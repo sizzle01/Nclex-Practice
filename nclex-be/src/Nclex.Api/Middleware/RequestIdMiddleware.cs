@@ -15,7 +15,14 @@ public sealed class RequestIdMiddleware(RequestDelegate next)
         // Version 7 GUIDs are time-ordered, so ids sort by when the request arrived.
         var requestId = $"req_{Guid.CreateVersion7():N}";
         context.TraceIdentifier = requestId;
-        context.Response.Headers[HeaderName] = requestId;
+
+        // Set just before the response starts: the exception handler clears headers when it
+        // replaces a failed response with an error body, and the id matters most on errors.
+        context.Response.OnStarting(() =>
+        {
+            context.Response.Headers[HeaderName] = requestId;
+            return Task.CompletedTask;
+        });
 
         // Logging/RequestIdEnricher reads TraceIdentifier to put the id on every log line.
         return next(context);
