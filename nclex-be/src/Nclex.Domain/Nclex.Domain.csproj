@@ -1,0 +1,3 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <!-- Pure C#, no dependencies (architecture.md section 4). -->
+</Project>
