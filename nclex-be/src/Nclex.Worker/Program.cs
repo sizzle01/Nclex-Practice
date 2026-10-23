@@ -1,0 +1,51 @@
+using System.Globalization;
+using Nclex.Infrastructure;
+using Serilog;
+using Serilog.Formatting.Compact;
+
+// Nclex.Worker hosts background work (architecture.md section 3: expiry, email outbox,
+// aggregation, reminders). F00 only sets up the host; Hangfire and jobs arrive with later features.
+Log.Logger = new LoggerConfiguration()
+    .WriteTo.Console(formatProvider: CultureInfo.InvariantCulture)
+    .CreateBootstrapLogger();
+
+try
+{
+    var builder = Host.CreateApplicationBuilder(args);
+
+    builder.Services.AddSerilog((services, logger) =>
+    {
+        logger
+            .ReadFrom.Configuration(builder.Configuration)
+            .ReadFrom.Services(services)
+            .Enrich.FromLogContext();
+
+        // Same convention as the API: readable text locally, JSON elsewhere.
+        if (builder.Environment.IsDevelopment())
+        {
+            logger.WriteTo.Console(formatProvider: CultureInfo.InvariantCulture);
+        }
+        else
+        {
+            logger.WriteTo.Console(new RenderedCompactJsonFormatter());
+        }
+    });
+
+    builder.Services.AddInfrastructure();
+    builder.Services.AddSingleton(TimeProvider.System);
+
+    var host = builder.Build();
+    host.Services.GetRequiredService<IHostApplicationLifetime>().ApplicationStarted.Register(() =>
+        Log.Information("Nclex.Worker started in {Environment}; no jobs registered yet", builder.Environment.EnvironmentName));
+
+    await host.RunAsync();
+}
+catch (Exception ex) when (ex is not HostAbortedException)
+{
+    Log.Fatal(ex, "Nclex.Worker terminated unexpectedly");
+    throw;
+}
+finally
+{
+    await Log.CloseAndFlushAsync();
+}
