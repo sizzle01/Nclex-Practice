@@ -1,0 +1,13 @@
+.topBar {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 0.75rem 1.5rem;
+  border-bottom: 1px solid var(--border);
+  background: var(--surface);
+}
+
+.brand {
+  font-weight: 600;
+  font-size: 1.125rem;
+}
