@@ -1,0 +1,31 @@
+.list {
+  list-style: none;
+  padding: 0;
+  font-size: 1.125rem;
+}
+
+.ok {
+  color: #15803d;
+}
+
+.degraded {
+  color: #a16207;
+}
+
+.unhealthy {
+  color: #b91c1c;
+}
+
+@media (prefers-color-scheme: dark) {
+  .ok {
+    color: #4ade80;
+  }
+
+  .degraded {
+    color: #facc15;
+  }
+
+  .unhealthy {
+    color: #f87171;
+  }
+}
