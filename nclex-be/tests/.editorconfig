@@ -1,0 +1,6 @@
+# Test-specific analyzer relaxations.
+[*.cs]
+# Test names read as sentences: Method_condition_expected_result.
+dotnet_diagnostic.CA1707.severity = none
+# Test controllers and helpers do not need to be static to be clear.
+dotnet_diagnostic.CA1822.severity = none
