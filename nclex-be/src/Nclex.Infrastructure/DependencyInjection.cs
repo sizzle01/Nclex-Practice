@@ -15,6 +15,10 @@ public static class DependencyInjection
     public const string PostgresConnectionName = "Postgres";
     public const string RedisConnectionName = "Redis";
 
+    // One shared instance: EF Core compares options by value, and a new translator per DbContext
+    // would make it build a new internal service provider for every request.
+    private static readonly NpgsqlNullNameTranslator KeepNamesAsWritten = new();
+
     /// <summary>Registers the database context and the Redis connection used by both hosts.</summary>
     public static IServiceCollection AddInfrastructure(this IServiceCollection services)
     {
@@ -50,7 +54,7 @@ public static class DependencyInjection
     /// </summary>
     private static NpgsqlDbContextOptionsBuilder MapDomainEnums(this NpgsqlDbContextOptionsBuilder npgsql) =>
         npgsql
-            .MapEnum<ExamTrack>("exam_track", nameTranslator: new NpgsqlNullNameTranslator())
+            .MapEnum<ExamTrack>("exam_track", nameTranslator: KeepNamesAsWritten)
             .MapEnum<UserRole>("user_role")
             .MapEnum<PlanTier>("plan_tier");
 

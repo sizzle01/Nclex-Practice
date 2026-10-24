@@ -47,7 +47,8 @@ public sealed class Argon2idPasswordHasher : IPasswordHasher
             return false;
         }
 
-        if (!TryParse(passwordHash, out var parameters, out var salt, out var expected))
+        // The Argon2 library rejects empty input; an empty password never matches anyway.
+        if (password.Length == 0 || !TryParse(passwordHash, out var parameters, out var salt, out var expected))
         {
             return false;
         }

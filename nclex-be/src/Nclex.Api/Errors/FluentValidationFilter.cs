@@ -35,7 +35,7 @@ public sealed class FluentValidationFilter : IAsyncActionFilter
 
         if (errors.Count > 0)
         {
-            context.Result = ValidationProblems.Create(context.HttpContext, errors);
+            context.Result = ValidationProblems.Create(errors);
             return;
         }
 

@@ -1,6 +1,5 @@
 using System.Text.Json;
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.AspNetCore.Mvc.Infrastructure;
 using Nclex.Application.Common.Validation;
 
 namespace Nclex.Api.Errors;
@@ -13,30 +12,17 @@ public sealed record FieldError(string Field, string Code);
 /// <summary>Builds 400 VALIDATION_FAILED responses in the api.md section 1 shape.</summary>
 public static class ValidationProblems
 {
-    public static ObjectResult Create(HttpContext httpContext, IReadOnlyList<FieldError> errors)
-    {
-        var factory = httpContext.RequestServices.GetRequiredService<ProblemDetailsFactory>();
-        // The factory applies ProblemDetailsSetup's customisation: code VALIDATION_FAILED, type and requestId.
-        var problem = factory.CreateProblemDetails(
-            httpContext,
-            StatusCodes.Status400BadRequest,
-            title: "Some fields are missing or invalid.");
-        problem.Extensions["errors"] = errors;
-        return new ObjectResult(problem) { StatusCode = StatusCodes.Status400BadRequest };
-    }
+    public static IActionResult Create(IReadOnlyList<FieldError> errors) =>
+        new ValidationProblemResult(errors);
 
     /// <summary>
     /// Replaces the framework's response when a body cannot be read at all (malformed JSON, or an
     /// unknown enum value such as track "XN").
     /// </summary>
-    public static IActionResult FromModelState(ActionContext context)
-    {
-        var errors = context.ModelState
+    public static IActionResult FromModelState(ActionContext context) =>
+        Create([.. context.ModelState
             .Where(entry => entry.Value?.Errors.Count > 0)
-            .Select(entry => new FieldError(ToFieldName(entry.Key), ValidationErrorCodes.InvalidValue))
-            .ToList();
-        return Create(context.HttpContext, errors);
-    }
+            .Select(entry => new FieldError(ToFieldName(entry.Key), ValidationErrorCodes.InvalidValue))]);
 
     /// <summary>"Email" becomes "email"; a JSON path such as "$.track" becomes "track"; an unreadable body becomes "body".</summary>
     public static string ToFieldName(string propertyPath)
@@ -48,5 +34,30 @@ public static class ValidationProblems
         }
 
         return string.Join('.', path.Split('.').Select(JsonNamingPolicy.CamelCase.ConvertName));
+    }
+
+    /// <summary>
+    /// Writes the body through IProblemDetailsService, like every other error, so it gets the same
+    /// code, type, requestId and application/problem+json content type. (An ObjectResult would have
+    /// its content type replaced by the controllers' [Produces("application/json")].)
+    /// </summary>
+    private sealed class ValidationProblemResult(IReadOnlyList<FieldError> errors) : IActionResult
+    {
+        public async Task ExecuteResultAsync(ActionContext context)
+        {
+            var httpContext = context.HttpContext;
+            httpContext.Response.StatusCode = StatusCodes.Status400BadRequest;
+            var problemDetailsService = httpContext.RequestServices.GetRequiredService<IProblemDetailsService>();
+            await problemDetailsService.WriteAsync(new ProblemDetailsContext
+            {
+                HttpContext = httpContext,
+                ProblemDetails = new ProblemDetails
+                {
+                    Status = StatusCodes.Status400BadRequest,
+                    Title = "Some fields are missing or invalid.",
+                    Extensions = { ["errors"] = errors },
+                },
+            });
+        }
     }
 }
