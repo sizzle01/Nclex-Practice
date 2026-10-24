@@ -144,7 +144,8 @@ Migration `F01_Accounts`:
 ## 6. Key decisions and deviations
 
 **My open questions, answered with the defaults I proposed** (you said "go" without choosing):
-- **Scaffolding.** When I started, F00 was already on `main`, so I built on it instead of scaffolding. The .NET 10 SDK was missing from this machine, so I installed it with Homebrew.
+- **Scaffolding and branch base.** F00 had already scaffolded the project, so I built on it instead of scaffolding again. The .NET 10 SDK was missing from this machine, so I installed it with Homebrew.
+- **This branch is based on `feature/f00-project-foundation`, not `main`.** F00 isn't merged yet, and the checkout was on the F00 branch when I branched. F01 needs F00's code, so this is the only workable base. Once F00 is merged, F01's commits sit directly on top of it, and `git rebase main` is a no-op apart from moving the base.
 - **`GET /me` / `PATCH /me` response.** It's the signup `user` object plus `timezone` and `targetExamDate`. Signup and login return the same `UserProfile`. This is additive to api.md.
 - **API client.** F00 had already chosen `openapi-typescript` + `openapi-fetch`, so I used those rather than the orval option in my plan.
 - **Small spec gaps:**
