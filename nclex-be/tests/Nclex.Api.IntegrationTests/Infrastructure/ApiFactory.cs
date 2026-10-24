@@ -18,6 +18,9 @@ public sealed class ApiFactory : WebApplicationFactory<Program>, IAsyncLifetime
     // Redis on the developer's machine and cover the "Redis down means degraded" rule.
     private const string UnreachableRedis = "127.0.0.1:1,connectTimeout=200";
 
+    /// <summary>Signing key for access tokens in tests. Tests use it to forge expired or tampered tokens.</summary>
+    public const string JwtSigningKey = "integration-tests-signing-key-0123456789abcdef";
+
     private readonly PostgreSqlContainer _postgres = new PostgreSqlBuilder("postgres:16").Build();
 
     public async ValueTask InitializeAsync()
@@ -34,6 +37,7 @@ public sealed class ApiFactory : WebApplicationFactory<Program>, IAsyncLifetime
         builder.UseEnvironment("Testing");
         builder.UseSetting("ConnectionStrings:Postgres", _postgres.GetConnectionString());
         builder.UseSetting("ConnectionStrings:Redis", UnreachableRedis);
+        builder.UseSetting("Jwt:SigningKey", JwtSigningKey);
 
         // Adds test-only controllers (e.g. ThrowingController) from this assembly.
         builder.ConfigureTestServices(services =>

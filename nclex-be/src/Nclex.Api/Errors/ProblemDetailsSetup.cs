@@ -24,6 +24,8 @@ public static class ProblemDetailsSetup
             // The framework adds a W3C traceId; api.md uses requestId only, so avoid two ids.
             problem.Extensions.Remove("traceId");
         });
+        // Handlers are tried in registration order: expected failures first, then the 500 fallback.
+        services.AddExceptionHandler<AppExceptionHandler>();
         services.AddExceptionHandler<ProblemDetailsExceptionHandler>();
         return services;
     }

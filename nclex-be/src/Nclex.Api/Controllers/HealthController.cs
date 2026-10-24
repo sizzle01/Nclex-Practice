@@ -1,3 +1,4 @@
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Diagnostics.HealthChecks;
 using Nclex.Api.Health;
@@ -9,6 +10,7 @@ namespace Nclex.Api.Controllers;
 /// because load balancers and container orchestrators probe fixed paths.
 /// </summary>
 [ApiController]
+[AllowAnonymous]
 [Produces("application/json")]
 public sealed class HealthController(HealthCheckService healthChecks) : ControllerBase
 {
