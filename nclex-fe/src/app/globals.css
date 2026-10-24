@@ -3,9 +3,10 @@
   --foreground: #171717;
   --surface: #f7f7f8;
   --border: #d4d4d8;
-  --focus: #1d4ed8;
+  /* Clinical teal-blue brand accent: 6:1 against white text and the page background. */
+  --focus: #0e7490;
   --error: #b91c1c;
-  --accent: #1d4ed8;
+  --accent: #0e7490;
   --accent-foreground: #ffffff;
 }
 
@@ -15,9 +16,10 @@
     --foreground: #ededed;
     --surface: #18181b;
     --border: #3f3f46;
-    --focus: #93c5fd;
+    /* Lighter teal for dark backgrounds: 13:1 against the dark background. */
+    --focus: #67e8f9;
     --error: #f87171;
-    --accent: #93c5fd;
+    --accent: #67e8f9;
     --accent-foreground: #0a0a0a;
   }
 }
