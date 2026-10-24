@@ -2,9 +2,6 @@
   <PropertyGroup>
     <IsPackable>false</IsPackable>
     <OutputType>Exe</OutputType>
-    <!-- Exit code 8 means "zero tests ran". This project has no tests until the first feature adds them;
-         remove this line then so an accidentally empty run fails again. -->
-    <TestingPlatformCommandLineArguments>--ignore-exit-code 8</TestingPlatformCommandLineArguments>
   </PropertyGroup>
   <ItemGroup>
     <ProjectReference Include="..\..\src\Nclex.Domain\Nclex.Domain.csproj" />
