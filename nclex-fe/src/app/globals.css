@@ -4,6 +4,9 @@
   --surface: #f7f7f8;
   --border: #d4d4d8;
   --focus: #1d4ed8;
+  --error: #b91c1c;
+  --accent: #1d4ed8;
+  --accent-foreground: #ffffff;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -13,6 +16,9 @@
     --surface: #18181b;
     --border: #3f3f46;
     --focus: #93c5fd;
+    --error: #f87171;
+    --accent: #93c5fd;
+    --accent-foreground: #0a0a0a;
   }
 }
 
