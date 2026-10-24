@@ -2,4 +2,11 @@
   <ItemGroup>
     <ProjectReference Include="..\Nclex.Domain\Nclex.Domain.csproj" />
   </ItemGroup>
+  <ItemGroup>
+    <!-- Use cases query through IAppDbContext's DbSets (LINQ), so they need EF Core's abstractions,
+         but not the Postgres provider, which stays in Nclex.Infrastructure. -->
+    <PackageReference Include="Microsoft.EntityFrameworkCore" />
+    <PackageReference Include="FluentValidation" />
+    <PackageReference Include="FluentValidation.DependencyInjectionExtensions" />
+  </ItemGroup>
 </Project>

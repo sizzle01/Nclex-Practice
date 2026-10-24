@@ -2,7 +2,10 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Nclex.Application.Abstractions;
+using Nclex.Domain.Entities;
 using Nclex.Infrastructure.Persistence;
+using Npgsql.EntityFrameworkCore.PostgreSQL.Infrastructure;
+using Npgsql.NameTranslation;
 using StackExchange.Redis;
 
 namespace Nclex.Infrastructure;
@@ -21,8 +24,10 @@ public static class DependencyInjection
             options
                 .UseNpgsql(
                     GetRequiredConnectionString(provider, PostgresConnectionName),
-                    // Keep EF's own bookkeeping table in the same snake_case style as everything else.
-                    npgsql => npgsql.MigrationsHistoryTable("__ef_migrations_history"))
+                    npgsql => npgsql
+                        // Keep EF's own bookkeeping table in the same snake_case style as everything else.
+                        .MigrationsHistoryTable("__ef_migrations_history")
+                        .MapDomainEnums())
                 .UseSnakeCaseNamingConvention());
         services.AddScoped<IAppDbContext>(provider => provider.GetRequiredService<AppDbContext>());
 
@@ -38,6 +43,16 @@ public static class DependencyInjection
 
         return services;
     }
+
+    /// <summary>
+    /// Maps C# enums to the Postgres enums in database.md section 2.1. Values are snake_case
+    /// ("candidate"), except exam_track, whose values are upper case ("RN", "PN") and are kept as written.
+    /// </summary>
+    private static NpgsqlDbContextOptionsBuilder MapDomainEnums(this NpgsqlDbContextOptionsBuilder npgsql) =>
+        npgsql
+            .MapEnum<ExamTrack>("exam_track", nameTranslator: new NpgsqlNullNameTranslator())
+            .MapEnum<UserRole>("user_role")
+            .MapEnum<PlanTier>("plan_tier");
 
     private static string GetRequiredConnectionString(IServiceProvider provider, string name) =>
         provider.GetRequiredService<IConfiguration>().GetConnectionString(name)

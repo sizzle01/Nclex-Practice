@@ -1,3 +1,6 @@
+using Microsoft.EntityFrameworkCore;
+using Nclex.Domain.Entities;
+
 namespace Nclex.Application.Abstractions;
 
 /// <summary>
@@ -7,5 +10,13 @@ namespace Nclex.Application.Abstractions;
 /// </summary>
 public interface IAppDbContext
 {
+    DbSet<User> Users { get; }
+
+    DbSet<RefreshSession> RefreshSessions { get; }
+
+    /// <summary>
+    /// Saves tracked changes in one transaction.
+    /// Throws <see cref="Common.UniqueConstraintViolationException"/> when a unique constraint is broken.
+    /// </summary>
     Task<int> SaveChangesAsync(CancellationToken cancellationToken = default);
 }
