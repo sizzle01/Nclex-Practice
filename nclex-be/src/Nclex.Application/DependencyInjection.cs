@@ -66,11 +66,19 @@ public static class DependencyInjection
         // Taxonomy
         services.AddScoped<GetTaxonomyHandler>();
 
-        // Content
-        services.AddScoped<ImportQuestionsHandler>();
+        services.AddContentImport();
 
+        return services;
+    }
+
+    /// <summary>
+    /// Registers only what the content importer needs, so the worker's import-questions command can
+    /// run without the API's auth services. <see cref="AddApplication"/> includes it.
+    /// </summary>
+    public static IServiceCollection AddContentImport(this IServiceCollection services)
+    {
         services.AddItemTypes();
-
+        services.AddScoped<ImportQuestionsHandler>();
         return services;
     }
 

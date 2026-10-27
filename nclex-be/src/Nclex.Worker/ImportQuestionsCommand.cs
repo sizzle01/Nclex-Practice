@@ -27,7 +27,8 @@ internal static class ImportQuestionsCommand
             return BadUsage;
         }
 
-        // dotnet run starts the worker in its project folder, so a relative path is resolved from there.
+        // dotnet run starts the worker in its project folder, so a relative path is resolved from
+        // there; the walkthrough passes "$PWD/..." for that reason.
         var path = Path.GetFullPath(args[0]);
         if (!File.Exists(path))
         {
@@ -39,7 +40,7 @@ internal static class ImportQuestionsCommand
         // EF Core logs every SQL command at Information; the summary below is all a user needs.
         builder.Logging.SetMinimumLevel(LogLevel.Warning);
         builder.Services.AddInfrastructure();
-        builder.Services.AddApplication();
+        builder.Services.AddContentImport();
         builder.Services.AddSingleton(TimeProvider.System);
         using var host = builder.Build();
 
