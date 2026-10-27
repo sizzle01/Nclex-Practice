@@ -15,8 +15,9 @@ public sealed class EmailOutboxMessage
     public const int LastErrorMaxLength = 1000;
 
     /// <summary>
-    /// How long a worker may hold a claimed email. If the worker crashes mid-send, the row becomes
-    /// due again after this, so another worker can retry it instead of it staying "sending" forever.
+    /// How long a worker may hold a claimed email. If the worker crashes mid-send, the row is
+    /// released back to pending after this (see <see cref="ReleaseExpiredClaim"/>), so another
+    /// worker retries it instead of it staying "sending" forever.
     /// </summary>
     public static readonly TimeSpan ClaimLease = TimeSpan.FromMinutes(10);
 
@@ -72,9 +73,8 @@ public sealed class EmailOutboxMessage
             CreatedAt = now,
         };
 
-    /// <summary>True if a worker may claim this email at <paramref name="now"/>: it is pending and due, or its claim lease ran out.</summary>
-    public bool IsDueAt(DateTimeOffset now) =>
-        (Status is OutboxStatus.Pending or OutboxStatus.Sending) && SendAfter <= now;
+    /// <summary>True if a worker may claim this email at <paramref name="now"/>.</summary>
+    public bool IsDueAt(DateTimeOffset now) => Status == OutboxStatus.Pending && SendAfter <= now;
 
     /// <summary>
     /// Claims the email for one send attempt. While claimed, <see cref="SendAfter"/> holds the end of
@@ -90,6 +90,22 @@ public sealed class EmailOutboxMessage
         Status = OutboxStatus.Sending;
         Attempts++;
         SendAfter = now + ClaimLease;
+    }
+
+    /// <summary>
+    /// Returns an email to pending if a worker claimed it and its lease ran out, which means that
+    /// worker stopped before recording the result. The attempt still counts towards the limit.
+    /// </summary>
+    /// <returns>True if the claim was released.</returns>
+    public bool ReleaseExpiredClaim(DateTimeOffset now)
+    {
+        if (Status != OutboxStatus.Sending || SendAfter > now)
+        {
+            return false;
+        }
+
+        Status = OutboxStatus.Pending;
+        return true;
     }
 
     /// <summary>

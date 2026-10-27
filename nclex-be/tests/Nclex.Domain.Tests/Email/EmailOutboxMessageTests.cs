@@ -29,12 +29,30 @@ public sealed class EmailOutboxMessageTests
     }
 
     [Fact]
-    public void A_claim_whose_lease_ran_out_is_due_again()
+    public void A_claim_is_released_only_once_its_lease_runs_out()
     {
         var message = NewMessage();
         message.StartAttempt(Now);
 
+        message.ReleaseExpiredClaim(Now + EmailOutboxMessage.ClaimLease - TimeSpan.FromSeconds(1)).ShouldBeFalse();
+        message.ReleaseExpiredClaim(Now + EmailOutboxMessage.ClaimLease).ShouldBeTrue();
+
+        message.Status.ShouldBe(OutboxStatus.Pending);
+        message.Attempts.ShouldBe((short)1);
         message.IsDueAt(Now + EmailOutboxMessage.ClaimLease).ShouldBeTrue();
+    }
+
+    [Fact]
+    public void Releasing_does_not_touch_pending_or_sent_messages()
+    {
+        var pending = NewMessage();
+        var sent = NewMessage();
+        sent.StartAttempt(Now);
+        sent.MarkSent("id", redactPayload: false, Now);
+
+        pending.ReleaseExpiredClaim(Now.AddDays(1)).ShouldBeFalse();
+        sent.ReleaseExpiredClaim(Now.AddDays(1)).ShouldBeFalse();
+        sent.Status.ShouldBe(OutboxStatus.Sent);
     }
 
     [Fact]
