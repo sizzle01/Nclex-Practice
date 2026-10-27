@@ -1,5 +1,6 @@
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Authorization;
+using Microsoft.Extensions.DependencyInjection.Extensions;
 using Microsoft.Extensions.Options;
 using Nclex.Application.Abstractions;
 using Nclex.Application.Auth;
@@ -40,7 +41,14 @@ public static class AuthSetup
                 };
             });
 
-        services.AddAuthorizationBuilder().AddRolePolicies();
+        services.AddAuthorizationBuilder()
+            .AddRolePolicies()
+            .AddPolicy(Policies.VerifiedEmail, policy => policy
+                .RequireAuthenticatedUser()
+                .AddRequirements(new VerifiedEmailRequirement()));
+        // Scoped: the handler reads the database through the request's DbContext.
+        services.AddScoped<IAuthorizationHandler, VerifiedEmailHandler>();
+        services.Replace(ServiceDescriptor.Singleton<IAuthorizationMiddlewareResultHandler, ApiAuthorizationResultHandler>());
 
         services.AddHttpContextAccessor();
         services.AddScoped<ICurrentUser, HttpCurrentUser>();
@@ -73,4 +81,7 @@ public static class Policies
     public const string Author = "role:author";
     public const string Reviewer = "role:reviewer";
     public const string Admin = "role:admin";
+
+    /// <summary>Signed in with a verified email; returns 403 EMAIL_NOT_VERIFIED otherwise (protects non-sample attempts from F08).</summary>
+    public const string VerifiedEmail = "verified-email";
 }

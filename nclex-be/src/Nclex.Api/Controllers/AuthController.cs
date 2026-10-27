@@ -2,17 +2,21 @@ using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Nclex.Api.Auth;
 using Nclex.Application.Auth;
+using Nclex.Application.Auth.ForgotPassword;
 using Nclex.Application.Auth.Login;
 using Nclex.Application.Auth.Logout;
 using Nclex.Application.Auth.LogoutAll;
 using Nclex.Application.Auth.Refresh;
+using Nclex.Application.Auth.ResendVerification;
+using Nclex.Application.Auth.ResetPassword;
 using Nclex.Application.Auth.Signup;
+using Nclex.Application.Auth.VerifyEmail;
 using Nclex.Application.Common;
 
 namespace Nclex.Api.Controllers;
 
 /// <summary>
-/// Sign-up, login and sessions (api.md section 2). The access token travels in response bodies;
+/// Sign-up, login, sessions, email verification and password reset (api.md section 2). The access token travels in response bodies;
 /// the refresh token only in the HttpOnly cookie (see <see cref="RefreshTokenCookie"/>).
 /// </summary>
 [ApiController]
@@ -108,6 +112,59 @@ public sealed class AuthController(TimeProvider clock) : ControllerBase
     {
         await handler.HandleAsync(cancellationToken);
         RefreshTokenCookie.Delete(Response);
+        return NoContent();
+    }
+
+    /// <summary>Verify the account's email with the token from the emailed link.</summary>
+    [HttpPost("verify-email")]
+    [AllowAnonymous]
+    [ProducesResponseType(StatusCodes.Status204NoContent)]
+    public async Task<IActionResult> VerifyEmail(
+        VerifyEmailRequest request,
+        [FromServices] VerifyEmailHandler handler,
+        CancellationToken cancellationToken)
+    {
+        await handler.HandleAsync(request, cancellationToken);
+        return NoContent();
+    }
+
+    /// <summary>Send a new verification link (at most 3 per hour). Does nothing if already verified.</summary>
+    [HttpPost("verify-email/resend")]
+    [Authorize]
+    [ProducesResponseType(StatusCodes.Status204NoContent)]
+    [ProducesResponseType<ProblemDetails>(StatusCodes.Status401Unauthorized, "application/problem+json")]
+    [ProducesResponseType<ProblemDetails>(StatusCodes.Status429TooManyRequests, "application/problem+json")]
+    public async Task<IActionResult> ResendVerification(
+        [FromServices] ResendVerificationHandler handler,
+        CancellationToken cancellationToken)
+    {
+        await handler.HandleAsync(cancellationToken);
+        return NoContent();
+    }
+
+    /// <summary>Email a password-reset link. Always 202, so it never reveals whether an account exists.</summary>
+    [HttpPost("password/forgot")]
+    [AllowAnonymous]
+    [ProducesResponseType(StatusCodes.Status202Accepted)]
+    public async Task<IActionResult> ForgotPassword(
+        ForgotPasswordRequest request,
+        [FromServices] ForgotPasswordHandler handler,
+        CancellationToken cancellationToken)
+    {
+        await handler.HandleAsync(request, cancellationToken);
+        return Accepted();
+    }
+
+    /// <summary>Set a new password with the token from the emailed reset link.</summary>
+    [HttpPost("password/reset")]
+    [AllowAnonymous]
+    [ProducesResponseType(StatusCodes.Status204NoContent)]
+    public async Task<IActionResult> ResetPassword(
+        ResetPasswordRequest request,
+        [FromServices] ResetPasswordHandler handler,
+        CancellationToken cancellationToken)
+    {
+        await handler.HandleAsync(request, cancellationToken);
         return NoContent();
     }
 }

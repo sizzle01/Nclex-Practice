@@ -1,3 +1,4 @@
+using System.Globalization;
 using Microsoft.AspNetCore.Diagnostics;
 using Microsoft.AspNetCore.Mvc;
 using Nclex.Application.Common;
@@ -16,23 +17,33 @@ public sealed class AppExceptionHandler(IProblemDetailsService problemDetailsSer
         Exception exception,
         CancellationToken cancellationToken)
     {
-        if (exception is not AppException { Error: var error })
+        if (exception is not AppException { Error: var error } appException)
         {
             return false;
         }
 
         var status = StatusFor(error.Kind);
         httpContext.Response.StatusCode = status;
+        var problem = new ProblemDetails
+        {
+            Status = status,
+            Type = ErrorCodes.TypeUri(error.Code),
+            Title = error.Title,
+            Extensions = { ["code"] = error.Code },
+        };
+
+        // api.md section 1: 429 responses include Retry-After; lockouts also say retryAfterSec.
+        if (appException.RetryAfter is { } retryAfter)
+        {
+            var seconds = Math.Max(1, (int)Math.Ceiling(retryAfter.TotalSeconds));
+            httpContext.Response.Headers.RetryAfter = seconds.ToString(CultureInfo.InvariantCulture);
+            problem.Extensions["retryAfterSec"] = seconds;
+        }
+
         return await problemDetailsService.TryWriteAsync(new ProblemDetailsContext
         {
             HttpContext = httpContext,
-            ProblemDetails = new ProblemDetails
-            {
-                Status = status,
-                Type = ErrorCodes.TypeUri(error.Code),
-                Title = error.Title,
-                Extensions = { ["code"] = error.Code },
-            },
+            ProblemDetails = problem,
         });
     }
 
@@ -43,6 +54,7 @@ public sealed class AppExceptionHandler(IProblemDetailsService problemDetailsSer
         AppErrorKind.Forbidden => StatusCodes.Status403Forbidden,
         AppErrorKind.NotFound => StatusCodes.Status404NotFound,
         AppErrorKind.Conflict => StatusCodes.Status409Conflict,
+        AppErrorKind.TooManyRequests => StatusCodes.Status429TooManyRequests,
         _ => StatusCodes.Status500InternalServerError,
     };
 }
