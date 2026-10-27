@@ -55,6 +55,10 @@ public sealed class AuthApi(ApiFactory factory)
         return await SignedIn.FromAsync(response);
     }
 
+    /// <summary>POSTs a JSON body to an endpoint that needs no sign-in.</summary>
+    public Task<HttpResponseMessage> PostAsync(string path, object body) =>
+        Client.PostAsJsonAsync(path, body, TestContext.Current.CancellationToken);
+
     public async Task<HttpResponseMessage> RefreshAsync(string? refreshToken, bool withRequestedWithHeader = true)
     {
         using var request = new HttpRequestMessage(HttpMethod.Post, "/api/v1/auth/refresh");

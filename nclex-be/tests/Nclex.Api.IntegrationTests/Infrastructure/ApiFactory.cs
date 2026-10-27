@@ -3,6 +3,9 @@ using Microsoft.AspNetCore.Mvc.Testing;
 using Microsoft.AspNetCore.TestHost;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.DependencyInjection;
+using Microsoft.Extensions.DependencyInjection.Extensions;
+using Nclex.Application.Abstractions;
+using Nclex.Infrastructure.Email;
 using Nclex.Infrastructure.Persistence;
 using Testcontainers.PostgreSql;
 
@@ -21,7 +24,13 @@ public sealed class ApiFactory : WebApplicationFactory<Program>, IAsyncLifetime
     /// <summary>Signing key for access tokens in tests. Tests use it to forge expired or tampered tokens.</summary>
     public const string JwtSigningKey = "integration-tests-signing-key-0123456789abcdef";
 
+    /// <summary>Frontend address used in emailed links during tests.</summary>
+    public const string FrontendBaseUrl = "https://app.test";
+
     private readonly PostgreSqlContainer _postgres = new PostgreSqlBuilder("postgres:16").Build();
+
+    /// <summary>Stands in for SMTP when tests run the outbox dispatcher.</summary>
+    public FakeEmailSender EmailSender { get; } = new();
 
     public async ValueTask InitializeAsync()
     {
@@ -38,10 +47,19 @@ public sealed class ApiFactory : WebApplicationFactory<Program>, IAsyncLifetime
         builder.UseSetting("ConnectionStrings:Postgres", _postgres.GetConnectionString());
         builder.UseSetting("ConnectionStrings:Redis", UnreachableRedis);
         builder.UseSetting("Jwt:SigningKey", JwtSigningKey);
+        builder.UseSetting("Email:From", "NCLEX Practice <no-reply@nclex-practice.test>");
+        builder.UseSetting("Email:FrontendBaseUrl", FrontendBaseUrl);
+        builder.UseSetting("Email:Smtp:Host", "localhost");
 
-        // Adds test-only controllers (e.g. ThrowingController) from this assembly.
         builder.ConfigureTestServices(services =>
-            services.AddControllers().AddApplicationPart(typeof(ApiFactory).Assembly));
+        {
+            // Adds test-only controllers (e.g. ThrowingController) from this assembly.
+            services.AddControllers().AddApplicationPart(typeof(ApiFactory).Assembly);
+
+            // The worker's email services, so tests can run OutboxDispatcher against this database.
+            services.AddEmailDelivery();
+            services.Replace(ServiceDescriptor.Singleton<IEmailSender>(EmailSender));
+        });
     }
 
     public override async ValueTask DisposeAsync()
