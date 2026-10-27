@@ -1,26 +1,78 @@
+/*
+ * Design tokens: a clinical teal-blue theme. Components use these variables, never raw colours, so
+ * the whole app changes from here. Every text/background pair below meets 4.5:1 contrast and input
+ * borders meet 3:1 (interfaces.md section 4).
+ */
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
-  --surface: #f7f7f8;
-  --border: #d4d4d8;
-  /* Clinical teal-blue brand accent: 6:1 against white text and the page background. */
-  --focus: #0e7490;
-  --error: #b91c1c;
+  /* Surfaces and text */
+  --background: #f3f7f9;
+  --surface: #ffffff;
+  --surface-muted: #eef4f7;
+  --foreground: #0f172a;
+  --muted: #475569;
+  --border: #dbe5ea;
+  --border-strong: #64748b;
+
+  /* Brand: teal-blue */
   --accent: #0e7490;
+  --accent-hover: #155e75;
   --accent-foreground: #ffffff;
+  --accent-soft: #e0f2f6;
+  --accent-soft-foreground: #155e75;
+  --focus: #0e7490;
+
+  /* Status */
+  --error: #b91c1c;
+  --error-soft: #fef2f2;
+  --success: #15803d;
+  --success-soft: #ecfdf3;
+  --warning: #a16207;
+  --warning-soft: #fefce8;
+
+  /* Shape, depth and spacing */
+  --radius-sm: 0.5rem;
+  --radius: 0.75rem;
+  --radius-lg: 1rem;
+  --radius-full: 999px;
+  --shadow-sm: 0 1px 2px rgb(15 23 42 / 0.06);
+  --shadow: 0 1px 3px rgb(15 23 42 / 0.06), 0 8px 24px rgb(15 23 42 / 0.06);
+  --shadow-lg: 0 4px 12px rgb(15 23 42 / 0.08), 0 20px 48px rgb(14 116 144 / 0.12);
+  --content-width: 72rem;
+
+  --font-sans: var(--font-inter), system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+
+  color-scheme: light;
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-    --surface: #18181b;
-    --border: #3f3f46;
-    /* Lighter teal for dark backgrounds: 13:1 against the dark background. */
-    --focus: #67e8f9;
+    --background: #0b1720;
+    --surface: #12222d;
+    --surface-muted: #182c38;
+    --foreground: #e6eef2;
+    --muted: #9fb3bf;
+    --border: #22394a;
+    --border-strong: #6b8899;
+
+    --accent: #2cc4d8;
+    --accent-hover: #5fd4e4;
+    --accent-foreground: #04232b;
+    --accent-soft: #133945;
+    --accent-soft-foreground: #9ae6f0;
+    --focus: #5fd4e4;
+
     --error: #f87171;
-    --accent: #67e8f9;
-    --accent-foreground: #0a0a0a;
+    --error-soft: #3a1518;
+    --success: #4ade80;
+    --success-soft: #0f2e1e;
+    --warning: #facc15;
+    --warning-soft: #33290a;
+
+    --shadow-sm: 0 1px 2px rgb(0 0 0 / 0.3);
+    --shadow: 0 1px 3px rgb(0 0 0 / 0.3), 0 8px 24px rgb(0 0 0 / 0.25);
+    --shadow-lg: 0 4px 12px rgb(0 0 0 / 0.35), 0 20px 48px rgb(0 0 0 / 0.35);
+
+    color-scheme: dark;
   }
 }
 
@@ -35,14 +87,44 @@ body {
 }
 
 body {
+  min-height: 100vh;
   color: var(--foreground);
   background: var(--background);
-  font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
-  line-height: 1.5;
+  font-family: var(--font-sans);
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+}
+
+h1,
+h2,
+h3 {
+  margin: 0 0 0.5rem;
+  line-height: 1.2;
+  letter-spacing: -0.02em;
+}
+
+h1 {
+  font-size: clamp(1.75rem, 1.4rem + 1.2vw, 2.25rem);
+  font-weight: 700;
+}
+
+h2 {
+  font-size: 1.25rem;
+  font-weight: 650;
+}
+
+p {
+  margin: 0 0 1rem;
 }
 
 a {
-  color: inherit;
+  color: var(--accent);
+  font-weight: 500;
+  text-underline-offset: 0.2em;
+}
+
+a:hover {
+  color: var(--accent-hover);
 }
 
 /* Visible focus rings everywhere (interfaces.md section 4, global requirements). */
@@ -52,7 +134,16 @@ a {
 }
 
 main {
-  max-width: 64rem;
+  max-width: var(--content-width);
   margin: 0 auto;
-  padding: 2rem 1.5rem;
+  padding: 2.5rem 1.5rem 4rem;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    transition: none !important;
+    animation: none !important;
+  }
 }

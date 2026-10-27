@@ -1,0 +1,99 @@
+/* Shared building blocks (cards, buttons, badges) so every feature looks the same. */
+
+.card {
+  padding: 1.5rem;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  background: var(--surface);
+  box-shadow: var(--shadow);
+}
+
+.cardTitle {
+  margin: 0 0 0.25rem;
+  font-size: 1.0625rem;
+  font-weight: 650;
+}
+
+.muted {
+  color: var(--muted);
+}
+
+.button,
+.buttonSecondary,
+.buttonGhost {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  min-height: 2.75rem;
+  padding: 0.625rem 1.25rem;
+  border: 1px solid transparent;
+  border-radius: var(--radius-sm);
+  font: inherit;
+  font-weight: 600;
+  line-height: 1.2;
+  text-decoration: none;
+  white-space: nowrap;
+  cursor: pointer;
+  transition:
+    background-color 150ms ease,
+    border-color 150ms ease,
+    box-shadow 150ms ease,
+    transform 150ms ease;
+}
+
+.button {
+  background: var(--accent);
+  color: var(--accent-foreground);
+  box-shadow: var(--shadow-sm);
+}
+
+.button:hover:not(:disabled) {
+  background: var(--accent-hover);
+  color: var(--accent-foreground);
+}
+
+.buttonSecondary {
+  border-color: var(--border);
+  background: var(--surface);
+  color: var(--foreground);
+}
+
+.buttonSecondary:hover:not(:disabled) {
+  border-color: var(--accent);
+  color: var(--accent);
+}
+
+.buttonGhost {
+  background: transparent;
+  color: var(--foreground);
+}
+
+.buttonGhost:hover:not(:disabled) {
+  background: var(--accent-soft);
+  color: var(--accent-soft-foreground);
+}
+
+.button:active:not(:disabled),
+.buttonSecondary:active:not(:disabled) {
+  transform: translateY(1px);
+}
+
+.button:disabled,
+.buttonSecondary:disabled,
+.buttonGhost:disabled {
+  opacity: 0.6;
+  cursor: progress;
+}
+
+.badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.375rem;
+  padding: 0.25rem 0.75rem;
+  border-radius: var(--radius-full);
+  background: var(--accent-soft);
+  color: var(--accent-soft-foreground);
+  font-size: 0.8125rem;
+  font-weight: 600;
+}
