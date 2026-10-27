@@ -1,4 +1,5 @@
 using Microsoft.EntityFrameworkCore;
+using Microsoft.EntityFrameworkCore.Storage;
 using Nclex.Application.Abstractions;
 using Nclex.Application.Common;
 using Nclex.Domain.Audit;
@@ -20,6 +21,25 @@ public sealed class AppDbContext(DbContextOptions<AppDbContext> options) : DbCon
     public DbSet<EmailOutboxMessage> EmailOutbox => Set<EmailOutboxMessage>();
 
     public DbSet<AuditEvent> AuditEvents => Set<AuditEvent>();
+
+    public DbSet<ClientNeedsCategory> ClientNeedsCategories => Set<ClientNeedsCategory>();
+
+    public DbSet<BodySystem> BodySystems => Set<BodySystem>();
+
+    public DbSet<MediaAsset> MediaAssets => Set<MediaAsset>();
+
+    public DbSet<CaseStudy> CaseStudies => Set<CaseStudy>();
+
+    public DbSet<Question> Questions => Set<Question>();
+
+    public DbSet<QuestionVersion> QuestionVersions => Set<QuestionVersion>();
+
+    public DbSet<QuestionBank> QuestionBanks => Set<QuestionBank>();
+
+    public DbSet<QuestionBankItem> QuestionBankItems => Set<QuestionBankItem>();
+
+    public Task<IDbContextTransaction> BeginTransactionAsync(CancellationToken cancellationToken = default) =>
+        Database.BeginTransactionAsync(cancellationToken);
 
     public override async Task<int> SaveChangesAsync(CancellationToken cancellationToken = default)
     {

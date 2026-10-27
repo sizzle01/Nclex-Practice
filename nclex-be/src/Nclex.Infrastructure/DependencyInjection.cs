@@ -3,6 +3,7 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Nclex.Application.Abstractions;
 using Nclex.Domain.Entities;
+using Nclex.Domain.ItemTypes;
 using Nclex.Infrastructure.Audit;
 using Nclex.Infrastructure.Email;
 using Nclex.Infrastructure.Persistence;
@@ -63,7 +64,12 @@ public static class DependencyInjection
             .MapEnum<ExamTrack>("exam_track", nameTranslator: KeepNamesAsWritten)
             .MapEnum<UserRole>("user_role")
             .MapEnum<PlanTier>("plan_tier")
-            .MapEnum<EmailTokenPurpose>("email_token_purpose");
+            .MapEnum<EmailTokenPurpose>("email_token_purpose")
+            .MapEnum<ItemType>("item_type")
+            .MapEnum<DifficultyTier>("difficulty_tier")
+            .MapEnum<CjmmSkill>("cjmm_skill")
+            .MapEnum<VersionStatus>("version_status")
+            .MapEnum<QuestionStatus>("question_status");
 
     private static string GetRequiredConnectionString(IServiceProvider provider, string name) =>
         provider.GetRequiredService<IConfiguration>().GetConnectionString(name)

@@ -1,4 +1,5 @@
 using Microsoft.EntityFrameworkCore;
+using Microsoft.EntityFrameworkCore.Storage;
 using Nclex.Domain.Audit;
 using Nclex.Domain.Email;
 using Nclex.Domain.Entities;
@@ -23,6 +24,30 @@ public interface IAppDbContext
 
     /// <summary>Security and admin events. Use cases add rows through <see cref="IAuditLog"/>.</summary>
     DbSet<AuditEvent> AuditEvents { get; }
+
+    /// <summary>The Client Needs trees for RN and PN (seed data, read-only).</summary>
+    DbSet<ClientNeedsCategory> ClientNeedsCategories { get; }
+
+    /// <summary>Body-system tags (seed data, read-only).</summary>
+    DbSet<BodySystem> BodySystems { get; }
+
+    DbSet<MediaAsset> MediaAssets { get; }
+
+    DbSet<CaseStudy> CaseStudies { get; }
+
+    DbSet<Question> Questions { get; }
+
+    DbSet<QuestionVersion> QuestionVersions { get; }
+
+    DbSet<QuestionBank> QuestionBanks { get; }
+
+    DbSet<QuestionBankItem> QuestionBankItems { get; }
+
+    /// <summary>
+    /// Starts a transaction for a use case that needs more than one SaveChanges to stay atomic,
+    /// such as publishing a new question (see QuestionConfiguration for why).
+    /// </summary>
+    Task<IDbContextTransaction> BeginTransactionAsync(CancellationToken cancellationToken = default);
 
     /// <summary>
     /// Saves tracked changes in one transaction.
