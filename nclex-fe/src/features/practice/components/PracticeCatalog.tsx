@@ -1,5 +1,6 @@
 "use client";
 
+import Link from "next/link";
 import { usePathname, useRouter, useSearchParams } from "next/navigation";
 import ui from "@/components/ui/ui.module.css";
 import { useMe } from "@/features/auth/AuthProvider";
@@ -42,6 +43,11 @@ export function PracticeCatalog() {
         <p className={ui.muted}>
           Curated sets{me ? ` for the NCLEX-${me.track}` : ""}. Start with the sample set, then try a full practice or
           challenge exam.
+        </p>
+        <p>
+          <Link href="/practice/custom" className={ui.buttonSecondary}>
+            Build a custom test
+          </Link>
         </p>
       </div>
 

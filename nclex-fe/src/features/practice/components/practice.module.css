@@ -11,6 +11,10 @@
   margin: 0;
 }
 
+.header p + p {
+  margin-top: 1rem;
+}
+
 /* Cards on the left, the open set's details on the right; stacked on narrow screens. */
 .layout {
   display: grid;
