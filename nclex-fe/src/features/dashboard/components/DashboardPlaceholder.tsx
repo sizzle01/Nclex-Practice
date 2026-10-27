@@ -1,8 +1,10 @@
 "use client";
 
+import { useRef } from "react";
 import ui from "@/components/ui/ui.module.css";
 import { useMe } from "@/features/auth/AuthProvider";
 import styles from "./DashboardPlaceholder.module.css";
+import { VerifyEmailBanner } from "./VerifyEmailBanner";
 
 /**
  * Placeholder until the real dashboard (drafts, last results, weakest categories) arrives in a
@@ -10,12 +12,17 @@ import styles from "./DashboardPlaceholder.module.css";
  */
 export function DashboardPlaceholder() {
   const { data: me } = useMe();
+  const headingRef = useRef<HTMLHeadingElement>(null);
 
   return (
     <section aria-labelledby="dashboard-heading" className={styles.dashboard}>
+      {me && !me.emailVerified && <VerifyEmailBanner user={me} onDismiss={() => headingRef.current?.focus()} />}
+
       <div className={styles.welcome}>
         <div>
-          <h1 id="dashboard-heading">Dashboard</h1>
+          <h1 id="dashboard-heading" ref={headingRef} tabIndex={-1}>
+            Dashboard
+          </h1>
           {me && (
             <p className={styles.greeting}>
               Welcome, {me.displayName ?? me.email}. You are preparing for the NCLEX-{me.track}.

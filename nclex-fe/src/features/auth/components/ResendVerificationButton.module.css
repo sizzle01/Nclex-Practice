@@ -1,0 +1,14 @@
+.resend {
+  display: grid;
+  justify-items: start;
+  gap: 0.5rem;
+}
+
+.message {
+  margin: 0;
+  font-size: 0.9375rem;
+}
+
+.message:empty {
+  display: none;
+}

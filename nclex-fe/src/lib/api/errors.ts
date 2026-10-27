@@ -14,6 +14,8 @@ export class ApiError extends Error {
     readonly code: string | undefined,
     readonly fieldErrors: FieldError[],
     message: string,
+    /** Seconds until the request may be retried, sent with RATE_LIMITED and ACCOUNT_LOCKED. */
+    readonly retryAfterSec?: number,
   ) {
     super(message);
     this.name = "ApiError";
@@ -25,11 +27,13 @@ export class ApiError extends Error {
       code?: unknown;
       title?: unknown;
       errors?: unknown;
+      retryAfterSec?: unknown;
     };
     const code = typeof problem.code === "string" ? problem.code : undefined;
     const title = typeof problem.title === "string" ? problem.title : `HTTP ${response.status}`;
     const fieldErrors = Array.isArray(problem.errors) ? (problem.errors as FieldError[]) : [];
-    return new ApiError(response.status, code, fieldErrors, title);
+    const retryAfterSec = typeof problem.retryAfterSec === "number" ? problem.retryAfterSec : undefined;
+    return new ApiError(response.status, code, fieldErrors, title, retryAfterSec);
   }
 }
 

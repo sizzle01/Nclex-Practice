@@ -72,6 +72,9 @@ export function LoginForm() {
         error={errors.password?.message}
         {...register("password")}
       />
+      <Link href="/forgot-password" className={styles.inlineLink}>
+        Forgot password?
+      </Link>
 
       <button type="submit" className={`${ui.button} ${styles.submit}`} disabled={mutation.isPending}>
         {mutation.isPending ? "Logging in…" : "Log in"}

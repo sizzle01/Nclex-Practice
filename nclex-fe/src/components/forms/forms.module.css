@@ -129,6 +129,42 @@
   content: "✗ ";
 }
 
+/* Success is text with a symbol too, not colour alone. */
+.formSuccess {
+  margin: 0;
+  padding: 0.75rem 1rem;
+  border: 1px solid var(--success);
+  border-left-width: 4px;
+  border-radius: var(--radius-sm);
+  background: var(--success-soft);
+  color: var(--foreground);
+}
+
+.formSuccess::before {
+  content: "✓ ";
+  color: var(--success);
+  font-weight: 700;
+}
+
+.checkbox {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.625rem;
+  cursor: pointer;
+}
+
+.checkbox input {
+  width: 1.125rem;
+  height: 1.125rem;
+  margin: 0.125rem 0 0;
+  accent-color: var(--accent);
+}
+
+.inlineLink {
+  justify-self: end;
+  font-size: 0.875rem;
+}
+
 .submit {
   width: 100%;
   margin-top: 0.25rem;

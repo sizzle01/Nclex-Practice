@@ -1,0 +1,29 @@
+/* Warning colours plus a heading, so the reminder is not conveyed by colour alone. */
+.banner {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 1.25rem 1.5rem;
+  border: 1px solid var(--warning);
+  border-left-width: 4px;
+  border-radius: var(--radius-lg);
+  background: var(--warning-soft);
+}
+
+.text {
+  display: grid;
+  gap: 0.5rem;
+  flex: 1 1 20rem;
+}
+
+.title {
+  margin: 0;
+  font-size: 1.0625rem;
+  font-weight: 650;
+}
+
+.body {
+  margin: 0;
+}

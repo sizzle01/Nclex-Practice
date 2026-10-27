@@ -7,6 +7,7 @@ export type AuthResponse = ApiSchema<"AuthResponse">;
 export type SignupRequest = ApiSchema<"SignupRequest">;
 export type LoginRequest = ApiSchema<"LoginRequest">;
 export type ExamTrack = ApiSchema<"ExamTrack">;
+export type ResetPasswordRequest = ApiSchema<"ResetPasswordRequest">;
 
 /** POST /auth/signup. The refresh cookie is set by the response; the body carries the access token. */
 export async function signup(body: SignupRequest): Promise<AuthResponse> {
@@ -38,4 +39,28 @@ export async function fetchMe(): Promise<UserProfile> {
   const { data, error, response } = await apiClient.GET("/api/v1/me");
   if (data) return data;
   throw ApiError.from(response, error);
+}
+
+/** POST /auth/verify-email: uses the token from a verification link. Fails with INVALID_TOKEN. */
+export async function verifyEmail(token: string): Promise<void> {
+  const { error, response } = await apiClient.POST("/api/v1/auth/verify-email", { body: { token } });
+  if (!response.ok) throw ApiError.from(response, error);
+}
+
+/** POST /auth/verify-email/resend: emails a new link. Fails with RATE_LIMITED after 3 in an hour. */
+export async function resendVerification(): Promise<void> {
+  const { error, response } = await apiClient.POST("/api/v1/auth/verify-email/resend");
+  if (!response.ok) throw ApiError.from(response, error);
+}
+
+/** POST /auth/password/forgot: always succeeds for a valid email, whether or not it has an account. */
+export async function forgotPassword(email: string): Promise<void> {
+  const { error, response } = await apiClient.POST("/api/v1/auth/password/forgot", { body: { email } });
+  if (!response.ok) throw ApiError.from(response, error);
+}
+
+/** POST /auth/password/reset: sets a new password with the token from a reset link. */
+export async function resetPassword(body: ResetPasswordRequest): Promise<void> {
+  const { error, response } = await apiClient.POST("/api/v1/auth/password/reset", { body });
+  if (!response.ok) throw ApiError.from(response, error);
 }
