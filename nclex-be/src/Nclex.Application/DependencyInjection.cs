@@ -13,6 +13,10 @@ using Nclex.Application.Auth.ResetPassword;
 using Nclex.Application.Auth.Sessions;
 using Nclex.Application.Auth.Signup;
 using Nclex.Application.Auth.VerifyEmail;
+using Nclex.Application.Catalog;
+using Nclex.Application.Catalog.GetTestSet;
+using Nclex.Application.Catalog.ListQuestionBanks;
+using Nclex.Application.Catalog.ListTestSets;
 using Nclex.Application.Content.ImportQuestions;
 using Nclex.Application.Email;
 using Nclex.Application.Taxonomy.GetTaxonomy;
@@ -76,6 +80,12 @@ public static class DependencyInjection
         // Taxonomy
         services.AddScoped<GetTaxonomyHandler>();
 
+        // Catalog
+        services.AddScoped<PlanTierGuard>();
+        services.AddScoped<ListQuestionBanksHandler>();
+        services.AddScoped<ListTestSetsHandler>();
+        services.AddScoped<GetTestSetHandler>();
+
         services.AddContentImport();
 
         return services;
@@ -88,6 +98,7 @@ public static class DependencyInjection
     public static IServiceCollection AddContentImport(this IServiceCollection services)
     {
         services.AddItemTypes();
+        services.AddScoped<CatalogImporter>();
         services.AddScoped<ImportQuestionsHandler>();
         return services;
     }

@@ -8,6 +8,9 @@ namespace Nclex.Domain.Entities;
 /// </summary>
 public sealed class TestSet
 {
+    /// <summary>A sample set is a short taster of 10 items (PRD 5.5).</summary>
+    public const int SampleQuestionCount = 10;
+
     // For EF Core, which sets properties directly when loading rows.
     private TestSet()
     {

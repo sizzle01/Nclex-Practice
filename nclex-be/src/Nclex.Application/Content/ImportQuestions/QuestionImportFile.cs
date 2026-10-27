@@ -5,13 +5,21 @@ using Nclex.Domain.ItemTypes;
 namespace Nclex.Application.Content.ImportQuestions;
 
 /// <summary>
-/// A JSON file of questions for the content importer. Every question carries a fixed id, so importing
-/// the same file again updates those questions instead of adding copies.
+/// A JSON file of questions for the content importer, optionally with the banks and curated test
+/// sets built from them. Everything carries a fixed id, so importing the same file again updates
+/// those rows instead of adding copies.
 /// </summary>
-/// <param name="Track">The exam track of every question in the file.</param>
+/// <param name="Track">The exam track of every question, bank and set in the file.</param>
 /// <param name="Questions">The questions to publish.</param>
 /// <param name="Notice">Free text for people reading the file, e.g. that it is sample content. Not stored.</param>
-public sealed record QuestionImportFile(ExamTrack Track, IReadOnlyList<ImportedQuestion> Questions, string? Notice = null)
+/// <param name="Banks">Question banks to publish; none by default.</param>
+/// <param name="TestSets">Curated (prebuilt) test sets to publish; none by default.</param>
+public sealed record QuestionImportFile(
+    ExamTrack Track,
+    IReadOnlyList<ImportedQuestion> Questions,
+    string? Notice = null,
+    IReadOnlyList<ImportedBank>? Banks = null,
+    IReadOnlyList<ImportedTestSet>? TestSets = null)
 {
     private static readonly JsonSerializerOptions Json = new(ItemJson.Options)
     {
@@ -57,4 +65,67 @@ public sealed record ImportedQuestion(
     JsonElement? Exhibits = null)
 {
     public const int DefaultTimeAllotmentSec = 120;
+}
+
+/// <summary>A question bank in an import file. It is published when imported.</summary>
+/// <param name="Id">Fixed id of the bank; reuse it to update the bank later.</param>
+/// <param name="Name">Shown to candidates.</param>
+/// <param name="QuestionIds">Ids of questions in this file, or already published on the same track.</param>
+/// <param name="Description">Optional longer text.</param>
+/// <param name="AccessTier">free (default) or premium.</param>
+public sealed record ImportedBank(
+    Guid Id,
+    string Name,
+    IReadOnlyList<Guid> QuestionIds,
+    string? Description = null,
+    PlanTier AccessTier = PlanTier.Free);
+
+/// <summary>
+/// A curated test set in an import file (PRD 5.5). It is imported as a published "prebuilt" set
+/// whose items are served in the order of <see cref="QuestionIds"/>.
+/// </summary>
+/// <param name="Id">Fixed id of the set; reuse it to update the set later.</param>
+/// <param name="Title">Shown on the set card.</param>
+/// <param name="Mode">practice or challenge.</param>
+/// <param name="RevealMode">tutor or exam.</param>
+/// <param name="Timed">Whether a timer runs; a timed set needs perQuestionSec or timeBudgetSec.</param>
+/// <param name="QuestionIds">Ids of questions in this file, or already published on the same track.</param>
+/// <param name="Description">Optional text for the detail panel.</param>
+/// <param name="PerQuestionSec">Seconds per item, for timed sets.</param>
+/// <param name="TimeBudgetSec">Seconds for the whole attempt, for timed sets.</param>
+/// <param name="PassThreshold">Share of points for a "likely pass" estimate, above 0 and at most 1.</param>
+/// <param name="IsSample">Startable before verifying an email; a sample set has exactly 10 questions.</param>
+/// <param name="AccessTier">free (default) or premium.</param>
+/// <param name="AllowBackNav">Whether candidates may go back; true by default, as in the DDL.</param>
+/// <param name="PausePolicy">Pause limits; no limits by default.</param>
+public sealed record ImportedTestSet(
+    Guid Id,
+    string Title,
+    TestMode Mode,
+    RevealMode RevealMode,
+    bool Timed,
+    IReadOnlyList<Guid> QuestionIds,
+    string? Description = null,
+    int? PerQuestionSec = null,
+    int? TimeBudgetSec = null,
+    decimal? PassThreshold = null,
+    bool IsSample = false,
+    PlanTier AccessTier = PlanTier.Free,
+    bool AllowBackNav = true,
+    PausePolicy? PausePolicy = null)
+{
+    /// <summary>The set's settings as the domain stores them.</summary>
+    public TestSetSettings ToSettings() => new(
+        Title,
+        Description,
+        Mode,
+        RevealMode,
+        Timed,
+        PerQuestionSec,
+        TimeBudgetSec,
+        PassThreshold,
+        PausePolicy ?? PausePolicy.Unlimited,
+        AllowBackNav,
+        IsSample,
+        AccessTier);
 }

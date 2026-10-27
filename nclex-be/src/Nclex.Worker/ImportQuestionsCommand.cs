@@ -8,8 +8,8 @@ namespace Nclex.Worker;
 
 /// <summary>
 /// <c>dotnet run --project src/Nclex.Worker -- import-questions &lt;file.json&gt;</c>: loads a question
-/// file, publishes its questions and exits. It lives in the worker so the solution keeps the
-/// layout of architecture.md section 4 and reuses the worker's configuration.
+/// file, publishes its questions, banks and test sets, and exits. It lives in the worker so the
+/// solution keeps the layout of architecture.md section 4 and reuses the worker's configuration.
 /// </summary>
 internal static class ImportQuestionsCommand
 {
@@ -74,6 +74,20 @@ internal static class ImportQuestionsCommand
         Console.WriteLine(string.Create(
             CultureInfo.InvariantCulture,
             $"Imported {file.Questions.Count} {file.Track} question(s): {result.Created} created, {result.Updated} updated, {result.Unchanged} unchanged."));
+        PrintCounts("bank(s)", file.Banks?.Count ?? 0, result.Banks);
+        PrintCounts("test set(s)", file.TestSets?.Count ?? 0, result.TestSets);
         return Success;
+    }
+
+    private static void PrintCounts(string noun, int inFile, ImportCounts counts)
+    {
+        if (inFile == 0)
+        {
+            return;
+        }
+
+        Console.WriteLine(string.Create(
+            CultureInfo.InvariantCulture,
+            $"Imported {inFile} {noun}: {counts.Created} created, {counts.Updated} updated, {counts.Unchanged} unchanged."));
     }
 }

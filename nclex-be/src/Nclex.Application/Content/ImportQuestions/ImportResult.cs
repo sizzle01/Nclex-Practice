@@ -7,9 +7,21 @@ namespace Nclex.Application.Content.ImportQuestions;
 /// <param name="Issues">Everything wrong with the file.</param>
 public sealed record ImportResult(int Created, int Updated, int Unchanged, IReadOnlyList<ImportIssue> Issues)
 {
+    /// <summary>What happened to the file's question banks.</summary>
+    public ImportCounts Banks { get; init; } = ImportCounts.None;
+
+    /// <summary>What happened to the file's test sets.</summary>
+    public ImportCounts TestSets { get; init; } = ImportCounts.None;
+
     public bool Succeeded => Issues.Count == 0;
 
     public static ImportResult Failed(IReadOnlyList<ImportIssue> issues) => new(0, 0, 0, issues);
+}
+
+/// <summary>How many banks or sets an import created, changed, or found already up to date.</summary>
+public sealed record ImportCounts(int Created, int Updated, int Unchanged)
+{
+    public static ImportCounts None { get; } = new(0, 0, 0);
 }
 
 /// <summary>A problem in an import file.</summary>
@@ -32,6 +44,9 @@ public static class ImportIssueCodes
     /// <summary>The item type has no module yet, so its items can't be validated or graded.</summary>
     public const string UnsupportedItemType = "UNSUPPORTED_ITEM_TYPE";
 
-    /// <summary>The id belongs to an existing question on the other track.</summary>
+    /// <summary>The id belongs to an existing question, bank or set on the other track.</summary>
     public const string TrackMismatch = "TRACK_MISMATCH";
+
+    /// <summary>A bank or set lists a question that is neither in the file nor published on the track.</summary>
+    public const string UnknownQuestion = "UNKNOWN_QUESTION";
 }
