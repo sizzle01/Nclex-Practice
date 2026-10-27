@@ -6,6 +6,7 @@ using Nclex.Api.Errors;
 using Nclex.Api.Health;
 using Nclex.Api.Logging;
 using Nclex.Api.Middleware;
+using Nclex.Api.ModelBinding;
 using Nclex.Api.OpenApi;
 using Nclex.Api.RateLimiting;
 using Nclex.Application;
@@ -36,6 +37,8 @@ try
     builder.Services.AddControllers(options =>
         {
             options.Filters.Add<FluentValidationFilter>();
+            // Query-string enums use the same snake_case names as JSON (api.md section 1).
+            options.ModelBinderProviders.Insert(0, new SnakeCaseEnumModelBinderProvider());
             // FluentValidation owns validation; without this, MVC would also reject missing
             // non-nullable strings itself, with a different error format.
             options.SuppressImplicitRequiredAttributeForNonNullableReferenceTypes = true;
