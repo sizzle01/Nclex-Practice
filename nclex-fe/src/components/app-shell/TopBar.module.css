@@ -1,13 +1,51 @@
 .topBar {
+  position: sticky;
+  top: 0;
+  z-index: 20;
+  border-bottom: 1px solid var(--border);
+  background: color-mix(in srgb, var(--surface) 85%, transparent);
+  backdrop-filter: saturate(180%) blur(12px);
+}
+
+.inner {
   display: flex;
   align-items: center;
   gap: 1rem;
+  max-width: var(--content-width);
+  margin: 0 auto;
   padding: 0.75rem 1.5rem;
-  border-bottom: 1px solid var(--border);
-  background: var(--surface);
 }
 
 .brand {
-  font-weight: 600;
-  font-size: 1.125rem;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.625rem;
+  color: var(--foreground);
+  font-size: 1.0625rem;
+  font-weight: 700;
+  letter-spacing: -0.01em;
+  text-decoration: none;
+  white-space: nowrap;
+}
+
+.brand:hover {
+  color: var(--foreground);
+}
+
+.logo {
+  display: inline-grid;
+  place-items: center;
+  width: 2.25rem;
+  height: 2.25rem;
+  border-radius: var(--radius-sm);
+  background: linear-gradient(135deg, var(--accent), var(--accent-hover));
+  color: var(--accent-foreground);
+  box-shadow: var(--shadow-sm);
+}
+
+@media (max-width: 30rem) {
+  .inner {
+    gap: 0.5rem;
+    padding: 0.625rem 1rem;
+  }
 }

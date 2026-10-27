@@ -1,6 +1,7 @@
 .links {
   display: flex;
-  gap: 1rem;
+  align-items: center;
+  gap: 0.5rem;
   margin-left: auto;
 }
 
@@ -10,27 +11,56 @@
 }
 
 .toggle {
-  font: inherit;
-  padding: 0.375rem 0.75rem;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  max-width: 18rem;
+  padding: 0.25rem 0.75rem 0.25rem 0.25rem;
   border: 1px solid var(--border);
-  border-radius: 0.375rem;
-  background: var(--background);
+  border-radius: var(--radius-full);
+  background: var(--surface);
   color: var(--foreground);
+  font: inherit;
+  font-weight: 500;
   cursor: pointer;
+  transition: border-color 150ms ease;
+}
+
+.toggle:hover {
+  border-color: var(--accent);
+}
+
+.avatar {
+  display: inline-grid;
+  flex: none;
+  place-items: center;
+  width: 2rem;
+  height: 2rem;
+  border-radius: var(--radius-full);
+  background: var(--accent-soft);
+  color: var(--accent-soft-foreground);
+  font-weight: 700;
+}
+
+.name {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
 
 .menu {
   position: absolute;
   right: 0;
-  top: calc(100% + 0.25rem);
-  z-index: 10;
-  min-width: 14rem;
+  top: calc(100% + 0.5rem);
+  z-index: 30;
+  min-width: 15rem;
   margin: 0;
-  padding: 0.25rem;
+  padding: 0.375rem;
   list-style: none;
   border: 1px solid var(--border);
-  border-radius: 0.375rem;
-  background: var(--background);
+  border-radius: var(--radius);
+  background: var(--surface);
+  box-shadow: var(--shadow-lg);
 }
 
 .menu a,
@@ -39,10 +69,11 @@
   width: 100%;
   padding: 0.5rem 0.75rem;
   border: 0;
-  border-radius: 0.25rem;
+  border-radius: var(--radius-sm);
   background: none;
-  color: inherit;
+  color: var(--foreground);
   font: inherit;
+  font-weight: 500;
   text-align: left;
   text-decoration: none;
   cursor: pointer;
@@ -50,5 +81,26 @@
 
 .menu a:hover,
 .menu button:hover {
-  background: var(--surface);
+  background: var(--accent-soft);
+  color: var(--accent-soft-foreground);
+}
+
+/* On small screens only the avatar shows; the name stays available to screen readers. */
+@media (max-width: 30rem) {
+  .links {
+    gap: 0.25rem;
+  }
+
+  .links a {
+    min-height: 2.5rem;
+    padding: 0.5rem 0.75rem;
+  }
+
+  .name {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    clip-path: inset(50%);
+  }
 }

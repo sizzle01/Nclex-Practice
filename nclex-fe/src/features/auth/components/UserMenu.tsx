@@ -3,6 +3,7 @@
 import Link from "next/link";
 import { useRouter } from "next/navigation";
 import { useEffect, useId, useRef, useState } from "react";
+import ui from "@/components/ui/ui.module.css";
 import { useAuth, useMe } from "../AuthProvider";
 import styles from "./UserMenu.module.css";
 
@@ -45,8 +46,12 @@ export function UserMenu() {
   if (status === "anonymous") {
     return (
       <nav aria-label="Account" className={styles.links}>
-        <Link href="/login">Log in</Link>
-        <Link href="/signup">Sign up</Link>
+        <Link href="/login" className={ui.buttonGhost}>
+          Log in
+        </Link>
+        <Link href="/signup" className={ui.button}>
+          Sign up
+        </Link>
       </nav>
     );
   }
@@ -62,6 +67,8 @@ export function UserMenu() {
     }
   }
 
+  const name = me?.displayName ?? me?.email ?? "Account";
+
   return (
     <div ref={containerRef} className={styles.container}>
       <button
@@ -72,7 +79,10 @@ export function UserMenu() {
         aria-controls={menuId}
         onClick={() => setOpen((value) => !value)}
       >
-        {me?.displayName ?? me?.email ?? "Account"} <span aria-hidden="true">▾</span>
+        <span className={styles.avatar} aria-hidden="true">
+          {name.charAt(0).toUpperCase()}
+        </span>
+        <span className={styles.name}>{name}</span> <span aria-hidden="true">▾</span>
       </button>
       {open && (
         <ul id={menuId} className={styles.menu}>
