@@ -1,0 +1,48 @@
+.page {
+  display: grid;
+  gap: 1.5rem;
+  max-width: 40rem;
+  margin: 0 auto;
+}
+
+.page > h1 {
+  margin: 0;
+}
+
+/* Each section is a card with its own heading and form. */
+.section {
+  display: grid;
+  gap: 1rem;
+}
+
+.section h2 {
+  margin: 0;
+  font-size: 1.25rem;
+}
+
+.section p {
+  margin: 0;
+}
+
+.actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+}
+
+/* The deletion card is set apart so it is not mistaken for an everyday setting. */
+.danger {
+  border-color: var(--error);
+}
+
+.dangerButton {
+  background: var(--error);
+  border-color: var(--error);
+  /* Dark mode uses a light red, which needs dark text for contrast. */
+  color: light-dark(#ffffff, #0b1720);
+}
+
+.dangerButton:hover:not(:disabled) {
+  background: var(--error);
+  filter: brightness(0.92);
+}

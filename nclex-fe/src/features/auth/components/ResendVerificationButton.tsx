@@ -3,6 +3,7 @@
 import { useMutation } from "@tanstack/react-query";
 import ui from "@/components/ui/ui.module.css";
 import { isApiError } from "@/lib/api/errors";
+import { describeWait } from "@/lib/format/retryAfter";
 import { resendVerification } from "../api/authApi";
 import styles from "./ResendVerificationButton.module.css";
 
@@ -34,12 +35,7 @@ function resultMessage(status: "idle" | "pending" | "success" | "error", error: 
   if (status === "success") return email ? `We've sent a new link to ${email}.` : "We've sent a new link.";
   if (status !== "error") return "";
   if (isApiError(error, "RATE_LIMITED")) {
-    return `You've asked for several links recently. Try again in ${minutesFrom(error.retryAfterSec)}.`;
+    return `You've asked for several links recently. Try again in ${describeWait(error.retryAfterSec)}.`;
   }
   return "We couldn't send the email. Please try again.";
-}
-
-function minutesFrom(seconds = 60): string {
-  const minutes = Math.max(1, Math.ceil(seconds / 60));
-  return minutes === 1 ? "1 minute" : `${minutes} minutes`;
 }

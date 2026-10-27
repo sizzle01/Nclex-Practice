@@ -24,7 +24,8 @@
   font-weight: 600;
 }
 
-.field input {
+.field input,
+.field select {
   min-height: 2.75rem;
   padding: 0.625rem 0.875rem;
   border: 1px solid var(--border-strong);
@@ -37,12 +38,14 @@
     box-shadow 150ms ease;
 }
 
-.field input:hover {
+.field input:hover,
+.field select:hover {
   border-color: var(--accent);
 }
 
 /* The focus ring is a soft halo plus the global outline, so it stays visible on every surface. */
-.field input:focus-visible {
+.field input:focus-visible,
+.field select:focus-visible {
   border-color: var(--accent);
   box-shadow: 0 0 0 4px var(--accent-soft);
   outline-offset: 0;

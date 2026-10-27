@@ -1,5 +1,6 @@
 import type { FieldValues, Path, UseFormSetError } from "react-hook-form";
 import { type ApiError, isApiError } from "@/lib/api/errors";
+import { describeWait } from "@/lib/format/retryAfter";
 
 // Messages for the per-field codes in a VALIDATION_FAILED body (api.md section 1).
 const fieldCodeMessages: Record<string, string> = {
@@ -8,6 +9,8 @@ const fieldCodeMessages: Record<string, string> = {
   INVALID_VALUE: "Choose one of the options.",
   TOO_SHORT: "This is too short.",
   TOO_LONG: "This is too long.",
+  INCORRECT: "That password isn't right.",
+  UNCHANGED: "This is the same as the current value.",
 };
 
 const fallbackMessage = "Something went wrong. Please try again.";
@@ -22,6 +25,12 @@ export function applyServerErrors<T extends FieldValues>(
   fields: readonly Path<T>[],
 ): string | null {
   if (!isApiError(error)) return fallbackMessage;
+  if (error.code === "ACCOUNT_LOCKED") {
+    return `Too many wrong passwords, so your account is locked for now. Try again in ${describeWait(error.retryAfterSec)}, or reset your password.`;
+  }
+  if (error.code === "RATE_LIMITED") {
+    return `Too many attempts from your network. Try again in ${describeWait(error.retryAfterSec)}.`;
+  }
   if (error.code !== "VALIDATION_FAILED") return error.message || fallbackMessage;
 
   const unplaced = placeFieldErrors(error, setError, fields);

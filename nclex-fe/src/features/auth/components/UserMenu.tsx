@@ -9,7 +9,7 @@ import styles from "./UserMenu.module.css";
 
 /**
  * Top-bar account controls. Signed out: log in / sign up links. Signed in: a button that opens a
- * small menu with "Log out" and "Log out on all devices". It is a disclosure (button plus list of
+ * small menu with links to the dashboard and settings, "Log out" and "Log out on all devices". It is a disclosure (button plus list of
  * buttons) rather than an ARIA menu, so Tab and Enter work as everywhere else; Escape closes it.
  */
 export function UserMenu() {
@@ -89,6 +89,11 @@ export function UserMenu() {
           <li>
             <Link href="/dashboard" onClick={() => setOpen(false)}>
               Dashboard
+            </Link>
+          </li>
+          <li>
+            <Link href="/settings/account" onClick={() => setOpen(false)}>
+              Account settings
             </Link>
           </li>
           <li>

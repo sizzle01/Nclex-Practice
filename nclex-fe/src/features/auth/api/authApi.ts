@@ -64,3 +64,9 @@ export async function resetPassword(body: ResetPasswordRequest): Promise<void> {
   const { error, response } = await apiClient.POST("/api/v1/auth/password/reset", { body });
   if (!response.ok) throw ApiError.from(response, error);
 }
+
+/** POST /auth/email/confirm-change: switches the account to its new email. Fails with INVALID_TOKEN or EMAIL_TAKEN. */
+export async function confirmEmailChange(token: string): Promise<void> {
+  const { error, response } = await apiClient.POST("/api/v1/auth/email/confirm-change", { body: { token } });
+  if (!response.ok) throw ApiError.from(response, error);
+}
