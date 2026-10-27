@@ -11,7 +11,9 @@ namespace Nclex.Api.IntegrationTests.Infrastructure;
 /// Calls the auth endpoints the way the browser does, but handles the refresh cookie by hand so
 /// tests can inspect it and replay old values (for reuse detection).
 /// </summary>
-public sealed class AuthApi(ApiFactory factory)
+/// <param name="factory">The API host to call.</param>
+/// <param name="clientIp">Sent as the client's IP address (see <see cref="TestClientIpStartupFilter"/>); none when null.</param>
+public sealed class AuthApi(WebApplicationFactory<Program> factory, string? clientIp = null)
 {
     public const string Password = "correct-horse-battery";
 
@@ -25,11 +27,15 @@ public sealed class AuthApi(ApiFactory factory)
     /// HTTPS base address, because the refresh cookie is Secure; automatic cookie handling is off
     /// so each test controls exactly which cookie it sends.
     /// </summary>
-    public HttpClient Client { get; } = factory.CreateClient(new WebApplicationFactoryClientOptions
+    public HttpClient Client { get; } = CreateClient(factory, clientIp);
+
+    /// <summary>Signs in with the right password and returns the session.</summary>
+    public async Task<SignedIn> LoginOkAsync(string email, string password)
     {
-        BaseAddress = new Uri("https://localhost"),
-        HandleCookies = false,
-    });
+        var response = await LoginAsync(email, password);
+        response.EnsureSuccessStatusCode();
+        return await SignedIn.FromAsync(response);
+    }
 
     /// <summary>A unique email per call, so tests sharing one database never collide.</summary>
     public static string NewEmail() => $"user-{Guid.NewGuid():N}@example.com";
@@ -96,6 +102,21 @@ public sealed class AuthApi(ApiFactory factory)
         }
 
         return await Client.SendAsync(request, TestContext.Current.CancellationToken);
+    }
+
+    private static HttpClient CreateClient(WebApplicationFactory<Program> factory, string? clientIp)
+    {
+        var client = factory.CreateClient(new WebApplicationFactoryClientOptions
+        {
+            BaseAddress = new Uri("https://localhost"),
+            HandleCookies = false,
+        });
+        if (clientIp is not null)
+        {
+            client.DefaultRequestHeaders.Add(TestClientIpStartupFilter.Header, clientIp);
+        }
+
+        return client;
     }
 
     /// <summary>The Set-Cookie header for the refresh cookie, or null if the response did not set one.</summary>

@@ -63,6 +63,19 @@ public sealed class PasswordResetTests(ApiFactory factory)
     }
 
     [Fact]
+    public async Task Reset_emails_a_password_changed_notice_and_is_audited()
+    {
+        var email = AuthApi.NewEmail();
+        var user = await _api.SignupNewUserAsync(email);
+        var token = await RequestResetTokenAsync(email);
+
+        await _api.PostAsync(ResetPath, new { token, newPassword = NewPassword });
+
+        (await _outbox.ForAsync(email)).Count(m => m.Template == "password_changed").ShouldBe(1);
+        (await new AuditProbe(factory).ActionsForAsync(user.Body.User.Id)).ShouldContain("auth.password_reset");
+    }
+
+    [Fact]
     public async Task Reset_signs_out_every_device_by_default()
     {
         var email = AuthApi.NewEmail();

@@ -61,6 +61,31 @@ public sealed class MigrationTests(ApiFactory factory)
         check.ShouldHaveSingleItem().ShouldContain("'pending'::text, 'sending'::text, 'sent'::text, 'failed'::text");
     }
 
+    [Theory]
+    [InlineData("id", "bigint", "nextval('audit_events_id_seq'::regclass)")]
+    [InlineData("metadata", "jsonb", "'{}'::jsonb")]
+    [InlineData("ip", "inet", null)]
+    [InlineData("created_at", "timestamp with time zone", "now()")]
+    public async Task F03_migration_creates_audit_events_as_in_the_ddl(string column, string type, string? defaultValue)
+    {
+        var rows = await QueryAsync(
+            $"""
+            SELECT data_type || '|' || coalesce(column_default, '') AS "Value" FROM information_schema.columns
+            WHERE table_name = 'audit_events' AND column_name = {column}
+            """);
+
+        rows.ShouldHaveSingleItem().ShouldBe($"{type}|{defaultValue}");
+    }
+
+    [Fact]
+    public async Task F03_migration_indexes_audit_events_by_entity()
+    {
+        var definition = await QueryAsync(
+            $"SELECT indexdef AS \"Value\" FROM pg_indexes WHERE indexname = {"ix_audit_events_entity_type_entity_id"}");
+
+        definition.ShouldHaveSingleItem().ShouldEndWith("(entity_type, entity_id)");
+    }
+
     private async Task<List<string>> QueryAsync(FormattableString sql)
     {
         await using var scope = factory.Services.CreateAsyncScope();

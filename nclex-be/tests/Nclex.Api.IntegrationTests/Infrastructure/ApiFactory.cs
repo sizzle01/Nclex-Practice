@@ -8,17 +8,21 @@ using Nclex.Application.Abstractions;
 using Nclex.Infrastructure.Email;
 using Nclex.Infrastructure.Persistence;
 using Testcontainers.PostgreSql;
+using Testcontainers.Redis;
 
 namespace Nclex.Api.IntegrationTests.Infrastructure;
 
 /// <summary>
 /// Hosts the real API in memory against a throwaway Postgres 16 container.
 /// Shared by the whole test assembly (see AssemblyInfo.cs) so the container starts once.
+/// This host has no Redis; tests that need it (rate limits, lockout) use <see cref="SecurityTestHost"/>,
+/// which points a copy of this host at the Redis container started here.
 /// </summary>
 public sealed class ApiFactory : WebApplicationFactory<Program>, IAsyncLifetime
 {
-    // Nothing listens on port 1, so Redis is always unreachable: tests stay independent of any
-    // Redis on the developer's machine and cover the "Redis down means degraded" rule.
+    // Nothing listens on port 1, so Redis is always unreachable here: tests stay independent of any
+    // Redis on the developer's machine and cover the "Redis down means degraded" rule. It also
+    // keeps rate limits out of tests that log in many times from the same (missing) client IP.
     private const string UnreachableRedis = "127.0.0.1:1,connectTimeout=200";
 
     /// <summary>Signing key for access tokens in tests. Tests use it to forge expired or tampered tokens.</summary>
@@ -28,13 +32,17 @@ public sealed class ApiFactory : WebApplicationFactory<Program>, IAsyncLifetime
     public const string FrontendBaseUrl = "https://app.test";
 
     private readonly PostgreSqlContainer _postgres = new PostgreSqlBuilder("postgres:16").Build();
+    private readonly RedisContainer _redis = new RedisBuilder("redis:7").Build();
 
     /// <summary>Stands in for SMTP when tests run the outbox dispatcher.</summary>
     public FakeEmailSender EmailSender { get; } = new();
 
+    /// <summary>Connection string of the real Redis container, for <see cref="SecurityTestHost"/>.</summary>
+    public string RedisConnectionString => _redis.GetConnectionString();
+
     public async ValueTask InitializeAsync()
     {
-        await _postgres.StartAsync();
+        await Task.WhenAll(_postgres.StartAsync(), _redis.StartAsync());
 
         // Applying the real migrations proves they run cleanly on a fresh database.
         await using var scope = Services.CreateAsyncScope();
@@ -59,6 +67,9 @@ public sealed class ApiFactory : WebApplicationFactory<Program>, IAsyncLifetime
             // The worker's email services, so tests can run OutboxDispatcher against this database.
             services.AddEmailDelivery();
             services.Replace(ServiceDescriptor.Singleton<IEmailSender>(EmailSender));
+
+            // Lets a test choose its client IP address (TestServer has none).
+            services.AddSingleton<IStartupFilter, TestClientIpStartupFilter>();
         });
     }
 
@@ -66,5 +77,6 @@ public sealed class ApiFactory : WebApplicationFactory<Program>, IAsyncLifetime
     {
         await base.DisposeAsync();
         await _postgres.DisposeAsync();
+        await _redis.DisposeAsync();
     }
 }
