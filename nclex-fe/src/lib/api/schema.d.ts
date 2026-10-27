@@ -958,6 +958,63 @@ export interface paths {
         patch?: never;
         trace?: never;
     };
+    "/api/v1/taxonomy": {
+        parameters: {
+            query?: never;
+            header?: never;
+            path?: never;
+            cookie?: never;
+        };
+        get: {
+            parameters: {
+                query?: {
+                    Track?: components["schemas"]["ExamTrack"];
+                };
+                header?: never;
+                path?: never;
+                cookie?: never;
+            };
+            requestBody?: never;
+            responses: {
+                /** @description OK */
+                200: {
+                    headers: {
+                        [name: string]: unknown;
+                    };
+                    content: {
+                        "application/json": components["schemas"]["TaxonomyResponse"];
+                    };
+                };
+                /** @description Bad Request */
+                400: {
+                    headers: {
+                        [name: string]: unknown;
+                    };
+                    content: {
+                        "application/problem+json": components["schemas"]["ProblemDetails"];
+                        "application/json": unknown;
+                    };
+                };
+                /** @description Unauthorized */
+                401: {
+                    headers: {
+                        [name: string]: unknown;
+                    };
+                    content: {
+                        "application/problem+json": components["schemas"]["ProblemDetails"];
+                        "application/json": unknown;
+                    };
+                };
+            };
+        };
+        put?: never;
+        post?: never;
+        delete?: never;
+        options?: never;
+        head?: never;
+        patch?: never;
+        trace?: never;
+    };
 }
 export type webhooks = Record<string, never>;
 export interface components {
@@ -973,6 +1030,12 @@ export interface components {
             /** Format: date-time */
             accessTokenExpiresAt: string;
         };
+        BodySystemInfo: {
+            /** Format: int16 */
+            id: number | string;
+            slug: string;
+            name: string;
+        };
         ChangeEmailRequest: {
             currentPassword: string;
             newEmail: string;
@@ -980,6 +1043,24 @@ export interface components {
         ChangePasswordRequest: {
             currentPassword: string;
             newPassword: string;
+        };
+        /** @enum {unknown} */
+        CjmmSkill: "recognize_cues" | "analyze_cues" | "prioritize_hypotheses" | "generate_solutions" | "take_action" | "evaluate_outcomes";
+        CjmmSkillInfo: {
+            key: components["schemas"]["CjmmSkill"];
+            label: string;
+            prompt: string;
+        };
+        ClientNeedsNode: {
+            /** Format: int16 */
+            id: number | string;
+            code: string;
+            name: string;
+            /** Format: double */
+            weightMin: null | number | string;
+            /** Format: double */
+            weightMax: null | number | string;
+            children: null | components["schemas"]["ClientNeedsNode"][];
         };
         ConfirmEmailChangeRequest: {
             token: string;
@@ -994,6 +1075,13 @@ export interface components {
         };
         /** @enum {unknown} */
         HealthState: "ok" | "degraded" | "unhealthy";
+        /** @enum {unknown} */
+        ItemType: "multiple_choice" | "sata" | "select_n" | "matrix_mc" | "matrix_mr" | "multiple_response_grouping" | "dropdown_cloze" | "dropdown_table" | "dropdown_rationale" | "highlight_text" | "highlight_table" | "fill_blank_calc" | "ordered_response" | "drag_drop_cloze" | "drag_drop_rationale" | "bowtie" | "hotspot";
+        ItemTypeInfo: {
+            type: components["schemas"]["ItemType"];
+            label: string;
+            available: boolean;
+        };
         LivenessResponse: {
             status: components["schemas"]["HealthState"];
         };
@@ -1030,6 +1118,12 @@ export interface components {
             password: string;
             track: null | components["schemas"]["ExamTrack"];
             displayName?: null | string;
+        };
+        TaxonomyResponse: {
+            clientNeeds: components["schemas"]["ClientNeedsNode"][];
+            bodySystems: components["schemas"]["BodySystemInfo"][];
+            itemTypes: components["schemas"]["ItemTypeInfo"][];
+            cjmmSkills: components["schemas"]["CjmmSkillInfo"][];
         };
         UpdateMeRequest: {
             displayName?: null | string;
