@@ -24,8 +24,16 @@ public sealed class ImportQuestionsTests(ApiFactory factory)
         var first = await ImportAsync(file);
         var second = await ImportAsync(QuestionImportFile.Parse(await File.ReadAllTextAsync(SampleFile, TestContext.Current.CancellationToken)));
 
-        first.ShouldBe(new ImportResult(Created: 40, Updated: 0, Unchanged: 0, []), "first import");
-        second.ShouldBe(new ImportResult(Created: 0, Updated: 0, Unchanged: 40, []), "second import");
+        first.ShouldBe(new ImportResult(Created: 40, Updated: 0, Unchanged: 0, [])
+        {
+            Banks = new ImportCounts(1, 0, 0),
+            TestSets = new ImportCounts(3, 0, 0),
+        }, "first import");
+        second.ShouldBe(new ImportResult(Created: 0, Updated: 0, Unchanged: 40, [])
+        {
+            Banks = new ImportCounts(0, 0, 1),
+            TestSets = new ImportCounts(0, 0, 3),
+        }, "second import");
 
         await using var scope = factory.Services.CreateAsyncScope();
         var db = scope.ServiceProvider.GetRequiredService<AppDbContext>();
@@ -47,6 +55,20 @@ public sealed class ImportQuestionsTests(ApiFactory factory)
 
         var questions = await db.Questions.Where(q => ids.Contains(q.Id)).ToListAsync(TestContext.Current.CancellationToken);
         questions.ShouldAllBe(q => versions.Any(v => v.Id == q.CurrentVersionId));
+
+        // F06: the three curated sets of PRD 5.5 and one bank, all built from the file's questions.
+        var sets = await db.TestSets.Where(s => file.TestSets!.Select(t => t.Id).Contains(s.Id))
+            .OrderBy(s => s.Title).ToListAsync(TestContext.Current.CancellationToken);
+        sets.Select(s => (s.Title, s.QuestionCount, s.Mode, s.RevealMode, s.Timed, s.TimeBudgetSec, s.PassThreshold, s.IsSample)).ShouldBe(
+        [
+            ("Comprehensive Challenge 1", 40, TestMode.Challenge, RevealMode.Exam, true, (int?)4800, (decimal?)0.65m, false),
+            ("Comprehensive Practice 1", 40, TestMode.Practice, RevealMode.Tutor, false, null, null, false),
+            ("RN Sample Set", 10, TestMode.Practice, RevealMode.Tutor, false, null, null, true),
+        ]);
+        sets.ShouldAllBe(s => s.Kind == TestSetKind.Prebuilt && s.IsPublished && s.AccessTier == PlanTier.Free && s.Track == ExamTrack.RN);
+        var bank = await db.QuestionBanks.SingleAsync(b => b.Id == file.Banks![0].Id, TestContext.Current.CancellationToken);
+        bank.Name.ShouldBe("RN Sample Bank");
+        (await db.QuestionBankItems.CountAsync(i => i.BankId == bank.Id, TestContext.Current.CancellationToken)).ShouldBe(40);
 
         var importer = await db.Users.SingleAsync(u => u.Email == User.ContentImporterEmail, TestContext.Current.CancellationToken);
         importer.Role.ShouldBe(UserRole.Author);

@@ -28,6 +28,9 @@ public sealed class MigrationTests(ApiFactory factory)
     [InlineData("cjmm_skill", "recognize_cues,analyze_cues,prioritize_hypotheses,generate_solutions,take_action,evaluate_outcomes")]
     [InlineData("version_status", "draft,in_review,approved,published,superseded,rejected")]
     [InlineData("question_status", "active,retired")]
+    [InlineData("test_set_kind", "prebuilt,custom,cat,assigned")]
+    [InlineData("test_mode", "practice,challenge,cat")]
+    [InlineData("reveal_mode", "tutor,exam")]
     public async Task Migrations_create_enums_with_labels_in_ddl_order(string enumName, string labels)
     {
         var actual = await QueryAsync(
@@ -122,6 +125,44 @@ public sealed class MigrationTests(ApiFactory factory)
             $"SELECT (CASE WHEN is_called THEN last_value + 1 ELSE last_value END)::text AS \"Value\" FROM {table}_id_seq"));
 
         next.ShouldHaveSingleItem().ShouldBe(nextId);
+    }
+
+    [Theory]
+    [InlineData("ix_test_sets_track_kind", "(track, kind) WHERE is_published")]
+    [InlineData("ix_test_sets_owner_user_id", "(owner_user_id) WHERE (kind = 'custom'::test_set_kind)")]
+    [InlineData("ix_test_set_items_test_set_id_question_id", "(test_set_id, question_id)")]
+    public async Task F06_migration_creates_the_test_set_indexes(string index, string ending)
+    {
+        var definition = await QueryAsync($"SELECT indexdef AS \"Value\" FROM pg_indexes WHERE indexname = {index}");
+
+        definition.ShouldHaveSingleItem().ShouldEndWith(ending);
+    }
+
+    [Theory]
+    [InlineData("test_sets_check", "CHECK (((kind <> 'custom'::test_set_kind) OR (owner_user_id IS NOT NULL)))")]
+    [InlineData("test_sets_check1", "CHECK (((NOT timed) OR (per_question_sec IS NOT NULL) OR (time_budget_sec IS NOT NULL)))")]
+    public async Task F06_migration_adds_the_test_set_checks(string name, string definition)
+    {
+        var check = await QueryAsync($"SELECT pg_get_constraintdef(oid) AS \"Value\" FROM pg_constraint WHERE conname = {name}");
+
+        check.ShouldHaveSingleItem().ShouldBe(definition);
+    }
+
+    [Theory]
+    [InlineData("mode", "'practice'::test_mode")]
+    [InlineData("reveal_mode", "'tutor'::reveal_mode")]
+    [InlineData("pause_policy", "'{\"maxPauses\": null, \"maxPauseSec\": null}'::jsonb")]
+    [InlineData("allow_back_nav", "true")]
+    [InlineData("pass_threshold", null)]
+    public async Task F06_migration_gives_test_sets_the_ddl_defaults(string column, string? defaultValue)
+    {
+        var rows = await QueryAsync(
+            $"""
+            SELECT coalesce(column_default, '') AS "Value" FROM information_schema.columns
+            WHERE table_name = 'test_sets' AND column_name = {column}
+            """);
+
+        rows.ShouldHaveSingleItem().ShouldBe(defaultValue ?? "");
     }
 
     private async Task<List<string>> QueryAsync(FormattableString sql)
