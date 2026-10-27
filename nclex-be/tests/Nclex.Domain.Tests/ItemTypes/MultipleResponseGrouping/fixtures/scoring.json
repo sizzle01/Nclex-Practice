@@ -1,0 +1,651 @@
+[
+  {
+    "name": "every correct option and nothing else",
+    "content": {
+      "groups": [
+        {
+          "id": "g1",
+          "label": "Medications",
+          "options": [
+            {
+              "id": "a",
+              "text": "Medication A"
+            },
+            {
+              "id": "b",
+              "text": "Medication B"
+            },
+            {
+              "id": "c",
+              "text": "Medication C"
+            },
+            {
+              "id": "d",
+              "text": "Medication D"
+            }
+          ]
+        },
+        {
+          "id": "g2",
+          "label": "Interventions",
+          "options": [
+            {
+              "id": "e",
+              "text": "Intervention E"
+            },
+            {
+              "id": "f",
+              "text": "Intervention F"
+            },
+            {
+              "id": "g",
+              "text": "Intervention G"
+            }
+          ]
+        },
+        {
+          "id": "g3",
+          "label": "Laboratory tests",
+          "options": [
+            {
+              "id": "h",
+              "text": "Test H"
+            },
+            {
+              "id": "i",
+              "text": "Test I"
+            },
+            {
+              "id": "j",
+              "text": "Test J"
+            }
+          ]
+        }
+      ]
+    },
+    "key": {
+      "byGroup": {
+        "g1": [
+          "a",
+          "c"
+        ],
+        "g2": [
+          "f"
+        ],
+        "g3": [
+          "h",
+          "j"
+        ]
+      }
+    },
+    "response": {
+      "byGroup": {
+        "g1": [
+          "a",
+          "c"
+        ],
+        "g2": [
+          "f"
+        ],
+        "g3": [
+          "h",
+          "j"
+        ]
+      }
+    },
+    "expectedPoints": 5
+  },
+  {
+    "name": "a wrong pick cancels a right one in the same group",
+    "content": {
+      "groups": [
+        {
+          "id": "g1",
+          "label": "Medications",
+          "options": [
+            {
+              "id": "a",
+              "text": "Medication A"
+            },
+            {
+              "id": "b",
+              "text": "Medication B"
+            },
+            {
+              "id": "c",
+              "text": "Medication C"
+            },
+            {
+              "id": "d",
+              "text": "Medication D"
+            }
+          ]
+        },
+        {
+          "id": "g2",
+          "label": "Interventions",
+          "options": [
+            {
+              "id": "e",
+              "text": "Intervention E"
+            },
+            {
+              "id": "f",
+              "text": "Intervention F"
+            },
+            {
+              "id": "g",
+              "text": "Intervention G"
+            }
+          ]
+        },
+        {
+          "id": "g3",
+          "label": "Laboratory tests",
+          "options": [
+            {
+              "id": "h",
+              "text": "Test H"
+            },
+            {
+              "id": "i",
+              "text": "Test I"
+            },
+            {
+              "id": "j",
+              "text": "Test J"
+            }
+          ]
+        }
+      ]
+    },
+    "key": {
+      "byGroup": {
+        "g1": [
+          "a",
+          "c"
+        ],
+        "g2": [
+          "f"
+        ],
+        "g3": [
+          "h",
+          "j"
+        ]
+      }
+    },
+    "response": {
+      "byGroup": {
+        "g1": [
+          "a",
+          "b"
+        ],
+        "g2": [
+          "f"
+        ],
+        "g3": [
+          "h",
+          "j"
+        ]
+      }
+    },
+    "expectedPoints": 3
+  },
+  {
+    "name": "floor is per group: groups 1 and 2 below zero do not reduce group 3",
+    "content": {
+      "groups": [
+        {
+          "id": "g1",
+          "label": "Medications",
+          "options": [
+            {
+              "id": "a",
+              "text": "Medication A"
+            },
+            {
+              "id": "b",
+              "text": "Medication B"
+            },
+            {
+              "id": "c",
+              "text": "Medication C"
+            },
+            {
+              "id": "d",
+              "text": "Medication D"
+            }
+          ]
+        },
+        {
+          "id": "g2",
+          "label": "Interventions",
+          "options": [
+            {
+              "id": "e",
+              "text": "Intervention E"
+            },
+            {
+              "id": "f",
+              "text": "Intervention F"
+            },
+            {
+              "id": "g",
+              "text": "Intervention G"
+            }
+          ]
+        },
+        {
+          "id": "g3",
+          "label": "Laboratory tests",
+          "options": [
+            {
+              "id": "h",
+              "text": "Test H"
+            },
+            {
+              "id": "i",
+              "text": "Test I"
+            },
+            {
+              "id": "j",
+              "text": "Test J"
+            }
+          ]
+        }
+      ]
+    },
+    "key": {
+      "byGroup": {
+        "g1": [
+          "a",
+          "c"
+        ],
+        "g2": [
+          "f"
+        ],
+        "g3": [
+          "h",
+          "j"
+        ]
+      }
+    },
+    "response": {
+      "byGroup": {
+        "g1": [
+          "b",
+          "d"
+        ],
+        "g2": [
+          "e",
+          "f",
+          "g"
+        ],
+        "g3": [
+          "h",
+          "j"
+        ]
+      }
+    },
+    "expectedPoints": 2
+  },
+  {
+    "name": "correct options only, some missed",
+    "content": {
+      "groups": [
+        {
+          "id": "g1",
+          "label": "Medications",
+          "options": [
+            {
+              "id": "a",
+              "text": "Medication A"
+            },
+            {
+              "id": "b",
+              "text": "Medication B"
+            },
+            {
+              "id": "c",
+              "text": "Medication C"
+            },
+            {
+              "id": "d",
+              "text": "Medication D"
+            }
+          ]
+        },
+        {
+          "id": "g2",
+          "label": "Interventions",
+          "options": [
+            {
+              "id": "e",
+              "text": "Intervention E"
+            },
+            {
+              "id": "f",
+              "text": "Intervention F"
+            },
+            {
+              "id": "g",
+              "text": "Intervention G"
+            }
+          ]
+        },
+        {
+          "id": "g3",
+          "label": "Laboratory tests",
+          "options": [
+            {
+              "id": "h",
+              "text": "Test H"
+            },
+            {
+              "id": "i",
+              "text": "Test I"
+            },
+            {
+              "id": "j",
+              "text": "Test J"
+            }
+          ]
+        }
+      ]
+    },
+    "key": {
+      "byGroup": {
+        "g1": [
+          "a",
+          "c"
+        ],
+        "g2": [
+          "f"
+        ],
+        "g3": [
+          "h",
+          "j"
+        ]
+      }
+    },
+    "response": {
+      "byGroup": {
+        "g1": [
+          "c"
+        ],
+        "g2": [],
+        "g3": [
+          "h"
+        ]
+      }
+    },
+    "expectedPoints": 2
+  },
+  {
+    "name": "every option selected in every group",
+    "content": {
+      "groups": [
+        {
+          "id": "g1",
+          "label": "Medications",
+          "options": [
+            {
+              "id": "a",
+              "text": "Medication A"
+            },
+            {
+              "id": "b",
+              "text": "Medication B"
+            },
+            {
+              "id": "c",
+              "text": "Medication C"
+            },
+            {
+              "id": "d",
+              "text": "Medication D"
+            }
+          ]
+        },
+        {
+          "id": "g2",
+          "label": "Interventions",
+          "options": [
+            {
+              "id": "e",
+              "text": "Intervention E"
+            },
+            {
+              "id": "f",
+              "text": "Intervention F"
+            },
+            {
+              "id": "g",
+              "text": "Intervention G"
+            }
+          ]
+        },
+        {
+          "id": "g3",
+          "label": "Laboratory tests",
+          "options": [
+            {
+              "id": "h",
+              "text": "Test H"
+            },
+            {
+              "id": "i",
+              "text": "Test I"
+            },
+            {
+              "id": "j",
+              "text": "Test J"
+            }
+          ]
+        }
+      ]
+    },
+    "key": {
+      "byGroup": {
+        "g1": [
+          "a",
+          "c"
+        ],
+        "g2": [
+          "f"
+        ],
+        "g3": [
+          "h",
+          "j"
+        ]
+      }
+    },
+    "response": {
+      "byGroup": {
+        "g1": [
+          "a",
+          "b",
+          "c",
+          "d"
+        ],
+        "g2": [
+          "e",
+          "f",
+          "g"
+        ],
+        "g3": [
+          "h",
+          "i",
+          "j"
+        ]
+      }
+    },
+    "expectedPoints": 1
+  },
+  {
+    "name": "nothing selected",
+    "content": {
+      "groups": [
+        {
+          "id": "g1",
+          "label": "Medications",
+          "options": [
+            {
+              "id": "a",
+              "text": "Medication A"
+            },
+            {
+              "id": "b",
+              "text": "Medication B"
+            },
+            {
+              "id": "c",
+              "text": "Medication C"
+            },
+            {
+              "id": "d",
+              "text": "Medication D"
+            }
+          ]
+        },
+        {
+          "id": "g2",
+          "label": "Interventions",
+          "options": [
+            {
+              "id": "e",
+              "text": "Intervention E"
+            },
+            {
+              "id": "f",
+              "text": "Intervention F"
+            },
+            {
+              "id": "g",
+              "text": "Intervention G"
+            }
+          ]
+        },
+        {
+          "id": "g3",
+          "label": "Laboratory tests",
+          "options": [
+            {
+              "id": "h",
+              "text": "Test H"
+            },
+            {
+              "id": "i",
+              "text": "Test I"
+            },
+            {
+              "id": "j",
+              "text": "Test J"
+            }
+          ]
+        }
+      ]
+    },
+    "key": {
+      "byGroup": {
+        "g1": [
+          "a",
+          "c"
+        ],
+        "g2": [
+          "f"
+        ],
+        "g3": [
+          "h",
+          "j"
+        ]
+      }
+    },
+    "response": {
+      "byGroup": {}
+    },
+    "expectedPoints": 0
+  },
+  {
+    "name": "no response (blank or timed out)",
+    "content": {
+      "groups": [
+        {
+          "id": "g1",
+          "label": "Medications",
+          "options": [
+            {
+              "id": "a",
+              "text": "Medication A"
+            },
+            {
+              "id": "b",
+              "text": "Medication B"
+            },
+            {
+              "id": "c",
+              "text": "Medication C"
+            },
+            {
+              "id": "d",
+              "text": "Medication D"
+            }
+          ]
+        },
+        {
+          "id": "g2",
+          "label": "Interventions",
+          "options": [
+            {
+              "id": "e",
+              "text": "Intervention E"
+            },
+            {
+              "id": "f",
+              "text": "Intervention F"
+            },
+            {
+              "id": "g",
+              "text": "Intervention G"
+            }
+          ]
+        },
+        {
+          "id": "g3",
+          "label": "Laboratory tests",
+          "options": [
+            {
+              "id": "h",
+              "text": "Test H"
+            },
+            {
+              "id": "i",
+              "text": "Test I"
+            },
+            {
+              "id": "j",
+              "text": "Test J"
+            }
+          ]
+        }
+      ]
+    },
+    "key": {
+      "byGroup": {
+        "g1": [
+          "a",
+          "c"
+        ],
+        "g2": [
+          "f"
+        ],
+        "g3": [
+          "h",
+          "j"
+        ]
+      }
+    },
+    "response": null,
+    "expectedPoints": 0
+  }
+]

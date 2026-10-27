@@ -1,0 +1,362 @@
+[
+  {
+    "name": "all_or_nothing: the correct order",
+    "content": {
+      "items": [
+        {
+          "id": "a",
+          "text": "Perform hand hygiene"
+        },
+        {
+          "id": "b",
+          "text": "Identify the client"
+        },
+        {
+          "id": "c",
+          "text": "Explain the procedure"
+        },
+        {
+          "id": "d",
+          "text": "Put on gloves"
+        },
+        {
+          "id": "e",
+          "text": "Assess the site"
+        }
+      ]
+    },
+    "key": {
+      "order": [
+        "c",
+        "a",
+        "e",
+        "b",
+        "d"
+      ],
+      "scoring": "all_or_nothing"
+    },
+    "response": {
+      "order": [
+        "c",
+        "a",
+        "e",
+        "b",
+        "d"
+      ]
+    },
+    "expectedPoints": 1
+  },
+  {
+    "name": "all_or_nothing: one swap scores 0",
+    "content": {
+      "items": [
+        {
+          "id": "a",
+          "text": "Perform hand hygiene"
+        },
+        {
+          "id": "b",
+          "text": "Identify the client"
+        },
+        {
+          "id": "c",
+          "text": "Explain the procedure"
+        },
+        {
+          "id": "d",
+          "text": "Put on gloves"
+        },
+        {
+          "id": "e",
+          "text": "Assess the site"
+        }
+      ]
+    },
+    "key": {
+      "order": [
+        "c",
+        "a",
+        "e",
+        "b",
+        "d"
+      ],
+      "scoring": "all_or_nothing"
+    },
+    "response": {
+      "order": [
+        "a",
+        "c",
+        "e",
+        "b",
+        "d"
+      ]
+    },
+    "expectedPoints": 0
+  },
+  {
+    "name": "all_or_nothing: no response",
+    "content": {
+      "items": [
+        {
+          "id": "a",
+          "text": "Perform hand hygiene"
+        },
+        {
+          "id": "b",
+          "text": "Identify the client"
+        },
+        {
+          "id": "c",
+          "text": "Explain the procedure"
+        },
+        {
+          "id": "d",
+          "text": "Put on gloves"
+        },
+        {
+          "id": "e",
+          "text": "Assess the site"
+        }
+      ]
+    },
+    "key": {
+      "order": [
+        "c",
+        "a",
+        "e",
+        "b",
+        "d"
+      ],
+      "scoring": "all_or_nothing"
+    },
+    "response": null,
+    "expectedPoints": 0
+  },
+  {
+    "name": "per_position: the correct order",
+    "content": {
+      "items": [
+        {
+          "id": "a",
+          "text": "Perform hand hygiene"
+        },
+        {
+          "id": "b",
+          "text": "Identify the client"
+        },
+        {
+          "id": "c",
+          "text": "Explain the procedure"
+        },
+        {
+          "id": "d",
+          "text": "Put on gloves"
+        },
+        {
+          "id": "e",
+          "text": "Assess the site"
+        }
+      ]
+    },
+    "key": {
+      "order": [
+        "c",
+        "a",
+        "e",
+        "b",
+        "d"
+      ],
+      "scoring": "per_position"
+    },
+    "response": {
+      "order": [
+        "c",
+        "a",
+        "e",
+        "b",
+        "d"
+      ]
+    },
+    "expectedPoints": 5
+  },
+  {
+    "name": "per_position: first two swapped",
+    "content": {
+      "items": [
+        {
+          "id": "a",
+          "text": "Perform hand hygiene"
+        },
+        {
+          "id": "b",
+          "text": "Identify the client"
+        },
+        {
+          "id": "c",
+          "text": "Explain the procedure"
+        },
+        {
+          "id": "d",
+          "text": "Put on gloves"
+        },
+        {
+          "id": "e",
+          "text": "Assess the site"
+        }
+      ]
+    },
+    "key": {
+      "order": [
+        "c",
+        "a",
+        "e",
+        "b",
+        "d"
+      ],
+      "scoring": "per_position"
+    },
+    "response": {
+      "order": [
+        "a",
+        "c",
+        "e",
+        "b",
+        "d"
+      ]
+    },
+    "expectedPoints": 3
+  },
+  {
+    "name": "per_position: reversed keeps only the middle item",
+    "content": {
+      "items": [
+        {
+          "id": "a",
+          "text": "Perform hand hygiene"
+        },
+        {
+          "id": "b",
+          "text": "Identify the client"
+        },
+        {
+          "id": "c",
+          "text": "Explain the procedure"
+        },
+        {
+          "id": "d",
+          "text": "Put on gloves"
+        },
+        {
+          "id": "e",
+          "text": "Assess the site"
+        }
+      ]
+    },
+    "key": {
+      "order": [
+        "c",
+        "a",
+        "e",
+        "b",
+        "d"
+      ],
+      "scoring": "per_position"
+    },
+    "response": {
+      "order": [
+        "d",
+        "b",
+        "e",
+        "a",
+        "c"
+      ]
+    },
+    "expectedPoints": 1
+  },
+  {
+    "name": "per_position: every item one place off",
+    "content": {
+      "items": [
+        {
+          "id": "a",
+          "text": "Perform hand hygiene"
+        },
+        {
+          "id": "b",
+          "text": "Identify the client"
+        },
+        {
+          "id": "c",
+          "text": "Explain the procedure"
+        },
+        {
+          "id": "d",
+          "text": "Put on gloves"
+        },
+        {
+          "id": "e",
+          "text": "Assess the site"
+        }
+      ]
+    },
+    "key": {
+      "order": [
+        "c",
+        "a",
+        "e",
+        "b",
+        "d"
+      ],
+      "scoring": "per_position"
+    },
+    "response": {
+      "order": [
+        "a",
+        "e",
+        "b",
+        "d",
+        "c"
+      ]
+    },
+    "expectedPoints": 0
+  },
+  {
+    "name": "per_position: no response",
+    "content": {
+      "items": [
+        {
+          "id": "a",
+          "text": "Perform hand hygiene"
+        },
+        {
+          "id": "b",
+          "text": "Identify the client"
+        },
+        {
+          "id": "c",
+          "text": "Explain the procedure"
+        },
+        {
+          "id": "d",
+          "text": "Put on gloves"
+        },
+        {
+          "id": "e",
+          "text": "Assess the site"
+        }
+      ]
+    },
+    "key": {
+      "order": [
+        "c",
+        "a",
+        "e",
+        "b",
+        "d"
+      ],
+      "scoring": "per_position"
+    },
+    "response": null,
+    "expectedPoints": 0
+  }
+]

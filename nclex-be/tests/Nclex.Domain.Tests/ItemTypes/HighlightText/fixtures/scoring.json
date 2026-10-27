@@ -1,0 +1,379 @@
+[
+  {
+    "name": "exactly the correct segments",
+    "content": {
+      "segments": [
+        {
+          "id": "s1",
+          "text": "The client reports ",
+          "selectable": false
+        },
+        {
+          "id": "s2",
+          "text": "chest pain radiating to the left arm",
+          "selectable": true
+        },
+        {
+          "id": "s3",
+          "text": ", ",
+          "selectable": false
+        },
+        {
+          "id": "s4",
+          "text": "a heart rate of 72/min",
+          "selectable": true
+        },
+        {
+          "id": "s5",
+          "text": " and diaphoresis",
+          "selectable": true
+        },
+        {
+          "id": "s6",
+          "text": ". ",
+          "selectable": false
+        },
+        {
+          "id": "s7",
+          "text": "Lungs are clear.",
+          "selectable": true
+        }
+      ]
+    },
+    "key": {
+      "correct": [
+        "s2",
+        "s5"
+      ]
+    },
+    "response": {
+      "selected": [
+        "s2",
+        "s5"
+      ]
+    },
+    "expectedPoints": 2
+  },
+  {
+    "name": "one correct segment only",
+    "content": {
+      "segments": [
+        {
+          "id": "s1",
+          "text": "The client reports ",
+          "selectable": false
+        },
+        {
+          "id": "s2",
+          "text": "chest pain radiating to the left arm",
+          "selectable": true
+        },
+        {
+          "id": "s3",
+          "text": ", ",
+          "selectable": false
+        },
+        {
+          "id": "s4",
+          "text": "a heart rate of 72/min",
+          "selectable": true
+        },
+        {
+          "id": "s5",
+          "text": " and diaphoresis",
+          "selectable": true
+        },
+        {
+          "id": "s6",
+          "text": ". ",
+          "selectable": false
+        },
+        {
+          "id": "s7",
+          "text": "Lungs are clear.",
+          "selectable": true
+        }
+      ]
+    },
+    "key": {
+      "correct": [
+        "s2",
+        "s5"
+      ]
+    },
+    "response": {
+      "selected": [
+        "s5"
+      ]
+    },
+    "expectedPoints": 1
+  },
+  {
+    "name": "both correct plus one wrong",
+    "content": {
+      "segments": [
+        {
+          "id": "s1",
+          "text": "The client reports ",
+          "selectable": false
+        },
+        {
+          "id": "s2",
+          "text": "chest pain radiating to the left arm",
+          "selectable": true
+        },
+        {
+          "id": "s3",
+          "text": ", ",
+          "selectable": false
+        },
+        {
+          "id": "s4",
+          "text": "a heart rate of 72/min",
+          "selectable": true
+        },
+        {
+          "id": "s5",
+          "text": " and diaphoresis",
+          "selectable": true
+        },
+        {
+          "id": "s6",
+          "text": ". ",
+          "selectable": false
+        },
+        {
+          "id": "s7",
+          "text": "Lungs are clear.",
+          "selectable": true
+        }
+      ]
+    },
+    "key": {
+      "correct": [
+        "s2",
+        "s5"
+      ]
+    },
+    "response": {
+      "selected": [
+        "s2",
+        "s5",
+        "s7"
+      ]
+    },
+    "expectedPoints": 1
+  },
+  {
+    "name": "one correct and one wrong cancel out",
+    "content": {
+      "segments": [
+        {
+          "id": "s1",
+          "text": "The client reports ",
+          "selectable": false
+        },
+        {
+          "id": "s2",
+          "text": "chest pain radiating to the left arm",
+          "selectable": true
+        },
+        {
+          "id": "s3",
+          "text": ", ",
+          "selectable": false
+        },
+        {
+          "id": "s4",
+          "text": "a heart rate of 72/min",
+          "selectable": true
+        },
+        {
+          "id": "s5",
+          "text": " and diaphoresis",
+          "selectable": true
+        },
+        {
+          "id": "s6",
+          "text": ". ",
+          "selectable": false
+        },
+        {
+          "id": "s7",
+          "text": "Lungs are clear.",
+          "selectable": true
+        }
+      ]
+    },
+    "key": {
+      "correct": [
+        "s2",
+        "s5"
+      ]
+    },
+    "response": {
+      "selected": [
+        "s2",
+        "s4"
+      ]
+    },
+    "expectedPoints": 0
+  },
+  {
+    "name": "only wrong segments: floor at 0",
+    "content": {
+      "segments": [
+        {
+          "id": "s1",
+          "text": "The client reports ",
+          "selectable": false
+        },
+        {
+          "id": "s2",
+          "text": "chest pain radiating to the left arm",
+          "selectable": true
+        },
+        {
+          "id": "s3",
+          "text": ", ",
+          "selectable": false
+        },
+        {
+          "id": "s4",
+          "text": "a heart rate of 72/min",
+          "selectable": true
+        },
+        {
+          "id": "s5",
+          "text": " and diaphoresis",
+          "selectable": true
+        },
+        {
+          "id": "s6",
+          "text": ". ",
+          "selectable": false
+        },
+        {
+          "id": "s7",
+          "text": "Lungs are clear.",
+          "selectable": true
+        }
+      ]
+    },
+    "key": {
+      "correct": [
+        "s2",
+        "s5"
+      ]
+    },
+    "response": {
+      "selected": [
+        "s4",
+        "s7"
+      ]
+    },
+    "expectedPoints": 0
+  },
+  {
+    "name": "nothing highlighted",
+    "content": {
+      "segments": [
+        {
+          "id": "s1",
+          "text": "The client reports ",
+          "selectable": false
+        },
+        {
+          "id": "s2",
+          "text": "chest pain radiating to the left arm",
+          "selectable": true
+        },
+        {
+          "id": "s3",
+          "text": ", ",
+          "selectable": false
+        },
+        {
+          "id": "s4",
+          "text": "a heart rate of 72/min",
+          "selectable": true
+        },
+        {
+          "id": "s5",
+          "text": " and diaphoresis",
+          "selectable": true
+        },
+        {
+          "id": "s6",
+          "text": ". ",
+          "selectable": false
+        },
+        {
+          "id": "s7",
+          "text": "Lungs are clear.",
+          "selectable": true
+        }
+      ]
+    },
+    "key": {
+      "correct": [
+        "s2",
+        "s5"
+      ]
+    },
+    "response": {
+      "selected": []
+    },
+    "expectedPoints": 0
+  },
+  {
+    "name": "no response (blank or timed out)",
+    "content": {
+      "segments": [
+        {
+          "id": "s1",
+          "text": "The client reports ",
+          "selectable": false
+        },
+        {
+          "id": "s2",
+          "text": "chest pain radiating to the left arm",
+          "selectable": true
+        },
+        {
+          "id": "s3",
+          "text": ", ",
+          "selectable": false
+        },
+        {
+          "id": "s4",
+          "text": "a heart rate of 72/min",
+          "selectable": true
+        },
+        {
+          "id": "s5",
+          "text": " and diaphoresis",
+          "selectable": true
+        },
+        {
+          "id": "s6",
+          "text": ". ",
+          "selectable": false
+        },
+        {
+          "id": "s7",
+          "text": "Lungs are clear.",
+          "selectable": true
+        }
+      ]
+    },
+    "key": {
+      "correct": [
+        "s2",
+        "s5"
+      ]
+    },
+    "response": null,
+    "expectedPoints": 0
+  }
+]

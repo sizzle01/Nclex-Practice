@@ -1,0 +1,236 @@
+[
+  {
+    "name": "exact: the right number",
+    "content": {
+      "unit": "mL/hr",
+      "decimals": 0,
+      "inputLabel": "Infusion rate"
+    },
+    "key": {
+      "value": 125,
+      "rounding": "exact"
+    },
+    "response": {
+      "value": "125"
+    },
+    "expectedPoints": 1
+  },
+  {
+    "name": "exact: trailing zeros are the same number",
+    "content": {
+      "unit": "mL/hr",
+      "decimals": 0,
+      "inputLabel": "Infusion rate"
+    },
+    "key": {
+      "value": 125,
+      "rounding": "exact"
+    },
+    "response": {
+      "value": "125.0"
+    },
+    "expectedPoints": 1
+  },
+  {
+    "name": "exact: surrounding spaces are ignored",
+    "content": {
+      "unit": "mL/hr",
+      "decimals": 0,
+      "inputLabel": "Infusion rate"
+    },
+    "key": {
+      "value": 125,
+      "rounding": "exact"
+    },
+    "response": {
+      "value": "  125 "
+    },
+    "expectedPoints": 1
+  },
+  {
+    "name": "exact: a different number",
+    "content": {
+      "unit": "mL/hr",
+      "decimals": 0,
+      "inputLabel": "Infusion rate"
+    },
+    "key": {
+      "value": 125,
+      "rounding": "exact"
+    },
+    "response": {
+      "value": "124"
+    },
+    "expectedPoints": 0
+  },
+  {
+    "name": "round: 41.7 matches 41.666666 at 1 decimal",
+    "content": {
+      "unit": "mg",
+      "decimals": 1
+    },
+    "key": {
+      "value": 41.666666,
+      "rounding": "round"
+    },
+    "response": {
+      "value": "41.7"
+    },
+    "expectedPoints": 1
+  },
+  {
+    "name": "round: 41.6 does not",
+    "content": {
+      "unit": "mg",
+      "decimals": 1
+    },
+    "key": {
+      "value": 41.666666,
+      "rounding": "round"
+    },
+    "response": {
+      "value": "41.6"
+    },
+    "expectedPoints": 0
+  },
+  {
+    "name": "round: half rounds away from zero (0.25 to 0.3)",
+    "content": {
+      "unit": "mg",
+      "decimals": 1
+    },
+    "key": {
+      "value": 0.25,
+      "rounding": "round"
+    },
+    "response": {
+      "value": "0.3"
+    },
+    "expectedPoints": 1
+  },
+  {
+    "name": "round: banker's rounding result (0.2) is wrong",
+    "content": {
+      "unit": "mg",
+      "decimals": 1
+    },
+    "key": {
+      "value": 0.25,
+      "rounding": "round"
+    },
+    "response": {
+      "value": "0.2"
+    },
+    "expectedPoints": 0
+  },
+  {
+    "name": "tolerance: inside the range",
+    "content": {
+      "unit": "mg",
+      "decimals": 1
+    },
+    "key": {
+      "value": 2.5,
+      "tolerance": 0.1,
+      "rounding": "exact"
+    },
+    "response": {
+      "value": "2.58"
+    },
+    "expectedPoints": 1
+  },
+  {
+    "name": "tolerance: exactly on the edge counts",
+    "content": {
+      "unit": "mg",
+      "decimals": 1
+    },
+    "key": {
+      "value": 2.5,
+      "tolerance": 0.1,
+      "rounding": "exact"
+    },
+    "response": {
+      "value": "2.6"
+    },
+    "expectedPoints": 1
+  },
+  {
+    "name": "tolerance: outside the range",
+    "content": {
+      "unit": "mg",
+      "decimals": 1
+    },
+    "key": {
+      "value": 2.5,
+      "tolerance": 0.1,
+      "rounding": "exact"
+    },
+    "response": {
+      "value": "2.65"
+    },
+    "expectedPoints": 0
+  },
+  {
+    "name": "a decimal comma is not a number",
+    "content": {
+      "unit": "mL/hr",
+      "decimals": 0,
+      "inputLabel": "Infusion rate"
+    },
+    "key": {
+      "value": 125,
+      "rounding": "exact"
+    },
+    "response": {
+      "value": "12,5"
+    },
+    "expectedPoints": 0
+  },
+  {
+    "name": "a unit in the box is not a number",
+    "content": {
+      "unit": "mL/hr",
+      "decimals": 0,
+      "inputLabel": "Infusion rate"
+    },
+    "key": {
+      "value": 125,
+      "rounding": "exact"
+    },
+    "response": {
+      "value": "125 mL"
+    },
+    "expectedPoints": 0
+  },
+  {
+    "name": "empty box",
+    "content": {
+      "unit": "mL/hr",
+      "decimals": 0,
+      "inputLabel": "Infusion rate"
+    },
+    "key": {
+      "value": 125,
+      "rounding": "exact"
+    },
+    "response": {
+      "value": ""
+    },
+    "expectedPoints": 0
+  },
+  {
+    "name": "no response (blank or timed out)",
+    "content": {
+      "unit": "mL/hr",
+      "decimals": 0,
+      "inputLabel": "Infusion rate"
+    },
+    "key": {
+      "value": 125,
+      "rounding": "exact"
+    },
+    "response": null,
+    "expectedPoints": 0
+  }
+]

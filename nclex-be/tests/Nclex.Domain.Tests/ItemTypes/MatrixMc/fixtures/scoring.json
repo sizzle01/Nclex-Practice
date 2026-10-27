@@ -1,0 +1,312 @@
+[
+  {
+    "name": "every row correct",
+    "content": {
+      "rows": [
+        {
+          "id": "r1",
+          "text": "Finding 1"
+        },
+        {
+          "id": "r2",
+          "text": "Finding 2"
+        },
+        {
+          "id": "r3",
+          "text": "Finding 3"
+        },
+        {
+          "id": "r4",
+          "text": "Finding 4"
+        }
+      ],
+      "columns": [
+        {
+          "id": "c1",
+          "text": "Indicated"
+        },
+        {
+          "id": "c2",
+          "text": "Contraindicated"
+        },
+        {
+          "id": "c3",
+          "text": "Non-essential"
+        }
+      ]
+    },
+    "key": {
+      "byRow": {
+        "r1": "c1",
+        "r2": "c2",
+        "r3": "c3",
+        "r4": "c1"
+      }
+    },
+    "response": {
+      "byRow": {
+        "r1": "c1",
+        "r2": "c2",
+        "r3": "c3",
+        "r4": "c1"
+      }
+    },
+    "expectedPoints": 4
+  },
+  {
+    "name": "two rows correct, two wrong",
+    "content": {
+      "rows": [
+        {
+          "id": "r1",
+          "text": "Finding 1"
+        },
+        {
+          "id": "r2",
+          "text": "Finding 2"
+        },
+        {
+          "id": "r3",
+          "text": "Finding 3"
+        },
+        {
+          "id": "r4",
+          "text": "Finding 4"
+        }
+      ],
+      "columns": [
+        {
+          "id": "c1",
+          "text": "Indicated"
+        },
+        {
+          "id": "c2",
+          "text": "Contraindicated"
+        },
+        {
+          "id": "c3",
+          "text": "Non-essential"
+        }
+      ]
+    },
+    "key": {
+      "byRow": {
+        "r1": "c1",
+        "r2": "c2",
+        "r3": "c3",
+        "r4": "c1"
+      }
+    },
+    "response": {
+      "byRow": {
+        "r1": "c1",
+        "r2": "c1",
+        "r3": "c3",
+        "r4": "c2"
+      }
+    },
+    "expectedPoints": 2
+  },
+  {
+    "name": "every row wrong",
+    "content": {
+      "rows": [
+        {
+          "id": "r1",
+          "text": "Finding 1"
+        },
+        {
+          "id": "r2",
+          "text": "Finding 2"
+        },
+        {
+          "id": "r3",
+          "text": "Finding 3"
+        },
+        {
+          "id": "r4",
+          "text": "Finding 4"
+        }
+      ],
+      "columns": [
+        {
+          "id": "c1",
+          "text": "Indicated"
+        },
+        {
+          "id": "c2",
+          "text": "Contraindicated"
+        },
+        {
+          "id": "c3",
+          "text": "Non-essential"
+        }
+      ]
+    },
+    "key": {
+      "byRow": {
+        "r1": "c1",
+        "r2": "c2",
+        "r3": "c3",
+        "r4": "c1"
+      }
+    },
+    "response": {
+      "byRow": {
+        "r1": "c2",
+        "r2": "c1",
+        "r3": "c1",
+        "r4": "c3"
+      }
+    },
+    "expectedPoints": 0
+  },
+  {
+    "name": "one row answered correctly, one null, the rest absent",
+    "content": {
+      "rows": [
+        {
+          "id": "r1",
+          "text": "Finding 1"
+        },
+        {
+          "id": "r2",
+          "text": "Finding 2"
+        },
+        {
+          "id": "r3",
+          "text": "Finding 3"
+        },
+        {
+          "id": "r4",
+          "text": "Finding 4"
+        }
+      ],
+      "columns": [
+        {
+          "id": "c1",
+          "text": "Indicated"
+        },
+        {
+          "id": "c2",
+          "text": "Contraindicated"
+        },
+        {
+          "id": "c3",
+          "text": "Non-essential"
+        }
+      ]
+    },
+    "key": {
+      "byRow": {
+        "r1": "c1",
+        "r2": "c2",
+        "r3": "c3",
+        "r4": "c1"
+      }
+    },
+    "response": {
+      "byRow": {
+        "r1": "c1",
+        "r2": null
+      }
+    },
+    "expectedPoints": 1
+  },
+  {
+    "name": "no rows answered",
+    "content": {
+      "rows": [
+        {
+          "id": "r1",
+          "text": "Finding 1"
+        },
+        {
+          "id": "r2",
+          "text": "Finding 2"
+        },
+        {
+          "id": "r3",
+          "text": "Finding 3"
+        },
+        {
+          "id": "r4",
+          "text": "Finding 4"
+        }
+      ],
+      "columns": [
+        {
+          "id": "c1",
+          "text": "Indicated"
+        },
+        {
+          "id": "c2",
+          "text": "Contraindicated"
+        },
+        {
+          "id": "c3",
+          "text": "Non-essential"
+        }
+      ]
+    },
+    "key": {
+      "byRow": {
+        "r1": "c1",
+        "r2": "c2",
+        "r3": "c3",
+        "r4": "c1"
+      }
+    },
+    "response": {
+      "byRow": {}
+    },
+    "expectedPoints": 0
+  },
+  {
+    "name": "no response (blank or timed out)",
+    "content": {
+      "rows": [
+        {
+          "id": "r1",
+          "text": "Finding 1"
+        },
+        {
+          "id": "r2",
+          "text": "Finding 2"
+        },
+        {
+          "id": "r3",
+          "text": "Finding 3"
+        },
+        {
+          "id": "r4",
+          "text": "Finding 4"
+        }
+      ],
+      "columns": [
+        {
+          "id": "c1",
+          "text": "Indicated"
+        },
+        {
+          "id": "c2",
+          "text": "Contraindicated"
+        },
+        {
+          "id": "c3",
+          "text": "Non-essential"
+        }
+      ]
+    },
+    "key": {
+      "byRow": {
+        "r1": "c1",
+        "r2": "c2",
+        "r3": "c3",
+        "r4": "c1"
+      }
+    },
+    "response": null,
+    "expectedPoints": 0
+  }
+]

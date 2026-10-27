@@ -1,0 +1,615 @@
+[
+  {
+    "name": "every blank correct",
+    "content": {
+      "columns": [
+        "Finding",
+        "Indicates"
+      ],
+      "rows": [
+        {
+          "id": "r1",
+          "cells": [
+            {
+              "text": "BP 82/50 mm Hg"
+            },
+            {
+              "blankId": "b1"
+            }
+          ]
+        },
+        {
+          "id": "r2",
+          "cells": [
+            {
+              "text": "Crackles in both lung bases"
+            },
+            {
+              "blankId": "b2"
+            }
+          ]
+        },
+        {
+          "id": "r3",
+          "cells": [
+            {
+              "text": "Urine output 15 mL/hr"
+            },
+            {
+              "blankId": "b3"
+            }
+          ]
+        }
+      ],
+      "blanks": [
+        {
+          "id": "b1",
+          "options": [
+            {
+              "id": "a",
+              "text": "Hypovolemia"
+            },
+            {
+              "id": "b",
+              "text": "Fluid overload"
+            }
+          ]
+        },
+        {
+          "id": "b2",
+          "options": [
+            {
+              "id": "a",
+              "text": "Hypovolemia"
+            },
+            {
+              "id": "b",
+              "text": "Fluid overload"
+            }
+          ]
+        },
+        {
+          "id": "b3",
+          "options": [
+            {
+              "id": "a",
+              "text": "Hypovolemia"
+            },
+            {
+              "id": "b",
+              "text": "Fluid overload"
+            },
+            {
+              "id": "c",
+              "text": "Neither"
+            }
+          ]
+        }
+      ]
+    },
+    "key": {
+      "byBlank": {
+        "b1": "a",
+        "b2": "b",
+        "b3": "a"
+      }
+    },
+    "response": {
+      "byBlank": {
+        "b1": "a",
+        "b2": "b",
+        "b3": "a"
+      }
+    },
+    "expectedPoints": 3
+  },
+  {
+    "name": "two blanks correct",
+    "content": {
+      "columns": [
+        "Finding",
+        "Indicates"
+      ],
+      "rows": [
+        {
+          "id": "r1",
+          "cells": [
+            {
+              "text": "BP 82/50 mm Hg"
+            },
+            {
+              "blankId": "b1"
+            }
+          ]
+        },
+        {
+          "id": "r2",
+          "cells": [
+            {
+              "text": "Crackles in both lung bases"
+            },
+            {
+              "blankId": "b2"
+            }
+          ]
+        },
+        {
+          "id": "r3",
+          "cells": [
+            {
+              "text": "Urine output 15 mL/hr"
+            },
+            {
+              "blankId": "b3"
+            }
+          ]
+        }
+      ],
+      "blanks": [
+        {
+          "id": "b1",
+          "options": [
+            {
+              "id": "a",
+              "text": "Hypovolemia"
+            },
+            {
+              "id": "b",
+              "text": "Fluid overload"
+            }
+          ]
+        },
+        {
+          "id": "b2",
+          "options": [
+            {
+              "id": "a",
+              "text": "Hypovolemia"
+            },
+            {
+              "id": "b",
+              "text": "Fluid overload"
+            }
+          ]
+        },
+        {
+          "id": "b3",
+          "options": [
+            {
+              "id": "a",
+              "text": "Hypovolemia"
+            },
+            {
+              "id": "b",
+              "text": "Fluid overload"
+            },
+            {
+              "id": "c",
+              "text": "Neither"
+            }
+          ]
+        }
+      ]
+    },
+    "key": {
+      "byBlank": {
+        "b1": "a",
+        "b2": "b",
+        "b3": "a"
+      }
+    },
+    "response": {
+      "byBlank": {
+        "b1": "a",
+        "b2": "a",
+        "b3": "a"
+      }
+    },
+    "expectedPoints": 2
+  },
+  {
+    "name": "every blank wrong",
+    "content": {
+      "columns": [
+        "Finding",
+        "Indicates"
+      ],
+      "rows": [
+        {
+          "id": "r1",
+          "cells": [
+            {
+              "text": "BP 82/50 mm Hg"
+            },
+            {
+              "blankId": "b1"
+            }
+          ]
+        },
+        {
+          "id": "r2",
+          "cells": [
+            {
+              "text": "Crackles in both lung bases"
+            },
+            {
+              "blankId": "b2"
+            }
+          ]
+        },
+        {
+          "id": "r3",
+          "cells": [
+            {
+              "text": "Urine output 15 mL/hr"
+            },
+            {
+              "blankId": "b3"
+            }
+          ]
+        }
+      ],
+      "blanks": [
+        {
+          "id": "b1",
+          "options": [
+            {
+              "id": "a",
+              "text": "Hypovolemia"
+            },
+            {
+              "id": "b",
+              "text": "Fluid overload"
+            }
+          ]
+        },
+        {
+          "id": "b2",
+          "options": [
+            {
+              "id": "a",
+              "text": "Hypovolemia"
+            },
+            {
+              "id": "b",
+              "text": "Fluid overload"
+            }
+          ]
+        },
+        {
+          "id": "b3",
+          "options": [
+            {
+              "id": "a",
+              "text": "Hypovolemia"
+            },
+            {
+              "id": "b",
+              "text": "Fluid overload"
+            },
+            {
+              "id": "c",
+              "text": "Neither"
+            }
+          ]
+        }
+      ]
+    },
+    "key": {
+      "byBlank": {
+        "b1": "a",
+        "b2": "b",
+        "b3": "a"
+      }
+    },
+    "response": {
+      "byBlank": {
+        "b1": "b",
+        "b2": "a",
+        "b3": "c"
+      }
+    },
+    "expectedPoints": 0
+  },
+  {
+    "name": "one correct, one null, one absent",
+    "content": {
+      "columns": [
+        "Finding",
+        "Indicates"
+      ],
+      "rows": [
+        {
+          "id": "r1",
+          "cells": [
+            {
+              "text": "BP 82/50 mm Hg"
+            },
+            {
+              "blankId": "b1"
+            }
+          ]
+        },
+        {
+          "id": "r2",
+          "cells": [
+            {
+              "text": "Crackles in both lung bases"
+            },
+            {
+              "blankId": "b2"
+            }
+          ]
+        },
+        {
+          "id": "r3",
+          "cells": [
+            {
+              "text": "Urine output 15 mL/hr"
+            },
+            {
+              "blankId": "b3"
+            }
+          ]
+        }
+      ],
+      "blanks": [
+        {
+          "id": "b1",
+          "options": [
+            {
+              "id": "a",
+              "text": "Hypovolemia"
+            },
+            {
+              "id": "b",
+              "text": "Fluid overload"
+            }
+          ]
+        },
+        {
+          "id": "b2",
+          "options": [
+            {
+              "id": "a",
+              "text": "Hypovolemia"
+            },
+            {
+              "id": "b",
+              "text": "Fluid overload"
+            }
+          ]
+        },
+        {
+          "id": "b3",
+          "options": [
+            {
+              "id": "a",
+              "text": "Hypovolemia"
+            },
+            {
+              "id": "b",
+              "text": "Fluid overload"
+            },
+            {
+              "id": "c",
+              "text": "Neither"
+            }
+          ]
+        }
+      ]
+    },
+    "key": {
+      "byBlank": {
+        "b1": "a",
+        "b2": "b",
+        "b3": "a"
+      }
+    },
+    "response": {
+      "byBlank": {
+        "b2": "b",
+        "b3": null
+      }
+    },
+    "expectedPoints": 1
+  },
+  {
+    "name": "no blanks answered",
+    "content": {
+      "columns": [
+        "Finding",
+        "Indicates"
+      ],
+      "rows": [
+        {
+          "id": "r1",
+          "cells": [
+            {
+              "text": "BP 82/50 mm Hg"
+            },
+            {
+              "blankId": "b1"
+            }
+          ]
+        },
+        {
+          "id": "r2",
+          "cells": [
+            {
+              "text": "Crackles in both lung bases"
+            },
+            {
+              "blankId": "b2"
+            }
+          ]
+        },
+        {
+          "id": "r3",
+          "cells": [
+            {
+              "text": "Urine output 15 mL/hr"
+            },
+            {
+              "blankId": "b3"
+            }
+          ]
+        }
+      ],
+      "blanks": [
+        {
+          "id": "b1",
+          "options": [
+            {
+              "id": "a",
+              "text": "Hypovolemia"
+            },
+            {
+              "id": "b",
+              "text": "Fluid overload"
+            }
+          ]
+        },
+        {
+          "id": "b2",
+          "options": [
+            {
+              "id": "a",
+              "text": "Hypovolemia"
+            },
+            {
+              "id": "b",
+              "text": "Fluid overload"
+            }
+          ]
+        },
+        {
+          "id": "b3",
+          "options": [
+            {
+              "id": "a",
+              "text": "Hypovolemia"
+            },
+            {
+              "id": "b",
+              "text": "Fluid overload"
+            },
+            {
+              "id": "c",
+              "text": "Neither"
+            }
+          ]
+        }
+      ]
+    },
+    "key": {
+      "byBlank": {
+        "b1": "a",
+        "b2": "b",
+        "b3": "a"
+      }
+    },
+    "response": {
+      "byBlank": {}
+    },
+    "expectedPoints": 0
+  },
+  {
+    "name": "no response (blank or timed out)",
+    "content": {
+      "columns": [
+        "Finding",
+        "Indicates"
+      ],
+      "rows": [
+        {
+          "id": "r1",
+          "cells": [
+            {
+              "text": "BP 82/50 mm Hg"
+            },
+            {
+              "blankId": "b1"
+            }
+          ]
+        },
+        {
+          "id": "r2",
+          "cells": [
+            {
+              "text": "Crackles in both lung bases"
+            },
+            {
+              "blankId": "b2"
+            }
+          ]
+        },
+        {
+          "id": "r3",
+          "cells": [
+            {
+              "text": "Urine output 15 mL/hr"
+            },
+            {
+              "blankId": "b3"
+            }
+          ]
+        }
+      ],
+      "blanks": [
+        {
+          "id": "b1",
+          "options": [
+            {
+              "id": "a",
+              "text": "Hypovolemia"
+            },
+            {
+              "id": "b",
+              "text": "Fluid overload"
+            }
+          ]
+        },
+        {
+          "id": "b2",
+          "options": [
+            {
+              "id": "a",
+              "text": "Hypovolemia"
+            },
+            {
+              "id": "b",
+              "text": "Fluid overload"
+            }
+          ]
+        },
+        {
+          "id": "b3",
+          "options": [
+            {
+              "id": "a",
+              "text": "Hypovolemia"
+            },
+            {
+              "id": "b",
+              "text": "Fluid overload"
+            },
+            {
+              "id": "c",
+              "text": "Neither"
+            }
+          ]
+        }
+      ]
+    },
+    "key": {
+      "byBlank": {
+        "b1": "a",
+        "b2": "b",
+        "b3": "a"
+      }
+    },
+    "response": null,
+    "expectedPoints": 0
+  }
+]

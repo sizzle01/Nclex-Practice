@@ -1,0 +1,443 @@
+[
+  {
+    "name": "exactly the correct rows",
+    "content": {
+      "columns": [
+        "Time",
+        "Finding"
+      ],
+      "rows": [
+        {
+          "id": "r1",
+          "cells": [
+            "08:00",
+            "Temperature 37.0 C"
+          ],
+          "selectable": true
+        },
+        {
+          "id": "r2",
+          "cells": [
+            "10:00",
+            "Temperature 38.9 C"
+          ],
+          "selectable": true
+        },
+        {
+          "id": "r3",
+          "cells": [
+            "10:00",
+            "Respirations 16/min"
+          ],
+          "selectable": true
+        },
+        {
+          "id": "r4",
+          "cells": [
+            "12:00",
+            "New confusion"
+          ],
+          "selectable": true
+        },
+        {
+          "id": "r5",
+          "cells": [
+            "12:00",
+            "Provider notified"
+          ],
+          "selectable": false
+        }
+      ]
+    },
+    "key": {
+      "correct": [
+        "r2",
+        "r4"
+      ]
+    },
+    "response": {
+      "selected": [
+        "r2",
+        "r4"
+      ]
+    },
+    "expectedPoints": 2
+  },
+  {
+    "name": "one correct row only",
+    "content": {
+      "columns": [
+        "Time",
+        "Finding"
+      ],
+      "rows": [
+        {
+          "id": "r1",
+          "cells": [
+            "08:00",
+            "Temperature 37.0 C"
+          ],
+          "selectable": true
+        },
+        {
+          "id": "r2",
+          "cells": [
+            "10:00",
+            "Temperature 38.9 C"
+          ],
+          "selectable": true
+        },
+        {
+          "id": "r3",
+          "cells": [
+            "10:00",
+            "Respirations 16/min"
+          ],
+          "selectable": true
+        },
+        {
+          "id": "r4",
+          "cells": [
+            "12:00",
+            "New confusion"
+          ],
+          "selectable": true
+        },
+        {
+          "id": "r5",
+          "cells": [
+            "12:00",
+            "Provider notified"
+          ],
+          "selectable": false
+        }
+      ]
+    },
+    "key": {
+      "correct": [
+        "r2",
+        "r4"
+      ]
+    },
+    "response": {
+      "selected": [
+        "r4"
+      ]
+    },
+    "expectedPoints": 1
+  },
+  {
+    "name": "both correct plus one wrong",
+    "content": {
+      "columns": [
+        "Time",
+        "Finding"
+      ],
+      "rows": [
+        {
+          "id": "r1",
+          "cells": [
+            "08:00",
+            "Temperature 37.0 C"
+          ],
+          "selectable": true
+        },
+        {
+          "id": "r2",
+          "cells": [
+            "10:00",
+            "Temperature 38.9 C"
+          ],
+          "selectable": true
+        },
+        {
+          "id": "r3",
+          "cells": [
+            "10:00",
+            "Respirations 16/min"
+          ],
+          "selectable": true
+        },
+        {
+          "id": "r4",
+          "cells": [
+            "12:00",
+            "New confusion"
+          ],
+          "selectable": true
+        },
+        {
+          "id": "r5",
+          "cells": [
+            "12:00",
+            "Provider notified"
+          ],
+          "selectable": false
+        }
+      ]
+    },
+    "key": {
+      "correct": [
+        "r2",
+        "r4"
+      ]
+    },
+    "response": {
+      "selected": [
+        "r2",
+        "r4",
+        "r3"
+      ]
+    },
+    "expectedPoints": 1
+  },
+  {
+    "name": "every selectable row: two right, two wrong",
+    "content": {
+      "columns": [
+        "Time",
+        "Finding"
+      ],
+      "rows": [
+        {
+          "id": "r1",
+          "cells": [
+            "08:00",
+            "Temperature 37.0 C"
+          ],
+          "selectable": true
+        },
+        {
+          "id": "r2",
+          "cells": [
+            "10:00",
+            "Temperature 38.9 C"
+          ],
+          "selectable": true
+        },
+        {
+          "id": "r3",
+          "cells": [
+            "10:00",
+            "Respirations 16/min"
+          ],
+          "selectable": true
+        },
+        {
+          "id": "r4",
+          "cells": [
+            "12:00",
+            "New confusion"
+          ],
+          "selectable": true
+        },
+        {
+          "id": "r5",
+          "cells": [
+            "12:00",
+            "Provider notified"
+          ],
+          "selectable": false
+        }
+      ]
+    },
+    "key": {
+      "correct": [
+        "r2",
+        "r4"
+      ]
+    },
+    "response": {
+      "selected": [
+        "r1",
+        "r2",
+        "r3",
+        "r4"
+      ]
+    },
+    "expectedPoints": 0
+  },
+  {
+    "name": "only a wrong row: floor at 0",
+    "content": {
+      "columns": [
+        "Time",
+        "Finding"
+      ],
+      "rows": [
+        {
+          "id": "r1",
+          "cells": [
+            "08:00",
+            "Temperature 37.0 C"
+          ],
+          "selectable": true
+        },
+        {
+          "id": "r2",
+          "cells": [
+            "10:00",
+            "Temperature 38.9 C"
+          ],
+          "selectable": true
+        },
+        {
+          "id": "r3",
+          "cells": [
+            "10:00",
+            "Respirations 16/min"
+          ],
+          "selectable": true
+        },
+        {
+          "id": "r4",
+          "cells": [
+            "12:00",
+            "New confusion"
+          ],
+          "selectable": true
+        },
+        {
+          "id": "r5",
+          "cells": [
+            "12:00",
+            "Provider notified"
+          ],
+          "selectable": false
+        }
+      ]
+    },
+    "key": {
+      "correct": [
+        "r2",
+        "r4"
+      ]
+    },
+    "response": {
+      "selected": [
+        "r1"
+      ]
+    },
+    "expectedPoints": 0
+  },
+  {
+    "name": "nothing highlighted",
+    "content": {
+      "columns": [
+        "Time",
+        "Finding"
+      ],
+      "rows": [
+        {
+          "id": "r1",
+          "cells": [
+            "08:00",
+            "Temperature 37.0 C"
+          ],
+          "selectable": true
+        },
+        {
+          "id": "r2",
+          "cells": [
+            "10:00",
+            "Temperature 38.9 C"
+          ],
+          "selectable": true
+        },
+        {
+          "id": "r3",
+          "cells": [
+            "10:00",
+            "Respirations 16/min"
+          ],
+          "selectable": true
+        },
+        {
+          "id": "r4",
+          "cells": [
+            "12:00",
+            "New confusion"
+          ],
+          "selectable": true
+        },
+        {
+          "id": "r5",
+          "cells": [
+            "12:00",
+            "Provider notified"
+          ],
+          "selectable": false
+        }
+      ]
+    },
+    "key": {
+      "correct": [
+        "r2",
+        "r4"
+      ]
+    },
+    "response": {
+      "selected": []
+    },
+    "expectedPoints": 0
+  },
+  {
+    "name": "no response (blank or timed out)",
+    "content": {
+      "columns": [
+        "Time",
+        "Finding"
+      ],
+      "rows": [
+        {
+          "id": "r1",
+          "cells": [
+            "08:00",
+            "Temperature 37.0 C"
+          ],
+          "selectable": true
+        },
+        {
+          "id": "r2",
+          "cells": [
+            "10:00",
+            "Temperature 38.9 C"
+          ],
+          "selectable": true
+        },
+        {
+          "id": "r3",
+          "cells": [
+            "10:00",
+            "Respirations 16/min"
+          ],
+          "selectable": true
+        },
+        {
+          "id": "r4",
+          "cells": [
+            "12:00",
+            "New confusion"
+          ],
+          "selectable": true
+        },
+        {
+          "id": "r5",
+          "cells": [
+            "12:00",
+            "Provider notified"
+          ],
+          "selectable": false
+        }
+      ]
+    },
+    "key": {
+      "correct": [
+        "r2",
+        "r4"
+      ]
+    },
+    "response": null,
+    "expectedPoints": 0
+  }
+]

@@ -1,0 +1,410 @@
+[
+  {
+    "name": "all three correct options selected",
+    "content": {
+      "options": [
+        {
+          "id": "a",
+          "text": "Option A"
+        },
+        {
+          "id": "b",
+          "text": "Option B"
+        },
+        {
+          "id": "c",
+          "text": "Option C"
+        },
+        {
+          "id": "d",
+          "text": "Option D"
+        },
+        {
+          "id": "e",
+          "text": "Option E"
+        },
+        {
+          "id": "f",
+          "text": "Option F"
+        }
+      ],
+      "selectCount": 3
+    },
+    "key": {
+      "correct": [
+        "a",
+        "c",
+        "e"
+      ]
+    },
+    "response": {
+      "selected": [
+        "a",
+        "c",
+        "e"
+      ]
+    },
+    "expectedPoints": 3
+  },
+  {
+    "name": "two correct and one wrong: wrong picks cost nothing",
+    "content": {
+      "options": [
+        {
+          "id": "a",
+          "text": "Option A"
+        },
+        {
+          "id": "b",
+          "text": "Option B"
+        },
+        {
+          "id": "c",
+          "text": "Option C"
+        },
+        {
+          "id": "d",
+          "text": "Option D"
+        },
+        {
+          "id": "e",
+          "text": "Option E"
+        },
+        {
+          "id": "f",
+          "text": "Option F"
+        }
+      ],
+      "selectCount": 3
+    },
+    "key": {
+      "correct": [
+        "a",
+        "c",
+        "e"
+      ]
+    },
+    "response": {
+      "selected": [
+        "a",
+        "c",
+        "b"
+      ]
+    },
+    "expectedPoints": 2
+  },
+  {
+    "name": "one correct option only",
+    "content": {
+      "options": [
+        {
+          "id": "a",
+          "text": "Option A"
+        },
+        {
+          "id": "b",
+          "text": "Option B"
+        },
+        {
+          "id": "c",
+          "text": "Option C"
+        },
+        {
+          "id": "d",
+          "text": "Option D"
+        },
+        {
+          "id": "e",
+          "text": "Option E"
+        },
+        {
+          "id": "f",
+          "text": "Option F"
+        }
+      ],
+      "selectCount": 3
+    },
+    "key": {
+      "correct": [
+        "a",
+        "c",
+        "e"
+      ]
+    },
+    "response": {
+      "selected": [
+        "e"
+      ]
+    },
+    "expectedPoints": 1
+  },
+  {
+    "name": "only wrong options selected",
+    "content": {
+      "options": [
+        {
+          "id": "a",
+          "text": "Option A"
+        },
+        {
+          "id": "b",
+          "text": "Option B"
+        },
+        {
+          "id": "c",
+          "text": "Option C"
+        },
+        {
+          "id": "d",
+          "text": "Option D"
+        },
+        {
+          "id": "e",
+          "text": "Option E"
+        },
+        {
+          "id": "f",
+          "text": "Option F"
+        }
+      ],
+      "selectCount": 3
+    },
+    "key": {
+      "correct": [
+        "a",
+        "c",
+        "e"
+      ]
+    },
+    "response": {
+      "selected": [
+        "b",
+        "d",
+        "f"
+      ]
+    },
+    "expectedPoints": 0
+  },
+  {
+    "name": "nothing selected",
+    "content": {
+      "options": [
+        {
+          "id": "a",
+          "text": "Option A"
+        },
+        {
+          "id": "b",
+          "text": "Option B"
+        },
+        {
+          "id": "c",
+          "text": "Option C"
+        },
+        {
+          "id": "d",
+          "text": "Option D"
+        },
+        {
+          "id": "e",
+          "text": "Option E"
+        },
+        {
+          "id": "f",
+          "text": "Option F"
+        }
+      ],
+      "selectCount": 3
+    },
+    "key": {
+      "correct": [
+        "a",
+        "c",
+        "e"
+      ]
+    },
+    "response": {
+      "selected": []
+    },
+    "expectedPoints": 0
+  },
+  {
+    "name": "no response (blank or timed out)",
+    "content": {
+      "options": [
+        {
+          "id": "a",
+          "text": "Option A"
+        },
+        {
+          "id": "b",
+          "text": "Option B"
+        },
+        {
+          "id": "c",
+          "text": "Option C"
+        },
+        {
+          "id": "d",
+          "text": "Option D"
+        },
+        {
+          "id": "e",
+          "text": "Option E"
+        },
+        {
+          "id": "f",
+          "text": "Option F"
+        }
+      ],
+      "selectCount": 3
+    },
+    "key": {
+      "correct": [
+        "a",
+        "c",
+        "e"
+      ]
+    },
+    "response": null,
+    "expectedPoints": 0
+  },
+  {
+    "name": "all_or_nothing override: all correct, in any order",
+    "content": {
+      "options": [
+        {
+          "id": "a",
+          "text": "Option A"
+        },
+        {
+          "id": "b",
+          "text": "Option B"
+        },
+        {
+          "id": "c",
+          "text": "Option C"
+        },
+        {
+          "id": "d",
+          "text": "Option D"
+        },
+        {
+          "id": "e",
+          "text": "Option E"
+        },
+        {
+          "id": "f",
+          "text": "Option F"
+        }
+      ],
+      "selectCount": 3
+    },
+    "key": {
+      "correct": [
+        "a",
+        "c",
+        "e"
+      ],
+      "scoringOverride": "all_or_nothing"
+    },
+    "response": {
+      "selected": [
+        "e",
+        "a",
+        "c"
+      ]
+    },
+    "expectedPoints": 1
+  },
+  {
+    "name": "all_or_nothing override: two of three correct scores 0",
+    "content": {
+      "options": [
+        {
+          "id": "a",
+          "text": "Option A"
+        },
+        {
+          "id": "b",
+          "text": "Option B"
+        },
+        {
+          "id": "c",
+          "text": "Option C"
+        },
+        {
+          "id": "d",
+          "text": "Option D"
+        },
+        {
+          "id": "e",
+          "text": "Option E"
+        },
+        {
+          "id": "f",
+          "text": "Option F"
+        }
+      ],
+      "selectCount": 3
+    },
+    "key": {
+      "correct": [
+        "a",
+        "c",
+        "e"
+      ],
+      "scoringOverride": "all_or_nothing"
+    },
+    "response": {
+      "selected": [
+        "a",
+        "c",
+        "b"
+      ]
+    },
+    "expectedPoints": 0
+  },
+  {
+    "name": "all_or_nothing override: no response",
+    "content": {
+      "options": [
+        {
+          "id": "a",
+          "text": "Option A"
+        },
+        {
+          "id": "b",
+          "text": "Option B"
+        },
+        {
+          "id": "c",
+          "text": "Option C"
+        },
+        {
+          "id": "d",
+          "text": "Option D"
+        },
+        {
+          "id": "e",
+          "text": "Option E"
+        },
+        {
+          "id": "f",
+          "text": "Option F"
+        }
+      ],
+      "selectCount": 3
+    },
+    "key": {
+      "correct": [
+        "a",
+        "c",
+        "e"
+      ],
+      "scoringOverride": "all_or_nothing"
+    },
+    "response": null,
+    "expectedPoints": 0
+  }
+]

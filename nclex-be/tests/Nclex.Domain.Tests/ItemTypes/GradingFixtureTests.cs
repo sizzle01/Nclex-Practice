@@ -1,7 +1,14 @@
 using System.Text.Json;
 using Nclex.Domain.ItemTypes;
+using Nclex.Domain.ItemTypes.Dropdown;
+using Nclex.Domain.ItemTypes.FillBlankCalc;
+using Nclex.Domain.ItemTypes.Grouped;
+using Nclex.Domain.ItemTypes.Highlight;
+using Nclex.Domain.ItemTypes.Matrix;
 using Nclex.Domain.ItemTypes.MultipleChoice;
+using Nclex.Domain.ItemTypes.OrderedResponse;
 using Nclex.Domain.ItemTypes.Sata;
+using Nclex.Domain.ItemTypes.SelectN;
 
 namespace Nclex.Domain.Tests.ItemTypes;
 
@@ -16,6 +23,16 @@ public sealed class GradingFixtureTests
     {
         ["MultipleChoice"] = new MultipleChoiceModule(),
         ["Sata"] = new SataModule(),
+        ["SelectN"] = new SelectNModule(),
+        ["MatrixMc"] = new MatrixMcModule(),
+        ["MatrixMr"] = new MatrixMrModule(),
+        ["MultipleResponseGrouping"] = new MultipleResponseGroupingModule(),
+        ["DropdownCloze"] = new DropdownClozeModule(),
+        ["DropdownTable"] = new DropdownTableModule(),
+        ["HighlightText"] = new HighlightTextModule(),
+        ["HighlightTable"] = new HighlightTableModule(),
+        ["FillBlankCalc"] = new FillBlankCalcModule(),
+        ["OrderedResponse"] = new OrderedResponseModule(),
     };
 
     private static string FixturesRoot => Path.Combine(AppContext.BaseDirectory, "ItemTypes");
@@ -38,6 +55,13 @@ public sealed class GradingFixtureTests
         result.Points.ShouldBe(fixture.ExpectedPoints);
         result.MaxPoints.ShouldBe(module.MaxPoints(fixture.Content, fixture.Key));
         result.IsCorrect.ShouldBe(fixture.ExpectedPoints == result.MaxPoints);
+    }
+
+    [Fact]
+    public void Every_mvp_item_type_has_a_fixtures_folder()
+    {
+        ModulesByFolder.Values.Select(m => m.Type)
+            .ShouldBe(ItemTypeCatalog.All.Where(d => d.Phase == Phase.Mvp).Select(d => d.Type), ignoreOrder: true);
     }
 
     [Fact]

@@ -1,0 +1,481 @@
+[
+  {
+    "name": "every correct cell and nothing else",
+    "content": {
+      "rows": [
+        {
+          "id": "r1",
+          "text": "Client 1"
+        },
+        {
+          "id": "r2",
+          "text": "Client 2"
+        },
+        {
+          "id": "r3",
+          "text": "Client 3"
+        }
+      ],
+      "columns": [
+        {
+          "id": "c1",
+          "text": "Action 1"
+        },
+        {
+          "id": "c2",
+          "text": "Action 2"
+        },
+        {
+          "id": "c3",
+          "text": "Action 3"
+        }
+      ],
+      "groupAxis": "row"
+    },
+    "key": {
+      "byGroup": {
+        "r1": [
+          "r1:c1",
+          "r1:c3"
+        ],
+        "r2": [
+          "r2:c2"
+        ],
+        "r3": [
+          "r3:c1",
+          "r3:c2"
+        ]
+      }
+    },
+    "response": {
+      "byGroup": {
+        "r1": [
+          "r1:c1",
+          "r1:c3"
+        ],
+        "r2": [
+          "r2:c2"
+        ],
+        "r3": [
+          "r3:c1",
+          "r3:c2"
+        ]
+      }
+    },
+    "expectedPoints": 5
+  },
+  {
+    "name": "a wrong pick cancels a right one in the same row",
+    "content": {
+      "rows": [
+        {
+          "id": "r1",
+          "text": "Client 1"
+        },
+        {
+          "id": "r2",
+          "text": "Client 2"
+        },
+        {
+          "id": "r3",
+          "text": "Client 3"
+        }
+      ],
+      "columns": [
+        {
+          "id": "c1",
+          "text": "Action 1"
+        },
+        {
+          "id": "c2",
+          "text": "Action 2"
+        },
+        {
+          "id": "c3",
+          "text": "Action 3"
+        }
+      ],
+      "groupAxis": "row"
+    },
+    "key": {
+      "byGroup": {
+        "r1": [
+          "r1:c1",
+          "r1:c3"
+        ],
+        "r2": [
+          "r2:c2"
+        ],
+        "r3": [
+          "r3:c1",
+          "r3:c2"
+        ]
+      }
+    },
+    "response": {
+      "byGroup": {
+        "r1": [
+          "r1:c1",
+          "r1:c2"
+        ],
+        "r2": [
+          "r2:c2"
+        ],
+        "r3": [
+          "r3:c1",
+          "r3:c2"
+        ]
+      }
+    },
+    "expectedPoints": 3
+  },
+  {
+    "name": "floor is per row: row 2 at -1 does not reduce rows 1 and 3",
+    "content": {
+      "rows": [
+        {
+          "id": "r1",
+          "text": "Client 1"
+        },
+        {
+          "id": "r2",
+          "text": "Client 2"
+        },
+        {
+          "id": "r3",
+          "text": "Client 3"
+        }
+      ],
+      "columns": [
+        {
+          "id": "c1",
+          "text": "Action 1"
+        },
+        {
+          "id": "c2",
+          "text": "Action 2"
+        },
+        {
+          "id": "c3",
+          "text": "Action 3"
+        }
+      ],
+      "groupAxis": "row"
+    },
+    "key": {
+      "byGroup": {
+        "r1": [
+          "r1:c1",
+          "r1:c3"
+        ],
+        "r2": [
+          "r2:c2"
+        ],
+        "r3": [
+          "r3:c1",
+          "r3:c2"
+        ]
+      }
+    },
+    "response": {
+      "byGroup": {
+        "r1": [
+          "r1:c1",
+          "r1:c2",
+          "r1:c3"
+        ],
+        "r2": [
+          "r2:c1",
+          "r2:c2",
+          "r2:c3"
+        ],
+        "r3": [
+          "r3:c1",
+          "r3:c2"
+        ]
+      }
+    },
+    "expectedPoints": 3
+  },
+  {
+    "name": "correct cells only, some missed, one row untouched",
+    "content": {
+      "rows": [
+        {
+          "id": "r1",
+          "text": "Client 1"
+        },
+        {
+          "id": "r2",
+          "text": "Client 2"
+        },
+        {
+          "id": "r3",
+          "text": "Client 3"
+        }
+      ],
+      "columns": [
+        {
+          "id": "c1",
+          "text": "Action 1"
+        },
+        {
+          "id": "c2",
+          "text": "Action 2"
+        },
+        {
+          "id": "c3",
+          "text": "Action 3"
+        }
+      ],
+      "groupAxis": "row"
+    },
+    "key": {
+      "byGroup": {
+        "r1": [
+          "r1:c1",
+          "r1:c3"
+        ],
+        "r2": [
+          "r2:c2"
+        ],
+        "r3": [
+          "r3:c1",
+          "r3:c2"
+        ]
+      }
+    },
+    "response": {
+      "byGroup": {
+        "r1": [
+          "r1:c1"
+        ],
+        "r2": [
+          "r2:c2"
+        ]
+      }
+    },
+    "expectedPoints": 2
+  },
+  {
+    "name": "only wrong cells",
+    "content": {
+      "rows": [
+        {
+          "id": "r1",
+          "text": "Client 1"
+        },
+        {
+          "id": "r2",
+          "text": "Client 2"
+        },
+        {
+          "id": "r3",
+          "text": "Client 3"
+        }
+      ],
+      "columns": [
+        {
+          "id": "c1",
+          "text": "Action 1"
+        },
+        {
+          "id": "c2",
+          "text": "Action 2"
+        },
+        {
+          "id": "c3",
+          "text": "Action 3"
+        }
+      ],
+      "groupAxis": "row"
+    },
+    "key": {
+      "byGroup": {
+        "r1": [
+          "r1:c1",
+          "r1:c3"
+        ],
+        "r2": [
+          "r2:c2"
+        ],
+        "r3": [
+          "r3:c1",
+          "r3:c2"
+        ]
+      }
+    },
+    "response": {
+      "byGroup": {
+        "r1": [
+          "r1:c2"
+        ],
+        "r2": [
+          "r2:c1",
+          "r2:c3"
+        ],
+        "r3": [
+          "r3:c3"
+        ]
+      }
+    },
+    "expectedPoints": 0
+  },
+  {
+    "name": "nothing selected",
+    "content": {
+      "rows": [
+        {
+          "id": "r1",
+          "text": "Client 1"
+        },
+        {
+          "id": "r2",
+          "text": "Client 2"
+        },
+        {
+          "id": "r3",
+          "text": "Client 3"
+        }
+      ],
+      "columns": [
+        {
+          "id": "c1",
+          "text": "Action 1"
+        },
+        {
+          "id": "c2",
+          "text": "Action 2"
+        },
+        {
+          "id": "c3",
+          "text": "Action 3"
+        }
+      ],
+      "groupAxis": "row"
+    },
+    "key": {
+      "byGroup": {
+        "r1": [
+          "r1:c1",
+          "r1:c3"
+        ],
+        "r2": [
+          "r2:c2"
+        ],
+        "r3": [
+          "r3:c1",
+          "r3:c2"
+        ]
+      }
+    },
+    "response": {
+      "byGroup": {}
+    },
+    "expectedPoints": 0
+  },
+  {
+    "name": "no response (blank or timed out)",
+    "content": {
+      "rows": [
+        {
+          "id": "r1",
+          "text": "Client 1"
+        },
+        {
+          "id": "r2",
+          "text": "Client 2"
+        },
+        {
+          "id": "r3",
+          "text": "Client 3"
+        }
+      ],
+      "columns": [
+        {
+          "id": "c1",
+          "text": "Action 1"
+        },
+        {
+          "id": "c2",
+          "text": "Action 2"
+        },
+        {
+          "id": "c3",
+          "text": "Action 3"
+        }
+      ],
+      "groupAxis": "row"
+    },
+    "key": {
+      "byGroup": {
+        "r1": [
+          "r1:c1",
+          "r1:c3"
+        ],
+        "r2": [
+          "r2:c2"
+        ],
+        "r3": [
+          "r3:c1",
+          "r3:c2"
+        ]
+      }
+    },
+    "response": null,
+    "expectedPoints": 0
+  },
+  {
+    "name": "column groups: wrong pick cancels in column 1 only",
+    "content": {
+      "rows": [
+        {
+          "id": "r1",
+          "text": "Finding 1"
+        },
+        {
+          "id": "r2",
+          "text": "Finding 2"
+        },
+        {
+          "id": "r3",
+          "text": "Finding 3"
+        }
+      ],
+      "columns": [
+        {
+          "id": "c1",
+          "text": "Pneumonia"
+        },
+        {
+          "id": "c2",
+          "text": "Heart failure"
+        }
+      ],
+      "groupAxis": "column"
+    },
+    "key": {
+      "byGroup": {
+        "c1": [
+          "r1:c1",
+          "r2:c1"
+        ],
+        "c2": [
+          "r3:c2"
+        ]
+      }
+    },
+    "response": {
+      "byGroup": {
+        "c1": [
+          "r1:c1",
+          "r3:c1"
+        ],
+        "c2": [
+          "r3:c2"
+        ]
+      }
+    },
+    "expectedPoints": 1
+  }
+]

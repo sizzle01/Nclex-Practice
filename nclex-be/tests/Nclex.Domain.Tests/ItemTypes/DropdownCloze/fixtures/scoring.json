@@ -1,0 +1,379 @@
+[
+  {
+    "name": "both blanks correct",
+    "content": {
+      "template": "The nurse should first {{b1}} because the client is at risk for {{b2}}.",
+      "blanks": [
+        {
+          "id": "b1",
+          "options": [
+            {
+              "id": "a",
+              "text": "call the provider"
+            },
+            {
+              "id": "b",
+              "text": "raise the head of the bed"
+            },
+            {
+              "id": "c",
+              "text": "document the finding"
+            }
+          ]
+        },
+        {
+          "id": "b2",
+          "options": [
+            {
+              "id": "a",
+              "text": "falls"
+            },
+            {
+              "id": "b",
+              "text": "infection"
+            },
+            {
+              "id": "c",
+              "text": "aspiration"
+            }
+          ]
+        }
+      ]
+    },
+    "key": {
+      "byBlank": {
+        "b1": "b",
+        "b2": "c"
+      }
+    },
+    "response": {
+      "byBlank": {
+        "b1": "b",
+        "b2": "c"
+      }
+    },
+    "expectedPoints": 2
+  },
+  {
+    "name": "one blank correct, one wrong",
+    "content": {
+      "template": "The nurse should first {{b1}} because the client is at risk for {{b2}}.",
+      "blanks": [
+        {
+          "id": "b1",
+          "options": [
+            {
+              "id": "a",
+              "text": "call the provider"
+            },
+            {
+              "id": "b",
+              "text": "raise the head of the bed"
+            },
+            {
+              "id": "c",
+              "text": "document the finding"
+            }
+          ]
+        },
+        {
+          "id": "b2",
+          "options": [
+            {
+              "id": "a",
+              "text": "falls"
+            },
+            {
+              "id": "b",
+              "text": "infection"
+            },
+            {
+              "id": "c",
+              "text": "aspiration"
+            }
+          ]
+        }
+      ]
+    },
+    "key": {
+      "byBlank": {
+        "b1": "b",
+        "b2": "c"
+      }
+    },
+    "response": {
+      "byBlank": {
+        "b1": "b",
+        "b2": "a"
+      }
+    },
+    "expectedPoints": 1
+  },
+  {
+    "name": "both blanks wrong",
+    "content": {
+      "template": "The nurse should first {{b1}} because the client is at risk for {{b2}}.",
+      "blanks": [
+        {
+          "id": "b1",
+          "options": [
+            {
+              "id": "a",
+              "text": "call the provider"
+            },
+            {
+              "id": "b",
+              "text": "raise the head of the bed"
+            },
+            {
+              "id": "c",
+              "text": "document the finding"
+            }
+          ]
+        },
+        {
+          "id": "b2",
+          "options": [
+            {
+              "id": "a",
+              "text": "falls"
+            },
+            {
+              "id": "b",
+              "text": "infection"
+            },
+            {
+              "id": "c",
+              "text": "aspiration"
+            }
+          ]
+        }
+      ]
+    },
+    "key": {
+      "byBlank": {
+        "b1": "b",
+        "b2": "c"
+      }
+    },
+    "response": {
+      "byBlank": {
+        "b1": "a",
+        "b2": "b"
+      }
+    },
+    "expectedPoints": 0
+  },
+  {
+    "name": "answers swapped between blanks score nothing",
+    "content": {
+      "template": "The nurse should first {{b1}} because the client is at risk for {{b2}}.",
+      "blanks": [
+        {
+          "id": "b1",
+          "options": [
+            {
+              "id": "a",
+              "text": "call the provider"
+            },
+            {
+              "id": "b",
+              "text": "raise the head of the bed"
+            },
+            {
+              "id": "c",
+              "text": "document the finding"
+            }
+          ]
+        },
+        {
+          "id": "b2",
+          "options": [
+            {
+              "id": "a",
+              "text": "falls"
+            },
+            {
+              "id": "b",
+              "text": "infection"
+            },
+            {
+              "id": "c",
+              "text": "aspiration"
+            }
+          ]
+        }
+      ]
+    },
+    "key": {
+      "byBlank": {
+        "b1": "b",
+        "b2": "c"
+      }
+    },
+    "response": {
+      "byBlank": {
+        "b1": "c",
+        "b2": "b"
+      }
+    },
+    "expectedPoints": 0
+  },
+  {
+    "name": "one blank correct, the other null",
+    "content": {
+      "template": "The nurse should first {{b1}} because the client is at risk for {{b2}}.",
+      "blanks": [
+        {
+          "id": "b1",
+          "options": [
+            {
+              "id": "a",
+              "text": "call the provider"
+            },
+            {
+              "id": "b",
+              "text": "raise the head of the bed"
+            },
+            {
+              "id": "c",
+              "text": "document the finding"
+            }
+          ]
+        },
+        {
+          "id": "b2",
+          "options": [
+            {
+              "id": "a",
+              "text": "falls"
+            },
+            {
+              "id": "b",
+              "text": "infection"
+            },
+            {
+              "id": "c",
+              "text": "aspiration"
+            }
+          ]
+        }
+      ]
+    },
+    "key": {
+      "byBlank": {
+        "b1": "b",
+        "b2": "c"
+      }
+    },
+    "response": {
+      "byBlank": {
+        "b1": "b",
+        "b2": null
+      }
+    },
+    "expectedPoints": 1
+  },
+  {
+    "name": "no blanks answered",
+    "content": {
+      "template": "The nurse should first {{b1}} because the client is at risk for {{b2}}.",
+      "blanks": [
+        {
+          "id": "b1",
+          "options": [
+            {
+              "id": "a",
+              "text": "call the provider"
+            },
+            {
+              "id": "b",
+              "text": "raise the head of the bed"
+            },
+            {
+              "id": "c",
+              "text": "document the finding"
+            }
+          ]
+        },
+        {
+          "id": "b2",
+          "options": [
+            {
+              "id": "a",
+              "text": "falls"
+            },
+            {
+              "id": "b",
+              "text": "infection"
+            },
+            {
+              "id": "c",
+              "text": "aspiration"
+            }
+          ]
+        }
+      ]
+    },
+    "key": {
+      "byBlank": {
+        "b1": "b",
+        "b2": "c"
+      }
+    },
+    "response": {
+      "byBlank": {}
+    },
+    "expectedPoints": 0
+  },
+  {
+    "name": "no response (blank or timed out)",
+    "content": {
+      "template": "The nurse should first {{b1}} because the client is at risk for {{b2}}.",
+      "blanks": [
+        {
+          "id": "b1",
+          "options": [
+            {
+              "id": "a",
+              "text": "call the provider"
+            },
+            {
+              "id": "b",
+              "text": "raise the head of the bed"
+            },
+            {
+              "id": "c",
+              "text": "document the finding"
+            }
+          ]
+        },
+        {
+          "id": "b2",
+          "options": [
+            {
+              "id": "a",
+              "text": "falls"
+            },
+            {
+              "id": "b",
+              "text": "infection"
+            },
+            {
+              "id": "c",
+              "text": "aspiration"
+            }
+          ]
+        }
+      ]
+    },
+    "key": {
+      "byBlank": {
+        "b1": "b",
+        "b2": "c"
+      }
+    },
+    "response": null,
+    "expectedPoints": 0
+  }
+]
