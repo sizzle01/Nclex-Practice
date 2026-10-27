@@ -1,5 +1,15 @@
 using FluentValidation;
 using Microsoft.Extensions.DependencyInjection;
+using Nclex.Application.Attempts;
+using Nclex.Application.Attempts.DiscardAttempt;
+using Nclex.Application.Attempts.GetAttempt;
+using Nclex.Application.Attempts.GetItem;
+using Nclex.Application.Attempts.ListAttempts;
+using Nclex.Application.Attempts.Navigate;
+using Nclex.Application.Attempts.OpenAttempt;
+using Nclex.Application.Attempts.SaveResponse;
+using Nclex.Application.Attempts.StartAttempt;
+using Nclex.Application.Attempts.UpdateItemMarks;
 using Nclex.Application.Auth.ConfirmEmailChange;
 using Nclex.Application.Auth.EmailTokens;
 using Nclex.Application.Auth.ForgotPassword;
@@ -85,6 +95,19 @@ public static class DependencyInjection
         services.AddScoped<ListQuestionBanksHandler>();
         services.AddScoped<ListTestSetsHandler>();
         services.AddScoped<GetTestSetHandler>();
+
+        // Attempts
+        services.AddScoped<AttemptStore>();
+        services.AddScoped<AttemptStateReader>();
+        services.AddScoped<StartAttemptHandler>();
+        services.AddScoped<ListAttemptsHandler>();
+        services.AddScoped<GetAttemptHandler>();
+        services.AddScoped<OpenAttemptHandler>();
+        services.AddScoped<GetItemHandler>();
+        services.AddScoped<SaveResponseHandler>();
+        services.AddScoped<UpdateItemMarksHandler>();
+        services.AddScoped<NavigateHandler>();
+        services.AddScoped<DiscardAttemptHandler>();
 
         services.AddContentImport();
 

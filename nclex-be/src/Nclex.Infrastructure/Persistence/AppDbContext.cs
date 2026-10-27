@@ -46,6 +46,15 @@ public sealed class AppDbContext(DbContextOptions<AppDbContext> options) : DbCon
 
     public DbSet<AttemptItem> AttemptItems => Set<AttemptItem>();
 
+    public async Task<Attempt?> LockAttemptAsync(Guid attemptId, CancellationToken cancellationToken)
+    {
+        // ToListAsync rather than SingleOrDefaultAsync: EF would wrap the SQL in a subquery to add a LIMIT.
+        var rows = await Attempts
+            .FromSql($"SELECT * FROM attempts WHERE id = {attemptId} FOR UPDATE")
+            .ToListAsync(cancellationToken);
+        return rows.SingleOrDefault();
+    }
+
     public Task<IDbContextTransaction> BeginTransactionAsync(CancellationToken cancellationToken = default) =>
         Database.BeginTransactionAsync(cancellationToken);
 

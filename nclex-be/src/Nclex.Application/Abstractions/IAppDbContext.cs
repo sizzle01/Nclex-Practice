@@ -56,6 +56,12 @@ public interface IAppDbContext
     DbSet<AttemptItem> AttemptItems { get; }
 
     /// <summary>
+    /// Reads an attempt with <c>SELECT … FOR UPDATE</c> and tracks it, or returns null when there is
+    /// none. Call inside a transaction: the row stays locked until it ends.
+    /// </summary>
+    Task<Attempt?> LockAttemptAsync(Guid attemptId, CancellationToken cancellationToken);
+
+    /// <summary>
     /// Starts a transaction for a use case that needs more than one SaveChanges to stay atomic,
     /// such as publishing a new question (see QuestionConfiguration for why).
     /// </summary>
