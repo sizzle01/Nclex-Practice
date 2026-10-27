@@ -23,4 +23,15 @@ public sealed class AccountEmails(EmailTokenService emailTokens, IEmailOutbox ou
         var token = await emailTokens.IssueAsync(user, EmailTokenPurpose.ResetPassword, cancellationToken);
         outbox.Enqueue(user, EmailTemplateNames.ResetPassword, new ResetPasswordPayload(user.DisplayName, token));
     }
+
+    /// <summary>Queues a "confirm your new email" email with a fresh 24-hour link, sent to the new address.</summary>
+    public async Task QueueEmailChangeConfirmationAsync(User user, string newEmail, CancellationToken cancellationToken)
+    {
+        var token = await emailTokens.IssueForEmailChangeAsync(user, newEmail, cancellationToken);
+        outbox.Enqueue(
+            user,
+            EmailTemplateNames.ConfirmEmailChange,
+            new ConfirmEmailChangePayload(user.DisplayName, newEmail, token),
+            toAddress: newEmail);
+    }
 }

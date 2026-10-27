@@ -10,8 +10,12 @@ namespace Nclex.Application.Abstractions;
 public interface IEmailOutbox
 {
     /// <summary>Adds an email for <paramref name="recipient"/>. <paramref name="payload"/> is stored as JSON.</summary>
-    /// <param name="recipient">The account to email, at its current address.</param>
+    /// <param name="recipient">The account the email is about.</param>
     /// <param name="templateName">A name from <see cref="Email.EmailTemplateNames"/>.</param>
     /// <param name="payload">The values the template needs, e.g. a <see cref="Email.VerifyEmailPayload"/>.</param>
-    void Enqueue(User recipient, string templateName, object payload);
+    /// <param name="toAddress">
+    /// Where to send it when that is not the account's current address: the new address for an
+    /// email-change link, or the old one for the notice once it has changed.
+    /// </param>
+    void Enqueue(User recipient, string templateName, object payload, string? toAddress = null);
 }

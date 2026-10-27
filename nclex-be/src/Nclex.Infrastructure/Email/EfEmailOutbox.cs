@@ -11,10 +11,10 @@ namespace Nclex.Infrastructure.Email;
 /// </summary>
 internal sealed class EfEmailOutbox(AppDbContext db, TimeProvider clock) : IEmailOutbox
 {
-    public void Enqueue(User recipient, string templateName, object payload) =>
+    public void Enqueue(User recipient, string templateName, object payload, string? toAddress = null) =>
         db.EmailOutbox.Add(EmailOutboxMessage.Queue(
             recipient.Id,
-            recipient.Email,
+            toAddress ?? recipient.Email,
             templateName,
             EmailPayloadJson.Write(payload),
             clock.GetUtcNow()));

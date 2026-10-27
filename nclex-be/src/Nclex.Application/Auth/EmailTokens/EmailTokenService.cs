@@ -17,18 +17,40 @@ public sealed class EmailTokenService(IAppDbContext db, ISecureTokenGenerator to
     public async Task<string> IssueAsync(User user, EmailTokenPurpose purpose, CancellationToken cancellationToken)
     {
         var now = clock.GetUtcNow();
+        await SupersedeOlderAsync(user.Id, purpose, now, cancellationToken);
 
+        var token = tokens.Generate();
+        db.EmailTokens.Add(EmailToken.Issue(user.Id, purpose, token.Hash, now));
+        return token.Value;
+    }
+
+    /// <summary>
+    /// Creates a token confirming <paramref name="newEmail"/> and returns its raw value. As with
+    /// <see cref="IssueAsync"/>, an earlier pending email change stops working.
+    /// </summary>
+    public async Task<string> IssueForEmailChangeAsync(User user, string newEmail, CancellationToken cancellationToken)
+    {
+        var now = clock.GetUtcNow();
+        await SupersedeOlderAsync(user.Id, EmailTokenPurpose.ChangeEmail, now, cancellationToken);
+
+        var token = tokens.Generate();
+        db.EmailTokens.Add(EmailToken.IssueForEmailChange(user.Id, token.Hash, newEmail, now));
+        return token.Value;
+    }
+
+    /// <summary>Deletes every token of a user, for account deletion. Writes immediately.</summary>
+    public Task DeleteAllForUserAsync(Guid userId, CancellationToken cancellationToken) =>
+        db.EmailTokens.Where(t => t.UserId == userId).ExecuteDeleteAsync(cancellationToken);
+
+    private async Task SupersedeOlderAsync(Guid userId, EmailTokenPurpose purpose, DateTimeOffset now, CancellationToken cancellationToken)
+    {
         var olderTokens = await db.EmailTokens
-            .Where(t => t.UserId == user.Id && t.Purpose == purpose && t.ConsumedAt == null)
+            .Where(t => t.UserId == userId && t.Purpose == purpose && t.ConsumedAt == null)
             .ToListAsync(cancellationToken);
         foreach (var older in olderTokens)
         {
             older.Supersede(now);
         }
-
-        var token = tokens.Generate();
-        db.EmailTokens.Add(EmailToken.Issue(user.Id, purpose, token.Hash, now));
-        return token.Value;
     }
 
     /// <summary>
