@@ -165,6 +165,30 @@ public sealed class MigrationTests(ApiFactory factory)
         rows.ShouldHaveSingleItem().ShouldBe(defaultValue ?? "");
     }
 
+    [Theory]
+    [InlineData("times_seen", "integer|0")]
+    [InlineData("last_correct", "boolean|")]
+    [InlineData("last_seen_at", "timestamp with time zone|")]
+    public async Task F07_migration_creates_user_question_history_as_in_the_ddl(string column, string typeAndDefault)
+    {
+        var rows = await QueryAsync(
+            $"""
+            SELECT data_type || '|' || coalesce(column_default, '') AS "Value" FROM information_schema.columns
+            WHERE table_name = 'user_question_history' AND column_name = {column}
+            """);
+
+        rows.ShouldHaveSingleItem().ShouldBe(typeAndDefault);
+    }
+
+    [Fact]
+    public async Task F07_migration_removes_history_with_the_user()
+    {
+        var foreignKey = await QueryAsync(
+            $"SELECT pg_get_constraintdef(oid) AS \"Value\" FROM pg_constraint WHERE conname = {"fk_user_question_history_users_user_id"}");
+
+        foreignKey.ShouldHaveSingleItem().ShouldBe("FOREIGN KEY (user_id) REFERENCES users(id) ON DELETE CASCADE");
+    }
+
     private async Task<List<string>> QueryAsync(FormattableString sql)
     {
         await using var scope = factory.Services.CreateAsyncScope();

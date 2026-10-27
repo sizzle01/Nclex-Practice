@@ -14,7 +14,12 @@ namespace Nclex.Api.IntegrationTests.Infrastructure;
 public sealed class CatalogContent(ApiFactory factory)
 {
     /// <summary>A valid multiple-choice question; PN questions need a PN Client Needs code.</summary>
-    public static Dictionary<string, object> Question(Guid id, string clientNeeds = "SECE.MOC") => new()
+    public static Dictionary<string, object> Question(
+        Guid id,
+        string clientNeeds = "SECE.MOC",
+        string bodySystem = "fundamentals",
+        string difficulty = "easy",
+        string accessTier = "free") => new()
     {
         ["id"] = id,
         ["itemType"] = "multiple_choice",
@@ -24,8 +29,9 @@ public sealed class CatalogContent(ApiFactory factory)
         ["rationale"] = new { correct = "Why b", perOption = new { a = "A", b = "B", c = "C", d = "D" } },
         ["educationalObjective"] = "Prioritise safety.",
         ["clientNeeds"] = clientNeeds,
-        ["bodySystem"] = "fundamentals",
-        ["difficulty"] = "easy",
+        ["bodySystem"] = bodySystem,
+        ["difficulty"] = difficulty,
+        ["accessTier"] = accessTier,
     };
 
     /// <summary>An untimed practice set; pass <paramref name="settings"/> to override any field.</summary>
@@ -75,6 +81,10 @@ public sealed class CatalogContent(ApiFactory factory)
         }));
     }
 
+    /// <summary>A file of questions built with <see cref="Question"/>, for tests that need varied tags.</summary>
+    public static QuestionImportFile FileWith(string track, IEnumerable<Dictionary<string, object>> questions) =>
+        QuestionImportFile.Parse(JsonSerializer.Serialize(new { track, questions }));
+
     public async Task<ImportResult> ImportAsync(QuestionImportFile file)
     {
         await using var scope = factory.Services.CreateAsyncScope();
@@ -105,6 +115,60 @@ public sealed class CatalogContent(ApiFactory factory)
         await scope.ServiceProvider.GetRequiredService<AppDbContext>().TestSets
             .Where(s => s.Id == setId)
             .ExecuteUpdateAsync(s => s.SetProperty(x => x.IsPublished, false), TestContext.Current.CancellationToken);
+    }
+
+    /// <summary>Records that a user saw questions, as F10's grading will.</summary>
+    public async Task AddHistoryAsync(Guid userId, bool? correct, params Guid[] questionIds)
+    {
+        await using var scope = factory.Services.CreateAsyncScope();
+        var db = scope.ServiceProvider.GetRequiredService<AppDbContext>();
+        db.UserQuestionHistory.AddRange(questionIds.Select(q => UserQuestionHistory.FirstSeen(userId, q, correct, DateTimeOffset.UtcNow)));
+        await db.SaveChangesAsync(TestContext.Current.CancellationToken);
+    }
+
+    /// <summary>The id of a Client Needs category by its code, e.g. "SECE" or "SECE.MOC".</summary>
+    public async Task<short> CategoryIdAsync(ExamTrack track, string code)
+    {
+        await using var scope = factory.Services.CreateAsyncScope();
+        return await scope.ServiceProvider.GetRequiredService<AppDbContext>().ClientNeedsCategories
+            .Where(c => c.Track == track && c.Code == code)
+            .Select(c => c.Id)
+            .SingleAsync(TestContext.Current.CancellationToken);
+    }
+
+    public async Task<short> BodySystemIdAsync(string slug)
+    {
+        await using var scope = factory.Services.CreateAsyncScope();
+        return await scope.ServiceProvider.GetRequiredService<AppDbContext>().BodySystems
+            .Where(b => b.Slug == slug)
+            .Select(b => b.Id)
+            .SingleAsync(TestContext.Current.CancellationToken);
+    }
+
+    /// <summary>
+    /// Puts published questions into a new case study, in the order given. The importer can't
+    /// author case studies yet (F14), so this writes the rows directly.
+    /// </summary>
+    public async Task MakeCaseStudyAsync(params Guid[] questionIds)
+    {
+        await using var scope = factory.Services.CreateAsyncScope();
+        var db = scope.ServiceProvider.GetRequiredService<AppDbContext>();
+        var caseId = Guid.NewGuid();
+        var cancellationToken = TestContext.Current.CancellationToken;
+        await db.Database.ExecuteSqlAsync(
+            $"INSERT INTO case_studies (id, track, title, scenario) VALUES ({caseId}, 'RN', 'Test case', '{{}}'::jsonb)",
+            cancellationToken);
+        for (var i = 0; i < questionIds.Length; i++)
+        {
+            var position = (short)(i + 1);
+            var questionId = questionIds[i];
+            await db.Database.ExecuteSqlAsync(
+                $"""
+                UPDATE question_versions SET case_study_id = {caseId}, case_position = {position}
+                WHERE id = (SELECT current_version_id FROM questions WHERE id = {questionId})
+                """,
+                cancellationToken);
+        }
     }
 
     /// <summary>Retires a question, as F14's admin tools will.</summary>

@@ -1,3 +1,4 @@
+using System.Text.Json;
 using Nclex.Domain.Entities;
 
 namespace Nclex.Domain.Tests.Entities;
@@ -25,6 +26,24 @@ public sealed class TestSetTests
             s => s.OwnerUserId.ShouldBeNull(),
             s => s.QuestionCount.ShouldBe(40),
             s => s.Settings.ShouldBe(Untimed));
+    }
+
+    [Fact]
+    public void A_custom_set_belongs_to_its_owner_and_is_not_published()
+    {
+        var owner = Guid.NewGuid();
+        using var criteria = JsonDocument.Parse("""{"pool":"unused"}""");
+
+        var set = TestSet.CreateCustom(owner, ExamTrack.PN, Untimed, questionCount: 30, criteria, Now);
+
+        set.ShouldSatisfyAllConditions(
+            s => s.Id.ShouldNotBe(Guid.Empty),
+            s => s.Kind.ShouldBe(TestSetKind.Custom),
+            s => s.OwnerUserId.ShouldBe(owner),
+            s => s.IsPublished.ShouldBeFalse(),
+            s => s.Track.ShouldBe(ExamTrack.PN),
+            s => s.QuestionCount.ShouldBe(30),
+            s => s.GeneratorCriteria.ShouldBeSameAs(criteria));
     }
 
     [Fact]
