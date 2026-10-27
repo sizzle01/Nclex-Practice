@@ -1,4 +1,5 @@
 using Microsoft.EntityFrameworkCore;
+using Nclex.Domain.Audit;
 using Nclex.Domain.Email;
 using Nclex.Domain.Entities;
 
@@ -19,6 +20,9 @@ public interface IAppDbContext
 
     /// <summary>Emails waiting to be sent. Use cases add rows through <see cref="IEmailOutbox"/>.</summary>
     DbSet<EmailOutboxMessage> EmailOutbox { get; }
+
+    /// <summary>Security and admin events. Use cases add rows through <see cref="IAuditLog"/>.</summary>
+    DbSet<AuditEvent> AuditEvents { get; }
 
     /// <summary>
     /// Saves tracked changes in one transaction.

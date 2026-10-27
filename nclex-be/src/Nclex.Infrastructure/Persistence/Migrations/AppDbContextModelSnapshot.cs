@@ -30,6 +30,61 @@ namespace Nclex.Infrastructure.Persistence.Migrations
             NpgsqlModelBuilderExtensions.HasPostgresExtension(modelBuilder, "pgcrypto");
             NpgsqlModelBuilderExtensions.UseIdentityByDefaultColumns(modelBuilder);
 
+            modelBuilder.Entity("Nclex.Domain.Audit.AuditEvent", b =>
+                {
+                    b.Property<long>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("bigint")
+                        .HasColumnName("id");
+
+                    NpgsqlPropertyBuilderExtensions.UseSerialColumn(b.Property<long>("Id"));
+
+                    b.Property<string>("Action")
+                        .IsRequired()
+                        .HasColumnType("text")
+                        .HasColumnName("action");
+
+                    b.Property<Guid?>("ActorId")
+                        .HasColumnType("uuid")
+                        .HasColumnName("actor_id");
+
+                    b.Property<DateTimeOffset>("CreatedAt")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("timestamp with time zone")
+                        .HasColumnName("created_at")
+                        .HasDefaultValueSql("now()");
+
+                    b.Property<string>("EntityId")
+                        .HasColumnType("text")
+                        .HasColumnName("entity_id");
+
+                    b.Property<string>("EntityType")
+                        .HasColumnType("text")
+                        .HasColumnName("entity_type");
+
+                    b.Property<IPAddress>("Ip")
+                        .HasColumnType("inet")
+                        .HasColumnName("ip");
+
+                    b.Property<string>("Metadata")
+                        .IsRequired()
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("jsonb")
+                        .HasColumnName("metadata")
+                        .HasDefaultValueSql("'{}'");
+
+                    b.HasKey("Id")
+                        .HasName("pk_audit_events");
+
+                    b.HasIndex("ActorId")
+                        .HasDatabaseName("ix_audit_events_actor_id");
+
+                    b.HasIndex("EntityType", "EntityId")
+                        .HasDatabaseName("ix_audit_events_entity_type_entity_id");
+
+                    b.ToTable("audit_events", (string)null);
+                });
+
             modelBuilder.Entity("Nclex.Domain.Email.EmailOutboxMessage", b =>
                 {
                     b.Property<Guid>("Id")
@@ -322,6 +377,15 @@ namespace Nclex.Infrastructure.Persistence.Migrations
                         .HasDatabaseName("ix_users_email");
 
                     b.ToTable("users", (string)null);
+                });
+
+            modelBuilder.Entity("Nclex.Domain.Audit.AuditEvent", b =>
+                {
+                    b.HasOne("Nclex.Domain.Entities.User", null)
+                        .WithMany()
+                        .HasForeignKey("ActorId")
+                        .OnDelete(DeleteBehavior.NoAction)
+                        .HasConstraintName("fk_audit_events_users_actor_id");
                 });
 
             modelBuilder.Entity("Nclex.Domain.Email.EmailOutboxMessage", b =>

@@ -3,6 +3,7 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Nclex.Application.Abstractions;
 using Nclex.Domain.Entities;
+using Nclex.Infrastructure.Audit;
 using Nclex.Infrastructure.Email;
 using Nclex.Infrastructure.Persistence;
 using Npgsql.EntityFrameworkCore.PostgreSQL.Infrastructure;
@@ -36,6 +37,7 @@ public static class DependencyInjection
                 .UseSnakeCaseNamingConvention());
         services.AddScoped<IAppDbContext>(provider => provider.GetRequiredService<AppDbContext>());
         services.AddScoped<IEmailOutbox, EfEmailOutbox>();
+        services.AddScoped<IAuditLog, EfAuditLog>();
 
         // Redis only holds data that can be rebuilt (architecture.md section 3), so the app must
         // start and keep serving when Redis is down. AbortOnConnectFail = false makes the
