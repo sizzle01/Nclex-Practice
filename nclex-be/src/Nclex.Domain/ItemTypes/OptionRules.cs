@@ -7,18 +7,23 @@ public static class OptionRules
 {
     /// <summary>
     /// Options must have unique, non-empty ids and non-empty text, and their number must be within
-    /// <paramref name="min"/> and <paramref name="max"/>.
+    /// <paramref name="min"/> and <paramref name="max"/>. <paramref name="path"/> is where the list is,
+    /// for types that call their options something else, e.g. "content.items".
     /// </summary>
-    public static IEnumerable<ValidationIssue> CheckOptions(IReadOnlyList<Option> options, int min, int max = int.MaxValue)
+    public static IEnumerable<ValidationIssue> CheckOptions(
+        IReadOnlyList<Option> options,
+        int min,
+        int max = int.MaxValue,
+        string path = "content.options")
     {
         if (options.Count < min)
         {
-            yield return new ValidationIssue("content.options", ValidationIssueCodes.TooFew, $"At least {min} options are needed.");
+            yield return new ValidationIssue(path, ValidationIssueCodes.TooFew, $"At least {min} options are needed.");
         }
 
         if (options.Count > max)
         {
-            yield return new ValidationIssue("content.options", ValidationIssueCodes.TooMany, $"At most {max} options are allowed.");
+            yield return new ValidationIssue(path, ValidationIssueCodes.TooMany, $"At most {max} options are allowed.");
         }
 
         var seen = new HashSet<string>(StringComparer.Ordinal);
@@ -26,16 +31,16 @@ public static class OptionRules
         {
             if (string.IsNullOrWhiteSpace(options[i].Id))
             {
-                yield return new ValidationIssue($"content.options[{i}].id", ValidationIssueCodes.Required, "Every option needs an id.");
+                yield return new ValidationIssue($"{path}[{i}].id", ValidationIssueCodes.Required, "Every option needs an id.");
             }
             else if (!seen.Add(options[i].Id))
             {
-                yield return new ValidationIssue($"content.options[{i}].id", ValidationIssueCodes.DuplicateId, $"Option id \"{options[i].Id}\" is used more than once.");
+                yield return new ValidationIssue($"{path}[{i}].id", ValidationIssueCodes.DuplicateId, $"Option id \"{options[i].Id}\" is used more than once.");
             }
 
             if (string.IsNullOrWhiteSpace(options[i].Text))
             {
-                yield return new ValidationIssue($"content.options[{i}].text", ValidationIssueCodes.Required, "Every option needs text.");
+                yield return new ValidationIssue($"{path}[{i}].text", ValidationIssueCodes.Required, "Every option needs text.");
             }
         }
     }

@@ -62,4 +62,16 @@ public static class ValidationIssueCodes
     public const string MissingRationale = "MISSING_RATIONALE";
     public const string TooFew = "TOO_FEW";
     public const string TooMany = "TOO_MANY";
+
+    /// <summary>A response picks something the content shows but does not let candidates select.</summary>
+    public const string NotSelectable = "NOT_SELECTABLE";
+
+    /// <summary>A calculation answer is not a plain number, e.g. "12,5" or "12 mL".</summary>
+    public const string NotANumber = "NOT_A_NUMBER";
+
+    /// <summary>A value is outside what the item type allows, e.g. a negative tolerance.</summary>
+    public const string InvalidValue = "INVALID_VALUE";
+
+    /// <summary>A template or table and its blanks do not match.</summary>
+    public const string Mismatch = "MISMATCH";
 }
