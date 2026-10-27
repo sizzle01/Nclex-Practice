@@ -48,6 +48,14 @@ public interface IAppDbContext
     DbSet<TestSetItem> TestSetItems { get; }
 
     /// <summary>
+    /// Attempts and their items. Every change runs inside a transaction that first locks the
+    /// attempt row (database.md section 2.6 invariants).
+    /// </summary>
+    DbSet<Attempt> Attempts { get; }
+
+    DbSet<AttemptItem> AttemptItems { get; }
+
+    /// <summary>
     /// Starts a transaction for a use case that needs more than one SaveChanges to stay atomic,
     /// such as publishing a new question (see QuestionConfiguration for why).
     /// </summary>

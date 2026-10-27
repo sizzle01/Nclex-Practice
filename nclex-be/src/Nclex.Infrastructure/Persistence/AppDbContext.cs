@@ -42,6 +42,10 @@ public sealed class AppDbContext(DbContextOptions<AppDbContext> options) : DbCon
 
     public DbSet<TestSetItem> TestSetItems => Set<TestSetItem>();
 
+    public DbSet<Attempt> Attempts => Set<Attempt>();
+
+    public DbSet<AttemptItem> AttemptItems => Set<AttemptItem>();
+
     public Task<IDbContextTransaction> BeginTransactionAsync(CancellationToken cancellationToken = default) =>
         Database.BeginTransactionAsync(cancellationToken);
 
