@@ -1,5 +1,6 @@
 using Microsoft.EntityFrameworkCore;
 using Nclex.Application.Abstractions;
+using Nclex.Application.Auth.EmailTokens;
 using Nclex.Application.Auth.Sessions;
 using Nclex.Application.Common;
 using Nclex.Application.Common.Validation;
@@ -9,13 +10,15 @@ using Nclex.Domain.Entities;
 namespace Nclex.Application.Auth.Signup;
 
 /// <summary>
-/// POST /auth/signup: creates a free, unverified candidate account and signs the user in.
-/// The verification email arrives with F02.
+/// POST /auth/signup: creates a free, unverified candidate account, queues the verification
+/// email and signs the user in. The account, its session, the verification token and the outbox
+/// row are saved in one transaction (ADR-7), so there is never an account without its email.
 /// </summary>
 public sealed class SignupHandler(
     IAppDbContext db,
     IPasswordHasher passwordHasher,
     SessionService sessions,
+    AccountEmails accountEmails,
     TimeProvider clock)
 {
     public async Task<SignInResult> HandleAsync(SignupRequest request, ClientInfo client, CancellationToken cancellationToken)
@@ -34,6 +37,7 @@ public sealed class SignupHandler(
             clock.GetUtcNow());
         db.Users.Add(user);
         var session = sessions.Start(user, client);
+        await accountEmails.QueueVerificationAsync(user, cancellationToken);
 
         try
         {

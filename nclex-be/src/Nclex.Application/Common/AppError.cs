@@ -26,6 +26,9 @@ public enum AppErrorKind
 
     /// <summary>409: the request clashes with the current state.</summary>
     Conflict,
+
+    /// <summary>429: too many requests; the response says when to try again.</summary>
+    TooManyRequests,
 }
 
 /// <summary>Errors shared by several features.</summary>
@@ -35,4 +38,9 @@ public static class CommonErrors
         "UNAUTHENTICATED",
         AppErrorKind.Unauthenticated,
         "You need to log in again.");
+
+    public static readonly AppError RateLimited = new(
+        "RATE_LIMITED",
+        AppErrorKind.TooManyRequests,
+        "Too many requests. Please try again later.");
 }

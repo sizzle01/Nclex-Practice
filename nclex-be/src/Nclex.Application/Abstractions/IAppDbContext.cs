@@ -17,7 +17,7 @@ public interface IAppDbContext
 
     DbSet<EmailToken> EmailTokens { get; }
 
-    /// <summary>Emails waiting to be sent. Use cases add rows through IEmailOutbox.</summary>
+    /// <summary>Emails waiting to be sent. Use cases add rows through <see cref="IEmailOutbox"/>.</summary>
     DbSet<EmailOutboxMessage> EmailOutbox { get; }
 
     /// <summary>
