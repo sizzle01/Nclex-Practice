@@ -37,7 +37,7 @@ public sealed class User
 
     public DateOnly? TargetExamDate { get; private set; }
 
-    /// <summary>Set after repeated failed logins (rate limiting arrives in F03).</summary>
+    /// <summary>Set after repeated failed logins or re-authentications; login is refused until then.</summary>
     public DateTimeOffset? LockedUntil { get; private set; }
 
     public DateTimeOffset? PasswordChangedAt { get; private set; }
@@ -52,6 +52,9 @@ public sealed class User
     public bool IsDeleted => DeletedAt is not null;
 
     public bool IsEmailVerified => EmailVerifiedAt is not null;
+
+    /// <summary>The address a deleted account's email is replaced with (database.md section 4).</summary>
+    public static string DeletedEmailFor(Guid id) => $"deleted+{id}@invalid";
 
     /// <summary>
     /// Creates a new candidate account. Every account starts as a free, unverified candidate
@@ -115,6 +118,59 @@ public sealed class User
     {
         PasswordHash = passwordHash;
         PasswordChangedAt = now;
+        UpdatedAt = now;
+    }
+
+    /// <summary>True while a temporary lock is in force (architecture.md section 6, "Brute force").</summary>
+    public bool IsLockedAt(DateTimeOffset now) => LockedUntil > now;
+
+    /// <summary>How long until the lock ends; zero when the account is not locked.</summary>
+    public TimeSpan LockRemainingAt(DateTimeOffset now) =>
+        IsLockedAt(now) ? LockedUntil!.Value - now : TimeSpan.Zero;
+
+    /// <summary>Refuses logins until <paramref name="until"/>. A longer existing lock is kept.</summary>
+    public void Lock(DateTimeOffset until, DateTimeOffset now)
+    {
+        if (LockedUntil >= until)
+        {
+            return;
+        }
+
+        LockedUntil = until;
+        UpdatedAt = now;
+    }
+
+    /// <summary>
+    /// Switches the login address to <paramref name="newEmail"/> once the user has followed the
+    /// link sent there, which also proves they own it.
+    /// </summary>
+    public void ChangeEmail(string newEmail, DateTimeOffset now)
+    {
+        Email = newEmail;
+        EmailVerifiedAt = now;
+        UpdatedAt = now;
+    }
+
+    /// <summary>
+    /// Deletes the account by removing its personal data and keeping the row, so attempts that
+    /// point at it stay usable, anonymised, for item statistics (database.md section 4).
+    /// The email becomes a placeholder, which frees the real address for a new sign-up.
+    /// </summary>
+    public void ScrubForDeletion(DateTimeOffset now)
+    {
+        if (IsDeleted)
+        {
+            return;
+        }
+
+        Email = DeletedEmailFor(Id);
+        PasswordHash = null;
+        EmailVerifiedAt = null;
+        DisplayName = null;
+        Timezone = DefaultTimezone;
+        TargetExamDate = null;
+        LockedUntil = null;
+        DeletedAt = now;
         UpdatedAt = now;
     }
 }

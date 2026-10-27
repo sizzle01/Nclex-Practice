@@ -9,6 +9,6 @@ public enum EmailTokenPurpose
     /// <summary>Lets the user choose a new password after "forgot password".</summary>
     ResetPassword,
 
-    /// <summary>Confirms a new email address (built in F03).</summary>
+    /// <summary>Confirms a new email address before it replaces the old one.</summary>
     ChangeEmail,
 }

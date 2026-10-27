@@ -26,9 +26,27 @@ public sealed class EmailTokenTests
     }
 
     [Fact]
-    public void Change_email_tokens_are_not_supported_yet()
+    public void Change_email_token_lasts_24_hours_and_carries_the_new_address()
     {
-        Should.Throw<ArgumentOutOfRangeException>(() => EmailToken.Issue(UserId, EmailTokenPurpose.ChangeEmail, [1], Now));
+        var token = EmailToken.IssueForEmailChange(UserId, [1], "new@example.com", Now);
+
+        token.Purpose.ShouldBe(EmailTokenPurpose.ChangeEmail);
+        token.NewEmail.ShouldBe("new@example.com");
+        token.ExpiresAt.ShouldBe(Now.AddHours(24));
+        token.IsUsableAt(token.ExpiresAt.AddTicks(-1)).ShouldBeTrue();
+        token.IsUsableAt(token.ExpiresAt).ShouldBeFalse();
+    }
+
+    [Fact]
+    public void Change_email_tokens_cannot_be_issued_without_the_new_address()
+    {
+        Should.Throw<ArgumentException>(() => EmailToken.Issue(UserId, EmailTokenPurpose.ChangeEmail, [1], Now));
+    }
+
+    [Fact]
+    public void Other_tokens_have_no_new_address()
+    {
+        EmailToken.Issue(UserId, EmailTokenPurpose.VerifyEmail, [1], Now).NewEmail.ShouldBeNull();
     }
 
     [Fact]
