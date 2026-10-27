@@ -1,0 +1,46 @@
+.dashboard {
+  display: grid;
+  gap: 1.5rem;
+}
+
+.welcome {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 1.75rem 2rem;
+  border-radius: var(--radius-lg);
+  background: linear-gradient(135deg, var(--accent), var(--accent-hover));
+  color: var(--accent-foreground);
+  box-shadow: var(--shadow-lg);
+}
+
+.welcome h1 {
+  margin-bottom: 0.25rem;
+}
+
+.greeting {
+  margin: 0;
+}
+
+/* On the coloured banner the badge flips to a surface background so it keeps its contrast. */
+.welcome .trackBadge {
+  background: var(--surface);
+  color: var(--accent-hover);
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(18rem, 1fr));
+  gap: 1.25rem;
+}
+
+.empty {
+  border-style: dashed;
+  box-shadow: none;
+}
+
+.empty p {
+  margin: 0;
+}

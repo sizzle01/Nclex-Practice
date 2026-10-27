@@ -1,5 +1,6 @@
 "use client";
 
+import ui from "@/components/ui/ui.module.css";
 import { type HealthState, useReadiness } from "../api/readiness";
 import styles from "./HealthStatus.module.css";
 
@@ -18,8 +19,11 @@ const stateSymbols: Record<HealthState, string> = {
 
 function DependencyRow({ name, state }: { name: string; state: HealthState }) {
   return (
-    <li className={styles[state]}>
-      <span aria-hidden="true">{stateSymbols[state]}</span> {name}: {stateLabels[state]}
+    <li className={`${styles.row} ${styles[state]}`}>
+      <span aria-hidden="true" className={styles.symbol}>
+        {stateSymbols[state]}
+      </span>{" "}
+      {name}: {stateLabels[state]}
     </li>
   );
 }
@@ -29,7 +33,7 @@ export function HealthStatus() {
   const { data, isPending, isError, refetch, isFetching } = useReadiness();
 
   return (
-    <section aria-labelledby="health-heading">
+    <section aria-labelledby="health-heading" className={`${ui.card} ${styles.panel}`}>
       <h1 id="health-heading">System status</h1>
 
       <div role="status" aria-live="polite">
@@ -43,7 +47,7 @@ export function HealthStatus() {
         )}
       </div>
 
-      <button type="button" onClick={() => refetch()} disabled={isFetching}>
+      <button type="button" className={ui.buttonSecondary} onClick={() => refetch()} disabled={isFetching}>
         {isFetching ? "Checking…" : "Check again"}
       </button>
     </section>
