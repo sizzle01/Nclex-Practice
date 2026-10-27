@@ -24,17 +24,26 @@ public sealed class ImportQuestionsTests(ApiFactory factory)
         var first = await ImportAsync(file);
         var second = await ImportAsync(QuestionImportFile.Parse(await File.ReadAllTextAsync(SampleFile, TestContext.Current.CancellationToken)));
 
-        first.ShouldBe(new ImportResult(Created: 20, Updated: 0, Unchanged: 0, []), "first import");
-        second.ShouldBe(new ImportResult(Created: 0, Updated: 0, Unchanged: 20, []), "second import");
+        first.ShouldBe(new ImportResult(Created: 40, Updated: 0, Unchanged: 0, []), "first import");
+        second.ShouldBe(new ImportResult(Created: 0, Updated: 0, Unchanged: 40, []), "second import");
 
         await using var scope = factory.Services.CreateAsyncScope();
         var db = scope.ServiceProvider.GetRequiredService<AppDbContext>();
         var versions = await db.QuestionVersions.Where(v => ids.Contains(v.QuestionId)).ToListAsync(TestContext.Current.CancellationToken);
-        versions.Count.ShouldBe(20);
+        versions.Count.ShouldBe(40);
         versions.ShouldAllBe(v => v.Status == VersionStatus.Published && v.Version == 1);
         versions.Count(v => v.ItemType == ItemType.MultipleChoice).ShouldBe(10);
         versions.Where(v => v.ItemType == ItemType.MultipleChoice).ShouldAllBe(v => v.MaxPoints == 1);
         versions.Where(v => v.ItemType == ItemType.Sata).ShouldAllBe(v => v.MaxPoints > 1);
+
+        // Two samples of every other MVP type (F05), with max points worked out by each type's module.
+        var otherMvpTypes = ItemTypeCatalog.All
+            .Where(d => d.Phase == Phase.Mvp && d.Type is not (ItemType.MultipleChoice or ItemType.Sata))
+            .Select(d => d.Type);
+        versions.GroupBy(v => v.ItemType).Where(g => otherMvpTypes.Contains(g.Key))
+            .Select(g => (g.Key, g.Count())).ShouldBe(otherMvpTypes.Select(t => (t, 2)), ignoreOrder: true);
+        versions.Where(v => v.ItemType == ItemType.SelectN).Select(v => (int)v.MaxPoints).ShouldBe([3, 1], ignoreOrder: true); // per option, then all_or_nothing
+        versions.Where(v => v.ItemType == ItemType.OrderedResponse).Select(v => (int)v.MaxPoints).ShouldBe([1, 5], ignoreOrder: true); // all_or_nothing, then per_position
 
         var questions = await db.Questions.Where(q => ids.Contains(q.Id)).ToListAsync(TestContext.Current.CancellationToken);
         questions.ShouldAllBe(q => versions.Any(v => v.Id == q.CurrentVersionId));

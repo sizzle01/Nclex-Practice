@@ -1019,6 +1019,1495 @@
         ]
       },
       "educationalObjective": "Recognize the cues of diabetic ketoacidosis."
+    },
+    {
+      "id": "f05a0000-0000-4000-8000-000000000001",
+      "itemType": "select_n",
+      "clientNeeds": "PHI.PA",
+      "bodySystem": "endocrine",
+      "cjmmSkill": "recognize_cues",
+      "difficulty": "moderate",
+      "stem": "The nurse is caring for a client 12 hours after a total thyroidectomy. Select the 3 findings that require immediate follow-up.",
+      "content": {
+        "options": [
+          {
+            "id": "a",
+            "text": "Tingling around the mouth and in the fingertips"
+          },
+          {
+            "id": "b",
+            "text": "Mild hoarseness when speaking"
+          },
+          {
+            "id": "c",
+            "text": "High-pitched sound on inspiration"
+          },
+          {
+            "id": "d",
+            "text": "Incision pain rated 3 out of 10"
+          },
+          {
+            "id": "e",
+            "text": "Facial twitching when the cheek is tapped"
+          },
+          {
+            "id": "f",
+            "text": "Temperature 37.2 °C (99 °F)"
+          }
+        ],
+        "selectCount": 3
+      },
+      "key": {
+        "correct": [
+          "a",
+          "c",
+          "e"
+        ]
+      },
+      "rationale": {
+        "correct": "Damage to the parathyroid glands causes hypocalcemia (tingling, a positive Chvostek sign), and stridor signals airway obstruction; all three need action now.",
+        "perOption": {
+          "a": "Perioral and fingertip tingling is an early sign of hypocalcemia from parathyroid injury.",
+          "b": "Mild hoarseness is common after thyroid surgery because of laryngeal edema and usually resolves.",
+          "c": "Stridor signals airway narrowing from edema, bleeding or tetany and is an emergency.",
+          "d": "Mild incision pain is expected and can be managed with the prescribed analgesic.",
+          "e": "Facial twitching on tapping (Chvostek sign) indicates hypocalcemia.",
+          "f": "A slightly raised temperature in the first 24 hours is expected after surgery."
+        },
+        "references": [
+          "SAMPLE CONTENT: written for development and testing, not reviewed by a nurse educator. Do not use for exam preparation."
+        ]
+      },
+      "educationalObjective": "After thyroidectomy, watch for airway obstruction and hypocalcemia."
+    },
+    {
+      "id": "f05a0000-0000-4000-8000-000000000002",
+      "itemType": "select_n",
+      "clientNeeds": "PHI.PPT",
+      "bodySystem": "pharmacology",
+      "cjmmSkill": "analyze_cues",
+      "difficulty": "difficult",
+      "stem": "A client's serum potassium is 6.0 mEq/L. Select the 2 prescribed medications the nurse should clarify with the provider before giving.",
+      "content": {
+        "options": [
+          {
+            "id": "a",
+            "text": "Spironolactone"
+          },
+          {
+            "id": "b",
+            "text": "Furosemide"
+          },
+          {
+            "id": "c",
+            "text": "Lisinopril"
+          },
+          {
+            "id": "d",
+            "text": "Acetaminophen"
+          },
+          {
+            "id": "e",
+            "text": "Pantoprazole"
+          }
+        ],
+        "selectCount": 2
+      },
+      "key": {
+        "correct": [
+          "a",
+          "c"
+        ],
+        "scoringOverride": "all_or_nothing"
+      },
+      "rationale": {
+        "correct": "Spironolactone and lisinopril both raise serum potassium, so giving them during hyperkalemia could cause dangerous dysrhythmias.",
+        "perOption": {
+          "a": "Spironolactone is a potassium-sparing diuretic and raises potassium further.",
+          "b": "Furosemide is a loop diuretic that lowers potassium; it is not the concern here.",
+          "c": "ACE inhibitors such as lisinopril reduce aldosterone and raise potassium.",
+          "d": "Acetaminophen does not affect potassium.",
+          "e": "Pantoprazole does not affect potassium."
+        },
+        "references": [
+          "SAMPLE CONTENT: written for development and testing, not reviewed by a nurse educator. Do not use for exam preparation."
+        ]
+      },
+      "educationalObjective": "Know which medications raise serum potassium."
+    },
+    {
+      "id": "f05a0000-0000-4000-8000-000000000003",
+      "itemType": "matrix_mc",
+      "clientNeeds": "PHI.PA",
+      "bodySystem": "cardiovascular",
+      "cjmmSkill": "analyze_cues",
+      "difficulty": "moderate",
+      "stem": "For each finding, indicate whether it is more consistent with left-sided or right-sided heart failure.",
+      "content": {
+        "rows": [
+          {
+            "id": "r1",
+            "text": "Crackles in both lung bases"
+          },
+          {
+            "id": "r2",
+            "text": "Jugular venous distension"
+          },
+          {
+            "id": "r3",
+            "text": "Dependent edema of the ankles"
+          },
+          {
+            "id": "r4",
+            "text": "Orthopnea"
+          }
+        ],
+        "columns": [
+          {
+            "id": "c1",
+            "text": "Left-sided"
+          },
+          {
+            "id": "c2",
+            "text": "Right-sided"
+          }
+        ]
+      },
+      "key": {
+        "byRow": {
+          "r1": "c1",
+          "r2": "c2",
+          "r3": "c2",
+          "r4": "c1"
+        }
+      },
+      "rationale": {
+        "correct": "Left-sided failure backs blood up into the lungs; right-sided failure backs blood up into the systemic veins.",
+        "perOption": {
+          "r1:c1": "Crackles come from fluid in the lungs, typical of left-sided failure.",
+          "r1:c2": "Right-sided failure congests the systemic veins, not the lungs.",
+          "r2:c1": "Left-sided failure congests the pulmonary circulation, not the neck veins.",
+          "r2:c2": "Jugular venous distension reflects systemic venous congestion from right-sided failure.",
+          "r3:c1": "Peripheral edema is not the main sign of left-sided failure.",
+          "r3:c2": "Dependent edema results from systemic venous congestion in right-sided failure.",
+          "r4:c1": "Orthopnea occurs because lying flat increases pulmonary congestion in left-sided failure.",
+          "r4:c2": "Breathlessness lying flat comes from lung congestion, which is left-sided."
+        },
+        "references": [
+          "SAMPLE CONTENT: written for development and testing, not reviewed by a nurse educator. Do not use for exam preparation."
+        ]
+      },
+      "educationalObjective": "Tell left-sided from right-sided heart failure by where fluid backs up."
+    },
+    {
+      "id": "f05a0000-0000-4000-8000-000000000004",
+      "itemType": "matrix_mc",
+      "clientNeeds": "PHI.PPT",
+      "bodySystem": "hematologic-oncologic",
+      "cjmmSkill": "take_action",
+      "difficulty": "moderate",
+      "stem": "A client with a new deep vein thrombosis is receiving a continuous heparin infusion. For each action, indicate whether it is indicated or contraindicated.",
+      "content": {
+        "rows": [
+          {
+            "id": "r1",
+            "text": "Massage the affected calf to relieve discomfort"
+          },
+          {
+            "id": "r2",
+            "text": "Monitor the aPTT"
+          },
+          {
+            "id": "r3",
+            "text": "Elevate the affected leg"
+          },
+          {
+            "id": "r4",
+            "text": "Give the prescribed vitamin K with the heparin"
+          }
+        ],
+        "columns": [
+          {
+            "id": "c1",
+            "text": "Indicated"
+          },
+          {
+            "id": "c2",
+            "text": "Contraindicated"
+          }
+        ]
+      },
+      "key": {
+        "byRow": {
+          "r1": "c2",
+          "r2": "c1",
+          "r3": "c1",
+          "r4": "c2"
+        }
+      },
+      "rationale": {
+        "correct": "Care for DVT on heparin protects the clot from dislodging and monitors anticoagulation.",
+        "perOption": {
+          "r1:c1": "Massaging the leg can dislodge the clot and cause a pulmonary embolism.",
+          "r1:c2": "Correct: massage is contraindicated because it can dislodge the clot.",
+          "r2:c1": "Correct: the aPTT guides heparin dose adjustments.",
+          "r2:c2": "The aPTT must be monitored; it is how heparin therapy is titrated.",
+          "r3:c1": "Correct: elevation reduces swelling and promotes venous return.",
+          "r3:c2": "Elevation is a standard comfort and circulation measure for DVT.",
+          "r4:c1": "Vitamin K reverses warfarin, not heparin, and would work against anticoagulation.",
+          "r4:c2": "Correct: vitamin K is not given with anticoagulation therapy; protamine reverses heparin."
+        },
+        "references": [
+          "SAMPLE CONTENT: written for development and testing, not reviewed by a nurse educator. Do not use for exam preparation."
+        ]
+      },
+      "educationalObjective": "Know the nursing care of a client with DVT receiving heparin."
+    },
+    {
+      "id": "f05a0000-0000-4000-8000-000000000005",
+      "itemType": "matrix_mr",
+      "clientNeeds": "PHI.PPT",
+      "bodySystem": "pharmacology",
+      "cjmmSkill": "take_action",
+      "difficulty": "moderate",
+      "stem": "For each medication, select the adverse effects the nurse should teach the client to report right away. Each medication may have more than one.",
+      "content": {
+        "rows": [
+          {
+            "id": "r1",
+            "text": "Warfarin"
+          },
+          {
+            "id": "r2",
+            "text": "Lisinopril"
+          },
+          {
+            "id": "r3",
+            "text": "Metformin"
+          }
+        ],
+        "columns": [
+          {
+            "id": "c1",
+            "text": "Unusual bleeding or bruising"
+          },
+          {
+            "id": "c2",
+            "text": "Swelling of the face, lips or tongue"
+          },
+          {
+            "id": "c3",
+            "text": "Muscle pain with weakness and trouble breathing"
+          },
+          {
+            "id": "c4",
+            "text": "Black, tarry stools"
+          }
+        ],
+        "groupAxis": "row"
+      },
+      "key": {
+        "byGroup": {
+          "r1": [
+            "r1:c1",
+            "r1:c4"
+          ],
+          "r2": [
+            "r2:c2"
+          ],
+          "r3": [
+            "r3:c3"
+          ]
+        }
+      },
+      "rationale": {
+        "correct": "Teaching focuses on the serious adverse effect of each drug: bleeding for warfarin, angioedema for lisinopril, lactic acidosis for metformin.",
+        "perOption": {
+          "r1:c1": "Bleeding is the main adverse effect of warfarin.",
+          "r1:c2": "Angioedema is linked to ACE inhibitors, not warfarin.",
+          "r1:c3": "This describes lactic acidosis, a metformin effect.",
+          "r1:c4": "Tarry stools can signal gastrointestinal bleeding on warfarin.",
+          "r2:c1": "Lisinopril does not cause bleeding.",
+          "r2:c2": "ACE inhibitors can cause angioedema, which can block the airway.",
+          "r2:c3": "This is not an effect of lisinopril.",
+          "r2:c4": "Lisinopril does not cause gastrointestinal bleeding.",
+          "r3:c1": "Metformin does not cause bleeding.",
+          "r3:c2": "Metformin does not cause angioedema.",
+          "r3:c3": "Muscle pain, weakness and trouble breathing can signal lactic acidosis from metformin.",
+          "r3:c4": "Metformin does not cause gastrointestinal bleeding."
+        },
+        "references": [
+          "SAMPLE CONTENT: written for development and testing, not reviewed by a nurse educator. Do not use for exam preparation."
+        ]
+      },
+      "educationalObjective": "Teach clients the serious adverse effects of common medications."
+    },
+    {
+      "id": "f05a0000-0000-4000-8000-000000000006",
+      "itemType": "matrix_mr",
+      "clientNeeds": "SECE.SIC",
+      "bodySystem": "fundamentals",
+      "cjmmSkill": "generate_solutions",
+      "difficulty": "easy",
+      "stem": "For each type of transmission-based precautions, select the conditions that require it.",
+      "content": {
+        "rows": [
+          {
+            "id": "r1",
+            "text": "Influenza"
+          },
+          {
+            "id": "r2",
+            "text": "Clostridioides difficile"
+          },
+          {
+            "id": "r3",
+            "text": "Pulmonary tuberculosis"
+          },
+          {
+            "id": "r4",
+            "text": "Measles"
+          },
+          {
+            "id": "r5",
+            "text": "MRSA wound infection"
+          }
+        ],
+        "columns": [
+          {
+            "id": "c1",
+            "text": "Contact"
+          },
+          {
+            "id": "c2",
+            "text": "Droplet"
+          },
+          {
+            "id": "c3",
+            "text": "Airborne"
+          }
+        ],
+        "groupAxis": "column"
+      },
+      "key": {
+        "byGroup": {
+          "c1": [
+            "r2:c1",
+            "r5:c1"
+          ],
+          "c2": [
+            "r1:c2"
+          ],
+          "c3": [
+            "r3:c3",
+            "r4:c3"
+          ]
+        }
+      },
+      "rationale": {
+        "correct": "Precautions match how the organism spreads: contact for C. difficile and MRSA, droplet for influenza, airborne for tuberculosis and measles.",
+        "perOption": {
+          "r1:c1": "Influenza is not spread by touch and contaminated surfaces; it needs droplet precautions.",
+          "r1:c2": "Correct: Influenza is spread by large droplets within about 1 metre.",
+          "r1:c3": "Influenza is not spread by small particles that stay in the air; it needs droplet precautions.",
+          "r2:c1": "Correct: Clostridioides difficile is spread by touch and contaminated surfaces.",
+          "r2:c2": "Clostridioides difficile is not spread by large droplets within about 1 metre; it needs contact precautions.",
+          "r2:c3": "Clostridioides difficile is not spread by small particles that stay in the air; it needs contact precautions.",
+          "r3:c1": "Pulmonary tuberculosis is not spread by touch and contaminated surfaces; it needs airborne precautions.",
+          "r3:c2": "Pulmonary tuberculosis is not spread by large droplets within about 1 metre; it needs airborne precautions.",
+          "r3:c3": "Correct: Pulmonary tuberculosis is spread by small particles that stay in the air.",
+          "r4:c1": "Measles is not spread by touch and contaminated surfaces; it needs airborne precautions.",
+          "r4:c2": "Measles is not spread by large droplets within about 1 metre; it needs airborne precautions.",
+          "r4:c3": "Correct: Measles is spread by small particles that stay in the air.",
+          "r5:c1": "Correct: MRSA wound infection is spread by touch and contaminated surfaces.",
+          "r5:c2": "MRSA wound infection is not spread by large droplets within about 1 metre; it needs contact precautions.",
+          "r5:c3": "MRSA wound infection is not spread by small particles that stay in the air; it needs contact precautions."
+        },
+        "references": [
+          "SAMPLE CONTENT: written for development and testing, not reviewed by a nurse educator. Do not use for exam preparation."
+        ]
+      },
+      "educationalObjective": "Match each infection to its transmission-based precautions."
+    },
+    {
+      "id": "f05a0000-0000-4000-8000-000000000007",
+      "itemType": "multiple_response_grouping",
+      "clientNeeds": "PHI.RRP",
+      "bodySystem": "musculoskeletal",
+      "cjmmSkill": "recognize_cues",
+      "difficulty": "moderate",
+      "stem": "The nurse assesses a client 1 day after a total hip arthroplasty. For each body system, select the findings that require immediate follow-up.",
+      "content": {
+        "groups": [
+          {
+            "id": "g1",
+            "label": "Circulation",
+            "options": [
+              {
+                "id": "a",
+                "text": "Capillary refill under 3 seconds in the toes"
+              },
+              {
+                "id": "b",
+                "text": "Cool, pale foot on the operative side"
+              },
+              {
+                "id": "c",
+                "text": "Pedal pulses 2+ and equal"
+              }
+            ]
+          },
+          {
+            "id": "g2",
+            "label": "Respiratory",
+            "options": [
+              {
+                "id": "d",
+                "text": "Sudden shortness of breath and chest pain"
+              },
+              {
+                "id": "e",
+                "text": "Oxygen saturation 96% on room air"
+              },
+              {
+                "id": "f",
+                "text": "Clear breath sounds"
+              }
+            ]
+          },
+          {
+            "id": "g3",
+            "label": "Operative hip",
+            "options": [
+              {
+                "id": "g",
+                "text": "Bright red drainage saturating the dressing"
+              },
+              {
+                "id": "h",
+                "text": "Operative leg shorter and turned outward"
+              },
+              {
+                "id": "i",
+                "text": "Mild bruising around the incision"
+              }
+            ]
+          }
+        ]
+      },
+      "key": {
+        "byGroup": {
+          "g1": [
+            "b"
+          ],
+          "g2": [
+            "d"
+          ],
+          "g3": [
+            "g",
+            "h"
+          ]
+        }
+      },
+      "rationale": {
+        "correct": "After hip arthroplasty, watch for impaired circulation, pulmonary embolism, hemorrhage and dislocation.",
+        "perOption": {
+          "a": "Brisk capillary refill shows adequate perfusion.",
+          "b": "A cool, pale foot suggests impaired arterial circulation.",
+          "c": "Strong, equal pulses are a normal finding.",
+          "d": "Sudden dyspnea and chest pain suggest a pulmonary embolism.",
+          "e": "A saturation of 96% is within normal limits.",
+          "f": "Clear breath sounds are a normal finding.",
+          "g": "Saturating the dressing with bright red blood suggests hemorrhage.",
+          "h": "Shortening and external rotation suggest hip dislocation.",
+          "i": "Mild bruising is expected after surgery."
+        },
+        "references": [
+          "SAMPLE CONTENT: written for development and testing, not reviewed by a nurse educator. Do not use for exam preparation."
+        ]
+      },
+      "educationalObjective": "Recognize the complications of total hip arthroplasty."
+    },
+    {
+      "id": "f05a0000-0000-4000-8000-000000000008",
+      "itemType": "multiple_response_grouping",
+      "clientNeeds": "HPM",
+      "bodySystem": "cardiovascular",
+      "cjmmSkill": "take_action",
+      "difficulty": "easy",
+      "stem": "The nurse is teaching a client with heart failure before discharge. For each topic, select the statements that show the client understands the teaching.",
+      "content": {
+        "groups": [
+          {
+            "id": "g1",
+            "label": "Diet",
+            "options": [
+              {
+                "id": "a",
+                "text": "\"I will keep my sodium to the amount my provider set.\""
+              },
+              {
+                "id": "b",
+                "text": "\"I can use as much salt substitute as I like.\""
+              },
+              {
+                "id": "c",
+                "text": "\"Canned soups are a good low-salt choice.\""
+              }
+            ]
+          },
+          {
+            "id": "g2",
+            "label": "Monitoring",
+            "options": [
+              {
+                "id": "d",
+                "text": "\"I will weigh myself every morning after I urinate.\""
+              },
+              {
+                "id": "e",
+                "text": "\"I will call if I gain more than 1 kg (2 lb) in a day.\""
+              },
+              {
+                "id": "f",
+                "text": "\"I only need to check my weight at clinic visits.\""
+              }
+            ]
+          },
+          {
+            "id": "g3",
+            "label": "Activity",
+            "options": [
+              {
+                "id": "g",
+                "text": "\"I will rest between activities.\""
+              },
+              {
+                "id": "h",
+                "text": "\"I should stay in bed most of the day.\""
+              }
+            ]
+          }
+        ]
+      },
+      "key": {
+        "byGroup": {
+          "g1": [
+            "a"
+          ],
+          "g2": [
+            "d",
+            "e"
+          ],
+          "g3": [
+            "g"
+          ]
+        }
+      },
+      "rationale": {
+        "correct": "Heart failure self-care is a sodium limit, daily weights with prompt reporting of gains, and paced activity.",
+        "perOption": {
+          "a": "A prescribed sodium limit reduces fluid retention.",
+          "b": "Salt substitutes contain potassium and can cause hyperkalemia with some heart failure drugs.",
+          "c": "Canned soups are usually high in sodium.",
+          "d": "Daily weights at the same time detect fluid retention early.",
+          "e": "A rapid weight gain signals fluid retention and should be reported.",
+          "f": "Weekly or monthly weights miss fluid gain until it is severe.",
+          "g": "Pacing activity with rest reduces cardiac workload.",
+          "h": "Bed rest causes deconditioning; gradual activity is encouraged."
+        },
+        "references": [
+          "SAMPLE CONTENT: written for development and testing, not reviewed by a nurse educator. Do not use for exam preparation."
+        ]
+      },
+      "educationalObjective": "Evaluate heart failure discharge teaching."
+    },
+    {
+      "id": "f05a0000-0000-4000-8000-000000000009",
+      "itemType": "dropdown_cloze",
+      "clientNeeds": "PHI.RRP",
+      "bodySystem": "endocrine",
+      "cjmmSkill": "analyze_cues",
+      "difficulty": "easy",
+      "stem": "A client with type 1 diabetes is shaky, sweaty and anxious 2 hours after taking insulin and skipping lunch. Complete the sentence.",
+      "content": {
+        "template": "The client is most likely experiencing {{b1}}, as shown by {{b2}}.",
+        "blanks": [
+          {
+            "id": "b1",
+            "options": [
+              {
+                "id": "a",
+                "text": "hypoglycemia"
+              },
+              {
+                "id": "b",
+                "text": "hyperglycemia"
+              },
+              {
+                "id": "c",
+                "text": "diabetic ketoacidosis"
+              }
+            ]
+          },
+          {
+            "id": "b2",
+            "options": [
+              {
+                "id": "a",
+                "text": "a capillary glucose of 52 mg/dL"
+              },
+              {
+                "id": "b",
+                "text": "a fruity odor on the breath"
+              },
+              {
+                "id": "c",
+                "text": "frequent urination"
+              }
+            ]
+          }
+        ]
+      },
+      "key": {
+        "byBlank": {
+          "b1": "a",
+          "b2": "a"
+        }
+      },
+      "rationale": {
+        "correct": "Insulin without food leads to low glucose; shakiness and sweating are adrenergic signs, confirmed by a glucose below 70 mg/dL.",
+        "perOption": {
+          "b1:a": "Insulin with a missed meal and adrenergic symptoms point to hypoglycemia.",
+          "b1:b": "Hyperglycemia causes thirst and polyuria, not shakiness and sweating.",
+          "b1:c": "DKA develops over hours with ketosis; it does not follow a missed meal after insulin.",
+          "b2:a": "A glucose of 52 mg/dL confirms hypoglycemia.",
+          "b2:b": "A fruity breath odor suggests ketosis from DKA.",
+          "b2:c": "Frequent urination is a sign of hyperglycemia."
+        },
+        "references": [
+          "SAMPLE CONTENT: written for development and testing, not reviewed by a nurse educator. Do not use for exam preparation."
+        ]
+      },
+      "educationalObjective": "Recognize hypoglycemia and its confirming finding."
+    },
+    {
+      "id": "f05a0000-0000-4000-8000-000000000010",
+      "itemType": "dropdown_cloze",
+      "clientNeeds": "SECE.SIC",
+      "bodySystem": "fundamentals",
+      "cjmmSkill": "take_action",
+      "difficulty": "easy",
+      "stem": "The nurse discovers a small fire in a client's room. Complete the sentence.",
+      "content": {
+        "template": "The nurse should first {{b1}} and then {{b2}}.",
+        "blanks": [
+          {
+            "id": "b1",
+            "options": [
+              {
+                "id": "a",
+                "text": "move the client out of immediate danger"
+              },
+              {
+                "id": "b",
+                "text": "put out the fire with an extinguisher"
+              },
+              {
+                "id": "c",
+                "text": "call the provider"
+              }
+            ]
+          },
+          {
+            "id": "b2",
+            "options": [
+              {
+                "id": "a",
+                "text": "activate the fire alarm"
+              },
+              {
+                "id": "b",
+                "text": "open the windows"
+              },
+              {
+                "id": "c",
+                "text": "take the client to the elevator"
+              }
+            ]
+          }
+        ]
+      },
+      "key": {
+        "byBlank": {
+          "b1": "a",
+          "b2": "a"
+        }
+      },
+      "rationale": {
+        "correct": "Fire response follows RACE: Rescue, Alarm, Contain, Extinguish.",
+        "perOption": {
+          "b1:a": "Rescue comes first: clients in immediate danger are moved.",
+          "b1:b": "Extinguishing comes after rescue, alarm and containment.",
+          "b1:c": "Calling the provider does not protect anyone from the fire.",
+          "b2:a": "Alarm is the second step of RACE.",
+          "b2:b": "Opening windows feeds the fire with oxygen.",
+          "b2:c": "Elevators must not be used during a fire."
+        },
+        "references": [
+          "SAMPLE CONTENT: written for development and testing, not reviewed by a nurse educator. Do not use for exam preparation."
+        ]
+      },
+      "educationalObjective": "Apply the RACE sequence in a fire."
+    },
+    {
+      "id": "f05a0000-0000-4000-8000-000000000011",
+      "itemType": "dropdown_table",
+      "clientNeeds": "PHI.RRP",
+      "bodySystem": "renal-urinary",
+      "cjmmSkill": "recognize_cues",
+      "difficulty": "moderate",
+      "stem": "The nurse reviews the morning laboratory results of a client with chronic kidney disease. For each result, choose the interpretation.",
+      "content": {
+        "columns": [
+          "Laboratory test",
+          "Result",
+          "Interpretation"
+        ],
+        "rows": [
+          {
+            "id": "r1",
+            "cells": [
+              {
+                "text": "Potassium"
+              },
+              {
+                "text": "5.9 mEq/L"
+              },
+              {
+                "blankId": "b1"
+              }
+            ]
+          },
+          {
+            "id": "r2",
+            "cells": [
+              {
+                "text": "Sodium"
+              },
+              {
+                "text": "138 mEq/L"
+              },
+              {
+                "blankId": "b2"
+              }
+            ]
+          },
+          {
+            "id": "r3",
+            "cells": [
+              {
+                "text": "Fasting glucose"
+              },
+              {
+                "text": "62 mg/dL"
+              },
+              {
+                "blankId": "b3"
+              }
+            ]
+          }
+        ],
+        "blanks": [
+          {
+            "id": "b1",
+            "options": [
+              {
+                "id": "a",
+                "text": "Low"
+              },
+              {
+                "id": "b",
+                "text": "Within normal range"
+              },
+              {
+                "id": "c",
+                "text": "High"
+              }
+            ]
+          },
+          {
+            "id": "b2",
+            "options": [
+              {
+                "id": "a",
+                "text": "Low"
+              },
+              {
+                "id": "b",
+                "text": "Within normal range"
+              },
+              {
+                "id": "c",
+                "text": "High"
+              }
+            ]
+          },
+          {
+            "id": "b3",
+            "options": [
+              {
+                "id": "a",
+                "text": "Low"
+              },
+              {
+                "id": "b",
+                "text": "Within normal range"
+              },
+              {
+                "id": "c",
+                "text": "High"
+              }
+            ]
+          }
+        ]
+      },
+      "key": {
+        "byBlank": {
+          "b1": "c",
+          "b2": "b",
+          "b3": "a"
+        }
+      },
+      "rationale": {
+        "correct": "Normal ranges: potassium 3.5 to 5.0 mEq/L, sodium 135 to 145 mEq/L, fasting glucose 70 to 99 mg/dL.",
+        "perOption": {
+          "b1:a": "5.9 mEq/L is above, not below, 3.5 to 5.0 mEq/L.",
+          "b1:b": "5.9 mEq/L is above the normal 3.5 to 5.0 mEq/L.",
+          "b1:c": "5.9 mEq/L is high; kidney disease reduces potassium excretion.",
+          "b2:a": "138 mEq/L is not below 135 mEq/L.",
+          "b2:b": "138 mEq/L is within 135 to 145 mEq/L.",
+          "b2:c": "138 mEq/L is not above 145 mEq/L.",
+          "b3:a": "62 mg/dL is below the fasting range of 70 to 99 mg/dL.",
+          "b3:b": "62 mg/dL is below the normal fasting range.",
+          "b3:c": "62 mg/dL is low, not high."
+        },
+        "references": [
+          "SAMPLE CONTENT: written for development and testing, not reviewed by a nurse educator. Do not use for exam preparation."
+        ]
+      },
+      "educationalObjective": "Interpret common electrolyte and glucose results."
+    },
+    {
+      "id": "f05a0000-0000-4000-8000-000000000012",
+      "itemType": "dropdown_table",
+      "clientNeeds": "PHI.PPT",
+      "bodySystem": "pharmacology",
+      "cjmmSkill": "take_action",
+      "difficulty": "moderate",
+      "stem": "For each medication, choose the assessment that matters most before giving it.",
+      "content": {
+        "columns": [
+          "Medication",
+          "Assessment before giving"
+        ],
+        "rows": [
+          {
+            "id": "r1",
+            "cells": [
+              {
+                "text": "Digoxin"
+              },
+              {
+                "blankId": "b1"
+              }
+            ]
+          },
+          {
+            "id": "r2",
+            "cells": [
+              {
+                "text": "Metoprolol"
+              },
+              {
+                "blankId": "b2"
+              }
+            ]
+          },
+          {
+            "id": "r3",
+            "cells": [
+              {
+                "text": "Furosemide"
+              },
+              {
+                "blankId": "b3"
+              }
+            ]
+          }
+        ],
+        "blanks": [
+          {
+            "id": "b1",
+            "options": [
+              {
+                "id": "a",
+                "text": "Apical pulse for 1 full minute"
+              },
+              {
+                "id": "b",
+                "text": "Blood pressure and apical pulse"
+              },
+              {
+                "id": "c",
+                "text": "Serum potassium"
+              }
+            ]
+          },
+          {
+            "id": "b2",
+            "options": [
+              {
+                "id": "a",
+                "text": "Apical pulse for 1 full minute"
+              },
+              {
+                "id": "b",
+                "text": "Blood pressure and apical pulse"
+              },
+              {
+                "id": "c",
+                "text": "Serum potassium"
+              }
+            ]
+          },
+          {
+            "id": "b3",
+            "options": [
+              {
+                "id": "a",
+                "text": "Apical pulse for 1 full minute"
+              },
+              {
+                "id": "b",
+                "text": "Blood pressure and apical pulse"
+              },
+              {
+                "id": "c",
+                "text": "Serum potassium"
+              }
+            ]
+          }
+        ]
+      },
+      "key": {
+        "byBlank": {
+          "b1": "a",
+          "b2": "b",
+          "b3": "c"
+        }
+      },
+      "rationale": {
+        "correct": "Each check targets the drug's main risk: bradycardia for digoxin, hypotension and bradycardia for beta blockers, hypokalemia for loop diuretics.",
+        "perOption": {
+          "b1:a": "Digoxin slows the heart; hold it if the apical pulse is below 60/min.",
+          "b1:b": "Digoxin has little effect on blood pressure; the apical rate is the key check.",
+          "b1:c": "Potassium matters for digoxin toxicity, but the apical pulse is checked before every dose.",
+          "b2:a": "The apical pulse alone misses hypotension from a beta blocker.",
+          "b2:b": "Beta blockers lower both blood pressure and heart rate.",
+          "b2:c": "Metoprolol does not usually change potassium.",
+          "b3:a": "Furosemide does not slow the heart.",
+          "b3:b": "Blood pressure matters, but low potassium is the main risk of loop diuretics.",
+          "b3:c": "Furosemide wastes potassium; hypokalemia can cause dysrhythmias."
+        },
+        "references": [
+          "SAMPLE CONTENT: written for development and testing, not reviewed by a nurse educator. Do not use for exam preparation."
+        ]
+      },
+      "educationalObjective": "Know the key pre-administration check for common cardiac drugs."
+    },
+    {
+      "id": "f05a0000-0000-4000-8000-000000000013",
+      "itemType": "highlight_text",
+      "clientNeeds": "PHI.PA",
+      "bodySystem": "maternal-newborn",
+      "cjmmSkill": "recognize_cues",
+      "difficulty": "moderate",
+      "stem": "Highlight the findings in the nurse's note that require immediate follow-up.",
+      "content": {
+        "segments": [
+          {
+            "id": "s1",
+            "text": "Client is 2 hours after a vaginal birth. ",
+            "selectable": false
+          },
+          {
+            "id": "s2",
+            "text": "Fundus is boggy and 2 cm above the umbilicus",
+            "selectable": true
+          },
+          {
+            "id": "s3",
+            "text": ". ",
+            "selectable": false
+          },
+          {
+            "id": "s4",
+            "text": "Lochia rubra is saturating a pad every 15 minutes",
+            "selectable": true
+          },
+          {
+            "id": "s5",
+            "text": ". ",
+            "selectable": false
+          },
+          {
+            "id": "s6",
+            "text": "Blood pressure 118/72 mm Hg",
+            "selectable": true
+          },
+          {
+            "id": "s7",
+            "text": ". ",
+            "selectable": false
+          },
+          {
+            "id": "s8",
+            "text": "Client reports cramping while breastfeeding",
+            "selectable": true
+          },
+          {
+            "id": "s9",
+            "text": ".",
+            "selectable": false
+          }
+        ]
+      },
+      "key": {
+        "correct": [
+          "s2",
+          "s4"
+        ]
+      },
+      "rationale": {
+        "correct": "A boggy, high fundus with heavy bleeding indicates uterine atony and postpartum hemorrhage.",
+        "perOption": {
+          "s2": "A boggy fundus above the umbilicus suggests uterine atony.",
+          "s4": "Saturating a pad in 15 minutes is excessive bleeding.",
+          "s6": "This blood pressure is within normal limits.",
+          "s8": "Cramping while breastfeeding is expected as oxytocin contracts the uterus."
+        },
+        "references": [
+          "SAMPLE CONTENT: written for development and testing, not reviewed by a nurse educator. Do not use for exam preparation."
+        ]
+      },
+      "educationalObjective": "Recognize the early signs of postpartum hemorrhage."
+    },
+    {
+      "id": "f05a0000-0000-4000-8000-000000000014",
+      "itemType": "highlight_text",
+      "clientNeeds": "PHI.PA",
+      "bodySystem": "respiratory",
+      "cjmmSkill": "recognize_cues",
+      "difficulty": "easy",
+      "stem": "Highlight the findings in the admission note that require immediate follow-up.",
+      "content": {
+        "segments": [
+          {
+            "id": "s1",
+            "text": "Client admitted with pneumonia. ",
+            "selectable": false
+          },
+          {
+            "id": "s2",
+            "text": "Alert and oriented to person, place and time",
+            "selectable": true
+          },
+          {
+            "id": "s3",
+            "text": ". ",
+            "selectable": false
+          },
+          {
+            "id": "s4",
+            "text": "Respiratory rate 28/min",
+            "selectable": true
+          },
+          {
+            "id": "s5",
+            "text": ", ",
+            "selectable": false
+          },
+          {
+            "id": "s6",
+            "text": "oxygen saturation 87% on room air",
+            "selectable": true
+          },
+          {
+            "id": "s7",
+            "text": ". ",
+            "selectable": false
+          },
+          {
+            "id": "s8",
+            "text": "Reports pain of 2 out of 10 when coughing",
+            "selectable": true
+          },
+          {
+            "id": "s9",
+            "text": ". ",
+            "selectable": false
+          },
+          {
+            "id": "s10",
+            "text": "Drinking fluids well",
+            "selectable": true
+          },
+          {
+            "id": "s11",
+            "text": ".",
+            "selectable": false
+          }
+        ]
+      },
+      "key": {
+        "correct": [
+          "s4",
+          "s6"
+        ]
+      },
+      "rationale": {
+        "correct": "Tachypnea and hypoxemia show the client is not oxygenating well and needs action now.",
+        "perOption": {
+          "s2": "Normal orientation shows adequate cerebral perfusion.",
+          "s4": "A respiratory rate of 28/min is tachypnea.",
+          "s6": "A saturation of 87% is hypoxemia and needs oxygen.",
+          "s8": "Mild pleuritic pain is expected with pneumonia.",
+          "s10": "Good fluid intake is a positive finding."
+        },
+        "references": [
+          "SAMPLE CONTENT: written for development and testing, not reviewed by a nurse educator. Do not use for exam preparation."
+        ]
+      },
+      "educationalObjective": "Prioritize findings of impaired oxygenation."
+    },
+    {
+      "id": "f05a0000-0000-4000-8000-000000000015",
+      "itemType": "highlight_table",
+      "clientNeeds": "PHI.PPT",
+      "bodySystem": "hematologic-oncologic",
+      "cjmmSkill": "recognize_cues",
+      "difficulty": "moderate",
+      "stem": "A client is receiving a unit of packed red blood cells. Highlight the entries that indicate a transfusion reaction.",
+      "content": {
+        "columns": [
+          "Time",
+          "Finding"
+        ],
+        "rows": [
+          {
+            "id": "r1",
+            "cells": [
+              "Before transfusion",
+              "T 36.8 °C, HR 82/min, BP 124/78 mm Hg"
+            ],
+            "selectable": true
+          },
+          {
+            "id": "r2",
+            "cells": [
+              "15 minutes",
+              "T 36.9 °C, HR 84/min, BP 122/76 mm Hg"
+            ],
+            "selectable": true
+          },
+          {
+            "id": "r3",
+            "cells": [
+              "30 minutes",
+              "T 38.4 °C, HR 112/min, BP 98/60 mm Hg"
+            ],
+            "selectable": true
+          },
+          {
+            "id": "r4",
+            "cells": [
+              "30 minutes",
+              "Client reports chills and low back pain"
+            ],
+            "selectable": true
+          },
+          {
+            "id": "r5",
+            "cells": [
+              "35 minutes",
+              "Transfusion stopped; provider notified"
+            ],
+            "selectable": false
+          }
+        ]
+      },
+      "key": {
+        "correct": [
+          "r3",
+          "r4"
+        ]
+      },
+      "rationale": {
+        "correct": "Fever, tachycardia, hypotension, chills and back pain during a transfusion indicate an acute hemolytic reaction.",
+        "perOption": {
+          "r1": "Baseline vital signs are normal.",
+          "r2": "Vital signs at 15 minutes are stable.",
+          "r3": "Fever, tachycardia and falling blood pressure signal a reaction.",
+          "r4": "Chills and low back pain are classic signs of a hemolytic reaction."
+        },
+        "references": [
+          "SAMPLE CONTENT: written for development and testing, not reviewed by a nurse educator. Do not use for exam preparation."
+        ]
+      },
+      "educationalObjective": "Recognize an acute hemolytic transfusion reaction."
+    },
+    {
+      "id": "f05a0000-0000-4000-8000-000000000016",
+      "itemType": "highlight_table",
+      "clientNeeds": "PHI.PA",
+      "bodySystem": "pediatrics",
+      "cjmmSkill": "analyze_cues",
+      "difficulty": "moderate",
+      "stem": "A 9-month-old infant has had diarrhea for 2 days. Highlight the findings that indicate dehydration.",
+      "content": {
+        "columns": [
+          "Assessment",
+          "Finding"
+        ],
+        "rows": [
+          {
+            "id": "r1",
+            "cells": [
+              "Anterior fontanel",
+              "Sunken"
+            ],
+            "selectable": true
+          },
+          {
+            "id": "r2",
+            "cells": [
+              "Mucous membranes",
+              "Moist"
+            ],
+            "selectable": true
+          },
+          {
+            "id": "r3",
+            "cells": [
+              "Wet diapers",
+              "1 in the past 12 hours"
+            ],
+            "selectable": true
+          },
+          {
+            "id": "r4",
+            "cells": [
+              "Capillary refill",
+              "2 seconds"
+            ],
+            "selectable": true
+          },
+          {
+            "id": "r5",
+            "cells": [
+              "Caregiver",
+              "At the bedside"
+            ],
+            "selectable": false
+          }
+        ]
+      },
+      "key": {
+        "correct": [
+          "r1",
+          "r3"
+        ]
+      },
+      "rationale": {
+        "correct": "A sunken fontanel and reduced urine output are signs of dehydration in infants.",
+        "perOption": {
+          "r1": "A sunken fontanel indicates fluid volume deficit.",
+          "r2": "Moist mucous membranes are a normal finding.",
+          "r3": "Fewer wet diapers means reduced urine output.",
+          "r4": "Capillary refill of 2 seconds is normal."
+        },
+        "references": [
+          "SAMPLE CONTENT: written for development and testing, not reviewed by a nurse educator. Do not use for exam preparation."
+        ]
+      },
+      "educationalObjective": "Recognize dehydration in an infant."
+    },
+    {
+      "id": "f05a0000-0000-4000-8000-000000000017",
+      "itemType": "fill_blank_calc",
+      "clientNeeds": "PHI.PPT",
+      "bodySystem": "pharmacology",
+      "cjmmSkill": "take_action",
+      "difficulty": "easy",
+      "stem": "The provider prescribes 1,000 mL of 0.9% sodium chloride to infuse over 8 hours. At what rate should the nurse set the infusion pump?",
+      "content": {
+        "unit": "mL/hr",
+        "decimals": 0,
+        "inputLabel": "Infusion rate"
+      },
+      "key": {
+        "value": 125,
+        "rounding": "exact"
+      },
+      "rationale": {
+        "correct": "Rate = volume ÷ time = 1,000 mL ÷ 8 hours = 125 mL/hr.",
+        "perOption": {},
+        "references": [
+          "SAMPLE CONTENT: written for development and testing, not reviewed by a nurse educator. Do not use for exam preparation."
+        ]
+      },
+      "educationalObjective": "Calculate an infusion rate in mL/hr."
+    },
+    {
+      "id": "f05a0000-0000-4000-8000-000000000018",
+      "itemType": "fill_blank_calc",
+      "clientNeeds": "PHI.PPT",
+      "bodySystem": "pediatrics",
+      "cjmmSkill": "take_action",
+      "difficulty": "difficult",
+      "stem": "A child weighing 17.3 kg is prescribed amoxicillin 25 mg/kg per dose. The suspension contains 250 mg in 5 mL. How many mL should the nurse give? Round to the nearest tenth.",
+      "content": {
+        "unit": "mL",
+        "decimals": 1,
+        "inputLabel": "Volume per dose"
+      },
+      "key": {
+        "value": 8.65,
+        "rounding": "round"
+      },
+      "rationale": {
+        "correct": "Dose = 17.3 kg × 25 mg/kg = 432.5 mg. Volume = 432.5 mg ÷ 50 mg/mL = 8.65 mL, which rounds to 8.7 mL.",
+        "perOption": {},
+        "references": [
+          "SAMPLE CONTENT: written for development and testing, not reviewed by a nurse educator. Do not use for exam preparation."
+        ]
+      },
+      "educationalObjective": "Calculate a weight-based pediatric dose and round correctly."
+    },
+    {
+      "id": "f05a0000-0000-4000-8000-000000000019",
+      "itemType": "ordered_response",
+      "clientNeeds": "PHI.PPT",
+      "bodySystem": "pharmacology",
+      "cjmmSkill": "take_action",
+      "difficulty": "easy",
+      "stem": "Place the steps for giving eye drops in order.",
+      "content": {
+        "items": [
+          {
+            "id": "c",
+            "text": "Pull the lower lid down to form a pocket"
+          },
+          {
+            "id": "a",
+            "text": "Perform hand hygiene and put on gloves"
+          },
+          {
+            "id": "e",
+            "text": "Press gently on the inner corner of the eye"
+          },
+          {
+            "id": "b",
+            "text": "Ask the client to tilt the head back and look up"
+          },
+          {
+            "id": "d",
+            "text": "Place the drops in the pocket of the lower lid"
+          }
+        ]
+      },
+      "key": {
+        "order": [
+          "a",
+          "b",
+          "c",
+          "d",
+          "e"
+        ],
+        "scoring": "all_or_nothing"
+      },
+      "rationale": {
+        "correct": "Clean hands, position the client, make a pocket, instill the drops, then press on the inner canthus to limit systemic absorption.",
+        "perOption": {
+          "a": "Hand hygiene comes first to prevent infection.",
+          "b": "Looking up moves the cornea away from the dropper.",
+          "c": "The pocket receives the drops instead of the sensitive cornea.",
+          "d": "Drops go into the conjunctival sac, not onto the cornea.",
+          "e": "Pressure on the inner canthus reduces drainage into the nasolacrimal duct."
+        },
+        "references": [
+          "SAMPLE CONTENT: written for development and testing, not reviewed by a nurse educator. Do not use for exam preparation."
+        ]
+      },
+      "educationalObjective": "Give eye drops in the correct sequence."
+    },
+    {
+      "id": "f05a0000-0000-4000-8000-000000000020",
+      "itemType": "ordered_response",
+      "clientNeeds": "PHI.PA",
+      "bodySystem": "cardiovascular",
+      "cjmmSkill": "take_action",
+      "difficulty": "moderate",
+      "stem": "The nurse finds an adult client unresponsive in bed. Place the actions in order.",
+      "content": {
+        "items": [
+          {
+            "id": "d",
+            "text": "Begin chest compressions"
+          },
+          {
+            "id": "b",
+            "text": "Call for help and activate the emergency response"
+          },
+          {
+            "id": "e",
+            "text": "Attach the defibrillator when it arrives"
+          },
+          {
+            "id": "a",
+            "text": "Check for responsiveness"
+          },
+          {
+            "id": "c",
+            "text": "Check for breathing and a pulse for no more than 10 seconds"
+          }
+        ]
+      },
+      "key": {
+        "order": [
+          "a",
+          "b",
+          "c",
+          "d",
+          "e"
+        ],
+        "scoring": "per_position"
+      },
+      "rationale": {
+        "correct": "Basic life support: confirm unresponsiveness, call for help, check breathing and pulse, start compressions, then defibrillate as soon as possible.",
+        "perOption": {
+          "a": "Confirm the client is unresponsive before acting.",
+          "b": "Calling for help early brings the team and the defibrillator.",
+          "c": "A pulse and breathing check of up to 10 seconds avoids delaying CPR.",
+          "d": "Compressions start immediately when there is no pulse.",
+          "e": "The defibrillator is attached as soon as it is available."
+        },
+        "references": [
+          "SAMPLE CONTENT: written for development and testing, not reviewed by a nurse educator. Do not use for exam preparation."
+        ]
+      },
+      "educationalObjective": "Follow the basic life support sequence."
     }
   ]
 }
