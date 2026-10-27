@@ -1,4 +1,5 @@
 using Microsoft.EntityFrameworkCore;
+using Nclex.Domain.Email;
 using Nclex.Domain.Entities;
 
 namespace Nclex.Application.Abstractions;
@@ -13,6 +14,11 @@ public interface IAppDbContext
     DbSet<User> Users { get; }
 
     DbSet<RefreshSession> RefreshSessions { get; }
+
+    DbSet<EmailToken> EmailTokens { get; }
+
+    /// <summary>Emails waiting to be sent. Use cases add rows through IEmailOutbox.</summary>
+    DbSet<EmailOutboxMessage> EmailOutbox { get; }
 
     /// <summary>
     /// Saves tracked changes in one transaction.

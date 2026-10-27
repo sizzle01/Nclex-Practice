@@ -56,7 +56,8 @@ public static class DependencyInjection
         npgsql
             .MapEnum<ExamTrack>("exam_track", nameTranslator: KeepNamesAsWritten)
             .MapEnum<UserRole>("user_role")
-            .MapEnum<PlanTier>("plan_tier");
+            .MapEnum<PlanTier>("plan_tier")
+            .MapEnum<EmailTokenPurpose>("email_token_purpose");
 
     private static string GetRequiredConnectionString(IServiceProvider provider, string name) =>
         provider.GetRequiredService<IConfiguration>().GetConnectionString(name)
