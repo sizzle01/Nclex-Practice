@@ -51,14 +51,25 @@ public sealed class SessionService(
     }
 
     /// <summary>Revokes every active session of a user ("log out everywhere"). Writes immediately.</summary>
-    public Task RevokeAllForUserAsync(Guid userId, CancellationToken cancellationToken)
+    public Task RevokeAllForUserAsync(Guid userId, CancellationToken cancellationToken) =>
+        RevokeOtherSessionsAsync(userId, keepFamilyId: null, cancellationToken);
+
+    /// <summary>
+    /// Revokes every active session of a user except the sign-in <paramref name="keepFamilyId"/>
+    /// (the device making the request). Revokes all of them when it is null. Writes immediately.
+    /// </summary>
+    public Task RevokeOtherSessionsAsync(Guid userId, Guid? keepFamilyId, CancellationToken cancellationToken)
     {
         DateTimeOffset? now = clock.GetUtcNow();
         return db.RefreshSessions
-            .Where(s => s.UserId == userId && s.RevokedAt == null)
+            .Where(s => s.UserId == userId && s.RevokedAt == null && s.FamilyId != keepFamilyId)
             .ExecuteUpdateAsync(set => set.SetProperty(s => s.RevokedAt, now), cancellationToken);
     }
 
+    /// <summary>Deletes every session row of a user, for account deletion (database.md section 4). Writes immediately.</summary>
+    public Task DeleteAllForUserAsync(Guid userId, CancellationToken cancellationToken) =>
+        db.RefreshSessions.Where(s => s.UserId == userId).ExecuteDeleteAsync(cancellationToken);
+
     private IssuedSession Issue(User user, SecureToken refreshToken, RefreshSession session) =>
-        new(accessTokens.Issue(user), new RefreshToken(refreshToken.Value, session.ExpiresAt));
+        new(accessTokens.Issue(user, session.FamilyId), new RefreshToken(refreshToken.Value, session.ExpiresAt));
 }

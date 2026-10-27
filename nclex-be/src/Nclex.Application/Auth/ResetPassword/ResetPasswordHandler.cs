@@ -3,6 +3,8 @@ using Nclex.Application.Abstractions;
 using Nclex.Application.Auth.EmailTokens;
 using Nclex.Application.Auth.Sessions;
 using Nclex.Application.Common;
+using Nclex.Application.Email;
+using Nclex.Domain.Audit;
 using Nclex.Domain.Entities;
 
 namespace Nclex.Application.Auth.ResetPassword;
@@ -11,15 +13,18 @@ namespace Nclex.Application.Auth.ResetPassword;
 /// POST /auth/password/reset: uses a reset link's token to set a new password, and optionally
 /// signs the user out on every device (architecture.md section 6, "Email tokens").
 /// The user is not signed in here; the frontend sends them to the login page afterwards.
+/// The owner gets a "password changed" email (api.md section 2).
 /// </summary>
 public sealed class ResetPasswordHandler(
     IAppDbContext db,
     EmailTokenService emailTokens,
     IPasswordHasher passwordHasher,
     SessionService sessions,
+    SecurityEmails securityEmails,
+    IAuditLog audit,
     TimeProvider clock)
 {
-    public async Task HandleAsync(ResetPasswordRequest request, CancellationToken cancellationToken)
+    public async Task HandleAsync(ResetPasswordRequest request, ClientInfo client, CancellationToken cancellationToken)
     {
         var now = clock.GetUtcNow();
         var emailToken = await emailTokens.FindUsableAsync(request.Token, EmailTokenPurpose.ResetPassword, now, cancellationToken)
@@ -37,6 +42,8 @@ public sealed class ResetPasswordHandler(
         user.ChangePassword(passwordHasher.Hash(request.NewPassword), now);
         // Following a link sent to the address proves the user owns it.
         user.MarkEmailVerified(now);
+        securityEmails.QueuePasswordChanged(user);
+        audit.RecordUserEvent(AuditActions.PasswordReset, user.Id, client.Ip, new { request.SignOutEverywhere });
 
         try
         {

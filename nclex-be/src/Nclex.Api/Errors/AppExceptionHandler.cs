@@ -1,4 +1,3 @@
-using System.Globalization;
 using Microsoft.AspNetCore.Diagnostics;
 using Microsoft.AspNetCore.Mvc;
 using Nclex.Application.Common;
@@ -35,9 +34,14 @@ public sealed class AppExceptionHandler(IProblemDetailsService problemDetailsSer
         // api.md section 1: 429 responses include Retry-After; lockouts also say retryAfterSec.
         if (appException.RetryAfter is { } retryAfter)
         {
-            var seconds = Math.Max(1, (int)Math.Ceiling(retryAfter.TotalSeconds));
-            httpContext.Response.Headers.RetryAfter = seconds.ToString(CultureInfo.InvariantCulture);
-            problem.Extensions["retryAfterSec"] = seconds;
+            RetryAfterHeader.Apply(httpContext, problem, retryAfter);
+        }
+
+        // Field problems found by a use case (e.g. a wrong current password) use the same
+        // errors[] shape as the validators' VALIDATION_FAILED responses.
+        if (appException.FieldErrors.Count > 0)
+        {
+            problem.Extensions["errors"] = appException.FieldErrors.Select(e => new FieldError(e.Field, e.Code)).ToList();
         }
 
         return await problemDetailsService.TryWriteAsync(new ProblemDetailsContext
@@ -54,6 +58,7 @@ public sealed class AppExceptionHandler(IProblemDetailsService problemDetailsSer
         AppErrorKind.Forbidden => StatusCodes.Status403Forbidden,
         AppErrorKind.NotFound => StatusCodes.Status404NotFound,
         AppErrorKind.Conflict => StatusCodes.Status409Conflict,
+        AppErrorKind.Locked => StatusCodes.Status423Locked,
         AppErrorKind.TooManyRequests => StatusCodes.Status429TooManyRequests,
         _ => StatusCodes.Status500InternalServerError,
     };

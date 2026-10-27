@@ -27,6 +27,9 @@ public enum AppErrorKind
     /// <summary>409: the request clashes with the current state.</summary>
     Conflict,
 
+    /// <summary>423: the account is temporarily locked; the response says when to try again.</summary>
+    Locked,
+
     /// <summary>429: too many requests; the response says when to try again.</summary>
     TooManyRequests,
 }
@@ -38,6 +41,15 @@ public static class CommonErrors
         "UNAUTHENTICATED",
         AppErrorKind.Unauthenticated,
         "You need to log in again.");
+
+    /// <summary>
+    /// A field problem that only the use case can detect, such as a wrong current password.
+    /// Raised with field errors, so the body matches the validator's VALIDATION_FAILED responses.
+    /// </summary>
+    public static readonly AppError ValidationFailed = new(
+        "VALIDATION_FAILED",
+        AppErrorKind.Validation,
+        "Some fields are missing or invalid.");
 
     public static readonly AppError RateLimited = new(
         "RATE_LIMITED",

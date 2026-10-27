@@ -1,7 +1,10 @@
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.RateLimiting;
 using Nclex.Api.Auth;
+using Nclex.Api.RateLimiting;
 using Nclex.Application.Auth;
+using Nclex.Application.Auth.ConfirmEmailChange;
 using Nclex.Application.Auth.ForgotPassword;
 using Nclex.Application.Auth.Login;
 using Nclex.Application.Auth.Logout;
@@ -16,7 +19,7 @@ using Nclex.Application.Common;
 namespace Nclex.Api.Controllers;
 
 /// <summary>
-/// Sign-up, login, sessions, email verification and password reset (api.md section 2). The access token travels in response bodies;
+/// Sign-up, login, sessions, email verification, password reset and email-change confirmation (api.md section 2). The access token travels in response bodies;
 /// the refresh token only in the HttpOnly cookie (see <see cref="RefreshTokenCookie"/>).
 /// </summary>
 [ApiController]
@@ -40,11 +43,14 @@ public sealed class AuthController(TimeProvider clock) : ControllerBase
         return StatusCode(StatusCodes.Status201Created, AuthResponse.From(result));
     }
 
-    /// <summary>Sign in with email and password.</summary>
+    /// <summary>Sign in with email and password. Repeated failures lock the account for a while (423).</summary>
     [HttpPost("login")]
     [AllowAnonymous]
+    [EnableRateLimiting(RateLimitingSetup.LoginPerIp)]
     [ProducesResponseType<AuthResponse>(StatusCodes.Status200OK)]
     [ProducesResponseType<ProblemDetails>(StatusCodes.Status401Unauthorized, "application/problem+json")]
+    [ProducesResponseType<ProblemDetails>(StatusCodes.Status423Locked, "application/problem+json")]
+    [ProducesResponseType<ProblemDetails>(StatusCodes.Status429TooManyRequests, "application/problem+json")]
     public async Task<ActionResult<AuthResponse>> Login(
         LoginRequest request,
         [FromServices] LoginHandler handler,
@@ -164,7 +170,21 @@ public sealed class AuthController(TimeProvider clock) : ControllerBase
         [FromServices] ResetPasswordHandler handler,
         CancellationToken cancellationToken)
     {
-        await handler.HandleAsync(request, cancellationToken);
+        await handler.HandleAsync(request, HttpContext.GetClientInfo(), cancellationToken);
+        return NoContent();
+    }
+
+    /// <summary>Switch the account to its new email with the token from the link sent there.</summary>
+    [HttpPost("email/confirm-change")]
+    [AllowAnonymous]
+    [ProducesResponseType(StatusCodes.Status204NoContent)]
+    [ProducesResponseType<ProblemDetails>(StatusCodes.Status409Conflict, "application/problem+json")]
+    public async Task<IActionResult> ConfirmEmailChange(
+        ConfirmEmailChangeRequest request,
+        [FromServices] ConfirmEmailChangeHandler handler,
+        CancellationToken cancellationToken)
+    {
+        await handler.HandleAsync(request, HttpContext.GetClientInfo(), cancellationToken);
         return NoContent();
     }
 }

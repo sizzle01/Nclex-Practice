@@ -131,6 +131,6 @@ public sealed class MeTests(ApiFactory factory)
     private static string IssueToken(User user, DateTimeOffset issuedAt, string signingKey = ApiFactory.JwtSigningKey)
     {
         var options = Options.Create(new JwtOptions { Issuer = "nclex-api", Audience = "nclex-web", SigningKey = signingKey });
-        return new JwtAccessTokenIssuer(options, new FixedTimeProvider(issuedAt)).Issue(user).Value;
+        return new JwtAccessTokenIssuer(options, new FixedTimeProvider(issuedAt)).Issue(user, sessionFamilyId: Guid.NewGuid()).Value;
     }
 }

@@ -6,6 +6,7 @@ using Nclex.Api.Errors;
 using Nclex.Api.Health;
 using Nclex.Api.Logging;
 using Nclex.Api.Middleware;
+using Nclex.Api.RateLimiting;
 using Nclex.Application;
 using Nclex.Infrastructure;
 using Nclex.Infrastructure.Security;
@@ -52,6 +53,7 @@ try
     builder.Services.AddInfrastructure();
     builder.Services.AddSecurity();
     builder.Services.AddApiAuth();
+    builder.Services.AddApiRateLimiting();
     builder.Services.AddReadinessChecks();
     builder.Services.AddSingleton(TimeProvider.System);
 
@@ -63,6 +65,8 @@ try
     app.UseSerilogRequestLogging();
     app.UseExceptionHandler();
     app.UseApiStatusCodeProblemDetails();
+    // After routing (implicit in minimal hosting), so it can see each endpoint's policy.
+    app.UseRateLimiter();
     app.UseAuthentication();
     app.UseAuthorization();
 

@@ -6,6 +6,7 @@ using Nclex.Domain.Entities;
 using Nclex.Infrastructure.Audit;
 using Nclex.Infrastructure.Email;
 using Nclex.Infrastructure.Persistence;
+using Nclex.Infrastructure.RateLimiting;
 using Npgsql.EntityFrameworkCore.PostgreSQL.Infrastructure;
 using Npgsql.NameTranslation;
 using StackExchange.Redis;
@@ -48,6 +49,7 @@ public static class DependencyInjection
             options.AbortOnConnectFail = false;
             return ConnectionMultiplexer.Connect(options);
         });
+        services.AddSingleton<IRateLimitStore, RedisRateLimitStore>();
 
         return services;
     }

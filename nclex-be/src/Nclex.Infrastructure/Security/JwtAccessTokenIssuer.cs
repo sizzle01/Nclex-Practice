@@ -13,7 +13,7 @@ public sealed class JwtAccessTokenIssuer(IOptions<JwtOptions> options, TimeProvi
 {
     private readonly JsonWebTokenHandler _handler = new();
 
-    public AccessToken Issue(User user)
+    public AccessToken Issue(User user, Guid sessionFamilyId)
     {
         var settings = options.Value;
         var now = clock.GetUtcNow();
@@ -31,6 +31,7 @@ public sealed class JwtAccessTokenIssuer(IOptions<JwtOptions> options, TimeProvi
             {
                 [AccessTokenClaims.Subject] = user.Id.ToString(),
                 [AccessTokenClaims.Role] = user.Role.ToClaimValue(),
+                [AccessTokenClaims.SessionId] = sessionFamilyId.ToString(),
                 [AccessTokenClaims.TokenId] = Guid.NewGuid().ToString(),
             },
             SigningCredentials = new SigningCredentials(CreateSigningKey(settings), SecurityAlgorithms.HmacSha256),

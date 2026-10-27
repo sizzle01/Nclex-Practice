@@ -16,4 +16,9 @@ public sealed class HttpCurrentUser(IHttpContextAccessor httpContextAccessor) : 
                 : throw new InvalidOperationException("No signed-in user. Is the endpoint missing [Authorize]?");
         }
     }
+
+    public Guid? SessionFamilyId =>
+        Guid.TryParse(httpContextAccessor.HttpContext?.User.FindFirst(AccessTokenClaims.SessionId)?.Value, out var familyId)
+            ? familyId
+            : null;
 }

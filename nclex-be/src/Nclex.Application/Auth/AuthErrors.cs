@@ -23,6 +23,12 @@ public static class AuthErrors
         AppErrorKind.Validation,
         "This link is invalid or has expired.");
 
+    // Raised with a retryAfter, which the API sends as Retry-After and retryAfterSec (api.md section 1).
+    public static readonly AppError AccountLocked = new(
+        "ACCOUNT_LOCKED",
+        AppErrorKind.Locked,
+        "Too many failed attempts. Your account is temporarily locked.");
+
     public static readonly AppError EmailNotVerified = new(
         "EMAIL_NOT_VERIFIED",
         AppErrorKind.Forbidden,

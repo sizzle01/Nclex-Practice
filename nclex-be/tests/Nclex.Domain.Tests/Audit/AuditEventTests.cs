@@ -22,18 +22,4 @@ public sealed class AuditEventTests
         audit.Ip.ShouldBe(IPAddress.Loopback);
         audit.CreatedAt.ShouldBe(Now);
     }
-
-    [Fact]
-    public void Anonymise_clears_the_ip_and_metadata_but_keeps_what_happened()
-    {
-        var actor = Guid.NewGuid();
-        var audit = AuditEvent.Record(AuditActions.LoginFailed, actor, AuditActions.UserEntity, actor.ToString(), """{"reason":"wrong_password"}""", IPAddress.Loopback, Now);
-
-        audit.Anonymise();
-
-        audit.Ip.ShouldBeNull();
-        audit.Metadata.ShouldBe("{}");
-        audit.Action.ShouldBe(AuditActions.LoginFailed);
-        audit.CreatedAt.ShouldBe(Now);
-    }
 }

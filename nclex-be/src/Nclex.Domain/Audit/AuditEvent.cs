@@ -8,10 +8,13 @@ namespace Nclex.Domain.Audit;
 /// </summary>
 /// <remarks>
 /// Metadata must never hold passwords, tokens or answer keys, and should avoid personal data:
-/// account deletion only clears <see cref="Ip"/> and the metadata of the user's own events.
+/// account deletion clears <see cref="Ip"/> and the metadata of the user's own events.
 /// </remarks>
 public sealed class AuditEvent
 {
+    /// <summary>The metadata of an event with no details, and of an anonymised one.</summary>
+    public const string EmptyMetadata = "{}";
+
     // For EF Core, which sets properties directly when loading rows.
     private AuditEvent()
     {
@@ -33,7 +36,7 @@ public sealed class AuditEvent
     public string? EntityId { get; private set; }
 
     /// <summary>Extra details as a JSON object; "{}" when there are none.</summary>
-    public string Metadata { get; private set; } = "{}";
+    public string Metadata { get; private set; } = EmptyMetadata;
 
     /// <summary>The client's IP address, if known.</summary>
     public IPAddress? Ip { get; private set; }
@@ -59,11 +62,4 @@ public sealed class AuditEvent
             Ip = ip,
             CreatedAt = now,
         };
-
-    /// <summary>Removes the personal data an event may hold, when its user deletes their account.</summary>
-    public void Anonymise()
-    {
-        Ip = null;
-        Metadata = "{}";
-    }
 }
