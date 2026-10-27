@@ -8,6 +8,7 @@ import { useState } from "react";
 import { useForm } from "react-hook-form";
 import { TextField } from "@/components/forms/TextField";
 import styles from "@/components/forms/forms.module.css";
+import ui from "@/components/ui/ui.module.css";
 import { isApiError } from "@/lib/api/errors";
 import { login } from "../api/authApi";
 import { useAuth } from "../AuthProvider";
@@ -55,6 +56,7 @@ export function LoginForm() {
   return (
     <form className={styles.form} onSubmit={onSubmit} noValidate aria-labelledby="login-heading">
       <h1 id="login-heading">Log in</h1>
+      <p className={styles.lead}>Welcome back. Pick up your practice where you left off.</p>
 
       {formError && (
         <p role="alert" className={styles.formError}>
@@ -71,11 +73,11 @@ export function LoginForm() {
         {...register("password")}
       />
 
-      <button type="submit" className={styles.submit} disabled={mutation.isPending}>
+      <button type="submit" className={`${ui.button} ${styles.submit}`} disabled={mutation.isPending}>
         {mutation.isPending ? "Logging in…" : "Log in"}
       </button>
 
-      <p>
+      <p className={styles.footer}>
         New here? <Link href="/signup">Create an account</Link>
       </p>
     </form>
