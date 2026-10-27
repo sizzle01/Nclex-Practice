@@ -5,6 +5,12 @@ using Nclex.Worker;
 using Serilog;
 using Serilog.Formatting.Compact;
 
+// "import-questions <file>" runs the content importer once and exits instead of starting the worker.
+if (args is [ImportQuestionsCommand.Name, .. var commandArgs])
+{
+    return await ImportQuestionsCommand.RunAsync(commandArgs);
+}
+
 // Nclex.Worker hosts background work (architecture.md section 3: expiry, email outbox,
 // aggregation, reminders). F02 adds the email outbox dispatcher; Hangfire and jobs arrive with later features.
 Log.Logger = new LoggerConfiguration()
@@ -53,3 +59,5 @@ finally
 {
     await Log.CloseAndFlushAsync();
 }
+
+return 0;

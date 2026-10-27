@@ -13,6 +13,7 @@ using Nclex.Application.Auth.ResetPassword;
 using Nclex.Application.Auth.Sessions;
 using Nclex.Application.Auth.Signup;
 using Nclex.Application.Auth.VerifyEmail;
+using Nclex.Application.Content.ImportQuestions;
 using Nclex.Application.Email;
 using Nclex.Application.Taxonomy.GetTaxonomy;
 using Nclex.Application.Users;
@@ -64,6 +65,9 @@ public static class DependencyInjection
 
         // Taxonomy
         services.AddScoped<GetTaxonomyHandler>();
+
+        // Content
+        services.AddScoped<ImportQuestionsHandler>();
 
         services.AddItemTypes();
 

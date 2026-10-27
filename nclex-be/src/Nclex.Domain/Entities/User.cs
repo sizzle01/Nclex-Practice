@@ -9,6 +9,9 @@ public sealed class User
     /// <summary>Default time zone for new accounts, matching the column default.</summary>
     public const string DefaultTimezone = "UTC";
 
+    /// <summary>Email of the account that imported content is attributed to; nothing is ever sent to it.</summary>
+    public const string ContentImporterEmail = "content-import@system.local";
+
     // For EF Core, which sets properties directly when loading rows.
     private User()
     {
@@ -71,6 +74,25 @@ public sealed class User
             Track = track,
             PlanTier = PlanTier.Free,
             DisplayName = displayName,
+            Timezone = DefaultTimezone,
+            CreatedAt = now,
+            UpdatedAt = now,
+        };
+
+    /// <summary>
+    /// Creates the system account that the content importer records as author of imported questions
+    /// (question_versions.author_id is required). It has no password, so nobody can log in as it.
+    /// </summary>
+    public static User CreateContentImporter(DateTimeOffset now) =>
+        new()
+        {
+            Id = Guid.CreateVersion7(now),
+            Email = ContentImporterEmail,
+            PasswordHash = null,
+            Role = UserRole.Author,
+            Track = ExamTrack.RN,
+            PlanTier = PlanTier.Free,
+            DisplayName = "Content importer",
             Timezone = DefaultTimezone,
             CreatedAt = now,
             UpdatedAt = now,

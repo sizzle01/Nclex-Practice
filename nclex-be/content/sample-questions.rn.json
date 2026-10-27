@@ -1,0 +1,1024 @@
+{
+  "notice": "SAMPLE CONTENT: written for development and testing, not reviewed by a nurse educator. Do not use for exam preparation.",
+  "track": "RN",
+  "questions": [
+    {
+      "id": "f04a0000-0000-4000-8000-000000000001",
+      "itemType": "multiple_choice",
+      "clientNeeds": "SECE.MOC",
+      "bodySystem": "fundamentals",
+      "cjmmSkill": "prioritize_hypotheses",
+      "difficulty": "moderate",
+      "stem": "The nurse receives report on four clients. Which client should the nurse see first?",
+      "content": {
+        "options": [
+          {
+            "id": "a",
+            "text": "A client with COPD whose oxygen saturation is 90% on 2 L/min by nasal cannula"
+          },
+          {
+            "id": "b",
+            "text": "A client one day after an appendectomy who rates pain 4 out of 10"
+          },
+          {
+            "id": "c",
+            "text": "A client who received IV morphine 20 minutes ago and is now difficult to rouse with a respiratory rate of 8/min"
+          },
+          {
+            "id": "d",
+            "text": "A client with type 2 diabetes whose pre-lunch glucose is 180 mg/dL"
+          }
+        ]
+      },
+      "key": {
+        "correct": "c"
+      },
+      "rationale": {
+        "correct": "Opioid-induced respiratory depression is an immediate threat to airway and breathing, so this client is the priority.",
+        "perOption": {
+          "a": "A saturation of 88% to 92% is an acceptable target for many clients with COPD; this client is stable.",
+          "b": "Moderate pain one day after surgery is expected and can be managed after the unstable client is seen.",
+          "c": "Sedation with a respiratory rate of 8/min after an opioid signals respiratory depression; the nurse must assess and support breathing now.",
+          "d": "Mild hyperglycemia before a meal needs follow-up but is not life-threatening."
+        },
+        "references": [
+          "SAMPLE CONTENT: written for development and testing, not reviewed by a nurse educator. Do not use for exam preparation."
+        ]
+      },
+      "educationalObjective": "Use airway, breathing and circulation to choose which client to see first."
+    },
+    {
+      "id": "f04a0000-0000-4000-8000-000000000002",
+      "itemType": "multiple_choice",
+      "clientNeeds": "SECE.SIC",
+      "bodySystem": "gastrointestinal",
+      "cjmmSkill": "take_action",
+      "difficulty": "easy",
+      "stem": "A client is diagnosed with Clostridioides difficile infection. Which action should the nurse take?",
+      "content": {
+        "options": [
+          {
+            "id": "a",
+            "text": "Place the client on contact precautions and wash hands with soap and water"
+          },
+          {
+            "id": "b",
+            "text": "Place the client on airborne precautions in a negative-pressure room"
+          },
+          {
+            "id": "c",
+            "text": "Wear a surgical mask whenever within 3 feet of the client"
+          },
+          {
+            "id": "d",
+            "text": "Use alcohol-based hand rub after each contact with the client"
+          }
+        ]
+      },
+      "key": {
+        "correct": "a"
+      },
+      "rationale": {
+        "correct": "C. difficile spreads by contact with spores, and alcohol does not kill spores, so contact precautions and soap-and-water hand washing are required.",
+        "perOption": {
+          "a": "Contact precautions and soap and water remove C. difficile spores from hands.",
+          "b": "Airborne precautions are for organisms such as tuberculosis, measles and varicella.",
+          "c": "Droplet precautions (a mask) are for organisms such as influenza; C. difficile is not spread by droplets.",
+          "d": "Alcohol-based rub does not destroy C. difficile spores."
+        },
+        "references": [
+          "SAMPLE CONTENT: written for development and testing, not reviewed by a nurse educator. Do not use for exam preparation."
+        ]
+      },
+      "educationalObjective": "Match the isolation precautions and hand hygiene method to how the organism spreads."
+    },
+    {
+      "id": "f04a0000-0000-4000-8000-000000000003",
+      "itemType": "multiple_choice",
+      "clientNeeds": "HPM",
+      "bodySystem": "maternal-newborn",
+      "cjmmSkill": "generate_solutions",
+      "difficulty": "moderate",
+      "stem": "A client who plans to become pregnant asks when to start taking folic acid. What is the nurse's best response?",
+      "content": {
+        "options": [
+          {
+            "id": "a",
+            "text": "\"Start at least one month before you try to conceive.\""
+          },
+          {
+            "id": "b",
+            "text": "\"Start as soon as you have a positive pregnancy test.\""
+          },
+          {
+            "id": "c",
+            "text": "\"Start at the beginning of the second trimester.\""
+          },
+          {
+            "id": "d",
+            "text": "\"You only need it if a previous baby had a neural tube defect.\""
+          }
+        ]
+      },
+      "key": {
+        "correct": "a"
+      },
+      "rationale": {
+        "correct": "The neural tube closes in the first weeks after conception, often before pregnancy is known, so folic acid should be taken before conception.",
+        "perOption": {
+          "a": "Taking folic acid before conception means levels are adequate when the neural tube forms.",
+          "b": "By the time a pregnancy test is positive, neural tube development may already be under way.",
+          "c": "The neural tube closes in the first trimester, so starting in the second trimester is too late.",
+          "d": "All people who could become pregnant are advised to take folic acid; a history of neural tube defects calls for a higher dose."
+        },
+        "references": [
+          "SAMPLE CONTENT: written for development and testing, not reviewed by a nurse educator. Do not use for exam preparation."
+        ]
+      },
+      "educationalObjective": "Folic acid prevents neural tube defects only when taken before and early in pregnancy."
+    },
+    {
+      "id": "f04a0000-0000-4000-8000-000000000004",
+      "itemType": "multiple_choice",
+      "clientNeeds": "PSI",
+      "bodySystem": "mental-health",
+      "cjmmSkill": "take_action",
+      "difficulty": "moderate",
+      "stem": "A client on the medical unit tells the nurse, \"I have a plan to end my life tonight.\" What should the nurse do first?",
+      "content": {
+        "options": [
+          {
+            "id": "a",
+            "text": "Stay with the client and arrange continuous one-to-one observation"
+          },
+          {
+            "id": "b",
+            "text": "Call the client's family to come and sit with the client"
+          },
+          {
+            "id": "c",
+            "text": "Document the statement in the client's record"
+          },
+          {
+            "id": "d",
+            "text": "Ask the client to sign a no-harm contract"
+          }
+        ]
+      },
+      "key": {
+        "correct": "a"
+      },
+      "rationale": {
+        "correct": "A client with a specific plan is at high risk; the first priority is safety, which means the client is not left alone.",
+        "perOption": {
+          "a": "Continuous observation keeps the client safe while further help is arranged.",
+          "b": "Family may support the client later, but the nurse must not leave the client alone to arrange this.",
+          "c": "Documentation is required but does not protect the client.",
+          "d": "No-harm contracts do not prevent suicide and are not a substitute for observation."
+        },
+        "references": [
+          "SAMPLE CONTENT: written for development and testing, not reviewed by a nurse educator. Do not use for exam preparation."
+        ]
+      },
+      "educationalObjective": "A client who states a suicide plan needs immediate safety measures before anything else."
+    },
+    {
+      "id": "f04a0000-0000-4000-8000-000000000005",
+      "itemType": "multiple_choice",
+      "clientNeeds": "PHI.BCC",
+      "bodySystem": "gastrointestinal",
+      "cjmmSkill": "take_action",
+      "difficulty": "easy",
+      "stem": "A client is receiving continuous enteral feedings through a nasogastric tube. How should the nurse position the client?",
+      "content": {
+        "options": [
+          {
+            "id": "a",
+            "text": "Head of the bed raised at least 30 degrees"
+          },
+          {
+            "id": "b",
+            "text": "Flat on the back"
+          },
+          {
+            "id": "c",
+            "text": "Head of the bed raised 10 degrees"
+          },
+          {
+            "id": "d",
+            "text": "Prone with the head turned to the side"
+          }
+        ]
+      },
+      "key": {
+        "correct": "a"
+      },
+      "rationale": {
+        "correct": "Raising the head of the bed at least 30 degrees during and after feedings reduces the risk of aspiration.",
+        "perOption": {
+          "a": "At least 30 degrees uses gravity to keep the feeding in the stomach.",
+          "b": "Lying flat increases reflux and aspiration.",
+          "c": "10 degrees is not high enough to reduce aspiration risk.",
+          "d": "The prone position puts pressure on the abdomen and increases reflux."
+        },
+        "references": [
+          "SAMPLE CONTENT: written for development and testing, not reviewed by a nurse educator. Do not use for exam preparation."
+        ]
+      },
+      "educationalObjective": "Keep the head of the bed at 30 degrees or more for clients receiving tube feedings."
+    },
+    {
+      "id": "f04a0000-0000-4000-8000-000000000006",
+      "itemType": "multiple_choice",
+      "clientNeeds": "PHI.PPT",
+      "bodySystem": "pharmacology",
+      "cjmmSkill": "recognize_cues",
+      "difficulty": "moderate",
+      "stem": "An adult client is due for digoxin 0.125 mg. The apical pulse is 52/min. What should the nurse do?",
+      "content": {
+        "options": [
+          {
+            "id": "a",
+            "text": "Hold the dose and notify the healthcare provider"
+          },
+          {
+            "id": "b",
+            "text": "Give the dose and recheck the pulse in one hour"
+          },
+          {
+            "id": "c",
+            "text": "Give half the dose"
+          },
+          {
+            "id": "d",
+            "text": "Give the dose with food"
+          }
+        ]
+      },
+      "key": {
+        "correct": "a"
+      },
+      "rationale": {
+        "correct": "Digoxin slows the heart rate; an apical pulse below 60/min in an adult is a reason to hold the dose and report it.",
+        "perOption": {
+          "a": "Holding the dose avoids further slowing of the heart and lets the provider assess for toxicity.",
+          "b": "Giving the dose may slow the heart rate further.",
+          "c": "Nurses do not change a prescribed dose without an order.",
+          "d": "Food does not change the drug's effect on heart rate."
+        },
+        "references": [
+          "SAMPLE CONTENT: written for development and testing, not reviewed by a nurse educator. Do not use for exam preparation."
+        ]
+      },
+      "educationalObjective": "Check the apical pulse for a full minute before giving digoxin and hold it for an adult rate below 60/min."
+    },
+    {
+      "id": "f04a0000-0000-4000-8000-000000000007",
+      "itemType": "multiple_choice",
+      "clientNeeds": "PHI.PPT",
+      "bodySystem": "pharmacology",
+      "cjmmSkill": "evaluate_outcomes",
+      "difficulty": "easy",
+      "stem": "Which laboratory result does the nurse use to monitor the effect of warfarin?",
+      "content": {
+        "options": [
+          {
+            "id": "a",
+            "text": "International normalized ratio (INR)"
+          },
+          {
+            "id": "b",
+            "text": "Activated partial thromboplastin time (aPTT)"
+          },
+          {
+            "id": "c",
+            "text": "Platelet count"
+          },
+          {
+            "id": "d",
+            "text": "Hemoglobin A1c"
+          }
+        ]
+      },
+      "key": {
+        "correct": "a"
+      },
+      "rationale": {
+        "correct": "Warfarin's effect is monitored with the PT/INR.",
+        "perOption": {
+          "a": "The INR measures warfarin's anticoagulant effect; a common target is 2 to 3.",
+          "b": "The aPTT is used to monitor unfractionated heparin.",
+          "c": "The platelet count is watched for heparin-induced thrombocytopenia, not to adjust warfarin.",
+          "d": "Hemoglobin A1c reflects average blood glucose."
+        },
+        "references": [
+          "SAMPLE CONTENT: written for development and testing, not reviewed by a nurse educator. Do not use for exam preparation."
+        ]
+      },
+      "educationalObjective": "Know which coagulation test goes with each anticoagulant."
+    },
+    {
+      "id": "f04a0000-0000-4000-8000-000000000008",
+      "itemType": "multiple_choice",
+      "clientNeeds": "PHI.RRP",
+      "bodySystem": "renal-urinary",
+      "cjmmSkill": "analyze_cues",
+      "difficulty": "moderate",
+      "stem": "A client received IV contrast for a CT scan. Which laboratory value is most important for the nurse to monitor over the next 48 hours?",
+      "content": {
+        "options": [
+          {
+            "id": "a",
+            "text": "Serum creatinine"
+          },
+          {
+            "id": "b",
+            "text": "Alanine aminotransferase (ALT)"
+          },
+          {
+            "id": "c",
+            "text": "Serum amylase"
+          },
+          {
+            "id": "d",
+            "text": "Troponin"
+          }
+        ]
+      },
+      "key": {
+        "correct": "a"
+      },
+      "rationale": {
+        "correct": "Contrast can injure the kidneys, and a rising serum creatinine is the main sign of contrast-associated kidney injury.",
+        "perOption": {
+          "a": "Creatinine rises when kidney filtration falls.",
+          "b": "ALT reflects liver injury, which contrast does not usually cause.",
+          "c": "Amylase reflects pancreatic injury.",
+          "d": "Troponin reflects heart muscle injury."
+        },
+        "references": [
+          "SAMPLE CONTENT: written for development and testing, not reviewed by a nurse educator. Do not use for exam preparation."
+        ]
+      },
+      "educationalObjective": "Monitor kidney function after a client receives iodinated contrast."
+    },
+    {
+      "id": "f04a0000-0000-4000-8000-000000000009",
+      "itemType": "multiple_choice",
+      "clientNeeds": "PHI.PA",
+      "bodySystem": "respiratory",
+      "cjmmSkill": "analyze_cues",
+      "difficulty": "difficult",
+      "stem": "A client has a chest tube connected to a water-seal drainage system. The nurse sees continuous bubbling in the water-seal chamber. What does this finding suggest?",
+      "content": {
+        "options": [
+          {
+            "id": "a",
+            "text": "An air leak in the system"
+          },
+          {
+            "id": "b",
+            "text": "The system is working as expected"
+          },
+          {
+            "id": "c",
+            "text": "The chest tube is clamped"
+          },
+          {
+            "id": "d",
+            "text": "The lung has fully re-expanded"
+          }
+        ]
+      },
+      "key": {
+        "correct": "a"
+      },
+      "rationale": {
+        "correct": "Continuous bubbling in the water-seal chamber means air is entering the system all the time, from a leak in the tubing or connections or from the client's lung.",
+        "perOption": {
+          "a": "Continuous bubbling points to an air leak that the nurse should locate.",
+          "b": "Gentle bubbling only on exhalation or coughing can be expected with a pneumothorax; continuous bubbling is not.",
+          "c": "A clamped tube would stop bubbling, not cause it.",
+          "d": "When the lung has re-expanded, bubbling stops."
+        },
+        "references": [
+          "SAMPLE CONTENT: written for development and testing, not reviewed by a nurse educator. Do not use for exam preparation."
+        ]
+      },
+      "educationalObjective": "Tell expected from unexpected findings in a chest drainage system."
+    },
+    {
+      "id": "f04a0000-0000-4000-8000-000000000010",
+      "itemType": "multiple_choice",
+      "clientNeeds": "PHI.PA",
+      "bodySystem": "endocrine",
+      "cjmmSkill": "take_action",
+      "difficulty": "moderate",
+      "stem": "A client with type 1 diabetes is shaky and sweaty, with a blood glucose of 55 mg/dL. The client is alert and can swallow. What should the nurse do first?",
+      "content": {
+        "options": [
+          {
+            "id": "a",
+            "text": "Give 15 g of a fast-acting carbohydrate, such as 4 oz of juice"
+          },
+          {
+            "id": "b",
+            "text": "Give the scheduled dose of rapid-acting insulin"
+          },
+          {
+            "id": "c",
+            "text": "Give glucagon intramuscularly"
+          },
+          {
+            "id": "d",
+            "text": "Recheck the blood glucose in one hour"
+          }
+        ]
+      },
+      "key": {
+        "correct": "a"
+      },
+      "rationale": {
+        "correct": "For an alert client who can swallow, hypoglycemia is treated with 15 g of fast-acting carbohydrate, then the glucose is rechecked in 15 minutes.",
+        "perOption": {
+          "a": "Fast-acting carbohydrate raises the glucose quickly and is safe in a client who can swallow.",
+          "b": "Insulin would lower the glucose further.",
+          "c": "Glucagon is for clients who are unconscious or cannot swallow safely.",
+          "d": "Waiting an hour leaves the hypoglycemia untreated; recheck after 15 minutes of treatment."
+        },
+        "references": [
+          "SAMPLE CONTENT: written for development and testing, not reviewed by a nurse educator. Do not use for exam preparation."
+        ]
+      },
+      "educationalObjective": "Apply the 15-15 rule for a conscious client with hypoglycemia."
+    },
+    {
+      "id": "f04a0000-0000-4000-8000-000000000011",
+      "itemType": "sata",
+      "clientNeeds": "SECE.MOC",
+      "bodySystem": "fundamentals",
+      "cjmmSkill": "take_action",
+      "difficulty": "moderate",
+      "stem": "The nurse is assigning care for a stable client to assistive personnel. Which tasks are appropriate to delegate? Select all that apply.",
+      "content": {
+        "options": [
+          {
+            "id": "a",
+            "text": "Measuring vital signs"
+          },
+          {
+            "id": "b",
+            "text": "Helping the client walk in the hall"
+          },
+          {
+            "id": "c",
+            "text": "Assessing the client on admission"
+          },
+          {
+            "id": "d",
+            "text": "Teaching the client to self-inject insulin"
+          },
+          {
+            "id": "e",
+            "text": "Recording intake and output"
+          },
+          {
+            "id": "f",
+            "text": "Evaluating the client's response to pain medication"
+          }
+        ]
+      },
+      "key": {
+        "correct": [
+          "a",
+          "b",
+          "e"
+        ]
+      },
+      "rationale": {
+        "correct": "Assistive personnel can do routine, standard tasks for stable clients; assessment, teaching and evaluation stay with the nurse.",
+        "perOption": {
+          "a": "Measuring vital signs on a stable client is a routine task.",
+          "b": "Helping a stable client walk is within the role of assistive personnel.",
+          "c": "Admission assessment requires nursing judgment and cannot be delegated.",
+          "d": "Teaching is a nursing responsibility.",
+          "e": "Measuring and recording intake and output is a routine task.",
+          "f": "Evaluating a response to medication requires nursing judgment."
+        },
+        "references": [
+          "SAMPLE CONTENT: written for development and testing, not reviewed by a nurse educator. Do not use for exam preparation."
+        ]
+      },
+      "educationalObjective": "Delegate tasks, not assessment, teaching or evaluation."
+    },
+    {
+      "id": "f04a0000-0000-4000-8000-000000000012",
+      "itemType": "sata",
+      "clientNeeds": "SECE.SIC",
+      "bodySystem": "respiratory",
+      "cjmmSkill": "take_action",
+      "difficulty": "moderate",
+      "stem": "A client is admitted with suspected pulmonary tuberculosis. Which actions should the nurse take? Select all that apply.",
+      "content": {
+        "options": [
+          {
+            "id": "a",
+            "text": "Place the client in a negative-pressure (airborne infection isolation) room"
+          },
+          {
+            "id": "b",
+            "text": "Wear a fitted N95 respirator when entering the room"
+          },
+          {
+            "id": "c",
+            "text": "Have the client wear a surgical mask when leaving the room"
+          },
+          {
+            "id": "d",
+            "text": "Keep the door open so the client can be observed"
+          },
+          {
+            "id": "e",
+            "text": "Place the client in a shared room with another client who has pneumonia"
+          }
+        ]
+      },
+      "key": {
+        "correct": [
+          "a",
+          "b",
+          "c"
+        ]
+      },
+      "rationale": {
+        "correct": "Tuberculosis spreads by airborne droplet nuclei, so the client needs airborne precautions.",
+        "perOption": {
+          "a": "A negative-pressure room keeps airborne particles from leaving the room.",
+          "b": "An N95 respirator filters the small particles that carry tuberculosis.",
+          "c": "A surgical mask on the client reduces the spread of particles during transport.",
+          "d": "The door must stay closed so negative pressure is maintained.",
+          "e": "A client with suspected tuberculosis needs a private airborne isolation room."
+        },
+        "references": [
+          "SAMPLE CONTENT: written for development and testing, not reviewed by a nurse educator. Do not use for exam preparation."
+        ]
+      },
+      "educationalObjective": "Use airborne precautions for tuberculosis."
+    },
+    {
+      "id": "f04a0000-0000-4000-8000-000000000013",
+      "itemType": "sata",
+      "clientNeeds": "HPM",
+      "bodySystem": "pediatrics",
+      "cjmmSkill": "recognize_cues",
+      "difficulty": "easy",
+      "stem": "Which developmental milestones does the nurse expect in a healthy 6-month-old infant? Select all that apply.",
+      "content": {
+        "options": [
+          {
+            "id": "a",
+            "text": "Rolls from back to front"
+          },
+          {
+            "id": "b",
+            "text": "Sits with support"
+          },
+          {
+            "id": "c",
+            "text": "Passes a toy from one hand to the other"
+          },
+          {
+            "id": "d",
+            "text": "Walks without help"
+          },
+          {
+            "id": "e",
+            "text": "Picks up small objects with a pincer grasp"
+          },
+          {
+            "id": "f",
+            "text": "Speaks in two-word phrases"
+          }
+        ]
+      },
+      "key": {
+        "correct": [
+          "a",
+          "b",
+          "c"
+        ]
+      },
+      "rationale": {
+        "correct": "Rolling over, sitting with support and passing objects between hands are typical by about 6 months.",
+        "perOption": {
+          "a": "Most infants roll from back to front by about 6 months.",
+          "b": "Infants usually sit with support by 6 months and without support by about 7 to 8 months.",
+          "c": "Transferring objects between hands appears at about 6 months.",
+          "d": "Independent walking typically begins at about 12 months.",
+          "e": "The pincer grasp develops at about 9 to 10 months.",
+          "f": "Two-word phrases usually appear at about 2 years."
+        },
+        "references": [
+          "SAMPLE CONTENT: written for development and testing, not reviewed by a nurse educator. Do not use for exam preparation."
+        ]
+      },
+      "educationalObjective": "Know the expected milestones of infancy."
+    },
+    {
+      "id": "f04a0000-0000-4000-8000-000000000014",
+      "itemType": "sata",
+      "clientNeeds": "PSI",
+      "bodySystem": "mental-health",
+      "cjmmSkill": "recognize_cues",
+      "difficulty": "moderate",
+      "stem": "A client who drinks alcohol daily was admitted 18 hours ago. Which findings suggest alcohol withdrawal? Select all that apply.",
+      "content": {
+        "options": [
+          {
+            "id": "a",
+            "text": "Hand tremors"
+          },
+          {
+            "id": "b",
+            "text": "Sweating"
+          },
+          {
+            "id": "c",
+            "text": "Heart rate 118/min"
+          },
+          {
+            "id": "d",
+            "text": "Heart rate 50/min"
+          },
+          {
+            "id": "e",
+            "text": "Anxiety and agitation"
+          },
+          {
+            "id": "f",
+            "text": "Pinpoint pupils"
+          }
+        ]
+      },
+      "key": {
+        "correct": [
+          "a",
+          "b",
+          "c",
+          "e"
+        ]
+      },
+      "rationale": {
+        "correct": "Alcohol withdrawal causes autonomic hyperactivity, usually starting 6 to 24 hours after the last drink.",
+        "perOption": {
+          "a": "Tremors are an early sign of withdrawal.",
+          "b": "Sweating reflects autonomic hyperactivity.",
+          "c": "Tachycardia reflects autonomic hyperactivity.",
+          "d": "Withdrawal raises the heart rate; bradycardia is not expected.",
+          "e": "Anxiety and agitation are common in withdrawal.",
+          "f": "Pinpoint pupils suggest opioid use, not alcohol withdrawal."
+        },
+        "references": [
+          "SAMPLE CONTENT: written for development and testing, not reviewed by a nurse educator. Do not use for exam preparation."
+        ]
+      },
+      "educationalObjective": "Recognize the early signs of alcohol withdrawal."
+    },
+    {
+      "id": "f04a0000-0000-4000-8000-000000000015",
+      "itemType": "sata",
+      "clientNeeds": "PHI.BCC",
+      "bodySystem": "integumentary",
+      "cjmmSkill": "take_action",
+      "difficulty": "easy",
+      "stem": "Which actions help prevent pressure injuries in a client on bed rest? Select all that apply.",
+      "content": {
+        "options": [
+          {
+            "id": "a",
+            "text": "Reposition the client at least every 2 hours"
+          },
+          {
+            "id": "b",
+            "text": "Keep the skin clean and dry"
+          },
+          {
+            "id": "c",
+            "text": "Use a pressure-redistributing mattress"
+          },
+          {
+            "id": "d",
+            "text": "Massage reddened areas over bony prominences"
+          },
+          {
+            "id": "e",
+            "text": "Keep the head of the bed above 45 degrees at all times"
+          }
+        ]
+      },
+      "key": {
+        "correct": [
+          "a",
+          "b",
+          "c"
+        ]
+      },
+      "rationale": {
+        "correct": "Relieving pressure, protecting the skin from moisture and spreading pressure over a larger area prevent pressure injuries.",
+        "perOption": {
+          "a": "Regular repositioning relieves pressure on tissues.",
+          "b": "Moisture weakens skin and increases breakdown.",
+          "c": "Pressure-redistributing surfaces lower pressure on bony areas.",
+          "d": "Massaging reddened areas can damage the tissue further.",
+          "e": "A high head of the bed increases shear on the sacrum; keep it at 30 degrees or lower when possible."
+        },
+        "references": [
+          "SAMPLE CONTENT: written for development and testing, not reviewed by a nurse educator. Do not use for exam preparation."
+        ]
+      },
+      "educationalObjective": "Choose evidence-based measures to prevent pressure injuries."
+    },
+    {
+      "id": "f04a0000-0000-4000-8000-000000000016",
+      "itemType": "sata",
+      "clientNeeds": "PHI.PPT",
+      "bodySystem": "pharmacology",
+      "cjmmSkill": "evaluate_outcomes",
+      "difficulty": "moderate",
+      "stem": "A client started lisinopril two weeks ago. Which findings should the nurse report to the healthcare provider? Select all that apply.",
+      "content": {
+        "options": [
+          {
+            "id": "a",
+            "text": "A persistent dry cough"
+          },
+          {
+            "id": "b",
+            "text": "Swelling of the lips and tongue"
+          },
+          {
+            "id": "c",
+            "text": "Serum potassium 5.9 mEq/L"
+          },
+          {
+            "id": "d",
+            "text": "Blood pressure 118/76 mm Hg"
+          },
+          {
+            "id": "e",
+            "text": "Heart rate 72/min"
+          }
+        ]
+      },
+      "key": {
+        "correct": [
+          "a",
+          "b",
+          "c"
+        ]
+      },
+      "rationale": {
+        "correct": "ACE inhibitors can cause cough, angioedema and hyperkalemia; these need to be reported.",
+        "perOption": {
+          "a": "A dry cough is a common ACE-inhibitor effect that may lead the provider to change the drug.",
+          "b": "Angioedema can block the airway and is an emergency.",
+          "c": "ACE inhibitors raise potassium; 5.9 mEq/L is above the normal range.",
+          "d": "This blood pressure shows the drug is working.",
+          "e": "A heart rate of 72/min is normal."
+        },
+        "references": [
+          "SAMPLE CONTENT: written for development and testing, not reviewed by a nurse educator. Do not use for exam preparation."
+        ]
+      },
+      "educationalObjective": "Monitor for the serious adverse effects of ACE inhibitors."
+    },
+    {
+      "id": "f04a0000-0000-4000-8000-000000000017",
+      "itemType": "sata",
+      "clientNeeds": "PHI.PPT",
+      "bodySystem": "pharmacology",
+      "cjmmSkill": "take_action",
+      "difficulty": "difficult",
+      "stem": "The nurse is preparing to give potassium chloride intravenously. Which actions are correct? Select all that apply.",
+      "content": {
+        "options": [
+          {
+            "id": "a",
+            "text": "Give it with an infusion pump"
+          },
+          {
+            "id": "b",
+            "text": "Give it by IV push over 1 minute"
+          },
+          {
+            "id": "c",
+            "text": "Check that the client's urine output is adequate first"
+          },
+          {
+            "id": "d",
+            "text": "Monitor the IV site for pain and phlebitis"
+          },
+          {
+            "id": "e",
+            "text": "Add it to an IV bag that is already hanging"
+          }
+        ]
+      },
+      "key": {
+        "correct": [
+          "a",
+          "c",
+          "d"
+        ]
+      },
+      "rationale": {
+        "correct": "IV potassium must be diluted, given slowly with a pump, and given only when the kidneys can excrete it.",
+        "perOption": {
+          "a": "A pump controls the rate and prevents a dangerous bolus.",
+          "b": "IV push potassium can cause fatal cardiac arrhythmias.",
+          "c": "Potassium is excreted by the kidneys, so poor urine output risks hyperkalemia.",
+          "d": "Potassium irritates veins, so the site must be watched.",
+          "e": "Adding potassium to a hanging bag can leave it poorly mixed and deliver a concentrated dose."
+        },
+        "references": [
+          "SAMPLE CONTENT: written for development and testing, not reviewed by a nurse educator. Do not use for exam preparation."
+        ]
+      },
+      "educationalObjective": "Give IV potassium safely."
+    },
+    {
+      "id": "f04a0000-0000-4000-8000-000000000018",
+      "itemType": "sata",
+      "clientNeeds": "PHI.RRP",
+      "bodySystem": "cardiovascular",
+      "cjmmSkill": "recognize_cues",
+      "difficulty": "difficult",
+      "stem": "A client had a cardiac catheterization through the femoral artery 2 hours ago. Which findings could indicate bleeding? Select all that apply.",
+      "content": {
+        "options": [
+          {
+            "id": "a",
+            "text": "A firm swelling at the insertion site"
+          },
+          {
+            "id": "b",
+            "text": "Heart rate 112/min"
+          },
+          {
+            "id": "c",
+            "text": "Blood pressure 88/54 mm Hg"
+          },
+          {
+            "id": "d",
+            "text": "New back or flank pain"
+          },
+          {
+            "id": "e",
+            "text": "Heart rate 64/min"
+          },
+          {
+            "id": "f",
+            "text": "A warm foot with a strong pedal pulse"
+          }
+        ]
+      },
+      "key": {
+        "correct": [
+          "a",
+          "b",
+          "c",
+          "d"
+        ]
+      },
+      "rationale": {
+        "correct": "Bleeding after femoral access can be external, a hematoma, or retroperitoneal, and causes signs of hypovolemia.",
+        "perOption": {
+          "a": "A firm swelling suggests a hematoma.",
+          "b": "Tachycardia is an early compensation for blood loss.",
+          "c": "Hypotension can follow significant blood loss.",
+          "d": "Back or flank pain can signal retroperitoneal bleeding.",
+          "e": "A heart rate of 64/min is not a sign of bleeding.",
+          "f": "A warm foot with a strong pulse shows good circulation to the limb."
+        },
+        "references": [
+          "SAMPLE CONTENT: written for development and testing, not reviewed by a nurse educator. Do not use for exam preparation."
+        ]
+      },
+      "educationalObjective": "Recognize signs of bleeding after femoral arterial access."
+    },
+    {
+      "id": "f04a0000-0000-4000-8000-000000000019",
+      "itemType": "sata",
+      "clientNeeds": "PHI.PA",
+      "bodySystem": "cardiovascular",
+      "cjmmSkill": "analyze_cues",
+      "difficulty": "moderate",
+      "stem": "Which findings are consistent with left-sided heart failure? Select all that apply.",
+      "content": {
+        "options": [
+          {
+            "id": "a",
+            "text": "Crackles in the lungs"
+          },
+          {
+            "id": "b",
+            "text": "Shortness of breath when lying flat"
+          },
+          {
+            "id": "c",
+            "text": "Pink, frothy sputum"
+          },
+          {
+            "id": "d",
+            "text": "Jugular venous distension"
+          },
+          {
+            "id": "e",
+            "text": "Swelling of the lower legs"
+          },
+          {
+            "id": "f",
+            "text": "An enlarged liver"
+          }
+        ]
+      },
+      "key": {
+        "correct": [
+          "a",
+          "b",
+          "c"
+        ]
+      },
+      "rationale": {
+        "correct": "Left-sided failure backs blood up into the lungs, causing pulmonary congestion.",
+        "perOption": {
+          "a": "Fluid in the alveoli causes crackles.",
+          "b": "Orthopnea results from pulmonary congestion when lying flat.",
+          "c": "Pink, frothy sputum is a sign of pulmonary edema.",
+          "d": "Jugular venous distension is a sign of right-sided failure.",
+          "e": "Dependent edema is a sign of right-sided failure.",
+          "f": "Hepatomegaly is a sign of right-sided failure."
+        },
+        "references": [
+          "SAMPLE CONTENT: written for development and testing, not reviewed by a nurse educator. Do not use for exam preparation."
+        ]
+      },
+      "educationalObjective": "Tell left-sided from right-sided heart failure by where fluid backs up."
+    },
+    {
+      "id": "f04a0000-0000-4000-8000-000000000020",
+      "itemType": "sata",
+      "clientNeeds": "PHI.PA",
+      "bodySystem": "endocrine",
+      "cjmmSkill": "recognize_cues",
+      "difficulty": "difficult",
+      "stem": "Which findings does the nurse expect in a client with diabetic ketoacidosis? Select all that apply.",
+      "content": {
+        "options": [
+          {
+            "id": "a",
+            "text": "Deep, rapid respirations"
+          },
+          {
+            "id": "b",
+            "text": "A fruity odor on the breath"
+          },
+          {
+            "id": "c",
+            "text": "Blood glucose 420 mg/dL"
+          },
+          {
+            "id": "d",
+            "text": "Arterial pH 7.48"
+          },
+          {
+            "id": "e",
+            "text": "Frequent urination"
+          }
+        ]
+      },
+      "key": {
+        "correct": [
+          "a",
+          "b",
+          "c",
+          "e"
+        ]
+      },
+      "rationale": {
+        "correct": "Diabetic ketoacidosis combines hyperglycemia, ketosis and metabolic acidosis.",
+        "perOption": {
+          "a": "Kussmaul respirations blow off carbon dioxide to compensate for acidosis.",
+          "b": "Acetone from ketones gives the breath a fruity odor.",
+          "c": "Severe hyperglycemia, usually above 250 mg/dL, is expected.",
+          "d": "A pH of 7.48 is alkalosis; DKA causes acidosis (pH below 7.35).",
+          "e": "High glucose causes osmotic diuresis and frequent urination."
+        },
+        "references": [
+          "SAMPLE CONTENT: written for development and testing, not reviewed by a nurse educator. Do not use for exam preparation."
+        ]
+      },
+      "educationalObjective": "Recognize the cues of diabetic ketoacidosis."
+    }
+  ]
+}
