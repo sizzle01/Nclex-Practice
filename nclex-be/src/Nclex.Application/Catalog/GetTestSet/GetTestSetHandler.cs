@@ -19,24 +19,6 @@ public sealed class GetTestSetHandler(IAppDbContext db, PlanTierGuard planTierGu
             .SingleOrDefaultAsync(s => s.Id == id, cancellationToken)
             ?? throw new AppException(CatalogErrors.TestSetNotFound);
 
-        return new TestSetDetail(
-            set.Id,
-            set.Track,
-            set.Kind,
-            set.Title,
-            set.Description,
-            set.Mode,
-            set.RevealMode,
-            set.QuestionCount,
-            set.Timed,
-            set.TimeBudgetSec,
-            set.PerQuestionSec,
-            set.PassThreshold,
-            set.PausePolicy,
-            set.AllowBackNav,
-            set.IsSample,
-            set.AccessTier,
-            viewer.IsLocked(set.AccessTier),
-            MyLastAttempt: null);
+        return TestSetDetail.From(set, viewer);
     }
 }

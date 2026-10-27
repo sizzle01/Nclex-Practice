@@ -14,6 +14,7 @@ using Nclex.Application.Auth.Sessions;
 using Nclex.Application.Auth.Signup;
 using Nclex.Application.Auth.VerifyEmail;
 using Nclex.Application.Catalog;
+using Nclex.Application.Catalog.CustomSets;
 using Nclex.Application.Catalog.GetTestSet;
 using Nclex.Application.Catalog.ListQuestionBanks;
 using Nclex.Application.Catalog.ListTestSets;
@@ -85,6 +86,11 @@ public static class DependencyInjection
         services.AddScoped<ListQuestionBanksHandler>();
         services.AddScoped<ListTestSetsHandler>();
         services.AddScoped<GetTestSetHandler>();
+
+        // Custom test builder
+        services.AddScoped<QuestionPool>();
+        services.AddScoped<GetAvailableCountHandler>();
+        services.AddScoped<CreateCustomSetHandler>();
 
         services.AddContentImport();
 

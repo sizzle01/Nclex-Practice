@@ -51,7 +51,29 @@ public sealed record TestSetDetail(
     bool IsSample,
     PlanTier AccessTier,
     bool Locked,
-    LastAttemptSummary? MyLastAttempt);
+    LastAttemptSummary? MyLastAttempt)
+{
+    /// <summary>The detail of <paramref name="set"/> as <paramref name="viewer"/> sees it.</summary>
+    public static TestSetDetail From(TestSet set, CatalogViewer viewer) => new(
+        set.Id,
+        set.Track,
+        set.Kind,
+        set.Title,
+        set.Description,
+        set.Mode,
+        set.RevealMode,
+        set.QuestionCount,
+        set.Timed,
+        set.TimeBudgetSec,
+        set.PerQuestionSec,
+        set.PassThreshold,
+        set.PausePolicy,
+        set.AllowBackNav,
+        set.IsSample,
+        set.AccessTier,
+        viewer.IsLocked(set.AccessTier),
+        MyLastAttempt: null);
+}
 
 /// <summary>Which sets a user may see at all; locking is separate.</summary>
 internal static class TestSetVisibility

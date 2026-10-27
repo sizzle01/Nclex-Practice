@@ -51,6 +51,13 @@ public interface IAppDbContext
     DbSet<UserQuestionHistory> UserQuestionHistory { get; }
 
     /// <summary>
+    /// Runs hand-written SQL whose columns match <typeparamref name="T"/>'s property names. For hot or
+    /// complex queries such as the builder's pool (database.md intro); always pass values as
+    /// interpolated parameters, never as concatenated text.
+    /// </summary>
+    IQueryable<T> SqlQuery<T>(FormattableString sql);
+
+    /// <summary>
     /// Starts a transaction for a use case that needs more than one SaveChanges to stay atomic,
     /// such as publishing a new question (see QuestionConfiguration for why).
     /// </summary>

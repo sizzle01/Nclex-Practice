@@ -86,6 +86,33 @@ public sealed class TestSet
         return set;
     }
 
+    /// <summary>
+    /// Creates a set made by the custom builder for one user (architecture.md 5.7). It is never
+    /// published: only its owner sees it. <paramref name="generatorCriteria"/> keeps the filters it
+    /// was built from, for "retake similar".
+    /// </summary>
+    public static TestSet CreateCustom(
+        Guid ownerUserId,
+        ExamTrack track,
+        TestSetSettings settings,
+        int questionCount,
+        JsonDocument generatorCriteria,
+        DateTimeOffset now)
+    {
+        var set = new TestSet
+        {
+            Id = Guid.CreateVersion7(now),
+            Track = track,
+            Kind = TestSetKind.Custom,
+            OwnerUserId = ownerUserId,
+            IsPublished = false,
+            GeneratorCriteria = generatorCriteria,
+            CreatedAt = now,
+        };
+        set.Apply(settings, questionCount);
+        return set;
+    }
+
     /// <summary>The settings as a candidate sees them.</summary>
     public TestSetSettings Settings => new(
         Title,

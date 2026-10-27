@@ -44,6 +44,11 @@ public sealed class AppExceptionHandler(IProblemDetailsService problemDetailsSer
             problem.Extensions["errors"] = appException.FieldErrors.Select(e => new FieldError(e.Field, e.Code)).ToList();
         }
 
+        foreach (var (name, value) in appException.Details)
+        {
+            problem.Extensions[name] = value;
+        }
+
         return await problemDetailsService.TryWriteAsync(new ProblemDetailsContext
         {
             HttpContext = httpContext,
@@ -58,6 +63,7 @@ public sealed class AppExceptionHandler(IProblemDetailsService problemDetailsSer
         AppErrorKind.Forbidden => StatusCodes.Status403Forbidden,
         AppErrorKind.NotFound => StatusCodes.Status404NotFound,
         AppErrorKind.Conflict => StatusCodes.Status409Conflict,
+        AppErrorKind.Unprocessable => StatusCodes.Status422UnprocessableEntity,
         AppErrorKind.Locked => StatusCodes.Status423Locked,
         AppErrorKind.TooManyRequests => StatusCodes.Status429TooManyRequests,
         _ => StatusCodes.Status500InternalServerError,

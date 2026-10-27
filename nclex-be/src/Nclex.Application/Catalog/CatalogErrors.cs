@@ -11,6 +11,12 @@ public static class CatalogErrors
         AppErrorKind.NotFound,
         "That test set was not found.");
 
+    /// <summary>The builder's filters match fewer questions than asked for; the body says how many (api.md section 3).</summary>
+    public static readonly AppError InsufficientQuestions = new(
+        "INSUFFICIENT_QUESTIONS",
+        AppErrorKind.Unprocessable,
+        "Not enough questions match these filters.");
+
     /// <summary>A free account tried to use a premium set or bank (api.md section 1).</summary>
     public static readonly AppError PlanUpgradeRequired = new(
         "PLAN_UPGRADE_REQUIRED",

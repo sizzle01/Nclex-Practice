@@ -7,7 +7,12 @@ namespace Nclex.Application.Common;
 /// <param name="error">The failure to report.</param>
 /// <param name="retryAfter">For rate limits and lockouts: how long until the caller may try again.</param>
 /// <param name="fieldErrors">For VALIDATION_FAILED: which fields are wrong, sent as <c>errors[]</c>.</param>
-public sealed class AppException(AppError error, TimeSpan? retryAfter = null, IReadOnlyList<AppFieldError>? fieldErrors = null)
+/// <param name="details">Extra top-level fields for the error body, e.g. <c>available</c> on INSUFFICIENT_QUESTIONS.</param>
+public sealed class AppException(
+    AppError error,
+    TimeSpan? retryAfter = null,
+    IReadOnlyList<AppFieldError>? fieldErrors = null,
+    IReadOnlyDictionary<string, object?>? details = null)
     : Exception(error.Title)
 {
     public AppError Error { get; } = error;
@@ -17,6 +22,9 @@ public sealed class AppException(AppError error, TimeSpan? retryAfter = null, IR
 
     /// <summary>Sent as <c>errors: [{ field, code }]</c>; empty when the error is not about fields.</summary>
     public IReadOnlyList<AppFieldError> FieldErrors { get; } = fieldErrors ?? [];
+
+    /// <summary>Added to the error body as they are; camelCase names, as api.md section 1 shows.</summary>
+    public IReadOnlyDictionary<string, object?> Details { get; } = details ?? new Dictionary<string, object?>();
 
     /// <summary>A 400 VALIDATION_FAILED about one field, e.g. ("currentPassword", "INCORRECT").</summary>
     public static AppException ForField(string field, string code) =>

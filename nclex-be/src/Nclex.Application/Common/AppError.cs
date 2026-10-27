@@ -27,6 +27,9 @@ public enum AppErrorKind
     /// <summary>409: the request clashes with the current state.</summary>
     Conflict,
 
+    /// <summary>422: the request is valid but can't be carried out, e.g. too few questions match.</summary>
+    Unprocessable,
+
     /// <summary>423: the account is temporarily locked; the response says when to try again.</summary>
     Locked,
 
