@@ -1,5 +1,6 @@
 "use client";
 
+import Link from "next/link";
 import { useRef } from "react";
 import ui from "@/components/ui/ui.module.css";
 import { useMe } from "@/features/auth/AuthProvider";
@@ -36,6 +37,9 @@ export function DashboardPlaceholder() {
         <article className={`${ui.card} ${styles.empty}`}>
           <h2 className={ui.cardTitle}>Practice tests</h2>
           <p className={ui.muted}>Your practice tests and results will appear here.</p>
+          <Link href="/practice" className={ui.buttonSecondary}>
+            Browse practice sets
+          </Link>
         </article>
         <article className={`${ui.card} ${styles.empty}`}>
           <h2 className={ui.cardTitle}>Performance</h2>

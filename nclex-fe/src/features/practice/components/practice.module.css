@@ -1,0 +1,136 @@
+.page {
+  display: grid;
+  gap: 1.5rem;
+}
+
+.header h1 {
+  margin: 0 0 0.25rem;
+}
+
+.header p {
+  margin: 0;
+}
+
+/* Cards on the left, the open set's details on the right; stacked on narrow screens. */
+.layout {
+  display: grid;
+  gap: 1.5rem;
+  align-items: start;
+}
+
+@media (min-width: 60rem) {
+  .layoutWithPanel {
+    grid-template-columns: minmax(0, 1fr) minmax(20rem, 26rem);
+  }
+
+  .panel {
+    position: sticky;
+    top: 1.5rem;
+  }
+}
+
+.list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(16rem, 1fr));
+  gap: 1.25rem;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.card {
+  display: grid;
+  gap: 0.75rem;
+  height: 100%;
+  align-content: start;
+}
+
+.cardSelected {
+  border-color: var(--accent);
+  box-shadow: 0 0 0 1px var(--accent), var(--shadow);
+}
+
+.cardHeader {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  align-items: center;
+}
+
+.badges {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.375rem;
+}
+
+.lockedBadge {
+  background: var(--warning-soft);
+  color: var(--warning);
+}
+
+.facts {
+  display: grid;
+  gap: 0.25rem;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  color: var(--muted);
+  font-size: 0.9375rem;
+}
+
+.cardAction {
+  margin-top: auto;
+}
+
+.panel {
+  display: grid;
+  gap: 1rem;
+}
+
+.panelHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: start;
+  gap: 1rem;
+}
+
+.panelHeader h2 {
+  margin: 0;
+  font-size: 1.25rem;
+}
+
+.settings {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 0.375rem 1rem;
+  margin: 0;
+}
+
+.settings dt {
+  color: var(--muted);
+}
+
+.settings dd {
+  margin: 0;
+  font-weight: 600;
+}
+
+/* Shared disabled buttons show a "busy" cursor; this one is unavailable, not busy. */
+.startButton:disabled {
+  cursor: not-allowed;
+}
+
+.startHint {
+  margin: 0.5rem 0 0;
+  color: var(--muted);
+  font-size: 0.9375rem;
+}
+
+.empty {
+  border-style: dashed;
+  box-shadow: none;
+}
+
+.error {
+  color: var(--error);
+}
