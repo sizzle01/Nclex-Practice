@@ -47,6 +47,9 @@ public interface IAppDbContext
 
     DbSet<TestSetItem> TestSetItems { get; }
 
+    /// <summary>Per-user question history for the builder's pools; written by grading (F10).</summary>
+    DbSet<UserQuestionHistory> UserQuestionHistory { get; }
+
     /// <summary>
     /// Starts a transaction for a use case that needs more than one SaveChanges to stay atomic,
     /// such as publishing a new question (see QuestionConfiguration for why).

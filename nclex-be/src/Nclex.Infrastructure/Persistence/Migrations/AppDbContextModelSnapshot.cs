@@ -1325,6 +1325,39 @@ namespace Nclex.Infrastructure.Persistence.Migrations
                     b.ToTable("users", (string)null);
                 });
 
+            modelBuilder.Entity("Nclex.Domain.Entities.UserQuestionHistory", b =>
+                {
+                    b.Property<Guid>("UserId")
+                        .HasColumnType("uuid")
+                        .HasColumnName("user_id");
+
+                    b.Property<Guid>("QuestionId")
+                        .HasColumnType("uuid")
+                        .HasColumnName("question_id");
+
+                    b.Property<bool?>("LastCorrect")
+                        .HasColumnType("boolean")
+                        .HasColumnName("last_correct");
+
+                    b.Property<DateTimeOffset>("LastSeenAt")
+                        .HasColumnType("timestamp with time zone")
+                        .HasColumnName("last_seen_at");
+
+                    b.Property<int>("TimesSeen")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("integer")
+                        .HasDefaultValue(0)
+                        .HasColumnName("times_seen");
+
+                    b.HasKey("UserId", "QuestionId")
+                        .HasName("pk_user_question_history");
+
+                    b.HasIndex("QuestionId")
+                        .HasDatabaseName("ix_user_question_history_question_id");
+
+                    b.ToTable("user_question_history", (string)null);
+                });
+
             modelBuilder.Entity("Nclex.Domain.Audit.AuditEvent", b =>
                 {
                     b.HasOne("Nclex.Domain.Entities.User", null)
@@ -1517,6 +1550,23 @@ namespace Nclex.Infrastructure.Persistence.Migrations
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired()
                         .HasConstraintName("fk_test_set_items_test_sets_test_set_id");
+                });
+
+            modelBuilder.Entity("Nclex.Domain.Entities.UserQuestionHistory", b =>
+                {
+                    b.HasOne("Nclex.Domain.Entities.Question", null)
+                        .WithMany()
+                        .HasForeignKey("QuestionId")
+                        .OnDelete(DeleteBehavior.NoAction)
+                        .IsRequired()
+                        .HasConstraintName("fk_user_question_history_questions_question_id");
+
+                    b.HasOne("Nclex.Domain.Entities.User", null)
+                        .WithMany()
+                        .HasForeignKey("UserId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired()
+                        .HasConstraintName("fk_user_question_history_users_user_id");
                 });
 #pragma warning restore 612, 618
         }
