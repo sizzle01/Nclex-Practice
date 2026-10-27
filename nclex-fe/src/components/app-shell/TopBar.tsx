@@ -1,9 +1,10 @@
 import Link from "next/link";
 import { UserMenu } from "@/features/auth/components/UserMenu";
+import { ThemeSwitcher } from "@/features/theme/components/ThemeSwitcher";
 import styles from "./TopBar.module.css";
 
 /**
- * App shell top bar with the user menu. The track badge and notification bell (interfaces.md 5.2)
+ * App shell top bar with the theme switcher and user menu. The track badge and notification bell (interfaces.md 5.2)
  * arrive with the features that need them.
  */
 export function TopBar() {
@@ -16,9 +17,12 @@ export function TopBar() {
               <path d="M10 3h4v7h7v4h-7v7h-4v-7H3v-4h7z" fill="currentColor" />
             </svg>
           </span>
-          NCLEX Practice
+          <span className={styles.brandName}>NCLEX Practice</span>
         </Link>
-        <UserMenu />
+        <div className={styles.actions}>
+          <ThemeSwitcher />
+          <UserMenu />
+        </div>
       </div>
     </header>
   );
