@@ -44,4 +44,29 @@ public sealed class UserTests
 
         user.DisplayName.ShouldBeNull();
     }
+
+    [Fact]
+    public void MarkEmailVerified_records_the_first_verification_only()
+    {
+        var user = User.Register("ada@example.com", "hash", ExamTrack.RN, null, Now);
+
+        user.MarkEmailVerified(Now.AddHours(1));
+        user.MarkEmailVerified(Now.AddHours(2));
+
+        user.IsEmailVerified.ShouldBeTrue();
+        user.EmailVerifiedAt.ShouldBe(Now.AddHours(1));
+        user.UpdatedAt.ShouldBe(Now.AddHours(1));
+    }
+
+    [Fact]
+    public void ChangePassword_replaces_the_hash_and_records_when()
+    {
+        var user = User.Register("ada@example.com", "old-hash", ExamTrack.RN, null, Now);
+
+        user.ChangePassword("new-hash", Now.AddDays(1));
+
+        user.PasswordHash.ShouldBe("new-hash");
+        user.PasswordChangedAt.ShouldBe(Now.AddDays(1));
+        user.UpdatedAt.ShouldBe(Now.AddDays(1));
+    }
 }

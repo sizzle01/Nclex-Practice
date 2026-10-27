@@ -51,6 +51,8 @@ public sealed class User
 
     public bool IsDeleted => DeletedAt is not null;
 
+    public bool IsEmailVerified => EmailVerifiedAt is not null;
+
     /// <summary>
     /// Creates a new candidate account. Every account starts as a free, unverified candidate
     /// (api.md section 2, POST /auth/signup).
@@ -90,6 +92,29 @@ public sealed class User
         Track = track ?? Track;
         Timezone = timezone ?? Timezone;
         TargetExamDate = targetExamDate ?? TargetExamDate;
+        UpdatedAt = now;
+    }
+
+    /// <summary>
+    /// Records that the user proved they own their email address, by following a verification or
+    /// password-reset link. The first verification time is kept.
+    /// </summary>
+    public void MarkEmailVerified(DateTimeOffset now)
+    {
+        if (EmailVerifiedAt is not null)
+        {
+            return;
+        }
+
+        EmailVerifiedAt = now;
+        UpdatedAt = now;
+    }
+
+    /// <summary>Replaces the password hash, e.g. after a password reset.</summary>
+    public void ChangePassword(string passwordHash, DateTimeOffset now)
+    {
+        PasswordHash = passwordHash;
+        PasswordChangedAt = now;
         UpdatedAt = now;
     }
 }
