@@ -14,4 +14,6 @@ public sealed class QuestionBankItem
     public Guid BankId { get; private set; }
 
     public Guid QuestionId { get; private set; }
+
+    public static QuestionBankItem Create(Guid bankId, Guid questionId) => new() { BankId = bankId, QuestionId = questionId };
 }

@@ -2,7 +2,8 @@ namespace Nclex.Domain.Entities;
 
 /// <summary>
 /// A named collection of questions shown to candidates, e.g. "Pharmacology essentials".
-/// Maps to <c>question_banks</c> (database.md section 2.4). Managing banks arrives with F14.
+/// Maps to <c>question_banks</c> (database.md section 2.4). The content importer loads banks
+/// until managing them arrives with F14.
 /// </summary>
 public sealed class QuestionBank
 {
@@ -25,4 +26,31 @@ public sealed class QuestionBank
     public bool IsPublished { get; private set; }
 
     public DateTimeOffset CreatedAt { get; private set; }
+
+    /// <summary>
+    /// Creates a published bank. The caller chooses the id, so content files can refer to the same
+    /// bank every time they are imported.
+    /// </summary>
+    public static QuestionBank CreatePublished(Guid id, ExamTrack track, string name, string? description, PlanTier accessTier, DateTimeOffset now) =>
+        new()
+        {
+            Id = id,
+            Track = track,
+            Name = name,
+            Description = description,
+            AccessTier = accessTier,
+            IsPublished = true,
+            CreatedAt = now,
+        };
+
+    /// <summary>True when the bank already has these details, so an import has nothing to change.</summary>
+    public bool HasDetails(string name, string? description, PlanTier accessTier) =>
+        Name == name && Description == description && AccessTier == accessTier;
+
+    public void ChangeDetails(string name, string? description, PlanTier accessTier)
+    {
+        Name = name;
+        Description = description;
+        AccessTier = accessTier;
+    }
 }

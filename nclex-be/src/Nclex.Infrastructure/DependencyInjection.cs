@@ -69,7 +69,10 @@ public static class DependencyInjection
             .MapEnum<DifficultyTier>("difficulty_tier")
             .MapEnum<CjmmSkill>("cjmm_skill")
             .MapEnum<VersionStatus>("version_status")
-            .MapEnum<QuestionStatus>("question_status");
+            .MapEnum<QuestionStatus>("question_status")
+            .MapEnum<TestSetKind>("test_set_kind")
+            .MapEnum<TestMode>("test_mode")
+            .MapEnum<RevealMode>("reveal_mode");
 
     private static string GetRequiredConnectionString(IServiceProvider provider, string name) =>
         provider.GetRequiredService<IConfiguration>().GetConnectionString(name)

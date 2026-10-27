@@ -43,6 +43,10 @@ public interface IAppDbContext
 
     DbSet<QuestionBankItem> QuestionBankItems { get; }
 
+    DbSet<TestSet> TestSets { get; }
+
+    DbSet<TestSetItem> TestSetItems { get; }
+
     /// <summary>
     /// Starts a transaction for a use case that needs more than one SaveChanges to stay atomic,
     /// such as publishing a new question (see QuestionConfiguration for why).

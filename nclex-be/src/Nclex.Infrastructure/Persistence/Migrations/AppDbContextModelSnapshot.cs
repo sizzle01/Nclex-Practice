@@ -31,6 +31,9 @@ namespace Nclex.Infrastructure.Persistence.Migrations
             NpgsqlModelBuilderExtensions.HasPostgresEnum(modelBuilder, "item_type", new[] { "bowtie", "drag_drop_cloze", "drag_drop_rationale", "dropdown_cloze", "dropdown_rationale", "dropdown_table", "fill_blank_calc", "highlight_table", "highlight_text", "hotspot", "matrix_mc", "matrix_mr", "multiple_choice", "multiple_response_grouping", "ordered_response", "sata", "select_n" });
             NpgsqlModelBuilderExtensions.HasPostgresEnum(modelBuilder, "plan_tier", new[] { "free", "premium" });
             NpgsqlModelBuilderExtensions.HasPostgresEnum(modelBuilder, "question_status", new[] { "active", "retired" });
+            NpgsqlModelBuilderExtensions.HasPostgresEnum(modelBuilder, "reveal_mode", new[] { "exam", "tutor" });
+            NpgsqlModelBuilderExtensions.HasPostgresEnum(modelBuilder, "test_mode", new[] { "cat", "challenge", "practice" });
+            NpgsqlModelBuilderExtensions.HasPostgresEnum(modelBuilder, "test_set_kind", new[] { "assigned", "cat", "custom", "prebuilt" });
             NpgsqlModelBuilderExtensions.HasPostgresEnum(modelBuilder, "user_role", new[] { "admin", "author", "candidate", "educator", "reviewer" });
             NpgsqlModelBuilderExtensions.HasPostgresEnum(modelBuilder, "version_status", new[] { "approved", "draft", "in_review", "published", "rejected", "superseded" });
             NpgsqlModelBuilderExtensions.HasPostgresExtension(modelBuilder, "citext");
@@ -1088,6 +1091,154 @@ namespace Nclex.Infrastructure.Persistence.Migrations
                     b.ToTable("refresh_sessions", (string)null);
                 });
 
+            modelBuilder.Entity("Nclex.Domain.Entities.TestSet", b =>
+                {
+                    b.Property<Guid>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("uuid")
+                        .HasColumnName("id")
+                        .HasDefaultValueSql("gen_random_uuid()");
+
+                    b.Property<PlanTier>("AccessTier")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("plan_tier")
+                        .HasDefaultValue(PlanTier.Free)
+                        .HasColumnName("access_tier");
+
+                    b.Property<bool>("AllowBackNav")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("boolean")
+                        .HasDefaultValue(true)
+                        .HasColumnName("allow_back_nav");
+
+                    b.Property<JsonDocument>("CatConfig")
+                        .HasColumnType("jsonb")
+                        .HasColumnName("cat_config");
+
+                    b.Property<DateTimeOffset>("CreatedAt")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("timestamp with time zone")
+                        .HasColumnName("created_at")
+                        .HasDefaultValueSql("now()");
+
+                    b.Property<string>("Description")
+                        .HasColumnType("text")
+                        .HasColumnName("description");
+
+                    b.Property<JsonDocument>("GeneratorCriteria")
+                        .HasColumnType("jsonb")
+                        .HasColumnName("generator_criteria");
+
+                    b.Property<bool>("IsPublished")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("boolean")
+                        .HasDefaultValue(false)
+                        .HasColumnName("is_published");
+
+                    b.Property<bool>("IsSample")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("boolean")
+                        .HasDefaultValue(false)
+                        .HasColumnName("is_sample");
+
+                    b.Property<TestSetKind>("Kind")
+                        .HasColumnType("test_set_kind")
+                        .HasColumnName("kind");
+
+                    b.Property<TestMode>("Mode")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("test_mode")
+                        .HasDefaultValue(TestMode.Practice)
+                        .HasColumnName("mode");
+
+                    b.Property<Guid?>("OwnerUserId")
+                        .HasColumnType("uuid")
+                        .HasColumnName("owner_user_id");
+
+                    b.Property<decimal?>("PassThreshold")
+                        .HasPrecision(5, 4)
+                        .HasColumnType("numeric(5,4)")
+                        .HasColumnName("pass_threshold");
+
+                    b.Property<int?>("PerQuestionSec")
+                        .HasColumnType("integer")
+                        .HasColumnName("per_question_sec");
+
+                    b.Property<int>("QuestionCount")
+                        .HasColumnType("integer")
+                        .HasColumnName("question_count");
+
+                    b.Property<RevealMode>("RevealMode")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("reveal_mode")
+                        .HasDefaultValue(RevealMode.Tutor)
+                        .HasColumnName("reveal_mode");
+
+                    b.Property<int?>("TimeBudgetSec")
+                        .HasColumnType("integer")
+                        .HasColumnName("time_budget_sec");
+
+                    b.Property<bool>("Timed")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("boolean")
+                        .HasDefaultValue(false)
+                        .HasColumnName("timed");
+
+                    b.Property<string>("Title")
+                        .IsRequired()
+                        .HasColumnType("text")
+                        .HasColumnName("title");
+
+                    b.Property<ExamTrack>("Track")
+                        .HasColumnType("exam_track")
+                        .HasColumnName("track");
+
+                    b.HasKey("Id")
+                        .HasName("pk_test_sets");
+
+                    b.HasIndex(new[] { "OwnerUserId" }, "ix_test_sets_owner_user_id")
+                        .HasDatabaseName("ix_test_sets_owner_user_id")
+                        .HasFilter("kind = 'custom'");
+
+                    b.HasIndex(new[] { "Track", "Kind" }, "ix_test_sets_track_kind")
+                        .HasDatabaseName("ix_test_sets_track_kind")
+                        .HasFilter("is_published");
+
+                    b.ToTable("test_sets", null, t =>
+                        {
+                            t.HasCheckConstraint("test_sets_check", "kind <> 'custom' OR owner_user_id IS NOT NULL");
+
+                            t.HasCheckConstraint("test_sets_check1", "NOT timed OR per_question_sec IS NOT NULL OR time_budget_sec IS NOT NULL");
+                        });
+                });
+
+            modelBuilder.Entity("Nclex.Domain.Entities.TestSetItem", b =>
+                {
+                    b.Property<Guid>("TestSetId")
+                        .HasColumnType("uuid")
+                        .HasColumnName("test_set_id");
+
+                    b.Property<int>("Position")
+                        .HasColumnType("integer")
+                        .HasColumnName("position");
+
+                    b.Property<Guid>("QuestionId")
+                        .HasColumnType("uuid")
+                        .HasColumnName("question_id");
+
+                    b.HasKey("TestSetId", "Position")
+                        .HasName("pk_test_set_items");
+
+                    b.HasIndex("QuestionId")
+                        .HasDatabaseName("ix_test_set_items_question_id");
+
+                    b.HasIndex("TestSetId", "QuestionId")
+                        .IsUnique()
+                        .HasDatabaseName("ix_test_set_items_test_set_id_question_id");
+
+                    b.ToTable("test_set_items", (string)null);
+                });
+
             modelBuilder.Entity("Nclex.Domain.Entities.User", b =>
                 {
                     b.Property<Guid>("Id")
@@ -1313,6 +1464,59 @@ namespace Nclex.Infrastructure.Persistence.Migrations
                         .HasConstraintName("fk_refresh_sessions_users_user_id");
 
                     b.Navigation("User");
+                });
+
+            modelBuilder.Entity("Nclex.Domain.Entities.TestSet", b =>
+                {
+                    b.HasOne("Nclex.Domain.Entities.User", null)
+                        .WithMany()
+                        .HasForeignKey("OwnerUserId")
+                        .OnDelete(DeleteBehavior.NoAction)
+                        .HasConstraintName("fk_test_sets_users_owner_user_id");
+
+                    b.OwnsOne("Nclex.Domain.Entities.PausePolicy", "PausePolicy", b1 =>
+                        {
+                            b1.Property<Guid>("TestSetId")
+                                .ValueGeneratedOnAdd();
+
+                            b1.Property<int?>("MaxPauseSec")
+                                .HasJsonPropertyName("maxPauseSec");
+
+                            b1.Property<int?>("MaxPauses")
+                                .HasJsonPropertyName("maxPauses");
+
+                            b1.HasKey("TestSetId");
+
+                            b1.ToTable("test_sets");
+
+                            b1
+                                .ToJson("pause_policy")
+                                .HasColumnType("jsonb");
+
+                            b1.WithOwner()
+                                .HasForeignKey("TestSetId")
+                                .HasConstraintName("fk_test_sets_test_sets_id");
+                        });
+
+                    b.Navigation("PausePolicy")
+                        .IsRequired();
+                });
+
+            modelBuilder.Entity("Nclex.Domain.Entities.TestSetItem", b =>
+                {
+                    b.HasOne("Nclex.Domain.Entities.Question", null)
+                        .WithMany()
+                        .HasForeignKey("QuestionId")
+                        .OnDelete(DeleteBehavior.NoAction)
+                        .IsRequired()
+                        .HasConstraintName("fk_test_set_items_questions_question_id");
+
+                    b.HasOne("Nclex.Domain.Entities.TestSet", null)
+                        .WithMany()
+                        .HasForeignKey("TestSetId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired()
+                        .HasConstraintName("fk_test_set_items_test_sets_test_set_id");
                 });
 #pragma warning restore 612, 618
         }
