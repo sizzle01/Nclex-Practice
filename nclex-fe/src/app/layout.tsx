@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import { TopBar } from "@/components/app-shell/TopBar";
+import { themeScript } from "@/features/theme/themeScript";
 import { Providers } from "./providers";
 import "./globals.css";
 
@@ -15,7 +16,11 @@ export const metadata: Metadata = {
 
 export default function RootLayout({ children }: LayoutProps<"/">) {
   return (
-    <html lang="en" className={inter.variable}>
+    // suppressHydrationWarning: the head script may add data-theme to <html> before React hydrates.
+    <html lang="en" className={inter.variable} suppressHydrationWarning>
+      <head>
+        <script dangerouslySetInnerHTML={{ __html: themeScript }} />
+      </head>
       <body>
         <Providers>
           <TopBar />

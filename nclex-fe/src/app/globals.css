@@ -1,79 +1,61 @@
 /*
  * Design tokens: a clinical teal-blue theme. Components use these variables, never raw colours, so
- * the whole app changes from here. Every text/background pair below meets 4.5:1 contrast and input
- * borders meet 3:1 (interfaces.md section 4).
+ * the whole app changes from here. Every text/background pair meets 4.5:1 contrast and input
+ * borders meet 3:1, in both themes (interfaces.md section 4).
+ *
+ * Each colour is light-dark(<light value>, <dark value>). The browser picks a side from
+ * color-scheme on <html>:
+ *   - no data-theme ("System"): "light dark", so it follows the operating system;
+ *   - data-theme="light" / "dark": set by the theme switcher (src/features/theme) to force one.
  */
 :root {
+  color-scheme: light dark;
+
   /* Surfaces and text */
-  --background: #f3f7f9;
-  --surface: #ffffff;
-  --surface-muted: #eef4f7;
-  --foreground: #0f172a;
-  --muted: #475569;
-  --border: #dbe5ea;
-  --border-strong: #64748b;
+  --background: light-dark(#f3f7f9, #0b1720);
+  --surface: light-dark(#ffffff, #12222d);
+  --surface-muted: light-dark(#eef4f7, #182c38);
+  --foreground: light-dark(#0f172a, #e6eef2);
+  --muted: light-dark(#475569, #9fb3bf);
+  --border: light-dark(#dbe5ea, #22394a);
+  --border-strong: light-dark(#64748b, #6b8899);
 
   /* Brand: teal-blue */
-  --accent: #0e7490;
-  --accent-hover: #155e75;
-  --accent-foreground: #ffffff;
-  --accent-soft: #e0f2f6;
-  --accent-soft-foreground: #155e75;
-  --focus: #0e7490;
+  --accent: light-dark(#0e7490, #2cc4d8);
+  --accent-hover: light-dark(#155e75, #5fd4e4);
+  --accent-foreground: light-dark(#ffffff, #04232b);
+  --accent-soft: light-dark(#e0f2f6, #133945);
+  --accent-soft-foreground: light-dark(#155e75, #9ae6f0);
+  --focus: light-dark(#0e7490, #5fd4e4);
 
   /* Status */
-  --error: #b91c1c;
-  --error-soft: #fef2f2;
-  --success: #15803d;
-  --success-soft: #ecfdf3;
-  --warning: #a16207;
-  --warning-soft: #fefce8;
+  --error: light-dark(#b91c1c, #f87171);
+  --error-soft: light-dark(#fef2f2, #3a1518);
+  --success: light-dark(#15803d, #4ade80);
+  --success-soft: light-dark(#ecfdf3, #0f2e1e);
+  --warning: light-dark(#a16207, #facc15);
+  --warning-soft: light-dark(#fefce8, #33290a);
 
   /* Shape, depth and spacing */
   --radius-sm: 0.5rem;
   --radius: 0.75rem;
   --radius-lg: 1rem;
   --radius-full: 999px;
-  --shadow-sm: 0 1px 2px rgb(15 23 42 / 0.06);
-  --shadow: 0 1px 3px rgb(15 23 42 / 0.06), 0 8px 24px rgb(15 23 42 / 0.06);
-  --shadow-lg: 0 4px 12px rgb(15 23 42 / 0.08), 0 20px 48px rgb(14 116 144 / 0.12);
+  --shadow-colour: light-dark(rgb(15 23 42 / 0.06), rgb(0 0 0 / 0.3));
+  --shadow-sm: 0 1px 2px var(--shadow-colour);
+  --shadow: 0 1px 3px var(--shadow-colour), 0 8px 24px var(--shadow-colour);
+  --shadow-lg: 0 4px 12px var(--shadow-colour), 0 20px 48px light-dark(rgb(14 116 144 / 0.12), rgb(0 0 0 / 0.35));
   --content-width: 72rem;
 
   --font-sans: var(--font-inter), system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+}
 
+:root[data-theme="light"] {
   color-scheme: light;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0b1720;
-    --surface: #12222d;
-    --surface-muted: #182c38;
-    --foreground: #e6eef2;
-    --muted: #9fb3bf;
-    --border: #22394a;
-    --border-strong: #6b8899;
-
-    --accent: #2cc4d8;
-    --accent-hover: #5fd4e4;
-    --accent-foreground: #04232b;
-    --accent-soft: #133945;
-    --accent-soft-foreground: #9ae6f0;
-    --focus: #5fd4e4;
-
-    --error: #f87171;
-    --error-soft: #3a1518;
-    --success: #4ade80;
-    --success-soft: #0f2e1e;
-    --warning: #facc15;
-    --warning-soft: #33290a;
-
-    --shadow-sm: 0 1px 2px rgb(0 0 0 / 0.3);
-    --shadow: 0 1px 3px rgb(0 0 0 / 0.3), 0 8px 24px rgb(0 0 0 / 0.25);
-    --shadow-lg: 0 4px 12px rgb(0 0 0 / 0.35), 0 20px 48px rgb(0 0 0 / 0.35);
-
-    color-scheme: dark;
-  }
+:root[data-theme="dark"] {
+  color-scheme: dark;
 }
 
 * {
