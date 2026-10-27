@@ -67,7 +67,7 @@ public sealed class ImportQuestionsTests(ApiFactory factory)
         var file = ImportFile(
             McQuestion(id, clientNeeds: "SECE"),
             McQuestion(id, bodySystem: "spleen"),
-            McQuestion(Guid.NewGuid(), itemType: "select_n"));
+            McQuestion(Guid.NewGuid(), itemType: "bowtie")); // phase 2: no module yet
 
         var result = await ImportAsync(file);
 

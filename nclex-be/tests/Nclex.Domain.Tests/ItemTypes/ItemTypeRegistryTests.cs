@@ -28,4 +28,21 @@ public sealed class ItemTypeRegistryTests
     {
         ItemTypeCatalog.All.Select(d => d.Type).ShouldBe(Enum.GetValues<ItemType>(), ignoreOrder: true);
     }
+
+    [Fact]
+    public void Lists_the_enabled_types_that_have_no_module()
+    {
+        _registry.MissingModules(Phase.Mvp).ShouldBe(
+            ItemTypeCatalog.All.Where(d => d.Phase == Phase.Mvp && d.Type is not (ItemType.MultipleChoice or ItemType.Sata)).Select(d => d.Type));
+        _registry.MissingModules(Phase.P2).ShouldContain(ItemType.Bowtie);
+    }
+
+    [Fact]
+    public void The_startup_check_names_the_missing_types()
+    {
+        var ex = Should.Throw<InvalidOperationException>(() => _registry.EnsureEveryTypeHasAModule(Phase.Mvp));
+
+        ex.Message.ShouldContain(nameof(ItemType.SelectN));
+        ex.Message.ShouldNotContain(nameof(ItemType.Bowtie));
+    }
 }

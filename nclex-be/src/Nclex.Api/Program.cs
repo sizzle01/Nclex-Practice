@@ -58,6 +58,8 @@ try
     builder.Services.AddSingleton(TimeProvider.System);
 
     var app = builder.Build();
+    // Fail fast if an MVP item type has no grader (interfaces.md section 3).
+    app.Services.EnsureItemTypeModules();
 
     // Order matters: the request id must exist before anything logs, and the exception handler
     // must wrap everything that can throw.

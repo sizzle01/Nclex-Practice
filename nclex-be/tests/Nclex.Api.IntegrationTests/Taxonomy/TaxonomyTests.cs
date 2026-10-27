@@ -56,7 +56,8 @@ public sealed class TaxonomyTests(ApiFactory factory)
         taxonomy.BodySystems[0].ShouldBe(new BodySystemInfo(1, "cardiovascular", "Cardiovascular"));
 
         taxonomy.ItemTypes.Count.ShouldBe(Enum.GetValues<ItemType>().Length);
-        taxonomy.ItemTypes.Where(t => t.Available).Select(t => t.Type).ShouldBe([ItemType.MultipleChoice, ItemType.Sata]);
+        taxonomy.ItemTypes.Where(t => t.Available).Select(t => t.Type)
+            .ShouldBe(ItemTypeCatalog.All.Where(d => d.Phase == Phase.Mvp).Select(d => d.Type));
         taxonomy.ItemTypes.ShouldContain(new ItemTypeInfo(ItemType.Sata, "Select All That Apply", true));
 
         taxonomy.CjmmSkills.ShouldBe(CjmmSkillCatalog.All);

@@ -18,4 +18,23 @@ public sealed class ItemTypeRegistry(IEnumerable<IItemTypeModule> modules)
         _byType.TryGetValue(type, out var module)
             ? module
             : throw new InvalidOperationException($"No item-type module is registered for {type}.");
+
+    /// <summary>Item types of <paramref name="enabledPhase"/>, or an earlier phase, that have no module.</summary>
+    public IReadOnlyList<ItemType> MissingModules(Phase enabledPhase) =>
+        [.. ItemTypeCatalog.All.Where(d => d.Phase <= enabledPhase && !IsAvailable(d.Type)).Select(d => d.Type)];
+
+    /// <summary>
+    /// The startup check from interfaces.md section 3: every item type whose phase is enabled must have
+    /// a module. Throws, so a forgotten registration stops the host from starting instead of failing
+    /// the first candidate who meets that item type.
+    /// </summary>
+    public void EnsureEveryTypeHasAModule(Phase enabledPhase)
+    {
+        var missing = MissingModules(enabledPhase);
+        if (missing.Count > 0)
+        {
+            throw new InvalidOperationException(
+                $"No item-type module is registered for these {enabledPhase} item types: {string.Join(", ", missing)}.");
+        }
+    }
 }

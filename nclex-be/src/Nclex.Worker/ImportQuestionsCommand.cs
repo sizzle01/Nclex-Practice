@@ -43,6 +43,7 @@ internal static class ImportQuestionsCommand
         builder.Services.AddContentImport();
         builder.Services.AddSingleton(TimeProvider.System);
         using var host = builder.Build();
+        host.Services.EnsureItemTypeModules();
 
         QuestionImportFile file;
         try

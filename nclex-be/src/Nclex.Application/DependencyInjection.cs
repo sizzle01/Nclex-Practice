@@ -23,13 +23,23 @@ using Nclex.Application.Users.DeleteAccount;
 using Nclex.Application.Users.GetMe;
 using Nclex.Application.Users.UpdateMe;
 using Nclex.Domain.ItemTypes;
+using Nclex.Domain.ItemTypes.Dropdown;
+using Nclex.Domain.ItemTypes.FillBlankCalc;
+using Nclex.Domain.ItemTypes.Grouped;
+using Nclex.Domain.ItemTypes.Highlight;
+using Nclex.Domain.ItemTypes.Matrix;
 using Nclex.Domain.ItemTypes.MultipleChoice;
+using Nclex.Domain.ItemTypes.OrderedResponse;
 using Nclex.Domain.ItemTypes.Sata;
+using Nclex.Domain.ItemTypes.SelectN;
 
 namespace Nclex.Application;
 
 public static class DependencyInjection
 {
+    // Phase 2 types (bowtie, hotspot...) are switched on when their modules are built.
+    private const Phase EnabledItemTypePhase = Phase.Mvp;
+
     /// <summary>Registers the use-case handlers and request validators.</summary>
     public static IServiceCollection AddApplication(this IServiceCollection services)
     {
@@ -83,6 +93,13 @@ public static class DependencyInjection
     }
 
     /// <summary>
+    /// Checks at startup that every item type of the enabled phase has a module (interfaces.md
+    /// section 3). Hosts that grade or import items call it right after building.
+    /// </summary>
+    public static void EnsureItemTypeModules(this IServiceProvider services) =>
+        services.GetRequiredService<ItemTypeRegistry>().EnsureEveryTypeHasAModule(EnabledItemTypePhase);
+
+    /// <summary>
     /// Registers one module per item type that has been built (interfaces.md section 3). Graders are
     /// pure and stateless, so singletons are safe.
     /// </summary>
@@ -90,6 +107,16 @@ public static class DependencyInjection
     {
         services.AddSingleton<IItemTypeModule, MultipleChoiceModule>();
         services.AddSingleton<IItemTypeModule, SataModule>();
+        services.AddSingleton<IItemTypeModule, SelectNModule>();
+        services.AddSingleton<IItemTypeModule, MatrixMcModule>();
+        services.AddSingleton<IItemTypeModule, MatrixMrModule>();
+        services.AddSingleton<IItemTypeModule, MultipleResponseGroupingModule>();
+        services.AddSingleton<IItemTypeModule, DropdownClozeModule>();
+        services.AddSingleton<IItemTypeModule, DropdownTableModule>();
+        services.AddSingleton<IItemTypeModule, HighlightTextModule>();
+        services.AddSingleton<IItemTypeModule, HighlightTableModule>();
+        services.AddSingleton<IItemTypeModule, FillBlankCalcModule>();
+        services.AddSingleton<IItemTypeModule, OrderedResponseModule>();
         services.AddSingleton<ItemTypeRegistry>();
         return services;
     }
