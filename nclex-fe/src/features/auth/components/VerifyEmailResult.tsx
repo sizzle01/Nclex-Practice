@@ -25,8 +25,8 @@ export function VerifyEmailResult() {
     onSuccess: () => queryClient.invalidateQueries({ queryKey: meQueryKey }),
   });
 
-  // Tokens are single-use. React runs effects twice in development (StrictMode), and a second
-  // request would fail with INVALID_TOKEN after the first succeeded, so send it only once.
+  // Tokens are single-use: a second request would fail with INVALID_TOKEN after the first
+  // succeeded. React may run this effect twice in development (StrictMode), so guard it.
   const sent = useRef(false);
   useEffect(() => {
     if (!token || sent.current) return;
