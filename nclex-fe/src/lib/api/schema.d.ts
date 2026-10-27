@@ -1189,6 +1189,139 @@ export interface paths {
         patch?: never;
         trace?: never;
     };
+    "/api/v1/test-sets/custom/available-count": {
+        parameters: {
+            query?: never;
+            header?: never;
+            path?: never;
+            cookie?: never;
+        };
+        get: {
+            parameters: {
+                query?: {
+                    track?: components["schemas"]["ExamTrack"];
+                    clientNeedsIds?: (number | string)[];
+                    bodySystemIds?: (number | string)[];
+                    itemTypes?: components["schemas"]["ItemType"][];
+                    difficulties?: components["schemas"]["DifficultyTier"][];
+                    pool?: components["schemas"]["PoolMode"];
+                };
+                header?: never;
+                path?: never;
+                cookie?: never;
+            };
+            requestBody?: never;
+            responses: {
+                /** @description OK */
+                200: {
+                    headers: {
+                        [name: string]: unknown;
+                    };
+                    content: {
+                        "application/json": components["schemas"]["AvailableCountResponse"];
+                    };
+                };
+                /** @description Bad Request */
+                400: {
+                    headers: {
+                        [name: string]: unknown;
+                    };
+                    content: {
+                        "application/problem+json": components["schemas"]["ProblemDetails"];
+                        "application/json": unknown;
+                    };
+                };
+                /** @description Unauthorized */
+                401: {
+                    headers: {
+                        [name: string]: unknown;
+                    };
+                    content: {
+                        "application/problem+json": components["schemas"]["ProblemDetails"];
+                        "application/json": unknown;
+                    };
+                };
+            };
+        };
+        put?: never;
+        post?: never;
+        delete?: never;
+        options?: never;
+        head?: never;
+        patch?: never;
+        trace?: never;
+    };
+    "/api/v1/test-sets/custom": {
+        parameters: {
+            query?: never;
+            header?: never;
+            path?: never;
+            cookie?: never;
+        };
+        get?: never;
+        put?: never;
+        post: {
+            parameters: {
+                query?: never;
+                header?: never;
+                path?: never;
+                cookie?: never;
+            };
+            requestBody: {
+                content: {
+                    "application/json": components["schemas"]["CreateCustomSetRequest"];
+                    "text/json": components["schemas"]["CreateCustomSetRequest"];
+                    "application/*+json": components["schemas"]["CreateCustomSetRequest"];
+                };
+            };
+            responses: {
+                /** @description Created */
+                201: {
+                    headers: {
+                        [name: string]: unknown;
+                    };
+                    content: {
+                        "application/json": components["schemas"]["CreateCustomSetResponse"];
+                    };
+                };
+                /** @description Bad Request */
+                400: {
+                    headers: {
+                        [name: string]: unknown;
+                    };
+                    content: {
+                        "application/problem+json": components["schemas"]["ProblemDetails"];
+                        "application/json": unknown;
+                    };
+                };
+                /** @description Unauthorized */
+                401: {
+                    headers: {
+                        [name: string]: unknown;
+                    };
+                    content: {
+                        "application/problem+json": components["schemas"]["ProblemDetails"];
+                        "application/json": unknown;
+                    };
+                };
+                /** @description Unprocessable Entity */
+                422: {
+                    headers: {
+                        [name: string]: unknown;
+                    };
+                    content: {
+                        "application/problem+json": components["schemas"]["ProblemDetails"];
+                        "application/json": unknown;
+                    };
+                };
+            };
+        };
+        delete?: never;
+        options?: never;
+        head?: never;
+        patch?: never;
+        trace?: never;
+    };
 }
 export type webhooks = Record<string, never>;
 export interface components {
@@ -1203,6 +1336,10 @@ export interface components {
             accessToken: string;
             /** Format: date-time */
             accessTokenExpiresAt: string;
+        };
+        AvailableCountResponse: {
+            /** Format: int32 */
+            available: number | string;
         };
         BodySystemInfo: {
             /** Format: int16 */
@@ -1239,9 +1376,38 @@ export interface components {
         ConfirmEmailChangeRequest: {
             token: string;
         };
+        CreateCustomSetRequest: {
+            track?: null | components["schemas"]["ExamTrack"];
+            clientNeedsIds?: null | (number | string)[];
+            bodySystemIds?: null | (number | string)[];
+            itemTypes?: null | components["schemas"]["ItemType"][];
+            difficulties?: null | components["schemas"]["DifficultyTier"][];
+            pool?: null | components["schemas"]["PoolMode"];
+            /** Format: int32 */
+            questionCount?: null | number | string;
+            mode?: null | components["schemas"]["TestMode"];
+            revealMode?: null | components["schemas"]["RevealMode"];
+            timing?: null | components["schemas"]["CustomSetTiming"];
+            /** @default false */
+            startNow: boolean;
+        };
+        CreateCustomSetResponse: {
+            testSet: components["schemas"]["TestSetDetail"];
+            attempt: unknown;
+        };
+        CustomSetTiming: {
+            /** @default false */
+            timed: boolean;
+            /** Format: int32 */
+            perQuestionSec?: null | number | string;
+            /** Format: int32 */
+            timeBudgetSec?: null | number | string;
+        };
         DeleteAccountRequest: {
             currentPassword: string;
         };
+        /** @enum {unknown} */
+        DifficultyTier: "easy" | "moderate" | "difficult";
         /** @enum {unknown} */
         ExamTrack: "RN" | "PN";
         ForgotPasswordRequest: {
@@ -1279,6 +1445,8 @@ export interface components {
         };
         /** @enum {unknown} */
         PlanTier: "free" | "premium";
+        /** @enum {unknown} */
+        PoolMode: "all" | "unused" | "incorrect" | "flagged" | null;
         ProblemDetails: {
             type?: null | string;
             title?: null | string;

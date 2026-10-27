@@ -51,7 +51,8 @@ public interface IAppDbContext
     DbSet<UserQuestionHistory> UserQuestionHistory { get; }
 
     /// <summary>
-    /// Runs hand-written SQL whose columns match <typeparamref name="T"/>'s property names. For hot or
+    /// Runs hand-written SQL whose columns are <typeparamref name="T"/>'s properties in snake_case
+    /// (the naming convention applies here too), e.g. QuestionId is question_id. For hot or
     /// complex queries such as the builder's pool (database.md intro); always pass values as
     /// interpolated parameters, never as concatenated text.
     /// </summary>

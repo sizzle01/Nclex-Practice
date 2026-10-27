@@ -51,8 +51,7 @@ public sealed class QuestionPool(IAppDbContext db)
         // An empty array means "any". The qv_filter_idx partial index covers the tag columns.
         return db.SqlQuery<PoolItem>(
             $"""
-            SELECT q.id AS "QuestionId", v.client_needs_id AS "ClientNeedsId",
-                   v.case_study_id AS "CaseStudyId", v.case_position AS "CasePosition"
+            SELECT q.id AS question_id, v.client_needs_id, v.case_study_id, v.case_position
             FROM questions q
             JOIN question_versions v ON v.id = q.current_version_id
             WHERE q.track = {trackName}::exam_track
