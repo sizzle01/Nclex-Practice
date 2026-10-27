@@ -4,3 +4,5 @@
 dotnet_diagnostic.CA1707.severity = none
 # Test controllers and helpers do not need to be static to be clear.
 dotnet_diagnostic.CA1822.severity = none
+# Inline arrays are test inputs, built once per test; caching them in static fields would hide the case.
+dotnet_diagnostic.CA1861.severity = none
