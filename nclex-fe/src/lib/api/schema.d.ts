@@ -958,6 +958,63 @@ export interface paths {
         patch?: never;
         trace?: never;
     };
+    "/api/v1/question-banks": {
+        parameters: {
+            query?: never;
+            header?: never;
+            path?: never;
+            cookie?: never;
+        };
+        get: {
+            parameters: {
+                query?: {
+                    Track?: components["schemas"]["ExamTrack"];
+                };
+                header?: never;
+                path?: never;
+                cookie?: never;
+            };
+            requestBody?: never;
+            responses: {
+                /** @description OK */
+                200: {
+                    headers: {
+                        [name: string]: unknown;
+                    };
+                    content: {
+                        "application/json": components["schemas"]["QuestionBankList"];
+                    };
+                };
+                /** @description Bad Request */
+                400: {
+                    headers: {
+                        [name: string]: unknown;
+                    };
+                    content: {
+                        "application/problem+json": components["schemas"]["ProblemDetails"];
+                        "application/json": unknown;
+                    };
+                };
+                /** @description Unauthorized */
+                401: {
+                    headers: {
+                        [name: string]: unknown;
+                    };
+                    content: {
+                        "application/problem+json": components["schemas"]["ProblemDetails"];
+                        "application/json": unknown;
+                    };
+                };
+            };
+        };
+        put?: never;
+        post?: never;
+        delete?: never;
+        options?: never;
+        head?: never;
+        patch?: never;
+        trace?: never;
+    };
     "/api/v1/taxonomy": {
         parameters: {
             query?: never;
@@ -997,6 +1054,123 @@ export interface paths {
                 };
                 /** @description Unauthorized */
                 401: {
+                    headers: {
+                        [name: string]: unknown;
+                    };
+                    content: {
+                        "application/problem+json": components["schemas"]["ProblemDetails"];
+                        "application/json": unknown;
+                    };
+                };
+            };
+        };
+        put?: never;
+        post?: never;
+        delete?: never;
+        options?: never;
+        head?: never;
+        patch?: never;
+        trace?: never;
+    };
+    "/api/v1/test-sets": {
+        parameters: {
+            query?: never;
+            header?: never;
+            path?: never;
+            cookie?: never;
+        };
+        get: {
+            parameters: {
+                query?: {
+                    Track?: components["schemas"]["ExamTrack"];
+                    Kind?: components["schemas"]["TestSetKind"];
+                    Limit?: number | string;
+                    Cursor?: string;
+                };
+                header?: never;
+                path?: never;
+                cookie?: never;
+            };
+            requestBody?: never;
+            responses: {
+                /** @description OK */
+                200: {
+                    headers: {
+                        [name: string]: unknown;
+                    };
+                    content: {
+                        "application/json": components["schemas"]["TestSetPage"];
+                    };
+                };
+                /** @description Bad Request */
+                400: {
+                    headers: {
+                        [name: string]: unknown;
+                    };
+                    content: {
+                        "application/problem+json": components["schemas"]["ProblemDetails"];
+                        "application/json": unknown;
+                    };
+                };
+                /** @description Unauthorized */
+                401: {
+                    headers: {
+                        [name: string]: unknown;
+                    };
+                    content: {
+                        "application/problem+json": components["schemas"]["ProblemDetails"];
+                        "application/json": unknown;
+                    };
+                };
+            };
+        };
+        put?: never;
+        post?: never;
+        delete?: never;
+        options?: never;
+        head?: never;
+        patch?: never;
+        trace?: never;
+    };
+    "/api/v1/test-sets/{id}": {
+        parameters: {
+            query?: never;
+            header?: never;
+            path?: never;
+            cookie?: never;
+        };
+        get: {
+            parameters: {
+                query?: never;
+                header?: never;
+                path: {
+                    id: string;
+                };
+                cookie?: never;
+            };
+            requestBody?: never;
+            responses: {
+                /** @description OK */
+                200: {
+                    headers: {
+                        [name: string]: unknown;
+                    };
+                    content: {
+                        "application/json": components["schemas"]["TestSetDetail"];
+                    };
+                };
+                /** @description Unauthorized */
+                401: {
+                    headers: {
+                        [name: string]: unknown;
+                    };
+                    content: {
+                        "application/problem+json": components["schemas"]["ProblemDetails"];
+                        "application/json": unknown;
+                    };
+                };
+                /** @description Not Found */
+                404: {
                     headers: {
                         [name: string]: unknown;
                     };
@@ -1082,12 +1256,26 @@ export interface components {
             label: string;
             available: boolean;
         };
+        LastAttemptSummary: {
+            /** Format: uuid */
+            id: string;
+            /** Format: double */
+            scorePct: number | string;
+            /** Format: date-time */
+            submittedAt: string;
+        };
         LivenessResponse: {
             status: components["schemas"]["HealthState"];
         };
         LoginRequest: {
             email: string;
             password: string;
+        };
+        PausePolicy: {
+            /** Format: int32 */
+            maxPauses: null | number | string;
+            /** Format: int32 */
+            maxPauseSec: null | number | string;
         };
         /** @enum {unknown} */
         PlanTier: "free" | "premium";
@@ -1098,6 +1286,19 @@ export interface components {
             status?: null | number | string;
             detail?: null | string;
             instance?: null | string;
+        };
+        QuestionBankList: {
+            items: components["schemas"]["QuestionBankSummary"][];
+        };
+        QuestionBankSummary: {
+            /** Format: uuid */
+            id: string;
+            name: string;
+            description: null | string;
+            accessTier: components["schemas"]["PlanTier"];
+            /** Format: int32 */
+            questionCount: number | string;
+            locked: boolean;
         };
         ReadinessChecks: {
             postgres: components["schemas"]["HealthState"];
@@ -1113,6 +1314,8 @@ export interface components {
             /** @default true */
             signOutEverywhere: boolean;
         };
+        /** @enum {unknown} */
+        RevealMode: "tutor" | "exam";
         SignupRequest: {
             email: string;
             password: string;
@@ -1124,6 +1327,59 @@ export interface components {
             bodySystems: components["schemas"]["BodySystemInfo"][];
             itemTypes: components["schemas"]["ItemTypeInfo"][];
             cjmmSkills: components["schemas"]["CjmmSkillInfo"][];
+        };
+        /** @enum {unknown} */
+        TestMode: "practice" | "challenge" | "cat";
+        TestSetDetail: {
+            /** Format: uuid */
+            id: string;
+            track: components["schemas"]["ExamTrack"];
+            kind: components["schemas"]["TestSetKind"];
+            title: string;
+            description: null | string;
+            mode: components["schemas"]["TestMode"];
+            revealMode: components["schemas"]["RevealMode"];
+            /** Format: int32 */
+            questionCount: number | string;
+            timed: boolean;
+            /** Format: int32 */
+            timeBudgetSec: null | number | string;
+            /** Format: int32 */
+            perQuestionSec: null | number | string;
+            /** Format: double */
+            passThreshold: null | number | string;
+            pausePolicy: components["schemas"]["PausePolicy"];
+            allowBackNav: boolean;
+            isSample: boolean;
+            accessTier: components["schemas"]["PlanTier"];
+            locked: boolean;
+            myLastAttempt: null | components["schemas"]["LastAttemptSummary"];
+        };
+        /** @enum {unknown} */
+        TestSetKind: "prebuilt" | "custom" | "cat" | "assigned" | null;
+        TestSetPage: {
+            items: components["schemas"]["TestSetSummary"][];
+            nextCursor: null | string;
+        };
+        TestSetSummary: {
+            /** Format: uuid */
+            id: string;
+            title: string;
+            mode: components["schemas"]["TestMode"];
+            revealMode: components["schemas"]["RevealMode"];
+            /** Format: int32 */
+            questionCount: number | string;
+            timed: boolean;
+            /** Format: int32 */
+            timeBudgetSec: null | number | string;
+            /** Format: int32 */
+            perQuestionSec: null | number | string;
+            /** Format: double */
+            passThreshold: null | number | string;
+            isSample: boolean;
+            accessTier: components["schemas"]["PlanTier"];
+            locked: boolean;
+            myLastAttempt: null | components["schemas"]["LastAttemptSummary"];
         };
         UpdateMeRequest: {
             displayName?: null | string;
