@@ -397,11 +397,6 @@ namespace Nclex.Infrastructure.Persistence.Migrations
                 column: "question_id",
                 principalTable: "questions",
                 principalColumn: "id");
-
-            // The taxonomy rows are seeded with fixed ids, which does not advance the smallserial
-            // sequences; move them past the seeded ids so rows added later don't collide.
-            migrationBuilder.Sql("SELECT setval(pg_get_serial_sequence('client_needs_categories', 'id'), (SELECT max(id) FROM client_needs_categories));");
-            migrationBuilder.Sql("SELECT setval(pg_get_serial_sequence('body_systems', 'id'), (SELECT max(id) FROM body_systems));");
         }
 
         /// <inheritdoc />

@@ -10,7 +10,7 @@ namespace Nclex.Infrastructure.Persistence.Seed;
 /// </summary>
 /// <remarks>
 /// Ids are fixed so that parents can be referenced and so content and tests can rely on them.
-/// The migration moves each table's id sequence past the last seeded id.
+/// Npgsql moves each table's id sequence past the seeded ids at the end of the migration.
 /// </remarks>
 internal static class TaxonomySeedData
 {
