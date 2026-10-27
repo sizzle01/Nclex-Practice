@@ -6,6 +6,7 @@ using Nclex.Api.Errors;
 using Nclex.Api.Health;
 using Nclex.Api.Logging;
 using Nclex.Api.Middleware;
+using Nclex.Api.OpenApi;
 using Nclex.Api.RateLimiting;
 using Nclex.Application;
 using Nclex.Infrastructure;
@@ -43,11 +44,15 @@ try
         .ConfigureApiBehaviorOptions(options => options.InvalidModelStateResponseFactory = ValidationProblems.FromModelState);
     builder.Services.ConfigureHttpJsonOptions(options => options.SerializerOptions.Converters.Add(enumConverter));
 
-    builder.Services.AddOpenApi(options => options.AddDocumentTransformer((document, _, _) =>
+    builder.Services.AddOpenApi(options =>
     {
-        document.Info.Title = "NCLEX Practice API";
-        return Task.CompletedTask;
-    }));
+        options.AddDocumentTransformer((document, _, _) =>
+        {
+            document.Info.Title = "NCLEX Practice API";
+            return Task.CompletedTask;
+        });
+        options.AddOperationTransformer<CamelCaseQueryParameters>();
+    });
     builder.Services.AddApiProblemDetails();
     builder.Services.AddApplication();
     builder.Services.AddInfrastructure();

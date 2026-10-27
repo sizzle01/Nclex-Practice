@@ -968,7 +968,7 @@ export interface paths {
         get: {
             parameters: {
                 query?: {
-                    Track?: components["schemas"]["ExamTrack"];
+                    track?: components["schemas"]["ExamTrack"];
                 };
                 header?: never;
                 path?: never;
@@ -1025,7 +1025,7 @@ export interface paths {
         get: {
             parameters: {
                 query?: {
-                    Track?: components["schemas"]["ExamTrack"];
+                    track?: components["schemas"]["ExamTrack"];
                 };
                 header?: never;
                 path?: never;
@@ -1082,10 +1082,10 @@ export interface paths {
         get: {
             parameters: {
                 query?: {
-                    Track?: components["schemas"]["ExamTrack"];
-                    Kind?: components["schemas"]["TestSetKind"];
-                    Limit?: number | string;
-                    Cursor?: string;
+                    track?: components["schemas"]["ExamTrack"];
+                    kind?: components["schemas"]["TestSetKind"];
+                    limit?: number | string;
+                    cursor?: string;
                 };
                 header?: never;
                 path?: never;
