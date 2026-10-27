@@ -1,3 +1,4 @@
+using System.Runtime.CompilerServices;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.DependencyInjection;
 using Nclex.Api.IntegrationTests.Infrastructure;
@@ -22,6 +23,11 @@ public sealed class MigrationTests(ApiFactory factory)
     [InlineData("user_role", "candidate,educator,author,reviewer,admin")]
     [InlineData("plan_tier", "free,premium")]
     [InlineData("email_token_purpose", "verify_email,reset_password,change_email")]
+    [InlineData("item_type", "multiple_choice,sata,select_n,matrix_mc,matrix_mr,multiple_response_grouping,dropdown_cloze,dropdown_table,dropdown_rationale,highlight_text,highlight_table,fill_blank_calc,ordered_response,drag_drop_cloze,drag_drop_rationale,bowtie,hotspot")]
+    [InlineData("difficulty_tier", "easy,moderate,difficult")]
+    [InlineData("cjmm_skill", "recognize_cues,analyze_cues,prioritize_hypotheses,generate_solutions,take_action,evaluate_outcomes")]
+    [InlineData("version_status", "draft,in_review,approved,published,superseded,rejected")]
+    [InlineData("question_status", "active,retired")]
     public async Task Migrations_create_enums_with_labels_in_ddl_order(string enumName, string labels)
     {
         var actual = await QueryAsync(
@@ -84,6 +90,38 @@ public sealed class MigrationTests(ApiFactory factory)
             $"SELECT indexdef AS \"Value\" FROM pg_indexes WHERE indexname = {"ix_audit_events_entity_type_entity_id"}");
 
         definition.ShouldHaveSingleItem().ShouldEndWith("(entity_type, entity_id)");
+    }
+
+    [Theory]
+    [InlineData("qv_filter_idx", "WHERE (status = 'published'::version_status)")]
+    [InlineData("qv_review_queue_idx", "WHERE (status = 'in_review'::version_status)")]
+    [InlineData("qv_question_idx", "(question_id, version DESC)")]
+    public async Task F04_migration_creates_the_question_version_indexes(string index, string ending)
+    {
+        var definition = await QueryAsync($"SELECT indexdef AS \"Value\" FROM pg_indexes WHERE indexname = {index}");
+
+        definition.ShouldHaveSingleItem().ShouldEndWith(ending);
+    }
+
+    [Fact]
+    public async Task F04_migration_links_questions_to_their_current_version()
+    {
+        var foreignKey = await QueryAsync(
+            $"SELECT pg_get_constraintdef(oid) AS \"Value\" FROM pg_constraint WHERE conname = {"questions_current_version_fk"}");
+
+        foreignKey.ShouldHaveSingleItem().ShouldBe("FOREIGN KEY (current_version_id) REFERENCES question_versions(id)");
+    }
+
+    [Theory]
+    [InlineData("client_needs_categories", "21")]
+    [InlineData("body_systems", "17")]
+    public async Task F04_migration_moves_seeded_sequences_past_the_seed_rows(string table, string nextId)
+    {
+        // A sequence name can't be a query parameter, so it goes into the SQL text itself.
+        var next = await QueryAsync(FormattableStringFactory.Create(
+            $"SELECT (CASE WHEN is_called THEN last_value + 1 ELSE last_value END)::text AS \"Value\" FROM {table}_id_seq"));
+
+        next.ShouldHaveSingleItem().ShouldBe(nextId);
     }
 
     private async Task<List<string>> QueryAsync(FormattableString sql)

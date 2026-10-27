@@ -1,0 +1,120 @@
+[
+  {
+    "name": "correct option selected",
+    "content": {
+      "options": [
+        {
+          "id": "a",
+          "text": "Option A"
+        },
+        {
+          "id": "b",
+          "text": "Option B"
+        },
+        {
+          "id": "c",
+          "text": "Option C"
+        },
+        {
+          "id": "d",
+          "text": "Option D"
+        }
+      ]
+    },
+    "key": {
+      "correct": "c"
+    },
+    "response": {
+      "selected": "c"
+    },
+    "expectedPoints": 1
+  },
+  {
+    "name": "wrong option selected",
+    "content": {
+      "options": [
+        {
+          "id": "a",
+          "text": "Option A"
+        },
+        {
+          "id": "b",
+          "text": "Option B"
+        },
+        {
+          "id": "c",
+          "text": "Option C"
+        },
+        {
+          "id": "d",
+          "text": "Option D"
+        }
+      ]
+    },
+    "key": {
+      "correct": "c"
+    },
+    "response": {
+      "selected": "a"
+    },
+    "expectedPoints": 0
+  },
+  {
+    "name": "nothing selected",
+    "content": {
+      "options": [
+        {
+          "id": "a",
+          "text": "Option A"
+        },
+        {
+          "id": "b",
+          "text": "Option B"
+        },
+        {
+          "id": "c",
+          "text": "Option C"
+        },
+        {
+          "id": "d",
+          "text": "Option D"
+        }
+      ]
+    },
+    "key": {
+      "correct": "c"
+    },
+    "response": {
+      "selected": null
+    },
+    "expectedPoints": 0
+  },
+  {
+    "name": "no response (blank or timed out)",
+    "content": {
+      "options": [
+        {
+          "id": "a",
+          "text": "Option A"
+        },
+        {
+          "id": "b",
+          "text": "Option B"
+        },
+        {
+          "id": "c",
+          "text": "Option C"
+        },
+        {
+          "id": "d",
+          "text": "Option D"
+        }
+      ]
+    },
+    "key": {
+      "correct": "c"
+    },
+    "response": null,
+    "expectedPoints": 0
+  }
+]

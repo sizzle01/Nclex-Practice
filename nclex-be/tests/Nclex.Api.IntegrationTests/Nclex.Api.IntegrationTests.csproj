@@ -14,6 +14,10 @@
     <PackageReference Include="Testcontainers.Redis" />
   </ItemGroup>
   <ItemGroup>
+    <!-- The sample question file, so the import tests load exactly what developers import. -->
+    <None Include="..\..\content\sample-questions.rn.json" Link="content\sample-questions.rn.json" CopyToOutputDirectory="PreserveNewest" />
+  </ItemGroup>
+  <ItemGroup>
     <Using Include="Shouldly" />
     <Using Include="Xunit" />
   </ItemGroup>

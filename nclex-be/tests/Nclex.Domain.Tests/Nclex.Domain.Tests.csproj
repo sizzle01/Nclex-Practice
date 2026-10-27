@@ -11,6 +11,10 @@
     <PackageReference Include="xunit.v3" />
   </ItemGroup>
   <ItemGroup>
+    <!-- Golden grading cases, read at run time by GradingFixtureTests (interfaces.md section 3). -->
+    <None Include="ItemTypes\**\fixtures\*.json" CopyToOutputDirectory="PreserveNewest" />
+  </ItemGroup>
+  <ItemGroup>
     <Using Include="Shouldly" />
     <Using Include="Xunit" />
   </ItemGroup>

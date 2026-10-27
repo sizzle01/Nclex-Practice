@@ -1,0 +1,413 @@
+[
+  {
+    "name": "all correct options selected",
+    "content": {
+      "options": [
+        {
+          "id": "a",
+          "text": "Option A"
+        },
+        {
+          "id": "b",
+          "text": "Option B"
+        },
+        {
+          "id": "c",
+          "text": "Option C"
+        },
+        {
+          "id": "d",
+          "text": "Option D"
+        },
+        {
+          "id": "e",
+          "text": "Option E"
+        }
+      ]
+    },
+    "key": {
+      "correct": [
+        "a",
+        "b",
+        "c"
+      ]
+    },
+    "response": {
+      "selected": [
+        "a",
+        "b",
+        "c"
+      ]
+    },
+    "expectedPoints": 3
+  },
+  {
+    "name": "two of three correct, none wrong",
+    "content": {
+      "options": [
+        {
+          "id": "a",
+          "text": "Option A"
+        },
+        {
+          "id": "b",
+          "text": "Option B"
+        },
+        {
+          "id": "c",
+          "text": "Option C"
+        },
+        {
+          "id": "d",
+          "text": "Option D"
+        },
+        {
+          "id": "e",
+          "text": "Option E"
+        }
+      ]
+    },
+    "key": {
+      "correct": [
+        "a",
+        "b",
+        "c"
+      ]
+    },
+    "response": {
+      "selected": [
+        "a",
+        "b"
+      ]
+    },
+    "expectedPoints": 2
+  },
+  {
+    "name": "+/- example: two correct and one wrong",
+    "content": {
+      "options": [
+        {
+          "id": "a",
+          "text": "Option A"
+        },
+        {
+          "id": "b",
+          "text": "Option B"
+        },
+        {
+          "id": "c",
+          "text": "Option C"
+        },
+        {
+          "id": "d",
+          "text": "Option D"
+        },
+        {
+          "id": "e",
+          "text": "Option E"
+        }
+      ]
+    },
+    "key": {
+      "correct": [
+        "a",
+        "b",
+        "c"
+      ]
+    },
+    "response": {
+      "selected": [
+        "a",
+        "b",
+        "d"
+      ]
+    },
+    "expectedPoints": 1
+  },
+  {
+    "name": "+/- example: all three correct and one wrong",
+    "content": {
+      "options": [
+        {
+          "id": "a",
+          "text": "Option A"
+        },
+        {
+          "id": "b",
+          "text": "Option B"
+        },
+        {
+          "id": "c",
+          "text": "Option C"
+        },
+        {
+          "id": "d",
+          "text": "Option D"
+        },
+        {
+          "id": "e",
+          "text": "Option E"
+        }
+      ]
+    },
+    "key": {
+      "correct": [
+        "a",
+        "b",
+        "c"
+      ]
+    },
+    "response": {
+      "selected": [
+        "a",
+        "b",
+        "c",
+        "d"
+      ]
+    },
+    "expectedPoints": 2
+  },
+  {
+    "name": "+/- example: every option selected",
+    "content": {
+      "options": [
+        {
+          "id": "a",
+          "text": "Option A"
+        },
+        {
+          "id": "b",
+          "text": "Option B"
+        },
+        {
+          "id": "c",
+          "text": "Option C"
+        },
+        {
+          "id": "d",
+          "text": "Option D"
+        },
+        {
+          "id": "e",
+          "text": "Option E"
+        }
+      ]
+    },
+    "key": {
+      "correct": [
+        "a",
+        "b",
+        "c"
+      ]
+    },
+    "response": {
+      "selected": [
+        "a",
+        "b",
+        "c",
+        "d",
+        "e"
+      ]
+    },
+    "expectedPoints": 1
+  },
+  {
+    "name": "floor at 0: one correct and two wrong",
+    "content": {
+      "options": [
+        {
+          "id": "a",
+          "text": "Option A"
+        },
+        {
+          "id": "b",
+          "text": "Option B"
+        },
+        {
+          "id": "c",
+          "text": "Option C"
+        },
+        {
+          "id": "d",
+          "text": "Option D"
+        },
+        {
+          "id": "e",
+          "text": "Option E"
+        }
+      ]
+    },
+    "key": {
+      "correct": [
+        "a",
+        "b",
+        "c"
+      ]
+    },
+    "response": {
+      "selected": [
+        "a",
+        "d",
+        "e"
+      ]
+    },
+    "expectedPoints": 0
+  },
+  {
+    "name": "floor at 0: only wrong options",
+    "content": {
+      "options": [
+        {
+          "id": "a",
+          "text": "Option A"
+        },
+        {
+          "id": "b",
+          "text": "Option B"
+        },
+        {
+          "id": "c",
+          "text": "Option C"
+        },
+        {
+          "id": "d",
+          "text": "Option D"
+        },
+        {
+          "id": "e",
+          "text": "Option E"
+        }
+      ]
+    },
+    "key": {
+      "correct": [
+        "a",
+        "b",
+        "c"
+      ]
+    },
+    "response": {
+      "selected": [
+        "d",
+        "e"
+      ]
+    },
+    "expectedPoints": 0
+  },
+  {
+    "name": "nothing selected",
+    "content": {
+      "options": [
+        {
+          "id": "a",
+          "text": "Option A"
+        },
+        {
+          "id": "b",
+          "text": "Option B"
+        },
+        {
+          "id": "c",
+          "text": "Option C"
+        },
+        {
+          "id": "d",
+          "text": "Option D"
+        },
+        {
+          "id": "e",
+          "text": "Option E"
+        }
+      ]
+    },
+    "key": {
+      "correct": [
+        "a",
+        "b",
+        "c"
+      ]
+    },
+    "response": {
+      "selected": []
+    },
+    "expectedPoints": 0
+  },
+  {
+    "name": "no response (blank or timed out)",
+    "content": {
+      "options": [
+        {
+          "id": "a",
+          "text": "Option A"
+        },
+        {
+          "id": "b",
+          "text": "Option B"
+        },
+        {
+          "id": "c",
+          "text": "Option C"
+        },
+        {
+          "id": "d",
+          "text": "Option D"
+        },
+        {
+          "id": "e",
+          "text": "Option E"
+        }
+      ]
+    },
+    "key": {
+      "correct": [
+        "a",
+        "b",
+        "c"
+      ]
+    },
+    "response": null,
+    "expectedPoints": 0
+  },
+  {
+    "name": "selection order does not matter",
+    "content": {
+      "options": [
+        {
+          "id": "a",
+          "text": "Option A"
+        },
+        {
+          "id": "b",
+          "text": "Option B"
+        },
+        {
+          "id": "c",
+          "text": "Option C"
+        },
+        {
+          "id": "d",
+          "text": "Option D"
+        },
+        {
+          "id": "e",
+          "text": "Option E"
+        }
+      ]
+    },
+    "key": {
+      "correct": [
+        "a",
+        "b",
+        "c"
+      ]
+    },
+    "response": {
+      "selected": [
+        "c",
+        "a",
+        "b"
+      ]
+    },
+    "expectedPoints": 3
+  }
+]
