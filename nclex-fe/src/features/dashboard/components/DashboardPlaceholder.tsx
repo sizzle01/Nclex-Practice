@@ -5,11 +5,12 @@ import { useRef } from "react";
 import ui from "@/components/ui/ui.module.css";
 import { useMe } from "@/features/auth/AuthProvider";
 import styles from "./DashboardPlaceholder.module.css";
+import { DraftsList } from "./DraftsList";
 import { VerifyEmailBanner } from "./VerifyEmailBanner";
 
 /**
- * Placeholder until the real dashboard (drafts, last results, weakest categories) arrives in a
- * later feature (interfaces.md 5.2).
+ * The dashboard so far: tests in progress (F08). Last results and weakest categories arrive with
+ * results (F10) and performance (interfaces.md 5.2).
  */
 export function DashboardPlaceholder() {
   const { data: me } = useMe();
@@ -34,12 +35,14 @@ export function DashboardPlaceholder() {
       </div>
 
       <div className={styles.grid}>
-        <article className={`${ui.card} ${styles.empty}`}>
-          <h2 className={ui.cardTitle}>Practice tests</h2>
-          <p className={ui.muted}>Your practice tests and results will appear here.</p>
-          <Link href="/practice" className={ui.buttonSecondary}>
-            Browse practice sets
-          </Link>
+        <article className={ui.card}>
+          <h2 className={ui.cardTitle}>Continue where you left off</h2>
+          <DraftsList />
+          <p>
+            <Link href="/practice" className={ui.buttonSecondary}>
+              Browse practice sets
+            </Link>
+          </p>
         </article>
         <article className={`${ui.card} ${styles.empty}`}>
           <h2 className={ui.cardTitle}>Performance</h2>
