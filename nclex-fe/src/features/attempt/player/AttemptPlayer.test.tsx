@@ -14,6 +14,7 @@ vi.mock("next/navigation", () => ({ useRouter: () => ({ push }) }));
 const getMock = vi.mocked(apiClient.GET);
 const postMock = vi.mocked(apiClient.POST);
 const putMock = vi.mocked(apiClient.PUT);
+const patchMock = vi.mocked(apiClient.PATCH);
 
 function reply(status: number, body: unknown) {
   const ok = status < 400;
@@ -94,6 +95,7 @@ describe("AttemptPlayer", () => {
     getMock.mockReset();
     postMock.mockReset();
     putMock.mockReset();
+    patchMock.mockReset();
   });
 
   it("opens the attempt with a client id and shows the current question", async () => {
@@ -173,6 +175,47 @@ describe("AttemptPlayer", () => {
     const opens = callsOf(postMock).filter(([path]) => path === "/api/v1/attempts/{id}/open");
     expect(opens).toHaveLength(2);
     expect(clientIdOf(opens[1])).toBe(clientIdOf(opens[0]));
+  });
+
+  it("strikes an option through at once and saves the full list with the lease header", async () => {
+    postMock.mockResolvedValue(reply(200, attemptState()));
+    serveItems({ 1: item(1, { struckOptions: ["a"] }), 2: item(2) });
+    patchMock.mockResolvedValue(reply(200, { position: 1, flagged: false, struckOptions: ["a", "b"] }));
+    renderPlayer();
+
+    await userEvent.click(await screen.findByRole("button", { name: "Strike out Option B" }));
+
+    expect(screen.getByRole("button", { name: "Strike out Option B" })).toHaveAttribute("aria-pressed", "true");
+    const [path, init] = callsOf(patchMock)[0] as [string, { body: unknown; params: { header: Record<string, string> } }];
+    expect(path).toBe("/api/v1/attempts/{id}/items/{position}");
+    expect(init.body).toEqual({ struckOptions: ["a", "b"] });
+    expect(init.params.header["X-Attempt-Client"]).toBe(clientIdOf(callsOf(postMock)[0]));
+    expect(putMock).not.toHaveBeenCalled();
+  });
+
+  it("puts a strike back when the server refuses it", async () => {
+    postMock.mockResolvedValue(reply(200, attemptState()));
+    serveItems({ 1: item(1), 2: item(2) });
+    patchMock.mockResolvedValue(reply(500, { code: "INTERNAL", title: "Failed." }));
+    renderPlayer();
+
+    await userEvent.click(await screen.findByRole("button", { name: "Strike out Option A" }));
+
+    await waitFor(() =>
+      expect(screen.getByRole("button", { name: "Strike out Option A" })).toHaveAttribute("aria-pressed", "false"),
+    );
+  });
+
+  it("shows the item's exhibits beside the question", async () => {
+    postMock.mockResolvedValue(reply(200, attemptState()));
+    const exhibits = [
+      { id: "v", kind: "flowsheet", title: "Vital signs", table: { columns: ["08:00"], rows: [{ label: "HR", cells: ["88"] }] } },
+    ];
+    serveItems({ 1: item(1, { exhibits }), 2: item(2) });
+    renderPlayer();
+
+    expect(await screen.findByRole("complementary", { name: "Exhibits" })).toBeInTheDocument();
+    expect(screen.getByRole("table", { name: "Vital signs" })).toBeInTheDocument();
   });
 
   it("explains when the attempt can no longer be opened", async () => {
