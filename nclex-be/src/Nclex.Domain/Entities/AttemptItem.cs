@@ -1,4 +1,6 @@
 using System.Text.Json;
+using Nclex.Domain.Grading;
+using Nclex.Domain.ItemTypes;
 using Nclex.Domain.Timing;
 
 namespace Nclex.Domain.Entities;
@@ -55,16 +57,16 @@ public sealed class AttemptItem
     /// </summary>
     public Countdown ItemTimer => new(ItemDeadlineAt, ItemRemainingMs);
 
-    /// <summary>Filled in by grading (F10).</summary>
+    /// <summary>Set by grading; null until the item is graded.</summary>
     public decimal? PointsEarned { get; private set; }
 
-    /// <summary>Filled in by grading (F10).</summary>
+    /// <summary>Set by grading: the most the item could earn.</summary>
     public short? MaxPoints { get; private set; }
 
-    /// <summary>Filled in by grading (F10): true when the item earned full marks.</summary>
+    /// <summary>Set by grading: true when the item earned full marks.</summary>
     public bool? IsCorrect { get; private set; }
 
-    /// <summary>Filled in by grading (F10): the per-target +1/0/-1 breakdown.</summary>
+    /// <summary>Set by grading: the per-target +1/0/-1 breakdown that shows partial credit (PRD 5.6).</summary>
     public JsonDocument? GradeDetail { get; private set; }
 
     public DateTimeOffset? GradedAt { get; private set; }
@@ -77,6 +79,8 @@ public sealed class AttemptItem
     public bool IsLocked => State == ItemState.Locked;
 
     public bool IsAnswered => State == ItemState.Answered || (State == ItemState.Locked && Response is not null);
+
+    public bool IsGraded => GradedAt is not null;
 
     /// <summary>Creates an attempt's items, numbering them from 1 in the order given.</summary>
     public static IReadOnlyList<AttemptItem> ForVersions(Guid attemptId, IEnumerable<Guid> questionVersionIds) =>
@@ -110,6 +114,31 @@ public sealed class AttemptItem
         State = response is null ? ItemState.Seen : ItemState.Answered;
         AnsweredAt = response is null ? null : now;
         return SaveOutcome.Saved;
+    }
+
+    /// <summary>
+    /// Stores the grade of the final answer. Only a locked item can be graded, so the answer graded is
+    /// the one that counts, and it is graded once: the grade columns are the one write a locked row
+    /// still gets (database.md section 2.6 invariants).
+    /// </summary>
+    public void RecordGrade(GradeResult grade, DateTimeOffset now)
+    {
+        if (!IsLocked)
+        {
+            throw new InvalidOperationException($"Item {Position} must be locked before it is graded.");
+        }
+
+        if (IsGraded)
+        {
+            throw new InvalidOperationException($"Item {Position} has already been graded.");
+        }
+
+        PointsEarned = grade.Points;
+        // Item maxima are small whole numbers (question_versions.max_points is a smallint).
+        MaxPoints = (short)grade.MaxPoints;
+        IsCorrect = grade.IsCorrect;
+        GradeDetail = GradeDetailJson.Write(grade.Detail);
+        GradedAt = now;
     }
 
     /// <summary>Changes the candidate's marks; null leaves a mark as it is. False when the item is locked.</summary>

@@ -244,7 +244,8 @@ public sealed class Attempt
 
     /// <summary>
     /// Ends the attempt (status <c>submitted</c>) and locks every item with its current answer, so
-    /// unanswered items count as blank (architecture.md 5.1). Grading the items is F10's job.
+    /// unanswered items count as blank (architecture.md 5.1). Grading happens next, in the same
+    /// transaction (AttemptFinalizer).
     /// </summary>
     public void Finalize(SubmitReason reason, IReadOnlyList<AttemptItem> items, DateTimeOffset now)
     {
@@ -272,6 +273,28 @@ public sealed class Attempt
         PauseReason = null;
         PauseStartedAt = null;
         ActiveClientId = null;
+        LastActivityAt = now;
+    }
+
+    /// <summary>
+    /// Tutor mode: the candidate submitted <paramref name="item"/>, so its answer is final and it
+    /// can be graded and revealed (architecture.md 5.5). Time after this is reading the rationale,
+    /// so it is not counted as time on the item.
+    /// </summary>
+    public void SubmitItem(AttemptItem item, DateTimeOffset now)
+    {
+        if (Status != AttemptStatus.InProgress || Settings.RevealMode != RevealMode.Tutor)
+        {
+            throw new InvalidOperationException("Items are submitted one by one only in a tutor-mode attempt in progress.");
+        }
+
+        if (item.AttemptId != Id)
+        {
+            throw new InvalidOperationException("The item belongs to a different attempt.");
+        }
+
+        item.Leave(now);
+        item.Lock(now);
         LastActivityAt = now;
     }
 
