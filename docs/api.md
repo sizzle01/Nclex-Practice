@@ -338,7 +338,7 @@ Repeated calls return the same result.
 
 | Method | Path | Description |
 |---|---|---|
-| GET | `/me/performance/summary?track=RN` | Totals, overall accuracy, avg time, streak, items answered |
+| GET | `/me/performance/summary?track=RN` | Totals, overall accuracy, avg time, items answered, and the three weakest Client Needs categories (`weakest`). Streak arrives with phase 2. |
 | GET | `/me/performance/breakdown?dimension=client_needs` | Snapshot per category (accuracy, avg time, count) |
 | GET | `/me/performance/trend?dimension=client_needs&key=PI.PPT&bucket=week&from=&to=` | Time series for charts |
 
@@ -434,6 +434,7 @@ Roles: **A** = author, **R** = reviewer, **Ad** = admin.
 | GET | `/admin/flags?status=open` | R Ad | Moderation queue |
 | PATCH | `/admin/flags/{id}` | R Ad | `{ status, resolutionNote, assigneeId }`. Resolving notifies the reporter. |
 | GET | `/admin/users?q=` / PATCH `/admin/users/{id}` | Ad | Role, plan tier, unlock |
+| POST | `/admin/performance-snapshots/rebuild` | Ad | `{ userId }` → 202. Queues a rebuild of the user's `performance_snapshots` from their results. |
 
 ---
 
