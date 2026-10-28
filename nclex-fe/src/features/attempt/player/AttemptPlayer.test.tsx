@@ -7,8 +7,10 @@ import type { AttemptState, CandidateItem } from "../api/attemptApi";
 import { AttemptPlayer } from "./AttemptPlayer";
 import { pendingStorageKey } from "./saveQueue";
 
-// Only the network is replaced; the session hook, save queue and renderers are real.
+// Only the network and the router are replaced; the session hook, save queue and renderers are real.
 vi.mock("@/lib/api/client", () => ({ apiClient: { GET: vi.fn(), POST: vi.fn(), PUT: vi.fn(), PATCH: vi.fn() } }));
+const push = vi.fn();
+vi.mock("next/navigation", () => ({ useRouter: () => ({ push }) }));
 const getMock = vi.mocked(apiClient.GET);
 const postMock = vi.mocked(apiClient.POST);
 const putMock = vi.mocked(apiClient.PUT);
