@@ -5,6 +5,7 @@ import { useEffect, useId, useRef, useState } from "react";
 import ui from "@/components/ui/ui.module.css";
 import { isApiError } from "@/lib/api/errors";
 import { toNumber } from "@/lib/format/toNumber";
+import { ExhibitPanel } from "@/features/player/exhibits/ExhibitPanel";
 import { ItemAnswer } from "@/features/player/renderers/ItemAnswer";
 import { RationalePanel } from "../reveal/RationalePanel";
 import { AttemptMenu } from "./AttemptMenu";
@@ -115,33 +116,37 @@ export function AttemptPlayer({ attemptId }: { attemptId: string }) {
         ) : !item ? (
           <p className={ui.muted}>Loading question…</p>
         ) : (
-          <>
-            <h2 id={stemId} ref={stemRef} tabIndex={-1} className={styles.stem}>
-              {item.stem}
-            </h2>
-            <ItemAnswer
-              itemType={item.itemType}
-              content={item.content}
-              response={session.response}
-              onChange={session.answer}
-              disabled={inputDisabled}
-              struckOptions={item.struckOptions}
-              labelledBy={stemId}
-              reveal={item.reveal}
-            />
-            {locked && <p className={styles.notice}>This answer is locked and can no longer be changed.</p>}
-            {item.reveal && <RationalePanel reveal={item.reveal} content={item.content} />}
-            {session.itemTimeUp && !locked && (
-              <p role="alert" className={styles.notice}>
-                Time is up for this question. Your answer is kept; move on to the next one.
-              </p>
-            )}
-            {session.examTimeUp && (
-              <p role="alert" className={styles.notice}>
-                Time is up. Your answers are being submitted…
-              </p>
-            )}
-          </>
+          <div className={styles.split}>
+            <ExhibitPanel exhibits={item.exhibits} caseStudy={item.caseStudy ?? null} />
+            <div className={styles.question}>
+              <h2 id={stemId} ref={stemRef} tabIndex={-1} className={styles.stem}>
+                {item.stem}
+              </h2>
+              <ItemAnswer
+                itemType={item.itemType}
+                content={item.content}
+                response={session.response}
+                onChange={session.answer}
+                disabled={inputDisabled}
+                struckOptions={item.struckOptions}
+                onToggleStrike={(optionId) => void session.toggleStrike(optionId)}
+                labelledBy={stemId}
+                reveal={item.reveal}
+              />
+              {locked && <p className={styles.notice}>This answer is locked and can no longer be changed.</p>}
+              {item.reveal && <RationalePanel reveal={item.reveal} itemType={item.itemType} content={item.content} />}
+              {session.itemTimeUp && !locked && (
+                <p role="alert" className={styles.notice}>
+                  Time is up for this question. Your answer is kept; move on to the next one.
+                </p>
+              )}
+              {session.examTimeUp && (
+                <p role="alert" className={styles.notice}>
+                  Time is up. Your answers are being submitted…
+                </p>
+              )}
+            </div>
+          </div>
         )}
       </article>
 

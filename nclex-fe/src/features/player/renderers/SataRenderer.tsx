@@ -1,9 +1,10 @@
 "use client";
 
 import { useId } from "react";
+import { ChoiceOption } from "./ChoiceOption";
 import styles from "./renderers.module.css";
-import { OptionMarkText } from "./OptionMarkText";
 import { optionMarks } from "./revealMarks";
+import { toggleIn } from "./selection";
 import type { ItemRendererProps, Option } from "./types";
 
 interface SataContent {
@@ -24,18 +25,18 @@ export function SataRenderer({
   onChange,
   disabled,
   struckOptions,
+  onToggleStrike,
   labelledBy,
   reveal,
 }: ItemRendererProps<SataContent, SataResponse>) {
   const instructionsId = useId();
   const selected = response?.selected ?? [];
   const marks = optionMarks(reveal);
+  const order = content.options.map((o) => o.id);
 
   function toggle(optionId: string) {
-    const next = selected.includes(optionId) ? selected.filter((id) => id !== optionId) : [...selected, optionId];
-    // Keep the content's order, so the same choice always saves the same answer.
-    const ordered = content.options.map((o) => o.id).filter((id) => next.includes(id));
-    onChange(ordered.length > 0 ? { selected: ordered } : null);
+    const next = toggleIn(selected, optionId, order);
+    onChange(next.length > 0 ? { selected: next } : null);
   }
 
   return (
@@ -45,17 +46,18 @@ export function SataRenderer({
       </p>
       <div className={styles.options}>
         {content.options.map((option) => (
-          <label key={option.id} className={styles.option}>
-            <input
-              type="checkbox"
-              value={option.id}
-              checked={selected.includes(option.id)}
-              disabled={disabled}
-              onChange={() => toggle(option.id)}
-            />
-            <span className={struckOptions.includes(option.id) ? styles.struck : undefined}>{option.text}</span>
-            <OptionMarkText mark={marks[option.id]} />
-          </label>
+          <ChoiceOption
+            key={option.id}
+            type="checkbox"
+            option={option}
+            checked={selected.includes(option.id)}
+            disabled={disabled}
+            onChange={() => toggle(option.id)}
+            struck={struckOptions.includes(option.id)}
+            showStrike={!disabled && !reveal}
+            onToggleStrike={onToggleStrike}
+            mark={marks[option.id]}
+          />
         ))}
       </div>
     </div>

@@ -20,6 +20,7 @@ import {
   resumeAttempt,
   saveResponse,
   setFlagged,
+  setStruckOptions,
   submitAttempt as postSubmit,
   submitItem as postSubmitItem,
 } from "../api/attemptApi";
@@ -256,6 +257,24 @@ export function useAttemptSession(attemptId: string) {
     }
   }
 
+  /**
+   * Strikes an option through, or removes the strike. It shows straight away and is put back if the
+   * server refuses, because a strike is only a note to self and must never hold up answering.
+   */
+  async function toggleStrike(optionId: string) {
+    if (!item || position === null) return;
+    const before = item.struckOptions;
+    const next = before.includes(optionId) ? before.filter((id) => id !== optionId) : [...before, optionId];
+    const itemPosition = position;
+    updateItem(itemPosition, (current) => ({ ...current, struckOptions: next }));
+    try {
+      await setStruckOptions(attemptId, clientId, itemPosition, next);
+    } catch (error) {
+      updateItem(itemPosition, (current) => ({ ...current, struckOptions: before }));
+      handleWriteError(error);
+    }
+  }
+
   /** A break shows the overlay; Save & Exit leaves for the dashboard. Both freeze the timers. */
   async function pause(reason: PauseReason) {
     if (pausing) return;
@@ -378,6 +397,7 @@ export function useAttemptSession(attemptId: string) {
     answer,
     goTo,
     toggleFlag,
+    toggleStrike,
     pause,
     resume,
     continueHere,

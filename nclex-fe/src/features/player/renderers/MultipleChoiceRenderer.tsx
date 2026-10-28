@@ -1,7 +1,7 @@
 "use client";
 
+import { ChoiceOption } from "./ChoiceOption";
 import styles from "./renderers.module.css";
-import { OptionMarkText } from "./OptionMarkText";
 import { optionMarks } from "./revealMarks";
 import type { ItemRendererProps, Option } from "./types";
 
@@ -23,6 +23,7 @@ export function MultipleChoiceRenderer({
   onChange,
   disabled,
   struckOptions,
+  onToggleStrike,
   labelledBy,
   reveal,
 }: ItemRendererProps<MultipleChoiceContent, MultipleChoiceResponse>) {
@@ -31,18 +32,19 @@ export function MultipleChoiceRenderer({
   return (
     <div role="radiogroup" aria-labelledby={labelledBy} className={styles.options}>
       {content.options.map((option) => (
-        <label key={option.id} className={styles.option}>
-          <input
-            type="radio"
-            name={name}
-            value={option.id}
-            checked={response?.selected === option.id}
-            disabled={disabled}
-            onChange={() => onChange({ selected: option.id })}
-          />
-          <span className={struckOptions.includes(option.id) ? styles.struck : undefined}>{option.text}</span>
-          <OptionMarkText mark={marks[option.id]} />
-        </label>
+        <ChoiceOption
+          key={option.id}
+          type="radio"
+          name={name}
+          option={option}
+          checked={response?.selected === option.id}
+          disabled={disabled}
+          onChange={() => onChange({ selected: option.id })}
+          struck={struckOptions.includes(option.id)}
+          showStrike={!disabled && !reveal}
+          onToggleStrike={onToggleStrike}
+          mark={marks[option.id]}
+        />
       ))}
     </div>
   );

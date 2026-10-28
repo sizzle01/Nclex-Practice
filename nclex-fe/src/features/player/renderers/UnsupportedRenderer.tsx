@@ -1,6 +1,6 @@
 import ui from "@/components/ui/ui.module.css";
 
-/** Shown for item types whose renderer has not been built yet (F11). */
+/** Shown for phase 2 item types, whose renderers come in their own feature. */
 export function UnsupportedRenderer() {
   return (
     <p role="note" className={ui.muted}>

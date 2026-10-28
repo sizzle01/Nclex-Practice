@@ -7,6 +7,7 @@ import ui from "@/components/ui/ui.module.css";
 import { isApiError } from "@/lib/api/errors";
 import { toNumber } from "@/lib/format/toNumber";
 import { type CandidateItem, fetchReview, type ReviewFilter, reviewQueryKey } from "../attempt/api/attemptApi";
+import { ExhibitPanel } from "../player/exhibits/ExhibitPanel";
 import { ItemAnswer } from "../player/renderers/ItemAnswer";
 import { RationalePanel } from "../attempt/reveal/RationalePanel";
 import styles from "./review.module.css";
@@ -103,6 +104,7 @@ function ReviewItem({ item }: { item: CandidateItem }) {
           </>
         )}
       </h2>
+      <ExhibitPanel exhibits={item.exhibits} caseStudy={item.caseStudy ?? null} />
       <p id={stemId} className={styles.stem}>
         {item.stem}
       </p>
@@ -113,11 +115,12 @@ function ReviewItem({ item }: { item: CandidateItem }) {
         onChange={() => undefined}
         disabled
         struckOptions={item.struckOptions}
+        onToggleStrike={() => undefined}
         labelledBy={stemId}
         reveal={item.reveal}
       />
       {item.response == null && <p className={ui.muted}>Not answered.</p>}
-      {item.reveal && <RationalePanel reveal={item.reveal} content={item.content} />}
+      {item.reveal && <RationalePanel reveal={item.reveal} itemType={item.itemType} content={item.content} />}
     </article>
   );
 }
