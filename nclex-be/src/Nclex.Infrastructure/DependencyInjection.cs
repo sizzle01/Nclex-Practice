@@ -1,4 +1,5 @@
 using Microsoft.EntityFrameworkCore;
+using Microsoft.EntityFrameworkCore.Diagnostics;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Nclex.Application.Abstractions;
@@ -37,7 +38,9 @@ public static class DependencyInjection
                         // Keep EF's own bookkeeping table in the same snake_case style as everything else.
                         .MigrationsHistoryTable("__ef_migrations_history")
                         .MapDomainEnums())
-                .UseSnakeCaseNamingConvention());
+                .UseSnakeCaseNamingConvention()
+                // Hooks such as "queue the snapshot refresh after the submit commits" (Jobs).
+                .AddInterceptors(provider.GetServices<IInterceptor>()));
         services.AddScoped<IAppDbContext>(provider => provider.GetRequiredService<AppDbContext>());
         services.AddScoped<IEmailOutbox, EfEmailOutbox>();
         services.AddScoped<IAuditLog, EfAuditLog>();
