@@ -31,6 +31,9 @@ public sealed class MigrationTests(ApiFactory factory)
     [InlineData("test_set_kind", "prebuilt,custom,cat,assigned")]
     [InlineData("test_mode", "practice,challenge,cat")]
     [InlineData("reveal_mode", "tutor,exam")]
+    [InlineData("attempt_status", "in_progress,paused,submitted,abandoned")]
+    [InlineData("submit_reason", "user,time_expired,cat_stop")]
+    [InlineData("item_state", "unseen,seen,answered,locked")]
     public async Task Migrations_create_enums_with_labels_in_ddl_order(string enumName, string labels)
     {
         var actual = await QueryAsync(
@@ -163,6 +166,61 @@ public sealed class MigrationTests(ApiFactory factory)
             """);
 
         rows.ShouldHaveSingleItem().ShouldBe(defaultValue ?? "");
+    }
+
+    [Theory]
+    [InlineData("attempts_drafts_idx", "(user_id, last_activity_at DESC) WHERE (status = ANY (ARRAY['in_progress'::attempt_status, 'paused'::attempt_status]))")]
+    [InlineData("attempts_history_idx", "(user_id, submitted_at DESC) WHERE (status = 'submitted'::attempt_status)")]
+    [InlineData("attempts_expiry_idx", "(exam_deadline_at) WHERE (status = 'in_progress'::attempt_status)")]
+    [InlineData("pk_attempt_items", "(attempt_id, \"position\")")]
+    public async Task F08_migration_creates_the_attempt_indexes(string index, string ending)
+    {
+        var definition = await QueryAsync($"SELECT indexdef AS \"Value\" FROM pg_indexes WHERE indexname = {index}");
+
+        definition.ShouldHaveSingleItem().ShouldEndWith(ending);
+    }
+
+    [Theory]
+    [InlineData("attempts_check", "CHECK (((status <> 'submitted'::attempt_status) OR (submitted_at IS NOT NULL)))")]
+    [InlineData("attempts_check1", "CHECK (((status <> 'paused'::attempt_status) OR (exam_deadline_at IS NULL)))")]
+    [InlineData("attempts_pause_reason_check", "CHECK ((pause_reason = ANY (ARRAY['break'::text, 'save_exit'::text])))")]
+    public async Task F08_migration_adds_the_attempt_checks(string name, string definition)
+    {
+        var check = await QueryAsync($"SELECT pg_get_constraintdef(oid) AS \"Value\" FROM pg_constraint WHERE conname = {name}");
+
+        check.ShouldHaveSingleItem().ShouldBe(definition);
+    }
+
+    [Theory]
+    [InlineData("attempts", "status", "'in_progress'::attempt_status")]
+    [InlineData("attempts", "current_position", "1")]
+    [InlineData("attempts", "timer_epoch", "0")]
+    [InlineData("attempts", "pauses_used", "0")]
+    [InlineData("attempts", "total_paused_ms", "0")]
+    [InlineData("attempts", "settings", "")]
+    [InlineData("attempt_items", "state", "'unseen'::item_state")]
+    [InlineData("attempt_items", "client_seq", "0")]
+    [InlineData("attempt_items", "flagged", "false")]
+    [InlineData("attempt_items", "struck_options", "'[]'::jsonb")]
+    [InlineData("attempt_items", "time_spent_ms", "0")]
+    public async Task F08_migration_gives_attempt_columns_the_ddl_defaults(string table, string column, string defaultValue)
+    {
+        var rows = await QueryAsync(
+            $"""
+            SELECT coalesce(column_default, '') AS "Value" FROM information_schema.columns
+            WHERE table_name = {table} AND column_name = {column}
+            """);
+
+        rows.ShouldHaveSingleItem().ShouldBe(defaultValue);
+    }
+
+    [Fact]
+    public async Task F08_migration_deletes_items_with_their_attempt()
+    {
+        var rule = await QueryAsync(
+            $"SELECT confdeltype::text AS \"Value\" FROM pg_constraint WHERE conname = {"fk_attempt_items_attempts_attempt_id"}");
+
+        rule.ShouldHaveSingleItem().ShouldBe("c");
     }
 
     private async Task<List<string>> QueryAsync(FormattableString sql)
