@@ -18,7 +18,9 @@ public sealed class ExamScenario(ApiFactory factory, AttemptsApi attempts)
     public async Task<Started> StartAsync(object settings)
     {
         var (questions, setId) = (CatalogContent.NewIds(3), Guid.NewGuid());
-        var title = $"Notify {setId:N}";
+        // Sorts after other tests' sets, so importing it mid-run does not shift the catalog's
+        // offset-paged listing under a test that is paging it (TestSetsTests).
+        var title = $"Zz notify {setId:N}";
         await _content.ImportOkAsync(CatalogContent.FileWith(
             "RN",
             [
