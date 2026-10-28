@@ -1,5 +1,7 @@
+/* minmax(0, 1fr) stops a wide table from stretching the page past a phone screen; it scrolls in its card instead. */
 .page {
   display: grid;
+  grid-template-columns: minmax(0, 1fr);
   gap: 1.25rem;
 }
 
@@ -44,11 +46,13 @@
 
 .field {
   display: grid;
+  max-width: 100%;
   gap: 0.375rem;
   font-weight: 600;
 }
 
 .field select {
+  max-width: 100%;
   min-height: 2.75rem;
   padding: 0.5rem 0.75rem;
   border: 1px solid var(--border-strong);
@@ -162,6 +166,11 @@
 
 .trend .table caption {
   font-size: 0.9375rem;
+}
+
+/* "Week of 26 Oct 2026" reads better on one line; the table scrolls on narrow screens instead. */
+.trend .table th:first-child {
+  white-space: nowrap;
 }
 
 .table th,
