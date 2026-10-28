@@ -34,6 +34,8 @@ public sealed class MigrationTests(ApiFactory factory)
     [InlineData("attempt_status", "in_progress,paused,submitted,abandoned")]
     [InlineData("submit_reason", "user,time_expired,cat_stop")]
     [InlineData("item_state", "unseen,seen,answered,locked")]
+    [InlineData("notification_type", "result_pass,result_fail,result_ready,draft_reminder,streak,goal_met,flag_resolved,security,system")]
+    [InlineData("notification_category", "results,reminders,engagement,content,security")]
     public async Task Migrations_create_enums_with_labels_in_ddl_order(string enumName, string labels)
     {
         var actual = await QueryAsync(
@@ -310,6 +312,55 @@ public sealed class MigrationTests(ApiFactory factory)
         var rule = await QueryAsync($"SELECT confdeltype::text AS \"Value\" FROM pg_constraint WHERE conname = {foreignKey}");
 
         rule.ShouldHaveSingleItem().ShouldBe("c");
+    }
+
+    [Theory]
+    [InlineData("notif_feed_idx", "(user_id, created_at DESC)")]
+    [InlineData("notif_unread_idx", "(user_id) WHERE (read_at IS NULL)")]
+    [InlineData("notif_result_once", "(related_attempt_id) WHERE (type = ANY (ARRAY['result_pass'::notification_type, 'result_fail'::notification_type, 'result_ready'::notification_type]))")]
+    [InlineData("pk_notification_preferences", "(user_id, category)")]
+    public async Task F12_migration_creates_the_notification_indexes(string index, string ending)
+    {
+        var definition = await QueryAsync($"SELECT indexdef AS \"Value\" FROM pg_indexes WHERE indexname = {index}");
+
+        definition.ShouldHaveSingleItem().ShouldEndWith(ending);
+    }
+
+    [Fact]
+    public async Task F12_migration_makes_result_notifications_unique_per_attempt()
+    {
+        var unique = await QueryAsync($"SELECT indexdef AS \"Value\" FROM pg_indexes WHERE indexname = {"notif_result_once"}");
+
+        unique.ShouldHaveSingleItem().ShouldStartWith("CREATE UNIQUE INDEX");
+    }
+
+    [Theory]
+    [InlineData("notifications", "data", "jsonb|NO|'{}'::jsonb")]
+    [InlineData("notifications", "channels", "ARRAY|NO|")]
+    [InlineData("notifications", "read_at", "timestamp with time zone|YES|")]
+    [InlineData("notifications", "created_at", "timestamp with time zone|NO|now()")]
+    [InlineData("notification_preferences", "in_app", "boolean|NO|true")]
+    [InlineData("notification_preferences", "email", "boolean|NO|")]
+    public async Task F12_migration_creates_the_notification_columns_as_in_the_ddl(string table, string column, string typeNullDefault)
+    {
+        var rows = await QueryAsync(
+            $"""
+            SELECT data_type || '|' || is_nullable || '|' || coalesce(column_default, '') AS "Value"
+            FROM information_schema.columns WHERE table_name = {table} AND column_name = {column}
+            """);
+
+        rows.ShouldHaveSingleItem().ShouldBe(typeNullDefault);
+    }
+
+    [Theory]
+    [InlineData("fk_notifications_users_user_id", "c")]
+    [InlineData("fk_notifications_attempts_related_attempt_id", "n")]
+    [InlineData("fk_notification_preferences_users_user_id", "c")]
+    public async Task F12_migration_sets_the_notification_delete_rules(string foreignKey, string rule)
+    {
+        var rules = await QueryAsync($"SELECT confdeltype::text AS \"Value\" FROM pg_constraint WHERE conname = {foreignKey}");
+
+        rules.ShouldHaveSingleItem().ShouldBe(rule);
     }
 
     private async Task<List<string>> QueryAsync(FormattableString sql)
