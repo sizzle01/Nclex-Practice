@@ -12,6 +12,8 @@ import { testTaxonomy } from "./testTaxonomy";
 vi.mock("@/lib/api/client", () => ({ apiClient: { GET: vi.fn(), POST: vi.fn(), use: vi.fn() } }));
 const getMock = vi.mocked(apiClient.GET);
 const postMock = vi.mocked(apiClient.POST);
+const push = vi.fn();
+vi.mock("next/navigation", () => ({ useRouter: () => ({ push }) }));
 
 function reply(status: number, body: unknown) {
   const ok = status < 400;
@@ -45,6 +47,7 @@ describe("CustomBuilder", () => {
   beforeEach(() => {
     getMock.mockReset();
     postMock.mockReset();
+    push.mockReset();
   });
 
   it("shows the live count for the user's track", async () => {
@@ -113,7 +116,7 @@ describe("CustomBuilder", () => {
     expect(heading).toHaveFocus();
     expect(screen.getByText("Custom test: 10 questions")).toBeInTheDocument();
     expect(screen.getByText("10 questions")).toBeInTheDocument();
-    expect(screen.getByRole("button", { name: "Start" })).toBeDisabled();
+    expect(screen.getByRole("button", { name: "Start" })).toBeEnabled();
     expect(postMock).toHaveBeenCalledWith("/api/v1/test-sets/custom", {
       body: expect.objectContaining({
         track: "RN",
@@ -125,6 +128,52 @@ describe("CustomBuilder", () => {
         startNow: false,
       }),
     });
+  });
+
+  it("starts the attempt with the set and opens the player", async () => {
+    serve();
+    postMock.mockResolvedValue(
+      reply(201, { testSet: { ...challengeDetail, kind: "custom" }, attempt: { id: "attempt-9" } }),
+    );
+    const user = userEvent.setup();
+    await renderBuilder();
+
+    await user.click(screen.getByRole("button", { name: "Create and start" }));
+
+    await waitFor(() => expect(push).toHaveBeenCalledWith("/attempts/attempt-9"));
+    expect(postMock).toHaveBeenCalledWith("/api/v1/test-sets/custom", { body: expect.objectContaining({ startNow: true }) });
+    expect(screen.queryByRole("heading", { name: "Your test is ready" })).not.toBeInTheDocument();
+  });
+
+  it("starts a test created earlier from the card's Start button", async () => {
+    serve();
+    postMock.mockImplementation(((path: string) =>
+      Promise.resolve(
+        path === "/api/v1/attempts"
+          ? reply(201, { id: "attempt-3" })
+          : reply(201, { testSet: { ...challengeDetail, id: "set-7", kind: "custom" }, attempt: null }),
+      )) as never);
+    const user = userEvent.setup();
+    await renderBuilder();
+    await user.click(screen.getByRole("button", { name: "Create test" }));
+    await screen.findByRole("heading", { name: "Your test is ready" });
+
+    await user.click(screen.getByRole("button", { name: "Start" }));
+
+    await waitFor(() => expect(push).toHaveBeenCalledWith("/attempts/attempt-3"));
+    expect(postMock).toHaveBeenCalledWith("/api/v1/attempts", { body: { testSetId: "set-7" } });
+  });
+
+  it("asks an unverified user to verify their email before starting", async () => {
+    serve();
+    postMock.mockResolvedValue(reply(403, { code: "EMAIL_NOT_VERIFIED", title: "Verify your email." }));
+    const user = userEvent.setup();
+    await renderBuilder();
+
+    await user.click(screen.getByRole("button", { name: "Create and start" }));
+
+    expect(await screen.findByRole("alert")).toHaveTextContent("Verify your email address to start a test");
+    expect(push).not.toHaveBeenCalled();
   });
 
   it("explains a timed test without a timer before sending anything", async () => {
