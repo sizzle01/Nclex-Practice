@@ -30,6 +30,16 @@ interface Exhibit {                // makes "Trend", "Chart/Exhibit", "Audio", "
   body?: Markdown;
 }
 
+interface MediaView {               // GET /media/{id} (api.md section 10): how a mediaId is shown
+  id: string;
+  kind: 'image' | 'audio' | 'video';
+  url: string;                     // signed, relative, valid for 10 minutes
+  captionsUrl: string | null;      // WebVTT; required for audio and video
+  altText: string | null;          // required for images
+  width: number | null; height: number | null; durationMs: number | null;
+  expiresAt: string;
+}
+
 interface CaseStudyScenario {      // case_studies.scenario (shape settled in F11)
   // one tab per record: nurses' notes, vitals, labs, orders, history
   tabs: Array<{ id: string; title: string; exhibits: Exhibit[] }>;

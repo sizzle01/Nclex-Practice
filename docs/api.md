@@ -444,3 +444,34 @@ Roles: **A** = author, **R** = reviewer, **Ad** = admin.
 | GET | `/healthz` | Liveness |
 | GET | `/readyz` | Readiness (Postgres, and Redis as degraded-OK) |
 | POST | `/webhooks/email` | Provider bounce and complaint events (signed) |
+
+---
+
+## 10. Media (added in F11)
+
+Question media (images, audio, video) are referenced by `mediaId` in exhibits and graphic options (interfaces.md section 1). The browser loads them with `<img>`, `<audio>` and `<video>`, which can't send the in-memory access token, so the API hands out **signed, short-lived links** instead. A link works for 10 minutes, and the signature covers the asset id, the part (file or captions) and the expiry, like a presigned S3 URL.
+
+| Method | Path | Auth | Description |
+|---|---|---|---|
+| GET | `/media/{id}` | bearer | Kind, alt text, size, and signed links to the file and its captions |
+| GET | `/media/{id}/file?exp=&sig=` | signed link | The image, audio or video file. Range requests are supported, so clips can seek. |
+| GET | `/media/{id}/captions?exp=&sig=` | signed link | The WebVTT captions (`text/vtt`) of an audio or video clip |
+
+**`GET /media/{id}` → 200**
+```json
+{
+  "id": "f11a0000-0000-4000-8000-000000000002",
+  "kind": "audio",
+  "url": "/api/v1/media/f11a…0002/file?exp=1793180000&sig=Xq2…",
+  "captionsUrl": "/api/v1/media/f11a…0002/captions?exp=1793180000&sig=9fA…",
+  "altText": null,
+  "width": null, "height": null, "durationMs": 4000,
+  "expiresAt": "2026-10-28T13:43:20Z"
+}
+```
+- The links are relative, so they resolve against the app's own origin, where the Next.js server forwards `/api` to the API.
+- File responses carry `Cache-Control: private, max-age=600`.
+- Errors:
+  - `404 NOT_FOUND`: unknown asset, or no captions.
+  - `403 FORBIDDEN`: a link that is changed, expired or unsigned. The player then fetches fresh links once.
+- Not yet: premium gating of media. Any signed-in user can get links for any asset id.
