@@ -312,6 +312,30 @@ public sealed class MigrationTests(ApiFactory factory)
         rule.ShouldHaveSingleItem().ShouldBe("c");
     }
 
+    [Fact]
+    public async Task F13_migration_makes_accuracy_a_stored_generated_column()
+    {
+        var column = await QueryAsync(
+            $"""
+            SELECT is_generated || ' ' || generation_expression || ' ' || numeric_precision || ',' || numeric_scale AS "Value"
+            FROM information_schema.columns
+            WHERE table_name = {"performance_snapshots"} AND column_name = {"accuracy"}
+            """);
+
+        // Postgres pretty-prints the expression over several lines.
+        string.Join(' ', column.ShouldHaveSingleItem().Split((char[]?)null, StringSplitOptions.RemoveEmptyEntries)).ShouldBe(
+            "ALWAYS CASE WHEN (max_points > (0)::numeric) THEN (points_earned / max_points) ELSE (0)::numeric END 5,4");
+    }
+
+    [Fact]
+    public async Task F13_migration_keys_snapshots_by_user_track_dimension_and_key()
+    {
+        var key = await QueryAsync(
+            $"SELECT pg_get_constraintdef(oid) AS \"Value\" FROM pg_constraint WHERE conname = {"pk_performance_snapshots"}");
+
+        key.ShouldHaveSingleItem().ShouldBe("PRIMARY KEY (user_id, track, dimension, dimension_key)");
+    }
+
     private async Task<List<string>> QueryAsync(FormattableString sql)
     {
         await using var scope = factory.Services.CreateAsyncScope();
