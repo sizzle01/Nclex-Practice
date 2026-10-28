@@ -311,7 +311,8 @@ export function useAttemptSession(attemptId: string) {
       if (queue.getState().leaseLost) return;
       const reveal = await postSubmitItem(attemptId, clientId, position);
       updateItem(position, (current) => ({ ...current, state: "locked", reveal }));
-      await queryClient.invalidateQueries({ queryKey: attemptKey });
+      // Only the navigator and progress changed; the item already holds its reveal, so it is not refetched.
+      await queryClient.invalidateQueries({ queryKey: attemptKey, exact: true });
     } catch (error) {
       handleWriteError(error);
       if (!isApiError(error, "ATTEMPT_OPENED_ELSEWHERE") && !isApiError(error, "ATTEMPT_TIME_EXPIRED"))

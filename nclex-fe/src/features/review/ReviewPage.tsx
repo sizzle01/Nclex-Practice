@@ -96,7 +96,12 @@ function ReviewItem({ item }: { item: CandidateItem }) {
     <article className={`${ui.card} ${styles.item}`} aria-labelledby={`${stemId}-title`}>
       <h2 id={`${stemId}-title`} className={styles.itemTitle}>
         Question {toNumber(item.position)}
-        {item.flagged && <span className={ui.badge}>Marked for review</span>}
+        {item.flagged && (
+          <>
+            {" "}
+            <span className={ui.badge}>Marked for review</span>
+          </>
+        )}
       </h2>
       <p id={stemId} className={styles.stem}>
         {item.stem}
