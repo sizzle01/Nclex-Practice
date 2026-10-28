@@ -1046,7 +1046,9 @@
           "title": "Lung sounds, posterior bases",
           "mediaId": "f11a0000-0000-4000-8000-000000000002"
         }
-      ]
+      ],
+      "caseStudyId": "f11c0000-0000-4000-8000-000000000001",
+      "casePosition": 1
     },
     {
       "id": "f04a0000-0000-4000-8000-000000000020",
@@ -1280,7 +1282,9 @@
           "SAMPLE CONTENT: written for development and testing, not reviewed by a nurse educator. Do not use for exam preparation."
         ]
       },
-      "educationalObjective": "Tell left-sided from right-sided heart failure by where fluid backs up."
+      "educationalObjective": "Tell left-sided from right-sided heart failure by where fluid backs up.",
+      "caseStudyId": "f11c0000-0000-4000-8000-000000000001",
+      "casePosition": 2
     },
     {
       "id": "f05a0000-0000-4000-8000-000000000004",
@@ -1747,7 +1751,9 @@
           "SAMPLE CONTENT: written for development and testing, not reviewed by a nurse educator. Do not use for exam preparation."
         ]
       },
-      "educationalObjective": "Evaluate heart failure discharge teaching."
+      "educationalObjective": "Evaluate heart failure discharge teaching.",
+      "caseStudyId": "f11c0000-0000-4000-8000-000000000001",
+      "casePosition": 3
     },
     {
       "id": "f05a0000-0000-4000-8000-000000000009",
@@ -2645,6 +2651,162 @@
       "educationalObjective": "Follow the basic life support sequence."
     }
   ],
+  "caseStudies": [
+    {
+      "id": "f11c0000-0000-4000-8000-000000000001",
+      "title": "Heart failure exacerbation",
+      "scenario": {
+        "tabs": [
+          {
+            "id": "notes",
+            "title": "Nurses' notes",
+            "exhibits": [
+              {
+                "id": "admission-note",
+                "kind": "text",
+                "title": "Emergency department, 0800",
+                "body": "A 74-year-old client with a history of heart failure and hypertension reports **increasing shortness of breath for 3 days**, now worse when lying flat; the client slept sitting in a recliner last night. Reports a 2.5 kg (5.5 lb) weight gain in 4 days and says, \"My shoes feel tight.\" Ran out of furosemide 1 week ago. Coughing up small amounts of pink-tinged, frothy sputum. Crackles in both lung bases; 2+ pitting edema of both ankles; jugular veins distended at 45 degrees. Alert and oriented, anxious."
+              }
+            ]
+          },
+          {
+            "id": "vitals",
+            "title": "Vital signs",
+            "exhibits": [
+              {
+                "id": "vitals-flowsheet",
+                "kind": "flowsheet",
+                "title": "Vital signs",
+                "table": {
+                  "columns": [
+                    "0800",
+                    "1000",
+                    "1200"
+                  ],
+                  "rows": [
+                    {
+                      "label": "Temperature (°C)",
+                      "cells": [
+                        "36.9",
+                        "37.0",
+                        "36.8"
+                      ]
+                    },
+                    {
+                      "label": "Heart rate (/min)",
+                      "cells": [
+                        "112",
+                        "104",
+                        "96"
+                      ]
+                    },
+                    {
+                      "label": "Respiratory rate (/min)",
+                      "cells": [
+                        "28",
+                        "24",
+                        "22"
+                      ]
+                    },
+                    {
+                      "label": "Blood pressure (mm Hg)",
+                      "cells": [
+                        "168/94",
+                        "152/88",
+                        "144/84"
+                      ]
+                    },
+                    {
+                      "label": "SpO2 (%)",
+                      "cells": [
+                        "88 on room air",
+                        "93 on 2 L/min",
+                        "95 on 2 L/min"
+                      ]
+                    },
+                    {
+                      "label": "Weight (kg)",
+                      "cells": [
+                        "86.4",
+                        "—",
+                        "—"
+                      ]
+                    }
+                  ]
+                }
+              }
+            ]
+          },
+          {
+            "id": "labs",
+            "title": "Laboratory results",
+            "exhibits": [
+              {
+                "id": "labs-table",
+                "kind": "table",
+                "title": "Laboratory results, 0815",
+                "table": {
+                  "columns": [
+                    "Result",
+                    "Reference range"
+                  ],
+                  "rows": [
+                    {
+                      "label": "BNP",
+                      "cells": [
+                        "1,240 pg/mL",
+                        "< 100 pg/mL"
+                      ]
+                    },
+                    {
+                      "label": "Sodium",
+                      "cells": [
+                        "133 mEq/L",
+                        "135–145 mEq/L"
+                      ]
+                    },
+                    {
+                      "label": "Potassium",
+                      "cells": [
+                        "3.6 mEq/L",
+                        "3.5–5.0 mEq/L"
+                      ]
+                    },
+                    {
+                      "label": "Creatinine",
+                      "cells": [
+                        "1.3 mg/dL",
+                        "0.6–1.2 mg/dL"
+                      ]
+                    },
+                    {
+                      "label": "Troponin I",
+                      "cells": [
+                        "< 0.01 ng/mL",
+                        "< 0.04 ng/mL"
+                      ]
+                    }
+                  ]
+                }
+              }
+            ]
+          },
+          {
+            "id": "orders",
+            "title": "Orders",
+            "exhibits": [
+              {
+                "id": "provider-orders",
+                "kind": "text",
+                "title": "Provider orders",
+                "body": "- Oxygen to keep SpO2 at or above 92%\n- Furosemide 40 mg IV now, then 40 mg IV every 12 hours\n- Fluid restriction 1.5 L/day\n- 2 g sodium diet\n- Daily weight before breakfast\n- Strict intake and output\n- Basic metabolic panel in the morning"
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ],
   "banks": [
     {
       "id": "f06b0000-0000-4000-8000-000000000001",
@@ -2711,7 +2873,7 @@
         "f04a0000-0000-4000-8000-000000000013",
         "f04a0000-0000-4000-8000-000000000015",
         "f05a0000-0000-4000-8000-000000000001",
-        "f05a0000-0000-4000-8000-000000000003",
+        "f05a0000-0000-4000-8000-000000000004",
         "f05a0000-0000-4000-8000-000000000009",
         "f05a0000-0000-4000-8000-000000000014",
         "f05a0000-0000-4000-8000-000000000017",
@@ -2746,15 +2908,15 @@
         "f04a0000-0000-4000-8000-000000000017",
         "f04a0000-0000-4000-8000-000000000018",
         "f04a0000-0000-4000-8000-000000000019",
+        "f05a0000-0000-4000-8000-000000000003",
+        "f05a0000-0000-4000-8000-000000000008",
         "f04a0000-0000-4000-8000-000000000020",
         "f05a0000-0000-4000-8000-000000000001",
         "f05a0000-0000-4000-8000-000000000002",
-        "f05a0000-0000-4000-8000-000000000003",
         "f05a0000-0000-4000-8000-000000000004",
         "f05a0000-0000-4000-8000-000000000005",
         "f05a0000-0000-4000-8000-000000000006",
         "f05a0000-0000-4000-8000-000000000007",
-        "f05a0000-0000-4000-8000-000000000008",
         "f05a0000-0000-4000-8000-000000000009",
         "f05a0000-0000-4000-8000-000000000010",
         "f05a0000-0000-4000-8000-000000000011",
@@ -2784,7 +2946,6 @@
         "f04a0000-0000-4000-8000-000000000001",
         "f05a0000-0000-4000-8000-000000000002",
         "f04a0000-0000-4000-8000-000000000002",
-        "f05a0000-0000-4000-8000-000000000003",
         "f04a0000-0000-4000-8000-000000000003",
         "f05a0000-0000-4000-8000-000000000004",
         "f04a0000-0000-4000-8000-000000000004",
@@ -2794,7 +2955,6 @@
         "f04a0000-0000-4000-8000-000000000006",
         "f05a0000-0000-4000-8000-000000000007",
         "f04a0000-0000-4000-8000-000000000007",
-        "f05a0000-0000-4000-8000-000000000008",
         "f04a0000-0000-4000-8000-000000000008",
         "f05a0000-0000-4000-8000-000000000009",
         "f04a0000-0000-4000-8000-000000000009",
@@ -2818,6 +2978,8 @@
         "f04a0000-0000-4000-8000-000000000018",
         "f05a0000-0000-4000-8000-000000000019",
         "f04a0000-0000-4000-8000-000000000019",
+        "f05a0000-0000-4000-8000-000000000003",
+        "f05a0000-0000-4000-8000-000000000008",
         "f05a0000-0000-4000-8000-000000000020",
         "f04a0000-0000-4000-8000-000000000020"
       ]
