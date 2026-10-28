@@ -7,6 +7,7 @@ using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using Nclex.Domain.Entities;
 using Nclex.Domain.ItemTypes;
+using Nclex.Domain.Notifications;
 using Nclex.Infrastructure.Persistence;
 using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 
@@ -31,6 +32,8 @@ namespace Nclex.Infrastructure.Persistence.Migrations
             NpgsqlModelBuilderExtensions.HasPostgresEnum(modelBuilder, "exam_track", new[] { "PN", "RN" });
             NpgsqlModelBuilderExtensions.HasPostgresEnum(modelBuilder, "item_state", new[] { "answered", "locked", "seen", "unseen" });
             NpgsqlModelBuilderExtensions.HasPostgresEnum(modelBuilder, "item_type", new[] { "bowtie", "drag_drop_cloze", "drag_drop_rationale", "dropdown_cloze", "dropdown_rationale", "dropdown_table", "fill_blank_calc", "highlight_table", "highlight_text", "hotspot", "matrix_mc", "matrix_mr", "multiple_choice", "multiple_response_grouping", "ordered_response", "sata", "select_n" });
+            NpgsqlModelBuilderExtensions.HasPostgresEnum(modelBuilder, "notification_category", new[] { "content", "engagement", "reminders", "results", "security" });
+            NpgsqlModelBuilderExtensions.HasPostgresEnum(modelBuilder, "notification_type", new[] { "draft_reminder", "flag_resolved", "goal_met", "result_fail", "result_pass", "result_ready", "security", "streak", "system" });
             NpgsqlModelBuilderExtensions.HasPostgresEnum(modelBuilder, "plan_tier", new[] { "free", "premium" });
             NpgsqlModelBuilderExtensions.HasPostgresEnum(modelBuilder, "question_status", new[] { "active", "retired" });
             NpgsqlModelBuilderExtensions.HasPostgresEnum(modelBuilder, "reveal_mode", new[] { "exam", "tutor" });
@@ -1713,6 +1716,106 @@ namespace Nclex.Infrastructure.Persistence.Migrations
                     b.ToTable("user_question_history", (string)null);
                 });
 
+            modelBuilder.Entity("Nclex.Domain.Notifications.Notification", b =>
+                {
+                    b.Property<Guid>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("uuid")
+                        .HasColumnName("id")
+                        .HasDefaultValueSql("gen_random_uuid()");
+
+                    b.Property<string>("Body")
+                        .IsRequired()
+                        .HasColumnType("text")
+                        .HasColumnName("body");
+
+                    b.Property<NotificationCategory>("Category")
+                        .HasColumnType("notification_category")
+                        .HasColumnName("category");
+
+                    b.PrimitiveCollection<string[]>("Channels")
+                        .IsRequired()
+                        .HasColumnType("text[]")
+                        .HasColumnName("channels");
+
+                    b.Property<DateTimeOffset>("CreatedAt")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("timestamp with time zone")
+                        .HasColumnName("created_at")
+                        .HasDefaultValueSql("now()");
+
+                    b.Property<string>("Data")
+                        .IsRequired()
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("jsonb")
+                        .HasColumnName("data")
+                        .HasDefaultValueSql("'{}'");
+
+                    b.Property<DateTimeOffset?>("ReadAt")
+                        .HasColumnType("timestamp with time zone")
+                        .HasColumnName("read_at");
+
+                    b.Property<Guid?>("RelatedAttemptId")
+                        .HasColumnType("uuid")
+                        .HasColumnName("related_attempt_id");
+
+                    b.Property<string>("Title")
+                        .IsRequired()
+                        .HasColumnType("text")
+                        .HasColumnName("title");
+
+                    b.Property<NotificationType>("Type")
+                        .HasColumnType("notification_type")
+                        .HasColumnName("type");
+
+                    b.Property<Guid>("UserId")
+                        .HasColumnType("uuid")
+                        .HasColumnName("user_id");
+
+                    b.HasKey("Id")
+                        .HasName("pk_notifications");
+
+                    b.HasIndex("RelatedAttemptId")
+                        .IsUnique()
+                        .HasDatabaseName("notif_result_once")
+                        .HasFilter("type IN ('result_pass','result_fail','result_ready')");
+
+                    b.HasIndex("UserId")
+                        .HasDatabaseName("notif_unread_idx")
+                        .HasFilter("read_at IS NULL");
+
+                    b.HasIndex("UserId", "CreatedAt")
+                        .IsDescending(false, true)
+                        .HasDatabaseName("notif_feed_idx");
+
+                    b.ToTable("notifications", (string)null);
+                });
+
+            modelBuilder.Entity("Nclex.Domain.Notifications.NotificationPreference", b =>
+                {
+                    b.Property<Guid>("UserId")
+                        .HasColumnType("uuid")
+                        .HasColumnName("user_id");
+
+                    b.Property<NotificationCategory>("Category")
+                        .HasColumnType("notification_category")
+                        .HasColumnName("category");
+
+                    b.Property<bool>("Email")
+                        .HasColumnType("boolean")
+                        .HasColumnName("email");
+
+                    b.Property<bool>("InApp")
+                        .HasColumnType("boolean")
+                        .HasDefaultValue(true)
+                        .HasColumnName("in_app");
+
+                    b.HasKey("UserId", "Category")
+                        .HasName("pk_notification_preferences");
+
+                    b.ToTable("notification_preferences", (string)null);
+                });
+
             modelBuilder.Entity("Nclex.Domain.Audit.AuditEvent", b =>
                 {
                     b.HasOne("Nclex.Domain.Entities.User", null)
@@ -2045,6 +2148,32 @@ namespace Nclex.Infrastructure.Persistence.Migrations
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired()
                         .HasConstraintName("fk_user_question_history_users_user_id");
+                });
+
+            modelBuilder.Entity("Nclex.Domain.Notifications.Notification", b =>
+                {
+                    b.HasOne("Nclex.Domain.Entities.Attempt", null)
+                        .WithMany()
+                        .HasForeignKey("RelatedAttemptId")
+                        .OnDelete(DeleteBehavior.SetNull)
+                        .HasConstraintName("fk_notifications_attempts_related_attempt_id");
+
+                    b.HasOne("Nclex.Domain.Entities.User", null)
+                        .WithMany()
+                        .HasForeignKey("UserId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired()
+                        .HasConstraintName("fk_notifications_users_user_id");
+                });
+
+            modelBuilder.Entity("Nclex.Domain.Notifications.NotificationPreference", b =>
+                {
+                    b.HasOne("Nclex.Domain.Entities.User", null)
+                        .WithMany()
+                        .HasForeignKey("UserId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired()
+                        .HasConstraintName("fk_notification_preferences_users_user_id");
                 });
 #pragma warning restore 612, 618
         }

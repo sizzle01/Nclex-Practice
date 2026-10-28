@@ -5,6 +5,7 @@ using Nclex.Application.Common;
 using Nclex.Domain.Audit;
 using Nclex.Domain.Email;
 using Nclex.Domain.Entities;
+using Nclex.Domain.Notifications;
 using Npgsql;
 
 namespace Nclex.Infrastructure.Persistence;
@@ -53,6 +54,10 @@ public sealed class AppDbContext(DbContextOptions<AppDbContext> options) : DbCon
     public DbSet<AttemptResult> AttemptResults => Set<AttemptResult>();
 
     public DbSet<AttemptCategoryScore> AttemptCategoryScores => Set<AttemptCategoryScore>();
+
+    public DbSet<Notification> Notifications => Set<Notification>();
+
+    public DbSet<NotificationPreference> NotificationPreferences => Set<NotificationPreference>();
 
     public async Task<Attempt?> LockAttemptAsync(Guid attemptId, CancellationToken cancellationToken)
     {
