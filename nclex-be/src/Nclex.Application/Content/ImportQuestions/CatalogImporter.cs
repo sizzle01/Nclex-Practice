@@ -60,6 +60,8 @@ public sealed class CatalogImporter(IAppDbContext db)
             CheckQuestionIds(set.QuestionIds, path, known, issues);
             CheckCaseStudies(set.QuestionIds, path, cases, issues);
         }
+
+        await CheckStoredSetsAsync(setIds, cases, issues, cancellationToken);
     }
 
     /// <summary>Creates or updates the file's banks and sets. Call only after a clean <see cref="ValidateAsync"/>.</summary>
@@ -200,6 +202,44 @@ public sealed class CatalogImporter(IAppDbContext db)
             else if (!known.Contains(id))
             {
                 issues.Add(new ImportIssue($"{path}.questionIds[{j}]", ImportIssueCodes.UnknownQuestion, $"Question {id} is not in this file or published on this track."));
+            }
+        }
+    }
+
+    // A curated set imported earlier must stay whole too when this file changes one of its cases.
+    // The import is refused instead of editing the set, so the author re-imports the set, fixed, in
+    // the same file. Custom sets belong to candidates, so they are not checked (see F11 walkthrough).
+    private async Task CheckStoredSetsAsync(List<Guid> setsInFile, CaseMembership cases, List<ImportIssue> issues, CancellationToken cancellationToken)
+    {
+        var affected = cases.AffectedQuestionIds.ToList();
+        if (affected.Count == 0)
+        {
+            return;
+        }
+
+        var sets = await db.TestSets.AsNoTracking()
+            .Where(s => s.Kind == TestSetKind.Prebuilt
+                && !setsInFile.Contains(s.Id)
+                && db.TestSetItems.Any(i => i.TestSetId == s.Id && affected.Contains(i.QuestionId)))
+            .Select(s => new { s.Id, s.Title })
+            .ToListAsync(cancellationToken);
+        foreach (var set in sets.OrderBy(s => s.Title, StringComparer.Ordinal))
+        {
+            var questionIds = await db.TestSetItems.AsNoTracking().Where(i => i.TestSetId == set.Id)
+                .OrderBy(i => i.Position).Select(i => i.QuestionId).ToListAsync(cancellationToken);
+            foreach (var (index, _) in CaseStudyRules.CheckSetOrder(questionIds, cases.PlacementOf, cases.SizeOf))
+            {
+                // Only the cases this file changes; the problem is reported where the file changes it.
+                var caseId = cases.PlacementOf(questionIds[index])!.CaseStudyId;
+                if (!cases.ChangedCases.TryGetValue(caseId, out var path))
+                {
+                    continue;
+                }
+
+                issues.Add(new ImportIssue(
+                    path,
+                    ImportIssueCodes.CaseStudySplit,
+                    $"Curated set \"{set.Title}\" ({set.Id}) would no longer hold case study {caseId} whole and in order. Add the set to this file with its questions reordered."));
             }
         }
     }

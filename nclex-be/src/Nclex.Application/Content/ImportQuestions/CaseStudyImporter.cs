@@ -204,6 +204,7 @@ public sealed class CaseStudyImporter(IAppDbContext db)
             .Distinct()
             .ToList();
         var members = await PlacementsAsync(PublishedInCases().Where(x => caseIds.Contains(x.Version.CaseStudyId!.Value)), cancellationToken);
+        var membersBefore = members.Where(m => touched.ContainsKey(m.Value.CaseStudyId)).Select(m => m.Key).ToList();
 
         // The file decides where its own questions sit, including outside any case.
         foreach (var id in fileIds)
@@ -216,7 +217,8 @@ public sealed class CaseStudyImporter(IAppDbContext db)
             members[file.Questions[index].Id] = placement;
         }
 
-        var membership = new CaseMembership(members);
+        var membersAfter = members.Where(m => touched.ContainsKey(m.Value.CaseStudyId)).Select(m => m.Key);
+        var membership = new CaseMembership(members, touched, [.. membersBefore.Union(membersAfter)]);
         foreach (var (caseId, path) in touched)
         {
             var positions = membership.PositionsOf(caseId);
@@ -261,8 +263,20 @@ public sealed class CaseStudyImporter(IAppDbContext db)
 }
 
 /// <summary>Where each question will sit in a case study once the import is written.</summary>
-public sealed class CaseMembership(IReadOnlyDictionary<Guid, CasePlacement> placements)
+/// <param name="placements">Each question in a case, by question id.</param>
+/// <param name="changedCases">The cases the file may change, with the path to report a problem at.</param>
+/// <param name="affectedQuestionIds">Questions in a changed case, before or after the import.</param>
+public sealed class CaseMembership(
+    IReadOnlyDictionary<Guid, CasePlacement> placements,
+    IReadOnlyDictionary<Guid, string> changedCases,
+    IReadOnlyList<Guid> affectedQuestionIds)
 {
+    /// <summary>The cases the file may change, with the import-file path that changes each.</summary>
+    public IReadOnlyDictionary<Guid, string> ChangedCases => changedCases;
+
+    /// <summary>Questions that are in a changed case before or after the import; sets holding them need a re-check.</summary>
+    public IReadOnlyList<Guid> AffectedQuestionIds => affectedQuestionIds;
+
     /// <summary>A question's place in its case, or null for a standalone question.</summary>
     public CasePlacement? PlacementOf(Guid questionId) => placements.GetValueOrDefault(questionId);
 
