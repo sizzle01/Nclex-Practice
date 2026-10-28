@@ -16,7 +16,7 @@ On submit, the backend builds the set:
 3. It fills any shortfall at random.
 4. It keeps each case study's items together.
 
-The new set is saved as the user's own custom set, and the page confirms it with the item count. Starting it arrives with F08.
+The new set is saved as the user's own custom set. **Create and start** opens the player straight away (`startNow`); **Create test** shows a confirmation card with the item count and a **Start** button. (Starting was added when F07 was merged with F08 and F09; see section 6.)
 
 ## 2. How to try it
 
@@ -109,7 +109,7 @@ Frontend (`nclex-fe/src/features/custom-builder/`):
 
 ## 4. Request flow: `POST /api/v1/test-sets/custom`
 
-1. **UI:** `CustomBuilder` validates the form with Zod (5 to 150 questions, and a timer when the test is timed). `toRequest` turns minutes into `timeBudgetSec` and adds the user's track and `startNow: false`. `useMutation` calls `createCustomSet`, which calls `apiClient.POST("/api/v1/test-sets/custom")`, and the Next.js rewrite forwards it to the API.
+1. **UI:** `CustomBuilder` validates the form with Zod (5 to 150 questions, and a timer when the test is timed). `toRequest` turns minutes into `timeBudgetSec` and adds the user's track, plus `startNow: true` for **Create and start** or `false` for **Create test**. `useMutation` calls `createCustomSet`, which calls `apiClient.POST("/api/v1/test-sets/custom")`, and the Next.js rewrite forwards it to the API.
 2. **API:** `TestSetsController.CreateCustom` binds `CreateCustomSetRequest`. `FluentValidationFilter` runs `CreateCustomSetRequestValidator`, which checks:
    - the count is from 5 to 150
    - the mode is practice or challenge
@@ -166,7 +166,11 @@ No index was added for the pool query. It filters on the current version reached
 - **Test-plan weights** are the midpoint of each leaf's `weight_min` to `weight_max` range. Shares are rounded with the largest-remainder method, so they always add up to the requested count. Ties go to the lower category id, which makes results repeatable.
 - **`available` on 422** is the number of questions the sampler could actually put together. That is usually the pool size. With case studies it can be lower, because a 6-item block can't fill 5 places.
 - **Challenge sets get `pass_threshold` 0.65,** as agreed, matching the seeded Comprehensive Challenge. Practice sets get none. The title is generated as "Custom test: N questions".
-- **`startNow`** is accepted, and `attempt` is always null until F08. The form sends `false`.
+- **`startNow`** (added when merging with F08 and F09):
+  - `CreateCustomSetHandler` calls F08's `StartAttemptHandler` with the new set's id, so the start rules (verified email, tier, versions) are the same as `POST /attempts`. It returns the `AttemptState` in `attempt`, with the exam timer not yet running: it starts on `/open`, as for any attempt.
+  - The set and the attempt are saved in one transaction. If the start is refused (403 `EMAIL_NOT_VERIFIED`), no set is left behind. Creating a set without `startNow` still works for unverified users.
+  - The confirmation card's **Start** now calls `POST /attempts`. Custom sets are not prebuilt, so every start makes a new attempt (F08's draft reuse applies only to prebuilt sets).
+- **Merge with F08 and F09:** the branch `feature/f07-merge-main` merges `main` into F07. The only conflicts were additions on both sides (handler registrations, DbSets, migration tests), and all were kept. `F07_QuestionHistory` is dated before `F08_Attempts`, so a fresh database applies them in order. A database that already has F08 applies F07 afterwards, which is safe because the tables are unrelated. `has-pending-model-changes` reports none.
 - **Track** defaults to the user's own track when the request leaves it out, as in F06.
 - **Custom sets** use `access_tier='free'`, because the questions were already limited to the user's tier. They are unpublished and visible only to their owner through `GET /test-sets/{id}`. They aren't listed anywhere yet.
 - **Bug fix for query-string enums.** MVC binds enums in query strings by their C# names, so `?itemTypes=multiple_choice` returned 400, while `sata` happened to work. The new `SnakeCaseEnumModelBinder` accepts the API's own names (snake_case, or an explicit name such as `RN`), the same ones JSON uses. Every query-string enum is affected, but the existing F04 and F06 tests still pass.
@@ -186,11 +190,11 @@ No index was added for the pool query. It filters on the current version reached
 | `Nclex.Domain.Tests/Entities/TestSetTests.cs` | `CreateCustom`: owner, unpublished, criteria |
 | `Nclex.Application.Tests/Catalog/CreateCustomSetRequestValidatorTests.cs` | Required fields, 5 to 150 inclusive, no CAT, timing rules, undefined enum values, shared filter rules |
 | `Nclex.Api.IntegrationTests/Catalog/QuestionPoolTests.cs` | Parent expands to leaves (and the weights), body-system, difficulty and item-type filters, tier, track, retired questions, unused/incorrect/flagged pools from history, case studies only when complete, unknown ids as field errors |
-| `Nclex.Api.IntegrationTests/Catalog/CustomSetsTests.cs` | Exact live count, **set created with the right number of items** (owner, positions 1..N, unique items, criteria, `Location`), only the owner sees it, **`INSUFFICIENT_QUESTIONS` with `available`**, 400 field errors, unknown category, 401 |
+| `Nclex.Api.IntegrationTests/Catalog/CustomSetsTests.cs` | Exact live count, **set created with the right number of items** (owner, positions 1..N, unique items, criteria, `Location`), only the owner sees it, **`INSUFFICIENT_QUESTIONS` with `available`**, 400 field errors, unknown category, 401, **`startNow` returns an in-progress attempt of the new set (timer not running yet)**, **`startNow` for an unverified email is 403 and leaves no set** |
 | `Nclex.Api.IntegrationTests/MigrationTests.cs` | `user_question_history` columns, defaults and cascade |
 | `nclex-fe/.../CategoryTree.test.tsx` | A parent selects and clears its leaves, mixed state, a category without children counts as a leaf, keyboard use |
 | `nclex-fe/.../schema.test.ts` | Count limits, timed tests need a timer |
-| `nclex-fe/.../CustomBuilder.test.tsx` | Count for the user's track, **one count request after quick clicks (debounce)**, only servable item types, "too many" warning, submit then confirmation with the item count and the exact request body, client-side timer error, 422 message |
+| `nclex-fe/.../CustomBuilder.test.tsx` | Count for the user's track, **one count request after quick clicks (debounce)**, only servable item types, "too many" warning, submit then confirmation with the item count and the exact request body, client-side timer error, 422 message, **Create and start opens `/attempts/{id}`**, **Start on the card calls `POST /attempts`**, verify-email message |
 
 The pool and endpoint tests share one database with every other test. So they check which of their own questions are in or out, or they build from a fresh user's "incorrect" pool, where every number is exact.
 
@@ -198,6 +202,12 @@ The pool and endpoint tests share one database with every other test. So they ch
 cd nclex-be && dotnet build && dotnet test        # 616 passed, 0 failed (Docker must be running)
 cd nclex-fe && npm run lint && npm run typecheck && npm test   # clean, clean, 118 tests in 25 files passed
 ```
+
+After merging with F08 and F09 and adding `startNow`:
+- `dotnet build`: 0 warnings, 0 errors.
+- `dotnet test`: 783 passed, 0 failed.
+- `npm run lint` and `npm run typecheck`: clean.
+- `npm test`: 189 tests in 34 files passed.
 
 I also checked it end to end against a scratch Postgres loaded with the sample content:
 - The counts were right.
@@ -209,10 +219,7 @@ I didn't drive the form in a real browser; Playwright arrives in F16.
 
 ## 8. Follow-ups and known limitations
 
-- **F08:**
-  - honour `startNow` and return the attempt
-  - make the "flagged" pool read `attempt_items.flagged`
-  - enable **Start** on the confirmation card
+- **The "flagged" pool still returns nothing.** `attempt_items` exists now (F08), so `QuestionPool`'s `WHEN 'flagged' THEN false` can become a check for the user's flagged attempt items. That needs its own small change and tests.
 - **F10:** grading must create and update `user_question_history` (`times_seen`, `last_correct`, `last_seen_at`). `UserQuestionHistory.FirstSeen` is the starting point.
 - **Importer race (from F04):** `ImportQuestionsHandler` creates the content-importer user on first use. Two first imports at the same moment both try, and one fails on `ix_users_email`. The new parallel tests hit this, so the test host now creates the account up front. The product code should handle it too, for example with `INSERT … ON CONFLICT DO NOTHING`.
 - **"My custom sets"** has no list yet, and nothing offers "retake similar" from `generator_criteria`.
