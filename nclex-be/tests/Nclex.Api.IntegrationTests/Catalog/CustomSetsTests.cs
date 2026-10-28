@@ -4,6 +4,7 @@ using System.Text.Json;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.DependencyInjection;
 using Nclex.Api.IntegrationTests.Infrastructure;
+using Nclex.Application.Attempts;
 using Nclex.Application.Catalog;
 using Nclex.Application.Catalog.CustomSets;
 using Nclex.Domain.Entities;
@@ -50,13 +51,12 @@ public sealed class CustomSetsTests(ApiFactory factory)
             mode = "challenge",
             revealMode = "exam",
             timing = new { timed = true, timeBudgetSec = 600 },
-            startNow = true,
         });
 
         response.StatusCode.ShouldBe(HttpStatusCode.Created);
         var created = (await response.Content.ReadFromJsonAsync<CreateCustomSetResponse>(AuthApi.Json, TestContext.Current.CancellationToken))!;
         response.Headers.Location!.AbsolutePath.ShouldBe($"/api/v1/test-sets/{created.TestSet.Id}");
-        created.Attempt.ShouldBeNull(); // attempts start from F08
+        created.Attempt.ShouldBeNull(); // no startNow
         created.TestSet.ShouldSatisfyAllConditions(
             s => s.Kind.ShouldBe(TestSetKind.Custom),
             s => s.Title.ShouldBe("Custom test: 5 questions"),
@@ -141,6 +141,53 @@ public sealed class CustomSetsTests(ApiFactory factory)
         var response = await _api.SendWithTokenAsync(new HttpMethod(method), path, accessToken: null, body: method == "POST" ? new { } : null);
 
         await response.ShouldBeProblemAsync(HttpStatusCode.Unauthorized, "UNAUTHENTICATED");
+    }
+
+    [Fact]
+    public async Task Start_now_also_starts_an_attempt_of_the_new_set()
+    {
+        var (user, _) = await UserWithWrongAnswersAsync(6);
+        await VerifyAsync(user);
+
+        var created = await CreateOkAsync(user.AccessToken, new
+        {
+            pool = "incorrect",
+            questionCount = 5,
+            mode = "challenge",
+            revealMode = "exam",
+            timing = new { timed = true, timeBudgetSec = 600 },
+            startNow = true,
+        });
+
+        created.Attempt.ShouldNotBeNull().ShouldSatisfyAllConditions(
+            a => a.TestSet.Id.ShouldBe(created.TestSet.Id),
+            a => a.Status.ShouldBe(AttemptStatus.InProgress),
+            a => a.TotalItems.ShouldBe(5),
+            a => a.Timer.Exam.ShouldBe(new ClockState(Running: false, DeadlineAt: null, RemainingMs: 600_000))); // starts on /open
+    }
+
+    [Fact]
+    public async Task Start_now_for_an_unverified_email_is_refused_and_leaves_no_set()
+    {
+        var (user, _) = await UserWithWrongAnswersAsync(5);
+
+        var response = await CreateAsync(user.AccessToken, new
+        {
+            pool = "incorrect", questionCount = 5, mode = "practice", revealMode = "tutor", startNow = true,
+        });
+
+        await response.ShouldBeProblemAsync(HttpStatusCode.Forbidden, "EMAIL_NOT_VERIFIED");
+        await using var scope = factory.Services.CreateAsyncScope();
+        (await scope.ServiceProvider.GetRequiredService<AppDbContext>().TestSets
+            .AnyAsync(s => s.OwnerUserId == user.Body.User.Id, TestContext.Current.CancellationToken)).ShouldBeFalse();
+    }
+
+    private async Task VerifyAsync(AuthApi.SignedIn user)
+    {
+        await using var scope = factory.Services.CreateAsyncScope();
+        await scope.ServiceProvider.GetRequiredService<AppDbContext>().Users
+            .Where(u => u.Id == user.Body.User.Id)
+            .ExecuteUpdateAsync(u => u.SetProperty(x => x.EmailVerifiedAt, DateTimeOffset.UtcNow), TestContext.Current.CancellationToken);
     }
 
     private async Task<(AuthApi.SignedIn User, List<Guid> Questions)> UserWithWrongAnswersAsync(int count)
