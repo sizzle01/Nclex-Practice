@@ -43,6 +43,10 @@ public static class AuthSetup
 
         services.AddAuthorizationBuilder()
             .AddRolePolicies()
+            // Reviewers and admins moderate content reports (api.md section 8).
+            .AddPolicy(Policies.ContentModerator, policy => policy.RequireRole(
+                UserRole.Reviewer.ToClaimValue(),
+                UserRole.Admin.ToClaimValue()))
             .AddPolicy(Policies.VerifiedEmail, policy => policy
                 .RequireAuthenticatedUser()
                 .AddRequirements(new VerifiedEmailRequirement()));
@@ -81,6 +85,9 @@ public static class Policies
     public const string Author = "role:author";
     public const string Reviewer = "role:reviewer";
     public const string Admin = "role:admin";
+
+    /// <summary>Reviewer or admin: may work the content-report queue (F15).</summary>
+    public const string ContentModerator = "content-moderator";
 
     /// <summary>Signed in with a verified email; returns 403 EMAIL_NOT_VERIFIED otherwise (protects non-sample attempts from F08).</summary>
     public const string VerifiedEmail = "verified-email";
