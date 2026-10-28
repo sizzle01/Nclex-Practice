@@ -68,4 +68,21 @@ public sealed class Question
     }
 
     public void ChangeAccessTier(PlanTier accessTier) => AccessTier = accessTier;
+
+    public bool IsRetired => Status == QuestionStatus.Retired;
+
+    /// <summary>
+    /// Takes the question out of future sets (api.md section 8). Attempts already started keep
+    /// serving the version they resolved, so nobody loses an item halfway through.
+    /// </summary>
+    public void Retire(DateTimeOffset now)
+    {
+        if (IsRetired)
+        {
+            throw new InvalidOperationException($"Question {Id} is already retired.");
+        }
+
+        Status = QuestionStatus.Retired;
+        RetiredAt = now;
+    }
 }
