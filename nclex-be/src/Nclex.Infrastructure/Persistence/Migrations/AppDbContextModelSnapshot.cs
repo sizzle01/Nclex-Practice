@@ -310,6 +310,51 @@ namespace Nclex.Infrastructure.Persistence.Migrations
                         });
                 });
 
+            modelBuilder.Entity("Nclex.Domain.Entities.AttemptCategoryScore", b =>
+                {
+                    b.Property<Guid>("AttemptId")
+                        .HasColumnType("uuid")
+                        .HasColumnName("attempt_id");
+
+                    b.Property<string>("Dimension")
+                        .HasColumnType("text")
+                        .HasColumnName("dimension");
+
+                    b.Property<string>("DimensionKey")
+                        .HasColumnType("text")
+                        .HasColumnName("dimension_key");
+
+                    b.Property<int>("Items")
+                        .HasColumnType("integer")
+                        .HasColumnName("items");
+
+                    b.Property<int>("ItemsCorrect")
+                        .HasColumnType("integer")
+                        .HasColumnName("items_correct");
+
+                    b.Property<decimal>("MaxPoints")
+                        .HasPrecision(8, 2)
+                        .HasColumnType("numeric(8,2)")
+                        .HasColumnName("max_points");
+
+                    b.Property<decimal>("PointsEarned")
+                        .HasPrecision(8, 2)
+                        .HasColumnType("numeric(8,2)")
+                        .HasColumnName("points_earned");
+
+                    b.Property<long>("TimeMs")
+                        .HasColumnType("bigint")
+                        .HasColumnName("time_ms");
+
+                    b.HasKey("AttemptId", "Dimension", "DimensionKey")
+                        .HasName("pk_attempt_category_scores");
+
+                    b.ToTable("attempt_category_scores", null, t =>
+                        {
+                            t.HasCheckConstraint("attempt_category_scores_dimension_check", "dimension IN ('client_needs','client_needs_parent','body_system','item_type','cjmm_skill','difficulty')");
+                        });
+                });
+
             modelBuilder.Entity("Nclex.Domain.Entities.AttemptItem", b =>
                 {
                     b.Property<Guid>("AttemptId")
@@ -407,6 +452,82 @@ namespace Nclex.Infrastructure.Persistence.Migrations
                         .HasDatabaseName("ix_attempt_items_question_version_id");
 
                     b.ToTable("attempt_items", (string)null);
+                });
+
+            modelBuilder.Entity("Nclex.Domain.Entities.AttemptResult", b =>
+                {
+                    b.Property<Guid>("AttemptId")
+                        .HasColumnType("uuid")
+                        .HasColumnName("attempt_id");
+
+                    b.Property<int>("AvgTimeMs")
+                        .HasColumnType("integer")
+                        .HasColumnName("avg_time_ms");
+
+                    b.Property<decimal?>("CatSe")
+                        .HasPrecision(6, 3)
+                        .HasColumnType("numeric(6,3)")
+                        .HasColumnName("cat_se");
+
+                    b.Property<decimal?>("CatTheta")
+                        .HasPrecision(6, 3)
+                        .HasColumnType("numeric(6,3)")
+                        .HasColumnName("cat_theta");
+
+                    b.Property<DateTimeOffset>("GradedAt")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("timestamp with time zone")
+                        .HasColumnName("graded_at")
+                        .HasDefaultValueSql("now()");
+
+                    b.Property<int>("ItemsAnswered")
+                        .HasColumnType("integer")
+                        .HasColumnName("items_answered");
+
+                    b.Property<int>("ItemsCorrect")
+                        .HasColumnType("integer")
+                        .HasColumnName("items_correct");
+
+                    b.Property<int>("ItemsTotal")
+                        .HasColumnType("integer")
+                        .HasColumnName("items_total");
+
+                    b.Property<decimal>("MaxPoints")
+                        .HasPrecision(8, 2)
+                        .HasColumnType("numeric(8,2)")
+                        .HasColumnName("max_points");
+
+                    b.Property<decimal?>("PassThreshold")
+                        .HasPrecision(5, 4)
+                        .HasColumnType("numeric(5,4)")
+                        .HasColumnName("pass_threshold");
+
+                    b.Property<bool?>("Passed")
+                        .HasColumnType("boolean")
+                        .HasColumnName("passed");
+
+                    b.Property<decimal>("PointsEarned")
+                        .HasPrecision(8, 2)
+                        .HasColumnType("numeric(8,2)")
+                        .HasColumnName("points_earned");
+
+                    b.Property<string>("ReadinessLabel")
+                        .HasColumnType("text")
+                        .HasColumnName("readiness_label");
+
+                    b.Property<decimal>("ScorePct")
+                        .HasPrecision(5, 4)
+                        .HasColumnType("numeric(5,4)")
+                        .HasColumnName("score_pct");
+
+                    b.Property<long>("TotalTimeMs")
+                        .HasColumnType("bigint")
+                        .HasColumnName("total_time_ms");
+
+                    b.HasKey("AttemptId")
+                        .HasName("pk_attempt_results");
+
+                    b.ToTable("attempt_results", (string)null);
                 });
 
             modelBuilder.Entity("Nclex.Domain.Entities.BodySystem", b =>
@@ -1696,6 +1817,16 @@ namespace Nclex.Infrastructure.Persistence.Migrations
                         .IsRequired();
                 });
 
+            modelBuilder.Entity("Nclex.Domain.Entities.AttemptCategoryScore", b =>
+                {
+                    b.HasOne("Nclex.Domain.Entities.Attempt", null)
+                        .WithMany()
+                        .HasForeignKey("AttemptId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired()
+                        .HasConstraintName("fk_attempt_category_scores_attempts_attempt_id");
+                });
+
             modelBuilder.Entity("Nclex.Domain.Entities.AttemptItem", b =>
                 {
                     b.HasOne("Nclex.Domain.Entities.Attempt", null)
@@ -1711,6 +1842,16 @@ namespace Nclex.Infrastructure.Persistence.Migrations
                         .OnDelete(DeleteBehavior.NoAction)
                         .IsRequired()
                         .HasConstraintName("fk_attempt_items_question_versions_question_version_id");
+                });
+
+            modelBuilder.Entity("Nclex.Domain.Entities.AttemptResult", b =>
+                {
+                    b.HasOne("Nclex.Domain.Entities.Attempt", null)
+                        .WithOne()
+                        .HasForeignKey("Nclex.Domain.Entities.AttemptResult", "AttemptId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired()
+                        .HasConstraintName("fk_attempt_results_attempts_attempt_id");
                 });
 
             modelBuilder.Entity("Nclex.Domain.Entities.ClientNeedsCategory", b =>

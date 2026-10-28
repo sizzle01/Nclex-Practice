@@ -50,6 +50,10 @@ public sealed class AppDbContext(DbContextOptions<AppDbContext> options) : DbCon
 
     public DbSet<AttemptItem> AttemptItems => Set<AttemptItem>();
 
+    public DbSet<AttemptResult> AttemptResults => Set<AttemptResult>();
+
+    public DbSet<AttemptCategoryScore> AttemptCategoryScores => Set<AttemptCategoryScore>();
+
     public async Task<Attempt?> LockAttemptAsync(Guid attemptId, CancellationToken cancellationToken)
     {
         // ToListAsync rather than SingleOrDefaultAsync: EF would wrap the SQL in a subquery to add a LIMIT.

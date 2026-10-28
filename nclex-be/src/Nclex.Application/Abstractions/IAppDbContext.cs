@@ -66,6 +66,12 @@ public interface IAppDbContext
 
     DbSet<AttemptItem> AttemptItems { get; }
 
+    /// <summary>The score of each submitted attempt, written once by grading.</summary>
+    DbSet<AttemptResult> AttemptResults { get; }
+
+    /// <summary>Each result's breakdown by Client Needs, body system, item type... (architecture.md 5.5).</summary>
+    DbSet<AttemptCategoryScore> AttemptCategoryScores { get; }
+
     /// <summary>
     /// Reads an attempt with <c>SELECT … FOR UPDATE</c> and tracks it, or returns null when there is
     /// none. Call inside a transaction: the row stays locked until it ends.
