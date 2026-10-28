@@ -8,6 +8,9 @@ public enum AttemptWriteCheck
     /// <summary>The attempt is submitted or abandoned: ATTEMPT_NOT_ACTIVE.</summary>
     NotActive,
 
+    /// <summary>The exam timer ran out and the attempt was finalized: ATTEMPT_TIME_EXPIRED.</summary>
+    TimeExpired,
+
     /// <summary>The attempt is paused: ATTEMPT_PAUSED.</summary>
     Paused,
 
@@ -37,4 +40,25 @@ public enum NavigationOutcome
 
     /// <summary>The set does not allow going back: BACK_NAVIGATION_DISABLED.</summary>
     BackNavigationDisabled,
+}
+
+/// <summary>What happened to a request to pause.</summary>
+public enum PauseOutcome
+{
+    Paused,
+
+    /// <summary>Every allowed pause has been used: PAUSE_LIMIT_REACHED.</summary>
+    LimitReached,
+}
+
+/// <summary>What happened to a request to resume.</summary>
+public enum ResumeOutcome
+{
+    Resumed,
+
+    /// <summary>
+    /// The pause ran so far past its limit that no exam time is left. The caller finalizes the attempt
+    /// as time_expired (architecture.md 5.1, pause limits).
+    /// </summary>
+    TimeExpired,
 }

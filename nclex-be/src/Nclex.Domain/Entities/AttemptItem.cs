@@ -1,4 +1,5 @@
 using System.Text.Json;
+using Nclex.Domain.Timing;
 
 namespace Nclex.Domain.Entities;
 
@@ -42,11 +43,17 @@ public sealed class AttemptItem
     /// <summary>Time on the item, worked out by the server from navigation (architecture.md 5.2).</summary>
     public long TimeSpentMs { get; private set; }
 
-    /// <summary>Per-item timer deadline while it runs (F09).</summary>
+    /// <summary>Per-item timer deadline while it runs (architecture.md 5.1).</summary>
     public DateTimeOffset? ItemDeadlineAt { get; private set; }
 
-    /// <summary>Per-item time left while the timer is stopped (F09).</summary>
+    /// <summary>Per-item time left; authoritative while the timer is stopped.</summary>
     public int? ItemRemainingMs { get; private set; }
+
+    /// <summary>
+    /// The per-question timer. It runs only while the candidate is on the item, and freezes when
+    /// they leave it or pause. No timer until the item is first entered in a set with one.
+    /// </summary>
+    public Countdown ItemTimer => new(ItemDeadlineAt, ItemRemainingMs);
 
     /// <summary>Filled in by grading (F10).</summary>
     public decimal? PointsEarned { get; private set; }
@@ -118,8 +125,14 @@ public sealed class AttemptItem
         return true;
     }
 
-    /// <summary>The candidate arrived at this item: start counting its time.</summary>
-    internal void Enter(DateTimeOffset now)
+    /// <summary>True when the item timer has run out (with the write grace) and the item is not locked yet.</summary>
+    public bool HasTimerExpiredAt(DateTimeOffset now) => !IsLocked && ItemTimer.HasExpiredAt(now);
+
+    /// <summary>
+    /// The candidate arrived at this item: start counting its time and, in a set with a per-question
+    /// limit, start its timer from where it stopped (<paramref name="perQuestionMs"/> on the first visit).
+    /// </summary>
+    internal void Enter(DateTimeOffset now, long? perQuestionMs)
     {
         // Looking back at a locked item is review, not answering time, and locked rows stay as they are.
         if (IsLocked)
@@ -132,6 +145,40 @@ public sealed class AttemptItem
         {
             State = ItemState.Seen;
         }
+
+        if (perQuestionMs is null)
+        {
+            return;
+        }
+
+        var timer = ItemTimer.HasTimer ? ItemTimer : Countdown.Stopped(perQuestionMs.Value);
+        if (!timer.IsRunning && timer.RemainingMs <= 0)
+        {
+            // Its time was used up on an earlier visit: PRD 5.2 locks it with the answer it has.
+            Lock(now);
+            return;
+        }
+
+        SetTimer(timer.StartAt(now));
+    }
+
+    /// <summary>Freezes the item timer, for leaving the item or pausing.</summary>
+    internal void StopTimer(DateTimeOffset now) => SetTimer(ItemTimer.StopAt(now));
+
+    /// <summary>
+    /// Locks the item with its current answer when its timer has run out (PRD 5.2). Its time on the
+    /// item stops at the deadline. False when the timer has not run out.
+    /// </summary>
+    internal bool ExpireTimer(DateTimeOffset now)
+    {
+        if (!HasTimerExpiredAt(now))
+        {
+            return false;
+        }
+
+        Leave(ItemDeadlineAt!.Value);
+        Lock(now);
+        return true;
     }
 
     /// <summary>The candidate left this item (or is treated as having left at <paramref name="until"/>).</summary>
@@ -154,8 +201,16 @@ public sealed class AttemptItem
             return;
         }
 
+        StopTimer(now);
         State = ItemState.Locked;
         LockedAt = now;
         EnteredAt = null;
+    }
+
+    private void SetTimer(Countdown timer)
+    {
+        ItemDeadlineAt = timer.DeadlineAt;
+        // Never more than the set's per-question limit, which is a few minutes, so it fits an int.
+        ItemRemainingMs = timer.RemainingMs is { } remaining ? (int)remaining : null;
     }
 }
