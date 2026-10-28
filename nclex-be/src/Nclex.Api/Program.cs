@@ -10,6 +10,7 @@ using Nclex.Api.Middleware;
 using Nclex.Api.ModelBinding;
 using Nclex.Api.OpenApi;
 using Nclex.Api.RateLimiting;
+using Nclex.Api.Sse;
 using Nclex.Application;
 using Nclex.Infrastructure;
 using Nclex.Infrastructure.Jobs;
@@ -95,6 +96,8 @@ try
     // Secure by default: every controller action needs a signed-in user unless marked [AllowAnonymous].
     // (A fallback policy would also turn 404s for unknown routes into 401s.)
     app.MapControllers().RequireAuthorization();
+    // Authenticated by its own single-use ticket, since EventSource cannot send a bearer token.
+    app.MapNotificationStream();
 
     await app.RunAsync();
 }
