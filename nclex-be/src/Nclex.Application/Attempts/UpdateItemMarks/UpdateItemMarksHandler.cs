@@ -4,7 +4,7 @@ using Nclex.Application.Common;
 namespace Nclex.Application.Attempts.UpdateItemMarks;
 
 /// <summary>PATCH /attempts/{id}/items/{position}: mark for review and strike-through.</summary>
-public sealed class UpdateItemMarksHandler(IAppDbContext db, AttemptStore store, TimeProvider clock)
+public sealed class UpdateItemMarksHandler(IAppDbContext db, AttemptStore store, AttemptWriteGuard guard, TimeProvider clock)
 {
     public async Task<ItemMarks> HandleAsync(
         Guid attemptId,
@@ -15,12 +15,14 @@ public sealed class UpdateItemMarksHandler(IAppDbContext db, AttemptStore store,
     {
         var clientId = AttemptClient.Require(clientIdHeader);
         await using var transaction = await db.BeginTransactionAsync(cancellationToken);
-        var attempt = await store.LockOwnedAsync(attemptId, cancellationToken);
-        AttemptStore.EnsureWritable(attempt, clientId);
+        var attempt = await guard.LockForWriteAsync(attemptId, clientId, transaction, cancellationToken);
         var item = await store.ItemAsync(attempt, position, cancellationToken);
 
         if (!item.UpdateMarks(request.Flagged, request.StruckOptions))
         {
+            // Keeps the lock the guard may have just made because the item's time ran out.
+            await db.SaveChangesAsync(cancellationToken);
+            await transaction.CommitAsync(cancellationToken);
             throw new AppException(AttemptErrors.ItemLocked);
         }
 

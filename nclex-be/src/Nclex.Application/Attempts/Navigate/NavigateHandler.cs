@@ -9,7 +9,7 @@ namespace Nclex.Application.Attempts.Navigate;
 /// POST /attempts/{id}/navigate: moves to another item. The server records the time spent on the
 /// item being left, so time-per-item never depends on the client (architecture.md 5.2).
 /// </summary>
-public sealed class NavigateHandler(IAppDbContext db, AttemptStore store, TimeProvider clock)
+public sealed class NavigateHandler(IAppDbContext db, AttemptStore store, AttemptWriteGuard guard, TimeProvider clock)
 {
     public async Task<NavigateResult> HandleAsync(
         Guid attemptId,
@@ -19,14 +19,13 @@ public sealed class NavigateHandler(IAppDbContext db, AttemptStore store, TimePr
     {
         var clientId = AttemptClient.Require(clientIdHeader);
         await using var transaction = await db.BeginTransactionAsync(cancellationToken);
-        var attempt = await store.LockOwnedAsync(attemptId, cancellationToken);
-        AttemptStore.EnsureWritable(attempt, clientId);
+        var attempt = await guard.LockForWriteAsync(attemptId, clientId, transaction, cancellationToken);
         if (request.ToPosition > attempt.TotalItems)
         {
             throw AppException.ForField("toPosition", ValidationErrorCodes.InvalidValue);
         }
 
-        var current = await store.ItemAsync(attempt, attempt.CurrentPosition, cancellationToken);
+        var current = await store.CurrentItemAsync(attempt, cancellationToken);
         var target = request.ToPosition == current.Position
             ? current
             : await store.ItemAsync(attempt, request.ToPosition, cancellationToken);
@@ -39,6 +38,6 @@ public sealed class NavigateHandler(IAppDbContext db, AttemptStore store, TimePr
 
         await db.SaveChangesAsync(cancellationToken);
         await transaction.CommitAsync(cancellationToken);
-        return new NavigateResult(attempt.CurrentPosition, TimerState.For(attempt, now));
+        return new NavigateResult(attempt.CurrentPosition, TimerState.For(attempt, target, now));
     }
 }

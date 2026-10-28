@@ -14,6 +14,7 @@ namespace Nclex.Application.Attempts.SaveResponse;
 public sealed class SaveResponseHandler(
     IAppDbContext db,
     AttemptStore store,
+    AttemptWriteGuard guard,
     ItemTypeRegistry itemTypes,
     TimeProvider clock)
 {
@@ -26,8 +27,7 @@ public sealed class SaveResponseHandler(
     {
         var clientId = AttemptClient.Require(clientIdHeader);
         await using var transaction = await db.BeginTransactionAsync(cancellationToken);
-        var attempt = await store.LockOwnedAsync(attemptId, cancellationToken);
-        AttemptStore.EnsureWritable(attempt, clientId);
+        var attempt = await guard.LockForWriteAsync(attemptId, clientId, transaction, cancellationToken);
         var item = await store.ItemAsync(attempt, position, cancellationToken);
 
         var response = request.Response is { ValueKind: not JsonValueKind.Null } value ? value : (JsonElement?)null;
@@ -40,17 +40,21 @@ public sealed class SaveResponseHandler(
         var outcome = item.SaveResponse(response is null ? null : JsonDocument.Parse(response.Value.GetRawText()), request.ClientSeq, now);
         if (outcome == SaveOutcome.ItemLocked)
         {
+            // Keeps the lock the guard may have just made because the item's time ran out.
+            await db.SaveChangesAsync(cancellationToken);
+            await transaction.CommitAsync(cancellationToken);
             throw new AppException(AttemptErrors.ItemLocked);
         }
 
         if (outcome == SaveOutcome.Saved)
         {
             attempt.RecordActivity(now);
-            await db.SaveChangesAsync(cancellationToken);
-            await transaction.CommitAsync(cancellationToken);
         }
 
-        return new SaveResponseResult(now, item.ClientSeq, item.State, TimerState.For(attempt, now));
+        await db.SaveChangesAsync(cancellationToken);
+        await transaction.CommitAsync(cancellationToken);
+        var current = await store.CurrentItemAsync(attempt, cancellationToken);
+        return new SaveResponseResult(now, item.ClientSeq, item.State, TimerState.For(attempt, current, now));
     }
 
     /// <summary>

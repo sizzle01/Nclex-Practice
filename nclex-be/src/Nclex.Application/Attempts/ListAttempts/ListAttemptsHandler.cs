@@ -48,7 +48,7 @@ public sealed class ListAttemptsHandler(IAppDbContext db, ICurrentUser currentUs
             r.Attempt.LastActivityAt,
             r.Attempt.SubmittedAt,
             r.Attempt.IsStaleDraftAt(now),
-            r.Attempt.ExamRemainingMs)).ToList();
+            r.Attempt.ExamTimer.RemainingAt(now))).ToList();
         return new AttemptPage(items, rows.Count > limit ? PageCursor.Encode(offset + limit) : null);
     }
 }

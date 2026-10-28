@@ -1,6 +1,7 @@
 using Microsoft.EntityFrameworkCore;
 using Nclex.Application.Abstractions;
 using Nclex.Domain.Entities;
+using Nclex.Domain.Timing;
 
 namespace Nclex.Application.Attempts;
 
@@ -19,11 +20,12 @@ public sealed class AttemptStateReader(IAppDbContext db, TimeProvider clock)
         var items = await db.AttemptItems.AsNoTracking()
             .Where(i => i.AttemptId == attempt.Id)
             .OrderBy(i => i.Position)
-            .Select(i => new { i.Position, i.State, i.Flagged, HasResponse = i.Response != null })
+            .Select(i => new { i.Position, i.State, i.Flagged, HasResponse = i.Response != null, i.ItemDeadlineAt, i.ItemRemainingMs })
             .ToListAsync(cancellationToken);
 
         var now = clock.GetUtcNow();
         var settings = attempt.Settings;
+        var current = items.Single(i => i.Position == attempt.CurrentPosition);
         return new AttemptState(
             attempt.Id,
             new TestSetRef(attempt.TestSetId, title),
@@ -42,7 +44,7 @@ public sealed class AttemptStateReader(IAppDbContext db, TimeProvider clock)
                 Locked: items.Count(i => i.State == ItemState.Locked),
                 Flagged: items.Count(i => i.Flagged)),
             [.. items.Select(i => new NavigatorEntry(i.Position, i.State, i.Flagged))],
-            TimerState.For(attempt, now),
+            TimerState.For(attempt, new Countdown(current.ItemDeadlineAt, current.ItemRemainingMs), now),
             attempt.StartedAt,
             attempt.LastActivityAt,
             attempt.IsStaleDraftAt(now),

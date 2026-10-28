@@ -28,11 +28,25 @@ public sealed class AttemptStore(IAppDbContext db, ICurrentUser currentUser)
         await db.AttemptItems.SingleOrDefaultAsync(i => i.AttemptId == attempt.Id && i.Position == position, cancellationToken)
         ?? throw new AppException(AttemptErrors.ItemNotFound);
 
+    /// <summary>The item the candidate is on, tracked for changes.</summary>
+    public Task<AttemptItem> CurrentItemAsync(Attempt attempt, CancellationToken cancellationToken) =>
+        ItemAsync(attempt, attempt.CurrentPosition, cancellationToken);
+
+    /// <summary>Stops with ATTEMPT_TIME_EXPIRED or ATTEMPT_NOT_ACTIVE unless the attempt is a draft.</summary>
+    public static void EnsureDraft(Attempt attempt)
+    {
+        if (!attempt.IsDraft)
+        {
+            throw new AppException(attempt.SubmitReason == SubmitReason.TimeExpired ? AttemptErrors.TimeExpired : AttemptErrors.NotActive);
+        }
+    }
+
     /// <summary>Stops with the matching api.md error unless <paramref name="clientId"/> may write to the attempt now.</summary>
     public static void EnsureWritable(Attempt attempt, string clientId)
     {
         var error = attempt.CheckWrite(clientId) switch
         {
+            AttemptWriteCheck.TimeExpired => AttemptErrors.TimeExpired,
             AttemptWriteCheck.NotActive => AttemptErrors.NotActive,
             AttemptWriteCheck.Paused => AttemptErrors.Paused,
             AttemptWriteCheck.OpenedElsewhere => AttemptErrors.OpenedElsewhere,

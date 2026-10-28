@@ -2,11 +2,14 @@ using FluentValidation;
 using Microsoft.Extensions.DependencyInjection;
 using Nclex.Application.Attempts;
 using Nclex.Application.Attempts.DiscardAttempt;
+using Nclex.Application.Attempts.Expiry;
 using Nclex.Application.Attempts.GetAttempt;
 using Nclex.Application.Attempts.GetItem;
 using Nclex.Application.Attempts.ListAttempts;
 using Nclex.Application.Attempts.Navigate;
 using Nclex.Application.Attempts.OpenAttempt;
+using Nclex.Application.Attempts.PauseAttempt;
+using Nclex.Application.Attempts.ResumeAttempt;
 using Nclex.Application.Attempts.SaveResponse;
 using Nclex.Application.Attempts.StartAttempt;
 using Nclex.Application.Attempts.UpdateItemMarks;
@@ -98,6 +101,7 @@ public static class DependencyInjection
 
         // Attempts
         services.AddScoped<AttemptStore>();
+        services.AddScoped<AttemptWriteGuard>();
         services.AddScoped<AttemptStateReader>();
         services.AddScoped<StartAttemptHandler>();
         services.AddScoped<ListAttemptsHandler>();
@@ -108,7 +112,10 @@ public static class DependencyInjection
         services.AddScoped<UpdateItemMarksHandler>();
         services.AddScoped<NavigateHandler>();
         services.AddScoped<DiscardAttemptHandler>();
+        services.AddScoped<PauseAttemptHandler>();
+        services.AddScoped<ResumeAttemptHandler>();
 
+        services.AddAttemptExpiry();
         services.AddContentImport();
 
         return services;
@@ -123,6 +130,18 @@ public static class DependencyInjection
         services.AddItemTypes();
         services.AddScoped<CatalogImporter>();
         services.AddScoped<ImportQuestionsHandler>();
+        return services;
+    }
+
+    /// <summary>
+    /// Registers what the expiry jobs need (architecture.md 5.1, rules 2 and 3), so the worker can run
+    /// them without the API's auth services. <see cref="AddApplication"/> includes it.
+    /// </summary>
+    public static IServiceCollection AddAttemptExpiry(this IServiceCollection services)
+    {
+        services.AddScoped<AttemptFinalizer>();
+        services.AddScoped<ExpireAttemptHandler>();
+        services.AddScoped<SweepExpiredAttemptsHandler>();
         return services;
     }
 

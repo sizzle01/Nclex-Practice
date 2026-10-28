@@ -28,7 +28,21 @@ public static class AttemptErrors
         AppErrorKind.Conflict,
         "This attempt has already been submitted or discarded.");
 
-    /// <summary>Item content is hidden while paused (PRD 5.4); pausing itself arrives in F09.</summary>
+    /// <summary>
+    /// The exam timer ran out and the attempt has been finalized (architecture.md 5.1). The player
+    /// routes to results on this code.
+    /// </summary>
+    public static readonly AppError TimeExpired = new(
+        "ATTEMPT_TIME_EXPIRED",
+        AppErrorKind.Conflict,
+        "The time limit for this attempt has passed.");
+
+    public static readonly AppError PauseLimitReached = new(
+        "PAUSE_LIMIT_REACHED",
+        AppErrorKind.Conflict,
+        "You have used all the pauses this test allows.");
+
+    /// <summary>Item content is hidden while paused (PRD 5.4).</summary>
     public static readonly AppError Paused = new(
         "ATTEMPT_PAUSED",
         AppErrorKind.Locked,
