@@ -133,7 +133,7 @@ public sealed class AttemptItem
             throw new InvalidOperationException($"Item {Position} has already been graded.");
         }
 
-        PointsEarned = grade.Points;
+        PointsEarned = ScoreMaths.Points(grade.Points);
         // Item maxima are small whole numbers (question_versions.max_points is a smallint).
         MaxPoints = (short)grade.MaxPoints;
         IsCorrect = grade.IsCorrect;

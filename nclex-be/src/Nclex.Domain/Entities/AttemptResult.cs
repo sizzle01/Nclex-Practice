@@ -61,15 +61,15 @@ public sealed class AttemptResult
         new()
         {
             AttemptId = attemptId,
-            PointsEarned = totals.PointsEarned,
-            MaxPoints = totals.MaxPoints,
+            PointsEarned = ScoreMaths.Points(totals.PointsEarned),
+            MaxPoints = ScoreMaths.Points(totals.MaxPoints),
             ScorePct = totals.ScorePct,
             ItemsCorrect = totals.ItemsCorrect,
             ItemsAnswered = totals.ItemsAnswered,
             ItemsTotal = totals.ItemsTotal,
             TotalTimeMs = totals.TotalTimeMs,
             AvgTimeMs = totals.AvgTimeMs,
-            PassThreshold = passThreshold,
+            PassThreshold = passThreshold is { } threshold ? ScoreMaths.Share(threshold) : null,
             Passed = readiness.Passed,
             ReadinessLabel = readiness.Label,
             GradedAt = gradedAt,

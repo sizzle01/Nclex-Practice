@@ -42,8 +42,8 @@ public sealed class AttemptCategoryScore
             DimensionKey = tally.Key,
             Items = tally.Items,
             ItemsCorrect = tally.ItemsCorrect,
-            PointsEarned = tally.PointsEarned,
-            MaxPoints = tally.MaxPoints,
+            PointsEarned = ScoreMaths.Points(tally.PointsEarned),
+            MaxPoints = ScoreMaths.Points(tally.MaxPoints),
             TimeMs = tally.TimeMs,
         };
 }
