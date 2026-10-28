@@ -97,6 +97,16 @@ export function UserMenu() {
             </Link>
           </li>
           <li>
+            <Link href="/performance" onClick={() => setOpen(false)}>
+              Performance
+            </Link>
+          </li>
+          <li>
+            <Link href="/history" onClick={() => setOpen(false)}>
+              History
+            </Link>
+          </li>
+          <li>
             <Link href="/settings/account" onClick={() => setOpen(false)}>
               Account settings
             </Link>

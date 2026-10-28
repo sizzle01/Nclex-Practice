@@ -1,13 +1,13 @@
 import type { Metadata } from "next";
 import { RequireAuth } from "@/features/auth/components/RequireAuth";
-import { DashboardPlaceholder } from "@/features/dashboard/components/DashboardPlaceholder";
+import { Dashboard } from "@/features/dashboard/components/Dashboard";
 
 export const metadata: Metadata = { title: "Dashboard | NCLEX Practice" };
 
 export default function DashboardPage() {
   return (
     <RequireAuth>
-      <DashboardPlaceholder />
+      <Dashboard />
     </RequireAuth>
   );
 }

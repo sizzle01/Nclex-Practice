@@ -28,6 +28,8 @@ function draft(overrides: Partial<AttemptSummary>): AttemptSummary {
     submittedAt: null,
     staleDraft: false,
     timeRemainingMs: null,
+    scorePct: null,
+    passed: null,
     ...overrides,
   };
 }

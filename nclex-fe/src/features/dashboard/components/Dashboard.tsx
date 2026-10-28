@@ -4,15 +4,17 @@ import Link from "next/link";
 import { useRef } from "react";
 import ui from "@/components/ui/ui.module.css";
 import { useMe } from "@/features/auth/AuthProvider";
-import styles from "./DashboardPlaceholder.module.css";
+import styles from "./Dashboard.module.css";
 import { DraftsList } from "./DraftsList";
+import { PerformanceOverview } from "./PerformanceOverview";
+import { RecentResults } from "./RecentResults";
 import { VerifyEmailBanner } from "./VerifyEmailBanner";
 
 /**
- * The dashboard so far: tests in progress (F08). Last results and weakest categories arrive with
- * results (F10) and performance (interfaces.md 5.2).
+ * /dashboard (interfaces.md 5.2): the verify-email banner, tests in progress, the latest results,
+ * and the overall score with the weakest categories.
  */
-export function DashboardPlaceholder() {
+export function Dashboard() {
   const { data: me } = useMe();
   const headingRef = useRef<HTMLHeadingElement>(null);
 
@@ -44,9 +46,23 @@ export function DashboardPlaceholder() {
             </Link>
           </p>
         </article>
-        <article className={`${ui.card} ${styles.empty}`}>
+        <article className={ui.card}>
+          <h2 className={ui.cardTitle}>Recent results</h2>
+          <RecentResults />
+          <p>
+            <Link href="/history" className={ui.buttonGhost}>
+              See all history
+            </Link>
+          </p>
+        </article>
+        <article className={ui.card}>
           <h2 className={ui.cardTitle}>Performance</h2>
-          <p className={ui.muted}>Once you finish a test, your strongest and weakest categories show up here.</p>
+          <PerformanceOverview />
+          <p>
+            <Link href="/performance" className={ui.buttonSecondary}>
+              See your performance
+            </Link>
+          </p>
         </article>
       </div>
     </section>
