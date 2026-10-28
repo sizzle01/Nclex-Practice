@@ -3,6 +3,7 @@ using System.Text.Json;
 using Nclex.Application;
 using Nclex.Application.Content.ImportQuestions;
 using Nclex.Infrastructure;
+using Nclex.Infrastructure.Content;
 
 namespace Nclex.Worker;
 
@@ -58,7 +59,9 @@ internal static class ImportQuestionsCommand
 
         await using var scope = host.Services.CreateAsyncScope();
         var handler = scope.ServiceProvider.GetRequiredService<ImportQuestionsHandler>();
-        var result = await handler.HandleAsync(file, CancellationToken.None);
+        // Media files and captions are listed relative to the import file's folder.
+        var files = new DirectoryContentFiles(Path.GetDirectoryName(path)!);
+        var result = await handler.HandleAsync(file, files, CancellationToken.None);
 
         if (!result.Succeeded)
         {
@@ -76,6 +79,7 @@ internal static class ImportQuestionsCommand
             $"Imported {file.Questions.Count} {file.Track} question(s): {result.Created} created, {result.Updated} updated, {result.Unchanged} unchanged."));
         PrintCounts("bank(s)", file.Banks?.Count ?? 0, result.Banks);
         PrintCounts("test set(s)", file.TestSets?.Count ?? 0, result.TestSets);
+        PrintCounts("media file(s)", file.Media?.Count ?? 0, result.Media);
         return Success;
     }
 

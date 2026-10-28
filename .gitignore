@@ -27,3 +27,6 @@ next-env.d.ts
 
 # Logs
 *.log
+
+# Local media storage (nclex-be/.local/media)
+.local/

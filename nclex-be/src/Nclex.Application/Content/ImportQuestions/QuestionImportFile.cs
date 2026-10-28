@@ -14,12 +14,14 @@ namespace Nclex.Application.Content.ImportQuestions;
 /// <param name="Notice">Free text for people reading the file, e.g. that it is sample content. Not stored.</param>
 /// <param name="Banks">Question banks to publish; none by default.</param>
 /// <param name="TestSets">Curated (prebuilt) test sets to publish; none by default.</param>
+/// <param name="Media">Images, audio and video that the questions' exhibits and options use; none by default.</param>
 public sealed record QuestionImportFile(
     ExamTrack Track,
     IReadOnlyList<ImportedQuestion> Questions,
     string? Notice = null,
     IReadOnlyList<ImportedBank>? Banks = null,
-    IReadOnlyList<ImportedTestSet>? TestSets = null)
+    IReadOnlyList<ImportedTestSet>? TestSets = null,
+    IReadOnlyList<ImportedMedia>? Media = null)
 {
     private static readonly JsonSerializerOptions Json = new(ItemJson.Options)
     {
@@ -66,6 +68,30 @@ public sealed record ImportedQuestion(
 {
     public const int DefaultTimeAllotmentSec = 120;
 }
+
+/// <summary>
+/// A media asset in an import file: a file beside the import file, stored as a media_assets row
+/// (database.md 2.4). Exhibits and options refer to it by <see cref="Id"/>.
+/// </summary>
+/// <param name="Id">Fixed id of the asset; exhibits use it as their mediaId.</param>
+/// <param name="Kind">image, audio or video.</param>
+/// <param name="File">Path of the file, relative to the import file's folder, e.g. "media/wound.png".</param>
+/// <param name="MimeType">e.g. "image/png" or "audio/wav"; it must match the kind.</param>
+/// <param name="AltText">Required for images.</param>
+/// <param name="CaptionsFile">Path of a WebVTT file; required for audio and video.</param>
+/// <param name="Width">Pixels, for images and video.</param>
+/// <param name="Height">Pixels, for images and video.</param>
+/// <param name="DurationMs">Length of an audio or video clip.</param>
+public sealed record ImportedMedia(
+    Guid Id,
+    string Kind,
+    string File,
+    string MimeType,
+    string? AltText = null,
+    string? CaptionsFile = null,
+    int? Width = null,
+    int? Height = null,
+    int? DurationMs = null);
 
 /// <summary>A question bank in an import file. It is published when imported.</summary>
 /// <param name="Id">Fixed id of the bank; reuse it to update the bank later.</param>

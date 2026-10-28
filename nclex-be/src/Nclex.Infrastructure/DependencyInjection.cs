@@ -1,3 +1,4 @@
+using System.Text;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
@@ -6,6 +7,7 @@ using Nclex.Domain.Entities;
 using Nclex.Domain.ItemTypes;
 using Nclex.Infrastructure.Audit;
 using Nclex.Infrastructure.Email;
+using Nclex.Infrastructure.Media;
 using Nclex.Infrastructure.Notifications;
 using Nclex.Infrastructure.Persistence;
 using Nclex.Infrastructure.RateLimiting;
@@ -43,6 +45,12 @@ public static class DependencyInjection
         services.AddScoped<IAuditLog, EfAuditLog>();
         services.AddScoped<INotificationPublisher, NoOpNotificationPublisher>();
 
+        // Both hosts store media: the worker's importer writes it and the API serves it.
+        services.AddOptions<MediaStorageOptions>()
+            .BindConfiguration(MediaStorageOptions.SectionName)
+            .Validate(o => !string.IsNullOrWhiteSpace(o.LocalRoot), "MediaStorage:LocalRoot is required.");
+        services.AddSingleton<IMediaStorage, LocalDiskMediaStorage>();
+
         // Redis only holds data that can be rebuilt (architecture.md section 3), so the app must
         // start and keep serving when Redis is down. AbortOnConnectFail = false makes the
         // multiplexer retry in the background instead of throwing at startup.
@@ -54,6 +62,21 @@ public static class DependencyInjection
         });
         services.AddSingleton<IRateLimitStore, RedisRateLimitStore>();
 
+        return services;
+    }
+
+    /// <summary>
+    /// Registers signed media links. Only the API serves media, so only it needs the signing key,
+    /// which it checks at startup.
+    /// </summary>
+    public static IServiceCollection AddMediaLinks(this IServiceCollection services)
+    {
+        services.AddOptions<MediaStorageOptions>()
+            .Validate(
+                o => Encoding.UTF8.GetByteCount(o.SigningKey) >= MediaStorageOptions.MinimumSigningKeyBytes,
+                $"MediaStorage:SigningKey must be at least {MediaStorageOptions.MinimumSigningKeyBytes} bytes.")
+            .ValidateOnStart();
+        services.AddSingleton<IMediaUrlSigner, HmacMediaUrlSigner>();
         return services;
     }
 
