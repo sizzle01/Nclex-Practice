@@ -187,3 +187,20 @@
   min-width: 10rem;
   padding: 0.25rem;
 }
+
+/* With exhibits or a case study: exhibits beside the question from 1024px (interfaces.md 5.3). */
+.split {
+  display: grid;
+  gap: 1rem;
+}
+
+.question {
+  min-width: 0;
+}
+
+@media (min-width: 1024px) {
+  .split:has(> aside) {
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+    align-items: start;
+  }
+}

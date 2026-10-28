@@ -13,6 +13,12 @@ public sealed record ImportResult(int Created, int Updated, int Unchanged, IRead
     /// <summary>What happened to the file's test sets.</summary>
     public ImportCounts TestSets { get; init; } = ImportCounts.None;
 
+    /// <summary>What happened to the file's media assets.</summary>
+    public ImportCounts Media { get; init; } = ImportCounts.None;
+
+    /// <summary>What happened to the file's case studies.</summary>
+    public ImportCounts CaseStudies { get; init; } = ImportCounts.None;
+
     public bool Succeeded => Issues.Count == 0;
 
     public static ImportResult Failed(IReadOnlyList<ImportIssue> issues) => new(0, 0, 0, issues);
@@ -49,4 +55,16 @@ public static class ImportIssueCodes
 
     /// <summary>A bank or set lists a question that is neither in the file nor published on the track.</summary>
     public const string UnknownQuestion = "UNKNOWN_QUESTION";
+
+    /// <summary>A file named in the import file is missing, or its path leaves the import file's folder.</summary>
+    public const string FileNotFound = "FILE_NOT_FOUND";
+
+    /// <summary>An exhibit or option uses a mediaId that is neither in the file nor already imported.</summary>
+    public const string UnknownMedia = "UNKNOWN_MEDIA";
+
+    /// <summary>A question names a case study that is neither in the file nor imported on the track.</summary>
+    public const string UnknownCaseStudy = "UNKNOWN_CASE_STUDY";
+
+    /// <summary>A curated set has only some of a case's questions, or not back to back in case order.</summary>
+    public const string CaseStudySplit = "CASE_STUDY_SPLIT";
 }

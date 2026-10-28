@@ -1,14 +1,16 @@
 using System.Text.Json;
 using Microsoft.EntityFrameworkCore;
 using Nclex.Application.Abstractions;
+using Nclex.Domain.Content;
 using Nclex.Domain.Entities;
 using Nclex.Domain.ItemTypes;
 
 namespace Nclex.Application.Content.ImportQuestions;
 
 /// <summary>
-/// Loads questions from an import file and publishes them, along with the file's banks and test
-/// sets (see <see cref="CatalogImporter"/>). The whole file is validated first and
+/// Loads questions from an import file and publishes them, along with the file's media, case
+/// studies, banks and test sets (see <see cref="MediaImporter"/>, <see cref="CaseStudyImporter"/>
+/// and <see cref="CatalogImporter"/>). The whole file is validated first and
 /// written in one transaction, so a file with any problem changes nothing. Importing the same file
 /// again changes nothing either: a question gets a new version only when its content changed.
 /// </summary>
@@ -16,9 +18,20 @@ namespace Nclex.Application.Content.ImportQuestions;
 /// The file stands in for the review workflow that admin authoring adds in F14, so it is meant for
 /// content the team has already reviewed, or for clearly marked sample content.
 /// </remarks>
-public sealed class ImportQuestionsHandler(IAppDbContext db, ItemTypeRegistry itemTypes, CatalogImporter catalog, TimeProvider clock)
+public sealed class ImportQuestionsHandler(
+    IAppDbContext db,
+    ItemTypeRegistry itemTypes,
+    CatalogImporter catalog,
+    MediaImporter mediaImporter,
+    CaseStudyImporter caseStudyImporter,
+    TimeProvider clock)
 {
-    public async Task<ImportResult> HandleAsync(QuestionImportFile file, CancellationToken cancellationToken)
+    /// <summary>Imports a file that has no files beside it, so it can't list media.</summary>
+    public Task<ImportResult> HandleAsync(QuestionImportFile file, CancellationToken cancellationToken) =>
+        HandleAsync(file, NoContentFiles.Instance, cancellationToken);
+
+    /// <summary>Imports a file whose media files are read from <paramref name="files"/>.</summary>
+    public async Task<ImportResult> HandleAsync(QuestionImportFile file, IContentFiles files, CancellationToken cancellationToken)
     {
         var tags = await LoadTagsAsync(file.Track, cancellationToken);
         var ids = file.Questions.Select(q => q.Id).ToList();
@@ -26,27 +39,38 @@ public sealed class ImportQuestionsHandler(IAppDbContext db, ItemTypeRegistry it
             .Where(q => ids.Contains(q.Id))
             .ToDictionaryAsync(q => q.Id, cancellationToken);
 
-        var validated = Validate(file, tags, existing, out var issues);
-        await catalog.ValidateAsync(file, issues, cancellationToken);
+        var validated = Validate(file, tags, existing, out var issues, out var mediaReferences);
+        // Before the media check, because scenarios show media too.
+        var cases = await caseStudyImporter.ValidateAsync(file, issues, mediaReferences, cancellationToken);
+        var media = await mediaImporter.ValidateAsync(file.Media, mediaReferences, files, issues, cancellationToken);
+        await catalog.ValidateAsync(file, cases, issues, cancellationToken);
         if (issues.Count > 0)
         {
             return ImportResult.Failed(issues);
         }
 
+        var now = clock.GetUtcNow();
         await using var transaction = await db.BeginTransactionAsync(cancellationToken);
-        var result = await WriteAsync(file, validated, existing, cancellationToken);
-        var (banks, testSets) = await catalog.WriteAsync(file, clock.GetUtcNow(), cancellationToken);
+        var author = await GetOrCreateImporterAsync(now, cancellationToken);
+        // Media first, so a stored file exists before any published question shows it.
+        var mediaCounts = await mediaImporter.WriteAsync(media, author.Id, now, cancellationToken);
+        // Case studies before questions, whose versions refer to them.
+        var caseCounts = await caseStudyImporter.WriteAsync(file, now, cancellationToken);
+        var result = await WriteAsync(file, validated, existing, author, now, cancellationToken);
+        var (banks, testSets) = await catalog.WriteAsync(file, now, cancellationToken);
         await transaction.CommitAsync(cancellationToken);
-        return result with { Banks = banks, TestSets = testSets };
+        return result with { Banks = banks, TestSets = testSets, Media = mediaCounts, CaseStudies = caseCounts };
     }
 
     private List<(ImportedQuestion Source, AuthoredItem Item)> Validate(
         QuestionImportFile file,
         ImportTags tags,
         Dictionary<Guid, Question> existing,
-        out List<ImportIssue> issues)
+        out List<ImportIssue> issues,
+        out List<MediaReference> mediaReferences)
     {
         issues = [];
+        mediaReferences = [];
         var validated = new List<(ImportedQuestion, AuthoredItem)>();
         if (file.Questions.Count == 0)
         {
@@ -73,7 +97,7 @@ public sealed class ImportQuestionsHandler(IAppDbContext db, ItemTypeRegistry it
                 issues.Add(new ImportIssue($"{path}.id", ImportIssueCodes.TrackMismatch, $"Question {question.Id} already exists on the {current.Track} track."));
             }
 
-            var item = ValidateQuestion(question, path, tags, issues);
+            var item = ValidateQuestion(question, path, tags, issues, mediaReferences);
             if (item is not null && issues.Count == before)
             {
                 validated.Add((question, item));
@@ -84,7 +108,12 @@ public sealed class ImportQuestionsHandler(IAppDbContext db, ItemTypeRegistry it
     }
 
     // Returns the item ready to save, or null when the item-type checks could not run.
-    private AuthoredItem? ValidateQuestion(ImportedQuestion question, string path, ImportTags tags, List<ImportIssue> issues)
+    private AuthoredItem? ValidateQuestion(
+        ImportedQuestion question,
+        string path,
+        ImportTags tags,
+        List<ImportIssue> issues,
+        List<MediaReference> mediaReferences)
     {
         if (string.IsNullOrWhiteSpace(question.Stem))
         {
@@ -102,10 +131,10 @@ public sealed class ImportQuestionsHandler(IAppDbContext db, ItemTypeRegistry it
         }
 
         var exhibits = question.Exhibits ?? JsonSerializer.SerializeToElement(Array.Empty<object>());
-        if (exhibits.ValueKind != JsonValueKind.Array)
-        {
-            issues.Add(new ImportIssue($"{path}.exhibits", ImportIssueCodes.InvalidValue, "Exhibits must be a JSON array."));
-        }
+        var exhibitCheck = ExhibitRules.Check(exhibits);
+        issues.AddRange(exhibitCheck.Issues.Select(issue => new ImportIssue($"{path}.{issue.Path}", issue.Code, issue.Message)));
+        mediaReferences.AddRange(exhibitCheck.Media.Concat(ExhibitRules.MediaInContent(question.Content))
+            .Select(reference => reference with { Path = $"{path}.{reference.Path}" }));
 
         if (!tags.LeafIdsByCode.TryGetValue(question.ClientNeeds, out var clientNeedsId))
         {
@@ -159,17 +188,18 @@ public sealed class ImportQuestionsHandler(IAppDbContext db, ItemTypeRegistry it
             question.CjmmSkill,
             question.Difficulty,
             question.TimeAllotmentSec,
-            (short)module.MaxPoints(question.Content, question.Key));
+            (short)module.MaxPoints(question.Content, question.Key),
+            question.CaseStudyId is { } caseId && question.CasePosition is { } position ? new CasePlacement(caseId, position) : null);
     }
 
     private async Task<ImportResult> WriteAsync(
         QuestionImportFile file,
         List<(ImportedQuestion Source, AuthoredItem Item)> questions,
         Dictionary<Guid, Question> existing,
+        User author,
+        DateTimeOffset now,
         CancellationToken cancellationToken)
     {
-        var now = clock.GetUtcNow();
-        var author = await GetOrCreateImporterAsync(now, cancellationToken);
         var currentVersions = await LoadCurrentVersionsAsync(existing.Values, cancellationToken);
         var latestVersionNumbers = await db.QuestionVersions
             .Where(v => existing.Keys.Contains(v.QuestionId))

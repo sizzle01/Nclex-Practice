@@ -105,6 +105,16 @@ export async function setFlagged(attemptId: string, clientId: string, position: 
   throw ApiError.from(response, error);
 }
 
+/** PATCH …/items/{position}: replaces the item's struck-through options (the strike-through tool). */
+export async function setStruckOptions(attemptId: string, clientId: string, position: number, struckOptions: string[]) {
+  const { data, error, response } = await apiClient.PATCH("/api/v1/attempts/{id}/items/{position}", {
+    params: { path: { id: attemptId, position }, header: { "X-Attempt-Client": clientId } },
+    body: { struckOptions },
+  });
+  if (data) return data;
+  throw ApiError.from(response, error);
+}
+
 /** POST /attempts/{id}/pause: a break or Save & Exit; both freeze the timers and use up a pause. */
 export async function pauseAttempt(attemptId: string, clientId: string, reason: PauseReason): Promise<PauseResult> {
   const { data, error, response } = await apiClient.POST("/api/v1/attempts/{id}/pause", {

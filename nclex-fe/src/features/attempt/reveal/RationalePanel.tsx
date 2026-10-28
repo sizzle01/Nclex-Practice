@@ -1,12 +1,14 @@
 import { toNumber } from "@/lib/format/toNumber";
 import type { ItemReveal } from "../api/attemptApi";
-import { optionMarkLabels, optionMarks } from "../renderers/revealMarks";
-import type { Option } from "../renderers/types";
+import { choiceLabels } from "@/features/player/renderers/choiceLabels";
+import { choiceMarks, optionMarkLabels } from "@/features/player/renderers/revealMarks";
+import type { ItemType } from "@/features/player/renderers/types";
 import styles from "./reveal.module.css";
 
 interface RationalePanelProps {
   reveal: ItemReveal;
-  /** The item's content; its options, when it has them, give each "why" its option text. */
+  itemType: ItemType;
+  /** The item's content, which gives each "why" the text of its option, cell, blank choice or segment. */
   content: unknown;
 }
 
@@ -14,9 +16,9 @@ interface RationalePanelProps {
  * The rationale shown after the reveal (interfaces.md 5.3, RationalePanel): how the answer scored,
  * why the right answer is right, a "why" for every option (PRD 5.1) and the educational objective.
  */
-export function RationalePanel({ reveal, content }: RationalePanelProps) {
-  const marks = optionMarks(reveal);
-  const optionText = new Map(optionsOf(content).map((o) => [o.id, o.text]));
+export function RationalePanel({ reveal, itemType, content }: RationalePanelProps) {
+  const marks = choiceMarks(itemType, reveal);
+  const optionText = choiceLabels(itemType, content);
   const perOption = Object.entries(reveal.rationale.perOption);
 
   return (
@@ -56,9 +58,4 @@ export function outcomeText(reveal: ItemReveal): string {
 
 function formatPoints(value: number): string {
   return Number.isInteger(value) ? String(value) : value.toFixed(2);
-}
-
-function optionsOf(content: unknown): Option[] {
-  const options = (content as { options?: unknown } | null)?.options;
-  return Array.isArray(options) ? (options as Option[]) : [];
 }

@@ -23,12 +23,16 @@ public sealed class TimedTestHost : IAsyncDisposable
             services.Replace(ServiceDescriptor.Singleton<TimeProvider>(Clock));
             services.Replace(ServiceDescriptor.Singleton<IJobScheduler>(Jobs));
         }));
-        Attempts = new AttemptsApi(factory, new AuthApi(_host));
+        Auth = new AuthApi(_host);
+        Attempts = new AttemptsApi(factory, Auth);
     }
 
     public ManualTimeProvider Clock { get; }
 
     public RecordingJobScheduler Jobs { get; } = new();
+
+    /// <summary>Calls this host as a signed-in user, or anonymously.</summary>
+    public AuthApi Auth { get; }
 
     /// <summary>Calls the attempt endpoints of this host.</summary>
     public AttemptsApi Attempts { get; }

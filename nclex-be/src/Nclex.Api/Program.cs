@@ -65,6 +65,7 @@ try
     // Client only: the API schedules expiry jobs and Nclex.Worker runs them.
     builder.Services.AddJobScheduling();
     builder.Services.AddSecurity();
+    builder.Services.AddMediaLinks();
     builder.Services.AddApiAuth();
     builder.Services.AddApiRateLimiting();
     builder.Services.AddReadinessChecks();

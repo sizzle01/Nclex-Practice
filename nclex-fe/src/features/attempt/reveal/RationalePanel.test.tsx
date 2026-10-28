@@ -34,7 +34,7 @@ describe("RationalePanel", () => {
   it("explains the answer, every option with its text and mark, and the objective", () => {
     const content = { options: [{ id: "a", text: "Reposition the client" }, { id: "b", text: "Open the airway" }] };
 
-    render(<RationalePanel reveal={reveal(0, 1, false)} content={content} />);
+    render(<RationalePanel reveal={reveal(0, 1, false)} itemType="multiple_choice" content={content} />);
 
     expect(screen.getByRole("heading", { name: "Incorrect: 0 of 1 point" })).toBeInTheDocument();
     expect(screen.getByText("B protects the airway first.")).toBeInTheDocument();
@@ -46,7 +46,7 @@ describe("RationalePanel", () => {
   });
 
   it("falls back to option ids when the content has no options list", () => {
-    render(<RationalePanel reveal={reveal(1, 1, true)} content={{ blanks: [] }} />);
+    render(<RationalePanel reveal={reveal(1, 1, true)} itemType="multiple_choice" content={{ blanks: [] }} />);
 
     expect(screen.getByText("A can wait.").previousSibling).toHaveTextContent("a");
   });

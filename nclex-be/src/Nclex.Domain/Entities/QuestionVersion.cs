@@ -107,6 +107,8 @@ public sealed class QuestionVersion
             Difficulty = item.Difficulty,
             TimeAllotmentSec = item.TimeAllotmentSec,
             MaxPoints = item.MaxPoints,
+            CaseStudyId = item.Case?.CaseStudyId,
+            CasePosition = item.Case?.Position,
             AuthorId = authorId,
             ReviewNotes = ImportedReviewNote,
             ReviewedAt = now,
@@ -127,6 +129,8 @@ public sealed class QuestionVersion
         && Difficulty == item.Difficulty
         && TimeAllotmentSec == item.TimeAllotmentSec
         && MaxPoints == item.MaxPoints
+        && CaseStudyId == item.Case?.CaseStudyId
+        && CasePosition == item.Case?.Position
         && JsonElement.DeepEquals(Content.RootElement, item.Content)
         && JsonElement.DeepEquals(AnswerKey.RootElement, item.AnswerKey)
         && JsonElement.DeepEquals(Rationale.RootElement, item.Rationale)

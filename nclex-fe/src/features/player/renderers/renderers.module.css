@@ -1,0 +1,390 @@
+.options {
+  display: grid;
+  gap: 0.625rem;
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
+/* 44px or more hit targets (interfaces.md section 4); the whole row is the label. */
+.option {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  min-height: 2.75rem;
+  padding: 0.625rem 0.875rem;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  background: var(--surface);
+  cursor: pointer;
+}
+
+.option:has(input:checked) {
+  border-color: var(--accent);
+  background: var(--accent-soft);
+}
+
+.option:has(input:focus-visible) {
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
+}
+
+.option:has(input:disabled) {
+  cursor: default;
+  opacity: 0.8;
+}
+
+.option input {
+  width: 1.125rem;
+  height: 1.125rem;
+  margin: 0;
+  accent-color: var(--accent);
+}
+
+.struck {
+  text-decoration: line-through;
+  color: var(--muted);
+}
+
+.instructions {
+  margin: 0 0 0.75rem;
+  color: var(--muted);
+}
+
+/* Reveal marks (F10): the text says right or wrong; colour only reinforces it. */
+.mark {
+  margin-left: auto;
+  font-size: 0.875rem;
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+.correct,
+.missed {
+  color: var(--success);
+}
+
+.incorrect {
+  color: var(--error);
+}
+
+/* ---- F11: shared pieces ---- */
+
+/* Hidden visually but still read by screen readers (live regions). */
+.visuallyHidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+/* An option and its strike button side by side. */
+.optionRow {
+  display: flex;
+  align-items: stretch;
+  gap: 0.5rem;
+}
+
+.optionRow > .option {
+  flex: 1;
+  min-width: 0;
+}
+
+.optionImage {
+  display: block;
+  max-width: min(100%, 16rem);
+  height: auto;
+  margin-bottom: 0.375rem;
+}
+
+.strikeButton {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.25rem;
+  min-width: 2.75rem;
+  min-height: 2.75rem;
+  padding: 0 0.625rem;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  background: var(--surface);
+  color: var(--muted);
+  font: inherit;
+  font-size: 0.8125rem;
+  cursor: pointer;
+}
+
+.strikeButton[aria-pressed="true"] {
+  border-color: var(--foreground);
+  color: var(--foreground);
+}
+
+.strikeIcon {
+  font-weight: 700;
+  text-decoration: line-through;
+}
+
+.strikeButton:focus-visible,
+.segment:focus-visible,
+.rowToggle:focus-visible,
+.moveButton:focus-visible,
+.handle:focus-visible,
+.keepOrder:focus-visible,
+.select:focus-visible,
+.calcInput input:focus-visible,
+.cellLabel:has(input:focus-visible) {
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
+}
+
+.groups {
+  display: grid;
+  gap: 1rem;
+}
+
+.fieldset {
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
+.legend {
+  margin-bottom: 0.5rem;
+  padding: 0;
+  font-weight: 650;
+}
+
+.expected {
+  font-size: 0.875rem;
+  font-weight: 600;
+}
+
+/* ---- Tables (matrix, drop-down table, highlight table) ---- */
+
+/* Wide tables scroll inside their own box, never the page (text scaled to 200%, interfaces.md 4). */
+.tableScroll {
+  max-width: 100%;
+  overflow-x: auto;
+}
+
+.table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.table th,
+.table td {
+  padding: 0.5rem 0.75rem;
+  border: 1px solid var(--border);
+  text-align: left;
+  vertical-align: middle;
+}
+
+.table thead th {
+  background: var(--surface-muted);
+  font-weight: 650;
+}
+
+.cell {
+  padding: 0 !important;
+  text-align: center;
+}
+
+/* The whole cell is the hit target (44px or more). */
+.cellLabel {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 0.25rem;
+  min-width: 2.75rem;
+  min-height: 2.75rem;
+  padding: 0.25rem;
+  cursor: pointer;
+}
+
+.cellLabel input {
+  width: 1.125rem;
+  height: 1.125rem;
+  margin: 0;
+  accent-color: var(--accent);
+}
+
+.cellLabel .mark {
+  margin-left: 0;
+  font-size: 0.75rem;
+}
+
+/* ---- Drop-downs ---- */
+
+.cloze {
+  line-height: 2.75;
+}
+
+.blank {
+  display: inline-flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.25rem;
+}
+
+.select {
+  min-height: 2.75rem;
+  max-width: 100%;
+  padding: 0 0.5rem;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  background: var(--surface);
+  color: inherit;
+  font: inherit;
+}
+
+/* ---- Highlight ---- */
+
+.passage {
+  line-height: 2.25;
+}
+
+/* A selectable segment reads as text with a dotted underline, so candidates can see it is selectable. */
+.segment {
+  padding: 0.25rem 0.125rem;
+  border: 0;
+  border-bottom: 2px dotted var(--muted);
+  background: none;
+  color: inherit;
+  font: inherit;
+  text-align: left;
+  cursor: pointer;
+}
+
+.segment[aria-pressed="true"],
+.highlightedRow td {
+  background: var(--warning-soft);
+}
+
+.segment[aria-pressed="true"] {
+  border-bottom-style: solid;
+  border-bottom-color: var(--warning);
+}
+
+.rowToggle {
+  min-width: 2.75rem;
+  min-height: 2.75rem;
+  padding: 0 0.625rem;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  background: var(--surface);
+  color: inherit;
+  font: inherit;
+  cursor: pointer;
+}
+
+.rowToggle[aria-pressed="true"] {
+  border-color: var(--warning);
+  font-weight: 650;
+}
+
+/* ---- Calculation ---- */
+
+.calcLabel {
+  display: block;
+  margin-bottom: 0.375rem;
+  font-weight: 600;
+}
+
+.calcInput {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.calcInput input {
+  width: 10rem;
+  min-height: 2.75rem;
+  padding: 0 0.75rem;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  background: var(--surface);
+  color: inherit;
+  font: inherit;
+}
+
+.unit {
+  font-weight: 600;
+}
+
+/* ---- Ordered response ---- */
+
+.orderedList {
+  display: grid;
+  gap: 0.5rem;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.orderedItem {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.75rem;
+  min-height: 2.75rem;
+  padding: 0.5rem 0.75rem;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  background: var(--surface);
+}
+
+.dragging {
+  position: relative;
+  z-index: 1;
+  box-shadow: var(--shadow);
+}
+
+.orderedNumber {
+  min-width: 1.5rem;
+  font-weight: 700;
+}
+
+.orderedText {
+  flex: 1;
+  min-width: 10rem;
+}
+
+.orderedControls {
+  display: flex;
+  gap: 0.375rem;
+}
+
+.handle,
+.moveButton,
+.keepOrder {
+  min-width: 2.75rem;
+  min-height: 2.75rem;
+  padding: 0 0.625rem;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  background: var(--surface);
+  color: inherit;
+  font: inherit;
+  font-size: 0.875rem;
+  cursor: pointer;
+}
+
+.handle {
+  cursor: grab;
+  touch-action: none;
+}
+
+.moveButton:disabled {
+  cursor: default;
+  opacity: 0.5;
+}
+
+.keepOrder {
+  margin-top: 0.75rem;
+}

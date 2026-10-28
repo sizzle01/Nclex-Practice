@@ -270,7 +270,74 @@
           "SAMPLE CONTENT: written for development and testing, not reviewed by a nurse educator. Do not use for exam preparation."
         ]
       },
-      "educationalObjective": "Check the apical pulse for a full minute before giving digoxin and hold it for an adult rate below 60/min."
+      "educationalObjective": "Check the apical pulse for a full minute before giving digoxin and hold it for an adult rate below 60/min.",
+      "exhibits": [
+        {
+          "id": "vitals",
+          "kind": "flowsheet",
+          "title": "Vital signs",
+          "table": {
+            "columns": [
+              "Day 1 08:00",
+              "Day 2 08:00",
+              "Day 3 08:00"
+            ],
+            "rows": [
+              {
+                "label": "Apical pulse (/min)",
+                "cells": [
+                  "74",
+                  "63",
+                  "52"
+                ]
+              },
+              {
+                "label": "Blood pressure (mm Hg)",
+                "cells": [
+                  "132/80",
+                  "128/78",
+                  "124/76"
+                ]
+              },
+              {
+                "label": "Respiratory rate (/min)",
+                "cells": [
+                  "18",
+                  "18",
+                  "16"
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "id": "labs",
+          "kind": "table",
+          "title": "Laboratory results, Day 3",
+          "table": {
+            "columns": [
+              "Result",
+              "Reference range"
+            ],
+            "rows": [
+              {
+                "label": "Potassium",
+                "cells": [
+                  "3.4 mEq/L",
+                  "3.5–5.0 mEq/L"
+                ]
+              },
+              {
+                "label": "Digoxin level",
+                "cells": [
+                  "1.8 ng/mL",
+                  "0.5–2.0 ng/mL"
+                ]
+              }
+            ]
+          }
+        }
+      ]
     },
     {
       "id": "f04a0000-0000-4000-8000-000000000007",
@@ -736,7 +803,15 @@
           "SAMPLE CONTENT: written for development and testing, not reviewed by a nurse educator. Do not use for exam preparation."
         ]
       },
-      "educationalObjective": "Choose evidence-based measures to prevent pressure injuries."
+      "educationalObjective": "Choose evidence-based measures to prevent pressure injuries.",
+      "exhibits": [
+        {
+          "id": "sacrum",
+          "kind": "image",
+          "title": "Sacral skin, day 3 of bed rest",
+          "mediaId": "f11a0000-0000-4000-8000-000000000001"
+        }
+      ]
     },
     {
       "id": "f04a0000-0000-4000-8000-000000000016",
@@ -963,7 +1038,15 @@
           "SAMPLE CONTENT: written for development and testing, not reviewed by a nurse educator. Do not use for exam preparation."
         ]
       },
-      "educationalObjective": "Tell left-sided from right-sided heart failure by where fluid backs up."
+      "educationalObjective": "Tell left-sided from right-sided heart failure by where fluid backs up.",
+      "exhibits": [
+        {
+          "id": "lungs",
+          "kind": "audio",
+          "title": "Lung sounds, posterior bases",
+          "mediaId": "f11a0000-0000-4000-8000-000000000002"
+        }
+      ]
     },
     {
       "id": "f04a0000-0000-4000-8000-000000000020",
@@ -1197,7 +1280,9 @@
           "SAMPLE CONTENT: written for development and testing, not reviewed by a nurse educator. Do not use for exam preparation."
         ]
       },
-      "educationalObjective": "Tell left-sided from right-sided heart failure by where fluid backs up."
+      "educationalObjective": "Tell left-sided from right-sided heart failure by where fluid backs up.",
+      "caseStudyId": "f11c0000-0000-4000-8000-000000000001",
+      "casePosition": 2
     },
     {
       "id": "f05a0000-0000-4000-8000-000000000004",
@@ -1261,7 +1346,51 @@
           "SAMPLE CONTENT: written for development and testing, not reviewed by a nurse educator. Do not use for exam preparation."
         ]
       },
-      "educationalObjective": "Know the nursing care of a client with DVT receiving heparin."
+      "educationalObjective": "Know the nursing care of a client with DVT receiving heparin.",
+      "exhibits": [
+        {
+          "id": "aptt",
+          "kind": "flowsheet",
+          "title": "Anticoagulation",
+          "table": {
+            "columns": [
+              "06:00",
+              "12:00",
+              "18:00",
+              "00:00"
+            ],
+            "rows": [
+              {
+                "label": "aPTT (seconds)",
+                "cells": [
+                  "31",
+                  "54",
+                  "68",
+                  "72"
+                ]
+              },
+              {
+                "label": "Heparin infusion (units/hr)",
+                "cells": [
+                  "1,000",
+                  "1,200",
+                  "1,200",
+                  "1,200"
+                ]
+              },
+              {
+                "label": "Platelets (×10³/µL)",
+                "cells": [
+                  "228",
+                  "—",
+                  "221",
+                  "—"
+                ]
+              }
+            ]
+          }
+        }
+      ]
     },
     {
       "id": "f05a0000-0000-4000-8000-000000000005",
@@ -1620,7 +1749,9 @@
           "SAMPLE CONTENT: written for development and testing, not reviewed by a nurse educator. Do not use for exam preparation."
         ]
       },
-      "educationalObjective": "Evaluate heart failure discharge teaching."
+      "educationalObjective": "Evaluate heart failure discharge teaching.",
+      "caseStudyId": "f11c0000-0000-4000-8000-000000000001",
+      "casePosition": 5
     },
     {
       "id": "f05a0000-0000-4000-8000-000000000009",
@@ -1689,7 +1820,15 @@
           "SAMPLE CONTENT: written for development and testing, not reviewed by a nurse educator. Do not use for exam preparation."
         ]
       },
-      "educationalObjective": "Recognize hypoglycemia and its confirming finding."
+      "educationalObjective": "Recognize hypoglycemia and its confirming finding.",
+      "exhibits": [
+        {
+          "id": "note",
+          "kind": "text",
+          "title": "Nurse's note, 13:10",
+          "body": "Client reports feeling shaky and \"not right\". Took 8 units of rapid-acting insulin at 11:00 and did not eat lunch.\n\nSkin cool and clammy. Alert and oriented, speaking in full sentences. Capillary glucose 52 mg/dL."
+        }
+      ]
     },
     {
       "id": "f05a0000-0000-4000-8000-000000000010",
@@ -2508,6 +2647,564 @@
         ]
       },
       "educationalObjective": "Follow the basic life support sequence."
+    },
+    {
+      "id": "f11b0000-0000-4000-8000-000000000001",
+      "itemType": "highlight_text",
+      "clientNeeds": "PHI.PA",
+      "bodySystem": "cardiovascular",
+      "cjmmSkill": "recognize_cues",
+      "difficulty": "moderate",
+      "stem": "Highlight the findings in the emergency department note that require immediate follow-up by the nurse.",
+      "content": {
+        "segments": [
+          {
+            "id": "s1",
+            "text": "74-year-old client with heart failure. ",
+            "selectable": false
+          },
+          {
+            "id": "s2",
+            "text": "Short of breath for 3 days, worse when lying flat",
+            "selectable": true
+          },
+          {
+            "id": "s3",
+            "text": ". ",
+            "selectable": false
+          },
+          {
+            "id": "s4",
+            "text": "Weight up 2.5 kg (5.5 lb) in 4 days",
+            "selectable": true
+          },
+          {
+            "id": "s5",
+            "text": ". ",
+            "selectable": false
+          },
+          {
+            "id": "s6",
+            "text": "Alert and oriented",
+            "selectable": true
+          },
+          {
+            "id": "s7",
+            "text": ". ",
+            "selectable": false
+          },
+          {
+            "id": "s8",
+            "text": "Coughing up pink, frothy sputum",
+            "selectable": true
+          },
+          {
+            "id": "s9",
+            "text": ". ",
+            "selectable": false
+          },
+          {
+            "id": "s10",
+            "text": "Temperature 36.9 °C",
+            "selectable": true
+          },
+          {
+            "id": "s11",
+            "text": ". ",
+            "selectable": false
+          },
+          {
+            "id": "s12",
+            "text": "SpO2 88% on room air",
+            "selectable": true
+          },
+          {
+            "id": "s13",
+            "text": ". ",
+            "selectable": false
+          },
+          {
+            "id": "s14",
+            "text": "Troponin I below 0.01 ng/mL",
+            "selectable": true
+          },
+          {
+            "id": "s15",
+            "text": ".",
+            "selectable": false
+          }
+        ]
+      },
+      "key": {
+        "correct": [
+          "s2",
+          "s4",
+          "s8",
+          "s12"
+        ]
+      },
+      "rationale": {
+        "correct": "Orthopnea, rapid weight gain, frothy sputum and low oxygen saturation are cues of worsening fluid overload with pulmonary congestion.",
+        "perOption": {
+          "s2": "Breathlessness that worsens lying flat (orthopnea) signals pulmonary congestion.",
+          "s4": "A gain of more than 1 kg in a day or 2 kg in a week signals fluid retention.",
+          "s6": "Being alert and oriented is expected and needs no immediate action.",
+          "s8": "Pink, frothy sputum is a sign of pulmonary edema.",
+          "s10": "The temperature is normal, which makes infection less likely.",
+          "s12": "An SpO2 of 88% on room air shows impaired gas exchange.",
+          "s14": "A normal troponin makes acute myocardial injury less likely."
+        },
+        "references": [
+          "SAMPLE CONTENT: written for development and testing, not reviewed by a nurse educator. Do not use for exam preparation."
+        ]
+      },
+      "educationalObjective": "Recognize the cues of worsening heart failure in a nursing note.",
+      "caseStudyId": "f11c0000-0000-4000-8000-000000000001",
+      "casePosition": 1
+    },
+    {
+      "id": "f11b0000-0000-4000-8000-000000000002",
+      "itemType": "dropdown_cloze",
+      "clientNeeds": "PHI.PA",
+      "bodySystem": "cardiovascular",
+      "cjmmSkill": "prioritize_hypotheses",
+      "difficulty": "moderate",
+      "stem": "Complete the sentence by choosing from the lists of options.",
+      "content": {
+        "template": "The client is at highest risk for {{b1}}, as shown by {{b2}}.",
+        "blanks": [
+          {
+            "id": "b1",
+            "options": [
+              {
+                "id": "a",
+                "text": "acute pulmonary edema"
+              },
+              {
+                "id": "b",
+                "text": "pneumonia"
+              },
+              {
+                "id": "c",
+                "text": "acute myocardial infarction"
+              }
+            ]
+          },
+          {
+            "id": "b2",
+            "options": [
+              {
+                "id": "a",
+                "text": "pink, frothy sputum with an SpO2 of 88%"
+              },
+              {
+                "id": "b",
+                "text": "a temperature of 36.9 °C"
+              },
+              {
+                "id": "c",
+                "text": "a troponin I below 0.01 ng/mL"
+              }
+            ]
+          }
+        ]
+      },
+      "key": {
+        "byBlank": {
+          "b1": "a",
+          "b2": "a"
+        }
+      },
+      "rationale": {
+        "correct": "Fluid backing up into the lungs from left-sided failure causes pulmonary edema, which threatens oxygenation first.",
+        "perOption": {
+          "b1:a": "Orthopnea, frothy sputum, crackles and hypoxemia after stopping a diuretic point to pulmonary edema.",
+          "b1:b": "Pneumonia usually brings fever and purulent sputum; the temperature is normal.",
+          "b1:c": "A normal troponin makes an acute myocardial infarction less likely.",
+          "b2:a": "Frothy sputum and hypoxemia are signs of fluid in the alveoli.",
+          "b2:b": "A normal temperature does not support any of the hypotheses.",
+          "b2:c": "A normal troponin argues against myocardial infarction rather than for a risk."
+        },
+        "references": [
+          "SAMPLE CONTENT: written for development and testing, not reviewed by a nurse educator. Do not use for exam preparation."
+        ]
+      },
+      "educationalObjective": "Prioritize pulmonary edema as the most urgent risk in decompensated heart failure.",
+      "caseStudyId": "f11c0000-0000-4000-8000-000000000001",
+      "casePosition": 3
+    },
+    {
+      "id": "f11b0000-0000-4000-8000-000000000003",
+      "itemType": "matrix_mr",
+      "clientNeeds": "PHI.PPT",
+      "bodySystem": "cardiovascular",
+      "cjmmSkill": "generate_solutions",
+      "difficulty": "difficult",
+      "stem": "For each intervention, select the expected effect or effects for this client. Each intervention may have more than one.",
+      "content": {
+        "rows": [
+          {
+            "id": "r1",
+            "text": "Furosemide 40 mg IV"
+          },
+          {
+            "id": "r2",
+            "text": "Oxygen to keep SpO2 at or above 92%"
+          },
+          {
+            "id": "r3",
+            "text": "High-Fowler's position"
+          },
+          {
+            "id": "r4",
+            "text": "Fluid restriction of 1.5 L/day"
+          }
+        ],
+        "columns": [
+          {
+            "id": "c1",
+            "text": "Decreases fluid volume"
+          },
+          {
+            "id": "c2",
+            "text": "Improves gas exchange directly"
+          },
+          {
+            "id": "c3",
+            "text": "Decreases venous return to the heart"
+          }
+        ],
+        "groupAxis": "row"
+      },
+      "key": {
+        "byGroup": {
+          "r1": [
+            "r1:c1",
+            "r1:c3"
+          ],
+          "r2": [
+            "r2:c2"
+          ],
+          "r3": [
+            "r3:c2",
+            "r3:c3"
+          ],
+          "r4": [
+            "r4:c1"
+          ]
+        }
+      },
+      "rationale": {
+        "correct": "Each intervention targets the fluid overload, the congested lungs, or the preload behind them.",
+        "perOption": {
+          "r1:c1": "Furosemide is a loop diuretic that removes excess fluid.",
+          "r1:c2": "Gas exchange improves only later, as the diuresis clears the lungs; furosemide does not act on it directly.",
+          "r1:c3": "Diuresis lowers the blood volume returning to the heart.",
+          "r2:c1": "Oxygen does not change fluid volume.",
+          "r2:c2": "Supplemental oxygen raises the oxygen available for exchange.",
+          "r2:c3": "Oxygen does not change venous return.",
+          "r3:c1": "Positioning does not remove fluid.",
+          "r3:c2": "Sitting upright lets the diaphragm descend and the lungs expand.",
+          "r3:c3": "Sitting upright pools blood in the legs, reducing venous return.",
+          "r4:c1": "Limiting intake keeps fluid volume from building up again.",
+          "r4:c2": "A fluid restriction does not act directly on gas exchange.",
+          "r4:c3": "The restriction works over days, not as a direct reduction in venous return."
+        },
+        "references": [
+          "SAMPLE CONTENT: written for development and testing, not reviewed by a nurse educator. Do not use for exam preparation."
+        ]
+      },
+      "educationalObjective": "Link each heart failure intervention to the effect it is expected to have.",
+      "caseStudyId": "f11c0000-0000-4000-8000-000000000001",
+      "casePosition": 4
+    },
+    {
+      "id": "f11b0000-0000-4000-8000-000000000004",
+      "itemType": "matrix_mc",
+      "clientNeeds": "PHI.PA",
+      "bodySystem": "cardiovascular",
+      "cjmmSkill": "evaluate_outcomes",
+      "difficulty": "moderate",
+      "stem": "On day 2, the nurse reassesses the client. For each finding, indicate whether it has improved, not changed or worsened since admission.",
+      "content": {
+        "rows": [
+          {
+            "id": "r1",
+            "text": "Weight"
+          },
+          {
+            "id": "r2",
+            "text": "Oxygen saturation"
+          },
+          {
+            "id": "r3",
+            "text": "Lung sounds"
+          },
+          {
+            "id": "r4",
+            "text": "Ankle edema"
+          },
+          {
+            "id": "r5",
+            "text": "Potassium"
+          }
+        ],
+        "columns": [
+          {
+            "id": "c1",
+            "text": "Improved"
+          },
+          {
+            "id": "c2",
+            "text": "Not changed"
+          },
+          {
+            "id": "c3",
+            "text": "Worsened"
+          }
+        ]
+      },
+      "key": {
+        "byRow": {
+          "r1": "c1",
+          "r2": "c1",
+          "r3": "c1",
+          "r4": "c2",
+          "r5": "c3"
+        }
+      },
+      "rationale": {
+        "correct": "Diuresis has reduced weight and pulmonary congestion; edema has not yet resolved, and potassium has fallen as an effect of furosemide.",
+        "perOption": {
+          "r1:c1": "A loss of 2.3 kg shows fluid is being removed.",
+          "r1:c2": "The weight changed.",
+          "r1:c3": "A lower weight is the goal of diuresis.",
+          "r2:c1": "An SpO2 of 95% on room air shows better gas exchange.",
+          "r2:c2": "The saturation rose from 88%.",
+          "r2:c3": "The saturation rose.",
+          "r3:c1": "Crackles have cleared from the left base, so congestion is easing.",
+          "r3:c2": "Crackles are now heard in one base instead of two.",
+          "r3:c3": "Fewer crackles is an improvement.",
+          "r4:c1": "Ankle edema is still 2+.",
+          "r4:c2": "Dependent edema often lags behind lung findings; it is still 2+.",
+          "r4:c3": "The edema did not get worse.",
+          "r5:c1": "Potassium fell, which is not an improvement.",
+          "r5:c2": "Potassium fell from 3.6 to 3.1 mEq/L.",
+          "r5:c3": "Loop diuretics waste potassium; 3.1 mEq/L is low and needs follow-up."
+        },
+        "references": [
+          "SAMPLE CONTENT: written for development and testing, not reviewed by a nurse educator. Do not use for exam preparation."
+        ]
+      },
+      "educationalObjective": "Evaluate the response to heart failure treatment, including adverse effects of diuretics.",
+      "exhibits": [
+        {
+          "id": "reassessment",
+          "kind": "flowsheet",
+          "title": "Reassessment, day 2",
+          "table": {
+            "columns": [
+              "Admission 0800",
+              "Day 2 0800"
+            ],
+            "rows": [
+              {
+                "label": "Weight (kg)",
+                "cells": [
+                  "86.4",
+                  "84.1"
+                ]
+              },
+              {
+                "label": "SpO2 (%)",
+                "cells": [
+                  "88 on room air",
+                  "95 on room air"
+                ]
+              },
+              {
+                "label": "Lung sounds",
+                "cells": [
+                  "Crackles, both bases",
+                  "Crackles, right base"
+                ]
+              },
+              {
+                "label": "Ankle edema",
+                "cells": [
+                  "2+",
+                  "2+"
+                ]
+              },
+              {
+                "label": "Potassium (mEq/L)",
+                "cells": [
+                  "3.6",
+                  "3.1"
+                ]
+              }
+            ]
+          }
+        }
+      ],
+      "caseStudyId": "f11c0000-0000-4000-8000-000000000001",
+      "casePosition": 6
+    }
+  ],
+  "caseStudies": [
+    {
+      "id": "f11c0000-0000-4000-8000-000000000001",
+      "title": "Heart failure exacerbation",
+      "scenario": {
+        "tabs": [
+          {
+            "id": "notes",
+            "title": "Nurses' notes",
+            "exhibits": [
+              {
+                "id": "admission-note",
+                "kind": "text",
+                "title": "Emergency department, 0800",
+                "body": "A 74-year-old client with a history of heart failure and hypertension reports **increasing shortness of breath for 3 days**, now worse when lying flat; the client slept sitting in a recliner last night. Reports a 2.5 kg (5.5 lb) weight gain in 4 days and says, \"My shoes feel tight.\" Ran out of furosemide 1 week ago. Coughing up small amounts of pink-tinged, frothy sputum. Crackles in both lung bases; 2+ pitting edema of both ankles; jugular veins distended at 45 degrees. Alert and oriented, anxious."
+              }
+            ]
+          },
+          {
+            "id": "vitals",
+            "title": "Vital signs",
+            "exhibits": [
+              {
+                "id": "vitals-flowsheet",
+                "kind": "flowsheet",
+                "title": "Vital signs",
+                "table": {
+                  "columns": [
+                    "0800",
+                    "1000",
+                    "1200"
+                  ],
+                  "rows": [
+                    {
+                      "label": "Temperature (°C)",
+                      "cells": [
+                        "36.9",
+                        "37.0",
+                        "36.8"
+                      ]
+                    },
+                    {
+                      "label": "Heart rate (/min)",
+                      "cells": [
+                        "112",
+                        "104",
+                        "96"
+                      ]
+                    },
+                    {
+                      "label": "Respiratory rate (/min)",
+                      "cells": [
+                        "28",
+                        "24",
+                        "22"
+                      ]
+                    },
+                    {
+                      "label": "Blood pressure (mm Hg)",
+                      "cells": [
+                        "168/94",
+                        "152/88",
+                        "144/84"
+                      ]
+                    },
+                    {
+                      "label": "SpO2 (%)",
+                      "cells": [
+                        "88 on room air",
+                        "93 on 2 L/min",
+                        "95 on 2 L/min"
+                      ]
+                    },
+                    {
+                      "label": "Weight (kg)",
+                      "cells": [
+                        "86.4",
+                        "—",
+                        "—"
+                      ]
+                    }
+                  ]
+                }
+              }
+            ]
+          },
+          {
+            "id": "labs",
+            "title": "Laboratory results",
+            "exhibits": [
+              {
+                "id": "labs-table",
+                "kind": "table",
+                "title": "Laboratory results, 0815",
+                "table": {
+                  "columns": [
+                    "Result",
+                    "Reference range"
+                  ],
+                  "rows": [
+                    {
+                      "label": "BNP",
+                      "cells": [
+                        "1,240 pg/mL",
+                        "< 100 pg/mL"
+                      ]
+                    },
+                    {
+                      "label": "Sodium",
+                      "cells": [
+                        "133 mEq/L",
+                        "135–145 mEq/L"
+                      ]
+                    },
+                    {
+                      "label": "Potassium",
+                      "cells": [
+                        "3.6 mEq/L",
+                        "3.5–5.0 mEq/L"
+                      ]
+                    },
+                    {
+                      "label": "Creatinine",
+                      "cells": [
+                        "1.3 mg/dL",
+                        "0.6–1.2 mg/dL"
+                      ]
+                    },
+                    {
+                      "label": "Troponin I",
+                      "cells": [
+                        "< 0.01 ng/mL",
+                        "< 0.04 ng/mL"
+                      ]
+                    }
+                  ]
+                }
+              }
+            ]
+          },
+          {
+            "id": "orders",
+            "title": "Orders",
+            "exhibits": [
+              {
+                "id": "provider-orders",
+                "kind": "text",
+                "title": "Provider orders",
+                "body": "- Oxygen to keep SpO2 at or above 92%\n- Furosemide 40 mg IV now, then 40 mg IV every 12 hours\n- Fluid restriction 1.5 L/day\n- 2 g sodium diet\n- Daily weight before breakfast\n- Strict intake and output\n- Basic metabolic panel in the morning"
+              }
+            ]
+          }
+        ]
+      }
     }
   ],
   "banks": [
@@ -2556,7 +3253,11 @@
         "f05a0000-0000-4000-8000-000000000017",
         "f05a0000-0000-4000-8000-000000000018",
         "f05a0000-0000-4000-8000-000000000019",
-        "f05a0000-0000-4000-8000-000000000020"
+        "f05a0000-0000-4000-8000-000000000020",
+        "f11b0000-0000-4000-8000-000000000001",
+        "f11b0000-0000-4000-8000-000000000002",
+        "f11b0000-0000-4000-8000-000000000003",
+        "f11b0000-0000-4000-8000-000000000004"
       ]
     }
   ],
@@ -2576,7 +3277,7 @@
         "f04a0000-0000-4000-8000-000000000013",
         "f04a0000-0000-4000-8000-000000000015",
         "f05a0000-0000-4000-8000-000000000001",
-        "f05a0000-0000-4000-8000-000000000003",
+        "f05a0000-0000-4000-8000-000000000004",
         "f05a0000-0000-4000-8000-000000000009",
         "f05a0000-0000-4000-8000-000000000014",
         "f05a0000-0000-4000-8000-000000000017",
@@ -2598,10 +3299,6 @@
         "f04a0000-0000-4000-8000-000000000004",
         "f04a0000-0000-4000-8000-000000000005",
         "f04a0000-0000-4000-8000-000000000006",
-        "f04a0000-0000-4000-8000-000000000007",
-        "f04a0000-0000-4000-8000-000000000008",
-        "f04a0000-0000-4000-8000-000000000009",
-        "f04a0000-0000-4000-8000-000000000010",
         "f04a0000-0000-4000-8000-000000000011",
         "f04a0000-0000-4000-8000-000000000012",
         "f04a0000-0000-4000-8000-000000000013",
@@ -2611,15 +3308,19 @@
         "f04a0000-0000-4000-8000-000000000017",
         "f04a0000-0000-4000-8000-000000000018",
         "f04a0000-0000-4000-8000-000000000019",
+        "f11b0000-0000-4000-8000-000000000001",
+        "f05a0000-0000-4000-8000-000000000003",
+        "f11b0000-0000-4000-8000-000000000002",
+        "f11b0000-0000-4000-8000-000000000003",
+        "f05a0000-0000-4000-8000-000000000008",
+        "f11b0000-0000-4000-8000-000000000004",
         "f04a0000-0000-4000-8000-000000000020",
         "f05a0000-0000-4000-8000-000000000001",
         "f05a0000-0000-4000-8000-000000000002",
-        "f05a0000-0000-4000-8000-000000000003",
         "f05a0000-0000-4000-8000-000000000004",
         "f05a0000-0000-4000-8000-000000000005",
         "f05a0000-0000-4000-8000-000000000006",
         "f05a0000-0000-4000-8000-000000000007",
-        "f05a0000-0000-4000-8000-000000000008",
         "f05a0000-0000-4000-8000-000000000009",
         "f05a0000-0000-4000-8000-000000000010",
         "f05a0000-0000-4000-8000-000000000011",
@@ -2649,7 +3350,6 @@
         "f04a0000-0000-4000-8000-000000000001",
         "f05a0000-0000-4000-8000-000000000002",
         "f04a0000-0000-4000-8000-000000000002",
-        "f05a0000-0000-4000-8000-000000000003",
         "f04a0000-0000-4000-8000-000000000003",
         "f05a0000-0000-4000-8000-000000000004",
         "f04a0000-0000-4000-8000-000000000004",
@@ -2658,13 +3358,8 @@
         "f05a0000-0000-4000-8000-000000000006",
         "f04a0000-0000-4000-8000-000000000006",
         "f05a0000-0000-4000-8000-000000000007",
-        "f04a0000-0000-4000-8000-000000000007",
-        "f05a0000-0000-4000-8000-000000000008",
-        "f04a0000-0000-4000-8000-000000000008",
         "f05a0000-0000-4000-8000-000000000009",
-        "f04a0000-0000-4000-8000-000000000009",
         "f05a0000-0000-4000-8000-000000000010",
-        "f04a0000-0000-4000-8000-000000000010",
         "f05a0000-0000-4000-8000-000000000011",
         "f04a0000-0000-4000-8000-000000000011",
         "f05a0000-0000-4000-8000-000000000012",
@@ -2683,9 +3378,35 @@
         "f04a0000-0000-4000-8000-000000000018",
         "f05a0000-0000-4000-8000-000000000019",
         "f04a0000-0000-4000-8000-000000000019",
+        "f11b0000-0000-4000-8000-000000000001",
+        "f05a0000-0000-4000-8000-000000000003",
+        "f11b0000-0000-4000-8000-000000000002",
+        "f11b0000-0000-4000-8000-000000000003",
+        "f05a0000-0000-4000-8000-000000000008",
+        "f11b0000-0000-4000-8000-000000000004",
         "f05a0000-0000-4000-8000-000000000020",
         "f04a0000-0000-4000-8000-000000000020"
       ]
+    }
+  ],
+  "media": [
+    {
+      "id": "f11a0000-0000-4000-8000-000000000001",
+      "kind": "image",
+      "file": "media/sacral-skin.png",
+      "mimeType": "image/png",
+      "width": 360,
+      "height": 240,
+      "altText": "Skin over the sacrum with an oval area of redness about 3.5 cm across, intact and without blisters; a 2 cm scale bar is shown."
+    },
+    {
+      "id": "f11a0000-0000-4000-8000-000000000002",
+      "kind": "audio",
+      "file": "media/lung-crackles.wav",
+      "mimeType": "audio/wav",
+      "durationMs": 4000,
+      "captionsFile": "media/lung-crackles.vtt",
+      "transcriptFile": "media/lung-crackles.txt"
     }
   ]
 }

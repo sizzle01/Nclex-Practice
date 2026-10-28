@@ -40,6 +40,8 @@ using Nclex.Application.Catalog.ListQuestionBanks;
 using Nclex.Application.Catalog.ListTestSets;
 using Nclex.Application.Content.ImportQuestions;
 using Nclex.Application.Email;
+using Nclex.Application.Media.GetMedia;
+using Nclex.Application.Media.OpenMediaFile;
 using Nclex.Application.Notifications;
 using Nclex.Application.Notifications.DraftReminders;
 using Nclex.Application.Notifications.Feed;
@@ -152,6 +154,10 @@ public static class DependencyInjection
         services.AddScoped<GetPreferencesHandler>();
         services.AddScoped<UpdatePreferencesHandler>();
 
+        // Media
+        services.AddScoped<GetMediaHandler>();
+        services.AddScoped<OpenMediaFileHandler>();
+
         services.AddAttemptExpiry();
         services.AddContentImport();
 
@@ -166,6 +172,8 @@ public static class DependencyInjection
     {
         services.AddItemTypes();
         services.AddScoped<CatalogImporter>();
+        services.AddScoped<MediaImporter>();
+        services.AddScoped<CaseStudyImporter>();
         services.AddScoped<ImportQuestionsHandler>();
         return services;
     }

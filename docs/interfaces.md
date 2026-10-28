@@ -30,6 +30,27 @@ interface Exhibit {                // makes "Trend", "Chart/Exhibit", "Audio", "
   body?: Markdown;
 }
 
+interface MediaView {               // GET /media/{id} (api.md section 10): how a mediaId is shown
+  id: string;
+  kind: 'image' | 'audio' | 'video';
+  url: string;                     // signed, relative, valid for 10 minutes
+  captionsUrl: string | null;      // WebVTT; required for audio and video
+  transcriptUrl: string | null;    // plain text; required for audio and video (section 4, Media)
+  altText: string | null;          // required for images
+  width: number | null; height: number | null; durationMs: number | null;
+  expiresAt: string;
+}
+
+interface CaseStudyScenario {      // case_studies.scenario (shape settled in F11)
+  // one tab per record: nurses' notes, vitals, labs, orders, history
+  // at least one tab; each tab has a unique id, a title and at least one exhibit.
+  // The player lists these tabs before the item's own exhibits, so their ids must differ.
+  tabs: Array<{ id: string; title: string; exhibits: Exhibit[] }>;
+}
+// Import file (F11): top-level caseStudies: [{ id, title, scenario: CaseStudyScenario }], and each
+// question may carry caseStudyId + casePosition (1..6, both or neither). A case's positions run
+// 1..n with no gap. A curated set that uses any item of a case has all of them, back to back, in order.
+
 interface Rationale {
   correct: Markdown;                           // why the correct answer(s) are correct
   perOption: Record<string, Markdown>;         // REQUIRED for every option / cell / blank choice
