@@ -2,7 +2,7 @@
 
 ## 1. Summary
 
-Every MVP item type can now be answered in the exam player and read back in review. That covers multiple choice, SATA, select N, both matrix types, grouping, both drop-down types, both highlight types, calculation and ordered response. Each renderer has a keyboard model and shows its reveal marks as ✓/✗ text, not by colour alone. A question can bring exhibits: tables, trend flowsheets, images with alt text, and audio or video with captions. Questions in an unfolding case study show the case's tabs (nurses' notes, vitals, orders…) beside the question on wide screens and in a drawer on phones. Candidates can strike options through as a note to self. Five sample questions now carry exhibits, including a real image and an audio clip. Those media come in through the content importer and are served to the player through short-lived signed links. A development-only gallery at `/dev/items` shows every renderer with sample data.
+Every MVP item type can now be answered in the exam player and read back in review. That covers multiple choice, SATA, select N, both matrix types, grouping, both drop-down types, both highlight types, calculation and ordered response. Each renderer has a keyboard model and shows its reveal marks as ✓/✗ text, not by colour alone. A question can bring exhibits: tables, trend flowsheets, images with alt text, and audio or video with captions. Questions in an unfolding case study show the case's tabs (nurses' notes, vitals, orders…) beside the question on wide screens and in a drawer on phones. Candidates can strike options through as a note to self. Five sample questions now carry exhibits, including a real image and an audio clip with captions and a transcript. Those media come in through the content importer and are served to the player through short-lived signed links. The importer can also create case studies, and three sample heart-failure questions now form one. A development-only gallery at `/dev/items` shows every renderer with sample data.
 
 ## 2. How to try it
 
@@ -10,16 +10,17 @@ This branch lives in its own worktree, `/Users/tunde/Codes/Nclex-Practice-f11`. 
 
 There is no migration: `media_assets` already exists from F04. `nclex_f11` was created as a separate local database, following the per-feature databases already there (`nclex_f05`, `nclex_f08`…), so the shared `nclex` database is left alone. Using the main `nclex` database works too, provided it has F10's migrations.
 
-**Re-run the import.** The sample file now has exhibits and a `media` list. The importer stores the media files in `nclex-be/.local/media`, which git ignores and which the API reads from. Both hosts set `MediaStorage:LocalRoot` to `../../.local/media`. The API also needs `MediaStorage:SigningKey`, which is in `appsettings.Development.json` for development only.
+**Re-run the import.** The sample file now has exhibits, a `media` list and a `caseStudies` list. The importer stores the media files in `nclex-be/.local/media`, which git ignores and which the API reads from. Both hosts set `MediaStorage:LocalRoot` to `../../.local/media`. The API also needs `MediaStorage:SigningKey`, which is in `appsettings.Development.json` for development only.
 
 ```bash
 docker compose up -d
 cd nclex-be
 export ConnectionStrings__Postgres="Host=localhost;Port=5432;Database=nclex_f11;Username=nclex;Password=nclex"
 dotnet tool restore && dotnet build
-dotnet ef database update --no-build -p src/Nclex.Infrastructure -s src/Nclex.Api
+dotnet ef database update --no-build -p src/Nclex.Infrastructure -s src/Nclex.Api   # applies F11_MediaTranscripts
 dotnet run --no-build --project src/Nclex.Worker -- import-questions "$PWD/content/sample-questions.rn.json"
-#   -> … Imported 2 media file(s): 2 created …   (5 questions "updated" if you imported before F11)
+#   -> … Imported 2 media file(s) … Imported 1 case study(ies): 1 created …
+#      (questions and sets "updated" if you imported before F11: exhibits, case fields and set order changed)
 dotnet run --project src/Nclex.Api                    # http://localhost:5080
 cd ../nclex-fe && npm install && npm run dev          # http://localhost:3000
 ```
@@ -46,15 +47,19 @@ cd ../nclex-fe && npm install && npm run dev          # http://localhost:3000
 4. Press **Submit answer**. Each target now shows its mark ("✓ Correct", "✗ Incorrect", "Correct answer, not selected", "✓ Correct position", "Correct answer: 125 mL/hr"…). The rationale names each choice, e.g. "Warfarin: Unusual bleeding or bruising" or "Blank 1: hypoglycemia".
 5. Submit the test and open **Review**. The same renderers show every answer, locked and marked.
 
-**Exhibits and media** (question numbers in **Comprehensive Practice 1**; the pressure-injury and hypoglycemia questions are also in the **RN Sample Set**):
+**Exhibits, media and the case study** (question numbers in **Comprehensive Practice 1**; the pressure-injury, heparin and hypoglycemia questions are also in the **RN Sample Set**):
 
 | Question | Exhibit |
 |---|---|
 | 6 (MC, digoxin) | Vital-signs flowsheet and a lab table, as two tabs |
 | 15 (SATA, pressure injuries) | Image of sacral skin, with alt text |
-| 19 (SATA, left-sided heart failure) | Audio of lung crackles, with captions (turn captions on in the player's controls) |
-| 24 (matrix, heparin) | aPTT flowsheet |
+| 19 to 21 (case study "Heart failure exacerbation") | The case's four tabs (nurses' notes, vital signs, labs, orders) on all three items |
+| 19 (SATA, left-sided heart failure; case item 1) | Also audio of lung crackles, with captions (turn them on in the player's controls) and a **Read the transcript** link |
+| 20 (matrix, left or right; case item 2), 21 (grouping, discharge teaching; case item 3) | Only the case's tabs |
+| 25 (matrix, heparin) | aPTT flowsheet |
 | 29 (drop-down, hypoglycemia) | Nurse's note |
+
+In **Comprehensive Challenge 1** the case is questions 36 to 38.
 
 From 1024px the exhibits sit beside the question; below that, open them with **Show exhibits**. Tab to the tab list and move between tabs with the arrow keys.
 
@@ -64,8 +69,13 @@ curl -s -X PATCH $B/attempts/$ID/items/3 "${H[@]}" "${J[@]}" -d '{"struckOptions
 
 # Media: details and signed links (needs a token), then the file itself (needs none)
 curl -s $B/media/f11a0000-0000-4000-8000-000000000002 -H "Authorization: Bearer $TOKEN"
-# -> {"kind":"audio","url":"/api/v1/media/…/file?exp=…&sig=…","captionsUrl":"/api/v1/media/…/captions?exp=…&sig=…",…}
+# -> {"kind":"audio","url":"/api/v1/media/…/file?exp=…&sig=…","captionsUrl":"…/captions?…","transcriptUrl":"…/transcript?…",…}
 curl -s -o clip.wav "http://localhost:5080<url from above>"              # 200 audio/wav
+curl -s "http://localhost:5080<transcriptUrl>"                           # 200 text/plain; charset=utf-8
+
+# The case study comes with each of its items
+curl -s $B/attempts/$ID/items/20 "${H[@]}" | jq '.caseStudy | {title, position, tabs: [.scenario.tabs[].title]}'
+# -> {"title":"Heart failure exacerbation","position":2,"tabs":["Nurses' notes","Vital signs","Laboratory results","Orders"]}
 curl -s -H "Range: bytes=0-99" -o /dev/null -w "%{http_code}\n" "http://localhost:5080<url>"   # 206
 ```
 
@@ -93,13 +103,20 @@ There are no new test accounts.
 Media, backend then frontend:
 
 17. `nclex-be/src/Nclex.Domain/Content/ExhibitRules.cs` and `MediaRules.cs`: what a valid exhibit and media asset are (pure functions).
-18. `Nclex.Domain/Entities/MediaAsset.cs`: `Create`, `Update` and `MediaDetails`.
+18. `Nclex.Domain/Entities/MediaAsset.cs`: `Create`, `Update` and `MediaDetails` (with `TranscriptKey`).
 19. `Nclex.Application/Content/ImportQuestions/QuestionImportFile.cs` (`ImportedMedia`), then `MediaImporter.cs` and the changes in `ImportQuestionsHandler.cs`.
 20. `Nclex.Application/Abstractions/IMediaStorage.cs` and `IMediaUrlSigner.cs`, then `Media/GetMedia/GetMediaHandler.cs`, `Media/OpenMediaFile/OpenMediaFileHandler.cs` and `Media/MediaPaths.cs`.
 21. `Nclex.Infrastructure/Media/LocalDiskMediaStorage.cs`, `HmacMediaUrlSigner.cs` and `MediaStorageOptions.cs`, then `Content/DirectoryContentFiles.cs`.
-22. `Nclex.Api/Controllers/MediaController.cs`: the three endpoints.
+22. `Nclex.Api/Controllers/MediaController.cs`: the four endpoints (details, file, captions, transcript).
 23. `nclex-fe/src/features/player/media/mediaApi.ts` and `MediaContext.tsx` (`useMedia`), then `exhibits/ExhibitMedia.tsx`.
-24. `nclex-be/content/sample-questions.rn.json` (`media` and the five `exhibits`) and `content/media/`.
+24. `nclex-be/content/sample-questions.rn.json` (`media`, `caseStudies`, the five `exhibits` and the three questions with `caseStudyId`) and `content/media/`.
+
+Case studies:
+
+25. `Nclex.Domain/Content/CaseStudyRules.cs`: a valid scenario, complete positions, and a set that keeps each case whole (pure functions).
+26. `Nclex.Domain/Entities/CaseStudy.cs` (`Create`, `Update`, `CasePlacement`), then `AuthoredItem.Case` and how `QuestionVersion.CreateImported` and `Matches` use it.
+27. `Nclex.Application/Content/ImportQuestions/CaseStudyImporter.cs`: checks the cases and placements, works out each case's members after the import (`CaseMembership`), and writes the rows.
+28. `CatalogImporter.CheckCaseStudies`: the curated-set rule.
 
 ## 4. Request flow: ticking a matrix cell, then submitting it
 
@@ -117,19 +134,29 @@ Media, backend then frontend:
 4. **File.** The `<img>` loads that link without a token. `OpenMediaFileHandler` checks the signature before touching the database, then streams the file with `Content-Type: image/png`. The alt text comes from the row.
 5. **Expired link.** If the browser is refused (a link older than 10 minutes), `ExhibitMedia` asks once for fresh links. A second failure shows "can't be shown right now".
 
+**A case-study item**, from import to screen:
+1. **Import.** `CaseStudyImporter.ValidateAsync` checks `caseStudies[0]` with `CaseStudyRules.CheckScenario` (each tab's exhibits go through `ExhibitRules`) and the three questions' `caseStudyId`/`casePosition`. It then works out the case's members after the import (the file's questions plus published ones it doesn't mention) and checks their positions run 1, 2, 3. `CatalogImporter` checks that both comprehensive sets hold all three, back to back, in order.
+2. **Write.** Inside the import transaction: media, then the `case_studies` row (`CaseStudy.Create`), then a question version per question with `case_study_id` and `case_position` set from `AuthoredItem.Case`.
+3. **Item.** `GET …/items/20` goes through `ItemViewReader` (F08), which loads the case and returns `caseStudy: { id, title, scenario, position: 2 }`.
+4. **Screen.** `ExhibitPanel` shows the case title and its four tabs, then the item's own exhibits as more tabs.
+
 The strike-through tool follows a shorter path. `toggleStrike` updates the cached item straight away, then sends `PATCH …/items/{position}` with the full `struckOptions` list. If the server refuses, the strike is put back.
 
 ## 5. Database changes
 
-No migration.
-- `case_studies.scenario` already exists as `jsonb`. F11 only settles the JSON shape inside it (see section 6).
+One migration, `F11_MediaTranscripts`:
+- `media_assets.transcript_key text` (nullable), added to the DDL in database.md. It holds the storage key of the clip's plain-text transcript, `media/{id}.txt`. Audio and video need one before import, like captions, because captions only help someone who can play the clip.
+
+No other schema change:
+- `case_studies` (F04) gets its first rows, from the importer. F11 settles the JSON shape of `scenario` (see section 6).
+- `question_versions.case_study_id` and `case_position` (F04) are now set by the importer. The DDL's CHECK (both or neither, position 1 to 6) was already there.
 - `media_assets` (F04) gets its first rows, from the importer. `storage_key` is `media/{id}.{ext}`; `captions_key` is `media/{id}.vtt`; `created_by` is the content importer's account.
 
 ## 6. Key decisions and deviations
 
 - **Stacked on F10.** F10 wasn't merged into `main` yet, and F11 builds on its player, reveal marks and review page.
 - **Renderers moved** from `features/attempt/renderers` (F08 and F10) to `features/player/renderers`, as the feature asked. The player shell, save queue and timers stay in `features/attempt`.
-- **The case-study `scenario` shape** was undocumented ("tabs: nurses' notes, vitals, labs, orders, history"). It is now `{ tabs: [{ id, title, exhibits: Exhibit[] }] }`, which reuses `Exhibit`, and is recorded in interfaces.md section 1. A scenario in any other shape shows no tabs instead of crashing. Nothing authors case studies yet, so no data has to change.
+- **The case-study `scenario` shape** was undocumented ("tabs: nurses' notes, vitals, labs, orders, history"). It is now `{ tabs: [{ id, title, exhibits: Exhibit[] }] }`, which reuses `Exhibit`, and is recorded in interfaces.md section 1. The importer refuses any other shape; the player still shows no tabs instead of crashing if one gets in some other way.
 - **Media delivery (new API, api.md section 10).**
   - `GET /media/{id}` (signed in) returns the alt text and **signed links** to the file and captions. The file links need no token, because `<img>` and `<audio>` can't send the in-memory access token.
   - The signature (HMAC-SHA256 over the id, the part and the expiry) does the job a presigned S3 URL would. Links last 10 minutes, so the frontend reuses them for 5.
@@ -137,7 +164,14 @@ No migration.
 - **Local-disk storage behind `IMediaStorage`.** It needs no new dependency. The S3 or MinIO version that architecture.md describes can replace it behind the same interface, and `GetMediaHandler` would then return the presigned URLs instead.
 - **Media in the import file.** The `media` list's paths are relative to the import file. A path that leaves its folder is treated as missing. Files are written every import (so a changed file replaces the old one); rows count as updated only when their description changes.
 - **Exhibits are now validated on import** (`ExhibitRules`): a known kind, a title, a table whose rows match its columns, a body for text, and a `mediaId` of an existing asset of the same kind. Graphic options' `mediaId`s are checked too. Before F11 the importer only checked that `exhibits` was an array, but no file had exhibits, so nothing that imported before is now refused.
-- **No transcripts.** `media_assets` has no transcript column, so `transcriptUrl` stays optional and the player shows the link only when it has one (the gallery does). Captions are required.
+- **Transcripts are required for audio and video**, as captions are. interfaces.md section 4 asks for a transcript link, and for audio a transcript is the text alternative (WCAG 1.2.1). The import file names a `transcriptFile` (UTF-8 plain text; anything else is refused), and `GET /media/{id}/transcript` serves it through a signed link (api.md section 10). The player shows **Read the transcript** when `transcriptUrl` is set.
+- **Case studies in the import file** (interfaces.md section 1, after `CaseStudyScenario`):
+  - A top-level `caseStudies` list, on the file's track. A question joins one with `caseStudyId` and `casePosition` (1 to 6, both or neither). It may join a case from this file or one imported before.
+  - Positions are checked for the case as it will be after the import, including published questions the file doesn't mention. They must run 1, 2, 3… with no gap or repeat. So moving a question out of the middle of a case is refused until the others are renumbered in the same file.
+  - Joining, leaving or moving within a case gives the question a new version, because versions are immutable. The case itself is edited in place: its scenario only sets the scene, and past attempts keep their answers.
+  - A case-study tab and one of its items' own exhibits can't share an id, because the player puts them in one tab list.
+- **Curated sets keep each case whole.** A prebuilt set that uses any item of a case must hold all of them, back to back, in case order (`CASE_STUDY_SPLIT` otherwise). The custom builder already works this way (F07's `SetSampler`), and otherwise the player would show a case's tabs with items missing or out of order. Banks need no rule, because the builder drops incomplete cases from a pool. Sets already in the database are not re-checked when a later file changes a case; the next import of that set is.
+- **The sample case** reuses the three existing heart-failure questions (SATA left-sided findings, matrix left or right, grouping discharge teaching) instead of new ones, so it has 3 items rather than the usual 6. The new scenario text (notes, vitals, labs, orders) is sample content like the rest of the file, not reviewed by a nurse educator. To keep the case whole, the two comprehensive sets were reordered, and the **RN Sample Set** now uses the heparin matrix question (also matrix MC) instead of the case's matrix question. F04's walkthrough says case studies can't be imported; that is now out of date.
 - **The gallery** keeps its own local files (`public/dev-media`) through `MediaProvider`, so it works without signing in.
 - **Panel layout.** The exhibit panel uses tabs: the case study's tabs first, then one tab per item exhibit. With a single tab there is no tab list.
 - **Matrix keyboard model.** The arrow keys move focus without selecting, and Space selects, for both radio and checkbox matrices. Native radio buttons would select as they move, and only within their row.
@@ -155,8 +189,8 @@ No migration.
 ## 7. Tests
 
 ```bash
-cd nclex-be && dotnet build && dotnet test          # 893 passed (Docker must be running)
-cd nclex-fe && npm run lint && npm run typecheck && npm test   # 311 passed (49 files)
+cd nclex-be && dotnet build && dotnet test          # 943 passed (Docker must be running)
+cd nclex-fe && npm run lint && npm run typecheck && npm test   # 312 passed (49 files)
 ```
 
 - **Every renderer** (`src/features/player/renderers/*.test.tsx`) is checked for:
@@ -182,26 +216,30 @@ cd nclex-fe && npm run lint && npm run typecheck && npm test   # 311 passed (49 
 - **Player** (`AttemptPlayer.test.tsx`): striking sends the full list with the lease header, shows at once and is undone if the server refuses; exhibits appear beside the question.
 - **Gallery** (`ItemGallery.test.tsx`): all 12 MVP types have a real renderer; the response JSON and the reveal show.
 - **Media, backend:**
-  - Domain (`tests/Nclex.Domain.Tests/Content/`): each exhibit kind, each malformed exhibit with its path, graphic options found anywhere in the content, and each media rule (alt text, captions, MIME type of another kind, unknown kind).
-  - Import (`Content/ImportMediaTests.cs`): files and rows stored, a re-import unchanged, a changed alt text updating the row, and media from an earlier file usable. These problems each write nothing: no alt text, no captions, a wrong MIME type, a missing file, a path outside the folder, captions that aren't WebVTT. Also: an unknown or wrong-kind `mediaId`, a malformed exhibit, and an unknown graphic-option media.
-  - Sample file (`ImportQuestionsTests`): 2 media and 5 questions with exhibits, with the files in storage.
+  - Domain (`tests/Nclex.Domain.Tests/Content/`): each exhibit kind, each malformed exhibit with its path, graphic options found anywhere in the content, and each media rule (alt text, captions, transcript, MIME type of another kind, unknown kind).
+  - Import (`Content/ImportMediaTests.cs`): files and rows stored, a re-import unchanged, a changed alt text updating the row, and media from an earlier file usable. These problems each write nothing: no alt text, no captions, a wrong MIME type, a missing file, a path outside the folder, captions that aren't WebVTT, no transcript, a missing transcript file, a transcript that isn't text. Also: an unknown or wrong-kind `mediaId`, a malformed exhibit, and an unknown graphic-option media.
+  - Sample file (`ImportQuestionsTests`): 2 media and 5 questions with exhibits, with the files (and the transcript) in storage, and the case study with its three items in order.
   - Endpoints (`Media/MediaEndpointsTests.cs`):
     - 401 when signed out, and 404 for an unknown asset
     - an image with alt text and a token-free link, with the right bytes, type and `Cache-Control: private`
-    - audio with captions as `text/vtt`, and a range request answered with 206
-    - 403 for a tampered signature, another asset's or part's signature, a moved expiry, or no signature
+    - audio with captions as `text/vtt`, a transcript as `text/plain; charset=utf-8`, and a range request answered with 206
+    - 403 for a tampered signature, another asset's or part's (captions or transcript) signature, a moved expiry, or no signature
     - 403 once the link expires (manual clock)
     - an item's exhibits reaching the candidate
-- **Media, frontend** (`ExhibitPanel.test.tsx`): loading from the API with the signed link and alt text, a 404 shown as "can't be shown", and one refresh after a refused link, then giving up.
+- **Case studies, backend:**
+  - Domain (`CaseStudyRulesTests`): a valid scenario and its media, each malformed scenario with its path, tab ids, complete and incomplete positions, sets that keep or split a case, and `CaseStudy.Update` changing only when something changed.
+  - Import (`Content/ImportCaseStudiesTests.cs`): the case and its versions stored and a re-import unchanged; a changed scenario updating in place; a later file adding a question to an imported case; leaving a case giving a new version; leaving a gap refused. Each of these writes nothing: an unknown case, a position without a case or a case without a position, position 7, a repeated position, a gap, no tabs, a scenario that isn't an object, a malformed exhibit or unknown media in a tab, an exhibit id that is also a tab id, no title. A curated set with only part of a case, out of order, or not back to back is refused. An item in a case returns its case study with title, tabs and position.
+- **Media, frontend** (`ExhibitPanel.test.tsx`): loading from the API with the signed link and alt text, an audio clip's captions and transcript links from the API, a 404 shown as "can't be shown", and one refresh after a refused link, then giving up.
 - **Media end to end** (run by hand, not in the suite): through the Next.js proxy, every exhibit of Comprehensive Practice 1 arrived. The image and audio links worked without a token, captions came back as `text/vtt`, a range request got 206, and a tampered link got 403.
+- **Transcripts and the case study against the real API** (by hand, after the follow-up): the worker imported the sample file into a database that had the earlier F11 content (3 questions and 3 sets updated, 1 case study created, the transcript stored). Items 19 to 21 of Comprehensive Practice 1 returned the case with its four tabs and positions 1 to 3, with no answer key; the transcript link returned `text/plain; charset=utf-8`.
 - **Against the real API** (run once by hand while building F11, not part of the suite): a script answered all 90 items of the three sample sets with the shapes the renderers emit. There were no 400s from autosave or tutor submit, and the grade details had the targets the reveal marks expect.
 
 ## 8. Follow-ups and known limitations
 
 - **Premium media.** Any signed-in user can get links for any asset id. Gating by the item's access tier, and serving premium media through signed CDN URLs (architecture.md), is still to do.
 - **S3/MinIO storage** in place of local disk for deployed environments, behind `IMediaStorage`.
-- **Transcripts** need a column (or a convention) in `media_assets` before the player can link one.
-- **Case studies** still can't be imported (F04's file format has no fields for them), so no sample case study exists; only the gallery and tests show the case-study tabs.
+- **A full six-item sample case.** The sample case has 3 items; a reviewed 6-item case (recognize cues through evaluate outcomes) is content work for later.
+- **Sets already in the database** aren't re-checked when a later import changes a case they use (see section 6).
 - **A link that expires mid-playback.** A clip that has already loaded keeps playing; one that needs a new range request after 10 minutes gets one fresh link, then shows the note.
 - **Markdown** in stems, options and exhibit bodies is still shown as plain text.
 - **Browser checks.** The keyboard-only pass in a real browser (dnd-kit's keyboard sensor needs layout, which jsdom lacks) should become a Playwright test in F16.

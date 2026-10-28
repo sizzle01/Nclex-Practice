@@ -43,8 +43,13 @@ interface MediaView {               // GET /media/{id} (api.md section 10): how 
 
 interface CaseStudyScenario {      // case_studies.scenario (shape settled in F11)
   // one tab per record: nurses' notes, vitals, labs, orders, history
+  // at least one tab; each tab has a unique id, a title and at least one exhibit.
+  // The player lists these tabs before the item's own exhibits, so their ids must differ.
   tabs: Array<{ id: string; title: string; exhibits: Exhibit[] }>;
 }
+// Import file (F11): top-level caseStudies: [{ id, title, scenario: CaseStudyScenario }], and each
+// question may carry caseStudyId + casePosition (1..6, both or neither). A case's positions run
+// 1..n with no gap. A curated set that uses any item of a case has all of them, back to back, in order.
 
 interface Rationale {
   correct: Markdown;                           // why the correct answer(s) are correct
