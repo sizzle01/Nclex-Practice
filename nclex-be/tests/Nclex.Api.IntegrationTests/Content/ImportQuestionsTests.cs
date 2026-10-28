@@ -33,12 +33,14 @@ public sealed class ImportQuestionsTests(ApiFactory factory)
             Banks = new ImportCounts(1, 0, 0),
             TestSets = new ImportCounts(3, 0, 0),
             Media = new ImportCounts(2, 0, 0),
+            CaseStudies = new ImportCounts(1, 0, 0),
         }, "first import");
         second.ShouldBe(new ImportResult(Created: 0, Updated: 0, Unchanged: 40, [])
         {
             Banks = new ImportCounts(0, 0, 1),
             TestSets = new ImportCounts(0, 0, 3),
             Media = new ImportCounts(0, 0, 2),
+            CaseStudies = new ImportCounts(0, 0, 1),
         }, "second import");
 
         await using var scope = factory.Services.CreateAsyncScope();
@@ -79,9 +81,17 @@ public sealed class ImportQuestionsTests(ApiFactory factory)
         // F11: five questions carry exhibits, two of them showing the file's image and audio clip.
         versions.Count(v => v.Exhibits.RootElement.GetArrayLength() > 0).ShouldBe(5);
         var media = await db.MediaAssets.Where(m => file.Media!.Select(x => x.Id).Contains(m.Id)).ToListAsync(TestContext.Current.CancellationToken);
-        media.Select(m => (m.Kind, m.MimeType, m.AltText is not null, m.CaptionsKey is not null)).ShouldBe(
-            [("image", "image/png", true, false), ("audio", "audio/wav", false, true)], ignoreOrder: true);
+        media.Select(m => (m.Kind, m.MimeType, m.AltText is not null, m.CaptionsKey is not null, m.TranscriptKey is not null)).ShouldBe(
+            [("image", "image/png", true, false, false), ("audio", "audio/wav", false, true, true)], ignoreOrder: true);
         media.ShouldAllBe(m => File.Exists(Path.Combine(factory.MediaRoot, m.StorageKey)));
+        media.Where(m => m.TranscriptKey != null).ShouldAllBe(m => File.Exists(Path.Combine(factory.MediaRoot, m.TranscriptKey!)));
+
+        // F11: one case study, whose three heart-failure questions sit back to back in both comprehensive sets.
+        var caseStudy = await db.CaseStudies.SingleAsync(c => c.Id == file.CaseStudies![0].Id, TestContext.Current.CancellationToken);
+        caseStudy.Title.ShouldBe("Heart failure exacerbation");
+        caseStudy.Scenario.RootElement.GetProperty("tabs").GetArrayLength().ShouldBe(4);
+        versions.Where(v => v.CaseStudyId == caseStudy.Id).OrderBy(v => v.CasePosition)
+            .Select(v => v.ItemType).ShouldBe([ItemType.Sata, ItemType.MatrixMc, ItemType.MultipleResponseGrouping]);
 
         var importer = await db.Users.SingleAsync(u => u.Email == User.ContentImporterEmail, TestContext.Current.CancellationToken);
         importer.Role.ShouldBe(UserRole.Author);
