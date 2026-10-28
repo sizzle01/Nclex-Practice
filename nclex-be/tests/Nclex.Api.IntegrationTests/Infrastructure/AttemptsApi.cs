@@ -84,6 +84,27 @@ public sealed class AttemptsApi(ApiFactory factory, AuthApi api)
         return (await response.Content.ReadFromJsonAsync<AttemptState>(AuthApi.Json, TestContext.Current.CancellationToken))!;
     }
 
+    /// <summary>Tutor mode's Submit on one item; <paramref name="body"/> may carry a final answer.</summary>
+    public Task<HttpResponseMessage> SubmitItemAsync(string token, Guid attemptId, int position, string? clientId, object? body = null) =>
+        SendAsync(HttpMethod.Post, $"/api/v1/attempts/{attemptId}/items/{position}/submit", token, clientId, body);
+
+    /// <summary>The final Submit; <paramref name="body"/> may carry <c>finalResponses</c>.</summary>
+    public Task<HttpResponseMessage> SubmitAsync(string token, Guid attemptId, string? clientId, object? body = null) =>
+        SendAsync(HttpMethod.Post, $"/api/v1/attempts/{attemptId}/submit", token, clientId, body);
+
+    public Task<HttpResponseMessage> ResultAsync(string token, Guid attemptId) =>
+        SendAsync(HttpMethod.Get, $"/api/v1/attempts/{attemptId}/result", token, clientId: null);
+
+    public Task<HttpResponseMessage> ReviewAsync(string token, Guid attemptId, string query = "") =>
+        SendAsync(HttpMethod.Get, $"/api/v1/attempts/{attemptId}/review{query}", token, clientId: null);
+
+    /// <summary>A JSON body exactly as sent, failing the test unless the request succeeded.</summary>
+    public static async Task<JsonElement> JsonOkAsync(HttpResponseMessage response)
+    {
+        response.EnsureSuccessStatusCode();
+        return await response.Content.ReadFromJsonAsync<JsonElement>(TestContext.Current.CancellationToken);
+    }
+
     public Task<HttpResponseMessage> DiscardAsync(string token, Guid attemptId) =>
         SendAsync(HttpMethod.Delete, $"/api/v1/attempts/{attemptId}", token, clientId: null);
 

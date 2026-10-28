@@ -247,6 +247,71 @@ public sealed class MigrationTests(ApiFactory factory)
         rule.ShouldHaveSingleItem().ShouldBe("c");
     }
 
+    [Theory]
+    [InlineData("attempt_results", "points_earned", "numeric(8,2)|NO|")]
+    [InlineData("attempt_results", "max_points", "numeric(8,2)|NO|")]
+    [InlineData("attempt_results", "score_pct", "numeric(5,4)|NO|")]
+    [InlineData("attempt_results", "items_correct", "integer|NO|")]
+    [InlineData("attempt_results", "items_answered", "integer|NO|")]
+    [InlineData("attempt_results", "items_total", "integer|NO|")]
+    [InlineData("attempt_results", "total_time_ms", "bigint|NO|")]
+    [InlineData("attempt_results", "avg_time_ms", "integer|NO|")]
+    [InlineData("attempt_results", "pass_threshold", "numeric(5,4)|YES|")]
+    [InlineData("attempt_results", "passed", "boolean|YES|")]
+    [InlineData("attempt_results", "readiness_label", "text|YES|")]
+    [InlineData("attempt_results", "cat_theta", "numeric(6,3)|YES|")]
+    [InlineData("attempt_results", "cat_se", "numeric(6,3)|YES|")]
+    [InlineData("attempt_results", "graded_at", "timestamp with time zone|NO|now()")]
+    [InlineData("attempt_category_scores", "dimension", "text|NO|")]
+    [InlineData("attempt_category_scores", "dimension_key", "text|NO|")]
+    [InlineData("attempt_category_scores", "items", "integer|NO|")]
+    [InlineData("attempt_category_scores", "items_correct", "integer|NO|")]
+    [InlineData("attempt_category_scores", "points_earned", "numeric(8,2)|NO|")]
+    [InlineData("attempt_category_scores", "max_points", "numeric(8,2)|NO|")]
+    [InlineData("attempt_category_scores", "time_ms", "bigint|NO|")]
+    public async Task F10_migration_creates_the_result_tables_as_in_the_ddl(string table, string column, string typeNullableDefault)
+    {
+        var rows = await QueryAsync(
+            $"""
+            SELECT format_type(a.atttypid, a.atttypmod) || '|' || c.is_nullable || '|' || coalesce(c.column_default, '') AS "Value"
+            FROM information_schema.columns c
+            JOIN pg_attribute a ON a.attrelid = c.table_name::regclass AND a.attname = c.column_name
+            WHERE c.table_name = {table} AND c.column_name = {column}
+            """);
+
+        rows.ShouldHaveSingleItem().ShouldBe(typeNullableDefault);
+    }
+
+    [Theory]
+    [InlineData("pk_attempt_results", "(attempt_id)")]
+    [InlineData("pk_attempt_category_scores", "(attempt_id, dimension, dimension_key)")]
+    public async Task F10_migration_keys_the_result_tables_by_attempt(string index, string ending)
+    {
+        var definition = await QueryAsync($"SELECT indexdef AS \"Value\" FROM pg_indexes WHERE indexname = {index}");
+
+        definition.ShouldHaveSingleItem().ShouldEndWith(ending);
+    }
+
+    [Fact]
+    public async Task F10_migration_restricts_the_breakdown_dimensions()
+    {
+        var check = await QueryAsync(
+            $"SELECT pg_get_constraintdef(oid) AS \"Value\" FROM pg_constraint WHERE conname = {"attempt_category_scores_dimension_check"}");
+
+        check.ShouldHaveSingleItem().ShouldBe(
+            "CHECK ((dimension = ANY (ARRAY['client_needs'::text, 'client_needs_parent'::text, 'body_system'::text, 'item_type'::text, 'cjmm_skill'::text, 'difficulty'::text])))");
+    }
+
+    [Theory]
+    [InlineData("fk_attempt_results_attempts_attempt_id")]
+    [InlineData("fk_attempt_category_scores_attempts_attempt_id")]
+    public async Task F10_migration_deletes_results_with_their_attempt(string foreignKey)
+    {
+        var rule = await QueryAsync($"SELECT confdeltype::text AS \"Value\" FROM pg_constraint WHERE conname = {foreignKey}");
+
+        rule.ShouldHaveSingleItem().ShouldBe("c");
+    }
+
     private async Task<List<string>> QueryAsync(FormattableString sql)
     {
         await using var scope = factory.Services.CreateAsyncScope();

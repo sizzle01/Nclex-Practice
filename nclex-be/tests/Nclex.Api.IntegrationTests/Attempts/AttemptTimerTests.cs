@@ -410,6 +410,90 @@ public sealed class AttemptTimerTests(ApiFactory factory) : IAsyncLifetime
         (await Attempts.GetOkAsync(user, attempt.Id)).Timer.Item!.RemainingMs.ShouldBe(40_000);
     }
 
+    // Grading when time runs out (F10)
+
+    [Fact]
+    public async Task An_attempt_finalized_by_a_late_write_is_graded_with_its_blanks_scoring_zero()
+    {
+        var (user, attempt) = await OpenedAsync(Timed());
+        await Attempts.SaveAsync(user, attempt.Id, 1, "c-1", Answer("b"), 1);
+
+        _host.Clock.Advance(TimeSpan.FromSeconds(BudgetSec + 3));
+        await Attempts.SaveAsync(user, attempt.Id, 2, "c-1", Answer("b"), 2);
+        var result = await AttemptsApi.JsonOkAsync(await Attempts.ResultAsync(user, attempt.Id));
+
+        result.GetProperty("submitReason").GetString().ShouldBe("time_expired");
+        var score = result.GetProperty("score");
+        (score.GetProperty("pointsEarned").GetDecimal(), score.GetProperty("maxPoints").GetDecimal(), score.GetProperty("itemsAnswered").GetInt32())
+            .ShouldBe((1m, 3m, 1));
+        var items = (await RowAsync(attempt.Id)).Items;
+        items.Select(i => i.PointsEarned).ShouldBe([1m, 0m, 0m]);
+        items.ShouldAllBe(i => i.GradedAt != null);
+    }
+
+    [Fact]
+    public async Task Submitting_after_the_deadline_is_refused_and_a_retry_returns_the_time_expired_result()
+    {
+        var (user, attempt) = await OpenedAsync(Timed());
+        await Attempts.SaveAsync(user, attempt.Id, 1, "c-1", Answer("b"), 1);
+
+        _host.Clock.Advance(TimeSpan.FromSeconds(BudgetSec + 3));
+        var late = await Attempts.SubmitAsync(user, attempt.Id, "c-1", new
+        {
+            finalResponses = new[] { new { position = 2, response = Answer("b"), clientSeq = 1 } },
+        });
+        var retry = await AttemptsApi.JsonOkAsync(await Attempts.SubmitAsync(user, attempt.Id, "c-1"));
+
+        await late.ShouldBeProblemAsync(HttpStatusCode.Conflict, "ATTEMPT_TIME_EXPIRED");
+        retry.GetProperty("submitReason").GetString().ShouldBe("time_expired");
+        // The answer sent after time was up does not count.
+        retry.GetProperty("result").GetProperty("score").GetProperty("pointsEarned").GetDecimal().ShouldBe(1m);
+    }
+
+    [Fact]
+    public async Task The_delayed_job_grades_the_attempt_it_finalizes()
+    {
+        var (user, attempt) = await OpenedAsync(Timed());
+        await Attempts.SaveAsync(user, attempt.Id, 1, "c-1", Answer("a"), 1);
+        var job = _host.Jobs.Expiries.Single();
+
+        _host.Clock.Advance(job.At - _host.Clock.GetUtcNow());
+        await RunExpiryJobAsync(job);
+
+        var result = await AttemptsApi.JsonOkAsync(await Attempts.ResultAsync(user, attempt.Id));
+        (result.GetProperty("score").GetProperty("pointsEarned").GetDecimal(), result.GetProperty("score").GetProperty("maxPoints").GetDecimal())
+            .ShouldBe((0m, 3m));
+    }
+
+    [Fact]
+    public async Task The_sweeper_grades_the_attempts_it_finalizes()
+    {
+        var (user, attempt) = await OpenedAsync(Timed(budgetSec: 60));
+        await Attempts.SaveAsync(user, attempt.Id, 1, "c-1", Answer("b"), 1);
+
+        _host.Clock.Advance(TimeSpan.FromSeconds(95));
+        await _host.WithServiceAsync<SweepExpiredAttemptsHandler, int>(
+            sweeper => sweeper.HandleAsync(TestContext.Current.CancellationToken));
+
+        var result = await AttemptsApi.JsonOkAsync(await Attempts.ResultAsync(user, attempt.Id));
+        result.GetProperty("score").GetProperty("pointsEarned").GetDecimal().ShouldBe(1m);
+    }
+
+    [Fact]
+    public async Task A_tutor_item_locked_by_its_timer_is_graded_and_revealed_at_once()
+    {
+        var (user, attempt) = await OpenedAsync(new { timed = true, perQuestionSec = 60, revealMode = "tutor" });
+        await Attempts.SaveAsync(user, attempt.Id, 1, "c-1", Answer("b"), 1);
+
+        _host.Clock.Advance(TimeSpan.FromSeconds(63));
+        await Attempts.NavigateAsync(user, attempt.Id, "c-1", 2);
+        var item = await Attempts.GetItemOkAsync(user, attempt.Id, 1);
+
+        item.GetProperty("state").GetString().ShouldBe("locked");
+        item.GetProperty("reveal").GetProperty("grade").GetProperty("isCorrect").GetBoolean().ShouldBeTrue();
+        (await RowAsync(attempt.Id)).Items[0].GradedAt.ShouldNotBeNull();
+    }
+
     // Real Hangfire (shared host)
 
     [Fact]

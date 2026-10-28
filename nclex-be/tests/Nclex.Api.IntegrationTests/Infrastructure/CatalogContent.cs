@@ -39,6 +39,31 @@ public sealed class CatalogContent(ApiFactory factory)
         ["accessTier"] = accessTier,
     };
 
+    /// <summary>
+    /// A Select All That Apply question with options a to e, of which a, b and e are correct, so
+    /// a response can earn partial credit (+1 per right choice, -1 per wrong one, floor 0).
+    /// </summary>
+    public static Dictionary<string, object> SataQuestion(
+        Guid id,
+        string clientNeeds = "SECE.SIC",
+        string bodySystem = "respiratory",
+        string? cjmmSkill = "take_action")
+    {
+        var question = Question(id, clientNeeds, bodySystem, difficulty: "moderate");
+        var options = new[] { "a", "b", "c", "d", "e" };
+        question["itemType"] = "sata";
+        question["stem"] = "Which findings should the nurse report? Select all that apply.";
+        question["content"] = new { options = options.Select(o => new { id = o, text = $"Finding {o}" }) };
+        question["key"] = new { correct = new[] { "a", "b", "e" } };
+        question["rationale"] = new { correct = "Why a, b and e", perOption = options.ToDictionary(o => o, o => $"Because {o}") };
+        if (cjmmSkill is not null)
+        {
+            question["cjmmSkill"] = cjmmSkill;
+        }
+
+        return question;
+    }
+
     /// <summary>An untimed practice set; pass <paramref name="settings"/> to override any field.</summary>
     public static Dictionary<string, object?> Set(Guid id, string title, IEnumerable<Guid> questionIds, object? settings = null)
     {
@@ -87,8 +112,11 @@ public sealed class CatalogContent(ApiFactory factory)
     }
 
     /// <summary>A file of questions built with <see cref="Question"/>, for tests that need varied tags.</summary>
-    public static QuestionImportFile FileWith(string track, IEnumerable<Dictionary<string, object>> questions) =>
-        QuestionImportFile.Parse(JsonSerializer.Serialize(new { track, questions }));
+    public static QuestionImportFile FileWith(
+        string track,
+        IEnumerable<Dictionary<string, object>> questions,
+        IEnumerable<object>? testSets = null) =>
+        QuestionImportFile.Parse(JsonSerializer.Serialize(new { track, questions, testSets = testSets ?? [] }));
 
     public async Task<ImportResult> ImportAsync(QuestionImportFile file)
     {
