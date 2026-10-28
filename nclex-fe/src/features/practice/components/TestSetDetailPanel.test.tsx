@@ -7,8 +7,11 @@ import { TestSetDetailPanel } from "./TestSetDetailPanel";
 import { challengeDetail } from "./testSets";
 
 // Only the network call is replaced; the query hook and the panel are real.
-vi.mock("@/lib/api/client", () => ({ apiClient: { GET: vi.fn() } }));
+vi.mock("@/lib/api/client", () => ({ apiClient: { GET: vi.fn(), POST: vi.fn() } }));
 const getMock = vi.mocked(apiClient.GET);
+const postMock = vi.mocked(apiClient.POST);
+const push = vi.fn();
+vi.mock("next/navigation", () => ({ useRouter: () => ({ push }) }));
 
 function reply(status: number, body: unknown) {
   const ok = status < 400;
@@ -16,7 +19,7 @@ function reply(status: number, body: unknown) {
 }
 
 function renderPanel(onClose = vi.fn()) {
-  const queryClient = new QueryClient({ defaultOptions: { queries: { retry: false } } });
+  const queryClient = new QueryClient({ defaultOptions: { queries: { retry: false }, mutations: { retry: false } } });
   render(
     <QueryClientProvider client={queryClient}>
       <TestSetDetailPanel id="panel" setId={challengeDetail.id} onClose={onClose} />
@@ -28,6 +31,8 @@ function renderPanel(onClose = vi.fn()) {
 describe("TestSetDetailPanel", () => {
   beforeEach(() => {
     getMock.mockReset();
+    postMock.mockReset();
+    push.mockReset();
   });
 
   it("shows the set's settings and moves focus to its heading", async () => {
@@ -44,14 +49,26 @@ describe("TestSetDetailPanel", () => {
     expect(screen.getByText("Unlimited")).toBeInTheDocument();
   });
 
-  it("has a disabled Start button that says why", async () => {
+  it("starts the set and opens the player", async () => {
     getMock.mockResolvedValue(reply(200, challengeDetail));
-
+    postMock.mockResolvedValue(reply(201, { id: "attempt-1" }));
     renderPanel();
 
-    const start = await screen.findByRole("button", { name: "Start" });
-    expect(start).toBeDisabled();
-    expect(start).toHaveAccessibleDescription("Starting a set is coming in the next update.");
+    await userEvent.click(await screen.findByRole("button", { name: "Start" }));
+
+    expect(postMock).toHaveBeenCalledWith("/api/v1/attempts", { body: { testSetId: challengeDetail.id } });
+    expect(push).toHaveBeenCalledWith("/attempts/attempt-1");
+  });
+
+  it("asks an unverified user to verify before starting", async () => {
+    getMock.mockResolvedValue(reply(200, challengeDetail));
+    postMock.mockResolvedValue(reply(403, { code: "EMAIL_NOT_VERIFIED", title: "Verify your email address to continue." }));
+    renderPanel();
+
+    await userEvent.click(await screen.findByRole("button", { name: "Start" }));
+
+    expect(await screen.findByRole("alert")).toHaveTextContent("Verify your email address to start this set.");
+    expect(push).not.toHaveBeenCalled();
   });
 
   it("explains that a locked set needs a premium plan", async () => {
@@ -59,7 +76,9 @@ describe("TestSetDetailPanel", () => {
 
     renderPanel();
 
-    expect(await screen.findByRole("button", { name: "Start" })).toHaveAccessibleDescription("This set needs a premium plan.");
+    const start = await screen.findByRole("button", { name: "Start" });
+    expect(start).toBeDisabled();
+    expect(start).toHaveAccessibleDescription("This set needs a premium plan.");
     expect(screen.getByText(/Locked: premium/)).toBeInTheDocument();
   });
 
