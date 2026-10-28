@@ -155,12 +155,8 @@ public sealed class ImportQuestionsTests(ApiFactory factory)
         result.Issues.ShouldHaveSingleItem().Code.ShouldBe(ImportIssueCodes.TrackMismatch);
     }
 
-    private async Task<ImportResult> ImportAsync(QuestionImportFile file)
-    {
-        await using var scope = factory.Services.CreateAsyncScope();
-        return await scope.ServiceProvider.GetRequiredService<ImportQuestionsHandler>()
-            .HandleAsync(file, TestContext.Current.CancellationToken);
-    }
+    // Through CatalogContent, so it waits its turn with every other test class's imports.
+    private Task<ImportResult> ImportAsync(QuestionImportFile file) => new CatalogContent(factory).ImportAsync(file);
 
     private async Task<int> CountQuestionsAsync(params Guid[] ids)
     {
