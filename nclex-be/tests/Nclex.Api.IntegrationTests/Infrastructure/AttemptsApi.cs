@@ -70,6 +70,20 @@ public sealed class AttemptsApi(ApiFactory factory, AuthApi api)
     public Task<HttpResponseMessage> NavigateAsync(string token, Guid attemptId, string? clientId, int toPosition) =>
         SendAsync(HttpMethod.Post, $"/api/v1/attempts/{attemptId}/navigate", token, clientId, new { toPosition });
 
+    public Task<HttpResponseMessage> PauseAsync(string token, Guid attemptId, string? clientId, object body) =>
+        SendAsync(HttpMethod.Post, $"/api/v1/attempts/{attemptId}/pause", token, clientId, body);
+
+    public Task<HttpResponseMessage> ResumeAsync(string token, Guid attemptId, string? clientId) =>
+        SendAsync(HttpMethod.Post, $"/api/v1/attempts/{attemptId}/resume", token, clientId);
+
+    /// <summary>The attempt's state, failing the test unless the request succeeds.</summary>
+    public async Task<AttemptState> GetOkAsync(string token, Guid attemptId)
+    {
+        var response = await GetAsync(token, attemptId);
+        response.EnsureSuccessStatusCode();
+        return (await response.Content.ReadFromJsonAsync<AttemptState>(AuthApi.Json, TestContext.Current.CancellationToken))!;
+    }
+
     public Task<HttpResponseMessage> DiscardAsync(string token, Guid attemptId) =>
         SendAsync(HttpMethod.Delete, $"/api/v1/attempts/{attemptId}", token, clientId: null);
 

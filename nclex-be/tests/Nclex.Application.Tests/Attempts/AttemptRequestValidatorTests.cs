@@ -2,6 +2,7 @@ using FluentValidation.TestHelper;
 using Nclex.Application.Attempts;
 using Nclex.Application.Attempts.ListAttempts;
 using Nclex.Application.Attempts.Navigate;
+using Nclex.Application.Attempts.PauseAttempt;
 using Nclex.Application.Attempts.SaveResponse;
 using Nclex.Application.Attempts.UpdateItemMarks;
 using Nclex.Application.Common;
@@ -63,6 +64,17 @@ public sealed class AttemptRequestValidatorTests
         validator.TestValidate(new UpdateItemMarksRequest(StruckOptions: [new string('x', 65)])).IsValid.ShouldBeFalse();
         validator.TestValidate(new UpdateItemMarksRequest(Flagged: true, StruckOptions: ["a", "b"])).IsValid.ShouldBeTrue();
     }
+
+    [Fact]
+    public void A_pause_needs_a_reason() =>
+        new PauseAttemptRequestValidator().TestValidate(new PauseAttemptRequest(null))
+            .ShouldHaveValidationErrorFor(r => r.Reason).WithErrorCode("REQUIRED");
+
+    [Theory]
+    [InlineData(PauseReason.Break)]
+    [InlineData(PauseReason.SaveExit)]
+    public void Both_pause_reasons_are_accepted(PauseReason reason) =>
+        new PauseAttemptRequestValidator().TestValidate(new PauseAttemptRequest(reason)).ShouldNotHaveAnyValidationErrors();
 
     [Theory]
     [InlineData(null, "REQUIRED")]
