@@ -1,4 +1,4 @@
-import type { ItemReveal } from "../api/attemptApi";
+import type { ItemReveal } from "@/features/attempt/api/attemptApi";
 import { toNumber } from "@/lib/format/toNumber";
 
 /** How one option fared once the answer is revealed. */

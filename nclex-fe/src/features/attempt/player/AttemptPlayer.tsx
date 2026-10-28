@@ -5,7 +5,7 @@ import { useEffect, useId, useRef, useState } from "react";
 import ui from "@/components/ui/ui.module.css";
 import { isApiError } from "@/lib/api/errors";
 import { toNumber } from "@/lib/format/toNumber";
-import { ItemAnswer } from "../renderers/ItemAnswer";
+import { ItemAnswer } from "@/features/player/renderers/ItemAnswer";
 import { RationalePanel } from "../reveal/RationalePanel";
 import { AttemptMenu } from "./AttemptMenu";
 import { NavigatorDrawer } from "./NavigatorDrawer";

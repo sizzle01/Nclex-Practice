@@ -1,7 +1,7 @@
 import { toNumber } from "@/lib/format/toNumber";
 import type { ItemReveal } from "../api/attemptApi";
-import { optionMarkLabels, optionMarks } from "../renderers/revealMarks";
-import type { Option } from "../renderers/types";
+import { optionMarkLabels, optionMarks } from "@/features/player/renderers/revealMarks";
+import type { Option } from "@/features/player/renderers/types";
 import styles from "./reveal.module.css";
 
 interface RationalePanelProps {

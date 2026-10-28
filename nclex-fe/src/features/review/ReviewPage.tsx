@@ -7,7 +7,7 @@ import ui from "@/components/ui/ui.module.css";
 import { isApiError } from "@/lib/api/errors";
 import { toNumber } from "@/lib/format/toNumber";
 import { type CandidateItem, fetchReview, type ReviewFilter, reviewQueryKey } from "../attempt/api/attemptApi";
-import { ItemAnswer } from "../attempt/renderers/ItemAnswer";
+import { ItemAnswer } from "../player/renderers/ItemAnswer";
 import { RationalePanel } from "../attempt/reveal/RationalePanel";
 import styles from "./review.module.css";
 

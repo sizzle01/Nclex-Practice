@@ -1,4 +1,4 @@
-import type { ItemReveal } from "../api/attemptApi";
+import type { ItemReveal } from "@/features/attempt/api/attemptApi";
 
 /** An option as the item content sends it (interfaces.md section 1). */
 export interface Option {
