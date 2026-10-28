@@ -1,7 +1,9 @@
 "use client";
 
+import { useRouter } from "next/navigation";
 import { useEffect, useId, useRef } from "react";
 import ui from "@/components/ui/ui.module.css";
+import { useStartAttempt } from "@/features/attempt/api/attemptApi";
 import { isApiError } from "@/lib/api/errors";
 import { useTestSet } from "../api/practiceApi";
 import {
@@ -21,8 +23,8 @@ interface TestSetDetailPanelProps {
 }
 
 /**
- * The open set's settings and a Start button. Starting attempts arrives with F08, so the button
- * is disabled and says why. Focus moves to the panel's heading when it opens, so keyboard and
+ * The open set's settings and a Start button, which starts the set (or resumes its draft) and
+ * opens the player. Focus moves to the panel's heading when it opens, so keyboard and
  * screen-reader users land on what they asked for.
  */
 export function TestSetDetailPanel({ id, setId, onClose }: TestSetDetailPanelProps) {
@@ -30,6 +32,12 @@ export function TestSetDetailPanel({ id, setId, onClose }: TestSetDetailPanelPro
   const headingRef = useRef<HTMLHeadingElement>(null);
   const hintId = useId();
   const headingId = `${id}-heading`;
+  const router = useRouter();
+  const start = useStartAttempt();
+
+  function startSet() {
+    start.mutate(setId, { onSuccess: (attempt) => router.push(`/attempts/${attempt.id}`) });
+  }
 
   useEffect(() => {
     if (set) headingRef.current?.focus();
@@ -85,15 +93,35 @@ export function TestSetDetailPanel({ id, setId, onClose }: TestSetDetailPanelPro
             <dd>{pausePolicyLabel(set.pausePolicy)}</dd>
           </dl>
           <div>
-            <button type="button" className={`${ui.button} ${styles.startButton}`} disabled aria-describedby={hintId}>
-              Start
+            <button
+              type="button"
+              className={`${ui.button} ${styles.startButton}`}
+              disabled={set.locked || start.isPending}
+              aria-describedby={set.locked ? hintId : undefined}
+              onClick={startSet}
+            >
+              {start.isPending ? "Starting…" : "Start"}
             </button>
-            <p id={hintId} className={styles.startHint}>
-              {set.locked ? "This set needs a premium plan." : "Starting a set is coming in the next update."}
-            </p>
+            {set.locked && (
+              <p id={hintId} className={styles.startHint}>
+                This set needs a premium plan.
+              </p>
+            )}
+            {start.error && (
+              <p role="alert" className={styles.error}>
+                {startErrorMessage(start.error)}
+              </p>
+            )}
           </div>
         </>
       )}
     </section>
   );
+}
+
+function startErrorMessage(error: unknown) {
+  if (isApiError(error, "EMAIL_NOT_VERIFIED")) return "Verify your email address to start this set. Sample sets can be started now.";
+  if (isApiError(error, "PLAN_UPGRADE_REQUIRED")) return "This set needs a premium plan.";
+  if (isApiError(error, "NOT_FOUND")) return "This set is no longer available.";
+  return "The set could not be started. Please try again.";
 }

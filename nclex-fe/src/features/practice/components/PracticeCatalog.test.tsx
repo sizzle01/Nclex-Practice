@@ -13,7 +13,7 @@ const getMock = vi.mocked(apiClient.GET);
 const replace = vi.fn();
 let searchParams = new URLSearchParams();
 vi.mock("next/navigation", () => ({
-  useRouter: () => ({ replace }),
+  useRouter: () => ({ replace, push: vi.fn() }),
   usePathname: () => "/practice",
   useSearchParams: () => searchParams,
 }));
@@ -71,7 +71,7 @@ describe("PracticeCatalog", () => {
     renderWithAuth(<PracticeCatalog />, { status: "authenticated" });
 
     const panel = await screen.findByRole("region", { name: "Comprehensive Challenge 1" });
-    expect(within(panel).getByRole("button", { name: "Start" })).toBeDisabled();
+    expect(within(panel).getByRole("button", { name: "Start" })).toBeEnabled();
   });
 
   it("loads more sets when there is another page", async () => {

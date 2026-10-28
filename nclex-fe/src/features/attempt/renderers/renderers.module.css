@@ -1,0 +1,52 @@
+.options {
+  display: grid;
+  gap: 0.625rem;
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
+/* 44px or more hit targets (interfaces.md section 4); the whole row is the label. */
+.option {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  min-height: 2.75rem;
+  padding: 0.625rem 0.875rem;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  background: var(--surface);
+  cursor: pointer;
+}
+
+.option:has(input:checked) {
+  border-color: var(--accent);
+  background: var(--accent-soft);
+}
+
+.option:has(input:focus-visible) {
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
+}
+
+.option:has(input:disabled) {
+  cursor: default;
+  opacity: 0.8;
+}
+
+.option input {
+  width: 1.125rem;
+  height: 1.125rem;
+  margin: 0;
+  accent-color: var(--accent);
+}
+
+.struck {
+  text-decoration: line-through;
+  color: var(--muted);
+}
+
+.instructions {
+  margin: 0 0 0.75rem;
+  color: var(--muted);
+}

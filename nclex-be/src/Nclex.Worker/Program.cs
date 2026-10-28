@@ -1,6 +1,8 @@
 using System.Globalization;
+using Nclex.Application;
 using Nclex.Infrastructure;
 using Nclex.Infrastructure.Email;
+using Nclex.Infrastructure.Jobs;
 using Nclex.Worker;
 using Serilog;
 using Serilog.Formatting.Compact;
@@ -12,7 +14,8 @@ if (args is [ImportQuestionsCommand.Name, .. var commandArgs])
 }
 
 // Nclex.Worker hosts background work (architecture.md section 3: expiry, email outbox,
-// aggregation, reminders). F02 adds the email outbox dispatcher; Hangfire and jobs arrive with later features.
+// aggregation, reminders): the email outbox dispatcher (F02) and the Hangfire server with the
+// attempt expiry jobs (F09).
 Log.Logger = new LoggerConfiguration()
     .WriteTo.Console(formatProvider: CultureInfo.InvariantCulture)
     .CreateBootstrapLogger();
@@ -42,9 +45,13 @@ try
     builder.Services.AddInfrastructure();
     builder.Services.AddEmailDelivery();
     builder.Services.AddHostedService<EmailOutboxDispatcherService>();
+    builder.Services.AddAttemptExpiry();
+    builder.Services.AddJobScheduling();
+    builder.Services.AddJobServer();
     builder.Services.AddSingleton(TimeProvider.System);
 
     var host = builder.Build();
+    host.Services.ScheduleRecurringJobs();
     host.Services.GetRequiredService<IHostApplicationLifetime>().ApplicationStarted.Register(() =>
         Log.Information("Nclex.Worker started in {Environment}", builder.Environment.EnvironmentName));
 

@@ -72,7 +72,10 @@ public static class DependencyInjection
             .MapEnum<QuestionStatus>("question_status")
             .MapEnum<TestSetKind>("test_set_kind")
             .MapEnum<TestMode>("test_mode")
-            .MapEnum<RevealMode>("reveal_mode");
+            .MapEnum<RevealMode>("reveal_mode")
+            .MapEnum<AttemptStatus>("attempt_status")
+            .MapEnum<SubmitReason>("submit_reason")
+            .MapEnum<ItemState>("item_state");
 
     private static string GetRequiredConnectionString(IServiceProvider provider, string name) =>
         provider.GetRequiredService<IConfiguration>().GetConnectionString(name)

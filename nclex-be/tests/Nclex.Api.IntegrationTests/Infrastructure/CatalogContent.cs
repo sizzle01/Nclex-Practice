@@ -13,6 +13,11 @@ namespace Nclex.Api.IntegrationTests.Infrastructure;
 /// </summary>
 public sealed class CatalogContent(ApiFactory factory)
 {
+    // The importer creates its system user on first use with a check-then-insert, so two test
+    // classes importing at the same moment on a fresh database can both try to insert it.
+    // Imports run one at a time here; the worker's import command never runs concurrently.
+    private static readonly SemaphoreSlim ImportLock = new(1, 1);
+
     /// <summary>A valid multiple-choice question; PN questions need a PN Client Needs code.</summary>
     public static Dictionary<string, object> Question(
         Guid id,
@@ -87,9 +92,17 @@ public sealed class CatalogContent(ApiFactory factory)
 
     public async Task<ImportResult> ImportAsync(QuestionImportFile file)
     {
-        await using var scope = factory.Services.CreateAsyncScope();
-        return await scope.ServiceProvider.GetRequiredService<ImportQuestionsHandler>()
-            .HandleAsync(file, TestContext.Current.CancellationToken);
+        await ImportLock.WaitAsync(TestContext.Current.CancellationToken);
+        try
+        {
+            await using var scope = factory.Services.CreateAsyncScope();
+            return await scope.ServiceProvider.GetRequiredService<ImportQuestionsHandler>()
+                .HandleAsync(file, TestContext.Current.CancellationToken);
+        }
+        finally
+        {
+            ImportLock.Release();
+        }
     }
 
     /// <summary>Imports a file and fails the test if the importer found problems.</summary>

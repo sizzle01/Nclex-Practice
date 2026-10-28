@@ -24,14 +24,17 @@ namespace Nclex.Infrastructure.Persistence.Migrations
                 .HasAnnotation("ProductVersion", "10.0.13")
                 .HasAnnotation("Relational:MaxIdentifierLength", 63);
 
+            NpgsqlModelBuilderExtensions.HasPostgresEnum(modelBuilder, "attempt_status", new[] { "abandoned", "in_progress", "paused", "submitted" });
             NpgsqlModelBuilderExtensions.HasPostgresEnum(modelBuilder, "cjmm_skill", new[] { "analyze_cues", "evaluate_outcomes", "generate_solutions", "prioritize_hypotheses", "recognize_cues", "take_action" });
             NpgsqlModelBuilderExtensions.HasPostgresEnum(modelBuilder, "difficulty_tier", new[] { "difficult", "easy", "moderate" });
             NpgsqlModelBuilderExtensions.HasPostgresEnum(modelBuilder, "email_token_purpose", new[] { "change_email", "reset_password", "verify_email" });
             NpgsqlModelBuilderExtensions.HasPostgresEnum(modelBuilder, "exam_track", new[] { "PN", "RN" });
+            NpgsqlModelBuilderExtensions.HasPostgresEnum(modelBuilder, "item_state", new[] { "answered", "locked", "seen", "unseen" });
             NpgsqlModelBuilderExtensions.HasPostgresEnum(modelBuilder, "item_type", new[] { "bowtie", "drag_drop_cloze", "drag_drop_rationale", "dropdown_cloze", "dropdown_rationale", "dropdown_table", "fill_blank_calc", "highlight_table", "highlight_text", "hotspot", "matrix_mc", "matrix_mr", "multiple_choice", "multiple_response_grouping", "ordered_response", "sata", "select_n" });
             NpgsqlModelBuilderExtensions.HasPostgresEnum(modelBuilder, "plan_tier", new[] { "free", "premium" });
             NpgsqlModelBuilderExtensions.HasPostgresEnum(modelBuilder, "question_status", new[] { "active", "retired" });
             NpgsqlModelBuilderExtensions.HasPostgresEnum(modelBuilder, "reveal_mode", new[] { "exam", "tutor" });
+            NpgsqlModelBuilderExtensions.HasPostgresEnum(modelBuilder, "submit_reason", new[] { "cat_stop", "time_expired", "user" });
             NpgsqlModelBuilderExtensions.HasPostgresEnum(modelBuilder, "test_mode", new[] { "cat", "challenge", "practice" });
             NpgsqlModelBuilderExtensions.HasPostgresEnum(modelBuilder, "test_set_kind", new[] { "assigned", "cat", "custom", "prebuilt" });
             NpgsqlModelBuilderExtensions.HasPostgresEnum(modelBuilder, "user_role", new[] { "admin", "author", "candidate", "educator", "reviewer" });
@@ -173,6 +176,237 @@ namespace Nclex.Infrastructure.Persistence.Migrations
                         {
                             t.HasCheckConstraint("email_outbox_status_check", "status IN ('pending','sending','sent','failed')");
                         });
+                });
+
+            modelBuilder.Entity("Nclex.Domain.Entities.Attempt", b =>
+                {
+                    b.Property<Guid>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("uuid")
+                        .HasColumnName("id")
+                        .HasDefaultValueSql("gen_random_uuid()");
+
+                    b.Property<string>("ActiveClientId")
+                        .HasColumnType("text")
+                        .HasColumnName("active_client_id");
+
+                    b.Property<JsonDocument>("CatState")
+                        .HasColumnType("jsonb")
+                        .HasColumnName("cat_state");
+
+                    b.Property<int>("CurrentPosition")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("integer")
+                        .HasDefaultValue(1)
+                        .HasColumnName("current_position");
+
+                    b.Property<DateTimeOffset?>("ExamDeadlineAt")
+                        .HasColumnType("timestamp with time zone")
+                        .HasColumnName("exam_deadline_at");
+
+                    b.Property<long?>("ExamRemainingMs")
+                        .HasColumnType("bigint")
+                        .HasColumnName("exam_remaining_ms");
+
+                    b.Property<DateTimeOffset>("LastActivityAt")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("timestamp with time zone")
+                        .HasColumnName("last_activity_at")
+                        .HasDefaultValueSql("now()");
+
+                    b.Property<DateTimeOffset?>("LeaseAcquiredAt")
+                        .HasColumnType("timestamp with time zone")
+                        .HasColumnName("lease_acquired_at");
+
+                    b.Property<string>("PauseReason")
+                        .HasColumnType("text")
+                        .HasColumnName("pause_reason");
+
+                    b.Property<DateTimeOffset?>("PauseStartedAt")
+                        .HasColumnType("timestamp with time zone")
+                        .HasColumnName("pause_started_at");
+
+                    b.Property<short>("PausesUsed")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("smallint")
+                        .HasDefaultValue((short)0)
+                        .HasColumnName("pauses_used");
+
+                    b.Property<DateTimeOffset>("StartedAt")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("timestamp with time zone")
+                        .HasColumnName("started_at")
+                        .HasDefaultValueSql("now()");
+
+                    b.Property<AttemptStatus>("Status")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("attempt_status")
+                        .HasDefaultValue(AttemptStatus.InProgress)
+                        .HasColumnName("status");
+
+                    b.Property<SubmitReason?>("SubmitReason")
+                        .HasColumnType("submit_reason")
+                        .HasColumnName("submit_reason");
+
+                    b.Property<DateTimeOffset?>("SubmittedAt")
+                        .HasColumnType("timestamp with time zone")
+                        .HasColumnName("submitted_at");
+
+                    b.Property<Guid>("TestSetId")
+                        .HasColumnType("uuid")
+                        .HasColumnName("test_set_id");
+
+                    b.Property<int>("TimerEpoch")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("integer")
+                        .HasDefaultValue(0)
+                        .HasColumnName("timer_epoch");
+
+                    b.Property<int>("TotalItems")
+                        .HasColumnType("integer")
+                        .HasColumnName("total_items");
+
+                    b.Property<long>("TotalPausedMs")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("bigint")
+                        .HasDefaultValue(0L)
+                        .HasColumnName("total_paused_ms");
+
+                    b.Property<ExamTrack>("Track")
+                        .HasColumnType("exam_track")
+                        .HasColumnName("track");
+
+                    b.Property<Guid>("UserId")
+                        .HasColumnType("uuid")
+                        .HasColumnName("user_id");
+
+                    b.HasKey("Id")
+                        .HasName("pk_attempts");
+
+                    b.HasIndex("ExamDeadlineAt")
+                        .HasDatabaseName("attempts_expiry_idx")
+                        .HasFilter("status = 'in_progress'");
+
+                    b.HasIndex("TestSetId")
+                        .HasDatabaseName("ix_attempts_test_set_id");
+
+                    b.HasIndex("UserId", "LastActivityAt")
+                        .IsDescending(false, true)
+                        .HasDatabaseName("attempts_drafts_idx")
+                        .HasFilter("status IN ('in_progress','paused')");
+
+                    b.HasIndex("UserId", "SubmittedAt")
+                        .IsDescending(false, true)
+                        .HasDatabaseName("attempts_history_idx")
+                        .HasFilter("status = 'submitted'");
+
+                    b.ToTable("attempts", null, t =>
+                        {
+                            t.HasCheckConstraint("attempts_check", "status <> 'submitted' OR submitted_at IS NOT NULL");
+
+                            t.HasCheckConstraint("attempts_check1", "status <> 'paused' OR exam_deadline_at IS NULL");
+
+                            t.HasCheckConstraint("attempts_pause_reason_check", "pause_reason IN ('break','save_exit')");
+                        });
+                });
+
+            modelBuilder.Entity("Nclex.Domain.Entities.AttemptItem", b =>
+                {
+                    b.Property<Guid>("AttemptId")
+                        .HasColumnType("uuid")
+                        .HasColumnName("attempt_id");
+
+                    b.Property<int>("Position")
+                        .HasColumnType("integer")
+                        .HasColumnName("position");
+
+                    b.Property<DateTimeOffset?>("AnsweredAt")
+                        .HasColumnType("timestamp with time zone")
+                        .HasColumnName("answered_at");
+
+                    b.Property<int>("ClientSeq")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("integer")
+                        .HasDefaultValue(0)
+                        .HasColumnName("client_seq");
+
+                    b.Property<DateTimeOffset?>("EnteredAt")
+                        .HasColumnType("timestamp with time zone")
+                        .HasColumnName("entered_at");
+
+                    b.Property<bool>("Flagged")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("boolean")
+                        .HasDefaultValue(false)
+                        .HasColumnName("flagged");
+
+                    b.Property<JsonDocument>("GradeDetail")
+                        .HasColumnType("jsonb")
+                        .HasColumnName("grade_detail");
+
+                    b.Property<DateTimeOffset?>("GradedAt")
+                        .HasColumnType("timestamp with time zone")
+                        .HasColumnName("graded_at");
+
+                    b.Property<bool?>("IsCorrect")
+                        .HasColumnType("boolean")
+                        .HasColumnName("is_correct");
+
+                    b.Property<DateTimeOffset?>("ItemDeadlineAt")
+                        .HasColumnType("timestamp with time zone")
+                        .HasColumnName("item_deadline_at");
+
+                    b.Property<int?>("ItemRemainingMs")
+                        .HasColumnType("integer")
+                        .HasColumnName("item_remaining_ms");
+
+                    b.Property<DateTimeOffset?>("LockedAt")
+                        .HasColumnType("timestamp with time zone")
+                        .HasColumnName("locked_at");
+
+                    b.Property<short?>("MaxPoints")
+                        .HasColumnType("smallint")
+                        .HasColumnName("max_points");
+
+                    b.Property<decimal?>("PointsEarned")
+                        .HasPrecision(6, 2)
+                        .HasColumnType("numeric(6,2)")
+                        .HasColumnName("points_earned");
+
+                    b.Property<Guid>("QuestionVersionId")
+                        .HasColumnType("uuid")
+                        .HasColumnName("question_version_id");
+
+                    b.Property<JsonDocument>("Response")
+                        .HasColumnType("jsonb")
+                        .HasColumnName("response");
+
+                    b.Property<ItemState>("State")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("item_state")
+                        .HasDefaultValue(ItemState.Unseen)
+                        .HasColumnName("state");
+
+                    b.Property<string>("StruckOptions")
+                        .IsRequired()
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("jsonb")
+                        .HasColumnName("struck_options")
+                        .HasDefaultValueSql("'[]'");
+
+                    b.Property<long>("TimeSpentMs")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("bigint")
+                        .HasDefaultValue(0L)
+                        .HasColumnName("time_spent_ms");
+
+                    b.HasKey("AttemptId", "Position")
+                        .HasName("pk_attempt_items");
+
+                    b.HasIndex("QuestionVersionId")
+                        .HasDatabaseName("ix_attempt_items_question_version_id");
+
+                    b.ToTable("attempt_items", (string)null);
                 });
 
             modelBuilder.Entity("Nclex.Domain.Entities.BodySystem", b =>
@@ -1374,6 +1608,109 @@ namespace Nclex.Infrastructure.Persistence.Migrations
                         .HasForeignKey("UserId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .HasConstraintName("fk_email_outbox_users_user_id");
+                });
+
+            modelBuilder.Entity("Nclex.Domain.Entities.Attempt", b =>
+                {
+                    b.HasOne("Nclex.Domain.Entities.TestSet", null)
+                        .WithMany()
+                        .HasForeignKey("TestSetId")
+                        .OnDelete(DeleteBehavior.NoAction)
+                        .IsRequired()
+                        .HasConstraintName("fk_attempts_test_sets_test_set_id");
+
+                    b.HasOne("Nclex.Domain.Entities.User", null)
+                        .WithMany()
+                        .HasForeignKey("UserId")
+                        .OnDelete(DeleteBehavior.NoAction)
+                        .IsRequired()
+                        .HasConstraintName("fk_attempts_users_user_id");
+
+                    b.OwnsOne("Nclex.Domain.Entities.AttemptSettings", "Settings", b1 =>
+                        {
+                            b1.Property<Guid>("AttemptId")
+                                .ValueGeneratedOnAdd();
+
+                            b1.Property<bool>("AllowBackNav")
+                                .HasJsonPropertyName("allowBackNav");
+
+                            b1.Property<string>("Mode")
+                                .IsRequired()
+                                .HasJsonPropertyName("mode");
+
+                            b1.Property<decimal?>("PassThreshold")
+                                .HasJsonPropertyName("passThreshold");
+
+                            b1.Property<int?>("PerQuestionSec")
+                                .HasJsonPropertyName("perQuestionSec");
+
+                            b1.Property<string>("RevealMode")
+                                .IsRequired()
+                                .HasJsonPropertyName("revealMode");
+
+                            b1.Property<int?>("TimeBudgetSec")
+                                .HasJsonPropertyName("timeBudgetSec");
+
+                            b1.Property<bool>("Timed")
+                                .HasJsonPropertyName("timed");
+
+                            b1.HasKey("AttemptId");
+
+                            b1.ToTable("attempts");
+
+                            b1
+                                .ToJson("settings")
+                                .HasColumnType("jsonb");
+
+                            b1.WithOwner()
+                                .HasForeignKey("AttemptId")
+                                .HasConstraintName("fk_attempts_attempts_id");
+
+                            b1.OwnsOne("Nclex.Domain.Entities.PausePolicy", "PausePolicy", b2 =>
+                                {
+                                    b2.Property<Guid>("AttemptSettingsAttemptId");
+
+                                    b2.Property<int?>("MaxPauseSec")
+                                        .HasJsonPropertyName("maxPauseSec");
+
+                                    b2.Property<int?>("MaxPauses")
+                                        .HasJsonPropertyName("maxPauses");
+
+                                    b2.HasKey("AttemptSettingsAttemptId")
+                                        .HasName("pk_attempts");
+
+                                    b2.ToTable("attempts");
+
+                                    b2.HasJsonPropertyName("pausePolicy");
+
+                                    b2.WithOwner()
+                                        .HasForeignKey("AttemptSettingsAttemptId")
+                                        .HasConstraintName("fk_attempts_attempts_attempt_settings_attempt_id");
+                                });
+
+                            b1.Navigation("PausePolicy")
+                                .IsRequired();
+                        });
+
+                    b.Navigation("Settings")
+                        .IsRequired();
+                });
+
+            modelBuilder.Entity("Nclex.Domain.Entities.AttemptItem", b =>
+                {
+                    b.HasOne("Nclex.Domain.Entities.Attempt", null)
+                        .WithMany()
+                        .HasForeignKey("AttemptId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired()
+                        .HasConstraintName("fk_attempt_items_attempts_attempt_id");
+
+                    b.HasOne("Nclex.Domain.Entities.QuestionVersion", null)
+                        .WithMany()
+                        .HasForeignKey("QuestionVersionId")
+                        .OnDelete(DeleteBehavior.NoAction)
+                        .IsRequired()
+                        .HasConstraintName("fk_attempt_items_question_versions_question_version_id");
                 });
 
             modelBuilder.Entity("Nclex.Domain.Entities.ClientNeedsCategory", b =>
