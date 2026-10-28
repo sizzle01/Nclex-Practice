@@ -2,7 +2,7 @@
 
 ## 1. Summary
 
-Every MVP item type can now be answered in the exam player and read back in review. That covers multiple choice, SATA, select N, both matrix types, grouping, both drop-down types, both highlight types, calculation and ordered response. Each renderer has a keyboard model and shows its reveal marks as ✓/✗ text, not by colour alone. A question can bring exhibits: tables, trend flowsheets, images with alt text, and audio or video with captions. Questions in an unfolding case study show the case's tabs (nurses' notes, vitals, orders…) beside the question on wide screens and in a drawer on phones. Candidates can strike options through as a note to self. Five sample questions now carry exhibits, including a real image and an audio clip with captions and a transcript. Those media come in through the content importer and are served to the player through short-lived signed links. The importer can also create case studies, and three sample heart-failure questions now form one. A development-only gallery at `/dev/items` shows every renderer with sample data.
+Every MVP item type can now be answered in the exam player and read back in review. That covers multiple choice, SATA, select N, both matrix types, grouping, both drop-down types, both highlight types, calculation and ordered response. Each renderer has a keyboard model and shows its reveal marks as ✓/✗ text, not by colour alone. A question can bring exhibits: tables, trend flowsheets, images with alt text, and audio or video with captions. Questions in an unfolding case study show the case's tabs (nurses' notes, vitals, orders…) beside the question on wide screens and in a drawer on phones. Candidates can strike options through as a note to self. Five sample questions now carry exhibits, including a real image and an audio clip with captions and a transcript. Those media come in through the content importer and are served to the player through short-lived signed links. The importer can also create case studies, and the sample file now has a six-item heart-failure case, one item per clinical judgment step. A development-only gallery at `/dev/items` shows every renderer with sample data.
 
 ## 2. How to try it
 
@@ -52,14 +52,25 @@ cd ../nclex-fe && npm install && npm run dev          # http://localhost:3000
 | Question | Exhibit |
 |---|---|
 | 6 (MC, digoxin) | Vital-signs flowsheet and a lab table, as two tabs |
-| 15 (SATA, pressure injuries) | Image of sacral skin, with alt text |
-| 19 to 21 (case study "Heart failure exacerbation") | The case's four tabs (nurses' notes, vital signs, labs, orders) on all three items |
-| 19 (SATA, left-sided heart failure; case item 1) | Also audio of lung crackles, with captions (turn them on in the player's controls) and a **Read the transcript** link |
-| 20 (matrix, left or right; case item 2), 21 (grouping, discharge teaching; case item 3) | Only the case's tabs |
+| 11 (SATA, pressure injuries) | Image of sacral skin, with alt text |
+| 15 (SATA, left-sided heart failure) | Audio of lung crackles, with captions (turn them on in the player's controls) and a **Read the transcript** link |
+| 16 to 21 (case study "Heart failure exacerbation") | The case's four tabs (nurses' notes, vital signs, labs, orders) on all six items |
+| 21 (matrix, day-2 reassessment; case item 6) | Also a reassessment flowsheet (admission against day 2) |
 | 25 (matrix, heparin) | aPTT flowsheet |
 | 29 (drop-down, hypoglycemia) | Nurse's note |
 
-In **Comprehensive Challenge 1** the case is questions 36 to 38.
+The case's six items, one per clinical judgment step:
+
+| Case item | Question | Type | Step |
+|---|---|---|---|
+| 1 | 16 | Highlight: findings in the note that need follow-up (new) | Recognize cues |
+| 2 | 17 | Matrix: left- or right-sided failure (existing) | Analyze cues |
+| 3 | 18 | Drop-down: the highest risk, and the evidence (new) | Prioritize hypotheses |
+| 4 | 19 | Matrix, more than one per row: each intervention's effects (new) | Generate solutions |
+| 5 | 20 | Grouping: discharge teaching (existing) | Take action |
+| 6 | 21 | Matrix: improved, not changed or worsened on day 2 (new) | Evaluate outcomes |
+
+In **Comprehensive Challenge 1** the case is questions 33 to 38.
 
 From 1024px the exhibits sit beside the question; below that, open them with **Show exhibits**. Tab to the tab list and move between tabs with the arrow keys.
 
@@ -74,7 +85,7 @@ curl -s -o clip.wav "http://localhost:5080<url from above>"              # 200 a
 curl -s "http://localhost:5080<transcriptUrl>"                           # 200 text/plain; charset=utf-8
 
 # The case study comes with each of its items
-curl -s $B/attempts/$ID/items/20 "${H[@]}" | jq '.caseStudy | {title, position, tabs: [.scenario.tabs[].title]}'
+curl -s $B/attempts/$ID/items/17 "${H[@]}" | jq '.caseStudy | {title, position, tabs: [.scenario.tabs[].title]}'
 # -> {"title":"Heart failure exacerbation","position":2,"tabs":["Nurses' notes","Vital signs","Laboratory results","Orders"]}
 curl -s -H "Range: bytes=0-99" -o /dev/null -w "%{http_code}\n" "http://localhost:5080<url>"   # 206
 ```
@@ -109,7 +120,7 @@ Media, backend then frontend:
 21. `Nclex.Infrastructure/Media/LocalDiskMediaStorage.cs`, `HmacMediaUrlSigner.cs` and `MediaStorageOptions.cs`, then `Content/DirectoryContentFiles.cs`.
 22. `Nclex.Api/Controllers/MediaController.cs`: the four endpoints (details, file, captions, transcript).
 23. `nclex-fe/src/features/player/media/mediaApi.ts` and `MediaContext.tsx` (`useMedia`), then `exhibits/ExhibitMedia.tsx`.
-24. `nclex-be/content/sample-questions.rn.json` (`media`, `caseStudies`, the five `exhibits` and the three questions with `caseStudyId`) and `content/media/`.
+24. `nclex-be/content/sample-questions.rn.json` (`media`, `caseStudies`, the six `exhibits` and the six questions with `caseStudyId`) and `content/media/`.
 
 Case studies:
 
@@ -135,9 +146,9 @@ Case studies:
 5. **Expired link.** If the browser is refused (a link older than 10 minutes), `ExhibitMedia` asks once for fresh links. A second failure shows "can't be shown right now".
 
 **A case-study item**, from import to screen:
-1. **Import.** `CaseStudyImporter.ValidateAsync` checks `caseStudies[0]` with `CaseStudyRules.CheckScenario` (each tab's exhibits go through `ExhibitRules`) and the three questions' `caseStudyId`/`casePosition`. It then works out the case's members after the import (the file's questions plus published ones it doesn't mention) and checks their positions run 1, 2, 3. `CatalogImporter` checks that both comprehensive sets hold all three, back to back, in order.
+1. **Import.** `CaseStudyImporter.ValidateAsync` checks `caseStudies[0]` with `CaseStudyRules.CheckScenario` (each tab's exhibits go through `ExhibitRules`) and the six questions' `caseStudyId`/`casePosition`. It then works out the case's members after the import (the file's questions plus published ones it doesn't mention) and checks their positions run 1 to 6. `CatalogImporter` checks that both comprehensive sets hold all six, back to back, in order, and that no curated set already in the database would be split by the change.
 2. **Write.** Inside the import transaction: media, then the `case_studies` row (`CaseStudy.Create`), then a question version per question with `case_study_id` and `case_position` set from `AuthoredItem.Case`.
-3. **Item.** `GET …/items/20` goes through `ItemViewReader` (F08), which loads the case and returns `caseStudy: { id, title, scenario, position: 2 }`.
+3. **Item.** `GET …/items/17` goes through `ItemViewReader` (F08), which loads the case and returns `caseStudy: { id, title, scenario, position: 2 }`.
 4. **Screen.** `ExhibitPanel` shows the case title and its four tabs, then the item's own exhibits as more tabs.
 
 The strike-through tool follows a shorter path. `toggleStrike` updates the cached item straight away, then sends `PATCH …/items/{position}` with the full `struckOptions` list. If the server refuses, the strike is put back.
@@ -170,8 +181,10 @@ No other schema change:
   - Positions are checked for the case as it will be after the import, including published questions the file doesn't mention. They must run 1, 2, 3… with no gap or repeat. So moving a question out of the middle of a case is refused until the others are renumbered in the same file.
   - Joining, leaving or moving within a case gives the question a new version, because versions are immutable. The case itself is edited in place: its scenario only sets the scene, and past attempts keep their answers.
   - A case-study tab and one of its items' own exhibits can't share an id, because the player puts them in one tab list.
-- **Curated sets keep each case whole.** A prebuilt set that uses any item of a case must hold all of them, back to back, in case order (`CASE_STUDY_SPLIT` otherwise). The custom builder already works this way (F07's `SetSampler`), and otherwise the player would show a case's tabs with items missing or out of order. Banks need no rule, because the builder drops incomplete cases from a pool. Sets already in the database are not re-checked when a later file changes a case; the next import of that set is.
-- **The sample case** reuses the three existing heart-failure questions (SATA left-sided findings, matrix left or right, grouping discharge teaching) instead of new ones, so it has 3 items rather than the usual 6. The new scenario text (notes, vitals, labs, orders) is sample content like the rest of the file, not reviewed by a nurse educator. To keep the case whole, the two comprehensive sets were reordered, and the **RN Sample Set** now uses the heparin matrix question (also matrix MC) instead of the case's matrix question. F04's walkthrough says case studies can't be imported; that is now out of date.
+- **Curated sets keep each case whole.** A prebuilt set that uses any item of a case must hold all of them, back to back, in case order (`CASE_STUDY_SPLIT` otherwise). The custom builder already works this way (F07's `SetSampler`), and otherwise the player would show a case's tabs with items missing or out of order. Banks need no rule, because the builder drops incomplete cases from a pool.
+- **Stored sets are re-checked too.** When a file changes a case (adds, removes or moves a question), every curated set already in the database that holds a question of that case, before or after the change, is checked against the case as it will be. If one would be split, the import is refused with `CASE_STUDY_SPLIT` at the place in the file that changes the case, naming the set; the fix is to add that set, reordered, to the same file. The importer never edits a set on its own. Custom sets are not checked: they belong to candidates, and an author's import shouldn't fail because of one (see Follow-ups).
+- **The sample case** has six items, one per clinical judgment step (table in section 2). Four are new (`f11b…0001` to `0004`); two are existing heart-failure questions (the left-or-right matrix and the discharge-teaching grouping). The plan's table first listed five new items; to keep to four, the existing grouping question (already tagged "take action") stays at position 5 instead of a new SATA, and the left-sided-findings SATA leaves the case and is standalone again, keeping its audio. The new questions and scenario text are sample content like the rest of the file, not reviewed by a nurse educator.
+- **Sample-set changes for the case.** The file has 44 questions. To keep both comprehensive sets at 40 with the whole case inside, four standalone multiple-choice questions without exhibits (`f04a…0007` to `0010`) left them; they stay in the bank, which now has 44. The **RN Sample Set** uses the heparin matrix question (also matrix MC) instead of the case's matrix question, so it still has one question per type. F04's walkthrough says case studies can't be imported; that is now out of date.
 - **The gallery** keeps its own local files (`public/dev-media`) through `MediaProvider`, so it works without signing in.
 - **Panel layout.** The exhibit panel uses tabs: the case study's tabs first, then one tab per item exhibit. With a single tab there is no tab list.
 - **Matrix keyboard model.** The arrow keys move focus without selecting, and Space selects, for both radio and checkbox matrices. Native radio buttons would select as they move, and only within their row.
@@ -189,7 +202,7 @@ No other schema change:
 ## 7. Tests
 
 ```bash
-cd nclex-be && dotnet build && dotnet test          # 943 passed (Docker must be running)
+cd nclex-be && dotnet build && dotnet test          # 946 passed (Docker must be running)
 cd nclex-fe && npm run lint && npm run typecheck && npm test   # 312 passed (49 files)
 ```
 
@@ -218,7 +231,7 @@ cd nclex-fe && npm run lint && npm run typecheck && npm test   # 312 passed (49 
 - **Media, backend:**
   - Domain (`tests/Nclex.Domain.Tests/Content/`): each exhibit kind, each malformed exhibit with its path, graphic options found anywhere in the content, and each media rule (alt text, captions, transcript, MIME type of another kind, unknown kind).
   - Import (`Content/ImportMediaTests.cs`): files and rows stored, a re-import unchanged, a changed alt text updating the row, and media from an earlier file usable. These problems each write nothing: no alt text, no captions, a wrong MIME type, a missing file, a path outside the folder, captions that aren't WebVTT, no transcript, a missing transcript file, a transcript that isn't text. Also: an unknown or wrong-kind `mediaId`, a malformed exhibit, and an unknown graphic-option media.
-  - Sample file (`ImportQuestionsTests`): 2 media and 5 questions with exhibits, with the files (and the transcript) in storage, and the case study with its three items in order.
+  - Sample file (`ImportQuestionsTests`): 44 questions (three of each of the four types the case added), 2 media and 6 questions with exhibits, with the files (and the transcript) in storage, and the six-item case in clinical-judgment order.
   - Endpoints (`Media/MediaEndpointsTests.cs`):
     - 401 when signed out, and 404 for an unknown asset
     - an image with alt text and a token-free link, with the right bytes, type and `Cache-Control: private`
@@ -228,18 +241,20 @@ cd nclex-fe && npm run lint && npm run typecheck && npm test   # 312 passed (49 
     - an item's exhibits reaching the candidate
 - **Case studies, backend:**
   - Domain (`CaseStudyRulesTests`): a valid scenario and its media, each malformed scenario with its path, tab ids, complete and incomplete positions, sets that keep or split a case, and `CaseStudy.Update` changing only when something changed.
-  - Import (`Content/ImportCaseStudiesTests.cs`): the case and its versions stored and a re-import unchanged; a changed scenario updating in place; a later file adding a question to an imported case; leaving a case giving a new version; leaving a gap refused. Each of these writes nothing: an unknown case, a position without a case or a case without a position, position 7, a repeated position, a gap, no tabs, a scenario that isn't an object, a malformed exhibit or unknown media in a tab, an exhibit id that is also a tab id, no title. A curated set with only part of a case, out of order, or not back to back is refused. An item in a case returns its case study with title, tabs and position.
+  - Import (`Content/ImportCaseStudiesTests.cs`): the case and its versions stored and a re-import unchanged; a changed scenario updating in place; a later file adding a question to an imported case; leaving a case giving a new version; leaving a gap refused. Each of these writes nothing: an unknown case, a position without a case or a case without a position, position 7, a repeated position, a gap, no tabs, a scenario that isn't an object, a malformed exhibit or unknown media in a tab, an exhibit id that is also a tab id, no title. A curated set with only part of a case, out of order, or not back to back is refused. A set already stored is checked too: a later file that adds a question to its case, or reorders the case, is refused and names the set, and the same change passes when the file also brings the set, fixed. An item in a case returns its case study with title, tabs and position.
 - **Media, frontend** (`ExhibitPanel.test.tsx`): loading from the API with the signed link and alt text, an audio clip's captions and transcript links from the API, a 404 shown as "can't be shown", and one refresh after a refused link, then giving up.
 - **Media end to end** (run by hand, not in the suite): through the Next.js proxy, every exhibit of Comprehensive Practice 1 arrived. The image and audio links worked without a token, captions came back as `text/vtt`, a range request got 206, and a tampered link got 403.
 - **Transcripts and the case study against the real API** (by hand, after the follow-up): the worker imported the sample file into a database that had the earlier F11 content (3 questions and 3 sets updated, 1 case study created, the transcript stored). Items 19 to 21 of Comprehensive Practice 1 returned the case with its four tabs and positions 1 to 3, with no answer key; the transcript link returned `text/plain; charset=utf-8`.
+- **The six-item case against the real API** (by hand): re-importing into the database with the 3-item case gave 4 questions created, 2 updated (the SATA leaving the case and the grouping moving to position 5) and 2 sets updated. Questions 16 to 21 of Comprehensive Practice 1 came back with positions 1 to 6 and no answer key, and each scored full marks in tutor mode when answered correctly (4/4, 4/4, 2/2, 6/6, 4/4, 5/5).
 - **Against the real API** (run once by hand while building F11, not part of the suite): a script answered all 90 items of the three sample sets with the shapes the renderers emit. There were no 400s from autosave or tutor submit, and the grade details had the targets the reveal marks expect.
 
 ## 8. Follow-ups and known limitations
 
 - **Premium media.** Any signed-in user can get links for any asset id. Gating by the item's access tier, and serving premium media through signed CDN URLs (architecture.md), is still to do.
 - **S3/MinIO storage** in place of local disk for deployed environments, behind `IMediaStorage`.
-- **A full six-item sample case.** The sample case has 3 items; a reviewed 6-item case (recognize cues through evaluate outcomes) is content work for later.
-- **Sets already in the database** aren't re-checked when a later import changes a case they use (see section 6).
+- **Clinical review of the sample case.** The six-item case is sample content; it needs a nurse educator's review before it counts as real content.
+- **Custom sets aren't re-checked** when an import changes a case. Their questions came from whole cases when built, and attempts already started keep their versions, so the risk is only a case changing after someone built a custom set from it. The player would then show the case's tabs with an item missing or out of order.
+- **Older walkthroughs** (F04 to F10) still describe 40 sample questions and the old set order, and F04's says case studies can't be imported.
 - **A link that expires mid-playback.** A clip that has already loaded keeps playing; one that needs a new range request after 10 minutes gets one fresh link, then shows the note.
 - **Markdown** in stems, options and exhibit bodies is still shown as plain text.
 - **Browser checks.** The keyboard-only pass in a real browser (dnd-kit's keyboard sensor needs layout, which jsdom lacks) should become a Playwright test in F16.
