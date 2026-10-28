@@ -102,6 +102,11 @@ export function UserMenu() {
             </Link>
           </li>
           <li>
+            <Link href="/settings/notifications" onClick={() => setOpen(false)}>
+              Notification settings
+            </Link>
+          </li>
+          <li>
             <button type="button" disabled={busy} onClick={() => run(signOut)}>
               Log out
             </button>

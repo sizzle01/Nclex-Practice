@@ -88,3 +88,10 @@
   color: var(--muted);
   font-weight: 600;
 }
+
+/* Target of #breakdown; the margin keeps the first table clear of the sticky top bar. */
+.breakdown {
+  display: grid;
+  gap: 1.25rem;
+  scroll-margin-top: 5rem;
+}

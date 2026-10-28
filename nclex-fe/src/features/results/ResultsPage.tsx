@@ -2,6 +2,7 @@
 
 import { useQuery } from "@tanstack/react-query";
 import Link from "next/link";
+import { useEffect } from "react";
 import ui from "@/components/ui/ui.module.css";
 import { isApiError } from "@/lib/api/errors";
 import { toNumber } from "@/lib/format/toNumber";
@@ -27,6 +28,13 @@ const dimensions: { key: keyof Breakdown; title: string; column: string }[] = [
  */
 export function ResultsPage({ attemptId }: { attemptId: string }) {
   const result = useQuery({ queryKey: resultQueryKey(attemptId), queryFn: () => fetchResult(attemptId) });
+
+  // The browser only jumps to #breakdown if it exists on arrival; here it appears after loading.
+  useEffect(() => {
+    if (result.isSuccess && window.location.hash === "#breakdown") {
+      document.getElementById("breakdown")?.scrollIntoView();
+    }
+  }, [result.isSuccess]);
 
   if (result.isPending) return <p className={ui.muted}>Loading your results…</p>;
   if (result.isError) return <ResultsError attemptId={attemptId} error={result.error} />;
@@ -90,11 +98,14 @@ export function ResultsPage({ attemptId }: { attemptId: string }) {
         </Link>
       </nav>
 
-      {dimensions.map(({ key, title, column }) =>
-        data.breakdown[key].length > 0 ? (
-          <BreakdownTable key={key} title={title} column={column} rows={data.breakdown[key]} />
-        ) : null,
-      )}
+      {/* Result notifications link here (interfaces.md 5.5: results page anchored at #breakdown). */}
+      <div id="breakdown" className={styles.breakdown}>
+        {dimensions.map(({ key, title, column }) =>
+          data.breakdown[key].length > 0 ? (
+            <BreakdownTable key={key} title={title} column={column} rows={data.breakdown[key]} />
+          ) : null,
+        )}
+      </div>
     </div>
   );
 }
