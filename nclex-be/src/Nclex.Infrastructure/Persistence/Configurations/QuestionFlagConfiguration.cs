@@ -1,5 +1,6 @@
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
+using Nclex.Application.Flags.ReportIssue;
 using Nclex.Domain.Entities;
 using Nclex.Domain.Flags;
 
@@ -8,8 +9,11 @@ namespace Nclex.Infrastructure.Persistence.Configurations;
 /// <summary>Maps <see cref="QuestionFlag"/> to <c>question_flags</c> (database.md section 2.9).</summary>
 internal sealed class QuestionFlagConfiguration : IEntityTypeConfiguration<QuestionFlag>
 {
-    /// <summary>One report per user, version and reason; a second one is a duplicate (409).</summary>
-    public const string OneReportPerReasonIndex = "ix_question_flags_user_id_question_version_id_reason";
+    /// <summary>
+    /// One report per user, version and reason; a second one is a duplicate (409).
+    /// The report handler matches this name to turn a race into 409.
+    /// </summary>
+    public const string OneReportPerReasonIndex = ReportIssueHandler.OneReportPerReasonIndex;
 
     /// <summary>The moderation queue: reports still to handle, oldest first.</summary>
     public const string QueueIndex = "flags_queue_idx";

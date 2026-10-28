@@ -19,6 +19,7 @@ public static class EmailTemplateNames
     public const string ResultFail = "result_fail";
     public const string ResultReady = "result_ready";
     public const string DraftReminder = "draft_reminder";
+    public const string FlagResolved = "flag_resolved";
 }
 
 /// <summary>Payload of the "verify your email" email.</summary>
@@ -81,3 +82,9 @@ public sealed record DraftReminderEmailPayload(
     decimal AnsweredShare,
     long? TimeLeftMs,
     string AttemptPath);
+
+/// <summary>Payload of the "we reviewed your report" email (F15).</summary>
+/// <param name="DisplayName">Used in the greeting, if the user gave one.</param>
+/// <param name="ResolutionNote">The moderator's note, shown as written.</param>
+/// <param name="ReportsPath">The "My reports" page, relative to the frontend.</param>
+public sealed record FlagResolvedEmailPayload(string? DisplayName, string ResolutionNote, string ReportsPath);

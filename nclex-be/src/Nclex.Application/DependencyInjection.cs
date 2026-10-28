@@ -40,6 +40,9 @@ using Nclex.Application.Catalog.ListQuestionBanks;
 using Nclex.Application.Catalog.ListTestSets;
 using Nclex.Application.Content.ImportQuestions;
 using Nclex.Application.Email;
+using Nclex.Application.Flags.Moderation;
+using Nclex.Application.Flags.MyFlags;
+using Nclex.Application.Flags.ReportIssue;
 using Nclex.Application.Media.GetMedia;
 using Nclex.Application.Media.OpenMediaFile;
 using Nclex.Application.Notifications;
@@ -153,6 +156,13 @@ public static class DependencyInjection
         services.AddScoped<PreferenceRows>();
         services.AddScoped<GetPreferencesHandler>();
         services.AddScoped<UpdatePreferencesHandler>();
+
+        // Content feedback (flags)
+        services.AddScoped<ReportIssueHandler>();
+        services.AddScoped<ListMyFlagsHandler>();
+        services.AddScoped<FlagQueueReader>();
+        services.AddScoped<ListFlagQueueHandler>();
+        services.AddScoped<UpdateFlagHandler>();
 
         // Media
         services.AddScoped<GetMediaHandler>();

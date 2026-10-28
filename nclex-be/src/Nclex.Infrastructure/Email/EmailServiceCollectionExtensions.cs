@@ -32,6 +32,7 @@ public static class EmailServiceCollectionExtensions
         services.AddSingleton<IEmailTemplate, ResultFailTemplate>();
         services.AddSingleton<IEmailTemplate, ResultReadyTemplate>();
         services.AddSingleton<IEmailTemplate, DraftReminderTemplate>();
+        services.AddSingleton<IEmailTemplate, FlagResolvedTemplate>();
         services.AddSingleton<EmailTemplates>();
         services.AddSingleton<IEmailSender, SmtpEmailSender>();
         services.AddScoped<OutboxDispatcher>();
