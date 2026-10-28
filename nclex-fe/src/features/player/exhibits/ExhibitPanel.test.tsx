@@ -1,17 +1,42 @@
-import { render, screen, within } from "@testing-library/react";
+import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
+import { fireEvent, render, screen, waitFor, within } from "@testing-library/react";
 import userEvent from "@testing-library/user-event";
-import { afterEach, describe, expect, it } from "vitest";
+import type { ReactNode } from "react";
+import { afterEach, beforeEach, describe, expect, it, vi } from "vitest";
+import { apiClient } from "@/lib/api/client";
 import { expectNoAxeViolations } from "@/test/axe";
 import { stubMatchMedia } from "@/test/matchMedia";
 import { caseStudyItem, exhibitItem, galleryMedia } from "../gallery/galleryExhibits";
 import { MediaProvider } from "../media/MediaContext";
 import { ExhibitPanel } from "./ExhibitPanel";
 
-function renderPanel(item: { exhibits?: unknown; caseStudy?: unknown }, withMedia = true) {
-  const panel = <ExhibitPanel exhibits={item.exhibits ?? []} caseStudy={(item.caseStudy as never) ?? null} />;
-  return render(withMedia ? <MediaProvider resolve={galleryMedia}>{panel}</MediaProvider> : panel);
+// Only the network is replaced: media from the API go through the real useMedia and its query.
+vi.mock("@/lib/api/client", () => ({ apiClient: { GET: vi.fn() } }));
+const getMock = vi.mocked(apiClient.GET);
+
+function reply(status: number, body: unknown) {
+  const ok = status < 400;
+  return {
+    data: ok ? body : undefined,
+    error: ok ? undefined : body,
+    response: new Response(null, { status }),
+  } as never;
 }
 
+function withQueryClient(children: ReactNode) {
+  const queryClient = new QueryClient({ defaultOptions: { queries: { retry: false } } });
+  return <QueryClientProvider client={queryClient}>{children}</QueryClientProvider>;
+}
+
+/** Renders the panel with the gallery's local media, or, with withMedia false, media from the (mocked) API. */
+function renderPanel(item: { exhibits?: unknown; caseStudy?: unknown }, withMedia = true) {
+  const panel = <ExhibitPanel exhibits={item.exhibits ?? []} caseStudy={(item.caseStudy as never) ?? null} />;
+  return render(withQueryClient(withMedia ? <MediaProvider resolve={galleryMedia}>{panel}</MediaProvider> : panel));
+}
+
+const imageExhibit = [{ id: "photo", kind: "image", title: "Sacral skin", mediaId: "m-1" }];
+
+beforeEach(() => getMock.mockReset());
 afterEach(() => stubMatchMedia(false));
 
 describe("ExhibitPanel", () => {
@@ -71,23 +96,61 @@ describe("ExhibitPanel", () => {
 
   it("plays video with captions", () => {
     const { container } = render(
-      <MediaProvider resolve={() => ({ url: "/clip.mp4", captionsUrl: "/clip.vtt" })}>
-        <ExhibitPanel
-          exhibits={[{ id: "v", kind: "video", title: "Inhaler technique", mediaId: "clip" }]}
-          caseStudy={null}
-        />
-      </MediaProvider>,
+      withQueryClient(
+        <MediaProvider resolve={() => ({ url: "/clip.mp4", captionsUrl: "/clip.vtt" })}>
+          <ExhibitPanel
+            exhibits={[{ id: "v", kind: "video", title: "Inhaler technique", mediaId: "clip" }]}
+            caseStudy={null}
+          />
+        </MediaProvider>,
+      ),
     );
 
     expect(container.querySelector("video track")).toHaveAttribute("src", "/clip.vtt");
   });
 
-  it("explains an image it can't show", async () => {
-    renderPanel(exhibitItem, false);
+  it("loads media from the API and uses its signed link and alt text", async () => {
+    getMock.mockResolvedValue(
+      reply(200, {
+        id: "m-1",
+        kind: "image",
+        url: "/api/v1/media/m-1/file?exp=1&sig=abc",
+        altText: "Red area over the sacrum",
+        captionsUrl: null,
+      }),
+    );
+    renderPanel({ exhibits: imageExhibit }, false);
 
-    await userEvent.click(screen.getByRole("tab", { name: "Sacral wound" }));
+    expect(screen.getByText("Loading Sacral skin…")).toBeInTheDocument();
+    const image = await screen.findByRole("img", { name: "Red area over the sacrum" });
+    expect(image).toHaveAttribute("src", "/api/v1/media/m-1/file?exp=1&sig=abc");
+    expect(getMock).toHaveBeenCalledWith("/api/v1/media/{id}", { params: { path: { id: "m-1" } } });
+  });
 
-    expect(screen.getByRole("note")).toHaveTextContent("Sacral wound: this image can't be shown right now.");
+  it("explains media the API can't find", async () => {
+    getMock.mockResolvedValue(reply(404, { code: "NOT_FOUND", title: "Not found." }));
+    renderPanel({ exhibits: imageExhibit }, false);
+
+    expect(await screen.findByRole("note")).toHaveTextContent("Sacral skin: this image can't be shown right now.");
+  });
+
+  it("asks once for fresh links when the browser is refused one, then gives up", async () => {
+    getMock
+      .mockResolvedValueOnce(
+        reply(200, { id: "m-1", kind: "image", url: "/expired", altText: "Red area", captionsUrl: null }),
+      )
+      .mockResolvedValue(
+        reply(200, { id: "m-1", kind: "image", url: "/fresh", altText: "Red area", captionsUrl: null }),
+      );
+    renderPanel({ exhibits: imageExhibit }, false);
+
+    fireEvent.error(await screen.findByRole("img"));
+    await waitFor(() => expect(screen.getByRole("img")).toHaveAttribute("src", "/fresh"));
+    expect(getMock).toHaveBeenCalledTimes(2);
+
+    fireEvent.error(screen.getByRole("img"));
+    expect(screen.getByRole("note")).toHaveTextContent("can't be shown right now");
+    expect(getMock).toHaveBeenCalledTimes(2);
   });
 
   it("shows a case study's tabs under its title", async () => {

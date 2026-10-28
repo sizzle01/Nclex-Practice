@@ -5,6 +5,7 @@ using Nclex.Api.IntegrationTests.Infrastructure;
 using Nclex.Application.Content.ImportQuestions;
 using Nclex.Domain.Entities;
 using Nclex.Domain.ItemTypes;
+using Nclex.Infrastructure.Content;
 using Nclex.Infrastructure.Persistence;
 
 namespace Nclex.Api.IntegrationTests.Content;
@@ -21,18 +22,23 @@ public sealed class ImportQuestionsTests(ApiFactory factory)
         var file = QuestionImportFile.Parse(await File.ReadAllTextAsync(SampleFile, TestContext.Current.CancellationToken));
         var ids = file.Questions.Select(q => q.Id).ToList();
 
-        var first = await ImportAsync(file);
-        var second = await ImportAsync(QuestionImportFile.Parse(await File.ReadAllTextAsync(SampleFile, TestContext.Current.CancellationToken)));
+        // The media files sit in content/media, next to the file, as they do for the worker's command.
+        var files = new DirectoryContentFiles(Path.GetDirectoryName(SampleFile)!);
+
+        var first = await ImportAsync(file, files);
+        var second = await ImportAsync(QuestionImportFile.Parse(await File.ReadAllTextAsync(SampleFile, TestContext.Current.CancellationToken)), files);
 
         first.ShouldBe(new ImportResult(Created: 40, Updated: 0, Unchanged: 0, [])
         {
             Banks = new ImportCounts(1, 0, 0),
             TestSets = new ImportCounts(3, 0, 0),
+            Media = new ImportCounts(2, 0, 0),
         }, "first import");
         second.ShouldBe(new ImportResult(Created: 0, Updated: 0, Unchanged: 40, [])
         {
             Banks = new ImportCounts(0, 0, 1),
             TestSets = new ImportCounts(0, 0, 3),
+            Media = new ImportCounts(0, 0, 2),
         }, "second import");
 
         await using var scope = factory.Services.CreateAsyncScope();
@@ -69,6 +75,13 @@ public sealed class ImportQuestionsTests(ApiFactory factory)
         var bank = await db.QuestionBanks.SingleAsync(b => b.Id == file.Banks![0].Id, TestContext.Current.CancellationToken);
         bank.Name.ShouldBe("RN Sample Bank");
         (await db.QuestionBankItems.CountAsync(i => i.BankId == bank.Id, TestContext.Current.CancellationToken)).ShouldBe(40);
+
+        // F11: five questions carry exhibits, two of them showing the file's image and audio clip.
+        versions.Count(v => v.Exhibits.RootElement.GetArrayLength() > 0).ShouldBe(5);
+        var media = await db.MediaAssets.Where(m => file.Media!.Select(x => x.Id).Contains(m.Id)).ToListAsync(TestContext.Current.CancellationToken);
+        media.Select(m => (m.Kind, m.MimeType, m.AltText is not null, m.CaptionsKey is not null)).ShouldBe(
+            [("image", "image/png", true, false), ("audio", "audio/wav", false, true)], ignoreOrder: true);
+        media.ShouldAllBe(m => File.Exists(Path.Combine(factory.MediaRoot, m.StorageKey)));
 
         var importer = await db.Users.SingleAsync(u => u.Email == User.ContentImporterEmail, TestContext.Current.CancellationToken);
         importer.Role.ShouldBe(UserRole.Author);
@@ -156,7 +169,7 @@ public sealed class ImportQuestionsTests(ApiFactory factory)
     }
 
     // Through CatalogContent, so it waits its turn with every other test class's imports.
-    private Task<ImportResult> ImportAsync(QuestionImportFile file) => new CatalogContent(factory).ImportAsync(file);
+    private Task<ImportResult> ImportAsync(QuestionImportFile file, IContentFiles? files = null) => new CatalogContent(factory).ImportAsync(file, files);
 
     private async Task<int> CountQuestionsAsync(params Guid[] ids)
     {

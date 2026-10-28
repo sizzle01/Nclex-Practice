@@ -29,6 +29,9 @@ public sealed class ApiFactory : WebApplicationFactory<Program>, IAsyncLifetime
     /// <summary>Signing key for access tokens in tests. Tests use it to forge expired or tampered tokens.</summary>
     public const string JwtSigningKey = "integration-tests-signing-key-0123456789abcdef";
 
+    /// <summary>Signing key for media links in tests.</summary>
+    public const string MediaSigningKey = "integration-tests-media-signing-key-0123456789abcdef";
+
     /// <summary>Frontend address used in emailed links during tests.</summary>
     public const string FrontendBaseUrl = "https://app.test";
 
@@ -37,6 +40,9 @@ public sealed class ApiFactory : WebApplicationFactory<Program>, IAsyncLifetime
 
     /// <summary>Stands in for SMTP when tests run the outbox dispatcher.</summary>
     public FakeEmailSender EmailSender { get; } = new();
+
+    /// <summary>A fresh folder for this test run's media files; removed when the run ends.</summary>
+    public string MediaRoot { get; } = Path.Combine(Path.GetTempPath(), $"nclex-test-media-{Guid.NewGuid():N}");
 
     /// <summary>Connection string of the real Redis container, for <see cref="SecurityTestHost"/>.</summary>
     public string RedisConnectionString => _redis.GetConnectionString();
@@ -65,6 +71,8 @@ public sealed class ApiFactory : WebApplicationFactory<Program>, IAsyncLifetime
         builder.UseSetting("Email:From", "NCLEX Practice <no-reply@nclex-practice.test>");
         builder.UseSetting("Email:FrontendBaseUrl", FrontendBaseUrl);
         builder.UseSetting("Email:Smtp:Host", "localhost");
+        builder.UseSetting("MediaStorage:LocalRoot", MediaRoot);
+        builder.UseSetting("MediaStorage:SigningKey", MediaSigningKey);
 
         builder.ConfigureTestServices(services =>
         {
@@ -85,5 +93,9 @@ public sealed class ApiFactory : WebApplicationFactory<Program>, IAsyncLifetime
         await base.DisposeAsync();
         await _postgres.DisposeAsync();
         await _redis.DisposeAsync();
+        if (Directory.Exists(MediaRoot))
+        {
+            Directory.Delete(MediaRoot, recursive: true);
+        }
     }
 }

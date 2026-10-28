@@ -14,8 +14,9 @@
     <PackageReference Include="Testcontainers.Redis" />
   </ItemGroup>
   <ItemGroup>
-    <!-- The sample question file, so the import tests load exactly what developers import. -->
+    <!-- The sample question file and its media, so the import tests load exactly what developers import. -->
     <None Include="..\..\content\sample-questions.rn.json" Link="content\sample-questions.rn.json" CopyToOutputDirectory="PreserveNewest" />
+    <None Include="..\..\content\media\**" Link="content\media\%(RecursiveDir)%(Filename)%(Extension)" CopyToOutputDirectory="PreserveNewest" />
   </ItemGroup>
   <ItemGroup>
     <Using Include="Shouldly" />

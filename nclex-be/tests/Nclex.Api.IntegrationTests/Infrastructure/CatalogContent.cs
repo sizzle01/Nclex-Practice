@@ -118,14 +118,15 @@ public sealed class CatalogContent(ApiFactory factory)
         IEnumerable<object>? testSets = null) =>
         QuestionImportFile.Parse(JsonSerializer.Serialize(new { track, questions, testSets = testSets ?? [] }));
 
-    public async Task<ImportResult> ImportAsync(QuestionImportFile file)
+    /// <summary>Imports a file; <paramref name="files"/> holds the media files beside it, if any.</summary>
+    public async Task<ImportResult> ImportAsync(QuestionImportFile file, IContentFiles? files = null)
     {
         await ImportLock.WaitAsync(TestContext.Current.CancellationToken);
         try
         {
             await using var scope = factory.Services.CreateAsyncScope();
             return await scope.ServiceProvider.GetRequiredService<ImportQuestionsHandler>()
-                .HandleAsync(file, TestContext.Current.CancellationToken);
+                .HandleAsync(file, files ?? NoContentFiles.Instance, TestContext.Current.CancellationToken);
         }
         finally
         {
@@ -134,9 +135,9 @@ public sealed class CatalogContent(ApiFactory factory)
     }
 
     /// <summary>Imports a file and fails the test if the importer found problems.</summary>
-    public async Task ImportOkAsync(QuestionImportFile file)
+    public async Task ImportOkAsync(QuestionImportFile file, IContentFiles? files = null)
     {
-        var result = await ImportAsync(file);
+        var result = await ImportAsync(file, files);
         result.Issues.ShouldBeEmpty();
     }
 
