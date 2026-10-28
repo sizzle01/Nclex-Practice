@@ -270,7 +270,74 @@
           "SAMPLE CONTENT: written for development and testing, not reviewed by a nurse educator. Do not use for exam preparation."
         ]
       },
-      "educationalObjective": "Check the apical pulse for a full minute before giving digoxin and hold it for an adult rate below 60/min."
+      "educationalObjective": "Check the apical pulse for a full minute before giving digoxin and hold it for an adult rate below 60/min.",
+      "exhibits": [
+        {
+          "id": "vitals",
+          "kind": "flowsheet",
+          "title": "Vital signs",
+          "table": {
+            "columns": [
+              "Day 1 08:00",
+              "Day 2 08:00",
+              "Day 3 08:00"
+            ],
+            "rows": [
+              {
+                "label": "Apical pulse (/min)",
+                "cells": [
+                  "74",
+                  "63",
+                  "52"
+                ]
+              },
+              {
+                "label": "Blood pressure (mm Hg)",
+                "cells": [
+                  "132/80",
+                  "128/78",
+                  "124/76"
+                ]
+              },
+              {
+                "label": "Respiratory rate (/min)",
+                "cells": [
+                  "18",
+                  "18",
+                  "16"
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "id": "labs",
+          "kind": "table",
+          "title": "Laboratory results, Day 3",
+          "table": {
+            "columns": [
+              "Result",
+              "Reference range"
+            ],
+            "rows": [
+              {
+                "label": "Potassium",
+                "cells": [
+                  "3.4 mEq/L",
+                  "3.5–5.0 mEq/L"
+                ]
+              },
+              {
+                "label": "Digoxin level",
+                "cells": [
+                  "1.8 ng/mL",
+                  "0.5–2.0 ng/mL"
+                ]
+              }
+            ]
+          }
+        }
+      ]
     },
     {
       "id": "f04a0000-0000-4000-8000-000000000007",
@@ -736,7 +803,15 @@
           "SAMPLE CONTENT: written for development and testing, not reviewed by a nurse educator. Do not use for exam preparation."
         ]
       },
-      "educationalObjective": "Choose evidence-based measures to prevent pressure injuries."
+      "educationalObjective": "Choose evidence-based measures to prevent pressure injuries.",
+      "exhibits": [
+        {
+          "id": "sacrum",
+          "kind": "image",
+          "title": "Sacral skin, day 3 of bed rest",
+          "mediaId": "f11a0000-0000-4000-8000-000000000001"
+        }
+      ]
     },
     {
       "id": "f04a0000-0000-4000-8000-000000000016",
@@ -963,7 +1038,15 @@
           "SAMPLE CONTENT: written for development and testing, not reviewed by a nurse educator. Do not use for exam preparation."
         ]
       },
-      "educationalObjective": "Tell left-sided from right-sided heart failure by where fluid backs up."
+      "educationalObjective": "Tell left-sided from right-sided heart failure by where fluid backs up.",
+      "exhibits": [
+        {
+          "id": "lungs",
+          "kind": "audio",
+          "title": "Lung sounds, posterior bases",
+          "mediaId": "f11a0000-0000-4000-8000-000000000002"
+        }
+      ]
     },
     {
       "id": "f04a0000-0000-4000-8000-000000000020",
@@ -1261,7 +1344,51 @@
           "SAMPLE CONTENT: written for development and testing, not reviewed by a nurse educator. Do not use for exam preparation."
         ]
       },
-      "educationalObjective": "Know the nursing care of a client with DVT receiving heparin."
+      "educationalObjective": "Know the nursing care of a client with DVT receiving heparin.",
+      "exhibits": [
+        {
+          "id": "aptt",
+          "kind": "flowsheet",
+          "title": "Anticoagulation",
+          "table": {
+            "columns": [
+              "06:00",
+              "12:00",
+              "18:00",
+              "00:00"
+            ],
+            "rows": [
+              {
+                "label": "aPTT (seconds)",
+                "cells": [
+                  "31",
+                  "54",
+                  "68",
+                  "72"
+                ]
+              },
+              {
+                "label": "Heparin infusion (units/hr)",
+                "cells": [
+                  "1,000",
+                  "1,200",
+                  "1,200",
+                  "1,200"
+                ]
+              },
+              {
+                "label": "Platelets (×10³/µL)",
+                "cells": [
+                  "228",
+                  "—",
+                  "221",
+                  "—"
+                ]
+              }
+            ]
+          }
+        }
+      ]
     },
     {
       "id": "f05a0000-0000-4000-8000-000000000005",
@@ -1689,7 +1816,15 @@
           "SAMPLE CONTENT: written for development and testing, not reviewed by a nurse educator. Do not use for exam preparation."
         ]
       },
-      "educationalObjective": "Recognize hypoglycemia and its confirming finding."
+      "educationalObjective": "Recognize hypoglycemia and its confirming finding.",
+      "exhibits": [
+        {
+          "id": "note",
+          "kind": "text",
+          "title": "Nurse's note, 13:10",
+          "body": "Client reports feeling shaky and \"not right\". Took 8 units of rapid-acting insulin at 11:00 and did not eat lunch.\n\nSkin cool and clammy. Alert and oriented, speaking in full sentences. Capillary glucose 52 mg/dL."
+        }
+      ]
     },
     {
       "id": "f05a0000-0000-4000-8000-000000000010",
@@ -2686,6 +2821,25 @@
         "f05a0000-0000-4000-8000-000000000020",
         "f04a0000-0000-4000-8000-000000000020"
       ]
+    }
+  ],
+  "media": [
+    {
+      "id": "f11a0000-0000-4000-8000-000000000001",
+      "kind": "image",
+      "file": "media/sacral-skin.png",
+      "mimeType": "image/png",
+      "width": 360,
+      "height": 240,
+      "altText": "Skin over the sacrum with an oval area of redness about 3.5 cm across, intact and without blisters; a 2 cm scale bar is shown."
+    },
+    {
+      "id": "f11a0000-0000-4000-8000-000000000002",
+      "kind": "audio",
+      "file": "media/lung-crackles.wav",
+      "mimeType": "audio/wav",
+      "durationMs": 4000,
+      "captionsFile": "media/lung-crackles.vtt"
     }
   ]
 }
