@@ -32,12 +32,15 @@ public sealed class ImportMediaTests(ApiFactory factory) : IDisposable
             m => m.Bytes.ShouldBe(MediaContent.Png.Length),
             m => m.AltText.ShouldBe("A red area over the sacrum"),
             m => m.StorageKey.ShouldBe($"media/{_media.ImageId:N}.png"),
-            m => m.CaptionsKey.ShouldBeNull());
+            m => m.CaptionsKey.ShouldBeNull(),
+            m => m.TranscriptKey.ShouldBeNull());
         (await File.ReadAllBytesAsync(Path.Combine(factory.MediaRoot, image.StorageKey), TestContext.Current.CancellationToken)).ShouldBe(MediaContent.Png);
 
         var clip = await db.MediaAssets.SingleAsync(m => m.Id == _media.AudioId, TestContext.Current.CancellationToken);
         clip.CaptionsKey.ShouldBe($"media/{_media.AudioId:N}.vtt");
+        clip.TranscriptKey.ShouldBe($"media/{_media.AudioId:N}.txt");
         (await File.ReadAllBytesAsync(Path.Combine(factory.MediaRoot, clip.CaptionsKey!), TestContext.Current.CancellationToken)).ShouldBe(MediaContent.Captions);
+        (await File.ReadAllBytesAsync(Path.Combine(factory.MediaRoot, clip.TranscriptKey!), TestContext.Current.CancellationToken)).ShouldBe(MediaContent.Transcript);
     }
 
     [Fact]
@@ -70,6 +73,9 @@ public sealed class ImportMediaTests(ApiFactory factory) : IDisposable
         { "missing file", "media[0].file", ImportIssueCodes.FileNotFound },
         { "path outside the folder", "media[0].file", ImportIssueCodes.FileNotFound },
         { "captions that are not WebVTT", "media[1].captionsFile", ImportIssueCodes.InvalidValue },
+        { "no transcript", "media[1].transcriptFile", ValidationIssueCodes.Required },
+        { "missing transcript file", "media[1].transcriptFile", ImportIssueCodes.FileNotFound },
+        { "transcript that is not text", "media[1].transcriptFile", ImportIssueCodes.InvalidValue },
     };
 
     [Theory]
@@ -87,6 +93,9 @@ public sealed class ImportMediaTests(ApiFactory factory) : IDisposable
             "MIME type of another kind" => (_media.Image(mimeType: "audio/wav"), _media.Clip()),
             "missing file" => (_media.Image(file: "media/missing.png"), _media.Clip()),
             "path outside the folder" => (_media.Image(file: $"../{outside}"), _media.Clip()),
+            "no transcript" => (_media.Image(), _media.Clip(transcriptFile: null)),
+            "missing transcript file" => (_media.Image(), _media.Clip(transcriptFile: "media/missing.txt")),
+            "transcript that is not text" => (_media.Image(), _media.Clip(transcriptFile: "media/clip.wav")),
             _ => (_media.Image(), _media.Clip(captionsFile: "media/not-vtt.txt")),
         };
 

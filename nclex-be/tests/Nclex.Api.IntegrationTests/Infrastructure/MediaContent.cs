@@ -18,12 +18,15 @@ public sealed class MediaContent : IDisposable
 
     public static readonly byte[] Captions = Encoding.UTF8.GetBytes("WEBVTT\n\n00:00.000 --> 00:01.000\n[Crackles]\n");
 
+    public static readonly byte[] Transcript = Encoding.UTF8.GetBytes("Fine crackles are heard at the end of each breath in — both bases.\n");
+
     public MediaContent()
     {
         Directory.CreateDirectory(Path.Combine(Folder, "media"));
         System.IO.File.WriteAllBytes(Path.Combine(Folder, "media", "image.png"), Png);
         System.IO.File.WriteAllBytes(Path.Combine(Folder, "media", "clip.wav"), Audio);
         System.IO.File.WriteAllBytes(Path.Combine(Folder, "media", "clip.vtt"), Captions);
+        System.IO.File.WriteAllBytes(Path.Combine(Folder, "media", "clip.txt"), Transcript);
     }
 
     public string Folder { get; } = Path.Combine(Path.GetTempPath(), $"nclex-import-{Guid.NewGuid():N}");
@@ -48,13 +51,14 @@ public sealed class MediaContent : IDisposable
         ["height"] = 1,
     };
 
-    public Dictionary<string, object?> Clip(string? captionsFile = "media/clip.vtt") => new()
+    public Dictionary<string, object?> Clip(string? captionsFile = "media/clip.vtt", string? transcriptFile = "media/clip.txt") => new()
     {
         ["id"] = AudioId,
         ["kind"] = "audio",
         ["file"] = "media/clip.wav",
         ["mimeType"] = "audio/wav",
         ["captionsFile"] = captionsFile,
+        ["transcriptFile"] = transcriptFile,
         ["durationMs"] = 1000,
     };
 

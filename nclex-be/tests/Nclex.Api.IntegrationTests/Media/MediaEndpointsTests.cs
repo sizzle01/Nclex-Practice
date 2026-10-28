@@ -7,7 +7,7 @@ using Nclex.Application.Media.GetMedia;
 namespace Nclex.Api.IntegrationTests.Media;
 
 /// <summary>
-/// GET /media/{id} and the signed file and captions links it returns (api.md section 10), and an
+/// GET /media/{id} and the signed file, captions and transcript links it returns (api.md section 10), and an
 /// item's exhibits reaching the candidate.
 /// </summary>
 public sealed class MediaEndpointsTests(ApiFactory factory) : IDisposable
@@ -46,6 +46,7 @@ public sealed class MediaEndpointsTests(ApiFactory factory) : IDisposable
             v => v.Kind.ShouldBe("image"),
             v => v.AltText.ShouldBe("A red area over the sacrum"),
             v => v.CaptionsUrl.ShouldBeNull(),
+            v => v.TranscriptUrl.ShouldBeNull(),
             v => v.Url.ShouldStartWith($"/api/v1/media/{_media.ImageId}/file?exp="),
             v => v.ExpiresAt.ShouldBeInRange(DateTimeOffset.UtcNow.AddMinutes(9), DateTimeOffset.UtcNow.AddMinutes(11)));
 
@@ -58,13 +59,18 @@ public sealed class MediaEndpointsTests(ApiFactory factory) : IDisposable
     }
 
     [Fact]
-    public async Task An_audio_clip_has_captions_and_answers_range_requests()
+    public async Task An_audio_clip_has_captions_and_a_transcript_and_answers_range_requests()
     {
         var view = await ImportAndGetAsync(_media.AudioId);
 
         var captions = await GetAnonymousAsync(view.CaptionsUrl!);
         captions.Content.Headers.ContentType!.MediaType.ShouldBe("text/vtt");
         (await captions.Content.ReadAsByteArrayAsync(TestContext.Current.CancellationToken)).ShouldBe(MediaContent.Captions);
+
+        view.TranscriptUrl.ShouldStartWith($"/api/v1/media/{_media.AudioId}/transcript?exp=");
+        var transcript = await GetAnonymousAsync(view.TranscriptUrl!);
+        transcript.Content.Headers.ContentType!.ToString().ShouldBe("text/plain; charset=utf-8");
+        (await transcript.Content.ReadAsByteArrayAsync(TestContext.Current.CancellationToken)).ShouldBe(MediaContent.Transcript);
 
         var range = await GetAnonymousAsync(view.Url, new RangeHeaderValue(0, 9));
         range.StatusCode.ShouldBe(HttpStatusCode.PartialContent);
@@ -83,6 +89,7 @@ public sealed class MediaEndpointsTests(ApiFactory factory) : IDisposable
             image.Url.Replace("sig=", "sig=x", StringComparison.Ordinal),     // tampered signature
             $"/api/v1/media/{_media.AudioId}/file{query}",                   // another asset's file
             $"/api/v1/media/{_media.ImageId}/captions{query}",               // the same asset's other part
+            $"/api/v1/media/{_media.ImageId}/transcript{query}",             // and its third part
             clip.Url.Replace("exp=", "exp=1", StringComparison.Ordinal),     // a later expiry
             $"/api/v1/media/{_media.ImageId}/file",                          // no signature at all
         ];
