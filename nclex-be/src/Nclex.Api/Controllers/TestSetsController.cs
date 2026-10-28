@@ -53,6 +53,8 @@ public sealed class TestSetsController : ControllerBase
     [HttpPost("custom")]
     [ProducesResponseType<CreateCustomSetResponse>(StatusCodes.Status201Created)]
     [ProducesResponseType<ProblemDetails>(StatusCodes.Status400BadRequest, "application/problem+json")]
+    // EMAIL_NOT_VERIFIED when startNow is true and the email is not verified.
+    [ProducesResponseType<ProblemDetails>(StatusCodes.Status403Forbidden, "application/problem+json")]
     [ProducesResponseType<ProblemDetails>(StatusCodes.Status422UnprocessableEntity, "application/problem+json")]
     public async Task<IActionResult> CreateCustom(
         CreateCustomSetRequest request,

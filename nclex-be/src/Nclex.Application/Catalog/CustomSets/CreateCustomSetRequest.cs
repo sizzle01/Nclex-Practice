@@ -1,3 +1,4 @@
+using Nclex.Application.Attempts;
 using Nclex.Domain.Entities;
 using Nclex.Domain.ItemTypes;
 
@@ -8,7 +9,7 @@ namespace Nclex.Application.Catalog.CustomSets;
 /// <param name="Mode">practice or challenge.</param>
 /// <param name="RevealMode">tutor or exam.</param>
 /// <param name="Timing">Timers; untimed when left out.</param>
-/// <param name="StartNow">Start an attempt straight away. Accepted now; attempts start from F08.</param>
+/// <param name="StartNow">Also start an attempt of the new set, so the builder can open the player straight away.</param>
 public sealed record CreateCustomSetRequest(
     ExamTrack? Track = null,
     IReadOnlyList<short>? ClientNeedsIds = null,
@@ -33,5 +34,5 @@ public sealed record CustomSetTiming(bool Timed = false, int? PerQuestionSec = n
 
 /// <summary>Body of a 201 from POST /test-sets/custom.</summary>
 /// <param name="TestSet">The new set; only its owner can see it.</param>
-/// <param name="Attempt">The started attempt when startNow is true. Always null until attempts exist (F08).</param>
-public sealed record CreateCustomSetResponse(TestSetDetail TestSet, object? Attempt);
+/// <param name="Attempt">The started attempt when startNow is true; otherwise null.</param>
+public sealed record CreateCustomSetResponse(TestSetDetail TestSet, AttemptState? Attempt);

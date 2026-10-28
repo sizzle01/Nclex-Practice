@@ -1,6 +1,8 @@
 using System.Globalization;
 using System.Text.Json;
 using Nclex.Application.Abstractions;
+using Nclex.Application.Attempts;
+using Nclex.Application.Attempts.StartAttempt;
 using Nclex.Application.Common;
 using Nclex.Domain.Builder;
 using Nclex.Domain.Entities;
@@ -10,12 +12,14 @@ namespace Nclex.Application.Catalog.CustomSets;
 
 /// <summary>
 /// POST /test-sets/custom (architecture.md 5.7): builds the pool, samples the set and saves it as
-/// the user's own custom set. Starting the attempt is added by F08.
+/// the user's own custom set. With <c>startNow</c> it also starts an attempt, through the same
+/// handler as POST /attempts, so the start rules (verified email...) are the same.
 /// </summary>
 public sealed class CreateCustomSetHandler(
     IAppDbContext db,
     PlanTierGuard planTierGuard,
     QuestionPool questionPool,
+    StartAttemptHandler startAttempt,
     TimeProvider clock)
 {
     /// <summary>
@@ -39,13 +43,22 @@ public sealed class CreateCustomSetHandler(
                 details: new Dictionary<string, object?> { ["available"] = questionIds.Count });
         }
 
+        // One transaction: if the attempt cannot start (e.g. EMAIL_NOT_VERIFIED), no set is left behind.
+        await using var transaction = await db.BeginTransactionAsync(cancellationToken);
         var now = clock.GetUtcNow();
         var set = TestSet.CreateCustom(viewer.UserId, pool.Track, Settings(request), count, Criteria(request, pool.Track), now);
         db.TestSets.Add(set);
         db.TestSetItems.AddRange(TestSetItem.ForQuestions(set.Id, questionIds));
         await db.SaveChangesAsync(cancellationToken);
 
-        return new CreateCustomSetResponse(TestSetDetail.From(set, viewer), Attempt: null);
+        AttemptState? attempt = null;
+        if (request.StartNow)
+        {
+            attempt = (await startAttempt.HandleAsync(new StartAttemptRequest(set.Id), cancellationToken)).Attempt;
+        }
+
+        await transaction.CommitAsync(cancellationToken);
+        return new CreateCustomSetResponse(TestSetDetail.From(set, viewer), attempt);
     }
 
     private static TestSetSettings Settings(CreateCustomSetRequest request)
