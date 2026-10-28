@@ -26,6 +26,6 @@ public sealed class LastAttempts(IAppDbContext db)
             .GroupBy(r => r.TestSetId)
             .ToDictionary(
                 g => g.Key,
-                g => g.OrderByDescending(r => r.SubmittedAt).Select(r => new LastAttemptSummary(r.Id, r.ScorePct, r.SubmittedAt)).First());
+                g => g.OrderByDescending(r => r.SubmittedAt).ThenByDescending(r => r.Id).Select(r => new LastAttemptSummary(r.Id, r.ScorePct, r.SubmittedAt)).First());
     }
 }
