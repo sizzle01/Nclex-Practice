@@ -1046,9 +1046,7 @@
           "title": "Lung sounds, posterior bases",
           "mediaId": "f11a0000-0000-4000-8000-000000000002"
         }
-      ],
-      "caseStudyId": "f11c0000-0000-4000-8000-000000000001",
-      "casePosition": 1
+      ]
     },
     {
       "id": "f04a0000-0000-4000-8000-000000000020",
@@ -1753,7 +1751,7 @@
       },
       "educationalObjective": "Evaluate heart failure discharge teaching.",
       "caseStudyId": "f11c0000-0000-4000-8000-000000000001",
-      "casePosition": 3
+      "casePosition": 5
     },
     {
       "id": "f05a0000-0000-4000-8000-000000000009",
@@ -2649,6 +2647,408 @@
         ]
       },
       "educationalObjective": "Follow the basic life support sequence."
+    },
+    {
+      "id": "f11b0000-0000-4000-8000-000000000001",
+      "itemType": "highlight_text",
+      "clientNeeds": "PHI.PA",
+      "bodySystem": "cardiovascular",
+      "cjmmSkill": "recognize_cues",
+      "difficulty": "moderate",
+      "stem": "Highlight the findings in the emergency department note that require immediate follow-up by the nurse.",
+      "content": {
+        "segments": [
+          {
+            "id": "s1",
+            "text": "74-year-old client with heart failure. ",
+            "selectable": false
+          },
+          {
+            "id": "s2",
+            "text": "Short of breath for 3 days, worse when lying flat",
+            "selectable": true
+          },
+          {
+            "id": "s3",
+            "text": ". ",
+            "selectable": false
+          },
+          {
+            "id": "s4",
+            "text": "Weight up 2.5 kg (5.5 lb) in 4 days",
+            "selectable": true
+          },
+          {
+            "id": "s5",
+            "text": ". ",
+            "selectable": false
+          },
+          {
+            "id": "s6",
+            "text": "Alert and oriented",
+            "selectable": true
+          },
+          {
+            "id": "s7",
+            "text": ". ",
+            "selectable": false
+          },
+          {
+            "id": "s8",
+            "text": "Coughing up pink, frothy sputum",
+            "selectable": true
+          },
+          {
+            "id": "s9",
+            "text": ". ",
+            "selectable": false
+          },
+          {
+            "id": "s10",
+            "text": "Temperature 36.9 °C",
+            "selectable": true
+          },
+          {
+            "id": "s11",
+            "text": ". ",
+            "selectable": false
+          },
+          {
+            "id": "s12",
+            "text": "SpO2 88% on room air",
+            "selectable": true
+          },
+          {
+            "id": "s13",
+            "text": ". ",
+            "selectable": false
+          },
+          {
+            "id": "s14",
+            "text": "Troponin I below 0.01 ng/mL",
+            "selectable": true
+          },
+          {
+            "id": "s15",
+            "text": ".",
+            "selectable": false
+          }
+        ]
+      },
+      "key": {
+        "correct": [
+          "s2",
+          "s4",
+          "s8",
+          "s12"
+        ]
+      },
+      "rationale": {
+        "correct": "Orthopnea, rapid weight gain, frothy sputum and low oxygen saturation are cues of worsening fluid overload with pulmonary congestion.",
+        "perOption": {
+          "s2": "Breathlessness that worsens lying flat (orthopnea) signals pulmonary congestion.",
+          "s4": "A gain of more than 1 kg in a day or 2 kg in a week signals fluid retention.",
+          "s6": "Being alert and oriented is expected and needs no immediate action.",
+          "s8": "Pink, frothy sputum is a sign of pulmonary edema.",
+          "s10": "The temperature is normal, which makes infection less likely.",
+          "s12": "An SpO2 of 88% on room air shows impaired gas exchange.",
+          "s14": "A normal troponin makes acute myocardial injury less likely."
+        },
+        "references": [
+          "SAMPLE CONTENT: written for development and testing, not reviewed by a nurse educator. Do not use for exam preparation."
+        ]
+      },
+      "educationalObjective": "Recognize the cues of worsening heart failure in a nursing note.",
+      "caseStudyId": "f11c0000-0000-4000-8000-000000000001",
+      "casePosition": 1
+    },
+    {
+      "id": "f11b0000-0000-4000-8000-000000000002",
+      "itemType": "dropdown_cloze",
+      "clientNeeds": "PHI.PA",
+      "bodySystem": "cardiovascular",
+      "cjmmSkill": "prioritize_hypotheses",
+      "difficulty": "moderate",
+      "stem": "Complete the sentence by choosing from the lists of options.",
+      "content": {
+        "template": "The client is at highest risk for {{b1}}, as shown by {{b2}}.",
+        "blanks": [
+          {
+            "id": "b1",
+            "options": [
+              {
+                "id": "a",
+                "text": "acute pulmonary edema"
+              },
+              {
+                "id": "b",
+                "text": "pneumonia"
+              },
+              {
+                "id": "c",
+                "text": "acute myocardial infarction"
+              }
+            ]
+          },
+          {
+            "id": "b2",
+            "options": [
+              {
+                "id": "a",
+                "text": "pink, frothy sputum with an SpO2 of 88%"
+              },
+              {
+                "id": "b",
+                "text": "a temperature of 36.9 °C"
+              },
+              {
+                "id": "c",
+                "text": "a troponin I below 0.01 ng/mL"
+              }
+            ]
+          }
+        ]
+      },
+      "key": {
+        "byBlank": {
+          "b1": "a",
+          "b2": "a"
+        }
+      },
+      "rationale": {
+        "correct": "Fluid backing up into the lungs from left-sided failure causes pulmonary edema, which threatens oxygenation first.",
+        "perOption": {
+          "b1:a": "Orthopnea, frothy sputum, crackles and hypoxemia after stopping a diuretic point to pulmonary edema.",
+          "b1:b": "Pneumonia usually brings fever and purulent sputum; the temperature is normal.",
+          "b1:c": "A normal troponin makes an acute myocardial infarction less likely.",
+          "b2:a": "Frothy sputum and hypoxemia are signs of fluid in the alveoli.",
+          "b2:b": "A normal temperature does not support any of the hypotheses.",
+          "b2:c": "A normal troponin argues against myocardial infarction rather than for a risk."
+        },
+        "references": [
+          "SAMPLE CONTENT: written for development and testing, not reviewed by a nurse educator. Do not use for exam preparation."
+        ]
+      },
+      "educationalObjective": "Prioritize pulmonary edema as the most urgent risk in decompensated heart failure.",
+      "caseStudyId": "f11c0000-0000-4000-8000-000000000001",
+      "casePosition": 3
+    },
+    {
+      "id": "f11b0000-0000-4000-8000-000000000003",
+      "itemType": "matrix_mr",
+      "clientNeeds": "PHI.PPT",
+      "bodySystem": "cardiovascular",
+      "cjmmSkill": "generate_solutions",
+      "difficulty": "difficult",
+      "stem": "For each intervention, select the expected effect or effects for this client. Each intervention may have more than one.",
+      "content": {
+        "rows": [
+          {
+            "id": "r1",
+            "text": "Furosemide 40 mg IV"
+          },
+          {
+            "id": "r2",
+            "text": "Oxygen to keep SpO2 at or above 92%"
+          },
+          {
+            "id": "r3",
+            "text": "High-Fowler's position"
+          },
+          {
+            "id": "r4",
+            "text": "Fluid restriction of 1.5 L/day"
+          }
+        ],
+        "columns": [
+          {
+            "id": "c1",
+            "text": "Decreases fluid volume"
+          },
+          {
+            "id": "c2",
+            "text": "Improves gas exchange directly"
+          },
+          {
+            "id": "c3",
+            "text": "Decreases venous return to the heart"
+          }
+        ],
+        "groupAxis": "row"
+      },
+      "key": {
+        "byGroup": {
+          "r1": [
+            "r1:c1",
+            "r1:c3"
+          ],
+          "r2": [
+            "r2:c2"
+          ],
+          "r3": [
+            "r3:c2",
+            "r3:c3"
+          ],
+          "r4": [
+            "r4:c1"
+          ]
+        }
+      },
+      "rationale": {
+        "correct": "Each intervention targets the fluid overload, the congested lungs, or the preload behind them.",
+        "perOption": {
+          "r1:c1": "Furosemide is a loop diuretic that removes excess fluid.",
+          "r1:c2": "Gas exchange improves only later, as the diuresis clears the lungs; furosemide does not act on it directly.",
+          "r1:c3": "Diuresis lowers the blood volume returning to the heart.",
+          "r2:c1": "Oxygen does not change fluid volume.",
+          "r2:c2": "Supplemental oxygen raises the oxygen available for exchange.",
+          "r2:c3": "Oxygen does not change venous return.",
+          "r3:c1": "Positioning does not remove fluid.",
+          "r3:c2": "Sitting upright lets the diaphragm descend and the lungs expand.",
+          "r3:c3": "Sitting upright pools blood in the legs, reducing venous return.",
+          "r4:c1": "Limiting intake keeps fluid volume from building up again.",
+          "r4:c2": "A fluid restriction does not act directly on gas exchange.",
+          "r4:c3": "The restriction works over days, not as a direct reduction in venous return."
+        },
+        "references": [
+          "SAMPLE CONTENT: written for development and testing, not reviewed by a nurse educator. Do not use for exam preparation."
+        ]
+      },
+      "educationalObjective": "Link each heart failure intervention to the effect it is expected to have.",
+      "caseStudyId": "f11c0000-0000-4000-8000-000000000001",
+      "casePosition": 4
+    },
+    {
+      "id": "f11b0000-0000-4000-8000-000000000004",
+      "itemType": "matrix_mc",
+      "clientNeeds": "PHI.PA",
+      "bodySystem": "cardiovascular",
+      "cjmmSkill": "evaluate_outcomes",
+      "difficulty": "moderate",
+      "stem": "On day 2, the nurse reassesses the client. For each finding, indicate whether it has improved, not changed or worsened since admission.",
+      "content": {
+        "rows": [
+          {
+            "id": "r1",
+            "text": "Weight"
+          },
+          {
+            "id": "r2",
+            "text": "Oxygen saturation"
+          },
+          {
+            "id": "r3",
+            "text": "Lung sounds"
+          },
+          {
+            "id": "r4",
+            "text": "Ankle edema"
+          },
+          {
+            "id": "r5",
+            "text": "Potassium"
+          }
+        ],
+        "columns": [
+          {
+            "id": "c1",
+            "text": "Improved"
+          },
+          {
+            "id": "c2",
+            "text": "Not changed"
+          },
+          {
+            "id": "c3",
+            "text": "Worsened"
+          }
+        ]
+      },
+      "key": {
+        "byRow": {
+          "r1": "c1",
+          "r2": "c1",
+          "r3": "c1",
+          "r4": "c2",
+          "r5": "c3"
+        }
+      },
+      "rationale": {
+        "correct": "Diuresis has reduced weight and pulmonary congestion; edema has not yet resolved, and potassium has fallen as an effect of furosemide.",
+        "perOption": {
+          "r1:c1": "A loss of 2.3 kg shows fluid is being removed.",
+          "r1:c2": "The weight changed.",
+          "r1:c3": "A lower weight is the goal of diuresis.",
+          "r2:c1": "An SpO2 of 95% on room air shows better gas exchange.",
+          "r2:c2": "The saturation rose from 88%.",
+          "r2:c3": "The saturation rose.",
+          "r3:c1": "Crackles have cleared from the left base, so congestion is easing.",
+          "r3:c2": "Crackles are now heard in one base instead of two.",
+          "r3:c3": "Fewer crackles is an improvement.",
+          "r4:c1": "Ankle edema is still 2+.",
+          "r4:c2": "Dependent edema often lags behind lung findings; it is still 2+.",
+          "r4:c3": "The edema did not get worse.",
+          "r5:c1": "Potassium fell, which is not an improvement.",
+          "r5:c2": "Potassium fell from 3.6 to 3.1 mEq/L.",
+          "r5:c3": "Loop diuretics waste potassium; 3.1 mEq/L is low and needs follow-up."
+        },
+        "references": [
+          "SAMPLE CONTENT: written for development and testing, not reviewed by a nurse educator. Do not use for exam preparation."
+        ]
+      },
+      "educationalObjective": "Evaluate the response to heart failure treatment, including adverse effects of diuretics.",
+      "exhibits": [
+        {
+          "id": "reassessment",
+          "kind": "flowsheet",
+          "title": "Reassessment, day 2",
+          "table": {
+            "columns": [
+              "Admission 0800",
+              "Day 2 0800"
+            ],
+            "rows": [
+              {
+                "label": "Weight (kg)",
+                "cells": [
+                  "86.4",
+                  "84.1"
+                ]
+              },
+              {
+                "label": "SpO2 (%)",
+                "cells": [
+                  "88 on room air",
+                  "95 on room air"
+                ]
+              },
+              {
+                "label": "Lung sounds",
+                "cells": [
+                  "Crackles, both bases",
+                  "Crackles, right base"
+                ]
+              },
+              {
+                "label": "Ankle edema",
+                "cells": [
+                  "2+",
+                  "2+"
+                ]
+              },
+              {
+                "label": "Potassium (mEq/L)",
+                "cells": [
+                  "3.6",
+                  "3.1"
+                ]
+              }
+            ]
+          }
+        }
+      ],
+      "caseStudyId": "f11c0000-0000-4000-8000-000000000001",
+      "casePosition": 6
     }
   ],
   "caseStudies": [
@@ -2853,7 +3253,11 @@
         "f05a0000-0000-4000-8000-000000000017",
         "f05a0000-0000-4000-8000-000000000018",
         "f05a0000-0000-4000-8000-000000000019",
-        "f05a0000-0000-4000-8000-000000000020"
+        "f05a0000-0000-4000-8000-000000000020",
+        "f11b0000-0000-4000-8000-000000000001",
+        "f11b0000-0000-4000-8000-000000000002",
+        "f11b0000-0000-4000-8000-000000000003",
+        "f11b0000-0000-4000-8000-000000000004"
       ]
     }
   ],
@@ -2895,10 +3299,6 @@
         "f04a0000-0000-4000-8000-000000000004",
         "f04a0000-0000-4000-8000-000000000005",
         "f04a0000-0000-4000-8000-000000000006",
-        "f04a0000-0000-4000-8000-000000000007",
-        "f04a0000-0000-4000-8000-000000000008",
-        "f04a0000-0000-4000-8000-000000000009",
-        "f04a0000-0000-4000-8000-000000000010",
         "f04a0000-0000-4000-8000-000000000011",
         "f04a0000-0000-4000-8000-000000000012",
         "f04a0000-0000-4000-8000-000000000013",
@@ -2908,8 +3308,12 @@
         "f04a0000-0000-4000-8000-000000000017",
         "f04a0000-0000-4000-8000-000000000018",
         "f04a0000-0000-4000-8000-000000000019",
+        "f11b0000-0000-4000-8000-000000000001",
         "f05a0000-0000-4000-8000-000000000003",
+        "f11b0000-0000-4000-8000-000000000002",
+        "f11b0000-0000-4000-8000-000000000003",
         "f05a0000-0000-4000-8000-000000000008",
+        "f11b0000-0000-4000-8000-000000000004",
         "f04a0000-0000-4000-8000-000000000020",
         "f05a0000-0000-4000-8000-000000000001",
         "f05a0000-0000-4000-8000-000000000002",
@@ -2954,12 +3358,8 @@
         "f05a0000-0000-4000-8000-000000000006",
         "f04a0000-0000-4000-8000-000000000006",
         "f05a0000-0000-4000-8000-000000000007",
-        "f04a0000-0000-4000-8000-000000000007",
-        "f04a0000-0000-4000-8000-000000000008",
         "f05a0000-0000-4000-8000-000000000009",
-        "f04a0000-0000-4000-8000-000000000009",
         "f05a0000-0000-4000-8000-000000000010",
-        "f04a0000-0000-4000-8000-000000000010",
         "f05a0000-0000-4000-8000-000000000011",
         "f04a0000-0000-4000-8000-000000000011",
         "f05a0000-0000-4000-8000-000000000012",
@@ -2978,8 +3378,12 @@
         "f04a0000-0000-4000-8000-000000000018",
         "f05a0000-0000-4000-8000-000000000019",
         "f04a0000-0000-4000-8000-000000000019",
+        "f11b0000-0000-4000-8000-000000000001",
         "f05a0000-0000-4000-8000-000000000003",
+        "f11b0000-0000-4000-8000-000000000002",
+        "f11b0000-0000-4000-8000-000000000003",
         "f05a0000-0000-4000-8000-000000000008",
+        "f11b0000-0000-4000-8000-000000000004",
         "f05a0000-0000-4000-8000-000000000020",
         "f04a0000-0000-4000-8000-000000000020"
       ]
