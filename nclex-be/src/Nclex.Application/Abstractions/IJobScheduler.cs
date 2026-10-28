@@ -11,4 +11,13 @@ public interface IJobScheduler
     /// The job does nothing if the attempt's timer epoch has moved on from <paramref name="timerEpoch"/>.
     /// </summary>
     void ScheduleAttemptExpiry(Guid attemptId, int timerEpoch, DateTimeOffset at);
+
+    /// <summary>
+    /// Runs SnapshotRefreshJob as soon as a worker is free (architecture.md 5.5): adds the newly
+    /// graded <paramref name="attemptId"/> to the user's performance snapshots.
+    /// </summary>
+    void EnqueueSnapshotRefresh(Guid userId, Guid attemptId);
+
+    /// <summary>Rebuilds every performance snapshot of <paramref name="userId"/> from their results (admin repair).</summary>
+    void EnqueueSnapshotRebuild(Guid userId);
 }

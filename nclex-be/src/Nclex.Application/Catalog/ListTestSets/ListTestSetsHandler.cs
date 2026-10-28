@@ -5,7 +5,7 @@ using Nclex.Domain.Entities;
 namespace Nclex.Application.Catalog.ListTestSets;
 
 /// <summary>GET /test-sets: the curated sets of a track, with each one's lock state (PRD 5.5).</summary>
-public sealed class ListTestSetsHandler(IAppDbContext db, PlanTierGuard planTierGuard)
+public sealed class ListTestSetsHandler(IAppDbContext db, PlanTierGuard planTierGuard, LastAttempts lastAttempts)
 {
     public async Task<TestSetPage> HandleAsync(ListTestSetsRequest request, CancellationToken cancellationToken)
     {
@@ -28,11 +28,13 @@ public sealed class ListTestSetsHandler(IAppDbContext db, PlanTierGuard planTier
             .ToListAsync(cancellationToken);
 
         var hasMore = sets.Count > limit;
-        var items = sets.Take(limit).Select(s => ToSummary(s, viewer)).ToList();
+        var page = sets.Take(limit).ToList();
+        var last = await lastAttempts.ForSetsAsync(viewer.UserId, [.. page.Select(s => s.Id)], cancellationToken);
+        var items = page.Select(s => ToSummary(s, viewer, last.GetValueOrDefault(s.Id))).ToList();
         return new TestSetPage(items, hasMore ? PageCursor.Encode(offset + limit) : null);
     }
 
-    private static TestSetSummary ToSummary(TestSet set, CatalogViewer viewer) => new(
+    private static TestSetSummary ToSummary(TestSet set, CatalogViewer viewer, LastAttemptSummary? myLastAttempt) => new(
         set.Id,
         set.Title,
         set.Mode,
@@ -45,5 +47,5 @@ public sealed class ListTestSetsHandler(IAppDbContext db, PlanTierGuard planTier
         set.IsSample,
         set.AccessTier,
         viewer.IsLocked(set.AccessTier),
-        MyLastAttempt: null);
+        myLastAttempt);
 }

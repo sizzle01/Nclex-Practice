@@ -9,7 +9,7 @@ namespace Nclex.Application.Catalog.GetTestSet;
 /// <c>locked: true</c> so the panel can explain why; only starting it (F08) is refused. The items
 /// themselves are never part of the response.
 /// </summary>
-public sealed class GetTestSetHandler(IAppDbContext db, PlanTierGuard planTierGuard)
+public sealed class GetTestSetHandler(IAppDbContext db, PlanTierGuard planTierGuard, LastAttempts lastAttempts)
 {
     public async Task<TestSetDetail> HandleAsync(Guid id, CancellationToken cancellationToken)
     {
@@ -19,6 +19,7 @@ public sealed class GetTestSetHandler(IAppDbContext db, PlanTierGuard planTierGu
             .SingleOrDefaultAsync(s => s.Id == id, cancellationToken)
             ?? throw new AppException(CatalogErrors.TestSetNotFound);
 
-        return TestSetDetail.From(set, viewer);
+        var last = await lastAttempts.ForSetsAsync(viewer.UserId, [set.Id], cancellationToken);
+        return TestSetDetail.From(set, viewer, last.GetValueOrDefault(set.Id));
     }
 }

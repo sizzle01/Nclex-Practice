@@ -23,6 +23,7 @@ public sealed class ListAttemptsHandler(IAppDbContext db, ICurrentUser currentUs
         var rows = await (
                 from attempt in db.Attempts
                 join set in db.TestSets on attempt.TestSetId equals set.Id
+                from result in db.AttemptResults.Where(r => r.AttemptId == attempt.Id).DefaultIfEmpty()
                 where attempt.UserId == currentUser.UserId && statuses.Contains(attempt.Status)
                 orderby attempt.LastActivityAt descending, attempt.Id
                 select new
@@ -30,6 +31,8 @@ public sealed class ListAttemptsHandler(IAppDbContext db, ICurrentUser currentUs
                     Attempt = attempt,
                     set.Title,
                     Answered = db.AttemptItems.Count(i => i.AttemptId == attempt.Id && i.Response != null),
+                    ScorePct = result == null ? (decimal?)null : result.ScorePct,
+                    Passed = result == null ? null : result.Passed,
                 })
             .AsNoTracking()
             .Skip(offset)
@@ -48,7 +51,9 @@ public sealed class ListAttemptsHandler(IAppDbContext db, ICurrentUser currentUs
             r.Attempt.LastActivityAt,
             r.Attempt.SubmittedAt,
             r.Attempt.IsStaleDraftAt(now),
-            r.Attempt.ExamTimer.RemainingAt(now))).ToList();
+            r.Attempt.ExamTimer.RemainingAt(now),
+            r.ScorePct,
+            r.Passed)).ToList();
         return new AttemptPage(items, rows.Count > limit ? PageCursor.Encode(offset + limit) : null);
     }
 }
