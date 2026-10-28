@@ -212,6 +212,7 @@ CREATE TABLE media_assets (
   width         int, height int, duration_ms int,
   alt_text      text,                              -- required for images before publish
   captions_key  text,                              -- WebVTT, required for audio/video before publish
+  transcript_key text,                             -- plain text, required for audio/video before publish (F11)
   created_by    uuid REFERENCES users(id),
   created_at    timestamptz NOT NULL DEFAULT now()
 );

@@ -17,7 +17,7 @@ namespace Nclex.Api.Controllers;
 [ProducesResponseType<ProblemDetails>(StatusCodes.Status404NotFound, "application/problem+json")]
 public sealed class MediaController : ControllerBase
 {
-    /// <summary>The asset's kind, alt text and size, with links to its file and captions that work for a few minutes.</summary>
+    /// <summary>The asset's kind, alt text and size, with links to its file, captions and transcript that work for a few minutes.</summary>
     [HttpGet("{id:guid}")]
     [Produces("application/json")]
     [ProducesResponseType<MediaView>(StatusCodes.Status200OK)]
@@ -53,6 +53,19 @@ public sealed class MediaController : ControllerBase
         [FromServices] OpenMediaFileHandler handler,
         CancellationToken cancellationToken) =>
         StreamAsync(handler.HandleAsync(id, MediaPart.Captions, exp, sig, cancellationToken));
+
+    /// <summary>The plain-text transcript of an audio or video clip, for candidates who can't play it.</summary>
+    [HttpGet("{id:guid}/transcript")]
+    [AllowAnonymous]
+    [ProducesResponseType(StatusCodes.Status200OK)]
+    [ProducesResponseType<ProblemDetails>(StatusCodes.Status403Forbidden, "application/problem+json")]
+    public Task<IActionResult> GetTranscript(
+        Guid id,
+        [FromQuery] long exp,
+        [FromQuery] string? sig,
+        [FromServices] OpenMediaFileHandler handler,
+        CancellationToken cancellationToken) =>
+        StreamAsync(handler.HandleAsync(id, MediaPart.Transcript, exp, sig, cancellationToken));
 
     private async Task<IActionResult> StreamAsync(Task<MediaContent> opening)
     {

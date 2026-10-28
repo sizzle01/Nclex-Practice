@@ -79,6 +79,7 @@ public sealed record ImportedQuestion(
 /// <param name="MimeType">e.g. "image/png" or "audio/wav"; it must match the kind.</param>
 /// <param name="AltText">Required for images.</param>
 /// <param name="CaptionsFile">Path of a WebVTT file; required for audio and video.</param>
+/// <param name="TranscriptFile">Path of a UTF-8 plain-text transcript; required for audio and video.</param>
 /// <param name="Width">Pixels, for images and video.</param>
 /// <param name="Height">Pixels, for images and video.</param>
 /// <param name="DurationMs">Length of an audio or video clip.</param>
@@ -89,6 +90,7 @@ public sealed record ImportedMedia(
     string MimeType,
     string? AltText = null,
     string? CaptionsFile = null,
+    string? TranscriptFile = null,
     int? Width = null,
     int? Height = null,
     int? DurationMs = null);

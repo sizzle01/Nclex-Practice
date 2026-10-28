@@ -16,6 +16,8 @@ public sealed class MediaImporter(IAppDbContext db, IMediaStorage storage)
     /// <summary>Folder of every media key in storage.</summary>
     public const string KeyPrefix = "media/";
 
+    private static readonly UTF8Encoding StrictUtf8 = new(encoderShouldEmitUTF8Identifier: false, throwOnInvalidBytes: true);
+
     /// <summary>
     /// Reads and checks the file's media and the questions' references, adding a problem to
     /// <paramref name="issues"/> for each thing wrong. Returns the media ready to write.
@@ -43,7 +45,7 @@ public sealed class MediaImporter(IAppDbContext db, IMediaStorage storage)
                 issues.Add(new ImportIssue($"{path}.id", ImportIssueCodes.DuplicateId, $"Id {item.Id} is used more than once."));
             }
 
-            issues.AddRange(MediaRules.Check(path, item.Kind, item.MimeType, item.AltText, item.CaptionsFile is not null)
+            issues.AddRange(MediaRules.Check(path, item.Kind, item.MimeType, item.AltText, item.CaptionsFile is not null, item.TranscriptFile is not null)
                 .Select(issue => new ImportIssue(issue.Path, issue.Code, issue.Message)));
 
             var content = await ReadAsync(files, item.File, $"{path}.file", issues, cancellationToken);
@@ -53,9 +55,15 @@ public sealed class MediaImporter(IAppDbContext db, IMediaStorage storage)
                 issues.Add(new ImportIssue($"{path}.captionsFile", ImportIssueCodes.InvalidValue, "Captions must be a WebVTT file (it starts with \"WEBVTT\")."));
             }
 
+            var transcript = item.TranscriptFile is null ? null : await ReadAsync(files, item.TranscriptFile, $"{path}.transcriptFile", issues, cancellationToken);
+            if (transcript is not null && !IsUtf8Text(transcript))
+            {
+                issues.Add(new ImportIssue($"{path}.transcriptFile", ImportIssueCodes.InvalidValue, "A transcript must be UTF-8 plain text."));
+            }
+
             if (issues.Count == before && content is not null)
             {
-                prepared.Add(new PreparedMedia(item.Id, content, captions, Describe(item, content.Length)));
+                prepared.Add(new PreparedMedia(item.Id, content, captions, transcript, Describe(item, content.Length)));
             }
         }
 
@@ -77,6 +85,11 @@ public sealed class MediaImporter(IAppDbContext db, IMediaStorage storage)
             if (item.Captions is not null)
             {
                 await storage.SaveAsync(item.Details.CaptionsKey!, item.Captions, cancellationToken);
+            }
+
+            if (item.Transcript is not null)
+            {
+                await storage.SaveAsync(item.Details.TranscriptKey!, item.Transcript, cancellationToken);
             }
 
             if (!existing.TryGetValue(item.Id, out var asset))
@@ -144,6 +157,20 @@ public sealed class MediaImporter(IAppDbContext db, IMediaStorage storage)
         return start.StartsWith("WEBVTT", StringComparison.Ordinal);
     }
 
+    // Served as text/plain; charset=utf-8, so anything else would show as garbage.
+    private static bool IsUtf8Text(byte[] transcript)
+    {
+        try
+        {
+            var text = StrictUtf8.GetString(transcript);
+            return !text.Any(c => char.IsControl(c) && !char.IsWhiteSpace(c));
+        }
+        catch (DecoderFallbackException)
+        {
+            return false;
+        }
+    }
+
     private static MediaDetails Describe(ImportedMedia item, long bytes)
     {
         // Keys use the asset id, so two assets can never share a file and a re-import overwrites its own.
@@ -157,9 +184,10 @@ public sealed class MediaImporter(IAppDbContext db, IMediaStorage storage)
             item.Height,
             item.DurationMs,
             string.IsNullOrWhiteSpace(item.AltText) ? null : item.AltText.Trim(),
-            item.CaptionsFile is null ? null : $"{KeyPrefix}{item.Id:N}.vtt");
+            item.CaptionsFile is null ? null : $"{KeyPrefix}{item.Id:N}.vtt",
+            item.TranscriptFile is null ? null : $"{KeyPrefix}{item.Id:N}.txt");
     }
 }
 
 /// <summary>A checked media asset with its file contents, ready to store.</summary>
-public sealed record PreparedMedia(Guid Id, byte[] Content, byte[]? Captions, MediaDetails Details);
+public sealed record PreparedMedia(Guid Id, byte[] Content, byte[]? Captions, byte[]? Transcript, MediaDetails Details);

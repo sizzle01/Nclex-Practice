@@ -16,16 +16,18 @@ public sealed class GetMediaHandler(IAppDbContext db, IMediaUrlSigner signer)
             ?? throw new AppException(MediaErrors.NotFound);
 
         var file = signer.Sign(asset.Id, MediaPart.File);
-        var captions = asset.CaptionsKey is null ? null : signer.Sign(asset.Id, MediaPart.Captions);
         return new MediaView(
             asset.Id,
             asset.Kind,
             MediaPaths.SignedLink(asset.Id, MediaPart.File, file),
-            captions is null ? null : MediaPaths.SignedLink(asset.Id, MediaPart.Captions, captions),
+            asset.CaptionsKey is null ? null : LinkTo(asset.Id, MediaPart.Captions),
+            asset.TranscriptKey is null ? null : LinkTo(asset.Id, MediaPart.Transcript),
             asset.AltText,
             asset.Width,
             asset.Height,
             asset.DurationMs,
             DateTimeOffset.FromUnixTimeSeconds(file.Expires));
     }
+
+    private string LinkTo(Guid mediaId, MediaPart part) => MediaPaths.SignedLink(mediaId, part, signer.Sign(mediaId, part));
 }

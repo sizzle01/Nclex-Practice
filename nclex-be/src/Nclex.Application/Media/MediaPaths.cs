@@ -6,8 +6,13 @@ namespace Nclex.Application.Media;
 /// <summary>The API paths that serve media files (api.md section 10).</summary>
 public static class MediaPaths
 {
-    /// <summary>The path segment of each part: /media/{id}/file or /media/{id}/captions.</summary>
-    public static string Segment(MediaPart part) => part == MediaPart.File ? "file" : "captions";
+    /// <summary>The path segment of each part: /media/{id}/file, /captions or /transcript.</summary>
+    public static string Segment(MediaPart part) => part switch
+    {
+        MediaPart.File => "file",
+        MediaPart.Captions => "captions",
+        _ => "transcript",
+    };
 
     /// <summary>
     /// A relative signed link. The browser resolves it against the app's own origin, and the

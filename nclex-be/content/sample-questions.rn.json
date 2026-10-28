@@ -2839,7 +2839,8 @@
       "file": "media/lung-crackles.wav",
       "mimeType": "audio/wav",
       "durationMs": 4000,
-      "captionsFile": "media/lung-crackles.vtt"
+      "captionsFile": "media/lung-crackles.vtt",
+      "transcriptFile": "media/lung-crackles.txt"
     }
   ]
 }

@@ -20,6 +20,7 @@ internal sealed class MediaAssetConfiguration : IEntityTypeConfiguration<MediaAs
         builder.Property(m => m.MimeType).HasColumnType("text").IsRequired();
         builder.Property(m => m.AltText).HasColumnType("text");
         builder.Property(m => m.CaptionsKey).HasColumnType("text");
+        builder.Property(m => m.TranscriptKey).HasColumnType("text");
         builder.Property(m => m.CreatedAt).HasDefaultValueSql("now()");
 
         builder.HasIndex(m => m.StorageKey).IsUnique();

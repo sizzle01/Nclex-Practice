@@ -7,7 +7,7 @@ namespace Nclex.Application.Abstractions;
 /// </summary>
 public interface IMediaUrlSigner
 {
-    /// <summary>A signature for the file (or its captions) that stops working after the link lifetime.</summary>
+    /// <summary>A signature for the file (or its captions or transcript) that stops working after the link lifetime.</summary>
     MediaLink Sign(Guid mediaId, MediaPart part);
 
     /// <summary>True when the signature belongs to this file and has not expired.</summary>
@@ -22,6 +22,9 @@ public enum MediaPart
 
     /// <summary>The WebVTT captions of an audio or video clip.</summary>
     Captions,
+
+    /// <summary>The plain-text transcript of an audio or video clip.</summary>
+    Transcript,
 }
 
 /// <summary>A signed link's expiry (Unix seconds) and signature.</summary>

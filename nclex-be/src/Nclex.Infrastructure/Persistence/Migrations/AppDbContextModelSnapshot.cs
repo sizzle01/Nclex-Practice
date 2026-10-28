@@ -1060,6 +1060,10 @@ namespace Nclex.Infrastructure.Persistence.Migrations
                         .HasColumnType("text")
                         .HasColumnName("storage_key");
 
+                    b.Property<string>("TranscriptKey")
+                        .HasColumnType("text")
+                        .HasColumnName("transcript_key");
+
                     b.Property<int?>("Width")
                         .HasColumnType("integer")
                         .HasColumnName("width");

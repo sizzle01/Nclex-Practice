@@ -36,6 +36,12 @@ public sealed class MediaAsset
     /// <summary>Storage key of the WebVTT captions; required for audio and video before publishing.</summary>
     public string? CaptionsKey { get; private set; }
 
+    /// <summary>
+    /// Storage key of the plain-text transcript; required for audio and video before publishing,
+    /// because captions alone don't help someone who can't play the clip (interfaces.md section 4).
+    /// </summary>
+    public string? TranscriptKey { get; private set; }
+
     public Guid? CreatedBy { get; private set; }
 
     public DateTimeOffset CreatedAt { get; private set; }
@@ -49,7 +55,7 @@ public sealed class MediaAsset
     }
 
     /// <summary>The asset as it is now, to compare with an incoming description.</summary>
-    public MediaDetails Details => new(Kind, StorageKey, MimeType, Bytes, Width, Height, DurationMs, AltText, CaptionsKey);
+    public MediaDetails Details => new(Kind, StorageKey, MimeType, Bytes, Width, Height, DurationMs, AltText, CaptionsKey, TranscriptKey);
 
     /// <summary>Replaces the description; returns false when nothing changed.</summary>
     public bool Update(MediaDetails details)
@@ -74,6 +80,7 @@ public sealed class MediaAsset
         DurationMs = details.DurationMs;
         AltText = details.AltText;
         CaptionsKey = details.CaptionsKey;
+        TranscriptKey = details.TranscriptKey;
     }
 }
 
@@ -87,4 +94,5 @@ public sealed record MediaDetails(
     int? Height,
     int? DurationMs,
     string? AltText,
-    string? CaptionsKey);
+    string? CaptionsKey,
+    string? TranscriptKey);
