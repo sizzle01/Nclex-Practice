@@ -3,6 +3,7 @@
 import { zodResolver } from "@hookform/resolvers/zod";
 import { useMutation } from "@tanstack/react-query";
 import Link from "next/link";
+import { useRouter } from "next/navigation";
 import { useMemo } from "react";
 import { Controller, useForm, useWatch } from "react-hook-form";
 import forms from "@/components/forms/forms.module.css";
@@ -52,7 +53,7 @@ const poolOptions: { value: NonNullable<PoolMode>; label: string; hint: string }
   { value: "flagged", label: "Marked for review", hint: "Questions you marked during a test." },
 ];
 
-function toRequest(values: BuilderValues, track: Track): CreateCustomSetRequest {
+function toRequest(values: BuilderValues, track: Track, startNow: boolean): CreateCustomSetRequest {
   return {
     ...toFilters(values, track),
     questionCount: values.questionCount,
@@ -63,8 +64,8 @@ function toRequest(values: BuilderValues, track: Track): CreateCustomSetRequest 
       timeBudgetSec: values.timed && values.timeBudgetMin !== undefined ? values.timeBudgetMin * 60 : null,
       perQuestionSec: values.timed ? (values.perQuestionSec ?? null) : null,
     },
-    // Attempts start from F08; until then the set is created and shown here.
-    startNow: false,
+    // The server starts the attempt in the same request (api.md section 3), so the player opens at once.
+    startNow,
   };
 }
 
@@ -111,9 +112,20 @@ export function CustomBuilder() {
   const debouncedFilters = useDebouncedValue(filters, countDebounceMs);
   const count = useAvailableCount(debouncedFilters);
 
-  const create = useMutation({ mutationFn: createCustomSet });
+  const router = useRouter();
+  const create = useMutation({
+    mutationFn: createCustomSet,
+    onSuccess: (created) => {
+      if (created.attempt) router.push(`/attempts/${created.attempt.id}`);
+    },
+  });
 
-  if (create.data) {
+  function submit(startNow: boolean) {
+    return handleSubmit((values) => track && create.mutate(toRequest(values, track, startNow)));
+  }
+
+  // With startNow the player opens instead; the card is for "Create test" only.
+  if (create.data && !create.data.attempt) {
     return (
       <CreatedSetCard
         created={create.data}
@@ -136,7 +148,7 @@ export function CustomBuilder() {
       noValidate
       aria-labelledby="builder-heading"
       className={styles.builder}
-      onSubmit={handleSubmit((values) => track && create.mutate(toRequest(values, track)))}
+      onSubmit={submit(true)}
     >
       <div className={styles.header}>
         <h1 id="builder-heading">Build a custom test</h1>
@@ -281,13 +293,20 @@ export function CustomBuilder() {
             <p role="alert" className={forms.formError}>
               {isApiError(create.error, "INSUFFICIENT_QUESTIONS")
                 ? "Not enough questions match any more. Choose fewer questions or widen the filters."
-                : "The test could not be created. Please try again."}
+                : isApiError(create.error, "EMAIL_NOT_VERIFIED")
+                  ? "Verify your email address to start a test. You can still create it and start it later."
+                  : "The test could not be created. Please try again."}
             </p>
           )}
 
-          <button type="submit" className={ui.button} disabled={create.isPending}>
-            {create.isPending ? "Creating…" : "Create test"}
-          </button>
+          <div className={styles.actions}>
+            <button type="submit" className={ui.button} disabled={create.isPending}>
+              {create.isPending ? "Creating…" : "Create and start"}
+            </button>
+            <button type="button" className={ui.buttonSecondary} disabled={create.isPending} onClick={submit(false)}>
+              Create test
+            </button>
+          </div>
         </div>
       </div>
     </form>

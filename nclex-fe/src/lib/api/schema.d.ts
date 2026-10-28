@@ -2157,6 +2157,16 @@ export interface paths {
                         "application/json": unknown;
                     };
                 };
+                /** @description Forbidden */
+                403: {
+                    headers: {
+                        [name: string]: unknown;
+                    };
+                    content: {
+                        "application/problem+json": components["schemas"]["ProblemDetails"];
+                        "application/json": unknown;
+                    };
+                };
                 /** @description Unprocessable Entity */
                 422: {
                     headers: {
@@ -2345,7 +2355,7 @@ export interface components {
         };
         CreateCustomSetResponse: {
             testSet: components["schemas"]["TestSetDetail"];
-            attempt: unknown;
+            attempt: null | components["schemas"]["AttemptState"];
         };
         CustomSetTiming: {
             /** @default false */

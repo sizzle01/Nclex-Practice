@@ -1,8 +1,11 @@
 "use client";
 
 import Link from "next/link";
-import { useEffect, useId, useRef } from "react";
+import { useRouter } from "next/navigation";
+import { useEffect, useRef } from "react";
 import ui from "@/components/ui/ui.module.css";
+import { useStartAttempt } from "@/features/attempt/api/attemptApi";
+import { isApiError } from "@/lib/api/errors";
 import { modeLabel, questionCountLabel, revealModeLabel, timingLabel } from "@/features/practice/format";
 import type { CreateCustomSetResponse } from "../api/builderApi";
 import styles from "./builder.module.css";
@@ -16,7 +19,12 @@ interface CreatedSetCardProps {
 export function CreatedSetCard({ created, onBuildAnother }: CreatedSetCardProps) {
   const set = created.testSet;
   const headingRef = useRef<HTMLHeadingElement>(null);
-  const hintId = useId();
+  const router = useRouter();
+  const start = useStartAttempt();
+
+  function startSet() {
+    start.mutate(set.id, { onSuccess: (attempt) => router.push(`/attempts/${attempt.id}`) });
+  }
 
   useEffect(() => {
     headingRef.current?.focus();
@@ -37,8 +45,8 @@ export function CreatedSetCard({ created, onBuildAnother }: CreatedSetCardProps)
         <li>{timingLabel(set)}</li>
       </ul>
       <div className={styles.actions}>
-        <button type="button" className={`${ui.button} ${styles.startButton}`} disabled aria-describedby={hintId}>
-          Start
+        <button type="button" className={`${ui.button} ${styles.startButton}`} disabled={start.isPending} onClick={startSet}>
+          {start.isPending ? "Starting…" : "Start"}
         </button>
         <button type="button" className={ui.buttonSecondary} onClick={onBuildAnother}>
           Build another
@@ -47,9 +55,13 @@ export function CreatedSetCard({ created, onBuildAnother }: CreatedSetCardProps)
           Back to practice
         </Link>
       </div>
-      <p id={hintId} className={styles.hint}>
-        Starting a test is coming in the next update.
-      </p>
+      {start.error && (
+        <p role="alert" className={styles.hint}>
+          {isApiError(start.error, "EMAIL_NOT_VERIFIED")
+            ? "Verify your email address to start this test."
+            : "The test could not be started. Please try again."}
+        </p>
+      )}
     </section>
   );
 }
