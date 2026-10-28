@@ -15,13 +15,15 @@ namespace Nclex.Application.Content.ImportQuestions;
 /// <param name="Banks">Question banks to publish; none by default.</param>
 /// <param name="TestSets">Curated (prebuilt) test sets to publish; none by default.</param>
 /// <param name="Media">Images, audio and video that the questions' exhibits and options use; none by default.</param>
+/// <param name="CaseStudies">Unfolding case studies that questions join with caseStudyId; none by default.</param>
 public sealed record QuestionImportFile(
     ExamTrack Track,
     IReadOnlyList<ImportedQuestion> Questions,
     string? Notice = null,
     IReadOnlyList<ImportedBank>? Banks = null,
     IReadOnlyList<ImportedTestSet>? TestSets = null,
-    IReadOnlyList<ImportedMedia>? Media = null)
+    IReadOnlyList<ImportedMedia>? Media = null,
+    IReadOnlyList<ImportedCaseStudy>? CaseStudies = null)
 {
     private static readonly JsonSerializerOptions Json = new(ItemJson.Options)
     {
@@ -50,6 +52,8 @@ public sealed record QuestionImportFile(
 /// <param name="AccessTier">free (default) or premium.</param>
 /// <param name="TimeAllotmentSec">Suggested time; 120 seconds by default, as in the DDL.</param>
 /// <param name="Exhibits">A JSON array of exhibits; none by default.</param>
+/// <param name="CaseStudyId">The case study it belongs to, in this file or already imported; none by default.</param>
+/// <param name="CasePosition">Its place in the case, 1 to 6; given exactly when <paramref name="CaseStudyId"/> is.</param>
 public sealed record ImportedQuestion(
     Guid Id,
     ItemType ItemType,
@@ -64,7 +68,9 @@ public sealed record ImportedQuestion(
     CjmmSkill? CjmmSkill = null,
     PlanTier AccessTier = PlanTier.Free,
     int TimeAllotmentSec = ImportedQuestion.DefaultTimeAllotmentSec,
-    JsonElement? Exhibits = null)
+    JsonElement? Exhibits = null,
+    Guid? CaseStudyId = null,
+    short? CasePosition = null)
 {
     public const int DefaultTimeAllotmentSec = 120;
 }
@@ -94,6 +100,15 @@ public sealed record ImportedMedia(
     int? Width = null,
     int? Height = null,
     int? DurationMs = null);
+
+/// <summary>
+/// An NGN unfolding case study in an import file, stored as a case_studies row on the file's track
+/// (database.md 2.4). Questions join it with caseStudyId and casePosition.
+/// </summary>
+/// <param name="Id">Fixed id of the case; reuse it to update the case later.</param>
+/// <param name="Title">Shown above the case's tabs, e.g. "Heart failure exacerbation".</param>
+/// <param name="Scenario">{ "tabs": [{ "id", "title", "exhibits": [...] }] } (interfaces.md section 1, CaseStudyScenario).</param>
+public sealed record ImportedCaseStudy(Guid Id, string Title, JsonElement Scenario);
 
 /// <summary>A question bank in an import file. It is published when imported.</summary>
 /// <param name="Id">Fixed id of the bank; reuse it to update the bank later.</param>

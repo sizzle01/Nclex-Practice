@@ -80,6 +80,7 @@ internal static class ImportQuestionsCommand
         PrintCounts("bank(s)", file.Banks?.Count ?? 0, result.Banks);
         PrintCounts("test set(s)", file.TestSets?.Count ?? 0, result.TestSets);
         PrintCounts("media file(s)", file.Media?.Count ?? 0, result.Media);
+        PrintCounts("case study(ies)", file.CaseStudies?.Count ?? 0, result.CaseStudies);
         return Success;
     }
 

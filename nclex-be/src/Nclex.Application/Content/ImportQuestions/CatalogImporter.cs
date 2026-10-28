@@ -1,5 +1,6 @@
 using Microsoft.EntityFrameworkCore;
 using Nclex.Application.Abstractions;
+using Nclex.Domain.Content;
 using Nclex.Domain.Entities;
 
 namespace Nclex.Application.Content.ImportQuestions;
@@ -12,9 +13,10 @@ public sealed class CatalogImporter(IAppDbContext db)
 {
     /// <summary>
     /// Adds every problem with the file's banks and sets to <paramref name="issues"/>. Questions may
-    /// come from the file itself or be already published on the file's track.
+    /// come from the file itself or be already published on the file's track. A set keeps each case
+    /// study it uses whole, as <paramref name="cases"/> will be after the import.
     /// </summary>
-    public async Task ValidateAsync(QuestionImportFile file, List<ImportIssue> issues, CancellationToken cancellationToken)
+    public async Task ValidateAsync(QuestionImportFile file, CaseMembership cases, List<ImportIssue> issues, CancellationToken cancellationToken)
     {
         var banks = file.Banks ?? [];
         var sets = file.TestSets ?? [];
@@ -56,6 +58,7 @@ public sealed class CatalogImporter(IAppDbContext db)
 
             CheckSettings(set, path, issues);
             CheckQuestionIds(set.QuestionIds, path, known, issues);
+            CheckCaseStudies(set.QuestionIds, path, cases, issues);
         }
     }
 
@@ -198,6 +201,15 @@ public sealed class CatalogImporter(IAppDbContext db)
             {
                 issues.Add(new ImportIssue($"{path}.questionIds[{j}]", ImportIssueCodes.UnknownQuestion, $"Question {id} is not in this file or published on this track."));
             }
+        }
+    }
+
+    // Banks need no such check: the custom builder takes whole cases from a pool (QuestionPool).
+    private static void CheckCaseStudies(IReadOnlyList<Guid>? questionIds, string path, CaseMembership cases, List<ImportIssue> issues)
+    {
+        foreach (var (index, message) in CaseStudyRules.CheckSetOrder(questionIds ?? [], cases.PlacementOf, cases.SizeOf))
+        {
+            issues.Add(new ImportIssue($"{path}.questionIds[{index}]", ImportIssueCodes.CaseStudySplit, message));
         }
     }
 

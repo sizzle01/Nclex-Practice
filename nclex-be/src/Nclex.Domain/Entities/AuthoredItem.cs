@@ -20,6 +20,7 @@ namespace Nclex.Domain.Entities;
 /// <param name="Difficulty">The author's difficulty rating.</param>
 /// <param name="TimeAllotmentSec">Suggested time on the item, in seconds.</param>
 /// <param name="MaxPoints">From the item-type module, worked out from the key.</param>
+/// <param name="Case">Its place in a case study, or null for a standalone item.</param>
 public sealed record AuthoredItem(
     ItemType ItemType,
     string Stem,
@@ -33,4 +34,5 @@ public sealed record AuthoredItem(
     CjmmSkill? CjmmSkill,
     DifficultyTier Difficulty,
     int TimeAllotmentSec,
-    short MaxPoints);
+    short MaxPoints,
+    CasePlacement? Case = null);

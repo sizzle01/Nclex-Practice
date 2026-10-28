@@ -157,6 +157,7 @@ public static class DependencyInjection
         services.AddItemTypes();
         services.AddScoped<CatalogImporter>();
         services.AddScoped<MediaImporter>();
+        services.AddScoped<CaseStudyImporter>();
         services.AddScoped<ImportQuestionsHandler>();
         return services;
     }

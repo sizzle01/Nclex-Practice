@@ -8,8 +8,9 @@ using Nclex.Domain.ItemTypes;
 namespace Nclex.Application.Content.ImportQuestions;
 
 /// <summary>
-/// Loads questions from an import file and publishes them, along with the file's banks and test
-/// sets (see <see cref="CatalogImporter"/>). The whole file is validated first and
+/// Loads questions from an import file and publishes them, along with the file's media, case
+/// studies, banks and test sets (see <see cref="MediaImporter"/>, <see cref="CaseStudyImporter"/>
+/// and <see cref="CatalogImporter"/>). The whole file is validated first and
 /// written in one transaction, so a file with any problem changes nothing. Importing the same file
 /// again changes nothing either: a question gets a new version only when its content changed.
 /// </summary>
@@ -22,6 +23,7 @@ public sealed class ImportQuestionsHandler(
     ItemTypeRegistry itemTypes,
     CatalogImporter catalog,
     MediaImporter mediaImporter,
+    CaseStudyImporter caseStudyImporter,
     TimeProvider clock)
 {
     /// <summary>Imports a file that has no files beside it, so it can't list media.</summary>
@@ -38,8 +40,10 @@ public sealed class ImportQuestionsHandler(
             .ToDictionaryAsync(q => q.Id, cancellationToken);
 
         var validated = Validate(file, tags, existing, out var issues, out var mediaReferences);
+        // Before the media check, because scenarios show media too.
+        var cases = await caseStudyImporter.ValidateAsync(file, issues, mediaReferences, cancellationToken);
         var media = await mediaImporter.ValidateAsync(file.Media, mediaReferences, files, issues, cancellationToken);
-        await catalog.ValidateAsync(file, issues, cancellationToken);
+        await catalog.ValidateAsync(file, cases, issues, cancellationToken);
         if (issues.Count > 0)
         {
             return ImportResult.Failed(issues);
@@ -50,10 +54,12 @@ public sealed class ImportQuestionsHandler(
         var author = await GetOrCreateImporterAsync(now, cancellationToken);
         // Media first, so a stored file exists before any published question shows it.
         var mediaCounts = await mediaImporter.WriteAsync(media, author.Id, now, cancellationToken);
+        // Case studies before questions, whose versions refer to them.
+        var caseCounts = await caseStudyImporter.WriteAsync(file, now, cancellationToken);
         var result = await WriteAsync(file, validated, existing, author, now, cancellationToken);
         var (banks, testSets) = await catalog.WriteAsync(file, now, cancellationToken);
         await transaction.CommitAsync(cancellationToken);
-        return result with { Banks = banks, TestSets = testSets, Media = mediaCounts };
+        return result with { Banks = banks, TestSets = testSets, Media = mediaCounts, CaseStudies = caseCounts };
     }
 
     private List<(ImportedQuestion Source, AuthoredItem Item)> Validate(
@@ -182,7 +188,8 @@ public sealed class ImportQuestionsHandler(
             question.CjmmSkill,
             question.Difficulty,
             question.TimeAllotmentSec,
-            (short)module.MaxPoints(question.Content, question.Key));
+            (short)module.MaxPoints(question.Content, question.Key),
+            question.CaseStudyId is { } caseId && question.CasePosition is { } position ? new CasePlacement(caseId, position) : null);
     }
 
     private async Task<ImportResult> WriteAsync(
