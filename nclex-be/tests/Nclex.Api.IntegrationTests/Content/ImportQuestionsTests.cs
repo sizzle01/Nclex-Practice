@@ -28,14 +28,14 @@ public sealed class ImportQuestionsTests(ApiFactory factory)
         var first = await ImportAsync(file, files);
         var second = await ImportAsync(QuestionImportFile.Parse(await File.ReadAllTextAsync(SampleFile, TestContext.Current.CancellationToken)), files);
 
-        first.ShouldBe(new ImportResult(Created: 40, Updated: 0, Unchanged: 0, [])
+        first.ShouldBe(new ImportResult(Created: 44, Updated: 0, Unchanged: 0, [])
         {
             Banks = new ImportCounts(1, 0, 0),
             TestSets = new ImportCounts(3, 0, 0),
             Media = new ImportCounts(2, 0, 0),
             CaseStudies = new ImportCounts(1, 0, 0),
         }, "first import");
-        second.ShouldBe(new ImportResult(Created: 0, Updated: 0, Unchanged: 40, [])
+        second.ShouldBe(new ImportResult(Created: 0, Updated: 0, Unchanged: 44, [])
         {
             Banks = new ImportCounts(0, 0, 1),
             TestSets = new ImportCounts(0, 0, 3),
@@ -46,18 +46,20 @@ public sealed class ImportQuestionsTests(ApiFactory factory)
         await using var scope = factory.Services.CreateAsyncScope();
         var db = scope.ServiceProvider.GetRequiredService<AppDbContext>();
         var versions = await db.QuestionVersions.Where(v => ids.Contains(v.QuestionId)).ToListAsync(TestContext.Current.CancellationToken);
-        versions.Count.ShouldBe(40);
+        versions.Count.ShouldBe(44);
         versions.ShouldAllBe(v => v.Status == VersionStatus.Published && v.Version == 1);
         versions.Count(v => v.ItemType == ItemType.MultipleChoice).ShouldBe(10);
         versions.Where(v => v.ItemType == ItemType.MultipleChoice).ShouldAllBe(v => v.MaxPoints == 1);
         versions.Where(v => v.ItemType == ItemType.Sata).ShouldAllBe(v => v.MaxPoints > 1);
 
-        // Two samples of every other MVP type (F05), with max points worked out by each type's module.
+        // Two samples of every other MVP type (F05), plus the four written for the F11 case study,
+        // with max points worked out by each type's module.
+        ItemType[] caseTypes = [ItemType.HighlightText, ItemType.DropdownCloze, ItemType.MatrixMr, ItemType.MatrixMc];
         var otherMvpTypes = ItemTypeCatalog.All
             .Where(d => d.Phase == Phase.Mvp && d.Type is not (ItemType.MultipleChoice or ItemType.Sata))
             .Select(d => d.Type);
         versions.GroupBy(v => v.ItemType).Where(g => otherMvpTypes.Contains(g.Key))
-            .Select(g => (g.Key, g.Count())).ShouldBe(otherMvpTypes.Select(t => (t, 2)), ignoreOrder: true);
+            .Select(g => (g.Key, g.Count())).ShouldBe(otherMvpTypes.Select(t => (t, caseTypes.Contains(t) ? 3 : 2)), ignoreOrder: true);
         versions.Where(v => v.ItemType == ItemType.SelectN).Select(v => (int)v.MaxPoints).ShouldBe([3, 1], ignoreOrder: true); // per option, then all_or_nothing
         versions.Where(v => v.ItemType == ItemType.OrderedResponse).Select(v => (int)v.MaxPoints).ShouldBe([1, 5], ignoreOrder: true); // all_or_nothing, then per_position
 
@@ -76,22 +78,30 @@ public sealed class ImportQuestionsTests(ApiFactory factory)
         sets.ShouldAllBe(s => s.Kind == TestSetKind.Prebuilt && s.IsPublished && s.AccessTier == PlanTier.Free && s.Track == ExamTrack.RN);
         var bank = await db.QuestionBanks.SingleAsync(b => b.Id == file.Banks![0].Id, TestContext.Current.CancellationToken);
         bank.Name.ShouldBe("RN Sample Bank");
-        (await db.QuestionBankItems.CountAsync(i => i.BankId == bank.Id, TestContext.Current.CancellationToken)).ShouldBe(40);
+        (await db.QuestionBankItems.CountAsync(i => i.BankId == bank.Id, TestContext.Current.CancellationToken)).ShouldBe(44);
 
-        // F11: five questions carry exhibits, two of them showing the file's image and audio clip.
-        versions.Count(v => v.Exhibits.RootElement.GetArrayLength() > 0).ShouldBe(5);
+        // F11: six questions carry exhibits, two of them showing the file's image and audio clip.
+        versions.Count(v => v.Exhibits.RootElement.GetArrayLength() > 0).ShouldBe(6);
         var media = await db.MediaAssets.Where(m => file.Media!.Select(x => x.Id).Contains(m.Id)).ToListAsync(TestContext.Current.CancellationToken);
         media.Select(m => (m.Kind, m.MimeType, m.AltText is not null, m.CaptionsKey is not null, m.TranscriptKey is not null)).ShouldBe(
             [("image", "image/png", true, false, false), ("audio", "audio/wav", false, true, true)], ignoreOrder: true);
         media.ShouldAllBe(m => File.Exists(Path.Combine(factory.MediaRoot, m.StorageKey)));
         media.Where(m => m.TranscriptKey != null).ShouldAllBe(m => File.Exists(Path.Combine(factory.MediaRoot, m.TranscriptKey!)));
 
-        // F11: one case study, whose three heart-failure questions sit back to back in both comprehensive sets.
+        // F11: one six-item case study, one item per clinical judgment step, in CJMM order.
         var caseStudy = await db.CaseStudies.SingleAsync(c => c.Id == file.CaseStudies![0].Id, TestContext.Current.CancellationToken);
         caseStudy.Title.ShouldBe("Heart failure exacerbation");
         caseStudy.Scenario.RootElement.GetProperty("tabs").GetArrayLength().ShouldBe(4);
         versions.Where(v => v.CaseStudyId == caseStudy.Id).OrderBy(v => v.CasePosition)
-            .Select(v => v.ItemType).ShouldBe([ItemType.Sata, ItemType.MatrixMc, ItemType.MultipleResponseGrouping]);
+            .Select(v => (v.ItemType, v.CjmmSkill)).ShouldBe(
+            [
+                (ItemType.HighlightText, CjmmSkill.RecognizeCues),
+                (ItemType.MatrixMc, CjmmSkill.AnalyzeCues),
+                (ItemType.DropdownCloze, CjmmSkill.PrioritizeHypotheses),
+                (ItemType.MatrixMr, CjmmSkill.GenerateSolutions),
+                (ItemType.MultipleResponseGrouping, CjmmSkill.TakeAction),
+                (ItemType.MatrixMc, CjmmSkill.EvaluateOutcomes),
+            ]);
 
         var importer = await db.Users.SingleAsync(u => u.Email == User.ContentImporterEmail, TestContext.Current.CancellationToken);
         importer.Role.ShouldBe(UserRole.Author);
