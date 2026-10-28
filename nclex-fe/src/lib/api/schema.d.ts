@@ -4,6 +4,87 @@
  */
 
 export interface paths {
+    "/api/v1/admin/performance-snapshots/rebuild": {
+        parameters: {
+            query?: never;
+            header?: never;
+            path?: never;
+            cookie?: never;
+        };
+        get?: never;
+        put?: never;
+        post: {
+            parameters: {
+                query?: never;
+                header?: never;
+                path?: never;
+                cookie?: never;
+            };
+            requestBody: {
+                content: {
+                    "application/json": components["schemas"]["RebuildSnapshotsRequest"];
+                    "text/json": components["schemas"]["RebuildSnapshotsRequest"];
+                    "application/*+json": components["schemas"]["RebuildSnapshotsRequest"];
+                };
+            };
+            responses: {
+                /** @description Accepted */
+                202: {
+                    headers: {
+                        [name: string]: unknown;
+                    };
+                    content: {
+                        "application/json": unknown;
+                    };
+                };
+                /** @description Bad Request */
+                400: {
+                    headers: {
+                        [name: string]: unknown;
+                    };
+                    content: {
+                        "application/problem+json": components["schemas"]["ProblemDetails"];
+                        "application/json": unknown;
+                    };
+                };
+                /** @description Unauthorized */
+                401: {
+                    headers: {
+                        [name: string]: unknown;
+                    };
+                    content: {
+                        "application/problem+json": components["schemas"]["ProblemDetails"];
+                        "application/json": unknown;
+                    };
+                };
+                /** @description Forbidden */
+                403: {
+                    headers: {
+                        [name: string]: unknown;
+                    };
+                    content: {
+                        "application/problem+json": components["schemas"]["ProblemDetails"];
+                        "application/json": unknown;
+                    };
+                };
+                /** @description Not Found */
+                404: {
+                    headers: {
+                        [name: string]: unknown;
+                    };
+                    content: {
+                        "application/problem+json": components["schemas"]["ProblemDetails"];
+                        "application/json": unknown;
+                    };
+                };
+            };
+        };
+        delete?: never;
+        options?: never;
+        head?: never;
+        patch?: never;
+        trace?: never;
+    };
     "/api/v1/attempts": {
         parameters: {
             query?: never;
@@ -2151,6 +2232,183 @@ export interface paths {
         patch?: never;
         trace?: never;
     };
+    "/api/v1/me/performance/summary": {
+        parameters: {
+            query?: never;
+            header?: never;
+            path?: never;
+            cookie?: never;
+        };
+        get: {
+            parameters: {
+                query?: {
+                    track?: components["schemas"]["ExamTrack"];
+                };
+                header?: never;
+                path?: never;
+                cookie?: never;
+            };
+            requestBody?: never;
+            responses: {
+                /** @description OK */
+                200: {
+                    headers: {
+                        [name: string]: unknown;
+                    };
+                    content: {
+                        "application/json": components["schemas"]["PerformanceSummary"];
+                    };
+                };
+                /** @description Bad Request */
+                400: {
+                    headers: {
+                        [name: string]: unknown;
+                    };
+                    content: {
+                        "application/problem+json": components["schemas"]["ProblemDetails"];
+                        "application/json": unknown;
+                    };
+                };
+                /** @description Unauthorized */
+                401: {
+                    headers: {
+                        [name: string]: unknown;
+                    };
+                    content: {
+                        "application/problem+json": components["schemas"]["ProblemDetails"];
+                        "application/json": unknown;
+                    };
+                };
+            };
+        };
+        put?: never;
+        post?: never;
+        delete?: never;
+        options?: never;
+        head?: never;
+        patch?: never;
+        trace?: never;
+    };
+    "/api/v1/me/performance/breakdown": {
+        parameters: {
+            query?: never;
+            header?: never;
+            path?: never;
+            cookie?: never;
+        };
+        get: {
+            parameters: {
+                query?: {
+                    dimension?: components["schemas"]["PerformanceDimension"];
+                    track?: components["schemas"]["ExamTrack"];
+                };
+                header?: never;
+                path?: never;
+                cookie?: never;
+            };
+            requestBody?: never;
+            responses: {
+                /** @description OK */
+                200: {
+                    headers: {
+                        [name: string]: unknown;
+                    };
+                    content: {
+                        "application/json": components["schemas"]["PerformanceBreakdown"];
+                    };
+                };
+                /** @description Bad Request */
+                400: {
+                    headers: {
+                        [name: string]: unknown;
+                    };
+                    content: {
+                        "application/problem+json": components["schemas"]["ProblemDetails"];
+                        "application/json": unknown;
+                    };
+                };
+                /** @description Unauthorized */
+                401: {
+                    headers: {
+                        [name: string]: unknown;
+                    };
+                    content: {
+                        "application/problem+json": components["schemas"]["ProblemDetails"];
+                        "application/json": unknown;
+                    };
+                };
+            };
+        };
+        put?: never;
+        post?: never;
+        delete?: never;
+        options?: never;
+        head?: never;
+        patch?: never;
+        trace?: never;
+    };
+    "/api/v1/me/performance/trend": {
+        parameters: {
+            query?: never;
+            header?: never;
+            path?: never;
+            cookie?: never;
+        };
+        get: {
+            parameters: {
+                query?: {
+                    dimension?: components["schemas"]["PerformanceDimension"];
+                    key?: string;
+                    bucket?: components["schemas"]["TrendBucket"];
+                    from?: string;
+                    to?: string;
+                    track?: components["schemas"]["ExamTrack"];
+                };
+                header?: never;
+                path?: never;
+                cookie?: never;
+            };
+            requestBody?: never;
+            responses: {
+                /** @description OK */
+                200: {
+                    headers: {
+                        [name: string]: unknown;
+                    };
+                    content: {
+                        "application/json": components["schemas"]["PerformanceTrend"];
+                    };
+                };
+                /** @description Bad Request */
+                400: {
+                    headers: {
+                        [name: string]: unknown;
+                    };
+                    content: {
+                        "application/problem+json": components["schemas"]["ProblemDetails"];
+                        "application/json": unknown;
+                    };
+                };
+                /** @description Unauthorized */
+                401: {
+                    headers: {
+                        [name: string]: unknown;
+                    };
+                    content: {
+                        "application/problem+json": components["schemas"]["ProblemDetails"];
+                        "application/json": unknown;
+                    };
+                };
+            };
+        };
+        put?: never;
+        post?: never;
+        delete?: never;
+        options?: never;
+        head?: never;
+        patch?: never;
+        trace?: never;
+    };
     "/api/v1/question-banks": {
         parameters: {
             query?: never;
@@ -2616,6 +2874,9 @@ export interface components {
             staleDraft: boolean;
             /** Format: int64 */
             timeRemainingMs: null | number | string;
+            /** Format: double */
+            scorePct: null | number | string;
+            passed: null | boolean;
         };
         AuthResponse: {
             user: components["schemas"]["UserProfile"];
@@ -2632,6 +2893,20 @@ export interface components {
             id: number | string;
             slug: string;
             name: string;
+        };
+        BreakdownRow: {
+            key: string;
+            name: string;
+            /** Format: int32 */
+            itemsAnswered: number | string;
+            /** Format: int32 */
+            itemsCorrect: number | string;
+            /** Format: double */
+            accuracy: number | string;
+            /** Format: int32 */
+            avgTimeMs: number | string;
+            /** Format: int32 */
+            attemptsCount: number | string;
         };
         CandidateItemView: {
             /** Format: int32 */
@@ -2854,6 +3129,34 @@ export interface components {
             /** Format: date-time */
             startedAt: null | string;
         };
+        PerformanceBreakdown: {
+            track: components["schemas"]["ExamTrack"];
+            dimension: components["schemas"]["PerformanceDimension"];
+            items: components["schemas"]["BreakdownRow"][];
+        };
+        /** @enum {unknown} */
+        PerformanceDimension: "overall" | "client_needs" | "client_needs_parent" | "body_system" | "item_type" | "cjmm_skill" | "difficulty";
+        PerformanceSummary: {
+            track: components["schemas"]["ExamTrack"];
+            /** Format: int32 */
+            attemptsCount: number | string;
+            /** Format: int32 */
+            itemsAnswered: number | string;
+            /** Format: int32 */
+            itemsCorrect: number | string;
+            /** Format: double */
+            accuracy: number | string;
+            /** Format: int32 */
+            avgTimeMs: number | string;
+            weakest: components["schemas"]["BreakdownRow"][];
+        };
+        PerformanceTrend: {
+            track: components["schemas"]["ExamTrack"];
+            dimension: components["schemas"]["PerformanceDimension"];
+            key: string;
+            bucket: components["schemas"]["TrendBucket"];
+            series: components["schemas"]["TrendPoint"][];
+        };
         /** @enum {unknown} */
         PlanTier: "free" | "premium";
         /** @enum {unknown} */
@@ -2896,6 +3199,10 @@ export interface components {
         ReadinessResponse: {
             status: components["schemas"]["HealthState"];
             checks: components["schemas"]["ReadinessChecks"];
+        };
+        RebuildSnapshotsRequest: {
+            /** Format: uuid */
+            userId: null | string;
         };
         ResetPasswordRequest: {
             token: string;
@@ -3067,6 +3374,18 @@ export interface components {
             exam: null | components["schemas"]["ClockState"];
             item: null | components["schemas"]["ClockState"];
             pause: components["schemas"]["PauseState"];
+        };
+        /** @enum {unknown} */
+        TrendBucket: "day" | "week";
+        TrendPoint: {
+            /** Format: date */
+            bucketStart: string;
+            /** Format: int32 */
+            items: number | string;
+            /** Format: double */
+            pct: number | string;
+            /** Format: int32 */
+            avgTimeMs: number | string;
         };
         UpdateItemMarksRequest: {
             flagged?: null | boolean;
