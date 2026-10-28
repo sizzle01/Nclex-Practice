@@ -9,6 +9,10 @@ export type AttemptSummary = ApiSchema<"AttemptSummary">;
 export type AttemptPage = ApiSchema<"AttemptPage">;
 export type CandidateItem = ApiSchema<"CandidateItemView">;
 export type ItemState = ApiSchema<"ItemState">;
+export type TimerState = ApiSchema<"TimerState">;
+export type ClockState = ApiSchema<"ClockState">;
+export type PauseReason = NonNullable<ApiSchema<"PauseReason">>;
+export type PauseResult = ApiSchema<"PauseAttemptResult">;
 
 export function attemptQueryKey(attemptId: string) {
   return ["attempts", attemptId] as const;
@@ -80,6 +84,25 @@ export async function setFlagged(attemptId: string, clientId: string, position: 
   const { data, error, response } = await apiClient.PATCH("/api/v1/attempts/{id}/items/{position}", {
     params: { path: { id: attemptId, position }, header: { "X-Attempt-Client": clientId } },
     body: { flagged },
+  });
+  if (data) return data;
+  throw ApiError.from(response, error);
+}
+
+/** POST /attempts/{id}/pause: a break or Save & Exit; both freeze the timers and use up a pause. */
+export async function pauseAttempt(attemptId: string, clientId: string, reason: PauseReason): Promise<PauseResult> {
+  const { data, error, response } = await apiClient.POST("/api/v1/attempts/{id}/pause", {
+    params: { path: { id: attemptId }, header: { "X-Attempt-Client": clientId } },
+    body: { reason },
+  });
+  if (data) return data;
+  throw ApiError.from(response, error);
+}
+
+/** POST /attempts/{id}/resume: restarts the timers on this device, which takes the lease. */
+export async function resumeAttempt(attemptId: string, clientId: string): Promise<AttemptState> {
+  const { data, error, response } = await apiClient.POST("/api/v1/attempts/{id}/resume", {
+    params: { path: { id: attemptId }, header: { "X-Attempt-Client": clientId } },
   });
   if (data) return data;
   throw ApiError.from(response, error);

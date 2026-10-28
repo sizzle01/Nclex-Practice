@@ -1,7 +1,8 @@
 "use client";
 
 import { useMutation, useQuery, useQueryClient } from "@tanstack/react-query";
-import { useEffect, useState } from "react";
+import { useRouter } from "next/navigation";
+import { useEffect, useRef, useState } from "react";
 import { useStore } from "zustand";
 import { isApiError } from "@/lib/api/errors";
 import { toNumber } from "@/lib/format/toNumber";
@@ -14,35 +15,58 @@ import {
   itemQueryKey,
   navigateTo,
   openAttempt,
+  type PauseReason,
+  pauseAttempt,
+  resumeAttempt,
   saveResponse,
   setFlagged,
 } from "../api/attemptApi";
+import { createAttemptClock, remainingMs } from "./attemptClock";
 import { browserStorage, createSaveQueue, newClientId, pendingStorageKey } from "./saveQueue";
 
-export type OpenState = "opening" | "open" | "failed";
+/** The server accepts writes this long after the deadline (architecture.md 5.1); the timeout check waits it out. */
+const serverGraceMs = 2_500;
+
+/** "ended": the time ran out and the server finalized the attempt. */
+export type OpenState = "opening" | "open" | "failed" | "ended";
 
 /**
  * Everything the player needs for one attempt: opening it with a fresh client id (the device
- * lease), the current item, autosave through the save queue, navigation and marks
- * (interfaces.md 5.4, PlayerController). Components only render what this returns.
+ * lease), the current item, autosave through the save queue, navigation and marks, the
+ * server-synced timers, pause and resume (interfaces.md 5.4, PlayerController). Components only
+ * render what this returns.
  */
 export function useAttemptSession(attemptId: string) {
   const queryClient = useQueryClient();
+  const router = useRouter();
   const [clientId] = useState(newClientId);
+  // Set once any call reports ATTEMPT_TIME_EXPIRED: the server has finalized the attempt.
+  const [timeExpired, setTimeExpired] = useState(false);
   const [queue] = useState(() =>
     createSaveQueue({
       clientId,
-      send: (position, write, { keepalive }) => saveResponse(attemptId, clientId, position, write, keepalive),
+      send: async (position, write, { keepalive }) => {
+        try {
+          await saveResponse(attemptId, clientId, position, write, keepalive);
+        } catch (error) {
+          if (isApiError(error, "ATTEMPT_TIME_EXPIRED")) setTimeExpired(true);
+          throw error;
+        }
+      },
       storage: browserStorage(),
       storageKey: pendingStorageKey(attemptId),
     }),
   );
+  const [clock] = useState(() => createAttemptClock());
+  const offsetMs = useStore(clock, (s) => s.offsetMs);
   const saveStatus = useStore(queue, (s) => s.status);
   const leaseLost = useStore(queue, (s) => s.leaseLost);
   const pending = useStore(queue, (s) => s.pending);
 
   const [navError, setNavError] = useState<string | null>(null);
   const [navigating, setNavigating] = useState(false);
+  const [pauseError, setPauseError] = useState<string | null>(null);
+  const [pausing, setPausing] = useState(false);
 
   // Claims the lease (architecture.md 5.2). Runs when the player mounts and again on "Continue here".
   const openMutation = useMutation({
@@ -69,14 +93,33 @@ export function useAttemptSession(attemptId: string) {
     enabled: openMutation.isSuccess,
   });
   const attempt = openMutation.isSuccess || openMutation.isPending ? attemptQuery.data : undefined;
-  const openState: OpenState = attempt ? "open" : openMutation.isError ? "failed" : "opening";
+  const openExpired = isApiError(openMutation.error, "ATTEMPT_TIME_EXPIRED");
+  const ended = timeExpired || openExpired || attempt?.status === "submitted";
+  const openState: OpenState = ended ? "ended" : attempt ? "open" : openMutation.isError ? "failed" : "opening";
   const position = attempt ? toNumber(attempt.currentPosition) : null;
   const total = attempt ? toNumber(attempt.totalItems) : 0;
+  const paused = attempt?.status === "paused";
 
+  // Every attempt response carries serverNow; the clock keeps the offset (architecture.md 5.1).
+  const serverNow = attempt?.timer.serverNow;
+  useEffect(() => {
+    if (serverNow) clock.getState().sync(serverNow);
+  }, [clock, serverNow]);
+
+  const examTimer = attempt?.timer.exam ?? null;
+  const itemTimer = attempt?.timer.item ?? null;
+  const ticking = !ended && !paused && Boolean(examTimer?.running || itemTimer?.running);
+  const now = useNow(ticking);
+  const examMs = examTimer ? remainingMs(examTimer.deadlineAt, toNumber(examTimer.remainingMs), offsetMs, now) : null;
+  const itemMs = itemTimer ? remainingMs(itemTimer.deadlineAt, toNumber(itemTimer.remainingMs), offsetMs, now) : null;
+  const examTimeUp = examTimer?.running === true && examMs === 0;
+  const itemTimeUp = itemTimer?.running === true && itemMs === 0;
+
+  // Paused content is hidden, and the server refuses it with 423 ATTEMPT_PAUSED (PRD 5.4).
   const itemQuery = useQuery({
     queryKey: itemQueryKey(attemptId, position ?? 0),
     queryFn: () => fetchItem(attemptId, position!),
-    enabled: openMutation.isSuccess && position !== null,
+    enabled: openMutation.isSuccess && position !== null && !paused && !ended,
   });
   const item = itemQuery.data;
 
@@ -87,13 +130,13 @@ export function useAttemptSession(attemptId: string) {
 
   // Prefetch the next item so moving on stays within the 1-second target (interfaces.md 5.4).
   useEffect(() => {
-    if (item && position !== null && position < total) {
+    if (item && !paused && position !== null && position < total) {
       void queryClient.prefetchQuery({
         queryKey: itemQueryKey(attemptId, position + 1),
         queryFn: () => fetchItem(attemptId, position + 1),
       });
     }
-  }, [attemptId, item, position, queryClient, total]);
+  }, [attemptId, item, paused, position, queryClient, total]);
 
   // Send unsaved answers when the tab is hidden or closed, or the network comes back.
   useEffect(() => {
@@ -126,7 +169,30 @@ export function useAttemptSession(attemptId: string) {
 
   function handleWriteError(error: unknown) {
     if (isApiError(error, "ATTEMPT_OPENED_ELSEWHERE")) queue.getState().markLeaseLost();
+    if (isApiError(error, "ATTEMPT_TIME_EXPIRED")) setTimeExpired(true);
   }
+
+  // At zero the input is already disabled. Saves sent in the last moment still land within the
+  // server's grace, so wait that out, then make one write: the server finalizes the attempt and
+  // answers ATTEMPT_TIME_EXPIRED (architecture.md 5.1, rule 1). F10 replaces this with POST /submit.
+  const timeoutCheck = useRef(false);
+  useEffect(() => {
+    if (!examTimeUp || timeoutCheck.current || position === null) return;
+    timeoutCheck.current = true;
+    const timer = setTimeout(async () => {
+      try {
+        await queue.getState().flush();
+        await navigateTo(attemptId, clientId, position);
+        // The server still had time (this device's clock offset was off): show its view again.
+        await queryClient.invalidateQueries({ queryKey: attemptKey });
+      } catch (error) {
+        handleWriteError(error);
+      } finally {
+        timeoutCheck.current = false;
+      }
+    }, serverGraceMs);
+    return () => clearTimeout(timer);
+  }, [examTimeUp]); // eslint-disable-line react-hooks/exhaustive-deps
 
   /** The answer to show: an unsent one from the queue, else the server's. */
   const response = position !== null && pending[position] ? pending[position].response : (item?.response ?? null);
@@ -184,6 +250,44 @@ export function useAttemptSession(attemptId: string) {
     }
   }
 
+  /** A break shows the overlay; Save & Exit leaves for the dashboard. Both freeze the timers. */
+  async function pause(reason: PauseReason) {
+    if (pausing) return;
+    setPausing(true);
+    setPauseError(null);
+    try {
+      await queue.getState().flush();
+      if (queue.getState().leaseLost) return;
+      const result = await pauseAttempt(attemptId, clientId, reason);
+      updateAttempt((current) => ({ ...current, status: result.status, timer: result.timer }));
+      if (reason === "save_exit") router.push("/dashboard");
+    } catch (error) {
+      handleWriteError(error);
+      if (isApiError(error, "PAUSE_LIMIT_REACHED")) setPauseError("You have used all the pauses this test allows.");
+      else if (!isApiError(error, "ATTEMPT_OPENED_ELSEWHERE") && !isApiError(error, "ATTEMPT_TIME_EXPIRED"))
+        setPauseError("Could not pause. Please try again.");
+    } finally {
+      setPausing(false);
+    }
+  }
+
+  async function resume() {
+    if (pausing) return;
+    setPausing(true);
+    setPauseError(null);
+    try {
+      const state = await resumeAttempt(attemptId, clientId);
+      queryClient.setQueryData(attemptKey, state);
+      queue.getState().leaseRestored();
+      await queryClient.invalidateQueries({ queryKey: ["attempts", attemptId, "items"] });
+    } catch (error) {
+      handleWriteError(error);
+      if (!isApiError(error, "ATTEMPT_TIME_EXPIRED")) setPauseError("Could not resume. Please try again.");
+    } finally {
+      setPausing(false);
+    }
+  }
+
   function continueHere() {
     open();
   }
@@ -201,10 +305,31 @@ export function useAttemptSession(attemptId: string) {
     saveStatus,
     leaseLost,
     navError,
-    busy: navigating || openMutation.isPending,
+    busy: navigating || pausing || openMutation.isPending,
+    paused,
+    pauseError,
+    examMs,
+    itemMs,
+    examTimeUp,
+    itemTimeUp,
     answer,
     goTo,
     toggleFlag,
+    pause,
+    resume,
     continueHere,
   };
+}
+
+/** Date.now(), refreshed every second while `active`, so the countdowns re-render. */
+function useNow(active: boolean) {
+  const [now, setNow] = useState(() => Date.now());
+  useEffect(() => {
+    if (!active) return;
+    const tick = () => setNow(Date.now());
+    tick();
+    const interval = setInterval(tick, 1000);
+    return () => clearInterval(interval);
+  }, [active]);
+  return now;
 }

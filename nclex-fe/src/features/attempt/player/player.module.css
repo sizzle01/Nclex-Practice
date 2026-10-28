@@ -138,3 +138,52 @@
 .dialog h2 {
   margin-top: 0;
 }
+
+/* Timers (F09): shown by text and a word ("time low", "paused"), not only colour. */
+.timers {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.timerChip {
+  padding: 0.25rem 0.625rem;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  font-weight: 600;
+  font-variant-numeric: tabular-nums;
+}
+
+.timerLow {
+  border-color: var(--danger, #b42318);
+  color: var(--danger, #b42318);
+}
+
+.timerNote {
+  font-weight: 400;
+  font-size: 0.875rem;
+}
+
+.visuallyHidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip-path: inset(50%);
+  white-space: nowrap;
+}
+
+.menu {
+  position: relative;
+}
+
+.menuList {
+  position: absolute;
+  right: 0;
+  top: calc(100% + 0.25rem);
+  z-index: 20;
+  display: grid;
+  min-width: 10rem;
+  padding: 0.25rem;
+}

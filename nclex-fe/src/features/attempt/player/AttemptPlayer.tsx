@@ -4,17 +4,21 @@ import Link from "next/link";
 import { useEffect, useId, useRef, useState } from "react";
 import ui from "@/components/ui/ui.module.css";
 import { isApiError } from "@/lib/api/errors";
+import { toNumber } from "@/lib/format/toNumber";
 import { ItemAnswer } from "../renderers/ItemAnswer";
+import { AttemptMenu } from "./AttemptMenu";
 import { NavigatorDrawer } from "./NavigatorDrawer";
 import { OpenElsewhereDialog } from "./OpenElsewhereDialog";
+import { PauseOverlay } from "./PauseOverlay";
 import styles from "./player.module.css";
 import { SaveStatusText } from "./SaveStatusText";
+import { TimerChips } from "./TimerChips";
 import { useAttemptSession } from "./useAttemptSession";
 
 /**
- * The exam player at /attempts/[id] (interfaces.md 5.3), untimed for now: top bar, the item,
- * bottom bar with mark-for-review, the save indicator and Prev/Next, and a navigator drawer.
- * Timers and pause arrive in F09, submitting in F10.
+ * The exam player at /attempts/[id] (interfaces.md 5.3): top bar with the timers, Pause and the ⋯
+ * menu (Save &amp; Exit), the item, bottom bar with mark-for-review, the save indicator and
+ * Prev/Next, and a navigator drawer. Submitting arrives in F10.
  */
 export function AttemptPlayer({ attemptId }: { attemptId: string }) {
   const session = useAttemptSession(attemptId);
@@ -30,11 +34,15 @@ export function AttemptPlayer({ attemptId }: { attemptId: string }) {
     if (item) stemRef.current?.focus();
   }, [item?.questionVersionId]); // eslint-disable-line react-hooks/exhaustive-deps
 
+  if (session.openState === "ended") return <TimeUp />;
   if (session.openState === "failed") return <OpenFailed error={session.openError} />;
   if (session.openState === "opening" || !attempt) return <p className={ui.muted}>Opening your test…</p>;
 
   const locked = item?.state === "locked";
   const allowBack = attempt.settings.allowBackNav;
+  const pauseState = attempt.timer.pause;
+  const noPausesLeft = pauseState.max !== null && toNumber(pauseState.used) >= toNumber(pauseState.max);
+  const inputDisabled = locked || session.leaseLost || session.examTimeUp || session.itemTimeUp;
 
   function goTo(target: number) {
     setNavigatorOpen(false);
@@ -55,6 +63,22 @@ export function AttemptPlayer({ attemptId }: { attemptId: string }) {
         <span className={styles.position}>
           Question {position} of {total}
         </span>
+        <TimerChips examMs={session.examMs} itemMs={session.itemMs} paused={session.paused} />
+        <div className={styles.actions}>
+          <button
+            type="button"
+            className={ui.buttonSecondary}
+            disabled={session.busy || session.paused || noPausesLeft || session.examTimeUp}
+            onClick={() => void session.pause("break")}
+          >
+            <span aria-hidden="true">⏸</span> Pause
+          </button>
+          {noPausesLeft && <span className={ui.muted}>No pauses left</span>}
+          <AttemptMenu
+            disabled={session.busy || session.paused || noPausesLeft || session.examTimeUp}
+            onSaveAndExit={() => void session.pause("save_exit")}
+          />
+        </div>
         <button
           ref={navigatorButtonRef}
           type="button"
@@ -67,10 +91,18 @@ export function AttemptPlayer({ attemptId }: { attemptId: string }) {
         </button>
       </header>
 
+      {session.pauseError && !session.paused && (
+        <p role="alert" className={styles.error}>
+          {session.pauseError}
+        </p>
+      )}
+
       {navigatorOpen && <NavigatorDrawer id={navigatorId} attempt={attempt} onGoTo={goTo} onClose={closeNavigator} />}
 
       <article className={`${ui.card} ${styles.item}`} aria-busy={!item}>
-        {session.itemError ? (
+        {session.paused ? (
+          <p className={ui.muted}>The test is paused.</p>
+        ) : session.itemError ? (
           <p role="alert" className={styles.error}>
             This question could not be loaded. Please try again.
           </p>
@@ -86,11 +118,21 @@ export function AttemptPlayer({ attemptId }: { attemptId: string }) {
               content={item.content}
               response={session.response}
               onChange={session.answer}
-              disabled={locked || session.leaseLost}
+              disabled={inputDisabled}
               struckOptions={item.struckOptions}
               labelledBy={stemId}
             />
             {locked && <p className={styles.notice}>This answer is locked and can no longer be changed.</p>}
+            {session.itemTimeUp && !locked && (
+              <p role="alert" className={styles.notice}>
+                Time is up for this question. Your answer is kept; move on to the next one.
+              </p>
+            )}
+            {session.examTimeUp && (
+              <p role="alert" className={styles.notice}>
+                Time is up. Your answers are being submitted…
+              </p>
+            )}
           </>
         )}
       </article>
@@ -101,7 +143,7 @@ export function AttemptPlayer({ attemptId }: { attemptId: string }) {
             type="button"
             className={ui.buttonGhost}
             aria-pressed={item?.flagged ?? false}
-            disabled={!item || locked}
+            disabled={!item || locked || session.paused}
             onClick={() => void session.toggleFlag()}
           >
             <span aria-hidden="true">⚑</span> Mark for review
@@ -138,7 +180,32 @@ export function AttemptPlayer({ attemptId }: { attemptId: string }) {
         )}
       </footer>
 
+      {session.paused && !session.leaseLost && (
+        <PauseOverlay
+          pause={pauseState}
+          busy={session.busy}
+          error={session.pauseError}
+          onResume={() => void session.resume()}
+        />
+      )}
+
       {session.leaseLost && <OpenElsewhereDialog busy={session.busy} onContinueHere={() => void session.continueHere()} />}
+    </section>
+  );
+}
+
+/**
+ * The server finalized the attempt because its time ran out (ATTEMPT_TIME_EXPIRED). Results
+ * arrive in F10; until then the candidate goes back to the dashboard.
+ */
+function TimeUp() {
+  return (
+    <section className={ui.card}>
+      <h1>Time is up</h1>
+      <p role="alert">Your test has been submitted with the answers you saved.</p>
+      <Link href="/dashboard" className={ui.buttonSecondary}>
+        Back to the dashboard
+      </Link>
     </section>
   );
 }
