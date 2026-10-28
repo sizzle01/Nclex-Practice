@@ -30,6 +30,11 @@ interface Exhibit {                // makes "Trend", "Chart/Exhibit", "Audio", "
   body?: Markdown;
 }
 
+interface CaseStudyScenario {      // case_studies.scenario (shape settled in F11)
+  // one tab per record: nurses' notes, vitals, labs, orders, history
+  tabs: Array<{ id: string; title: string; exhibits: Exhibit[] }>;
+}
+
 interface Rationale {
   correct: Markdown;                           // why the correct answer(s) are correct
   perOption: Record<string, Markdown>;         // REQUIRED for every option / cell / blank choice
