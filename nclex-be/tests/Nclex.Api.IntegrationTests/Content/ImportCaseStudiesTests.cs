@@ -164,6 +164,46 @@ public sealed class ImportCaseStudiesTests(ApiFactory factory)
     }
 
     [Fact]
+    public async Task A_later_file_that_would_split_a_case_in_a_stored_set_is_refused()
+    {
+        var title = $"Stored case set {Guid.NewGuid():N}";
+        await _content.ImportOkAsync(CaseFile(testSets: [CatalogContent.Set(Guid.NewGuid(), title, _ids)]));
+        var newcomer = CatalogContent.Question(Guid.NewGuid());
+        newcomer["caseStudyId"] = _caseId;
+        newcomer["casePosition"] = 4;
+
+        var result = await _content.ImportAsync(CatalogContent.FileWith("RN", [newcomer]));
+
+        result.Issues.ShouldHaveSingleItem().ShouldSatisfyAllConditions(
+            i => i.Path.ShouldBe("questions[0].casePosition"),
+            i => i.Code.ShouldBe(ImportIssueCodes.CaseStudySplit),
+            i => i.Message.ShouldContain(title));
+    }
+
+    [Fact]
+    public async Task Reordering_a_case_used_by_a_stored_set_is_refused()
+    {
+        await _content.ImportOkAsync(CaseFile(testSets: [CatalogContent.Set(Guid.NewGuid(), $"Stored case set {Guid.NewGuid():N}", _ids)]));
+
+        var result = await _content.ImportAsync(CaseFile(placements: [2, 1, 3]));
+
+        result.Issues.ShouldContain(i => i.Path == "caseStudies[0].id" && i.Code == ImportIssueCodes.CaseStudySplit);
+    }
+
+    [Fact]
+    public async Task A_stored_set_fixed_in_the_same_file_lets_the_case_change()
+    {
+        var setId = Guid.NewGuid();
+        var title = $"Stored case set {setId:N}";
+        await _content.ImportOkAsync(CaseFile(testSets: [CatalogContent.Set(setId, title, _ids)]));
+
+        var result = await _content.ImportAsync(CaseFile(placements: [2, 1, 3], testSets: [CatalogContent.Set(setId, title, [_ids[1], _ids[0], _ids[2]])]));
+
+        result.Issues.ShouldBeEmpty();
+        result.TestSets.ShouldBe(new ImportCounts(0, 1, 0));
+    }
+
+    [Fact]
     public async Task An_item_in_a_case_brings_the_case_to_the_candidate()
     {
         var setId = Guid.NewGuid();
