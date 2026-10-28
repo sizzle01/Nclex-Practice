@@ -2,7 +2,7 @@ using Microsoft.EntityFrameworkCore;
 using Nclex.Application.Abstractions;
 using Nclex.Application.Auth.EmailTokens;
 using Nclex.Application.Common;
-using Nclex.Application.Email;
+using Nclex.Application.Notifications;
 using Nclex.Domain.Audit;
 using Nclex.Domain.Entities;
 
@@ -16,7 +16,7 @@ namespace Nclex.Application.Auth.ConfirmEmailChange;
 public sealed class ConfirmEmailChangeHandler(
     IAppDbContext db,
     EmailTokenService emailTokens,
-    SecurityEmails securityEmails,
+    SecurityNotifications securityNotifications,
     IAuditLog audit,
     TimeProvider clock)
 {
@@ -37,7 +37,7 @@ public sealed class ConfirmEmailChangeHandler(
         var oldEmail = user.Email;
         emailToken.Consume(now);
         user.ChangeEmail(newEmail, now);
-        securityEmails.QueueEmailChanged(user, oldEmail);
+        await securityNotifications.EmailChangedAsync(user, oldEmail, cancellationToken);
         audit.RecordUserEvent(AuditActions.EmailChanged, user.Id, client.Ip);
 
         try

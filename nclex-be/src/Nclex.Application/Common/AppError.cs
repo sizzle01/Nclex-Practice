@@ -35,6 +35,9 @@ public enum AppErrorKind
 
     /// <summary>429: too many requests; the response says when to try again.</summary>
     TooManyRequests,
+
+    /// <summary>503: a dependency the request needs (such as Redis) is down; the client should fall back or retry.</summary>
+    Unavailable,
 }
 
 /// <summary>Errors shared by several features.</summary>

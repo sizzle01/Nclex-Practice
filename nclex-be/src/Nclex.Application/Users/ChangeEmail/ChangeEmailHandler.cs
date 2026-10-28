@@ -5,7 +5,7 @@ using Nclex.Application.Auth.EmailTokens;
 using Nclex.Application.Auth.Lockout;
 using Nclex.Application.Common;
 using Nclex.Application.Common.Validation;
-using Nclex.Application.Email;
+using Nclex.Application.Notifications;
 using Nclex.Domain.Audit;
 using Nclex.Domain.Entities;
 
@@ -21,7 +21,7 @@ public sealed class ChangeEmailHandler(
     CurrentAccount currentAccount,
     Reauthentication reauthentication,
     AccountEmails accountEmails,
-    SecurityEmails securityEmails,
+    SecurityNotifications securityNotifications,
     IAuditLog audit)
 {
     public async Task HandleAsync(ChangeEmailRequest request, ClientInfo client, CancellationToken cancellationToken)
@@ -42,7 +42,7 @@ public sealed class ChangeEmailHandler(
         }
 
         await accountEmails.QueueEmailChangeConfirmationAsync(user, request.NewEmail, cancellationToken);
-        securityEmails.QueueEmailChangeRequested(user, request.NewEmail);
+        await securityNotifications.EmailChangeRequestedAsync(user, request.NewEmail, cancellationToken);
         // No addresses in the audit row: they are personal data and the account keeps its history.
         audit.RecordUserEvent(AuditActions.EmailChangeRequested, user.Id, client.Ip);
         await db.SaveChangesAsync(cancellationToken);

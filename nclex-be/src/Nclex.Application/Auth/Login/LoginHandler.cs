@@ -3,7 +3,7 @@ using Nclex.Application.Abstractions;
 using Nclex.Application.Auth.Lockout;
 using Nclex.Application.Auth.Sessions;
 using Nclex.Application.Common;
-using Nclex.Application.Email;
+using Nclex.Application.Notifications;
 using Nclex.Application.Users;
 using Nclex.Domain.Audit;
 using Nclex.Domain.Entities;
@@ -22,7 +22,7 @@ public sealed class LoginHandler(
     SessionService sessions,
     LoginThrottle throttle,
     AccountLockout lockout,
-    SecurityEmails securityEmails,
+    SecurityNotifications securityNotifications,
     IAuditLog audit,
     TimeProvider clock)
 {
@@ -46,7 +46,7 @@ public sealed class LoginHandler(
         await throttle.ResetLoginFailuresAsync(request.Email, client.Ip, cancellationToken);
         if (await IsNewDeviceAsync(account, client, cancellationToken))
         {
-            securityEmails.QueueNewDeviceSignIn(account, client);
+            await securityNotifications.NewDeviceSignInAsync(account, client, cancellationToken);
         }
 
         var session = sessions.Start(account, client);
@@ -92,7 +92,7 @@ public sealed class LoginHandler(
 
         if (account is not null && LoginLockoutPolicy.ShouldLock(failures))
         {
-            lockout.Lock(account, client.Ip, reason: "failed_logins");
+            await lockout.LockAsync(account, client.Ip, reason: "failed_logins", cancellationToken);
             // The lock now does the blocking; a fresh count starts once it ends.
             await throttle.ResetLoginFailuresAsync(email, client.Ip, cancellationToken);
         }

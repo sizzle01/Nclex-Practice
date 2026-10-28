@@ -6,13 +6,15 @@ using Nclex.Application.Common;
 using Nclex.Application.Common.Validation;
 using Nclex.Application.Users;
 using Nclex.Domain.Entities;
+using Nclex.Domain.Notifications;
 
 namespace Nclex.Application.Auth.Signup;
 
 /// <summary>
 /// POST /auth/signup: creates a free, unverified candidate account, queues the verification
-/// email and signs the user in. The account, its session, the verification token and the outbox
-/// row are saved in one transaction (ADR-7), so there is never an account without its email.
+/// email and signs the user in. The account, its session, its notification preferences, the
+/// verification token and the outbox row are saved in one transaction (ADR-7), so there is never
+/// an account without its email.
 /// </summary>
 public sealed class SignupHandler(
     IAppDbContext db,
@@ -36,6 +38,8 @@ public sealed class SignupHandler(
             AccountRules.NormalizeDisplayName(request.DisplayName),
             clock.GetUtcNow());
         db.Users.Add(user);
+        // Every account starts with its default channels per category (architecture.md 5.6).
+        db.NotificationPreferences.AddRange(NotificationPreference.DefaultsFor(user.Id));
         var session = sessions.Start(user, client);
         await accountEmails.QueueVerificationAsync(user, cancellationToken);
 

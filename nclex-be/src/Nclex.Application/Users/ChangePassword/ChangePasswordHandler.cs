@@ -1,7 +1,7 @@
 using Nclex.Application.Abstractions;
 using Nclex.Application.Auth.Lockout;
 using Nclex.Application.Auth.Sessions;
-using Nclex.Application.Email;
+using Nclex.Application.Notifications;
 using Nclex.Domain.Audit;
 using Nclex.Domain.Entities;
 
@@ -18,7 +18,7 @@ public sealed class ChangePasswordHandler(
     Reauthentication reauthentication,
     IPasswordHasher passwordHasher,
     SessionService sessions,
-    SecurityEmails securityEmails,
+    SecurityNotifications securityNotifications,
     IAuditLog audit,
     ICurrentUser currentUser,
     TimeProvider clock)
@@ -33,7 +33,7 @@ public sealed class ChangePasswordHandler(
         await sessions.RevokeOtherSessionsAsync(user.Id, keepFamilyId: currentUser.SessionFamilyId, cancellationToken);
 
         user.ChangePassword(passwordHasher.Hash(request.NewPassword), clock.GetUtcNow());
-        securityEmails.QueuePasswordChanged(user);
+        await securityNotifications.PasswordChangedAsync(user, cancellationToken);
         audit.RecordUserEvent(AuditActions.PasswordChanged, user.Id, client.Ip);
         await db.SaveChangesAsync(cancellationToken);
     }

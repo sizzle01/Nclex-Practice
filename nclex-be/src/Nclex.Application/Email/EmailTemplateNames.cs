@@ -13,6 +13,12 @@ public static class EmailTemplateNames
     public const string PasswordChanged = "password_changed";
     public const string AccountLocked = "account_locked";
     public const string NewDeviceSignIn = "new_device_sign_in";
+
+    // Notifications (F12): named like their notification_type.
+    public const string ResultPass = "result_pass";
+    public const string ResultFail = "result_fail";
+    public const string ResultReady = "result_ready";
+    public const string DraftReminder = "draft_reminder";
 }
 
 /// <summary>Payload of the "verify your email" email.</summary>
@@ -49,3 +55,29 @@ public sealed record AccountLockedPayload(string? DisplayName, DateTimeOffset Lo
 /// <param name="Browser">The User-Agent string, if the browser sent one.</param>
 /// <param name="IpAddress">The client's IP address, if known.</param>
 public sealed record NewDeviceSignInPayload(string? DisplayName, DateTimeOffset SignedInAt, string? Browser, string? IpAddress);
+
+/// <summary>Payload of the result emails (<c>result_pass</c>, <c>result_fail</c>, <c>result_ready</c>).</summary>
+/// <param name="DisplayName">Used in the greeting, if the user gave one.</param>
+/// <param name="SetTitle">The test set's title.</param>
+/// <param name="ScorePct">The score, 0 to 1.</param>
+/// <param name="Weakest">Names of the weakest categories, worst first.</param>
+/// <param name="ResultsPath">The results page, relative to the frontend, e.g. "/attempts/{id}/results#breakdown".</param>
+public sealed record ResultEmailPayload(
+    string? DisplayName,
+    string SetTitle,
+    decimal ScorePct,
+    IReadOnlyList<string> Weakest,
+    string ResultsPath);
+
+/// <summary>Payload of the "pick up where you left off" email.</summary>
+/// <param name="DisplayName">Used in the greeting, if the user gave one.</param>
+/// <param name="SetTitle">The test set's title.</param>
+/// <param name="AnsweredShare">Share of items answered, 0 to 1.</param>
+/// <param name="TimeLeftMs">Exam time left; null for an untimed set.</param>
+/// <param name="AttemptPath">The player, relative to the frontend, e.g. "/attempts/{id}".</param>
+public sealed record DraftReminderEmailPayload(
+    string? DisplayName,
+    string SetTitle,
+    decimal AnsweredShare,
+    long? TimeLeftMs,
+    string AttemptPath);

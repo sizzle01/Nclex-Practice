@@ -3,7 +3,7 @@ using Nclex.Application.Abstractions;
 using Nclex.Application.Auth.EmailTokens;
 using Nclex.Application.Auth.Sessions;
 using Nclex.Application.Common;
-using Nclex.Application.Email;
+using Nclex.Application.Notifications;
 using Nclex.Domain.Audit;
 using Nclex.Domain.Entities;
 
@@ -20,7 +20,7 @@ public sealed class ResetPasswordHandler(
     EmailTokenService emailTokens,
     IPasswordHasher passwordHasher,
     SessionService sessions,
-    SecurityEmails securityEmails,
+    SecurityNotifications securityNotifications,
     IAuditLog audit,
     TimeProvider clock)
 {
@@ -42,7 +42,7 @@ public sealed class ResetPasswordHandler(
         user.ChangePassword(passwordHasher.Hash(request.NewPassword), now);
         // Following a link sent to the address proves the user owns it.
         user.MarkEmailVerified(now);
-        securityEmails.QueuePasswordChanged(user);
+        await securityNotifications.PasswordChangedAsync(user, cancellationToken);
         audit.RecordUserEvent(AuditActions.PasswordReset, user.Id, client.Ip, new { request.SignOutEverywhere });
 
         try

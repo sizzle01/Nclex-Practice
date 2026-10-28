@@ -1,6 +1,7 @@
 using Nclex.Application.Abstractions;
 using Nclex.Application.Common;
 using Nclex.Application.Common.Validation;
+using Nclex.Application.Notifications;
 using Nclex.Domain.Entities;
 using Nclex.Domain.Security;
 
@@ -39,7 +40,7 @@ public sealed class Reauthentication(
         var failures = await throttle.RecordReauthFailureAsync(user.Id, cancellationToken);
         if (LoginLockoutPolicy.ShouldLock(failures))
         {
-            lockout.Lock(user, client.Ip, reason: "reauthentication");
+            await lockout.LockAsync(user, client.Ip, reason: "reauthentication", cancellationToken);
             // Saved now, because the request ends with an error instead of reaching its own save.
             await db.SaveChangesAsync(cancellationToken);
             await throttle.ResetReauthFailuresAsync(user.Id, cancellationToken);

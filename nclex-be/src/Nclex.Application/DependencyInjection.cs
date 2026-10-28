@@ -40,6 +40,12 @@ using Nclex.Application.Catalog.ListQuestionBanks;
 using Nclex.Application.Catalog.ListTestSets;
 using Nclex.Application.Content.ImportQuestions;
 using Nclex.Application.Email;
+using Nclex.Application.Notifications;
+using Nclex.Application.Notifications.DraftReminders;
+using Nclex.Application.Notifications.Feed;
+using Nclex.Application.Notifications.Preferences;
+using Nclex.Application.Notifications.ReadState;
+using Nclex.Application.Notifications.Stream;
 using Nclex.Application.Taxonomy.GetTaxonomy;
 using Nclex.Application.Users;
 using Nclex.Application.Users.ChangeEmail;
@@ -74,7 +80,7 @@ public static class DependencyInjection
         services.AddScoped<SessionService>();
         services.AddScoped<EmailTokenService>();
         services.AddScoped<AccountEmails>();
-        services.AddScoped<SecurityEmails>();
+        services.AddScoped<SecurityNotifications>();
         services.AddScoped<LoginThrottle>();
         services.AddScoped<AccountLockout>();
         services.AddScoped<Reauthentication>();
@@ -136,6 +142,16 @@ public static class DependencyInjection
         services.AddScoped<GetResultHandler>();
         services.AddScoped<GetReviewHandler>();
 
+        // Notifications
+        services.AddScoped<ListNotificationsHandler>();
+        services.AddScoped<UnreadCountHandler>();
+        services.AddScoped<MarkReadHandler>();
+        services.AddScoped<MarkAllReadHandler>();
+        services.AddScoped<IssueStreamTicketHandler>();
+        services.AddScoped<PreferenceRows>();
+        services.AddScoped<GetPreferencesHandler>();
+        services.AddScoped<UpdatePreferencesHandler>();
+
         services.AddAttemptExpiry();
         services.AddContentImport();
 
@@ -168,6 +184,17 @@ public static class DependencyInjection
         services.AddScoped<AttemptFinalizer>();
         services.AddScoped<ExpireAttemptHandler>();
         services.AddScoped<SweepExpiredAttemptsHandler>();
+        return services;
+    }
+
+    /// <summary>
+    /// Registers the draft reminder use case for the worker's recurring job (architecture.md 5.3),
+    /// without the API's auth services.
+    /// </summary>
+    public static IServiceCollection AddDraftReminders(this IServiceCollection services, DraftReminderSettings settings)
+    {
+        services.AddSingleton(settings);
+        services.AddScoped<SendDraftRemindersHandler>();
         return services;
     }
 

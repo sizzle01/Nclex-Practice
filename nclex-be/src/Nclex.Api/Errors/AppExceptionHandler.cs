@@ -66,6 +66,7 @@ public sealed class AppExceptionHandler(IProblemDetailsService problemDetailsSer
         AppErrorKind.Unprocessable => StatusCodes.Status422UnprocessableEntity,
         AppErrorKind.Locked => StatusCodes.Status423Locked,
         AppErrorKind.TooManyRequests => StatusCodes.Status429TooManyRequests,
+        AppErrorKind.Unavailable => StatusCodes.Status503ServiceUnavailable,
         _ => StatusCodes.Status500InternalServerError,
     };
 }

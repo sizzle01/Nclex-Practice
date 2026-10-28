@@ -1,6 +1,7 @@
 using Microsoft.EntityFrameworkCore;
 using Nclex.Application.Abstractions;
 using Nclex.Application.Attempts.Results;
+using Nclex.Application.Notifications;
 using Nclex.Domain.Entities;
 using Nclex.Domain.Grading;
 using Nclex.Domain.ItemTypes;
@@ -163,25 +164,19 @@ public sealed class GradingService(
         IReadOnlyList<AttemptCategoryScore> scores,
         CancellationToken cancellationToken)
     {
-        var title = await db.TestSets.AsNoTracking()
+        var setTitle = await db.TestSets.AsNoTracking()
             .Where(s => s.Id == attempt.TestSetId)
             .Select(s => s.Title)
             .SingleAsync(cancellationToken);
+        var displayName = await db.Users.AsNoTracking()
+            .Where(u => u.Id == attempt.UserId)
+            .Select(u => u.DisplayName)
+            .SingleAsync(cancellationToken);
         var names = await dimensionNames.ForTrackAsync(attempt.Track, cancellationToken);
-        var type = result.Passed switch
-        {
-            true => NotificationType.ResultPass,
-            false => NotificationType.ResultFail,
-            null => NotificationType.ResultReady,
-        };
-        return new NewNotification(
-            attempt.UserId,
-            type,
-            attempt.Id,
-            title,
-            result.ScorePct,
-            [.. WeakestAreas.From(scores).Select(s => names.Name(s.Dimension, s.DimensionKey))],
-            $"/attempts/{attempt.Id}/results");
+        var weakest = WeakestAreas.From(scores)
+            .Select(s => new WeakCategory(s.DimensionKey, names.Name(s.Dimension, s.DimensionKey)))
+            .ToList();
+        return ResultNotifications.For(attempt, result, setTitle, displayName, weakest);
     }
 
     private sealed record VersionTags(Guid QuestionId, ItemTags Tags);
