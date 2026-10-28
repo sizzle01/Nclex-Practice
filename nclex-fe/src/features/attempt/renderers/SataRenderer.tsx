@@ -2,6 +2,8 @@
 
 import { useId } from "react";
 import styles from "./renderers.module.css";
+import { OptionMarkText } from "./OptionMarkText";
+import { optionMarks } from "./revealMarks";
 import type { ItemRendererProps, Option } from "./types";
 
 interface SataContent {
@@ -23,9 +25,11 @@ export function SataRenderer({
   disabled,
   struckOptions,
   labelledBy,
+  reveal,
 }: ItemRendererProps<SataContent, SataResponse>) {
   const instructionsId = useId();
   const selected = response?.selected ?? [];
+  const marks = optionMarks(reveal);
 
   function toggle(optionId: string) {
     const next = selected.includes(optionId) ? selected.filter((id) => id !== optionId) : [...selected, optionId];
@@ -50,6 +54,7 @@ export function SataRenderer({
               onChange={() => toggle(option.id)}
             />
             <span className={struckOptions.includes(option.id) ? styles.struck : undefined}>{option.text}</span>
+            <OptionMarkText mark={marks[option.id]} />
           </label>
         ))}
       </div>

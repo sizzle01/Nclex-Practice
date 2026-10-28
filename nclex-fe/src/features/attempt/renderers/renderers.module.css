@@ -50,3 +50,20 @@
   margin: 0 0 0.75rem;
   color: var(--muted);
 }
+
+/* Reveal marks (F10): the text says right or wrong; colour only reinforces it. */
+.mark {
+  margin-left: auto;
+  font-size: 0.875rem;
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+.correct,
+.missed {
+  color: var(--success);
+}
+
+.incorrect {
+  color: var(--error);
+}

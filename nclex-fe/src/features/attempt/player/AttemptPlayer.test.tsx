@@ -58,6 +58,7 @@ function item(position: number, overrides: Partial<CandidateItem> = {}): Candida
     flagged: false,
     struckOptions: [],
     timeAllotmentSec: 120,
+    reveal: null,
     ...overrides,
   };
 }

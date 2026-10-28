@@ -72,6 +72,7 @@ function item(position: number): CandidateItem {
     flagged: false,
     struckOptions: [],
     timeAllotmentSec: 120,
+    reveal: null,
   };
 }
 
@@ -217,12 +218,12 @@ describe("AttemptPlayer timers and pause", () => {
     expect(screen.getByText("No pauses left")).toBeInTheDocument();
   });
 
-  it("at zero disables the answers, waits out the grace, and shows the time-up screen when the server finalizes", async () => {
+  it("at zero disables the answers, waits out the grace, then submits and goes to the results", async () => {
     const ending = attemptState({}, { exam: examRunning(5) });
     serve(
       {
         "/api/v1/attempts/{id}/open": () => reply(200, ending),
-        "/api/v1/attempts/{id}/navigate": () => reply(409, { code: "ATTEMPT_TIME_EXPIRED", title: "The time limit has passed." }),
+        "/api/v1/attempts/{id}/submit": () => reply(409, { code: "ATTEMPT_TIME_EXPIRED", title: "The time limit has passed." }),
       },
       () => ending,
     );
@@ -233,21 +234,23 @@ describe("AttemptPlayer timers and pause", () => {
     await act(() => vi.advanceTimersByTimeAsync(5_000));
     expect(screen.getByRole("radio", { name: "Option A" })).toBeDisabled();
     expect(screen.getByText("Time is up. Your answers are being submitted…")).toBeInTheDocument();
-    expect(postsTo("/api/v1/attempts/{id}/navigate")).toHaveLength(0);
+    expect(postsTo("/api/v1/attempts/{id}/submit")).toHaveLength(0);
 
     await act(() => vi.advanceTimersByTimeAsync(3_000));
 
     expect(await screen.findByRole("heading", { name: "Time is up" })).toBeInTheDocument();
-    expect(postsTo("/api/v1/attempts/{id}/navigate")).toHaveLength(1);
+    expect(postsTo("/api/v1/attempts/{id}/submit")).toHaveLength(1);
+    expect(push).toHaveBeenCalledWith(`/attempts/${attemptId}/results`);
   });
 
-  it("shows the time-up screen when the attempt expired while the browser was closed", async () => {
+  it("goes to the results when the attempt expired while the browser was closed", async () => {
     serve({ "/api/v1/attempts/{id}/open": () => reply(409, { code: "ATTEMPT_TIME_EXPIRED", title: "The time limit has passed." }) });
 
     renderPlayer();
 
     expect(await screen.findByRole("heading", { name: "Time is up" })).toBeInTheDocument();
-    expect(screen.getByRole("link", { name: "Back to the dashboard" })).toHaveAttribute("href", "/dashboard");
+    expect(screen.getByRole("link", { name: "See your results" })).toHaveAttribute("href", `/attempts/${attemptId}/results`);
+    expect(push).toHaveBeenCalledWith(`/attempts/${attemptId}/results`);
   });
 
   it("locks the answers when the question timer runs out", async () => {

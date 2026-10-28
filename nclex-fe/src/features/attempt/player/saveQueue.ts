@@ -27,6 +27,8 @@ export interface SaveQueueState {
   markLeaseLost(): void;
   /** Call after the lease is taken back ("Continue here"). */
   leaseRestored(): void;
+  /** The attempt was submitted, carrying any unsent answers with it: forget them here too. */
+  clear(): void;
   /** Stops timers when the player unmounts. */
   dispose(): void;
 }
@@ -176,6 +178,12 @@ export function createSaveQueue(options: SaveQueueOptions): StoreApi<SaveQueueSt
 
       leaseRestored() {
         set({ leaseLost: false, status: "idle" });
+      },
+
+      clear() {
+        clearTimers();
+        set({ pending: {}, status: "idle" });
+        persist({});
       },
 
       dispose() {

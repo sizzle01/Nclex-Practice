@@ -1,6 +1,8 @@
 "use client";
 
 import styles from "./renderers.module.css";
+import { OptionMarkText } from "./OptionMarkText";
+import { optionMarks } from "./revealMarks";
 import type { ItemRendererProps, Option } from "./types";
 
 interface MultipleChoiceContent {
@@ -22,8 +24,10 @@ export function MultipleChoiceRenderer({
   disabled,
   struckOptions,
   labelledBy,
+  reveal,
 }: ItemRendererProps<MultipleChoiceContent, MultipleChoiceResponse>) {
   const name = `${labelledBy}-choice`;
+  const marks = optionMarks(reveal);
   return (
     <div role="radiogroup" aria-labelledby={labelledBy} className={styles.options}>
       {content.options.map((option) => (
@@ -37,6 +41,7 @@ export function MultipleChoiceRenderer({
             onChange={() => onChange({ selected: option.id })}
           />
           <span className={struckOptions.includes(option.id) ? styles.struck : undefined}>{option.text}</span>
+          <OptionMarkText mark={marks[option.id]} />
         </label>
       ))}
     </div>

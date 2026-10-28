@@ -20,6 +20,8 @@ import {
   resumeAttempt,
   saveResponse,
   setFlagged,
+  submitAttempt as postSubmit,
+  submitItem as postSubmitItem,
 } from "../api/attemptApi";
 import { createAttemptClock, remainingMs } from "./attemptClock";
 import { browserStorage, createSaveQueue, newClientId, pendingStorageKey } from "./saveQueue";
@@ -27,14 +29,14 @@ import { browserStorage, createSaveQueue, newClientId, pendingStorageKey } from 
 /** The server accepts writes this long after the deadline (architecture.md 5.1); the timeout check waits it out. */
 const serverGraceMs = 2_500;
 
-/** "ended": the time ran out and the server finalized the attempt. */
+/** "ended": the attempt is submitted, by the candidate or because the time ran out. */
 export type OpenState = "opening" | "open" | "failed" | "ended";
 
 /**
  * Everything the player needs for one attempt: opening it with a fresh client id (the device
  * lease), the current item, autosave through the save queue, navigation and marks, the
- * server-synced timers, pause and resume (interfaces.md 5.4, PlayerController). Components only
- * render what this returns.
+ * server-synced timers, pause and resume, tutor-mode item submits and the final submit
+ * (interfaces.md 5.4, PlayerController). Components only render what this returns.
  */
 export function useAttemptSession(attemptId: string) {
   const queryClient = useQueryClient();
@@ -67,6 +69,8 @@ export function useAttemptSession(attemptId: string) {
   const [navigating, setNavigating] = useState(false);
   const [pauseError, setPauseError] = useState<string | null>(null);
   const [pausing, setPausing] = useState(false);
+  const [submitting, setSubmitting] = useState(false);
+  const [submitError, setSubmitError] = useState<string | null>(null);
 
   // Claims the lease (architecture.md 5.2). Runs when the player mounts and again on "Continue here".
   const openMutation = useMutation({
@@ -94,13 +98,20 @@ export function useAttemptSession(attemptId: string) {
   });
   const attempt = openMutation.isSuccess || openMutation.isPending ? attemptQuery.data : undefined;
   const openExpired = isApiError(openMutation.error, "ATTEMPT_TIME_EXPIRED");
-  const ended = timeExpired || openExpired || attempt?.status === "submitted";
+  const [submitted, setSubmitted] = useState(false);
+  const ended = submitted || timeExpired || openExpired || attempt?.status === "submitted";
   const openState: OpenState = ended ? "ended" : attempt ? "open" : openMutation.isError ? "failed" : "opening";
   const position = attempt ? toNumber(attempt.currentPosition) : null;
   const total = attempt ? toNumber(attempt.totalItems) : 0;
   const paused = attempt?.status === "paused";
 
-  // Every attempt response carries serverNow; the clock keeps the offset (architecture.md 5.1).
+  // A finished attempt belongs on its results page (architecture.md 5.5).
+  const resultsPath = `/attempts/${attemptId}/results`;
+  useEffect(() => {
+    if (ended) router.push(resultsPath);
+  }, [ended]); // eslint-disable-line react-hooks/exhaustive-deps
+
+    // Every attempt response carries serverNow; the clock keeps the offset (architecture.md 5.1).
   const serverNow = attempt?.timer.serverNow;
   useEffect(() => {
     if (serverNow) clock.getState().sync(serverNow);
@@ -173,20 +184,15 @@ export function useAttemptSession(attemptId: string) {
   }
 
   // At zero the input is already disabled. Saves sent in the last moment still land within the
-  // server's grace, so wait that out, then make one write: the server finalizes the attempt and
-  // answers ATTEMPT_TIME_EXPIRED (architecture.md 5.1, rule 1). F10 replaces this with POST /submit.
+  // server's grace, so wait that out, then submit (interfaces.md 5.4). If the server has already
+  // finalized the attempt it answers ATTEMPT_TIME_EXPIRED, and either way the player goes to results.
   const timeoutCheck = useRef(false);
   useEffect(() => {
     if (!examTimeUp || timeoutCheck.current || position === null) return;
     timeoutCheck.current = true;
     const timer = setTimeout(async () => {
       try {
-        await queue.getState().flush();
-        await navigateTo(attemptId, clientId, position);
-        // The server still had time (this device's clock offset was off): show its view again.
-        await queryClient.invalidateQueries({ queryKey: attemptKey });
-      } catch (error) {
-        handleWriteError(error);
+        await submitAttempt();
       } finally {
         timeoutCheck.current = false;
       }
@@ -292,6 +298,57 @@ export function useAttemptSession(attemptId: string) {
     open();
   }
 
+  /**
+   * Tutor mode's Submit on the current item: send its answer, then lock and grade it. The reveal
+   * comes back with the call, so the rationale shows without another request.
+   */
+  async function submitItem() {
+    if (submitting || position === null) return;
+    setSubmitting(true);
+    setSubmitError(null);
+    try {
+      await queue.getState().flush();
+      if (queue.getState().leaseLost) return;
+      const reveal = await postSubmitItem(attemptId, clientId, position);
+      updateItem(position, (current) => ({ ...current, state: "locked", reveal }));
+      await queryClient.invalidateQueries({ queryKey: attemptKey });
+    } catch (error) {
+      handleWriteError(error);
+      if (!isApiError(error, "ATTEMPT_OPENED_ELSEWHERE") && !isApiError(error, "ATTEMPT_TIME_EXPIRED"))
+        setSubmitError("Could not submit this answer. Please try again.");
+    } finally {
+      setSubmitting(false);
+    }
+  }
+
+  /**
+   * The final Submit (interfaces.md 5.4): flush the save queue, send whatever it still holds (for
+   * example while offline) as final responses, then go to the results page.
+   */
+  async function submitAttempt() {
+    if (submitting) return;
+    setSubmitting(true);
+    setSubmitError(null);
+    try {
+      await queue.getState().flush();
+      if (queue.getState().leaseLost) return;
+      const finalResponses = Object.entries(queue.getState().pending).map(([itemPosition, write]) => ({
+        position: Number(itemPosition),
+        response: write.response ?? null,
+        clientSeq: write.clientSeq,
+      }));
+      await postSubmit(attemptId, clientId, finalResponses);
+      queue.getState().clear();
+      setSubmitted(true);
+    } catch (error) {
+      handleWriteError(error);
+      if (isApiError(error, "ATTEMPT_TIME_EXPIRED")) queue.getState().clear();
+      else if (!isApiError(error, "ATTEMPT_OPENED_ELSEWHERE")) setSubmitError("Could not submit the test. Please try again.");
+    } finally {
+      setSubmitting(false);
+    }
+  }
+
   return {
     openState,
     openError: openMutation.error,
@@ -305,7 +362,12 @@ export function useAttemptSession(attemptId: string) {
     saveStatus,
     leaseLost,
     navError,
-    busy: navigating || pausing || openMutation.isPending,
+    busy: navigating || pausing || submitting || openMutation.isPending,
+    submitting,
+    submitError,
+    /** True when the attempt ended because its time ran out, not by the candidate's Submit. */
+    endedByTime: timeExpired || openExpired,
+    resultsPath,
     paused,
     pauseError,
     examMs,
@@ -318,6 +380,8 @@ export function useAttemptSession(attemptId: string) {
     pause,
     resume,
     continueHere,
+    submitItem,
+    submitAttempt,
   };
 }
 

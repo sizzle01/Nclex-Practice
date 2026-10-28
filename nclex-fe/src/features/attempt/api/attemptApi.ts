@@ -13,6 +13,14 @@ export type TimerState = ApiSchema<"TimerState">;
 export type ClockState = ApiSchema<"ClockState">;
 export type PauseReason = NonNullable<ApiSchema<"PauseReason">>;
 export type PauseResult = ApiSchema<"PauseAttemptResult">;
+export type ItemReveal = ApiSchema<"ItemReveal">;
+export type GradeDetail = ApiSchema<"GradeDetail">;
+export type SubmitAttemptResult = ApiSchema<"SubmitAttemptResult">;
+export type AttemptResultView = ApiSchema<"AttemptResultView">;
+export type CategoryResult = ApiSchema<"CategoryResult">;
+export type ReviewPage = ApiSchema<"ReviewPage">;
+export type ReviewFilter = NonNullable<ApiSchema<"ReviewFilter">>;
+export type FinalResponse = ApiSchema<"FinalResponse">;
 
 export function attemptQueryKey(attemptId: string) {
   return ["attempts", attemptId] as const;
@@ -23,6 +31,14 @@ export function itemQueryKey(attemptId: string, position: number) {
 }
 
 export const draftsQueryKey = ["attempts", "drafts"] as const;
+
+export function resultQueryKey(attemptId: string) {
+  return ["attempts", attemptId, "result"] as const;
+}
+
+export function reviewQueryKey(attemptId: string, filter: ReviewFilter) {
+  return ["attempts", attemptId, "review", filter] as const;
+}
 
 /** POST /attempts: starts a set, or returns the existing draft of it. */
 export async function startAttempt(testSetId: string): Promise<AttemptState> {
@@ -103,6 +119,48 @@ export async function pauseAttempt(attemptId: string, clientId: string, reason: 
 export async function resumeAttempt(attemptId: string, clientId: string): Promise<AttemptState> {
   const { data, error, response } = await apiClient.POST("/api/v1/attempts/{id}/resume", {
     params: { path: { id: attemptId }, header: { "X-Attempt-Client": clientId } },
+  });
+  if (data) return data;
+  throw ApiError.from(response, error);
+}
+
+/** POST …/items/{position}/submit: tutor mode's Submit; locks and grades the item and returns its reveal. */
+export async function submitItem(attemptId: string, clientId: string, position: number): Promise<ItemReveal> {
+  const { data, error, response } = await apiClient.POST("/api/v1/attempts/{id}/items/{position}/submit", {
+    params: { path: { id: attemptId, position }, header: { "X-Attempt-Client": clientId } },
+  });
+  if (data) return data.reveal;
+  throw ApiError.from(response, error);
+}
+
+/**
+ * POST /attempts/{id}/submit: finishes and grades the attempt. `finalResponses` carries answers the
+ * save queue could not send. Repeating the call returns the same result.
+ */
+export async function submitAttempt(
+  attemptId: string,
+  clientId: string,
+  finalResponses: FinalResponse[],
+): Promise<SubmitAttemptResult> {
+  const { data, error, response } = await apiClient.POST("/api/v1/attempts/{id}/submit", {
+    params: { path: { id: attemptId }, header: { "X-Attempt-Client": clientId } },
+    body: { finalResponses },
+  });
+  if (data) return data;
+  throw ApiError.from(response, error);
+}
+
+export async function fetchResult(attemptId: string): Promise<AttemptResultView> {
+  const { data, error, response } = await apiClient.GET("/api/v1/attempts/{id}/result", {
+    params: { path: { id: attemptId } },
+  });
+  if (data) return data;
+  throw ApiError.from(response, error);
+}
+
+export async function fetchReview(attemptId: string, filter: ReviewFilter, cursor: string | null): Promise<ReviewPage> {
+  const { data, error, response } = await apiClient.GET("/api/v1/attempts/{id}/review", {
+    params: { path: { id: attemptId }, query: { filter, ...(cursor ? { cursor } : {}) } },
   });
   if (data) return data;
   throw ApiError.from(response, error);
