@@ -36,11 +36,21 @@ public static class JobsServiceCollectionExtensions
         services.AddHangfireServer();
         services.AddScoped<AttemptExpiryJob>();
         services.AddScoped<ExpirySweeperJob>();
+        services.AddScoped<DraftReminderJob>();
         return services;
     }
 
-    /// <summary>Registers the sweeper to run every minute, Hangfire's shortest interval (architecture.md 5.1, rule 3).</summary>
-    public static void ScheduleRecurringJobs(this IServiceProvider services) =>
-        services.GetRequiredService<IRecurringJobManager>()
-            .AddOrUpdate<ExpirySweeperJob>(ExpirySweeperJob.RecurringJobId, job => job.RunAsync(CancellationToken.None), Cron.Minutely());
+    /// <summary>
+    /// Registers the recurring jobs: the expiry sweeper every minute, Hangfire's shortest interval
+    /// (architecture.md 5.1, rule 3), and the draft reminders on <c>Notifications:DraftReminderCron</c>.
+    /// </summary>
+    public static void ScheduleRecurringJobs(this IServiceProvider services)
+    {
+        var jobs = services.GetRequiredService<IRecurringJobManager>();
+        jobs.AddOrUpdate<ExpirySweeperJob>(ExpirySweeperJob.RecurringJobId, job => job.RunAsync(CancellationToken.None), Cron.Minutely());
+        jobs.AddOrUpdate<DraftReminderJob>(
+            DraftReminderJob.RecurringJobId,
+            job => job.RunAsync(CancellationToken.None),
+            NotificationJobSettings.ReminderCron(services.GetRequiredService<IConfiguration>()));
+    }
 }

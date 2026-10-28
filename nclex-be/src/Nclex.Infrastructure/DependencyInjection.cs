@@ -4,6 +4,7 @@ using Microsoft.Extensions.DependencyInjection;
 using Nclex.Application.Abstractions;
 using Nclex.Domain.Entities;
 using Nclex.Domain.ItemTypes;
+using Nclex.Domain.Notifications;
 using Nclex.Infrastructure.Audit;
 using Nclex.Infrastructure.Email;
 using Nclex.Infrastructure.Notifications;
@@ -31,6 +32,8 @@ public static class DependencyInjection
         // so tests can swap configuration in after Program.cs has run.
         services.AddDbContext<AppDbContext>((provider, options) =>
             options
+                // Pushes new notifications to Redis once their transaction commits (architecture.md 5.5).
+                .AddInterceptors(provider.GetRequiredService<PublishNotificationsAfterCommit>())
                 .UseNpgsql(
                     GetRequiredConnectionString(provider, PostgresConnectionName),
                     npgsql => npgsql
@@ -41,7 +44,10 @@ public static class DependencyInjection
         services.AddScoped<IAppDbContext>(provider => provider.GetRequiredService<AppDbContext>());
         services.AddScoped<IEmailOutbox, EfEmailOutbox>();
         services.AddScoped<IAuditLog, EfAuditLog>();
-        services.AddScoped<INotificationPublisher, NoOpNotificationPublisher>();
+
+        services.AddScoped<INotificationPublisher, NotificationPublisher>();
+        services.AddScoped<PendingNotifications>();
+        services.AddScoped<PublishNotificationsAfterCommit>();
 
         // Redis only holds data that can be rebuilt (architecture.md section 3), so the app must
         // start and keep serving when Redis is down. AbortOnConnectFail = false makes the
@@ -53,6 +59,8 @@ public static class DependencyInjection
             return ConnectionMultiplexer.Connect(options);
         });
         services.AddSingleton<IRateLimitStore, RedisRateLimitStore>();
+        services.AddSingleton<INotificationBus, RedisNotificationBus>();
+        services.AddScoped<IStreamTicketStore, RedisStreamTicketStore>();
 
         return services;
     }
@@ -77,7 +85,9 @@ public static class DependencyInjection
             .MapEnum<RevealMode>("reveal_mode")
             .MapEnum<AttemptStatus>("attempt_status")
             .MapEnum<SubmitReason>("submit_reason")
-            .MapEnum<ItemState>("item_state");
+            .MapEnum<ItemState>("item_state")
+            .MapEnum<NotificationType>("notification_type")
+            .MapEnum<NotificationCategory>("notification_category");
 
     private static string GetRequiredConnectionString(IServiceProvider provider, string name) =>
         provider.GetRequiredService<IConfiguration>().GetConnectionString(name)

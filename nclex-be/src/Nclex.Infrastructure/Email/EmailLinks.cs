@@ -17,6 +17,12 @@ public sealed class EmailLinks(IOptions<EmailOptions> options)
     /// <summary>The account settings page (interfaces.md section 5.2).</summary>
     public string AccountSettings() => Page("/settings/account");
 
+    /// <summary>The notification settings page, linked from every notification email.</summary>
+    public string NotificationSettings() => Page("/settings/notifications");
+
+    /// <summary>A page of the app; <paramref name="path"/> is a deep link such as "/attempts/{id}/results#breakdown".</summary>
+    public string App(string path) => Page(path);
+
     private string Page(string path) => $"{options.Value.FrontendBaseUrl.TrimEnd('/')}{path}";
 
     private string Build(string path, string token) => $"{Page(path)}?token={Uri.EscapeDataString(token)}";

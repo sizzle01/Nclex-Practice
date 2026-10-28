@@ -28,6 +28,10 @@ public static class EmailServiceCollectionExtensions
         services.AddSingleton<IEmailTemplate, PasswordChangedTemplate>();
         services.AddSingleton<IEmailTemplate, AccountLockedTemplate>();
         services.AddSingleton<IEmailTemplate, NewDeviceSignInTemplate>();
+        services.AddSingleton<IEmailTemplate, ResultPassTemplate>();
+        services.AddSingleton<IEmailTemplate, ResultFailTemplate>();
+        services.AddSingleton<IEmailTemplate, ResultReadyTemplate>();
+        services.AddSingleton<IEmailTemplate, DraftReminderTemplate>();
         services.AddSingleton<EmailTemplates>();
         services.AddSingleton<IEmailSender, SmtpEmailSender>();
         services.AddScoped<OutboxDispatcher>();
