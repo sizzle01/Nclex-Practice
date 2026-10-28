@@ -1,5 +1,6 @@
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Mvc.ModelBinding;
 using Nclex.Application.Attempts;
 using Nclex.Application.Attempts.DiscardAttempt;
 using Nclex.Application.Attempts.GetAttempt;
@@ -8,9 +9,13 @@ using Nclex.Application.Attempts.ListAttempts;
 using Nclex.Application.Attempts.Navigate;
 using Nclex.Application.Attempts.OpenAttempt;
 using Nclex.Application.Attempts.PauseAttempt;
+using Nclex.Application.Attempts.Results;
 using Nclex.Application.Attempts.ResumeAttempt;
+using Nclex.Application.Attempts.Review;
 using Nclex.Application.Attempts.SaveResponse;
 using Nclex.Application.Attempts.StartAttempt;
+using Nclex.Application.Attempts.SubmitAttempt;
+using Nclex.Application.Attempts.SubmitItem;
 using Nclex.Application.Attempts.UpdateItemMarks;
 
 namespace Nclex.Api.Controllers;
@@ -75,7 +80,7 @@ public sealed class AttemptsController : ControllerBase
         CancellationToken cancellationToken) =>
         handler.HandleAsync(id, clientId, cancellationToken);
 
-    /// <summary>One item to display, without its answer key or rationale.</summary>
+    /// <summary>One item to display; its answer key and rationale only once the reveal rules allow.</summary>
     [HttpGet("{id:guid}/items/{position:int}")]
     [ProducesResponseType<CandidateItemView>(StatusCodes.Status200OK)]
     [ProducesResponseType<ProblemDetails>(StatusCodes.Status409Conflict, "application/problem+json")]
@@ -117,6 +122,24 @@ public sealed class AttemptsController : ControllerBase
         CancellationToken cancellationToken) =>
         handler.HandleAsync(id, position, clientId, request, cancellationToken);
 
+    /// <summary>
+    /// Tutor mode: locks and grades one item and returns its answer and rationale. The body is
+    /// optional and saves a last answer first. Returns 409 TUTOR_MODE_ONLY in exam mode.
+    /// </summary>
+    [HttpPost("{id:guid}/items/{position:int}/submit")]
+    [ProducesResponseType<SubmitItemResult>(StatusCodes.Status200OK)]
+    [ProducesResponseType<ProblemDetails>(StatusCodes.Status400BadRequest, "application/problem+json")]
+    [ProducesResponseType<ProblemDetails>(StatusCodes.Status409Conflict, "application/problem+json")]
+    [ProducesResponseType<ProblemDetails>(StatusCodes.Status423Locked, "application/problem+json")]
+    public Task<SubmitItemResult> SubmitItem(
+        Guid id,
+        int position,
+        [FromHeader(Name = AttemptClient.HeaderName)] string? clientId,
+        [FromBody(EmptyBodyBehavior = EmptyBodyBehavior.Allow)] SubmitItemRequest? request,
+        [FromServices] SubmitItemHandler handler,
+        CancellationToken cancellationToken) =>
+        handler.HandleAsync(id, position, clientId, request ?? new SubmitItemRequest(), cancellationToken);
+
     /// <summary>Moves to another item; the server records the time spent on the one being left.</summary>
     [HttpPost("{id:guid}/navigate")]
     [ProducesResponseType<NavigateResult>(StatusCodes.Status200OK)]
@@ -156,6 +179,48 @@ public sealed class AttemptsController : ControllerBase
         [FromServices] ResumeAttemptHandler handler,
         CancellationToken cancellationToken) =>
         handler.HandleAsync(id, clientId, cancellationToken);
+
+    /// <summary>
+    /// Finishes and grades the attempt. Idempotent: repeating the call returns the same result. The
+    /// body is optional and carries answers the save queue had not sent yet.
+    /// </summary>
+    [HttpPost("{id:guid}/submit")]
+    [ProducesResponseType<SubmitAttemptResult>(StatusCodes.Status200OK)]
+    [ProducesResponseType<ProblemDetails>(StatusCodes.Status400BadRequest, "application/problem+json")]
+    [ProducesResponseType<ProblemDetails>(StatusCodes.Status409Conflict, "application/problem+json")]
+    public Task<SubmitAttemptResult> Submit(
+        Guid id,
+        [FromHeader(Name = AttemptClient.HeaderName)] string? clientId,
+        [FromBody(EmptyBodyBehavior = EmptyBodyBehavior.Allow)] SubmitAttemptRequest? request,
+        [FromServices] SubmitAttemptHandler handler,
+        CancellationToken cancellationToken) =>
+        handler.HandleAsync(id, clientId, request ?? new SubmitAttemptRequest(), cancellationToken);
+
+    /// <summary>The score summary, readiness estimate and category breakdown of a submitted attempt.</summary>
+    [HttpGet("{id:guid}/result")]
+    [ProducesResponseType<AttemptResultView>(StatusCodes.Status200OK)]
+    [ProducesResponseType<ProblemDetails>(StatusCodes.Status409Conflict, "application/problem+json")]
+    public Task<AttemptResultView> GetResult(
+        Guid id,
+        [FromServices] GetResultHandler handler,
+        CancellationToken cancellationToken) =>
+        handler.HandleAsync(id, cancellationToken);
+
+    /// <summary>
+    /// Item-by-item review with answer keys and rationales: every item once submitted, or the
+    /// locked items of a tutor-mode attempt in progress.
+    /// </summary>
+    [HttpGet("{id:guid}/review")]
+    [ProducesResponseType<ReviewPage>(StatusCodes.Status200OK)]
+    [ProducesResponseType<ProblemDetails>(StatusCodes.Status400BadRequest, "application/problem+json")]
+    [ProducesResponseType<ProblemDetails>(StatusCodes.Status409Conflict, "application/problem+json")]
+    [ProducesResponseType<ProblemDetails>(StatusCodes.Status423Locked, "application/problem+json")]
+    public Task<ReviewPage> GetReview(
+        Guid id,
+        [FromQuery] GetReviewRequest request,
+        [FromServices] GetReviewHandler handler,
+        CancellationToken cancellationToken) =>
+        handler.HandleAsync(id, request, cancellationToken);
 
     /// <summary>Discards a draft. Needs no lease, so the dashboard can do it.</summary>
     [HttpDelete("{id:guid}")]
