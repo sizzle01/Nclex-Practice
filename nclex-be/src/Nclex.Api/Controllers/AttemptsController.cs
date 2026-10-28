@@ -7,6 +7,8 @@ using Nclex.Application.Attempts.GetItem;
 using Nclex.Application.Attempts.ListAttempts;
 using Nclex.Application.Attempts.Navigate;
 using Nclex.Application.Attempts.OpenAttempt;
+using Nclex.Application.Attempts.PauseAttempt;
+using Nclex.Application.Attempts.ResumeAttempt;
 using Nclex.Application.Attempts.SaveResponse;
 using Nclex.Application.Attempts.StartAttempt;
 using Nclex.Application.Attempts.UpdateItemMarks;
@@ -128,6 +130,32 @@ public sealed class AttemptsController : ControllerBase
         [FromServices] NavigateHandler handler,
         CancellationToken cancellationToken) =>
         handler.HandleAsync(id, clientId, request, cancellationToken);
+
+    /// <summary>Pauses for a break or Save &amp; Exit; both freeze the timers and count against the pause limit.</summary>
+    [HttpPost("{id:guid}/pause")]
+    [ProducesResponseType<PauseAttemptResult>(StatusCodes.Status200OK)]
+    [ProducesResponseType<ProblemDetails>(StatusCodes.Status400BadRequest, "application/problem+json")]
+    [ProducesResponseType<ProblemDetails>(StatusCodes.Status409Conflict, "application/problem+json")]
+    [ProducesResponseType<ProblemDetails>(StatusCodes.Status423Locked, "application/problem+json")]
+    public Task<PauseAttemptResult> Pause(
+        Guid id,
+        [FromHeader(Name = AttemptClient.HeaderName)] string? clientId,
+        PauseAttemptRequest request,
+        [FromServices] PauseAttemptHandler handler,
+        CancellationToken cancellationToken) =>
+        handler.HandleAsync(id, clientId, request, cancellationToken);
+
+    /// <summary>Resumes on this device, which takes the lease. Time past the pause limit has come off the exam time.</summary>
+    [HttpPost("{id:guid}/resume")]
+    [ProducesResponseType<AttemptState>(StatusCodes.Status200OK)]
+    [ProducesResponseType<ProblemDetails>(StatusCodes.Status400BadRequest, "application/problem+json")]
+    [ProducesResponseType<ProblemDetails>(StatusCodes.Status409Conflict, "application/problem+json")]
+    public Task<AttemptState> Resume(
+        Guid id,
+        [FromHeader(Name = AttemptClient.HeaderName)] string? clientId,
+        [FromServices] ResumeAttemptHandler handler,
+        CancellationToken cancellationToken) =>
+        handler.HandleAsync(id, clientId, cancellationToken);
 
     /// <summary>Discards a draft. Needs no lease, so the dashboard can do it.</summary>
     [HttpDelete("{id:guid}")]

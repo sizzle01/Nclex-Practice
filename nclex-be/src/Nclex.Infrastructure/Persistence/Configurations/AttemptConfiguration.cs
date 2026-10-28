@@ -33,7 +33,12 @@ internal sealed class AttemptConfiguration : IEntityTypeConfiguration<Attempt>
         builder.Property(a => a.CurrentPosition).HasDefaultValue(1);
         builder.Property(a => a.TimerEpoch).HasDefaultValue(0);
         builder.Property(a => a.PausesUsed).HasDefaultValue((short)0);
-        builder.Property(a => a.PauseReason).HasColumnType("text");
+        // The DDL keeps pause_reason as text with a CHECK rather than a Postgres enum.
+        builder.Property(a => a.PauseReason)
+            .HasColumnType("text")
+            .HasConversion(
+                reason => reason == PauseReason.Break ? "break" : "save_exit",
+                column => column == "break" ? PauseReason.Break : PauseReason.SaveExit);
         builder.Property(a => a.TotalPausedMs).HasDefaultValue(0L);
         builder.Property(a => a.ActiveClientId).HasColumnType("text");
         builder.Property(a => a.CatState).HasColumnType("jsonb");

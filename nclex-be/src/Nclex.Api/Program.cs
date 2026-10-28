@@ -1,6 +1,7 @@
 using System.Globalization;
 using System.Text.Json;
 using System.Text.Json.Serialization;
+using Hangfire;
 using Nclex.Api.Auth;
 using Nclex.Api.Errors;
 using Nclex.Api.Health;
@@ -10,6 +11,7 @@ using Nclex.Api.OpenApi;
 using Nclex.Api.RateLimiting;
 using Nclex.Application;
 using Nclex.Infrastructure;
+using Nclex.Infrastructure.Jobs;
 using Nclex.Infrastructure.Security;
 using Serilog;
 
@@ -56,6 +58,8 @@ try
     builder.Services.AddApiProblemDetails();
     builder.Services.AddApplication();
     builder.Services.AddInfrastructure();
+    // Client only: the API schedules expiry jobs and Nclex.Worker runs them.
+    builder.Services.AddJobScheduling();
     builder.Services.AddSecurity();
     builder.Services.AddApiAuth();
     builder.Services.AddApiRateLimiting();
@@ -79,6 +83,12 @@ try
 
     // ADR-8: the frontend's typed client is generated from this document.
     app.MapOpenApi("/api/v1/openapi.json").AllowAnonymous();
+    if (app.Environment.IsDevelopment())
+    {
+        // Hangfire's own page of scheduled and recurring jobs; it only answers requests from this machine.
+        app.UseHangfireDashboard("/hangfire");
+    }
+
     // Secure by default: every controller action needs a signed-in user unless marked [AllowAnonymous].
     // (A fallback policy would also turn 404s for unknown routes into 401s.)
     app.MapControllers().RequireAuthorization();
