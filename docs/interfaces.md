@@ -35,6 +35,7 @@ interface MediaView {               // GET /media/{id} (api.md section 10): how 
   kind: 'image' | 'audio' | 'video';
   url: string;                     // signed, relative, valid for 10 minutes
   captionsUrl: string | null;      // WebVTT; required for audio and video
+  transcriptUrl: string | null;    // plain text; required for audio and video (section 4, Media)
   altText: string | null;          // required for images
   width: number | null; height: number | null; durationMs: number | null;
   expiresAt: string;
