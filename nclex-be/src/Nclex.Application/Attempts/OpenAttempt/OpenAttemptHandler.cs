@@ -25,8 +25,7 @@ public sealed class OpenAttemptHandler(
 
         var current = await store.CurrentItemAsync(attempt, cancellationToken);
         attempt.Open(clientId, current, clock.GetUtcNow());
-        await db.SaveChangesAsync(cancellationToken);
-        await transaction.CommitAsync(cancellationToken);
+        await guard.CommitAsync(attempt, transaction, cancellationToken);
 
         // The timer starts here on the first open (architecture.md 5.1, rule 2). Scheduling again on a
         // later open is harmless: whichever job runs second finds the attempt already finalized.

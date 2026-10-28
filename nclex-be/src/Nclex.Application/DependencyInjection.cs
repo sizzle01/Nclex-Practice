@@ -1,17 +1,24 @@
 using FluentValidation;
 using Microsoft.Extensions.DependencyInjection;
+using Microsoft.Extensions.DependencyInjection.Extensions;
 using Nclex.Application.Attempts;
 using Nclex.Application.Attempts.DiscardAttempt;
 using Nclex.Application.Attempts.Expiry;
 using Nclex.Application.Attempts.GetAttempt;
 using Nclex.Application.Attempts.GetItem;
+using Nclex.Application.Attempts.Grading;
 using Nclex.Application.Attempts.ListAttempts;
 using Nclex.Application.Attempts.Navigate;
 using Nclex.Application.Attempts.OpenAttempt;
 using Nclex.Application.Attempts.PauseAttempt;
+using Nclex.Application.Attempts.Results;
 using Nclex.Application.Attempts.ResumeAttempt;
+using Nclex.Application.Attempts.Reveal;
+using Nclex.Application.Attempts.Review;
 using Nclex.Application.Attempts.SaveResponse;
 using Nclex.Application.Attempts.StartAttempt;
+using Nclex.Application.Attempts.SubmitAttempt;
+using Nclex.Application.Attempts.SubmitItem;
 using Nclex.Application.Attempts.UpdateItemMarks;
 using Nclex.Application.Auth.ConfirmEmailChange;
 using Nclex.Application.Auth.EmailTokens;
@@ -40,6 +47,7 @@ using Nclex.Application.Users.ChangePassword;
 using Nclex.Application.Users.DeleteAccount;
 using Nclex.Application.Users.GetMe;
 using Nclex.Application.Users.UpdateMe;
+using Nclex.Domain.Grading;
 using Nclex.Domain.ItemTypes;
 using Nclex.Domain.ItemTypes.Dropdown;
 using Nclex.Domain.ItemTypes.FillBlankCalc;
@@ -109,6 +117,9 @@ public static class DependencyInjection
         services.AddScoped<AttemptStore>();
         services.AddScoped<AttemptWriteGuard>();
         services.AddScoped<AttemptStateReader>();
+        services.AddScoped<ResponseValidator>();
+        services.AddScoped<RevealReader>();
+        services.AddScoped<ItemViewReader>();
         services.AddScoped<StartAttemptHandler>();
         services.AddScoped<ListAttemptsHandler>();
         services.AddScoped<GetAttemptHandler>();
@@ -120,6 +131,10 @@ public static class DependencyInjection
         services.AddScoped<DiscardAttemptHandler>();
         services.AddScoped<PauseAttemptHandler>();
         services.AddScoped<ResumeAttemptHandler>();
+        services.AddScoped<SubmitItemHandler>();
+        services.AddScoped<SubmitAttemptHandler>();
+        services.AddScoped<GetResultHandler>();
+        services.AddScoped<GetReviewHandler>();
 
         services.AddAttemptExpiry();
         services.AddContentImport();
@@ -141,10 +156,15 @@ public static class DependencyInjection
 
     /// <summary>
     /// Registers what the expiry jobs need (architecture.md 5.1, rules 2 and 3), so the worker can run
-    /// them without the API's auth services. <see cref="AddApplication"/> includes it.
+    /// them without the API's auth services. Finalizing grades the attempt, so this includes grading.
+    /// <see cref="AddApplication"/> includes it.
     /// </summary>
     public static IServiceCollection AddAttemptExpiry(this IServiceCollection services)
     {
+        services.AddItemTypes();
+        services.AddSingleton<IReadinessPolicy, ReadinessPolicy>();
+        services.AddScoped<DimensionNames>();
+        services.AddScoped<IGradingService, GradingService>();
         services.AddScoped<AttemptFinalizer>();
         services.AddScoped<ExpireAttemptHandler>();
         services.AddScoped<SweepExpiredAttemptsHandler>();
@@ -160,23 +180,24 @@ public static class DependencyInjection
 
     /// <summary>
     /// Registers one module per item type that has been built (interfaces.md section 3). Graders are
-    /// pure and stateless, so singletons are safe.
+    /// pure and stateless, so singletons are safe. Both the importer and grading need them, so
+    /// registering twice adds nothing.
     /// </summary>
     private static IServiceCollection AddItemTypes(this IServiceCollection services)
     {
-        services.AddSingleton<IItemTypeModule, MultipleChoiceModule>();
-        services.AddSingleton<IItemTypeModule, SataModule>();
-        services.AddSingleton<IItemTypeModule, SelectNModule>();
-        services.AddSingleton<IItemTypeModule, MatrixMcModule>();
-        services.AddSingleton<IItemTypeModule, MatrixMrModule>();
-        services.AddSingleton<IItemTypeModule, MultipleResponseGroupingModule>();
-        services.AddSingleton<IItemTypeModule, DropdownClozeModule>();
-        services.AddSingleton<IItemTypeModule, DropdownTableModule>();
-        services.AddSingleton<IItemTypeModule, HighlightTextModule>();
-        services.AddSingleton<IItemTypeModule, HighlightTableModule>();
-        services.AddSingleton<IItemTypeModule, FillBlankCalcModule>();
-        services.AddSingleton<IItemTypeModule, OrderedResponseModule>();
-        services.AddSingleton<ItemTypeRegistry>();
+        services.TryAddEnumerable(ServiceDescriptor.Singleton<IItemTypeModule, MultipleChoiceModule>());
+        services.TryAddEnumerable(ServiceDescriptor.Singleton<IItemTypeModule, SataModule>());
+        services.TryAddEnumerable(ServiceDescriptor.Singleton<IItemTypeModule, SelectNModule>());
+        services.TryAddEnumerable(ServiceDescriptor.Singleton<IItemTypeModule, MatrixMcModule>());
+        services.TryAddEnumerable(ServiceDescriptor.Singleton<IItemTypeModule, MatrixMrModule>());
+        services.TryAddEnumerable(ServiceDescriptor.Singleton<IItemTypeModule, MultipleResponseGroupingModule>());
+        services.TryAddEnumerable(ServiceDescriptor.Singleton<IItemTypeModule, DropdownClozeModule>());
+        services.TryAddEnumerable(ServiceDescriptor.Singleton<IItemTypeModule, DropdownTableModule>());
+        services.TryAddEnumerable(ServiceDescriptor.Singleton<IItemTypeModule, HighlightTextModule>());
+        services.TryAddEnumerable(ServiceDescriptor.Singleton<IItemTypeModule, HighlightTableModule>());
+        services.TryAddEnumerable(ServiceDescriptor.Singleton<IItemTypeModule, FillBlankCalcModule>());
+        services.TryAddEnumerable(ServiceDescriptor.Singleton<IItemTypeModule, OrderedResponseModule>());
+        services.TryAddSingleton<ItemTypeRegistry>();
         return services;
     }
 }

@@ -1,9 +1,6 @@
-using System.Text.Json;
-using Microsoft.EntityFrameworkCore;
 using Nclex.Application.Abstractions;
 using Nclex.Application.Common;
 using Nclex.Domain.Entities;
-using Nclex.Domain.ItemTypes;
 
 namespace Nclex.Application.Attempts.SaveResponse;
 
@@ -15,7 +12,7 @@ public sealed class SaveResponseHandler(
     IAppDbContext db,
     AttemptStore store,
     AttemptWriteGuard guard,
-    ItemTypeRegistry itemTypes,
+    ResponseValidator validator,
     TimeProvider clock)
 {
     public async Task<SaveResponseResult> HandleAsync(
@@ -29,20 +26,14 @@ public sealed class SaveResponseHandler(
         await using var transaction = await db.BeginTransactionAsync(cancellationToken);
         var attempt = await guard.LockForWriteAsync(attemptId, clientId, transaction, cancellationToken);
         var item = await store.ItemAsync(attempt, position, cancellationToken);
-
-        var response = request.Response is { ValueKind: not JsonValueKind.Null } value ? value : (JsonElement?)null;
-        if (response is not null && !item.IsLocked)
-        {
-            await EnsureValidAsync(item, response.Value, cancellationToken);
-        }
+        var response = await validator.ToStoredAsync(item, request.Response, cancellationToken);
 
         var now = clock.GetUtcNow();
-        var outcome = item.SaveResponse(response is null ? null : JsonDocument.Parse(response.Value.GetRawText()), request.ClientSeq, now);
+        var outcome = item.SaveResponse(response, request.ClientSeq, now);
         if (outcome == SaveOutcome.ItemLocked)
         {
             // Keeps the lock the guard may have just made because the item's time ran out.
-            await db.SaveChangesAsync(cancellationToken);
-            await transaction.CommitAsync(cancellationToken);
+            await guard.CommitAsync(attempt, transaction, cancellationToken);
             throw new AppException(AttemptErrors.ItemLocked);
         }
 
@@ -51,28 +42,8 @@ public sealed class SaveResponseHandler(
             attempt.RecordActivity(now);
         }
 
-        await db.SaveChangesAsync(cancellationToken);
-        await transaction.CommitAsync(cancellationToken);
+        await guard.CommitAsync(attempt, transaction, cancellationToken);
         var current = await store.CurrentItemAsync(attempt, cancellationToken);
         return new SaveResponseResult(now, item.ClientSeq, item.State, TimerState.For(attempt, current, now));
-    }
-
-    /// <summary>
-    /// Checks the answer against the item (option ids exist, a Select-N answer is not over N...), so
-    /// grading in F10 can trust what is stored. Problems are returned as VALIDATION_FAILED.
-    /// </summary>
-    private async Task EnsureValidAsync(AttemptItem item, JsonElement response, CancellationToken cancellationToken)
-    {
-        var version = await db.QuestionVersions.AsNoTracking()
-            .Where(v => v.Id == item.QuestionVersionId)
-            .Select(v => new { v.ItemType, v.Content })
-            .SingleAsync(cancellationToken);
-        var issues = itemTypes.Get(version.ItemType).ValidateResponse(version.Content.RootElement, response);
-        if (issues.Count > 0)
-        {
-            throw new AppException(
-                CommonErrors.ValidationFailed,
-                fieldErrors: [.. issues.Select(issue => new AppFieldError(issue.Path, issue.Code))]);
-        }
     }
 }

@@ -230,13 +230,14 @@ public sealed class AttemptSessionTests(ApiFactory factory)
         item.EnumerateObject().Select(p => p.Name).ShouldBe(
         [
             "position", "questionVersionId", "itemType", "stem", "content", "exhibits", "caseStudy",
-            "state", "response", "clientSeq", "flagged", "struckOptions", "timeAllotmentSec",
+            "state", "response", "clientSeq", "flagged", "struckOptions", "timeAllotmentSec", "reveal",
         ], ignoreOrder: true);
+        // Exam and tutor mode alike: nothing is revealed before the item is locked or the attempt submitted.
+        item.GetProperty("reveal").ValueKind.ShouldBe(JsonValueKind.Null);
         var raw = item.GetRawText();
         raw.ShouldNotContain("answerKey", Case.Insensitive);
         raw.ShouldNotContain("rationale", Case.Insensitive);
         raw.ShouldNotContain("correct", Case.Insensitive);
-        raw.ShouldNotContain("reveal", Case.Insensitive);
         // The texts CatalogContent writes into the key's rationale and the educational objective.
         raw.ShouldNotContain("Why b");
         raw.ShouldNotContain("Prioritise safety.");

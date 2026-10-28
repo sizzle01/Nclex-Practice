@@ -21,14 +21,12 @@ public sealed class UpdateItemMarksHandler(IAppDbContext db, AttemptStore store,
         if (!item.UpdateMarks(request.Flagged, request.StruckOptions))
         {
             // Keeps the lock the guard may have just made because the item's time ran out.
-            await db.SaveChangesAsync(cancellationToken);
-            await transaction.CommitAsync(cancellationToken);
+            await guard.CommitAsync(attempt, transaction, cancellationToken);
             throw new AppException(AttemptErrors.ItemLocked);
         }
 
         attempt.RecordActivity(clock.GetUtcNow());
-        await db.SaveChangesAsync(cancellationToken);
-        await transaction.CommitAsync(cancellationToken);
+        await guard.CommitAsync(attempt, transaction, cancellationToken);
         return new ItemMarks(item.Position, item.Flagged, item.StruckOptions);
     }
 }

@@ -36,8 +36,7 @@ public sealed class NavigateHandler(IAppDbContext db, AttemptStore store, Attemp
             throw new AppException(AttemptErrors.BackNavigationDisabled);
         }
 
-        await db.SaveChangesAsync(cancellationToken);
-        await transaction.CommitAsync(cancellationToken);
+        await guard.CommitAsync(attempt, transaction, cancellationToken);
         return new NavigateResult(attempt.CurrentPosition, TimerState.For(attempt, target, now));
     }
 }

@@ -51,6 +51,8 @@ try
     builder.Services.AddSingleton(TimeProvider.System);
 
     var host = builder.Build();
+    // The expiry jobs grade attempts, so a missing item-type module must stop the worker at start.
+    host.Services.EnsureItemTypeModules();
     host.Services.ScheduleRecurringJobs();
     host.Services.GetRequiredService<IHostApplicationLifetime>().ApplicationStarted.Register(() =>
         Log.Information("Nclex.Worker started in {Environment}", builder.Environment.EnvironmentName));

@@ -37,8 +37,7 @@ public sealed class PauseAttemptHandler(
             throw new AppException(AttemptErrors.PauseLimitReached);
         }
 
-        await db.SaveChangesAsync(cancellationToken);
-        await transaction.CommitAsync(cancellationToken);
+        await guard.CommitAsync(attempt, transaction, cancellationToken);
         return new PauseAttemptResult(attempt.Status, TimerState.For(attempt, current, now));
     }
 }

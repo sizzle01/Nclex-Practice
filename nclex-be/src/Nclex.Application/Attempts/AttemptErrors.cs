@@ -63,4 +63,27 @@ public static class AttemptErrors
         "BACK_NAVIGATION_DISABLED",
         AppErrorKind.Conflict,
         "This test does not allow going back to earlier items.");
+
+    /// <summary>
+    /// Items are submitted one by one only in tutor mode; exam mode reveals everything after the
+    /// final Submit (api.md, POST /items/{position}/submit returns 409 in exam mode).
+    /// </summary>
+    public static readonly AppError TutorModeOnly = new(
+        "TUTOR_MODE_ONLY",
+        AppErrorKind.Conflict,
+        "Answers in this test are shown after you submit the whole test.");
+
+    /// <summary>The attempt is still a draft, so it has no result yet.</summary>
+    public static readonly AppError NotSubmitted = new(
+        "ATTEMPT_NOT_ACTIVE",
+        AppErrorKind.Conflict,
+        "This attempt has not been submitted yet.");
+
+    /// <summary>
+    /// A submitted attempt with no stored result: one finalized before grading existed (F10).
+    /// </summary>
+    public static readonly AppError ResultNotFound = new(
+        "NOT_FOUND",
+        AppErrorKind.NotFound,
+        "This attempt has no result.");
 }

@@ -36,13 +36,11 @@ public sealed class ResumeAttemptHandler(
         else if (attempt.Resume(clientId, current, now) == ResumeOutcome.TimeExpired)
         {
             await finalizer.FinalizeAsync(attempt, SubmitReason.TimeExpired, now, cancellationToken);
-            await db.SaveChangesAsync(cancellationToken);
-            await transaction.CommitAsync(cancellationToken);
+            await guard.CommitAsync(attempt, transaction, cancellationToken);
             throw new AppException(AttemptErrors.TimeExpired);
         }
 
-        await db.SaveChangesAsync(cancellationToken);
-        await transaction.CommitAsync(cancellationToken);
+        await guard.CommitAsync(attempt, transaction, cancellationToken);
 
         // The resume moved the epoch on, so the job scheduled before the pause will do nothing.
         if (attempt.ExamDeadlineAt is { } deadline)
