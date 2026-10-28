@@ -11,7 +11,12 @@ public static class AuditActions
     public const string EmailChangeRequested = "auth.email_change_requested";
     public const string EmailChanged = "auth.email_changed";
     public const string AccountDeleted = "account.deleted";
+    public const string FlagResolved = "flag.resolve";
+    public const string FlagRejected = "flag.reject";
 
     /// <summary><c>entity_type</c> for events about a user account.</summary>
     public const string UserEntity = "user";
+
+    /// <summary><c>entity_type</c> for events about a content report (question_flags).</summary>
+    public const string FlagEntity = "question_flag";
 }

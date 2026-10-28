@@ -4,6 +4,7 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Nclex.Application.Abstractions;
 using Nclex.Domain.Entities;
+using Nclex.Domain.Flags;
 using Nclex.Domain.ItemTypes;
 using Nclex.Domain.Notifications;
 using Nclex.Infrastructure.Audit;
@@ -110,7 +111,9 @@ public static class DependencyInjection
             .MapEnum<SubmitReason>("submit_reason")
             .MapEnum<ItemState>("item_state")
             .MapEnum<NotificationType>("notification_type")
-            .MapEnum<NotificationCategory>("notification_category");
+            .MapEnum<NotificationCategory>("notification_category")
+            .MapEnum<FlagReason>("flag_reason")
+            .MapEnum<FlagStatus>("flag_status");
 
     private static string GetRequiredConnectionString(IServiceProvider provider, string name) =>
         provider.GetRequiredService<IConfiguration>().GetConnectionString(name)

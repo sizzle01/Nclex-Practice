@@ -60,6 +60,11 @@ public static class NotificationCopy
         "Your email address was changed",
         $"Your account now signs in with {newEmail}. Not you? Reset your password.");
 
+    /// <summary>A moderator resolved the user's report; the body is the moderator's note as written (F15).</summary>
+    public static NotificationText FlagResolved(string resolutionNote) => new(
+        "Thanks — we reviewed your report",
+        resolutionNote);
+
     /// <summary>A 0 to 1 share as a whole percentage: 0.585 is "59".</summary>
     public static string Percent(decimal share) =>
         Math.Round(share * 100, MidpointRounding.AwayFromZero).ToString("0", CultureInfo.InvariantCulture);

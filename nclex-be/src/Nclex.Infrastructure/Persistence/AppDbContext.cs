@@ -5,6 +5,7 @@ using Nclex.Application.Common;
 using Nclex.Domain.Audit;
 using Nclex.Domain.Email;
 using Nclex.Domain.Entities;
+using Nclex.Domain.Flags;
 using Nclex.Domain.Notifications;
 using Npgsql;
 
@@ -58,6 +59,8 @@ public sealed class AppDbContext(DbContextOptions<AppDbContext> options) : DbCon
     public DbSet<Notification> Notifications => Set<Notification>();
 
     public DbSet<NotificationPreference> NotificationPreferences => Set<NotificationPreference>();
+
+    public DbSet<QuestionFlag> QuestionFlags => Set<QuestionFlag>();
 
     public async Task<Attempt?> LockAttemptAsync(Guid attemptId, CancellationToken cancellationToken)
     {

@@ -20,4 +20,14 @@ internal sealed class EfAuditLog(AppDbContext db, TimeProvider clock) : IAuditLo
             metadata is null ? AuditEvent.EmptyMetadata : JsonSerializer.Serialize(metadata, metadata.GetType(), Json),
             ip,
             clock.GetUtcNow()));
+
+    public void RecordEntityEvent(string action, Guid actorId, string entityType, string entityId, object? metadata = null) =>
+        db.AuditEvents.Add(AuditEvent.Record(
+            action,
+            actorId,
+            entityType,
+            entityId,
+            metadata is null ? AuditEvent.EmptyMetadata : JsonSerializer.Serialize(metadata, metadata.GetType(), Json),
+            ip: null,
+            clock.GetUtcNow()));
 }

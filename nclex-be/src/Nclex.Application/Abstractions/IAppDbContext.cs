@@ -3,6 +3,7 @@ using Microsoft.EntityFrameworkCore.Storage;
 using Nclex.Domain.Audit;
 using Nclex.Domain.Email;
 using Nclex.Domain.Entities;
+using Nclex.Domain.Flags;
 using Nclex.Domain.Notifications;
 
 namespace Nclex.Application.Abstractions;
@@ -78,6 +79,9 @@ public interface IAppDbContext
 
     /// <summary>One row per user and category; created at signup (architecture.md 5.6).</summary>
     DbSet<NotificationPreference> NotificationPreferences { get; }
+
+    /// <summary>Candidates' reports of problems with questions, and their moderation (F15).</summary>
+    DbSet<QuestionFlag> QuestionFlags { get; }
 
     /// <summary>
     /// Reads an attempt with <c>SELECT … FOR UPDATE</c> and tracks it, or returns null when there is

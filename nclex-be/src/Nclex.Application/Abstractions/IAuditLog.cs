@@ -17,4 +17,10 @@ public interface IAuditLog
     /// Extra details, stored as JSON. Never put passwords, tokens or email addresses here.
     /// </param>
     void RecordUserEvent(string action, Guid? userId, IPAddress? ip, object? metadata = null);
+
+    /// <summary>Records <paramref name="action"/> by <paramref name="actorId"/> on one entity, e.g. an admin resolving a report.</summary>
+    /// <param name="action">A name from <see cref="Domain.Audit.AuditActions"/>.</param>
+    /// <param name="entityType">An entity name from <see cref="Domain.Audit.AuditActions"/>, e.g. "question_flag".</param>
+    /// <param name="metadata">Extra details, stored as JSON. Never put answer keys or personal data here.</param>
+    void RecordEntityEvent(string action, Guid actorId, string entityType, string entityId, object? metadata = null);
 }

@@ -6,6 +6,7 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using Nclex.Domain.Entities;
+using Nclex.Domain.Flags;
 using Nclex.Domain.ItemTypes;
 using Nclex.Domain.Notifications;
 using Nclex.Infrastructure.Persistence;
@@ -30,6 +31,8 @@ namespace Nclex.Infrastructure.Persistence.Migrations
             NpgsqlModelBuilderExtensions.HasPostgresEnum(modelBuilder, "difficulty_tier", new[] { "difficult", "easy", "moderate" });
             NpgsqlModelBuilderExtensions.HasPostgresEnum(modelBuilder, "email_token_purpose", new[] { "change_email", "reset_password", "verify_email" });
             NpgsqlModelBuilderExtensions.HasPostgresEnum(modelBuilder, "exam_track", new[] { "PN", "RN" });
+            NpgsqlModelBuilderExtensions.HasPostgresEnum(modelBuilder, "flag_reason", new[] { "incorrect_answer_key", "media_problem", "other", "outdated_guideline", "rationale_unclear", "typo" });
+            NpgsqlModelBuilderExtensions.HasPostgresEnum(modelBuilder, "flag_status", new[] { "open", "rejected", "resolved", "triaged" });
             NpgsqlModelBuilderExtensions.HasPostgresEnum(modelBuilder, "item_state", new[] { "answered", "locked", "seen", "unseen" });
             NpgsqlModelBuilderExtensions.HasPostgresEnum(modelBuilder, "item_type", new[] { "bowtie", "drag_drop_cloze", "drag_drop_rationale", "dropdown_cloze", "dropdown_rationale", "dropdown_table", "fill_blank_calc", "highlight_table", "highlight_text", "hotspot", "matrix_mc", "matrix_mr", "multiple_choice", "multiple_response_grouping", "ordered_response", "sata", "select_n" });
             NpgsqlModelBuilderExtensions.HasPostgresEnum(modelBuilder, "notification_category", new[] { "content", "engagement", "reminders", "results", "security" });
@@ -1720,6 +1723,91 @@ namespace Nclex.Infrastructure.Persistence.Migrations
                     b.ToTable("user_question_history", (string)null);
                 });
 
+            modelBuilder.Entity("Nclex.Domain.Flags.QuestionFlag", b =>
+                {
+                    b.Property<Guid>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("uuid")
+                        .HasColumnName("id")
+                        .HasDefaultValueSql("gen_random_uuid()");
+
+                    b.Property<Guid?>("AssigneeId")
+                        .HasColumnType("uuid")
+                        .HasColumnName("assignee_id");
+
+                    b.Property<Guid?>("AttemptId")
+                        .HasColumnType("uuid")
+                        .HasColumnName("attempt_id");
+
+                    b.Property<string>("Comment")
+                        .HasColumnType("text")
+                        .HasColumnName("comment");
+
+                    b.Property<DateTimeOffset>("CreatedAt")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("timestamp with time zone")
+                        .HasColumnName("created_at")
+                        .HasDefaultValueSql("now()");
+
+                    b.Property<Guid>("QuestionVersionId")
+                        .HasColumnType("uuid")
+                        .HasColumnName("question_version_id");
+
+                    b.Property<FlagReason>("Reason")
+                        .HasColumnType("flag_reason")
+                        .HasColumnName("reason");
+
+                    b.Property<string>("ResolutionNote")
+                        .HasColumnType("text")
+                        .HasColumnName("resolution_note");
+
+                    b.Property<DateTimeOffset?>("ResolvedAt")
+                        .HasColumnType("timestamp with time zone")
+                        .HasColumnName("resolved_at");
+
+                    b.Property<Guid?>("ResolvedBy")
+                        .HasColumnType("uuid")
+                        .HasColumnName("resolved_by");
+
+                    b.Property<FlagStatus>("Status")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("flag_status")
+                        .HasDefaultValue(FlagStatus.Open)
+                        .HasColumnName("status");
+
+                    b.Property<Guid>("UserId")
+                        .HasColumnType("uuid")
+                        .HasColumnName("user_id");
+
+                    b.HasKey("Id")
+                        .HasName("pk_question_flags");
+
+                    b.HasIndex("AssigneeId")
+                        .HasDatabaseName("ix_question_flags_assignee_id");
+
+                    b.HasIndex("AttemptId")
+                        .HasDatabaseName("ix_question_flags_attempt_id");
+
+                    b.HasIndex("QuestionVersionId")
+                        .HasDatabaseName("ix_question_flags_question_version_id");
+
+                    b.HasIndex("ResolvedBy")
+                        .HasDatabaseName("ix_question_flags_resolved_by");
+
+                    b.HasIndex("Status", "CreatedAt")
+                        .HasDatabaseName("flags_queue_idx")
+                        .HasFilter("status IN ('open','triaged')");
+
+                    b.HasIndex("UserId", "QuestionVersionId", "Reason")
+                        .IsUnique()
+                        .HasDatabaseName("ix_question_flags_user_id_question_version_id_reason");
+
+                    b.ToTable("question_flags", null, t =>
+                        {
+                            t.HasCheckConstraint("question_flags_comment_check", "char_length(comment) <= 2000");
+                        });
+                });
+
             modelBuilder.Entity("Nclex.Domain.Notifications.Notification", b =>
                 {
                     b.Property<Guid>("Id")
@@ -2152,6 +2240,41 @@ namespace Nclex.Infrastructure.Persistence.Migrations
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired()
                         .HasConstraintName("fk_user_question_history_users_user_id");
+                });
+
+            modelBuilder.Entity("Nclex.Domain.Flags.QuestionFlag", b =>
+                {
+                    b.HasOne("Nclex.Domain.Entities.User", null)
+                        .WithMany()
+                        .HasForeignKey("AssigneeId")
+                        .OnDelete(DeleteBehavior.NoAction)
+                        .HasConstraintName("fk_question_flags_users_assignee_id");
+
+                    b.HasOne("Nclex.Domain.Entities.Attempt", null)
+                        .WithMany()
+                        .HasForeignKey("AttemptId")
+                        .OnDelete(DeleteBehavior.SetNull)
+                        .HasConstraintName("fk_question_flags_attempts_attempt_id");
+
+                    b.HasOne("Nclex.Domain.Entities.QuestionVersion", null)
+                        .WithMany()
+                        .HasForeignKey("QuestionVersionId")
+                        .OnDelete(DeleteBehavior.NoAction)
+                        .IsRequired()
+                        .HasConstraintName("fk_question_flags_question_versions_question_version_id");
+
+                    b.HasOne("Nclex.Domain.Entities.User", null)
+                        .WithMany()
+                        .HasForeignKey("ResolvedBy")
+                        .OnDelete(DeleteBehavior.NoAction)
+                        .HasConstraintName("fk_question_flags_users_resolved_by");
+
+                    b.HasOne("Nclex.Domain.Entities.User", null)
+                        .WithMany()
+                        .HasForeignKey("UserId")
+                        .OnDelete(DeleteBehavior.NoAction)
+                        .IsRequired()
+                        .HasConstraintName("fk_question_flags_users_user_id");
                 });
 
             modelBuilder.Entity("Nclex.Domain.Notifications.Notification", b =>
