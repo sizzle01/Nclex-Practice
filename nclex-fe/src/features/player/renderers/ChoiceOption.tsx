@@ -52,17 +52,21 @@ export function ChoiceOption({
 
 /** An option's text, plus its picture for graphic options (alt text from the media asset). */
 export function OptionText({ option, struck = false }: { option: Option; struck?: boolean }) {
-  const media = useMedia(option.mediaId);
   return (
     <span className={struck ? styles.struck : undefined}>
-      {media && (
-        // Media come from the CDN at their own sizes, so next/image's optimiser does not apply.
-        // eslint-disable-next-line @next/next/no-img-element
-        <img src={media.url} alt={media.altText ?? ""} className={styles.optionImage} />
-      )}
+      {option.mediaId && <OptionImage mediaId={option.mediaId} />}
       {option.text}
     </span>
   );
+}
+
+// Its own component, so only graphic options ask for media.
+function OptionImage({ mediaId }: { mediaId: string }) {
+  const { asset } = useMedia(mediaId);
+  if (!asset) return null;
+  // Media come from the API or a CDN at their own sizes, so next/image's optimiser does not apply.
+  // eslint-disable-next-line @next/next/no-img-element
+  return <img src={asset.url} alt={asset.altText ?? ""} className={styles.optionImage} />;
 }
 
 /**
