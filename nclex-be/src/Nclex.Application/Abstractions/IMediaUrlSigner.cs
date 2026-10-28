@@ -25,6 +25,12 @@ public enum MediaPart
 
     /// <summary>The plain-text transcript of an audio or video clip.</summary>
     Transcript,
+
+    /// <summary>
+    /// Permission to upload the file once (F14), like a presigned S3 PUT. Its signature differs
+    /// from a download link's, so a link to view a file can't be used to replace it.
+    /// </summary>
+    Upload,
 }
 
 /// <summary>A signed link's expiry (Unix seconds) and signature.</summary>

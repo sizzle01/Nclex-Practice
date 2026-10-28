@@ -20,4 +20,15 @@ internal sealed class EfAuditLog(AppDbContext db, TimeProvider clock) : IAuditLo
             metadata is null ? AuditEvent.EmptyMetadata : JsonSerializer.Serialize(metadata, metadata.GetType(), Json),
             ip,
             clock.GetUtcNow()));
+
+    // No IP: admin handlers don't receive the client's address, and the actor's id identifies them.
+    public void RecordAdminEvent(string action, Guid? actorId, string entityType, Guid entityId, object? metadata = null) =>
+        db.AuditEvents.Add(AuditEvent.Record(
+            action,
+            actorId,
+            entityType,
+            entityId.ToString(),
+            metadata is null ? AuditEvent.EmptyMetadata : JsonSerializer.Serialize(metadata, metadata.GetType(), Json),
+            ip: null,
+            clock.GetUtcNow()));
 }

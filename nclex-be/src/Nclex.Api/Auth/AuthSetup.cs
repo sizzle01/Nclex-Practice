@@ -43,6 +43,7 @@ public static class AuthSetup
 
         services.AddAuthorizationBuilder()
             .AddRolePolicies()
+            .AddContentPolicies()
             .AddPolicy(Policies.VerifiedEmail, policy => policy
                 .RequireAuthenticatedUser()
                 .AddRequirements(new VerifiedEmailRequirement()));
@@ -54,6 +55,17 @@ public static class AuthSetup
         services.AddScoped<ICurrentUser, HttpCurrentUser>();
         return services;
     }
+
+    /// <summary>
+    /// The role groups of api.md section 8 (A = author, R = reviewer, Ad = admin). Admins can do
+    /// everything authors and reviewers can.
+    /// </summary>
+    private static AuthorizationBuilder AddContentPolicies(this AuthorizationBuilder builder) =>
+        builder
+            .AddPolicy(Policies.ContentStaff, policy => policy.RequireRole(
+                UserRole.Author.ToClaimValue(), UserRole.Reviewer.ToClaimValue(), UserRole.Admin.ToClaimValue()))
+            .AddPolicy(Policies.ContentAuthor, policy => policy.RequireRole(UserRole.Author.ToClaimValue(), UserRole.Admin.ToClaimValue()))
+            .AddPolicy(Policies.ContentReviewer, policy => policy.RequireRole(UserRole.Reviewer.ToClaimValue(), UserRole.Admin.ToClaimValue()));
 
     /// <summary>One policy per role, named by <see cref="Policies.Role"/>, e.g. [Authorize(Policy = "role:admin")].</summary>
     private static AuthorizationBuilder AddRolePolicies(this AuthorizationBuilder builder)
@@ -81,6 +93,15 @@ public static class Policies
     public const string Author = "role:author";
     public const string Reviewer = "role:reviewer";
     public const string Admin = "role:admin";
+
+    /// <summary>Author, reviewer or admin ("A R Ad" in api.md section 8).</summary>
+    public const string ContentStaff = "content:staff";
+
+    /// <summary>Author or admin ("A Ad"): writes questions and uploads media.</summary>
+    public const string ContentAuthor = "content:author";
+
+    /// <summary>Reviewer or admin ("R Ad"): approves, rejects, publishes and retires.</summary>
+    public const string ContentReviewer = "content:reviewer";
 
     /// <summary>Signed in with a verified email; returns 403 EMAIL_NOT_VERIFIED otherwise (protects non-sample attempts from F08).</summary>
     public const string VerifiedEmail = "verified-email";

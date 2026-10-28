@@ -11,6 +11,7 @@ public static class MediaPaths
     {
         MediaPart.File => "file",
         MediaPart.Captions => "captions",
+        MediaPart.Upload => "upload",
         _ => "transcript",
     };
 
@@ -22,4 +23,10 @@ public static class MediaPaths
         string.Create(
             CultureInfo.InvariantCulture,
             $"/api/v1/media/{mediaId}/{Segment(part)}?exp={link.Expires}&sig={Uri.EscapeDataString(link.Signature)}");
+
+    /// <summary>The relative link an author's browser PUTs a new file to (POST /admin/media/upload-url).</summary>
+    public static string SignedUploadLink(Guid mediaId, MediaLink link) =>
+        string.Create(
+            CultureInfo.InvariantCulture,
+            $"/api/v1/admin/media/{mediaId}/upload?exp={link.Expires}&sig={Uri.EscapeDataString(link.Signature)}");
 }

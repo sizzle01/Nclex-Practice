@@ -13,6 +13,12 @@ if (args is [ImportQuestionsCommand.Name, .. var commandArgs])
     return await ImportQuestionsCommand.RunAsync(commandArgs);
 }
 
+// "set-role <email> <role>" gives an account a role, e.g. the first admin, and exits.
+if (args is [SetRoleCommand.Name, .. var roleArgs])
+{
+    return await SetRoleCommand.RunAsync(roleArgs);
+}
+
 // Nclex.Worker hosts background work (architecture.md section 3: expiry, email outbox,
 // aggregation, reminders): the email outbox dispatcher (F02) and the Hangfire server with the
 // attempt expiry jobs (F09).
