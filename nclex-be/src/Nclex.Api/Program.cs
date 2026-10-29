@@ -62,6 +62,7 @@ try
     builder.Services.AddApiProblemDetails();
     builder.Services.AddApplication();
     builder.Services.AddInfrastructure();
+    builder.Services.AddNotificationStreamTickets();
     // Client only: the API schedules expiry jobs and Nclex.Worker runs them.
     builder.Services.AddJobScheduling();
     builder.Services.AddSecurity();

@@ -69,8 +69,17 @@ public static class DependencyInjection
         });
         services.AddSingleton<IRateLimitStore, RedisRateLimitStore>();
         services.AddSingleton<INotificationBus, RedisNotificationBus>();
-        services.AddScoped<IStreamTicketStore, RedisStreamTicketStore>();
 
+        return services;
+    }
+
+    /// <summary>
+    /// Registers the tickets that open the notification stream. Only the API issues and checks
+    /// them, and they need the API's secure token generator, so the worker leaves them out.
+    /// </summary>
+    public static IServiceCollection AddNotificationStreamTickets(this IServiceCollection services)
+    {
+        services.AddScoped<IStreamTicketStore, RedisStreamTicketStore>();
         return services;
     }
 
