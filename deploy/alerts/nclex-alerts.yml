@@ -1,0 +1,55 @@
+# Alerts from architecture.md section 9, as Prometheus rules (Amazon Managed Prometheus, Grafana or
+# any Prometheus-compatible store fed by the OpenTelemetry collector). Metric names are the OTLP
+# names translated to Prometheus: "nclex.outbox.lag" (unit s) becomes nclex_outbox_lag_seconds.
+# What to do when each one fires: docs/operations.md, "On-call checks".
+groups:
+  - name: nclex
+    rules:
+      - alert: OutboxLagHigh
+        # The worker sends due emails every 2 seconds; a minute behind means it is stuck or down.
+        expr: max(nclex_outbox_lag_seconds) > 60
+        for: 2m
+        labels: { severity: page }
+        annotations:
+          summary: "Emails are waiting more than 60 s to be sent"
+
+      - alert: OutboxLagMissing
+        # No gauge at all means no worker is running, which the rule above cannot see.
+        expr: absent(nclex_outbox_lag_seconds)
+        for: 5m
+        labels: { severity: page }
+        annotations:
+          summary: "No worker is reporting the email outbox"
+
+      - alert: AutosaveErrorRateHigh
+        # Refusals the player expects and handles (time up, submitted, paused, item locked, opened elsewhere)
+        # are not failures; everything else that is not saved or stale is.
+        expr: |
+          sum(rate(nclex_autosave_duration_seconds_count{outcome!~"saved|stale|ATTEMPT_TIME_EXPIRED|ATTEMPT_NOT_ACTIVE|ATTEMPT_PAUSED|ITEM_LOCKED|ATTEMPT_OPENED_ELSEWHERE"}[5m]))
+            / sum(rate(nclex_autosave_duration_seconds_count[5m])) > 0.01
+        for: 5m
+        labels: { severity: page }
+        annotations:
+          summary: "More than 1% of autosaves are failing"
+
+      - alert: ApiLatencyHigh
+        expr: |
+          histogram_quantile(0.95, sum by (le) (rate(http_server_request_duration_seconds_bucket{http_route!~".*notifications/stream"}[5m]))) > 0.5
+        for: 10m
+        labels: { severity: page }
+        annotations:
+          summary: "API p95 latency is over 500 ms (target 150 ms)"
+
+      - alert: GradingFailed
+        # Grading runs inside the submit transaction; one failure means a candidate has no result.
+        expr: increase(nclex_grading_duration_seconds_count{outcome="failed"}[5m]) > 0
+        labels: { severity: page }
+        annotations:
+          summary: "An attempt failed to grade"
+
+      - alert: SweeperFinalizing
+        # Should be close to zero: each one is an attempt whose delayed expiry job was lost.
+        expr: increase(nclex_attempts_sweeper_finalizations_total[30m]) > 5
+        labels: { severity: ticket }
+        annotations:
+          summary: "The expiry sweeper is finalizing attempts; delayed expiry jobs may be failing"

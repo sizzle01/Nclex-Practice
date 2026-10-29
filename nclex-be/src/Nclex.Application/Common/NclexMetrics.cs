@@ -28,7 +28,7 @@ public sealed class NclexMetrics
         _autosaveDuration = meter.CreateHistogram<double>(
             "nclex.autosave.duration",
             unit: "s",
-            description: "Time to handle one autosave, tagged with its outcome (saved, stale or the error code).");
+            description: "Time to handle one autosave, tagged with its outcome (saved, stale, failed or the api.md error code).");
         _errorResponses = meter.CreateCounter<long>(
             "nclex.api.error_responses",
             unit: "{response}",
@@ -57,6 +57,9 @@ public sealed class NclexMetrics
 
     /// <summary>Outcome tag for an autosave whose clientSeq was not newer (idempotent replay).</summary>
     public const string AutosaveStale = "stale";
+
+    /// <summary>Outcome tag for an autosave that failed with an unexpected error (a 500).</summary>
+    public const string AutosaveFailed = "failed";
 
     public void RecordAutosave(TimeSpan duration, string outcome) =>
         _autosaveDuration.Record(duration.TotalSeconds, new KeyValuePair<string, object?>("outcome", outcome));

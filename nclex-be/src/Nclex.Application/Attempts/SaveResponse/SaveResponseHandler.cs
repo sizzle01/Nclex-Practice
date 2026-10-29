@@ -31,9 +31,11 @@ public sealed class SaveResponseHandler(
             metrics.RecordAutosave(clock.GetElapsedTime(started), outcome == SaveOutcome.Saved ? NclexMetrics.AutosaveSaved : NclexMetrics.AutosaveStale);
             return result;
         }
-        catch (AppException ex)
+        catch (Exception ex)
         {
-            metrics.RecordAutosave(clock.GetElapsedTime(started), ex.Error.Code);
+            // Expected refusals keep their api.md code; anything else is a server failure.
+            var outcome = ex is AppException app ? app.Error.Code : NclexMetrics.AutosaveFailed;
+            metrics.RecordAutosave(clock.GetElapsedTime(started), outcome);
             throw;
         }
     }
