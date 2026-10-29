@@ -1090,6 +1090,73 @@ namespace Nclex.Infrastructure.Persistence.Migrations
                         });
                 });
 
+            modelBuilder.Entity("Nclex.Domain.Entities.PerformanceSnapshot", b =>
+                {
+                    b.Property<Guid>("UserId")
+                        .HasColumnType("uuid")
+                        .HasColumnName("user_id");
+
+                    b.Property<ExamTrack>("Track")
+                        .HasColumnType("exam_track")
+                        .HasColumnName("track");
+
+                    b.Property<string>("Dimension")
+                        .HasColumnType("text")
+                        .HasColumnName("dimension");
+
+                    b.Property<string>("DimensionKey")
+                        .HasColumnType("text")
+                        .HasColumnName("dimension_key");
+
+                    b.Property<decimal>("Accuracy")
+                        .ValueGeneratedOnAddOrUpdate()
+                        .HasPrecision(5, 4)
+                        .HasColumnType("numeric(5,4)")
+                        .HasColumnName("accuracy")
+                        .HasComputedColumnSql("CASE WHEN max_points > 0 THEN points_earned / max_points ELSE 0 END", true);
+
+                    b.Property<int>("AttemptsCount")
+                        .HasColumnType("integer")
+                        .HasColumnName("attempts_count");
+
+                    b.Property<int>("AvgTimeMs")
+                        .HasColumnType("integer")
+                        .HasColumnName("avg_time_ms");
+
+                    b.Property<int>("ItemsAnswered")
+                        .HasColumnType("integer")
+                        .HasColumnName("items_answered");
+
+                    b.Property<int>("ItemsCorrect")
+                        .HasColumnType("integer")
+                        .HasColumnName("items_correct");
+
+                    b.Property<Guid?>("LastAttemptId")
+                        .HasColumnType("uuid")
+                        .HasColumnName("last_attempt_id");
+
+                    b.Property<decimal>("MaxPoints")
+                        .HasPrecision(10, 2)
+                        .HasColumnType("numeric(10,2)")
+                        .HasColumnName("max_points");
+
+                    b.Property<decimal>("PointsEarned")
+                        .HasPrecision(10, 2)
+                        .HasColumnType("numeric(10,2)")
+                        .HasColumnName("points_earned");
+
+                    b.Property<DateTimeOffset>("UpdatedAt")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("timestamp with time zone")
+                        .HasColumnName("updated_at")
+                        .HasDefaultValueSql("now()");
+
+                    b.HasKey("UserId", "Track", "Dimension", "DimensionKey")
+                        .HasName("pk_performance_snapshots");
+
+                    b.ToTable("performance_snapshots", (string)null);
+                });
+
             modelBuilder.Entity("Nclex.Domain.Entities.Question", b =>
                 {
                     b.Property<Guid>("Id")
@@ -2077,6 +2144,16 @@ namespace Nclex.Infrastructure.Persistence.Migrations
                         .HasForeignKey("CreatedBy")
                         .OnDelete(DeleteBehavior.NoAction)
                         .HasConstraintName("fk_media_assets_users_created_by");
+                });
+
+            modelBuilder.Entity("Nclex.Domain.Entities.PerformanceSnapshot", b =>
+                {
+                    b.HasOne("Nclex.Domain.Entities.User", null)
+                        .WithMany()
+                        .HasForeignKey("UserId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired()
+                        .HasConstraintName("fk_performance_snapshots_users_user_id");
                 });
 
             modelBuilder.Entity("Nclex.Domain.Entities.Question", b =>

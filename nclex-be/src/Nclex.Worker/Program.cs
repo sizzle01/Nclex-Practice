@@ -15,7 +15,7 @@ if (args is [ImportQuestionsCommand.Name, .. var commandArgs])
 
 // Nclex.Worker hosts background work (architecture.md section 3: expiry, email outbox,
 // aggregation, reminders): the email outbox dispatcher (F02) and the Hangfire server with the
-// attempt expiry jobs (F09) and the draft reminders (F12).
+// attempt expiry jobs (F09), the draft reminders (F12) and the performance snapshot jobs (F13).
 Log.Logger = new LoggerConfiguration()
     .WriteTo.Console(formatProvider: CultureInfo.InvariantCulture)
     .CreateBootstrapLogger();
@@ -47,6 +47,7 @@ try
     builder.Services.AddHostedService<EmailOutboxDispatcherService>();
     builder.Services.AddAttemptExpiry();
     builder.Services.AddDraftReminders(NotificationJobSettings.DraftReminders(builder.Configuration));
+    builder.Services.AddPerformanceSnapshots();
     builder.Services.AddJobScheduling();
     builder.Services.AddJobServer();
     builder.Services.AddSingleton(TimeProvider.System);

@@ -62,6 +62,12 @@ public sealed class AppDbContext(DbContextOptions<AppDbContext> options) : DbCon
 
     public DbSet<QuestionFlag> QuestionFlags => Set<QuestionFlag>();
 
+    public DbSet<PerformanceSnapshot> PerformanceSnapshots => Set<PerformanceSnapshot>();
+
+    public Task LockPerformanceSnapshotsAsync(Guid userId, CancellationToken cancellationToken) =>
+        // A transaction-level advisory lock, keyed by the user, so it ends with the transaction.
+        Database.ExecuteSqlAsync($"SELECT pg_advisory_xact_lock(hashtextextended('performance_snapshots:' || {userId}::text, 0))", cancellationToken);
+
     public async Task<Attempt?> LockAttemptAsync(Guid attemptId, CancellationToken cancellationToken)
     {
         // ToListAsync rather than SingleOrDefaultAsync: EF would wrap the SQL in a subquery to add a LIMIT.

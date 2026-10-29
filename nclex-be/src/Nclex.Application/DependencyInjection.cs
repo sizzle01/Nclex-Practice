@@ -51,6 +51,12 @@ using Nclex.Application.Notifications.Feed;
 using Nclex.Application.Notifications.Preferences;
 using Nclex.Application.Notifications.ReadState;
 using Nclex.Application.Notifications.Stream;
+using Nclex.Application.Performance;
+using Nclex.Application.Performance.GetBreakdown;
+using Nclex.Application.Performance.GetSummary;
+using Nclex.Application.Performance.GetTrend;
+using Nclex.Application.Performance.RebuildSnapshots;
+using Nclex.Application.Performance.Snapshots;
 using Nclex.Application.Taxonomy.GetTaxonomy;
 using Nclex.Application.Users;
 using Nclex.Application.Users.ChangeEmail;
@@ -115,6 +121,7 @@ public static class DependencyInjection
 
         // Catalog
         services.AddScoped<PlanTierGuard>();
+        services.AddScoped<LastAttempts>();
         services.AddScoped<ListQuestionBanksHandler>();
         services.AddScoped<ListTestSetsHandler>();
         services.AddScoped<GetTestSetHandler>();
@@ -168,7 +175,15 @@ public static class DependencyInjection
         services.AddScoped<GetMediaHandler>();
         services.AddScoped<OpenMediaFileHandler>();
 
+        // Performance
+        services.AddScoped<PerformanceViewers>();
+        services.AddScoped<GetSummaryHandler>();
+        services.AddScoped<GetBreakdownHandler>();
+        services.AddScoped<GetTrendHandler>();
+        services.AddScoped<RequestSnapshotRebuildHandler>();
+
         services.AddAttemptExpiry();
+        services.AddPerformanceSnapshots();
         services.AddContentImport();
 
         return services;
@@ -213,6 +228,18 @@ public static class DependencyInjection
     {
         services.AddSingleton(settings);
         services.AddScoped<SendDraftRemindersHandler>();
+        return services;
+    }
+
+    /// <summary>
+    /// Registers the snapshot jobs' use cases (architecture.md 5.5), so the worker can run them
+    /// without the API's auth services. <see cref="AddApplication"/> includes it.
+    /// </summary>
+    public static IServiceCollection AddPerformanceSnapshots(this IServiceCollection services)
+    {
+        services.AddScoped<SnapshotCatchUp>();
+        services.AddScoped<RefreshSnapshotsHandler>();
+        services.AddScoped<RebuildSnapshotsHandler>();
         return services;
     }
 

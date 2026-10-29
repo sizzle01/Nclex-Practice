@@ -9,9 +9,9 @@ namespace Nclex.Application.Attempts;
 /// Ends an attempt: marks it submitted, locks every item with its current answer, then grades it and
 /// writes the result, all in the caller's transaction (architecture.md 5.5). The one place an attempt
 /// is finalized, whichever path got there (Submit, a write after the deadline, the delayed job, the
-/// sweeper, an overrun pause).
+/// sweeper, an overrun pause), so it is also where the performance snapshot refresh is requested.
 /// </summary>
-public sealed class AttemptFinalizer(IAppDbContext db, IGradingService grading)
+public sealed class AttemptFinalizer(IAppDbContext db, IGradingService grading, ISnapshotRefreshRequests snapshotRefresh)
 {
     /// <summary>
     /// Finalizes <paramref name="attempt"/>, which the caller has locked FOR UPDATE inside its
@@ -28,6 +28,8 @@ public sealed class AttemptFinalizer(IAppDbContext db, IGradingService grading)
         // Finalizing locks unseen items too, so note now which ones the candidate actually saw.
         var seenPositions = items.Where(i => i.State != ItemState.Unseen).Select(i => i.Position).ToHashSet();
         attempt.Finalize(reason, items, now);
-        return await grading.FinalizeAttemptAsync(attempt, items, seenPositions, cancellationToken);
+        var result = await grading.FinalizeAttemptAsync(attempt, items, seenPositions, cancellationToken);
+        snapshotRefresh.RequestAfterCommit(attempt.UserId, attempt.Id);
+        return result;
     }
 }

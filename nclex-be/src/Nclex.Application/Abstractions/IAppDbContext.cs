@@ -83,6 +83,15 @@ public interface IAppDbContext
     /// <summary>Candidates' reports of problems with questions, and their moderation (F15).</summary>
     DbSet<QuestionFlag> QuestionFlags { get; }
 
+    /// <summary>Each user's running totals per category, kept up to date by the worker (F13).</summary>
+    DbSet<PerformanceSnapshot> PerformanceSnapshots { get; }
+
+    /// <summary>
+    /// Makes the snapshot jobs of one user run one at a time: waits until no other transaction holds
+    /// this user's lock, then holds it until the current transaction ends. Call inside a transaction.
+    /// </summary>
+    Task LockPerformanceSnapshotsAsync(Guid userId, CancellationToken cancellationToken);
+
     /// <summary>
     /// Reads an attempt with <c>SELECT … FOR UPDATE</c> and tracks it, or returns null when there is
     /// none. Call inside a transaction: the row stays locked until it ends.

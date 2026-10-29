@@ -12,6 +12,10 @@ namespace Nclex.Api.IntegrationTests.Infrastructure;
 /// </summary>
 public sealed class TimedTestHost : IAsyncDisposable
 {
+    // Program.cs replaces Serilog's static bootstrap logger and freezes it as the host builds, so
+    // two hosts starting at once (test classes run in parallel) fail with "logger already frozen".
+    private static readonly Lock StartLock = new();
+
     private readonly WebApplicationFactory<Program> _host;
 
     public TimedTestHost(ApiFactory factory)
@@ -23,7 +27,12 @@ public sealed class TimedTestHost : IAsyncDisposable
             services.Replace(ServiceDescriptor.Singleton<TimeProvider>(Clock));
             services.Replace(ServiceDescriptor.Singleton<IJobScheduler>(Jobs));
         }));
-        Auth = new AuthApi(_host);
+        lock (StartLock)
+        {
+            // Creating the first client builds and starts the host.
+            Auth = new AuthApi(_host);
+        }
+
         Attempts = new AttemptsApi(factory, Auth);
     }
 
@@ -31,7 +40,7 @@ public sealed class TimedTestHost : IAsyncDisposable
 
     public RecordingJobScheduler Jobs { get; } = new();
 
-    /// <summary>Calls this host as a signed-in user, or anonymously.</summary>
+    /// <summary>Calls the auth endpoints of this host, e.g. to sign in again after a role change.</summary>
     public AuthApi Auth { get; }
 
     /// <summary>Calls the attempt endpoints of this host.</summary>

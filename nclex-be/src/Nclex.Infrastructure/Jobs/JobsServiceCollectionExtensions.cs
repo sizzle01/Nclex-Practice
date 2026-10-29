@@ -1,5 +1,6 @@
 using Hangfire;
 using Hangfire.PostgreSql;
+using Microsoft.EntityFrameworkCore.Diagnostics;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Nclex.Application.Abstractions;
@@ -27,6 +28,12 @@ public static class JobsServiceCollectionExtensions
                     provider.GetRequiredService<IConfiguration>().GetConnectionString(DependencyInjection.PostgresConnectionName)),
                 new PostgreSqlStorageOptions { SchemaName = HangfireSchema }));
         services.AddScoped<IJobScheduler, HangfireJobScheduler>();
+
+        // Snapshot refreshes are queued only once the submit commits; AddInfrastructure hands every
+        // registered interceptor to the DbContext.
+        services.AddScoped<PendingSnapshotRefreshes>();
+        services.AddScoped<ISnapshotRefreshRequests>(provider => provider.GetRequiredService<PendingSnapshotRefreshes>());
+        services.AddScoped<IInterceptor, EnqueueSnapshotRefreshAfterCommit>();
         return services;
     }
 
@@ -37,6 +44,8 @@ public static class JobsServiceCollectionExtensions
         services.AddScoped<AttemptExpiryJob>();
         services.AddScoped<ExpirySweeperJob>();
         services.AddScoped<DraftReminderJob>();
+        services.AddScoped<SnapshotRefreshJob>();
+        services.AddScoped<SnapshotRebuildJob>();
         return services;
     }
 
