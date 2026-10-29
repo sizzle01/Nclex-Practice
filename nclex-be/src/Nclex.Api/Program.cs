@@ -73,6 +73,7 @@ try
     builder.Services.AddApiAuth();
     builder.Services.AddApiRateLimiting();
     builder.Services.AddReadinessChecks();
+    builder.Services.AddTrustedProxies(builder.Configuration);
     builder.Services.AddSingleton(TimeProvider.System);
     builder.Services.AddNclexTelemetry(builder.Configuration, "nclex-api")
         .WithTracing(tracing => tracing.AddAspNetCoreInstrumentation(options =>
@@ -86,8 +87,17 @@ try
     // Fail fast if an MVP item type has no grader (interfaces.md section 3).
     app.Services.EnsureItemTypeModules();
 
-    // Order matters: the request id must exist before anything logs, and the exception handler
-    // must wrap everything that can throw.
+    // Order matters: the real client address and scheme come first, so rate limits and HSTS see
+    // them; the request id must exist before anything logs; the exception handler must wrap
+    // everything that can throw.
+    app.UseForwardedHeaders();
+    app.UseMiddleware<SecurityHeadersMiddleware>();
+    if (!app.Environment.IsDevelopment())
+    {
+        // TLS terminates at the load balancer; X-Forwarded-Proto marks the request as HTTPS.
+        app.UseHsts();
+    }
+
     app.UseMiddleware<RequestIdMiddleware>();
     app.UseSerilogRequestLogging();
     app.UseExceptionHandler();
