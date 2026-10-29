@@ -173,7 +173,11 @@ public sealed class CustomSetsTests(ApiFactory factory)
 
         var response = await CreateAsync(user.AccessToken, new
         {
-            pool = "incorrect", questionCount = 5, mode = "practice", revealMode = "tutor", startNow = true,
+            pool = "incorrect",
+            questionCount = 5,
+            mode = "practice",
+            revealMode = "tutor",
+            startNow = true,
         });
 
         await response.ShouldBeProblemAsync(HttpStatusCode.Forbidden, "EMAIL_NOT_VERIFIED");
