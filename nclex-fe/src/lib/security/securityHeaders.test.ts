@@ -22,7 +22,6 @@ describe("securityHeaders", () => {
 
     expect(csp).toContain("'unsafe-eval'");
     expect(csp).toContain("connect-src 'self' ws:");
-    expect(csp).not.toContain("upgrade-insecure-requests");
   });
 
   it("sends HSTS in production only", () => {

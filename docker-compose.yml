@@ -1,7 +1,22 @@
 # Local development services (architecture.md section 8: "local" environment).
-# The API and worker run on the host with `dotnet run`; only backing services live here.
+# By default only the backing services start; the API and worker run on the host with `dotnet run`.
 # Host ports can be overridden (e.g. in an untracked .env file) if another project already uses them.
+#
+# The "app" profile also runs the whole app from its Docker images, as staging does: migrations,
+# sample content, API, worker, frontend and an OpenTelemetry dashboard. The end-to-end tests run
+# against it (docs/operations.md):
+#   docker compose --profile app up -d --build --wait
 name: nclex
+
+# Settings the API, worker and one-off jobs share. Secrets here are for this local stack only;
+# deployed environments read them from the secret store (docs/operations.md).
+x-app-settings: &app-settings
+  ASPNETCORE_ENVIRONMENT: Production
+  DOTNET_ENVIRONMENT: Production
+  ConnectionStrings__Postgres: Host=postgres;Port=5432;Database=nclex;Username=nclex;Password=nclex
+  ConnectionStrings__Redis: redis:6379
+  MediaStorage__LocalRoot: /data/media
+  OTEL_EXPORTER_OTLP_ENDPOINT: http://otel:18889
 
 services:
   postgres:
@@ -64,7 +79,93 @@ services:
       timeout: 5s
       retries: 10
 
+  # One-off: applies pending EF Core migrations with the bundle, then exits.
+  migrate:
+    profiles: [app]
+    build: { context: ./nclex-be, target: migrations }
+    image: nclex-migrations:local
+    command: ["--connection", "Host=postgres;Port=5432;Database=nclex;Username=nclex;Password=nclex"]
+    depends_on:
+      postgres: { condition: service_healthy }
+
+  # One-off: loads the sample questions, sets and media. Safe to run again: the importer updates
+  # what it already stored.
+  seed:
+    profiles: [app]
+    build: { context: ./nclex-be, target: worker }
+    image: nclex-worker:local
+    command: ["import-questions", "/content/sample-questions.rn.json"]
+    environment: *app-settings
+    volumes:
+      - ./nclex-be/content:/content:ro
+      - media-data:/data/media
+    depends_on:
+      migrate: { condition: service_completed_successfully }
+
+  api:
+    profiles: [app]
+    build: { context: ./nclex-be, target: api }
+    image: nclex-api:local
+    environment:
+      <<: *app-settings
+      Jwt__SigningKey: compose-only-jwt-signing-key-0123456789abcdef
+      MediaStorage__SigningKey: compose-only-media-signing-key-0123456789abcdef
+      # The frontend container forwards requests; trust its X-Forwarded-For (Docker's private ranges).
+      ForwardedHeaders__KnownNetworks__0: 172.16.0.0/12
+      ForwardedHeaders__KnownNetworks__1: 192.168.0.0/16
+    ports:
+      - "${APP_API_PORT:-8080}:8080"
+    volumes:
+      - media-data:/data/media
+    depends_on:
+      seed: { condition: service_completed_successfully }
+      redis: { condition: service_healthy }
+    healthcheck:
+      # The aspnet image has no curl; bash can open a TCP socket itself.
+      test: ["CMD-SHELL", "bash -c 'exec 3<>/dev/tcp/127.0.0.1/8080 && printf \"GET /readyz HTTP/1.0\\r\\n\\r\\n\" >&3 && grep -q \"200 OK\" <&3'"]
+      interval: 5s
+      timeout: 5s
+      retries: 20
+
+  worker:
+    profiles: [app]
+    image: nclex-worker:local
+    environment:
+      <<: *app-settings
+      Email__Smtp__Host: mailpit
+      Email__Smtp__Port: "1025"
+      Email__FrontendBaseUrl: http://localhost:${APP_WEB_PORT:-3000}
+    volumes:
+      - media-data:/data/media
+    depends_on:
+      seed: { condition: service_completed_successfully }
+      mailpit: { condition: service_healthy }
+
+  web:
+    profiles: [app]
+    build: { context: ./nclex-fe, args: { API_URL: "http://api:8080" } }
+    image: nclex-web:local
+    ports:
+      - "${APP_WEB_PORT:-3000}:3000"
+    depends_on:
+      api: { condition: service_healthy }
+    healthcheck:
+      test: ["CMD", "node", "-e", "fetch('http://127.0.0.1:3000/healthz').then(r => process.exit(r.ok ? 0 : 1)).catch(() => process.exit(1))"]
+      interval: 5s
+      timeout: 5s
+      retries: 20
+
+  # Traces, metrics and logs from the API and worker: http://localhost:18888
+  otel:
+    profiles: [app]
+    image: mcr.microsoft.com/dotnet/aspire-dashboard:9.5
+    environment:
+      DOTNET_DASHBOARD_UNSECURED_ALLOW_ANONYMOUS: "true"
+    ports:
+      - "${OTEL_DASHBOARD_PORT:-18888}:18888"
+
 volumes:
+  media-data:
   postgres-data:
   redis-data:
   minio-data:

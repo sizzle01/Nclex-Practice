@@ -28,7 +28,8 @@ export function contentSecurityPolicy(isDev: boolean): string {
     "form-action 'self'",
     "frame-ancestors 'none'",
   ];
-  if (!isDev) directives.push("upgrade-insecure-requests");
+  // No upgrade-insecure-requests: HSTS already moves production to HTTPS, and the directive would
+  // break the plain-http compose stack the end-to-end tests run against.
   return directives.join("; ");
 }
 
