@@ -134,6 +134,24 @@ public sealed class CatalogContent(ApiFactory factory)
         }
     }
 
+    /// <summary>
+    /// Runs <paramref name="action"/> while no other test imports or unpublishes content through this
+    /// class. The catalog pages by offset, so a set added or removed mid-walk would shift the pages
+    /// under a test that is walking them. Sets created through the admin API are not covered.
+    /// </summary>
+    public static async Task<T> WhileCatalogIsStillAsync<T>(Func<Task<T>> action)
+    {
+        await ImportLock.WaitAsync(TestContext.Current.CancellationToken);
+        try
+        {
+            return await action();
+        }
+        finally
+        {
+            ImportLock.Release();
+        }
+    }
+
     /// <summary>Imports a file and fails the test if the importer found problems.</summary>
     public async Task ImportOkAsync(QuestionImportFile file, IContentFiles? files = null)
     {
@@ -151,13 +169,13 @@ public sealed class CatalogContent(ApiFactory factory)
     }
 
     /// <summary>Takes a set out of the catalog; unpublishing has no use case until admin tools (F14).</summary>
-    public async Task UnpublishSetAsync(Guid setId)
+    public Task UnpublishSetAsync(Guid setId) => WhileCatalogIsStillAsync(async () =>
     {
         await using var scope = factory.Services.CreateAsyncScope();
-        await scope.ServiceProvider.GetRequiredService<AppDbContext>().TestSets
+        return await scope.ServiceProvider.GetRequiredService<AppDbContext>().TestSets
             .Where(s => s.Id == setId)
             .ExecuteUpdateAsync(s => s.SetProperty(x => x.IsPublished, false), TestContext.Current.CancellationToken);
-    }
+    });
 
     /// <summary>Records that a user saw questions, as F10's grading will.</summary>
     public async Task AddHistoryAsync(Guid userId, bool? correct, params Guid[] questionIds)

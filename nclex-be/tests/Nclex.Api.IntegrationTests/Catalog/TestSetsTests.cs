@@ -130,8 +130,10 @@ public sealed class TestSetsTests(ApiFactory factory)
             [.. ids.Select((id, i) => CatalogContent.Set(id, $"Paged {i}", questions))]));
         var user = await _api.SignupNewUserAsync();
 
-        var first = await GetPageAsync(user.AccessToken, "/api/v1/test-sets?limit=1");
-        var all = await ListAllAsync(user.AccessToken, "/api/v1/test-sets", limit: 2);
+        // Other test classes import sets in parallel; hold them off while the pages are walked.
+        var (first, all) = await CatalogContent.WhileCatalogIsStillAsync(async () => (
+            await GetPageAsync(user.AccessToken, "/api/v1/test-sets?limit=1"),
+            await ListAllAsync(user.AccessToken, "/api/v1/test-sets", limit: 2)));
 
         first.Items.Count.ShouldBe(1);
         first.NextCursor.ShouldNotBeNull();
