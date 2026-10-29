@@ -19,6 +19,7 @@ using Nclex.Infrastructure.Telemetry;
 using OpenTelemetry.Metrics;
 using OpenTelemetry.Trace;
 using Serilog;
+using Serilog.Events;
 
 // Bootstrap logger so failures during startup are still logged; replaced by the configured logger below.
 Log.Logger = new LoggerConfiguration()
@@ -78,8 +79,7 @@ try
     builder.Services.AddNclexTelemetry(builder.Configuration, "nclex-api")
         .WithTracing(tracing => tracing.AddAspNetCoreInstrumentation(options =>
             // Probes arrive every few seconds and would bury real traffic.
-            options.Filter = http => !http.Request.Path.StartsWithSegments("/healthz")
-                && !http.Request.Path.StartsWithSegments("/readyz")))
+            options.Filter = http => !IsProbe(http.Request.Path)))
         // http.server.request.duration: the p95 latency the alerts and load test use.
         .WithMetrics(metrics => metrics.AddAspNetCoreInstrumentation());
 
@@ -99,7 +99,11 @@ try
     }
 
     app.UseMiddleware<RequestIdMiddleware>();
-    app.UseSerilogRequestLogging();
+    app.UseSerilogRequestLogging(options => options.GetLevel = (http, _, exception) =>
+        exception is not null || http.Response.StatusCode >= 500 ? LogEventLevel.Error
+        // Load balancer and container probes arrive every few seconds; keep them out of the logs.
+        : IsProbe(http.Request.Path) ? LogEventLevel.Verbose
+        : LogEventLevel.Information);
     app.UseExceptionHandler();
     app.UseApiStatusCodeProblemDetails();
     // After routing (implicit in minimal hosting), so it can see each endpoint's policy.
@@ -134,4 +138,9 @@ finally
 }
 
 /// <summary>Exposed so integration tests can host the API with WebApplicationFactory.</summary>
-public partial class Program;
+public partial class Program
+{
+    /// <summary>The liveness and readiness probes (api.md section 9).</summary>
+    private static bool IsProbe(PathString path) =>
+        path.StartsWithSegments("/healthz") || path.StartsWithSegments("/readyz");
+}
