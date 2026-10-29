@@ -38,8 +38,8 @@ docker exec nclex-postgres-1 psql -U nclex -d nclex_f15 -c "
 1. As the candidate, start **Comprehensive Practice 1**. Below the question, next to **Mark for review**, press **Report issue**. Focus moves into the dialog, Tab stays inside it, and Escape closes it. Pick **The answer seems wrong**, add a comment and press **Send report**. The dialog thanks you and links to **My reports**.
 2. Report the same question for the same reason again. The dialog says you already did (`409 FLAG_DUPLICATE`). A different reason works.
 3. Open **My reports** from the user menu (`/settings/reports`). The report shows as **Received**.
-4. In another browser (or a private window), sign in as the reviewer. The user menu now has **Reported questions** (`/admin/flags`). The report is under **Open**, with the stem, the comment, the reporter's name and the version.
-5. Press **Assign to me**, then **Triage**. It moves to the **Triaged** tab. **Open in editor** links to `/admin/questions/{questionId}?version={versionId}`. That page comes with F14, so for now it is a 404.
+4. In another browser (or a private window), sign in as the reviewer. The admin console (user menu → **Admin console**) now has **Reported questions** in its nav (`/admin/flags`). The report is under **Open**, with the stem, the comment, the reporter's name and the version.
+5. Press **Assign to me**, then **Triage**. It moves to the **Triaged** tab. **Open in editor** opens F14's editor at `/admin/questions/{questionId}?version={versionId}`, with that version selected.
 6. Press **Resolve…**. The note is required. Write one and press **Resolve and notify**.
 7. Back as the candidate, the bell shows **Thanks — we reviewed your report** with the note. Click it to open My reports, where the report is **Resolved** with the note.
 8. Reject another report instead. The candidate gets no notification, and My reports shows **Reviewed, no change needed** without the note.
@@ -77,7 +77,7 @@ curl -s "$B/notifications?limit=1" -H "Authorization: Bearer $C"               #
 7. `nclex-be/src/Nclex.Application/Flags/Moderation/ListFlagQueueHandler.cs` and `FlagQueueReader.cs`: the queue and its rows.
 8. `nclex-be/src/Nclex.Application/Flags/Moderation/UpdateFlagHandler.cs` and `UpdateFlagRequestValidator.cs`: assign, triage, resolve or reject, with the notification and the audit row.
 9. `nclex-be/src/Nclex.Application/Notifications/FlagNotifications.cs`, `Nclex.Domain/Notifications/NotificationCopy.cs` (`FlagResolved`) and `Nclex.Infrastructure/Email/Templates/FlagResolvedTemplate.cs`: the `flag_resolved` notification and its email.
-10. `nclex-be/src/Nclex.Api/Controllers/FlagsController.cs`, `AdminFlagsController.cs` and `Auth/AuthSetup.cs` (`Policies.ContentModerator`).
+10. `nclex-be/src/Nclex.Api/Controllers/FlagsController.cs`, `AdminFlagsController.cs` and `Auth/AuthSetup.cs` (`Policies.ContentReviewer`, from F14).
 11. `nclex-fe/src/features/flags/api/flagsApi.ts` and `flagQueries.ts`: fetch functions and TanStack Query hooks.
 12. `nclex-fe/src/features/flags/components/ReportIssueDialog.tsx`, `useDialogFocus.ts` and `ReportIssueButton.tsx`: the dialog and its keyboard model.
 13. `nclex-fe/src/features/flags/components/MyReports.tsx`: `/settings/reports`.
@@ -87,7 +87,7 @@ curl -s "$B/notifications?limit=1" -H "Authorization: Bearer $C"               #
 ## 4. Request flow: resolving a report
 
 1. **UI:** on `/admin/flags`, the reviewer presses **Resolve…**, writes a note and presses **Resolve and notify**. `CloseForm` checks the note with Zod (`closeFlagSchema`). `useUpdateFlag` calls `updateFlag`, which sends `PATCH /api/v1/admin/flags/{id}` with `{ status: "resolved", resolutionNote }` through the generated client.
-2. **API:** `[Authorize(Policy = Policies.ContentModerator)]` lets only the reviewer and admin roles in; everyone else gets `403 FORBIDDEN`. `FluentValidationFilter` runs `UpdateFlagRequestValidator`: the status can't be `open`, closing needs a note, and the note is at most 2000 characters. `AdminFlagsController.Update` calls the handler.
+2. **API:** `[Authorize(Policy = Policies.ContentReviewer)]` lets only the reviewer and admin roles in; everyone else gets `403 FORBIDDEN`. `FluentValidationFilter` runs `UpdateFlagRequestValidator`: the status can't be `open`, closing needs a note, and the note is at most 2000 characters. `AdminFlagsController.Update` calls the handler.
 3. **Application:** `UpdateFlagHandler` loads the report (404 if missing). If it is already resolved or rejected, it stops with `409 FLAG_CLOSED`.
 4. **Domain:** `QuestionFlag.Resolve` checks `CanMove(current, Resolved)`, then stores the trimmed note, `resolved_by` and `resolved_at` (from `TimeProvider`).
 5. **Application:** `FlagNotifications.Resolved` builds a `flag_resolved` notification in the `content` category. The title comes from interfaces.md 5.6 and the body is the note. `INotificationPublisher` adds the `notifications` row and, if the reporter turned content emails on, an `email_outbox` row. `IAuditLog.RecordEntityEvent` adds `flag.resolve`.
@@ -128,11 +128,11 @@ Migration `F15_ContentFlags`, matching database.md 2.9:
 - **`resolutionNote` is capped at 2000 characters** in the validator, the same as the comment. The DDL has no limit.
 - **A `flag_resolved` email template was added**, so the existing "Your reports → By email" setting does something. It is off by default (F12's defaults). The notification's `relatedAttemptId` is the attempt the report came from.
 - **`IAuditLog.RecordEntityEvent`** was added next to `RecordUserEvent` for events about something other than a user. Audit metadata holds only the version id and reason, not the note or the comment.
-- **Moderator policy:** `Policies.ContentModerator` (reviewer or admin). It is the first role-gated endpoint.
+- **Moderator policy:** F15 added `Policies.ContentModerator` (reviewer or admin). When F14 was merged, the queue moved to F14's `Policies.ContentReviewer`, which is the same role group, and `ContentModerator` was removed.
 - **Frontend placement:**
   - "My reports" is linked from the user menu, because there is no settings sub-navigation.
-  - `/admin/flags` has its own small guard (`RequireModerator`); F14 is expected to bring the admin shell.
-  - **Open in editor** points at F14's `/admin/questions/{id}?version={versionId}`. The `?version=` parameter is my assumption and should match whatever F14 builds.
+  - `/admin/flags` sits inside F14's admin shell, which lets authors, reviewers and admins in. `RequireModerator` narrows it to reviewers and admins with F14's `canReview`.
+  - **Open in editor** goes to `/admin/questions/{id}?version={versionId}`. F14's editor didn't read `?version=`, so the F14 merge added it: the page passes it to `QuestionEditor` as `initialVersionId`.
 - **Fixes to existing code, found while building:**
   - **Merge bug (F11 + F12):** F12 registered the SSE ticket store in `AddInfrastructure`, but it needs `ISecureTokenGenerator`, which only the API registers. In Development the worker, and F11's `import-questions` command, failed at startup with a DI validation error. The store is now registered by an API-only `AddNotificationStreamTickets()`.
   - **Schema leak:** `UpdateFlagRequest.Closes` was marked `[JsonIgnore]`, so the derived value is not part of the request schema.
@@ -204,14 +204,14 @@ cd ../nclex-fe && npm run lint && npm run typecheck && npm test
 
 ## 8. Follow-ups and known limitations
 
-- **Editor link:** check that F14's editor accepts `?version=` (or change `editorPath` in `flagCopy.ts`). When F14 lands, move `/admin/flags` into its admin shell and nav, and replace `RequireModerator` with F14's guard if it has one.
+- **Editor link and admin shell:** done in the F14 merge. The editor reads `?version=`, and **Reported questions** is in the admin nav.
 - **Assigning:** moderators can only "Assign to me". There is no picker for other moderators (no users list endpoint yet) and no unassign.
 - **Notifications:** the assignee is not notified, and the reporter is not told when a report is triaged.
 - **Bulk actions:** none yet, such as resolving every report on one version when it is republished.
 - **Reporting from the results page:** only the player and review have the button.
 - **Roles:** reviewers and admins are made by SQL until `/admin/users` exists, and a role change needs a fresh login, because the role travels in the access token.
 - **Flaky backend tests:** the catalog paging test needs keyset paging, or scoping to its own sets. The 401s need a test clock or longer-lived test tokens. The Serilog race needs a non-global logger in test hosts. All of these predate F15.
-- **Merge order:** F12, then F15. The sibling rule from earlier features still applies: whichever of F13 and F15 merges second must regenerate the EF snapshot and `schema.d.ts`.
+- **Merges:** F12 and F15 were fast-forwarded into `main`. F13 and F14 were then merged on `feature/f13-f14-merge-main`, with `schema.d.ts` regenerated. The EF snapshot needed no change.
 
 ## 9. Try it yourself
 
