@@ -8,6 +8,7 @@ import { toNumber } from "@/lib/format/toNumber";
 import { ExhibitPanel } from "@/features/player/exhibits/ExhibitPanel";
 import { ItemAnswer } from "@/features/player/renderers/ItemAnswer";
 import { RationalePanel } from "../reveal/RationalePanel";
+import { ReportIssueButton } from "@/features/flags/components/ReportIssueButton";
 import { AttemptMenu } from "./AttemptMenu";
 import { NavigatorDrawer } from "./NavigatorDrawer";
 import { OpenElsewhereDialog } from "./OpenElsewhereDialog";
@@ -21,7 +22,7 @@ import { useAttemptSession } from "./useAttemptSession";
 /**
  * The exam player at /attempts/[id] (interfaces.md 5.3): top bar with the timers, Pause and the ⋯
  * menu (Save &amp; Exit), the item with its rationale once revealed, bottom bar with
- * mark-for-review, the save indicator, Prev/Next and Submit, and a navigator drawer.
+ * mark-for-review, "Report issue" (F15), the save indicator, Prev/Next and Submit, and a navigator drawer.
  */
 export function AttemptPlayer({ attemptId }: { attemptId: string }) {
   const session = useAttemptSession(attemptId);
@@ -161,6 +162,9 @@ export function AttemptPlayer({ attemptId }: { attemptId: string }) {
           >
             <span aria-hidden="true">⚑</span> Mark for review
           </button>
+          {item && (
+            <ReportIssueButton questionVersionId={item.questionVersionId} attemptId={attemptId} disabled={session.paused} />
+          )}
           <SaveStatusText status={session.saveStatus} />
         </div>
         <div className={styles.actions}>

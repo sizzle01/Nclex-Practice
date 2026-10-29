@@ -4,6 +4,7 @@ import Link from "next/link";
 import { useRouter } from "next/navigation";
 import { useEffect, useId, useRef, useState } from "react";
 import ui from "@/components/ui/ui.module.css";
+import { isModerator } from "@/features/flags/components/RequireModerator";
 import { useAuth, useMe } from "../AuthProvider";
 import styles from "./UserMenu.module.css";
 
@@ -106,6 +107,18 @@ export function UserMenu() {
               Notification settings
             </Link>
           </li>
+          <li>
+            <Link href="/settings/reports" onClick={() => setOpen(false)}>
+              My reports
+            </Link>
+          </li>
+          {isModerator(me?.role) && (
+            <li>
+              <Link href="/admin/flags" onClick={() => setOpen(false)}>
+                Reported questions
+              </Link>
+            </li>
+          )}
           <li>
             <button type="button" disabled={busy} onClick={() => run(signOut)}>
               Log out

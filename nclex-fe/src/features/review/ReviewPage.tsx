@@ -7,6 +7,7 @@ import ui from "@/components/ui/ui.module.css";
 import { isApiError } from "@/lib/api/errors";
 import { toNumber } from "@/lib/format/toNumber";
 import { type CandidateItem, fetchReview, type ReviewFilter, reviewQueryKey } from "../attempt/api/attemptApi";
+import { ReportIssueButton } from "../flags/components/ReportIssueButton";
 import { ExhibitPanel } from "../player/exhibits/ExhibitPanel";
 import { ItemAnswer } from "../player/renderers/ItemAnswer";
 import { RationalePanel } from "../attempt/reveal/RationalePanel";
@@ -71,7 +72,7 @@ export function ReviewPage({ attemptId, initialFilter }: { attemptId: string; in
           <ol className={styles.list}>
             {items.map((item) => (
               <li key={toNumber(item.position)}>
-                <ReviewItem item={item} />
+                <ReviewItem item={item} attemptId={attemptId} />
               </li>
             ))}
           </ol>
@@ -91,7 +92,7 @@ export function ReviewPage({ attemptId, initialFilter }: { attemptId: string; in
   );
 }
 
-function ReviewItem({ item }: { item: CandidateItem }) {
+function ReviewItem({ item, attemptId }: { item: CandidateItem; attemptId: string }) {
   const stemId = useId();
   return (
     <article className={`${ui.card} ${styles.item}`} aria-labelledby={`${stemId}-title`}>
@@ -121,6 +122,9 @@ function ReviewItem({ item }: { item: CandidateItem }) {
       />
       {item.response == null && <p className={ui.muted}>Not answered.</p>}
       {item.reveal && <RationalePanel reveal={item.reveal} itemType={item.itemType} content={item.content} />}
+      <div className={styles.itemActions}>
+        <ReportIssueButton questionVersionId={item.questionVersionId} attemptId={attemptId} />
+      </div>
     </article>
   );
 }

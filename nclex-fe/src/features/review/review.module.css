@@ -49,3 +49,8 @@
   font-size: 1.0625rem;
   font-weight: 600;
 }
+
+.itemActions {
+  display: flex;
+  justify-content: flex-end;
+}
