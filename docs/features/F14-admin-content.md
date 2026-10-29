@@ -175,7 +175,11 @@ The admin tests create their sets as challenge sets titled "zz…". They sort af
 
 ## 8. Follow-ups and known limitations
 
-- **Flag moderation (F15)**: `/admin/flags` and `PATCH /admin/flags/{id}`.
+- **Merging with the current `main` (F12 and F15 merged while F14 was built).**
+  - **Audit log.** F15 added `IAuditLog.RecordEntityEvent(action, actorId, entityType, entityId, metadata)`, which does the same job as F14's `RecordAdminEvent`. On merge, keep F15's method and point F14's handlers at it.
+  - **Policies.** Both features add content policies to `AuthSetup.cs` (F15's `ContentModerator`, F14's `ContentStaff`, `ContentAuthor` and `ContentReviewer`), so expect a conflict there.
+  - **Editor deep link.** F15's moderation queue links to `/admin/questions/{id}?version={versionId}`. `QuestionEditor` should read `version` from the URL to preselect that version (a few lines with `useSearchParams`).
+  - **Types.** Regenerate `schema.d.ts` after merging.
 - **S3/MinIO storage** behind `IMediaStorage`, with real presigned URLs from `upload-url`. Assets created but never uploaded are left behind and need a clean-up job.
 - **The Next.js proxy and large uploads.** Uploads go through the `/api` rewrite. Files near the 25 MB limit should be tried against a production build before relying on them.
 - **Case-study authoring** (scenario tabs, positions, whole-case review) is not in the console. Case items can be edited one at a time and keep their place.
