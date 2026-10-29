@@ -1,8 +1,8 @@
 using Microsoft.EntityFrameworkCore;
 using Nclex.Application.Abstractions;
 using Nclex.Application.Attempts.Reveal;
-using Nclex.Domain.ItemTypes;
 using Nclex.Domain.Entities;
+using Nclex.Domain.ItemTypes;
 
 namespace Nclex.Application.Attempts.GetItem;
 
