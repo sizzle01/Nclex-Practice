@@ -2,6 +2,8 @@
 export interface FieldError {
   field: string;
   code: string;
+  /** An explanation for authors, sent with item-validation problems (admin console, F14). */
+  message?: string;
 }
 
 /**
