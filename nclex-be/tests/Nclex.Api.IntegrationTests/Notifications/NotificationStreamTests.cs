@@ -26,6 +26,8 @@ public sealed class NotificationStreamTests(ApiFactory factory) : IAsyncDisposab
         {
             stream.StatusCode.ShouldBe(HttpStatusCode.OK);
             stream.Content.Headers.ContentType!.MediaType.ShouldBe("text/event-stream");
+            // Compressing proxies (the production Next.js server) would otherwise hold events back.
+            stream.Headers.CacheControl!.NoTransform.ShouldBeTrue();
             using var events = new SseReader(await stream.Content.ReadAsStreamAsync(TestContext.Current.CancellationToken));
             var first = await events.NextAsync();
             (first.Event, first.Data.GetProperty("count").GetInt32()).ShouldBe(("unread_count", 0));

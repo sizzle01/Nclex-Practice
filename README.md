@@ -61,6 +61,17 @@ npm run dev                                           # http://localhost:3000
 Open http://localhost:3000/health. It should show "Postgres: OK". The dev server forwards `/api/*`,
 `/healthz` and `/readyz` to the API (set `API_URL` if the API is not on http://localhost:5080).
 
+### Or run everything in Docker
+
+```bash
+docker compose --profile app up -d --build --wait     # migrations, sample content, API, worker, frontend
+cd nclex-fe && npx playwright install chromium && npm run e2e   # end-to-end tests against it
+```
+
+The frontend is on http://localhost:3000, the API on http://localhost:8080, and traces, metrics
+and logs on http://localhost:18888. Configuration, deploys, rollback and on-call checks are in
+[docs/operations.md](docs/operations.md).
+
 ### Regenerate the typed API client
 
 With the API running:

@@ -11,6 +11,8 @@ public sealed partial class AttemptExpiryJob(ExpireAttemptHandler handler, ILogg
 {
     public async Task RunAsync(Guid attemptId, int timerEpoch, CancellationToken cancellationToken)
     {
+        // Every log line from this run, including any failure, carries the attemptId (architecture.md section 9).
+        using var scope = logger.BeginScope(new Dictionary<string, object> { ["AttemptId"] = attemptId });
         if (await handler.HandleAsync(attemptId, timerEpoch, cancellationToken))
         {
             LogExpired(logger, attemptId);

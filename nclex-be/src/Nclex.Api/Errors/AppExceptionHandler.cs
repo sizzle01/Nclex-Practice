@@ -9,7 +9,7 @@ namespace Nclex.Api.Errors;
 /// ProblemDetails body with its code. Expected failures are not server errors, so they are not
 /// logged as errors. Runs before <see cref="ProblemDetailsExceptionHandler"/>.
 /// </summary>
-public sealed class AppExceptionHandler(IProblemDetailsService problemDetailsService) : IExceptionHandler
+public sealed class AppExceptionHandler(IProblemDetailsService problemDetailsService, NclexMetrics metrics) : IExceptionHandler
 {
     public async ValueTask<bool> TryHandleAsync(
         HttpContext httpContext,
@@ -21,6 +21,7 @@ public sealed class AppExceptionHandler(IProblemDetailsService problemDetailsSer
             return false;
         }
 
+        metrics.RecordErrorResponse(error.Code);
         var status = StatusFor(error.Kind);
         httpContext.Response.StatusCode = status;
         var problem = new ProblemDetails

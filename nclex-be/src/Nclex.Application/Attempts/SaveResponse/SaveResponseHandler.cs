@@ -13,9 +13,34 @@ public sealed class SaveResponseHandler(
     AttemptStore store,
     AttemptWriteGuard guard,
     ResponseValidator validator,
+    NclexMetrics metrics,
     TimeProvider clock)
 {
     public async Task<SaveResponseResult> HandleAsync(
+        Guid attemptId,
+        int position,
+        string? clientIdHeader,
+        SaveResponseRequest request,
+        CancellationToken cancellationToken)
+    {
+        // Autosave success rate and latency are on-call signals (architecture.md section 9).
+        var started = clock.GetTimestamp();
+        try
+        {
+            var (result, outcome) = await SaveAsync(attemptId, position, clientIdHeader, request, cancellationToken);
+            metrics.RecordAutosave(clock.GetElapsedTime(started), outcome == SaveOutcome.Saved ? NclexMetrics.AutosaveSaved : NclexMetrics.AutosaveStale);
+            return result;
+        }
+        catch (Exception ex)
+        {
+            // Expected refusals keep their api.md code; anything else is a server failure.
+            var outcome = ex is AppException app ? app.Error.Code : NclexMetrics.AutosaveFailed;
+            metrics.RecordAutosave(clock.GetElapsedTime(started), outcome);
+            throw;
+        }
+    }
+
+    private async Task<(SaveResponseResult Result, SaveOutcome Outcome)> SaveAsync(
         Guid attemptId,
         int position,
         string? clientIdHeader,
@@ -44,6 +69,6 @@ public sealed class SaveResponseHandler(
 
         await guard.CommitAsync(attempt, transaction, cancellationToken);
         var current = await store.CurrentItemAsync(attempt, cancellationToken);
-        return new SaveResponseResult(now, item.ClientSeq, item.State, TimerState.For(attempt, current, now));
+        return (new SaveResponseResult(now, item.ClientSeq, item.State, TimerState.For(attempt, current, now)), outcome);
     }
 }

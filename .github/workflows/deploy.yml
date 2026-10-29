@@ -1,0 +1,101 @@
+name: Deploy
+
+# Every push to main deploys to staging; production deploys the same images once someone approves
+# the "production" environment in GitHub (architecture.md section 8, docs/operations.md).
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+# One deploy at a time; a newer push waits rather than cancelling a rollout halfway.
+concurrency:
+  group: deploy
+  cancel-in-progress: false
+
+permissions:
+  id-token: write # GitHub OIDC → an AWS role, so no long-lived AWS keys are stored in GitHub
+  contents: read
+
+jobs:
+  images:
+    name: Build and push images
+    runs-on: ubuntu-latest
+    environment: staging
+    outputs:
+      tag: ${{ steps.tag.outputs.tag }}
+    steps:
+      - uses: actions/checkout@v5
+
+      - id: tag
+        run: echo "tag=${GITHUB_SHA::12}" >> "$GITHUB_OUTPUT"
+
+      - uses: aws-actions/configure-aws-credentials@v4
+        with:
+          role-to-assume: ${{ vars.AWS_DEPLOY_ROLE_ARN }}
+          aws-region: ${{ vars.AWS_REGION }}
+
+      - uses: aws-actions/amazon-ecr-login@v2
+
+      # Images are tagged with the commit, so production runs exactly what staging tested.
+      - name: Build and push
+        env:
+          REGISTRY: ${{ vars.ECR_REGISTRY }}
+          TAG: ${{ steps.tag.outputs.tag }}
+        run: |
+          for target in api worker migrations; do
+            docker build --target "$target" -t "$REGISTRY/nclex-$target:$TAG" nclex-be
+            docker push "$REGISTRY/nclex-$target:$TAG"
+          done
+          docker build -t "$REGISTRY/nclex-web:$TAG" nclex-fe
+          docker push "$REGISTRY/nclex-web:$TAG"
+
+  staging:
+    name: Deploy to staging
+    needs: images
+    runs-on: ubuntu-latest
+    environment:
+      name: staging
+      url: ${{ vars.APP_URL }}
+    steps:
+      - uses: actions/checkout@v5
+      - uses: aws-actions/configure-aws-credentials@v4
+        with:
+          role-to-assume: ${{ vars.AWS_DEPLOY_ROLE_ARN }}
+          aws-region: ${{ vars.AWS_REGION }}
+      - name: Migrate and roll out
+        env:
+          AWS_REGION: ${{ vars.AWS_REGION }}
+          ECR_REGISTRY: ${{ vars.ECR_REGISTRY }}
+          ECS_CLUSTER: ${{ vars.ECS_CLUSTER }}
+          ECS_SUBNETS: ${{ vars.ECS_SUBNETS }}
+          ECS_SECURITY_GROUP: ${{ vars.ECS_SECURITY_GROUP }}
+          IMAGE_TAG: ${{ needs.images.outputs.tag }}
+        run: deploy/aws/deploy.sh
+      - name: Smoke check
+        run: curl --fail --silent --show-error --retry 5 --retry-delay 5 "${{ vars.APP_URL }}/readyz"
+
+  production:
+    name: Deploy to production
+    needs: [images, staging]
+    runs-on: ubuntu-latest
+    # Required reviewers on this environment make the job wait for an approval.
+    environment:
+      name: production
+      url: ${{ vars.APP_URL }}
+    steps:
+      - uses: actions/checkout@v5
+      - uses: aws-actions/configure-aws-credentials@v4
+        with:
+          role-to-assume: ${{ vars.AWS_DEPLOY_ROLE_ARN }}
+          aws-region: ${{ vars.AWS_REGION }}
+      - name: Migrate and roll out
+        env:
+          AWS_REGION: ${{ vars.AWS_REGION }}
+          ECR_REGISTRY: ${{ vars.ECR_REGISTRY }}
+          ECS_CLUSTER: ${{ vars.ECS_CLUSTER }}
+          ECS_SUBNETS: ${{ vars.ECS_SUBNETS }}
+          ECS_SECURITY_GROUP: ${{ vars.ECS_SECURITY_GROUP }}
+          IMAGE_TAG: ${{ needs.images.outputs.tag }}
+        run: deploy/aws/deploy.sh
+      - name: Smoke check
+        run: curl --fail --silent --show-error --retry 5 --retry-delay 5 "${{ vars.APP_URL }}/readyz"

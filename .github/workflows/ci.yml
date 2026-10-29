@@ -36,6 +36,13 @@ jobs:
       - name: Test
         run: dotnet test --no-build --configuration Release
 
+      # Restore already fails on known vulnerabilities (NuGet audit warnings are errors here); this
+      # step lists them, direct and transitive, so the log says which package to update.
+      - name: Vulnerable packages
+        run: |
+          dotnet list package --vulnerable --include-transitive | tee vulnerable.txt
+          ! grep -q "has the following vulnerable packages" vulnerable.txt
+
   frontend:
     name: Frontend (lint, typecheck, test, build)
     runs-on: ubuntu-latest
@@ -54,6 +61,9 @@ jobs:
       - name: Install
         run: npm ci
 
+      - name: Vulnerable packages
+        run: npm audit --audit-level=high
+
       - name: Lint
         run: npm run lint
 
@@ -65,3 +75,60 @@ jobs:
 
       - name: Build
         run: npm run build
+
+  # Pull requests may not add a dependency with a known high-severity vulnerability.
+  dependency-review:
+    name: Dependency review
+    if: github.event_name == 'pull_request'
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v5
+      - uses: actions/dependency-review-action@v4
+        with:
+          fail-on-severity: high
+
+  # The whole app from its Docker images (docker compose --profile app), driven by Playwright.
+  e2e:
+    name: End-to-end (Playwright against docker compose)
+    needs: [backend, frontend]
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v5
+
+      - name: Start the app
+        run: docker compose --profile app up -d --build --wait --wait-timeout 300
+
+      - uses: actions/setup-node@v5
+        with:
+          node-version: 24
+          cache: npm
+          cache-dependency-path: nclex-fe/package-lock.json
+
+      - name: Install Playwright
+        working-directory: nclex-fe
+        run: |
+          npm ci
+          npx playwright install --with-deps chromium
+
+      - name: Run the end-to-end tests
+        working-directory: nclex-fe
+        env:
+          E2E_BASE_URL: http://localhost:3000
+          MAILPIT_URL: http://localhost:8025
+        run: npm run e2e
+
+      - name: App logs
+        if: failure()
+        run: docker compose --profile app logs --no-color > compose-logs.txt
+
+      - name: Upload the report and logs
+        if: failure()
+        uses: actions/upload-artifact@v4
+        with:
+          name: e2e-report
+          path: |
+            nclex-fe/playwright-report/
+            nclex-fe/test-results/
+            compose-logs.txt
+          retention-days: 7

@@ -25,19 +25,19 @@ public sealed class CatalogContent(ApiFactory factory)
         string bodySystem = "fundamentals",
         string difficulty = "easy",
         string accessTier = "free") => new()
-    {
-        ["id"] = id,
-        ["itemType"] = "multiple_choice",
-        ["stem"] = "Which action should the nurse take first?",
-        ["content"] = new { options = new[] { "a", "b", "c", "d" }.Select(o => new { id = o, text = $"Option {o}" }) },
-        ["key"] = new { correct = "b" },
-        ["rationale"] = new { correct = "Why b", perOption = new { a = "A", b = "B", c = "C", d = "D" } },
-        ["educationalObjective"] = "Prioritise safety.",
-        ["clientNeeds"] = clientNeeds,
-        ["bodySystem"] = bodySystem,
-        ["difficulty"] = difficulty,
-        ["accessTier"] = accessTier,
-    };
+        {
+            ["id"] = id,
+            ["itemType"] = "multiple_choice",
+            ["stem"] = "Which action should the nurse take first?",
+            ["content"] = new { options = new[] { "a", "b", "c", "d" }.Select(o => new { id = o, text = $"Option {o}" }) },
+            ["key"] = new { correct = "b" },
+            ["rationale"] = new { correct = "Why b", perOption = new { a = "A", b = "B", c = "C", d = "D" } },
+            ["educationalObjective"] = "Prioritise safety.",
+            ["clientNeeds"] = clientNeeds,
+            ["bodySystem"] = bodySystem,
+            ["difficulty"] = difficulty,
+            ["accessTier"] = accessTier,
+        };
 
     /// <summary>
     /// A Select All That Apply question with options a to e, of which a, b and e are correct, so

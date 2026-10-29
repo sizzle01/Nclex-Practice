@@ -1,6 +1,7 @@
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Logging;
 using Nclex.Application.Abstractions;
+using Nclex.Application.Common;
 using Nclex.Domain.Email;
 using Nclex.Infrastructure.Email.Templates;
 using Nclex.Infrastructure.Persistence;
@@ -17,6 +18,7 @@ public sealed partial class OutboxDispatcher(
     EmailTemplates templates,
     IEmailSender sender,
     TimeProvider clock,
+    NclexMetrics metrics,
     ILogger<OutboxDispatcher> logger)
 {
     /// <summary>Most emails claimed in one go, so one worker never holds a large share of the queue.</summary>
@@ -33,6 +35,22 @@ public sealed partial class OutboxDispatcher(
         }
 
         return claimed.Count;
+    }
+
+    /// <summary>
+    /// Publishes how long the oldest due email has waited (architecture.md section 9 alerts when it
+    /// passes 60 seconds). Only due rows count: an email waiting for its retry backoff is not late.
+    /// </summary>
+    public async Task MeasureLagAsync(CancellationToken cancellationToken)
+    {
+        var now = clock.GetUtcNow();
+        // Served by outbox_pending_idx (database.md), like the claim query.
+        var oldestDue = await db.EmailOutbox
+            .Where(m => m.Status == OutboxStatus.Pending && m.SendAfter <= now)
+            .OrderBy(m => m.SendAfter)
+            .Select(m => (DateTimeOffset?)m.SendAfter)
+            .FirstOrDefaultAsync(cancellationToken);
+        metrics.SetOutboxLag(oldestDue is { } sendAfter ? now - sendAfter : TimeSpan.Zero);
     }
 
     /// <summary>

@@ -24,7 +24,7 @@ public sealed class RequestIdMiddleware(RequestDelegate next)
             return Task.CompletedTask;
         });
 
-        // Logging/RequestIdEnricher reads TraceIdentifier to put the id on every log line.
+        // Logging/RequestContextEnricher reads TraceIdentifier to put the id on every log line.
         return next(context);
     }
 }

@@ -38,13 +38,7 @@ public static class DependencyInjection
             options
                 // Pushes new notifications to Redis once their transaction commits (architecture.md 5.5).
                 .AddInterceptors(provider.GetRequiredService<PublishNotificationsAfterCommit>())
-                .UseNpgsql(
-                    GetRequiredConnectionString(provider, PostgresConnectionName),
-                    npgsql => npgsql
-                        // Keep EF's own bookkeeping table in the same snake_case style as everything else.
-                        .MigrationsHistoryTable("__ef_migrations_history")
-                        .MapDomainEnums())
-                .UseSnakeCaseNamingConvention()
+                .UsePostgres(GetRequiredConnectionString(provider, PostgresConnectionName))
                 // Hooks such as "queue the snapshot refresh after the submit commits" (Jobs).
                 .AddInterceptors(provider.GetServices<IInterceptor>()));
         services.AddScoped<IAppDbContext>(provider => provider.GetRequiredService<AppDbContext>());
@@ -100,6 +94,20 @@ public static class DependencyInjection
         services.AddSingleton<IMediaUrlSigner, HmacMediaUrlSigner>();
         return services;
     }
+
+    /// <summary>
+    /// The database settings shared by the app and the migration tools (<see cref="AppDbContextFactory"/>),
+    /// so a migration sees exactly the model the app uses.
+    /// </summary>
+    internal static DbContextOptionsBuilder UsePostgres(this DbContextOptionsBuilder options, string connectionString) =>
+        options
+            .UseNpgsql(
+                connectionString,
+                npgsql => npgsql
+                    // Keep EF's own bookkeeping table in the same snake_case style as everything else.
+                    .MigrationsHistoryTable("__ef_migrations_history")
+                    .MapDomainEnums())
+            .UseSnakeCaseNamingConvention();
 
     /// <summary>
     /// Maps C# enums to the Postgres enums in database.md section 2.1. Values are snake_case
