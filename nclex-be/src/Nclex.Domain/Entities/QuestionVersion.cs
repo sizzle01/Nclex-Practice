@@ -1,4 +1,5 @@
 using System.Text.Json;
+using Nclex.Domain.Content;
 using Nclex.Domain.ItemTypes;
 
 namespace Nclex.Domain.Entities;
@@ -116,6 +117,74 @@ public sealed class QuestionVersion
         };
 
     /// <summary>
+    /// Creates a draft written in the admin console (F14). It stays editable until the author
+    /// submits it for review.
+    /// </summary>
+    public static QuestionVersion CreateDraft(Guid questionId, int version, AuthoredItem item, Guid authorId, DateTimeOffset now)
+    {
+        var draft = new QuestionVersion
+        {
+            Id = Guid.CreateVersion7(now),
+            QuestionId = questionId,
+            Version = version,
+            Status = VersionStatus.Draft,
+            AuthorId = authorId,
+            CreatedAt = now,
+        };
+        draft.Apply(item);
+        return draft;
+    }
+
+    /// <summary>
+    /// A new draft with this version's content, tags and case placement, numbered
+    /// <paramref name="version"/>. Whoever asks for it becomes its author. Review fields start empty.
+    /// </summary>
+    public QuestionVersion CloneAsDraft(int version, Guid authorId, DateTimeOffset now) =>
+        CreateDraft(QuestionId, version, ToAuthoredItem(), authorId, now);
+
+    /// <summary>What this version holds, in the shape authors write.</summary>
+    public AuthoredItem ToAuthoredItem() => new(
+        ItemType,
+        Stem,
+        Content.RootElement.Clone(),
+        AnswerKey.RootElement.Clone(),
+        Rationale.RootElement.Clone(),
+        EducationalObjective,
+        Exhibits.RootElement.Clone(),
+        ClientNeedsId,
+        BodySystemId,
+        CjmmSkill,
+        Difficulty,
+        TimeAllotmentSec,
+        MaxPoints,
+        CaseStudyId is { } caseId && CasePosition is { } position ? new CasePlacement(caseId, position) : null);
+
+    /// <summary>
+    /// Replaces the draft's content and tags. Only drafts change: once a version leaves draft it is
+    /// immutable (database.md 2.4), so a past attempt always shows what the candidate saw.
+    /// </summary>
+    public void EditDraft(AuthoredItem item)
+    {
+        Ensure(VersionAction.Edit, AuthorId);
+        Apply(item);
+    }
+
+    /// <summary>draft → in_review: the author asks a reviewer to check it.</summary>
+    public void SubmitForReview()
+    {
+        Ensure(VersionAction.SubmitForReview, AuthorId);
+        Status = VersionStatus.InReview;
+    }
+
+    /// <summary>in_review → approved. The reviewer must not be the author (database.md 2.4).</summary>
+    public void Approve(Guid reviewerId, string? notes, DateTimeOffset now) =>
+        Review(VersionAction.Approve, reviewerId, notes, now);
+
+    /// <summary>in_review → rejected, with notes telling the author what to fix in a new version.</summary>
+    public void Reject(Guid reviewerId, string notes, DateTimeOffset now) =>
+        Review(VersionAction.Reject, reviewerId, notes, now);
+
+    /// <summary>
     /// True when this version already holds exactly <paramref name="item"/>. JSON is compared by
     /// value, because Postgres jsonb does not keep the original key order or spacing.
     /// </summary>
@@ -157,6 +226,43 @@ public sealed class QuestionVersion
         }
 
         Status = VersionStatus.Superseded;
+    }
+
+    private void Review(VersionAction action, Guid reviewerId, string? notes, DateTimeOffset now)
+    {
+        Ensure(action, reviewerId);
+        Status = VersionWorkflow.To(action);
+        ReviewerId = reviewerId;
+        ReviewNotes = notes;
+        ReviewedAt = now;
+    }
+
+    // The application checks the workflow first and answers with an error; reaching here is a bug.
+    private void Ensure(VersionAction action, Guid actorId)
+    {
+        if (VersionWorkflow.Check(action, Status, AuthorId, actorId) is { } refusal)
+        {
+            throw new InvalidOperationException($"Cannot {action} version {Id} ({Status}): {refusal}.");
+        }
+    }
+
+    private void Apply(AuthoredItem item)
+    {
+        ItemType = item.ItemType;
+        Stem = item.Stem;
+        Content = ToDocument(item.Content);
+        AnswerKey = ToDocument(item.AnswerKey);
+        Rationale = ToDocument(item.Rationale);
+        EducationalObjective = item.EducationalObjective;
+        Exhibits = ToDocument(item.Exhibits);
+        ClientNeedsId = item.ClientNeedsId;
+        BodySystemId = item.BodySystemId;
+        CjmmSkill = item.CjmmSkill;
+        Difficulty = item.Difficulty;
+        TimeAllotmentSec = item.TimeAllotmentSec;
+        MaxPoints = item.MaxPoints;
+        CaseStudyId = item.Case?.CaseStudyId;
+        CasePosition = item.Case?.Position;
     }
 
     private static JsonDocument ToDocument(JsonElement element) => JsonDocument.Parse(element.GetRawText());

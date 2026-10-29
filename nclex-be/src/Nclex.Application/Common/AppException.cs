@@ -33,5 +33,9 @@ public sealed class AppException(
 
 /// <summary>One entry of <c>errors[]</c> raised by a use case.</summary>
 /// <param name="Field">camelCase request field name, e.g. "currentPassword".</param>
-/// <param name="Code">A code from <see cref="Validation.ValidationErrorCodes"/>.</param>
-public sealed record AppFieldError(string Field, string Code);
+/// <param name="Code">A code from <see cref="Validation.ValidationErrorCodes"/>, or an item-type issue code.</param>
+/// <param name="Message">
+/// A sentence for the person fixing it, when the code alone can't say what is wrong, e.g. which
+/// option is missing a rationale. Optional, so existing error bodies are unchanged.
+/// </param>
+public sealed record AppFieldError(string Field, string Code, string? Message = null);

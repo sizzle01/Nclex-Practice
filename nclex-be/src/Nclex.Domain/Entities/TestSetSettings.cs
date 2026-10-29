@@ -1,3 +1,5 @@
+using System.Text.Json.Serialization;
+
 namespace Nclex.Domain.Entities;
 
 /// <summary>
@@ -35,6 +37,8 @@ public sealed record TestSetSettings(
     /// a timed set needs at least one timer. Untimed sets must not carry timers either, so the
     /// card never shows a time for a set that has none.
     /// </summary>
+    // A rule, not data: kept out of API bodies, where it would look like a setting to send.
+    [JsonIgnore]
     public bool HasConsistentTiming =>
         Timed
             ? PerQuestionSec is not null || TimeBudgetSec is not null

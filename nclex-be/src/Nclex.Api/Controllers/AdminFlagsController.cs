@@ -8,7 +8,7 @@ namespace Nclex.Api.Controllers;
 /// <summary>The moderation queue for content reports; reviewers and admins only (api.md section 8).</summary>
 [ApiController]
 [Route("api/v1/admin/flags")]
-[Authorize(Policy = Policies.ContentModerator)]
+[Authorize(Policy = Policies.ContentReviewer)]
 [Produces("application/json")]
 [ProducesResponseType<ProblemDetails>(StatusCodes.Status401Unauthorized, "application/problem+json")]
 [ProducesResponseType<ProblemDetails>(StatusCodes.Status403Forbidden, "application/problem+json")]

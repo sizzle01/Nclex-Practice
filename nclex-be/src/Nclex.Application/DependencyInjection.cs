@@ -1,6 +1,20 @@
 using FluentValidation;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.DependencyInjection.Extensions;
+using Nclex.Application.Admin.Banks;
+using Nclex.Application.Admin.Media;
+using Nclex.Application.Admin.Membership;
+using Nclex.Application.Admin.Questions;
+using Nclex.Application.Admin.Questions.CreateQuestion;
+using Nclex.Application.Admin.Questions.CreateVersion;
+using Nclex.Application.Admin.Questions.PreviewGrade;
+using Nclex.Application.Admin.Questions.Publish;
+using Nclex.Application.Admin.Questions.Retire;
+using Nclex.Application.Admin.Questions.Review;
+using Nclex.Application.Admin.Questions.Search;
+using Nclex.Application.Admin.Questions.UpdateDraft;
+using Nclex.Application.Admin.TestSets;
+using Nclex.Application.Admin.Users;
 using Nclex.Application.Attempts;
 using Nclex.Application.Attempts.DiscardAttempt;
 using Nclex.Application.Attempts.Expiry;
@@ -181,6 +195,29 @@ public static class DependencyInjection
         services.AddScoped<GetBreakdownHandler>();
         services.AddScoped<GetTrendHandler>();
         services.AddScoped<RequestSnapshotRebuildHandler>();
+
+        // Admin console (F14)
+        services.AddScoped<AuthoringValidator>();
+        services.AddScoped<VersionLoader>();
+        services.AddScoped<MediaReadiness>();
+        services.AddScoped<AdminQuestionReader>();
+        services.AddScoped<SearchQuestionsHandler>();
+        services.AddScoped<CreateQuestionHandler>();
+        services.AddScoped<CreateVersionHandler>();
+        services.AddScoped<UpdateDraftHandler>();
+        services.AddScoped<SubmitForReviewHandler>();
+        services.AddScoped<ApproveVersionHandler>();
+        services.AddScoped<RejectVersionHandler>();
+        services.AddScoped<PublishVersionHandler>();
+        services.AddScoped<RetireQuestionHandler>();
+        services.AddScoped<PreviewGradeHandler>();
+        services.AddScoped<CreateUploadUrlHandler>();
+        services.AddScoped<UploadMediaFileHandler>();
+        services.AddScoped<UpdateMediaHandler>();
+        services.AddScoped<QuestionMembership>();
+        services.AddScoped<AdminTestSetsHandler>();
+        services.AddScoped<AdminBanksHandler>();
+        services.AddScoped<AdminUsersHandler>();
 
         services.AddAttemptExpiry();
         services.AddPerformanceSnapshots();

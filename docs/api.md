@@ -31,6 +31,8 @@ REST over HTTPS with JSON bodies. Base path: `/api/v1`. The ASP.NET Core backend
 }
 ```
 
+An `errors[]` entry may also carry a `message` (added in F14). Item-type validation in the admin console uses it to say what is wrong, e.g. `{ "field": "rationale.perOption.c", "code": "MISSING_RATIONALE", "message": "Option \"c\" needs a rationale." }`. Clients that only read `field` and `code` are unaffected.
+
 | Code | HTTP | Meaning |
 |---|---|---|
 | `VALIDATION_FAILED` | 400 | Body or query failed validation (see `errors[]`) |
@@ -50,6 +52,7 @@ REST over HTTPS with JSON bodies. Base path: `/api/v1`. The ASP.NET Core backend
 | `BACK_NAVIGATION_DISABLED` | 409 | The set doesn't allow going back |
 | `PAUSE_LIMIT_REACHED` | 409 | |
 | `INSUFFICIENT_QUESTIONS` | 422 | The builder found fewer items than requested. `available` is included. |
+| `INVALID_STATUS_TRANSITION` | 409 | Admin console (F14): the action doesn't fit the current status, e.g. approving a draft, editing a version in review, a second open version, or a retired question |
 | `RATE_LIMITED` | 429 | |
 | `FLAG_DUPLICATE` | 409 | You already reported this question version for that reason (added in F15) |
 | `FLAG_CLOSED` | 409 | The report is resolved or rejected and can no longer change (added in F15) |
@@ -464,6 +467,16 @@ Roles: **A** = author, **R** = reviewer, **Ad** = admin.
   - Resolving sends the reporter a `flag_resolved` notification in the `content` category, with the note as its body and `data.deepLink = "/settings/reports"`. Rejecting sends nothing.
   - Resolved and rejected are final, so any later PATCH is `409 FLAG_CLOSED`.
   - Resolving and rejecting are written to `audit_events` as `flag.resolve` and `flag.reject`.
+
+**Details settled in F14**
+- **Search.** `GET /admin/questions` returns one row per question, described by its latest version, with cursor paging (`limit` 1–100). `status=published` means "has a current version"; any other status matches the latest version, and `status=in_review` (the reviewer queue) lists the oldest first. `q` matches stem text (case-insensitive) or a question id. An extra `questionStatus=active|retired` filter lets set pickers skip retired questions.
+- **Workflow.** Every workflow call returns the whole question with all versions. `approve` takes an optional `{ notes }`; `reject` requires them. A question has at most one open version (draft, in review or approved) at a time, and "new version" copies the current published version, or the latest one when nothing is published. Retired questions take no new versions and can't be published. Any author may edit any draft; the version's `author_id` is the one who created it. Approving or rejecting your own version is `403 FORBIDDEN`.
+- **Media must be accessible before review.** Submitting for review and publishing check every asset the version shows: uploaded, alt text for images, captions and a transcript for audio and video (`400 VALIDATION_FAILED`, paths such as `exhibits[0].mediaId.altText`).
+- **`preview-grade`** returns the `GradeResult` shape (`{ points, maxPoints, isCorrect, detail }`). The response is checked like autosave first (`400` with paths under `response`).
+- **Uploads.** `POST /admin/media/upload-url` accepts PNG, JPEG, WebP, GIF, MP3, WAV, M4A, MP4 and WebM up to 25 MB (no SVG, which can carry script). It records the asset and returns `{ mediaId, uploadUrl, expiresAt }`. `uploadUrl` is a relative, signed link to **`PUT /admin/media/{id}/upload?exp=&sig=`**, which takes no token, like a presigned URL. The body must have the declared `Content-Type` and size (`204` on success, `403` for a bad or expired link). `PATCH /admin/media/{id}` takes `{ altText, captions, transcript }`, where captions are WebVTT text (starting `WEBVTT`) and transcripts plain text; `null` leaves a field as it is. Storage is behind `IMediaStorage` (local disk today), so S3 or MinIO can return a real presigned URL here later.
+- **Sets and banks.** List, get, create and patch include unpublished ones. A `PATCH` replaces whole parts: `settings`, the ordered `questionIds`, `isPublished` (banks: `name`, `description`, `accessTier`, `isPublished`, `questionIds`). Members must be published, active questions on the same track, listed once. A set also keeps each case study whole and in order, and a sample set has exactly 10 questions.
+- **Users.** `PATCH /admin/users/{id}` takes `{ role, planTier, unlock }`. Changing a role revokes that user's refresh sessions, so the new role applies when they sign in again (within the 15-minute access-token life). An admin can't change their own role (`403`). The first admin is made with the worker command `set-role <email> admin`.
+- Every write records an `audit_events` row (`question.create`, `question.publish`, `user.update`, ...) with ids and statuses only, never keys or rationales.
 
 ---
 

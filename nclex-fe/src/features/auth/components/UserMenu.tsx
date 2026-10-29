@@ -4,13 +4,13 @@ import Link from "next/link";
 import { useRouter } from "next/navigation";
 import { useEffect, useId, useRef, useState } from "react";
 import ui from "@/components/ui/ui.module.css";
-import { isModerator } from "@/features/flags/components/RequireModerator";
+import { isContentStaff } from "@/features/admin/roles";
 import { useAuth, useMe } from "../AuthProvider";
 import styles from "./UserMenu.module.css";
 
 /**
  * Top-bar account controls. Signed out: log in / sign up links. Signed in: a button that opens a
- * small menu with links to the dashboard, practice sets and settings, "Log out" and "Log out on all devices". It is a disclosure (button plus list of
+ * small menu with links to the dashboard, practice sets, settings and (for staff) the admin console, "Log out" and "Log out on all devices". It is a disclosure (button plus list of
  * buttons) rather than an ARIA menu, so Tab and Enter work as everywhere else; Escape closes it.
  */
 export function UserMenu() {
@@ -97,6 +97,13 @@ export function UserMenu() {
               Practice
             </Link>
           </li>
+          {isContentStaff(me?.role) && (
+            <li>
+              <Link href="/admin/questions" onClick={() => setOpen(false)}>
+                Admin console
+              </Link>
+            </li>
+          )}
           <li>
             <Link href="/performance" onClick={() => setOpen(false)}>
               Performance
@@ -122,13 +129,6 @@ export function UserMenu() {
               My reports
             </Link>
           </li>
-          {isModerator(me?.role) && (
-            <li>
-              <Link href="/admin/flags" onClick={() => setOpen(false)}>
-                Reported questions
-              </Link>
-            </li>
-          )}
           <li>
             <button type="button" disabled={busy} onClick={() => run(signOut)}>
               Log out

@@ -43,6 +43,17 @@ public sealed class QuestionBank
             CreatedAt = now,
         };
 
+    /// <summary>Creates a bank in the admin console (F14); it may start unpublished.</summary>
+    public static QuestionBank Create(ExamTrack track, string name, string? description, PlanTier accessTier, bool isPublished, DateTimeOffset now)
+    {
+        var bank = CreatePublished(Guid.CreateVersion7(now), track, name, description, accessTier, now);
+        bank.IsPublished = isPublished;
+        return bank;
+    }
+
+    /// <summary>Shows the bank to candidates, or hides it again.</summary>
+    public void SetPublished(bool isPublished) => IsPublished = isPublished;
+
     /// <summary>True when the bank already has these details, so an import has nothing to change.</summary>
     public bool HasDetails(string name, string? description, PlanTier accessTier) =>
         Name == name && Description == description && AccessTier == accessTier;

@@ -18,9 +18,14 @@ public interface IAuditLog
     /// </param>
     void RecordUserEvent(string action, Guid? userId, IPAddress? ip, object? metadata = null);
 
-    /// <summary>Records <paramref name="action"/> by <paramref name="actorId"/> on one entity, e.g. an admin resolving a report.</summary>
-    /// <param name="action">A name from <see cref="Domain.Audit.AuditActions"/>.</param>
-    /// <param name="entityType">An entity name from <see cref="Domain.Audit.AuditActions"/>, e.g. "question_flag".</param>
-    /// <param name="metadata">Extra details, stored as JSON. Never put answer keys or personal data here.</param>
-    void RecordEntityEvent(string action, Guid actorId, string entityType, string entityId, object? metadata = null);
+    /// <summary>
+    /// Records <paramref name="action"/> by <paramref name="actorId"/> on one entity, e.g. a reviewer
+    /// publishing a version (F14) or resolving a report (F15).
+    /// </summary>
+    /// <param name="action">A name from <see cref="Domain.Audit.AuditActions"/>, e.g. "question.publish".</param>
+    /// <param name="actorId">The staff member who acted; null for a command-line change such as set-role.</param>
+    /// <param name="entityType">An <c>*Entity</c> constant from <see cref="Domain.Audit.AuditActions"/>.</param>
+    /// <param name="entityId">The id of the thing acted on.</param>
+    /// <param name="metadata">Extra details, stored as JSON. Never put answer keys, rationales or personal data here.</param>
+    void RecordEntityEvent(string action, Guid? actorId, string entityType, string entityId, object? metadata = null);
 }

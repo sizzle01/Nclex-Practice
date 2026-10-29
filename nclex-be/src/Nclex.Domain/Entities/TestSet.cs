@@ -87,6 +87,17 @@ public sealed class TestSet
     }
 
     /// <summary>
+    /// Creates a curated set in the admin console (F14). Unlike an imported set it can start
+    /// unpublished, so an admin can build it up before candidates see it.
+    /// </summary>
+    public static TestSet CreateCurated(ExamTrack track, TestSetSettings settings, int questionCount, bool isPublished, DateTimeOffset now)
+    {
+        var set = CreatePrebuilt(Guid.CreateVersion7(now), track, settings, questionCount, now);
+        set.IsPublished = isPublished;
+        return set;
+    }
+
+    /// <summary>
     /// Creates a set made by the custom builder for one user (architecture.md 5.7). It is never
     /// published: only its owner sees it. <paramref name="generatorCriteria"/> keeps the filters it
     /// was built from, for "retake similar".
@@ -127,6 +138,9 @@ public sealed class TestSet
         AllowBackNav,
         IsSample,
         AccessTier);
+
+    /// <summary>Shows the set to candidates, or hides it again.</summary>
+    public void SetPublished(bool isPublished) => IsPublished = isPublished;
 
     /// <summary>Replaces the settings, for example when a content file changes them.</summary>
     public void Apply(TestSetSettings settings, int questionCount)

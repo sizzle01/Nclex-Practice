@@ -1,4 +1,5 @@
 using System.Text.Json;
+using System.Text.Json.Serialization;
 using Microsoft.AspNetCore.Mvc;
 using Nclex.Application.Common.Validation;
 
@@ -7,7 +8,11 @@ namespace Nclex.Api.Errors;
 /// <summary>One entry of <c>errors[]</c> in a VALIDATION_FAILED body (api.md section 1).</summary>
 /// <param name="Field">camelCase name of the request field, e.g. "password".</param>
 /// <param name="Code">What is wrong, e.g. "TOO_SHORT" (see ValidationErrorCodes).</param>
-public sealed record FieldError(string Field, string Code);
+/// <param name="Message">An explanation for authors (F14 item validation); left out when null.</param>
+public sealed record FieldError(
+    string Field,
+    string Code,
+    [property: JsonIgnore(Condition = JsonIgnoreCondition.WhenWritingNull)] string? Message = null);
 
 /// <summary>Builds 400 VALIDATION_FAILED responses in the api.md section 1 shape.</summary>
 public static class ValidationProblems

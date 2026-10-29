@@ -21,7 +21,8 @@ internal sealed class EfAuditLog(AppDbContext db, TimeProvider clock) : IAuditLo
             ip,
             clock.GetUtcNow()));
 
-    public void RecordEntityEvent(string action, Guid actorId, string entityType, string entityId, object? metadata = null) =>
+    // No IP: these handlers don't receive the client's address, and the actor's id identifies them.
+    public void RecordEntityEvent(string action, Guid? actorId, string entityType, string entityId, object? metadata = null) =>
         db.AuditEvents.Add(AuditEvent.Record(
             action,
             actorId,

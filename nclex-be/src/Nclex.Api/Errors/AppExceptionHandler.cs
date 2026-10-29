@@ -41,7 +41,7 @@ public sealed class AppExceptionHandler(IProblemDetailsService problemDetailsSer
         // errors[] shape as the validators' VALIDATION_FAILED responses.
         if (appException.FieldErrors.Count > 0)
         {
-            problem.Extensions["errors"] = appException.FieldErrors.Select(e => new FieldError(e.Field, e.Code)).ToList();
+            problem.Extensions["errors"] = appException.FieldErrors.Select(e => new FieldError(e.Field, e.Code, e.Message)).ToList();
         }
 
         foreach (var (name, value) in appException.Details)

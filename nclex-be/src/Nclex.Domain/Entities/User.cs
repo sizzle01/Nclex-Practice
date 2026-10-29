@@ -162,6 +162,27 @@ public sealed class User
         UpdatedAt = now;
     }
 
+    /// <summary>Lifts a lock early, when an admin unlocks the account (api.md section 8).</summary>
+    public void Unlock(DateTimeOffset now)
+    {
+        LockedUntil = null;
+        UpdatedAt = now;
+    }
+
+    /// <summary>Changes what the user may do; an admin action (api.md section 8).</summary>
+    public void ChangeRole(UserRole role, DateTimeOffset now)
+    {
+        Role = role;
+        UpdatedAt = now;
+    }
+
+    /// <summary>Moves the account between free and premium; an admin action until billing exists.</summary>
+    public void ChangePlanTier(PlanTier planTier, DateTimeOffset now)
+    {
+        PlanTier = planTier;
+        UpdatedAt = now;
+    }
+
     /// <summary>
     /// Switches the login address to <paramref name="newEmail"/> once the user has followed the
     /// link sent there, which also proves they own it.

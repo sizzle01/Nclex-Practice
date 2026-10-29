@@ -403,7 +403,9 @@ Global requirements: visible focus rings; text scale from 100% to 200% without h
 | `/admin/questions/[id]` | Version history plus editor (item-type form + live preview + preview-grade) | `/admin/question-*` |
 | `/admin/review` | Reviewer queue (`in_review`) | `/admin/questions?status=in_review` |
 | `/admin/flags` | Moderation queue | `/admin/flags` |
-| `/admin/test-sets`, `/admin/banks` | Curated sets and banks | `/admin/test-sets`, `/admin/question-banks` |
+| `/admin/questions/new` | New question: track, access, then the same editor (added in F14) | `POST /admin/questions` |
+| `/admin/test-sets`, `/admin/banks` | Curated sets and banks; `/new` and `/[id]` edit settings and membership (F14) | `/admin/test-sets`, `/admin/question-banks` |
+| `/admin/users` | Role, plan tier and unlock (added in F14; api.md lists the endpoint but no screen) | `/admin/users` |
 
 App shell (all authenticated pages): top bar with the track badge, the **notification bell** (unread badge fed by SSE) and the user menu.
 
