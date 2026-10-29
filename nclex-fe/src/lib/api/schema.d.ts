@@ -4,6 +4,168 @@
  */
 
 export interface paths {
+    "/api/v1/admin/flags": {
+        parameters: {
+            query?: never;
+            header?: never;
+            path?: never;
+            cookie?: never;
+        };
+        get: {
+            parameters: {
+                query?: {
+                    status?: components["schemas"]["FlagStatus"];
+                    cursor?: string;
+                    limit?: number | string;
+                };
+                header?: never;
+                path?: never;
+                cookie?: never;
+            };
+            requestBody?: never;
+            responses: {
+                /** @description OK */
+                200: {
+                    headers: {
+                        [name: string]: unknown;
+                    };
+                    content: {
+                        "application/json": components["schemas"]["FlagQueuePage"];
+                    };
+                };
+                /** @description Bad Request */
+                400: {
+                    headers: {
+                        [name: string]: unknown;
+                    };
+                    content: {
+                        "application/problem+json": components["schemas"]["ProblemDetails"];
+                        "application/json": unknown;
+                    };
+                };
+                /** @description Unauthorized */
+                401: {
+                    headers: {
+                        [name: string]: unknown;
+                    };
+                    content: {
+                        "application/problem+json": components["schemas"]["ProblemDetails"];
+                        "application/json": unknown;
+                    };
+                };
+                /** @description Forbidden */
+                403: {
+                    headers: {
+                        [name: string]: unknown;
+                    };
+                    content: {
+                        "application/problem+json": components["schemas"]["ProblemDetails"];
+                        "application/json": unknown;
+                    };
+                };
+            };
+        };
+        put?: never;
+        post?: never;
+        delete?: never;
+        options?: never;
+        head?: never;
+        patch?: never;
+        trace?: never;
+    };
+    "/api/v1/admin/flags/{id}": {
+        parameters: {
+            query?: never;
+            header?: never;
+            path?: never;
+            cookie?: never;
+        };
+        get?: never;
+        put?: never;
+        post?: never;
+        delete?: never;
+        options?: never;
+        head?: never;
+        patch: {
+            parameters: {
+                query?: never;
+                header?: never;
+                path: {
+                    id: string;
+                };
+                cookie?: never;
+            };
+            requestBody: {
+                content: {
+                    "application/json": components["schemas"]["UpdateFlagRequest"];
+                    "text/json": components["schemas"]["UpdateFlagRequest"];
+                    "application/*+json": components["schemas"]["UpdateFlagRequest"];
+                };
+            };
+            responses: {
+                /** @description OK */
+                200: {
+                    headers: {
+                        [name: string]: unknown;
+                    };
+                    content: {
+                        "application/json": components["schemas"]["FlagQueueItem"];
+                    };
+                };
+                /** @description Bad Request */
+                400: {
+                    headers: {
+                        [name: string]: unknown;
+                    };
+                    content: {
+                        "application/problem+json": components["schemas"]["ProblemDetails"];
+                        "application/json": unknown;
+                    };
+                };
+                /** @description Unauthorized */
+                401: {
+                    headers: {
+                        [name: string]: unknown;
+                    };
+                    content: {
+                        "application/problem+json": components["schemas"]["ProblemDetails"];
+                        "application/json": unknown;
+                    };
+                };
+                /** @description Forbidden */
+                403: {
+                    headers: {
+                        [name: string]: unknown;
+                    };
+                    content: {
+                        "application/problem+json": components["schemas"]["ProblemDetails"];
+                        "application/json": unknown;
+                    };
+                };
+                /** @description Not Found */
+                404: {
+                    headers: {
+                        [name: string]: unknown;
+                    };
+                    content: {
+                        "application/problem+json": components["schemas"]["ProblemDetails"];
+                        "application/json": unknown;
+                    };
+                };
+                /** @description Conflict */
+                409: {
+                    headers: {
+                        [name: string]: unknown;
+                    };
+                    content: {
+                        "application/problem+json": components["schemas"]["ProblemDetails"];
+                        "application/json": unknown;
+                    };
+                };
+            };
+        };
+        trace?: never;
+    };
     "/api/v1/attempts": {
         parameters: {
             query?: never;
@@ -1775,6 +1937,147 @@ export interface paths {
         patch?: never;
         trace?: never;
     };
+    "/api/v1/question-versions/{id}/flags": {
+        parameters: {
+            query?: never;
+            header?: never;
+            path?: never;
+            cookie?: never;
+        };
+        get?: never;
+        put?: never;
+        post: {
+            parameters: {
+                query?: never;
+                header?: never;
+                path: {
+                    id: string;
+                };
+                cookie?: never;
+            };
+            requestBody: {
+                content: {
+                    "application/json": components["schemas"]["ReportIssueRequest"];
+                    "text/json": components["schemas"]["ReportIssueRequest"];
+                    "application/*+json": components["schemas"]["ReportIssueRequest"];
+                };
+            };
+            responses: {
+                /** @description Created */
+                201: {
+                    headers: {
+                        [name: string]: unknown;
+                    };
+                    content: {
+                        "application/json": components["schemas"]["MyFlagView"];
+                    };
+                };
+                /** @description Bad Request */
+                400: {
+                    headers: {
+                        [name: string]: unknown;
+                    };
+                    content: {
+                        "application/problem+json": components["schemas"]["ProblemDetails"];
+                        "application/json": unknown;
+                    };
+                };
+                /** @description Unauthorized */
+                401: {
+                    headers: {
+                        [name: string]: unknown;
+                    };
+                    content: {
+                        "application/problem+json": components["schemas"]["ProblemDetails"];
+                        "application/json": unknown;
+                    };
+                };
+                /** @description Not Found */
+                404: {
+                    headers: {
+                        [name: string]: unknown;
+                    };
+                    content: {
+                        "application/problem+json": components["schemas"]["ProblemDetails"];
+                        "application/json": unknown;
+                    };
+                };
+                /** @description Conflict */
+                409: {
+                    headers: {
+                        [name: string]: unknown;
+                    };
+                    content: {
+                        "application/problem+json": components["schemas"]["ProblemDetails"];
+                        "application/json": unknown;
+                    };
+                };
+            };
+        };
+        delete?: never;
+        options?: never;
+        head?: never;
+        patch?: never;
+        trace?: never;
+    };
+    "/api/v1/me/flags": {
+        parameters: {
+            query?: never;
+            header?: never;
+            path?: never;
+            cookie?: never;
+        };
+        get: {
+            parameters: {
+                query?: {
+                    cursor?: string;
+                    limit?: number | string;
+                };
+                header?: never;
+                path?: never;
+                cookie?: never;
+            };
+            requestBody?: never;
+            responses: {
+                /** @description OK */
+                200: {
+                    headers: {
+                        [name: string]: unknown;
+                    };
+                    content: {
+                        "application/json": components["schemas"]["MyFlagPage"];
+                    };
+                };
+                /** @description Bad Request */
+                400: {
+                    headers: {
+                        [name: string]: unknown;
+                    };
+                    content: {
+                        "application/problem+json": components["schemas"]["ProblemDetails"];
+                        "application/json": unknown;
+                    };
+                };
+                /** @description Unauthorized */
+                401: {
+                    headers: {
+                        [name: string]: unknown;
+                    };
+                    content: {
+                        "application/problem+json": components["schemas"]["ProblemDetails"];
+                        "application/json": unknown;
+                    };
+                };
+            };
+        };
+        put?: never;
+        post?: never;
+        delete?: never;
+        options?: never;
+        head?: never;
+        patch?: never;
+        trace?: never;
+    };
     "/healthz": {
         parameters: {
             query?: never;
@@ -3330,6 +3633,47 @@ export interface components {
             /** Format: int32 */
             clientSeq: number | string;
         };
+        FlaggedQuestion: {
+            /** Format: uuid */
+            questionId: string;
+            /** Format: uuid */
+            versionId: string;
+            /** Format: int32 */
+            version: number | string;
+            itemType: components["schemas"]["ItemType"];
+            stemPreview: string;
+        };
+        FlagPerson: {
+            /** Format: uuid */
+            id: string;
+            displayName: null | string;
+        };
+        FlagQueueItem: {
+            /** Format: uuid */
+            id: string;
+            status: components["schemas"]["FlagStatus"];
+            reason: components["schemas"]["FlagReason"];
+            comment: null | string;
+            question: components["schemas"]["FlaggedQuestion"];
+            reporter: components["schemas"]["FlagPerson"];
+            assignee: null | components["schemas"]["FlagPerson"];
+            resolutionNote: null | string;
+            resolvedBy: null | components["schemas"]["FlagPerson"];
+            /** Format: date-time */
+            resolvedAt: null | string;
+            /** Format: uuid */
+            attemptId: null | string;
+            /** Format: date-time */
+            createdAt: string;
+        };
+        FlagQueuePage: {
+            items: components["schemas"]["FlagQueueItem"][];
+            nextCursor: null | string;
+        };
+        /** @enum {unknown} */
+        FlagReason: "rationale_unclear" | "incorrect_answer_key" | "typo" | "outdated_guideline" | "media_problem" | "other";
+        /** @enum {unknown} */
+        FlagStatus: "open" | "triaged" | "resolved" | "rejected";
         ForgotPasswordRequest: {
             email: string;
         };
@@ -3406,6 +3750,27 @@ export interface components {
             durationMs: null | number | string;
             /** Format: date-time */
             expiresAt: string;
+        };
+        MyFlagPage: {
+            items: components["schemas"]["MyFlagView"][];
+            nextCursor: null | string;
+        };
+        MyFlagView: {
+            /** Format: uuid */
+            id: string;
+            /** Format: uuid */
+            questionVersionId: string;
+            stemPreview: string;
+            reason: components["schemas"]["FlagReason"];
+            comment: null | string;
+            status: components["schemas"]["FlagStatus"];
+            resolutionNote: null | string;
+            /** Format: uuid */
+            attemptId: null | string;
+            /** Format: date-time */
+            createdAt: string;
+            /** Format: date-time */
+            resolvedAt: null | string;
         };
         NavigateRequest: {
             /** Format: int32 */
@@ -3526,6 +3891,12 @@ export interface components {
         ReadinessResponse: {
             status: components["schemas"]["HealthState"];
             checks: components["schemas"]["ReadinessChecks"];
+        };
+        ReportIssueRequest: {
+            reason: null | components["schemas"]["FlagReason"];
+            comment?: null | string;
+            /** Format: uuid */
+            attemptId?: null | string;
         };
         ResetPasswordRequest: {
             token: string;
@@ -3706,6 +4077,12 @@ export interface components {
         UnreadCountResponse: {
             /** Format: int32 */
             count: number | string;
+        };
+        UpdateFlagRequest: {
+            status?: null | components["schemas"]["FlagStatus"];
+            resolutionNote?: null | string;
+            /** Format: uuid */
+            assigneeId?: null | string;
         };
         UpdateItemMarksRequest: {
             flagged?: null | boolean;
