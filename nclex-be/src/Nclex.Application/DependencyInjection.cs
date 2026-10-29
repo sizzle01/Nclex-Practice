@@ -38,6 +38,7 @@ using Nclex.Application.Catalog.CustomSets;
 using Nclex.Application.Catalog.GetTestSet;
 using Nclex.Application.Catalog.ListQuestionBanks;
 using Nclex.Application.Catalog.ListTestSets;
+using Nclex.Application.Common;
 using Nclex.Application.Content.ImportQuestions;
 using Nclex.Application.Email;
 using Nclex.Application.Flags.Moderation;
@@ -196,6 +197,8 @@ public static class DependencyInjection
     public static IServiceCollection AddAttemptExpiry(this IServiceCollection services)
     {
         services.AddItemTypes();
+        // Grading and the sweeper record metrics; both hosts share this one instance (architecture.md section 9).
+        services.TryAddSingleton<NclexMetrics>();
         services.AddSingleton<IReadinessPolicy, ReadinessPolicy>();
         services.AddScoped<DimensionNames>();
         services.AddScoped<IGradingService, GradingService>();

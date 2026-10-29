@@ -3,6 +3,7 @@ using Nclex.Application;
 using Nclex.Infrastructure;
 using Nclex.Infrastructure.Email;
 using Nclex.Infrastructure.Jobs;
+using Nclex.Infrastructure.Telemetry;
 using Nclex.Worker;
 using Serilog;
 using Serilog.Formatting.Compact;
@@ -50,6 +51,7 @@ try
     builder.Services.AddJobScheduling();
     builder.Services.AddJobServer();
     builder.Services.AddSingleton(TimeProvider.System);
+    builder.Services.AddNclexTelemetry(builder.Configuration, "nclex-worker");
 
     var host = builder.Build();
     // The expiry jobs grade attempts, so a missing item-type module must stop the worker at start.

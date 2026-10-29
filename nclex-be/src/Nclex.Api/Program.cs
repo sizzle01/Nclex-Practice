@@ -15,6 +15,9 @@ using Nclex.Application;
 using Nclex.Infrastructure;
 using Nclex.Infrastructure.Jobs;
 using Nclex.Infrastructure.Security;
+using Nclex.Infrastructure.Telemetry;
+using OpenTelemetry.Metrics;
+using OpenTelemetry.Trace;
 using Serilog;
 
 // Bootstrap logger so failures during startup are still logged; replaced by the configured logger below.
@@ -27,7 +30,7 @@ try
     var builder = WebApplication.CreateBuilder(args);
 
     builder.Services.AddHttpContextAccessor();
-    builder.Services.AddSingleton<Serilog.Core.ILogEventEnricher, RequestIdEnricher>();
+    builder.Services.AddSingleton<Serilog.Core.ILogEventEnricher, RequestContextEnricher>();
     builder.Services.AddSerilog((services, logger) => logger
         .ReadFrom.Configuration(builder.Configuration)
         .ReadFrom.Services(services)
@@ -71,6 +74,13 @@ try
     builder.Services.AddApiRateLimiting();
     builder.Services.AddReadinessChecks();
     builder.Services.AddSingleton(TimeProvider.System);
+    builder.Services.AddNclexTelemetry(builder.Configuration, "nclex-api")
+        .WithTracing(tracing => tracing.AddAspNetCoreInstrumentation(options =>
+            // Probes arrive every few seconds and would bury real traffic.
+            options.Filter = http => !http.Request.Path.StartsWithSegments("/healthz")
+                && !http.Request.Path.StartsWithSegments("/readyz")))
+        // http.server.request.duration: the p95 latency the alerts and load test use.
+        .WithMetrics(metrics => metrics.AddAspNetCoreInstrumentation());
 
     var app = builder.Build();
     // Fail fast if an MVP item type has no grader (interfaces.md section 3).

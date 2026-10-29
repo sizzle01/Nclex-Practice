@@ -37,6 +37,7 @@ public static class NotificationStreamEndpoint
         IStreamTicketStore tickets,
         INotificationBus bus,
         UnreadCountHandler unreadCount,
+        NclexMetrics metrics,
         IOptions<JsonOptions> json)
     {
         var cancellationToken = http.RequestAborted;
@@ -61,6 +62,7 @@ public static class NotificationStreamEndpoint
         _ = PingAsync(events.Writer, cancellationToken);
 
         var serializer = json.Value.SerializerOptions;
+        metrics.SseConnectionOpened();
         try
         {
             await WriteAsync(http.Response, "unread_count", await unreadCount.HandleAsync(user, cancellationToken), serializer, cancellationToken);
@@ -83,6 +85,10 @@ public static class NotificationStreamEndpoint
         catch (OperationCanceledException) when (cancellationToken.IsCancellationRequested)
         {
             // The client went away; disposing the subscription above unsubscribes from Redis.
+        }
+        finally
+        {
+            metrics.SseConnectionClosed();
         }
     }
 

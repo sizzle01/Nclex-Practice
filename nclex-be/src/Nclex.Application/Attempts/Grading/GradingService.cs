@@ -1,6 +1,7 @@
 using Microsoft.EntityFrameworkCore;
 using Nclex.Application.Abstractions;
 using Nclex.Application.Attempts.Results;
+using Nclex.Application.Common;
 using Nclex.Application.Notifications;
 using Nclex.Domain.Entities;
 using Nclex.Domain.Grading;
@@ -19,6 +20,7 @@ public sealed class GradingService(
     IReadinessPolicy readiness,
     DimensionNames dimensionNames,
     INotificationPublisher notifications,
+    NclexMetrics metrics,
     TimeProvider clock) : IGradingService
 {
     public async Task GradeLockedTutorItemsAsync(Attempt attempt, CancellationToken cancellationToken)
@@ -37,6 +39,27 @@ public sealed class GradingService(
     }
 
     public async Task<AttemptResult> FinalizeAttemptAsync(
+        Attempt attempt,
+        IReadOnlyList<AttemptItem> items,
+        IReadOnlySet<int> seenPositions,
+        CancellationToken cancellationToken)
+    {
+        // Grading duration and any grading failure are on-call signals (architecture.md section 9).
+        var started = clock.GetTimestamp();
+        try
+        {
+            var result = await GradeAndScoreAsync(attempt, items, seenPositions, cancellationToken);
+            metrics.RecordGrading(clock.GetElapsedTime(started), succeeded: true);
+            return result;
+        }
+        catch
+        {
+            metrics.RecordGrading(clock.GetElapsedTime(started), succeeded: false);
+            throw;
+        }
+    }
+
+    private async Task<AttemptResult> GradeAndScoreAsync(
         Attempt attempt,
         IReadOnlyList<AttemptItem> items,
         IReadOnlySet<int> seenPositions,

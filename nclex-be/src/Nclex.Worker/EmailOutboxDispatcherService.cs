@@ -37,6 +37,8 @@ public sealed partial class EmailOutboxDispatcherService(
                 }
 
                 await dispatcher.DispatchDueAsync(stoppingToken);
+                // Measured after sending, so the gauge shows what is still waiting.
+                await dispatcher.MeasureLagAsync(stoppingToken);
             }
             catch (Exception ex) when (!stoppingToken.IsCancellationRequested)
             {
