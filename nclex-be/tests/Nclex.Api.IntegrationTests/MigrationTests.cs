@@ -36,6 +36,8 @@ public sealed class MigrationTests(ApiFactory factory)
     [InlineData("item_state", "unseen,seen,answered,locked")]
     [InlineData("notification_type", "result_pass,result_fail,result_ready,draft_reminder,streak,goal_met,flag_resolved,security,system")]
     [InlineData("notification_category", "results,reminders,engagement,content,security")]
+    [InlineData("flag_reason", "rationale_unclear,incorrect_answer_key,typo,outdated_guideline,media_problem,other")]
+    [InlineData("flag_status", "open,triaged,resolved,rejected")]
     public async Task Migrations_create_enums_with_labels_in_ddl_order(string enumName, string labels)
     {
         var actual = await QueryAsync(
@@ -357,6 +359,61 @@ public sealed class MigrationTests(ApiFactory factory)
     [InlineData("fk_notifications_attempts_related_attempt_id", "n")]
     [InlineData("fk_notification_preferences_users_user_id", "c")]
     public async Task F12_migration_sets_the_notification_delete_rules(string foreignKey, string rule)
+    {
+        var rules = await QueryAsync($"SELECT confdeltype::text AS \"Value\" FROM pg_constraint WHERE conname = {foreignKey}");
+
+        rules.ShouldHaveSingleItem().ShouldBe(rule);
+    }
+
+    [Theory]
+    [InlineData("flags_queue_idx", "(status, created_at) WHERE (status = ANY (ARRAY['open'::flag_status, 'triaged'::flag_status]))")]
+    [InlineData("ix_question_flags_user_id_question_version_id_reason", "(user_id, question_version_id, reason)")]
+    public async Task F15_migration_creates_the_flag_indexes(string index, string ending)
+    {
+        var definition = await QueryAsync($"SELECT indexdef AS \"Value\" FROM pg_indexes WHERE indexname = {index}");
+
+        definition.ShouldHaveSingleItem().ShouldEndWith(ending);
+    }
+
+    [Fact]
+    public async Task F15_migration_allows_one_report_per_user_version_and_reason()
+    {
+        var unique = await QueryAsync(
+            $"SELECT indexdef AS \"Value\" FROM pg_indexes WHERE indexname = {"ix_question_flags_user_id_question_version_id_reason"}");
+
+        unique.ShouldHaveSingleItem().ShouldStartWith("CREATE UNIQUE INDEX");
+    }
+
+    [Fact]
+    public async Task F15_migration_limits_comments_to_2000_characters()
+    {
+        var check = await QueryAsync(
+            $"SELECT pg_get_constraintdef(oid) AS \"Value\" FROM pg_constraint WHERE conname = {"question_flags_comment_check"}");
+
+        check.ShouldHaveSingleItem().ShouldBe("CHECK ((char_length(comment) <= 2000))");
+    }
+
+    [Theory]
+    [InlineData("question_flags", "status", "USER-DEFINED|NO|'open'::flag_status")]
+    [InlineData("question_flags", "comment", "text|YES|")]
+    [InlineData("question_flags", "resolution_note", "text|YES|")]
+    [InlineData("question_flags", "created_at", "timestamp with time zone|NO|now()")]
+    public async Task F15_migration_creates_the_flag_columns_as_in_the_ddl(string table, string column, string typeNullDefault)
+    {
+        var rows = await QueryAsync(
+            $"""
+            SELECT data_type || '|' || is_nullable || '|' || coalesce(column_default, '') AS "Value"
+            FROM information_schema.columns WHERE table_name = {table} AND column_name = {column}
+            """);
+
+        rows.ShouldHaveSingleItem().ShouldBe(typeNullDefault);
+    }
+
+    [Theory]
+    [InlineData("fk_question_flags_attempts_attempt_id", "n")]
+    [InlineData("fk_question_flags_users_user_id", "a")]
+    [InlineData("fk_question_flags_question_versions_question_version_id", "a")]
+    public async Task F15_migration_sets_the_flag_delete_rules(string foreignKey, string rule)
     {
         var rules = await QueryAsync($"SELECT confdeltype::text AS \"Value\" FROM pg_constraint WHERE conname = {foreignKey}");
 

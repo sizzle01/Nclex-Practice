@@ -77,4 +77,13 @@ public sealed class NotificationCopyTests
 
         text.Body.ShouldContain("until 28 Oct 2026 at 14:30 UTC");
     }
+
+    [Fact]
+    public void A_resolved_report_thanks_the_reporter_and_shows_the_note_as_written()
+    {
+        var text = NotificationCopy.FlagResolved("You were right; the key is fixed.");
+
+        text.Title.ShouldBe("Thanks — we reviewed your report");
+        text.Body.ShouldBe("You were right; the key is fixed.");
+    }
 }

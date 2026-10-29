@@ -17,9 +17,10 @@ public sealed class ExamScenario(ApiFactory factory, AttemptsApi attempts)
     /// <param name="settings">Set settings, e.g. <c>new { revealMode = "exam", passThreshold = 0.5 }</c>.</param>
     public async Task<Started> StartAsync(object settings)
     {
-        var (questions, setId) = (CatalogContent.NewIds(3), Guid.NewGuid());
-        // Sorts after other tests' sets, so importing it mid-run does not shift the catalog's
-        // offset-paged listing under a test that is paging it (TestSetsTests).
+        // A time-ordered id, so each new title sorts after every earlier one: importing it mid-run
+        // then never lands before the position of a test that is paging the catalog's offset-paged
+        // listing (TestSetsTests), even with many of these sets (the F15 flag tests make dozens).
+        var (questions, setId) = (CatalogContent.NewIds(3), Guid.CreateVersion7());
         var title = $"Zz notify {setId:N}";
         await _content.ImportOkAsync(CatalogContent.FileWith(
             "RN",
