@@ -36,7 +36,7 @@ environments never see the local keys in it.
 
 | Setting | Secret | Example / default | Notes |
 |---|---|---|---|
-| `ConnectionStrings__Postgres` | yes | `Host=…;Database=nclex;Username=nclex_app;Password=…` | Required. |
+| `ConnectionStrings__Postgres` | yes | `Host=…;Database=nclex;Username=nclex_app;Password=…;Maximum Pool Size=40` | Required. Always set `Maximum Pool Size`: Npgsql's default of 100 per process can exceed Postgres's `max_connections` and fail requests with "too many clients" (seen in the F16 load test). Keep (API tasks × pool) + (worker tasks × pool) + 10 for admin below `max_connections`, or put RDS Proxy in front. |
 | `ConnectionStrings__Redis` | yes | `primary.xxx.cache.amazonaws.com:6379,ssl=true,password=…` | Required. If Redis is down the API keeps serving, with `/readyz` reporting `degraded`. |
 | `Jwt__SigningKey` | yes | 32 or more random bytes | The API refuses to start without it. Changing it signs everyone out within 15 minutes. |
 | `Jwt__Issuer`, `Jwt__Audience` | no | `nclex-api`, `nclex-web` | From `appsettings.json`. |

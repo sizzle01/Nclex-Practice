@@ -13,7 +13,9 @@ name: nclex
 x-app-settings: &app-settings
   ASPNETCORE_ENVIRONMENT: Production
   DOTNET_ENVIRONMENT: Production
-  ConnectionStrings__Postgres: Host=postgres;Port=5432;Database=nclex;Username=nclex;Password=nclex
+  # Postgres allows 100 connections; capping each process's pool keeps API + worker below that
+  # (the F16 load test hit "too many clients" without it). Size it per environment: docs/operations.md.
+  ConnectionStrings__Postgres: Host=postgres;Port=5432;Database=nclex;Username=nclex;Password=nclex;Maximum Pool Size=40
   ConnectionStrings__Redis: redis:6379
   MediaStorage__LocalRoot: /data/media
   OTEL_EXPORTER_OTLP_ENDPOINT: http://otel:18889
