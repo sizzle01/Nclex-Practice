@@ -1,3 +1,4 @@
+using System.Text.Json.Serialization;
 using Nclex.Domain.Flags;
 
 namespace Nclex.Application.Flags.Moderation;
@@ -13,5 +14,7 @@ public sealed record UpdateFlagRequest(FlagStatus? Status = null, string? Resolu
     /// <summary>Longest note a moderator may write; the same limit as a reporter's comment.</summary>
     public const int MaxNoteLength = QuestionFlag.MaxCommentLength;
 
+    // Derived, so not part of the request body or the OpenAPI schema.
+    [JsonIgnore]
     public bool Closes => Status is FlagStatus.Resolved or FlagStatus.Rejected;
 }
