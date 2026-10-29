@@ -3,9 +3,11 @@ import { refreshSession } from "./refreshSession";
 import { getAccessToken } from "./sessionStore";
 
 // Auth endpoints authenticate with the refresh cookie, not the access token, and must never
-// trigger a refresh themselves (that would loop). logout-all is the one that needs the token.
+// trigger a refresh themselves (that would loop). The exceptions are the [Authorize] ones.
+const authEndpointsNeedingToken = new Set(["/api/v1/auth/logout-all", "/api/v1/auth/verify-email/resend"]);
+
 function usesAccessToken(schemaPath: string) {
-  return !schemaPath.startsWith("/api/v1/auth/") || schemaPath === "/api/v1/auth/logout-all";
+  return !schemaPath.startsWith("/api/v1/auth/") || authEndpointsNeedingToken.has(schemaPath);
 }
 
 // Copies of outgoing requests, kept until the response arrives, so a request can be sent again
