@@ -95,7 +95,9 @@ public static class NotificationStreamEndpoint
     private static void StartEventStream(HttpContext http)
     {
         http.Response.ContentType = "text/event-stream";
-        http.Response.Headers.CacheControl = "no-cache";
+        // no-transform stops compressing proxies, including the production Next.js server, from
+        // gzipping the stream: compression holds events back until a buffer fills (found in F16).
+        http.Response.Headers.CacheControl = "no-cache, no-transform";
         // Tells nginx-style proxies (and the Next.js rewrite) not to hold events back.
         http.Response.Headers["X-Accel-Buffering"] = "no";
         http.Features.Get<IHttpResponseBodyFeature>()?.DisableBuffering();
