@@ -1,3 +1,4 @@
+using System.Diagnostics.CodeAnalysis;
 using Microsoft.EntityFrameworkCore;
 using Nclex.Application.Abstractions;
 using Nclex.Domain.Entities;
@@ -11,6 +12,10 @@ namespace Nclex.Application.Admin.Questions.Search;
 /// </summary>
 public sealed class SearchQuestionsHandler(IAppDbContext db)
 {
+    // ToLower() here is translated to SQL lower(); it never runs in .NET, so the culture rules don't apply.
+    // (Npgsql can't translate ToLowerInvariant.)
+    [SuppressMessage("Globalization", "CA1304", Justification = "Translated to SQL lower() by EF Core.")]
+    [SuppressMessage("Globalization", "CA1311", Justification = "Translated to SQL lower() by EF Core.")]
     public async Task<QuestionSearchPage> HandleAsync(SearchQuestionsRequest request, CancellationToken cancellationToken)
     {
         var (limit, offset) = AdminPaging.Read(request.Limit, request.Cursor);
@@ -54,7 +59,7 @@ public sealed class SearchQuestionsHandler(IAppDbContext db)
             var pattern = SearchPattern.Containing(text);
             rows = Guid.TryParse(text, out var id)
                 ? rows.Where(r => r.Question.Id == id)
-                : rows.Where(r => EF.Functions.Like(r.Version.Stem.ToLowerInvariant(), pattern, SearchPattern.Escape));
+                : rows.Where(r => EF.Functions.Like(r.Version.Stem.ToLower(), pattern, SearchPattern.Escape));
         }
 
         rows = request.Status == VersionStatus.InReview

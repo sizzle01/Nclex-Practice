@@ -1,3 +1,4 @@
+using System.Diagnostics.CodeAnalysis;
 using Microsoft.EntityFrameworkCore;
 using Nclex.Application.Abstractions;
 using Nclex.Application.Auth.Sessions;
@@ -18,6 +19,10 @@ public sealed class AdminUsersHandler(
     IAuditLog audit,
     TimeProvider clock)
 {
+    // ToLower() here is translated to SQL lower(); it never runs in .NET, so the culture rules don't apply.
+    // (Npgsql can't translate ToLowerInvariant.)
+    [SuppressMessage("Globalization", "CA1304", Justification = "Translated to SQL lower() by EF Core.")]
+    [SuppressMessage("Globalization", "CA1311", Justification = "Translated to SQL lower() by EF Core.")]
     public async Task<AdminUserPage> ListAsync(ListAdminUsersRequest request, CancellationToken cancellationToken)
     {
         var (limit, offset) = AdminPaging.Read(request.Limit, request.Cursor);
@@ -26,8 +31,8 @@ public sealed class AdminUsersHandler(
         {
             var pattern = SearchPattern.Containing(request.Q);
             users = users.Where(u =>
-                EF.Functions.Like(u.Email.ToLowerInvariant(), pattern, SearchPattern.Escape)
-                || (u.DisplayName != null && EF.Functions.Like(u.DisplayName.ToLowerInvariant(), pattern, SearchPattern.Escape)));
+                EF.Functions.Like(u.Email.ToLower(), pattern, SearchPattern.Escape)
+                || (u.DisplayName != null && EF.Functions.Like(u.DisplayName.ToLower(), pattern, SearchPattern.Escape)));
         }
 
         var rows = await users
