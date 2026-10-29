@@ -398,6 +398,7 @@ Global requirements: visible focus rings; text scale from 100% to 200% without h
 | `/notifications` | Full notification history | `/notifications` |
 | `/settings/account` | Profile, track, change email or password, delete account | `/me*` |
 | `/settings/notifications` | Per-category in-app / email toggles | `/me/notification-preferences` |
+| `/settings/reports` | "My reports": questions I reported, their status and the resolution note (added in F15) | `/me/flags` |
 | `/admin/questions` | Question search and list | `/admin/questions` |
 | `/admin/questions/[id]` | Version history plus editor (item-type form + live preview + preview-grade) | `/admin/question-*` |
 | `/admin/review` | Reviewer queue (`in_review`) | `/admin/questions?status=in_review` |

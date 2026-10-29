@@ -51,6 +51,8 @@ REST over HTTPS with JSON bodies. Base path: `/api/v1`. The ASP.NET Core backend
 | `PAUSE_LIMIT_REACHED` | 409 | |
 | `INSUFFICIENT_QUESTIONS` | 422 | The builder found fewer items than requested. `available` is included. |
 | `RATE_LIMITED` | 429 | |
+| `FLAG_DUPLICATE` | 409 | You already reported this question version for that reason (added in F15) |
+| `FLAG_CLOSED` | 409 | The report is resolved or rejected and can no longer change (added in F15) |
 
 ### Shared schemas
 
@@ -408,6 +410,21 @@ data: {}
 
 Returns `409` for a duplicate (same user, version and reason).
 
+Details added in F15:
+
+- **Report body:** `reason` is required, and `comment` may be up to 2000 characters. `attemptId`, if sent, must be your attempt (else `404`) and must have served that version (else `400` on `attemptId`). Only published or superseded versions can be reported; any other version is `404`. The duplicate code is `FLAG_DUPLICATE`.
+- **Report object** (the `201` body and each `/me/flags` item):
+
+  ```json
+  { "id": "…", "questionVersionId": "…", "stemPreview": "The nurse is caring for…",
+    "reason": "incorrect_answer_key", "comment": "C looks right too", "status": "resolved",
+    "resolutionNote": "Thanks, the key now accepts C as well.", "attemptId": "…",
+    "createdAt": "…", "resolvedAt": "…" }
+  ```
+
+  `resolutionNote` is sent only when the report is resolved. A rejected report's note is for moderators only. Neither object ever carries the answer key or the rationale.
+- **`/me/flags`** is cursor-paged, newest first.
+
 ---
 
 ## 8. Admin and content (role-gated)
@@ -434,6 +451,18 @@ Roles: **A** = author, **R** = reviewer, **Ad** = admin.
 | GET | `/admin/flags?status=open` | R Ad | Moderation queue |
 | PATCH | `/admin/flags/{id}` | R Ad | `{ status, resolutionNote, assigneeId }`. Resolving notifies the reporter. |
 | GET | `/admin/users?q=` / PATCH `/admin/users/{id}` | Ad | Role, plan tier, unlock |
+
+**Flags (details added in F15).**
+
+- **The queue:** `GET /admin/flags` takes `status` (default `open`), `cursor` and `limit`, and lists oldest first. Each item has the question (`questionId`, `versionId`, `version`, `itemType`, `stemPreview`), the `reporter`, `assignee` and `resolvedBy` (`{ id, displayName }`), and the note and dates. There is no answer key.
+- **`PATCH /admin/flags/{id}`:**
+  - Every field is optional, but at least one of `status` and `assigneeId` must be sent.
+  - `status` can be `triaged`, `resolved` or `rejected`, never `open`.
+  - `resolved` and `rejected` need a `resolutionNote` (up to 2000 characters).
+  - `assigneeId` must be a reviewer or admin, else `400` on `assigneeId`.
+  - Resolving sends the reporter a `flag_resolved` notification in the `content` category, with the note as its body and `data.deepLink = "/settings/reports"`. Rejecting sends nothing.
+  - Resolved and rejected are final, so any later PATCH is `409 FLAG_CLOSED`.
+  - Resolving and rejecting are written to `audit_events` as `flag.resolve` and `flag.reject`.
 
 ---
 
