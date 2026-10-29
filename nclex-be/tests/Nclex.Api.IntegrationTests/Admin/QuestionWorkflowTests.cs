@@ -260,8 +260,10 @@ public sealed class QuestionWorkflowTests(ApiFactory factory)
             questionIds,
             settings = new
             {
-                title = $"Set {Guid.NewGuid():N}",
-                mode = "practice",
+                // Challenge sets titled "zz…" sort after every other set in GET /test-sets, so creating
+                // them can't shift the offset pages that Catalog tests read at the same time.
+                title = $"zz F14 set {Guid.NewGuid():N}",
+                mode = "challenge",
                 revealMode = "tutor",
                 timed = false,
                 pausePolicy = new { },
