@@ -19,6 +19,9 @@ public sealed record ImportResult(int Created, int Updated, int Unchanged, IRead
     /// <summary>What happened to the file's case studies.</summary>
     public ImportCounts CaseStudies { get; init; } = ImportCounts.None;
 
+    /// <summary>What happened to the file's subtopics.</summary>
+    public ImportCounts Subtopics { get; init; } = ImportCounts.None;
+
     public bool Succeeded => Issues.Count == 0;
 
     public static ImportResult Failed(IReadOnlyList<ImportIssue> issues) => new(0, 0, 0, issues);
@@ -46,6 +49,12 @@ public static class ImportIssueCodes
 
     /// <summary>The Client Needs code or body-system slug does not exist (or is not a leaf for the track).</summary>
     public const string UnknownTag = "UNKNOWN_TAG";
+
+    /// <summary>A file lists a subtopic that none of its questions use.</summary>
+    public const string UnusedSubtopic = "UNUSED_SUBTOPIC";
+
+    /// <summary>Two subtopics on a track have the same name once case, punctuation and plurals are ignored.</summary>
+    public const string DuplicateSubtopic = "DUPLICATE_SUBTOPIC";
 
     /// <summary>The item type has no module yet, so its items can't be validated or graded.</summary>
     public const string UnsupportedItemType = "UNSUPPORTED_ITEM_TYPE";

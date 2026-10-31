@@ -6,6 +6,7 @@ using Nclex.Application.Admin.Questions.CreateQuestion;
 using Nclex.Application.Admin.Questions.CreateVersion;
 using Nclex.Application.Admin.Questions.Retire;
 using Nclex.Application.Admin.Questions.Search;
+using Nclex.Application.Admin.Subtopics;
 
 namespace Nclex.Api.Controllers;
 
@@ -69,6 +70,20 @@ public sealed class AdminQuestionsController : ControllerBase
         var question = await handler.HandleAsync(id, cancellationToken);
         return CreatedAtAction(nameof(Get), new { id }, question);
     }
+
+    /// <summary>Replace the question's subtopic tags. Works on a published question without a new version.</summary>
+    [HttpPut("{id:guid}/subtopics")]
+    [Authorize(Policy = Policies.ContentAuthor)]
+    [ProducesResponseType<AdminQuestionView>(StatusCodes.Status200OK)]
+    [ProducesResponseType<ProblemDetails>(StatusCodes.Status400BadRequest, "application/problem+json")]
+    [ProducesResponseType<ProblemDetails>(StatusCodes.Status404NotFound, "application/problem+json")]
+    [ProducesResponseType<ProblemDetails>(StatusCodes.Status409Conflict, "application/problem+json")]
+    public Task<AdminQuestionView> SetSubtopics(
+        Guid id,
+        SetQuestionSubtopicsRequest request,
+        [FromServices] QuestionSubtopicTags tags,
+        CancellationToken cancellationToken) =>
+        tags.SetAsync(id, request, cancellationToken);
 
     /// <summary>Remove the question from future sets.</summary>
     [HttpPost("{id:guid}/retire")]

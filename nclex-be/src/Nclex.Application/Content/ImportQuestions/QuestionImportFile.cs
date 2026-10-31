@@ -16,6 +16,7 @@ namespace Nclex.Application.Content.ImportQuestions;
 /// <param name="TestSets">Curated (prebuilt) test sets to publish; none by default.</param>
 /// <param name="Media">Images, audio and video that the questions' exhibits and options use; none by default.</param>
 /// <param name="CaseStudies">Unfolding case studies that questions join with caseStudyId; none by default.</param>
+/// <param name="Subtopics">Study subtopics. A file that lists them must tag every question and use every entry.</param>
 public sealed record QuestionImportFile(
     ExamTrack Track,
     IReadOnlyList<ImportedQuestion> Questions,
@@ -23,7 +24,8 @@ public sealed record QuestionImportFile(
     IReadOnlyList<ImportedBank>? Banks = null,
     IReadOnlyList<ImportedTestSet>? TestSets = null,
     IReadOnlyList<ImportedMedia>? Media = null,
-    IReadOnlyList<ImportedCaseStudy>? CaseStudies = null)
+    IReadOnlyList<ImportedCaseStudy>? CaseStudies = null,
+    IReadOnlyList<ImportedSubtopic>? Subtopics = null)
 {
     private static readonly JsonSerializerOptions Json = new(ItemJson.Options)
     {
@@ -54,6 +56,7 @@ public sealed record QuestionImportFile(
 /// <param name="Exhibits">A JSON array of exhibits; none by default.</param>
 /// <param name="CaseStudyId">The case study it belongs to, in this file or already imported; none by default.</param>
 /// <param name="CasePosition">Its place in the case, 1 to 6; given exactly when <paramref name="CaseStudyId"/> is.</param>
+/// <param name="Subtopics">Slugs of 1 to 3 subtopics of its Client Needs leaf; left out, its tags stay as they are.</param>
 public sealed record ImportedQuestion(
     Guid Id,
     ItemType ItemType,
@@ -70,10 +73,17 @@ public sealed record ImportedQuestion(
     int TimeAllotmentSec = ImportedQuestion.DefaultTimeAllotmentSec,
     JsonElement? Exhibits = null,
     Guid? CaseStudyId = null,
-    short? CasePosition = null)
+    short? CasePosition = null,
+    IReadOnlyList<string>? Subtopics = null)
 {
     public const int DefaultTimeAllotmentSec = 120;
 }
+
+/// <summary>A subtopic in an import file, stored as a subtopics row (database.md 2.4). Reuse the slug to rename it.</summary>
+/// <param name="ClientNeeds">Code of the Client Needs leaf for the file's track, e.g. "PHI.PPT".</param>
+/// <param name="Slug">Stable name questions use, e.g. "medication-dose-calculations".</param>
+/// <param name="Name">What candidates see.</param>
+public sealed record ImportedSubtopic(string ClientNeeds, string Slug, string Name);
 
 /// <summary>
 /// A media asset in an import file: a file beside the import file, stored as a media_assets row

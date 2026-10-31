@@ -10,7 +10,7 @@ namespace Nclex.Application.Content.ImportQuestions;
 /// <summary>
 /// Loads questions from an import file and publishes them, along with the file's media, case
 /// studies, banks and test sets (see <see cref="MediaImporter"/>, <see cref="CaseStudyImporter"/>
-/// and <see cref="CatalogImporter"/>). The whole file is validated first and
+/// and <see cref="CatalogImporter"/>), and its subtopic tags (<see cref="SubtopicImporter"/>). The whole file is validated first and
 /// written in one transaction, so a file with any problem changes nothing. Importing the same file
 /// again changes nothing either: a question gets a new version only when its content changed.
 /// </summary>
@@ -24,6 +24,7 @@ public sealed class ImportQuestionsHandler(
     CatalogImporter catalog,
     MediaImporter mediaImporter,
     CaseStudyImporter caseStudyImporter,
+    SubtopicImporter subtopicImporter,
     TimeProvider clock)
 {
     /// <summary>Imports a file that has no files beside it, so it can't list media.</summary>
@@ -44,6 +45,7 @@ public sealed class ImportQuestionsHandler(
         var cases = await caseStudyImporter.ValidateAsync(file, issues, mediaReferences, cancellationToken);
         var media = await mediaImporter.ValidateAsync(file.Media, mediaReferences, files, issues, cancellationToken);
         await catalog.ValidateAsync(file, cases, issues, cancellationToken);
+        await subtopicImporter.ValidateAsync(file, issues, cancellationToken);
         if (issues.Count > 0)
         {
             return ImportResult.Failed(issues);
@@ -58,8 +60,10 @@ public sealed class ImportQuestionsHandler(
         var caseCounts = await caseStudyImporter.WriteAsync(file, now, cancellationToken);
         var result = await WriteAsync(file, validated, existing, author, now, cancellationToken);
         var (banks, testSets) = await catalog.WriteAsync(file, now, cancellationToken);
+        var subtopics = await subtopicImporter.WriteSubtopicsAsync(file, now, cancellationToken);
+        await subtopicImporter.WriteTagsAsync(file, cancellationToken);
         await transaction.CommitAsync(cancellationToken);
-        return result with { Banks = banks, TestSets = testSets, Media = mediaCounts, CaseStudies = caseCounts };
+        return result with { Banks = banks, TestSets = testSets, Media = mediaCounts, CaseStudies = caseCounts, Subtopics = subtopics };
     }
 
     private List<(ImportedQuestion Source, AuthoredItem Item)> Validate(

@@ -31,6 +31,9 @@ public static class AuditActions
     public const string BankCreated = "question_bank.create";
     public const string BankUpdated = "question_bank.update";
     public const string UserUpdated = "user.update";
+    public const string SubtopicCreated = "subtopic.create";
+    public const string SubtopicUpdated = "subtopic.update";
+    public const string QuestionSubtopicsSet = "question.set_subtopics";
 
     /// <summary><c>entity_type</c> for events about a user account.</summary>
     public const string UserEntity = "user";
@@ -40,6 +43,7 @@ public static class AuditActions
     public const string MediaEntity = "media_asset";
     public const string TestSetEntity = "test_set";
     public const string BankEntity = "question_bank";
+    public const string SubtopicEntity = "subtopic";
 
     /// <summary><c>entity_type</c> for events about a content report (question_flags).</summary>
     public const string FlagEntity = "question_flag";

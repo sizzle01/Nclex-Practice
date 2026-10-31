@@ -13,6 +13,7 @@ using Nclex.Application.Admin.Questions.Retire;
 using Nclex.Application.Admin.Questions.Review;
 using Nclex.Application.Admin.Questions.Search;
 using Nclex.Application.Admin.Questions.UpdateDraft;
+using Nclex.Application.Admin.Subtopics;
 using Nclex.Application.Admin.TestSets;
 using Nclex.Application.Admin.Users;
 using Nclex.Application.Attempts;
@@ -25,6 +26,7 @@ using Nclex.Application.Attempts.ListAttempts;
 using Nclex.Application.Attempts.Navigate;
 using Nclex.Application.Attempts.OpenAttempt;
 using Nclex.Application.Attempts.PauseAttempt;
+using Nclex.Application.Attempts.Recommendations;
 using Nclex.Application.Attempts.Results;
 using Nclex.Application.Attempts.ResumeAttempt;
 using Nclex.Application.Attempts.Reveal;
@@ -167,6 +169,7 @@ public static class DependencyInjection
         services.AddScoped<SubmitItemHandler>();
         services.AddScoped<SubmitAttemptHandler>();
         services.AddScoped<GetResultHandler>();
+        services.AddScoped<GetRecommendationsHandler>();
         services.AddScoped<GetReviewHandler>();
 
         // Notifications
@@ -219,6 +222,8 @@ public static class DependencyInjection
         services.AddScoped<AdminTestSetsHandler>();
         services.AddScoped<AdminBanksHandler>();
         services.AddScoped<AdminUsersHandler>();
+        services.AddScoped<AdminSubtopicsHandler>();
+        services.AddScoped<QuestionSubtopicTags>();
 
         services.AddAttemptExpiry();
         services.AddPerformanceSnapshots();
@@ -237,6 +242,7 @@ public static class DependencyInjection
         services.AddScoped<CatalogImporter>();
         services.AddScoped<MediaImporter>();
         services.AddScoped<CaseStudyImporter>();
+        services.AddScoped<SubtopicImporter>();
         services.AddScoped<ImportQuestionsHandler>();
         return services;
     }

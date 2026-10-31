@@ -9,6 +9,7 @@ using Nclex.Application.Attempts.ListAttempts;
 using Nclex.Application.Attempts.Navigate;
 using Nclex.Application.Attempts.OpenAttempt;
 using Nclex.Application.Attempts.PauseAttempt;
+using Nclex.Application.Attempts.Recommendations;
 using Nclex.Application.Attempts.Results;
 using Nclex.Application.Attempts.ResumeAttempt;
 using Nclex.Application.Attempts.Review;
@@ -203,6 +204,16 @@ public sealed class AttemptsController : ControllerBase
     public Task<AttemptResultView> GetResult(
         Guid id,
         [FromServices] GetResultHandler handler,
+        CancellationToken cancellationToken) =>
+        handler.HandleAsync(id, cancellationToken);
+
+    /// <summary>The subtopics to study next, worked out from the attempt's missed questions.</summary>
+    [HttpGet("{id:guid}/recommendations")]
+    [ProducesResponseType<AttemptRecommendationsView>(StatusCodes.Status200OK)]
+    [ProducesResponseType<ProblemDetails>(StatusCodes.Status409Conflict, "application/problem+json")]
+    public Task<AttemptRecommendationsView> GetRecommendations(
+        Guid id,
+        [FromServices] GetRecommendationsHandler handler,
         CancellationToken cancellationToken) =>
         handler.HandleAsync(id, cancellationToken);
 

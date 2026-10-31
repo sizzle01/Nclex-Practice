@@ -1,5 +1,6 @@
 using Microsoft.EntityFrameworkCore;
 using Nclex.Application.Abstractions;
+using Nclex.Application.Admin.Subtopics;
 using Nclex.Application.Common;
 using Nclex.Domain.Entities;
 
@@ -28,6 +29,14 @@ public sealed class AdminQuestionReader(IAppDbContext db)
             .Where(u => peopleIds.Contains(u.Id))
             .ToDictionaryAsync(u => u.Id, u => u.DisplayName ?? u.Email, cancellationToken);
 
+        var subtopics = await (
+            from tag in db.QuestionSubtopics.AsNoTracking()
+            where tag.QuestionId == questionId
+            join subtopic in db.Subtopics.AsNoTracking() on tag.SubtopicId equals subtopic.Id
+            orderby subtopic.SortOrder, subtopic.Name
+            select new QuestionSubtopicView(subtopic.Id, subtopic.Name, subtopic.ClientNeedsId, subtopic.IsActive))
+            .ToListAsync(cancellationToken);
+
         return new AdminQuestionView(
             question.Id,
             question.Track,
@@ -36,7 +45,8 @@ public sealed class AdminQuestionReader(IAppDbContext db)
             question.CurrentVersionId,
             question.CreatedAt,
             question.RetiredAt,
-            [.. versions.Select(v => ToView(v, names))]);
+            [.. versions.Select(v => ToView(v, names))],
+            subtopics);
     }
 
     private static AdminVersionView ToView(QuestionVersion v, Dictionary<Guid, string> names) => new(

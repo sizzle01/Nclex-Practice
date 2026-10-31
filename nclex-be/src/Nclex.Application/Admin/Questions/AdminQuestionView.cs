@@ -1,4 +1,5 @@
 using System.Text.Json;
+using Nclex.Application.Admin.Subtopics;
 using Nclex.Domain.Entities;
 using Nclex.Domain.ItemTypes;
 
@@ -11,6 +12,7 @@ namespace Nclex.Application.Admin.Questions;
 /// <param name="CurrentVersionId">The published version candidates get; null until one is published.</param>
 /// <param name="RetiredAt">Set when the question was taken out of future sets.</param>
 /// <param name="Versions">Newest first; the first is the one an author would work on.</param>
+/// <param name="Subtopics">The question's tags; they belong to the question, not to one version.</param>
 public sealed record AdminQuestionView(
     Guid Id,
     ExamTrack Track,
@@ -19,7 +21,8 @@ public sealed record AdminQuestionView(
     Guid? CurrentVersionId,
     DateTimeOffset CreatedAt,
     DateTimeOffset? RetiredAt,
-    IReadOnlyList<AdminVersionView> Versions);
+    IReadOnlyList<AdminVersionView> Versions,
+    IReadOnlyList<QuestionSubtopicView> Subtopics);
 
 /// <summary>One version with its full payloads and review trail.</summary>
 /// <param name="AuthorName">The author's display name, or email when they have none.</param>

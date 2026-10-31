@@ -18,6 +18,14 @@ public static class AdminErrors
 
     public static readonly AppError BankNotFound = new("NOT_FOUND", AppErrorKind.NotFound, "That question bank was not found.");
 
+    public static readonly AppError SubtopicNotFound = new("NOT_FOUND", AppErrorKind.NotFound, "That subtopic was not found.");
+
+    /// <summary>Candidates see subtopics by name alone, so two with the same meaning would look like a mistake.</summary>
+    public static readonly AppError SubtopicDuplicate = new(
+        "SUBTOPIC_DUPLICATE",
+        AppErrorKind.Conflict,
+        "This track already has a subtopic with that name.");
+
     public static readonly AppError UserNotFound = new("NOT_FOUND", AppErrorKind.NotFound, "That user was not found.");
 
     /// <summary>For example approving a draft, or editing a version that is already in review.</summary>
