@@ -50,6 +50,9 @@ interface CaseStudyScenario {      // case_studies.scenario (shape settled in F1
 // Import file (F11): top-level caseStudies: [{ id, title, scenario: CaseStudyScenario }], and each
 // question may carry caseStudyId + casePosition (1..6, both or neither). A case's positions run
 // 1..n with no gap. A curated set that uses any item of a case has all of them, back to back, in order.
+// Import file (F17): top-level subtopics: [{ clientNeeds, slug, name }], and each question may carry
+// subtopics: [slug] (1..3, from its own clientNeeds). A file with the list must tag every question and
+// use every entry. A question without the field keeps its tags.
 
 interface Rationale {
   correct: Markdown;                           // why the correct answer(s) are correct
@@ -391,7 +394,7 @@ Global requirements: visible focus rings; text scale from 100% to 200% without h
 | `/practice` | Prebuilt sets (Practice, Challenge, Sample), locked badges | `/test-sets?kind=prebuilt` |
 | `/practice/custom` | Custom test builder with live available count | `/taxonomy`, `/test-sets/custom/*` |
 | `/attempts/[id]` | **Exam player** | `/attempts/{id}/*` |
-| `/attempts/[id]/results` | Score, readiness estimate, category breakdown, time per item | `/attempts/{id}/result` |
+| `/attempts/[id]/results` | Score, readiness estimate, subtopics to study next (F17), category breakdown, time per item | `/attempts/{id}/result`, `/attempts/{id}/recommendations` |
 | `/attempts/[id]/review` | Item-by-item rationale review, filter incorrect / flagged | `/attempts/{id}/review` |
 | `/performance` | Breakdown by dimension, trend charts | `/me/performance/*` |
 | `/history` | Past attempts table | `/attempts?status=submitted` |
@@ -405,6 +408,7 @@ Global requirements: visible focus rings; text scale from 100% to 200% without h
 | `/admin/flags` | Moderation queue | `/admin/flags` |
 | `/admin/questions/new` | New question: track, access, then the same editor (added in F14) | `POST /admin/questions` |
 | `/admin/test-sets`, `/admin/banks` | Curated sets and banks; `/new` and `/[id]` edit settings and membership (F14) | `/admin/test-sets`, `/admin/question-banks` |
+| `/admin/subtopics` | The subtopic list: add, rename, deactivate (added in F17); the question editor has the tag picker | `/admin/subtopics` |
 | `/admin/users` | Role, plan tier and unlock (added in F14; api.md lists the endpoint but no screen) | `/admin/users` |
 
 App shell (all authenticated pages): top bar with the track badge, the **notification bell** (unread badge fed by SSE) and the user menu.

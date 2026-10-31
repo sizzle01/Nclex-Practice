@@ -53,6 +53,9 @@ erDiagram
   questions ||--o| question_versions : "current (published)"
   case_studies ||--o{ question_versions : groups
   media_assets }o--o{ question_versions : "referenced in payload"
+  client_needs_categories ||--o{ subtopics : contains
+  questions ||--o{ question_subtopics : tagged
+  subtopics ||--o{ question_subtopics : tags
 ```
 
 ### 1.3 Banks and test sets
@@ -292,12 +295,33 @@ CREATE TABLE question_bank_items (
   question_id  uuid REFERENCES questions(id),
   PRIMARY KEY (bank_id, question_id)
 );
+
+-- Specific study topics inside a Client Needs leaf (added in F17)
+CREATE TABLE subtopics (
+  id               uuid PRIMARY KEY DEFAULT gen_random_uuid(),
+  client_needs_id  smallint NOT NULL REFERENCES client_needs_categories(id),
+  slug             text NOT NULL,                  -- stable name for content files; never changes
+  name             text NOT NULL,                  -- what candidates see
+  is_active        boolean NOT NULL DEFAULT true,  -- deactivated, never deleted
+  sort_order       smallint NOT NULL DEFAULT 0,
+  UNIQUE (client_needs_id, slug)
+);
+-- Tags sit on the question, not a version: they are study metadata, so correcting one
+-- needs no new version or review, and it also corrects past results.
+CREATE TABLE question_subtopics (
+  question_id  uuid REFERENCES questions(id),
+  subtopic_id  uuid REFERENCES subtopics(id),
+  PRIMARY KEY (question_id, subtopic_id)
+);
+CREATE INDEX ON question_subtopics (subtopic_id);
 ```
 
 **Rules enforced in the application:**
 - A version's `content`, `answer_key` and `rationale` are validated against the item type's schema on every save. Every option ID in `content` must have an entry in `rationale.perOption` (PRD §5.1: a "why" for every option).
 - Publishing a version sets the previous published version to `superseded` and updates `questions.current_version_id` in one transaction.
 - Only `reviewer` and `admin` roles can move a version `in_review → approved`. Authors can't approve their own versions (`reviewer_id <> author_id`).
+- A subtopic sits on a Client Needs leaf. Its name is unique across the track, ignoring case, punctuation and plurals, because candidates see it without its category (F17).
+- A question has 1 to 3 subtopics, all active and from its newest version's Client Needs leaf. Submitting for review checks this (F17).
 
 ### 2.5 Test sets
 

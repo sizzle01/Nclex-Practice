@@ -56,6 +56,7 @@ An `errors[]` entry may also carry a `message` (added in F14). Item-type validat
 | `RATE_LIMITED` | 429 | |
 | `FLAG_DUPLICATE` | 409 | You already reported this question version for that reason (added in F15) |
 | `FLAG_CLOSED` | 409 | The report is resolved or rejected and can no longer change (added in F15) |
+| `SUBTOPIC_DUPLICATE` | 409 | The track already has a subtopic with that name, ignoring case, punctuation and plurals (added in F17) |
 
 ### Shared schemas
 
@@ -335,6 +336,15 @@ Repeated calls return the same result.
 }
 ```
 
+**`GET /attempts/{id}/recommendations` → 200** (added in F17). The owner only, for submitted attempts, with the same errors as `/result`. It lists up to 5 subtopics to study, worked out on each read from the current tags.
+```json
+{
+  "attemptId": "…",
+  "subtopics": [ { "id": "…", "name": "Anticoagulant therapy and monitoring", "missed": 2, "answered": 3 } ]
+}
+```
+A subtopic qualifies with at least one answered question without full marks, so partial credit counts as a miss and unanswered questions don't count. Order: most missed, then the lowest share correct, then name. The list is empty when nothing qualifies. The response holds names and counts only, never keys or rationales. `weakest` on `/result` is unchanged: notifications still use it, but the results page shows this list instead.
+
 **`GET /attempts/{id}/review?position=&filter=incorrect|flagged|all`** returns paginated items in the same shape as the item endpoint, with `reveal` always present. Only available for submitted attempts, or for locked items in tutor mode.
 
 ---
@@ -446,6 +456,10 @@ Roles: **A** = author, **R** = reviewer, **Ad** = admin.
 | POST | `/admin/question-versions/{id}/reject` | R Ad | in_review → rejected, `{ notes }` |
 | POST | `/admin/question-versions/{id}/publish` | R Ad | approved → published (supersedes the previous version) |
 | POST | `/admin/questions/{id}/retire` | R Ad | Remove from future sets |
+| PUT | `/admin/questions/{id}/subtopics` | A Ad | `{ subtopicIds }`: replace the tags, 1 to 3. Works on a published question and makes no new version; `409` when retired (added in F17) |
+| GET | `/admin/subtopics?track=&clientNeedsId=` | A R Ad | The subtopic list, not paged (added in F17) |
+| POST | `/admin/subtopics` | R Ad | `{ clientNeedsId, name, sortOrder }`; the slug comes from the name (added in F17) |
+| PATCH | `/admin/subtopics/{id}` | R Ad | `{ name, sortOrder, isActive }`; the slug never changes (added in F17) |
 | POST | `/admin/question-versions/{id}/preview-grade` | A R Ad | `{ response }` → GradeResult (test the key) |
 | POST | `/admin/media/upload-url` | A Ad | Presigned S3 PUT `{ mimeType, bytes }` → `{ mediaId, uploadUrl }` |
 | PATCH | `/admin/media/{id}` | A Ad | Alt text, captions |
