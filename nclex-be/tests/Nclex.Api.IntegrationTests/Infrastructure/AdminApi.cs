@@ -13,6 +13,9 @@ namespace Nclex.Api.IntegrationTests.Infrastructure;
 /// </summary>
 public sealed class AdminApi(ApiFactory factory)
 {
+    private static readonly SemaphoreSlim SharedSubtopicLock = new(1, 1);
+    private static Guid? _sharedSubtopicId;
+
     private readonly AuthApi _auth = new(factory);
 
     /// <summary>A signed-in staff member of <paramref name="role"/>.</summary>
@@ -50,8 +53,43 @@ public sealed class AdminApi(ApiFactory factory)
     public async Task<AdminQuestionView> CreateDraftAsync(Staff author, string stem = "Which action should the nurse take first?")
     {
         var draft = await McDraftAsync(stem);
-        return await QuestionOkAsync(HttpMethod.Post, "/api/v1/admin/questions", author, new { track = "RN", draft });
+        var created = await QuestionOkAsync(HttpMethod.Post, "/api/v1/admin/questions", author, new { track = "RN", draft });
+        return await TagAsync(author, created.Id);
     }
+
+    /// <summary>Gives a SECE.MOC question the shared test subtopic, which submitting for review needs.</summary>
+    public async Task<AdminQuestionView> TagAsync(Staff author, Guid questionId) =>
+        await QuestionOkAsync(HttpMethod.Put, $"/api/v1/admin/questions/{questionId}/subtopics", author, new { subtopicIds = new[] { await SharedSubtopicIdAsync() } });
+
+    /// <summary>A new active subtopic of RN SECE.MOC with a name no other test uses.</summary>
+    public async Task<Guid> NewSubtopicIdAsync()
+    {
+        var name = $"Topic {Guid.NewGuid():N}";
+        var (clientNeedsId, _) = await TagIdsAsync();
+        await using var scope = factory.Services.CreateAsyncScope();
+        var db = scope.ServiceProvider.GetRequiredService<AppDbContext>();
+        var subtopic = Subtopic.Create(clientNeedsId, name.ToLowerInvariant().Replace(' ', '-'), name, 0, DateTimeOffset.UtcNow);
+        db.Subtopics.Add(subtopic);
+        await db.SaveChangesAsync(TestContext.Current.CancellationToken);
+        return subtopic.Id;
+    }
+
+    // One per test run: tests only need some valid tag, and parallel classes must not add it twice.
+    private static async Task<Guid> GetOrAdd(Func<Task<Guid>> create)
+    {
+        await SharedSubtopicLock.WaitAsync(TestContext.Current.CancellationToken);
+        try
+        {
+            _sharedSubtopicId ??= await create();
+            return _sharedSubtopicId.Value;
+        }
+        finally
+        {
+            SharedSubtopicLock.Release();
+        }
+    }
+
+    private Task<Guid> SharedSubtopicIdAsync() => GetOrAdd(NewSubtopicIdAsync);
 
     /// <summary>Takes a new question through the whole workflow and returns it published.</summary>
     public async Task<AdminQuestionView> PublishedQuestionAsync(Staff author, Staff reviewer, string stem = "Which action should the nurse take first?")

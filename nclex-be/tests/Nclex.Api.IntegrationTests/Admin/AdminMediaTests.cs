@@ -85,6 +85,7 @@ public sealed class AdminMediaTests(ApiFactory factory)
         draft["exhibits"] = new[] { new { id = "x1", kind = "image", title = "Wound", mediaId = link.MediaId } };
         var question = await _admin.QuestionOkAsync(HttpMethod.Post, "/api/v1/admin/questions", author, new { track = "RN", draft });
         var versionId = question.Versions[0].Id;
+        await _admin.TagAsync(author, question.Id);
 
         var submit = await _admin.SendAsync(HttpMethod.Post, $"/api/v1/admin/question-versions/{versionId}/submit-for-review", author);
         (await submit.ShouldBeProblemAsync(HttpStatusCode.BadRequest, "VALIDATION_FAILED")).FieldErrors().ShouldContain(("exhibits[0].mediaId.altText", "REQUIRED"));

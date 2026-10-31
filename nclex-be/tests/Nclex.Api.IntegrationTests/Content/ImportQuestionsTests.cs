@@ -34,6 +34,7 @@ public sealed class ImportQuestionsTests(ApiFactory factory)
             TestSets = new ImportCounts(3, 0, 0),
             Media = new ImportCounts(2, 0, 0),
             CaseStudies = new ImportCounts(1, 0, 0),
+            Subtopics = new ImportCounts(34, 0, 0),
         }, "first import");
         second.ShouldBe(new ImportResult(Created: 0, Updated: 0, Unchanged: 44, [])
         {
@@ -41,6 +42,7 @@ public sealed class ImportQuestionsTests(ApiFactory factory)
             TestSets = new ImportCounts(0, 0, 3),
             Media = new ImportCounts(0, 0, 2),
             CaseStudies = new ImportCounts(0, 0, 1),
+            Subtopics = new ImportCounts(0, 0, 34),
         }, "second import");
 
         await using var scope = factory.Services.CreateAsyncScope();

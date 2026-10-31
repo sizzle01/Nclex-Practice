@@ -95,6 +95,9 @@ public sealed class AttemptsApi(ApiFactory factory, AuthApi api)
     public Task<HttpResponseMessage> ResultAsync(string token, Guid attemptId) =>
         SendAsync(HttpMethod.Get, $"/api/v1/attempts/{attemptId}/result", token, clientId: null);
 
+    public Task<HttpResponseMessage> RecommendationsAsync(string token, Guid attemptId) =>
+        SendAsync(HttpMethod.Get, $"/api/v1/attempts/{attemptId}/recommendations", token, clientId: null);
+
     public Task<HttpResponseMessage> ReviewAsync(string token, Guid attemptId, string query = "") =>
         SendAsync(HttpMethod.Get, $"/api/v1/attempts/{attemptId}/review{query}", token, clientId: null);
 
