@@ -45,6 +45,11 @@ public interface IAppDbContext
 
     DbSet<QuestionBankItem> QuestionBankItems { get; }
 
+    /// <summary>Specific topics inside Client Needs leaves, for study suggestions (F17).</summary>
+    DbSet<Subtopic> Subtopics { get; }
+
+    DbSet<QuestionSubtopic> QuestionSubtopics { get; }
+
     DbSet<TestSet> TestSets { get; }
 
     DbSet<TestSetItem> TestSetItems { get; }

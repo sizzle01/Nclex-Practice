@@ -40,6 +40,10 @@ public sealed class AppDbContext(DbContextOptions<AppDbContext> options) : DbCon
 
     public DbSet<QuestionBankItem> QuestionBankItems => Set<QuestionBankItem>();
 
+    public DbSet<Subtopic> Subtopics => Set<Subtopic>();
+
+    public DbSet<QuestionSubtopic> QuestionSubtopics => Set<QuestionSubtopic>();
+
     public DbSet<TestSet> TestSets => Set<TestSet>();
 
     public DbSet<TestSetItem> TestSetItems => Set<TestSetItem>();

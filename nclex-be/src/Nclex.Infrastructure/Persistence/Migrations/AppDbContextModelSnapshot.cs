@@ -1275,6 +1275,25 @@ namespace Nclex.Infrastructure.Persistence.Migrations
                     b.ToTable("question_bank_items", (string)null);
                 });
 
+            modelBuilder.Entity("Nclex.Domain.Entities.QuestionSubtopic", b =>
+                {
+                    b.Property<Guid>("QuestionId")
+                        .HasColumnType("uuid")
+                        .HasColumnName("question_id");
+
+                    b.Property<Guid>("SubtopicId")
+                        .HasColumnType("uuid")
+                        .HasColumnName("subtopic_id");
+
+                    b.HasKey("QuestionId", "SubtopicId")
+                        .HasName("pk_question_subtopics");
+
+                    b.HasIndex("SubtopicId")
+                        .HasDatabaseName("ix_question_subtopics_subtopic_id");
+
+                    b.ToTable("question_subtopics", (string)null);
+                });
+
             modelBuilder.Entity("Nclex.Domain.Entities.QuestionVersion", b =>
                 {
                     b.Property<Guid>("Id")
@@ -1521,6 +1540,50 @@ namespace Nclex.Infrastructure.Persistence.Migrations
                         .HasFilter("revoked_at IS NULL");
 
                     b.ToTable("refresh_sessions", (string)null);
+                });
+
+            modelBuilder.Entity("Nclex.Domain.Entities.Subtopic", b =>
+                {
+                    b.Property<Guid>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("uuid")
+                        .HasColumnName("id")
+                        .HasDefaultValueSql("gen_random_uuid()");
+
+                    b.Property<short>("ClientNeedsId")
+                        .HasColumnType("smallint")
+                        .HasColumnName("client_needs_id");
+
+                    b.Property<bool>("IsActive")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("boolean")
+                        .HasDefaultValue(true)
+                        .HasColumnName("is_active");
+
+                    b.Property<string>("Name")
+                        .IsRequired()
+                        .HasColumnType("text")
+                        .HasColumnName("name");
+
+                    b.Property<string>("Slug")
+                        .IsRequired()
+                        .HasColumnType("text")
+                        .HasColumnName("slug");
+
+                    b.Property<short>("SortOrder")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("smallint")
+                        .HasDefaultValue((short)0)
+                        .HasColumnName("sort_order");
+
+                    b.HasKey("Id")
+                        .HasName("pk_subtopics");
+
+                    b.HasIndex("ClientNeedsId", "Slug")
+                        .IsUnique()
+                        .HasDatabaseName("ix_subtopics_client_needs_id_slug");
+
+                    b.ToTable("subtopics", (string)null);
                 });
 
             modelBuilder.Entity("Nclex.Domain.Entities.TestSet", b =>
@@ -2188,6 +2251,23 @@ namespace Nclex.Infrastructure.Persistence.Migrations
                         .HasConstraintName("fk_question_bank_items_questions_question_id");
                 });
 
+            modelBuilder.Entity("Nclex.Domain.Entities.QuestionSubtopic", b =>
+                {
+                    b.HasOne("Nclex.Domain.Entities.Question", null)
+                        .WithMany()
+                        .HasForeignKey("QuestionId")
+                        .OnDelete(DeleteBehavior.NoAction)
+                        .IsRequired()
+                        .HasConstraintName("fk_question_subtopics_questions_question_id");
+
+                    b.HasOne("Nclex.Domain.Entities.Subtopic", null)
+                        .WithMany()
+                        .HasForeignKey("SubtopicId")
+                        .OnDelete(DeleteBehavior.NoAction)
+                        .IsRequired()
+                        .HasConstraintName("fk_question_subtopics_subtopics_subtopic_id");
+                });
+
             modelBuilder.Entity("Nclex.Domain.Entities.QuestionVersion", b =>
                 {
                     b.HasOne("Nclex.Domain.Entities.User", null)
@@ -2247,6 +2327,16 @@ namespace Nclex.Infrastructure.Persistence.Migrations
                         .HasConstraintName("fk_refresh_sessions_users_user_id");
 
                     b.Navigation("User");
+                });
+
+            modelBuilder.Entity("Nclex.Domain.Entities.Subtopic", b =>
+                {
+                    b.HasOne("Nclex.Domain.Entities.ClientNeedsCategory", null)
+                        .WithMany()
+                        .HasForeignKey("ClientNeedsId")
+                        .OnDelete(DeleteBehavior.NoAction)
+                        .IsRequired()
+                        .HasConstraintName("fk_subtopics_client_needs_categories_client_needs_id");
                 });
 
             modelBuilder.Entity("Nclex.Domain.Entities.TestSet", b =>
