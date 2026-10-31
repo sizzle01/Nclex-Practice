@@ -997,6 +997,99 @@ export interface paths {
         patch?: never;
         trace?: never;
     };
+    "/api/v1/admin/questions/{id}/subtopics": {
+        parameters: {
+            query?: never;
+            header?: never;
+            path?: never;
+            cookie?: never;
+        };
+        get?: never;
+        put: {
+            parameters: {
+                query?: never;
+                header?: never;
+                path: {
+                    id: string;
+                };
+                cookie?: never;
+            };
+            requestBody: {
+                content: {
+                    "application/json": components["schemas"]["SetQuestionSubtopicsRequest"];
+                    "text/json": components["schemas"]["SetQuestionSubtopicsRequest"];
+                    "application/*+json": components["schemas"]["SetQuestionSubtopicsRequest"];
+                };
+            };
+            responses: {
+                /** @description OK */
+                200: {
+                    headers: {
+                        [name: string]: unknown;
+                    };
+                    content: {
+                        "application/json": components["schemas"]["AdminQuestionView"];
+                    };
+                };
+                /** @description Bad Request */
+                400: {
+                    headers: {
+                        [name: string]: unknown;
+                    };
+                    content: {
+                        "application/problem+json": components["schemas"]["ProblemDetails"];
+                        "application/json": unknown;
+                    };
+                };
+                /** @description Unauthorized */
+                401: {
+                    headers: {
+                        [name: string]: unknown;
+                    };
+                    content: {
+                        "application/problem+json": components["schemas"]["ProblemDetails"];
+                        "application/json": unknown;
+                    };
+                };
+                /** @description Forbidden */
+                403: {
+                    headers: {
+                        [name: string]: unknown;
+                    };
+                    content: {
+                        "application/problem+json": components["schemas"]["ProblemDetails"];
+                        "application/json": unknown;
+                    };
+                };
+                /** @description Not Found */
+                404: {
+                    headers: {
+                        [name: string]: unknown;
+                    };
+                    content: {
+                        "application/problem+json": components["schemas"]["ProblemDetails"];
+                        "application/json": unknown;
+                    };
+                };
+                /** @description Conflict */
+                409: {
+                    headers: {
+                        [name: string]: unknown;
+                    };
+                    content: {
+                        "application/problem+json": components["schemas"]["ProblemDetails"];
+                        "application/json": unknown;
+                    };
+                };
+            };
+        };
+        post?: never;
+        delete?: never;
+        options?: never;
+        head?: never;
+        patch?: never;
+        trace?: never;
+    };
     "/api/v1/admin/questions/{id}/retire": {
         parameters: {
             query?: never;
@@ -1598,6 +1691,222 @@ export interface paths {
         options?: never;
         head?: never;
         patch?: never;
+        trace?: never;
+    };
+    "/api/v1/admin/subtopics": {
+        parameters: {
+            query?: never;
+            header?: never;
+            path?: never;
+            cookie?: never;
+        };
+        get: {
+            parameters: {
+                query?: {
+                    track?: components["schemas"]["ExamTrack"];
+                    clientNeedsId?: number | string;
+                };
+                header?: never;
+                path?: never;
+                cookie?: never;
+            };
+            requestBody?: never;
+            responses: {
+                /** @description OK */
+                200: {
+                    headers: {
+                        [name: string]: unknown;
+                    };
+                    content: {
+                        "application/json": components["schemas"]["SubtopicList"];
+                    };
+                };
+                /** @description Unauthorized */
+                401: {
+                    headers: {
+                        [name: string]: unknown;
+                    };
+                    content: {
+                        "application/problem+json": components["schemas"]["ProblemDetails"];
+                        "application/json": unknown;
+                    };
+                };
+                /** @description Forbidden */
+                403: {
+                    headers: {
+                        [name: string]: unknown;
+                    };
+                    content: {
+                        "application/problem+json": components["schemas"]["ProblemDetails"];
+                        "application/json": unknown;
+                    };
+                };
+            };
+        };
+        put?: never;
+        post: {
+            parameters: {
+                query?: never;
+                header?: never;
+                path?: never;
+                cookie?: never;
+            };
+            requestBody: {
+                content: {
+                    "application/json": components["schemas"]["CreateSubtopicRequest"];
+                    "text/json": components["schemas"]["CreateSubtopicRequest"];
+                    "application/*+json": components["schemas"]["CreateSubtopicRequest"];
+                };
+            };
+            responses: {
+                /** @description Created */
+                201: {
+                    headers: {
+                        [name: string]: unknown;
+                    };
+                    content: {
+                        "application/json": components["schemas"]["SubtopicView"];
+                    };
+                };
+                /** @description Bad Request */
+                400: {
+                    headers: {
+                        [name: string]: unknown;
+                    };
+                    content: {
+                        "application/problem+json": components["schemas"]["ProblemDetails"];
+                        "application/json": unknown;
+                    };
+                };
+                /** @description Unauthorized */
+                401: {
+                    headers: {
+                        [name: string]: unknown;
+                    };
+                    content: {
+                        "application/problem+json": components["schemas"]["ProblemDetails"];
+                        "application/json": unknown;
+                    };
+                };
+                /** @description Forbidden */
+                403: {
+                    headers: {
+                        [name: string]: unknown;
+                    };
+                    content: {
+                        "application/problem+json": components["schemas"]["ProblemDetails"];
+                        "application/json": unknown;
+                    };
+                };
+                /** @description Conflict */
+                409: {
+                    headers: {
+                        [name: string]: unknown;
+                    };
+                    content: {
+                        "application/problem+json": components["schemas"]["ProblemDetails"];
+                        "application/json": unknown;
+                    };
+                };
+            };
+        };
+        delete?: never;
+        options?: never;
+        head?: never;
+        patch?: never;
+        trace?: never;
+    };
+    "/api/v1/admin/subtopics/{id}": {
+        parameters: {
+            query?: never;
+            header?: never;
+            path?: never;
+            cookie?: never;
+        };
+        get?: never;
+        put?: never;
+        post?: never;
+        delete?: never;
+        options?: never;
+        head?: never;
+        patch: {
+            parameters: {
+                query?: never;
+                header?: never;
+                path: {
+                    id: string;
+                };
+                cookie?: never;
+            };
+            requestBody: {
+                content: {
+                    "application/json": components["schemas"]["UpdateSubtopicRequest"];
+                    "text/json": components["schemas"]["UpdateSubtopicRequest"];
+                    "application/*+json": components["schemas"]["UpdateSubtopicRequest"];
+                };
+            };
+            responses: {
+                /** @description OK */
+                200: {
+                    headers: {
+                        [name: string]: unknown;
+                    };
+                    content: {
+                        "application/json": components["schemas"]["SubtopicView"];
+                    };
+                };
+                /** @description Bad Request */
+                400: {
+                    headers: {
+                        [name: string]: unknown;
+                    };
+                    content: {
+                        "application/problem+json": components["schemas"]["ProblemDetails"];
+                        "application/json": unknown;
+                    };
+                };
+                /** @description Unauthorized */
+                401: {
+                    headers: {
+                        [name: string]: unknown;
+                    };
+                    content: {
+                        "application/problem+json": components["schemas"]["ProblemDetails"];
+                        "application/json": unknown;
+                    };
+                };
+                /** @description Forbidden */
+                403: {
+                    headers: {
+                        [name: string]: unknown;
+                    };
+                    content: {
+                        "application/problem+json": components["schemas"]["ProblemDetails"];
+                        "application/json": unknown;
+                    };
+                };
+                /** @description Not Found */
+                404: {
+                    headers: {
+                        [name: string]: unknown;
+                    };
+                    content: {
+                        "application/problem+json": components["schemas"]["ProblemDetails"];
+                        "application/json": unknown;
+                    };
+                };
+                /** @description Conflict */
+                409: {
+                    headers: {
+                        [name: string]: unknown;
+                    };
+                    content: {
+                        "application/problem+json": components["schemas"]["ProblemDetails"];
+                        "application/json": unknown;
+                    };
+                };
+            };
+        };
         trace?: never;
     };
     "/api/v1/admin/test-sets": {
@@ -3069,6 +3378,73 @@ export interface paths {
                     };
                     content: {
                         "application/json": components["schemas"]["AttemptResultView"];
+                    };
+                };
+                /** @description Unauthorized */
+                401: {
+                    headers: {
+                        [name: string]: unknown;
+                    };
+                    content: {
+                        "application/problem+json": components["schemas"]["ProblemDetails"];
+                        "application/json": unknown;
+                    };
+                };
+                /** @description Not Found */
+                404: {
+                    headers: {
+                        [name: string]: unknown;
+                    };
+                    content: {
+                        "application/problem+json": components["schemas"]["ProblemDetails"];
+                        "application/json": unknown;
+                    };
+                };
+                /** @description Conflict */
+                409: {
+                    headers: {
+                        [name: string]: unknown;
+                    };
+                    content: {
+                        "application/problem+json": components["schemas"]["ProblemDetails"];
+                        "application/json": unknown;
+                    };
+                };
+            };
+        };
+        put?: never;
+        post?: never;
+        delete?: never;
+        options?: never;
+        head?: never;
+        patch?: never;
+        trace?: never;
+    };
+    "/api/v1/attempts/{id}/recommendations": {
+        parameters: {
+            query?: never;
+            header?: never;
+            path?: never;
+            cookie?: never;
+        };
+        get: {
+            parameters: {
+                query?: never;
+                header?: never;
+                path: {
+                    id: string;
+                };
+                cookie?: never;
+            };
+            requestBody?: never;
+            responses: {
+                /** @description OK */
+                200: {
+                    headers: {
+                        [name: string]: unknown;
+                    };
+                    content: {
+                        "application/json": components["schemas"]["AttemptRecommendationsView"];
                     };
                 };
                 /** @description Unauthorized */
@@ -5487,6 +5863,7 @@ export interface components {
             /** Format: date-time */
             retiredAt: null | string;
             versions: components["schemas"]["AdminVersionView"][];
+            subtopics: components["schemas"]["QuestionSubtopicView"][];
         };
         AdminTestSetPage: {
             items: components["schemas"]["AdminTestSetSummary"][];
@@ -5588,6 +5965,11 @@ export interface components {
             locked: number | string;
             /** Format: int32 */
             flagged: number | string;
+        };
+        AttemptRecommendationsView: {
+            /** Format: uuid */
+            attemptId: string;
+            subtopics: components["schemas"]["RecommendedSubtopic"][];
         };
         AttemptResultSummary: {
             score: components["schemas"]["ResultScore"];
@@ -5804,6 +6186,16 @@ export interface components {
             track: components["schemas"]["ExamTrack"];
             accessTier: null | components["schemas"]["PlanTier"];
             draft: components["schemas"]["DraftInput"];
+        };
+        CreateSubtopicRequest: {
+            /** Format: int16 */
+            clientNeedsId: number | string;
+            name: string;
+            /**
+             * Format: int16
+             * @default 0
+             */
+            sortOrder: number | string;
         };
         CreateTestSetRequest: {
             track: components["schemas"]["ExamTrack"];
@@ -6142,6 +6534,14 @@ export interface components {
         };
         /** @enum {unknown} */
         QuestionStatus: "active" | "retired";
+        QuestionSubtopicView: {
+            /** Format: uuid */
+            id: string;
+            name: string;
+            /** Format: int16 */
+            clientNeedsId: number | string;
+            isActive: boolean;
+        };
         QuestionSummary: {
             /** Format: uuid */
             id: string;
@@ -6189,6 +6589,15 @@ export interface components {
         RebuildSnapshotsRequest: {
             /** Format: uuid */
             userId: null | string;
+        };
+        RecommendedSubtopic: {
+            /** Format: uuid */
+            id: string;
+            name: string;
+            /** Format: int32 */
+            missed: number | string;
+            /** Format: int32 */
+            answered: number | string;
         };
         ReportIssueRequest: {
             reason: null | components["schemas"]["FlagReason"];
@@ -6269,6 +6678,9 @@ export interface components {
         };
         /** @enum {unknown} */
         ScoreDimension: "client_needs" | "client_needs_parent" | "body_system" | "item_type" | "cjmm_skill" | "difficulty";
+        SetQuestionSubtopicsRequest: {
+            subtopicIds: string[];
+        };
         SignupRequest: {
             email: string;
             password: string;
@@ -6304,6 +6716,25 @@ export interface components {
         };
         /** @enum {unknown} */
         SubmitReason: "user" | "time_expired" | "cat_stop";
+        SubtopicList: {
+            items: components["schemas"]["SubtopicView"][];
+        };
+        SubtopicView: {
+            /** Format: uuid */
+            id: string;
+            track: components["schemas"]["ExamTrack"];
+            /** Format: int16 */
+            clientNeedsId: number | string;
+            clientNeedsCode: string;
+            clientNeedsName: string;
+            slug: string;
+            name: string;
+            isActive: boolean;
+            /** Format: int16 */
+            sortOrder: number | string;
+            /** Format: int32 */
+            questionCount: number | string;
+        };
         TaxonomyResponse: {
             clientNeeds: components["schemas"]["ClientNeedsNode"][];
             bodySystems: components["schemas"]["BodySystemInfo"][];
@@ -6444,6 +6875,12 @@ export interface components {
         };
         UpdatePreferencesRequest: {
             preferences: null | components["schemas"]["PreferenceInput"][];
+        };
+        UpdateSubtopicRequest: {
+            name: null | string;
+            /** Format: int16 */
+            sortOrder: null | number | string;
+            isActive: null | boolean;
         };
         UpdateTestSetRequest: {
             settings: null | components["schemas"]["TestSetSettings"];

@@ -17,6 +17,7 @@ export type ItemReveal = ApiSchema<"ItemReveal">;
 export type GradeDetail = ApiSchema<"GradeDetail">;
 export type SubmitAttemptResult = ApiSchema<"SubmitAttemptResult">;
 export type AttemptResultView = ApiSchema<"AttemptResultView">;
+export type AttemptRecommendationsView = ApiSchema<"AttemptRecommendationsView">;
 export type CategoryResult = ApiSchema<"CategoryResult">;
 export type ReviewPage = ApiSchema<"ReviewPage">;
 export type ReviewFilter = NonNullable<ApiSchema<"ReviewFilter">>;
@@ -34,6 +35,10 @@ export const draftsQueryKey = ["attempts", "drafts"] as const;
 
 export function resultQueryKey(attemptId: string) {
   return ["attempts", attemptId, "result"] as const;
+}
+
+export function recommendationsQueryKey(attemptId: string) {
+  return ["attempts", attemptId, "recommendations"] as const;
 }
 
 export function reviewQueryKey(attemptId: string, filter: ReviewFilter) {
@@ -155,6 +160,14 @@ export async function submitAttempt(
   const { data, error, response } = await apiClient.POST("/api/v1/attempts/{id}/submit", {
     params: { path: { id: attemptId }, header: { "X-Attempt-Client": clientId } },
     body: { finalResponses },
+  });
+  if (data) return data;
+  throw ApiError.from(response, error);
+}
+
+export async function fetchRecommendations(attemptId: string): Promise<AttemptRecommendationsView> {
+  const { data, error, response } = await apiClient.GET("/api/v1/attempts/{id}/recommendations", {
+    params: { path: { id: attemptId } },
   });
   if (data) return data;
   throw ApiError.from(response, error);

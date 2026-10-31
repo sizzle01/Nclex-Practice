@@ -25,6 +25,16 @@ export type AdminUserPage = ApiSchema<"AdminUserPage">;
 export type AdminUserView = ApiSchema<"AdminUserView">;
 export type UpdateAdminUserRequest = ApiSchema<"UpdateAdminUserRequest">;
 export type UserRole = ApiSchema<"UserRole">;
+export type SubtopicView = ApiSchema<"SubtopicView">;
+export type SubtopicList = ApiSchema<"SubtopicList">;
+export type CreateSubtopicRequest = ApiSchema<"CreateSubtopicRequest">;
+export type UpdateSubtopicRequest = ApiSchema<"UpdateSubtopicRequest">;
+
+/** Query string of GET /admin/subtopics. */
+export interface SubtopicSearch {
+  track?: ApiSchema<"ExamTrack">;
+  clientNeedsId?: number;
+}
 
 /** Query string of GET /admin/questions. Leave a field out to match anything. */
 export interface QuestionSearch {
@@ -45,6 +55,7 @@ export const adminKeys = {
   banks: ["admin", "banks"] as const,
   bank: (id: string) => ["admin", "bank", id] as const,
   users: (q: string) => ["admin", "users", q] as const,
+  subtopics: (search: SubtopicSearch) => ["admin", "subtopics", search] as const,
 };
 
 function unwrap<T>(result: { data?: T; error?: unknown; response: Response }): T {
@@ -56,6 +67,24 @@ function unwrap<T>(result: { data?: T; error?: unknown; response: Response }): T
 
 export async function searchQuestions(search: QuestionSearch): Promise<QuestionSearchPage> {
   return unwrap(await apiClient.GET("/api/v1/admin/questions", { params: { query: search } }));
+}
+
+// Subtopics (docs/features/F17)
+
+export async function listSubtopics(search: SubtopicSearch): Promise<SubtopicList> {
+  return unwrap(await apiClient.GET("/api/v1/admin/subtopics", { params: { query: search } }));
+}
+
+export async function createSubtopic(body: CreateSubtopicRequest): Promise<SubtopicView> {
+  return unwrap(await apiClient.POST("/api/v1/admin/subtopics", { body }));
+}
+
+export async function updateSubtopic(id: string, body: UpdateSubtopicRequest): Promise<SubtopicView> {
+  return unwrap(await apiClient.PATCH("/api/v1/admin/subtopics/{id}", { params: { path: { id } }, body }));
+}
+
+export async function setQuestionSubtopics(id: string, subtopicIds: string[]): Promise<AdminQuestionView> {
+  return unwrap(await apiClient.PUT("/api/v1/admin/questions/{id}/subtopics", { params: { path: { id } }, body: { subtopicIds } }));
 }
 
 export async function fetchQuestion(id: string): Promise<AdminQuestionView> {

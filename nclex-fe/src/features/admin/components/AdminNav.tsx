@@ -14,6 +14,7 @@ export function AdminNav() {
     { href: "/admin/questions", label: "Questions", show: true },
     { href: "/admin/review", label: "Review queue", show: canReview(me?.role) },
     { href: "/admin/flags", label: "Reported questions", show: canReview(me?.role) },
+    { href: "/admin/subtopics", label: "Subtopics", show: canReview(me?.role) },
     { href: "/admin/test-sets", label: "Test sets", show: isAdmin(me?.role) },
     { href: "/admin/banks", label: "Banks", show: isAdmin(me?.role) },
     { href: "/admin/users", label: "Users", show: isAdmin(me?.role) },

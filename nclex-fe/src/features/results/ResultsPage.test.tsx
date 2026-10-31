@@ -40,6 +40,19 @@ const result: AttemptResultView = {
   weakest: [{ dimension: "client_needs", key: "PHI.PPT", name: "Pharmacological and Parenteral Therapies", pct: 0.48 }],
 };
 
+const recommendations = {
+  attemptId: "attempt-1",
+  subtopics: [
+    { id: "s1", name: "Insulin administration", missed: 2, answered: 3 },
+    { id: "s2", name: "Adverse effects of anticoagulants", missed: 1, answered: 2 },
+  ],
+};
+
+/** Answers the results request with <resultReply> and the suggestions request with <studyReply>. */
+function replyWith(resultReply: unknown, studyReply: unknown = reply(200, recommendations)) {
+  getMock.mockImplementation(((path: string) => Promise.resolve(path.endsWith("/recommendations") ? studyReply : resultReply)) as never);
+}
+
 function renderPage() {
   const queryClient = new QueryClient({ defaultOptions: { queries: { retry: false } } });
   render(
@@ -50,10 +63,13 @@ function renderPage() {
 }
 
 describe("ResultsPage", () => {
-  beforeEach(() => getMock.mockReset());
+  // In braces: Vitest would otherwise run the returned mock as a cleanup step, with no arguments.
+  beforeEach(() => {
+    getMock.mockReset();
+  });
 
   it("shows the score, time and the readiness estimate with its disclaimer", async () => {
-    getMock.mockResolvedValue(reply(200, result));
+    replyWith(reply(200, result));
 
     renderPage();
 
@@ -69,7 +85,7 @@ describe("ResultsPage", () => {
   });
 
   it("leaves out the estimate when the set has no threshold", async () => {
-    getMock.mockResolvedValue(reply(200, { ...result, readiness: null }));
+    replyWith(reply(200, { ...result, readiness: null }));
 
     renderPage();
 
@@ -77,13 +93,42 @@ describe("ResultsPage", () => {
     expect(screen.queryByText(disclaimer)).not.toBeInTheDocument();
   });
 
-  it("lists the weakest areas and a table per dimension with partial-credit points", async () => {
-    getMock.mockResolvedValue(reply(200, result));
+  it("names the subtopics to study, not the broad categories", async () => {
+    replyWith(reply(200, result));
 
     renderPage();
 
-    const weakest = await screen.findByRole("region", { name: "Focus on these next" });
-    expect(within(weakest).getByRole("listitem")).toHaveTextContent("Pharmacological and Parenteral Therapies: 48%");
+    const section = await screen.findByRole("region", { name: "What to study next" });
+    const items = await within(section).findAllByRole("listitem");
+    expect(items.map((item) => item.textContent)).toEqual(["Insulin administration: missed 2 of 3", "Adverse effects of anticoagulants: missed 1 of 2"]);
+    expect(section).toHaveTextContent("Based on this test's question topics.");
+    expect(section).not.toHaveTextContent("Pharmacological");
+    expect(screen.queryByRole("link", { name: /insulin/i })).not.toBeInTheDocument();
+  });
+
+  it("says so when there is nothing specific to review", async () => {
+    replyWith(reply(200, result), reply(200, { attemptId: "attempt-1", subtopics: [] }));
+
+    renderPage();
+
+    expect(await screen.findByText("No specific topics to review from this test.")).toBeInTheDocument();
+  });
+
+  it("keeps the results on screen when the suggestions fail", async () => {
+    replyWith(reply(200, result), reply(500, { code: "INTERNAL_ERROR", title: "Broken." }));
+
+    renderPage();
+
+    expect(await screen.findByText(/study suggestions could not be loaded/)).toBeInTheDocument();
+    expect(screen.getByRole("region", { name: "Your score" })).toHaveTextContent("74%");
+  });
+
+  it("lists a table per dimension with partial-credit points", async () => {
+    replyWith(reply(200, result));
+
+    renderPage();
+
+    await screen.findByRole("heading", { name: "Results: Comprehensive Challenge Exam 1" });
     const subcategories = screen.getByRole("table", { name: "By Client Needs subcategory" });
     const moc = within(subcategories).getByRole("row", { name: /Management of Care/ });
     expect(within(moc).getAllByRole("cell").map((c) => c.textContent)).toEqual(["12", "8", "8.5 / 12", "71%", "1 min 21 s"]);
@@ -93,7 +138,7 @@ describe("ResultsPage", () => {
   });
 
   it("links to the review, including incorrect answers only", async () => {
-    getMock.mockResolvedValue(reply(200, result));
+    replyWith(reply(200, result));
 
     renderPage();
 
@@ -105,7 +150,7 @@ describe("ResultsPage", () => {
   });
 
   it("notes when the time ran out", async () => {
-    getMock.mockResolvedValue(reply(200, { ...result, submitReason: "time_expired" }));
+    replyWith(reply(200, { ...result, submitReason: "time_expired" }));
 
     renderPage();
 
@@ -113,7 +158,7 @@ describe("ResultsPage", () => {
   });
 
   it("explains a test that has not been submitted yet", async () => {
-    getMock.mockResolvedValue(reply(409, { code: "ATTEMPT_NOT_ACTIVE", title: "Not submitted." }));
+    replyWith(reply(409, { code: "ATTEMPT_NOT_ACTIVE", title: "Not submitted." }));
 
     renderPage();
 

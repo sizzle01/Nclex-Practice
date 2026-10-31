@@ -10,6 +10,7 @@ import { canAuthor } from "../roles";
 import { DraftForm } from "./DraftForm";
 import { formValuesFrom } from "./draftValues";
 import styles from "./editor.module.css";
+import { SubtopicPicker } from "./SubtopicPicker";
 import { TestKeyPanel } from "./TestKeyPanel";
 import { VersionHistory } from "./VersionHistory";
 import { WorkflowPanel } from "./WorkflowPanel";
@@ -54,6 +55,12 @@ export function QuestionEditor({ questionId, initialVersionId }: { questionId: s
       </div>
       <VersionHistory versions={question.versions} selectedId={version.id} onSelect={setSelectedId} />
       <WorkflowPanel question={question} version={version} onChanged={showLatest} />
+      {/* Remounted when the newest version moves category, so stale choices don't carry over. */}
+      <SubtopicPicker
+        key={`subtopics-${question.versions[0].id}-${String(question.versions[0].clientNeedsId)}`}
+        question={question}
+        editable={canAuthor(me?.role) && question.status === "active"}
+      />
       {isAuthorable(version.itemType) ? (
         <DraftForm
           // A fresh form per version, so switching versions shows that version's own values.

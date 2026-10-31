@@ -9,6 +9,7 @@ import { toNumber } from "@/lib/format/toNumber";
 import { type AttemptResultView, type CategoryResult, fetchResult, resultQueryKey } from "../attempt/api/attemptApi";
 import { elapsed, percent, points } from "./format";
 import styles from "./results.module.css";
+import { StudyRecommendations } from "./StudyRecommendations";
 
 type Breakdown = AttemptResultView["breakdown"];
 
@@ -24,7 +25,7 @@ const dimensions: { key: keyof Breakdown; title: string; column: string }[] = [
 
 /**
  * /attempts/[id]/results (interfaces.md 5.2): the score, the readiness estimate with its
- * disclaimer, time per question, the weakest areas and the breakdown tables.
+ * disclaimer, time per question, what to study next and the breakdown tables.
  */
 export function ResultsPage({ attemptId }: { attemptId: string }) {
   const result = useQuery({ queryKey: resultQueryKey(attemptId), queryFn: () => fetchResult(attemptId) });
@@ -71,20 +72,7 @@ export function ResultsPage({ attemptId }: { attemptId: string }) {
         <Readiness readiness={data.readiness} />
       </section>
 
-      {data.weakest.length > 0 && (
-        <section aria-labelledby="weakest-heading" className={ui.card}>
-          <h2 id="weakest-heading" className={ui.cardTitle}>
-            Focus on these next
-          </h2>
-          <ol className={styles.weakest}>
-            {data.weakest.map((area) => (
-              <li key={area.key}>
-                {area.name}: {percent(area.pct)}
-              </li>
-            ))}
-          </ol>
-        </section>
-      )}
+      <StudyRecommendations attemptId={attemptId} />
 
       <nav aria-label="Review your answers" className={styles.links}>
         <Link href={`/attempts/${attemptId}/review`} className={ui.button}>

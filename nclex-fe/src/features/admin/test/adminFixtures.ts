@@ -62,6 +62,7 @@ export function question(versions: AdminVersionView[], overrides: Partial<AdminQ
     createdAt: "2026-10-28T09:00:00Z",
     retiredAt: null,
     versions,
+    subtopics: [],
     ...overrides,
   };
 }
