@@ -1,12 +1,187 @@
 {
   "notice": "SAMPLE CONTENT: written for development and testing, not reviewed by a nurse educator. Do not use for exam preparation.",
   "track": "RN",
+  "subtopics": [
+    {
+      "clientNeeds": "SECE.MOC",
+      "slug": "prioritizing-client-care",
+      "name": "Prioritizing client care"
+    },
+    {
+      "clientNeeds": "SECE.MOC",
+      "slug": "delegation-and-supervision",
+      "name": "Delegation and supervision"
+    },
+    {
+      "clientNeeds": "SECE.SIC",
+      "slug": "transmission-based-precautions",
+      "name": "Transmission-based precautions"
+    },
+    {
+      "clientNeeds": "SECE.SIC",
+      "slug": "fire-safety-response",
+      "name": "Fire safety response"
+    },
+    {
+      "clientNeeds": "HPM",
+      "slug": "preconception-and-prenatal-care",
+      "name": "Preconception and prenatal care"
+    },
+    {
+      "clientNeeds": "HPM",
+      "slug": "infant-growth-and-development",
+      "name": "Infant growth and development"
+    },
+    {
+      "clientNeeds": "HPM",
+      "slug": "heart-failure-self-care-teaching",
+      "name": "Heart failure self-care teaching"
+    },
+    {
+      "clientNeeds": "PSI",
+      "slug": "suicide-risk-and-safety",
+      "name": "Suicide risk and safety"
+    },
+    {
+      "clientNeeds": "PSI",
+      "slug": "alcohol-withdrawal",
+      "name": "Alcohol withdrawal"
+    },
+    {
+      "clientNeeds": "PHI.BCC",
+      "slug": "tube-feeding-care",
+      "name": "Tube feeding care"
+    },
+    {
+      "clientNeeds": "PHI.BCC",
+      "slug": "pressure-injury-prevention",
+      "name": "Pressure injury prevention"
+    },
+    {
+      "clientNeeds": "PHI.PPT",
+      "slug": "pre-administration-medication-checks",
+      "name": "Pre-administration medication checks"
+    },
+    {
+      "clientNeeds": "PHI.PPT",
+      "slug": "adverse-effects-of-medications",
+      "name": "Adverse effects of medications"
+    },
+    {
+      "clientNeeds": "PHI.PPT",
+      "slug": "anticoagulant-therapy-and-monitoring",
+      "name": "Anticoagulant therapy and monitoring"
+    },
+    {
+      "clientNeeds": "PHI.PPT",
+      "slug": "potassium-medication-safety",
+      "name": "Potassium medication safety"
+    },
+    {
+      "clientNeeds": "PHI.PPT",
+      "slug": "blood-transfusion-reactions",
+      "name": "Blood transfusion reactions"
+    },
+    {
+      "clientNeeds": "PHI.PPT",
+      "slug": "medication-dose-calculations",
+      "name": "Medication dose calculations"
+    },
+    {
+      "clientNeeds": "PHI.PPT",
+      "slug": "medication-administration-technique",
+      "name": "Medication administration technique"
+    },
+    {
+      "clientNeeds": "PHI.PPT",
+      "slug": "heart-failure-interventions",
+      "name": "Heart failure interventions"
+    },
+    {
+      "clientNeeds": "PHI.RRP",
+      "slug": "monitoring-after-contrast-dye",
+      "name": "Monitoring after contrast dye"
+    },
+    {
+      "clientNeeds": "PHI.RRP",
+      "slug": "post-procedure-complications",
+      "name": "Post-procedure complications"
+    },
+    {
+      "clientNeeds": "PHI.RRP",
+      "slug": "recognizing-hypoglycemia",
+      "name": "Recognizing hypoglycemia"
+    },
+    {
+      "clientNeeds": "PHI.RRP",
+      "slug": "electrolyte-and-glucose-lab-results",
+      "name": "Electrolyte and glucose lab results"
+    },
+    {
+      "clientNeeds": "PHI.PA",
+      "slug": "chest-tube-management",
+      "name": "Chest tube management"
+    },
+    {
+      "clientNeeds": "PHI.PA",
+      "slug": "hypoglycemia-treatment",
+      "name": "Hypoglycemia treatment"
+    },
+    {
+      "clientNeeds": "PHI.PA",
+      "slug": "heart-failure-assessment",
+      "name": "Heart failure assessment"
+    },
+    {
+      "clientNeeds": "PHI.PA",
+      "slug": "heart-failure-treatment-response",
+      "name": "Heart failure treatment response"
+    },
+    {
+      "clientNeeds": "PHI.PA",
+      "slug": "acute-pulmonary-edema",
+      "name": "Acute pulmonary edema"
+    },
+    {
+      "clientNeeds": "PHI.PA",
+      "slug": "diabetic-ketoacidosis",
+      "name": "Diabetic ketoacidosis"
+    },
+    {
+      "clientNeeds": "PHI.PA",
+      "slug": "post-thyroidectomy-complications",
+      "name": "Post-thyroidectomy complications"
+    },
+    {
+      "clientNeeds": "PHI.PA",
+      "slug": "postpartum-hemorrhage",
+      "name": "Postpartum hemorrhage"
+    },
+    {
+      "clientNeeds": "PHI.PA",
+      "slug": "impaired-oxygenation",
+      "name": "Impaired oxygenation"
+    },
+    {
+      "clientNeeds": "PHI.PA",
+      "slug": "infant-dehydration",
+      "name": "Infant dehydration"
+    },
+    {
+      "clientNeeds": "PHI.PA",
+      "slug": "basic-life-support",
+      "name": "Basic life support"
+    }
+  ],
   "questions": [
     {
       "id": "f04a0000-0000-4000-8000-000000000001",
       "itemType": "multiple_choice",
       "clientNeeds": "SECE.MOC",
       "bodySystem": "fundamentals",
+      "subtopics": [
+        "prioritizing-client-care"
+      ],
       "cjmmSkill": "prioritize_hypotheses",
       "difficulty": "moderate",
       "stem": "The nurse receives report on four clients. Which client should the nurse see first?",
@@ -52,6 +227,9 @@
       "itemType": "multiple_choice",
       "clientNeeds": "SECE.SIC",
       "bodySystem": "gastrointestinal",
+      "subtopics": [
+        "transmission-based-precautions"
+      ],
       "cjmmSkill": "take_action",
       "difficulty": "easy",
       "stem": "A client is diagnosed with Clostridioides difficile infection. Which action should the nurse take?",
@@ -97,6 +275,9 @@
       "itemType": "multiple_choice",
       "clientNeeds": "HPM",
       "bodySystem": "maternal-newborn",
+      "subtopics": [
+        "preconception-and-prenatal-care"
+      ],
       "cjmmSkill": "generate_solutions",
       "difficulty": "moderate",
       "stem": "A client who plans to become pregnant asks when to start taking folic acid. What is the nurse's best response?",
@@ -142,6 +323,9 @@
       "itemType": "multiple_choice",
       "clientNeeds": "PSI",
       "bodySystem": "mental-health",
+      "subtopics": [
+        "suicide-risk-and-safety"
+      ],
       "cjmmSkill": "take_action",
       "difficulty": "moderate",
       "stem": "A client on the medical unit tells the nurse, \"I have a plan to end my life tonight.\" What should the nurse do first?",
@@ -187,6 +371,9 @@
       "itemType": "multiple_choice",
       "clientNeeds": "PHI.BCC",
       "bodySystem": "gastrointestinal",
+      "subtopics": [
+        "tube-feeding-care"
+      ],
       "cjmmSkill": "take_action",
       "difficulty": "easy",
       "stem": "A client is receiving continuous enteral feedings through a nasogastric tube. How should the nurse position the client?",
@@ -232,6 +419,9 @@
       "itemType": "multiple_choice",
       "clientNeeds": "PHI.PPT",
       "bodySystem": "pharmacology",
+      "subtopics": [
+        "pre-administration-medication-checks"
+      ],
       "cjmmSkill": "recognize_cues",
       "difficulty": "moderate",
       "stem": "An adult client is due for digoxin 0.125 mg. The apical pulse is 52/min. What should the nurse do?",
@@ -344,6 +534,9 @@
       "itemType": "multiple_choice",
       "clientNeeds": "PHI.PPT",
       "bodySystem": "pharmacology",
+      "subtopics": [
+        "anticoagulant-therapy-and-monitoring"
+      ],
       "cjmmSkill": "evaluate_outcomes",
       "difficulty": "easy",
       "stem": "Which laboratory result does the nurse use to monitor the effect of warfarin?",
@@ -389,6 +582,9 @@
       "itemType": "multiple_choice",
       "clientNeeds": "PHI.RRP",
       "bodySystem": "renal-urinary",
+      "subtopics": [
+        "monitoring-after-contrast-dye"
+      ],
       "cjmmSkill": "analyze_cues",
       "difficulty": "moderate",
       "stem": "A client received IV contrast for a CT scan. Which laboratory value is most important for the nurse to monitor over the next 48 hours?",
@@ -434,6 +630,9 @@
       "itemType": "multiple_choice",
       "clientNeeds": "PHI.PA",
       "bodySystem": "respiratory",
+      "subtopics": [
+        "chest-tube-management"
+      ],
       "cjmmSkill": "analyze_cues",
       "difficulty": "difficult",
       "stem": "A client has a chest tube connected to a water-seal drainage system. The nurse sees continuous bubbling in the water-seal chamber. What does this finding suggest?",
@@ -479,6 +678,9 @@
       "itemType": "multiple_choice",
       "clientNeeds": "PHI.PA",
       "bodySystem": "endocrine",
+      "subtopics": [
+        "hypoglycemia-treatment"
+      ],
       "cjmmSkill": "take_action",
       "difficulty": "moderate",
       "stem": "A client with type 1 diabetes is shaky and sweaty, with a blood glucose of 55 mg/dL. The client is alert and can swallow. What should the nurse do first?",
@@ -524,6 +726,9 @@
       "itemType": "sata",
       "clientNeeds": "SECE.MOC",
       "bodySystem": "fundamentals",
+      "subtopics": [
+        "delegation-and-supervision"
+      ],
       "cjmmSkill": "take_action",
       "difficulty": "moderate",
       "stem": "The nurse is assigning care for a stable client to assistive personnel. Which tasks are appropriate to delegate? Select all that apply.",
@@ -583,6 +788,9 @@
       "itemType": "sata",
       "clientNeeds": "SECE.SIC",
       "bodySystem": "respiratory",
+      "subtopics": [
+        "transmission-based-precautions"
+      ],
       "cjmmSkill": "take_action",
       "difficulty": "moderate",
       "stem": "A client is admitted with suspected pulmonary tuberculosis. Which actions should the nurse take? Select all that apply.",
@@ -637,6 +845,9 @@
       "itemType": "sata",
       "clientNeeds": "HPM",
       "bodySystem": "pediatrics",
+      "subtopics": [
+        "infant-growth-and-development"
+      ],
       "cjmmSkill": "recognize_cues",
       "difficulty": "easy",
       "stem": "Which developmental milestones does the nurse expect in a healthy 6-month-old infant? Select all that apply.",
@@ -696,6 +907,9 @@
       "itemType": "sata",
       "clientNeeds": "PSI",
       "bodySystem": "mental-health",
+      "subtopics": [
+        "alcohol-withdrawal"
+      ],
       "cjmmSkill": "recognize_cues",
       "difficulty": "moderate",
       "stem": "A client who drinks alcohol daily was admitted 18 hours ago. Which findings suggest alcohol withdrawal? Select all that apply.",
@@ -756,6 +970,9 @@
       "itemType": "sata",
       "clientNeeds": "PHI.BCC",
       "bodySystem": "integumentary",
+      "subtopics": [
+        "pressure-injury-prevention"
+      ],
       "cjmmSkill": "take_action",
       "difficulty": "easy",
       "stem": "Which actions help prevent pressure injuries in a client on bed rest? Select all that apply.",
@@ -818,6 +1035,9 @@
       "itemType": "sata",
       "clientNeeds": "PHI.PPT",
       "bodySystem": "pharmacology",
+      "subtopics": [
+        "adverse-effects-of-medications"
+      ],
       "cjmmSkill": "evaluate_outcomes",
       "difficulty": "moderate",
       "stem": "A client started lisinopril two weeks ago. Which findings should the nurse report to the healthcare provider? Select all that apply.",
@@ -872,6 +1092,9 @@
       "itemType": "sata",
       "clientNeeds": "PHI.PPT",
       "bodySystem": "pharmacology",
+      "subtopics": [
+        "potassium-medication-safety"
+      ],
       "cjmmSkill": "take_action",
       "difficulty": "difficult",
       "stem": "The nurse is preparing to give potassium chloride intravenously. Which actions are correct? Select all that apply.",
@@ -926,6 +1149,9 @@
       "itemType": "sata",
       "clientNeeds": "PHI.RRP",
       "bodySystem": "cardiovascular",
+      "subtopics": [
+        "post-procedure-complications"
+      ],
       "cjmmSkill": "recognize_cues",
       "difficulty": "difficult",
       "stem": "A client had a cardiac catheterization through the femoral artery 2 hours ago. Which findings could indicate bleeding? Select all that apply.",
@@ -986,6 +1212,9 @@
       "itemType": "sata",
       "clientNeeds": "PHI.PA",
       "bodySystem": "cardiovascular",
+      "subtopics": [
+        "heart-failure-assessment"
+      ],
       "cjmmSkill": "analyze_cues",
       "difficulty": "moderate",
       "stem": "Which findings are consistent with left-sided heart failure? Select all that apply.",
@@ -1053,6 +1282,9 @@
       "itemType": "sata",
       "clientNeeds": "PHI.PA",
       "bodySystem": "endocrine",
+      "subtopics": [
+        "diabetic-ketoacidosis"
+      ],
       "cjmmSkill": "recognize_cues",
       "difficulty": "difficult",
       "stem": "Which findings does the nurse expect in a client with diabetic ketoacidosis? Select all that apply.",
@@ -1108,6 +1340,9 @@
       "itemType": "select_n",
       "clientNeeds": "PHI.PA",
       "bodySystem": "endocrine",
+      "subtopics": [
+        "post-thyroidectomy-complications"
+      ],
       "cjmmSkill": "recognize_cues",
       "difficulty": "moderate",
       "stem": "The nurse is caring for a client 12 hours after a total thyroidectomy. Select the 3 findings that require immediate follow-up.",
@@ -1168,6 +1403,9 @@
       "itemType": "select_n",
       "clientNeeds": "PHI.PPT",
       "bodySystem": "pharmacology",
+      "subtopics": [
+        "potassium-medication-safety"
+      ],
       "cjmmSkill": "analyze_cues",
       "difficulty": "difficult",
       "stem": "A client's serum potassium is 6.0 mEq/L. Select the 2 prescribed medications the nurse should clarify with the provider before giving.",
@@ -1223,6 +1461,9 @@
       "itemType": "matrix_mc",
       "clientNeeds": "PHI.PA",
       "bodySystem": "cardiovascular",
+      "subtopics": [
+        "heart-failure-assessment"
+      ],
       "cjmmSkill": "analyze_cues",
       "difficulty": "moderate",
       "stem": "For each finding, indicate whether it is more consistent with left-sided or right-sided heart failure.",
@@ -1289,6 +1530,9 @@
       "itemType": "matrix_mc",
       "clientNeeds": "PHI.PPT",
       "bodySystem": "hematologic-oncologic",
+      "subtopics": [
+        "anticoagulant-therapy-and-monitoring"
+      ],
       "cjmmSkill": "take_action",
       "difficulty": "moderate",
       "stem": "A client with a new deep vein thrombosis is receiving a continuous heparin infusion. For each action, indicate whether it is indicated or contraindicated.",
@@ -1397,6 +1641,9 @@
       "itemType": "matrix_mr",
       "clientNeeds": "PHI.PPT",
       "bodySystem": "pharmacology",
+      "subtopics": [
+        "adverse-effects-of-medications"
+      ],
       "cjmmSkill": "take_action",
       "difficulty": "moderate",
       "stem": "For each medication, select the adverse effects the nurse should teach the client to report right away. Each medication may have more than one.",
@@ -1476,6 +1723,9 @@
       "itemType": "matrix_mr",
       "clientNeeds": "SECE.SIC",
       "bodySystem": "fundamentals",
+      "subtopics": [
+        "transmission-based-precautions"
+      ],
       "cjmmSkill": "generate_solutions",
       "difficulty": "easy",
       "stem": "For each type of transmission-based precautions, select the conditions that require it.",
@@ -1563,6 +1813,9 @@
       "itemType": "multiple_response_grouping",
       "clientNeeds": "PHI.RRP",
       "bodySystem": "musculoskeletal",
+      "subtopics": [
+        "post-procedure-complications"
+      ],
       "cjmmSkill": "recognize_cues",
       "difficulty": "moderate",
       "stem": "The nurse assesses a client 1 day after a total hip arthroplasty. For each body system, select the findings that require immediate follow-up.",
@@ -1662,6 +1915,9 @@
       "itemType": "multiple_response_grouping",
       "clientNeeds": "HPM",
       "bodySystem": "cardiovascular",
+      "subtopics": [
+        "heart-failure-self-care-teaching"
+      ],
       "cjmmSkill": "take_action",
       "difficulty": "easy",
       "stem": "The nurse is teaching a client with heart failure before discharge. For each topic, select the statements that show the client understands the teaching.",
@@ -1758,6 +2014,9 @@
       "itemType": "dropdown_cloze",
       "clientNeeds": "PHI.RRP",
       "bodySystem": "endocrine",
+      "subtopics": [
+        "recognizing-hypoglycemia"
+      ],
       "cjmmSkill": "analyze_cues",
       "difficulty": "easy",
       "stem": "A client with type 1 diabetes is shaky, sweaty and anxious 2 hours after taking insulin and skipping lunch. Complete the sentence.",
@@ -1835,6 +2094,9 @@
       "itemType": "dropdown_cloze",
       "clientNeeds": "SECE.SIC",
       "bodySystem": "fundamentals",
+      "subtopics": [
+        "fire-safety-response"
+      ],
       "cjmmSkill": "take_action",
       "difficulty": "easy",
       "stem": "The nurse discovers a small fire in a client's room. Complete the sentence.",
@@ -1904,6 +2166,9 @@
       "itemType": "dropdown_table",
       "clientNeeds": "PHI.RRP",
       "bodySystem": "renal-urinary",
+      "subtopics": [
+        "electrolyte-and-glucose-lab-results"
+      ],
       "cjmmSkill": "recognize_cues",
       "difficulty": "moderate",
       "stem": "The nurse reviews the morning laboratory results of a client with chronic kidney disease. For each result, choose the interpretation.",
@@ -2042,6 +2307,9 @@
       "itemType": "dropdown_table",
       "clientNeeds": "PHI.PPT",
       "bodySystem": "pharmacology",
+      "subtopics": [
+        "pre-administration-medication-checks"
+      ],
       "cjmmSkill": "take_action",
       "difficulty": "moderate",
       "stem": "For each medication, choose the assessment that matters most before giving it.",
@@ -2170,6 +2438,9 @@
       "itemType": "highlight_text",
       "clientNeeds": "PHI.PA",
       "bodySystem": "maternal-newborn",
+      "subtopics": [
+        "postpartum-hemorrhage"
+      ],
       "cjmmSkill": "recognize_cues",
       "difficulty": "moderate",
       "stem": "Highlight the findings in the nurse's note that require immediate follow-up.",
@@ -2247,6 +2518,9 @@
       "itemType": "highlight_text",
       "clientNeeds": "PHI.PA",
       "bodySystem": "respiratory",
+      "subtopics": [
+        "impaired-oxygenation"
+      ],
       "cjmmSkill": "recognize_cues",
       "difficulty": "easy",
       "stem": "Highlight the findings in the admission note that require immediate follow-up.",
@@ -2335,6 +2609,9 @@
       "itemType": "highlight_table",
       "clientNeeds": "PHI.PPT",
       "bodySystem": "hematologic-oncologic",
+      "subtopics": [
+        "blood-transfusion-reactions"
+      ],
       "cjmmSkill": "recognize_cues",
       "difficulty": "moderate",
       "stem": "A client is receiving a unit of packed red blood cells. Highlight the entries that indicate a transfusion reaction.",
@@ -2411,6 +2688,9 @@
       "itemType": "highlight_table",
       "clientNeeds": "PHI.PA",
       "bodySystem": "pediatrics",
+      "subtopics": [
+        "infant-dehydration"
+      ],
       "cjmmSkill": "analyze_cues",
       "difficulty": "moderate",
       "stem": "A 9-month-old infant has had diarrhea for 2 days. Highlight the findings that indicate dehydration.",
@@ -2487,6 +2767,9 @@
       "itemType": "fill_blank_calc",
       "clientNeeds": "PHI.PPT",
       "bodySystem": "pharmacology",
+      "subtopics": [
+        "medication-dose-calculations"
+      ],
       "cjmmSkill": "take_action",
       "difficulty": "easy",
       "stem": "The provider prescribes 1,000 mL of 0.9% sodium chloride to infuse over 8 hours. At what rate should the nurse set the infusion pump?",
@@ -2513,6 +2796,9 @@
       "itemType": "fill_blank_calc",
       "clientNeeds": "PHI.PPT",
       "bodySystem": "pediatrics",
+      "subtopics": [
+        "medication-dose-calculations"
+      ],
       "cjmmSkill": "take_action",
       "difficulty": "difficult",
       "stem": "A child weighing 17.3 kg is prescribed amoxicillin 25 mg/kg per dose. The suspension contains 250 mg in 5 mL. How many mL should the nurse give? Round to the nearest tenth.",
@@ -2539,6 +2825,9 @@
       "itemType": "ordered_response",
       "clientNeeds": "PHI.PPT",
       "bodySystem": "pharmacology",
+      "subtopics": [
+        "medication-administration-technique"
+      ],
       "cjmmSkill": "take_action",
       "difficulty": "easy",
       "stem": "Place the steps for giving eye drops in order.",
@@ -2596,6 +2885,9 @@
       "itemType": "ordered_response",
       "clientNeeds": "PHI.PA",
       "bodySystem": "cardiovascular",
+      "subtopics": [
+        "basic-life-support"
+      ],
       "cjmmSkill": "take_action",
       "difficulty": "moderate",
       "stem": "The nurse finds an adult client unresponsive in bed. Place the actions in order.",
@@ -2653,6 +2945,9 @@
       "itemType": "highlight_text",
       "clientNeeds": "PHI.PA",
       "bodySystem": "cardiovascular",
+      "subtopics": [
+        "heart-failure-assessment"
+      ],
       "cjmmSkill": "recognize_cues",
       "difficulty": "moderate",
       "stem": "Highlight the findings in the emergency department note that require immediate follow-up by the nurse.",
@@ -2767,6 +3062,9 @@
       "itemType": "dropdown_cloze",
       "clientNeeds": "PHI.PA",
       "bodySystem": "cardiovascular",
+      "subtopics": [
+        "acute-pulmonary-edema"
+      ],
       "cjmmSkill": "prioritize_hypotheses",
       "difficulty": "moderate",
       "stem": "Complete the sentence by choosing from the lists of options.",
@@ -2838,6 +3136,9 @@
       "itemType": "matrix_mr",
       "clientNeeds": "PHI.PPT",
       "bodySystem": "cardiovascular",
+      "subtopics": [
+        "heart-failure-interventions"
+      ],
       "cjmmSkill": "generate_solutions",
       "difficulty": "difficult",
       "stem": "For each intervention, select the expected effect or effects for this client. Each intervention may have more than one.",
@@ -2923,6 +3224,9 @@
       "itemType": "matrix_mc",
       "clientNeeds": "PHI.PA",
       "bodySystem": "cardiovascular",
+      "subtopics": [
+        "heart-failure-treatment-response"
+      ],
       "cjmmSkill": "evaluate_outcomes",
       "difficulty": "moderate",
       "stem": "On day 2, the nurse reassesses the client. For each finding, indicate whether it has improved, not changed or worsened since admission.",
