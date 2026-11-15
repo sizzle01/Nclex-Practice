@@ -17,6 +17,8 @@ public static class EmailServiceCollectionExtensions
             .Validate(o => o.From.Length > 0, "Email:From is required.")
             .Validate(o => Uri.IsWellFormedUriString(o.FrontendBaseUrl, UriKind.Absolute), "Email:FrontendBaseUrl must be an absolute URL.")
             .Validate(o => o.Smtp.Host.Length > 0, "Email:Smtp:Host is required.")
+            // A login without its key would fail on every send; refuse to start instead.
+            .Validate(o => o.Smtp.Username.Length == 0 || o.Smtp.Password.Length > 0, "Email:Smtp:Password is required when Email:Smtp:Username is set.")
             .ValidateOnStart();
 
         services.AddSingleton<EmailLinks>();

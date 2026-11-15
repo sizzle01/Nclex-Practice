@@ -7,9 +7,9 @@ using Nclex.Application.Abstractions;
 namespace Nclex.Infrastructure.Email;
 
 /// <summary>
-/// Sends email over SMTP with the built-in <see cref="SmtpClient"/>, which is enough for Mailpit
-/// locally. A production provider (with authentication, or an HTTP API) can replace this class
-/// behind <see cref="IEmailSender"/>.
+/// Sends email over SMTP with the built-in <see cref="SmtpClient"/>: anonymously to Mailpit
+/// locally, or with a username and SMTP key to a provider such as Brevo. A provider's HTTP API
+/// can replace this class behind <see cref="IEmailSender"/>.
 /// </summary>
 internal sealed class SmtpEmailSender(IOptions<EmailOptions> options) : IEmailSender
 {
@@ -39,6 +39,12 @@ internal sealed class SmtpEmailSender(IOptions<EmailOptions> options) : IEmailSe
             EnableSsl = settings.Smtp.EnableSsl,
             DeliveryMethod = SmtpDeliveryMethod.Network,
         };
+        // Set only when there is a login: assigning null keeps SmtpClient anonymous for Mailpit.
+        var credentials = settings.Smtp.CreateCredentials();
+        if (credentials is not null)
+        {
+            client.Credentials = credentials;
+        }
         await client.SendMailAsync(mail, cancellationToken);
         return messageId;
     }
