@@ -2,7 +2,6 @@ import { screen } from "@testing-library/react";
 import { beforeEach, describe, expect, it, vi } from "vitest";
 import { renderWithAuth } from "@/features/auth/test/renderWithAuth";
 import { apiClient } from "@/lib/api/client";
-import { isAdmin } from "../roles";
 import { reply, staffUser } from "../test/adminFixtures";
 import { AdminGate } from "./AdminGate";
 
@@ -33,7 +32,7 @@ describe("AdminGate", () => {
 
   it("keeps admin-only pages from authors", async () => {
     signedInAs("author");
-    renderWithAuth(<AdminGate allow={isAdmin}>Users</AdminGate>, { status: "authenticated" });
+    renderWithAuth(<AdminGate allow="admin">Users</AdminGate>, { status: "authenticated" });
 
     expect(await screen.findByRole("heading", { name: "You don't have access to this page" })).toBeInTheDocument();
   });

@@ -2,7 +2,6 @@ import type { Metadata } from "next";
 import { Suspense } from "react";
 import { BankEditor } from "@/features/admin/catalog/BankEditor";
 import { AdminGate } from "@/features/admin/components/AdminGate";
-import { isAdmin } from "@/features/admin/roles";
 
 export const metadata: Metadata = { title: "Banks | Admin | NCLEX Practice" };
 
@@ -17,7 +16,7 @@ export default function AdminBankPage({ params }: PageProps<"/admin/banks/[id]">
 async function BankRoute({ params }: Pick<PageProps<"/admin/banks/[id]">, "params">) {
   const { id } = await params;
   return (
-    <AdminGate allow={isAdmin}>
+    <AdminGate allow="admin">
       <BankEditor bankId={id} />
     </AdminGate>
   );
