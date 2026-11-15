@@ -10,7 +10,7 @@ run it day to day.
 |---|---|---|---|
 | `local` | Your machine: `docker compose up -d` for Postgres, Redis, MinIO and Mailpit, then `dotnet run` and `npm run dev` (see the [README](../README.md)) | Your working tree | Throwaway |
 | `local` (full stack) | `docker compose --profile app up -d --build --wait`: the same images staging runs | Your working tree, built into images | Throwaway; sample content imported on start |
-| `test` (informal) | One free Oracle Cloud VM, `https://129-146-180-15.sslip.io` (section 9) | `deploy/vm/deploy.sh deploy` from a Mac, by hand | Test accounts only; nightly dump kept 7 days on the VM |
+| `test` (informal) | One free Oracle Cloud VM, `https://fatimah-test.duckdns.org` (section 9) | `deploy/vm/deploy.sh deploy` from a Mac, by hand | Test accounts only; nightly dump kept 7 days on the VM |
 | `staging` | AWS (section 4), its own account or VPC | Every push to `main`, automatically | Test accounts only, never real candidates |
 | `production` | AWS, Multi-AZ | The images staging ran, once someone approves the `production` environment in GitHub | Real candidates |
 
@@ -256,10 +256,10 @@ Everything lives in `deploy/vm/`:
 | File | Role |
 |---|---|
 | `compose.vm.yml` | The stack. Only Caddy publishes ports (80, 443). Memory limits keep it inside 5 GB. |
-| `Caddyfile` | HTTPS for `SITE_HOST` and the proxy to the frontend. |
+| `Caddyfile` | HTTPS for `SITE_HOST`, the proxy to the frontend, and redirects from `REDIRECT_HOSTS`. |
 | `.env.example` | Every setting. The real `.env` (secrets, mode 600) exists only on the VM. |
 | `setup.sh` | One-time VM preparation: Docker, firewalld, swap, secrets, backup cron. |
-| `deploy.sh` | Run on a Mac: `bootstrap`, `deploy [--seed]`, `make-admin <email>`, `logs [service]`. |
+| `deploy.sh` | Run on a Mac: `bootstrap`, `deploy [--seed]`, `restart`, `make-admin <email>`, `logs [service]`. |
 | `backup.sh` | Nightly `pg_dump` (03:00 UTC) to `~/nclex/backups`, kept 7 days. |
 
 **Deploying.** From the repository root on an Apple Silicon Mac: `deploy/vm/deploy.sh deploy`. It
@@ -267,6 +267,12 @@ builds the four arm64 images locally (the VM's one core is too slow), copies the
 Postgres and Redis, runs the migration bundle (and stops if it fails), then restarts the api,
 worker, web and caddy. Add `--seed` to import the sample questions; leave it off normally, because
 the importer overwrites edits made in the admin screens.
+
+**The address.** `fatimah-test.duckdns.org` is a free DuckDNS name; its IP is set to the VM's on
+duckdns.org (the owner's account). The earlier `129-146-180-15.sslip.io` redirects to it. To move
+to another name: point it at the VM, set `SITE_HOST` in `~/nclex/.env` on the VM, add the old name
+to `REDIRECT_HOSTS`, then `deploy.sh restart`. Caddy gets the certificates; links in new emails
+follow `SITE_HOST`. If the VM's public IP ever changes, update it on duckdns.org.
 
 **First admin.** Sign up on the site, verify the email, then `deploy/vm/deploy.sh make-admin you@example.com`.
 The role applies at the next sign-in.
@@ -288,6 +294,5 @@ $C exec -T postgres pg_restore -U nclex -d nclex --clean --if-exists < backups/n
 $C start api worker
 ```
 
-**Rotating a secret.** Edit `~/nclex/.env` on the VM, then re-run `deploy.sh deploy` (or
-`docker compose … up -d`). A new `JWT_SIGNING_KEY` signs everyone out. Never change
+**Rotating a secret.** Edit `~/nclex/.env` on the VM, then run `deploy.sh restart`. A new `JWT_SIGNING_KEY` signs everyone out. Never change
 `POSTGRES_PASSWORD` there alone: Postgres keeps the password it was created with.

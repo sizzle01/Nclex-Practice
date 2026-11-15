@@ -128,6 +128,7 @@ services:
     restart: unless-stopped
     environment:
       SITE_HOST: ${SITE_HOST:?set SITE_HOST in .env}
+      REDIRECT_HOSTS: ${REDIRECT_HOSTS:?set REDIRECT_HOSTS in .env}
     ports:
       - "80:80"
       - "443:443"

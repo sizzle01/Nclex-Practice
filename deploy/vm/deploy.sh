@@ -5,6 +5,7 @@
 #   deploy/vm/deploy.sh bootstrap            first time only: copy files, run setup.sh on the VM
 #                                            (asks for the Brevo SMTP key, or reads NCLEX_SMTP_KEY)
 #   deploy/vm/deploy.sh deploy [--seed]      build images here, copy them over, migrate, restart
+#   deploy/vm/deploy.sh restart              apply changed settings (.env, Caddyfile) without new images
 #   deploy/vm/deploy.sh make-admin <email>   give an existing account the admin role
 #   deploy/vm/deploy.sh logs [service]       follow the logs (api, worker, web, caddy, ...)
 #
@@ -92,6 +93,13 @@ case "${1:-}" in
   deploy)
     deploy "${2:-}"
     ;;
+  restart)
+    # Recreates only the containers whose settings changed; images stay as they are.
+    sync_files
+    compose up -d --wait --remove-orphans api worker web caddy
+    # A changed Caddyfile is a bind mount, so compose sees no change: reload it explicitly.
+    compose exec -T caddy caddy reload --config /etc/caddy/Caddyfile
+    ;;
   make-admin)
     [ -n "${2:-}" ] || { echo "Usage: $0 make-admin <email>" >&2; exit 2; }
     compose run --rm jobs set-role "$2" admin
@@ -100,7 +108,7 @@ case "${1:-}" in
     compose logs -f --tail 200 "${2:-}"
     ;;
   *)
-    sed -n '2,16p' "$0"
+    sed -n '2,17p' "$0"
     exit 2
     ;;
 esac

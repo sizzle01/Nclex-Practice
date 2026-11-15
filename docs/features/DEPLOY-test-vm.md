@@ -4,9 +4,9 @@ Branch: `feature/deploy-test-vm`, based on `main` (efb65cb, F00–F17).
 
 ## 1. Summary
 
-Testers can use the whole app at **https://129-146-180-15.sslip.io**: a free Oracle Cloud VM
+Testers can use the whole app at **https://fatimah-test.duckdns.org**: a free Oracle Cloud VM
 running the same Docker images as the full local stack. Caddy gives it a real HTTPS certificate
-with no domain to buy (sslip.io turns the IP into a host name), and verification, reset and
+for a free DuckDNS name (the first address, `129-146-180-15.sslip.io`, now redirects there), and verification, reset and
 result emails go out for real through Brevo. A script on your Mac builds the images, copies them
 to the VM, migrates the database and restarts the app; another backs the database up every night.
 To make Brevo work, the worker's SMTP settings gained an optional username and password, the only
@@ -21,11 +21,12 @@ cd <repo root>
 deploy/vm/deploy.sh bootstrap        # done once already: Docker, firewall, secrets, backups
 deploy/vm/deploy.sh deploy --seed    # first deploy (imports the sample questions)
 deploy/vm/deploy.sh deploy           # every later deploy
+deploy/vm/deploy.sh restart          # after editing ~/nclex/.env on the VM, or the Caddyfile
 deploy/vm/deploy.sh make-admin you@example.com
 deploy/vm/deploy.sh logs worker
 ```
 
-Then open https://129-146-180-15.sslip.io, sign up, and find the verification email (check spam:
+Then open https://fatimah-test.duckdns.org, sign up, and find the verification email (check spam:
 see section 8). After `make-admin`, sign out and in again to get the admin screens.
 
 In the Oracle console the subnet's security list must allow TCP 80 and 443 from `0.0.0.0/0`.
@@ -48,7 +49,7 @@ In the Oracle console the subnet's security list must allow TCP 80 and 443 from 
 
 A tester signs up:
 
-1. The browser posts to `https://…sslip.io/api/v1/auth/signup`. **Caddy** ends TLS and forwards to
+1. The browser posts to `https://fatimah-test.duckdns.org/api/v1/auth/signup`. **Caddy** ends TLS and forwards to
    `web:3000`, adding `X-Forwarded-For`.
 2. The **Next.js server** matches its `/api` rewrite (compiled in with `API_URL=http://api:8080`)
    and forwards to the **API**, which trusts forwarded headers from Docker's private ranges, so rate
@@ -58,7 +59,7 @@ A tester signs up:
 4. The **worker**'s outbox dispatcher picks the row up, renders the template, and `SmtpEmailSender`
    connects to `smtp-relay.brevo.com:587`, starts TLS and logs in with `Email:Smtp:Username` and
    `Password`. Brevo delivers it; the row is marked `sent`.
-5. The link in the email points at `Email:FrontendBaseUrl` (`https://…sslip.io/verify-email?token=…`).
+5. The link in the email points at `Email:FrontendBaseUrl` (`https://fatimah-test.duckdns.org/verify-email?token=…`).
 
 ## 5. Database changes
 
@@ -70,6 +71,10 @@ None. No migration; the VM's database is created by the existing migration bundl
   production; that design is unchanged. This VM is documented separately (operations.md section 9).
 - **Images are built on the Mac, not on the VM, and copied over SSH.** The VM has one core; both
   machines are arm64. No registry and no GitHub push are needed (origin still stops at F16).
+- **A free DuckDNS name, not a bought domain.** It gives a readable address, but DuckDNS only
+  lets you set the IP (and one TXT record), so the domain can't be verified in Brevo. Emails still
+  come from the gmail.com address. The sslip.io address stays as a permanent redirect so earlier
+  links keep working.
 - **Brevo instead of Mailpit**, using a sender address on gmail.com (see section 8).
 - **SMTP login is optional.** Without a username `SmtpClient` stays anonymous, so Mailpit and the
   local stack behave as before. A username without a password stops the worker at start-up rather
@@ -97,7 +102,8 @@ None. No migration; the VM's database is created by the existing migration bundl
 ## 8. Follow-ups and known limitations
 
 - **Email from `@gmail.com` through Brevo fails Gmail's sender checks (DMARC)**, so messages may
-  land in spam. Verifying a domain you own in Brevo and sending from it fixes this.
+  land in spam. Verifying a domain you own in Brevo and sending from it fixes this; a DuckDNS name
+  can't be verified (no DKIM records), so this needs a bought domain.
 - **The Brevo SMTP key was pasted into a chat transcript.** Generate a new key in Brevo, then
   update `SMTP_PASSWORD` in `~/nclex/.env` on the VM and run `deploy.sh deploy`.
 - Backups sit on the same disk as the database. Copy them off the VM (for example to Oracle Object
