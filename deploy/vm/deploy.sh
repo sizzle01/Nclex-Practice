@@ -3,6 +3,7 @@
 # Run from your Mac, in the repository root:
 #
 #   deploy/vm/deploy.sh bootstrap            first time only: copy files, run setup.sh on the VM
+#                                            (asks for the Brevo SMTP key, or reads NCLEX_SMTP_KEY)
 #   deploy/vm/deploy.sh deploy [--seed]      build images here, copy them over, migrate, restart
 #   deploy/vm/deploy.sh make-admin <email>   give an existing account the admin role
 #   deploy/vm/deploy.sh logs [service]       follow the logs (api, worker, web, caddy, ...)
@@ -80,8 +81,13 @@ site_host() { ssh_vm "grep '^SITE_HOST=' ~/$APP_DIR/.env | cut -d= -f2"; }
 case "${1:-}" in
   bootstrap)
     sync_files
-    # -t: setup.sh asks for the SMTP key, which needs a terminal.
-    ssh -t -i "$SSH_KEY" "$VM" "bash ~/$APP_DIR/setup.sh"
+    if [ -n "${NCLEX_SMTP_KEY:-}" ]; then
+      # Non-interactive: send the key on stdin so it never appears in the VM's process list.
+      printf %s "$NCLEX_SMTP_KEY" | ssh_vm "NCLEX_SMTP_KEY=\$(cat) bash ~/$APP_DIR/setup.sh"
+    else
+      # -t: setup.sh asks for the SMTP key, which needs a terminal.
+      ssh -t -i "$SSH_KEY" "$VM" "bash ~/$APP_DIR/setup.sh"
+    fi
     ;;
   deploy)
     deploy "${2:-}"
@@ -94,7 +100,7 @@ case "${1:-}" in
     compose logs -f --tail 200 "${2:-}"
     ;;
   *)
-    sed -n '2,15p' "$0"
+    sed -n '2,16p' "$0"
     exit 2
     ;;
 esac

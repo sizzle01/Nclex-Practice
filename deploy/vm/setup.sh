@@ -28,8 +28,9 @@ sudo firewall-cmd --permanent --add-service=http --add-service=https >/dev/null
 sudo firewall-cmd --reload >/dev/null
 
 echo "==> Swap"
-# 2 GB of headroom for the 1-core, 5 GB VM; the stack itself fits in memory (compose.vm.yml limits).
-if ! sudo swapon --show | grep -q /swapfile; then
+# Headroom for the 1-core, 5 GB VM; the stack itself fits in memory (compose.vm.yml limits).
+# Oracle's images usually come with swap already, so only add it when there is none.
+if [ -z "$(sudo swapon --show --noheadings)" ]; then
   sudo fallocate -l 2G /swapfile
   sudo chmod 600 /swapfile
   sudo mkswap /swapfile >/dev/null
