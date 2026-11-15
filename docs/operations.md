@@ -10,6 +10,7 @@ run it day to day.
 |---|---|---|---|
 | `local` | Your machine: `docker compose up -d` for Postgres, Redis, MinIO and Mailpit, then `dotnet run` and `npm run dev` (see the [README](../README.md)) | Your working tree | Throwaway |
 | `local` (full stack) | `docker compose --profile app up -d --build --wait`: the same images staging runs | Your working tree, built into images | Throwaway; sample content imported on start |
+| `test` (informal) | One free Oracle Cloud VM, `https://129-146-180-15.sslip.io` (section 9) | `deploy/vm/deploy.sh deploy` from a Mac, by hand | Test accounts only; nightly dump kept 7 days on the VM |
 | `staging` | AWS (section 4), its own account or VPC | Every push to `main`, automatically | Test accounts only, never real candidates |
 | `production` | AWS, Multi-AZ | The images staging ran, once someone approves the `production` environment in GitHub | Real candidates |
 
@@ -53,7 +54,9 @@ environments never see the local keys in it.
 | `ConnectionStrings__Postgres`, `ConnectionStrings__Redis` | yes | as for the API | |
 | `Email__From` | no | `NCLEX Practice <no-reply@example.com>` | Required. |
 | `Email__FrontendBaseUrl` | no | `https://app.example.com` | Required. Used to build the links in emails. |
-| `Email__Smtp__Host`, `__Port`, `__EnableSsl` | no | `email-smtp.us-east-1.amazonaws.com`, `587`, `true` | See the SMTP credentials limitation in section 8. |
+| `Email__Smtp__Host`, `__Port`, `__EnableSsl` | no | `smtp-relay.brevo.com`, `587`, `true` | Mailpit locally: `mailpit`, `1025`, `false`. |
+| `Email__Smtp__Username` | no | `xxxxxx@smtp-brevo.com` | Optional. Leave empty for Mailpit, which accepts mail without a login. |
+| `Email__Smtp__Password` | yes | the provider's SMTP key | Required when a username is set; the worker refuses to start without it. |
 | `Notifications__DraftReminderAfterDays`, `__DraftReminderCron` | no | `3`, `0 * * * *` | |
 | `MediaStorage__LocalRoot` | no | `/data/media` | The content importer writes media here. |
 | `OTEL_EXPORTER_OTLP_ENDPOINT` | no | as for the API | |
@@ -231,10 +234,60 @@ format).
 - **Media is on local disk.** `LocalDiskMediaStorage` writes under `MediaStorage__LocalRoot`. On
   Fargate that storage belongs to each task and is lost when the task is replaced. Until S3 storage
   exists, mount a shared EFS volume at `/data/media` on the API and worker tasks.
-- **SMTP has no username or password setting.** SES, Postmark and Resend all require one, so email
-  can't be sent from staging or production until `Email:Smtp` gains credentials (read from the
-  secret store).
 - **The email webhook is missing.** `POST /webhooks/email` (api.md section 9), for bounces and
   complaints, isn't built yet.
 - **The deploy has not been run against AWS.** The infrastructure in section 4 is not provisioned by
   this repository yet.
+
+## 9. Test VM (informal)
+
+A cheap place for people to try the app: the whole stack on one free Oracle Cloud VM (Always Free,
+1 ARM core, 5 GB RAM, Oracle Linux 9). It is **not** the staging environment of architecture.md
+section 8, which stays the AWS design above. Use test accounts only: there is one copy of the data,
+backed up to the same disk.
+
+```
+Internet ──► Caddy :443 (Let's Encrypt) ──► web:3000 ──/api──► api:8080 ──► postgres, redis
+                                                               worker ──► Brevo SMTP (email)
+```
+
+Everything lives in `deploy/vm/`:
+
+| File | Role |
+|---|---|
+| `compose.vm.yml` | The stack. Only Caddy publishes ports (80, 443). Memory limits keep it inside 5 GB. |
+| `Caddyfile` | HTTPS for `SITE_HOST` and the proxy to the frontend. |
+| `.env.example` | Every setting. The real `.env` (secrets, mode 600) exists only on the VM. |
+| `setup.sh` | One-time VM preparation: Docker, firewalld, swap, secrets, backup cron. |
+| `deploy.sh` | Run on a Mac: `bootstrap`, `deploy [--seed]`, `make-admin <email>`, `logs [service]`. |
+| `backup.sh` | Nightly `pg_dump` (03:00 UTC) to `~/nclex/backups`, kept 7 days. |
+
+**Deploying.** From the repository root on an Apple Silicon Mac: `deploy/vm/deploy.sh deploy`. It
+builds the four arm64 images locally (the VM's one core is too slow), copies them over SSH, starts
+Postgres and Redis, runs the migration bundle (and stops if it fails), then restarts the api,
+worker, web and caddy. Add `--seed` to import the sample questions; leave it off normally, because
+the importer overwrites edits made in the admin screens.
+
+**First admin.** Sign up on the site, verify the email, then `deploy/vm/deploy.sh make-admin you@example.com`.
+The role applies at the next sign-in.
+
+**Looking around.** `deploy/vm/deploy.sh logs api` (or `worker`, `web`, `caddy`). On the VM:
+`cd ~/nclex && docker compose -f compose.vm.yml --env-file .env ps`.
+
+**Rolling back.** There is no image history on the VM. Check out the last good commit and run
+`deploy.sh deploy` again; migrations already applied are skipped.
+
+**Restoring a backup.**
+
+```bash
+ssh -i ~/.ssh/oracle_nclex opc@129.146.180.15
+cd ~/nclex
+C="docker compose -f compose.vm.yml --env-file .env"
+$C stop api worker
+$C exec -T postgres pg_restore -U nclex -d nclex --clean --if-exists < backups/nclex-<date>.dump
+$C start api worker
+```
+
+**Rotating a secret.** Edit `~/nclex/.env` on the VM, then re-run `deploy.sh deploy` (or
+`docker compose … up -d`). A new `JWT_SIGNING_KEY` signs everyone out. Never change
+`POSTGRES_PASSWORD` there alone: Postgres keeps the password it was created with.
