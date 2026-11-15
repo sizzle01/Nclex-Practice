@@ -1,0 +1,13 @@
+# Public entry point of the test VM (compose.vm.yml). SITE_HOST comes from .env, for example
+# 129-146-180-15.sslip.io: sslip.io resolves that name to the IP inside it, so Let's Encrypt can
+# issue a real certificate without us owning a domain.
+{$SITE_HOST} {
+	encode gzip
+
+	# The frontend serves the pages and forwards /api to the API (nclex-fe next.config.ts), exactly
+	# as on the full local stack, so Caddy only needs one upstream. flush_interval -1 keeps
+	# server-sent notifications (architecture.md, ADR-6) streaming instead of buffered.
+	reverse_proxy web:3000 {
+		flush_interval -1
+	}
+}
