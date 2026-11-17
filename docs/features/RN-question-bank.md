@@ -52,9 +52,10 @@ questions and the last file imports after every question it lists:
 - 8 NCLEX-RN challenges: 4 exams of 85 items (2 whole cases + 73 standalone items weighted by test-plan
   midpoints; no item appears in two exams), each published as a timed (2 h 50 min) and an untimed challenge.
   Both use exam rules: no going back, answers and a 65% pass estimate at the end.
-- **Deviation, to be fixed by F19:** the user's design is that timed and untimed challenges are both adaptive, like
-  the real NCLEX (architecture.md 5.8: stop once the 95% confidence interval excludes the passing standard after
-  85 items, otherwise continue to 150). CAT isn't built yet, so the challenges are fixed at 85 items for now.
+- **Since F19** these 8 challenges are unpublished (`isPublished: false`, same ids and items, so earlier attempts
+  keep their history). One **NCLEX-RN adaptive exam** replaces them: 85 to 150 questions picked from the whole
+  bank as the candidate answers, taken timed (5 hours) or untimed as the candidate chooses (architecture.md 5.8,
+  docs/features/F19-cat-adaptive-exam.md).
 The custom builder (`/practice/custom`) draws from every published question, so it never needed a set.
 
 ## 6. Key decisions and deviations

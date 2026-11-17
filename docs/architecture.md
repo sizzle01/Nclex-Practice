@@ -277,13 +277,18 @@ One button on the dashboard and the results page builds a practice test from the
 - **Size:** 25 questions; fewer when the leaves run short (the card says so before the click); no test under 5.
 - **Set:** an ordinary custom set (`kind='custom'`, owner = user) in practice mode with tutor reveal and no timer, so no new tables. `generator_criteria` records `source: "weak_areas"` and the leaves.
 
-### 5.8 CAT adaptive mode (Phase 2, designed now)
+### 5.8 CAT adaptive mode (built in F19)
 
-The schema already supports it: `attempt_items` rows are appended one at a time instead of being created up front, and `attempts.cat_state` holds `{theta, se, administered, contentCounts}`.
+An adaptive exam is a test set with `kind='cat'` and `mode='cat'`. It has no `test_set_items`: each attempt picks its questions one at a time from every published standalone question of the track that the candidate's plan allows. `attempt_items` rows are appended as questions are given, so `attempts.total_items` grows with the exam. `test_sets.cat_config` holds `{minItems, maxItems, passingTheta}` (RN: 85, 150, 0). `attempts.cat_state` holds the config copied at start, θ, its standard error, every question given in order with its difficulty, Client Needs leaf and score, and the stop reason once it ends. The pure maths lives in `Nclex.Domain/Cat`.
 
-- **Model:** Rasch (1PL) using `question_versions.irt_b`. Until real calibration data exists, it's seeded from difficulty tiers (easy = −1, moderate = 0, difficult = +1).
-- **Selection:** maximum information at the current θ, constrained by test-plan content balancing, with randomesque exposure control (pick from the top 5).
-- **Stopping:** the 95% confidence interval excludes the passing standard (after the minimum number of items), or the item maximum is reached, or time runs out (the R.O.O.T. rule). The minimum and maximum are configurable per set and default to 85/150.
+- **Model:** Rasch (1PL) using `question_versions.irt_b`. Until real calibration data exists, a missing `irt_b` is read as the difficulty tier's seed (easy = −1, moderate = 0, difficult = +1); nothing is written back.
+- **Estimate:** expected a posteriori (EAP) over a θ grid from −4 to 4 with a standard normal prior, so all-right or all-wrong answers still give a finite θ. The standard error is the posterior SD. A partly correct NGN answer counts as its share of points (2 of 3 points = 0.67).
+- **Selection:** first the Client Needs leaf furthest behind its test-plan share (midpoint of `weight_min`/`weight_max`), then, within it, the 5 most informative questions at the current θ (p(1−p)), picking one at random. Questions of equal information are shuffled first, because seeded difficulties have only three values. A question is never given twice in one attempt.
+- **Flow:** `POST /attempts/{id}/items/{position}/answer` locks the current item, grades it at once (the reveal still waits for the end), re-estimates θ and checks the stopping rule in one transaction. It then either adds the next item or finalizes the attempt with `submit_reason='cat_stop'`. There is no going back, no navigator and no candidate Submit; Navigate and Submit return `409 ADAPTIVE_NOT_ALLOWED`.
+- **Stopping:** after the minimum, the exam stops as soon as the 95% confidence interval (θ ± 1.96·SE) excludes the passing standard. It always stops at the maximum, or if the bank runs out. On a timed exam the usual exam timer (5.1) finalizes the attempt with `time_expired`.
+- **Result:** one rule covers every ending: fewer answers than the minimum is a fail (the run-out-of-time rule), otherwise θ ≥ the passing standard is a pass. When the exam stopped on a clear result, this agrees with the interval. `attempt_results` stores `cat_theta`/`cat_se`, `passed`, and the readiness label from it, with no `pass_threshold`. A question on screen when time ran out is scored in the totals but does not move θ.
+- **Timing choice (F19):** the set carries a time budget (RN: 5 hours), and the candidate chooses timed or untimed with `POST /attempts {timed}`. Untimed drops every timer from the attempt's settings snapshot. A draft keeps the choice it started with.
+- **Not yet:** case-study items are left out of the pool (a case is six linked items, which one-at-a-time selection cannot serve as a unit), and the difficulties are not calibrated.
 
 ## 6. Security
 

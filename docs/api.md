@@ -52,6 +52,8 @@ An `errors[]` entry may also carry a `message` (added in F14). Item-type validat
 | `BACK_NAVIGATION_DISABLED` | 409 | The set doesn't allow going back |
 | `PAUSE_LIMIT_REACHED` | 409 | |
 | `INSUFFICIENT_QUESTIONS` | 422 | The builder found fewer items than requested. `available` is included. Weak-area practice (F18) sends it when fewer than 5 questions qualify. |
+| `ADAPTIVE_NOT_ALLOWED` | 409 | Navigate or Submit on an adaptive exam, which moves on one answer at a time and ends on its own (added in F19) |
+| `ADAPTIVE_ONLY` | 409 | `POST …/answer` on an attempt that is not an adaptive exam (added in F19) |
 | `NO_WEAK_AREAS` | 422 | Weak-area practice (F18): no Client Needs area is weak in the last 10 tests, so there is nothing to practise |
 | `INVALID_STATUS_TRANSITION` | 409 | Admin console (F14): the action doesn't fit the current status, e.g. approving a draft, editing a version in review, a second open version, or a retired question |
 | `RATE_LIMITED` | 429 | |
@@ -130,7 +132,7 @@ Validation: email in RFC 5322 format, at most 254 characters. Password must be 1
 |---|---|---|
 | GET | `/taxonomy?track=RN` | Client-needs tree, body systems, item types (with MVP availability), CJMM skills |
 | GET | `/question-banks?track=RN` | Banks visible to the user, with item counts and lock state |
-| GET | `/test-sets?track=RN&kind=prebuilt` | Curated sets (Practice, Challenge, Sample) |
+| GET | `/test-sets?track=RN&kind=prebuilt` | Curated sets (Practice, Challenge, Sample). `kind=cat` lists adaptive exams; with no kind, both (F19) |
 | GET | `/test-sets/{id}` | Set details and settings |
 | GET | `/test-sets/custom/available-count?…filters` | Live pool size for the builder |
 | POST | `/test-sets/custom` | Generate a custom set |
@@ -156,9 +158,11 @@ Validation: email in RFC 5322 format, at most 254 characters. Password must be 1
   "id": "…", "title": "Comprehensive Challenge Exam 1", "mode": "challenge", "revealMode": "exam",
   "questionCount": 75, "timed": true, "timeBudgetSec": 9000, "perQuestionSec": null,
   "passThreshold": 0.65, "isSample": false, "accessTier": "free", "locked": false,
-  "myLastAttempt": { "id": "…", "scorePct": 0.71, "submittedAt": "…" }
+  "myLastAttempt": { "id": "…", "scorePct": 0.71, "submittedAt": "…" },
+  "adaptive": null
 } ], "nextCursor": null }
 ```
+An adaptive exam (F19, `mode: "cat"`) has `"adaptive": { "minItems": 85, "maxItems": 150 }`, and its `questionCount` is the maximum. `timed` and `timeBudgetSec` describe the timed option; the candidate may choose untimed when starting. `GET /test-sets/{id}` carries the same `adaptive` field, and `kind` is `"cat"`.
 
 **`POST /test-sets/custom`**
 ```json
@@ -209,6 +213,7 @@ The server picks the areas and the questions; the client sends no filters. The s
 | PUT | `/attempts/{id}/items/{position}/response` | Autosave the response |
 | PATCH | `/attempts/{id}/items/{position}` | Toggle mark-for-review, strike-through |
 | POST | `/attempts/{id}/items/{position}/submit` | Tutor mode: lock, grade, reveal |
+| POST | `/attempts/{id}/items/{position}/answer` | Adaptive exam: confirm the answer, then get the next question or the end (added in F19) |
 | POST | `/attempts/{id}/navigate` | Move to a position (starts and stops item timers) |
 | POST | `/attempts/{id}/pause` | Pause or Save & Exit |
 | POST | `/attempts/{id}/resume` | Resume from pause |
@@ -241,15 +246,18 @@ interface AttemptState {
   lastActivityAt: string;
   staleDraft: boolean;              // lastActivityAt > 30 days → UI prompts resume/discard
   resultAvailable: boolean;
+  // Adaptive exams only (F19); null otherwise. θ is never shown while the exam runs.
+  adaptive: { answered: number; minItems: number; maxItems: number; timed: boolean } | null;
 }
 ```
 
 **`POST /attempts`**
 ```json
 // request
-{ "testSetId": "…" }
+{ "testSetId": "…", "timed": false }   // timed: adaptive exams only (F19), optional
 // 201 AttemptState. Exam timer is NOT running yet; it starts on /open.
 ```
+`timed` is the candidate's choice for an adaptive exam: `false` drops every timer, `true` (or left out) uses the set's budget. Sent for any other set, it returns `400` with `{ "field": "timed", "code": "INVALID_VALUE" }`. An adaptive exam starts with one item; the rest are added as the candidate answers.
 Errors: `EMAIL_NOT_VERIFIED`, `PLAN_UPGRADE_REQUIRED`. If the user already has an active draft of the same prebuilt set, the call returns `200` with that draft instead of creating a duplicate.
 
 **`POST /attempts/{id}/open`**
@@ -307,6 +315,20 @@ Returns `423 ATTEMPT_PAUSED` while paused, because content is hidden during a pa
 **`POST /attempts/{id}/items/{position}/submit`** (tutor mode only; returns `409` in exam mode)
 Takes `{ "response": {…}, "clientSeq": 43 }`, which is optional and saves a final response before locking. Returns `200 { "reveal": { … } }`.
 
+**`POST /attempts/{id}/items/{position}/answer`** (adaptive exams only, added in F19; architecture §5.8)
+```json
+// request: the answer is required, as the NCLEX does not allow skipping
+{ "response": { "selected": "b" }, "clientSeq": 12 }
+// 200, the exam goes on: the next item is now current
+{ "ended": false, "attempt": { /* AttemptState, currentPosition = position + 1 */ } }
+// 200, the exam stopped on its own: the attempt is submitted with submitReason "cat_stop"
+{ "ended": true, "attempt": { /* AttemptState, status "submitted" */ } }
+```
+- The item is locked and graded at once, but its reveal still waits for the end.
+- A retry for a position already answered returns the current state and changes nothing. A retry after the exam ended returns `ended: true` again.
+- Errors: `ADAPTIVE_ONLY`, `ATTEMPT_TIME_EXPIRED` (the timer finalized the exam), `ATTEMPT_OPENED_ELSEWHERE`, `ATTEMPT_PAUSED`, and `400` for a missing response.
+- `navigate` and `submit` return `409 ADAPTIVE_NOT_ALLOWED` on an adaptive exam.
+
 **`POST /attempts/{id}/navigate`**
 ```json
 { "toPosition": 13 }
@@ -346,9 +368,16 @@ Repeated calls return the same result.
                         "pct": 0.70, "avgTimeMs": 90000 } ],
     "client_needs_parent": [ … ], "body_system": [ … ], "item_type": [ … ], "cjmm_skill": [ … ]
   },
-  "weakest": [ { "dimension": "client_needs", "key": "PI.PPT", "name": "Pharmacological & Parenteral Therapies", "pct": 0.48 } ]
+  "weakest": [ { "dimension": "client_needs", "key": "PI.PPT", "name": "Pharmacological & Parenteral Therapies", "pct": 0.48 } ],
+  "adaptive": null
 }
 ```
+For an adaptive exam (F19), `readiness` is null and `adaptive` holds the outcome:
+```json
+"adaptive": { "passed": true, "itemsAnswered": 85, "minItems": 85, "maxItems": 150,
+              "stopReason": "clear_result", "timed": false, "disclaimer": "…" }
+```
+`stopReason` is `clear_result`, `max_items`, `pool_exhausted` or `time_expired`. Score and breakdown are filled as usual, but the UI leads with pass or fail. The attempt list (`GET /attempts`) gains `timed` on every row, and `passed` there is the adaptive outcome for adaptive exams.
 
 **`GET /attempts/{id}/recommendations` → 200** (added in F17). The owner only, for submitted attempts, with the same errors as `/result`. It lists up to 5 subtopics to study, worked out on each read from the current tags.
 ```json

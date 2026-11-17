@@ -345,7 +345,7 @@ CREATE TABLE test_sets (
   access_tier        plan_tier NOT NULL DEFAULT 'free',
   is_published       boolean NOT NULL DEFAULT false,
   generator_criteria jsonb,                        -- custom builder filters (for "retake similar")
-  cat_config         jsonb,                        -- {minItems, maxItems, passingTheta} for CAT
+  cat_config         jsonb,                        -- {minItems, maxItems, passingTheta} for CAT (F19: kind 'cat', no test_set_items; question_count = maxItems)
   question_count     int NOT NULL,
   created_at         timestamptz NOT NULL DEFAULT now(),
   CHECK (kind <> 'custom' OR owner_user_id IS NOT NULL),
@@ -391,7 +391,7 @@ CREATE TABLE attempts (
   active_client_id    text,
   lease_acquired_at   timestamptz,
 
-  cat_state           jsonb,                -- phase 2: {theta, se, contentCounts}
+  cat_state           jsonb,                -- F19: {config, theta, standardError, items:[{questionId, difficulty, clientNeedsId, score}], stopReason}
 
   started_at          timestamptz NOT NULL DEFAULT now(),
   last_activity_at    timestamptz NOT NULL DEFAULT now(),
