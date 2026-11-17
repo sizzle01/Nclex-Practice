@@ -49,8 +49,12 @@ None. Content only; it uses the tables from F04, F11 and F17.
 questions and the last file imports after every question it lists:
 - 21 topic practice sets: every standalone question, by Client Needs category, in parts of up to 60 (tutor mode, untimed).
 - 2 case study sets: the 10 NGN cases, 5 per set, each kept whole and in order.
-- 4 NCLEX-RN mock exams: 85 items (2 whole cases + 73 standalone items weighted by test-plan midpoints), timed
-  2 h 50 min, no going back, answers and a 65% pass estimate at the end; no item appears in two exams.
+- 8 NCLEX-RN challenges: 4 exams of 85 items (2 whole cases + 73 standalone items weighted by test-plan
+  midpoints; no item appears in two exams), each published as a timed (2 h 50 min) and an untimed challenge.
+  Both use exam rules: no going back, answers and a 65% pass estimate at the end.
+- **Deviation, to be fixed by F19:** the user's design is that timed and untimed challenges are both adaptive, like
+  the real NCLEX (architecture.md 5.8: stop once the 95% confidence interval excludes the passing standard after
+  85 items, otherwise continue to 150). CAT isn't built yet, so the challenges are fixed at 85 items for now.
 The custom builder (`/practice/custom`) draws from every published question, so it never needed a set.
 
 ## 6. Key decisions and deviations

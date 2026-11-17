@@ -9,8 +9,9 @@ Sets (PRD 5.5, api.md section 3):
 - Topic practice: every standalone question, grouped by Client Needs category, in parts of up to
   PART_SIZE, tutor mode, untimed.
 - Case study practice: every NGN unfolding case, CASES_PER_SET cases per set, cases kept whole.
-- Mock exams: EXAM_COUNT exams of EXAM_LENGTH items. Each holds CASES_PER_EXAM whole cases and
-  standalone items weighted by the NCLEX-RN test plan midpoints, with no item repeated across exams.
+- Challenges: EXAM_COUNT exams of EXAM_LENGTH items, each published as a timed and an untimed
+  challenge. Each holds CASES_PER_EXAM whole cases and standalone items weighted by the NCLEX-RN
+  test plan midpoints, with no item repeated across exams. F19 will make both versions adaptive.
 """
 import json
 import math
@@ -106,6 +107,7 @@ def build_catalog(questions):
         rnd.shuffle(ids)
     quota = _allocate(EXAM_LENGTH - 6 * CASES_PER_EXAM, TEST_PLAN_MIDPOINTS)
     exam_cases = order[:]
+    exams = []
     for e in range(1, EXAM_COUNT + 1):
         items = []
         for cn, count in quota.items():
@@ -119,16 +121,26 @@ def build_catalog(questions):
             at = (k + 1) * len(items) // (CASES_PER_EXAM + 1) + k * 6
             items[at:at] = block
         assert len(items) == EXAM_LENGTH and len(set(items)) == EXAM_LENGTH
-        n += 1
-        sets.append({
-            "id": _set_id(n), "title": f"NCLEX-RN mock exam {e}",
-            "description": (f"{EXAM_LENGTH} items weighted like the NCLEX-RN test plan, including "
-                            f"{CASES_PER_EXAM} case studies. Timed ({EXAM_SECONDS // 3600} h {EXAM_SECONDS % 3600 // 60} min), "
-                            "no going back, answers and a pass estimate at the end."),
-            "mode": "challenge", "revealMode": "exam", "timed": True, "timeBudgetSec": EXAM_SECONDS,
-            "passThreshold": PASS_THRESHOLD, "allowBackNav": False, "accessTier": "free", "questionIds": items})
+        exams.append(items)
 
-    banks = [{"id": BANK_ID, "name": "RN Question Bank",
+    # Each exam comes as a timed and an untimed challenge with the same items. Both are fixed at
+    # EXAM_LENGTH until F19 makes them adaptive (architecture.md 5.8: stop between 85 and 150 items).
+    # The timed sets keep the ids they were first published with; the untimed ones come after.
+    about = (f"{EXAM_LENGTH} items weighted like the NCLEX-RN test plan, including {CASES_PER_EXAM} case "
+             "studies. Exam rules: no going back, answers and a pass estimate at the end. Fixed length for now; "
+             "an adaptive version that stops between 85 and 150 items, like the real exam, is planned.")
+    clock = f"{EXAM_SECONDS // 3600} h {EXAM_SECONDS % 3600 // 60} min"
+    for timed in (True, False):
+        for e, items in enumerate(exams, 1):
+            n += 1
+            sets.append({
+                "id": _set_id(n), "title": f"NCLEX-RN challenge {e} ({'timed' if timed else 'untimed'})",
+                "description": f"{'Timed (' + clock + ').' if timed else 'No time limit.'} {about}",
+                "mode": "challenge", "revealMode": "exam", "timed": timed,
+                **({"timeBudgetSec": EXAM_SECONDS} if timed else {}),
+                "passThreshold": PASS_THRESHOLD, "allowBackNav": False, "accessTier": "free", "questionIds": items})
+
+    banks =[{"id": BANK_ID, "name": "RN Question Bank",
               "description": f"All {len(questions)} RN bank questions across every NCLEX-RN category and item type.",
               "accessTier": "free", "questionIds": [q["id"] for q in questions]}]
     return banks, sets
