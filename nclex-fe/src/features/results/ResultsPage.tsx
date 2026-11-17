@@ -4,6 +4,7 @@ import { useQuery } from "@tanstack/react-query";
 import Link from "next/link";
 import { useEffect } from "react";
 import ui from "@/components/ui/ui.module.css";
+import { WeakAreasCard } from "@/features/weak-areas/WeakAreasCard";
 import { isApiError } from "@/lib/api/errors";
 import { toNumber } from "@/lib/format/toNumber";
 import { type AttemptResultView, type CategoryResult, fetchResult, resultQueryKey } from "../attempt/api/attemptApi";
@@ -73,6 +74,7 @@ export function ResultsPage({ attemptId }: { attemptId: string }) {
       </section>
 
       <StudyRecommendations attemptId={attemptId} />
+      <WeakAreasCard />
 
       <nav aria-label="Review your answers" className={styles.links}>
         <Link href={`/attempts/${attemptId}/review`} className={ui.button}>

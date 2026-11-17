@@ -74,6 +74,9 @@ using Nclex.Application.Performance.GetSummary;
 using Nclex.Application.Performance.GetTrend;
 using Nclex.Application.Performance.RebuildSnapshots;
 using Nclex.Application.Performance.Snapshots;
+using Nclex.Application.WeakAreas;
+using Nclex.Application.WeakAreas.GetWeakAreas;
+using Nclex.Application.WeakAreas.StartWeakAreaPractice;
 using Nclex.Application.Taxonomy.GetTaxonomy;
 using Nclex.Application.Users;
 using Nclex.Application.Users.ChangeEmail;
@@ -147,6 +150,12 @@ public static class DependencyInjection
         services.AddScoped<QuestionPool>();
         services.AddScoped<GetAvailableCountHandler>();
         services.AddScoped<CreateCustomSetHandler>();
+
+        // Weak-area practice (F18)
+        services.AddScoped<WeakAreaFinder>();
+        services.AddScoped<WeakAreaPool>();
+        services.AddScoped<GetWeakAreasHandler>();
+        services.AddScoped<StartWeakAreaPracticeHandler>();
 
         // Attempts
         services.AddScoped<AttemptStore>();

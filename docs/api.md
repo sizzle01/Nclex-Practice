@@ -51,7 +51,8 @@ An `errors[]` entry may also carry a `message` (added in F14). Item-type validat
 | `ITEM_LOCKED` | 409 | Item already submitted (tutor mode) or its item timer expired |
 | `BACK_NAVIGATION_DISABLED` | 409 | The set doesn't allow going back |
 | `PAUSE_LIMIT_REACHED` | 409 | |
-| `INSUFFICIENT_QUESTIONS` | 422 | The builder found fewer items than requested. `available` is included. |
+| `INSUFFICIENT_QUESTIONS` | 422 | The builder found fewer items than requested. `available` is included. Weak-area practice (F18) sends it when fewer than 5 questions qualify. |
+| `NO_WEAK_AREAS` | 422 | Weak-area practice (F18): no Client Needs area is weak in the last 10 tests, so there is nothing to practise |
 | `INVALID_STATUS_TRANSITION` | 409 | Admin console (F14): the action doesn't fit the current status, e.g. approving a draft, editing a version in review, a second open version, or a retired question |
 | `RATE_LIMITED` | 429 | |
 | `FLAG_DUPLICATE` | 409 | You already reported this question version for that reason (added in F15) |
@@ -133,6 +134,7 @@ Validation: email in RFC 5322 format, at most 254 characters. Password must be 1
 | GET | `/test-sets/{id}` | Set details and settings |
 | GET | `/test-sets/custom/available-count?…filters` | Live pool size for the builder |
 | POST | `/test-sets/custom` | Generate a custom set |
+| POST | `/test-sets/weak-areas` | Build a practice test from my weak areas and start it (added in F18) |
 
 **`GET /taxonomy?track=RN` → 200**
 ```json
@@ -179,6 +181,18 @@ Validation: email in RFC 5322 format, at most 254 characters. Password must be 1
   "attempt": { /* AttemptState, only when startNow=true */ } }
 // 422 INSUFFICIENT_QUESTIONS { "available": 18 }
 ```
+
+**`POST /test-sets/weak-areas`** (added in F18, architecture.md 5.7.1)
+```json
+// request: the track is the user's own when left out
+{ "track": "RN" }
+// 201: the same shape as POST /test-sets/custom, and the attempt is always started
+{ "testSet": { "id": "…", "title": "Weak areas practice: 25 questions", "kind": "custom",
+               "mode": "practice", "revealMode": "tutor", "timed": false, "questionCount": 25, "...": "..." },
+  "attempt": { /* AttemptState */ } }
+// 422 NO_WEAK_AREAS, 422 INSUFFICIENT_QUESTIONS { "available": 3 }, 403 EMAIL_NOT_VERIFIED
+```
+The server picks the areas and the questions; the client sends no filters. The set is a normal custom set owned by the user, so it appears in history and results like any other.
 
 ---
 
@@ -356,12 +370,21 @@ A subtopic qualifies with at least one answered question without full marks, so 
 | GET | `/me/performance/summary?track=RN` | Totals, overall accuracy, avg time, items answered, and the three weakest Client Needs categories (`weakest`). Streak arrives with phase 2. |
 | GET | `/me/performance/breakdown?dimension=client_needs` | Snapshot per category (accuracy, avg time, count) |
 | GET | `/me/performance/trend?dimension=client_needs&key=PI.PPT&bucket=week&from=&to=` | Time series for charts |
+| GET | `/me/weak-areas?track=RN` | Weak Client Needs areas in the last 10 tests, and the size of the practice test they give (added in F18) |
 
 ```json
 // GET /me/performance/trend?dimension=overall&bucket=week
 { "series": [ { "bucketStart": "2026-09-07", "items": 120, "pct": 0.62, "avgTimeMs": 84000 },
               { "bucketStart": "2026-09-14", "items": 210, "pct": 0.68, "avgTimeMs": 79000 } ] }
 ```
+
+**`GET /me/weak-areas` → 200** (added in F18, architecture.md 5.7.1)
+```json
+{ "track": "RN",
+  "areas": [ { "clientNeedsId": 7, "code": "PHI.PPT", "name": "Pharmacological and Parenteral Therapies", "pct": 0.42, "items": 12 } ],
+  "attemptsConsidered": 4, "questionsAvailable": 180, "questionCount": 25 }
+```
+`areas` is empty when nothing qualifies, and `questionCount` is 0 when no test is possible (no weak areas, or fewer than 5 questions). It is read from `attempt_category_scores`, not the snapshots, so it is current as soon as an attempt is submitted.
 
 ---
 
