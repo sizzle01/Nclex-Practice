@@ -18,11 +18,14 @@ public sealed class ListTestSetsRequestValidatorTests
         _validator.TestValidate(new ListTestSetsRequest(ExamTrack.PN, TestSetKind.Prebuilt, 50, PageCursor.Encode(20)))
             .ShouldNotHaveAnyValidationErrors();
 
+    [Fact]
+    public void Adaptive_exams_can_be_listed_on_their_own() =>
+        _validator.TestValidate(new ListTestSetsRequest(Kind: TestSetKind.Cat)).ShouldNotHaveAnyValidationErrors();
+
     [Theory]
     [InlineData(TestSetKind.Custom)]
-    [InlineData(TestSetKind.Cat)]
     [InlineData(TestSetKind.Assigned)]
-    public void Only_prebuilt_sets_can_be_listed_for_now(TestSetKind kind) =>
+    public void Only_curated_sets_and_adaptive_exams_are_listed(TestSetKind kind) =>
         _validator.TestValidate(new ListTestSetsRequest(Kind: kind))
             .ShouldHaveValidationErrorFor(r => r.Kind).WithErrorCode("INVALID_VALUE");
 

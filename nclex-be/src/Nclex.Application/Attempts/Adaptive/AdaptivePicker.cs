@@ -13,7 +13,7 @@ namespace Nclex.Application.Attempts.Adaptive;
 /// Case-study items are left out for now: a case study is six linked items, which the one-at-a-time
 /// selection cannot serve as a unit.
 /// </summary>
-public sealed class AdaptivePicker(IAppDbContext db, Random random)
+public class AdaptivePicker(IAppDbContext db, Random random)
 {
     /// <summary>
     /// The next question for an attempt in <paramref name="state"/> (null before the first), or
@@ -32,7 +32,11 @@ public sealed class AdaptivePicker(IAppDbContext db, Random random)
             random);
     }
 
-    private async Task<List<CatCandidate>> PoolAsync(
+    /// <summary>
+    /// The questions the exam may still give. Virtual only so integration tests on the shared
+    /// database can keep an exam to their own questions; the server always uses this one.
+    /// </summary>
+    protected virtual async Task<List<CatCandidate>> PoolAsync(
         ExamTrack track,
         PlanTier plan,
         IReadOnlySet<Guid> given,

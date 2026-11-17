@@ -81,7 +81,7 @@ public sealed class ImportCatalogTests(ApiFactory factory)
             testSets:
             [
                 CatalogContent.Set(setA, "Too small a sample", questions, new { isSample = true }),
-                CatalogContent.Set(setB, "Broken", [unknown, pnQuestion], new { timed = true, passThreshold = 1.5m, mode = "cat" }),
+                CatalogContent.Set(setB, "Broken", [unknown, pnQuestion], new { timed = true, passThreshold = 1.5m, catConfig = new { minItems = 1, maxItems = 2, passingTheta = 0 } }),
                 CatalogContent.Set(setB, "Again", questions),
             ]));
 
@@ -90,7 +90,7 @@ public sealed class ImportCatalogTests(ApiFactory factory)
             ("banks[0].name", ImportIssueCodes.Required),
             ("banks[0].questionIds[1]", ImportIssueCodes.DuplicateId),
             ("testSets[0].questionIds", ImportIssueCodes.InvalidValue), // a sample set has 10 questions
-            ("testSets[1].mode", ImportIssueCodes.InvalidValue),
+            ("testSets[1].catConfig", ImportIssueCodes.InvalidValue), // only an adaptive exam has rules
             ("testSets[1].timed", ImportIssueCodes.InvalidValue),
             ("testSets[1].passThreshold", ImportIssueCodes.InvalidValue),
             ("testSets[1].questionIds[0]", ImportIssueCodes.UnknownQuestion),

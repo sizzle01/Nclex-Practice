@@ -28,6 +28,14 @@ public sealed class AttemptsApi(ApiFactory factory, AuthApi api)
     public Task<HttpResponseMessage> StartAsync(string token, Guid testSetId) =>
         SendAsync(HttpMethod.Post, "/api/v1/attempts", token, clientId: null, new { testSetId });
 
+    /// <summary>Starts an adaptive exam with the candidate's timed or untimed choice (F19).</summary>
+    public Task<HttpResponseMessage> StartAsync(string token, Guid testSetId, bool timed) =>
+        SendAsync(HttpMethod.Post, "/api/v1/attempts", token, clientId: null, new { testSetId, timed });
+
+    /// <summary>The adaptive exam's "Next": confirms the answer to the current question (F19).</summary>
+    public Task<HttpResponseMessage> AnswerAsync(string token, Guid attemptId, int position, string? clientId, object body) =>
+        SendAsync(HttpMethod.Post, $"/api/v1/attempts/{attemptId}/items/{position}/answer", token, clientId, body);
+
     /// <summary>Starts an attempt and fails the test unless it succeeds.</summary>
     public async Task<AttemptState> StartOkAsync(string token, Guid testSetId)
     {

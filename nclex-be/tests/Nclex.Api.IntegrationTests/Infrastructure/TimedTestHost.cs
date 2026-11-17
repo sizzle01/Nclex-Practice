@@ -14,7 +14,8 @@ public sealed class TimedTestHost : IAsyncDisposable
 {
     private readonly WebApplicationFactory<Program> _host;
 
-    public TimedTestHost(ApiFactory factory)
+    /// <param name="configureServices">More service replacements for this host, applied last.</param>
+    public TimedTestHost(ApiFactory factory, Action<IServiceCollection>? configureServices = null)
     {
         // Starts at the real time, so access tokens issued now still pass JWT validation.
         Clock = new ManualTimeProvider(DateTimeOffset.UtcNow);
@@ -22,6 +23,7 @@ public sealed class TimedTestHost : IAsyncDisposable
         {
             services.Replace(ServiceDescriptor.Singleton<TimeProvider>(Clock));
             services.Replace(ServiceDescriptor.Singleton<IJobScheduler>(Jobs));
+            configureServices?.Invoke(services);
         }));
         // Creating the first client builds and starts the host.
         Auth = HostStartLock.Run(() => new AuthApi(_host));
