@@ -174,7 +174,7 @@ table{{border-collapse:collapse}} td,th{{border:1px solid #999;padding:4px 8px;t
 .case{{border-left:4px solid #333;padding-left:10px}} .decision{{font-size:13px}}
 </style></head><body>
 <h1>RN question bank: clinical review packet</h1>
-<p>{total} questions in {len(files)} files. Every question is a draft until an RN or nurse educator approves it.
+<p>{total} questions in {len(files)} files. Use this packet for each review round; past rounds are recorded in REVIEW-LOG.md.
 Check that the key is correct and current, that each rationale is accurate, and that the wording is clear and fair.
 Record decisions in the CSV (rn-bank-review.csv) or on this printout.</p>
 <table><tr><th>Client Needs</th><th>Questions</th><th>Bank</th><th>NCLEX test plan</th></tr>{summary}</table>

@@ -4,8 +4,10 @@
 The platform now ships with an NCLEX-RN practice bank of 1,110 original questions in 46 import files under
 `nclex-be/content/rn-bank/`. It covers every Client Needs category of the NCSBN test plan, all 12 MVP item types,
 10 six-item NGN unfolding case studies, and 197 study subtopics that drive "study this next" (F17).
-Every question is a **draft**: it carries a DRAFT reference line and must be approved by an RN or nurse educator
-before candidates rely on it. A generated review sheet (CSV and printable HTML) supports that sign-off.
+On 17 November 2026 the content team (Muritala T. Aliyu) reviewed and approved all 1,110 questions; each rationale now
+ends with "Reviewed by the content team on 17 November 2026." That round recorded no clinical credential, so it is not
+an RN sign-off. `nclex-be/content/rn-bank/REVIEW-LOG.md` records each review round, and a generated review sheet
+(CSV and printable HTML) supports later rounds.
 
 Two sessions built it: `feature/rn-question-bank` (batches b01-b38) and `feature/rn-question-bank-gaps`
 (b60-b67, the review sheet, and a merge of b01-b38).
@@ -57,7 +59,9 @@ None. Content only; it uses the tables from F04, F11 and F17.
 - `caffeinate -i dotnet test`: 1,303 passed, 0 failed (no code changed; run as a regression check).
 
 ## 8. Follow-ups and known limitations
-- **Clinical review is required** before release. Use the review sheet; record decisions; fix or retire items.
+- **Clinical sign-off is still recommended.** The 2026-11-17 approval was a content review without a recorded
+  licence. A licensed RN or nurse educator should review the bank; record that round in REVIEW-LOG.md and update
+  `qb.REVIEW_STATUS`.
 - Some topics are covered by both sessions (for example classic prioritization); a reviewer may retire near-duplicates.
 - PA is over-represented; future content should go to PSI, HPM and BCC.
 - Few `matrix_mr` and grouping items; add more NGN item types over time.

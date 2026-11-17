@@ -12,8 +12,9 @@ import random
 from pathlib import Path
 
 HERE = Path(__file__).resolve().parent
-DRAFT = ("DRAFT: original question written with AI assistance; an RN or nurse educator must check "
-         "it before candidates rely on it.")
+# Review status shown to candidates under each rationale. The full record (who, when, scope) is in
+# REVIEW-LOG.md; it deliberately claims no clinical credential, because none was recorded.
+REVIEW_STATUS = "Reviewed by the content team on 17 November 2026."
 
 REFS = {
     "ms": "Medical-surgical nursing texts (e.g. Lewis; Ignatavicius)",
@@ -322,8 +323,7 @@ def build(batch, slug, title, items, cases=()):
             if s not in used:
                 used.append(s)
     out = {
-        "notice": f"RN bank batch {batch}: {title}. DRAFT - every question must be reviewed by an RN "
-                  f"or nurse educator before candidates rely on it.",
+        "notice": f"RN bank batch {batch}: {title}. {REVIEW_STATUS} See REVIEW-LOG.md.",
         "track": "RN",
         "subtopics": [{"clientNeeds": SUBTOPICS[s][0], "slug": s, "name": SUBTOPICS[s][1]} for s in used],
         "questions": questions,
@@ -341,7 +341,7 @@ def _finish(item, qid):
               "content", "key"):
         q[k] = item[k]
     q["rationale"] = {"correct": item["_why"], "perOption": item["_per"],
-                      "references": [REFS[r] for r in item["_refs"]] + [DRAFT]}
+                      "references": [REFS[r] for r in item["_refs"]] + [REVIEW_STATUS]}
     q["educationalObjective"] = item["educationalObjective"]
     if "exhibits" in item:
         q["exhibits"] = item["exhibits"]
