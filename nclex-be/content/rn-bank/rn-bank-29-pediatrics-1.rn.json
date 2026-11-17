@@ -1,0 +1,1170 @@
+{
+  "notice": "RN bank batch 29: Pediatrics I: respiratory, ENT and pediatric basics. DRAFT - every question must be reviewed by an RN or nurse educator before candidates rely on it.",
+  "track": "RN",
+  "subtopics": [
+    {
+      "clientNeeds": "PHI.PA",
+      "slug": "pediatric-respiratory-disorders",
+      "name": "Pediatric respiratory disorders"
+    },
+    {
+      "clientNeeds": "PHI.PPT",
+      "slug": "gi-medications",
+      "name": "Gastrointestinal medications"
+    },
+    {
+      "clientNeeds": "PHI.RRP",
+      "slug": "respiratory-diagnostic-procedures",
+      "name": "Respiratory diagnostic procedures"
+    },
+    {
+      "clientNeeds": "PHI.PA",
+      "slug": "basic-life-support",
+      "name": "Basic life support"
+    },
+    {
+      "clientNeeds": "PHI.RRP",
+      "slug": "post-procedure-complications",
+      "name": "Post-procedure complications"
+    },
+    {
+      "clientNeeds": "HPM",
+      "slug": "infant-and-child-nutrition",
+      "name": "Infant and child nutrition"
+    },
+    {
+      "clientNeeds": "PHI.BCC",
+      "slug": "pediatric-care-basics",
+      "name": "Pediatric assessment and care basics"
+    },
+    {
+      "clientNeeds": "PHI.PPT",
+      "slug": "medication-administration-technique",
+      "name": "Medication administration technique"
+    },
+    {
+      "clientNeeds": "PSI",
+      "slug": "coping-and-adjustment",
+      "name": "Coping and adjustment to illness"
+    },
+    {
+      "clientNeeds": "PHI.BCC",
+      "slug": "pain-assessment-and-comfort",
+      "name": "Pain assessment and comfort measures"
+    },
+    {
+      "clientNeeds": "HPM",
+      "slug": "infant-growth-and-development",
+      "name": "Infant growth and development"
+    },
+    {
+      "clientNeeds": "HPM",
+      "slug": "developmental-stages",
+      "name": "Developmental stages across the lifespan"
+    }
+  ],
+  "questions": [
+    {
+      "id": "c1a00029-0000-4000-8000-000000000001",
+      "itemType": "multiple_choice",
+      "clientNeeds": "PHI.PA",
+      "bodySystem": "pediatrics",
+      "subtopics": [
+        "pediatric-respiratory-disorders"
+      ],
+      "cjmmSkill": "take_action",
+      "difficulty": "difficult",
+      "stem": "A 4-year-old has a sudden high fever, is drooling, sits leaning forward with the neck extended and has muffled speech. What should the nurse do?",
+      "content": {
+        "options": [
+          {
+            "id": "a",
+            "text": "Keep the child calm, avoid examining the throat and prepare for emergency airway management"
+          },
+          {
+            "id": "b",
+            "text": "Look in the throat with a tongue blade"
+          },
+          {
+            "id": "c",
+            "text": "Lay the child flat for an exam"
+          },
+          {
+            "id": "d",
+            "text": "Obtain a throat culture right away"
+          }
+        ]
+      },
+      "key": {
+        "correct": "a"
+      },
+      "rationale": {
+        "correct": "Epiglottitis: drooling, dysphagia, distress and tripod position; nothing in the mouth and have airway equipment ready.",
+        "perOption": {
+          "a": "This suggests epiglottitis; examining the throat can trigger complete obstruction.",
+          "b": "This can cause laryngospasm and airway obstruction.",
+          "c": "Let the child keep the position of comfort.",
+          "d": "Swabbing the throat is dangerous."
+        },
+        "references": [
+          "Pediatric nursing texts (e.g. Hockenberry, Wong's Essentials of Pediatric Nursing)",
+          "DRAFT: original question written with AI assistance; an RN or nurse educator must check it before candidates rely on it."
+        ]
+      },
+      "educationalObjective": "Respond to suspected epiglottitis."
+    },
+    {
+      "id": "c1a00029-0000-4000-8000-000000000002",
+      "itemType": "select_n",
+      "clientNeeds": "PHI.PA",
+      "bodySystem": "pediatrics",
+      "subtopics": [
+        "pediatric-respiratory-disorders"
+      ],
+      "cjmmSkill": "recognize_cues",
+      "difficulty": "moderate",
+      "stem": "Select the 3 findings most consistent with epiglottitis.",
+      "content": {
+        "options": [
+          {
+            "id": "a",
+            "text": "Drooling"
+          },
+          {
+            "id": "b",
+            "text": "Sudden onset of high fever"
+          },
+          {
+            "id": "c",
+            "text": "Sitting upright and leaning forward (tripod position)"
+          },
+          {
+            "id": "d",
+            "text": "Barking, seal-like cough"
+          },
+          {
+            "id": "e",
+            "text": "Gradual onset over several days"
+          },
+          {
+            "id": "f",
+            "text": "Low-grade fever with a runny nose"
+          }
+        ],
+        "selectCount": 3
+      },
+      "key": {
+        "correct": [
+          "a",
+          "b",
+          "c"
+        ]
+      },
+      "rationale": {
+        "correct": "Epiglottitis: the 3 D's (drooling, dysphagia, distress), sudden high fever and tripod position.",
+        "perOption": {
+          "a": "Painful swallowing leads to drooling.",
+          "b": "Epiglottitis is a rapidly progressing bacterial infection.",
+          "c": "This position helps keep the airway open.",
+          "d": "This is typical of croup.",
+          "e": "Epiglottitis develops over hours.",
+          "f": "This fits viral croup or a cold."
+        },
+        "references": [
+          "Pediatric nursing texts (e.g. Hockenberry, Wong's Essentials of Pediatric Nursing)",
+          "DRAFT: original question written with AI assistance; an RN or nurse educator must check it before candidates rely on it."
+        ]
+      },
+      "educationalObjective": "Recognize the signs of epiglottitis."
+    },
+    {
+      "id": "c1a00029-0000-4000-8000-000000000003",
+      "itemType": "matrix_mc",
+      "clientNeeds": "PHI.PA",
+      "bodySystem": "pediatrics",
+      "subtopics": [
+        "pediatric-respiratory-disorders"
+      ],
+      "cjmmSkill": "analyze_cues",
+      "difficulty": "difficult",
+      "stem": "For each finding, indicate which condition it is most consistent with.",
+      "content": {
+        "rows": [
+          {
+            "id": "r1",
+            "text": "Barking, seal-like cough that worsens at night"
+          },
+          {
+            "id": "r2",
+            "text": "Drooling and refusal to swallow"
+          },
+          {
+            "id": "r3",
+            "text": "Infant with wheezing and large amounts of nasal secretions"
+          },
+          {
+            "id": "r4",
+            "text": "Toxic appearance with sudden high fever"
+          }
+        ],
+        "columns": [
+          {
+            "id": "c1",
+            "text": "Croup"
+          },
+          {
+            "id": "c2",
+            "text": "Epiglottitis"
+          },
+          {
+            "id": "c3",
+            "text": "Bronchiolitis (RSV)"
+          }
+        ]
+      },
+      "key": {
+        "byRow": {
+          "r1": "c1",
+          "r2": "c2",
+          "r3": "c3",
+          "r4": "c2"
+        }
+      },
+      "rationale": {
+        "correct": "Croup = bark and stridor; epiglottitis = drooling and toxicity; bronchiolitis = infant wheeze with secretions.",
+        "perOption": {
+          "r1:c1": "This is the classic croup cough.",
+          "r1:c2": "Epiglottitis rarely causes a barking cough.",
+          "r1:c3": "Bronchiolitis causes wheezing, not barking.",
+          "r2:c1": "Croup doesn't usually cause drooling.",
+          "r2:c2": "Swelling of the epiglottis makes swallowing painful.",
+          "r2:c3": "This isn't typical of bronchiolitis.",
+          "r3:c1": "Croup causes stridor, not wheezing.",
+          "r3:c2": "This doesn't fit epiglottitis.",
+          "r3:c3": "RSV bronchiolitis causes wheezing and heavy secretions in infants.",
+          "r4:c1": "Croup usually has a low-grade fever.",
+          "r4:c2": "Epiglottitis is a rapid bacterial infection.",
+          "r4:c3": "Bronchiolitis usually has a mild fever."
+        },
+        "references": [
+          "Pediatric nursing texts (e.g. Hockenberry, Wong's Essentials of Pediatric Nursing)",
+          "DRAFT: original question written with AI assistance; an RN or nurse educator must check it before candidates rely on it."
+        ]
+      },
+      "educationalObjective": "Distinguish common pediatric airway illnesses."
+    },
+    {
+      "id": "c1a00029-0000-4000-8000-000000000004",
+      "itemType": "multiple_choice",
+      "clientNeeds": "PHI.PA",
+      "bodySystem": "pediatrics",
+      "subtopics": [
+        "pediatric-respiratory-disorders"
+      ],
+      "cjmmSkill": "take_action",
+      "difficulty": "moderate",
+      "stem": "A 2-year-old with croup has stridor at rest. Which treatment should the nurse expect?",
+      "content": {
+        "options": [
+          {
+            "id": "a",
+            "text": "Nebulized racemic epinephrine and a corticosteroid such as dexamethasone"
+          },
+          {
+            "id": "b",
+            "text": "Antibiotics"
+          },
+          {
+            "id": "c",
+            "text": "Chest physiotherapy"
+          },
+          {
+            "id": "d",
+            "text": "Cough suppressants"
+          }
+        ]
+      },
+      "key": {
+        "correct": "a"
+      },
+      "rationale": {
+        "correct": "Croup: steroids for all; racemic epinephrine for stridor at rest. Watch for rebound after epinephrine.",
+        "perOption": {
+          "a": "These reduce airway swelling.",
+          "b": "Croup is usually viral.",
+          "c": "This isn't used for croup.",
+          "d": "These don't treat airway swelling."
+        },
+        "references": [
+          "Pediatric nursing texts (e.g. Hockenberry, Wong's Essentials of Pediatric Nursing)",
+          "DRAFT: original question written with AI assistance; an RN or nurse educator must check it before candidates rely on it."
+        ]
+      },
+      "educationalObjective": "Anticipate treatment for croup."
+    },
+    {
+      "id": "c1a00029-0000-4000-8000-000000000005",
+      "itemType": "multiple_choice",
+      "clientNeeds": "PHI.PA",
+      "bodySystem": "pediatrics",
+      "subtopics": [
+        "pediatric-respiratory-disorders"
+      ],
+      "cjmmSkill": "generate_solutions",
+      "difficulty": "moderate",
+      "stem": "A 3-month-old with RSV bronchiolitis is having trouble feeding. Which intervention is most helpful?",
+      "content": {
+        "options": [
+          {
+            "id": "a",
+            "text": "Suction the nose before feedings"
+          },
+          {
+            "id": "b",
+            "text": "Give antibiotics"
+          },
+          {
+            "id": "c",
+            "text": "Keep the infant flat"
+          },
+          {
+            "id": "d",
+            "text": "Feed large volumes at once"
+          }
+        ]
+      },
+      "key": {
+        "correct": "a"
+      },
+      "rationale": {
+        "correct": "Bronchiolitis: nasal suctioning, hydration, oxygen if needed and contact precautions.",
+        "perOption": {
+          "a": "Infants breathe through the nose; clearing secretions makes feeding easier.",
+          "b": "RSV is viral.",
+          "c": "Elevating the head helps breathing.",
+          "d": "Small, frequent feeds are better."
+        },
+        "references": [
+          "Pediatric nursing texts (e.g. Hockenberry, Wong's Essentials of Pediatric Nursing)",
+          "DRAFT: original question written with AI assistance; an RN or nurse educator must check it before candidates rely on it."
+        ]
+      },
+      "educationalObjective": "Support feeding in bronchiolitis."
+    },
+    {
+      "id": "c1a00029-0000-4000-8000-000000000006",
+      "itemType": "multiple_choice",
+      "clientNeeds": "PHI.PPT",
+      "bodySystem": "pediatrics",
+      "subtopics": [
+        "gi-medications"
+      ],
+      "cjmmSkill": "generate_solutions",
+      "difficulty": "moderate",
+      "stem": "A child with cystic fibrosis is prescribed pancrelipase. When should the child take it?",
+      "content": {
+        "options": [
+          {
+            "id": "a",
+            "text": "With every meal and snack"
+          },
+          {
+            "id": "b",
+            "text": "Only at bedtime"
+          },
+          {
+            "id": "c",
+            "text": "Once a week"
+          },
+          {
+            "id": "d",
+            "text": "Only when stools are loose"
+          }
+        ]
+      },
+      "key": {
+        "correct": "a"
+      },
+      "rationale": {
+        "correct": "Cystic fibrosis: enzymes with meals, a high-calorie, high-protein diet and fat-soluble vitamins.",
+        "perOption": {
+          "a": "Enzymes are needed to digest the fat and protein in food.",
+          "b": "There's no food to digest then.",
+          "c": "It is taken with every meal.",
+          "d": "It is taken with all food."
+        },
+        "references": [
+          "Pediatric nursing texts (e.g. Hockenberry, Wong's Essentials of Pediatric Nursing)",
+          "Nursing pharmacology texts (e.g. Lehne; McCuistion) and the drug's prescribing information",
+          "DRAFT: original question written with AI assistance; an RN or nurse educator must check it before candidates rely on it."
+        ]
+      },
+      "educationalObjective": "Teach pancreatic enzyme timing in cystic fibrosis."
+    },
+    {
+      "id": "c1a00029-0000-4000-8000-000000000007",
+      "itemType": "multiple_choice",
+      "clientNeeds": "PHI.PA",
+      "bodySystem": "pediatrics",
+      "subtopics": [
+        "pediatric-respiratory-disorders"
+      ],
+      "cjmmSkill": "generate_solutions",
+      "difficulty": "moderate",
+      "stem": "When should chest physiotherapy be scheduled for a child with cystic fibrosis?",
+      "content": {
+        "options": [
+          {
+            "id": "a",
+            "text": "Before meals"
+          },
+          {
+            "id": "b",
+            "text": "Right after meals"
+          },
+          {
+            "id": "c",
+            "text": "Only during illness"
+          },
+          {
+            "id": "d",
+            "text": "Only at bedtime"
+          }
+        ]
+      },
+      "key": {
+        "correct": "a"
+      },
+      "rationale": {
+        "correct": "CF airway clearance: daily, before meals, often after a bronchodilator.",
+        "perOption": {
+          "a": "Doing it before meals clears the airways and reduces vomiting.",
+          "b": "This may cause vomiting.",
+          "c": "It is done daily.",
+          "d": "It is usually done several times a day."
+        },
+        "references": [
+          "Pediatric nursing texts (e.g. Hockenberry, Wong's Essentials of Pediatric Nursing)",
+          "DRAFT: original question written with AI assistance; an RN or nurse educator must check it before candidates rely on it."
+        ]
+      },
+      "educationalObjective": "Time chest physiotherapy correctly."
+    },
+    {
+      "id": "c1a00029-0000-4000-8000-000000000008",
+      "itemType": "multiple_choice",
+      "clientNeeds": "PHI.RRP",
+      "bodySystem": "pediatrics",
+      "subtopics": [
+        "respiratory-diagnostic-procedures"
+      ],
+      "cjmmSkill": "analyze_cues",
+      "difficulty": "moderate",
+      "stem": "Which test is used to diagnose cystic fibrosis?",
+      "content": {
+        "options": [
+          {
+            "id": "a",
+            "text": "Sweat chloride test"
+          },
+          {
+            "id": "b",
+            "text": "Throat culture"
+          },
+          {
+            "id": "c",
+            "text": "Chest x-ray alone"
+          },
+          {
+            "id": "d",
+            "text": "Blood glucose"
+          }
+        ]
+      },
+      "key": {
+        "correct": "a"
+      },
+      "rationale": {
+        "correct": "A sweat chloride of 60 mmol/L or higher supports a diagnosis of CF.",
+        "perOption": {
+          "a": "High sweat chloride is diagnostic.",
+          "b": "This isn't diagnostic.",
+          "c": "This isn't diagnostic.",
+          "d": "This isn't diagnostic."
+        },
+        "references": [
+          "Pediatric nursing texts (e.g. Hockenberry, Wong's Essentials of Pediatric Nursing)",
+          "DRAFT: original question written with AI assistance; an RN or nurse educator must check it before candidates rely on it."
+        ]
+      },
+      "educationalObjective": "Identify the diagnostic test for cystic fibrosis."
+    },
+    {
+      "id": "c1a00029-0000-4000-8000-000000000009",
+      "itemType": "multiple_choice",
+      "clientNeeds": "PHI.PA",
+      "bodySystem": "pediatrics",
+      "subtopics": [
+        "basic-life-support"
+      ],
+      "cjmmSkill": "take_action",
+      "difficulty": "moderate",
+      "stem": "A 7-month-old is choking and can't cry or cough. What should the nurse do?",
+      "content": {
+        "options": [
+          {
+            "id": "a",
+            "text": "Give 5 back blows followed by 5 chest thrusts, repeating as needed"
+          },
+          {
+            "id": "b",
+            "text": "Give abdominal thrusts"
+          },
+          {
+            "id": "c",
+            "text": "Do a blind finger sweep"
+          },
+          {
+            "id": "d",
+            "text": "Hold the infant upside down by the feet"
+          }
+        ]
+      },
+      "key": {
+        "correct": "a"
+      },
+      "rationale": {
+        "correct": "Infant choking: back blows and chest thrusts; start CPR if the infant becomes unresponsive.",
+        "perOption": {
+          "a": "This is the technique for infants under 1 year.",
+          "b": "Abdominal thrusts can injure an infant's organs.",
+          "c": "This can push the object deeper.",
+          "d": "This isn't recommended."
+        },
+        "references": [
+          "American Heart Association Guidelines for CPR and Emergency Cardiovascular Care",
+          "DRAFT: original question written with AI assistance; an RN or nurse educator must check it before candidates rely on it."
+        ]
+      },
+      "educationalObjective": "Relieve choking in an infant."
+    },
+    {
+      "id": "c1a00029-0000-4000-8000-000000000010",
+      "itemType": "multiple_choice",
+      "clientNeeds": "PHI.PA",
+      "bodySystem": "pediatrics",
+      "subtopics": [
+        "pediatric-respiratory-disorders"
+      ],
+      "cjmmSkill": "recognize_cues",
+      "difficulty": "moderate",
+      "stem": "Which finding is often an early sign of respiratory distress in a child?",
+      "content": {
+        "options": [
+          {
+            "id": "a",
+            "text": "Tachypnea and restlessness"
+          },
+          {
+            "id": "b",
+            "text": "Bradycardia"
+          },
+          {
+            "id": "c",
+            "text": "Cyanosis"
+          },
+          {
+            "id": "d",
+            "text": "Lethargy"
+          }
+        ]
+      },
+      "key": {
+        "correct": "a"
+      },
+      "rationale": {
+        "correct": "Early: tachypnea, tachycardia, restlessness, retractions. Late: bradycardia, cyanosis, lethargy.",
+        "perOption": {
+          "a": "Fast breathing and restlessness appear early as the child compensates.",
+          "b": "This is a late, ominous sign.",
+          "c": "This is late.",
+          "d": "This is late."
+        },
+        "references": [
+          "Pediatric nursing texts (e.g. Hockenberry, Wong's Essentials of Pediatric Nursing)",
+          "DRAFT: original question written with AI assistance; an RN or nurse educator must check it before candidates rely on it."
+        ]
+      },
+      "educationalObjective": "Recognize early respiratory distress in children."
+    },
+    {
+      "id": "c1a00029-0000-4000-8000-000000000011",
+      "itemType": "multiple_choice",
+      "clientNeeds": "PHI.RRP",
+      "bodySystem": "pediatrics",
+      "subtopics": [
+        "post-procedure-complications"
+      ],
+      "cjmmSkill": "recognize_cues",
+      "difficulty": "moderate",
+      "stem": "After a tonsillectomy, which finding most suggests bleeding?",
+      "content": {
+        "options": [
+          {
+            "id": "a",
+            "text": "Frequent swallowing"
+          },
+          {
+            "id": "b",
+            "text": "Sore throat"
+          },
+          {
+            "id": "c",
+            "text": "Bad breath"
+          },
+          {
+            "id": "d",
+            "text": "Low-grade fever on the first day"
+          }
+        ]
+      },
+      "key": {
+        "correct": "a"
+      },
+      "rationale": {
+        "correct": "Post-tonsillectomy bleeding: frequent swallowing, clearing the throat and vomiting bright red blood.",
+        "perOption": {
+          "a": "Children swallow blood that trickles down the throat.",
+          "b": "This is expected.",
+          "c": "This is common during healing.",
+          "d": "This is common."
+        },
+        "references": [
+          "Pediatric nursing texts (e.g. Hockenberry, Wong's Essentials of Pediatric Nursing)",
+          "DRAFT: original question written with AI assistance; an RN or nurse educator must check it before candidates rely on it."
+        ]
+      },
+      "educationalObjective": "Recognize hemorrhage after tonsillectomy."
+    },
+    {
+      "id": "c1a00029-0000-4000-8000-000000000012",
+      "itemType": "multiple_choice",
+      "clientNeeds": "PHI.RRP",
+      "bodySystem": "pediatrics",
+      "subtopics": [
+        "post-procedure-complications"
+      ],
+      "cjmmSkill": "evaluate_outcomes",
+      "difficulty": "easy",
+      "stem": "A parent is caring for a child after a tonsillectomy. Which statement needs correction?",
+      "content": {
+        "options": [
+          {
+            "id": "a",
+            "text": "\"I'll give cool fluids and popsicles.\""
+          },
+          {
+            "id": "b",
+            "text": "\"I'll let him drink through a straw.\""
+          },
+          {
+            "id": "c",
+            "text": "\"I'll avoid red-colored drinks.\""
+          },
+          {
+            "id": "d",
+            "text": "\"I'll give acetaminophen for pain as directed.\""
+          }
+        ]
+      },
+      "key": {
+        "correct": "b"
+      },
+      "rationale": {
+        "correct": "After tonsillectomy: no straws, no red fluids, soft cool foods and watch for bleeding.",
+        "perOption": {
+          "a": "This soothes the throat.",
+          "b": "Straws can dislodge clots and cause bleeding.",
+          "c": "Red fluids can look like blood.",
+          "d": "This is appropriate."
+        },
+        "references": [
+          "Pediatric nursing texts (e.g. Hockenberry, Wong's Essentials of Pediatric Nursing)",
+          "DRAFT: original question written with AI assistance; an RN or nurse educator must check it before candidates rely on it."
+        ]
+      },
+      "educationalObjective": "Teach care after tonsillectomy."
+    },
+    {
+      "id": "c1a00029-0000-4000-8000-000000000013",
+      "itemType": "multiple_choice",
+      "clientNeeds": "HPM",
+      "bodySystem": "pediatrics",
+      "subtopics": [
+        "infant-and-child-nutrition"
+      ],
+      "cjmmSkill": "evaluate_outcomes",
+      "difficulty": "moderate",
+      "stem": "Which parent statement shows understanding of how to prevent ear infections in infants?",
+      "content": {
+        "options": [
+          {
+            "id": "a",
+            "text": "\"I won't prop the bottle, and I'll hold my baby upright to feed.\""
+          },
+          {
+            "id": "b",
+            "text": "\"I'll put my baby to bed with a bottle.\""
+          },
+          {
+            "id": "c",
+            "text": "\"Smoking outside the house doesn't matter.\""
+          },
+          {
+            "id": "d",
+            "text": "\"Pacifiers prevent ear infections.\""
+          }
+        ]
+      },
+      "key": {
+        "correct": "a"
+      },
+      "rationale": {
+        "correct": "Reduce otitis media with upright feeding, breastfeeding, no smoke exposure and vaccines.",
+        "perOption": {
+          "a": "Feeding while lying flat lets fluid enter the short, horizontal eustachian tubes.",
+          "b": "This increases ear infections and tooth decay.",
+          "c": "Secondhand smoke exposure still increases risk.",
+          "d": "Pacifiers may increase risk."
+        },
+        "references": [
+          "Pediatric nursing texts (e.g. Hockenberry, Wong's Essentials of Pediatric Nursing)",
+          "DRAFT: original question written with AI assistance; an RN or nurse educator must check it before candidates rely on it."
+        ]
+      },
+      "educationalObjective": "Teach prevention of otitis media."
+    },
+    {
+      "id": "c1a00029-0000-4000-8000-000000000014",
+      "itemType": "multiple_choice",
+      "clientNeeds": "PHI.BCC",
+      "bodySystem": "pediatrics",
+      "subtopics": [
+        "pediatric-care-basics"
+      ],
+      "cjmmSkill": "evaluate_outcomes",
+      "difficulty": "easy",
+      "stem": "A child has tympanostomy tubes. Which instruction should the nurse give?",
+      "content": {
+        "options": [
+          {
+            "id": "a",
+            "text": "Keep water out of the ears when bathing or swimming, as the provider directs"
+          },
+          {
+            "id": "b",
+            "text": "Clean the ears with cotton swabs every day"
+          },
+          {
+            "id": "c",
+            "text": "Remove the tubes at home if they itch"
+          },
+          {
+            "id": "d",
+            "text": "Expect the tubes to stay in for life"
+          }
+        ]
+      },
+      "key": {
+        "correct": "a"
+      },
+      "rationale": {
+        "correct": "Tympanostomy tubes: protect the ears from water per provider instructions and report drainage.",
+        "perOption": {
+          "a": "Water entering through the tubes can cause infection.",
+          "b": "Swabs can damage the ears.",
+          "c": "Tubes are never removed at home.",
+          "d": "They usually fall out on their own."
+        },
+        "references": [
+          "Pediatric nursing texts (e.g. Hockenberry, Wong's Essentials of Pediatric Nursing)",
+          "DRAFT: original question written with AI assistance; an RN or nurse educator must check it before candidates rely on it."
+        ]
+      },
+      "educationalObjective": "Teach care with tympanostomy tubes."
+    },
+    {
+      "id": "c1a00029-0000-4000-8000-000000000015",
+      "itemType": "multiple_choice",
+      "clientNeeds": "PHI.BCC",
+      "bodySystem": "pediatrics",
+      "subtopics": [
+        "pediatric-care-basics"
+      ],
+      "cjmmSkill": "analyze_cues",
+      "difficulty": "easy",
+      "stem": "Which vital signs are within the normal range for a 6-month-old?",
+      "content": {
+        "options": [
+          {
+            "id": "a",
+            "text": "Heart rate 130/min and respiratory rate 40/min"
+          },
+          {
+            "id": "b",
+            "text": "Heart rate 70/min and respiratory rate 16/min"
+          },
+          {
+            "id": "c",
+            "text": "Heart rate 190/min and respiratory rate 80/min"
+          },
+          {
+            "id": "d",
+            "text": "Heart rate 90/min and respiratory rate 12/min"
+          }
+        ]
+      },
+      "key": {
+        "correct": "a"
+      },
+      "rationale": {
+        "correct": "Pediatric vital signs change with age; know the normal infant ranges.",
+        "perOption": {
+          "a": "Infants normally have a heart rate of about 100 to 160 and a respiratory rate of about 30 to 60.",
+          "b": "These are adult values.",
+          "c": "These are too high.",
+          "d": "These are too low."
+        },
+        "references": [
+          "Pediatric nursing texts (e.g. Hockenberry, Wong's Essentials of Pediatric Nursing)",
+          "DRAFT: original question written with AI assistance; an RN or nurse educator must check it before candidates rely on it."
+        ]
+      },
+      "educationalObjective": "Interpret infant vital signs."
+    },
+    {
+      "id": "c1a00029-0000-4000-8000-000000000016",
+      "itemType": "multiple_choice",
+      "clientNeeds": "PHI.PPT",
+      "bodySystem": "pediatrics",
+      "subtopics": [
+        "medication-administration-technique"
+      ],
+      "cjmmSkill": "take_action",
+      "difficulty": "easy",
+      "stem": "How should a parent measure a liquid medication for a toddler?",
+      "content": {
+        "options": [
+          {
+            "id": "a",
+            "text": "With an oral syringe or dosing device marked in mL"
+          },
+          {
+            "id": "b",
+            "text": "With a kitchen teaspoon"
+          },
+          {
+            "id": "c",
+            "text": "By mixing it in a full bottle of milk"
+          },
+          {
+            "id": "d",
+            "text": "By estimating the amount"
+          }
+        ]
+      },
+      "key": {
+        "correct": "a"
+      },
+      "rationale": {
+        "correct": "Pediatric medications: give with an accurate oral syringe, directed into the side of the cheek.",
+        "perOption": {
+          "a": "Household spoons are inaccurate.",
+          "b": "Spoons vary in size.",
+          "c": "The child may not finish the bottle.",
+          "d": "This is inaccurate."
+        },
+        "references": [
+          "Pediatric nursing texts (e.g. Hockenberry, Wong's Essentials of Pediatric Nursing)",
+          "DRAFT: original question written with AI assistance; an RN or nurse educator must check it before candidates rely on it."
+        ]
+      },
+      "educationalObjective": "Teach accurate pediatric medication measurement."
+    },
+    {
+      "id": "c1a00029-0000-4000-8000-000000000017",
+      "itemType": "multiple_choice",
+      "clientNeeds": "PSI",
+      "bodySystem": "pediatrics",
+      "subtopics": [
+        "coping-and-adjustment"
+      ],
+      "cjmmSkill": "analyze_cues",
+      "difficulty": "moderate",
+      "stem": "A hospitalized 18-month-old screams and cries when the parents leave. What does this behavior show?",
+      "content": {
+        "options": [
+          {
+            "id": "a",
+            "text": "The protest stage of separation anxiety, which is expected"
+          },
+          {
+            "id": "b",
+            "text": "A sign of abuse"
+          },
+          {
+            "id": "c",
+            "text": "Detachment"
+          },
+          {
+            "id": "d",
+            "text": "A developmental delay"
+          }
+        ]
+      },
+      "key": {
+        "correct": "a"
+      },
+      "rationale": {
+        "correct": "Separation anxiety stages: protest, despair, detachment. Encourage parents to stay and keep routines.",
+        "perOption": {
+          "a": "Protest is the first stage of separation anxiety in toddlers.",
+          "b": "This is a normal response.",
+          "c": "Detachment is the late stage, with apparent disinterest.",
+          "d": "This is age-appropriate."
+        },
+        "references": [
+          "Pediatric nursing texts (e.g. Hockenberry, Wong's Essentials of Pediatric Nursing)",
+          "DRAFT: original question written with AI assistance; an RN or nurse educator must check it before candidates rely on it."
+        ]
+      },
+      "educationalObjective": "Recognize separation anxiety in toddlers."
+    },
+    {
+      "id": "c1a00029-0000-4000-8000-000000000018",
+      "itemType": "multiple_choice",
+      "clientNeeds": "PHI.BCC",
+      "bodySystem": "pediatrics",
+      "subtopics": [
+        "pain-assessment-and-comfort"
+      ],
+      "cjmmSkill": "take_action",
+      "difficulty": "moderate",
+      "stem": "Which tool should the nurse use to assess pain in a 1-year-old?",
+      "content": {
+        "options": [
+          {
+            "id": "a",
+            "text": "FLACC scale"
+          },
+          {
+            "id": "b",
+            "text": "Numeric 0 to 10 scale"
+          },
+          {
+            "id": "c",
+            "text": "Wong-Baker FACES scale"
+          },
+          {
+            "id": "d",
+            "text": "Asking the child to describe the pain"
+          }
+        ]
+      },
+      "key": {
+        "correct": "a"
+      },
+      "rationale": {
+        "correct": "Choose the pain scale by developmental level.",
+        "perOption": {
+          "a": "FLACC (Face, Legs, Activity, Cry, Consolability) suits preverbal children.",
+          "b": "This is for older children and adults.",
+          "c": "This is for children about 3 and older.",
+          "d": "A 1-year-old can't."
+        },
+        "references": [
+          "Pediatric nursing texts (e.g. Hockenberry, Wong's Essentials of Pediatric Nursing)",
+          "DRAFT: original question written with AI assistance; an RN or nurse educator must check it before candidates rely on it."
+        ]
+      },
+      "educationalObjective": "Select a pain scale for a toddler."
+    },
+    {
+      "id": "c1a00029-0000-4000-8000-000000000019",
+      "itemType": "multiple_choice",
+      "clientNeeds": "HPM",
+      "bodySystem": "pediatrics",
+      "subtopics": [
+        "infant-growth-and-development"
+      ],
+      "cjmmSkill": "analyze_cues",
+      "difficulty": "easy",
+      "stem": "A parent says their 7-month-old now cries when held by strangers. What is the nurse's response?",
+      "content": {
+        "options": [
+          {
+            "id": "a",
+            "text": "\"Stranger anxiety is a normal stage at this age.\""
+          },
+          {
+            "id": "b",
+            "text": "\"This suggests a developmental problem.\""
+          },
+          {
+            "id": "c",
+            "text": "\"Your baby may have been abused.\""
+          },
+          {
+            "id": "d",
+            "text": "\"Keep your baby away from all visitors.\""
+          }
+        ]
+      },
+      "key": {
+        "correct": "a"
+      },
+      "rationale": {
+        "correct": "Stranger anxiety appears around 6 to 8 months and is a sign of attachment.",
+        "perOption": {
+          "a": "Stranger anxiety usually starts around 6 to 8 months.",
+          "b": "It is normal.",
+          "c": "This is unfounded.",
+          "d": "This isn't needed."
+        },
+        "references": [
+          "Pediatric nursing texts (e.g. Hockenberry, Wong's Essentials of Pediatric Nursing)",
+          "DRAFT: original question written with AI assistance; an RN or nurse educator must check it before candidates rely on it."
+        ]
+      },
+      "educationalObjective": "Recognize normal stranger anxiety."
+    },
+    {
+      "id": "c1a00029-0000-4000-8000-000000000020",
+      "itemType": "multiple_choice",
+      "clientNeeds": "HPM",
+      "bodySystem": "pediatrics",
+      "subtopics": [
+        "developmental-stages"
+      ],
+      "cjmmSkill": "analyze_cues",
+      "difficulty": "moderate",
+      "stem": "Which language skill is expected of a 2-year-old?",
+      "content": {
+        "options": [
+          {
+            "id": "a",
+            "text": "Using two-word phrases"
+          },
+          {
+            "id": "b",
+            "text": "Speaking in full sentences of 6 to 8 words"
+          },
+          {
+            "id": "c",
+            "text": "Saying no words"
+          },
+          {
+            "id": "d",
+            "text": "Reading simple words"
+          }
+        ]
+      },
+      "key": {
+        "correct": "a"
+      },
+      "rationale": {
+        "correct": "Language milestones: first words around 12 months, two-word phrases at 2 years, simple sentences at 3.",
+        "perOption": {
+          "a": "Two-word phrases are typical at 2 years.",
+          "b": "This is typical of older children.",
+          "c": "This is a delay.",
+          "d": "This is typical of school age."
+        },
+        "references": [
+          "Pediatric nursing texts (e.g. Hockenberry, Wong's Essentials of Pediatric Nursing)",
+          "DRAFT: original question written with AI assistance; an RN or nurse educator must check it before candidates rely on it."
+        ]
+      },
+      "educationalObjective": "Identify toddler language milestones."
+    },
+    {
+      "id": "c1a00029-0000-4000-8000-000000000021",
+      "itemType": "multiple_choice",
+      "clientNeeds": "HPM",
+      "bodySystem": "pediatrics",
+      "subtopics": [
+        "infant-and-child-nutrition"
+      ],
+      "cjmmSkill": "evaluate_outcomes",
+      "difficulty": "moderate",
+      "stem": "Which statement by a parent of a 6-month-old shows a need for more teaching about nutrition?",
+      "content": {
+        "options": [
+          {
+            "id": "a",
+            "text": "\"I'll start iron-fortified cereal.\""
+          },
+          {
+            "id": "b",
+            "text": "\"I'll add a little honey to the cereal for flavor.\""
+          },
+          {
+            "id": "c",
+            "text": "\"I'll introduce one new food at a time.\""
+          },
+          {
+            "id": "d",
+            "text": "\"I'll keep breastfeeding.\""
+          }
+        ]
+      },
+      "key": {
+        "correct": "b"
+      },
+      "rationale": {
+        "correct": "No honey before 12 months; introduce single foods; no cow's milk as the main drink before 12 months.",
+        "perOption": {
+          "a": "This is appropriate around 6 months.",
+          "b": "Honey can cause infant botulism before age 1.",
+          "c": "This helps spot allergies.",
+          "d": "Breastfeeding continues."
+        },
+        "references": [
+          "Pediatric nursing texts (e.g. Hockenberry, Wong's Essentials of Pediatric Nursing)",
+          "DRAFT: original question written with AI assistance; an RN or nurse educator must check it before candidates rely on it."
+        ]
+      },
+      "educationalObjective": "Teach infant feeding safety."
+    },
+    {
+      "id": "c1a00029-0000-4000-8000-000000000022",
+      "itemType": "fill_blank_calc",
+      "clientNeeds": "PHI.BCC",
+      "bodySystem": "pediatrics",
+      "subtopics": [
+        "pediatric-care-basics"
+      ],
+      "cjmmSkill": "analyze_cues",
+      "difficulty": "moderate",
+      "stem": "Using the Holliday-Segar method (100 mL/kg for the first 10 kg, plus 50 mL/kg for each kg from 11 to 20), what is the daily maintenance fluid requirement for a 15 kg child?",
+      "content": {
+        "unit": "mL/day",
+        "decimals": 0,
+        "inputLabel": "Daily fluid requirement"
+      },
+      "key": {
+        "value": 1250,
+        "rounding": "exact"
+      },
+      "rationale": {
+        "correct": "First 10 kg: 10 × 100 = 1,000 mL. Next 5 kg: 5 × 50 = 250 mL. Total = 1,250 mL/day.",
+        "perOption": {},
+        "references": [
+          "Pediatric nursing texts (e.g. Hockenberry, Wong's Essentials of Pediatric Nursing)",
+          "DRAFT: original question written with AI assistance; an RN or nurse educator must check it before candidates rely on it."
+        ]
+      },
+      "educationalObjective": "Calculate pediatric maintenance fluids."
+    }
+  ]
+}

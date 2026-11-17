@@ -1,0 +1,1038 @@
+{
+  "notice": "RN bank batch 35: Pharmacology II: psychiatric medications and drug safety. DRAFT - every question must be reviewed by an RN or nurse educator before candidates rely on it.",
+  "track": "RN",
+  "subtopics": [
+    {
+      "clientNeeds": "PHI.PPT",
+      "slug": "psychiatric-medications",
+      "name": "Psychiatric medications"
+    },
+    {
+      "clientNeeds": "PHI.PPT",
+      "slug": "antiseizure-medications",
+      "name": "Antiseizure medications"
+    },
+    {
+      "clientNeeds": "PHI.PPT",
+      "slug": "adverse-effects-of-medications",
+      "name": "Adverse effects of medications"
+    }
+  ],
+  "questions": [
+    {
+      "id": "c1a00035-0000-4000-8000-000000000001",
+      "itemType": "multiple_choice",
+      "clientNeeds": "PHI.PPT",
+      "bodySystem": "mental-health",
+      "subtopics": [
+        "psychiatric-medications"
+      ],
+      "cjmmSkill": "recognize_cues",
+      "difficulty": "difficult",
+      "stem": "A client recently started sertraline and also takes tramadol. The client is agitated and sweating, with a temperature of 39 °C (102.2 °F), muscle twitching and hyperactive reflexes. What does the nurse suspect?",
+      "content": {
+        "options": [
+          {
+            "id": "a",
+            "text": "Serotonin syndrome"
+          },
+          {
+            "id": "b",
+            "text": "Neuroleptic malignant syndrome"
+          },
+          {
+            "id": "c",
+            "text": "Anticholinergic toxicity"
+          },
+          {
+            "id": "d",
+            "text": "Hypoglycemia"
+          }
+        ]
+      },
+      "key": {
+        "correct": "a"
+      },
+      "rationale": {
+        "correct": "Serotonin syndrome: stop the serotonergic drugs and give supportive care; cyproheptadine may be used.",
+        "perOption": {
+          "a": "Combining serotonergic drugs causes agitation, hyperthermia, clonus and hyperreflexia.",
+          "b": "NMS causes rigid muscles and slow reflexes, usually with antipsychotics.",
+          "c": "This causes dry, hot skin, not sweating with clonus.",
+          "d": "This doesn't cause hyperthermia and clonus."
+        },
+        "references": [
+          "Nursing pharmacology texts (e.g. Lehne; McCuistion) and the drug's prescribing information",
+          "DRAFT: original question written with AI assistance; an RN or nurse educator must check it before candidates rely on it."
+        ]
+      },
+      "educationalObjective": "Recognize serotonin syndrome."
+    },
+    {
+      "id": "c1a00035-0000-4000-8000-000000000002",
+      "itemType": "multiple_choice",
+      "clientNeeds": "PHI.PPT",
+      "bodySystem": "mental-health",
+      "subtopics": [
+        "psychiatric-medications"
+      ],
+      "cjmmSkill": "evaluate_outcomes",
+      "difficulty": "moderate",
+      "stem": "A client started fluoxetine 1 week ago and says, \"It's not working, so I'll stop it.\" What is the best response?",
+      "content": {
+        "options": [
+          {
+            "id": "a",
+            "text": "\"It can take 2 to 6 weeks to feel the full effect. Please keep taking it and talk with your provider.\""
+          },
+          {
+            "id": "b",
+            "text": "\"Stop it if it isn't working.\""
+          },
+          {
+            "id": "c",
+            "text": "\"Double the dose.\""
+          },
+          {
+            "id": "d",
+            "text": "\"Add St. John's wort.\""
+          }
+        ]
+      },
+      "key": {
+        "correct": "a"
+      },
+      "rationale": {
+        "correct": "Antidepressants: delayed effect, watch for suicidal thoughts early on, don't stop abruptly.",
+        "perOption": {
+          "a": "SSRIs take weeks to work; stopping suddenly can cause discontinuation symptoms.",
+          "b": "This isn't advised.",
+          "c": "This isn't appropriate.",
+          "d": "This risks serotonin syndrome."
+        },
+        "references": [
+          "Nursing pharmacology texts (e.g. Lehne; McCuistion) and the drug's prescribing information",
+          "DRAFT: original question written with AI assistance; an RN or nurse educator must check it before candidates rely on it."
+        ]
+      },
+      "educationalObjective": "Teach about the delayed effect of SSRIs."
+    },
+    {
+      "id": "c1a00035-0000-4000-8000-000000000003",
+      "itemType": "multiple_choice",
+      "clientNeeds": "PHI.PPT",
+      "bodySystem": "mental-health",
+      "subtopics": [
+        "psychiatric-medications"
+      ],
+      "cjmmSkill": "evaluate_outcomes",
+      "difficulty": "difficult",
+      "stem": "A client taking phenelzine (an MAOI) plans a meal. Which food choice shows a need for more teaching?",
+      "content": {
+        "options": [
+          {
+            "id": "a",
+            "text": "Aged cheddar cheese and salami"
+          },
+          {
+            "id": "b",
+            "text": "Fresh chicken"
+          },
+          {
+            "id": "c",
+            "text": "Fresh vegetables"
+          },
+          {
+            "id": "d",
+            "text": "Cottage cheese"
+          }
+        ]
+      },
+      "key": {
+        "correct": "a"
+      },
+      "rationale": {
+        "correct": "MAOIs: avoid tyramine (aged cheese, cured meats, tap beer, soy sauce) and many drug interactions.",
+        "perOption": {
+          "a": "Tyramine-rich foods can cause a hypertensive crisis with MAOIs.",
+          "b": "Fresh meat is low in tyramine.",
+          "c": "These are safe.",
+          "d": "Fresh cheeses are low in tyramine."
+        },
+        "references": [
+          "Nursing pharmacology texts (e.g. Lehne; McCuistion) and the drug's prescribing information",
+          "DRAFT: original question written with AI assistance; an RN or nurse educator must check it before candidates rely on it."
+        ]
+      },
+      "educationalObjective": "Teach MAOI dietary restrictions."
+    },
+    {
+      "id": "c1a00035-0000-4000-8000-000000000004",
+      "itemType": "multiple_choice",
+      "clientNeeds": "PHI.PPT",
+      "bodySystem": "mental-health",
+      "subtopics": [
+        "psychiatric-medications"
+      ],
+      "cjmmSkill": "recognize_cues",
+      "difficulty": "difficult",
+      "stem": "A client taking lithium has a level of 2.1 mEq/L, with coarse tremors, vomiting and confusion. What should the nurse do?",
+      "content": {
+        "options": [
+          {
+            "id": "a",
+            "text": "Hold the lithium and notify the provider right away"
+          },
+          {
+            "id": "b",
+            "text": "Give the next dose"
+          },
+          {
+            "id": "c",
+            "text": "Encourage a low-sodium diet"
+          },
+          {
+            "id": "d",
+            "text": "Document the findings and recheck tomorrow"
+          }
+        ]
+      },
+      "key": {
+        "correct": "a"
+      },
+      "rationale": {
+        "correct": "Lithium: therapeutic about 0.6 to 1.2 mEq/L; keep sodium and fluid intake steady; watch for toxicity.",
+        "perOption": {
+          "a": "A level above about 1.5 mEq/L with these symptoms indicates toxicity.",
+          "b": "This worsens toxicity.",
+          "c": "Low sodium raises lithium levels.",
+          "d": "This is urgent."
+        },
+        "references": [
+          "Nursing pharmacology texts (e.g. Lehne; McCuistion) and the drug's prescribing information",
+          "DRAFT: original question written with AI assistance; an RN or nurse educator must check it before candidates rely on it."
+        ]
+      },
+      "educationalObjective": "Recognize lithium toxicity."
+    },
+    {
+      "id": "c1a00035-0000-4000-8000-000000000005",
+      "itemType": "multiple_choice",
+      "clientNeeds": "PHI.PPT",
+      "bodySystem": "mental-health",
+      "subtopics": [
+        "psychiatric-medications"
+      ],
+      "cjmmSkill": "evaluate_outcomes",
+      "difficulty": "moderate",
+      "stem": "Which statement by a client taking lithium shows correct understanding?",
+      "content": {
+        "options": [
+          {
+            "id": "a",
+            "text": "\"I'll keep my salt and fluid intake about the same every day.\""
+          },
+          {
+            "id": "b",
+            "text": "\"I'll cut out all salt.\""
+          },
+          {
+            "id": "c",
+            "text": "\"I'll take ibuprofen for headaches.\""
+          },
+          {
+            "id": "d",
+            "text": "\"I'll skip my blood tests if I feel fine.\""
+          }
+        ]
+      },
+      "key": {
+        "correct": "a"
+      },
+      "rationale": {
+        "correct": "Lithium: steady sodium and fluids, avoid NSAIDs and diuretics, regular blood levels.",
+        "perOption": {
+          "a": "Changes in sodium and fluids alter lithium levels.",
+          "b": "Low sodium raises lithium levels.",
+          "c": "NSAIDs raise lithium levels.",
+          "d": "Regular levels are needed."
+        },
+        "references": [
+          "Nursing pharmacology texts (e.g. Lehne; McCuistion) and the drug's prescribing information",
+          "DRAFT: original question written with AI assistance; an RN or nurse educator must check it before candidates rely on it."
+        ]
+      },
+      "educationalObjective": "Teach lithium safety."
+    },
+    {
+      "id": "c1a00035-0000-4000-8000-000000000006",
+      "itemType": "multiple_choice",
+      "clientNeeds": "PHI.PPT",
+      "bodySystem": "mental-health",
+      "subtopics": [
+        "psychiatric-medications"
+      ],
+      "cjmmSkill": "recognize_cues",
+      "difficulty": "difficult",
+      "stem": "A client who started haloperidol 2 days ago has a temperature of 40 °C (104 °F), severe muscle rigidity, confusion and an unstable blood pressure. What does the nurse suspect?",
+      "content": {
+        "options": [
+          {
+            "id": "a",
+            "text": "Neuroleptic malignant syndrome"
+          },
+          {
+            "id": "b",
+            "text": "Tardive dyskinesia"
+          },
+          {
+            "id": "c",
+            "text": "Akathisia"
+          },
+          {
+            "id": "d",
+            "text": "Serotonin syndrome"
+          }
+        ]
+      },
+      "key": {
+        "correct": "a"
+      },
+      "rationale": {
+        "correct": "NMS: stop the antipsychotic, cool the client, give supportive care and possibly dantrolene or bromocriptine.",
+        "perOption": {
+          "a": "This is a life-threatening reaction to antipsychotics.",
+          "b": "This develops after long-term use and involves involuntary movements.",
+          "c": "This is restlessness.",
+          "d": "That causes clonus and is linked to serotonergic drugs."
+        },
+        "references": [
+          "Nursing pharmacology texts (e.g. Lehne; McCuistion) and the drug's prescribing information",
+          "DRAFT: original question written with AI assistance; an RN or nurse educator must check it before candidates rely on it."
+        ]
+      },
+      "educationalObjective": "Recognize neuroleptic malignant syndrome."
+    },
+    {
+      "id": "c1a00035-0000-4000-8000-000000000007",
+      "itemType": "matrix_mc",
+      "clientNeeds": "PHI.PPT",
+      "bodySystem": "mental-health",
+      "subtopics": [
+        "psychiatric-medications"
+      ],
+      "cjmmSkill": "analyze_cues",
+      "difficulty": "difficult",
+      "stem": "For each finding in a client taking an antipsychotic, indicate the adverse effect.",
+      "content": {
+        "rows": [
+          {
+            "id": "r1",
+            "text": "Sudden, painful neck spasm with the eyes rolled upward"
+          },
+          {
+            "id": "r2",
+            "text": "Inner restlessness and constant pacing"
+          },
+          {
+            "id": "r3",
+            "text": "Shuffling gait, tremor and a masklike face"
+          },
+          {
+            "id": "r4",
+            "text": "Lip smacking and tongue thrusting after years of treatment"
+          }
+        ],
+        "columns": [
+          {
+            "id": "c1",
+            "text": "Acute dystonia"
+          },
+          {
+            "id": "c2",
+            "text": "Akathisia"
+          },
+          {
+            "id": "c3",
+            "text": "Pseudoparkinsonism"
+          },
+          {
+            "id": "c4",
+            "text": "Tardive dyskinesia"
+          }
+        ]
+      },
+      "key": {
+        "byRow": {
+          "r1": "c1",
+          "r2": "c2",
+          "r3": "c3",
+          "r4": "c4"
+        }
+      },
+      "rationale": {
+        "correct": "Acute dystonia is treated with an anticholinergic such as diphenhydramine or benztropine; screen for TD with the AIMS.",
+        "perOption": {
+          "r1:c1": "This is an acute dystonic reaction.",
+          "r1:c2": "Akathisia is restlessness.",
+          "r1:c3": "This is a sudden spasm, not tremor or rigidity.",
+          "r1:c4": "TD develops after long-term use.",
+          "r2:c1": "This isn't a muscle spasm.",
+          "r2:c2": "Akathisia is restlessness and an inability to sit still.",
+          "r2:c3": "This isn't tremor or rigidity.",
+          "r2:c4": "This isn't involuntary facial movement.",
+          "r3:c1": "This isn't a spasm.",
+          "r3:c2": "This isn't restlessness.",
+          "r3:c3": "These mimic Parkinson's disease.",
+          "r3:c4": "TD involves involuntary movements.",
+          "r4:c1": "This isn't acute.",
+          "r4:c2": "This isn't restlessness.",
+          "r4:c3": "This isn't Parkinson-like.",
+          "r4:c4": "TD causes involuntary facial movements after long-term use."
+        },
+        "references": [
+          "Nursing pharmacology texts (e.g. Lehne; McCuistion) and the drug's prescribing information",
+          "DRAFT: original question written with AI assistance; an RN or nurse educator must check it before candidates rely on it."
+        ]
+      },
+      "educationalObjective": "Identify extrapyramidal side effects."
+    },
+    {
+      "id": "c1a00035-0000-4000-8000-000000000008",
+      "itemType": "multiple_choice",
+      "clientNeeds": "PHI.PPT",
+      "bodySystem": "mental-health",
+      "subtopics": [
+        "psychiatric-medications"
+      ],
+      "cjmmSkill": "recognize_cues",
+      "difficulty": "moderate",
+      "stem": "A client taking clozapine has a sore throat and fever. What should the nurse do?",
+      "content": {
+        "options": [
+          {
+            "id": "a",
+            "text": "Hold the dose and check the white blood cell and absolute neutrophil counts"
+          },
+          {
+            "id": "b",
+            "text": "Give acetaminophen and continue the drug"
+          },
+          {
+            "id": "c",
+            "text": "Increase the dose"
+          },
+          {
+            "id": "d",
+            "text": "Ignore it as a cold"
+          }
+        ]
+      },
+      "key": {
+        "correct": "a"
+      },
+      "rationale": {
+        "correct": "Clozapine: monitor the ANC regularly; also watch for seizures, myocarditis and metabolic effects.",
+        "perOption": {
+          "a": "Clozapine can cause agranulocytosis.",
+          "b": "Infection may signal agranulocytosis.",
+          "c": "This isn't appropriate.",
+          "d": "This needs evaluation."
+        },
+        "references": [
+          "Nursing pharmacology texts (e.g. Lehne; McCuistion) and the drug's prescribing information",
+          "DRAFT: original question written with AI assistance; an RN or nurse educator must check it before candidates rely on it."
+        ]
+      },
+      "educationalObjective": "Recognize clozapine-induced agranulocytosis."
+    },
+    {
+      "id": "c1a00035-0000-4000-8000-000000000009",
+      "itemType": "multiple_choice",
+      "clientNeeds": "PHI.PPT",
+      "bodySystem": "mental-health",
+      "subtopics": [
+        "psychiatric-medications"
+      ],
+      "cjmmSkill": "generate_solutions",
+      "difficulty": "moderate",
+      "stem": "A client is taking olanzapine. What monitoring should the nurse plan?",
+      "content": {
+        "options": [
+          {
+            "id": "a",
+            "text": "Weight, waist size, blood glucose and lipids"
+          },
+          {
+            "id": "b",
+            "text": "Hearing tests"
+          },
+          {
+            "id": "c",
+            "text": "INR"
+          },
+          {
+            "id": "d",
+            "text": "Thyroid levels only"
+          }
+        ]
+      },
+      "key": {
+        "correct": "a"
+      },
+      "rationale": {
+        "correct": "Atypical antipsychotics: monitor for weight gain, diabetes and high lipids.",
+        "perOption": {
+          "a": "Second-generation antipsychotics cause metabolic syndrome.",
+          "b": "These aren't routinely needed.",
+          "c": "This isn't required.",
+          "d": "This isn't the focus."
+        },
+        "references": [
+          "Nursing pharmacology texts (e.g. Lehne; McCuistion) and the drug's prescribing information",
+          "DRAFT: original question written with AI assistance; an RN or nurse educator must check it before candidates rely on it."
+        ]
+      },
+      "educationalObjective": "Monitor metabolic effects of atypical antipsychotics."
+    },
+    {
+      "id": "c1a00035-0000-4000-8000-000000000010",
+      "itemType": "multiple_choice",
+      "clientNeeds": "PHI.PPT",
+      "bodySystem": "mental-health",
+      "subtopics": [
+        "psychiatric-medications"
+      ],
+      "cjmmSkill": "analyze_cues",
+      "difficulty": "difficult",
+      "stem": "A client with depression is prescribed a large supply of amitriptyline. What is the nurse's main safety concern?",
+      "content": {
+        "options": [
+          {
+            "id": "a",
+            "text": "Tricyclic antidepressants are highly lethal in overdose because of cardiac dysrhythmias"
+          },
+          {
+            "id": "b",
+            "text": "They cause weight loss"
+          },
+          {
+            "id": "c",
+            "text": "They have no side effects"
+          },
+          {
+            "id": "d",
+            "text": "They act within 1 day"
+          }
+        ]
+      },
+      "key": {
+        "correct": "a"
+      },
+      "rationale": {
+        "correct": "TCAs: anticholinergic effects, orthostatic hypotension and cardiotoxicity in overdose.",
+        "perOption": {
+          "a": "Prescribe limited amounts for clients at risk of suicide.",
+          "b": "They often cause weight gain.",
+          "c": "They have many anticholinergic effects.",
+          "d": "They take weeks."
+        },
+        "references": [
+          "Nursing pharmacology texts (e.g. Lehne; McCuistion) and the drug's prescribing information",
+          "DRAFT: original question written with AI assistance; an RN or nurse educator must check it before candidates rely on it."
+        ]
+      },
+      "educationalObjective": "Recognize TCA overdose risk."
+    },
+    {
+      "id": "c1a00035-0000-4000-8000-000000000011",
+      "itemType": "multiple_choice",
+      "clientNeeds": "PHI.PPT",
+      "bodySystem": "mental-health",
+      "subtopics": [
+        "antiseizure-medications"
+      ],
+      "cjmmSkill": "recognize_cues",
+      "difficulty": "moderate",
+      "stem": "A client taking valproic acid for bipolar disorder reports fatigue, nausea, yellowing of the eyes and abdominal pain. What should the nurse suspect?",
+      "content": {
+        "options": [
+          {
+            "id": "a",
+            "text": "Liver toxicity or pancreatitis"
+          },
+          {
+            "id": "b",
+            "text": "Expected effects"
+          },
+          {
+            "id": "c",
+            "text": "Lithium toxicity"
+          },
+          {
+            "id": "d",
+            "text": "Serotonin syndrome"
+          }
+        ]
+      },
+      "key": {
+        "correct": "a"
+      },
+      "rationale": {
+        "correct": "Valproate: liver tests, platelets, pancreatitis risk and birth defects (avoid in pregnancy).",
+        "perOption": {
+          "a": "Valproate can cause hepatotoxicity and pancreatitis.",
+          "b": "These need evaluation.",
+          "c": "The client isn't taking lithium.",
+          "d": "This doesn't fit."
+        },
+        "references": [
+          "Nursing pharmacology texts (e.g. Lehne; McCuistion) and the drug's prescribing information",
+          "DRAFT: original question written with AI assistance; an RN or nurse educator must check it before candidates rely on it."
+        ]
+      },
+      "educationalObjective": "Recognize valproate toxicity."
+    },
+    {
+      "id": "c1a00035-0000-4000-8000-000000000012",
+      "itemType": "multiple_choice",
+      "clientNeeds": "PHI.PPT",
+      "bodySystem": "mental-health",
+      "subtopics": [
+        "antiseizure-medications"
+      ],
+      "cjmmSkill": "recognize_cues",
+      "difficulty": "moderate",
+      "stem": "A client recently started lamotrigine. Which finding should the client report right away?",
+      "content": {
+        "options": [
+          {
+            "id": "a",
+            "text": "A rash"
+          },
+          {
+            "id": "b",
+            "text": "Mild headache"
+          },
+          {
+            "id": "c",
+            "text": "Better mood stability"
+          },
+          {
+            "id": "d",
+            "text": "Mild dizziness"
+          }
+        ]
+      },
+      "key": {
+        "correct": "a"
+      },
+      "rationale": {
+        "correct": "Lamotrigine: increase the dose slowly to reduce the risk of severe rash.",
+        "perOption": {
+          "a": "Lamotrigine can cause Stevens-Johnson syndrome; any rash needs evaluation.",
+          "b": "This is minor.",
+          "c": "This is the intended effect.",
+          "d": "This is common."
+        },
+        "references": [
+          "Nursing pharmacology texts (e.g. Lehne; McCuistion) and the drug's prescribing information",
+          "DRAFT: original question written with AI assistance; an RN or nurse educator must check it before candidates rely on it."
+        ]
+      },
+      "educationalObjective": "Recognize serious lamotrigine rash."
+    },
+    {
+      "id": "c1a00035-0000-4000-8000-000000000013",
+      "itemType": "multiple_choice",
+      "clientNeeds": "PHI.PPT",
+      "bodySystem": "pharmacology",
+      "subtopics": [
+        "adverse-effects-of-medications"
+      ],
+      "cjmmSkill": "analyze_cues",
+      "difficulty": "moderate",
+      "stem": "An 84-year-old is prescribed diphenhydramine for sleep. Why should the nurse question this?",
+      "content": {
+        "options": [
+          {
+            "id": "a",
+            "text": "Its anticholinergic effects can cause confusion, urinary retention and falls in older adults"
+          },
+          {
+            "id": "b",
+            "text": "It raises blood glucose"
+          },
+          {
+            "id": "c",
+            "text": "It causes hypertension"
+          },
+          {
+            "id": "d",
+            "text": "It is ineffective in older adults"
+          }
+        ]
+      },
+      "key": {
+        "correct": "a"
+      },
+      "rationale": {
+        "correct": "Avoid strongly anticholinergic drugs in older adults when possible.",
+        "perOption": {
+          "a": "It is on the Beers list of drugs to avoid in older adults.",
+          "b": "This isn't the main concern.",
+          "c": "This isn't the main concern.",
+          "d": "The concern is harm, not effectiveness."
+        },
+        "references": [
+          "Nursing pharmacology texts (e.g. Lehne; McCuistion) and the drug's prescribing information",
+          "DRAFT: original question written with AI assistance; an RN or nurse educator must check it before candidates rely on it."
+        ]
+      },
+      "educationalObjective": "Recognize risky medications for older adults."
+    },
+    {
+      "id": "c1a00035-0000-4000-8000-000000000014",
+      "itemType": "multiple_choice",
+      "clientNeeds": "PHI.PPT",
+      "bodySystem": "pharmacology",
+      "subtopics": [
+        "adverse-effects-of-medications"
+      ],
+      "cjmmSkill": "recognize_cues",
+      "difficulty": "moderate",
+      "stem": "A client takes ibuprofen daily for arthritis. Which finding should the nurse report?",
+      "content": {
+        "options": [
+          {
+            "id": "a",
+            "text": "Black, tarry stools"
+          },
+          {
+            "id": "b",
+            "text": "Less joint pain"
+          },
+          {
+            "id": "c",
+            "text": "Mild heartburn relieved by food"
+          },
+          {
+            "id": "d",
+            "text": "Taking it with meals"
+          }
+        ]
+      },
+      "key": {
+        "correct": "a"
+      },
+      "rationale": {
+        "correct": "NSAIDs: GI bleeding, kidney injury, high blood pressure and cardiovascular risk.",
+        "perOption": {
+          "a": "NSAIDs can cause GI bleeding.",
+          "b": "This is the intended effect.",
+          "c": "This is less urgent but should be discussed.",
+          "d": "This is appropriate."
+        },
+        "references": [
+          "Nursing pharmacology texts (e.g. Lehne; McCuistion) and the drug's prescribing information",
+          "DRAFT: original question written with AI assistance; an RN or nurse educator must check it before candidates rely on it."
+        ]
+      },
+      "educationalObjective": "Recognize NSAID GI bleeding."
+    },
+    {
+      "id": "c1a00035-0000-4000-8000-000000000015",
+      "itemType": "multiple_choice",
+      "clientNeeds": "PHI.PPT",
+      "bodySystem": "pharmacology",
+      "subtopics": [
+        "adverse-effects-of-medications"
+      ],
+      "cjmmSkill": "evaluate_outcomes",
+      "difficulty": "moderate",
+      "stem": "Which statement shows a client understands safe acetaminophen use?",
+      "content": {
+        "options": [
+          {
+            "id": "a",
+            "text": "\"I'll check the labels of cold medicines because many contain acetaminophen too.\""
+          },
+          {
+            "id": "b",
+            "text": "\"I can take as much as I want because it's over-the-counter.\""
+          },
+          {
+            "id": "c",
+            "text": "\"Alcohol doesn't matter with acetaminophen.\""
+          },
+          {
+            "id": "d",
+            "text": "\"I'll take extra if my fever doesn't go down.\""
+          }
+        ]
+      },
+      "key": {
+        "correct": "a"
+      },
+      "rationale": {
+        "correct": "Acetaminophen: usually no more than 3 to 4 g a day for healthy adults (less with liver disease or alcohol use); watch for hidden sources.",
+        "perOption": {
+          "a": "Hidden acetaminophen in combination products causes accidental overdose.",
+          "b": "There is a daily maximum.",
+          "c": "Alcohol increases liver toxicity.",
+          "d": "Doses must stay within the limit."
+        },
+        "references": [
+          "Nursing pharmacology texts (e.g. Lehne; McCuistion) and the drug's prescribing information",
+          "DRAFT: original question written with AI assistance; an RN or nurse educator must check it before candidates rely on it."
+        ]
+      },
+      "educationalObjective": "Teach safe acetaminophen use."
+    },
+    {
+      "id": "c1a00035-0000-4000-8000-000000000016",
+      "itemType": "multiple_choice",
+      "clientNeeds": "PHI.PPT",
+      "bodySystem": "pharmacology",
+      "subtopics": [
+        "adverse-effects-of-medications"
+      ],
+      "cjmmSkill": "recognize_cues",
+      "difficulty": "moderate",
+      "stem": "A client taking lisinopril and spironolactone has a potassium of 6.0 mEq/L. Which medication combination contributed?",
+      "content": {
+        "options": [
+          {
+            "id": "a",
+            "text": "Both drugs keep potassium in the body"
+          },
+          {
+            "id": "b",
+            "text": "Lisinopril lowers potassium"
+          },
+          {
+            "id": "c",
+            "text": "Spironolactone wastes potassium"
+          },
+          {
+            "id": "d",
+            "text": "Neither affects potassium"
+          }
+        ]
+      },
+      "key": {
+        "correct": "a"
+      },
+      "rationale": {
+        "correct": "Watch for drug combinations that raise potassium.",
+        "perOption": {
+          "a": "ACE inhibitors and potassium-sparing diuretics together raise the risk of hyperkalemia.",
+          "b": "ACE inhibitors raise potassium.",
+          "c": "It spares potassium.",
+          "d": "Both raise it."
+        },
+        "references": [
+          "Nursing pharmacology texts (e.g. Lehne; McCuistion) and the drug's prescribing information",
+          "DRAFT: original question written with AI assistance; an RN or nurse educator must check it before candidates rely on it."
+        ]
+      },
+      "educationalObjective": "Recognize drug combinations that cause hyperkalemia."
+    },
+    {
+      "id": "c1a00035-0000-4000-8000-000000000017",
+      "itemType": "multiple_choice",
+      "clientNeeds": "PHI.PPT",
+      "bodySystem": "pharmacology",
+      "subtopics": [
+        "adverse-effects-of-medications"
+      ],
+      "cjmmSkill": "recognize_cues",
+      "difficulty": "moderate",
+      "stem": "A client taking warfarin is prescribed a course of ciprofloxacin. What should the nurse monitor more closely?",
+      "content": {
+        "options": [
+          {
+            "id": "a",
+            "text": "INR and signs of bleeding"
+          },
+          {
+            "id": "b",
+            "text": "Blood glucose only"
+          },
+          {
+            "id": "c",
+            "text": "Hearing"
+          },
+          {
+            "id": "d",
+            "text": "Thyroid function"
+          }
+        ]
+      },
+      "key": {
+        "correct": "a"
+      },
+      "rationale": {
+        "correct": "Check for drug interactions whenever a new drug is added to warfarin.",
+        "perOption": {
+          "a": "Many antibiotics, including ciprofloxacin, increase warfarin's effect.",
+          "b": "This isn't the main interaction.",
+          "c": "This isn't the main interaction.",
+          "d": "This isn't related."
+        },
+        "references": [
+          "Nursing pharmacology texts (e.g. Lehne; McCuistion) and the drug's prescribing information",
+          "DRAFT: original question written with AI assistance; an RN or nurse educator must check it before candidates rely on it."
+        ]
+      },
+      "educationalObjective": "Monitor warfarin drug interactions."
+    },
+    {
+      "id": "c1a00035-0000-4000-8000-000000000018",
+      "itemType": "multiple_choice",
+      "clientNeeds": "PHI.PPT",
+      "bodySystem": "pharmacology",
+      "subtopics": [
+        "adverse-effects-of-medications"
+      ],
+      "cjmmSkill": "evaluate_outcomes",
+      "difficulty": "moderate",
+      "stem": "A client who takes simvastatin asks about grapefruit juice. What is the best response?",
+      "content": {
+        "options": [
+          {
+            "id": "a",
+            "text": "\"Avoid large amounts of grapefruit; it can raise simvastatin levels and the risk of muscle damage.\""
+          },
+          {
+            "id": "b",
+            "text": "\"Grapefruit makes the statin work less.\""
+          },
+          {
+            "id": "c",
+            "text": "\"There's no interaction.\""
+          },
+          {
+            "id": "d",
+            "text": "\"Take the statin with grapefruit juice for best absorption.\""
+          }
+        ]
+      },
+      "key": {
+        "correct": "a"
+      },
+      "rationale": {
+        "correct": "Grapefruit interacts with some statins, calcium channel blockers and immunosuppressants.",
+        "perOption": {
+          "a": "Grapefruit inhibits CYP3A4, which metabolizes simvastatin.",
+          "b": "It increases levels.",
+          "c": "There is a significant interaction.",
+          "d": "This increases toxicity."
+        },
+        "references": [
+          "Nursing pharmacology texts (e.g. Lehne; McCuistion) and the drug's prescribing information",
+          "DRAFT: original question written with AI assistance; an RN or nurse educator must check it before candidates rely on it."
+        ]
+      },
+      "educationalObjective": "Teach about the grapefruit-statin interaction."
+    },
+    {
+      "id": "c1a00035-0000-4000-8000-000000000019",
+      "itemType": "multiple_choice",
+      "clientNeeds": "PHI.PPT",
+      "bodySystem": "pharmacology",
+      "subtopics": [
+        "adverse-effects-of-medications"
+      ],
+      "cjmmSkill": "recognize_cues",
+      "difficulty": "difficult",
+      "stem": "Two weeks after starting allopurinol, a client has a widespread rash with blisters, fever and sores in the mouth. What does the nurse suspect?",
+      "content": {
+        "options": [
+          {
+            "id": "a",
+            "text": "Stevens-Johnson syndrome"
+          },
+          {
+            "id": "b",
+            "text": "Contact dermatitis"
+          },
+          {
+            "id": "c",
+            "text": "Expected side effect"
+          },
+          {
+            "id": "d",
+            "text": "Gout flare"
+          }
+        ]
+      },
+      "key": {
+        "correct": "a"
+      },
+      "rationale": {
+        "correct": "SJS: stop the drug right away; it is linked to allopurinol, sulfonamides, lamotrigine and anticonvulsants.",
+        "perOption": {
+          "a": "This is a severe skin reaction that needs the drug stopped and emergency care.",
+          "b": "This doesn't cause fever and mouth sores.",
+          "c": "This is an emergency.",
+          "d": "This doesn't fit."
+        },
+        "references": [
+          "Nursing pharmacology texts (e.g. Lehne; McCuistion) and the drug's prescribing information",
+          "DRAFT: original question written with AI assistance; an RN or nurse educator must check it before candidates rely on it."
+        ]
+      },
+      "educationalObjective": "Recognize Stevens-Johnson syndrome."
+    },
+    {
+      "id": "c1a00035-0000-4000-8000-000000000020",
+      "itemType": "multiple_choice",
+      "clientNeeds": "PHI.PPT",
+      "bodySystem": "mental-health",
+      "subtopics": [
+        "psychiatric-medications"
+      ],
+      "cjmmSkill": "take_action",
+      "difficulty": "moderate",
+      "stem": "A client becomes very agitated, and the provider orders IM haloperidol and lorazepam. What is the nurse's priority after giving them?",
+      "content": {
+        "options": [
+          {
+            "id": "a",
+            "text": "Monitor airway, breathing, blood pressure and level of sedation"
+          },
+          {
+            "id": "b",
+            "text": "Leave the client alone to rest"
+          },
+          {
+            "id": "c",
+            "text": "Give the next dose in 15 minutes"
+          },
+          {
+            "id": "d",
+            "text": "Start discharge teaching"
+          }
+        ]
+      },
+      "key": {
+        "correct": "a"
+      },
+      "rationale": {
+        "correct": "After emergency sedation, monitor vital signs, airway and EPS closely.",
+        "perOption": {
+          "a": "The combination can cause sedation, hypotension and respiratory depression.",
+          "b": "Monitoring is required.",
+          "c": "This risks oversedation.",
+          "d": "This isn't appropriate now."
+        },
+        "references": [
+          "Nursing pharmacology texts (e.g. Lehne; McCuistion) and the drug's prescribing information",
+          "DRAFT: original question written with AI assistance; an RN or nurse educator must check it before candidates rely on it."
+        ]
+      },
+      "educationalObjective": "Monitor after emergency sedation."
+    }
+  ]
+}
