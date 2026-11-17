@@ -1,0 +1,1552 @@
+{
+  "notice": "RN bank batch 10: Fluids, electrolytes and acid-base balance. DRAFT - every question must be reviewed by an RN or nurse educator before candidates rely on it.",
+  "track": "RN",
+  "subtopics": [
+    {
+      "clientNeeds": "PHI.PA",
+      "slug": "electrolyte-imbalances",
+      "name": "Electrolyte imbalances"
+    },
+    {
+      "clientNeeds": "PHI.RRP",
+      "slug": "electrolyte-and-glucose-lab-results",
+      "name": "Electrolyte and glucose lab results"
+    },
+    {
+      "clientNeeds": "PHI.PA",
+      "slug": "fluid-volume-imbalances",
+      "name": "Fluid volume imbalances"
+    },
+    {
+      "clientNeeds": "PHI.PPT",
+      "slug": "iv-fluid-selection",
+      "name": "IV fluid selection"
+    },
+    {
+      "clientNeeds": "PHI.PA",
+      "slug": "acid-base-imbalances",
+      "name": "Acid-base imbalances"
+    },
+    {
+      "clientNeeds": "PHI.RRP",
+      "slug": "respiratory-diagnostic-procedures",
+      "name": "Respiratory diagnostic procedures"
+    },
+    {
+      "clientNeeds": "PHI.PPT",
+      "slug": "potassium-medication-safety",
+      "name": "Potassium medication safety"
+    }
+  ],
+  "questions": [
+    {
+      "id": "c1a00010-0000-4000-8000-000000000001",
+      "itemType": "multiple_choice",
+      "clientNeeds": "PHI.PA",
+      "bodySystem": "renal-urinary",
+      "subtopics": [
+        "electrolyte-imbalances"
+      ],
+      "cjmmSkill": "recognize_cues",
+      "difficulty": "moderate",
+      "stem": "A client with chronic kidney disease has a potassium level of 6.8 mEq/L. Which ECG change should the nurse expect?",
+      "content": {
+        "options": [
+          {
+            "id": "a",
+            "text": "Tall, peaked T waves"
+          },
+          {
+            "id": "b",
+            "text": "Prominent U waves"
+          },
+          {
+            "id": "c",
+            "text": "ST elevation"
+          },
+          {
+            "id": "d",
+            "text": "Prolonged QT interval"
+          }
+        ]
+      },
+      "key": {
+        "correct": "a"
+      },
+      "rationale": {
+        "correct": "Hyperkalemia: peaked T waves, then a wide QRS, then a sine-wave pattern.",
+        "perOption": {
+          "a": "Hyperkalemia causes tall, peaked T waves; severe levels widen the QRS and can lead to ventricular fibrillation.",
+          "b": "U waves suggest hypokalemia.",
+          "c": "ST elevation suggests myocardial injury.",
+          "d": "A long QT is linked to hypocalcemia and hypomagnesemia."
+        },
+        "references": [
+          "Medical-surgical nursing texts (e.g. Lewis; Ignatavicius)",
+          "DRAFT: original question written with AI assistance; an RN or nurse educator must check it before candidates rely on it."
+        ]
+      },
+      "educationalObjective": "Recognize the ECG changes of hyperkalemia."
+    },
+    {
+      "id": "c1a00010-0000-4000-8000-000000000002",
+      "itemType": "multiple_choice",
+      "clientNeeds": "PHI.PA",
+      "bodySystem": "renal-urinary",
+      "subtopics": [
+        "electrolyte-imbalances"
+      ],
+      "cjmmSkill": "take_action",
+      "difficulty": "difficult",
+      "stem": "A client's potassium is 7.0 mEq/L, and the monitor shows peaked T waves and a widening QRS. Which prescription should the nurse give first?",
+      "content": {
+        "options": [
+          {
+            "id": "a",
+            "text": "Calcium gluconate IV"
+          },
+          {
+            "id": "b",
+            "text": "Sodium polystyrene sulfonate orally"
+          },
+          {
+            "id": "c",
+            "text": "Furosemide IV"
+          },
+          {
+            "id": "d",
+            "text": "Regular insulin IV with dextrose"
+          }
+        ]
+      },
+      "key": {
+        "correct": "a"
+      },
+      "rationale": {
+        "correct": "Hyperkalemia with ECG changes: calcium first (protects the heart), then insulin with glucose, albuterol or bicarbonate (shift potassium), then remove it (binders, diuretics, dialysis).",
+        "perOption": {
+          "a": "Calcium stabilizes the heart muscle within minutes, protecting against dysrhythmias while other treatments lower the potassium.",
+          "b": "This removes potassium over hours; it is too slow for an emergency.",
+          "c": "Diuretics remove potassium but don't protect the heart right away.",
+          "d": "Insulin shifts potassium into cells and is given soon after, but calcium protects the heart first."
+        },
+        "references": [
+          "Medical-surgical nursing texts (e.g. Lewis; Ignatavicius)",
+          "DRAFT: original question written with AI assistance; an RN or nurse educator must check it before candidates rely on it."
+        ]
+      },
+      "educationalObjective": "Prioritize emergency treatment of hyperkalemia."
+    },
+    {
+      "id": "c1a00010-0000-4000-8000-000000000003",
+      "itemType": "multiple_choice",
+      "clientNeeds": "PHI.PA",
+      "bodySystem": "renal-urinary",
+      "subtopics": [
+        "electrolyte-imbalances"
+      ],
+      "cjmmSkill": "recognize_cues",
+      "difficulty": "moderate",
+      "stem": "A client taking furosemide has a potassium level of 2.9 mEq/L. Which finding should the nurse expect?",
+      "content": {
+        "options": [
+          {
+            "id": "a",
+            "text": "Muscle weakness and flattened T waves with U waves"
+          },
+          {
+            "id": "b",
+            "text": "Hyperactive reflexes and muscle spasms"
+          },
+          {
+            "id": "c",
+            "text": "Peaked T waves"
+          },
+          {
+            "id": "d",
+            "text": "Diarrhea"
+          }
+        ]
+      },
+      "key": {
+        "correct": "a"
+      },
+      "rationale": {
+        "correct": "Hypokalemia: weakness, cramps, decreased bowel sounds, flat T waves, U waves and dysrhythmias (especially with digoxin).",
+        "perOption": {
+          "a": "Low potassium causes muscle weakness, cramps and characteristic ECG changes.",
+          "b": "These suggest hypocalcemia or hypomagnesemia.",
+          "c": "Peaked T waves suggest hyperkalemia.",
+          "d": "Hypokalemia usually causes constipation and decreased bowel sounds."
+        },
+        "references": [
+          "Medical-surgical nursing texts (e.g. Lewis; Ignatavicius)",
+          "DRAFT: original question written with AI assistance; an RN or nurse educator must check it before candidates rely on it."
+        ]
+      },
+      "educationalObjective": "Recognize the findings of hypokalemia."
+    },
+    {
+      "id": "c1a00010-0000-4000-8000-000000000004",
+      "itemType": "multiple_choice",
+      "clientNeeds": "PHI.PA",
+      "bodySystem": "neurological",
+      "subtopics": [
+        "electrolyte-imbalances"
+      ],
+      "cjmmSkill": "prioritize_hypotheses",
+      "difficulty": "moderate",
+      "stem": "A client's sodium level is 118 mEq/L, and the client is confused. Which intervention is the priority?",
+      "content": {
+        "options": [
+          {
+            "id": "a",
+            "text": "Encourage the client to drink more water"
+          },
+          {
+            "id": "b",
+            "text": "Put seizure precautions in place"
+          },
+          {
+            "id": "c",
+            "text": "Give a high-potassium diet"
+          },
+          {
+            "id": "d",
+            "text": "Weigh the client every week"
+          }
+        ]
+      },
+      "key": {
+        "correct": "b"
+      },
+      "rationale": {
+        "correct": "Severe hyponatremia (below about 120 mEq/L) risks cerebral edema and seizures; restrict fluids and correct slowly as prescribed.",
+        "perOption": {
+          "a": "Free water lowers sodium further.",
+          "b": "Severe hyponatremia causes brain swelling and can trigger seizures.",
+          "c": "Potassium doesn't correct sodium.",
+          "d": "Weekly weights don't address the immediate risk."
+        },
+        "references": [
+          "Medical-surgical nursing texts (e.g. Lewis; Ignatavicius)",
+          "DRAFT: original question written with AI assistance; an RN or nurse educator must check it before candidates rely on it."
+        ]
+      },
+      "educationalObjective": "Prioritize safety in severe hyponatremia."
+    },
+    {
+      "id": "c1a00010-0000-4000-8000-000000000005",
+      "itemType": "multiple_choice",
+      "clientNeeds": "PHI.PA",
+      "bodySystem": "neurological",
+      "subtopics": [
+        "electrolyte-imbalances"
+      ],
+      "cjmmSkill": "analyze_cues",
+      "difficulty": "difficult",
+      "stem": "A client with chronic hyponatremia is receiving 3% sodium chloride. The sodium rose from 114 to 128 mEq/L in 18 hours. Why is the nurse concerned?",
+      "content": {
+        "options": [
+          {
+            "id": "a",
+            "text": "The correction is too slow"
+          },
+          {
+            "id": "b",
+            "text": "Rapid correction can cause osmotic demyelination syndrome"
+          },
+          {
+            "id": "c",
+            "text": "The client will develop hypokalemia"
+          },
+          {
+            "id": "d",
+            "text": "The client will develop hypoglycemia"
+          }
+        ]
+      },
+      "key": {
+        "correct": "b"
+      },
+      "rationale": {
+        "correct": "Correct chronic hyponatremia slowly (about 8 to 10 mEq/L in 24 hours at most) to prevent osmotic demyelination.",
+        "perOption": {
+          "a": "A rise of 14 mEq/L in 18 hours is too fast.",
+          "b": "Raising sodium more than about 8 to 10 mEq/L in 24 hours can damage brain cells permanently.",
+          "c": "This isn't the main risk of rapid correction.",
+          "d": "This isn't related."
+        },
+        "references": [
+          "Medical-surgical nursing texts (e.g. Lewis; Ignatavicius)",
+          "DRAFT: original question written with AI assistance; an RN or nurse educator must check it before candidates rely on it."
+        ]
+      },
+      "educationalObjective": "Recognize the risk of rapid sodium correction."
+    },
+    {
+      "id": "c1a00010-0000-4000-8000-000000000006",
+      "itemType": "multiple_choice",
+      "clientNeeds": "PHI.PA",
+      "bodySystem": "endocrine",
+      "subtopics": [
+        "electrolyte-imbalances"
+      ],
+      "cjmmSkill": "recognize_cues",
+      "difficulty": "moderate",
+      "stem": "When the nurse inflates a blood pressure cuff on the client's arm, the client's hand and wrist go into spasm. Which imbalance does this suggest?",
+      "content": {
+        "options": [
+          {
+            "id": "a",
+            "text": "Hypocalcemia"
+          },
+          {
+            "id": "b",
+            "text": "Hypercalcemia"
+          },
+          {
+            "id": "c",
+            "text": "Hyperkalemia"
+          },
+          {
+            "id": "d",
+            "text": "Hypernatremia"
+          }
+        ]
+      },
+      "key": {
+        "correct": "a"
+      },
+      "rationale": {
+        "correct": "Trousseau and Chvostek signs indicate hypocalcemia (and hypomagnesemia).",
+        "perOption": {
+          "a": "This is a positive Trousseau sign, caused by neuromuscular irritability from low calcium.",
+          "b": "High calcium decreases neuromuscular excitability.",
+          "c": "Hyperkalemia doesn't cause the Trousseau sign.",
+          "d": "Hypernatremia doesn't cause the Trousseau sign."
+        },
+        "references": [
+          "Medical-surgical nursing texts (e.g. Lewis; Ignatavicius)",
+          "DRAFT: original question written with AI assistance; an RN or nurse educator must check it before candidates rely on it."
+        ]
+      },
+      "educationalObjective": "Recognize the signs of hypocalcemia."
+    },
+    {
+      "id": "c1a00010-0000-4000-8000-000000000007",
+      "itemType": "multiple_choice",
+      "clientNeeds": "PHI.PA",
+      "bodySystem": "hematologic-oncologic",
+      "subtopics": [
+        "electrolyte-imbalances"
+      ],
+      "cjmmSkill": "generate_solutions",
+      "difficulty": "moderate",
+      "stem": "A client with metastatic bone cancer has a calcium level of 12.8 mg/dL. Which intervention should the nurse anticipate?",
+      "content": {
+        "options": [
+          {
+            "id": "a",
+            "text": "IV 0.9% sodium chloride and encouraging weight-bearing activity as tolerated"
+          },
+          {
+            "id": "b",
+            "text": "Calcium supplements"
+          },
+          {
+            "id": "c",
+            "text": "Strict bed rest"
+          },
+          {
+            "id": "d",
+            "text": "Limiting fluids to 1 L a day"
+          }
+        ]
+      },
+      "key": {
+        "correct": "a"
+      },
+      "rationale": {
+        "correct": "Hypercalcemia causes lethargy, constipation, kidney stones and dysrhythmias; treat with fluids, mobility and medications such as bisphosphonates or calcitonin.",
+        "perOption": {
+          "a": "Fluids dilute calcium and promote its excretion, and weight-bearing reduces calcium release from bone.",
+          "b": "These would worsen hypercalcemia.",
+          "c": "Immobility releases more calcium from bone.",
+          "d": "Fluid restriction concentrates calcium and raises the risk of kidney stones."
+        },
+        "references": [
+          "Medical-surgical nursing texts (e.g. Lewis; Ignatavicius)",
+          "DRAFT: original question written with AI assistance; an RN or nurse educator must check it before candidates rely on it."
+        ]
+      },
+      "educationalObjective": "Plan care for hypercalcemia."
+    },
+    {
+      "id": "c1a00010-0000-4000-8000-000000000008",
+      "itemType": "multiple_choice",
+      "clientNeeds": "PHI.PA",
+      "bodySystem": "gastrointestinal",
+      "subtopics": [
+        "electrolyte-imbalances"
+      ],
+      "cjmmSkill": "analyze_cues",
+      "difficulty": "difficult",
+      "stem": "A client with alcohol use disorder has low potassium that isn't improving despite replacement. Which laboratory value should the nurse check?",
+      "content": {
+        "options": [
+          {
+            "id": "a",
+            "text": "Magnesium"
+          },
+          {
+            "id": "b",
+            "text": "Sodium"
+          },
+          {
+            "id": "c",
+            "text": "Chloride"
+          },
+          {
+            "id": "d",
+            "text": "Albumin"
+          }
+        ]
+      },
+      "key": {
+        "correct": "a"
+      },
+      "rationale": {
+        "correct": "Hypomagnesemia is common with alcohol use and makes hypokalemia hard to correct.",
+        "perOption": {
+          "a": "Low magnesium causes the kidneys to keep losing potassium; magnesium must be replaced first.",
+          "b": "Sodium doesn't prevent potassium correction.",
+          "c": "Chloride isn't the main cause.",
+          "d": "Albumin affects calcium readings, not potassium."
+        },
+        "references": [
+          "Medical-surgical nursing texts (e.g. Lewis; Ignatavicius)",
+          "DRAFT: original question written with AI assistance; an RN or nurse educator must check it before candidates rely on it."
+        ]
+      },
+      "educationalObjective": "Link hypomagnesemia to refractory hypokalemia."
+    },
+    {
+      "id": "c1a00010-0000-4000-8000-000000000009",
+      "itemType": "multiple_choice",
+      "clientNeeds": "PHI.PA",
+      "bodySystem": "maternal-newborn",
+      "subtopics": [
+        "electrolyte-imbalances"
+      ],
+      "cjmmSkill": "recognize_cues",
+      "difficulty": "moderate",
+      "stem": "A client receiving IV magnesium sulfate has a magnesium level of 9.5 mg/dL. Which finding should the nurse expect?",
+      "content": {
+        "options": [
+          {
+            "id": "a",
+            "text": "Absent deep tendon reflexes and slow respirations"
+          },
+          {
+            "id": "b",
+            "text": "Hyperactive reflexes"
+          },
+          {
+            "id": "c",
+            "text": "Tetany"
+          },
+          {
+            "id": "d",
+            "text": "Tachycardia"
+          }
+        ]
+      },
+      "key": {
+        "correct": "a"
+      },
+      "rationale": {
+        "correct": "Magnesium toxicity: loss of reflexes, respiratory depression, hypotension. The antidote is calcium gluconate.",
+        "perOption": {
+          "a": "Magnesium toxicity depresses the nervous system: reflexes disappear first, then breathing slows.",
+          "b": "This suggests low magnesium.",
+          "c": "Tetany occurs with low calcium or magnesium.",
+          "d": "High magnesium tends to cause bradycardia and hypotension."
+        },
+        "references": [
+          "Maternal-newborn nursing texts (e.g. Perry; Lowdermilk)",
+          "DRAFT: original question written with AI assistance; an RN or nurse educator must check it before candidates rely on it."
+        ]
+      },
+      "educationalObjective": "Recognize magnesium toxicity."
+    },
+    {
+      "id": "c1a00010-0000-4000-8000-000000000010",
+      "itemType": "multiple_choice",
+      "clientNeeds": "PHI.PA",
+      "bodySystem": "gastrointestinal",
+      "subtopics": [
+        "electrolyte-imbalances"
+      ],
+      "cjmmSkill": "analyze_cues",
+      "difficulty": "difficult",
+      "stem": "A severely malnourished client is starting enteral feedings. Which laboratory value is most important to monitor for refeeding syndrome?",
+      "content": {
+        "options": [
+          {
+            "id": "a",
+            "text": "Phosphorus"
+          },
+          {
+            "id": "b",
+            "text": "Amylase"
+          },
+          {
+            "id": "c",
+            "text": "Bilirubin"
+          },
+          {
+            "id": "d",
+            "text": "Troponin"
+          }
+        ]
+      },
+      "key": {
+        "correct": "a"
+      },
+      "rationale": {
+        "correct": "Refeeding syndrome: phosphorus, potassium and magnesium drop as feeding begins. Start feeding slowly and monitor these levels.",
+        "perOption": {
+          "a": "Refeeding drives phosphorus into cells, causing dangerous hypophosphatemia, along with low potassium and magnesium.",
+          "b": "Amylase isn't the main concern.",
+          "c": "Bilirubin isn't the main concern.",
+          "d": "Troponin isn't the main concern."
+        },
+        "references": [
+          "Medical-surgical nursing texts (e.g. Lewis; Ignatavicius)",
+          "DRAFT: original question written with AI assistance; an RN or nurse educator must check it before candidates rely on it."
+        ]
+      },
+      "educationalObjective": "Monitor for refeeding syndrome."
+    },
+    {
+      "id": "c1a00010-0000-4000-8000-000000000011",
+      "itemType": "matrix_mc",
+      "clientNeeds": "PHI.RRP",
+      "bodySystem": "renal-urinary",
+      "subtopics": [
+        "electrolyte-and-glucose-lab-results"
+      ],
+      "cjmmSkill": "analyze_cues",
+      "difficulty": "moderate",
+      "stem": "For each laboratory result, indicate whether it is low, within the normal range or high.",
+      "content": {
+        "rows": [
+          {
+            "id": "r1",
+            "text": "Sodium 132 mEq/L"
+          },
+          {
+            "id": "r2",
+            "text": "Potassium 5.8 mEq/L"
+          },
+          {
+            "id": "r3",
+            "text": "Calcium 9.4 mg/dL"
+          },
+          {
+            "id": "r4",
+            "text": "Magnesium 1.0 mg/dL"
+          },
+          {
+            "id": "r5",
+            "text": "Chloride 101 mEq/L"
+          }
+        ],
+        "columns": [
+          {
+            "id": "c1",
+            "text": "Low"
+          },
+          {
+            "id": "c2",
+            "text": "Normal"
+          },
+          {
+            "id": "c3",
+            "text": "High"
+          }
+        ]
+      },
+      "key": {
+        "byRow": {
+          "r1": "c1",
+          "r2": "c3",
+          "r3": "c2",
+          "r4": "c1",
+          "r5": "c2"
+        }
+      },
+      "rationale": {
+        "correct": "Know the usual adult ranges: Na 135-145, K 3.5-5.0, Ca 9.0-10.5, Mg 1.3-2.1, Cl 98-106. Always follow the facility's ranges.",
+        "perOption": {
+          "r1:c1": "Normal sodium is 135 to 145 mEq/L, so 132 is low.",
+          "r1:c2": "132 is below the normal range.",
+          "r1:c3": "132 is below, not above, normal.",
+          "r2:c1": "Normal potassium is 3.5 to 5.0 mEq/L.",
+          "r2:c2": "5.8 is above the normal range.",
+          "r2:c3": "5.8 mEq/L is high.",
+          "r3:c1": "Normal total calcium is about 9.0 to 10.5 mg/dL.",
+          "r3:c2": "9.4 mg/dL is within the normal range.",
+          "r3:c3": "9.4 isn't above normal.",
+          "r4:c1": "Normal magnesium is about 1.3 to 2.1 mg/dL, so 1.0 is low.",
+          "r4:c2": "1.0 is below the normal range.",
+          "r4:c3": "1.0 isn't high.",
+          "r5:c1": "Normal chloride is 98 to 106 mEq/L.",
+          "r5:c2": "101 is within the normal range.",
+          "r5:c3": "101 isn't high."
+        },
+        "references": [
+          "Laboratory reference ranges as used in common NCLEX review texts; follow the facility's ranges",
+          "DRAFT: original question written with AI assistance; an RN or nurse educator must check it before candidates rely on it."
+        ]
+      },
+      "educationalObjective": "Interpret common electrolyte results."
+    },
+    {
+      "id": "c1a00010-0000-4000-8000-000000000012",
+      "itemType": "multiple_choice",
+      "clientNeeds": "PHI.PA",
+      "bodySystem": "renal-urinary",
+      "subtopics": [
+        "fluid-volume-imbalances"
+      ],
+      "cjmmSkill": "recognize_cues",
+      "difficulty": "easy",
+      "stem": "Which finding supports dehydration (fluid volume deficit)?",
+      "content": {
+        "options": [
+          {
+            "id": "a",
+            "text": "Urine specific gravity of 1.035"
+          },
+          {
+            "id": "b",
+            "text": "Bounding pulse"
+          },
+          {
+            "id": "c",
+            "text": "Crackles in the lungs"
+          },
+          {
+            "id": "d",
+            "text": "Weight gain of 1 kg"
+          }
+        ]
+      },
+      "key": {
+        "correct": "a"
+      },
+      "rationale": {
+        "correct": "Fluid volume deficit: tachycardia, weak pulse, orthostatic hypotension, concentrated urine, raised BUN and hematocrit.",
+        "perOption": {
+          "a": "Concentrated urine (above about 1.030) shows the kidneys are conserving water.",
+          "b": "A bounding pulse suggests fluid excess.",
+          "c": "Crackles suggest fluid excess.",
+          "d": "Weight gain suggests fluid retention."
+        },
+        "references": [
+          "Medical-surgical nursing texts (e.g. Lewis; Ignatavicius)",
+          "DRAFT: original question written with AI assistance; an RN or nurse educator must check it before candidates rely on it."
+        ]
+      },
+      "educationalObjective": "Recognize the findings of fluid volume deficit."
+    },
+    {
+      "id": "c1a00010-0000-4000-8000-000000000013",
+      "itemType": "multiple_choice",
+      "clientNeeds": "PHI.PA",
+      "bodySystem": "cardiovascular",
+      "subtopics": [
+        "fluid-volume-imbalances"
+      ],
+      "cjmmSkill": "take_action",
+      "difficulty": "moderate",
+      "stem": "An 82-year-old client receiving IV fluids at 150 mL/hr develops crackles, a bounding pulse and shortness of breath. What should the nurse do first?",
+      "content": {
+        "options": [
+          {
+            "id": "a",
+            "text": "Slow the IV to the keep-open rate and raise the head of the bed"
+          },
+          {
+            "id": "b",
+            "text": "Give the next scheduled dose of IV fluid"
+          },
+          {
+            "id": "c",
+            "text": "Check the client's temperature"
+          },
+          {
+            "id": "d",
+            "text": "Encourage the client to drink more water"
+          }
+        ]
+      },
+      "key": {
+        "correct": "a"
+      },
+      "rationale": {
+        "correct": "For fluid overload: slow the infusion, raise the head of the bed, assess and notify the provider (diuretics may be ordered).",
+        "perOption": {
+          "a": "Stopping more fluid and positioning upright reduces the load on the heart and lungs.",
+          "b": "More fluid worsens overload.",
+          "c": "This doesn't address the fluid overload.",
+          "d": "This adds more fluid."
+        },
+        "references": [
+          "Medical-surgical nursing texts (e.g. Lewis; Ignatavicius)",
+          "DRAFT: original question written with AI assistance; an RN or nurse educator must check it before candidates rely on it."
+        ]
+      },
+      "educationalObjective": "Respond to fluid volume excess."
+    },
+    {
+      "id": "c1a00010-0000-4000-8000-000000000014",
+      "itemType": "sata",
+      "clientNeeds": "PHI.PA",
+      "bodySystem": "cardiovascular",
+      "subtopics": [
+        "fluid-volume-imbalances"
+      ],
+      "cjmmSkill": "recognize_cues",
+      "difficulty": "moderate",
+      "stem": "Which findings indicate fluid volume excess? Select all that apply.",
+      "content": {
+        "options": [
+          {
+            "id": "a",
+            "text": "Bounding pulse"
+          },
+          {
+            "id": "b",
+            "text": "Distended neck veins"
+          },
+          {
+            "id": "c",
+            "text": "Crackles in the lungs"
+          },
+          {
+            "id": "d",
+            "text": "Rapid weight gain"
+          },
+          {
+            "id": "e",
+            "text": "Increased hematocrit"
+          },
+          {
+            "id": "f",
+            "text": "Flat neck veins when lying down"
+          }
+        ]
+      },
+      "key": {
+        "correct": [
+          "a",
+          "b",
+          "c",
+          "d"
+        ]
+      },
+      "rationale": {
+        "correct": "Fluid excess: weight gain, edema, JVD, crackles, bounding pulse and diluted labs.",
+        "perOption": {
+          "a": "Increased volume strengthens the pulse.",
+          "b": "JVD reflects increased central venous volume.",
+          "c": "Fluid moves into the alveoli.",
+          "d": "Weight gain reflects retained fluid.",
+          "e": "Excess fluid dilutes the blood, lowering the hematocrit.",
+          "f": "Flat neck veins suggest volume deficit."
+        },
+        "references": [
+          "Medical-surgical nursing texts (e.g. Lewis; Ignatavicius)",
+          "DRAFT: original question written with AI assistance; an RN or nurse educator must check it before candidates rely on it."
+        ]
+      },
+      "educationalObjective": "Recognize the findings of fluid volume excess."
+    },
+    {
+      "id": "c1a00010-0000-4000-8000-000000000015",
+      "itemType": "matrix_mc",
+      "clientNeeds": "PHI.PPT",
+      "bodySystem": "pharmacology",
+      "subtopics": [
+        "iv-fluid-selection"
+      ],
+      "cjmmSkill": "analyze_cues",
+      "difficulty": "moderate",
+      "stem": "For each IV solution, indicate whether it is isotonic, hypotonic or hypertonic.",
+      "content": {
+        "rows": [
+          {
+            "id": "r1",
+            "text": "0.9% sodium chloride"
+          },
+          {
+            "id": "r2",
+            "text": "0.45% sodium chloride"
+          },
+          {
+            "id": "r3",
+            "text": "3% sodium chloride"
+          },
+          {
+            "id": "r4",
+            "text": "Lactated Ringer's"
+          },
+          {
+            "id": "r5",
+            "text": "10% dextrose in water"
+          }
+        ],
+        "columns": [
+          {
+            "id": "c1",
+            "text": "Isotonic"
+          },
+          {
+            "id": "c2",
+            "text": "Hypotonic"
+          },
+          {
+            "id": "c3",
+            "text": "Hypertonic"
+          }
+        ]
+      },
+      "key": {
+        "byRow": {
+          "r1": "c1",
+          "r2": "c2",
+          "r3": "c3",
+          "r4": "c1",
+          "r5": "c3"
+        }
+      },
+      "rationale": {
+        "correct": "Isotonic: 0.9% NaCl and LR; hypotonic: 0.45% NaCl; hypertonic: 3% NaCl, D10W and D5 with saline solutions.",
+        "perOption": {
+          "r1:c1": "0.9% NaCl has about the same osmolality as plasma.",
+          "r1:c2": "It isn't hypotonic.",
+          "r1:c3": "It isn't hypertonic.",
+          "r2:c1": "Half-strength saline is below plasma osmolality.",
+          "r2:c2": "0.45% NaCl is hypotonic and moves water into cells.",
+          "r2:c3": "It isn't hypertonic.",
+          "r3:c1": "3% NaCl is far above plasma osmolality.",
+          "r3:c2": "It isn't hypotonic.",
+          "r3:c3": "3% NaCl is hypertonic and pulls water out of cells.",
+          "r4:c1": "LR is isotonic.",
+          "r4:c2": "It isn't hypotonic.",
+          "r4:c3": "It isn't hypertonic.",
+          "r5:c1": "D10W is above plasma osmolality.",
+          "r5:c2": "It isn't hypotonic.",
+          "r5:c3": "D10W is hypertonic."
+        },
+        "references": [
+          "Medical-surgical nursing texts (e.g. Lewis; Ignatavicius)",
+          "DRAFT: original question written with AI assistance; an RN or nurse educator must check it before candidates rely on it."
+        ]
+      },
+      "educationalObjective": "Classify IV solutions by tonicity."
+    },
+    {
+      "id": "c1a00010-0000-4000-8000-000000000016",
+      "itemType": "multiple_choice",
+      "clientNeeds": "PHI.PPT",
+      "bodySystem": "neurological",
+      "subtopics": [
+        "iv-fluid-selection"
+      ],
+      "cjmmSkill": "analyze_cues",
+      "difficulty": "difficult",
+      "stem": "A client with a traumatic brain injury and increased intracranial pressure has IV fluid prescriptions. Which solution should the nurse question?",
+      "content": {
+        "options": [
+          {
+            "id": "a",
+            "text": "0.9% sodium chloride"
+          },
+          {
+            "id": "b",
+            "text": "0.45% sodium chloride"
+          },
+          {
+            "id": "c",
+            "text": "3% sodium chloride"
+          },
+          {
+            "id": "d",
+            "text": "Lactated Ringer's"
+          }
+        ]
+      },
+      "key": {
+        "correct": "b"
+      },
+      "rationale": {
+        "correct": "Avoid hypotonic fluids in clients at risk for cerebral edema.",
+        "perOption": {
+          "a": "Isotonic saline is commonly used.",
+          "b": "Hypotonic fluids move water into brain cells and worsen cerebral edema.",
+          "c": "Hypertonic saline may be used to reduce cerebral edema.",
+          "d": "LR is isotonic, though some protocols prefer 0.9% NaCl."
+        },
+        "references": [
+          "Medical-surgical nursing texts (e.g. Lewis; Ignatavicius)",
+          "DRAFT: original question written with AI assistance; an RN or nurse educator must check it before candidates rely on it."
+        ]
+      },
+      "educationalObjective": "Avoid hypotonic fluids with increased intracranial pressure."
+    },
+    {
+      "id": "c1a00010-0000-4000-8000-000000000017",
+      "itemType": "multiple_choice",
+      "clientNeeds": "PHI.PA",
+      "bodySystem": "respiratory",
+      "subtopics": [
+        "acid-base-imbalances"
+      ],
+      "cjmmSkill": "analyze_cues",
+      "difficulty": "moderate",
+      "stem": "A client's arterial blood gas results are pH 7.30, PaCO2 52 mm Hg and HCO3 26 mEq/L. How should the nurse interpret them?",
+      "content": {
+        "options": [
+          {
+            "id": "a",
+            "text": "Respiratory acidosis, uncompensated"
+          },
+          {
+            "id": "b",
+            "text": "Metabolic acidosis, uncompensated"
+          },
+          {
+            "id": "c",
+            "text": "Respiratory alkalosis"
+          },
+          {
+            "id": "d",
+            "text": "Metabolic alkalosis, partly compensated"
+          }
+        ]
+      },
+      "key": {
+        "correct": "a"
+      },
+      "rationale": {
+        "correct": "Normal values: pH 7.35-7.45, PaCO2 35-45, HCO3 22-26. In respiratory problems, pH and CO2 move in opposite directions.",
+        "perOption": {
+          "a": "The pH is low, the CO2 is high (respiratory cause) and the bicarbonate is normal (no compensation).",
+          "b": "Metabolic acidosis has a low bicarbonate.",
+          "c": "The pH is acidic.",
+          "d": "The pH is acidic and the bicarbonate is normal."
+        },
+        "references": [
+          "Medical-surgical nursing texts (e.g. Lewis; Ignatavicius)",
+          "DRAFT: original question written with AI assistance; an RN or nurse educator must check it before candidates rely on it."
+        ]
+      },
+      "educationalObjective": "Interpret an arterial blood gas."
+    },
+    {
+      "id": "c1a00010-0000-4000-8000-000000000018",
+      "itemType": "dropdown_table",
+      "clientNeeds": "PHI.PA",
+      "bodySystem": "respiratory",
+      "subtopics": [
+        "acid-base-imbalances"
+      ],
+      "cjmmSkill": "analyze_cues",
+      "difficulty": "difficult",
+      "stem": "For each set of arterial blood gas results, select the interpretation.",
+      "content": {
+        "columns": [
+          "pH",
+          "PaCO2 (mm Hg)",
+          "HCO3 (mEq/L)",
+          "Interpretation"
+        ],
+        "rows": [
+          {
+            "id": "r1",
+            "cells": [
+              {
+                "text": "7.50"
+              },
+              {
+                "text": "30"
+              },
+              {
+                "text": "24"
+              },
+              {
+                "blankId": "b1"
+              }
+            ]
+          },
+          {
+            "id": "r2",
+            "cells": [
+              {
+                "text": "7.28"
+              },
+              {
+                "text": "40"
+              },
+              {
+                "text": "18"
+              },
+              {
+                "blankId": "b2"
+              }
+            ]
+          },
+          {
+            "id": "r3",
+            "cells": [
+              {
+                "text": "7.48"
+              },
+              {
+                "text": "44"
+              },
+              {
+                "text": "32"
+              },
+              {
+                "blankId": "b3"
+              }
+            ]
+          }
+        ],
+        "blanks": [
+          {
+            "id": "b1",
+            "options": [
+              {
+                "id": "a",
+                "text": "Respiratory acidosis"
+              },
+              {
+                "id": "b",
+                "text": "Respiratory alkalosis"
+              },
+              {
+                "id": "c",
+                "text": "Metabolic acidosis"
+              },
+              {
+                "id": "d",
+                "text": "Metabolic alkalosis"
+              }
+            ]
+          },
+          {
+            "id": "b2",
+            "options": [
+              {
+                "id": "a",
+                "text": "Respiratory acidosis"
+              },
+              {
+                "id": "b",
+                "text": "Respiratory alkalosis"
+              },
+              {
+                "id": "c",
+                "text": "Metabolic acidosis"
+              },
+              {
+                "id": "d",
+                "text": "Metabolic alkalosis"
+              }
+            ]
+          },
+          {
+            "id": "b3",
+            "options": [
+              {
+                "id": "a",
+                "text": "Respiratory acidosis"
+              },
+              {
+                "id": "b",
+                "text": "Respiratory alkalosis"
+              },
+              {
+                "id": "c",
+                "text": "Metabolic acidosis"
+              },
+              {
+                "id": "d",
+                "text": "Metabolic alkalosis"
+              }
+            ]
+          }
+        ]
+      },
+      "key": {
+        "byBlank": {
+          "b1": "b",
+          "b2": "c",
+          "b3": "d"
+        }
+      },
+      "rationale": {
+        "correct": "In metabolic problems, pH and HCO3 move in the same direction.",
+        "perOption": {
+          "b1:a": "The pH is alkaline.",
+          "b1:b": "High pH with low CO2 and normal bicarbonate is respiratory alkalosis.",
+          "b1:c": "The pH is alkaline and the bicarbonate is normal.",
+          "b1:d": "The bicarbonate is normal; the CO2 is the cause.",
+          "b2:a": "The CO2 is normal.",
+          "b2:b": "The pH is acidic.",
+          "b2:c": "Low pH with low bicarbonate and normal CO2 is metabolic acidosis.",
+          "b2:d": "The pH is acidic.",
+          "b3:a": "The pH is alkaline.",
+          "b3:b": "The CO2 is normal, not low.",
+          "b3:c": "The pH is alkaline.",
+          "b3:d": "High pH with high bicarbonate is metabolic alkalosis."
+        },
+        "references": [
+          "Medical-surgical nursing texts (e.g. Lewis; Ignatavicius)",
+          "DRAFT: original question written with AI assistance; an RN or nurse educator must check it before candidates rely on it."
+        ]
+      },
+      "educationalObjective": "Interpret several ABG results."
+    },
+    {
+      "id": "c1a00010-0000-4000-8000-000000000019",
+      "itemType": "multiple_choice",
+      "clientNeeds": "PHI.PA",
+      "bodySystem": "endocrine",
+      "subtopics": [
+        "acid-base-imbalances"
+      ],
+      "cjmmSkill": "analyze_cues",
+      "difficulty": "moderate",
+      "stem": "A client with diabetic ketoacidosis is breathing deeply and rapidly. What is the reason for this breathing pattern?",
+      "content": {
+        "options": [
+          {
+            "id": "a",
+            "text": "To blow off carbon dioxide and compensate for metabolic acidosis"
+          },
+          {
+            "id": "b",
+            "text": "To take in more oxygen for the brain"
+          },
+          {
+            "id": "c",
+            "text": "Because the client is anxious"
+          },
+          {
+            "id": "d",
+            "text": "Because of fluid in the lungs"
+          }
+        ]
+      },
+      "key": {
+        "correct": "a"
+      },
+      "rationale": {
+        "correct": "Kussmaul respirations are respiratory compensation for metabolic acidosis.",
+        "perOption": {
+          "a": "Kussmaul breathing is the lungs' attempt to raise the pH by removing CO2.",
+          "b": "The pattern compensates for acid, not oxygen need.",
+          "c": "The pattern is a physiological compensation.",
+          "d": "There's no sign of pulmonary edema."
+        },
+        "references": [
+          "Medical-surgical nursing texts (e.g. Lewis; Ignatavicius)",
+          "DRAFT: original question written with AI assistance; an RN or nurse educator must check it before candidates rely on it."
+        ]
+      },
+      "educationalObjective": "Explain Kussmaul respirations."
+    },
+    {
+      "id": "c1a00010-0000-4000-8000-000000000020",
+      "itemType": "multiple_choice",
+      "clientNeeds": "PHI.PA",
+      "bodySystem": "gastrointestinal",
+      "subtopics": [
+        "acid-base-imbalances"
+      ],
+      "cjmmSkill": "analyze_cues",
+      "difficulty": "moderate",
+      "stem": "A client has had prolonged vomiting with nasogastric suction for 3 days. Which acid-base imbalance should the nurse expect?",
+      "content": {
+        "options": [
+          {
+            "id": "a",
+            "text": "Metabolic alkalosis"
+          },
+          {
+            "id": "b",
+            "text": "Metabolic acidosis"
+          },
+          {
+            "id": "c",
+            "text": "Respiratory acidosis"
+          },
+          {
+            "id": "d",
+            "text": "Respiratory alkalosis"
+          }
+        ]
+      },
+      "key": {
+        "correct": "a"
+      },
+      "rationale": {
+        "correct": "Vomiting and NG suction cause metabolic alkalosis; diarrhea causes metabolic acidosis.",
+        "perOption": {
+          "a": "Losing stomach acid (HCl) raises the pH and the bicarbonate.",
+          "b": "This occurs with diarrhea or DKA.",
+          "c": "This occurs with hypoventilation.",
+          "d": "This occurs with hyperventilation."
+        },
+        "references": [
+          "Medical-surgical nursing texts (e.g. Lewis; Ignatavicius)",
+          "DRAFT: original question written with AI assistance; an RN or nurse educator must check it before candidates rely on it."
+        ]
+      },
+      "educationalObjective": "Predict the acid-base effect of losing gastric fluid."
+    },
+    {
+      "id": "c1a00010-0000-4000-8000-000000000021",
+      "itemType": "multiple_choice",
+      "clientNeeds": "PHI.PA",
+      "bodySystem": "mental-health",
+      "subtopics": [
+        "acid-base-imbalances"
+      ],
+      "cjmmSkill": "take_action",
+      "difficulty": "easy",
+      "stem": "A client having a panic attack is breathing rapidly and reports tingling in the fingers and around the mouth. What should the nurse do?",
+      "content": {
+        "options": [
+          {
+            "id": "a",
+            "text": "Coach the client to breathe slowly"
+          },
+          {
+            "id": "b",
+            "text": "Give oxygen at 10 L/min"
+          },
+          {
+            "id": "c",
+            "text": "Give sodium bicarbonate"
+          },
+          {
+            "id": "d",
+            "text": "Encourage the client to breathe faster"
+          }
+        ]
+      },
+      "key": {
+        "correct": "a"
+      },
+      "rationale": {
+        "correct": "Hyperventilation causes respiratory alkalosis; slow breathing restores CO2.",
+        "perOption": {
+          "a": "Slowing the breathing retains CO2 and corrects respiratory alkalosis.",
+          "b": "The client isn't hypoxic; the problem is low CO2.",
+          "c": "Bicarbonate would worsen the alkalosis.",
+          "d": "Faster breathing worsens the alkalosis."
+        },
+        "references": [
+          "Medical-surgical nursing texts (e.g. Lewis; Ignatavicius)",
+          "DRAFT: original question written with AI assistance; an RN or nurse educator must check it before candidates rely on it."
+        ]
+      },
+      "educationalObjective": "Manage respiratory alkalosis caused by anxiety."
+    },
+    {
+      "id": "c1a00010-0000-4000-8000-000000000022",
+      "itemType": "multiple_choice",
+      "clientNeeds": "PHI.PA",
+      "bodySystem": "respiratory",
+      "subtopics": [
+        "acid-base-imbalances"
+      ],
+      "cjmmSkill": "analyze_cues",
+      "difficulty": "difficult",
+      "stem": "A client with COPD has arterial blood gas results of pH 7.36, PaCO2 50 mm Hg and HCO3 30 mEq/L. How should the nurse interpret them?",
+      "content": {
+        "options": [
+          {
+            "id": "a",
+            "text": "Fully compensated respiratory acidosis"
+          },
+          {
+            "id": "b",
+            "text": "Uncompensated metabolic alkalosis"
+          },
+          {
+            "id": "c",
+            "text": "Partly compensated respiratory acidosis"
+          },
+          {
+            "id": "d",
+            "text": "Normal results"
+          }
+        ]
+      },
+      "key": {
+        "correct": "a"
+      },
+      "rationale": {
+        "correct": "Full compensation brings the pH into the normal range. The side of 7.40 it falls on points to the primary problem.",
+        "perOption": {
+          "a": "The pH is normal but on the acidic side, the CO2 is high (primary problem) and the bicarbonate is high (compensation).",
+          "b": "The pH is normal, not alkalotic.",
+          "c": "Partly compensated means the pH is still abnormal.",
+          "d": "The CO2 and bicarbonate are both abnormal."
+        },
+        "references": [
+          "Medical-surgical nursing texts (e.g. Lewis; Ignatavicius)",
+          "DRAFT: original question written with AI assistance; an RN or nurse educator must check it before candidates rely on it."
+        ]
+      },
+      "educationalObjective": "Interpret a compensated ABG."
+    },
+    {
+      "id": "c1a00010-0000-4000-8000-000000000023",
+      "itemType": "multiple_choice",
+      "clientNeeds": "PHI.RRP",
+      "bodySystem": "respiratory",
+      "subtopics": [
+        "respiratory-diagnostic-procedures"
+      ],
+      "cjmmSkill": "take_action",
+      "difficulty": "moderate",
+      "stem": "Before drawing an arterial blood gas from the radial artery, which assessment should the nurse do?",
+      "content": {
+        "options": [
+          {
+            "id": "a",
+            "text": "Allen test"
+          },
+          {
+            "id": "b",
+            "text": "Homans sign"
+          },
+          {
+            "id": "c",
+            "text": "Romberg test"
+          },
+          {
+            "id": "d",
+            "text": "Tourniquet test"
+          }
+        ]
+      },
+      "key": {
+        "correct": "a"
+      },
+      "rationale": {
+        "correct": "The Allen test confirms collateral circulation before radial artery puncture.",
+        "perOption": {
+          "a": "The Allen test checks that the ulnar artery can supply the hand if the radial artery is damaged.",
+          "b": "Homans sign is an outdated test for DVT.",
+          "c": "Romberg tests balance.",
+          "d": "This isn't used before an ABG."
+        },
+        "references": [
+          "Medical-surgical nursing texts (e.g. Lewis; Ignatavicius)",
+          "DRAFT: original question written with AI assistance; an RN or nurse educator must check it before candidates rely on it."
+        ]
+      },
+      "educationalObjective": "Assess collateral circulation before a radial ABG."
+    },
+    {
+      "id": "c1a00010-0000-4000-8000-000000000024",
+      "itemType": "multiple_choice",
+      "clientNeeds": "PHI.PPT",
+      "bodySystem": "pharmacology",
+      "subtopics": [
+        "potassium-medication-safety"
+      ],
+      "cjmmSkill": "evaluate_outcomes",
+      "difficulty": "easy",
+      "stem": "A client is prescribed oral potassium chloride extended-release tablets. Which statement shows correct understanding?",
+      "content": {
+        "options": [
+          {
+            "id": "a",
+            "text": "\"I'll take it on an empty stomach.\""
+          },
+          {
+            "id": "b",
+            "text": "\"I'll take it with food and a full glass of water and swallow it whole.\""
+          },
+          {
+            "id": "c",
+            "text": "\"I'll crush it into applesauce.\""
+          },
+          {
+            "id": "d",
+            "text": "\"I'll use a salt substitute too.\""
+          }
+        ]
+      },
+      "key": {
+        "correct": "b"
+      },
+      "rationale": {
+        "correct": "Oral potassium: take with food and water, swallow extended-release forms whole and avoid extra potassium sources unless prescribed.",
+        "perOption": {
+          "a": "Taking it without food increases stomach irritation.",
+          "b": "Food and water reduce stomach upset, and swallowing it whole protects the extended-release form.",
+          "c": "Crushing an extended-release tablet can irritate the stomach and change absorption.",
+          "d": "Many salt substitutes contain potassium and can cause hyperkalemia."
+        },
+        "references": [
+          "Nursing pharmacology texts (e.g. Lehne; McCuistion) and the drug's prescribing information",
+          "DRAFT: original question written with AI assistance; an RN or nurse educator must check it before candidates rely on it."
+        ]
+      },
+      "educationalObjective": "Teach safe use of oral potassium."
+    },
+    {
+      "id": "c1a00010-0000-4000-8000-000000000025",
+      "itemType": "highlight_text",
+      "clientNeeds": "PHI.PA",
+      "bodySystem": "gastrointestinal",
+      "subtopics": [
+        "fluid-volume-imbalances"
+      ],
+      "cjmmSkill": "recognize_cues",
+      "difficulty": "moderate",
+      "stem": "An 80-year-old client has had diarrhea for 3 days. Highlight the findings that indicate fluid volume deficit.",
+      "content": {
+        "segments": [
+          {
+            "id": "s1",
+            "text": "Heart rate 112/min",
+            "selectable": true
+          },
+          {
+            "id": "s2",
+            "text": ". ",
+            "selectable": false
+          },
+          {
+            "id": "s3",
+            "text": "Blood pressure drops from 128/76 lying to 104/62 standing",
+            "selectable": true
+          },
+          {
+            "id": "s4",
+            "text": ". ",
+            "selectable": false
+          },
+          {
+            "id": "s5",
+            "text": "Dry, sticky mucous membranes",
+            "selectable": true
+          },
+          {
+            "id": "s6",
+            "text": ". ",
+            "selectable": false
+          },
+          {
+            "id": "s7",
+            "text": "Lung sounds clear",
+            "selectable": true
+          },
+          {
+            "id": "s8",
+            "text": ". ",
+            "selectable": false
+          },
+          {
+            "id": "s9",
+            "text": "Urine dark amber",
+            "selectable": true
+          },
+          {
+            "id": "s10",
+            "text": ". ",
+            "selectable": false
+          },
+          {
+            "id": "s11",
+            "text": "Alert and oriented",
+            "selectable": true
+          },
+          {
+            "id": "s12",
+            "text": ".",
+            "selectable": false
+          }
+        ]
+      },
+      "key": {
+        "correct": [
+          "s1",
+          "s3",
+          "s5",
+          "s9"
+        ]
+      },
+      "rationale": {
+        "correct": "Signs of fluid volume deficit in older adults: tachycardia, orthostatic hypotension, dry membranes and concentrated urine; confusion may also appear.",
+        "perOption": {
+          "s1": "Tachycardia compensates for reduced volume.",
+          "s3": "Orthostatic hypotension reflects low volume.",
+          "s5": "Dry membranes show dehydration.",
+          "s7": "Clear lungs are expected and don't indicate deficit.",
+          "s9": "Concentrated urine reflects water conservation.",
+          "s11": "Normal mental status isn't a sign of deficit."
+        },
+        "references": [
+          "Medical-surgical nursing texts (e.g. Lewis; Ignatavicius)",
+          "DRAFT: original question written with AI assistance; an RN or nurse educator must check it before candidates rely on it."
+        ]
+      },
+      "educationalObjective": "Recognize dehydration in an older adult."
+    },
+    {
+      "id": "c1a00010-0000-4000-8000-000000000026",
+      "itemType": "fill_blank_calc",
+      "clientNeeds": "PHI.PA",
+      "bodySystem": "renal-urinary",
+      "subtopics": [
+        "fluid-volume-imbalances"
+      ],
+      "cjmmSkill": "analyze_cues",
+      "difficulty": "moderate",
+      "stem": "Over 24 hours, a client received 1,200 mL of IV fluid, drank 650 mL and received a 150 mL IV antibiotic. Output was 1,450 mL of urine and 200 mL of emesis. What is the client's net fluid balance? (Enter a positive number for a gain, a negative number for a loss.)",
+      "content": {
+        "unit": "mL",
+        "decimals": 0,
+        "inputLabel": "Net fluid balance"
+      },
+      "key": {
+        "value": 350,
+        "rounding": "exact"
+      },
+      "rationale": {
+        "correct": "Intake: 1,200 + 650 + 150 = 2,000 mL. Output: 1,450 + 200 = 1,650 mL. Balance: 2,000 − 1,650 = +350 mL.",
+        "perOption": {},
+        "references": [
+          "Fundamentals of nursing texts (e.g. Potter & Perry)",
+          "DRAFT: original question written with AI assistance; an RN or nurse educator must check it before candidates rely on it."
+        ]
+      },
+      "educationalObjective": "Calculate 24-hour intake and output."
+    }
+  ]
+}
