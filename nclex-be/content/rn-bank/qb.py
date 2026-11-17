@@ -381,6 +381,14 @@ def _check(questions, cases):
         if len(texts) != len(set(texts)): errors.append(f"{where}: duplicate option text")
         ex_ids = [e["id"] for e in q.get("exhibits", [])]
         if len(ex_ids) != len(set(ex_ids)): errors.append(f"{where}: duplicate exhibit ids")
+    # The importer requires one cell per column in table and flowsheet exhibits (the row label
+    # is separate from the columns), in questions and in case-study tabs alike.
+    exhibits = [(q["id"], e) for q in questions for e in q.get("exhibits", [])]
+    exhibits += [(c["title"], e) for c in cases for t in c["scenario"]["tabs"] for e in t["exhibits"]]
+    for owner, e in exhibits:
+        for row in (e.get("table") or {}).get("rows", []):
+            if len(row["cells"]) != len(e["table"]["columns"]):
+                errors.append(f"{owner}: exhibit '{e['title']}' row '{row['label']}' needs one cell per column")
     ids = [q["id"] for q in questions]
     if len(ids) != len(set(ids)): errors.append("duplicate question ids")
     for c in cases:
