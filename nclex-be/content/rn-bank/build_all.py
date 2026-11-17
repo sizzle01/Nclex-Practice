@@ -13,6 +13,9 @@ import qb  # noqa: E402
 
 all_ids, by_cn, by_type, total = set(), collections.Counter(), collections.Counter(), 0
 for path in sorted((HERE / "batches").glob("b*.py")):
+    # Dead conditional expressions hide which tag a question really has; keep batch files plain.
+    if " if False" in path.read_text(encoding="utf-8"):
+        raise SystemExit(f"{path.name}: remove the 'if False' expression")
     spec = importlib.util.spec_from_file_location(path.stem, path)
     module = importlib.util.module_from_spec(spec)
     spec.loader.exec_module(module)
