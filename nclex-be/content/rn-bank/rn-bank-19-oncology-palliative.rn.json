@@ -1,0 +1,1244 @@
+{
+  "notice": "RN bank batch 19: Oncology and palliative care. DRAFT - every question must be reviewed by an RN or nurse educator before candidates rely on it.",
+  "track": "RN",
+  "subtopics": [
+    {
+      "clientNeeds": "PHI.PA",
+      "slug": "oncologic-emergencies",
+      "name": "Oncologic emergencies"
+    },
+    {
+      "clientNeeds": "PHI.PPT",
+      "slug": "chemotherapy-and-radiation-care",
+      "name": "Chemotherapy and radiation care"
+    },
+    {
+      "clientNeeds": "PHI.PA",
+      "slug": "cancer-care",
+      "name": "Cancer care and symptom management"
+    },
+    {
+      "clientNeeds": "HPM",
+      "slug": "cancer-screening",
+      "name": "Cancer screening"
+    },
+    {
+      "clientNeeds": "PHI.BCC",
+      "slug": "palliative-and-end-of-life-care",
+      "name": "Palliative and end-of-life care"
+    },
+    {
+      "clientNeeds": "SECE.SIC",
+      "slug": "hazardous-materials-and-radiation-safety",
+      "name": "Hazardous materials and radiation safety"
+    }
+  ],
+  "questions": [
+    {
+      "id": "c1a00019-0000-4000-8000-000000000001",
+      "itemType": "multiple_choice",
+      "clientNeeds": "PHI.PA",
+      "bodySystem": "hematologic-oncologic",
+      "subtopics": [
+        "oncologic-emergencies"
+      ],
+      "cjmmSkill": "recognize_cues",
+      "difficulty": "difficult",
+      "stem": "Two days after starting chemotherapy for leukemia, a client has a potassium of 6.4 mEq/L, a phosphorus of 7.2 mg/dL, a calcium of 7.0 mg/dL and a high uric acid. What does the nurse suspect?",
+      "content": {
+        "options": [
+          {
+            "id": "a",
+            "text": "Tumor lysis syndrome"
+          },
+          {
+            "id": "b",
+            "text": "Hypercalcemia of malignancy"
+          },
+          {
+            "id": "c",
+            "text": "SIADH"
+          },
+          {
+            "id": "d",
+            "text": "Dehydration"
+          }
+        ]
+      },
+      "key": {
+        "correct": "a"
+      },
+      "rationale": {
+        "correct": "Tumor lysis syndrome: prevent it with aggressive hydration and allopurinol or rasburicase; monitor electrolytes and kidney function.",
+        "perOption": {
+          "a": "Rapid cell breakdown releases potassium, phosphorus and uric acid; phosphorus binds calcium.",
+          "b": "The calcium is low.",
+          "c": "SIADH causes hyponatremia.",
+          "d": "This doesn't explain the pattern."
+        },
+        "references": [
+          "Medical-surgical nursing texts (e.g. Lewis; Ignatavicius)",
+          "DRAFT: original question written with AI assistance; an RN or nurse educator must check it before candidates rely on it."
+        ]
+      },
+      "educationalObjective": "Recognize tumor lysis syndrome."
+    },
+    {
+      "id": "c1a00019-0000-4000-8000-000000000002",
+      "itemType": "multiple_choice",
+      "clientNeeds": "PHI.PA",
+      "bodySystem": "hematologic-oncologic",
+      "subtopics": [
+        "oncologic-emergencies"
+      ],
+      "cjmmSkill": "recognize_cues",
+      "difficulty": "moderate",
+      "stem": "A client with lung cancer has swelling of the face and arms, distended neck veins and shortness of breath. What does the nurse suspect?",
+      "content": {
+        "options": [
+          {
+            "id": "a",
+            "text": "Superior vena cava syndrome"
+          },
+          {
+            "id": "b",
+            "text": "Heart failure"
+          },
+          {
+            "id": "c",
+            "text": "Allergic reaction"
+          },
+          {
+            "id": "d",
+            "text": "Pneumonia"
+          }
+        ]
+      },
+      "key": {
+        "correct": "a"
+      },
+      "rationale": {
+        "correct": "SVC syndrome: keep the client upright, give oxygen and prepare for radiation or stenting.",
+        "perOption": {
+          "a": "A tumor blocks blood return from the upper body.",
+          "b": "This isn't the best explanation with a mediastinal tumor.",
+          "c": "This doesn't fit.",
+          "d": "This doesn't cause facial and arm swelling."
+        },
+        "references": [
+          "Medical-surgical nursing texts (e.g. Lewis; Ignatavicius)",
+          "DRAFT: original question written with AI assistance; an RN or nurse educator must check it before candidates rely on it."
+        ]
+      },
+      "educationalObjective": "Recognize superior vena cava syndrome."
+    },
+    {
+      "id": "c1a00019-0000-4000-8000-000000000003",
+      "itemType": "multiple_choice",
+      "clientNeeds": "PHI.PA",
+      "bodySystem": "hematologic-oncologic",
+      "subtopics": [
+        "oncologic-emergencies"
+      ],
+      "cjmmSkill": "recognize_cues",
+      "difficulty": "moderate",
+      "stem": "A client with metastatic prostate cancer reports new back pain and weakness in both legs. What should the nurse do?",
+      "content": {
+        "options": [
+          {
+            "id": "a",
+            "text": "Report it right away as a possible spinal cord compression"
+          },
+          {
+            "id": "b",
+            "text": "Give a heating pad and reassess tomorrow"
+          },
+          {
+            "id": "c",
+            "text": "Encourage more walking"
+          },
+          {
+            "id": "d",
+            "text": "Document it as expected bone pain"
+          }
+        ]
+      },
+      "key": {
+        "correct": "a"
+      },
+      "rationale": {
+        "correct": "Spinal cord compression: new back pain with neurologic changes is an emergency.",
+        "perOption": {
+          "a": "Early treatment (steroids, radiation) can prevent permanent paralysis.",
+          "b": "Delay risks paralysis.",
+          "c": "This isn't appropriate.",
+          "d": "The new weakness is a red flag."
+        },
+        "references": [
+          "Medical-surgical nursing texts (e.g. Lewis; Ignatavicius)",
+          "DRAFT: original question written with AI assistance; an RN or nurse educator must check it before candidates rely on it."
+        ]
+      },
+      "educationalObjective": "Recognize spinal cord compression in cancer."
+    },
+    {
+      "id": "c1a00019-0000-4000-8000-000000000004",
+      "itemType": "multiple_choice",
+      "clientNeeds": "PHI.PA",
+      "bodySystem": "hematologic-oncologic",
+      "subtopics": [
+        "oncologic-emergencies"
+      ],
+      "cjmmSkill": "take_action",
+      "difficulty": "difficult",
+      "stem": "A client receiving chemotherapy has an ANC of 300/mm3 and a temperature of 38.4 °C (101.1 °F). What should the nurse do?",
+      "content": {
+        "options": [
+          {
+            "id": "a",
+            "text": "Notify the provider right away, draw blood cultures and expect broad-spectrum antibiotics within 1 hour"
+          },
+          {
+            "id": "b",
+            "text": "Give acetaminophen and recheck in 4 hours"
+          },
+          {
+            "id": "c",
+            "text": "Wait for the culture results"
+          },
+          {
+            "id": "d",
+            "text": "Encourage fluids and rest"
+          }
+        ]
+      },
+      "key": {
+        "correct": "a"
+      },
+      "rationale": {
+        "correct": "Neutropenic fever (38.3 °C once, or 38.0 °C sustained, with ANC below 500): cultures and antibiotics within 1 hour.",
+        "perOption": {
+          "a": "Neutropenic fever is an emergency; sepsis can develop rapidly.",
+          "b": "Delaying antibiotics increases mortality.",
+          "c": "Antibiotics aren't delayed for results.",
+          "d": "This isn't enough."
+        },
+        "references": [
+          "Medical-surgical nursing texts (e.g. Lewis; Ignatavicius)",
+          "DRAFT: original question written with AI assistance; an RN or nurse educator must check it before candidates rely on it."
+        ]
+      },
+      "educationalObjective": "Respond to neutropenic fever."
+    },
+    {
+      "id": "c1a00019-0000-4000-8000-000000000005",
+      "itemType": "multiple_choice",
+      "clientNeeds": "PHI.PPT",
+      "bodySystem": "hematologic-oncologic",
+      "subtopics": [
+        "chemotherapy-and-radiation-care"
+      ],
+      "cjmmSkill": "generate_solutions",
+      "difficulty": "moderate",
+      "stem": "A client receiving chemotherapy has painful mouth sores. Which instruction should the nurse give?",
+      "content": {
+        "options": [
+          {
+            "id": "a",
+            "text": "Rinse with saline or baking soda solution and use a soft toothbrush"
+          },
+          {
+            "id": "b",
+            "text": "Use an alcohol-based mouthwash"
+          },
+          {
+            "id": "c",
+            "text": "Eat spicy foods to stimulate appetite"
+          },
+          {
+            "id": "d",
+            "text": "Use a firm toothbrush to remove plaque"
+          }
+        ]
+      },
+      "key": {
+        "correct": "a"
+      },
+      "rationale": {
+        "correct": "Mucositis: gentle oral care, bland soft foods, avoid alcohol and tobacco, and use topical anesthetics as prescribed.",
+        "perOption": {
+          "a": "Gentle rinses clean the mouth and reduce irritation.",
+          "b": "Alcohol dries and irritates the mucosa.",
+          "c": "Spicy foods irritate sores.",
+          "d": "This injures the mucosa."
+        },
+        "references": [
+          "Medical-surgical nursing texts (e.g. Lewis; Ignatavicius)",
+          "DRAFT: original question written with AI assistance; an RN or nurse educator must check it before candidates rely on it."
+        ]
+      },
+      "educationalObjective": "Manage stomatitis during chemotherapy."
+    },
+    {
+      "id": "c1a00019-0000-4000-8000-000000000006",
+      "itemType": "multiple_choice",
+      "clientNeeds": "PHI.PPT",
+      "bodySystem": "hematologic-oncologic",
+      "subtopics": [
+        "chemotherapy-and-radiation-care"
+      ],
+      "cjmmSkill": "take_action",
+      "difficulty": "easy",
+      "stem": "When should the nurse give a prescribed antiemetic to a client receiving highly emetogenic chemotherapy?",
+      "content": {
+        "options": [
+          {
+            "id": "a",
+            "text": "Before the chemotherapy starts"
+          },
+          {
+            "id": "b",
+            "text": "Only if the client vomits"
+          },
+          {
+            "id": "c",
+            "text": "The day after chemotherapy"
+          },
+          {
+            "id": "d",
+            "text": "Only at bedtime"
+          }
+        ]
+      },
+      "key": {
+        "correct": "a"
+      },
+      "rationale": {
+        "correct": "Give antiemetics before chemotherapy and continue them as scheduled for delayed nausea.",
+        "perOption": {
+          "a": "Preventing nausea works better than treating it.",
+          "b": "Prevention is more effective.",
+          "c": "Some regimens continue for days, but the first dose is given before.",
+          "d": "This doesn't cover the infusion."
+        },
+        "references": [
+          "Nursing pharmacology texts (e.g. Lehne; McCuistion) and the drug's prescribing information",
+          "DRAFT: original question written with AI assistance; an RN or nurse educator must check it before candidates rely on it."
+        ]
+      },
+      "educationalObjective": "Time antiemetics for chemotherapy."
+    },
+    {
+      "id": "c1a00019-0000-4000-8000-000000000007",
+      "itemType": "multiple_choice",
+      "clientNeeds": "PHI.PPT",
+      "bodySystem": "hematologic-oncologic",
+      "subtopics": [
+        "chemotherapy-and-radiation-care"
+      ],
+      "cjmmSkill": "recognize_cues",
+      "difficulty": "moderate",
+      "stem": "A client is receiving doxorubicin. Which adverse effect is most important for the nurse to monitor?",
+      "content": {
+        "options": [
+          {
+            "id": "a",
+            "text": "Cardiotoxicity"
+          },
+          {
+            "id": "b",
+            "text": "Hypoglycemia"
+          },
+          {
+            "id": "c",
+            "text": "Hearing loss"
+          },
+          {
+            "id": "d",
+            "text": "Hirsutism"
+          }
+        ]
+      },
+      "key": {
+        "correct": "a"
+      },
+      "rationale": {
+        "correct": "Doxorubicin: cardiotoxicity, myelosuppression and red urine (harmless); it is a vesicant.",
+        "perOption": {
+          "a": "Doxorubicin can cause dose-related heart failure; heart function is checked before and during treatment.",
+          "b": "This isn't a key effect.",
+          "c": "This is more typical of cisplatin.",
+          "d": "This isn't an effect."
+        },
+        "references": [
+          "Nursing pharmacology texts (e.g. Lehne; McCuistion) and the drug's prescribing information",
+          "DRAFT: original question written with AI assistance; an RN or nurse educator must check it before candidates rely on it."
+        ]
+      },
+      "educationalObjective": "Monitor for doxorubicin cardiotoxicity."
+    },
+    {
+      "id": "c1a00019-0000-4000-8000-000000000008",
+      "itemType": "multiple_choice",
+      "clientNeeds": "PHI.PPT",
+      "bodySystem": "hematologic-oncologic",
+      "subtopics": [
+        "chemotherapy-and-radiation-care"
+      ],
+      "cjmmSkill": "generate_solutions",
+      "difficulty": "moderate",
+      "stem": "A client is receiving cisplatin. Which intervention helps prevent nephrotoxicity?",
+      "content": {
+        "options": [
+          {
+            "id": "a",
+            "text": "Vigorous IV hydration before and after the infusion"
+          },
+          {
+            "id": "b",
+            "text": "Restricting fluids"
+          },
+          {
+            "id": "c",
+            "text": "Giving NSAIDs"
+          },
+          {
+            "id": "d",
+            "text": "Withholding antiemetics"
+          }
+        ]
+      },
+      "key": {
+        "correct": "a"
+      },
+      "rationale": {
+        "correct": "Cisplatin: nephrotoxicity, ototoxicity, nausea and electrolyte loss.",
+        "perOption": {
+          "a": "Hydration dilutes cisplatin and protects the kidneys.",
+          "b": "This increases kidney injury.",
+          "c": "These increase kidney risk.",
+          "d": "This isn't related."
+        },
+        "references": [
+          "Nursing pharmacology texts (e.g. Lehne; McCuistion) and the drug's prescribing information",
+          "DRAFT: original question written with AI assistance; an RN or nurse educator must check it before candidates rely on it."
+        ]
+      },
+      "educationalObjective": "Prevent cisplatin nephrotoxicity."
+    },
+    {
+      "id": "c1a00019-0000-4000-8000-000000000009",
+      "itemType": "multiple_choice",
+      "clientNeeds": "PHI.PPT",
+      "bodySystem": "hematologic-oncologic",
+      "subtopics": [
+        "chemotherapy-and-radiation-care"
+      ],
+      "cjmmSkill": "recognize_cues",
+      "difficulty": "moderate",
+      "stem": "A client receiving vincristine reports numbness and tingling in the fingers and constipation. What do these findings suggest?",
+      "content": {
+        "options": [
+          {
+            "id": "a",
+            "text": "Neurotoxicity from vincristine"
+          },
+          {
+            "id": "b",
+            "text": "Hypercalcemia"
+          },
+          {
+            "id": "c",
+            "text": "An allergic reaction"
+          },
+          {
+            "id": "d",
+            "text": "Expected improvement"
+          }
+        ]
+      },
+      "key": {
+        "correct": "a"
+      },
+      "rationale": {
+        "correct": "Vincristine: neuropathy and constipation; report worsening symptoms.",
+        "perOption": {
+          "a": "Vincristine causes peripheral neuropathy and autonomic effects such as constipation.",
+          "b": "This doesn't explain the numbness.",
+          "c": "This doesn't fit.",
+          "d": "These are adverse effects."
+        },
+        "references": [
+          "Nursing pharmacology texts (e.g. Lehne; McCuistion) and the drug's prescribing information",
+          "DRAFT: original question written with AI assistance; an RN or nurse educator must check it before candidates rely on it."
+        ]
+      },
+      "educationalObjective": "Recognize vincristine neurotoxicity."
+    },
+    {
+      "id": "c1a00019-0000-4000-8000-000000000010",
+      "itemType": "multiple_choice",
+      "clientNeeds": "PHI.PPT",
+      "bodySystem": "hematologic-oncologic",
+      "subtopics": [
+        "chemotherapy-and-radiation-care"
+      ],
+      "cjmmSkill": "evaluate_outcomes",
+      "difficulty": "moderate",
+      "stem": "A client receiving external beam radiation to the chest asks about skin care. Which statement shows a need for more teaching?",
+      "content": {
+        "options": [
+          {
+            "id": "a",
+            "text": "\"I'll wash the area gently with lukewarm water and mild soap.\""
+          },
+          {
+            "id": "b",
+            "text": "\"I'll scrub off the ink markings when I shower.\""
+          },
+          {
+            "id": "c",
+            "text": "\"I'll protect the area from the sun.\""
+          },
+          {
+            "id": "d",
+            "text": "\"I'll wear loose cotton clothing.\""
+          }
+        ]
+      },
+      "key": {
+        "correct": "b"
+      },
+      "rationale": {
+        "correct": "Radiation skin care: gentle washing, keep the markings, avoid lotions unless prescribed, and avoid sun, heat and cold.",
+        "perOption": {
+          "a": "This is appropriate.",
+          "b": "The markings guide treatment and must not be removed.",
+          "c": "Irradiated skin burns easily.",
+          "d": "This reduces irritation."
+        },
+        "references": [
+          "Medical-surgical nursing texts (e.g. Lewis; Ignatavicius)",
+          "DRAFT: original question written with AI assistance; an RN or nurse educator must check it before candidates rely on it."
+        ]
+      },
+      "educationalObjective": "Teach skin care during radiation therapy."
+    },
+    {
+      "id": "c1a00019-0000-4000-8000-000000000011",
+      "itemType": "multiple_choice",
+      "clientNeeds": "PHI.PPT",
+      "bodySystem": "hematologic-oncologic",
+      "subtopics": [
+        "chemotherapy-and-radiation-care"
+      ],
+      "cjmmSkill": "generate_solutions",
+      "difficulty": "easy",
+      "stem": "A client starting chemotherapy is worried about hair loss. What is the best response?",
+      "content": {
+        "options": [
+          {
+            "id": "a",
+            "text": "\"Hair loss is usually temporary. Let's talk about scarves, wigs or cutting your hair short beforehand.\""
+          },
+          {
+            "id": "b",
+            "text": "\"Don't worry, you won't lose your hair.\""
+          },
+          {
+            "id": "c",
+            "text": "\"Hair loss is permanent.\""
+          },
+          {
+            "id": "d",
+            "text": "\"Hair isn't important compared with your cancer.\""
+          }
+        ]
+      },
+      "key": {
+        "correct": "a"
+      },
+      "rationale": {
+        "correct": "Alopecia affects body image; give accurate information and practical options.",
+        "perOption": {
+          "a": "This gives accurate information and supports coping.",
+          "b": "This may be false reassurance.",
+          "c": "It is usually temporary.",
+          "d": "This dismisses the client's feelings."
+        },
+        "references": [
+          "Medical-surgical nursing texts (e.g. Lewis; Ignatavicius)",
+          "DRAFT: original question written with AI assistance; an RN or nurse educator must check it before candidates rely on it."
+        ]
+      },
+      "educationalObjective": "Support a client facing chemotherapy-related hair loss."
+    },
+    {
+      "id": "c1a00019-0000-4000-8000-000000000012",
+      "itemType": "multiple_choice",
+      "clientNeeds": "PHI.PA",
+      "bodySystem": "hematologic-oncologic",
+      "subtopics": [
+        "cancer-care"
+      ],
+      "cjmmSkill": "take_action",
+      "difficulty": "easy",
+      "stem": "After a left mastectomy with lymph node removal, which instruction should the nurse give?",
+      "content": {
+        "options": [
+          {
+            "id": "a",
+            "text": "\"Don't allow blood pressures or blood draws on your left arm.\""
+          },
+          {
+            "id": "b",
+            "text": "\"Keep your left arm still for 6 months.\""
+          },
+          {
+            "id": "c",
+            "text": "\"Carry heavy bags on your left arm.\""
+          },
+          {
+            "id": "d",
+            "text": "\"Expect permanent swelling.\""
+          }
+        ]
+      },
+      "key": {
+        "correct": "a"
+      },
+      "rationale": {
+        "correct": "After lymph node removal: protect the arm, do prescribed exercises and report swelling.",
+        "perOption": {
+          "a": "This reduces the risk of lymphedema and infection.",
+          "b": "Gradual exercise is encouraged.",
+          "c": "Heavy loads increase lymphedema risk.",
+          "d": "Lymphedema can often be prevented or managed."
+        },
+        "references": [
+          "Medical-surgical nursing texts (e.g. Lewis; Ignatavicius)",
+          "DRAFT: original question written with AI assistance; an RN or nurse educator must check it before candidates rely on it."
+        ]
+      },
+      "educationalObjective": "Teach lymphedema prevention."
+    },
+    {
+      "id": "c1a00019-0000-4000-8000-000000000013",
+      "itemType": "multiple_choice",
+      "clientNeeds": "HPM",
+      "bodySystem": "hematologic-oncologic",
+      "subtopics": [
+        "cancer-screening"
+      ],
+      "cjmmSkill": "generate_solutions",
+      "difficulty": "moderate",
+      "stem": "A 42-year-old woman at average risk asks when she should have screening mammograms. What is the nurse's best response, based on current USPSTF guidance?",
+      "content": {
+        "options": [
+          {
+            "id": "a",
+            "text": "\"Every 2 years, starting at age 40.\""
+          },
+          {
+            "id": "b",
+            "text": "\"Only after age 60.\""
+          },
+          {
+            "id": "c",
+            "text": "\"Only if you feel a lump.\""
+          },
+          {
+            "id": "d",
+            "text": "\"Every 5 years starting at 50.\""
+          }
+        ]
+      },
+      "key": {
+        "correct": "a"
+      },
+      "rationale": {
+        "correct": "Mammography every 2 years from 40 to 74 (USPSTF 2024); other organizations may advise annual screening.",
+        "perOption": {
+          "a": "USPSTF recommends biennial mammography from 40 to 74 for average-risk women.",
+          "b": "This is too late.",
+          "c": "Screening is for women without symptoms.",
+          "d": "This isn't the recommendation."
+        },
+        "references": [
+          "U.S. Preventive Services Task Force recommendations",
+          "DRAFT: original question written with AI assistance; an RN or nurse educator must check it before candidates rely on it."
+        ]
+      },
+      "educationalObjective": "Teach breast cancer screening recommendations."
+    },
+    {
+      "id": "c1a00019-0000-4000-8000-000000000014",
+      "itemType": "multiple_choice",
+      "clientNeeds": "HPM",
+      "bodySystem": "reproductive",
+      "subtopics": [
+        "cancer-screening"
+      ],
+      "cjmmSkill": "generate_solutions",
+      "difficulty": "easy",
+      "stem": "When should a young man perform a testicular self-exam?",
+      "content": {
+        "options": [
+          {
+            "id": "a",
+            "text": "Monthly, after a warm shower"
+          },
+          {
+            "id": "b",
+            "text": "Once a year in a cold room"
+          },
+          {
+            "id": "c",
+            "text": "Only after age 50"
+          },
+          {
+            "id": "d",
+            "text": "Only if there is pain"
+          }
+        ]
+      },
+      "key": {
+        "correct": "a"
+      },
+      "rationale": {
+        "correct": "Testicular self-exam: monthly after a warm shower; report painless lumps or heaviness.",
+        "perOption": {
+          "a": "Warmth relaxes the scrotum, making lumps easier to feel.",
+          "b": "Cold tightens the scrotum.",
+          "c": "Testicular cancer is most common between 15 and 35.",
+          "d": "Testicular cancer is often painless."
+        },
+        "references": [
+          "Medical-surgical nursing texts (e.g. Lewis; Ignatavicius)",
+          "DRAFT: original question written with AI assistance; an RN or nurse educator must check it before candidates rely on it."
+        ]
+      },
+      "educationalObjective": "Teach testicular self-examination."
+    },
+    {
+      "id": "c1a00019-0000-4000-8000-000000000015",
+      "itemType": "multiple_choice",
+      "clientNeeds": "HPM",
+      "bodySystem": "reproductive",
+      "subtopics": [
+        "cancer-screening"
+      ],
+      "cjmmSkill": "generate_solutions",
+      "difficulty": "moderate",
+      "stem": "A 25-year-old asks how often to have cervical cancer screening. What is the best response?",
+      "content": {
+        "options": [
+          {
+            "id": "a",
+            "text": "\"A Pap test every 3 years.\""
+          },
+          {
+            "id": "b",
+            "text": "\"Every year.\""
+          },
+          {
+            "id": "c",
+            "text": "\"Starting at age 30.\""
+          },
+          {
+            "id": "d",
+            "text": "\"Only if you have symptoms.\""
+          }
+        ]
+      },
+      "key": {
+        "correct": "a"
+      },
+      "rationale": {
+        "correct": "Cervical screening: 21 to 29, Pap every 3 years; 30 to 65, HPV testing every 5 years or other approved options.",
+        "perOption": {
+          "a": "Ages 21 to 29: cytology every 3 years.",
+          "b": "Annual screening isn't recommended for average risk.",
+          "c": "Screening starts at 21.",
+          "d": "Screening is for people without symptoms."
+        },
+        "references": [
+          "U.S. Preventive Services Task Force recommendations",
+          "DRAFT: original question written with AI assistance; an RN or nurse educator must check it before candidates rely on it."
+        ]
+      },
+      "educationalObjective": "Teach cervical cancer screening."
+    },
+    {
+      "id": "c1a00019-0000-4000-8000-000000000016",
+      "itemType": "multiple_choice",
+      "clientNeeds": "PHI.PA",
+      "bodySystem": "hematologic-oncologic",
+      "subtopics": [
+        "cancer-care"
+      ],
+      "cjmmSkill": "prioritize_hypotheses",
+      "difficulty": "moderate",
+      "stem": "A client has newly diagnosed acute myeloid leukemia. Which nursing problem is the priority?",
+      "content": {
+        "options": [
+          {
+            "id": "a",
+            "text": "Risk for infection"
+          },
+          {
+            "id": "b",
+            "text": "Disturbed body image"
+          },
+          {
+            "id": "c",
+            "text": "Knowledge deficit"
+          },
+          {
+            "id": "d",
+            "text": "Constipation"
+          }
+        ]
+      },
+      "key": {
+        "correct": "a"
+      },
+      "rationale": {
+        "correct": "Leukemia: infection and bleeding risks are the priorities.",
+        "perOption": {
+          "a": "Immature white cells don't fight infection, and infection is a leading cause of death.",
+          "b": "This is lower priority.",
+          "c": "This is lower priority.",
+          "d": "This is lower priority."
+        },
+        "references": [
+          "Medical-surgical nursing texts (e.g. Lewis; Ignatavicius)",
+          "DRAFT: original question written with AI assistance; an RN or nurse educator must check it before candidates rely on it."
+        ]
+      },
+      "educationalObjective": "Prioritize care in acute leukemia."
+    },
+    {
+      "id": "c1a00019-0000-4000-8000-000000000017",
+      "itemType": "multiple_choice",
+      "clientNeeds": "PHI.PA",
+      "bodySystem": "hematologic-oncologic",
+      "subtopics": [
+        "cancer-care"
+      ],
+      "cjmmSkill": "recognize_cues",
+      "difficulty": "moderate",
+      "stem": "Which finding is typical of Hodgkin lymphoma?",
+      "content": {
+        "options": [
+          {
+            "id": "a",
+            "text": "Painless, enlarged lymph node in the neck"
+          },
+          {
+            "id": "b",
+            "text": "Tender, red lymph node with sore throat"
+          },
+          {
+            "id": "c",
+            "text": "Bone pain with kidney injury"
+          },
+          {
+            "id": "d",
+            "text": "Easy bruising and bleeding gums"
+          }
+        ]
+      },
+      "key": {
+        "correct": "a"
+      },
+      "rationale": {
+        "correct": "Hodgkin lymphoma: painless lymph node swelling, sometimes with fever, night sweats and weight loss (B symptoms).",
+        "perOption": {
+          "a": "Painless lymphadenopathy is the classic presentation.",
+          "b": "This suggests infection.",
+          "c": "This suggests multiple myeloma.",
+          "d": "This suggests leukemia or low platelets."
+        },
+        "references": [
+          "Medical-surgical nursing texts (e.g. Lewis; Ignatavicius)",
+          "DRAFT: original question written with AI assistance; an RN or nurse educator must check it before candidates rely on it."
+        ]
+      },
+      "educationalObjective": "Recognize Hodgkin lymphoma."
+    },
+    {
+      "id": "c1a00019-0000-4000-8000-000000000018",
+      "itemType": "multiple_choice",
+      "clientNeeds": "PHI.PA",
+      "bodySystem": "hematologic-oncologic",
+      "subtopics": [
+        "cancer-care"
+      ],
+      "cjmmSkill": "generate_solutions",
+      "difficulty": "moderate",
+      "stem": "A client with multiple myeloma has bone pain and a high calcium level. Which intervention is most important?",
+      "content": {
+        "options": [
+          {
+            "id": "a",
+            "text": "Encourage fluids of at least 2 to 3 L a day unless restricted"
+          },
+          {
+            "id": "b",
+            "text": "Bed rest"
+          },
+          {
+            "id": "c",
+            "text": "Restrict fluids"
+          },
+          {
+            "id": "d",
+            "text": "High-calcium diet"
+          }
+        ]
+      },
+      "key": {
+        "correct": "a"
+      },
+      "rationale": {
+        "correct": "Multiple myeloma: bone pain, fractures, hypercalcemia and kidney failure; hydration and fall safety are key.",
+        "perOption": {
+          "a": "Fluids help clear calcium and protect the kidneys from protein damage.",
+          "b": "Immobility increases bone calcium loss.",
+          "c": "This worsens kidney damage.",
+          "d": "This worsens hypercalcemia."
+        },
+        "references": [
+          "Medical-surgical nursing texts (e.g. Lewis; Ignatavicius)",
+          "DRAFT: original question written with AI assistance; an RN or nurse educator must check it before candidates rely on it."
+        ]
+      },
+      "educationalObjective": "Plan care for multiple myeloma."
+    },
+    {
+      "id": "c1a00019-0000-4000-8000-000000000019",
+      "itemType": "multiple_choice",
+      "clientNeeds": "PHI.PA",
+      "bodySystem": "hematologic-oncologic",
+      "subtopics": [
+        "cancer-care"
+      ],
+      "cjmmSkill": "generate_solutions",
+      "difficulty": "moderate",
+      "stem": "A client with cancer has constant pain. Which approach to pain relief is best?",
+      "content": {
+        "options": [
+          {
+            "id": "a",
+            "text": "Scheduled, around-the-clock analgesia with a breakthrough dose available"
+          },
+          {
+            "id": "b",
+            "text": "Medication only when pain is severe"
+          },
+          {
+            "id": "c",
+            "text": "Avoiding opioids to prevent addiction"
+          },
+          {
+            "id": "d",
+            "text": "Placebo injections"
+          }
+        ]
+      },
+      "key": {
+        "correct": "a"
+      },
+      "rationale": {
+        "correct": "Cancer pain: around-the-clock dosing, breakthrough doses and preventing side effects such as constipation.",
+        "perOption": {
+          "a": "Steady levels prevent pain from returning, and breakthrough doses treat flares.",
+          "b": "This leads to poor control.",
+          "c": "Opioids are appropriate for cancer pain.",
+          "d": "These are unethical."
+        },
+        "references": [
+          "Nursing pharmacology texts (e.g. Lehne; McCuistion) and the drug's prescribing information",
+          "DRAFT: original question written with AI assistance; an RN or nurse educator must check it before candidates rely on it."
+        ]
+      },
+      "educationalObjective": "Manage cancer pain effectively."
+    },
+    {
+      "id": "c1a00019-0000-4000-8000-000000000020",
+      "itemType": "multiple_choice",
+      "clientNeeds": "PHI.BCC",
+      "bodySystem": "hematologic-oncologic",
+      "subtopics": [
+        "palliative-and-end-of-life-care"
+      ],
+      "cjmmSkill": "take_action",
+      "difficulty": "moderate",
+      "stem": "A dying client has noisy, gurgling breathing, and the family is upset. What should the nurse do?",
+      "content": {
+        "options": [
+          {
+            "id": "a",
+            "text": "Reposition the client on the side and give a prescribed anticholinergic"
+          },
+          {
+            "id": "b",
+            "text": "Suction deeply every hour"
+          },
+          {
+            "id": "c",
+            "text": "Increase IV fluids"
+          },
+          {
+            "id": "d",
+            "text": "Ask the family to leave"
+          }
+        ]
+      },
+      "key": {
+        "correct": "a"
+      },
+      "rationale": {
+        "correct": "Terminal secretions ('death rattle') are managed with positioning and anticholinergics such as glycopyrrolate, along with family support.",
+        "perOption": {
+          "a": "Positioning and drying secretions reduce the noise; explain that it's common near death.",
+          "b": "Deep suctioning is distressing and usually not effective.",
+          "c": "This increases secretions.",
+          "d": "Family presence is supportive."
+        },
+        "references": [
+          "Medical-surgical nursing texts (e.g. Lewis; Ignatavicius)",
+          "DRAFT: original question written with AI assistance; an RN or nurse educator must check it before candidates rely on it."
+        ]
+      },
+      "educationalObjective": "Manage terminal secretions."
+    },
+    {
+      "id": "c1a00019-0000-4000-8000-000000000021",
+      "itemType": "sata",
+      "clientNeeds": "PHI.BCC",
+      "bodySystem": "hematologic-oncologic",
+      "subtopics": [
+        "palliative-and-end-of-life-care"
+      ],
+      "cjmmSkill": "generate_solutions",
+      "difficulty": "moderate",
+      "stem": "Which comfort measures should the nurse provide for a client who is actively dying? Select all that apply.",
+      "content": {
+        "options": [
+          {
+            "id": "a",
+            "text": "Frequent mouth care"
+          },
+          {
+            "id": "b",
+            "text": "Repositioning for comfort"
+          },
+          {
+            "id": "c",
+            "text": "Pain and symptom medication as prescribed"
+          },
+          {
+            "id": "d",
+            "text": "Encouraging family presence"
+          },
+          {
+            "id": "e",
+            "text": "Insisting the client eat full meals"
+          },
+          {
+            "id": "f",
+            "text": "Limiting visitors to 10 minutes"
+          }
+        ]
+      },
+      "key": {
+        "correct": [
+          "a",
+          "b",
+          "c",
+          "d"
+        ]
+      },
+      "rationale": {
+        "correct": "End-of-life care focuses on comfort, dignity and family support.",
+        "perOption": {
+          "a": "Mouth breathing dries the mucosa.",
+          "b": "This prevents discomfort and skin breakdown.",
+          "c": "Comfort is the goal.",
+          "d": "This supports the client and family.",
+          "e": "Appetite naturally falls; forcing food causes discomfort.",
+          "f": "Families should have time together."
+        },
+        "references": [
+          "Medical-surgical nursing texts (e.g. Lewis; Ignatavicius)",
+          "DRAFT: original question written with AI assistance; an RN or nurse educator must check it before candidates rely on it."
+        ]
+      },
+      "educationalObjective": "Provide comfort care at the end of life."
+    },
+    {
+      "id": "c1a00019-0000-4000-8000-000000000022",
+      "itemType": "multiple_choice",
+      "clientNeeds": "PHI.BCC",
+      "bodySystem": "hematologic-oncologic",
+      "subtopics": [
+        "palliative-and-end-of-life-care"
+      ],
+      "cjmmSkill": "analyze_cues",
+      "difficulty": "easy",
+      "stem": "Which client is eligible for hospice care?",
+      "content": {
+        "options": [
+          {
+            "id": "a",
+            "text": "A client whose provider certifies a life expectancy of 6 months or less if the disease runs its usual course"
+          },
+          {
+            "id": "b",
+            "text": "Any client with cancer"
+          },
+          {
+            "id": "c",
+            "text": "A client who wants curative treatment"
+          },
+          {
+            "id": "d",
+            "text": "Only clients in the last week of life"
+          }
+        ]
+      },
+      "key": {
+        "correct": "a"
+      },
+      "rationale": {
+        "correct": "Hospice: prognosis of 6 months or less, focused on comfort.",
+        "perOption": {
+          "a": "This is the standard eligibility rule.",
+          "b": "Eligibility depends on prognosis, not the diagnosis.",
+          "c": "Hospice focuses on comfort rather than cure.",
+          "d": "Earlier referral is better."
+        },
+        "references": [
+          "Medical-surgical nursing texts (e.g. Lewis; Ignatavicius)",
+          "DRAFT: original question written with AI assistance; an RN or nurse educator must check it before candidates rely on it."
+        ]
+      },
+      "educationalObjective": "Identify eligibility for hospice care."
+    },
+    {
+      "id": "c1a00019-0000-4000-8000-000000000023",
+      "itemType": "multiple_choice",
+      "clientNeeds": "PHI.BCC",
+      "bodySystem": "hematologic-oncologic",
+      "subtopics": [
+        "palliative-and-end-of-life-care"
+      ],
+      "cjmmSkill": "take_action",
+      "difficulty": "moderate",
+      "stem": "A client has just died, and no autopsy or coroner's case is involved. What should the nurse do?",
+      "content": {
+        "options": [
+          {
+            "id": "a",
+            "text": "Remove tubes and lines per policy, clean the body and let the family spend time with the client"
+          },
+          {
+            "id": "b",
+            "text": "Send the body to the morgue right away"
+          },
+          {
+            "id": "c",
+            "text": "Leave all tubes in place"
+          },
+          {
+            "id": "d",
+            "text": "Ask the family to leave while care is done, then send them home"
+          }
+        ]
+      },
+      "key": {
+        "correct": "a"
+      },
+      "rationale": {
+        "correct": "Postmortem care: follow policy, maintain dignity and support the family.",
+        "perOption": {
+          "a": "Postmortem care preserves dignity and supports grieving.",
+          "b": "The family should have time with the client.",
+          "c": "Tubes are left only for an autopsy or coroner's case.",
+          "d": "The family may wish to stay or help."
+        },
+        "references": [
+          "Fundamentals of nursing texts (e.g. Potter & Perry)",
+          "DRAFT: original question written with AI assistance; an RN or nurse educator must check it before candidates rely on it."
+        ]
+      },
+      "educationalObjective": "Provide postmortem care."
+    },
+    {
+      "id": "c1a00019-0000-4000-8000-000000000024",
+      "itemType": "select_n",
+      "clientNeeds": "SECE.SIC",
+      "bodySystem": "hematologic-oncologic",
+      "subtopics": [
+        "hazardous-materials-and-radiation-safety"
+      ],
+      "cjmmSkill": "generate_solutions",
+      "difficulty": "moderate",
+      "stem": "A client will receive oral chemotherapy at home. Select the 3 safety instructions the nurse should give.",
+      "content": {
+        "options": [
+          {
+            "id": "a",
+            "text": "Wear gloves when handling the medication or body fluids"
+          },
+          {
+            "id": "b",
+            "text": "Flush the toilet twice after use"
+          },
+          {
+            "id": "c",
+            "text": "Wash soiled linens separately"
+          },
+          {
+            "id": "d",
+            "text": "Crush tablets to make them easier to swallow"
+          },
+          {
+            "id": "e",
+            "text": "Let pregnant family members handle the pills"
+          },
+          {
+            "id": "f",
+            "text": "Store the medication with family members' medications"
+          }
+        ],
+        "selectCount": 3
+      },
+      "key": {
+        "correct": [
+          "a",
+          "b",
+          "c"
+        ]
+      },
+      "rationale": {
+        "correct": "Chemotherapy is hazardous; protect caregivers from exposure for about 48 hours after doses.",
+        "perOption": {
+          "a": "Chemotherapy is excreted in body fluids.",
+          "b": "This reduces exposure for others.",
+          "c": "This prevents contamination.",
+          "d": "Crushing releases hazardous particles.",
+          "e": "Pregnant people should avoid exposure.",
+          "f": "It should be stored separately and safely."
+        },
+        "references": [
+          "Medical-surgical nursing texts (e.g. Lewis; Ignatavicius)",
+          "DRAFT: original question written with AI assistance; an RN or nurse educator must check it before candidates rely on it."
+        ]
+      },
+      "educationalObjective": "Teach home safety for oral chemotherapy."
+    }
+  ]
+}
