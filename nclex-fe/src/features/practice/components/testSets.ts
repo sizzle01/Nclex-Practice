@@ -36,6 +36,29 @@ export const challengeSet: TestSetSummary = {
   passThreshold: 0.65,
 };
 
+/** The RN bank's other kinds of set, for the catalog's sections and filter tabs. */
+export const caseStudySet: TestSetSummary = {
+  ...practiceSet,
+  id: "c1e00000-0000-4000-8000-000000000022",
+  title: "NGN case studies, set 1 of 2",
+  questionCount: 30,
+};
+
+export const untimedChallengeSet: TestSetSummary = {
+  ...challengeSet,
+  id: "c1e00000-0000-4000-8000-000000000028",
+  title: "NCLEX-RN challenge 1 (untimed)",
+  timed: false,
+  timeBudgetSec: null,
+};
+
+export const adaptiveSet: TestSetSummary = {
+  ...challengeSet,
+  id: "c1e00000-0000-4000-8000-000000000099",
+  title: "Adaptive exam 1",
+  mode: "cat",
+};
+
 /** GET /test-sets/{id} for the challenge set. */
 export const challengeDetail: TestSetDetail = {
   ...challengeSet,
