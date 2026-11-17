@@ -1,0 +1,1451 @@
+{
+  "notice": "RN bank batch 1: Safety and infection control. DRAFT - every question must be reviewed by an RN or nurse educator before candidates rely on it.",
+  "track": "RN",
+  "subtopics": [
+    {
+      "clientNeeds": "SECE.SIC",
+      "slug": "standard-precautions-and-hand-hygiene",
+      "name": "Standard precautions and hand hygiene"
+    },
+    {
+      "clientNeeds": "SECE.SIC",
+      "slug": "transmission-based-precautions",
+      "name": "Transmission-based precautions"
+    },
+    {
+      "clientNeeds": "SECE.SIC",
+      "slug": "surgical-asepsis",
+      "name": "Surgical asepsis"
+    },
+    {
+      "clientNeeds": "SECE.SIC",
+      "slug": "injury-prevention",
+      "name": "Falls and injury prevention"
+    },
+    {
+      "clientNeeds": "SECE.SIC",
+      "slug": "restraint-safety",
+      "name": "Restraint safety"
+    },
+    {
+      "clientNeeds": "SECE.SIC",
+      "slug": "fire-safety-response",
+      "name": "Fire safety response"
+    },
+    {
+      "clientNeeds": "SECE.SIC",
+      "slug": "emergency-and-disaster-response",
+      "name": "Emergency and disaster response"
+    },
+    {
+      "clientNeeds": "SECE.SIC",
+      "slug": "hazardous-materials-and-radiation-safety",
+      "name": "Hazardous materials and radiation safety"
+    },
+    {
+      "clientNeeds": "SECE.SIC",
+      "slug": "client-identification-and-error-prevention",
+      "name": "Client identification and error prevention"
+    },
+    {
+      "clientNeeds": "SECE.SIC",
+      "slug": "equipment-and-home-safety",
+      "name": "Equipment and home safety"
+    },
+    {
+      "clientNeeds": "SECE.SIC",
+      "slug": "neutropenic-precautions",
+      "name": "Neutropenic precautions"
+    }
+  ],
+  "questions": [
+    {
+      "id": "c1a00001-0000-4000-8000-000000000001",
+      "itemType": "multiple_choice",
+      "clientNeeds": "SECE.SIC",
+      "bodySystem": "fundamentals",
+      "subtopics": [
+        "standard-precautions-and-hand-hygiene"
+      ],
+      "cjmmSkill": "take_action",
+      "difficulty": "moderate",
+      "stem": "The nurse is caring for a client with Clostridioides difficile infection. Which action by the nurse requires correction?",
+      "content": {
+        "options": [
+          {
+            "id": "a",
+            "text": "Puts on a gown and gloves before entering the room"
+          },
+          {
+            "id": "b",
+            "text": "Uses a dedicated stethoscope that stays in the room"
+          },
+          {
+            "id": "c",
+            "text": "Cleans hands with alcohol-based hand rub after leaving the room"
+          },
+          {
+            "id": "d",
+            "text": "Cleans the bedside table with a bleach-based disinfectant"
+          }
+        ]
+      },
+      "key": {
+        "correct": "c"
+      },
+      "rationale": {
+        "correct": "C. difficile forms spores that resist alcohol, so soap-and-water handwashing is required after care.",
+        "perOption": {
+          "a": "Contact precautions require a gown and gloves for any contact with the client or the environment.",
+          "b": "Dedicated equipment prevents spores from spreading to other clients.",
+          "c": "Alcohol does not kill C. difficile spores; hands must be washed with soap and water, which removes the spores mechanically.",
+          "d": "A sporicidal (bleach-based) disinfectant is recommended for C. difficile."
+        },
+        "references": [
+          "CDC infection control and isolation precautions guidance",
+          "Fundamentals of nursing texts (e.g. Potter & Perry)",
+          "DRAFT: original question written with AI assistance; an RN or nurse educator must check it before candidates rely on it."
+        ]
+      },
+      "educationalObjective": "Use soap and water, not alcohol rub, after caring for a client with C. difficile."
+    },
+    {
+      "id": "c1a00001-0000-4000-8000-000000000002",
+      "itemType": "sata",
+      "clientNeeds": "SECE.SIC",
+      "bodySystem": "respiratory",
+      "subtopics": [
+        "transmission-based-precautions"
+      ],
+      "cjmmSkill": "generate_solutions",
+      "difficulty": "moderate",
+      "stem": "A client is admitted with suspected active pulmonary tuberculosis. Which actions should the nurse include in the plan of care? Select all that apply.",
+      "content": {
+        "options": [
+          {
+            "id": "a",
+            "text": "Place the client in an airborne infection isolation (negative-pressure) room"
+          },
+          {
+            "id": "b",
+            "text": "Wear a fit-tested N95 respirator when entering the room"
+          },
+          {
+            "id": "c",
+            "text": "Keep the door to the room closed"
+          },
+          {
+            "id": "d",
+            "text": "Have the client wear a surgical mask when leaving the room for tests"
+          },
+          {
+            "id": "e",
+            "text": "Wear a surgical mask instead of a respirator when giving brief care"
+          },
+          {
+            "id": "f",
+            "text": "Place the client in a semi-private room with another client who has TB pneumonia"
+          }
+        ]
+      },
+      "key": {
+        "correct": [
+          "a",
+          "b",
+          "c",
+          "d"
+        ]
+      },
+      "rationale": {
+        "correct": "TB spreads by airborne droplet nuclei, so airborne precautions are needed: negative-pressure room, N95 respirator, closed door and a mask on the client during transport.",
+        "perOption": {
+          "a": "Negative pressure keeps airborne droplet nuclei from leaving the room.",
+          "b": "An N95 filters the small particles that carry M. tuberculosis.",
+          "c": "A closed door keeps the room under negative pressure.",
+          "d": "A mask on the client contains respiratory secretions during transport.",
+          "e": "A surgical mask does not filter airborne particles; a respirator is needed for every entry.",
+          "f": "Clients with suspected TB need a single airborne isolation room; strains and drug resistance may differ."
+        },
+        "references": [
+          "CDC infection control and isolation precautions guidance",
+          "DRAFT: original question written with AI assistance; an RN or nurse educator must check it before candidates rely on it."
+        ]
+      },
+      "educationalObjective": "Apply airborne precautions for suspected tuberculosis."
+    },
+    {
+      "id": "c1a00001-0000-4000-8000-000000000003",
+      "itemType": "multiple_choice",
+      "clientNeeds": "SECE.SIC",
+      "bodySystem": "immune",
+      "subtopics": [
+        "transmission-based-precautions"
+      ],
+      "cjmmSkill": "analyze_cues",
+      "difficulty": "easy",
+      "stem": "Which client should the nurse place on droplet precautions?",
+      "content": {
+        "options": [
+          {
+            "id": "a",
+            "text": "A client with a methicillin-resistant Staphylococcus aureus (MRSA) wound infection"
+          },
+          {
+            "id": "b",
+            "text": "A client with pertussis"
+          },
+          {
+            "id": "c",
+            "text": "A client with measles (rubeola)"
+          },
+          {
+            "id": "d",
+            "text": "A client with scabies"
+          }
+        ]
+      },
+      "key": {
+        "correct": "b"
+      },
+      "rationale": {
+        "correct": "Droplet precautions (surgical mask within close range, private room) are used for pertussis, influenza, mumps, rubella and meningococcal disease.",
+        "perOption": {
+          "a": "MRSA spreads by contact; it needs contact precautions.",
+          "b": "Pertussis spreads through large respiratory droplets; droplet precautions are required.",
+          "c": "Measles is airborne and needs an airborne infection isolation room.",
+          "d": "Scabies spreads by direct skin contact; it needs contact precautions."
+        },
+        "references": [
+          "CDC infection control and isolation precautions guidance",
+          "DRAFT: original question written with AI assistance; an RN or nurse educator must check it before candidates rely on it."
+        ]
+      },
+      "educationalObjective": "Identify infections that need droplet precautions."
+    },
+    {
+      "id": "c1a00001-0000-4000-8000-000000000004",
+      "itemType": "matrix_mc",
+      "clientNeeds": "SECE.SIC",
+      "bodySystem": "fundamentals",
+      "subtopics": [
+        "transmission-based-precautions"
+      ],
+      "cjmmSkill": "analyze_cues",
+      "difficulty": "moderate",
+      "stem": "For each condition, indicate the type of transmission-based precautions the nurse should use in addition to standard precautions.",
+      "content": {
+        "rows": [
+          {
+            "id": "r1",
+            "text": "Measles (rubeola)"
+          },
+          {
+            "id": "r2",
+            "text": "Influenza"
+          },
+          {
+            "id": "r3",
+            "text": "Clostridioides difficile diarrhea"
+          },
+          {
+            "id": "r4",
+            "text": "Mumps"
+          },
+          {
+            "id": "r5",
+            "text": "Pulmonary tuberculosis"
+          },
+          {
+            "id": "r6",
+            "text": "Scabies"
+          }
+        ],
+        "columns": [
+          {
+            "id": "c1",
+            "text": "Airborne"
+          },
+          {
+            "id": "c2",
+            "text": "Droplet"
+          },
+          {
+            "id": "c3",
+            "text": "Contact"
+          }
+        ]
+      },
+      "key": {
+        "byRow": {
+          "r1": "c1",
+          "r2": "c2",
+          "r3": "c3",
+          "r4": "c2",
+          "r5": "c1",
+          "r6": "c3"
+        }
+      },
+      "rationale": {
+        "correct": "Remember 'My Chicken Has TB' for airborne (measles, chickenpox, disseminated herpes zoster, TB); droplet for influenza, mumps, pertussis, rubella and meningococcus; contact for C. difficile, MRSA, VRE, scabies and lice.",
+        "perOption": {
+          "r1:c1": "Measles virus stays suspended in the air and needs airborne precautions.",
+          "r1:c2": "Droplet precautions do not protect against the airborne measles virus.",
+          "r1:c3": "Contact precautions alone do not stop airborne spread.",
+          "r2:c1": "Influenza is not routinely airborne except during aerosol-generating procedures.",
+          "r2:c2": "Influenza spreads by large droplets within about 2 m (6 ft).",
+          "r2:c3": "Contact is a minor route; droplet precautions are required.",
+          "r3:c1": "C. difficile is not spread through the air.",
+          "r3:c2": "C. difficile is not spread by respiratory droplets.",
+          "r3:c3": "Spores spread on hands and surfaces, so contact precautions are needed.",
+          "r4:c1": "Mumps is not airborne.",
+          "r4:c2": "Mumps spreads by respiratory droplets and saliva.",
+          "r4:c3": "Contact precautions alone are not enough.",
+          "r5:c1": "TB spreads through airborne droplet nuclei.",
+          "r5:c2": "A surgical mask and droplet precautions do not filter TB particles.",
+          "r5:c3": "TB is not spread by contact.",
+          "r6:c1": "Scabies mites are not airborne.",
+          "r6:c2": "Scabies is not spread by droplets.",
+          "r6:c3": "Scabies spreads by skin-to-skin contact and shared linen."
+        },
+        "references": [
+          "CDC infection control and isolation precautions guidance",
+          "DRAFT: original question written with AI assistance; an RN or nurse educator must check it before candidates rely on it."
+        ]
+      },
+      "educationalObjective": "Match common infections to their transmission-based precautions."
+    },
+    {
+      "id": "c1a00001-0000-4000-8000-000000000005",
+      "itemType": "ordered_response",
+      "clientNeeds": "SECE.SIC",
+      "bodySystem": "fundamentals",
+      "subtopics": [
+        "standard-precautions-and-hand-hygiene"
+      ],
+      "cjmmSkill": "take_action",
+      "difficulty": "easy",
+      "stem": "The nurse is preparing to enter the room of a client on contact and droplet precautions. Place the steps for putting on personal protective equipment in order.",
+      "content": {
+        "items": [
+          {
+            "id": "e",
+            "text": "Put on gloves, pulling the cuffs over the gown sleeves"
+          },
+          {
+            "id": "a",
+            "text": "Perform hand hygiene"
+          },
+          {
+            "id": "d",
+            "text": "Put on goggles or a face shield"
+          },
+          {
+            "id": "b",
+            "text": "Put on the gown"
+          },
+          {
+            "id": "c",
+            "text": "Put on the mask"
+          }
+        ]
+      },
+      "key": {
+        "order": [
+          "a",
+          "b",
+          "c",
+          "d",
+          "e"
+        ],
+        "scoring": "all_or_nothing"
+      },
+      "rationale": {
+        "correct": "CDC order for putting on PPE: hand hygiene, gown, mask or respirator, eye protection, gloves.",
+        "perOption": {
+          "a": "Clean hands come first so the PPE is not contaminated.",
+          "b": "The gown goes on first so the mask ties and gloves can go over it.",
+          "c": "The mask is placed before eye protection so the face shield or goggles fit over it.",
+          "d": "Eye protection goes over the mask.",
+          "e": "Gloves go on last and cover the gown cuffs to protect the wrists."
+        },
+        "references": [
+          "CDC infection control and isolation precautions guidance",
+          "DRAFT: original question written with AI assistance; an RN or nurse educator must check it before candidates rely on it."
+        ]
+      },
+      "educationalObjective": "Put on personal protective equipment in the correct sequence."
+    },
+    {
+      "id": "c1a00001-0000-4000-8000-000000000006",
+      "itemType": "multiple_choice",
+      "clientNeeds": "SECE.SIC",
+      "bodySystem": "fundamentals",
+      "subtopics": [
+        "standard-precautions-and-hand-hygiene"
+      ],
+      "cjmmSkill": "take_action",
+      "difficulty": "moderate",
+      "stem": "The nurse is leaving the room of a client on droplet and contact precautions while wearing a gown, gloves, goggles and a mask. Which item should the nurse remove last, just before performing hand hygiene?",
+      "content": {
+        "options": [
+          {
+            "id": "a",
+            "text": "Gloves"
+          },
+          {
+            "id": "b",
+            "text": "Goggles"
+          },
+          {
+            "id": "c",
+            "text": "Gown"
+          },
+          {
+            "id": "d",
+            "text": "Mask"
+          }
+        ]
+      },
+      "key": {
+        "correct": "d"
+      },
+      "rationale": {
+        "correct": "Removal order: gloves, goggles or face shield, gown, mask or respirator, then hand hygiene. This order removes the most contaminated items first.",
+        "perOption": {
+          "a": "Gloves are the most contaminated item and are removed first.",
+          "b": "Eye protection is removed after gloves, handled by the clean headband or earpieces.",
+          "c": "The gown is removed after the goggles (or together with the gloves), before the mask.",
+          "d": "The mask is removed last, by the ties or ear loops, outside the room, followed by hand hygiene."
+        },
+        "references": [
+          "CDC infection control and isolation precautions guidance",
+          "DRAFT: original question written with AI assistance; an RN or nurse educator must check it before candidates rely on it."
+        ]
+      },
+      "educationalObjective": "Remove personal protective equipment in the correct sequence."
+    },
+    {
+      "id": "c1a00001-0000-4000-8000-000000000007",
+      "itemType": "multiple_choice",
+      "clientNeeds": "SECE.SIC",
+      "bodySystem": "fundamentals",
+      "subtopics": [
+        "surgical-asepsis"
+      ],
+      "cjmmSkill": "evaluate_outcomes",
+      "difficulty": "moderate",
+      "stem": "The nurse observes a student setting up a sterile field for a dressing change. Which action requires the nurse to intervene?",
+      "content": {
+        "options": [
+          {
+            "id": "a",
+            "text": "Opens the first flap of the sterile package away from the body"
+          },
+          {
+            "id": "b",
+            "text": "Keeps sterile gloved hands above waist level"
+          },
+          {
+            "id": "c",
+            "text": "Turns away from the sterile field to get extra gauze from the cart"
+          },
+          {
+            "id": "d",
+            "text": "Considers the 2.5 cm (1 inch) border of the sterile drape contaminated"
+          }
+        ]
+      },
+      "key": {
+        "correct": "c"
+      },
+      "rationale": {
+        "correct": "A sterile field must stay in view at all times; turning away breaks sterile technique because contamination can't be ruled out.",
+        "perOption": {
+          "a": "Opening the first flap away from the body avoids reaching over the sterile field.",
+          "b": "Items below the waist are considered contaminated, so hands are kept above it.",
+          "c": "A sterile field out of view is considered contaminated; the student must keep facing the field.",
+          "d": "The outer 1 inch border of a sterile field is considered unsterile."
+        },
+        "references": [
+          "Fundamentals of nursing texts (e.g. Potter & Perry)",
+          "DRAFT: original question written with AI assistance; an RN or nurse educator must check it before candidates rely on it."
+        ]
+      },
+      "educationalObjective": "Recognize breaks in surgical asepsis."
+    },
+    {
+      "id": "c1a00001-0000-4000-8000-000000000008",
+      "itemType": "sata",
+      "clientNeeds": "SECE.SIC",
+      "bodySystem": "fundamentals",
+      "subtopics": [
+        "injury-prevention"
+      ],
+      "cjmmSkill": "generate_solutions",
+      "difficulty": "easy",
+      "stem": "The nurse is planning care for an older adult client at high risk for falls. Which interventions should the nurse include? Select all that apply.",
+      "content": {
+        "options": [
+          {
+            "id": "a",
+            "text": "Keep the bed in its lowest position with the wheels locked"
+          },
+          {
+            "id": "b",
+            "text": "Place the call light and personal items within reach"
+          },
+          {
+            "id": "c",
+            "text": "Raise all four side rails at night"
+          },
+          {
+            "id": "d",
+            "text": "Offer toileting assistance on a regular schedule"
+          },
+          {
+            "id": "e",
+            "text": "Provide nonskid socks or footwear"
+          },
+          {
+            "id": "f",
+            "text": "Keep the room completely dark at night to promote sleep"
+          }
+        ]
+      },
+      "key": {
+        "correct": [
+          "a",
+          "b",
+          "d",
+          "e"
+        ]
+      },
+      "rationale": {
+        "correct": "Fall prevention combines a safe environment (low bed, night light, items in reach) with planned help (scheduled toileting, nonskid footwear), not restraint.",
+        "perOption": {
+          "a": "A low, locked bed reduces the distance and injury if a fall happens.",
+          "b": "Reaching for items is a common cause of falls.",
+          "c": "Four raised rails count as a restraint and increase injury when clients climb over them.",
+          "d": "Scheduled toileting prevents rushed, unassisted trips to the bathroom.",
+          "e": "Nonskid footwear reduces slipping.",
+          "f": "A night light helps the client see when getting up; darkness increases fall risk."
+        },
+        "references": [
+          "Fundamentals of nursing texts (e.g. Potter & Perry)",
+          "DRAFT: original question written with AI assistance; an RN or nurse educator must check it before candidates rely on it."
+        ]
+      },
+      "educationalObjective": "Plan interventions to prevent falls in hospitalized clients."
+    },
+    {
+      "id": "c1a00001-0000-4000-8000-000000000009",
+      "itemType": "multiple_choice",
+      "clientNeeds": "SECE.SIC",
+      "bodySystem": "fundamentals",
+      "subtopics": [
+        "restraint-safety"
+      ],
+      "cjmmSkill": "evaluate_outcomes",
+      "difficulty": "moderate",
+      "stem": "The nurse is supervising assistive personnel (AP) caring for a client in soft wrist restraints. Which action by the AP requires immediate correction?",
+      "content": {
+        "options": [
+          {
+            "id": "a",
+            "text": "Ties the restraint to the movable side rail"
+          },
+          {
+            "id": "b",
+            "text": "Uses a quick-release knot"
+          },
+          {
+            "id": "c",
+            "text": "Checks that two fingers fit under the restraint"
+          },
+          {
+            "id": "d",
+            "text": "Removes one restraint at a time to provide range of motion"
+          }
+        ]
+      },
+      "key": {
+        "correct": "a"
+      },
+      "rationale": {
+        "correct": "Restraints are secured to the bed frame (the part that moves with the bed), never the side rail, using a quick-release knot.",
+        "perOption": {
+          "a": "Raising or lowering a side rail can pull the restraint and injure the client; restraints are tied to the bed frame.",
+          "b": "A quick-release knot allows rapid removal in an emergency.",
+          "c": "Two fingers' space prevents impaired circulation while keeping the restraint secure.",
+          "d": "Releasing one limb at a time allows skin care and range of motion while keeping the client safe."
+        },
+        "references": [
+          "Fundamentals of nursing texts (e.g. Potter & Perry)",
+          "DRAFT: original question written with AI assistance; an RN or nurse educator must check it before candidates rely on it."
+        ]
+      },
+      "educationalObjective": "Apply and monitor physical restraints safely."
+    },
+    {
+      "id": "c1a00001-0000-4000-8000-000000000010",
+      "itemType": "multiple_choice",
+      "clientNeeds": "SECE.SIC",
+      "bodySystem": "fundamentals",
+      "subtopics": [
+        "restraint-safety"
+      ],
+      "cjmmSkill": "take_action",
+      "difficulty": "moderate",
+      "stem": "A client who keeps pulling at a nasogastric tube is confused. The provider writes, \"Apply soft wrist restraints PRN for agitation.\" What should the nurse do?",
+      "content": {
+        "options": [
+          {
+            "id": "a",
+            "text": "Apply the restraints whenever the client becomes agitated"
+          },
+          {
+            "id": "b",
+            "text": "Contact the provider to clarify the order"
+          },
+          {
+            "id": "c",
+            "text": "Ask the client's family for consent to restrain"
+          },
+          {
+            "id": "d",
+            "text": "Apply the restraints and document the order as received"
+          }
+        ]
+      },
+      "key": {
+        "correct": "b"
+      },
+      "rationale": {
+        "correct": "Regulations prohibit PRN restraint orders; each order must be time-limited and renewed after the client is reassessed. Less restrictive measures should be tried first.",
+        "perOption": {
+          "a": "PRN restraint orders are not permitted.",
+          "b": "Restraint orders must be time-limited and specific; PRN restraint orders are not allowed, so the order needs clarification.",
+          "c": "Family consent does not replace a valid, time-limited provider order.",
+          "d": "Acting on an invalid order puts the client and the nurse at risk."
+        },
+        "references": [
+          "Fundamentals of nursing texts (e.g. Potter & Perry)",
+          "DRAFT: original question written with AI assistance; an RN or nurse educator must check it before candidates rely on it."
+        ]
+      },
+      "educationalObjective": "Recognize that restraint orders cannot be written PRN."
+    },
+    {
+      "id": "c1a00001-0000-4000-8000-000000000011",
+      "itemType": "ordered_response",
+      "clientNeeds": "SECE.SIC",
+      "bodySystem": "fundamentals",
+      "subtopics": [
+        "fire-safety-response"
+      ],
+      "cjmmSkill": "take_action",
+      "difficulty": "easy",
+      "stem": "The nurse needs to use a portable fire extinguisher on a small wastebasket fire. Place the steps in order.",
+      "content": {
+        "items": [
+          {
+            "id": "d",
+            "text": "Sweep the nozzle from side to side"
+          },
+          {
+            "id": "a",
+            "text": "Pull the pin"
+          },
+          {
+            "id": "c",
+            "text": "Squeeze the handle"
+          },
+          {
+            "id": "b",
+            "text": "Aim the nozzle at the base of the fire"
+          }
+        ]
+      },
+      "key": {
+        "order": [
+          "a",
+          "b",
+          "c",
+          "d"
+        ],
+        "scoring": "all_or_nothing"
+      },
+      "rationale": {
+        "correct": "PASS: Pull, Aim, Squeeze, Sweep. The extinguisher is used only after the RACE steps (rescue, alarm, contain) for a small, contained fire.",
+        "perOption": {
+          "a": "The pin locks the handle; it must be removed first.",
+          "b": "Aiming at the base puts out the fuel source, not just the flames.",
+          "c": "Squeezing the handle releases the extinguishing agent.",
+          "d": "A sweeping motion covers the whole base of the fire."
+        },
+        "references": [
+          "Fundamentals of nursing texts (e.g. Potter & Perry)",
+          "DRAFT: original question written with AI assistance; an RN or nurse educator must check it before candidates rely on it."
+        ]
+      },
+      "educationalObjective": "Use a fire extinguisher with the PASS sequence."
+    },
+    {
+      "id": "c1a00001-0000-4000-8000-000000000012",
+      "itemType": "multiple_choice",
+      "clientNeeds": "SECE.SIC",
+      "bodySystem": "fundamentals",
+      "subtopics": [
+        "emergency-and-disaster-response"
+      ],
+      "cjmmSkill": "prioritize_hypotheses",
+      "difficulty": "difficult",
+      "stem": "The nurse is triaging victims at a mass-casualty incident using the START system. Which victim should the nurse tag red (immediate)?",
+      "content": {
+        "options": [
+          {
+            "id": "a",
+            "text": "A victim who walks to the treatment area with a forearm laceration"
+          },
+          {
+            "id": "b",
+            "text": "A victim with a respiratory rate of 36/min and capillary refill of 3 seconds"
+          },
+          {
+            "id": "c",
+            "text": "A victim who is not breathing after the airway is repositioned"
+          },
+          {
+            "id": "d",
+            "text": "A victim with a closed femur fracture who follows commands, with a respiratory rate of 20/min and capillary refill under 2 seconds"
+          }
+        ]
+      },
+      "key": {
+        "correct": "b"
+      },
+      "rationale": {
+        "correct": "In mass-casualty triage, the most resources go to victims who are critically injured but likely to survive with immediate care.",
+        "perOption": {
+          "a": "A victim who can walk is tagged green (minor).",
+          "b": "A respiratory rate over 30/min or capillary refill over 2 seconds meets the criteria for immediate (red).",
+          "c": "No breathing after the airway is opened is tagged black (expectant/deceased).",
+          "d": "Stable breathing, perfusion and mental status with an injury that can wait is tagged yellow (delayed)."
+        },
+        "references": [
+          "Fundamentals of nursing texts (e.g. Potter & Perry)",
+          "DRAFT: original question written with AI assistance; an RN or nurse educator must check it before candidates rely on it."
+        ]
+      },
+      "educationalObjective": "Apply START triage categories in a mass-casualty event."
+    },
+    {
+      "id": "c1a00001-0000-4000-8000-000000000013",
+      "itemType": "multiple_choice",
+      "clientNeeds": "SECE.SIC",
+      "bodySystem": "fundamentals",
+      "subtopics": [
+        "emergency-and-disaster-response"
+      ],
+      "cjmmSkill": "prioritize_hypotheses",
+      "difficulty": "moderate",
+      "stem": "A disaster has been declared and the hospital needs beds for incoming casualties. Which client is most appropriate for the nurse to recommend for early discharge?",
+      "content": {
+        "options": [
+          {
+            "id": "a",
+            "text": "A client 2 days after an appendectomy who is walking and tolerating a regular diet"
+          },
+          {
+            "id": "b",
+            "text": "A client with heart failure receiving IV furosemide whose crackles are increasing"
+          },
+          {
+            "id": "c",
+            "text": "A client admitted 6 hours ago with diabetic ketoacidosis on an insulin infusion"
+          },
+          {
+            "id": "d",
+            "text": "A client with a new chest tube for a pneumothorax"
+          }
+        ]
+      },
+      "key": {
+        "correct": "a"
+      },
+      "rationale": {
+        "correct": "During a disaster, stable clients with predictable recovery are discharged first to free beds.",
+        "perOption": {
+          "a": "This client is stable, recovering as expected and can continue recovery at home.",
+          "b": "Worsening crackles show the client is not stable.",
+          "c": "An insulin infusion needs hourly monitoring in hospital.",
+          "d": "A new chest tube needs ongoing inpatient monitoring."
+        },
+        "references": [
+          "NCSBN National Guidelines for Nursing Delegation; LaCharity, Prioritization, Delegation & Assignment",
+          "DRAFT: original question written with AI assistance; an RN or nurse educator must check it before candidates rely on it."
+        ]
+      },
+      "educationalObjective": "Choose clients for early discharge during a disaster."
+    },
+    {
+      "id": "c1a00001-0000-4000-8000-000000000014",
+      "itemType": "multiple_choice",
+      "clientNeeds": "SECE.SIC",
+      "bodySystem": "reproductive",
+      "subtopics": [
+        "hazardous-materials-and-radiation-safety"
+      ],
+      "cjmmSkill": "take_action",
+      "difficulty": "difficult",
+      "stem": "A client with a sealed cervical radiation implant calls the nurse and says, \"Something fell out into the bed.\" The nurse sees the implant on the sheet. What should the nurse do first?",
+      "content": {
+        "options": [
+          {
+            "id": "a",
+            "text": "Pick up the implant with gloved hands and place it in the trash"
+          },
+          {
+            "id": "b",
+            "text": "Use long-handled forceps to place the implant in the lead container in the room"
+          },
+          {
+            "id": "c",
+            "text": "Reinsert the implant into the applicator"
+          },
+          {
+            "id": "d",
+            "text": "Leave the room and close the door until the radiation safety officer arrives"
+          }
+        ]
+      },
+      "key": {
+        "correct": "b"
+      },
+      "rationale": {
+        "correct": "Time, distance and shielding protect against radiation. A dislodged sealed source is moved with long-handled forceps into the lead container kept in the room, then the team is notified.",
+        "perOption": {
+          "a": "Gloves do not protect against radiation, and a radioactive source must never go in regular trash.",
+          "b": "Forceps add distance and the lead container provides shielding; both limit radiation exposure.",
+          "c": "Only the radiation oncology team repositions implants.",
+          "d": "Leaving the source exposed in the bed continues the client's exposure; it is contained first, then the radiation safety officer is notified."
+        },
+        "references": [
+          "Medical-surgical nursing texts (e.g. Lewis; Ignatavicius)",
+          "DRAFT: original question written with AI assistance; an RN or nurse educator must check it before candidates rely on it."
+        ]
+      },
+      "educationalObjective": "Respond safely to a dislodged sealed radiation implant."
+    },
+    {
+      "id": "c1a00001-0000-4000-8000-000000000015",
+      "itemType": "multiple_choice",
+      "clientNeeds": "SECE.SIC",
+      "bodySystem": "hematologic-oncologic",
+      "subtopics": [
+        "hazardous-materials-and-radiation-safety"
+      ],
+      "cjmmSkill": "take_action",
+      "difficulty": "moderate",
+      "stem": "The nurse is preparing to give IV chemotherapy. Which personal protective equipment should the nurse wear?",
+      "content": {
+        "options": [
+          {
+            "id": "a",
+            "text": "Clean examination gloves only"
+          },
+          {
+            "id": "b",
+            "text": "Two pairs of chemotherapy-tested gloves and a disposable, impermeable gown"
+          },
+          {
+            "id": "c",
+            "text": "A surgical mask and sterile gloves"
+          },
+          {
+            "id": "d",
+            "text": "A cloth gown and one pair of nitrile gloves"
+          }
+        ]
+      },
+      "key": {
+        "correct": "b"
+      },
+      "rationale": {
+        "correct": "Chemotherapy agents can be absorbed through the skin; double chemo-tested gloves and an impermeable gown are required, plus eye and face protection when splashing is possible.",
+        "perOption": {
+          "a": "Single standard gloves do not protect enough against hazardous drugs.",
+          "b": "Hazardous-drug guidance calls for double chemotherapy-tested gloves and an impermeable gown that closes in the back.",
+          "c": "Sterile gloves are not tested against chemotherapy agents, and a mask alone does not protect the skin.",
+          "d": "Cloth gowns absorb hazardous drugs instead of blocking them."
+        },
+        "references": [
+          "Nursing pharmacology texts (e.g. Lehne; McCuistion) and the drug's prescribing information",
+          "DRAFT: original question written with AI assistance; an RN or nurse educator must check it before candidates rely on it."
+        ]
+      },
+      "educationalObjective": "Select PPE for handling hazardous drugs."
+    },
+    {
+      "id": "c1a00001-0000-4000-8000-000000000016",
+      "itemType": "multiple_choice",
+      "clientNeeds": "SECE.SIC",
+      "bodySystem": "fundamentals",
+      "subtopics": [
+        "client-identification-and-error-prevention"
+      ],
+      "cjmmSkill": "take_action",
+      "difficulty": "easy",
+      "stem": "Before giving a medication, which method should the nurse use to identify the client?",
+      "content": {
+        "options": [
+          {
+            "id": "a",
+            "text": "Check the room number and the name on the door"
+          },
+          {
+            "id": "b",
+            "text": "Ask \"Are you John Smith?\""
+          },
+          {
+            "id": "c",
+            "text": "Compare the client's stated name and date of birth with the identification band and the medication record"
+          },
+          {
+            "id": "d",
+            "text": "Ask the client's roommate to confirm the client's name"
+          }
+        ]
+      },
+      "key": {
+        "correct": "c"
+      },
+      "rationale": {
+        "correct": "The Joint Commission requires at least two client identifiers (such as name and date of birth), never the room number.",
+        "perOption": {
+          "a": "Room numbers and door signs change and are not client identifiers.",
+          "b": "Confused or hard-of-hearing clients may say yes to any name.",
+          "c": "Two identifiers checked against the band and the record meet the safety standard.",
+          "d": "Another person is not a reliable identifier."
+        },
+        "references": [
+          "Fundamentals of nursing texts (e.g. Potter & Perry)",
+          "DRAFT: original question written with AI assistance; an RN or nurse educator must check it before candidates rely on it."
+        ]
+      },
+      "educationalObjective": "Identify clients with two identifiers before care."
+    },
+    {
+      "id": "c1a00001-0000-4000-8000-000000000017",
+      "itemType": "multiple_choice",
+      "clientNeeds": "SECE.SIC",
+      "bodySystem": "pharmacology",
+      "subtopics": [
+        "client-identification-and-error-prevention"
+      ],
+      "cjmmSkill": "prioritize_hypotheses",
+      "difficulty": "moderate",
+      "stem": "The nurse realizes that a client received 10 units of regular insulin instead of the prescribed 1 unit. What should the nurse do first?",
+      "content": {
+        "options": [
+          {
+            "id": "a",
+            "text": "Complete an incident (variance) report"
+          },
+          {
+            "id": "b",
+            "text": "Check the client's blood glucose and assess for signs of hypoglycemia"
+          },
+          {
+            "id": "c",
+            "text": "Notify the nurse manager"
+          },
+          {
+            "id": "d",
+            "text": "Document the error in the client's medical record"
+          }
+        ]
+      },
+      "key": {
+        "correct": "b"
+      },
+      "rationale": {
+        "correct": "After a medication error, assess the client first, then notify the provider, intervene as ordered, document the facts and complete an incident report.",
+        "perOption": {
+          "a": "The report is required, but the client's safety comes first.",
+          "b": "Assessing the client for harm is the first priority after any medication error.",
+          "c": "The manager is informed after the client is assessed and the provider is notified.",
+          "d": "The facts of the event and the client's condition are charted after the client is assessed and treated."
+        },
+        "references": [
+          "Fundamentals of nursing texts (e.g. Potter & Perry)",
+          "DRAFT: original question written with AI assistance; an RN or nurse educator must check it before candidates rely on it."
+        ]
+      },
+      "educationalObjective": "Respond to a medication error in priority order."
+    },
+    {
+      "id": "c1a00001-0000-4000-8000-000000000018",
+      "itemType": "multiple_choice",
+      "clientNeeds": "SECE.SIC",
+      "bodySystem": "fundamentals",
+      "subtopics": [
+        "client-identification-and-error-prevention"
+      ],
+      "cjmmSkill": "take_action",
+      "difficulty": "moderate",
+      "stem": "The nurse finds a client sitting on the floor beside the bed. After assessing the client, which entry should the nurse write in the medical record?",
+      "content": {
+        "options": [
+          {
+            "id": "a",
+            "text": "\"Client fell out of bed because the side rail was down. Incident report completed.\""
+          },
+          {
+            "id": "b",
+            "text": "\"Found client sitting on floor next to bed at 0215. States, 'I was going to the bathroom.' No visible injuries. Provider notified.\""
+          },
+          {
+            "id": "c",
+            "text": "\"Client fell due to confusion. Should have been watched more closely.\""
+          },
+          {
+            "id": "d",
+            "text": "\"See incident report for details of the fall.\""
+          }
+        ]
+      },
+      "key": {
+        "correct": "b"
+      },
+      "rationale": {
+        "correct": "Chart only objective facts and the care given; the incident report is a separate quality document and is not referred to in the chart.",
+        "perOption": {
+          "a": "The cause is assumed, and incident reports are never mentioned in the medical record.",
+          "b": "This is objective and factual, includes the client's own words, the assessment and the notification.",
+          "c": "Opinions and blame do not belong in the medical record.",
+          "d": "Referring to the incident report makes it part of the record and removes its confidential, quality-improvement status."
+        },
+        "references": [
+          "Fundamentals of nursing texts (e.g. Potter & Perry)",
+          "DRAFT: original question written with AI assistance; an RN or nurse educator must check it before candidates rely on it."
+        ]
+      },
+      "educationalObjective": "Document an adverse event objectively."
+    },
+    {
+      "id": "c1a00001-0000-4000-8000-000000000019",
+      "itemType": "multiple_choice",
+      "clientNeeds": "SECE.SIC",
+      "bodySystem": "fundamentals",
+      "subtopics": [
+        "equipment-and-home-safety"
+      ],
+      "cjmmSkill": "take_action",
+      "difficulty": "easy",
+      "stem": "The nurse notices that the power cord of a client's IV infusion pump is frayed. What should the nurse do?",
+      "content": {
+        "options": [
+          {
+            "id": "a",
+            "text": "Wrap the frayed area with tape and keep using the pump"
+          },
+          {
+            "id": "b",
+            "text": "Replace the pump, label the damaged one and send it to biomedical engineering"
+          },
+          {
+            "id": "c",
+            "text": "Keep using the pump until the infusion is finished"
+          },
+          {
+            "id": "d",
+            "text": "Unplug the pump and run the infusion on battery power indefinitely"
+          }
+        ]
+      },
+      "key": {
+        "correct": "b"
+      },
+      "rationale": {
+        "correct": "Damaged electrical equipment is removed from use immediately, labeled and reported so no one else uses it.",
+        "perOption": {
+          "a": "Tape doesn't make a damaged cord safe; it remains an electrical hazard.",
+          "b": "Faulty equipment is taken out of service, labeled and reported for repair.",
+          "c": "Continued use risks shock or fire.",
+          "d": "The pump still needs inspection, and the battery will run out."
+        },
+        "references": [
+          "Fundamentals of nursing texts (e.g. Potter & Perry)",
+          "DRAFT: original question written with AI assistance; an RN or nurse educator must check it before candidates rely on it."
+        ]
+      },
+      "educationalObjective": "Remove unsafe equipment from service."
+    },
+    {
+      "id": "c1a00001-0000-4000-8000-000000000020",
+      "itemType": "highlight_text",
+      "clientNeeds": "SECE.SIC",
+      "bodySystem": "fundamentals",
+      "subtopics": [
+        "equipment-and-home-safety"
+      ],
+      "cjmmSkill": "recognize_cues",
+      "difficulty": "moderate",
+      "stem": "The home health nurse documents a first visit with an 82-year-old client who lives alone. Highlight the findings that are safety hazards.",
+      "content": {
+        "segments": [
+          {
+            "id": "s1",
+            "text": "Client walks with a cane. ",
+            "selectable": false
+          },
+          {
+            "id": "s2",
+            "text": "Throw rugs are placed in the hallway and kitchen",
+            "selectable": true
+          },
+          {
+            "id": "s3",
+            "text": ". ",
+            "selectable": false
+          },
+          {
+            "id": "s4",
+            "text": "A space heater sits 30 cm (1 ft) from the bedroom curtains",
+            "selectable": true
+          },
+          {
+            "id": "s5",
+            "text": ". ",
+            "selectable": false
+          },
+          {
+            "id": "s6",
+            "text": "Grab bars are installed beside the toilet and in the shower",
+            "selectable": true
+          },
+          {
+            "id": "s7",
+            "text": ". ",
+            "selectable": false
+          },
+          {
+            "id": "s8",
+            "text": "Pills are kept in unlabeled containers on the counter",
+            "selectable": true
+          },
+          {
+            "id": "s9",
+            "text": ". ",
+            "selectable": false
+          },
+          {
+            "id": "s10",
+            "text": "A working smoke detector is on each floor",
+            "selectable": true
+          },
+          {
+            "id": "s11",
+            "text": ". ",
+            "selectable": false
+          },
+          {
+            "id": "s12",
+            "text": "The stairway light switch is only at the bottom of the stairs",
+            "selectable": true
+          },
+          {
+            "id": "s13",
+            "text": ".",
+            "selectable": false
+          }
+        ]
+      },
+      "key": {
+        "correct": [
+          "s2",
+          "s4",
+          "s8",
+          "s12"
+        ]
+      },
+      "rationale": {
+        "correct": "Home safety assessment focuses on fall hazards (rugs, poor lighting), fire hazards (space heaters) and medication safety.",
+        "perOption": {
+          "s2": "Loose rugs are a leading cause of tripping and falls in older adults.",
+          "s4": "Space heaters need about 1 m (3 ft) of clearance from anything flammable.",
+          "s6": "Grab bars reduce bathroom falls; they are protective.",
+          "s8": "Unlabeled medications increase the risk of taking the wrong drug or dose.",
+          "s10": "Working smoke detectors are protective.",
+          "s12": "Climbing down dark stairs increases fall risk; switches are needed at both ends."
+        },
+        "references": [
+          "Fundamentals of nursing texts (e.g. Potter & Perry)",
+          "DRAFT: original question written with AI assistance; an RN or nurse educator must check it before candidates rely on it."
+        ]
+      },
+      "educationalObjective": "Recognize hazards during a home safety assessment."
+    },
+    {
+      "id": "c1a00001-0000-4000-8000-000000000021",
+      "itemType": "multiple_choice",
+      "clientNeeds": "SECE.SIC",
+      "bodySystem": "respiratory",
+      "subtopics": [
+        "equipment-and-home-safety"
+      ],
+      "cjmmSkill": "evaluate_outcomes",
+      "difficulty": "moderate",
+      "stem": "The nurse teaches a client about home oxygen therapy. Which statement by the client shows a need for more teaching?",
+      "content": {
+        "options": [
+          {
+            "id": "a",
+            "text": "\"I will post 'No Smoking' signs on my doors.\""
+          },
+          {
+            "id": "b",
+            "text": "\"I will store the spare tanks upright in a stand.\""
+          },
+          {
+            "id": "c",
+            "text": "\"I will keep my oxygen tank next to the gas stove so it's handy while I cook.\""
+          },
+          {
+            "id": "d",
+            "text": "\"I will use a water-based lubricant on my lips instead of petroleum jelly.\""
+          }
+        ]
+      },
+      "key": {
+        "correct": "c"
+      },
+      "rationale": {
+        "correct": "Oxygen feeds fire, so keep it away from flames, heat and petroleum-based products, and don't smoke.",
+        "perOption": {
+          "a": "No Smoking signs warn visitors that oxygen is in use.",
+          "b": "Securing tanks upright prevents them from falling and damaging the valve.",
+          "c": "Oxygen supports combustion; tanks must be kept at least 1.5 to 3 m (5 to 10 ft) from open flames and heat sources.",
+          "d": "Petroleum products are flammable near oxygen; water-based products are safe."
+        },
+        "references": [
+          "Fundamentals of nursing texts (e.g. Potter & Perry)",
+          "DRAFT: original question written with AI assistance; an RN or nurse educator must check it before candidates rely on it."
+        ]
+      },
+      "educationalObjective": "Evaluate teaching on home oxygen safety."
+    },
+    {
+      "id": "c1a00001-0000-4000-8000-000000000022",
+      "itemType": "multiple_choice",
+      "clientNeeds": "SECE.SIC",
+      "bodySystem": "neurological",
+      "subtopics": [
+        "injury-prevention"
+      ],
+      "cjmmSkill": "take_action",
+      "difficulty": "moderate",
+      "stem": "A client begins having a generalized tonic-clonic seizure while sitting in a chair. What should the nurse do first?",
+      "content": {
+        "options": [
+          {
+            "id": "a",
+            "text": "Put a padded tongue blade between the client's teeth"
+          },
+          {
+            "id": "b",
+            "text": "Hold the client's arms and legs to stop the movements"
+          },
+          {
+            "id": "c",
+            "text": "Ease the client to the floor and turn the client onto the side"
+          },
+          {
+            "id": "d",
+            "text": "Leave to get the emergency medication"
+          }
+        ]
+      },
+      "key": {
+        "correct": "c"
+      },
+      "rationale": {
+        "correct": "During a seizure: protect from injury, keep the airway open by turning to the side, never restrain or put anything in the mouth, and time the seizure.",
+        "perOption": {
+          "a": "Objects in the mouth can break teeth or block the airway.",
+          "b": "Restraining a seizing client can cause fractures and soft-tissue injury.",
+          "c": "Lowering the client prevents a fall, and the side-lying position keeps the airway open and lets secretions drain.",
+          "d": "The nurse stays with the client and calls for help."
+        },
+        "references": [
+          "Medical-surgical nursing texts (e.g. Lewis; Ignatavicius)",
+          "DRAFT: original question written with AI assistance; an RN or nurse educator must check it before candidates rely on it."
+        ]
+      },
+      "educationalObjective": "Protect a client during a tonic-clonic seizure."
+    },
+    {
+      "id": "c1a00001-0000-4000-8000-000000000023",
+      "itemType": "multiple_choice",
+      "clientNeeds": "SECE.SIC",
+      "bodySystem": "fundamentals",
+      "subtopics": [
+        "injury-prevention"
+      ],
+      "cjmmSkill": "evaluate_outcomes",
+      "difficulty": "easy",
+      "stem": "The nurse is observing assistive personnel move clients. Which action requires the nurse to intervene?",
+      "content": {
+        "options": [
+          {
+            "id": "a",
+            "text": "Raises the bed to waist height before giving a bed bath"
+          },
+          {
+            "id": "b",
+            "text": "Bends at the waist to lift a box of supplies from the floor"
+          },
+          {
+            "id": "c",
+            "text": "Uses a friction-reducing sheet and a coworker to move a client up in bed"
+          },
+          {
+            "id": "d",
+            "text": "Stands with feet apart to widen the base of support"
+          }
+        ]
+      },
+      "key": {
+        "correct": "b"
+      },
+      "rationale": {
+        "correct": "Safe body mechanics: bend the knees, keep the back straight, hold loads close and use assistive devices.",
+        "perOption": {
+          "a": "Working at waist height reduces back strain.",
+          "b": "Lifting with a bent back strains the spine; the AP should bend the knees and keep the back straight.",
+          "c": "Friction-reducing devices and two staff reduce injury to the client and the staff.",
+          "d": "A wide base of support improves balance."
+        },
+        "references": [
+          "Fundamentals of nursing texts (e.g. Potter & Perry)",
+          "DRAFT: original question written with AI assistance; an RN or nurse educator must check it before candidates rely on it."
+        ]
+      },
+      "educationalObjective": "Recognize unsafe body mechanics."
+    },
+    {
+      "id": "c1a00001-0000-4000-8000-000000000024",
+      "itemType": "multiple_choice",
+      "clientNeeds": "SECE.SIC",
+      "bodySystem": "maternal-newborn",
+      "subtopics": [
+        "injury-prevention"
+      ],
+      "cjmmSkill": "take_action",
+      "difficulty": "moderate",
+      "stem": "A person wearing scrubs but no hospital identification badge enters a postpartum room and says, \"I need to take the baby to the nursery for a test.\" What should the nurse do?",
+      "content": {
+        "options": [
+          {
+            "id": "a",
+            "text": "Let the person take the baby because they are wearing scrubs"
+          },
+          {
+            "id": "b",
+            "text": "Keep the newborn in the room with the mother and call security"
+          },
+          {
+            "id": "c",
+            "text": "Walk with the person to the nursery"
+          },
+          {
+            "id": "d",
+            "text": "Ask the mother whether she agrees to let the person take the baby"
+          }
+        ]
+      },
+      "key": {
+        "correct": "b"
+      },
+      "rationale": {
+        "correct": "Infant abduction prevention: only staff with the unit's special identification badge transport infants; anyone else is challenged and security is called.",
+        "perOption": {
+          "a": "Scrubs are easy to get; they don't prove a person is staff.",
+          "b": "Staff without proper identification must not take an infant; the nurse protects the infant and activates the security plan.",
+          "c": "Going along doesn't confirm the person's identity and still lets an unknown person handle the infant.",
+          "d": "The mother can't verify staff identity either; the facility's security plan applies."
+        },
+        "references": [
+          "Maternal-newborn nursing texts (e.g. Perry; Lowdermilk)",
+          "DRAFT: original question written with AI assistance; an RN or nurse educator must check it before candidates rely on it."
+        ]
+      },
+      "educationalObjective": "Apply infant security measures."
+    },
+    {
+      "id": "c1a00001-0000-4000-8000-000000000025",
+      "itemType": "select_n",
+      "clientNeeds": "SECE.SIC",
+      "bodySystem": "hematologic-oncologic",
+      "subtopics": [
+        "neutropenic-precautions"
+      ],
+      "cjmmSkill": "generate_solutions",
+      "difficulty": "moderate",
+      "stem": "A client receiving chemotherapy has an absolute neutrophil count of 400/mm3. Select the 3 actions the nurse should take.",
+      "content": {
+        "options": [
+          {
+            "id": "a",
+            "text": "Perform hand hygiene before entering the room"
+          },
+          {
+            "id": "b",
+            "text": "Remove fresh flowers and plants from the room"
+          },
+          {
+            "id": "c",
+            "text": "Assign the client to a private room"
+          },
+          {
+            "id": "d",
+            "text": "Take the client's temperature rectally"
+          },
+          {
+            "id": "e",
+            "text": "Allow visitors with mild cold symptoms if they wear a mask"
+          },
+          {
+            "id": "f",
+            "text": "Place the client in a negative-pressure room"
+          }
+        ],
+        "selectCount": 3
+      },
+      "key": {
+        "correct": [
+          "a",
+          "b",
+          "c"
+        ]
+      },
+      "rationale": {
+        "correct": "An ANC under 500/mm3 means severe neutropenia and a high infection risk. Protective precautions keep pathogens away from the client.",
+        "perOption": {
+          "a": "Hand hygiene is the most effective way to prevent infection in a neutropenic client.",
+          "b": "Flowers, plants and standing water can carry bacteria and fungi.",
+          "c": "A private room reduces exposure to pathogens from other clients.",
+          "d": "Rectal temperatures can injure the mucosa and introduce bacteria; they are avoided.",
+          "e": "People with any infection should not visit a neutropenic client.",
+          "f": "Negative pressure is for airborne infections; protective environments use positive pressure."
+        },
+        "references": [
+          "Medical-surgical nursing texts (e.g. Lewis; Ignatavicius)",
+          "DRAFT: original question written with AI assistance; an RN or nurse educator must check it before candidates rely on it."
+        ]
+      },
+      "educationalObjective": "Implement neutropenic precautions."
+    }
+  ]
+}
