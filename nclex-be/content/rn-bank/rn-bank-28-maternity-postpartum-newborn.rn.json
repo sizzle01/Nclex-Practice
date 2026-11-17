@@ -1,0 +1,1119 @@
+{
+  "notice": "RN bank batch 28: Maternity III: postpartum and newborn care. Reviewed by the content team on 17 November 2026. See REVIEW-LOG.md.",
+  "track": "RN",
+  "subtopics": [
+    {
+      "clientNeeds": "HPM",
+      "slug": "postpartum-care",
+      "name": "Postpartum care"
+    },
+    {
+      "clientNeeds": "PHI.PA",
+      "slug": "postpartum-hemorrhage",
+      "name": "Postpartum hemorrhage"
+    },
+    {
+      "clientNeeds": "PHI.PPT",
+      "slug": "obstetric-medications",
+      "name": "Obstetric medications"
+    },
+    {
+      "clientNeeds": "PSI",
+      "slug": "perinatal-mood-disorders",
+      "name": "Perinatal mood disorders"
+    },
+    {
+      "clientNeeds": "HPM",
+      "slug": "breastfeeding",
+      "name": "Breastfeeding and infant feeding"
+    },
+    {
+      "clientNeeds": "HPM",
+      "slug": "newborn-care",
+      "name": "Newborn assessment and care"
+    },
+    {
+      "clientNeeds": "PHI.PA",
+      "slug": "newborn-complications",
+      "name": "Newborn complications"
+    }
+  ],
+  "questions": [
+    {
+      "id": "c1a00028-0000-4000-8000-000000000001",
+      "itemType": "multiple_choice",
+      "clientNeeds": "HPM",
+      "bodySystem": "maternal-newborn",
+      "subtopics": [
+        "postpartum-care"
+      ],
+      "cjmmSkill": "take_action",
+      "difficulty": "moderate",
+      "stem": "Four hours after birth, the client's fundus is above the umbilicus and pushed to the right. What should the nurse do first?",
+      "content": {
+        "options": [
+          {
+            "id": "a",
+            "text": "Help the client empty her bladder"
+          },
+          {
+            "id": "b",
+            "text": "Massage the fundus vigorously"
+          },
+          {
+            "id": "c",
+            "text": "Give methylergonovine"
+          },
+          {
+            "id": "d",
+            "text": "Document it as normal"
+          }
+        ]
+      },
+      "key": {
+        "correct": "a"
+      },
+      "rationale": {
+        "correct": "A displaced, high fundus suggests bladder distention; have the client void, then reassess.",
+        "perOption": {
+          "a": "A full bladder displaces the uterus and keeps it from contracting.",
+          "b": "Emptying the bladder corrects the cause.",
+          "c": "The likely cause is the bladder.",
+          "d": "Displacement isn't normal."
+        },
+        "references": [
+          "Maternal-newborn nursing texts (e.g. Perry; Lowdermilk)",
+          "Reviewed by the content team on 17 November 2026."
+        ]
+      },
+      "educationalObjective": "Respond to a displaced fundus."
+    },
+    {
+      "id": "c1a00028-0000-4000-8000-000000000002",
+      "itemType": "multiple_choice",
+      "clientNeeds": "PHI.PA",
+      "bodySystem": "maternal-newborn",
+      "subtopics": [
+        "postpartum-hemorrhage"
+      ],
+      "cjmmSkill": "take_action",
+      "difficulty": "moderate",
+      "stem": "One hour after birth, the client's fundus is soft and boggy at the umbilicus, and lochia is heavy. What should the nurse do first?",
+      "content": {
+        "options": [
+          {
+            "id": "a",
+            "text": "Massage the fundus"
+          },
+          {
+            "id": "b",
+            "text": "Call the provider before doing anything"
+          },
+          {
+            "id": "c",
+            "text": "Give a pain medication"
+          },
+          {
+            "id": "d",
+            "text": "Place the client flat and wait"
+          }
+        ]
+      },
+      "key": {
+        "correct": "a"
+      },
+      "rationale": {
+        "correct": "Uterine atony is the most common cause of postpartum hemorrhage; massage first, then give uterotonics.",
+        "perOption": {
+          "a": "Massage stimulates the uterus to contract and reduces bleeding.",
+          "b": "Massage comes first, then notify if bleeding continues.",
+          "c": "This doesn't address the bleeding.",
+          "d": "This delays treatment."
+        },
+        "references": [
+          "Maternal-newborn nursing texts (e.g. Perry; Lowdermilk)",
+          "Reviewed by the content team on 17 November 2026."
+        ]
+      },
+      "educationalObjective": "Respond to uterine atony."
+    },
+    {
+      "id": "c1a00028-0000-4000-8000-000000000003",
+      "itemType": "multiple_choice",
+      "clientNeeds": "PHI.PPT",
+      "bodySystem": "maternal-newborn",
+      "subtopics": [
+        "obstetric-medications"
+      ],
+      "cjmmSkill": "analyze_cues",
+      "difficulty": "difficult",
+      "stem": "A postpartum client with heavy bleeding has a blood pressure of 152/98 mm Hg. Which prescribed uterotonic should the nurse question?",
+      "content": {
+        "options": [
+          {
+            "id": "a",
+            "text": "Methylergonovine"
+          },
+          {
+            "id": "b",
+            "text": "Oxytocin"
+          },
+          {
+            "id": "c",
+            "text": "Misoprostol"
+          },
+          {
+            "id": "d",
+            "text": "Tranexamic acid"
+          }
+        ]
+      },
+      "key": {
+        "correct": "a"
+      },
+      "rationale": {
+        "correct": "Methylergonovine: avoid with hypertension or preeclampsia. Carboprost: avoid with asthma.",
+        "perOption": {
+          "a": "Methylergonovine causes vasoconstriction and is contraindicated with hypertension.",
+          "b": "Oxytocin is first-line.",
+          "c": "This is acceptable with hypertension.",
+          "d": "This is acceptable."
+        },
+        "references": [
+          "Nursing pharmacology texts (e.g. Lehne; McCuistion) and the drug's prescribing information",
+          "Maternal-newborn nursing texts (e.g. Perry; Lowdermilk)",
+          "Reviewed by the content team on 17 November 2026."
+        ]
+      },
+      "educationalObjective": "Identify contraindications to uterotonics."
+    },
+    {
+      "id": "c1a00028-0000-4000-8000-000000000004",
+      "itemType": "multiple_choice",
+      "clientNeeds": "PHI.PA",
+      "bodySystem": "maternal-newborn",
+      "subtopics": [
+        "postpartum-hemorrhage"
+      ],
+      "cjmmSkill": "recognize_cues",
+      "difficulty": "moderate",
+      "stem": "Which postpartum finding requires immediate follow-up?",
+      "content": {
+        "options": [
+          {
+            "id": "a",
+            "text": "Saturating a perineal pad in 15 minutes"
+          },
+          {
+            "id": "b",
+            "text": "Dark red lochia on day 1"
+          },
+          {
+            "id": "c",
+            "text": "Small clots, smaller than a quarter"
+          },
+          {
+            "id": "d",
+            "text": "Cramping while breastfeeding"
+          }
+        ]
+      },
+      "key": {
+        "correct": "a"
+      },
+      "rationale": {
+        "correct": "Report a pad saturated in 15 minutes, large clots, a boggy uterus or signs of shock.",
+        "perOption": {
+          "a": "This indicates hemorrhage.",
+          "b": "Lochia rubra is expected for 1 to 3 days.",
+          "c": "Small clots are common.",
+          "d": "Oxytocin release causes afterpains."
+        },
+        "references": [
+          "Maternal-newborn nursing texts (e.g. Perry; Lowdermilk)",
+          "Reviewed by the content team on 17 November 2026."
+        ]
+      },
+      "educationalObjective": "Recognize excessive postpartum bleeding."
+    },
+    {
+      "id": "c1a00028-0000-4000-8000-000000000005",
+      "itemType": "multiple_choice",
+      "clientNeeds": "PHI.PA",
+      "bodySystem": "maternal-newborn",
+      "subtopics": [
+        "postpartum-hemorrhage"
+      ],
+      "cjmmSkill": "analyze_cues",
+      "difficulty": "difficult",
+      "stem": "A postpartum client's fundus is firm and midline, but a steady trickle of bright red blood continues. What does the nurse suspect?",
+      "content": {
+        "options": [
+          {
+            "id": "a",
+            "text": "A cervical or vaginal laceration"
+          },
+          {
+            "id": "b",
+            "text": "Uterine atony"
+          },
+          {
+            "id": "c",
+            "text": "Normal lochia"
+          },
+          {
+            "id": "d",
+            "text": "Bladder distention"
+          }
+        ]
+      },
+      "key": {
+        "correct": "a"
+      },
+      "rationale": {
+        "correct": "Firm uterus with bleeding: suspect a laceration or hematoma and notify the provider.",
+        "perOption": {
+          "a": "Bleeding with a firm uterus suggests trauma, not atony.",
+          "b": "With atony the uterus is boggy.",
+          "c": "A continuous bright red trickle isn't normal.",
+          "d": "The fundus is midline."
+        },
+        "references": [
+          "Maternal-newborn nursing texts (e.g. Perry; Lowdermilk)",
+          "Reviewed by the content team on 17 November 2026."
+        ]
+      },
+      "educationalObjective": "Recognize bleeding from a laceration."
+    },
+    {
+      "id": "c1a00028-0000-4000-8000-000000000006",
+      "itemType": "multiple_choice",
+      "clientNeeds": "PHI.PA",
+      "bodySystem": "maternal-newborn",
+      "subtopics": [
+        "postpartum-hemorrhage"
+      ],
+      "cjmmSkill": "recognize_cues",
+      "difficulty": "moderate",
+      "stem": "On postpartum day 3, a client has a temperature of 38.6 °C (101.5 °F), a tender uterus and foul-smelling lochia. What does the nurse suspect?",
+      "content": {
+        "options": [
+          {
+            "id": "a",
+            "text": "Endometritis"
+          },
+          {
+            "id": "b",
+            "text": "Normal involution"
+          },
+          {
+            "id": "c",
+            "text": "Engorgement fever"
+          },
+          {
+            "id": "d",
+            "text": "Postpartum blues"
+          }
+        ]
+      },
+      "key": {
+        "correct": "a"
+      },
+      "rationale": {
+        "correct": "Endometritis is more common after cesarean birth; it needs antibiotics.",
+        "perOption": {
+          "a": "Infection of the uterine lining causes fever, tenderness and foul lochia.",
+          "b": "Fever and foul lochia aren't normal.",
+          "c": "This doesn't cause foul lochia.",
+          "d": "This is emotional."
+        },
+        "references": [
+          "Maternal-newborn nursing texts (e.g. Perry; Lowdermilk)",
+          "Reviewed by the content team on 17 November 2026."
+        ]
+      },
+      "educationalObjective": "Recognize postpartum endometritis."
+    },
+    {
+      "id": "c1a00028-0000-4000-8000-000000000007",
+      "itemType": "multiple_choice",
+      "clientNeeds": "PSI",
+      "bodySystem": "maternal-newborn",
+      "subtopics": [
+        "perinatal-mood-disorders"
+      ],
+      "cjmmSkill": "analyze_cues",
+      "difficulty": "easy",
+      "stem": "On postpartum day 3, a client cries easily and feels overwhelmed but is caring for her baby. What is the best nursing response?",
+      "content": {
+        "options": [
+          {
+            "id": "a",
+            "text": "Explain that postpartum blues are common and short-lived, offer support and teach the signs of depression"
+          },
+          {
+            "id": "b",
+            "text": "Refer for emergency psychiatric care"
+          },
+          {
+            "id": "c",
+            "text": "Tell her to stop breastfeeding"
+          },
+          {
+            "id": "d",
+            "text": "Ignore the crying"
+          }
+        ]
+      },
+      "key": {
+        "correct": "a"
+      },
+      "rationale": {
+        "correct": "Postpartum blues: within 2 weeks, mild; depression: lasts longer and impairs function; psychosis: an emergency.",
+        "perOption": {
+          "a": "Baby blues affect most mothers and usually resolve within 2 weeks.",
+          "b": "This isn't indicated for blues.",
+          "c": "This isn't related.",
+          "d": "Support is important."
+        },
+        "references": [
+          "Maternal-newborn nursing texts (e.g. Perry; Lowdermilk)",
+          "Psychiatric-mental health nursing texts (e.g. Varcarolis; Halter)",
+          "Reviewed by the content team on 17 November 2026."
+        ]
+      },
+      "educationalObjective": "Respond to postpartum blues."
+    },
+    {
+      "id": "c1a00028-0000-4000-8000-000000000008",
+      "itemType": "multiple_choice",
+      "clientNeeds": "PSI",
+      "bodySystem": "maternal-newborn",
+      "subtopics": [
+        "perinatal-mood-disorders"
+      ],
+      "cjmmSkill": "take_action",
+      "difficulty": "difficult",
+      "stem": "One week after birth, a client says voices are telling her the baby is evil. What should the nurse do first?",
+      "content": {
+        "options": [
+          {
+            "id": "a",
+            "text": "Make sure the infant is safe and the mother isn't left alone with the baby, and get emergency psychiatric evaluation"
+          },
+          {
+            "id": "b",
+            "text": "Reassure her that these are normal new-mother worries"
+          },
+          {
+            "id": "c",
+            "text": "Schedule a routine follow-up"
+          },
+          {
+            "id": "d",
+            "text": "Suggest more sleep"
+          }
+        ]
+      },
+      "key": {
+        "correct": "a"
+      },
+      "rationale": {
+        "correct": "Postpartum psychosis is a psychiatric emergency.",
+        "perOption": {
+          "a": "Postpartum psychosis puts both mother and baby at risk.",
+          "b": "Hallucinations aren't normal.",
+          "c": "This is an emergency.",
+          "d": "This doesn't address the danger."
+        },
+        "references": [
+          "Psychiatric-mental health nursing texts (e.g. Varcarolis; Halter)",
+          "Reviewed by the content team on 17 November 2026."
+        ]
+      },
+      "educationalObjective": "Respond to postpartum psychosis."
+    },
+    {
+      "id": "c1a00028-0000-4000-8000-000000000009",
+      "itemType": "multiple_choice",
+      "clientNeeds": "HPM",
+      "bodySystem": "maternal-newborn",
+      "subtopics": [
+        "breastfeeding"
+      ],
+      "cjmmSkill": "evaluate_outcomes",
+      "difficulty": "moderate",
+      "stem": "Which observation shows that a newborn is latched on correctly?",
+      "content": {
+        "options": [
+          {
+            "id": "a",
+            "text": "The mouth is wide open, lips flanged outward and much of the areola is in the mouth"
+          },
+          {
+            "id": "b",
+            "text": "Only the nipple is in the baby's mouth"
+          },
+          {
+            "id": "c",
+            "text": "Clicking sounds during sucking"
+          },
+          {
+            "id": "d",
+            "text": "The cheeks pull in with each suck"
+          }
+        ]
+      },
+      "key": {
+        "correct": "a"
+      },
+      "rationale": {
+        "correct": "Good latch: wide mouth, flanged lips, audible swallowing, no pain after the first moments.",
+        "perOption": {
+          "a": "A deep latch allows effective feeding and prevents nipple pain.",
+          "b": "This causes nipple trauma.",
+          "c": "This means a poor seal.",
+          "d": "This suggests a poor latch."
+        },
+        "references": [
+          "Maternal-newborn nursing texts (e.g. Perry; Lowdermilk)",
+          "Reviewed by the content team on 17 November 2026."
+        ]
+      },
+      "educationalObjective": "Assess breastfeeding latch."
+    },
+    {
+      "id": "c1a00028-0000-4000-8000-000000000010",
+      "itemType": "multiple_choice",
+      "clientNeeds": "HPM",
+      "bodySystem": "maternal-newborn",
+      "subtopics": [
+        "breastfeeding"
+      ],
+      "cjmmSkill": "generate_solutions",
+      "difficulty": "moderate",
+      "stem": "A breastfeeding client on day 4 has swollen, hard, painful breasts. What should the nurse suggest?",
+      "content": {
+        "options": [
+          {
+            "id": "a",
+            "text": "Breastfeed often, apply warmth before feeding and cold packs after"
+          },
+          {
+            "id": "b",
+            "text": "Stop breastfeeding until the swelling goes down"
+          },
+          {
+            "id": "c",
+            "text": "Bind the breasts tightly"
+          },
+          {
+            "id": "d",
+            "text": "Limit feedings to every 6 hours"
+          }
+        ]
+      },
+      "key": {
+        "correct": "a"
+      },
+      "rationale": {
+        "correct": "Engorgement: feed often, warm before, cold after, and express milk if needed.",
+        "perOption": {
+          "a": "Frequent emptying relieves engorgement; warmth helps let-down and cold reduces swelling.",
+          "b": "This worsens engorgement.",
+          "c": "This is for non-breastfeeding clients.",
+          "d": "Frequent feeding is needed."
+        },
+        "references": [
+          "Maternal-newborn nursing texts (e.g. Perry; Lowdermilk)",
+          "Reviewed by the content team on 17 November 2026."
+        ]
+      },
+      "educationalObjective": "Manage breast engorgement."
+    },
+    {
+      "id": "c1a00028-0000-4000-8000-000000000011",
+      "itemType": "multiple_choice",
+      "clientNeeds": "HPM",
+      "bodySystem": "maternal-newborn",
+      "subtopics": [
+        "breastfeeding"
+      ],
+      "cjmmSkill": "generate_solutions",
+      "difficulty": "moderate",
+      "stem": "A breastfeeding client has mastitis and is prescribed antibiotics. What should the nurse tell her?",
+      "content": {
+        "options": [
+          {
+            "id": "a",
+            "text": "\"Keep breastfeeding or pumping from both breasts.\""
+          },
+          {
+            "id": "b",
+            "text": "\"Stop breastfeeding until the antibiotics are finished.\""
+          },
+          {
+            "id": "c",
+            "text": "\"Feed only from the unaffected breast.\""
+          },
+          {
+            "id": "d",
+            "text": "\"Throw out your milk.\""
+          }
+        ]
+      },
+      "key": {
+        "correct": "a"
+      },
+      "rationale": {
+        "correct": "Mastitis: keep emptying the breast, rest, fluids and antibiotics.",
+        "perOption": {
+          "a": "Emptying the breast helps clear the infection, and the milk is safe for the baby.",
+          "b": "This worsens the condition.",
+          "c": "The affected breast needs emptying.",
+          "d": "The milk is safe."
+        },
+        "references": [
+          "Maternal-newborn nursing texts (e.g. Perry; Lowdermilk)",
+          "Reviewed by the content team on 17 November 2026."
+        ]
+      },
+      "educationalObjective": "Teach about mastitis."
+    },
+    {
+      "id": "c1a00028-0000-4000-8000-000000000012",
+      "itemType": "fill_blank_calc",
+      "clientNeeds": "HPM",
+      "bodySystem": "maternal-newborn",
+      "subtopics": [
+        "newborn-care"
+      ],
+      "cjmmSkill": "analyze_cues",
+      "difficulty": "moderate",
+      "stem": "At 1 minute, a newborn has a heart rate of 110/min, a weak, irregular cry, some flexion of the extremities, a grimace with suctioning, and a pink body with blue hands and feet. What is the Apgar score?",
+      "content": {
+        "unit": "points",
+        "decimals": 0,
+        "inputLabel": "Apgar score"
+      },
+      "key": {
+        "value": 6,
+        "rounding": "exact"
+      },
+      "rationale": {
+        "correct": "Heart rate 110 (above 100) = 2. Respiratory effort weak and irregular = 1. Muscle tone some flexion = 1. Reflex irritability grimace = 1. Color acrocyanosis = 1. Total = 6.",
+        "perOption": {},
+        "references": [
+          "Maternal-newborn nursing texts (e.g. Perry; Lowdermilk)",
+          "Reviewed by the content team on 17 November 2026."
+        ]
+      },
+      "educationalObjective": "Calculate an Apgar score."
+    },
+    {
+      "id": "c1a00028-0000-4000-8000-000000000013",
+      "itemType": "multiple_choice",
+      "clientNeeds": "HPM",
+      "bodySystem": "maternal-newborn",
+      "subtopics": [
+        "newborn-care"
+      ],
+      "cjmmSkill": "take_action",
+      "difficulty": "easy",
+      "stem": "Immediately after a healthy term birth, what should the nurse do first?",
+      "content": {
+        "options": [
+          {
+            "id": "a",
+            "text": "Dry the newborn and place the baby skin-to-skin to prevent heat loss"
+          },
+          {
+            "id": "b",
+            "text": "Give the vitamin K injection"
+          },
+          {
+            "id": "c",
+            "text": "Give the first bath"
+          },
+          {
+            "id": "d",
+            "text": "Weigh the newborn"
+          }
+        ]
+      },
+      "key": {
+        "correct": "a"
+      },
+      "rationale": {
+        "correct": "First priorities: airway, breathing and warmth.",
+        "perOption": {
+          "a": "Drying stimulates breathing and prevents cold stress.",
+          "b": "This can wait.",
+          "c": "Bathing is delayed until the baby is stable.",
+          "d": "This can wait."
+        },
+        "references": [
+          "Maternal-newborn nursing texts (e.g. Perry; Lowdermilk)",
+          "Reviewed by the content team on 17 November 2026."
+        ]
+      },
+      "educationalObjective": "Prioritize newborn care right after birth."
+    },
+    {
+      "id": "c1a00028-0000-4000-8000-000000000014",
+      "itemType": "multiple_choice",
+      "clientNeeds": "HPM",
+      "bodySystem": "maternal-newborn",
+      "subtopics": [
+        "newborn-care"
+      ],
+      "cjmmSkill": "generate_solutions",
+      "difficulty": "moderate",
+      "stem": "A parent asks why the newborn needs a vitamin K injection. What is the best response?",
+      "content": {
+        "options": [
+          {
+            "id": "a",
+            "text": "\"Newborns have low vitamin K, and the shot prevents serious bleeding.\""
+          },
+          {
+            "id": "b",
+            "text": "\"It prevents eye infections.\""
+          },
+          {
+            "id": "c",
+            "text": "\"It's a vaccine against hepatitis.\""
+          },
+          {
+            "id": "d",
+            "text": "\"It treats jaundice.\""
+          }
+        ]
+      },
+      "key": {
+        "correct": "a"
+      },
+      "rationale": {
+        "correct": "Newborn medications: vitamin K IM, erythromycin eye ointment and the hepatitis B vaccine.",
+        "perOption": {
+          "a": "Vitamin K prevents vitamin K deficiency bleeding.",
+          "b": "That is erythromycin eye ointment.",
+          "c": "That is the hepatitis B vaccine.",
+          "d": "This isn't its purpose."
+        },
+        "references": [
+          "Maternal-newborn nursing texts (e.g. Perry; Lowdermilk)",
+          "Reviewed by the content team on 17 November 2026."
+        ]
+      },
+      "educationalObjective": "Explain newborn vitamin K."
+    },
+    {
+      "id": "c1a00028-0000-4000-8000-000000000015",
+      "itemType": "multiple_choice",
+      "clientNeeds": "PHI.PA",
+      "bodySystem": "maternal-newborn",
+      "subtopics": [
+        "newborn-complications"
+      ],
+      "cjmmSkill": "recognize_cues",
+      "difficulty": "moderate",
+      "stem": "A 2-hour-old newborn of a mother with diabetes is jittery. What should the nurse check first?",
+      "content": {
+        "options": [
+          {
+            "id": "a",
+            "text": "Blood glucose"
+          },
+          {
+            "id": "b",
+            "text": "Temperature only"
+          },
+          {
+            "id": "c",
+            "text": "Bilirubin"
+          },
+          {
+            "id": "d",
+            "text": "Hearing"
+          }
+        ]
+      },
+      "key": {
+        "correct": "a"
+      },
+      "rationale": {
+        "correct": "Newborn hypoglycemia: jitteriness, poor feeding, lethargy; feed and recheck per protocol.",
+        "perOption": {
+          "a": "Infants of diabetic mothers are at risk for hypoglycemia.",
+          "b": "Glucose is the priority.",
+          "c": "Jaundice appears later.",
+          "d": "This isn't related."
+        },
+        "references": [
+          "Maternal-newborn nursing texts (e.g. Perry; Lowdermilk)",
+          "Reviewed by the content team on 17 November 2026."
+        ]
+      },
+      "educationalObjective": "Recognize newborn hypoglycemia."
+    },
+    {
+      "id": "c1a00028-0000-4000-8000-000000000016",
+      "itemType": "multiple_choice",
+      "clientNeeds": "PHI.PA",
+      "bodySystem": "maternal-newborn",
+      "subtopics": [
+        "newborn-complications"
+      ],
+      "cjmmSkill": "analyze_cues",
+      "difficulty": "moderate",
+      "stem": "A newborn's skin looks yellow at 18 hours of age. What should the nurse do?",
+      "content": {
+        "options": [
+          {
+            "id": "a",
+            "text": "Report it, because jaundice in the first 24 hours is pathologic"
+          },
+          {
+            "id": "b",
+            "text": "Document it as normal physiologic jaundice"
+          },
+          {
+            "id": "c",
+            "text": "Put the baby in direct sunlight"
+          },
+          {
+            "id": "d",
+            "text": "Stop breastfeeding"
+          }
+        ]
+      },
+      "key": {
+        "correct": "a"
+      },
+      "rationale": {
+        "correct": "Jaundice in the first 24 hours is pathologic; physiologic jaundice appears on days 2 to 3.",
+        "perOption": {
+          "a": "Early jaundice suggests hemolysis, such as ABO or Rh incompatibility.",
+          "b": "Physiologic jaundice appears after 24 hours.",
+          "c": "This isn't the treatment.",
+          "d": "This isn't indicated."
+        },
+        "references": [
+          "Maternal-newborn nursing texts (e.g. Perry; Lowdermilk)",
+          "Reviewed by the content team on 17 November 2026."
+        ]
+      },
+      "educationalObjective": "Recognize pathologic newborn jaundice."
+    },
+    {
+      "id": "c1a00028-0000-4000-8000-000000000017",
+      "itemType": "multiple_choice",
+      "clientNeeds": "PHI.PA",
+      "bodySystem": "maternal-newborn",
+      "subtopics": [
+        "newborn-complications"
+      ],
+      "cjmmSkill": "evaluate_outcomes",
+      "difficulty": "moderate",
+      "stem": "A newborn is receiving phototherapy. Which action requires correction?",
+      "content": {
+        "options": [
+          {
+            "id": "a",
+            "text": "Covering the baby's eyes with shields"
+          },
+          {
+            "id": "b",
+            "text": "Applying lotion to the baby's skin"
+          },
+          {
+            "id": "c",
+            "text": "Repositioning the baby often"
+          },
+          {
+            "id": "d",
+            "text": "Monitoring the temperature and hydration"
+          }
+        ]
+      },
+      "key": {
+        "correct": "b"
+      },
+      "rationale": {
+        "correct": "Phototherapy: eye shields, maximum skin exposure (diaper only), no lotions, monitor temperature and fluids.",
+        "perOption": {
+          "a": "This protects the eyes.",
+          "b": "Lotions can cause burns under the lights.",
+          "c": "This exposes all of the skin.",
+          "d": "This is needed."
+        },
+        "references": [
+          "Maternal-newborn nursing texts (e.g. Perry; Lowdermilk)",
+          "Reviewed by the content team on 17 November 2026."
+        ]
+      },
+      "educationalObjective": "Provide safe phototherapy."
+    },
+    {
+      "id": "c1a00028-0000-4000-8000-000000000018",
+      "itemType": "sata",
+      "clientNeeds": "PHI.PA",
+      "bodySystem": "maternal-newborn",
+      "subtopics": [
+        "newborn-complications"
+      ],
+      "cjmmSkill": "recognize_cues",
+      "difficulty": "moderate",
+      "stem": "Which findings in a newborn suggest respiratory distress? Select all that apply.",
+      "content": {
+        "options": [
+          {
+            "id": "a",
+            "text": "Nasal flaring"
+          },
+          {
+            "id": "b",
+            "text": "Expiratory grunting"
+          },
+          {
+            "id": "c",
+            "text": "Chest retractions"
+          },
+          {
+            "id": "d",
+            "text": "Respiratory rate of 72/min"
+          },
+          {
+            "id": "e",
+            "text": "Brief pauses in breathing of less than 15 seconds"
+          },
+          {
+            "id": "f",
+            "text": "Blue hands and feet in the first day"
+          }
+        ]
+      },
+      "key": {
+        "correct": [
+          "a",
+          "b",
+          "c",
+          "d"
+        ]
+      },
+      "rationale": {
+        "correct": "Newborn respiratory distress: flaring, grunting, retractions, tachypnea and central cyanosis.",
+        "perOption": {
+          "a": "This is a sign of increased work of breathing.",
+          "b": "Grunting keeps the alveoli open.",
+          "c": "These show increased work of breathing.",
+          "d": "Above 60/min is tachypnea.",
+          "e": "Periodic breathing is normal in newborns.",
+          "f": "Acrocyanosis is normal."
+        },
+        "references": [
+          "Maternal-newborn nursing texts (e.g. Perry; Lowdermilk)",
+          "Reviewed by the content team on 17 November 2026."
+        ]
+      },
+      "educationalObjective": "Recognize newborn respiratory distress."
+    },
+    {
+      "id": "c1a00028-0000-4000-8000-000000000019",
+      "itemType": "multiple_choice",
+      "clientNeeds": "HPM",
+      "bodySystem": "maternal-newborn",
+      "subtopics": [
+        "newborn-care"
+      ],
+      "cjmmSkill": "analyze_cues",
+      "difficulty": "easy",
+      "stem": "Which newborn finding requires follow-up?",
+      "content": {
+        "options": [
+          {
+            "id": "a",
+            "text": "Bluish color of the lips and trunk"
+          },
+          {
+            "id": "b",
+            "text": "Bluish hands and feet"
+          },
+          {
+            "id": "c",
+            "text": "Small white bumps on the nose"
+          },
+          {
+            "id": "d",
+            "text": "Blue-gray patches on the lower back"
+          }
+        ]
+      },
+      "key": {
+        "correct": "a"
+      },
+      "rationale": {
+        "correct": "Normal newborn: acrocyanosis, milia, molding, dermal melanocytosis. Abnormal: central cyanosis.",
+        "perOption": {
+          "a": "Central cyanosis indicates hypoxemia.",
+          "b": "Acrocyanosis is normal.",
+          "c": "Milia are normal.",
+          "d": "These are congenital dermal melanocytosis, which is benign."
+        },
+        "references": [
+          "Maternal-newborn nursing texts (e.g. Perry; Lowdermilk)",
+          "Reviewed by the content team on 17 November 2026."
+        ]
+      },
+      "educationalObjective": "Tell normal newborn findings from abnormal ones."
+    },
+    {
+      "id": "c1a00028-0000-4000-8000-000000000020",
+      "itemType": "multiple_choice",
+      "clientNeeds": "HPM",
+      "bodySystem": "maternal-newborn",
+      "subtopics": [
+        "newborn-care"
+      ],
+      "cjmmSkill": "generate_solutions",
+      "difficulty": "easy",
+      "stem": "Which instruction about umbilical cord care is correct?",
+      "content": {
+        "options": [
+          {
+            "id": "a",
+            "text": "Keep the cord clean and dry and fold the diaper below it"
+          },
+          {
+            "id": "b",
+            "text": "Apply petroleum jelly every day"
+          },
+          {
+            "id": "c",
+            "text": "Give tub baths until the cord falls off"
+          },
+          {
+            "id": "d",
+            "text": "Pull the cord off at 1 week"
+          }
+        ]
+      },
+      "key": {
+        "correct": "a"
+      },
+      "rationale": {
+        "correct": "Cord care: keep it dry, use sponge baths and report redness, odor or discharge.",
+        "perOption": {
+          "a": "Dry care promotes separation and prevents infection.",
+          "b": "This keeps the cord moist.",
+          "c": "Sponge baths are recommended until it separates.",
+          "d": "It falls off on its own in 1 to 3 weeks."
+        },
+        "references": [
+          "Maternal-newborn nursing texts (e.g. Perry; Lowdermilk)",
+          "Reviewed by the content team on 17 November 2026."
+        ]
+      },
+      "educationalObjective": "Teach umbilical cord care."
+    },
+    {
+      "id": "c1a00028-0000-4000-8000-000000000021",
+      "itemType": "multiple_choice",
+      "clientNeeds": "HPM",
+      "bodySystem": "maternal-newborn",
+      "subtopics": [
+        "newborn-care"
+      ],
+      "cjmmSkill": "evaluate_outcomes",
+      "difficulty": "moderate",
+      "stem": "A parent asks about care after a circumcision with a Plastibell. Which statement needs correction?",
+      "content": {
+        "options": [
+          {
+            "id": "a",
+            "text": "\"I'll call if there's active bleeding.\""
+          },
+          {
+            "id": "b",
+            "text": "\"A yellowish crust on the tip is normal.\""
+          },
+          {
+            "id": "c",
+            "text": "\"I'll pull the plastic ring off after 2 days.\""
+          },
+          {
+            "id": "d",
+            "text": "\"I'll watch for wet diapers.\""
+          }
+        ]
+      },
+      "key": {
+        "correct": "c"
+      },
+      "rationale": {
+        "correct": "Circumcision: watch for bleeding and voiding; the yellow exudate is normal; don't remove the Plastibell.",
+        "perOption": {
+          "a": "This is correct.",
+          "b": "This is normal healing.",
+          "c": "The ring falls off on its own in 5 to 8 days.",
+          "d": "Voiding confirms there's no obstruction."
+        },
+        "references": [
+          "Maternal-newborn nursing texts (e.g. Perry; Lowdermilk)",
+          "Reviewed by the content team on 17 November 2026."
+        ]
+      },
+      "educationalObjective": "Teach circumcision care."
+    },
+    {
+      "id": "c1a00028-0000-4000-8000-000000000022",
+      "itemType": "multiple_choice",
+      "clientNeeds": "PHI.PA",
+      "bodySystem": "maternal-newborn",
+      "subtopics": [
+        "newborn-complications"
+      ],
+      "cjmmSkill": "take_action",
+      "difficulty": "moderate",
+      "stem": "A newborn whose mother used opioids has a high-pitched cry, tremors and frantic sucking. Which intervention is most appropriate?",
+      "content": {
+        "options": [
+          {
+            "id": "a",
+            "text": "Swaddle the baby and keep the room quiet and dim"
+          },
+          {
+            "id": "b",
+            "text": "Keep the lights on and play music"
+          },
+          {
+            "id": "c",
+            "text": "Unwrap the baby to cool down"
+          },
+          {
+            "id": "d",
+            "text": "Limit feedings"
+          }
+        ]
+      },
+      "key": {
+        "correct": "a"
+      },
+      "rationale": {
+        "correct": "Neonatal abstinence syndrome: low stimulation, swaddling, small frequent feeds, rooming-in and medication if needed.",
+        "perOption": {
+          "a": "Reducing stimulation calms neonatal opioid withdrawal.",
+          "b": "This increases stimulation.",
+          "c": "Swaddling is comforting.",
+          "d": "Small, frequent feedings are needed."
+        },
+        "references": [
+          "Pediatric nursing texts (e.g. Hockenberry, Wong's Essentials of Pediatric Nursing)",
+          "Reviewed by the content team on 17 November 2026."
+        ]
+      },
+      "educationalObjective": "Care for a newborn with withdrawal."
+    }
+  ]
+}

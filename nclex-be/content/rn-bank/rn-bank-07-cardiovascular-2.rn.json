@@ -1,0 +1,1385 @@
+{
+  "notice": "RN bank batch 7: Cardiovascular II: heart failure, shock, inflammatory and valvular disease. Reviewed by the content team on 17 November 2026. See REVIEW-LOG.md.",
+  "track": "RN",
+  "subtopics": [
+    {
+      "clientNeeds": "PHI.PA",
+      "slug": "heart-failure-assessment",
+      "name": "Heart failure assessment"
+    },
+    {
+      "clientNeeds": "HPM",
+      "slug": "heart-failure-self-care-teaching",
+      "name": "Heart failure self-care teaching"
+    },
+    {
+      "clientNeeds": "PHI.RRP",
+      "slug": "electrolyte-and-glucose-lab-results",
+      "name": "Electrolyte and glucose lab results"
+    },
+    {
+      "clientNeeds": "PHI.PA",
+      "slug": "acute-pulmonary-edema",
+      "name": "Acute pulmonary edema"
+    },
+    {
+      "clientNeeds": "PHI.PPT",
+      "slug": "heart-failure-interventions",
+      "name": "Heart failure interventions"
+    },
+    {
+      "clientNeeds": "PHI.PA",
+      "slug": "heart-failure-treatment-response",
+      "name": "Heart failure treatment response"
+    },
+    {
+      "clientNeeds": "PHI.PA",
+      "slug": "shock-and-sepsis",
+      "name": "Shock and sepsis"
+    },
+    {
+      "clientNeeds": "PHI.PPT",
+      "slug": "medication-dose-calculations",
+      "name": "Medication dose calculations"
+    },
+    {
+      "clientNeeds": "PHI.PA",
+      "slug": "inflammatory-and-valvular-heart-disease",
+      "name": "Inflammatory and valvular heart disease"
+    },
+    {
+      "clientNeeds": "HPM",
+      "slug": "cardiac-rehabilitation",
+      "name": "Cardiac rehabilitation and risk reduction"
+    },
+    {
+      "clientNeeds": "PHI.PA",
+      "slug": "hypertensive-crisis",
+      "name": "Hypertensive crisis"
+    },
+    {
+      "clientNeeds": "PHI.PPT",
+      "slug": "adverse-effects-of-medications",
+      "name": "Adverse effects of medications"
+    },
+    {
+      "clientNeeds": "PHI.RRP",
+      "slug": "post-procedure-complications",
+      "name": "Post-procedure complications"
+    },
+    {
+      "clientNeeds": "PHI.PA",
+      "slug": "vascular-disorders",
+      "name": "Vascular disorders"
+    }
+  ],
+  "questions": [
+    {
+      "id": "c1a00007-0000-4000-8000-000000000001",
+      "itemType": "multiple_choice",
+      "clientNeeds": "PHI.PA",
+      "bodySystem": "cardiovascular",
+      "subtopics": [
+        "heart-failure-assessment"
+      ],
+      "cjmmSkill": "recognize_cues",
+      "difficulty": "easy",
+      "stem": "Which finding is the most reliable indicator of fluid retention in a client with heart failure?",
+      "content": {
+        "options": [
+          {
+            "id": "a",
+            "text": "Weight gain of 2 kg (4.4 lb) in 2 days"
+          },
+          {
+            "id": "b",
+            "text": "Report of increased fatigue"
+          },
+          {
+            "id": "c",
+            "text": "Heart rate of 92/min"
+          },
+          {
+            "id": "d",
+            "text": "Report of thirst"
+          }
+        ]
+      },
+      "key": {
+        "correct": "a"
+      },
+      "rationale": {
+        "correct": "Daily weight is the best measure of fluid balance in heart failure.",
+        "perOption": {
+          "a": "Rapid weight gain is the most sensitive sign of fluid retention; 1 kg is about 1 L of fluid.",
+          "b": "Fatigue is nonspecific.",
+          "c": "A mildly fast heart rate has many causes.",
+          "d": "Thirst doesn't reliably show fluid retention."
+        },
+        "references": [
+          "Medical-surgical nursing texts (e.g. Lewis; Ignatavicius)",
+          "Reviewed by the content team on 17 November 2026."
+        ]
+      },
+      "educationalObjective": "Identify the best indicator of fluid retention in heart failure."
+    },
+    {
+      "id": "c1a00007-0000-4000-8000-000000000002",
+      "itemType": "sata",
+      "clientNeeds": "HPM",
+      "bodySystem": "cardiovascular",
+      "subtopics": [
+        "heart-failure-self-care-teaching"
+      ],
+      "cjmmSkill": "generate_solutions",
+      "difficulty": "moderate",
+      "stem": "The nurse is teaching a client with heart failure about self-care at home. Which instructions should the nurse include? Select all that apply.",
+      "content": {
+        "options": [
+          {
+            "id": "a",
+            "text": "Weigh yourself every morning after urinating, before breakfast, on the same scale"
+          },
+          {
+            "id": "b",
+            "text": "Report a gain of more than 1 to 1.5 kg (2 to 3 lb) in a day or 2 kg (5 lb) in a week"
+          },
+          {
+            "id": "c",
+            "text": "Limit sodium as prescribed, often to about 2,000 mg a day"
+          },
+          {
+            "id": "d",
+            "text": "Use a salt substitute to flavor food"
+          },
+          {
+            "id": "e",
+            "text": "Report increasing shortness of breath or needing more pillows to sleep"
+          },
+          {
+            "id": "f",
+            "text": "Skip your diuretic on days you feel well"
+          }
+        ]
+      },
+      "key": {
+        "correct": [
+          "a",
+          "b",
+          "c",
+          "e"
+        ]
+      },
+      "rationale": {
+        "correct": "Heart failure self-care: daily weights, sodium limits, taking medications consistently and recognizing early warning signs.",
+        "perOption": {
+          "a": "Consistent timing makes daily weights comparable.",
+          "b": "These gains signal fluid retention that needs treatment adjustment.",
+          "c": "Sodium causes fluid retention.",
+          "d": "Most salt substitutes contain potassium and can cause hyperkalemia with ACE inhibitors, ARBs or spironolactone.",
+          "e": "Worsening dyspnea or orthopnea signals decompensation.",
+          "f": "Diuretics are taken as prescribed to prevent fluid buildup."
+        },
+        "references": [
+          "Medical-surgical nursing texts (e.g. Lewis; Ignatavicius)",
+          "Reviewed by the content team on 17 November 2026."
+        ]
+      },
+      "educationalObjective": "Teach heart failure self-management."
+    },
+    {
+      "id": "c1a00007-0000-4000-8000-000000000003",
+      "itemType": "multiple_choice",
+      "clientNeeds": "PHI.RRP",
+      "bodySystem": "cardiovascular",
+      "subtopics": [
+        "electrolyte-and-glucose-lab-results"
+      ],
+      "cjmmSkill": "analyze_cues",
+      "difficulty": "moderate",
+      "stem": "A client comes to the emergency department with shortness of breath. The B-type natriuretic peptide (BNP) is 980 pg/mL. What does this result suggest?",
+      "content": {
+        "options": [
+          {
+            "id": "a",
+            "text": "Heart failure"
+          },
+          {
+            "id": "b",
+            "text": "Pneumonia"
+          },
+          {
+            "id": "c",
+            "text": "Asthma"
+          },
+          {
+            "id": "d",
+            "text": "Normal finding"
+          }
+        ]
+      },
+      "key": {
+        "correct": "a"
+      },
+      "rationale": {
+        "correct": "BNP rises with ventricular stretch and helps identify heart failure as the cause of dyspnea.",
+        "perOption": {
+          "a": "BNP is released when the ventricles are stretched; a level above about 400 pg/mL strongly suggests heart failure.",
+          "b": "Pneumonia doesn't markedly raise BNP.",
+          "c": "BNP helps tell cardiac causes of dyspnea from lung causes like asthma.",
+          "d": "A normal BNP is below 100 pg/mL."
+        },
+        "references": [
+          "Medical-surgical nursing texts (e.g. Lewis; Ignatavicius)",
+          "Laboratory reference ranges as used in common NCLEX review texts; follow the facility's ranges",
+          "Reviewed by the content team on 17 November 2026."
+        ]
+      },
+      "educationalObjective": "Interpret a BNP result."
+    },
+    {
+      "id": "c1a00007-0000-4000-8000-000000000004",
+      "itemType": "multiple_choice",
+      "clientNeeds": "PHI.PA",
+      "bodySystem": "cardiovascular",
+      "subtopics": [
+        "acute-pulmonary-edema"
+      ],
+      "cjmmSkill": "take_action",
+      "difficulty": "moderate",
+      "stem": "A client with acute pulmonary edema is extremely short of breath, with pink frothy sputum. How should the nurse position the client?",
+      "content": {
+        "options": [
+          {
+            "id": "a",
+            "text": "Supine with the legs raised"
+          },
+          {
+            "id": "b",
+            "text": "High Fowler's with the legs dependent"
+          },
+          {
+            "id": "c",
+            "text": "Left side-lying"
+          },
+          {
+            "id": "d",
+            "text": "Trendelenburg"
+          }
+        ]
+      },
+      "key": {
+        "correct": "b"
+      },
+      "rationale": {
+        "correct": "Upright with legs dependent reduces preload and improves lung expansion.",
+        "perOption": {
+          "a": "This increases venous return and worsens the pulmonary congestion.",
+          "b": "Sitting upright with the legs down reduces venous return and eases breathing.",
+          "c": "This doesn't reduce preload.",
+          "d": "Head-down positioning worsens pulmonary edema."
+        },
+        "references": [
+          "Medical-surgical nursing texts (e.g. Lewis; Ignatavicius)",
+          "Reviewed by the content team on 17 November 2026."
+        ]
+      },
+      "educationalObjective": "Position a client with acute pulmonary edema."
+    },
+    {
+      "id": "c1a00007-0000-4000-8000-000000000005",
+      "itemType": "multiple_choice",
+      "clientNeeds": "PHI.PPT",
+      "bodySystem": "cardiovascular",
+      "subtopics": [
+        "heart-failure-interventions"
+      ],
+      "cjmmSkill": "take_action",
+      "difficulty": "difficult",
+      "stem": "A client with heart failure is switching from lisinopril to sacubitril/valsartan. Lisinopril was last taken this morning. When can the first dose of sacubitril/valsartan be given?",
+      "content": {
+        "options": [
+          {
+            "id": "a",
+            "text": "Right away"
+          },
+          {
+            "id": "b",
+            "text": "At least 36 hours after the last lisinopril dose"
+          },
+          {
+            "id": "c",
+            "text": "After 7 days"
+          },
+          {
+            "id": "d",
+            "text": "Only after a normal potassium level"
+          }
+        ]
+      },
+      "key": {
+        "correct": "b"
+      },
+      "rationale": {
+        "correct": "An ACE inhibitor and an ARNI must never overlap; separate them by 36 hours.",
+        "perOption": {
+          "a": "Taking the two together raises the risk of angioedema.",
+          "b": "A 36-hour washout is required between an ACE inhibitor and sacubitril/valsartan to reduce the risk of angioedema.",
+          "c": "A week isn't required.",
+          "d": "Potassium is monitored, but the washout period is the key rule."
+        },
+        "references": [
+          "Nursing pharmacology texts (e.g. Lehne; McCuistion) and the drug's prescribing information",
+          "Reviewed by the content team on 17 November 2026."
+        ]
+      },
+      "educationalObjective": "Apply the washout rule when switching from an ACE inhibitor to sacubitril/valsartan."
+    },
+    {
+      "id": "c1a00007-0000-4000-8000-000000000006",
+      "itemType": "multiple_choice",
+      "clientNeeds": "PHI.PPT",
+      "bodySystem": "cardiovascular",
+      "subtopics": [
+        "heart-failure-interventions"
+      ],
+      "cjmmSkill": "recognize_cues",
+      "difficulty": "moderate",
+      "stem": "A client with heart failure takes spironolactone and lisinopril. Which laboratory value should the nurse monitor most closely?",
+      "content": {
+        "options": [
+          {
+            "id": "a",
+            "text": "Potassium"
+          },
+          {
+            "id": "b",
+            "text": "Calcium"
+          },
+          {
+            "id": "c",
+            "text": "Glucose"
+          },
+          {
+            "id": "d",
+            "text": "Hemoglobin"
+          }
+        ]
+      },
+      "key": {
+        "correct": "a"
+      },
+      "rationale": {
+        "correct": "Spironolactone (a potassium-sparing diuretic) and ACE inhibitors both raise potassium.",
+        "perOption": {
+          "a": "Both drugs keep potassium in the body, so the risk of hyperkalemia is high.",
+          "b": "Calcium isn't significantly affected.",
+          "c": "Glucose isn't the main concern.",
+          "d": "Hemoglobin isn't the main concern."
+        },
+        "references": [
+          "Nursing pharmacology texts (e.g. Lehne; McCuistion) and the drug's prescribing information",
+          "Reviewed by the content team on 17 November 2026."
+        ]
+      },
+      "educationalObjective": "Monitor potassium with potassium-sparing drug combinations."
+    },
+    {
+      "id": "c1a00007-0000-4000-8000-000000000007",
+      "itemType": "dropdown_cloze",
+      "clientNeeds": "PHI.PA",
+      "bodySystem": "cardiovascular",
+      "subtopics": [
+        "heart-failure-treatment-response"
+      ],
+      "cjmmSkill": "analyze_cues",
+      "difficulty": "moderate",
+      "stem": "Review the exhibit, then complete the sentence.",
+      "content": {
+        "template": "The client's findings are most consistent with {{b1}}, and the nurse should anticipate a prescription for {{b2}}.",
+        "blanks": [
+          {
+            "id": "b1",
+            "options": [
+              {
+                "id": "a",
+                "text": "an exacerbation of heart failure"
+              },
+              {
+                "id": "b",
+                "text": "community-acquired pneumonia"
+              },
+              {
+                "id": "c",
+                "text": "dehydration"
+              }
+            ]
+          },
+          {
+            "id": "b2",
+            "options": [
+              {
+                "id": "a",
+                "text": "IV furosemide"
+              },
+              {
+                "id": "b",
+                "text": "a 1-liter normal saline bolus"
+              },
+              {
+                "id": "c",
+                "text": "IV antibiotics"
+              }
+            ]
+          }
+        ]
+      },
+      "key": {
+        "byBlank": {
+          "b1": "a",
+          "b2": "a"
+        }
+      },
+      "rationale": {
+        "correct": "Missing diuretic doses often triggers heart failure exacerbations. Treatment focuses on diuresis and reducing preload.",
+        "perOption": {
+          "b1:a": "Weight gain, crackles, orthopnea and edema after missing the diuretic show fluid overload.",
+          "b1:b": "There's no fever or productive cough to suggest infection.",
+          "b1:c": "The findings show fluid excess, not deficit.",
+          "b2:a": "A loop diuretic removes excess fluid quickly.",
+          "b2:b": "Extra fluid would worsen the overload.",
+          "b2:c": "There's no sign of infection."
+        },
+        "references": [
+          "Medical-surgical nursing texts (e.g. Lewis; Ignatavicius)",
+          "Reviewed by the content team on 17 November 2026."
+        ]
+      },
+      "educationalObjective": "Recognize a heart failure exacerbation and its treatment.",
+      "exhibits": [
+        {
+          "id": "clinic-note",
+          "kind": "text",
+          "title": "Clinic note",
+          "body": "A 70-year-old with heart failure ran out of furosemide 5 days ago. Weight is up 2.7 kg (6 lb) since last week. Sleeps on 3 pillows. Crackles in both lung bases; 2+ ankle edema. Temperature 36.8 °C; SpO2 91% on room air."
+        }
+      ]
+    },
+    {
+      "id": "c1a00007-0000-4000-8000-000000000008",
+      "itemType": "multiple_choice",
+      "clientNeeds": "PHI.PA",
+      "bodySystem": "cardiovascular",
+      "subtopics": [
+        "shock-and-sepsis"
+      ],
+      "cjmmSkill": "recognize_cues",
+      "difficulty": "moderate",
+      "stem": "A client is bleeding after surgery. Which finding is the earliest sign of hypovolemic shock?",
+      "content": {
+        "options": [
+          {
+            "id": "a",
+            "text": "Blood pressure falling from 128/76 to 84/50 mm Hg"
+          },
+          {
+            "id": "b",
+            "text": "Heart rate rising from 82/min to 108/min with restlessness"
+          },
+          {
+            "id": "c",
+            "text": "Urine output of 10 mL/hr"
+          },
+          {
+            "id": "d",
+            "text": "Mottled, cold extremities"
+          }
+        ]
+      },
+      "key": {
+        "correct": "b"
+      },
+      "rationale": {
+        "correct": "In early shock, compensation (tachycardia, vasoconstriction, anxiety) keeps blood pressure normal; hypotension appears late.",
+        "perOption": {
+          "a": "Hypotension is a later sign that appears after compensation fails.",
+          "b": "Tachycardia and restlessness come early as the body compensates.",
+          "c": "Very low urine output reflects established poor perfusion.",
+          "d": "Mottling is a late sign."
+        },
+        "references": [
+          "Medical-surgical nursing texts (e.g. Lewis; Ignatavicius)",
+          "Reviewed by the content team on 17 November 2026."
+        ]
+      },
+      "educationalObjective": "Recognize early compensated shock."
+    },
+    {
+      "id": "c1a00007-0000-4000-8000-000000000009",
+      "itemType": "matrix_mc",
+      "clientNeeds": "PHI.PA",
+      "bodySystem": "cardiovascular",
+      "subtopics": [
+        "shock-and-sepsis"
+      ],
+      "cjmmSkill": "analyze_cues",
+      "difficulty": "difficult",
+      "stem": "For each client finding, indicate the type of shock it is most consistent with.",
+      "content": {
+        "rows": [
+          {
+            "id": "r1",
+            "text": "Flat neck veins and falling hemoglobin after a gastrointestinal bleed"
+          },
+          {
+            "id": "r2",
+            "text": "Crackles, distended neck veins and an S3 after a large anterior MI"
+          },
+          {
+            "id": "r3",
+            "text": "Temperature 39.4 °C (103 °F), warm flushed skin and WBC 18,000/mm3"
+          },
+          {
+            "id": "r4",
+            "text": "Blood pressure 80/50 mm Hg with a rising troponin after chest pain"
+          },
+          {
+            "id": "r5",
+            "text": "Severe burns over 40% of the body with low urine output"
+          }
+        ],
+        "columns": [
+          {
+            "id": "c1",
+            "text": "Hypovolemic"
+          },
+          {
+            "id": "c2",
+            "text": "Cardiogenic"
+          },
+          {
+            "id": "c3",
+            "text": "Septic"
+          }
+        ]
+      },
+      "key": {
+        "byRow": {
+          "r1": "c1",
+          "r2": "c2",
+          "r3": "c3",
+          "r4": "c2",
+          "r5": "c1"
+        }
+      },
+      "rationale": {
+        "correct": "Hypovolemic = low volume (flat veins); cardiogenic = pump failure (congestion); septic = infection with vasodilation (warm skin early).",
+        "perOption": {
+          "r1:c1": "Blood loss reduces circulating volume, so the neck veins flatten.",
+          "r1:c2": "Cardiogenic shock causes distended neck veins.",
+          "r1:c3": "Sepsis doesn't directly lower hemoglobin.",
+          "r2:c1": "Volume loss doesn't cause crackles or JVD.",
+          "r2:c2": "A failing ventricle backs fluid into the lungs and veins.",
+          "r2:c3": "Septic shock doesn't typically cause an S3 or JVD.",
+          "r3:c1": "Hypovolemic shock causes cool, pale skin.",
+          "r3:c2": "Cardiogenic shock causes cool, clammy skin.",
+          "r3:c3": "Infection with vasodilation causes warm skin early in septic shock.",
+          "r4:c1": "There's no fluid or blood loss.",
+          "r4:c2": "Pump failure after MI causes cardiogenic shock.",
+          "r4:c3": "There are no signs of infection.",
+          "r5:c1": "Burn injury shifts large volumes of plasma out of the vessels.",
+          "r5:c2": "Pump function isn't the primary problem.",
+          "r5:c3": "There's no infection at this stage."
+        },
+        "references": [
+          "Medical-surgical nursing texts (e.g. Lewis; Ignatavicius)",
+          "Reviewed by the content team on 17 November 2026."
+        ]
+      },
+      "educationalObjective": "Distinguish types of shock by their findings."
+    },
+    {
+      "id": "c1a00007-0000-4000-8000-000000000010",
+      "itemType": "multiple_choice",
+      "clientNeeds": "PHI.PA",
+      "bodySystem": "immune",
+      "subtopics": [
+        "shock-and-sepsis"
+      ],
+      "cjmmSkill": "take_action",
+      "difficulty": "moderate",
+      "stem": "A client with suspected sepsis has a prescription for IV piperacillin-tazobactam. What should the nurse do before starting the antibiotic?",
+      "content": {
+        "options": [
+          {
+            "id": "a",
+            "text": "Draw blood cultures"
+          },
+          {
+            "id": "b",
+            "text": "Wait for the complete blood count results"
+          },
+          {
+            "id": "c",
+            "text": "Give acetaminophen for the fever"
+          },
+          {
+            "id": "d",
+            "text": "Insert a urinary catheter"
+          }
+        ]
+      },
+      "key": {
+        "correct": "a"
+      },
+      "rationale": {
+        "correct": "Sepsis bundle: measure lactate, draw blood cultures before antibiotics, give broad-spectrum antibiotics within 1 hour, and give 30 mL/kg crystalloid for hypotension or a lactate of 4 mmol/L or higher.",
+        "perOption": {
+          "a": "Cultures are drawn before antibiotics so the organism can be identified, but antibiotics shouldn't be delayed.",
+          "b": "Waiting delays lifesaving antibiotics.",
+          "c": "Treating fever doesn't come before cultures and antibiotics.",
+          "d": "A catheter isn't required before antibiotics."
+        },
+        "references": [
+          "Medical-surgical nursing texts (e.g. Lewis; Ignatavicius)",
+          "Reviewed by the content team on 17 November 2026."
+        ]
+      },
+      "educationalObjective": "Follow the sepsis bundle order."
+    },
+    {
+      "id": "c1a00007-0000-4000-8000-000000000011",
+      "itemType": "fill_blank_calc",
+      "clientNeeds": "PHI.PPT",
+      "bodySystem": "pharmacology",
+      "subtopics": [
+        "medication-dose-calculations"
+      ],
+      "cjmmSkill": "take_action",
+      "difficulty": "moderate",
+      "stem": "A client with septic shock who weighs 70 kg is prescribed a 30 mL/kg crystalloid bolus. How many mL should the client receive?",
+      "content": {
+        "unit": "mL",
+        "decimals": 0,
+        "inputLabel": "Total bolus volume"
+      },
+      "key": {
+        "value": 2100,
+        "rounding": "exact"
+      },
+      "rationale": {
+        "correct": "Volume = 30 mL/kg × 70 kg = 2,100 mL.",
+        "perOption": {},
+        "references": [
+          "Medical-surgical nursing texts (e.g. Lewis; Ignatavicius)",
+          "Reviewed by the content team on 17 November 2026."
+        ]
+      },
+      "educationalObjective": "Calculate a weight-based fluid bolus."
+    },
+    {
+      "id": "c1a00007-0000-4000-8000-000000000012",
+      "itemType": "multiple_choice",
+      "clientNeeds": "PHI.PA",
+      "bodySystem": "immune",
+      "subtopics": [
+        "shock-and-sepsis"
+      ],
+      "cjmmSkill": "take_action",
+      "difficulty": "moderate",
+      "stem": "Minutes after eating peanuts, a client has hives, wheezing, throat tightness and a blood pressure of 80/48 mm Hg. Which medication should the nurse give first?",
+      "content": {
+        "options": [
+          {
+            "id": "a",
+            "text": "Epinephrine 0.3 to 0.5 mg IM into the anterolateral thigh"
+          },
+          {
+            "id": "b",
+            "text": "Diphenhydramine 50 mg IV"
+          },
+          {
+            "id": "c",
+            "text": "Methylprednisolone 125 mg IV"
+          },
+          {
+            "id": "d",
+            "text": "Albuterol nebulizer"
+          }
+        ]
+      },
+      "key": {
+        "correct": "a"
+      },
+      "rationale": {
+        "correct": "Epinephrine IM is the first drug for anaphylaxis; repeat every 5 to 15 minutes as needed.",
+        "perOption": {
+          "a": "Epinephrine reverses bronchospasm and vasodilation and is the first-line treatment for anaphylaxis.",
+          "b": "Antihistamines are second-line and don't treat airway swelling or shock.",
+          "c": "Steroids act slowly and are adjuncts.",
+          "d": "Albuterol helps wheezing but doesn't treat shock or airway edema."
+        },
+        "references": [
+          "Medical-surgical nursing texts (e.g. Lewis; Ignatavicius)",
+          "Reviewed by the content team on 17 November 2026."
+        ]
+      },
+      "educationalObjective": "Give the first-line treatment for anaphylaxis."
+    },
+    {
+      "id": "c1a00007-0000-4000-8000-000000000013",
+      "itemType": "multiple_choice",
+      "clientNeeds": "PHI.PA",
+      "bodySystem": "cardiovascular",
+      "subtopics": [
+        "inflammatory-and-valvular-heart-disease"
+      ],
+      "cjmmSkill": "recognize_cues",
+      "difficulty": "difficult",
+      "stem": "Four hours after cardiac surgery, a client's chest tube drainage suddenly drops from 100 mL/hr to almost none. The blood pressure is 78/56 mm Hg, the neck veins are distended and the heart sounds are muffled. Which complication does the nurse suspect?",
+      "content": {
+        "options": [
+          {
+            "id": "a",
+            "text": "Cardiac tamponade"
+          },
+          {
+            "id": "b",
+            "text": "Hypovolemic shock"
+          },
+          {
+            "id": "c",
+            "text": "Pneumothorax"
+          },
+          {
+            "id": "d",
+            "text": "Pulmonary embolism"
+          }
+        ]
+      },
+      "key": {
+        "correct": "a"
+      },
+      "rationale": {
+        "correct": "Beck's triad (hypotension, JVD, muffled heart sounds) signals tamponade; prepare for pericardiocentesis or return to surgery.",
+        "perOption": {
+          "a": "Hypotension, JVD and muffled heart sounds (Beck's triad) after a sudden drop in drainage suggest blood collecting around the heart.",
+          "b": "Hypovolemia causes flat, not distended, neck veins.",
+          "c": "Pneumothorax causes absent breath sounds on one side, not muffled heart sounds.",
+          "d": "PE doesn't cause muffled heart sounds."
+        },
+        "references": [
+          "Medical-surgical nursing texts (e.g. Lewis; Ignatavicius)",
+          "Reviewed by the content team on 17 November 2026."
+        ]
+      },
+      "educationalObjective": "Recognize cardiac tamponade."
+    },
+    {
+      "id": "c1a00007-0000-4000-8000-000000000014",
+      "itemType": "multiple_choice",
+      "clientNeeds": "PHI.PA",
+      "bodySystem": "cardiovascular",
+      "subtopics": [
+        "inflammatory-and-valvular-heart-disease"
+      ],
+      "cjmmSkill": "analyze_cues",
+      "difficulty": "moderate",
+      "stem": "Which finding is most consistent with acute pericarditis?",
+      "content": {
+        "options": [
+          {
+            "id": "a",
+            "text": "Chest pain that eases when the client sits up and leans forward"
+          },
+          {
+            "id": "b",
+            "text": "Chest pain relieved by nitroglycerin"
+          },
+          {
+            "id": "c",
+            "text": "Chest pain that radiates to the left arm with exertion"
+          },
+          {
+            "id": "d",
+            "text": "Calf pain when walking"
+          }
+        ]
+      },
+      "key": {
+        "correct": "a"
+      },
+      "rationale": {
+        "correct": "Pericarditis: sharp, pleuritic chest pain relieved by sitting forward, with a pericardial friction rub.",
+        "perOption": {
+          "a": "Leaning forward pulls the inflamed pericardium away from the heart and eases the pain.",
+          "b": "This suggests angina.",
+          "c": "This suggests ischemia.",
+          "d": "This suggests peripheral arterial disease."
+        },
+        "references": [
+          "Medical-surgical nursing texts (e.g. Lewis; Ignatavicius)",
+          "Reviewed by the content team on 17 November 2026."
+        ]
+      },
+      "educationalObjective": "Recognize the signs of pericarditis."
+    },
+    {
+      "id": "c1a00007-0000-4000-8000-000000000015",
+      "itemType": "sata",
+      "clientNeeds": "PHI.PA",
+      "bodySystem": "cardiovascular",
+      "subtopics": [
+        "inflammatory-and-valvular-heart-disease"
+      ],
+      "cjmmSkill": "recognize_cues",
+      "difficulty": "moderate",
+      "stem": "A client with a history of injection drug use is admitted with suspected infective endocarditis. Which findings support this diagnosis? Select all that apply.",
+      "content": {
+        "options": [
+          {
+            "id": "a",
+            "text": "Fever"
+          },
+          {
+            "id": "b",
+            "text": "A new heart murmur"
+          },
+          {
+            "id": "c",
+            "text": "Splinter hemorrhages under the nails"
+          },
+          {
+            "id": "d",
+            "text": "Painless red spots on the palms and soles (Janeway lesions)"
+          },
+          {
+            "id": "e",
+            "text": "Barrel chest"
+          },
+          {
+            "id": "f",
+            "text": "Pericardial friction rub relieved by leaning forward"
+          }
+        ]
+      },
+      "key": {
+        "correct": [
+          "a",
+          "b",
+          "c",
+          "d"
+        ]
+      },
+      "rationale": {
+        "correct": "Endocarditis shows fever, a new murmur and embolic signs (splinter hemorrhages, Janeway lesions, Osler nodes, Roth spots).",
+        "perOption": {
+          "a": "Fever is the most common finding in endocarditis.",
+          "b": "Vegetations damage the valves and cause new murmurs.",
+          "c": "These come from small emboli.",
+          "d": "These are emboli to the skin.",
+          "e": "A barrel chest is associated with COPD.",
+          "f": "A friction rub points to pericarditis."
+        },
+        "references": [
+          "Medical-surgical nursing texts (e.g. Lewis; Ignatavicius)",
+          "Reviewed by the content team on 17 November 2026."
+        ]
+      },
+      "educationalObjective": "Recognize signs of infective endocarditis."
+    },
+    {
+      "id": "c1a00007-0000-4000-8000-000000000016",
+      "itemType": "multiple_choice",
+      "clientNeeds": "HPM",
+      "bodySystem": "cardiovascular",
+      "subtopics": [
+        "cardiac-rehabilitation"
+      ],
+      "cjmmSkill": "evaluate_outcomes",
+      "difficulty": "moderate",
+      "stem": "A client has had a mechanical mitral valve replacement. Which statement by the client shows a need for more teaching?",
+      "content": {
+        "options": [
+          {
+            "id": "a",
+            "text": "\"I'll take warfarin for the rest of my life.\""
+          },
+          {
+            "id": "b",
+            "text": "\"I'll tell my dentist about my valve before any dental work.\""
+          },
+          {
+            "id": "c",
+            "text": "\"I can stop the warfarin once the incision heals.\""
+          },
+          {
+            "id": "d",
+            "text": "\"I'll get my INR checked regularly.\""
+          }
+        ]
+      },
+      "key": {
+        "correct": "c"
+      },
+      "rationale": {
+        "correct": "Mechanical valves need lifelong warfarin with INR monitoring and endocarditis prophylaxis.",
+        "perOption": {
+          "a": "Mechanical valves need lifelong anticoagulation.",
+          "b": "Clients with prosthetic valves need antibiotic prophylaxis before some dental procedures.",
+          "c": "Stopping warfarin risks clots forming on the valve and stroke.",
+          "d": "Regular INR checks are needed."
+        },
+        "references": [
+          "Medical-surgical nursing texts (e.g. Lewis; Ignatavicius)",
+          "Nursing pharmacology texts (e.g. Lehne; McCuistion) and the drug's prescribing information",
+          "Reviewed by the content team on 17 November 2026."
+        ]
+      },
+      "educationalObjective": "Evaluate teaching after a mechanical valve replacement."
+    },
+    {
+      "id": "c1a00007-0000-4000-8000-000000000017",
+      "itemType": "multiple_choice",
+      "clientNeeds": "PHI.PA",
+      "bodySystem": "cardiovascular",
+      "subtopics": [
+        "inflammatory-and-valvular-heart-disease"
+      ],
+      "cjmmSkill": "analyze_cues",
+      "difficulty": "difficult",
+      "stem": "A client with severe aortic stenosis reports chest pain. Which prescription should the nurse question?",
+      "content": {
+        "options": [
+          {
+            "id": "a",
+            "text": "Oxygen at 2 L/min by nasal cannula if SpO2 is below 90%"
+          },
+          {
+            "id": "b",
+            "text": "Nitroglycerin 0.4 mg sublingual"
+          },
+          {
+            "id": "c",
+            "text": "12-lead ECG"
+          },
+          {
+            "id": "d",
+            "text": "Troponin level"
+          }
+        ]
+      },
+      "key": {
+        "correct": "b"
+      },
+      "rationale": {
+        "correct": "In severe aortic stenosis, vasodilators such as nitroglycerin must be used with great caution because they can cause a sharp fall in blood pressure.",
+        "perOption": {
+          "a": "Oxygen for hypoxemia is appropriate.",
+          "b": "Clients with severe aortic stenosis depend on preload; nitrates can cause severe hypotension and syncope.",
+          "c": "An ECG is appropriate for chest pain.",
+          "d": "A troponin level is appropriate to assess for ischemia."
+        },
+        "references": [
+          "Medical-surgical nursing texts (e.g. Lewis; Ignatavicius)",
+          "Nursing pharmacology texts (e.g. Lehne; McCuistion) and the drug's prescribing information",
+          "Reviewed by the content team on 17 November 2026."
+        ]
+      },
+      "educationalObjective": "Recognize the risk of nitrates in aortic stenosis."
+    },
+    {
+      "id": "c1a00007-0000-4000-8000-000000000018",
+      "itemType": "multiple_choice",
+      "clientNeeds": "PHI.PA",
+      "bodySystem": "cardiovascular",
+      "subtopics": [
+        "hypertensive-crisis"
+      ],
+      "cjmmSkill": "generate_solutions",
+      "difficulty": "difficult",
+      "stem": "A client has a blood pressure of 224/132 mm Hg with a severe headache and blurred vision. What is the goal for the first hour of treatment?",
+      "content": {
+        "options": [
+          {
+            "id": "a",
+            "text": "Lower the blood pressure to normal (below 120/80) as fast as possible"
+          },
+          {
+            "id": "b",
+            "text": "Lower the mean arterial pressure by no more than about 25%"
+          },
+          {
+            "id": "c",
+            "text": "Keep the blood pressure the same and treat the headache"
+          },
+          {
+            "id": "d",
+            "text": "Give oral medications and recheck tomorrow"
+          }
+        ]
+      },
+      "key": {
+        "correct": "b"
+      },
+      "rationale": {
+        "correct": "In a hypertensive emergency, reduce the MAP by no more than 25% in the first hour, then gradually toward 160/100 over the next 2 to 6 hours.",
+        "perOption": {
+          "a": "Lowering the pressure too fast can cause ischemia of the brain, heart and kidneys.",
+          "b": "Gradual lowering protects organs used to high pressures.",
+          "c": "End-organ damage needs treatment now.",
+          "d": "A hypertensive emergency needs IV medication and close monitoring."
+        },
+        "references": [
+          "Medical-surgical nursing texts (e.g. Lewis; Ignatavicius)",
+          "Reviewed by the content team on 17 November 2026."
+        ]
+      },
+      "educationalObjective": "Set safe goals for treating a hypertensive emergency."
+    },
+    {
+      "id": "c1a00007-0000-4000-8000-000000000019",
+      "itemType": "multiple_choice",
+      "clientNeeds": "PHI.PPT",
+      "bodySystem": "cardiovascular",
+      "subtopics": [
+        "adverse-effects-of-medications"
+      ],
+      "cjmmSkill": "recognize_cues",
+      "difficulty": "difficult",
+      "stem": "A client has been on an IV nitroprusside infusion for 3 days for a hypertensive emergency. Which finding should the nurse report immediately?",
+      "content": {
+        "options": [
+          {
+            "id": "a",
+            "text": "Blood pressure of 148/88 mm Hg"
+          },
+          {
+            "id": "b",
+            "text": "Confusion, metabolic acidosis and a smell of bitter almonds"
+          },
+          {
+            "id": "c",
+            "text": "IV bag covered with an opaque cover"
+          },
+          {
+            "id": "d",
+            "text": "Heart rate of 88/min"
+          }
+        ]
+      },
+      "key": {
+        "correct": "b"
+      },
+      "rationale": {
+        "correct": "Nitroprusside breaks down into cyanide; watch for toxicity, protect the infusion from light and monitor blood pressure continuously.",
+        "perOption": {
+          "a": "This is an expected treatment response.",
+          "b": "These suggest cyanide toxicity, a risk with prolonged or high-dose nitroprusside.",
+          "c": "Nitroprusside is protected from light, so this is appropriate.",
+          "d": "This heart rate is acceptable."
+        },
+        "references": [
+          "Nursing pharmacology texts (e.g. Lehne; McCuistion) and the drug's prescribing information",
+          "Reviewed by the content team on 17 November 2026."
+        ]
+      },
+      "educationalObjective": "Recognize nitroprusside toxicity."
+    },
+    {
+      "id": "c1a00007-0000-4000-8000-000000000020",
+      "itemType": "multiple_choice",
+      "clientNeeds": "PHI.RRP",
+      "bodySystem": "cardiovascular",
+      "subtopics": [
+        "post-procedure-complications"
+      ],
+      "cjmmSkill": "recognize_cues",
+      "difficulty": "moderate",
+      "stem": "A client is 3 hours past coronary artery bypass graft surgery. Which finding should the nurse report to the surgeon?",
+      "content": {
+        "options": [
+          {
+            "id": "a",
+            "text": "Mediastinal chest tube drainage of 150 mL/hr for the past 2 hours"
+          },
+          {
+            "id": "b",
+            "text": "Temperature of 36.2 °C (97.2 °F)"
+          },
+          {
+            "id": "c",
+            "text": "Pain at the sternal incision rated 5 out of 10"
+          },
+          {
+            "id": "d",
+            "text": "Serosanguineous drainage in the chest tube"
+          }
+        ]
+      },
+      "key": {
+        "correct": "a"
+      },
+      "rationale": {
+        "correct": "Excessive chest tube drainage after cardiac surgery suggests bleeding and needs the surgeon's evaluation.",
+        "perOption": {
+          "a": "Drainage over 100 to 150 mL/hr for 2 hours or more suggests hemorrhage.",
+          "b": "Mild hypothermia is common right after surgery and is treated with warming.",
+          "c": "Moderate incision pain is expected.",
+          "d": "Serosanguineous drainage is expected early."
+        },
+        "references": [
+          "Medical-surgical nursing texts (e.g. Lewis; Ignatavicius)",
+          "Reviewed by the content team on 17 November 2026."
+        ]
+      },
+      "educationalObjective": "Recognize bleeding after cardiac surgery."
+    },
+    {
+      "id": "c1a00007-0000-4000-8000-000000000021",
+      "itemType": "multiple_choice",
+      "clientNeeds": "PHI.PA",
+      "bodySystem": "cardiovascular",
+      "subtopics": [
+        "vascular-disorders"
+      ],
+      "cjmmSkill": "evaluate_outcomes",
+      "difficulty": "easy",
+      "stem": "The nurse is teaching a client with Raynaud's phenomenon. Which statement shows a need for more teaching?",
+      "content": {
+        "options": [
+          {
+            "id": "a",
+            "text": "\"I'll wear gloves when I take things out of the freezer.\""
+          },
+          {
+            "id": "b",
+            "text": "\"I'll cut down to two cigarettes a day.\""
+          },
+          {
+            "id": "c",
+            "text": "\"I'll limit caffeine.\""
+          },
+          {
+            "id": "d",
+            "text": "\"I'll try stress-reduction techniques.\""
+          }
+        ]
+      },
+      "key": {
+        "correct": "b"
+      },
+      "rationale": {
+        "correct": "Raynaud's teaching: avoid cold, nicotine, caffeine and stress, which all cause vasospasm.",
+        "perOption": {
+          "a": "Cold triggers vasospasm, so gloves are appropriate.",
+          "b": "Any nicotine causes vasoconstriction; complete smoking cessation is needed.",
+          "c": "Caffeine can cause vasoconstriction.",
+          "d": "Stress can trigger attacks."
+        },
+        "references": [
+          "Medical-surgical nursing texts (e.g. Lewis; Ignatavicius)",
+          "Reviewed by the content team on 17 November 2026."
+        ]
+      },
+      "educationalObjective": "Teach a client with Raynaud's phenomenon."
+    },
+    {
+      "id": "c1a00007-0000-4000-8000-000000000022",
+      "itemType": "multiple_choice",
+      "clientNeeds": "PHI.PA",
+      "bodySystem": "cardiovascular",
+      "subtopics": [
+        "vascular-disorders"
+      ],
+      "cjmmSkill": "generate_solutions",
+      "difficulty": "moderate",
+      "stem": "A client with peripheral arterial disease is starting a walking program. Which instruction should the nurse give?",
+      "content": {
+        "options": [
+          {
+            "id": "a",
+            "text": "\"Walk until the pain starts, rest until it goes away, then walk again.\""
+          },
+          {
+            "id": "b",
+            "text": "\"Avoid walking because it causes pain.\""
+          },
+          {
+            "id": "c",
+            "text": "\"Elevate your legs above heart level when resting.\""
+          },
+          {
+            "id": "d",
+            "text": "\"Wear tight compression stockings.\""
+          }
+        ]
+      },
+      "key": {
+        "correct": "a"
+      },
+      "rationale": {
+        "correct": "Walk to claudication, rest, repeat, for 30 to 45 minutes about 3 times a week.",
+        "perOption": {
+          "a": "Supervised walking to the point of claudication builds collateral circulation.",
+          "b": "Exercise improves walking distance.",
+          "c": "Elevation reduces arterial flow; legs should be level or dependent.",
+          "d": "Compression can further reduce arterial flow."
+        },
+        "references": [
+          "Medical-surgical nursing texts (e.g. Lewis; Ignatavicius)",
+          "Reviewed by the content team on 17 November 2026."
+        ]
+      },
+      "educationalObjective": "Teach an exercise program for peripheral arterial disease."
+    },
+    {
+      "id": "c1a00007-0000-4000-8000-000000000023",
+      "itemType": "multiple_choice",
+      "clientNeeds": "HPM",
+      "bodySystem": "cardiovascular",
+      "subtopics": [
+        "cardiac-rehabilitation"
+      ],
+      "cjmmSkill": "generate_solutions",
+      "difficulty": "moderate",
+      "stem": "A client recovering from a myocardial infarction asks when it's safe to resume sexual activity. What is the nurse's best response?",
+      "content": {
+        "options": [
+          {
+            "id": "a",
+            "text": "\"You should wait at least 6 months.\""
+          },
+          {
+            "id": "b",
+            "text": "\"Usually once you can climb two flights of stairs without symptoms, but confirm with your provider.\""
+          },
+          {
+            "id": "c",
+            "text": "\"You'll need to avoid sexual activity permanently.\""
+          },
+          {
+            "id": "d",
+            "text": "\"Take sildenafil before activity to protect your heart.\""
+          }
+        ]
+      },
+      "key": {
+        "correct": "b"
+      },
+      "rationale": {
+        "correct": "Many clients can resume sexual activity when they can tolerate moderate exertion, such as two flights of stairs, often 1 to 2 weeks after an uncomplicated MI.",
+        "perOption": {
+          "a": "Most clients can resume sooner.",
+          "b": "Tolerating this level of exertion suggests sexual activity is likely safe.",
+          "c": "This is inaccurate and harmful to quality of life.",
+          "d": "Sildenafil doesn't protect the heart and is dangerous with nitrates."
+        },
+        "references": [
+          "Medical-surgical nursing texts (e.g. Lewis; Ignatavicius)",
+          "Reviewed by the content team on 17 November 2026."
+        ]
+      },
+      "educationalObjective": "Teach about resuming sexual activity after an MI."
+    },
+    {
+      "id": "c1a00007-0000-4000-8000-000000000024",
+      "itemType": "highlight_text",
+      "clientNeeds": "PHI.PA",
+      "bodySystem": "cardiovascular",
+      "subtopics": [
+        "heart-failure-assessment"
+      ],
+      "cjmmSkill": "recognize_cues",
+      "difficulty": "moderate",
+      "stem": "The home health nurse documents a visit with a client who has heart failure. Highlight the findings that indicate worsening heart failure.",
+      "content": {
+        "segments": [
+          {
+            "id": "s1",
+            "text": "Client states, ",
+            "selectable": false
+          },
+          {
+            "id": "s2",
+            "text": "\"I had to sleep in my recliner the last two nights.\"",
+            "selectable": true
+          },
+          {
+            "id": "s3",
+            "text": " ",
+            "selectable": false
+          },
+          {
+            "id": "s4",
+            "text": "Weight is up 1.8 kg (4 lb) since 2 days ago.",
+            "selectable": true
+          },
+          {
+            "id": "s5",
+            "text": " ",
+            "selectable": false
+          },
+          {
+            "id": "s6",
+            "text": "Taking all medications as prescribed.",
+            "selectable": true
+          },
+          {
+            "id": "s7",
+            "text": " ",
+            "selectable": false
+          },
+          {
+            "id": "s8",
+            "text": "New crackles in both lung bases.",
+            "selectable": true
+          },
+          {
+            "id": "s9",
+            "text": " ",
+            "selectable": false
+          },
+          {
+            "id": "s10",
+            "text": "Blood pressure 124/76 mm Hg.",
+            "selectable": true
+          },
+          {
+            "id": "s11",
+            "text": " ",
+            "selectable": false
+          },
+          {
+            "id": "s12",
+            "text": "Ate a frozen dinner and canned soup yesterday.",
+            "selectable": true
+          }
+        ]
+      },
+      "key": {
+        "correct": [
+          "s2",
+          "s4",
+          "s8"
+        ]
+      },
+      "rationale": {
+        "correct": "Orthopnea, rapid weight gain and new crackles signal decompensation.",
+        "perOption": {
+          "s2": "Needing to sleep upright (orthopnea) signals worsening pulmonary congestion.",
+          "s4": "Rapid weight gain shows fluid retention.",
+          "s6": "Adherence is positive.",
+          "s8": "Crackles show fluid in the lungs.",
+          "s10": "This is a controlled blood pressure.",
+          "s12": "High-sodium food is a risk factor to address, but it isn't itself a sign of worsening."
+        },
+        "references": [
+          "Medical-surgical nursing texts (e.g. Lewis; Ignatavicius)",
+          "Reviewed by the content team on 17 November 2026."
+        ]
+      },
+      "educationalObjective": "Recognize worsening heart failure during a home visit."
+    }
+  ]
+}

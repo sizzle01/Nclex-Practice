@@ -1,0 +1,1573 @@
+{
+  "notice": "RN bank batch 4: Pharmacology: high-alert medications and IV therapy. Reviewed by the content team on 17 November 2026. See REVIEW-LOG.md.",
+  "track": "RN",
+  "subtopics": [
+    {
+      "clientNeeds": "PHI.PPT",
+      "slug": "insulin-therapy",
+      "name": "Insulin therapy"
+    },
+    {
+      "clientNeeds": "PHI.PPT",
+      "slug": "medication-dose-calculations",
+      "name": "Medication dose calculations"
+    },
+    {
+      "clientNeeds": "PHI.PPT",
+      "slug": "opioid-safety",
+      "name": "Opioid safety"
+    },
+    {
+      "clientNeeds": "PHI.PPT",
+      "slug": "potassium-medication-safety",
+      "name": "Potassium medication safety"
+    },
+    {
+      "clientNeeds": "PHI.PPT",
+      "slug": "anticoagulant-therapy-and-monitoring",
+      "name": "Anticoagulant therapy and monitoring"
+    },
+    {
+      "clientNeeds": "PHI.PPT",
+      "slug": "antidotes-and-reversal-agents",
+      "name": "Antidotes and reversal agents"
+    },
+    {
+      "clientNeeds": "PHI.PPT",
+      "slug": "pre-administration-medication-checks",
+      "name": "Pre-administration medication checks"
+    },
+    {
+      "clientNeeds": "PHI.PPT",
+      "slug": "adverse-effects-of-medications",
+      "name": "Adverse effects of medications"
+    },
+    {
+      "clientNeeds": "PHI.PPT",
+      "slug": "blood-transfusion-reactions",
+      "name": "Blood transfusion reactions"
+    },
+    {
+      "clientNeeds": "PHI.PPT",
+      "slug": "parenteral-nutrition",
+      "name": "Parenteral nutrition"
+    },
+    {
+      "clientNeeds": "PHI.PPT",
+      "slug": "iv-therapy-and-vascular-access",
+      "name": "IV therapy and vascular access"
+    },
+    {
+      "clientNeeds": "PHI.PPT",
+      "slug": "medication-administration-technique",
+      "name": "Medication administration technique"
+    }
+  ],
+  "questions": [
+    {
+      "id": "c1a00004-0000-4000-8000-000000000001",
+      "itemType": "ordered_response",
+      "clientNeeds": "PHI.PPT",
+      "bodySystem": "endocrine",
+      "subtopics": [
+        "insulin-therapy"
+      ],
+      "cjmmSkill": "take_action",
+      "difficulty": "moderate",
+      "stem": "The nurse is preparing a single injection of regular insulin 6 units and NPH insulin 14 units. Place the steps in order.",
+      "content": {
+        "items": [
+          {
+            "id": "c",
+            "text": "Withdraw 6 units of regular insulin"
+          },
+          {
+            "id": "a",
+            "text": "Inject 14 units of air into the NPH vial without withdrawing insulin"
+          },
+          {
+            "id": "d",
+            "text": "Withdraw 14 units of NPH insulin into the same syringe, for a total of 20 units"
+          },
+          {
+            "id": "b",
+            "text": "Inject 6 units of air into the regular insulin vial"
+          }
+        ]
+      },
+      "key": {
+        "order": [
+          "a",
+          "b",
+          "c",
+          "d"
+        ],
+        "scoring": "all_or_nothing"
+      },
+      "rationale": {
+        "correct": "Air into cloudy, air into clear, draw clear, then draw cloudy. This keeps intermediate-acting insulin out of the regular insulin vial.",
+        "perOption": {
+          "a": "Air goes into the cloudy (NPH) vial first, so the needle never touches NPH before drawing regular insulin.",
+          "b": "Adding air to the regular vial makes withdrawal easier.",
+          "c": "Clear (regular) insulin is drawn up first so it isn't contaminated with NPH.",
+          "d": "Cloudy insulin is drawn last."
+        },
+        "references": [
+          "Nursing pharmacology texts (e.g. Lehne; McCuistion) and the drug's prescribing information",
+          "Fundamentals of nursing texts (e.g. Potter & Perry)",
+          "Reviewed by the content team on 17 November 2026."
+        ]
+      },
+      "educationalObjective": "Mix regular and NPH insulin in one syringe correctly."
+    },
+    {
+      "id": "c1a00004-0000-4000-8000-000000000002",
+      "itemType": "multiple_choice",
+      "clientNeeds": "PHI.PPT",
+      "bodySystem": "endocrine",
+      "subtopics": [
+        "insulin-therapy"
+      ],
+      "cjmmSkill": "analyze_cues",
+      "difficulty": "moderate",
+      "stem": "A client receives NPH insulin at 0700. When is the client at greatest risk for hypoglycemia?",
+      "content": {
+        "options": [
+          {
+            "id": "a",
+            "text": "0715 to 0800"
+          },
+          {
+            "id": "b",
+            "text": "Late morning to late afternoon"
+          },
+          {
+            "id": "c",
+            "text": "Bedtime"
+          },
+          {
+            "id": "d",
+            "text": "The next morning before breakfast"
+          }
+        ]
+      },
+      "key": {
+        "correct": "b"
+      },
+      "rationale": {
+        "correct": "Hypoglycemia is most likely during an insulin's peak; NPH peaks 4 to 12 hours after injection.",
+        "perOption": {
+          "a": "NPH begins working 1 to 2 hours after injection, so it isn't yet active.",
+          "b": "NPH peaks about 4 to 12 hours after injection.",
+          "c": "By bedtime the peak effect of a morning NPH dose is wearing off.",
+          "d": "NPH lasts about 18 to 24 hours, and its peak is long past."
+        },
+        "references": [
+          "Nursing pharmacology texts (e.g. Lehne; McCuistion) and the drug's prescribing information",
+          "Reviewed by the content team on 17 November 2026."
+        ]
+      },
+      "educationalObjective": "Link insulin peak times to hypoglycemia risk."
+    },
+    {
+      "id": "c1a00004-0000-4000-8000-000000000003",
+      "itemType": "multiple_choice",
+      "clientNeeds": "PHI.PPT",
+      "bodySystem": "endocrine",
+      "subtopics": [
+        "insulin-therapy"
+      ],
+      "cjmmSkill": "evaluate_outcomes",
+      "difficulty": "moderate",
+      "stem": "The nurse is teaching a client who has started insulin glargine at bedtime. Which statement by the client shows a need for more teaching?",
+      "content": {
+        "options": [
+          {
+            "id": "a",
+            "text": "\"I'll take it at the same time every day.\""
+          },
+          {
+            "id": "b",
+            "text": "\"I'll mix it with my rapid-acting insulin to save an injection.\""
+          },
+          {
+            "id": "c",
+            "text": "\"It works all day and doesn't have a strong peak.\""
+          },
+          {
+            "id": "d",
+            "text": "\"I'll keep checking my blood sugar as instructed.\""
+          }
+        ]
+      },
+      "key": {
+        "correct": "b"
+      },
+      "rationale": {
+        "correct": "Long-acting insulin analogs such as glargine and detemir are never mixed with other insulins.",
+        "perOption": {
+          "a": "Consistent timing keeps basal insulin levels steady.",
+          "b": "Glargine must not be mixed with other insulins because mixing changes how it is absorbed.",
+          "c": "Glargine is a long-acting basal insulin with no pronounced peak.",
+          "d": "Monitoring is still essential."
+        },
+        "references": [
+          "Nursing pharmacology texts (e.g. Lehne; McCuistion) and the drug's prescribing information",
+          "Reviewed by the content team on 17 November 2026."
+        ]
+      },
+      "educationalObjective": "Teach safe use of long-acting insulin."
+    },
+    {
+      "id": "c1a00004-0000-4000-8000-000000000004",
+      "itemType": "multiple_choice",
+      "clientNeeds": "PHI.PPT",
+      "bodySystem": "endocrine",
+      "subtopics": [
+        "insulin-therapy"
+      ],
+      "cjmmSkill": "take_action",
+      "difficulty": "easy",
+      "stem": "A client with diabetic ketoacidosis needs a continuous IV insulin infusion. Which insulin should the nurse expect to use?",
+      "content": {
+        "options": [
+          {
+            "id": "a",
+            "text": "Regular insulin"
+          },
+          {
+            "id": "b",
+            "text": "NPH insulin"
+          },
+          {
+            "id": "c",
+            "text": "Insulin glargine"
+          },
+          {
+            "id": "d",
+            "text": "Insulin detemir"
+          }
+        ]
+      },
+      "key": {
+        "correct": "a"
+      },
+      "rationale": {
+        "correct": "Regular insulin is the standard insulin for IV infusion.",
+        "perOption": {
+          "a": "Regular (short-acting) insulin is the insulin routinely given IV.",
+          "b": "NPH is a suspension and must never be given IV.",
+          "c": "Glargine is given subcutaneously only.",
+          "d": "Detemir is given subcutaneously only."
+        },
+        "references": [
+          "Nursing pharmacology texts (e.g. Lehne; McCuistion) and the drug's prescribing information",
+          "Reviewed by the content team on 17 November 2026."
+        ]
+      },
+      "educationalObjective": "Identify the insulin used for IV infusion."
+    },
+    {
+      "id": "c1a00004-0000-4000-8000-000000000005",
+      "itemType": "fill_blank_calc",
+      "clientNeeds": "PHI.PPT",
+      "bodySystem": "pharmacology",
+      "subtopics": [
+        "medication-dose-calculations"
+      ],
+      "cjmmSkill": "take_action",
+      "difficulty": "moderate",
+      "stem": "A client who weighs 70 kg is prescribed an insulin infusion at 0.1 units/kg/hr. The bag contains 100 units of regular insulin in 100 mL of 0.9% sodium chloride. At what rate should the nurse set the pump?",
+      "content": {
+        "unit": "mL/hr",
+        "decimals": 0,
+        "inputLabel": "Infusion rate"
+      },
+      "key": {
+        "value": 7,
+        "rounding": "exact"
+      },
+      "rationale": {
+        "correct": "Dose: 0.1 units/kg/hr × 70 kg = 7 units/hr. Concentration: 100 units ÷ 100 mL = 1 unit/mL. Rate: 7 units/hr ÷ 1 unit/mL = 7 mL/hr.",
+        "perOption": {},
+        "references": [
+          "Nursing pharmacology texts (e.g. Lehne; McCuistion) and the drug's prescribing information",
+          "Reviewed by the content team on 17 November 2026."
+        ]
+      },
+      "educationalObjective": "Calculate a weight-based insulin infusion rate."
+    },
+    {
+      "id": "c1a00004-0000-4000-8000-000000000006",
+      "itemType": "dropdown_cloze",
+      "clientNeeds": "PHI.PPT",
+      "bodySystem": "endocrine",
+      "subtopics": [
+        "insulin-therapy"
+      ],
+      "cjmmSkill": "take_action",
+      "difficulty": "moderate",
+      "stem": "A client with type 1 diabetes is due for prescribed insulin lispro with lunch. The client's glucose is 52 mg/dL and the client is alert. Complete the sentence.",
+      "content": {
+        "template": "The nurse should {{b1}} the scheduled lispro and first {{b2}}.",
+        "blanks": [
+          {
+            "id": "b1",
+            "options": [
+              {
+                "id": "a",
+                "text": "hold"
+              },
+              {
+                "id": "b",
+                "text": "give"
+              },
+              {
+                "id": "c",
+                "text": "double"
+              }
+            ]
+          },
+          {
+            "id": "b2",
+            "options": [
+              {
+                "id": "a",
+                "text": "give 15 g of fast-acting carbohydrate and recheck the glucose in 15 minutes"
+              },
+              {
+                "id": "b",
+                "text": "give 1 mg of glucagon IM"
+              },
+              {
+                "id": "c",
+                "text": "give a high-fat snack such as peanut butter"
+              }
+            ]
+          }
+        ]
+      },
+      "key": {
+        "byBlank": {
+          "b1": "a",
+          "b2": "a"
+        }
+      },
+      "rationale": {
+        "correct": "Treat hypoglycemia before giving rapid-acting insulin, and contact the provider about adjusting the dose.",
+        "perOption": {
+          "b1:a": "Giving rapid-acting insulin with a glucose of 52 mg/dL would deepen the hypoglycemia.",
+          "b1:b": "Lispro lowers glucose within 15 minutes and would make the hypoglycemia worse.",
+          "b1:c": "Increasing insulin is dangerous with hypoglycemia.",
+          "b2:a": "The 15-15 rule treats mild to moderate hypoglycemia in an alert client.",
+          "b2:b": "Glucagon is for clients who can't swallow safely.",
+          "b2:c": "Fat slows the absorption of glucose."
+        },
+        "references": [
+          "Nursing pharmacology texts (e.g. Lehne; McCuistion) and the drug's prescribing information",
+          "American Diabetes Association Standards of Care",
+          "Reviewed by the content team on 17 November 2026."
+        ]
+      },
+      "educationalObjective": "Respond to hypoglycemia before giving mealtime insulin."
+    },
+    {
+      "id": "c1a00004-0000-4000-8000-000000000007",
+      "itemType": "multiple_choice",
+      "clientNeeds": "PHI.PPT",
+      "bodySystem": "pharmacology",
+      "subtopics": [
+        "opioid-safety"
+      ],
+      "cjmmSkill": "take_action",
+      "difficulty": "difficult",
+      "stem": "A client using a morphine PCA pump after surgery is hard to rouse and has a respiratory rate of 7/min and an oxygen saturation of 86%. What should the nurse do first?",
+      "content": {
+        "options": [
+          {
+            "id": "a",
+            "text": "Document the findings and reassess in 15 minutes"
+          },
+          {
+            "id": "b",
+            "text": "Stop the PCA, try to rouse the client and prepare to give naloxone per protocol"
+          },
+          {
+            "id": "c",
+            "text": "Lower the PCA dose and let the client continue to use it"
+          },
+          {
+            "id": "d",
+            "text": "Tell the client's family to stop pressing the PCA button"
+          }
+        ]
+      },
+      "key": {
+        "correct": "b"
+      },
+      "rationale": {
+        "correct": "Excessive sedation comes before respiratory depression. Stop the opioid, stimulate the client, support breathing and give naloxone.",
+        "perOption": {
+          "a": "This is respiratory depression and needs action now.",
+          "b": "Stopping the opioid, stimulating the client and reversing with naloxone treats opioid-induced respiratory depression.",
+          "c": "Any further opioid could worsen the respiratory depression.",
+          "d": "This may help prevent future problems but doesn't treat the current emergency."
+        },
+        "references": [
+          "Nursing pharmacology texts (e.g. Lehne; McCuistion) and the drug's prescribing information",
+          "Reviewed by the content team on 17 November 2026."
+        ]
+      },
+      "educationalObjective": "Respond to opioid-induced respiratory depression."
+    },
+    {
+      "id": "c1a00004-0000-4000-8000-000000000008",
+      "itemType": "multiple_choice",
+      "clientNeeds": "PHI.PPT",
+      "bodySystem": "pharmacology",
+      "subtopics": [
+        "opioid-safety"
+      ],
+      "cjmmSkill": "evaluate_outcomes",
+      "difficulty": "difficult",
+      "stem": "The nurse gave IV naloxone to a client with opioid-induced respiratory depression. The client is now awake with a respiratory rate of 14/min. Why must the nurse keep monitoring the client closely?",
+      "content": {
+        "options": [
+          {
+            "id": "a",
+            "text": "Naloxone often causes hypoglycemia"
+          },
+          {
+            "id": "b",
+            "text": "Naloxone's effect may wear off before the opioid's, so respiratory depression can return"
+          },
+          {
+            "id": "c",
+            "text": "Naloxone can cause respiratory depression on its own"
+          },
+          {
+            "id": "d",
+            "text": "The client will need a higher opioid dose immediately"
+          }
+        ]
+      },
+      "key": {
+        "correct": "b"
+      },
+      "rationale": {
+        "correct": "Because naloxone has a short half-life, monitor for re-sedation and watch for withdrawal and pain.",
+        "perOption": {
+          "a": "Hypoglycemia isn't a typical effect of naloxone.",
+          "b": "Naloxone lasts about 30 to 90 minutes, shorter than many opioids, so repeat doses may be needed.",
+          "c": "Naloxone reverses respiratory depression.",
+          "d": "Pain management must be adjusted carefully, not increased immediately."
+        },
+        "references": [
+          "Nursing pharmacology texts (e.g. Lehne; McCuistion) and the drug's prescribing information",
+          "Reviewed by the content team on 17 November 2026."
+        ]
+      },
+      "educationalObjective": "Monitor for recurrent sedation after naloxone."
+    },
+    {
+      "id": "c1a00004-0000-4000-8000-000000000009",
+      "itemType": "sata",
+      "clientNeeds": "PHI.PPT",
+      "bodySystem": "pharmacology",
+      "subtopics": [
+        "opioid-safety"
+      ],
+      "cjmmSkill": "generate_solutions",
+      "difficulty": "moderate",
+      "stem": "The nurse is teaching a client who is going home with oxycodone for pain. Which instructions should the nurse include? Select all that apply.",
+      "content": {
+        "options": [
+          {
+            "id": "a",
+            "text": "Increase fluid and fiber intake and use a stool softener as prescribed"
+          },
+          {
+            "id": "b",
+            "text": "Avoid alcohol and other sedatives"
+          },
+          {
+            "id": "c",
+            "text": "Don't drive until you know how the medication affects you"
+          },
+          {
+            "id": "d",
+            "text": "Store the medication in a locked place"
+          },
+          {
+            "id": "e",
+            "text": "Crush extended-release tablets if they are hard to swallow"
+          },
+          {
+            "id": "f",
+            "text": "Take an extra dose if the pain is not relieved"
+          }
+        ]
+      },
+      "key": {
+        "correct": [
+          "a",
+          "b",
+          "c",
+          "d"
+        ]
+      },
+      "rationale": {
+        "correct": "Opioid teaching covers constipation, sedation safety, avoiding other depressants, safe storage and never altering extended-release forms.",
+        "perOption": {
+          "a": "Opioids slow the bowel, and constipation doesn't improve with time.",
+          "b": "Combining depressants increases the risk of respiratory depression.",
+          "c": "Opioids cause drowsiness and slow reactions.",
+          "d": "Secure storage prevents misuse by others.",
+          "e": "Crushing extended-release tablets releases the whole dose at once and can be fatal.",
+          "f": "Extra doses increase the risk of overdose; the client should contact the provider instead."
+        },
+        "references": [
+          "Nursing pharmacology texts (e.g. Lehne; McCuistion) and the drug's prescribing information",
+          "Reviewed by the content team on 17 November 2026."
+        ]
+      },
+      "educationalObjective": "Teach safe opioid use at home."
+    },
+    {
+      "id": "c1a00004-0000-4000-8000-000000000010",
+      "itemType": "multiple_choice",
+      "clientNeeds": "PHI.PPT",
+      "bodySystem": "pharmacology",
+      "subtopics": [
+        "opioid-safety"
+      ],
+      "cjmmSkill": "evaluate_outcomes",
+      "difficulty": "moderate",
+      "stem": "A client has been prescribed a transdermal fentanyl patch. Which statement by the client shows a need for more teaching?",
+      "content": {
+        "options": [
+          {
+            "id": "a",
+            "text": "\"I'll take off the old patch before putting on a new one.\""
+          },
+          {
+            "id": "b",
+            "text": "\"I'll put a heating pad over the patch when my back hurts.\""
+          },
+          {
+            "id": "c",
+            "text": "\"I'll fold the used patch with the sticky sides together before throwing it away.\""
+          },
+          {
+            "id": "d",
+            "text": "\"I'll put each new patch on a different area of skin.\""
+          }
+        ]
+      },
+      "key": {
+        "correct": "b"
+      },
+      "rationale": {
+        "correct": "Heat (heating pads, hot tubs, fever) speeds up fentanyl absorption and can cause dangerous toxicity.",
+        "perOption": {
+          "a": "Removing the old patch prevents overdose.",
+          "b": "Heat increases fentanyl absorption and can cause overdose.",
+          "c": "Folding the patch prevents accidental exposure.",
+          "d": "Rotating sites prevents skin irritation."
+        },
+        "references": [
+          "Nursing pharmacology texts (e.g. Lehne; McCuistion) and the drug's prescribing information",
+          "Reviewed by the content team on 17 November 2026."
+        ]
+      },
+      "educationalObjective": "Teach safe use of transdermal fentanyl."
+    },
+    {
+      "id": "c1a00004-0000-4000-8000-000000000011",
+      "itemType": "multiple_choice",
+      "clientNeeds": "PHI.PPT",
+      "bodySystem": "pharmacology",
+      "subtopics": [
+        "potassium-medication-safety"
+      ],
+      "cjmmSkill": "take_action",
+      "difficulty": "moderate",
+      "stem": "Before starting an IV infusion of potassium chloride, which assessment is most important?",
+      "content": {
+        "options": [
+          {
+            "id": "a",
+            "text": "Urine output"
+          },
+          {
+            "id": "b",
+            "text": "Temperature"
+          },
+          {
+            "id": "c",
+            "text": "Blood glucose"
+          },
+          {
+            "id": "d",
+            "text": "Respiratory rate"
+          }
+        ]
+      },
+      "key": {
+        "correct": "a"
+      },
+      "rationale": {
+        "correct": "Check kidney function before IV potassium. Never give it IV push, and always dilute it and use an infusion pump.",
+        "perOption": {
+          "a": "Potassium is excreted by the kidneys; urine output of at least 30 mL/hr is needed to avoid hyperkalemia.",
+          "b": "Temperature doesn't affect potassium safety.",
+          "c": "Glucose isn't the main safety check before potassium.",
+          "d": "Respiratory rate isn't the main safety check before potassium."
+        },
+        "references": [
+          "Nursing pharmacology texts (e.g. Lehne; McCuistion) and the drug's prescribing information",
+          "Reviewed by the content team on 17 November 2026."
+        ]
+      },
+      "educationalObjective": "Assess kidney function before giving IV potassium."
+    },
+    {
+      "id": "c1a00004-0000-4000-8000-000000000012",
+      "itemType": "multiple_choice",
+      "clientNeeds": "PHI.PPT",
+      "bodySystem": "hematologic-oncologic",
+      "subtopics": [
+        "anticoagulant-therapy-and-monitoring"
+      ],
+      "cjmmSkill": "evaluate_outcomes",
+      "difficulty": "moderate",
+      "stem": "The nurse observes a student giving enoxaparin from a prefilled syringe. Which action requires the nurse to intervene?",
+      "content": {
+        "options": [
+          {
+            "id": "a",
+            "text": "Chooses a site on the abdomen at least 5 cm (2 inches) from the navel"
+          },
+          {
+            "id": "b",
+            "text": "Leaves the air bubble in the prefilled syringe"
+          },
+          {
+            "id": "c",
+            "text": "Rubs the injection site after giving the medication"
+          },
+          {
+            "id": "d",
+            "text": "Inserts the needle at a 90-degree angle into a pinched skin fold"
+          }
+        ]
+      },
+      "key": {
+        "correct": "c"
+      },
+      "rationale": {
+        "correct": "Don't expel the air bubble from the prefilled syringe, don't aspirate and don't rub the site after giving enoxaparin.",
+        "perOption": {
+          "a": "This is the correct site for enoxaparin.",
+          "b": "The bubble is left in so the full dose is given.",
+          "c": "Rubbing increases bruising and hematoma formation.",
+          "d": "This is the correct technique."
+        },
+        "references": [
+          "Nursing pharmacology texts (e.g. Lehne; McCuistion) and the drug's prescribing information",
+          "Reviewed by the content team on 17 November 2026."
+        ]
+      },
+      "educationalObjective": "Give low-molecular-weight heparin correctly."
+    },
+    {
+      "id": "c1a00004-0000-4000-8000-000000000013",
+      "itemType": "dropdown_table",
+      "clientNeeds": "PHI.PPT",
+      "bodySystem": "pharmacology",
+      "subtopics": [
+        "antidotes-and-reversal-agents"
+      ],
+      "cjmmSkill": "generate_solutions",
+      "difficulty": "moderate",
+      "stem": "For each drug causing toxicity, select the antidote or reversal agent.",
+      "content": {
+        "columns": [
+          "Drug",
+          "Antidote"
+        ],
+        "rows": [
+          {
+            "id": "r1",
+            "cells": [
+              {
+                "text": "Heparin"
+              },
+              {
+                "blankId": "b1"
+              }
+            ]
+          },
+          {
+            "id": "r2",
+            "cells": [
+              {
+                "text": "Warfarin"
+              },
+              {
+                "blankId": "b2"
+              }
+            ]
+          },
+          {
+            "id": "r3",
+            "cells": [
+              {
+                "text": "Morphine"
+              },
+              {
+                "blankId": "b3"
+              }
+            ]
+          },
+          {
+            "id": "r4",
+            "cells": [
+              {
+                "text": "Lorazepam"
+              },
+              {
+                "blankId": "b4"
+              }
+            ]
+          },
+          {
+            "id": "r5",
+            "cells": [
+              {
+                "text": "Acetaminophen"
+              },
+              {
+                "blankId": "b5"
+              }
+            ]
+          }
+        ],
+        "blanks": [
+          {
+            "id": "b1",
+            "options": [
+              {
+                "id": "a",
+                "text": "Protamine sulfate"
+              },
+              {
+                "id": "b",
+                "text": "Vitamin K"
+              },
+              {
+                "id": "c",
+                "text": "Naloxone"
+              },
+              {
+                "id": "d",
+                "text": "Flumazenil"
+              }
+            ]
+          },
+          {
+            "id": "b2",
+            "options": [
+              {
+                "id": "a",
+                "text": "Protamine sulfate"
+              },
+              {
+                "id": "b",
+                "text": "Vitamin K"
+              },
+              {
+                "id": "c",
+                "text": "Acetylcysteine"
+              },
+              {
+                "id": "d",
+                "text": "Digoxin immune fab"
+              }
+            ]
+          },
+          {
+            "id": "b3",
+            "options": [
+              {
+                "id": "a",
+                "text": "Naloxone"
+              },
+              {
+                "id": "b",
+                "text": "Flumazenil"
+              },
+              {
+                "id": "c",
+                "text": "Atropine"
+              },
+              {
+                "id": "d",
+                "text": "Protamine sulfate"
+              }
+            ]
+          },
+          {
+            "id": "b4",
+            "options": [
+              {
+                "id": "a",
+                "text": "Naloxone"
+              },
+              {
+                "id": "b",
+                "text": "Flumazenil"
+              },
+              {
+                "id": "c",
+                "text": "Vitamin K"
+              },
+              {
+                "id": "d",
+                "text": "Glucagon"
+              }
+            ]
+          },
+          {
+            "id": "b5",
+            "options": [
+              {
+                "id": "a",
+                "text": "Acetylcysteine"
+              },
+              {
+                "id": "b",
+                "text": "Naloxone"
+              },
+              {
+                "id": "c",
+                "text": "Deferoxamine"
+              },
+              {
+                "id": "d",
+                "text": "Protamine sulfate"
+              }
+            ]
+          }
+        ]
+      },
+      "key": {
+        "byBlank": {
+          "b1": "a",
+          "b2": "b",
+          "b3": "a",
+          "b4": "b",
+          "b5": "a"
+        }
+      },
+      "rationale": {
+        "correct": "Know the common antidotes: protamine (heparin), vitamin K (warfarin), naloxone (opioids), flumazenil (benzodiazepines), acetylcysteine (acetaminophen), digoxin immune fab (digoxin).",
+        "perOption": {
+          "b1:a": "Protamine binds heparin and neutralizes it.",
+          "b1:b": "Vitamin K reverses warfarin.",
+          "b1:c": "Naloxone reverses opioids.",
+          "b1:d": "Flumazenil reverses benzodiazepines.",
+          "b2:a": "Protamine reverses heparin.",
+          "b2:b": "Vitamin K restores the clotting factors warfarin blocks.",
+          "b2:c": "Acetylcysteine treats acetaminophen overdose.",
+          "b2:d": "This reverses digoxin.",
+          "b3:a": "Naloxone blocks opioid receptors.",
+          "b3:b": "Flumazenil reverses benzodiazepines.",
+          "b3:c": "Atropine treats bradycardia and cholinergic toxicity.",
+          "b3:d": "Protamine reverses heparin.",
+          "b4:a": "Naloxone reverses opioids.",
+          "b4:b": "Flumazenil reverses benzodiazepines.",
+          "b4:c": "Vitamin K reverses warfarin.",
+          "b4:d": "Glucagon treats hypoglycemia and beta-blocker toxicity.",
+          "b5:a": "Acetylcysteine restores glutathione and protects the liver.",
+          "b5:b": "Naloxone reverses opioids.",
+          "b5:c": "Deferoxamine treats iron toxicity.",
+          "b5:d": "Protamine reverses heparin."
+        },
+        "references": [
+          "Nursing pharmacology texts (e.g. Lehne; McCuistion) and the drug's prescribing information",
+          "Reviewed by the content team on 17 November 2026."
+        ]
+      },
+      "educationalObjective": "Match drugs to their antidotes."
+    },
+    {
+      "id": "c1a00004-0000-4000-8000-000000000014",
+      "itemType": "multiple_choice",
+      "clientNeeds": "PHI.PPT",
+      "bodySystem": "hematologic-oncologic",
+      "subtopics": [
+        "anticoagulant-therapy-and-monitoring"
+      ],
+      "cjmmSkill": "take_action",
+      "difficulty": "moderate",
+      "stem": "A client taking warfarin for atrial fibrillation has an INR of 5.2 and no signs of bleeding. What should the nurse do?",
+      "content": {
+        "options": [
+          {
+            "id": "a",
+            "text": "Give the scheduled warfarin dose"
+          },
+          {
+            "id": "b",
+            "text": "Hold the warfarin and notify the provider"
+          },
+          {
+            "id": "c",
+            "text": "Give protamine sulfate"
+          },
+          {
+            "id": "d",
+            "text": "Double the next day's dose"
+          }
+        ]
+      },
+      "key": {
+        "correct": "b"
+      },
+      "rationale": {
+        "correct": "Hold warfarin for a supratherapeutic INR and notify the provider; the target INR for atrial fibrillation is 2 to 3.",
+        "perOption": {
+          "a": "Giving more warfarin with a high INR raises the risk of bleeding.",
+          "b": "The INR is above the 2 to 3 target; the dose is held and the provider decides on further action, such as vitamin K.",
+          "c": "Protamine reverses heparin, not warfarin.",
+          "d": "This would raise the INR further."
+        },
+        "references": [
+          "Nursing pharmacology texts (e.g. Lehne; McCuistion) and the drug's prescribing information",
+          "Reviewed by the content team on 17 November 2026."
+        ]
+      },
+      "educationalObjective": "Respond to a high INR in a client taking warfarin."
+    },
+    {
+      "id": "c1a00004-0000-4000-8000-000000000015",
+      "itemType": "multiple_choice",
+      "clientNeeds": "PHI.PPT",
+      "bodySystem": "hematologic-oncologic",
+      "subtopics": [
+        "anticoagulant-therapy-and-monitoring"
+      ],
+      "cjmmSkill": "evaluate_outcomes",
+      "difficulty": "moderate",
+      "stem": "A client starting apixaban for atrial fibrillation asks, \"How often will I need my INR checked?\" What is the nurse's best response?",
+      "content": {
+        "options": [
+          {
+            "id": "a",
+            "text": "\"Every week for the first month.\""
+          },
+          {
+            "id": "b",
+            "text": "\"Routine INR monitoring isn't needed with this medication.\""
+          },
+          {
+            "id": "c",
+            "text": "\"Monthly, like warfarin.\""
+          },
+          {
+            "id": "d",
+            "text": "\"Only if you eat a lot of leafy green vegetables.\""
+          }
+        ]
+      },
+      "key": {
+        "correct": "b"
+      },
+      "rationale": {
+        "correct": "DOACs (apixaban, rivaroxaban, dabigatran) don't need routine INR monitoring. Clients still need bleeding precautions and periodic kidney function tests.",
+        "perOption": {
+          "a": "INR monitoring isn't used for apixaban.",
+          "b": "Direct oral anticoagulants such as apixaban have predictable effects and don't need routine INR checks.",
+          "c": "INR is used to monitor warfarin, not apixaban.",
+          "d": "Vitamin K intake affects warfarin, not apixaban."
+        },
+        "references": [
+          "Nursing pharmacology texts (e.g. Lehne; McCuistion) and the drug's prescribing information",
+          "Reviewed by the content team on 17 November 2026."
+        ]
+      },
+      "educationalObjective": "Teach a client about monitoring direct oral anticoagulants."
+    },
+    {
+      "id": "c1a00004-0000-4000-8000-000000000016",
+      "itemType": "multiple_choice",
+      "clientNeeds": "PHI.PPT",
+      "bodySystem": "neurological",
+      "subtopics": [
+        "pre-administration-medication-checks"
+      ],
+      "cjmmSkill": "analyze_cues",
+      "difficulty": "difficult",
+      "stem": "A client with an acute ischemic stroke is being evaluated for IV alteplase. Which finding makes alteplase contraindicated?",
+      "content": {
+        "options": [
+          {
+            "id": "a",
+            "text": "Symptoms started 2 hours ago"
+          },
+          {
+            "id": "b",
+            "text": "Platelet count of 80,000/mm3"
+          },
+          {
+            "id": "c",
+            "text": "Age of 72"
+          },
+          {
+            "id": "d",
+            "text": "Blood glucose of 110 mg/dL"
+          }
+        ]
+      },
+      "key": {
+        "correct": "b"
+      },
+      "rationale": {
+        "correct": "Before giving a thrombolytic, check for bleeding risks: low platelets, recent surgery or bleeding, uncontrolled hypertension (above 185/110) and intracranial hemorrhage.",
+        "perOption": {
+          "a": "Alteplase is given within 3 to 4.5 hours of symptom onset.",
+          "b": "A platelet count below 100,000/mm3 raises the risk of bleeding and is a contraindication.",
+          "c": "Age alone isn't a contraindication within the 3-hour window.",
+          "d": "This glucose is acceptable; very low glucose can mimic a stroke and is checked first."
+        },
+        "references": [
+          "Nursing pharmacology texts (e.g. Lehne; McCuistion) and the drug's prescribing information",
+          "Reviewed by the content team on 17 November 2026."
+        ]
+      },
+      "educationalObjective": "Identify contraindications to thrombolytic therapy."
+    },
+    {
+      "id": "c1a00004-0000-4000-8000-000000000017",
+      "itemType": "multiple_choice",
+      "clientNeeds": "PHI.PPT",
+      "bodySystem": "pharmacology",
+      "subtopics": [
+        "adverse-effects-of-medications"
+      ],
+      "cjmmSkill": "recognize_cues",
+      "difficulty": "moderate",
+      "stem": "A client receiving IV gentamicin reports ringing in the ears. What should the nurse do?",
+      "content": {
+        "options": [
+          {
+            "id": "a",
+            "text": "Tell the client this is an expected, harmless effect"
+          },
+          {
+            "id": "b",
+            "text": "Hold the next dose and notify the provider"
+          },
+          {
+            "id": "c",
+            "text": "Give the dose with food"
+          },
+          {
+            "id": "d",
+            "text": "Increase the infusion rate"
+          }
+        ]
+      },
+      "key": {
+        "correct": "b"
+      },
+      "rationale": {
+        "correct": "Aminoglycosides can cause ototoxicity and nephrotoxicity. Monitor hearing, balance, creatinine and drug levels.",
+        "perOption": {
+          "a": "Tinnitus is a sign of ototoxicity, which can become permanent.",
+          "b": "Ototoxicity is a serious adverse effect of aminoglycosides; the provider may change the drug or the dose.",
+          "c": "Food doesn't affect IV gentamicin or its ototoxicity.",
+          "d": "A faster infusion increases peak levels and toxicity."
+        },
+        "references": [
+          "Nursing pharmacology texts (e.g. Lehne; McCuistion) and the drug's prescribing information",
+          "Reviewed by the content team on 17 November 2026."
+        ]
+      },
+      "educationalObjective": "Recognize aminoglycoside ototoxicity."
+    },
+    {
+      "id": "c1a00004-0000-4000-8000-000000000018",
+      "itemType": "multiple_choice",
+      "clientNeeds": "PHI.PPT",
+      "bodySystem": "hematologic-oncologic",
+      "subtopics": [
+        "blood-transfusion-reactions"
+      ],
+      "cjmmSkill": "take_action",
+      "difficulty": "moderate",
+      "stem": "Ten minutes after a unit of packed red blood cells is started, the client reports chills and low back pain. The temperature has risen 1.5 °C. What should the nurse do first?",
+      "content": {
+        "options": [
+          {
+            "id": "a",
+            "text": "Slow the transfusion and recheck vital signs in 15 minutes"
+          },
+          {
+            "id": "b",
+            "text": "Stop the transfusion and keep the IV open with 0.9% sodium chloride through new tubing"
+          },
+          {
+            "id": "c",
+            "text": "Give acetaminophen and continue the transfusion"
+          },
+          {
+            "id": "d",
+            "text": "Take the blood bag back to the blood bank"
+          }
+        ]
+      },
+      "key": {
+        "correct": "b"
+      },
+      "rationale": {
+        "correct": "For any suspected transfusion reaction: stop the transfusion, keep the vein open with saline through new tubing, notify the provider and the blood bank, and monitor the client.",
+        "perOption": {
+          "a": "Slowing a possible hemolytic reaction lets more incompatible blood in.",
+          "b": "Stopping the blood limits the reaction, and new tubing avoids giving the blood left in the line.",
+          "c": "Treating symptoms without stopping the transfusion may be fatal in an acute hemolytic reaction.",
+          "d": "The bag and tubing are returned, but only after the client is safe."
+        },
+        "references": [
+          "Medical-surgical nursing texts (e.g. Lewis; Ignatavicius)",
+          "Reviewed by the content team on 17 November 2026."
+        ]
+      },
+      "educationalObjective": "Respond to a suspected transfusion reaction."
+    },
+    {
+      "id": "c1a00004-0000-4000-8000-000000000019",
+      "itemType": "sata",
+      "clientNeeds": "PHI.PPT",
+      "bodySystem": "hematologic-oncologic",
+      "subtopics": [
+        "blood-transfusion-reactions"
+      ],
+      "cjmmSkill": "take_action",
+      "difficulty": "moderate",
+      "stem": "The nurse is preparing to give a unit of packed red blood cells. Which actions are correct? Select all that apply.",
+      "content": {
+        "options": [
+          {
+            "id": "a",
+            "text": "Check the client and unit identification with another licensed nurse at the bedside"
+          },
+          {
+            "id": "b",
+            "text": "Prime the tubing with 0.9% sodium chloride"
+          },
+          {
+            "id": "c",
+            "text": "Use blood tubing with a filter"
+          },
+          {
+            "id": "d",
+            "text": "Stay with the client for the first 15 minutes"
+          },
+          {
+            "id": "e",
+            "text": "Prime the tubing with D5W"
+          },
+          {
+            "id": "f",
+            "text": "Warm the blood in a microwave to prevent hypothermia"
+          }
+        ]
+      },
+      "key": {
+        "correct": [
+          "a",
+          "b",
+          "c",
+          "d"
+        ]
+      },
+      "rationale": {
+        "correct": "Safe transfusion: verified identity, normal saline only, filtered tubing, close early monitoring and completion within 4 hours.",
+        "perOption": {
+          "a": "A two-person bedside check prevents ABO-incompatible transfusions.",
+          "b": "Only normal saline is compatible with blood.",
+          "c": "A filter removes clots and debris.",
+          "d": "Most severe reactions happen early.",
+          "e": "Dextrose solutions cause red blood cells to clump and hemolyze.",
+          "f": "Microwaving damages cells; an approved blood warmer is used if needed."
+        },
+        "references": [
+          "Medical-surgical nursing texts (e.g. Lewis; Ignatavicius)",
+          "Reviewed by the content team on 17 November 2026."
+        ]
+      },
+      "educationalObjective": "Prepare to give a blood transfusion safely."
+    },
+    {
+      "id": "c1a00004-0000-4000-8000-000000000020",
+      "itemType": "multiple_choice",
+      "clientNeeds": "PHI.PPT",
+      "bodySystem": "gastrointestinal",
+      "subtopics": [
+        "parenteral-nutrition"
+      ],
+      "cjmmSkill": "take_action",
+      "difficulty": "moderate",
+      "stem": "A client's bag of total parenteral nutrition (TPN) is empty and the pharmacy says the next bag will be 2 hours late. What should the nurse do?",
+      "content": {
+        "options": [
+          {
+            "id": "a",
+            "text": "Flush the line and leave it capped until the new bag arrives"
+          },
+          {
+            "id": "b",
+            "text": "Hang 10% dextrose in water at the TPN rate"
+          },
+          {
+            "id": "c",
+            "text": "Hang 0.9% sodium chloride at the TPN rate"
+          },
+          {
+            "id": "d",
+            "text": "Speed up the next bag when it arrives to make up the missed volume"
+          }
+        ]
+      },
+      "key": {
+        "correct": "b"
+      },
+      "rationale": {
+        "correct": "Hang D10W if TPN is interrupted, and never speed up TPN to catch up. Monitor glucose closely.",
+        "perOption": {
+          "a": "Stopping TPN suddenly can cause rebound hypoglycemia.",
+          "b": "D10W maintains glucose delivery and prevents rebound hypoglycemia.",
+          "c": "Saline doesn't provide glucose.",
+          "d": "Catching up can cause hyperglycemia and fluid overload."
+        },
+        "references": [
+          "Nursing pharmacology texts (e.g. Lehne; McCuistion) and the drug's prescribing information",
+          "Reviewed by the content team on 17 November 2026."
+        ]
+      },
+      "educationalObjective": "Prevent hypoglycemia when TPN is interrupted."
+    },
+    {
+      "id": "c1a00004-0000-4000-8000-000000000021",
+      "itemType": "multiple_choice",
+      "clientNeeds": "PHI.PPT",
+      "bodySystem": "cardiovascular",
+      "subtopics": [
+        "iv-therapy-and-vascular-access"
+      ],
+      "cjmmSkill": "take_action",
+      "difficulty": "difficult",
+      "stem": "A client's central venous catheter tubing comes apart during a position change. The client suddenly becomes short of breath with chest pain. What should the nurse do first?",
+      "content": {
+        "options": [
+          {
+            "id": "a",
+            "text": "Clamp the catheter"
+          },
+          {
+            "id": "b",
+            "text": "Place the client flat on the back"
+          },
+          {
+            "id": "c",
+            "text": "Give oxygen"
+          },
+          {
+            "id": "d",
+            "text": "Call the provider"
+          }
+        ]
+      },
+      "key": {
+        "correct": "a"
+      },
+      "rationale": {
+        "correct": "For suspected air embolism: clamp the catheter, put the client on the left side with the head down (if not contraindicated), give oxygen and notify the provider.",
+        "perOption": {
+          "a": "Clamping stops more air from entering the circulation.",
+          "b": "The left-side, head-down position is used after the catheter is clamped.",
+          "c": "Oxygen is needed, but stopping more air from entering comes first.",
+          "d": "The provider is notified after immediate actions."
+        },
+        "references": [
+          "Medical-surgical nursing texts (e.g. Lewis; Ignatavicius)",
+          "Reviewed by the content team on 17 November 2026."
+        ]
+      },
+      "educationalObjective": "Respond to a suspected air embolism from a central line."
+    },
+    {
+      "id": "c1a00004-0000-4000-8000-000000000022",
+      "itemType": "multiple_choice",
+      "clientNeeds": "PHI.PPT",
+      "bodySystem": "cardiovascular",
+      "subtopics": [
+        "iv-therapy-and-vascular-access"
+      ],
+      "cjmmSkill": "analyze_cues",
+      "difficulty": "easy",
+      "stem": "A client's peripheral IV site is cool, pale and swollen, and the infusion has slowed. What should the nurse do?",
+      "content": {
+        "options": [
+          {
+            "id": "a",
+            "text": "Stop the infusion, remove the catheter and elevate the arm"
+          },
+          {
+            "id": "b",
+            "text": "Flush the catheter forcefully to clear it"
+          },
+          {
+            "id": "c",
+            "text": "Apply a warm compress and continue the infusion"
+          },
+          {
+            "id": "d",
+            "text": "Raise the IV bag higher to improve flow"
+          }
+        ]
+      },
+      "key": {
+        "correct": "a"
+      },
+      "rationale": {
+        "correct": "Infiltration is cool, pale and swollen; phlebitis is warm, red and tender along the vein.",
+        "perOption": {
+          "a": "These findings indicate infiltration; the IV is stopped and removed and the arm elevated.",
+          "b": "Forceful flushing pushes more fluid into the tissue.",
+          "c": "The infusion must be stopped first.",
+          "d": "This forces more fluid into the tissue."
+        },
+        "references": [
+          "Fundamentals of nursing texts (e.g. Potter & Perry)",
+          "Reviewed by the content team on 17 November 2026."
+        ]
+      },
+      "educationalObjective": "Recognize and manage IV infiltration."
+    },
+    {
+      "id": "c1a00004-0000-4000-8000-000000000023",
+      "itemType": "multiple_choice",
+      "clientNeeds": "PHI.PPT",
+      "bodySystem": "cardiovascular",
+      "subtopics": [
+        "iv-therapy-and-vascular-access"
+      ],
+      "cjmmSkill": "take_action",
+      "difficulty": "difficult",
+      "stem": "A client receiving norepinephrine through a peripheral IV has a cold, blanched area around the insertion site. What should the nurse do?",
+      "content": {
+        "options": [
+          {
+            "id": "a",
+            "text": "Stop the infusion and notify the provider so phentolamine can be given into the area"
+          },
+          {
+            "id": "b",
+            "text": "Apply ice to the site and continue the infusion"
+          },
+          {
+            "id": "c",
+            "text": "Increase the infusion rate to maintain blood pressure"
+          },
+          {
+            "id": "d",
+            "text": "Massage the area to spread the medication"
+          }
+        ]
+      },
+      "key": {
+        "correct": "a"
+      },
+      "rationale": {
+        "correct": "Vasopressor extravasation is treated by stopping the infusion and giving phentolamine; vasopressors are preferably given through a central line.",
+        "perOption": {
+          "a": "Norepinephrine extravasation causes vasoconstriction and tissue necrosis; phentolamine reverses the local vasoconstriction.",
+          "b": "Ice worsens vasoconstriction, and the infusion must be stopped at that site.",
+          "c": "This increases tissue damage.",
+          "d": "Massage spreads the drug and the damage."
+        },
+        "references": [
+          "Nursing pharmacology texts (e.g. Lehne; McCuistion) and the drug's prescribing information",
+          "Reviewed by the content team on 17 November 2026."
+        ]
+      },
+      "educationalObjective": "Manage extravasation of a vasopressor."
+    },
+    {
+      "id": "c1a00004-0000-4000-8000-000000000024",
+      "itemType": "multiple_choice",
+      "clientNeeds": "PHI.PPT",
+      "bodySystem": "pharmacology",
+      "subtopics": [
+        "medication-administration-technique"
+      ],
+      "cjmmSkill": "take_action",
+      "difficulty": "moderate",
+      "stem": "The nurse is giving an intramuscular injection of iron dextran. Which technique should the nurse use?",
+      "content": {
+        "options": [
+          {
+            "id": "a",
+            "text": "Z-track method"
+          },
+          {
+            "id": "b",
+            "text": "Massaging the site after injection"
+          },
+          {
+            "id": "c",
+            "text": "Injecting into the deltoid muscle"
+          },
+          {
+            "id": "d",
+            "text": "Using the same needle used to draw up the drug"
+          }
+        ]
+      },
+      "key": {
+        "correct": "a"
+      },
+      "rationale": {
+        "correct": "Z-track injection prevents irritating or staining drugs from leaking into subcutaneous tissue.",
+        "perOption": {
+          "a": "The Z-track method seals the medication in the muscle, preventing leakage and skin staining.",
+          "b": "Massage can push the drug into the subcutaneous tissue and stain the skin.",
+          "c": "A large muscle such as the ventrogluteal is preferred.",
+          "d": "A new needle prevents tracking the irritating drug through the tissue."
+        },
+        "references": [
+          "Nursing pharmacology texts (e.g. Lehne; McCuistion) and the drug's prescribing information",
+          "Fundamentals of nursing texts (e.g. Potter & Perry)",
+          "Reviewed by the content team on 17 November 2026."
+        ]
+      },
+      "educationalObjective": "Use the Z-track method for irritating IM medications."
+    },
+    {
+      "id": "c1a00004-0000-4000-8000-000000000025",
+      "itemType": "multiple_choice",
+      "clientNeeds": "PHI.PPT",
+      "bodySystem": "pharmacology",
+      "subtopics": [
+        "medication-administration-technique"
+      ],
+      "cjmmSkill": "take_action",
+      "difficulty": "moderate",
+      "stem": "The nurse is giving furosemide 80 mg by IV push. Which action helps prevent ototoxicity?",
+      "content": {
+        "options": [
+          {
+            "id": "a",
+            "text": "Give the dose over at least 4 minutes (no faster than 20 mg/min)"
+          },
+          {
+            "id": "b",
+            "text": "Give the dose with a glass of milk"
+          },
+          {
+            "id": "c",
+            "text": "Give the dose as quickly as possible"
+          },
+          {
+            "id": "d",
+            "text": "Give it into the IM site instead"
+          }
+        ]
+      },
+      "key": {
+        "correct": "a"
+      },
+      "rationale": {
+        "correct": "Give IV furosemide slowly, at no more than about 20 mg/min; the risk of ototoxicity rises with fast or high doses.",
+        "perOption": {
+          "a": "Rapid IV push of high-dose furosemide raises the risk of ototoxicity.",
+          "b": "Food doesn't affect IV furosemide.",
+          "c": "Rapid administration increases the risk of hearing damage.",
+          "d": "Changing the route without an order isn't appropriate."
+        },
+        "references": [
+          "Nursing pharmacology texts (e.g. Lehne; McCuistion) and the drug's prescribing information",
+          "Reviewed by the content team on 17 November 2026."
+        ]
+      },
+      "educationalObjective": "Give IV push furosemide at a safe rate."
+    },
+    {
+      "id": "c1a00004-0000-4000-8000-000000000026",
+      "itemType": "select_n",
+      "clientNeeds": "PHI.PPT",
+      "bodySystem": "pharmacology",
+      "subtopics": [
+        "pre-administration-medication-checks"
+      ],
+      "cjmmSkill": "recognize_cues",
+      "difficulty": "moderate",
+      "stem": "Select the 3 assessments the nurse should check before giving these medications.",
+      "content": {
+        "options": [
+          {
+            "id": "a",
+            "text": "Blood pressure before giving lisinopril"
+          },
+          {
+            "id": "b",
+            "text": "Apical pulse for 1 full minute before giving digoxin"
+          },
+          {
+            "id": "c",
+            "text": "Potassium level before giving IV furosemide"
+          },
+          {
+            "id": "d",
+            "text": "Temperature before giving metoprolol"
+          },
+          {
+            "id": "e",
+            "text": "Blood glucose before giving amlodipine"
+          },
+          {
+            "id": "f",
+            "text": "Respiratory rate before giving atorvastatin"
+          }
+        ],
+        "selectCount": 3
+      },
+      "key": {
+        "correct": [
+          "a",
+          "b",
+          "c"
+        ]
+      },
+      "rationale": {
+        "correct": "Before giving cardiovascular drugs, check the vital sign or lab value the drug affects.",
+        "perOption": {
+          "a": "Lisinopril lowers blood pressure; hold it if the client is hypotensive.",
+          "b": "Hold digoxin for a heart rate below 60/min (or per the prescriber's parameters).",
+          "c": "Furosemide wastes potassium; hypokalemia must be corrected first.",
+          "d": "Metoprolol needs a heart rate and blood pressure check.",
+          "e": "Amlodipine needs a blood pressure check.",
+          "f": "Statins need monitoring of liver function and muscle symptoms."
+        },
+        "references": [
+          "Nursing pharmacology texts (e.g. Lehne; McCuistion) and the drug's prescribing information",
+          "Reviewed by the content team on 17 November 2026."
+        ]
+      },
+      "educationalObjective": "Choose the right pre-administration assessment for common drugs."
+    }
+  ]
+}

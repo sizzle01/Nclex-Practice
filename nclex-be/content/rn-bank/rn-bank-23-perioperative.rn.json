@@ -1,0 +1,1221 @@
+{
+  "notice": "RN bank batch 23: Perioperative care. Reviewed by the content team on 17 November 2026. See REVIEW-LOG.md.",
+  "track": "RN",
+  "subtopics": [
+    {
+      "clientNeeds": "PHI.RRP",
+      "slug": "preoperative-care",
+      "name": "Preoperative care"
+    },
+    {
+      "clientNeeds": "SECE.SIC",
+      "slug": "client-identification-and-error-prevention",
+      "name": "Client identification and error prevention"
+    },
+    {
+      "clientNeeds": "PHI.RRP",
+      "slug": "anesthesia-and-sedation",
+      "name": "Anesthesia and procedural sedation"
+    },
+    {
+      "clientNeeds": "PHI.RRP",
+      "slug": "postoperative-care",
+      "name": "Postoperative care"
+    }
+  ],
+  "questions": [
+    {
+      "id": "c1a00023-0000-4000-8000-000000000001",
+      "itemType": "multiple_choice",
+      "clientNeeds": "PHI.RRP",
+      "bodySystem": "fundamentals",
+      "subtopics": [
+        "preoperative-care"
+      ],
+      "cjmmSkill": "take_action",
+      "difficulty": "moderate",
+      "stem": "On the morning of surgery, a client tells the nurse, \"I had a coffee with cream about an hour ago.\" What should the nurse do?",
+      "content": {
+        "options": [
+          {
+            "id": "a",
+            "text": "Notify the anesthesia provider"
+          },
+          {
+            "id": "b",
+            "text": "Continue preparing the client for surgery"
+          },
+          {
+            "id": "c",
+            "text": "Give an antacid and proceed"
+          },
+          {
+            "id": "d",
+            "text": "Have the client vomit"
+          }
+        ]
+      },
+      "key": {
+        "correct": "a"
+      },
+      "rationale": {
+        "correct": "Fasting guidelines are commonly about 2 hours for clear liquids, 6 hours for a light meal and longer for fatty foods. Report any deviation.",
+        "perOption": {
+          "a": "Recent intake raises the risk of aspiration; the anesthesia team decides whether to delay.",
+          "b": "This ignores the aspiration risk.",
+          "c": "The nurse can't decide this alone.",
+          "d": "This isn't appropriate."
+        },
+        "references": [
+          "Medical-surgical nursing texts (e.g. Lewis; Ignatavicius)",
+          "Reviewed by the content team on 17 November 2026."
+        ]
+      },
+      "educationalObjective": "Respond to a breach of preoperative fasting."
+    },
+    {
+      "id": "c1a00023-0000-4000-8000-000000000002",
+      "itemType": "multiple_choice",
+      "clientNeeds": "PHI.RRP",
+      "bodySystem": "fundamentals",
+      "subtopics": [
+        "preoperative-care"
+      ],
+      "cjmmSkill": "generate_solutions",
+      "difficulty": "moderate",
+      "stem": "Which home medication is usually continued with a sip of water on the morning of surgery?",
+      "content": {
+        "options": [
+          {
+            "id": "a",
+            "text": "Metoprolol"
+          },
+          {
+            "id": "b",
+            "text": "Warfarin"
+          },
+          {
+            "id": "c",
+            "text": "Metformin"
+          },
+          {
+            "id": "d",
+            "text": "Ginkgo biloba"
+          }
+        ]
+      },
+      "key": {
+        "correct": "a"
+      },
+      "rationale": {
+        "correct": "Follow the surgeon's and anesthesia instructions; beta-blockers are generally continued, while anticoagulants and some diabetes drugs are held.",
+        "perOption": {
+          "a": "Beta-blockers are continued to prevent rebound tachycardia and perioperative ischemia.",
+          "b": "Warfarin is usually stopped several days before surgery as directed.",
+          "c": "Metformin is often held on the day of surgery.",
+          "d": "Ginkgo increases bleeding and is stopped beforehand."
+        },
+        "references": [
+          "Medical-surgical nursing texts (e.g. Lewis; Ignatavicius)",
+          "Nursing pharmacology texts (e.g. Lehne; McCuistion) and the drug's prescribing information",
+          "Reviewed by the content team on 17 November 2026."
+        ]
+      },
+      "educationalObjective": "Identify medications usually continued before surgery."
+    },
+    {
+      "id": "c1a00023-0000-4000-8000-000000000003",
+      "itemType": "multiple_choice",
+      "clientNeeds": "PHI.RRP",
+      "bodySystem": "fundamentals",
+      "subtopics": [
+        "preoperative-care"
+      ],
+      "cjmmSkill": "recognize_cues",
+      "difficulty": "moderate",
+      "stem": "During the preoperative interview, which supplement should the nurse report because it increases bleeding risk?",
+      "content": {
+        "options": [
+          {
+            "id": "a",
+            "text": "Ginkgo biloba"
+          },
+          {
+            "id": "b",
+            "text": "Vitamin C"
+          },
+          {
+            "id": "c",
+            "text": "Calcium"
+          },
+          {
+            "id": "d",
+            "text": "Probiotics"
+          }
+        ]
+      },
+      "key": {
+        "correct": "a"
+      },
+      "rationale": {
+        "correct": "Garlic, ginkgo, ginseng and fish oil can increase bleeding; ask about all supplements.",
+        "perOption": {
+          "a": "Ginkgo inhibits platelet function.",
+          "b": "This doesn't increase bleeding.",
+          "c": "This doesn't increase bleeding.",
+          "d": "These don't increase bleeding."
+        },
+        "references": [
+          "Nursing pharmacology texts (e.g. Lehne; McCuistion) and the drug's prescribing information",
+          "Reviewed by the content team on 17 November 2026."
+        ]
+      },
+      "educationalObjective": "Identify supplements that increase surgical bleeding."
+    },
+    {
+      "id": "c1a00023-0000-4000-8000-000000000004",
+      "itemType": "multiple_choice",
+      "clientNeeds": "SECE.SIC",
+      "bodySystem": "fundamentals",
+      "subtopics": [
+        "client-identification-and-error-prevention"
+      ],
+      "cjmmSkill": "take_action",
+      "difficulty": "easy",
+      "stem": "When does the surgical team perform the 'time-out'?",
+      "content": {
+        "options": [
+          {
+            "id": "a",
+            "text": "Right before the incision, with the whole team confirming the client, procedure and site"
+          },
+          {
+            "id": "b",
+            "text": "The day before surgery"
+          },
+          {
+            "id": "c",
+            "text": "After the incision"
+          },
+          {
+            "id": "d",
+            "text": "Only for emergency surgery"
+          }
+        ]
+      },
+      "key": {
+        "correct": "a"
+      },
+      "rationale": {
+        "correct": "Universal Protocol: pre-procedure verification, site marking and a time-out before the incision.",
+        "perOption": {
+          "a": "The time-out is the final check to prevent wrong-site surgery.",
+          "b": "This is too early.",
+          "c": "This is too late.",
+          "d": "It is required for all procedures."
+        },
+        "references": [
+          "Fundamentals of nursing texts (e.g. Potter & Perry)",
+          "Reviewed by the content team on 17 November 2026."
+        ]
+      },
+      "educationalObjective": "Explain the surgical time-out."
+    },
+    {
+      "id": "c1a00023-0000-4000-8000-000000000005",
+      "itemType": "multiple_choice",
+      "clientNeeds": "SECE.SIC",
+      "bodySystem": "fundamentals",
+      "subtopics": [
+        "client-identification-and-error-prevention"
+      ],
+      "cjmmSkill": "take_action",
+      "difficulty": "moderate",
+      "stem": "Who should mark the surgical site, and when?",
+      "content": {
+        "options": [
+          {
+            "id": "a",
+            "text": "The surgeon performing the procedure, with the client awake and involved"
+          },
+          {
+            "id": "b",
+            "text": "The circulating nurse after the client is sedated"
+          },
+          {
+            "id": "c",
+            "text": "The client alone"
+          },
+          {
+            "id": "d",
+            "text": "No one; marking isn't necessary"
+          }
+        ]
+      },
+      "key": {
+        "correct": "a"
+      },
+      "rationale": {
+        "correct": "The person doing the procedure marks the site, with the client's involvement when possible.",
+        "perOption": {
+          "a": "The client helps confirm the correct site.",
+          "b": "The client must be involved.",
+          "c": "The surgeon is responsible.",
+          "d": "Marking is required for procedures involving laterality."
+        },
+        "references": [
+          "Fundamentals of nursing texts (e.g. Potter & Perry)",
+          "Reviewed by the content team on 17 November 2026."
+        ]
+      },
+      "educationalObjective": "Apply surgical site marking rules."
+    },
+    {
+      "id": "c1a00023-0000-4000-8000-000000000006",
+      "itemType": "sata",
+      "clientNeeds": "PHI.RRP",
+      "bodySystem": "fundamentals",
+      "subtopics": [
+        "preoperative-care"
+      ],
+      "cjmmSkill": "generate_solutions",
+      "difficulty": "easy",
+      "stem": "Which topics should the nurse include in preoperative teaching for a client having abdominal surgery? Select all that apply.",
+      "content": {
+        "options": [
+          {
+            "id": "a",
+            "text": "Using an incentive spirometer"
+          },
+          {
+            "id": "b",
+            "text": "Leg exercises and early walking"
+          },
+          {
+            "id": "c",
+            "text": "Holding a pillow over the incision when coughing"
+          },
+          {
+            "id": "d",
+            "text": "Rating pain on a 0 to 10 scale"
+          },
+          {
+            "id": "e",
+            "text": "Avoiding coughing after surgery"
+          },
+          {
+            "id": "f",
+            "text": "Staying in bed for 3 days"
+          }
+        ]
+      },
+      "key": {
+        "correct": [
+          "a",
+          "b",
+          "c",
+          "d"
+        ]
+      },
+      "rationale": {
+        "correct": "Preop teaching: breathing exercises, mobility, splinting, pain management and what to expect.",
+        "perOption": {
+          "a": "This prevents atelectasis.",
+          "b": "These prevent DVT.",
+          "c": "Splinting reduces pain when coughing.",
+          "d": "This allows effective pain management.",
+          "e": "Coughing clears secretions.",
+          "f": "Early walking is encouraged."
+        },
+        "references": [
+          "Medical-surgical nursing texts (e.g. Lewis; Ignatavicius)",
+          "Reviewed by the content team on 17 November 2026."
+        ]
+      },
+      "educationalObjective": "Plan preoperative teaching."
+    },
+    {
+      "id": "c1a00023-0000-4000-8000-000000000007",
+      "itemType": "multiple_choice",
+      "clientNeeds": "PHI.RRP",
+      "bodySystem": "fundamentals",
+      "subtopics": [
+        "anesthesia-and-sedation"
+      ],
+      "cjmmSkill": "recognize_cues",
+      "difficulty": "difficult",
+      "stem": "During general anesthesia, a client has a sudden rise in end-tidal CO2, jaw rigidity, tachycardia and a rising temperature. What does the nurse suspect?",
+      "content": {
+        "options": [
+          {
+            "id": "a",
+            "text": "Malignant hyperthermia"
+          },
+          {
+            "id": "b",
+            "text": "Sepsis"
+          },
+          {
+            "id": "c",
+            "text": "Hypovolemia"
+          },
+          {
+            "id": "d",
+            "text": "Allergic reaction"
+          }
+        ]
+      },
+      "key": {
+        "correct": "a"
+      },
+      "rationale": {
+        "correct": "Malignant hyperthermia: stop the triggering agents, give dantrolene, cool the client and treat hyperkalemia and acidosis.",
+        "perOption": {
+          "a": "This is a genetic reaction to volatile anesthetics and succinylcholine; the treatment is dantrolene.",
+          "b": "The onset is too rapid and tied to anesthesia.",
+          "c": "This doesn't explain the rigidity and rising CO2.",
+          "d": "This doesn't fit."
+        },
+        "references": [
+          "Medical-surgical nursing texts (e.g. Lewis; Ignatavicius)",
+          "Reviewed by the content team on 17 November 2026."
+        ]
+      },
+      "educationalObjective": "Recognize malignant hyperthermia."
+    },
+    {
+      "id": "c1a00023-0000-4000-8000-000000000008",
+      "itemType": "multiple_choice",
+      "clientNeeds": "PHI.RRP",
+      "bodySystem": "fundamentals",
+      "subtopics": [
+        "postoperative-care"
+      ],
+      "cjmmSkill": "prioritize_hypotheses",
+      "difficulty": "easy",
+      "stem": "A client arrives in the post-anesthesia care unit (PACU). What should the nurse assess first?",
+      "content": {
+        "options": [
+          {
+            "id": "a",
+            "text": "Airway and breathing"
+          },
+          {
+            "id": "b",
+            "text": "Pain level"
+          },
+          {
+            "id": "c",
+            "text": "Incision"
+          },
+          {
+            "id": "d",
+            "text": "Urine output"
+          }
+        ]
+      },
+      "key": {
+        "correct": "a"
+      },
+      "rationale": {
+        "correct": "PACU priorities: airway, breathing, circulation, then level of consciousness, pain and surgical site.",
+        "perOption": {
+          "a": "Anesthesia and opioids depress breathing; the airway comes first.",
+          "b": "This comes after ABCs.",
+          "c": "This comes after ABCs.",
+          "d": "This comes after ABCs."
+        },
+        "references": [
+          "Medical-surgical nursing texts (e.g. Lewis; Ignatavicius)",
+          "Reviewed by the content team on 17 November 2026."
+        ]
+      },
+      "educationalObjective": "Prioritize the PACU assessment."
+    },
+    {
+      "id": "c1a00023-0000-4000-8000-000000000009",
+      "itemType": "multiple_choice",
+      "clientNeeds": "PHI.RRP",
+      "bodySystem": "fundamentals",
+      "subtopics": [
+        "postoperative-care"
+      ],
+      "cjmmSkill": "take_action",
+      "difficulty": "moderate",
+      "stem": "A drowsy client in the PACU is making loud snoring sounds, and the oxygen saturation is falling. What should the nurse do first?",
+      "content": {
+        "options": [
+          {
+            "id": "a",
+            "text": "Reposition the airway with a jaw thrust or head tilt"
+          },
+          {
+            "id": "b",
+            "text": "Give naloxone"
+          },
+          {
+            "id": "c",
+            "text": "Document the snoring"
+          },
+          {
+            "id": "d",
+            "text": "Encourage the client to sleep"
+          }
+        ]
+      },
+      "key": {
+        "correct": "a"
+      },
+      "rationale": {
+        "correct": "Partial airway obstruction from the tongue: jaw thrust, oral airway and supplemental oxygen.",
+        "perOption": {
+          "a": "Snoring means the tongue is partly blocking the airway.",
+          "b": "Opening the airway comes first.",
+          "c": "This delays treatment.",
+          "d": "The airway is obstructed."
+        },
+        "references": [
+          "Medical-surgical nursing texts (e.g. Lewis; Ignatavicius)",
+          "Reviewed by the content team on 17 November 2026."
+        ]
+      },
+      "educationalObjective": "Manage airway obstruction after anesthesia."
+    },
+    {
+      "id": "c1a00023-0000-4000-8000-000000000010",
+      "itemType": "multiple_choice",
+      "clientNeeds": "PHI.RRP",
+      "bodySystem": "fundamentals",
+      "subtopics": [
+        "postoperative-care"
+      ],
+      "cjmmSkill": "recognize_cues",
+      "difficulty": "moderate",
+      "stem": "Two hours after surgery, a client's heart rate rises from 84 to 118/min, the blood pressure falls from 128/78 to 92/58 mm Hg and the client is restless. What should the nurse do first?",
+      "content": {
+        "options": [
+          {
+            "id": "a",
+            "text": "Check the dressing and drains for bleeding"
+          },
+          {
+            "id": "b",
+            "text": "Give a pain medication"
+          },
+          {
+            "id": "c",
+            "text": "Encourage walking"
+          },
+          {
+            "id": "d",
+            "text": "Reassess in 1 hour"
+          }
+        ]
+      },
+      "key": {
+        "correct": "a"
+      },
+      "rationale": {
+        "correct": "Watch for hemorrhage after surgery: tachycardia, hypotension, restlessness and bleeding from dressings or drains.",
+        "perOption": {
+          "a": "These signs suggest hemorrhage.",
+          "b": "This could worsen the hypotension.",
+          "c": "This isn't safe.",
+          "d": "This delays treatment."
+        },
+        "references": [
+          "Medical-surgical nursing texts (e.g. Lewis; Ignatavicius)",
+          "Reviewed by the content team on 17 November 2026."
+        ]
+      },
+      "educationalObjective": "Recognize postoperative hemorrhage."
+    },
+    {
+      "id": "c1a00023-0000-4000-8000-000000000011",
+      "itemType": "multiple_choice",
+      "clientNeeds": "PHI.RRP",
+      "bodySystem": "fundamentals",
+      "subtopics": [
+        "postoperative-care"
+      ],
+      "cjmmSkill": "generate_solutions",
+      "difficulty": "moderate",
+      "stem": "On the first day after surgery, a client has a temperature of 37.9 °C (100.2 °F) and diminished breath sounds at the lung bases. What should the nurse do?",
+      "content": {
+        "options": [
+          {
+            "id": "a",
+            "text": "Encourage incentive spirometer use, deep breathing and walking"
+          },
+          {
+            "id": "b",
+            "text": "Expect a wound infection"
+          },
+          {
+            "id": "c",
+            "text": "Restrict fluids"
+          },
+          {
+            "id": "d",
+            "text": "Keep the client in bed"
+          }
+        ]
+      },
+      "key": {
+        "correct": "a"
+      },
+      "rationale": {
+        "correct": "Early postoperative fever is most often from atelectasis; treat with lung expansion and mobility.",
+        "perOption": {
+          "a": "These findings suggest atelectasis.",
+          "b": "Wound infections usually appear around day 5 to 7.",
+          "c": "This thickens secretions.",
+          "d": "Immobility worsens atelectasis."
+        },
+        "references": [
+          "Medical-surgical nursing texts (e.g. Lewis; Ignatavicius)",
+          "Reviewed by the content team on 17 November 2026."
+        ]
+      },
+      "educationalObjective": "Manage early postoperative fever."
+    },
+    {
+      "id": "c1a00023-0000-4000-8000-000000000012",
+      "itemType": "matrix_mc",
+      "clientNeeds": "PHI.RRP",
+      "bodySystem": "fundamentals",
+      "subtopics": [
+        "postoperative-care"
+      ],
+      "cjmmSkill": "analyze_cues",
+      "difficulty": "difficult",
+      "stem": "For each postoperative finding, indicate the most likely cause.",
+      "content": {
+        "rows": [
+          {
+            "id": "r1",
+            "text": "Day 1: low-grade fever with diminished breath sounds at the bases"
+          },
+          {
+            "id": "r2",
+            "text": "Day 3: burning on urination after catheter removal"
+          },
+          {
+            "id": "r3",
+            "text": "Day 6: red incision with purulent drainage"
+          },
+          {
+            "id": "r4",
+            "text": "Day 5: one-sided calf swelling and pain"
+          }
+        ],
+        "columns": [
+          {
+            "id": "c1",
+            "text": "Atelectasis"
+          },
+          {
+            "id": "c2",
+            "text": "Urinary tract infection"
+          },
+          {
+            "id": "c3",
+            "text": "Wound infection"
+          },
+          {
+            "id": "c4",
+            "text": "Deep vein thrombosis"
+          }
+        ]
+      },
+      "key": {
+        "byRow": {
+          "r1": "c1",
+          "r2": "c2",
+          "r3": "c3",
+          "r4": "c4"
+        }
+      },
+      "rationale": {
+        "correct": "Postoperative fever timeline: wind (days 1 to 2), water (days 3 to 5), wound (days 5 to 7), walking (DVT, days 5 and later), wonder drugs.",
+        "perOption": {
+          "r1:c1": "Atelectasis is the usual cause of fever in the first 1 to 2 days.",
+          "r1:c2": "UTIs usually appear around day 3 to 5.",
+          "r1:c3": "Wound infections usually appear around day 5 to 7.",
+          "r1:c4": "DVT doesn't cause diminished breath sounds.",
+          "r2:c1": "This isn't respiratory.",
+          "r2:c2": "Catheterization raises the risk of UTI.",
+          "r2:c3": "This isn't the wound.",
+          "r2:c4": "This isn't DVT.",
+          "r3:c1": "This isn't respiratory.",
+          "r3:c2": "This isn't urinary.",
+          "r3:c3": "Purulent drainage and redness indicate wound infection.",
+          "r3:c4": "This isn't DVT.",
+          "r4:c1": "This isn't respiratory.",
+          "r4:c2": "This isn't urinary.",
+          "r4:c3": "This isn't the wound.",
+          "r4:c4": "Calf swelling on one side suggests DVT."
+        },
+        "references": [
+          "Medical-surgical nursing texts (e.g. Lewis; Ignatavicius)",
+          "Reviewed by the content team on 17 November 2026."
+        ]
+      },
+      "educationalObjective": "Link postoperative complications to their timing."
+    },
+    {
+      "id": "c1a00023-0000-4000-8000-000000000013",
+      "itemType": "multiple_choice",
+      "clientNeeds": "PHI.RRP",
+      "bodySystem": "fundamentals",
+      "subtopics": [
+        "anesthesia-and-sedation"
+      ],
+      "cjmmSkill": "take_action",
+      "difficulty": "moderate",
+      "stem": "A client receives IV midazolam and fentanyl for moderate sedation during a procedure. Which monitoring is most important?",
+      "content": {
+        "options": [
+          {
+            "id": "a",
+            "text": "Continuous oxygen saturation, respiratory rate and level of consciousness"
+          },
+          {
+            "id": "b",
+            "text": "Blood glucose every hour"
+          },
+          {
+            "id": "c",
+            "text": "Temperature every 15 minutes"
+          },
+          {
+            "id": "d",
+            "text": "Urine output every 15 minutes"
+          }
+        ]
+      },
+      "key": {
+        "correct": "a"
+      },
+      "rationale": {
+        "correct": "Procedural sedation: continuous pulse oximetry and capnography, vital signs, sedation level, and reversal agents ready.",
+        "perOption": {
+          "a": "Sedatives and opioids can depress breathing.",
+          "b": "This isn't the main risk.",
+          "c": "This isn't the main risk.",
+          "d": "This isn't the main risk."
+        },
+        "references": [
+          "Medical-surgical nursing texts (e.g. Lewis; Ignatavicius)",
+          "Reviewed by the content team on 17 November 2026."
+        ]
+      },
+      "educationalObjective": "Monitor a client during moderate sedation."
+    },
+    {
+      "id": "c1a00023-0000-4000-8000-000000000014",
+      "itemType": "multiple_choice",
+      "clientNeeds": "PHI.RRP",
+      "bodySystem": "fundamentals",
+      "subtopics": [
+        "anesthesia-and-sedation"
+      ],
+      "cjmmSkill": "take_action",
+      "difficulty": "moderate",
+      "stem": "During moderate sedation with midazolam, a client becomes unresponsive with slow, shallow breathing. Which reversal agent should the nurse prepare?",
+      "content": {
+        "options": [
+          {
+            "id": "a",
+            "text": "Flumazenil"
+          },
+          {
+            "id": "b",
+            "text": "Naloxone"
+          },
+          {
+            "id": "c",
+            "text": "Protamine"
+          },
+          {
+            "id": "d",
+            "text": "Atropine"
+          }
+        ]
+      },
+      "key": {
+        "correct": "a"
+      },
+      "rationale": {
+        "correct": "Support the airway first; flumazenil reverses benzodiazepines and naloxone reverses opioids.",
+        "perOption": {
+          "a": "Flumazenil reverses benzodiazepines such as midazolam.",
+          "b": "Naloxone reverses opioids.",
+          "c": "Protamine reverses heparin.",
+          "d": "Atropine treats bradycardia."
+        },
+        "references": [
+          "Nursing pharmacology texts (e.g. Lehne; McCuistion) and the drug's prescribing information",
+          "Reviewed by the content team on 17 November 2026."
+        ]
+      },
+      "educationalObjective": "Choose the reversal agent for benzodiazepine sedation."
+    },
+    {
+      "id": "c1a00023-0000-4000-8000-000000000015",
+      "itemType": "multiple_choice",
+      "clientNeeds": "PHI.RRP",
+      "bodySystem": "fundamentals",
+      "subtopics": [
+        "anesthesia-and-sedation"
+      ],
+      "cjmmSkill": "recognize_cues",
+      "difficulty": "moderate",
+      "stem": "A client is receiving opioid analgesia through an epidural catheter. Which assessment is the priority?",
+      "content": {
+        "options": [
+          {
+            "id": "a",
+            "text": "Respiratory rate and sedation level"
+          },
+          {
+            "id": "b",
+            "text": "Bowel sounds"
+          },
+          {
+            "id": "c",
+            "text": "Skin turgor"
+          },
+          {
+            "id": "d",
+            "text": "Appetite"
+          }
+        ]
+      },
+      "key": {
+        "correct": "a"
+      },
+      "rationale": {
+        "correct": "Epidural analgesia: monitor breathing, sedation, blood pressure (hypotension), motor block and the catheter site.",
+        "perOption": {
+          "a": "Epidural opioids can cause delayed respiratory depression.",
+          "b": "This isn't the priority.",
+          "c": "This isn't the priority.",
+          "d": "This isn't the priority."
+        },
+        "references": [
+          "Medical-surgical nursing texts (e.g. Lewis; Ignatavicius)",
+          "Reviewed by the content team on 17 November 2026."
+        ]
+      },
+      "educationalObjective": "Monitor epidural analgesia."
+    },
+    {
+      "id": "c1a00023-0000-4000-8000-000000000016",
+      "itemType": "multiple_choice",
+      "clientNeeds": "PHI.RRP",
+      "bodySystem": "fundamentals",
+      "subtopics": [
+        "postoperative-care"
+      ],
+      "cjmmSkill": "take_action",
+      "difficulty": "easy",
+      "stem": "What should the nurse do before a client walks for the first time after surgery?",
+      "content": {
+        "options": [
+          {
+            "id": "a",
+            "text": "Have the client sit on the edge of the bed for a few minutes"
+          },
+          {
+            "id": "b",
+            "text": "Have the client stand up quickly"
+          },
+          {
+            "id": "c",
+            "text": "Give a sedative"
+          },
+          {
+            "id": "d",
+            "text": "Keep the client flat for 1 hour"
+          }
+        ]
+      },
+      "key": {
+        "correct": "a"
+      },
+      "rationale": {
+        "correct": "First walk: raise the head of the bed, dangle, stand with help and watch for dizziness.",
+        "perOption": {
+          "a": "Dangling the legs lets the blood pressure adjust and reduces fainting.",
+          "b": "This causes orthostatic hypotension.",
+          "c": "This increases fall risk.",
+          "d": "This isn't needed."
+        },
+        "references": [
+          "Fundamentals of nursing texts (e.g. Potter & Perry)",
+          "Reviewed by the content team on 17 November 2026."
+        ]
+      },
+      "educationalObjective": "Help a client walk safely for the first time after surgery."
+    },
+    {
+      "id": "c1a00023-0000-4000-8000-000000000017",
+      "itemType": "multiple_choice",
+      "clientNeeds": "PHI.RRP",
+      "bodySystem": "fundamentals",
+      "subtopics": [
+        "postoperative-care"
+      ],
+      "cjmmSkill": "take_action",
+      "difficulty": "easy",
+      "stem": "How should the nurse manage a Jackson-Pratt drain?",
+      "content": {
+        "options": [
+          {
+            "id": "a",
+            "text": "Empty it when half full and squeeze the bulb before closing it to restore suction"
+          },
+          {
+            "id": "b",
+            "text": "Leave the bulb fully expanded"
+          },
+          {
+            "id": "c",
+            "text": "Empty it only once a day"
+          },
+          {
+            "id": "d",
+            "text": "Irrigate the drain routinely"
+          }
+        ]
+      },
+      "key": {
+        "correct": "a"
+      },
+      "rationale": {
+        "correct": "JP drain: empty, measure, compress, record.",
+        "perOption": {
+          "a": "Compression creates the suction that pulls fluid out.",
+          "b": "This provides no suction.",
+          "c": "It is emptied as needed.",
+          "d": "This isn't routine."
+        },
+        "references": [
+          "Medical-surgical nursing texts (e.g. Lewis; Ignatavicius)",
+          "Reviewed by the content team on 17 November 2026."
+        ]
+      },
+      "educationalObjective": "Manage a closed suction drain."
+    },
+    {
+      "id": "c1a00023-0000-4000-8000-000000000018",
+      "itemType": "multiple_choice",
+      "clientNeeds": "PHI.RRP",
+      "bodySystem": "fundamentals",
+      "subtopics": [
+        "postoperative-care"
+      ],
+      "cjmmSkill": "take_action",
+      "difficulty": "moderate",
+      "stem": "An 80-year-old client is newly confused on the first night after surgery. What should the nurse do first?",
+      "content": {
+        "options": [
+          {
+            "id": "a",
+            "text": "Check the oxygen saturation and vital signs"
+          },
+          {
+            "id": "b",
+            "text": "Apply restraints"
+          },
+          {
+            "id": "c",
+            "text": "Give a sedative"
+          },
+          {
+            "id": "d",
+            "text": "Call the family to take the client home"
+          }
+        ]
+      },
+      "key": {
+        "correct": "a"
+      },
+      "rationale": {
+        "correct": "Postoperative delirium: look for causes (hypoxia, infection, pain, medications, retention) and reorient the client.",
+        "perOption": {
+          "a": "Hypoxia is a common, treatable cause of delirium.",
+          "b": "Restraints worsen delirium and are a last resort.",
+          "c": "This may worsen delirium.",
+          "d": "This isn't appropriate."
+        },
+        "references": [
+          "Medical-surgical nursing texts (e.g. Lewis; Ignatavicius)",
+          "Reviewed by the content team on 17 November 2026."
+        ]
+      },
+      "educationalObjective": "Respond to postoperative delirium."
+    },
+    {
+      "id": "c1a00023-0000-4000-8000-000000000019",
+      "itemType": "multiple_choice",
+      "clientNeeds": "PHI.RRP",
+      "bodySystem": "fundamentals",
+      "subtopics": [
+        "postoperative-care"
+      ],
+      "cjmmSkill": "take_action",
+      "difficulty": "moderate",
+      "stem": "A client using sequential compression devices has new pain and swelling in the right calf. What should the nurse do?",
+      "content": {
+        "options": [
+          {
+            "id": "a",
+            "text": "Remove the device from the right leg and notify the provider"
+          },
+          {
+            "id": "b",
+            "text": "Increase the device pressure"
+          },
+          {
+            "id": "c",
+            "text": "Massage the calf"
+          },
+          {
+            "id": "d",
+            "text": "Encourage the client to walk more"
+          }
+        ]
+      },
+      "key": {
+        "correct": "a"
+      },
+      "rationale": {
+        "correct": "Suspected DVT: don't massage or compress the leg; notify the provider for evaluation.",
+        "perOption": {
+          "a": "Compression could dislodge a clot; a DVT needs evaluation.",
+          "b": "This could dislodge a clot.",
+          "c": "This could dislodge a clot.",
+          "d": "Activity is limited until DVT is ruled out."
+        },
+        "references": [
+          "Medical-surgical nursing texts (e.g. Lewis; Ignatavicius)",
+          "Reviewed by the content team on 17 November 2026."
+        ]
+      },
+      "educationalObjective": "Respond to suspected DVT with compression devices."
+    },
+    {
+      "id": "c1a00023-0000-4000-8000-000000000020",
+      "itemType": "multiple_choice",
+      "clientNeeds": "PHI.RRP",
+      "bodySystem": "fundamentals",
+      "subtopics": [
+        "anesthesia-and-sedation"
+      ],
+      "cjmmSkill": "evaluate_outcomes",
+      "difficulty": "easy",
+      "stem": "A client is going home after outpatient surgery with general anesthesia. Which statement shows a need for more teaching?",
+      "content": {
+        "options": [
+          {
+            "id": "a",
+            "text": "\"My spouse will drive me home.\""
+          },
+          {
+            "id": "b",
+            "text": "\"I'll drive myself to work this evening.\""
+          },
+          {
+            "id": "c",
+            "text": "\"Someone will stay with me tonight.\""
+          },
+          {
+            "id": "d",
+            "text": "\"I'll avoid alcohol today.\""
+          }
+        ]
+      },
+      "key": {
+        "correct": "b"
+      },
+      "rationale": {
+        "correct": "After anesthesia: no driving, alcohol or important decisions for 24 hours, and a responsible adult present.",
+        "perOption": {
+          "a": "A responsible adult must drive.",
+          "b": "Clients shouldn't drive or make important decisions for 24 hours after anesthesia.",
+          "c": "This is recommended.",
+          "d": "This is correct."
+        },
+        "references": [
+          "Medical-surgical nursing texts (e.g. Lewis; Ignatavicius)",
+          "Reviewed by the content team on 17 November 2026."
+        ]
+      },
+      "educationalObjective": "Teach discharge safety after anesthesia."
+    },
+    {
+      "id": "c1a00023-0000-4000-8000-000000000021",
+      "itemType": "select_n",
+      "clientNeeds": "PHI.RRP",
+      "bodySystem": "fundamentals",
+      "subtopics": [
+        "postoperative-care"
+      ],
+      "cjmmSkill": "recognize_cues",
+      "difficulty": "moderate",
+      "stem": "The nurse reviews findings for a client 8 hours after surgery. Select the 3 findings that require immediate follow-up.",
+      "content": {
+        "options": [
+          {
+            "id": "a",
+            "text": "SpO2 89% on 2 L/min"
+          },
+          {
+            "id": "b",
+            "text": "Urine output of 20 mL/hr for the past 2 hours"
+          },
+          {
+            "id": "c",
+            "text": "Blood pressure 86/50 mm Hg"
+          },
+          {
+            "id": "d",
+            "text": "Pain rated 4 out of 10"
+          },
+          {
+            "id": "e",
+            "text": "Temperature 37.6 °C (99.7 °F)"
+          },
+          {
+            "id": "f",
+            "text": "Small amount of serosanguineous drainage on the dressing"
+          }
+        ],
+        "selectCount": 3
+      },
+      "key": {
+        "correct": [
+          "a",
+          "b",
+          "c"
+        ]
+      },
+      "rationale": {
+        "correct": "Report hypoxemia, low urine output and hypotension promptly after surgery.",
+        "perOption": {
+          "a": "Hypoxemia needs action now.",
+          "b": "Low output suggests hypovolemia or kidney injury.",
+          "c": "Hypotension may signal bleeding.",
+          "d": "Controlled pain is acceptable.",
+          "e": "A mild temperature is common after surgery.",
+          "f": "This is expected."
+        },
+        "references": [
+          "Medical-surgical nursing texts (e.g. Lewis; Ignatavicius)",
+          "Reviewed by the content team on 17 November 2026."
+        ]
+      },
+      "educationalObjective": "Identify abnormal postoperative findings."
+    },
+    {
+      "id": "c1a00023-0000-4000-8000-000000000022",
+      "itemType": "multiple_choice",
+      "clientNeeds": "PHI.RRP",
+      "bodySystem": "fundamentals",
+      "subtopics": [
+        "preoperative-care"
+      ],
+      "cjmmSkill": "recognize_cues",
+      "difficulty": "moderate",
+      "stem": "A client's preoperative labs show a potassium of 3.0 mEq/L. What should the nurse do?",
+      "content": {
+        "options": [
+          {
+            "id": "a",
+            "text": "Notify the surgeon and anesthesia provider before surgery"
+          },
+          {
+            "id": "b",
+            "text": "Proceed with surgery"
+          },
+          {
+            "id": "c",
+            "text": "Give a banana"
+          },
+          {
+            "id": "d",
+            "text": "Repeat the test after surgery"
+          }
+        ]
+      },
+      "key": {
+        "correct": "a"
+      },
+      "rationale": {
+        "correct": "Report abnormal preoperative labs (potassium, glucose, hemoglobin, coagulation) before surgery.",
+        "perOption": {
+          "a": "Hypokalemia raises the risk of dysrhythmias under anesthesia.",
+          "b": "This ignores a significant abnormality.",
+          "c": "This doesn't correct it adequately before surgery.",
+          "d": "This is too late."
+        },
+        "references": [
+          "Laboratory reference ranges as used in common NCLEX review texts; follow the facility's ranges",
+          "Reviewed by the content team on 17 November 2026."
+        ]
+      },
+      "educationalObjective": "Report abnormal preoperative lab values."
+    },
+    {
+      "id": "c1a00023-0000-4000-8000-000000000023",
+      "itemType": "multiple_choice",
+      "clientNeeds": "PHI.RRP",
+      "bodySystem": "fundamentals",
+      "subtopics": [
+        "postoperative-care"
+      ],
+      "cjmmSkill": "analyze_cues",
+      "difficulty": "easy",
+      "stem": "On the first day after surgery, the nurse finds a small amount of serosanguineous drainage on the incision dressing. What should the nurse do?",
+      "content": {
+        "options": [
+          {
+            "id": "a",
+            "text": "Document it as an expected finding and continue monitoring"
+          },
+          {
+            "id": "b",
+            "text": "Notify the surgeon immediately"
+          },
+          {
+            "id": "c",
+            "text": "Remove the sutures"
+          },
+          {
+            "id": "d",
+            "text": "Apply a heat pack"
+          }
+        ]
+      },
+      "key": {
+        "correct": "a"
+      },
+      "rationale": {
+        "correct": "Know what is expected after surgery and what needs reporting (large amounts, bright red or purulent drainage).",
+        "perOption": {
+          "a": "Small amounts of serosanguineous drainage are expected early.",
+          "b": "This is expected.",
+          "c": "This isn't appropriate.",
+          "d": "This isn't needed."
+        },
+        "references": [
+          "Medical-surgical nursing texts (e.g. Lewis; Ignatavicius)",
+          "Reviewed by the content team on 17 November 2026."
+        ]
+      },
+      "educationalObjective": "Interpret incision drainage after surgery."
+    }
+  ]
+}

@@ -1,0 +1,1121 @@
+{
+  "notice": "RN bank batch 32: Mental health I: communication, anxiety, crisis and grief. Reviewed by the content team on 17 November 2026. See REVIEW-LOG.md.",
+  "track": "RN",
+  "subtopics": [
+    {
+      "clientNeeds": "PSI",
+      "slug": "therapeutic-communication",
+      "name": "Therapeutic communication"
+    },
+    {
+      "clientNeeds": "PSI",
+      "slug": "anxiety-and-related-disorders",
+      "name": "Anxiety, OCD and trauma-related disorders"
+    },
+    {
+      "clientNeeds": "PHI.PPT",
+      "slug": "psychiatric-medications",
+      "name": "Psychiatric medications"
+    },
+    {
+      "clientNeeds": "PSI",
+      "slug": "defense-mechanisms",
+      "name": "Defense mechanisms"
+    },
+    {
+      "clientNeeds": "PSI",
+      "slug": "crisis-intervention",
+      "name": "Crisis intervention"
+    },
+    {
+      "clientNeeds": "PSI",
+      "slug": "grief-and-loss",
+      "name": "Grief and loss"
+    },
+    {
+      "clientNeeds": "PSI",
+      "slug": "cultural-and-spiritual-care",
+      "name": "Cultural and spiritual care"
+    },
+    {
+      "clientNeeds": "PSI",
+      "slug": "intimate-partner-and-sexual-violence",
+      "name": "Intimate partner and sexual violence"
+    }
+  ],
+  "questions": [
+    {
+      "id": "c1a00032-0000-4000-8000-000000000001",
+      "itemType": "multiple_choice",
+      "clientNeeds": "PSI",
+      "bodySystem": "mental-health",
+      "subtopics": [
+        "therapeutic-communication"
+      ],
+      "cjmmSkill": "take_action",
+      "difficulty": "easy",
+      "stem": "A client says, \"I'm worthless. Nobody cares about me.\" Which response by the nurse is most therapeutic?",
+      "content": {
+        "options": [
+          {
+            "id": "a",
+            "text": "\"You're feeling that you have no value to anyone?\""
+          },
+          {
+            "id": "b",
+            "text": "\"Of course people care about you.\""
+          },
+          {
+            "id": "c",
+            "text": "\"Why do you feel that way?\""
+          },
+          {
+            "id": "d",
+            "text": "\"Let's talk about something more positive.\""
+          }
+        ]
+      },
+      "key": {
+        "correct": "a"
+      },
+      "rationale": {
+        "correct": "Therapeutic techniques: reflecting, restating, open-ended questions, silence and clarifying.",
+        "perOption": {
+          "a": "Reflecting the feeling invites the client to explore it.",
+          "b": "This is false reassurance and dismisses the feeling.",
+          "c": "'Why' questions can feel judgmental and make the client defensive.",
+          "d": "This changes the subject."
+        },
+        "references": [
+          "Psychiatric-mental health nursing texts (e.g. Varcarolis; Halter)",
+          "Reviewed by the content team on 17 November 2026."
+        ]
+      },
+      "educationalObjective": "Use a therapeutic response."
+    },
+    {
+      "id": "c1a00032-0000-4000-8000-000000000002",
+      "itemType": "multiple_choice",
+      "clientNeeds": "PSI",
+      "bodySystem": "mental-health",
+      "subtopics": [
+        "therapeutic-communication"
+      ],
+      "cjmmSkill": "evaluate_outcomes",
+      "difficulty": "easy",
+      "stem": "Which statement by a nurse is a nontherapeutic communication technique?",
+      "content": {
+        "options": [
+          {
+            "id": "a",
+            "text": "\"Tell me more about that.\""
+          },
+          {
+            "id": "b",
+            "text": "\"Don't worry, everything will be fine.\""
+          },
+          {
+            "id": "c",
+            "text": "\"You seem upset.\""
+          },
+          {
+            "id": "d",
+            "text": "\"What happened next?\""
+          }
+        ]
+      },
+      "key": {
+        "correct": "b"
+      },
+      "rationale": {
+        "correct": "Avoid false reassurance, advice-giving, 'why' questions, changing the subject and judgment.",
+        "perOption": {
+          "a": "This is an open-ended prompt.",
+          "b": "False reassurance blocks discussion of feelings.",
+          "c": "Making an observation is therapeutic.",
+          "d": "This encourages description."
+        },
+        "references": [
+          "Psychiatric-mental health nursing texts (e.g. Varcarolis; Halter)",
+          "Reviewed by the content team on 17 November 2026."
+        ]
+      },
+      "educationalObjective": "Identify nontherapeutic communication."
+    },
+    {
+      "id": "c1a00032-0000-4000-8000-000000000003",
+      "itemType": "multiple_choice",
+      "clientNeeds": "PSI",
+      "bodySystem": "mental-health",
+      "subtopics": [
+        "therapeutic-communication"
+      ],
+      "cjmmSkill": "take_action",
+      "difficulty": "moderate",
+      "stem": "A client asks the nurse, \"Are you married? Do you have kids?\" What is the best response?",
+      "content": {
+        "options": [
+          {
+            "id": "a",
+            "text": "\"We're here to focus on you. Tell me how your day has been.\""
+          },
+          {
+            "id": "b",
+            "text": "Share personal details to build trust"
+          },
+          {
+            "id": "c",
+            "text": "\"That's none of your business.\""
+          },
+          {
+            "id": "d",
+            "text": "Ignore the question"
+          }
+        ]
+      },
+      "key": {
+        "correct": "a"
+      },
+      "rationale": {
+        "correct": "Keep the therapeutic relationship focused on the client.",
+        "perOption": {
+          "a": "This redirects to the client and keeps professional boundaries.",
+          "b": "This shifts the focus away from the client.",
+          "c": "This is rude and damages rapport.",
+          "d": "Ignoring it isn't therapeutic."
+        },
+        "references": [
+          "Psychiatric-mental health nursing texts (e.g. Varcarolis; Halter)",
+          "Reviewed by the content team on 17 November 2026."
+        ]
+      },
+      "educationalObjective": "Maintain professional boundaries."
+    },
+    {
+      "id": "c1a00032-0000-4000-8000-000000000004",
+      "itemType": "multiple_choice",
+      "clientNeeds": "PSI",
+      "bodySystem": "mental-health",
+      "subtopics": [
+        "therapeutic-communication"
+      ],
+      "cjmmSkill": "take_action",
+      "difficulty": "moderate",
+      "stem": "A client says, \"I'll tell you something if you promise not to tell anyone.\" What is the best response?",
+      "content": {
+        "options": [
+          {
+            "id": "a",
+            "text": "\"I can't promise that. If it affects your safety or care, I'll need to share it with the team.\""
+          },
+          {
+            "id": "b",
+            "text": "\"I promise I won't tell anyone.\""
+          },
+          {
+            "id": "c",
+            "text": "\"Then don't tell me.\""
+          },
+          {
+            "id": "d",
+            "text": "\"I'll only tell your family.\""
+          }
+        ]
+      },
+      "key": {
+        "correct": "a"
+      },
+      "rationale": {
+        "correct": "Information that affects safety must be shared with the treatment team.",
+        "perOption": {
+          "a": "Nurses can't keep secrets that involve safety, such as suicidal plans.",
+          "b": "The nurse may have to break this promise.",
+          "c": "This shuts down communication.",
+          "d": "This isn't appropriate."
+        },
+        "references": [
+          "Psychiatric-mental health nursing texts (e.g. Varcarolis; Halter)",
+          "Reviewed by the content team on 17 November 2026."
+        ]
+      },
+      "educationalObjective": "Respond to a request for secrecy."
+    },
+    {
+      "id": "c1a00032-0000-4000-8000-000000000005",
+      "itemType": "multiple_choice",
+      "clientNeeds": "PSI",
+      "bodySystem": "mental-health",
+      "subtopics": [
+        "anxiety-and-related-disorders"
+      ],
+      "cjmmSkill": "take_action",
+      "difficulty": "moderate",
+      "stem": "A client is having a panic attack, breathing fast and saying, \"I'm going to die.\" What should the nurse do first?",
+      "content": {
+        "options": [
+          {
+            "id": "a",
+            "text": "Stay with the client, speak calmly and use short, simple sentences"
+          },
+          {
+            "id": "b",
+            "text": "Teach the client about panic disorder"
+          },
+          {
+            "id": "c",
+            "text": "Leave the client alone to calm down"
+          },
+          {
+            "id": "d",
+            "text": "Ask the client why they're panicking"
+          }
+        ]
+      },
+      "key": {
+        "correct": "a"
+      },
+      "rationale": {
+        "correct": "Severe or panic anxiety: stay, stay calm, simple directions, reduce stimulation.",
+        "perOption": {
+          "a": "In panic, the client can't process complex information; presence lowers anxiety.",
+          "b": "Teaching isn't possible during panic.",
+          "c": "The client shouldn't be left alone.",
+          "d": "The client can't reason now."
+        },
+        "references": [
+          "Psychiatric-mental health nursing texts (e.g. Varcarolis; Halter)",
+          "Reviewed by the content team on 17 November 2026."
+        ]
+      },
+      "educationalObjective": "Respond to a panic attack."
+    },
+    {
+      "id": "c1a00032-0000-4000-8000-000000000006",
+      "itemType": "multiple_choice",
+      "clientNeeds": "PHI.PPT",
+      "bodySystem": "mental-health",
+      "subtopics": [
+        "psychiatric-medications"
+      ],
+      "cjmmSkill": "evaluate_outcomes",
+      "difficulty": "moderate",
+      "stem": "A client with generalized anxiety disorder is starting buspirone. Which statement shows correct understanding?",
+      "content": {
+        "options": [
+          {
+            "id": "a",
+            "text": "\"It may take a few weeks before I notice a difference.\""
+          },
+          {
+            "id": "b",
+            "text": "\"I'll take it only when I feel anxious.\""
+          },
+          {
+            "id": "c",
+            "text": "\"It will make me very sleepy right away.\""
+          },
+          {
+            "id": "d",
+            "text": "\"I'll get addicted to it.\""
+          }
+        ]
+      },
+      "key": {
+        "correct": "a"
+      },
+      "rationale": {
+        "correct": "Buspirone: scheduled dosing, delayed effect, little sedation or dependence.",
+        "perOption": {
+          "a": "Buspirone's effects build over 2 to 4 weeks.",
+          "b": "It is taken on a schedule.",
+          "c": "It is minimally sedating.",
+          "d": "It has low dependence potential."
+        },
+        "references": [
+          "Nursing pharmacology texts (e.g. Lehne; McCuistion) and the drug's prescribing information",
+          "Reviewed by the content team on 17 November 2026."
+        ]
+      },
+      "educationalObjective": "Teach about buspirone."
+    },
+    {
+      "id": "c1a00032-0000-4000-8000-000000000007",
+      "itemType": "multiple_choice",
+      "clientNeeds": "PHI.PPT",
+      "bodySystem": "mental-health",
+      "subtopics": [
+        "psychiatric-medications"
+      ],
+      "cjmmSkill": "evaluate_outcomes",
+      "difficulty": "moderate",
+      "stem": "A client is prescribed lorazepam for short-term anxiety. Which statement shows a need for more teaching?",
+      "content": {
+        "options": [
+          {
+            "id": "a",
+            "text": "\"I won't drink alcohol while taking this.\""
+          },
+          {
+            "id": "b",
+            "text": "\"I'll stop it suddenly when I feel better.\""
+          },
+          {
+            "id": "c",
+            "text": "\"I won't drive until I know how it affects me.\""
+          },
+          {
+            "id": "d",
+            "text": "\"It's meant for short-term use.\""
+          }
+        ]
+      },
+      "key": {
+        "correct": "b"
+      },
+      "rationale": {
+        "correct": "Benzodiazepines: avoid alcohol, taper off, watch for sedation and dependence.",
+        "perOption": {
+          "a": "Alcohol adds to CNS depression.",
+          "b": "Stopping suddenly after regular use can cause withdrawal and seizures.",
+          "c": "It causes drowsiness.",
+          "d": "This is correct."
+        },
+        "references": [
+          "Nursing pharmacology texts (e.g. Lehne; McCuistion) and the drug's prescribing information",
+          "Reviewed by the content team on 17 November 2026."
+        ]
+      },
+      "educationalObjective": "Teach safe benzodiazepine use."
+    },
+    {
+      "id": "c1a00032-0000-4000-8000-000000000008",
+      "itemType": "multiple_choice",
+      "clientNeeds": "PSI",
+      "bodySystem": "mental-health",
+      "subtopics": [
+        "anxiety-and-related-disorders"
+      ],
+      "cjmmSkill": "take_action",
+      "difficulty": "moderate",
+      "stem": "A newly admitted client with OCD washes their hands for 30 minutes before every meal and is often late. What should the nurse do first?",
+      "content": {
+        "options": [
+          {
+            "id": "a",
+            "text": "Allow time for the ritual and plan the schedule around it"
+          },
+          {
+            "id": "b",
+            "text": "Forbid all handwashing"
+          },
+          {
+            "id": "c",
+            "text": "Make the client skip meals if late"
+          },
+          {
+            "id": "d",
+            "text": "Point out that the behavior is irrational"
+          }
+        ]
+      },
+      "key": {
+        "correct": "a"
+      },
+      "rationale": {
+        "correct": "OCD: early on, allow rituals, then gradually limit them while teaching coping skills.",
+        "perOption": {
+          "a": "Stopping rituals abruptly raises anxiety; limits are set gradually later.",
+          "b": "This sharply increases anxiety.",
+          "c": "This is punitive.",
+          "d": "The client already knows; this doesn't help."
+        },
+        "references": [
+          "Psychiatric-mental health nursing texts (e.g. Varcarolis; Halter)",
+          "Reviewed by the content team on 17 November 2026."
+        ]
+      },
+      "educationalObjective": "Plan care for a client with OCD."
+    },
+    {
+      "id": "c1a00032-0000-4000-8000-000000000009",
+      "itemType": "multiple_choice",
+      "clientNeeds": "PSI",
+      "bodySystem": "mental-health",
+      "subtopics": [
+        "anxiety-and-related-disorders"
+      ],
+      "cjmmSkill": "recognize_cues",
+      "difficulty": "moderate",
+      "stem": "A veteran startles easily, has nightmares and avoids crowded places after combat. Which disorder do these findings suggest?",
+      "content": {
+        "options": [
+          {
+            "id": "a",
+            "text": "Post-traumatic stress disorder"
+          },
+          {
+            "id": "b",
+            "text": "Generalized anxiety disorder"
+          },
+          {
+            "id": "c",
+            "text": "Schizophrenia"
+          },
+          {
+            "id": "d",
+            "text": "Bipolar disorder"
+          }
+        ]
+      },
+      "key": {
+        "correct": "a"
+      },
+      "rationale": {
+        "correct": "PTSD: intrusive memories, avoidance, negative mood and hyperarousal; use trauma-informed care.",
+        "perOption": {
+          "a": "Hyperarousal, re-experiencing and avoidance after trauma are typical of PTSD.",
+          "b": "GAD isn't tied to a trauma.",
+          "c": "This doesn't fit.",
+          "d": "This doesn't fit."
+        },
+        "references": [
+          "Psychiatric-mental health nursing texts (e.g. Varcarolis; Halter)",
+          "Reviewed by the content team on 17 November 2026."
+        ]
+      },
+      "educationalObjective": "Recognize PTSD."
+    },
+    {
+      "id": "c1a00032-0000-4000-8000-000000000010",
+      "itemType": "matrix_mc",
+      "clientNeeds": "PSI",
+      "bodySystem": "mental-health",
+      "subtopics": [
+        "defense-mechanisms"
+      ],
+      "cjmmSkill": "analyze_cues",
+      "difficulty": "moderate",
+      "stem": "For each statement, indicate the defense mechanism it shows.",
+      "content": {
+        "rows": [
+          {
+            "id": "r1",
+            "text": "A client diagnosed with diabetes keeps eating sweets and says, \"I don't really have diabetes.\""
+          },
+          {
+            "id": "r2",
+            "text": "A client who is angry says to the nurse, \"You're angry with me.\""
+          },
+          {
+            "id": "r3",
+            "text": "After being yelled at by the boss, a client goes home and yells at the dog"
+          },
+          {
+            "id": "r4",
+            "text": "A student who failed an exam says, \"The test was unfair anyway.\""
+          }
+        ],
+        "columns": [
+          {
+            "id": "c1",
+            "text": "Denial"
+          },
+          {
+            "id": "c2",
+            "text": "Projection"
+          },
+          {
+            "id": "c3",
+            "text": "Displacement"
+          },
+          {
+            "id": "c4",
+            "text": "Rationalization"
+          }
+        ]
+      },
+      "key": {
+        "byRow": {
+          "r1": "c1",
+          "r2": "c2",
+          "r3": "c3",
+          "r4": "c4"
+        }
+      },
+      "rationale": {
+        "correct": "Recognize common defense mechanisms in client statements.",
+        "perOption": {
+          "r1:c1": "Refusing to accept reality is denial.",
+          "r1:c2": "No feelings are attributed to others.",
+          "r1:c3": "No feelings are redirected.",
+          "r1:c4": "No excuse is offered.",
+          "r2:c1": "The reality isn't refused.",
+          "r2:c2": "The client attributes their own feelings to the nurse.",
+          "r2:c3": "The feeling isn't shifted to a safer target.",
+          "r2:c4": "No excuse is offered.",
+          "r3:c1": "This isn't denial.",
+          "r3:c2": "This isn't projection.",
+          "r3:c3": "Anger is shifted to a safer target.",
+          "r3:c4": "This isn't rationalization.",
+          "r4:c1": "This isn't denial.",
+          "r4:c2": "This isn't projection.",
+          "r4:c3": "This isn't displacement.",
+          "r4:c4": "A plausible excuse is given for the failure."
+        },
+        "references": [
+          "Psychiatric-mental health nursing texts (e.g. Varcarolis; Halter)",
+          "Reviewed by the content team on 17 November 2026."
+        ]
+      },
+      "educationalObjective": "Identify defense mechanisms."
+    },
+    {
+      "id": "c1a00032-0000-4000-8000-000000000011",
+      "itemType": "multiple_choice",
+      "clientNeeds": "PSI",
+      "bodySystem": "mental-health",
+      "subtopics": [
+        "crisis-intervention"
+      ],
+      "cjmmSkill": "prioritize_hypotheses",
+      "difficulty": "moderate",
+      "stem": "A client arrives in crisis after losing a job and home. What should the nurse assess first?",
+      "content": {
+        "options": [
+          {
+            "id": "a",
+            "text": "Whether the client has thoughts of harming self or others"
+          },
+          {
+            "id": "b",
+            "text": "The client's childhood history"
+          },
+          {
+            "id": "c",
+            "text": "The client's long-term goals"
+          },
+          {
+            "id": "d",
+            "text": "The client's insurance"
+          }
+        ]
+      },
+      "key": {
+        "correct": "a"
+      },
+      "rationale": {
+        "correct": "Crisis intervention: ensure safety, focus on the immediate problem, use coping strategies and supports.",
+        "perOption": {
+          "a": "Safety is the first priority in crisis.",
+          "b": "This isn't the focus of crisis intervention.",
+          "c": "Crisis work focuses on the present.",
+          "d": "This isn't the priority."
+        },
+        "references": [
+          "Psychiatric-mental health nursing texts (e.g. Varcarolis; Halter)",
+          "Reviewed by the content team on 17 November 2026."
+        ]
+      },
+      "educationalObjective": "Prioritize safety in crisis intervention."
+    },
+    {
+      "id": "c1a00032-0000-4000-8000-000000000012",
+      "itemType": "multiple_choice",
+      "clientNeeds": "PSI",
+      "bodySystem": "mental-health",
+      "subtopics": [
+        "grief-and-loss"
+      ],
+      "cjmmSkill": "analyze_cues",
+      "difficulty": "easy",
+      "stem": "A client with a terminal illness says, \"If I can just live until my daughter's wedding, I'll be ready.\" Which stage of grief does this reflect?",
+      "content": {
+        "options": [
+          {
+            "id": "a",
+            "text": "Bargaining"
+          },
+          {
+            "id": "b",
+            "text": "Denial"
+          },
+          {
+            "id": "c",
+            "text": "Anger"
+          },
+          {
+            "id": "d",
+            "text": "Acceptance"
+          }
+        ]
+      },
+      "key": {
+        "correct": "a"
+      },
+      "rationale": {
+        "correct": "Kübler-Ross stages: denial, anger, bargaining, depression, acceptance (not always in order).",
+        "perOption": {
+          "a": "Bargaining is trying to make a deal for more time.",
+          "b": "The client acknowledges the illness.",
+          "c": "No anger is expressed.",
+          "d": "The client is still negotiating."
+        },
+        "references": [
+          "Psychiatric-mental health nursing texts (e.g. Varcarolis; Halter)",
+          "Reviewed by the content team on 17 November 2026."
+        ]
+      },
+      "educationalObjective": "Identify stages of grief."
+    },
+    {
+      "id": "c1a00032-0000-4000-8000-000000000013",
+      "itemType": "multiple_choice",
+      "clientNeeds": "PSI",
+      "bodySystem": "mental-health",
+      "subtopics": [
+        "grief-and-loss"
+      ],
+      "cjmmSkill": "analyze_cues",
+      "difficulty": "moderate",
+      "stem": "Two weeks after her husband died, a client cries often, has trouble sleeping and still eats regular meals. How should the nurse interpret this?",
+      "content": {
+        "options": [
+          {
+            "id": "a",
+            "text": "A normal grief response"
+          },
+          {
+            "id": "b",
+            "text": "Major depressive disorder"
+          },
+          {
+            "id": "c",
+            "text": "Complicated grief"
+          },
+          {
+            "id": "d",
+            "text": "Psychosis"
+          }
+        ]
+      },
+      "key": {
+        "correct": "a"
+      },
+      "rationale": {
+        "correct": "Support normal grief; watch for prolonged, disabling grief or suicidal thoughts.",
+        "perOption": {
+          "a": "Sadness and sleep changes are expected early in grief.",
+          "b": "It's too early to label this, and she's functioning.",
+          "c": "This is diagnosed when grief is prolonged and disabling.",
+          "d": "There are no psychotic features."
+        },
+        "references": [
+          "Psychiatric-mental health nursing texts (e.g. Varcarolis; Halter)",
+          "Reviewed by the content team on 17 November 2026."
+        ]
+      },
+      "educationalObjective": "Recognize normal grief."
+    },
+    {
+      "id": "c1a00032-0000-4000-8000-000000000014",
+      "itemType": "multiple_choice",
+      "clientNeeds": "PSI",
+      "bodySystem": "mental-health",
+      "subtopics": [
+        "cultural-and-spiritual-care"
+      ],
+      "cjmmSkill": "take_action",
+      "difficulty": "moderate",
+      "stem": "A client asks to have a traditional healer visit in addition to medical treatment. What is the nurse's best response?",
+      "content": {
+        "options": [
+          {
+            "id": "a",
+            "text": "Support the request and coordinate with the team so the practices don't interfere with treatment"
+          },
+          {
+            "id": "b",
+            "text": "Tell the client this isn't allowed"
+          },
+          {
+            "id": "c",
+            "text": "Ignore the request"
+          },
+          {
+            "id": "d",
+            "text": "Tell the client to stop medical treatment"
+          }
+        ]
+      },
+      "key": {
+        "correct": "a"
+      },
+      "rationale": {
+        "correct": "Culturally responsive care includes safe traditional practices.",
+        "perOption": {
+          "a": "Respecting cultural practices supports trust and adherence.",
+          "b": "This disregards cultural values.",
+          "c": "This disrespects the client.",
+          "d": "This isn't appropriate."
+        },
+        "references": [
+          "Fundamentals of nursing texts (e.g. Potter & Perry)",
+          "Reviewed by the content team on 17 November 2026."
+        ]
+      },
+      "educationalObjective": "Respect cultural healing practices."
+    },
+    {
+      "id": "c1a00032-0000-4000-8000-000000000015",
+      "itemType": "multiple_choice",
+      "clientNeeds": "PSI",
+      "bodySystem": "mental-health",
+      "subtopics": [
+        "cultural-and-spiritual-care"
+      ],
+      "cjmmSkill": "take_action",
+      "difficulty": "easy",
+      "stem": "A hospitalized client says, \"I feel like God has abandoned me.\" What should the nurse do?",
+      "content": {
+        "options": [
+          {
+            "id": "a",
+            "text": "Listen, explore the client's feelings and offer to contact the chaplain or a spiritual leader"
+          },
+          {
+            "id": "b",
+            "text": "Change the subject"
+          },
+          {
+            "id": "c",
+            "text": "Share the nurse's own religious beliefs"
+          },
+          {
+            "id": "d",
+            "text": "Tell the client those feelings are wrong"
+          }
+        ]
+      },
+      "key": {
+        "correct": "a"
+      },
+      "rationale": {
+        "correct": "Assess spiritual needs and refer according to the client's wishes.",
+        "perOption": {
+          "a": "This addresses spiritual distress respectfully.",
+          "b": "This dismisses the client.",
+          "c": "This imposes the nurse's views.",
+          "d": "This is judgmental."
+        },
+        "references": [
+          "Fundamentals of nursing texts (e.g. Potter & Perry)",
+          "Reviewed by the content team on 17 November 2026."
+        ]
+      },
+      "educationalObjective": "Respond to spiritual distress."
+    },
+    {
+      "id": "c1a00032-0000-4000-8000-000000000016",
+      "itemType": "multiple_choice",
+      "clientNeeds": "PSI",
+      "bodySystem": "mental-health",
+      "subtopics": [
+        "anxiety-and-related-disorders"
+      ],
+      "cjmmSkill": "recognize_cues",
+      "difficulty": "moderate",
+      "stem": "After a stressful event, a client suddenly can't move the right arm, even though tests are normal, and seems unconcerned. What does this suggest?",
+      "content": {
+        "options": [
+          {
+            "id": "a",
+            "text": "Conversion disorder (functional neurological symptom disorder)"
+          },
+          {
+            "id": "b",
+            "text": "Stroke"
+          },
+          {
+            "id": "c",
+            "text": "Malingering"
+          },
+          {
+            "id": "d",
+            "text": "Schizophrenia"
+          }
+        ]
+      },
+      "key": {
+        "correct": "a"
+      },
+      "rationale": {
+        "correct": "Conversion disorder: real symptoms without an organic cause, linked to stress; avoid focusing on the symptom.",
+        "perOption": {
+          "a": "Neurologic symptoms without an organic cause, often with indifference, suggest conversion.",
+          "b": "The tests are normal.",
+          "c": "Symptoms aren't intentionally produced in conversion.",
+          "d": "This doesn't fit."
+        },
+        "references": [
+          "Psychiatric-mental health nursing texts (e.g. Varcarolis; Halter)",
+          "Reviewed by the content team on 17 November 2026."
+        ]
+      },
+      "educationalObjective": "Recognize conversion disorder."
+    },
+    {
+      "id": "c1a00032-0000-4000-8000-000000000017",
+      "itemType": "multiple_choice",
+      "clientNeeds": "PSI",
+      "bodySystem": "mental-health",
+      "subtopics": [
+        "anxiety-and-related-disorders"
+      ],
+      "cjmmSkill": "generate_solutions",
+      "difficulty": "moderate",
+      "stem": "Which treatment is most effective for a specific phobia of dogs?",
+      "content": {
+        "options": [
+          {
+            "id": "a",
+            "text": "Systematic desensitization (gradual exposure with relaxation)"
+          },
+          {
+            "id": "b",
+            "text": "Avoiding all dogs forever"
+          },
+          {
+            "id": "c",
+            "text": "Flooding without consent"
+          },
+          {
+            "id": "d",
+            "text": "Long-term benzodiazepines"
+          }
+        ]
+      },
+      "key": {
+        "correct": "a"
+      },
+      "rationale": {
+        "correct": "Phobias respond to exposure-based behavioral therapy.",
+        "perOption": {
+          "a": "Gradual exposure reduces fear.",
+          "b": "This maintains the fear.",
+          "c": "Exposure needs consent and preparation.",
+          "d": "These aren't the first-line treatment."
+        },
+        "references": [
+          "Psychiatric-mental health nursing texts (e.g. Varcarolis; Halter)",
+          "Reviewed by the content team on 17 November 2026."
+        ]
+      },
+      "educationalObjective": "Identify treatment for phobias."
+    },
+    {
+      "id": "c1a00032-0000-4000-8000-000000000018",
+      "itemType": "multiple_choice",
+      "clientNeeds": "PSI",
+      "bodySystem": "mental-health",
+      "subtopics": [
+        "intimate-partner-and-sexual-violence"
+      ],
+      "cjmmSkill": "take_action",
+      "difficulty": "moderate",
+      "stem": "During a private screening, a client says her partner hits her. What should the nurse do first?",
+      "content": {
+        "options": [
+          {
+            "id": "a",
+            "text": "Assess her immediate safety and help her develop a safety plan"
+          },
+          {
+            "id": "b",
+            "text": "Tell her she must leave her partner today"
+          },
+          {
+            "id": "c",
+            "text": "Confront the partner in the waiting room"
+          },
+          {
+            "id": "d",
+            "text": "Document it and take no other action"
+          }
+        ]
+      },
+      "key": {
+        "correct": "a"
+      },
+      "rationale": {
+        "correct": "IPV: screen privately, believe the client, assess safety, create a safety plan and give resources.",
+        "perOption": {
+          "a": "Safety comes first, and the client decides on next steps.",
+          "b": "Leaving can be the most dangerous time; the client decides.",
+          "c": "This raises the danger.",
+          "d": "Safety planning and resources are needed."
+        },
+        "references": [
+          "Psychiatric-mental health nursing texts (e.g. Varcarolis; Halter)",
+          "Reviewed by the content team on 17 November 2026."
+        ]
+      },
+      "educationalObjective": "Respond to disclosure of intimate partner violence."
+    },
+    {
+      "id": "c1a00032-0000-4000-8000-000000000019",
+      "itemType": "multiple_choice",
+      "clientNeeds": "PSI",
+      "bodySystem": "mental-health",
+      "subtopics": [
+        "intimate-partner-and-sexual-violence"
+      ],
+      "cjmmSkill": "analyze_cues",
+      "difficulty": "moderate",
+      "stem": "A client says that after the beatings, her partner apologizes, brings gifts and promises it won't happen again. Which phase of the cycle of violence is this?",
+      "content": {
+        "options": [
+          {
+            "id": "a",
+            "text": "Honeymoon (reconciliation) phase"
+          },
+          {
+            "id": "b",
+            "text": "Tension-building phase"
+          },
+          {
+            "id": "c",
+            "text": "Acute battering phase"
+          },
+          {
+            "id": "d",
+            "text": "Resolution phase"
+          }
+        ]
+      },
+      "key": {
+        "correct": "a"
+      },
+      "rationale": {
+        "correct": "Cycle of violence: tension building, then acute battering, then honeymoon, then repeat.",
+        "perOption": {
+          "a": "Remorse and affection follow the battering.",
+          "b": "This involves increasing stress and minor incidents.",
+          "c": "This is the violent episode.",
+          "d": "This isn't a phase of the cycle."
+        },
+        "references": [
+          "Psychiatric-mental health nursing texts (e.g. Varcarolis; Halter)",
+          "Reviewed by the content team on 17 November 2026."
+        ]
+      },
+      "educationalObjective": "Identify the cycle of violence."
+    },
+    {
+      "id": "c1a00032-0000-4000-8000-000000000020",
+      "itemType": "multiple_choice",
+      "clientNeeds": "PSI",
+      "bodySystem": "mental-health",
+      "subtopics": [
+        "intimate-partner-and-sexual-violence"
+      ],
+      "cjmmSkill": "take_action",
+      "difficulty": "moderate",
+      "stem": "A client calls after being sexually assaulted an hour ago. Which instruction should the nurse give?",
+      "content": {
+        "options": [
+          {
+            "id": "a",
+            "text": "\"Please don't shower, change clothes or brush your teeth before coming in.\""
+          },
+          {
+            "id": "b",
+            "text": "\"Take a shower to feel better first.\""
+          },
+          {
+            "id": "c",
+            "text": "\"Wash your clothes right away.\""
+          },
+          {
+            "id": "d",
+            "text": "\"Wait until tomorrow to come in.\""
+          }
+        ]
+      },
+      "key": {
+        "correct": "a"
+      },
+      "rationale": {
+        "correct": "Sexual assault: preserve evidence, give prompt care (ideally a SANE exam) and offer support and prophylaxis.",
+        "perOption": {
+          "a": "This preserves evidence.",
+          "b": "This destroys evidence.",
+          "c": "This destroys evidence.",
+          "d": "Prompt care is needed."
+        },
+        "references": [
+          "Psychiatric-mental health nursing texts (e.g. Varcarolis; Halter)",
+          "Reviewed by the content team on 17 November 2026."
+        ]
+      },
+      "educationalObjective": "Teach evidence preservation after sexual assault."
+    },
+    {
+      "id": "c1a00032-0000-4000-8000-000000000021",
+      "itemType": "select_n",
+      "clientNeeds": "PSI",
+      "bodySystem": "mental-health",
+      "subtopics": [
+        "therapeutic-communication"
+      ],
+      "cjmmSkill": "take_action",
+      "difficulty": "moderate",
+      "stem": "A client says, \"My son never visits me anymore.\" Select the 2 most therapeutic responses.",
+      "content": {
+        "options": [
+          {
+            "id": "a",
+            "text": "\"You're feeling hurt that your son doesn't visit?\""
+          },
+          {
+            "id": "b",
+            "text": "\"Tell me more about your relationship with your son.\""
+          },
+          {
+            "id": "c",
+            "text": "\"I'm sure he's just busy.\""
+          },
+          {
+            "id": "d",
+            "text": "\"Why don't you call him?\""
+          },
+          {
+            "id": "e",
+            "text": "\"My mother says the same thing.\""
+          }
+        ],
+        "selectCount": 2
+      },
+      "key": {
+        "correct": [
+          "a",
+          "b"
+        ]
+      },
+      "rationale": {
+        "correct": "Reflection and open-ended questions encourage clients to share feelings.",
+        "perOption": {
+          "a": "Reflecting the feeling is therapeutic.",
+          "b": "An open-ended prompt encourages expression.",
+          "c": "This is false reassurance and minimizes the feeling.",
+          "d": "This gives advice.",
+          "e": "This shifts the focus to the nurse."
+        },
+        "references": [
+          "Psychiatric-mental health nursing texts (e.g. Varcarolis; Halter)",
+          "Reviewed by the content team on 17 November 2026."
+        ]
+      },
+      "educationalObjective": "Choose therapeutic responses."
+    }
+  ]
+}

@@ -1,0 +1,1108 @@
+{
+  "notice": "RN bank batch 31: Pediatrics III: heme/onc, communicable disease, poisoning and safety. Reviewed by the content team on 17 November 2026. See REVIEW-LOG.md.",
+  "track": "RN",
+  "subtopics": [
+    {
+      "clientNeeds": "PHI.PA",
+      "slug": "pediatric-hematology-oncology",
+      "name": "Pediatric hematology and oncology"
+    },
+    {
+      "clientNeeds": "HPM",
+      "slug": "infant-and-child-nutrition",
+      "name": "Infant and child nutrition"
+    },
+    {
+      "clientNeeds": "PHI.PA",
+      "slug": "poisoning-and-ingestions",
+      "name": "Poisoning and ingestions"
+    },
+    {
+      "clientNeeds": "SECE.SIC",
+      "slug": "childhood-communicable-diseases",
+      "name": "Childhood communicable diseases"
+    },
+    {
+      "clientNeeds": "PHI.PPT",
+      "slug": "antimicrobial-therapy",
+      "name": "Antimicrobial therapy"
+    },
+    {
+      "clientNeeds": "PSI",
+      "slug": "abuse-and-neglect",
+      "name": "Abuse and neglect"
+    },
+    {
+      "clientNeeds": "HPM",
+      "slug": "injury-prevention-across-lifespan",
+      "name": "Injury prevention across the lifespan"
+    }
+  ],
+  "questions": [
+    {
+      "id": "c1a00031-0000-4000-8000-000000000001",
+      "itemType": "multiple_choice",
+      "clientNeeds": "PHI.PA",
+      "bodySystem": "pediatrics",
+      "subtopics": [
+        "pediatric-hematology-oncology"
+      ],
+      "cjmmSkill": "generate_solutions",
+      "difficulty": "moderate",
+      "stem": "A child with leukemia is receiving chemotherapy. Which instruction should the nurse give the parents?",
+      "content": {
+        "options": [
+          {
+            "id": "a",
+            "text": "Avoid live vaccines and crowds, and report any fever right away"
+          },
+          {
+            "id": "b",
+            "text": "Keep all immunizations on schedule, including live vaccines"
+          },
+          {
+            "id": "c",
+            "text": "Take rectal temperatures"
+          },
+          {
+            "id": "d",
+            "text": "A fever is expected and can be ignored"
+          }
+        ]
+      },
+      "key": {
+        "correct": "a"
+      },
+      "rationale": {
+        "correct": "Leukemia: infection and bleeding precautions, no live vaccines, report fever immediately.",
+        "perOption": {
+          "a": "The child is immunosuppressed.",
+          "b": "Live vaccines are contraindicated during chemotherapy.",
+          "c": "Rectal temperatures risk injury and infection.",
+          "d": "Fever may signal a serious infection."
+        },
+        "references": [
+          "Pediatric nursing texts (e.g. Hockenberry, Wong's Essentials of Pediatric Nursing)",
+          "Reviewed by the content team on 17 November 2026."
+        ]
+      },
+      "educationalObjective": "Teach infection precautions for a child with leukemia."
+    },
+    {
+      "id": "c1a00031-0000-4000-8000-000000000002",
+      "itemType": "multiple_choice",
+      "clientNeeds": "PHI.PA",
+      "bodySystem": "pediatrics",
+      "subtopics": [
+        "pediatric-hematology-oncology"
+      ],
+      "cjmmSkill": "recognize_cues",
+      "difficulty": "difficult",
+      "stem": "A 2-year-old with sickle cell disease suddenly becomes pale and lethargic, with a rapidly enlarging spleen and a rapid heart rate. What does the nurse suspect?",
+      "content": {
+        "options": [
+          {
+            "id": "a",
+            "text": "Splenic sequestration crisis"
+          },
+          {
+            "id": "b",
+            "text": "Vaso-occlusive crisis"
+          },
+          {
+            "id": "c",
+            "text": "Iron deficiency"
+          },
+          {
+            "id": "d",
+            "text": "Expected sleepiness"
+          }
+        ]
+      },
+      "key": {
+        "correct": "a"
+      },
+      "rationale": {
+        "correct": "Splenic sequestration: pallor, an enlarging spleen and hypovolemic shock; transfusion is needed.",
+        "perOption": {
+          "a": "Blood pools in the spleen, causing shock; this is an emergency.",
+          "b": "This causes pain, not an enlarging spleen with shock.",
+          "c": "This develops slowly.",
+          "d": "This is an emergency."
+        },
+        "references": [
+          "Pediatric nursing texts (e.g. Hockenberry, Wong's Essentials of Pediatric Nursing)",
+          "Reviewed by the content team on 17 November 2026."
+        ]
+      },
+      "educationalObjective": "Recognize splenic sequestration."
+    },
+    {
+      "id": "c1a00031-0000-4000-8000-000000000003",
+      "itemType": "multiple_choice",
+      "clientNeeds": "PHI.PA",
+      "bodySystem": "pediatrics",
+      "subtopics": [
+        "pediatric-hematology-oncology"
+      ],
+      "cjmmSkill": "generate_solutions",
+      "difficulty": "moderate",
+      "stem": "Which activity is safest for a school-age child with hemophilia?",
+      "content": {
+        "options": [
+          {
+            "id": "a",
+            "text": "Swimming"
+          },
+          {
+            "id": "b",
+            "text": "Football"
+          },
+          {
+            "id": "c",
+            "text": "Hockey"
+          },
+          {
+            "id": "d",
+            "text": "Wrestling"
+          }
+        ]
+      },
+      "key": {
+        "correct": "a"
+      },
+      "rationale": {
+        "correct": "Hemophilia: encourage non-contact activity; teach factor replacement and joint protection.",
+        "perOption": {
+          "a": "Non-contact sports reduce the risk of bleeding.",
+          "b": "Contact sports risk bleeding.",
+          "c": "This is a contact sport.",
+          "d": "This is a contact sport."
+        },
+        "references": [
+          "Pediatric nursing texts (e.g. Hockenberry, Wong's Essentials of Pediatric Nursing)",
+          "Reviewed by the content team on 17 November 2026."
+        ]
+      },
+      "educationalObjective": "Choose safe activities in hemophilia."
+    },
+    {
+      "id": "c1a00031-0000-4000-8000-000000000004",
+      "itemType": "multiple_choice",
+      "clientNeeds": "HPM",
+      "bodySystem": "pediatrics",
+      "subtopics": [
+        "infant-and-child-nutrition"
+      ],
+      "cjmmSkill": "analyze_cues",
+      "difficulty": "moderate",
+      "stem": "A 2-year-old drinks about 1.4 L (48 oz) of cow's milk a day and eats little solid food. Which condition is this child at risk for?",
+      "content": {
+        "options": [
+          {
+            "id": "a",
+            "text": "Iron deficiency anemia"
+          },
+          {
+            "id": "b",
+            "text": "Vitamin C toxicity"
+          },
+          {
+            "id": "c",
+            "text": "Hypercalcemia"
+          },
+          {
+            "id": "d",
+            "text": "Obesity only"
+          }
+        ]
+      },
+      "key": {
+        "correct": "a"
+      },
+      "rationale": {
+        "correct": "Limit milk to about 470 to 710 mL (16 to 24 oz) a day for toddlers and offer iron-rich foods.",
+        "perOption": {
+          "a": "Too much milk displaces iron-rich foods and can cause GI blood loss.",
+          "b": "This isn't related.",
+          "c": "This isn't typical.",
+          "d": "Iron deficiency is the main concern."
+        },
+        "references": [
+          "Pediatric nursing texts (e.g. Hockenberry, Wong's Essentials of Pediatric Nursing)",
+          "Reviewed by the content team on 17 November 2026."
+        ]
+      },
+      "educationalObjective": "Recognize risk for iron deficiency in toddlers."
+    },
+    {
+      "id": "c1a00031-0000-4000-8000-000000000005",
+      "itemType": "multiple_choice",
+      "clientNeeds": "PHI.PA",
+      "bodySystem": "pediatrics",
+      "subtopics": [
+        "poisoning-and-ingestions"
+      ],
+      "cjmmSkill": "prioritize_hypotheses",
+      "difficulty": "moderate",
+      "stem": "A parent brings in a toddler who may have swallowed several of a grandparent's pills. What is the nurse's priority?",
+      "content": {
+        "options": [
+          {
+            "id": "a",
+            "text": "Assess airway, breathing and circulation"
+          },
+          {
+            "id": "b",
+            "text": "Induce vomiting"
+          },
+          {
+            "id": "c",
+            "text": "Give activated charcoal to all children"
+          },
+          {
+            "id": "d",
+            "text": "Call the grandparent first"
+          }
+        ]
+      },
+      "key": {
+        "correct": "a"
+      },
+      "rationale": {
+        "correct": "Poisoning: ABCs, identify the substance, contact poison control and give specific treatment.",
+        "perOption": {
+          "a": "Stabilize the child first, then identify the substance.",
+          "b": "This isn't recommended.",
+          "c": "It is given only when indicated and when the airway is protected.",
+          "d": "ABCs come first."
+        },
+        "references": [
+          "Pediatric nursing texts (e.g. Hockenberry, Wong's Essentials of Pediatric Nursing)",
+          "Reviewed by the content team on 17 November 2026."
+        ]
+      },
+      "educationalObjective": "Prioritize care in a suspected poisoning."
+    },
+    {
+      "id": "c1a00031-0000-4000-8000-000000000006",
+      "itemType": "multiple_choice",
+      "clientNeeds": "PHI.PA",
+      "bodySystem": "pediatrics",
+      "subtopics": [
+        "poisoning-and-ingestions"
+      ],
+      "cjmmSkill": "take_action",
+      "difficulty": "moderate",
+      "stem": "A child swallowed drain cleaner. What should the nurse avoid?",
+      "content": {
+        "options": [
+          {
+            "id": "a",
+            "text": "Inducing vomiting"
+          },
+          {
+            "id": "b",
+            "text": "Assessing the airway"
+          },
+          {
+            "id": "c",
+            "text": "Calling poison control"
+          },
+          {
+            "id": "d",
+            "text": "Looking for burns in the mouth"
+          }
+        ]
+      },
+      "key": {
+        "correct": "a"
+      },
+      "rationale": {
+        "correct": "Caustic ingestion: no induced vomiting; check for airway swelling.",
+        "perOption": {
+          "a": "Vomiting re-exposes the esophagus to the caustic substance.",
+          "b": "This is essential.",
+          "c": "This is appropriate.",
+          "d": "This is appropriate."
+        },
+        "references": [
+          "Pediatric nursing texts (e.g. Hockenberry, Wong's Essentials of Pediatric Nursing)",
+          "Reviewed by the content team on 17 November 2026."
+        ]
+      },
+      "educationalObjective": "Respond to caustic ingestion."
+    },
+    {
+      "id": "c1a00031-0000-4000-8000-000000000007",
+      "itemType": "multiple_choice",
+      "clientNeeds": "PHI.PA",
+      "bodySystem": "pediatrics",
+      "subtopics": [
+        "poisoning-and-ingestions"
+      ],
+      "cjmmSkill": "recognize_cues",
+      "difficulty": "moderate",
+      "stem": "A parent thinks a 3-year-old swallowed a small button battery. What should the nurse advise?",
+      "content": {
+        "options": [
+          {
+            "id": "a",
+            "text": "Go to the emergency department right away"
+          },
+          {
+            "id": "b",
+            "text": "Wait and watch the stools"
+          },
+          {
+            "id": "c",
+            "text": "Give a laxative"
+          },
+          {
+            "id": "d",
+            "text": "Induce vomiting"
+          }
+        ]
+      },
+      "key": {
+        "correct": "a"
+      },
+      "rationale": {
+        "correct": "Button battery ingestion is an emergency that may need urgent endoscopic removal.",
+        "perOption": {
+          "a": "Button batteries can burn through the esophagus within hours.",
+          "b": "Delay can cause serious injury.",
+          "c": "This isn't treatment.",
+          "d": "This isn't recommended."
+        },
+        "references": [
+          "Pediatric nursing texts (e.g. Hockenberry, Wong's Essentials of Pediatric Nursing)",
+          "Reviewed by the content team on 17 November 2026."
+        ]
+      },
+      "educationalObjective": "Recognize the urgency of button battery ingestion."
+    },
+    {
+      "id": "c1a00031-0000-4000-8000-000000000008",
+      "itemType": "multiple_choice",
+      "clientNeeds": "PHI.PA",
+      "bodySystem": "pediatrics",
+      "subtopics": [
+        "poisoning-and-ingestions"
+      ],
+      "cjmmSkill": "generate_solutions",
+      "difficulty": "moderate",
+      "stem": "A child has a high blood lead level and is starting chelation therapy. Which intervention is important?",
+      "content": {
+        "options": [
+          {
+            "id": "a",
+            "text": "Maintain good hydration and monitor kidney function"
+          },
+          {
+            "id": "b",
+            "text": "Restrict fluids"
+          },
+          {
+            "id": "c",
+            "text": "Stop the therapy if urine output increases"
+          },
+          {
+            "id": "d",
+            "text": "Give iron with each dose"
+          }
+        ]
+      },
+      "key": {
+        "correct": "a"
+      },
+      "rationale": {
+        "correct": "Lead poisoning: remove the source, chelation as needed and monitor the kidneys.",
+        "perOption": {
+          "a": "Chelated lead is excreted in the urine and can stress the kidneys.",
+          "b": "This increases kidney injury.",
+          "c": "Increased output is acceptable.",
+          "d": "This isn't standard."
+        },
+        "references": [
+          "Pediatric nursing texts (e.g. Hockenberry, Wong's Essentials of Pediatric Nursing)",
+          "Reviewed by the content team on 17 November 2026."
+        ]
+      },
+      "educationalObjective": "Plan care during chelation therapy."
+    },
+    {
+      "id": "c1a00031-0000-4000-8000-000000000009",
+      "itemType": "multiple_choice",
+      "clientNeeds": "SECE.SIC",
+      "bodySystem": "pediatrics",
+      "subtopics": [
+        "childhood-communicable-diseases"
+      ],
+      "cjmmSkill": "take_action",
+      "difficulty": "moderate",
+      "stem": "A child is admitted with chickenpox. When can the child stop isolation precautions?",
+      "content": {
+        "options": [
+          {
+            "id": "a",
+            "text": "When all lesions have crusted over"
+          },
+          {
+            "id": "b",
+            "text": "When the fever is gone"
+          },
+          {
+            "id": "c",
+            "text": "After 24 hours of antibiotics"
+          },
+          {
+            "id": "d",
+            "text": "When the first new lesion appears"
+          }
+        ]
+      },
+      "key": {
+        "correct": "a"
+      },
+      "rationale": {
+        "correct": "Varicella: airborne and contact precautions until all lesions crust; avoid contact with pregnant or immunocompromised people.",
+        "perOption": {
+          "a": "Varicella is contagious until all lesions are crusted.",
+          "b": "The child may still be contagious.",
+          "c": "Varicella is viral.",
+          "d": "This is when contagiousness is high."
+        },
+        "references": [
+          "CDC infection control and isolation precautions guidance",
+          "Pediatric nursing texts (e.g. Hockenberry, Wong's Essentials of Pediatric Nursing)",
+          "Reviewed by the content team on 17 November 2026."
+        ]
+      },
+      "educationalObjective": "Apply isolation for varicella."
+    },
+    {
+      "id": "c1a00031-0000-4000-8000-000000000010",
+      "itemType": "multiple_choice",
+      "clientNeeds": "SECE.SIC",
+      "bodySystem": "pediatrics",
+      "subtopics": [
+        "childhood-communicable-diseases"
+      ],
+      "cjmmSkill": "generate_solutions",
+      "difficulty": "moderate",
+      "stem": "A child has rubella. Who is most important for the child to avoid?",
+      "content": {
+        "options": [
+          {
+            "id": "a",
+            "text": "Pregnant people"
+          },
+          {
+            "id": "b",
+            "text": "Healthy grandparents"
+          },
+          {
+            "id": "c",
+            "text": "Siblings who are vaccinated"
+          },
+          {
+            "id": "d",
+            "text": "Teachers who are vaccinated"
+          }
+        ]
+      },
+      "key": {
+        "correct": "a"
+      },
+      "rationale": {
+        "correct": "Rubella's main danger is to the fetus; vaccination prevents it.",
+        "perOption": {
+          "a": "Rubella in early pregnancy can cause congenital rubella syndrome.",
+          "b": "They're at lower risk.",
+          "c": "They're immune.",
+          "d": "They're immune."
+        },
+        "references": [
+          "CDC infection control and isolation precautions guidance",
+          "Reviewed by the content team on 17 November 2026."
+        ]
+      },
+      "educationalObjective": "Protect pregnant contacts from rubella."
+    },
+    {
+      "id": "c1a00031-0000-4000-8000-000000000011",
+      "itemType": "matrix_mc",
+      "clientNeeds": "SECE.SIC",
+      "bodySystem": "pediatrics",
+      "subtopics": [
+        "childhood-communicable-diseases"
+      ],
+      "cjmmSkill": "analyze_cues",
+      "difficulty": "difficult",
+      "stem": "For each childhood illness, indicate its characteristic finding.",
+      "content": {
+        "rows": [
+          {
+            "id": "r1",
+            "text": "Varicella (chickenpox)"
+          },
+          {
+            "id": "r2",
+            "text": "Measles (rubeola)"
+          },
+          {
+            "id": "r3",
+            "text": "Fifth disease (erythema infectiosum)"
+          },
+          {
+            "id": "r4",
+            "text": "Roseola (exanthem subitum)"
+          }
+        ],
+        "columns": [
+          {
+            "id": "c1",
+            "text": "Vesicles in different stages at the same time"
+          },
+          {
+            "id": "c2",
+            "text": "Small white spots on the inside of the cheeks"
+          },
+          {
+            "id": "c3",
+            "text": "Bright red 'slapped cheek' rash"
+          },
+          {
+            "id": "c4",
+            "text": "High fever for 3 days, then a rash as the fever breaks"
+          }
+        ]
+      },
+      "key": {
+        "byRow": {
+          "r1": "c1",
+          "r2": "c2",
+          "r3": "c3",
+          "r4": "c4"
+        }
+      },
+      "rationale": {
+        "correct": "Know the hallmark findings of common childhood rashes.",
+        "perOption": {
+          "r1:c1": "Crops of lesions in different stages are typical.",
+          "r1:c2": "These are Koplik spots of measles.",
+          "r1:c3": "This is fifth disease.",
+          "r1:c4": "This is roseola.",
+          "r2:c1": "This is varicella.",
+          "r2:c2": "Koplik spots appear before the measles rash.",
+          "r2:c3": "This is fifth disease.",
+          "r2:c4": "This is roseola.",
+          "r3:c1": "This is varicella.",
+          "r3:c2": "This is measles.",
+          "r3:c3": "The slapped-cheek rash is typical of parvovirus B19.",
+          "r3:c4": "This is roseola.",
+          "r4:c1": "This is varicella.",
+          "r4:c2": "This is measles.",
+          "r4:c3": "This is fifth disease.",
+          "r4:c4": "The rash appears as the high fever ends."
+        },
+        "references": [
+          "Pediatric nursing texts (e.g. Hockenberry, Wong's Essentials of Pediatric Nursing)",
+          "Reviewed by the content team on 17 November 2026."
+        ]
+      },
+      "educationalObjective": "Identify common childhood rashes."
+    },
+    {
+      "id": "c1a00031-0000-4000-8000-000000000012",
+      "itemType": "multiple_choice",
+      "clientNeeds": "SECE.SIC",
+      "bodySystem": "pediatrics",
+      "subtopics": [
+        "childhood-communicable-diseases"
+      ],
+      "cjmmSkill": "generate_solutions",
+      "difficulty": "moderate",
+      "stem": "A child is diagnosed with scabies. Which instruction should the nurse give?",
+      "content": {
+        "options": [
+          {
+            "id": "a",
+            "text": "Treat all household members with permethrin at the same time and wash bedding in hot water"
+          },
+          {
+            "id": "b",
+            "text": "Treat only the child with symptoms"
+          },
+          {
+            "id": "c",
+            "text": "Expect the itching to stop the same day"
+          },
+          {
+            "id": "d",
+            "text": "Keep using the same unwashed bedding"
+          }
+        ]
+      },
+      "key": {
+        "correct": "a"
+      },
+      "rationale": {
+        "correct": "Scabies: treat all contacts, wash linens in hot water or bag them for 72 hours or more.",
+        "perOption": {
+          "a": "This prevents reinfestation.",
+          "b": "Others may be infested without symptoms.",
+          "c": "Itching can last weeks.",
+          "d": "This leads to reinfestation."
+        },
+        "references": [
+          "Pediatric nursing texts (e.g. Hockenberry, Wong's Essentials of Pediatric Nursing)",
+          "Reviewed by the content team on 17 November 2026."
+        ]
+      },
+      "educationalObjective": "Teach scabies treatment."
+    },
+    {
+      "id": "c1a00031-0000-4000-8000-000000000013",
+      "itemType": "multiple_choice",
+      "clientNeeds": "SECE.SIC",
+      "bodySystem": "pediatrics",
+      "subtopics": [
+        "childhood-communicable-diseases"
+      ],
+      "cjmmSkill": "evaluate_outcomes",
+      "difficulty": "easy",
+      "stem": "A parent is treating a child for head lice. Which statement needs correction?",
+      "content": {
+        "options": [
+          {
+            "id": "a",
+            "text": "\"I'll comb out the nits with a fine-tooth comb.\""
+          },
+          {
+            "id": "b",
+            "text": "\"I'll wash bedding and hats in hot water.\""
+          },
+          {
+            "id": "c",
+            "text": "\"It's fine for my kids to share hats and brushes.\""
+          },
+          {
+            "id": "d",
+            "text": "\"I'll check the rest of the family.\""
+          }
+        ]
+      },
+      "key": {
+        "correct": "c"
+      },
+      "rationale": {
+        "correct": "Lice: pediculicide, nit removal, washing items and no sharing of hair items.",
+        "perOption": {
+          "a": "This removes the eggs.",
+          "b": "This kills the lice.",
+          "c": "Sharing spreads lice.",
+          "d": "This is appropriate."
+        },
+        "references": [
+          "Pediatric nursing texts (e.g. Hockenberry, Wong's Essentials of Pediatric Nursing)",
+          "Reviewed by the content team on 17 November 2026."
+        ]
+      },
+      "educationalObjective": "Teach head lice management."
+    },
+    {
+      "id": "c1a00031-0000-4000-8000-000000000014",
+      "itemType": "multiple_choice",
+      "clientNeeds": "SECE.SIC",
+      "bodySystem": "pediatrics",
+      "subtopics": [
+        "childhood-communicable-diseases"
+      ],
+      "cjmmSkill": "analyze_cues",
+      "difficulty": "easy",
+      "stem": "A child has crusted, honey-colored lesions around the nose and mouth. What does the nurse suspect, and what is key to teach?",
+      "content": {
+        "options": [
+          {
+            "id": "a",
+            "text": "Impetigo; it is contagious, so use good hand hygiene and don't share towels"
+          },
+          {
+            "id": "b",
+            "text": "Eczema; it isn't contagious"
+          },
+          {
+            "id": "c",
+            "text": "Fifth disease"
+          },
+          {
+            "id": "d",
+            "text": "Measles"
+          }
+        ]
+      },
+      "key": {
+        "correct": "a"
+      },
+      "rationale": {
+        "correct": "Impetigo: topical or oral antibiotics, hygiene and keeping nails short.",
+        "perOption": {
+          "a": "Impetigo is a bacterial skin infection that spreads easily.",
+          "b": "Honey-colored crusts suggest impetigo.",
+          "c": "This causes a slapped-cheek rash.",
+          "d": "This doesn't cause honey-colored crusts."
+        },
+        "references": [
+          "Pediatric nursing texts (e.g. Hockenberry, Wong's Essentials of Pediatric Nursing)",
+          "Reviewed by the content team on 17 November 2026."
+        ]
+      },
+      "educationalObjective": "Recognize and manage impetigo."
+    },
+    {
+      "id": "c1a00031-0000-4000-8000-000000000015",
+      "itemType": "multiple_choice",
+      "clientNeeds": "PHI.PPT",
+      "bodySystem": "pediatrics",
+      "subtopics": [
+        "antimicrobial-therapy"
+      ],
+      "cjmmSkill": "evaluate_outcomes",
+      "difficulty": "moderate",
+      "stem": "A child is prescribed amoxicillin for strep throat. Which statement shows the parent understands?",
+      "content": {
+        "options": [
+          {
+            "id": "a",
+            "text": "\"My child will take all of it, even after feeling better.\""
+          },
+          {
+            "id": "b",
+            "text": "\"I'll stop it once the fever is gone.\""
+          },
+          {
+            "id": "c",
+            "text": "\"I'll save some for next time.\""
+          },
+          {
+            "id": "d",
+            "text": "\"My child is still contagious after a week of antibiotics.\""
+          }
+        ]
+      },
+      "key": {
+        "correct": "a"
+      },
+      "rationale": {
+        "correct": "Complete strep treatment to prevent rheumatic fever.",
+        "perOption": {
+          "a": "Completing the course prevents complications like rheumatic fever.",
+          "b": "This risks complications.",
+          "c": "This isn't appropriate.",
+          "d": "Children are usually not contagious after 12 to 24 hours of antibiotics."
+        },
+        "references": [
+          "Pediatric nursing texts (e.g. Hockenberry, Wong's Essentials of Pediatric Nursing)",
+          "Reviewed by the content team on 17 November 2026."
+        ]
+      },
+      "educationalObjective": "Teach adherence to strep throat treatment."
+    },
+    {
+      "id": "c1a00031-0000-4000-8000-000000000016",
+      "itemType": "multiple_choice",
+      "clientNeeds": "PSI",
+      "bodySystem": "pediatrics",
+      "subtopics": [
+        "abuse-and-neglect"
+      ],
+      "cjmmSkill": "recognize_cues",
+      "difficulty": "moderate",
+      "stem": "Which finding most strongly suggests physical abuse?",
+      "content": {
+        "options": [
+          {
+            "id": "a",
+            "text": "A spiral fracture of the femur in a 4-month-old who can't yet crawl"
+          },
+          {
+            "id": "b",
+            "text": "Bruises on the shins of a 4-year-old"
+          },
+          {
+            "id": "c",
+            "text": "A scraped knee in a school-age child"
+          },
+          {
+            "id": "d",
+            "text": "A forehead bump in a toddler learning to walk"
+          }
+        ]
+      },
+      "key": {
+        "correct": "a"
+      },
+      "rationale": {
+        "correct": "Red flags: injuries that don't fit the child's development or the history, patterned injuries and delays in seeking care.",
+        "perOption": {
+          "a": "Spiral fractures in an infant who can't move independently suggest twisting injuries.",
+          "b": "Shin bruises are common in active children.",
+          "c": "This is common.",
+          "d": "This is common."
+        },
+        "references": [
+          "Pediatric nursing texts (e.g. Hockenberry, Wong's Essentials of Pediatric Nursing)",
+          "Reviewed by the content team on 17 November 2026."
+        ]
+      },
+      "educationalObjective": "Recognize indicators of child abuse."
+    },
+    {
+      "id": "c1a00031-0000-4000-8000-000000000017",
+      "itemType": "multiple_choice",
+      "clientNeeds": "PSI",
+      "bodySystem": "pediatrics",
+      "subtopics": [
+        "abuse-and-neglect"
+      ],
+      "cjmmSkill": "recognize_cues",
+      "difficulty": "difficult",
+      "stem": "A 3-month-old is brought in for lethargy and vomiting with no history of injury. An eye exam shows retinal hemorrhages. What does the nurse suspect?",
+      "content": {
+        "options": [
+          {
+            "id": "a",
+            "text": "Abusive head trauma (shaken baby syndrome)"
+          },
+          {
+            "id": "b",
+            "text": "Viral gastroenteritis"
+          },
+          {
+            "id": "c",
+            "text": "Normal newborn findings"
+          },
+          {
+            "id": "d",
+            "text": "Ear infection"
+          }
+        ]
+      },
+      "key": {
+        "correct": "a"
+      },
+      "rationale": {
+        "correct": "Abusive head trauma: lethargy, vomiting, seizures, retinal hemorrhages; report as required.",
+        "perOption": {
+          "a": "Retinal hemorrhages with these symptoms strongly suggest abusive head trauma.",
+          "b": "This doesn't cause retinal hemorrhages.",
+          "c": "These aren't normal at 3 months.",
+          "d": "This doesn't explain the findings."
+        },
+        "references": [
+          "Pediatric nursing texts (e.g. Hockenberry, Wong's Essentials of Pediatric Nursing)",
+          "Reviewed by the content team on 17 November 2026."
+        ]
+      },
+      "educationalObjective": "Recognize abusive head trauma."
+    },
+    {
+      "id": "c1a00031-0000-4000-8000-000000000018",
+      "itemType": "multiple_choice",
+      "clientNeeds": "PSI",
+      "bodySystem": "pediatrics",
+      "subtopics": [
+        "abuse-and-neglect"
+      ],
+      "cjmmSkill": "analyze_cues",
+      "difficulty": "moderate",
+      "stem": "A 10-month-old is below the 3rd percentile for weight, is withdrawn and has poor hygiene, and no medical cause is found. What may this suggest?",
+      "content": {
+        "options": [
+          {
+            "id": "a",
+            "text": "Neglect with failure to thrive"
+          },
+          {
+            "id": "b",
+            "text": "Normal small size"
+          },
+          {
+            "id": "c",
+            "text": "Overfeeding"
+          },
+          {
+            "id": "d",
+            "text": "A food allergy only"
+          }
+        ]
+      },
+      "key": {
+        "correct": "a"
+      },
+      "rationale": {
+        "correct": "Assess feeding, the environment and the parent-child relationship; report suspected neglect.",
+        "perOption": {
+          "a": "Poor growth without a medical cause can reflect neglect.",
+          "b": "Falling percentiles need evaluation.",
+          "c": "This doesn't fit.",
+          "d": "No medical cause was found."
+        },
+        "references": [
+          "Pediatric nursing texts (e.g. Hockenberry, Wong's Essentials of Pediatric Nursing)",
+          "Reviewed by the content team on 17 November 2026."
+        ]
+      },
+      "educationalObjective": "Recognize signs of neglect."
+    },
+    {
+      "id": "c1a00031-0000-4000-8000-000000000019",
+      "itemType": "multiple_choice",
+      "clientNeeds": "HPM",
+      "bodySystem": "pediatrics",
+      "subtopics": [
+        "injury-prevention-across-lifespan"
+      ],
+      "cjmmSkill": "evaluate_outcomes",
+      "difficulty": "easy",
+      "stem": "Which statement by a parent of a toddler shows a need for more teaching about safety?",
+      "content": {
+        "options": [
+          {
+            "id": "a",
+            "text": "\"I keep medicines and cleaners in a locked cabinet.\""
+          },
+          {
+            "id": "b",
+            "text": "\"I leave my toddler in the bathtub for a minute while I get a towel.\""
+          },
+          {
+            "id": "c",
+            "text": "\"I use outlet covers.\""
+          },
+          {
+            "id": "d",
+            "text": "\"I've installed gates at the stairs.\""
+          }
+        ]
+      },
+      "key": {
+        "correct": "b"
+      },
+      "rationale": {
+        "correct": "Toddler safety: constant supervision near water, poison storage, gates and car seats.",
+        "perOption": {
+          "a": "This prevents poisoning.",
+          "b": "Toddlers can drown in seconds in very little water.",
+          "c": "This prevents electrical injury.",
+          "d": "This prevents falls."
+        },
+        "references": [
+          "Pediatric nursing texts (e.g. Hockenberry, Wong's Essentials of Pediatric Nursing)",
+          "Reviewed by the content team on 17 November 2026."
+        ]
+      },
+      "educationalObjective": "Teach toddler safety."
+    },
+    {
+      "id": "c1a00031-0000-4000-8000-000000000020",
+      "itemType": "multiple_choice",
+      "clientNeeds": "HPM",
+      "bodySystem": "pediatrics",
+      "subtopics": [
+        "injury-prevention-across-lifespan"
+      ],
+      "cjmmSkill": "analyze_cues",
+      "difficulty": "easy",
+      "stem": "What is the leading cause of injury death among adolescents?",
+      "content": {
+        "options": [
+          {
+            "id": "a",
+            "text": "Motor vehicle crashes"
+          },
+          {
+            "id": "b",
+            "text": "Choking"
+          },
+          {
+            "id": "c",
+            "text": "Poisoning from household products"
+          },
+          {
+            "id": "d",
+            "text": "Falls from furniture"
+          }
+        ]
+      },
+      "key": {
+        "correct": "a"
+      },
+      "rationale": {
+        "correct": "Teen safety: seat belts, no texting while driving, avoid impaired driving and use graduated licensing.",
+        "perOption": {
+          "a": "Motor vehicle crashes are a leading cause of death in teens.",
+          "b": "This is more common in young children.",
+          "c": "This is more common in toddlers.",
+          "d": "This is more common in young children."
+        },
+        "references": [
+          "Pediatric nursing texts (e.g. Hockenberry, Wong's Essentials of Pediatric Nursing)",
+          "Reviewed by the content team on 17 November 2026."
+        ]
+      },
+      "educationalObjective": "Identify injury risks for adolescents."
+    },
+    {
+      "id": "c1a00031-0000-4000-8000-000000000021",
+      "itemType": "multiple_choice",
+      "clientNeeds": "PHI.PA",
+      "bodySystem": "pediatrics",
+      "subtopics": [
+        "pediatric-hematology-oncology"
+      ],
+      "cjmmSkill": "recognize_cues",
+      "difficulty": "moderate",
+      "stem": "A child with sickle cell disease has painful swelling of the hands and feet. What does this suggest?",
+      "content": {
+        "options": [
+          {
+            "id": "a",
+            "text": "Dactylitis (hand-foot syndrome) from vaso-occlusion"
+          },
+          {
+            "id": "b",
+            "text": "Allergic reaction"
+          },
+          {
+            "id": "c",
+            "text": "Normal growth pains"
+          },
+          {
+            "id": "d",
+            "text": "Fracture"
+          }
+        ]
+      },
+      "key": {
+        "correct": "a"
+      },
+      "rationale": {
+        "correct": "Dactylitis is an early vaso-occlusive event; treat with fluids and pain relief.",
+        "perOption": {
+          "a": "This is often the first sign of sickle cell disease in infants and toddlers.",
+          "b": "This doesn't fit.",
+          "c": "Growth pains don't cause swelling.",
+          "d": "Both hands and feet are affected."
+        },
+        "references": [
+          "Pediatric nursing texts (e.g. Hockenberry, Wong's Essentials of Pediatric Nursing)",
+          "Reviewed by the content team on 17 November 2026."
+        ]
+      },
+      "educationalObjective": "Recognize dactylitis in sickle cell disease."
+    }
+  ]
+}

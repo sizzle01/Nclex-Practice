@@ -1,0 +1,1634 @@
+{
+  "notice": "RN bank batch 63: Management of Care III: legal duties, ethics, advocacy and health IT. Reviewed by the content team on 17 November 2026. See REVIEW-LOG.md.",
+  "track": "RN",
+  "subtopics": [
+    {
+      "clientNeeds": "SECE.MOC",
+      "slug": "legal-and-ethical-practice",
+      "name": "Legal and ethical practice"
+    },
+    {
+      "clientNeeds": "SECE.MOC",
+      "slug": "client-rights-and-advocacy",
+      "name": "Client rights and advocacy"
+    },
+    {
+      "clientNeeds": "SECE.MOC",
+      "slug": "informed-consent",
+      "name": "Informed consent"
+    },
+    {
+      "clientNeeds": "SECE.MOC",
+      "slug": "advance-directives",
+      "name": "Advance directives and end-of-life decisions"
+    },
+    {
+      "clientNeeds": "SECE.MOC",
+      "slug": "confidentiality-and-information-security",
+      "name": "Confidentiality and information security"
+    },
+    {
+      "clientNeeds": "SECE.MOC",
+      "slug": "health-information-technology",
+      "name": "Health information technology"
+    },
+    {
+      "clientNeeds": "SECE.MOC",
+      "slug": "collaboration-and-referrals",
+      "name": "Collaboration and referrals"
+    },
+    {
+      "clientNeeds": "SECE.MOC",
+      "slug": "handoff-and-sbar-communication",
+      "name": "Handoff and SBAR communication"
+    }
+  ],
+  "questions": [
+    {
+      "id": "c1a00063-0000-4000-8000-000000000001",
+      "itemType": "multiple_choice",
+      "clientNeeds": "SECE.MOC",
+      "bodySystem": "fundamentals",
+      "subtopics": [
+        "legal-and-ethical-practice"
+      ],
+      "cjmmSkill": "take_action",
+      "difficulty": "moderate",
+      "stem": "An off-duty nurse stops to help at a car crash and gives first aid. What protects the nurse legally?",
+      "content": {
+        "options": [
+          {
+            "id": "a",
+            "text": "Good Samaritan laws, as long as the nurse acts within training and without gross negligence"
+          },
+          {
+            "id": "b",
+            "text": "The hospital's malpractice insurance"
+          },
+          {
+            "id": "c",
+            "text": "Nothing; nurses should never help off duty"
+          },
+          {
+            "id": "d",
+            "text": "The client's signed consent"
+          }
+        ]
+      },
+      "key": {
+        "correct": "a"
+      },
+      "rationale": {
+        "correct": "Good Samaritan laws protect good-faith emergency care within the person's training.",
+        "perOption": {
+          "a": "These laws protect people who give emergency help in good faith without payment.",
+          "b": "Usually covers only work done for the employer.",
+          "c": "Helping in good faith is encouraged and protected.",
+          "d": "Consent isn't practical in an emergency."
+        },
+        "references": [
+          "Fundamentals of nursing texts (e.g. Potter & Perry)",
+          "Reviewed by the content team on 17 November 2026."
+        ]
+      },
+      "educationalObjective": "Apply Good Samaritan laws."
+    },
+    {
+      "id": "c1a00063-0000-4000-8000-000000000002",
+      "itemType": "sata",
+      "clientNeeds": "SECE.MOC",
+      "bodySystem": "fundamentals",
+      "subtopics": [
+        "legal-and-ethical-practice"
+      ],
+      "cjmmSkill": "take_action",
+      "difficulty": "moderate",
+      "stem": "Which situations must the nurse report to the proper authorities as required by law in most states? Select all that apply.",
+      "content": {
+        "options": [
+          {
+            "id": "a",
+            "text": "A gunshot wound"
+          },
+          {
+            "id": "b",
+            "text": "Suspected abuse of a dependent adult"
+          },
+          {
+            "id": "c",
+            "text": "A new diagnosis of measles"
+          },
+          {
+            "id": "d",
+            "text": "A client's seasonal allergy"
+          },
+          {
+            "id": "e",
+            "text": "A client's decision to refuse surgery"
+          },
+          {
+            "id": "f",
+            "text": "A positive syphilis test"
+          }
+        ]
+      },
+      "key": {
+        "correct": [
+          "a",
+          "b",
+          "c",
+          "f"
+        ]
+      },
+      "rationale": {
+        "correct": "Mandatory reports include certain injuries, abuse and communicable diseases.",
+        "perOption": {
+          "a": "Most states require reporting gunshot and stab wounds.",
+          "b": "Nurses are mandated reporters of elder and dependent adult abuse.",
+          "c": "Measles is a reportable communicable disease.",
+          "d": "Not reportable.",
+          "e": "A client's right; not reportable.",
+          "f": "Syphilis is a reportable disease."
+        },
+        "references": [
+          "Fundamentals of nursing texts (e.g. Potter & Perry)",
+          "Reviewed by the content team on 17 November 2026."
+        ]
+      },
+      "educationalObjective": "Identify mandatory reporting duties."
+    },
+    {
+      "id": "c1a00063-0000-4000-8000-000000000003",
+      "itemType": "multiple_choice",
+      "clientNeeds": "SECE.MOC",
+      "bodySystem": "fundamentals",
+      "subtopics": [
+        "legal-and-ethical-practice"
+      ],
+      "cjmmSkill": "analyze_cues",
+      "difficulty": "moderate",
+      "stem": "A nurse tells a confused client, \"If you try to get up again, I'll tie you to the bed.\" Which tort does this describe?",
+      "content": {
+        "options": [
+          {
+            "id": "a",
+            "text": "Assault"
+          },
+          {
+            "id": "b",
+            "text": "Battery"
+          },
+          {
+            "id": "c",
+            "text": "Defamation"
+          },
+          {
+            "id": "d",
+            "text": "Invasion of privacy"
+          }
+        ]
+      },
+      "key": {
+        "correct": "a"
+      },
+      "rationale": {
+        "correct": "Assault is a threat; battery is unwanted touching.",
+        "perOption": {
+          "a": "Assault is a threat that makes a person fear harmful contact.",
+          "b": "Battery is actual touching without consent.",
+          "c": "Defamation is a false statement that harms someone's reputation.",
+          "d": "Not related."
+        },
+        "references": [
+          "Fundamentals of nursing texts (e.g. Potter & Perry)",
+          "Reviewed by the content team on 17 November 2026."
+        ]
+      },
+      "educationalObjective": "Recognize assault."
+    },
+    {
+      "id": "c1a00063-0000-4000-8000-000000000004",
+      "itemType": "multiple_choice",
+      "clientNeeds": "SECE.MOC",
+      "bodySystem": "fundamentals",
+      "subtopics": [
+        "legal-and-ethical-practice"
+      ],
+      "cjmmSkill": "analyze_cues",
+      "difficulty": "moderate",
+      "stem": "A competent client who is admitted voluntarily is kept from leaving the unit by staff locking the door. Which tort does this describe?",
+      "content": {
+        "options": [
+          {
+            "id": "a",
+            "text": "False imprisonment"
+          },
+          {
+            "id": "b",
+            "text": "Negligence"
+          },
+          {
+            "id": "c",
+            "text": "Libel"
+          },
+          {
+            "id": "d",
+            "text": "Abandonment"
+          }
+        ]
+      },
+      "key": {
+        "correct": "a"
+      },
+      "rationale": {
+        "correct": "Competent clients may leave unless a lawful hold applies.",
+        "perOption": {
+          "a": "Unlawfully restricting a competent person's movement is false imprisonment.",
+          "b": "Negligence is failure to meet the standard of care.",
+          "c": "Libel is written defamation.",
+          "d": "Not related."
+        },
+        "references": [
+          "Fundamentals of nursing texts (e.g. Potter & Perry)",
+          "Reviewed by the content team on 17 November 2026."
+        ]
+      },
+      "educationalObjective": "Recognize false imprisonment."
+    },
+    {
+      "id": "c1a00063-0000-4000-8000-000000000005",
+      "itemType": "multiple_choice",
+      "clientNeeds": "SECE.MOC",
+      "bodySystem": "fundamentals",
+      "subtopics": [
+        "legal-and-ethical-practice"
+      ],
+      "cjmmSkill": "analyze_cues",
+      "difficulty": "moderate",
+      "stem": "Which document defines the legal scope of practice for registered nurses in a state?",
+      "content": {
+        "options": [
+          {
+            "id": "a",
+            "text": "The state's nurse practice act"
+          },
+          {
+            "id": "b",
+            "text": "The hospital's policy manual"
+          },
+          {
+            "id": "c",
+            "text": "The ANA Code of Ethics"
+          },
+          {
+            "id": "d",
+            "text": "The client bill of rights"
+          }
+        ]
+      },
+      "key": {
+        "correct": "a"
+      },
+      "rationale": {
+        "correct": "The nurse practice act sets the legal scope of nursing practice.",
+        "perOption": {
+          "a": "Each state's nurse practice act defines scope of practice and licensure.",
+          "b": "Policies can't expand legal scope.",
+          "c": "An ethical guide, not law.",
+          "d": "Describes client rights."
+        },
+        "references": [
+          "Fundamentals of nursing texts (e.g. Potter & Perry)",
+          "Reviewed by the content team on 17 November 2026."
+        ]
+      },
+      "educationalObjective": "Identify the source of scope of practice."
+    },
+    {
+      "id": "c1a00063-0000-4000-8000-000000000006",
+      "itemType": "multiple_choice",
+      "clientNeeds": "SECE.MOC",
+      "bodySystem": "fundamentals",
+      "subtopics": [
+        "legal-and-ethical-practice"
+      ],
+      "cjmmSkill": "take_action",
+      "difficulty": "moderate",
+      "stem": "A nurse sees a post on social media by a coworker that includes a photo of a client's wound with no face shown. What should the nurse do?",
+      "content": {
+        "options": [
+          {
+            "id": "a",
+            "text": "Ignore it because the client can't be identified"
+          },
+          {
+            "id": "b",
+            "text": "Report it according to facility policy"
+          },
+          {
+            "id": "c",
+            "text": "Like the post to show support"
+          },
+          {
+            "id": "d",
+            "text": "Share the post with other nurses for learning"
+          }
+        ]
+      },
+      "key": {
+        "correct": "b"
+      },
+      "rationale": {
+        "correct": "Never post client information or images on social media.",
+        "perOption": {
+          "a": "Details can still identify a client, and posting violates policy and privacy.",
+          "b": "Posting client images without consent violates privacy and professional standards.",
+          "c": "Endorses a privacy violation.",
+          "d": "Spreads the violation."
+        },
+        "references": [
+          "Fundamentals of nursing texts (e.g. Potter & Perry)",
+          "Reviewed by the content team on 17 November 2026."
+        ]
+      },
+      "educationalObjective": "Respond to a social media privacy breach."
+    },
+    {
+      "id": "c1a00063-0000-4000-8000-000000000007",
+      "itemType": "multiple_choice",
+      "clientNeeds": "SECE.MOC",
+      "bodySystem": "fundamentals",
+      "subtopics": [
+        "legal-and-ethical-practice"
+      ],
+      "cjmmSkill": "analyze_cues",
+      "difficulty": "difficult",
+      "stem": "Which situation shows all four elements of malpractice (duty, breach, causation, harm)?",
+      "content": {
+        "options": [
+          {
+            "id": "a",
+            "text": "A nurse forgets to document a vital sign that was normal"
+          },
+          {
+            "id": "b",
+            "text": "A nurse doesn't report a client's falling blood pressure, and the client later has a stroke from untreated hemorrhage"
+          },
+          {
+            "id": "c",
+            "text": "A client falls despite every fall precaution being in place"
+          },
+          {
+            "id": "d",
+            "text": "A nurse gives a medication late, and the client has no effects"
+          }
+        ]
+      },
+      "key": {
+        "correct": "b"
+      },
+      "rationale": {
+        "correct": "Malpractice requires duty, breach, causation and damages.",
+        "perOption": {
+          "a": "No harm resulted.",
+          "b": "Duty existed, the standard was breached, and the breach caused harm.",
+          "c": "No breach of duty.",
+          "d": "No harm."
+        },
+        "references": [
+          "Fundamentals of nursing texts (e.g. Potter & Perry)",
+          "Reviewed by the content team on 17 November 2026."
+        ]
+      },
+      "educationalObjective": "Analyze the elements of malpractice."
+    },
+    {
+      "id": "c1a00063-0000-4000-8000-000000000008",
+      "itemType": "multiple_choice",
+      "clientNeeds": "SECE.MOC",
+      "bodySystem": "fundamentals",
+      "subtopics": [
+        "legal-and-ethical-practice"
+      ],
+      "cjmmSkill": "take_action",
+      "difficulty": "difficult",
+      "stem": "A client arrives at the emergency department in active labor but has no insurance. What is the legal requirement?",
+      "content": {
+        "options": [
+          {
+            "id": "a",
+            "text": "Transfer the client to a public hospital immediately"
+          },
+          {
+            "id": "b",
+            "text": "Provide a medical screening exam and stabilizing treatment regardless of ability to pay"
+          },
+          {
+            "id": "c",
+            "text": "Ask for payment before treatment"
+          },
+          {
+            "id": "d",
+            "text": "Refuse care because of the hospital's policy"
+          }
+        ]
+      },
+      "key": {
+        "correct": "b"
+      },
+      "rationale": {
+        "correct": "EMTALA requires emergency screening and stabilization regardless of payment.",
+        "perOption": {
+          "a": "Transfer before stabilization violates EMTALA.",
+          "b": "EMTALA requires screening and stabilization for anyone who comes to the ED.",
+          "c": "Not allowed before screening and stabilization.",
+          "d": "Violates federal law."
+        },
+        "references": [
+          "Fundamentals of nursing texts (e.g. Potter & Perry)",
+          "Reviewed by the content team on 17 November 2026."
+        ]
+      },
+      "educationalObjective": "Apply EMTALA requirements."
+    },
+    {
+      "id": "c1a00063-0000-4000-8000-000000000009",
+      "itemType": "matrix_mc",
+      "clientNeeds": "SECE.MOC",
+      "bodySystem": "fundamentals",
+      "subtopics": [
+        "legal-and-ethical-practice"
+      ],
+      "cjmmSkill": "analyze_cues",
+      "difficulty": "difficult",
+      "stem": "For each situation, indicate the ethical principle that is most at stake.",
+      "content": {
+        "rows": [
+          {
+            "id": "r1",
+            "text": "A competent client refuses dialysis after being told the risks"
+          },
+          {
+            "id": "r2",
+            "text": "Deciding which of two clients gets the last ICU bed"
+          },
+          {
+            "id": "r3",
+            "text": "Holding a sedative that would further lower a client's dangerously low blood pressure"
+          },
+          {
+            "id": "r4",
+            "text": "Spending extra time helping a frightened client understand the plan"
+          }
+        ],
+        "columns": [
+          {
+            "id": "c1",
+            "text": "Autonomy"
+          },
+          {
+            "id": "c2",
+            "text": "Beneficence"
+          },
+          {
+            "id": "c3",
+            "text": "Justice"
+          },
+          {
+            "id": "c4",
+            "text": "Nonmaleficence"
+          }
+        ]
+      },
+      "key": {
+        "byRow": {
+          "r1": "c1",
+          "r2": "c3",
+          "r3": "c4",
+          "r4": "c2"
+        }
+      },
+      "rationale": {
+        "correct": "Autonomy is self-determination, beneficence is doing good, justice is fairness, and nonmaleficence is avoiding harm.",
+        "perOption": {
+          "r1:c1": "The client's right to decide.",
+          "r1:c2": "Not the main issue.",
+          "r1:c3": "Not the main issue.",
+          "r1:c4": "Not the main issue.",
+          "r2:c1": "Not the main issue.",
+          "r2:c2": "Not the main issue.",
+          "r2:c3": "Fair distribution of scarce resources.",
+          "r2:c4": "Not the main issue.",
+          "r3:c1": "Not the main issue.",
+          "r3:c2": "Related, but the focus is avoiding harm.",
+          "r3:c3": "Not the main issue.",
+          "r3:c4": "Avoiding harm.",
+          "r4:c1": "Related, but the focus is doing good.",
+          "r4:c2": "Acting for the client's benefit.",
+          "r4:c3": "Not the main issue.",
+          "r4:c4": "Not the main issue."
+        },
+        "references": [
+          "Fundamentals of nursing texts (e.g. Potter & Perry)",
+          "Reviewed by the content team on 17 November 2026."
+        ]
+      },
+      "educationalObjective": "Apply ethical principles."
+    },
+    {
+      "id": "c1a00063-0000-4000-8000-000000000010",
+      "itemType": "multiple_choice",
+      "clientNeeds": "SECE.MOC",
+      "bodySystem": "fundamentals",
+      "subtopics": [
+        "legal-and-ethical-practice"
+      ],
+      "cjmmSkill": "analyze_cues",
+      "difficulty": "difficult",
+      "stem": "A client dying of cancer receives increasing doses of morphine for severe pain. The family worries the morphine may shorten life. Which principle supports giving it?",
+      "content": {
+        "options": [
+          {
+            "id": "a",
+            "text": "The principle of double effect"
+          },
+          {
+            "id": "b",
+            "text": "Paternalism"
+          },
+          {
+            "id": "c",
+            "text": "Fidelity"
+          },
+          {
+            "id": "d",
+            "text": "Veracity"
+          }
+        ]
+      },
+      "key": {
+        "correct": "a"
+      },
+      "rationale": {
+        "correct": "Double effect: the intent is pain relief, not hastening death.",
+        "perOption": {
+          "a": "An action intended to relieve suffering is ethical even if a foreseen but unintended effect occurs.",
+          "b": "Overriding a client's wishes; not relevant here.",
+          "c": "Keeping promises.",
+          "d": "Truth-telling."
+        },
+        "references": [
+          "Fundamentals of nursing texts (e.g. Potter & Perry)",
+          "Reviewed by the content team on 17 November 2026."
+        ]
+      },
+      "educationalObjective": "Explain the principle of double effect."
+    },
+    {
+      "id": "c1a00063-0000-4000-8000-000000000011",
+      "itemType": "multiple_choice",
+      "clientNeeds": "SECE.MOC",
+      "bodySystem": "fundamentals",
+      "subtopics": [
+        "legal-and-ethical-practice"
+      ],
+      "cjmmSkill": "take_action",
+      "difficulty": "moderate",
+      "stem": "A nurse is asked to take part in a procedure that conflicts with the nurse's personal beliefs. What should the nurse do?",
+      "content": {
+        "options": [
+          {
+            "id": "a",
+            "text": "Refuse in front of the client"
+          },
+          {
+            "id": "b",
+            "text": "Tell the supervisor ahead of time and make sure the client's care is handed off safely"
+          },
+          {
+            "id": "c",
+            "text": "Leave the unit without telling anyone"
+          },
+          {
+            "id": "d",
+            "text": "Try to talk the client out of the procedure"
+          }
+        ]
+      },
+      "key": {
+        "correct": "b"
+      },
+      "rationale": {
+        "correct": "Conscientious objection requires notice and safe transfer of care.",
+        "perOption": {
+          "a": "Unprofessional and distressing to the client.",
+          "b": "Conscientious objection is acceptable when care isn't abandoned.",
+          "c": "Abandonment.",
+          "d": "Imposes the nurse's values."
+        },
+        "references": [
+          "Fundamentals of nursing texts (e.g. Potter & Perry)",
+          "Reviewed by the content team on 17 November 2026."
+        ]
+      },
+      "educationalObjective": "Handle a conscientious objection."
+    },
+    {
+      "id": "c1a00063-0000-4000-8000-000000000012",
+      "itemType": "multiple_choice",
+      "clientNeeds": "SECE.MOC",
+      "bodySystem": "fundamentals",
+      "subtopics": [
+        "client-rights-and-advocacy"
+      ],
+      "cjmmSkill": "take_action",
+      "difficulty": "moderate",
+      "stem": "A client who is deaf and uses American Sign Language needs teaching before a procedure. What should the nurse do?",
+      "content": {
+        "options": [
+          {
+            "id": "a",
+            "text": "Write notes in English"
+          },
+          {
+            "id": "b",
+            "text": "Arrange a qualified ASL interpreter"
+          },
+          {
+            "id": "c",
+            "text": "Ask a family member to sign"
+          },
+          {
+            "id": "d",
+            "text": "Speak slowly and loudly"
+          }
+        ]
+      },
+      "key": {
+        "correct": "b"
+      },
+      "rationale": {
+        "correct": "Use qualified sign language interpreters.",
+        "perOption": {
+          "a": "ASL users may not read English fluently.",
+          "b": "Clients are entitled to effective communication.",
+          "c": "Family interpreters may be inaccurate and breach privacy.",
+          "d": "Not effective for a deaf client."
+        },
+        "references": [
+          "Fundamentals of nursing texts (e.g. Potter & Perry)",
+          "Reviewed by the content team on 17 November 2026."
+        ]
+      },
+      "educationalObjective": "Advocate for effective communication."
+    },
+    {
+      "id": "c1a00063-0000-4000-8000-000000000013",
+      "itemType": "multiple_choice",
+      "clientNeeds": "SECE.MOC",
+      "bodySystem": "fundamentals",
+      "subtopics": [
+        "client-rights-and-advocacy"
+      ],
+      "cjmmSkill": "take_action",
+      "difficulty": "moderate",
+      "stem": "A client says, \"The doctor said the surgery is my only option, but I wanted to hear about others.\" What should the nurse do?",
+      "content": {
+        "options": [
+          {
+            "id": "a",
+            "text": "Tell the client the doctor knows best"
+          },
+          {
+            "id": "b",
+            "text": "Tell the provider the client wants to discuss alternatives before consenting"
+          },
+          {
+            "id": "c",
+            "text": "Explain alternatives in detail to the client"
+          },
+          {
+            "id": "d",
+            "text": "Cancel the surgery"
+          }
+        ]
+      },
+      "key": {
+        "correct": "b"
+      },
+      "rationale": {
+        "correct": "Nurses advocate by making sure clients get the information they need.",
+        "perOption": {
+          "a": "Doesn't respect the client's right to information.",
+          "b": "Advocacy supports informed decision-making.",
+          "c": "The provider explains the options as part of informed consent.",
+          "d": "Not the nurse's decision."
+        },
+        "references": [
+          "Fundamentals of nursing texts (e.g. Potter & Perry)",
+          "Reviewed by the content team on 17 November 2026."
+        ]
+      },
+      "educationalObjective": "Advocate for informed choices."
+    },
+    {
+      "id": "c1a00063-0000-4000-8000-000000000014",
+      "itemType": "multiple_choice",
+      "clientNeeds": "SECE.MOC",
+      "bodySystem": "fundamentals",
+      "subtopics": [
+        "informed-consent"
+      ],
+      "cjmmSkill": "analyze_cues",
+      "difficulty": "difficult",
+      "stem": "A 16-year-old asks to be tested and treated for a sexually transmitted infection without telling the parents. What applies in most states?",
+      "content": {
+        "options": [
+          {
+            "id": "a",
+            "text": "The minor can consent to STI testing and treatment"
+          },
+          {
+            "id": "b",
+            "text": "Parental consent is always required"
+          },
+          {
+            "id": "c",
+            "text": "The nurse must call the parents"
+          },
+          {
+            "id": "d",
+            "text": "Testing must wait until age 18"
+          }
+        ]
+      },
+      "key": {
+        "correct": "a"
+      },
+      "rationale": {
+        "correct": "Minors can consent to some services, such as STI care, contraception and substance use treatment, depending on state law.",
+        "perOption": {
+          "a": "Most states let minors consent to STI care.",
+          "b": "STI care is a common exception.",
+          "c": "Confidentiality applies.",
+          "d": "Not true."
+        },
+        "references": [
+          "Fundamentals of nursing texts (e.g. Potter & Perry)",
+          "Reviewed by the content team on 17 November 2026."
+        ]
+      },
+      "educationalObjective": "Apply consent exceptions for minors."
+    },
+    {
+      "id": "c1a00063-0000-4000-8000-000000000015",
+      "itemType": "multiple_choice",
+      "clientNeeds": "SECE.MOC",
+      "bodySystem": "fundamentals",
+      "subtopics": [
+        "informed-consent"
+      ],
+      "cjmmSkill": "take_action",
+      "difficulty": "moderate",
+      "stem": "A client is asked to join a research study. Which statement by the client shows understanding of research consent?",
+      "content": {
+        "options": [
+          {
+            "id": "a",
+            "text": "\"I have to stay in the study once I sign.\""
+          },
+          {
+            "id": "b",
+            "text": "\"I can leave the study at any time without losing my usual care.\""
+          },
+          {
+            "id": "c",
+            "text": "\"My care will be worse if I don't join.\""
+          },
+          {
+            "id": "d",
+            "text": "\"The researchers don't need to tell me the risks.\""
+          }
+        ]
+      },
+      "key": {
+        "correct": "b"
+      },
+      "rationale": {
+        "correct": "Research consent is voluntary, informed and can be withdrawn.",
+        "perOption": {
+          "a": "Participants can withdraw at any time.",
+          "b": "Voluntary participation and withdrawal are required.",
+          "c": "Refusing can't affect care.",
+          "d": "Risks must be explained."
+        },
+        "references": [
+          "Fundamentals of nursing texts (e.g. Potter & Perry)",
+          "Reviewed by the content team on 17 November 2026."
+        ]
+      },
+      "educationalObjective": "Evaluate understanding of research consent."
+    },
+    {
+      "id": "c1a00063-0000-4000-8000-000000000016",
+      "itemType": "multiple_choice",
+      "clientNeeds": "SECE.MOC",
+      "bodySystem": "fundamentals",
+      "subtopics": [
+        "advance-directives"
+      ],
+      "cjmmSkill": "take_action",
+      "difficulty": "difficult",
+      "stem": "A client with a valid POLST form stating \"comfort measures only\" stops breathing. The family asks staff to start CPR. What should the nurse do?",
+      "content": {
+        "options": [
+          {
+            "id": "a",
+            "text": "Start CPR because the family asked"
+          },
+          {
+            "id": "b",
+            "text": "Follow the POLST, notify the provider and support the family"
+          },
+          {
+            "id": "c",
+            "text": "Call the hospital lawyer before doing anything"
+          },
+          {
+            "id": "d",
+            "text": "Ask the family to sign a new form"
+          }
+        ]
+      },
+      "key": {
+        "correct": "b"
+      },
+      "rationale": {
+        "correct": "Honor valid advance directives and POLST orders.",
+        "perOption": {
+          "a": "The client's documented wishes take priority.",
+          "b": "A POLST is a medical order reflecting the client's wishes.",
+          "c": "Delays and isn't needed.",
+          "d": "The client's own wishes stand."
+        },
+        "references": [
+          "Fundamentals of nursing texts (e.g. Potter & Perry)",
+          "Reviewed by the content team on 17 November 2026."
+        ]
+      },
+      "educationalObjective": "Follow a POLST order."
+    },
+    {
+      "id": "c1a00063-0000-4000-8000-000000000017",
+      "itemType": "multiple_choice",
+      "clientNeeds": "SECE.MOC",
+      "bodySystem": "fundamentals",
+      "subtopics": [
+        "advance-directives"
+      ],
+      "cjmmSkill": "take_action",
+      "difficulty": "moderate",
+      "stem": "Two adult children of an unconscious client disagree about continuing life support. The client has no advance directive. What should the nurse do?",
+      "content": {
+        "options": [
+          {
+            "id": "a",
+            "text": "Follow the wishes of the oldest child"
+          },
+          {
+            "id": "b",
+            "text": "Request an ethics consultation and a family meeting with the team"
+          },
+          {
+            "id": "c",
+            "text": "Stop life support"
+          },
+          {
+            "id": "d",
+            "text": "Take a vote among all family members"
+          }
+        ]
+      },
+      "key": {
+        "correct": "b"
+      },
+      "rationale": {
+        "correct": "Ethics committees help resolve surrogate disagreements.",
+        "perOption": {
+          "a": "Age isn't the basis for surrogate decisions.",
+          "b": "Ethics consultation helps resolve conflicts about care.",
+          "c": "Not without a proper decision.",
+          "d": "Not an accepted process."
+        },
+        "references": [
+          "Fundamentals of nursing texts (e.g. Potter & Perry)",
+          "Reviewed by the content team on 17 November 2026."
+        ]
+      },
+      "educationalObjective": "Respond to family conflict about care."
+    },
+    {
+      "id": "c1a00063-0000-4000-8000-000000000018",
+      "itemType": "multiple_choice",
+      "clientNeeds": "SECE.MOC",
+      "bodySystem": "fundamentals",
+      "subtopics": [
+        "confidentiality-and-information-security"
+      ],
+      "cjmmSkill": "take_action",
+      "difficulty": "moderate",
+      "stem": "A nurse wants to look up a neighbor's lab results because the neighbor is a client in the hospital. What is correct?",
+      "content": {
+        "options": [
+          {
+            "id": "a",
+            "text": "It's fine because the nurse has system access"
+          },
+          {
+            "id": "b",
+            "text": "Access only records needed for your assigned work"
+          },
+          {
+            "id": "c",
+            "text": "It's fine if the neighbor wouldn't mind"
+          },
+          {
+            "id": "d",
+            "text": "It's fine if the nurse doesn't tell anyone"
+          }
+        ]
+      },
+      "key": {
+        "correct": "b"
+      },
+      "rationale": {
+        "correct": "Access client records only as needed for your role.",
+        "perOption": {
+          "a": "Access is only for clients the nurse is caring for.",
+          "b": "HIPAA's minimum necessary standard limits access to job duties.",
+          "c": "Permission isn't assumed.",
+          "d": "Unauthorized access is still a violation."
+        },
+        "references": [
+          "Fundamentals of nursing texts (e.g. Potter & Perry)",
+          "Reviewed by the content team on 17 November 2026."
+        ]
+      },
+      "educationalObjective": "Apply the minimum necessary standard."
+    },
+    {
+      "id": "c1a00063-0000-4000-8000-000000000019",
+      "itemType": "multiple_choice",
+      "clientNeeds": "SECE.MOC",
+      "bodySystem": "fundamentals",
+      "subtopics": [
+        "health-information-technology"
+      ],
+      "cjmmSkill": "take_action",
+      "difficulty": "moderate",
+      "stem": "The electronic health record goes down unexpectedly. What should the nurse do?",
+      "content": {
+        "options": [
+          {
+            "id": "a",
+            "text": "Stop giving medications until the system is back"
+          },
+          {
+            "id": "b",
+            "text": "Use the facility's downtime procedures and paper forms"
+          },
+          {
+            "id": "c",
+            "text": "Write notes on scrap paper and throw them away later"
+          },
+          {
+            "id": "d",
+            "text": "Tell clients to come back later"
+          }
+        ]
+      },
+      "key": {
+        "correct": "b"
+      },
+      "rationale": {
+        "correct": "Know the facility's downtime procedures.",
+        "perOption": {
+          "a": "Care continues using downtime procedures.",
+          "b": "Downtime procedures keep care and documentation safe.",
+          "c": "Records must be kept properly.",
+          "d": "Not appropriate."
+        },
+        "references": [
+          "Fundamentals of nursing texts (e.g. Potter & Perry)",
+          "Reviewed by the content team on 17 November 2026."
+        ]
+      },
+      "educationalObjective": "Respond to an EHR outage."
+    },
+    {
+      "id": "c1a00063-0000-4000-8000-000000000020",
+      "itemType": "multiple_choice",
+      "clientNeeds": "SECE.MOC",
+      "bodySystem": "fundamentals",
+      "subtopics": [
+        "health-information-technology"
+      ],
+      "cjmmSkill": "analyze_cues",
+      "difficulty": "moderate",
+      "stem": "Which documentation practice in the electronic health record is unsafe?",
+      "content": {
+        "options": [
+          {
+            "id": "a",
+            "text": "Copying the previous shift's assessment forward without reassessing"
+          },
+          {
+            "id": "b",
+            "text": "Documenting soon after care"
+          },
+          {
+            "id": "c",
+            "text": "Logging off when leaving the computer"
+          },
+          {
+            "id": "d",
+            "text": "Documenting a client's refusal of care"
+          }
+        ]
+      },
+      "key": {
+        "correct": "a"
+      },
+      "rationale": {
+        "correct": "Document only what you assessed; avoid copy-and-paste errors.",
+        "perOption": {
+          "a": "Copy-forward can record findings that are no longer true.",
+          "b": "Timely documentation is correct.",
+          "c": "Correct.",
+          "d": "Correct."
+        },
+        "references": [
+          "Fundamentals of nursing texts (e.g. Potter & Perry)",
+          "Reviewed by the content team on 17 November 2026."
+        ]
+      },
+      "educationalObjective": "Avoid unsafe EHR practices."
+    },
+    {
+      "id": "c1a00063-0000-4000-8000-000000000021",
+      "itemType": "multiple_choice",
+      "clientNeeds": "SECE.MOC",
+      "bodySystem": "fundamentals",
+      "subtopics": [
+        "health-information-technology"
+      ],
+      "cjmmSkill": "take_action",
+      "difficulty": "moderate",
+      "stem": "A drug interaction alert appears in the EHR when the nurse scans a medication. Which action is best?",
+      "content": {
+        "options": [
+          {
+            "id": "a",
+            "text": "Override the alert because alerts are frequent"
+          },
+          {
+            "id": "b",
+            "text": "Read the alert and check with the pharmacist or provider before giving the drug"
+          },
+          {
+            "id": "c",
+            "text": "Give half the dose"
+          },
+          {
+            "id": "d",
+            "text": "Turn off alerts for the unit"
+          }
+        ]
+      },
+      "key": {
+        "correct": "b"
+      },
+      "rationale": {
+        "correct": "Respond to clinical decision support alerts thoughtfully.",
+        "perOption": {
+          "a": "Alert fatigue causes errors.",
+          "b": "Alerts may show real risks.",
+          "c": "Not within the nurse's scope.",
+          "d": "Removes a safety feature."
+        },
+        "references": [
+          "Fundamentals of nursing texts (e.g. Potter & Perry)",
+          "Reviewed by the content team on 17 November 2026."
+        ]
+      },
+      "educationalObjective": "Respond to EHR alerts."
+    },
+    {
+      "id": "c1a00063-0000-4000-8000-000000000022",
+      "itemType": "multiple_choice",
+      "clientNeeds": "SECE.MOC",
+      "bodySystem": "fundamentals",
+      "subtopics": [
+        "health-information-technology"
+      ],
+      "cjmmSkill": "take_action",
+      "difficulty": "moderate",
+      "stem": "The nurse is doing a telehealth visit from home. Which action protects the client's privacy?",
+      "content": {
+        "options": [
+          {
+            "id": "a",
+            "text": "Using a secure, approved platform in a private room"
+          },
+          {
+            "id": "b",
+            "text": "Using a personal social media video call"
+          },
+          {
+            "id": "c",
+            "text": "Doing the visit in a coffee shop"
+          },
+          {
+            "id": "d",
+            "text": "Recording the visit on a personal phone"
+          }
+        ]
+      },
+      "key": {
+        "correct": "a"
+      },
+      "rationale": {
+        "correct": "Telehealth privacy: secure platform, private setting.",
+        "perOption": {
+          "a": "Telehealth must use secure platforms and private spaces.",
+          "b": "Not secure.",
+          "c": "Others can overhear.",
+          "d": "Not secure."
+        },
+        "references": [
+          "Fundamentals of nursing texts (e.g. Potter & Perry)",
+          "Reviewed by the content team on 17 November 2026."
+        ]
+      },
+      "educationalObjective": "Protect privacy in telehealth."
+    },
+    {
+      "id": "c1a00063-0000-4000-8000-000000000023",
+      "itemType": "multiple_choice",
+      "clientNeeds": "SECE.MOC",
+      "bodySystem": "fundamentals",
+      "subtopics": [
+        "collaboration-and-referrals"
+      ],
+      "cjmmSkill": "generate_solutions",
+      "difficulty": "moderate",
+      "stem": "A client on several medications has frequent falls and dizziness. Which team member is most helpful for a medication review?",
+      "content": {
+        "options": [
+          {
+            "id": "a",
+            "text": "Pharmacist"
+          },
+          {
+            "id": "b",
+            "text": "Dietitian"
+          },
+          {
+            "id": "c",
+            "text": "Respiratory therapist"
+          },
+          {
+            "id": "d",
+            "text": "Chaplain"
+          }
+        ]
+      },
+      "key": {
+        "correct": "a"
+      },
+      "rationale": {
+        "correct": "Pharmacists review medications for interactions and fall-risk drugs.",
+        "perOption": {
+          "a": "Pharmacists find interactions, duplications and drugs that raise fall risk.",
+          "b": "Not for medication review.",
+          "c": "Not related.",
+          "d": "Not related."
+        },
+        "references": [
+          "Fundamentals of nursing texts (e.g. Potter & Perry)",
+          "Reviewed by the content team on 17 November 2026."
+        ]
+      },
+      "educationalObjective": "Collaborate with a pharmacist."
+    },
+    {
+      "id": "c1a00063-0000-4000-8000-000000000024",
+      "itemType": "multiple_choice",
+      "clientNeeds": "SECE.MOC",
+      "bodySystem": "fundamentals",
+      "subtopics": [
+        "collaboration-and-referrals"
+      ],
+      "cjmmSkill": "generate_solutions",
+      "difficulty": "moderate",
+      "stem": "A client recovering from a stroke can't hold a fork or button a shirt. Which referral is most appropriate?",
+      "content": {
+        "options": [
+          {
+            "id": "a",
+            "text": "Occupational therapy"
+          },
+          {
+            "id": "b",
+            "text": "Speech therapy"
+          },
+          {
+            "id": "c",
+            "text": "Respiratory therapy"
+          },
+          {
+            "id": "d",
+            "text": "Social work"
+          }
+        ]
+      },
+      "key": {
+        "correct": "a"
+      },
+      "rationale": {
+        "correct": "OT focuses on daily living skills.",
+        "perOption": {
+          "a": "OT helps with fine motor skills and activities of daily living.",
+          "b": "Addresses swallowing and communication.",
+          "c": "Not related.",
+          "d": "Not the main need."
+        },
+        "references": [
+          "Fundamentals of nursing texts (e.g. Potter & Perry)",
+          "Reviewed by the content team on 17 November 2026."
+        ]
+      },
+      "educationalObjective": "Choose the right therapy referral."
+    },
+    {
+      "id": "c1a00063-0000-4000-8000-000000000025",
+      "itemType": "ordered_response",
+      "clientNeeds": "SECE.MOC",
+      "bodySystem": "fundamentals",
+      "subtopics": [
+        "handoff-and-sbar-communication"
+      ],
+      "cjmmSkill": "take_action",
+      "difficulty": "moderate",
+      "stem": "The nurse is giving a handoff using I-PASS. Place the parts in order.",
+      "content": {
+        "items": [
+          {
+            "id": "a",
+            "text": "Illness severity: \"stable\" or \"watcher\""
+          },
+          {
+            "id": "c",
+            "text": "Action list: what must be done and by when"
+          },
+          {
+            "id": "b",
+            "text": "Patient summary: diagnosis, events and plan"
+          },
+          {
+            "id": "e",
+            "text": "Synthesis by receiver: the receiving nurse summarizes"
+          },
+          {
+            "id": "d",
+            "text": "Situation awareness and contingency plans"
+          }
+        ]
+      },
+      "key": {
+        "order": [
+          "a",
+          "b",
+          "c",
+          "d",
+          "e"
+        ],
+        "scoring": "all_or_nothing"
+      },
+      "rationale": {
+        "correct": "I-PASS: Illness severity, Patient summary, Action list, Situation awareness, Synthesis.",
+        "perOption": {
+          "a": "Tells the receiver how worried to be.",
+          "b": "Gives context.",
+          "c": "Clarifies tasks.",
+          "d": "What could go wrong and what to do.",
+          "e": "Confirms understanding."
+        },
+        "references": [
+          "NCSBN National Guidelines for Nursing Delegation; LaCharity, Prioritization, Delegation & Assignment",
+          "Reviewed by the content team on 17 November 2026."
+        ]
+      },
+      "educationalObjective": "Use I-PASS for handoff."
+    },
+    {
+      "id": "c1a00063-0000-4000-8000-000000000026",
+      "itemType": "multiple_choice",
+      "clientNeeds": "SECE.MOC",
+      "bodySystem": "fundamentals",
+      "subtopics": [
+        "handoff-and-sbar-communication"
+      ],
+      "cjmmSkill": "take_action",
+      "difficulty": "moderate",
+      "stem": "During a code, the team leader asks the nurse to give epinephrine 1 mg IV. What should the nurse do?",
+      "content": {
+        "options": [
+          {
+            "id": "a",
+            "text": "Give it without speaking to save time"
+          },
+          {
+            "id": "b",
+            "text": "Repeat the order back, give it and announce when it's given"
+          },
+          {
+            "id": "c",
+            "text": "Wait for a written order"
+          },
+          {
+            "id": "d",
+            "text": "Ask another nurse to decide"
+          }
+        ]
+      },
+      "key": {
+        "correct": "b"
+      },
+      "rationale": {
+        "correct": "Closed-loop communication: repeat back, carry out, confirm.",
+        "perOption": {
+          "a": "Closed-loop communication prevents errors.",
+          "b": "Closed-loop communication confirms each order.",
+          "c": "Verbal orders are used in emergencies.",
+          "d": "The leader directs the code."
+        },
+        "references": [
+          "NCSBN National Guidelines for Nursing Delegation; LaCharity, Prioritization, Delegation & Assignment",
+          "Reviewed by the content team on 17 November 2026."
+        ]
+      },
+      "educationalObjective": "Use closed-loop communication."
+    },
+    {
+      "id": "c1a00063-0000-4000-8000-000000000027",
+      "itemType": "highlight_text",
+      "clientNeeds": "SECE.MOC",
+      "bodySystem": "fundamentals",
+      "subtopics": [
+        "legal-and-ethical-practice"
+      ],
+      "cjmmSkill": "recognize_cues",
+      "difficulty": "difficult",
+      "stem": "The nurse reviews a colleague's documentation. Highlight the entries that are inappropriate.",
+      "content": {
+        "segments": [
+          {
+            "id": "s1",
+            "text": "08:00 ",
+            "selectable": false
+          },
+          {
+            "id": "s2",
+            "text": "Client resting quietly, respirations 16, SpO2 96% on room air.",
+            "selectable": true
+          },
+          {
+            "id": "s3",
+            "text": " 09:15 ",
+            "selectable": false
+          },
+          {
+            "id": "s4",
+            "text": "Client is being difficult and lazy about walking.",
+            "selectable": true
+          },
+          {
+            "id": "s5",
+            "text": " 10:00 ",
+            "selectable": false
+          },
+          {
+            "id": "s6",
+            "text": "Incident report filed for fall.",
+            "selectable": true
+          },
+          {
+            "id": "s7",
+            "text": " 10:05 ",
+            "selectable": false
+          },
+          {
+            "id": "s8",
+            "text": "Client found sitting on the floor beside the bed; denies pain; provider notified at 10:07.",
+            "selectable": true
+          },
+          {
+            "id": "s9",
+            "text": " 11:00 ",
+            "selectable": false
+          },
+          {
+            "id": "s10",
+            "text": "Dr. Lee made an error with the order again.",
+            "selectable": true
+          }
+        ]
+      },
+      "key": {
+        "correct": [
+          "s4",
+          "s6",
+          "s10"
+        ]
+      },
+      "rationale": {
+        "correct": "Document facts objectively; leave out opinions, blame and references to incident reports.",
+        "perOption": {
+          "s2": "Objective and appropriate.",
+          "s4": "Judgmental and subjective.",
+          "s6": "Incident reports aren't mentioned in the medical record.",
+          "s8": "Factual and complete.",
+          "s10": "Blaming statements don't belong in the record."
+        },
+        "references": [
+          "Fundamentals of nursing texts (e.g. Potter & Perry)",
+          "Reviewed by the content team on 17 November 2026."
+        ]
+      },
+      "educationalObjective": "Recognize inappropriate documentation."
+    },
+    {
+      "id": "c1a00063-0000-4000-8000-000000000028",
+      "itemType": "sata",
+      "clientNeeds": "SECE.MOC",
+      "bodySystem": "fundamentals",
+      "subtopics": [
+        "client-rights-and-advocacy"
+      ],
+      "cjmmSkill": "take_action",
+      "difficulty": "moderate",
+      "stem": "Which actions support a client with low health literacy? Select all that apply.",
+      "content": {
+        "options": [
+          {
+            "id": "a",
+            "text": "Use plain language and avoid medical jargon"
+          },
+          {
+            "id": "b",
+            "text": "Use the teach-back method"
+          },
+          {
+            "id": "c",
+            "text": "Give large amounts of written information at once"
+          },
+          {
+            "id": "d",
+            "text": "Focus on the two or three most important points"
+          },
+          {
+            "id": "e",
+            "text": "Use pictures or demonstrations"
+          },
+          {
+            "id": "f",
+            "text": "Ask \"Do you understand?\" and move on"
+          }
+        ]
+      },
+      "key": {
+        "correct": [
+          "a",
+          "b",
+          "d",
+          "e"
+        ]
+      },
+      "rationale": {
+        "correct": "Health literacy strategies: plain language, teach-back, few key points, visuals.",
+        "perOption": {
+          "a": "Improves understanding.",
+          "b": "Confirms understanding.",
+          "c": "Overwhelms the client.",
+          "d": "Key messages are remembered better.",
+          "e": "Visual aids help understanding.",
+          "f": "Clients may say yes without understanding."
+        },
+        "references": [
+          "Fundamentals of nursing texts (e.g. Potter & Perry)",
+          "Reviewed by the content team on 17 November 2026."
+        ]
+      },
+      "educationalObjective": "Teach clients with low health literacy."
+    },
+    {
+      "id": "c1a00063-0000-4000-8000-000000000029",
+      "itemType": "multiple_choice",
+      "clientNeeds": "SECE.MOC",
+      "bodySystem": "fundamentals",
+      "subtopics": [
+        "legal-and-ethical-practice"
+      ],
+      "cjmmSkill": "take_action",
+      "difficulty": "moderate",
+      "stem": "A nurse with a multistate license lives in one compact state and wants to work in another compact state. What is true?",
+      "content": {
+        "options": [
+          {
+            "id": "a",
+            "text": "The nurse must get a new license in the second state"
+          },
+          {
+            "id": "b",
+            "text": "The nurse may practice in other compact states under the home-state multistate license"
+          },
+          {
+            "id": "c",
+            "text": "The nurse can practice anywhere in the world"
+          },
+          {
+            "id": "d",
+            "text": "The nurse must give up the home-state license"
+          }
+        ]
+      },
+      "key": {
+        "correct": "b"
+      },
+      "rationale": {
+        "correct": "The Nurse Licensure Compact lets nurses practice across member states.",
+        "perOption": {
+          "a": "The compact allows practice in other member states.",
+          "b": "The Nurse Licensure Compact allows this, following each state's practice laws.",
+          "c": "The compact covers member states only.",
+          "d": "Not required."
+        },
+        "references": [
+          "Fundamentals of nursing texts (e.g. Potter & Perry)",
+          "Reviewed by the content team on 17 November 2026."
+        ]
+      },
+      "educationalObjective": "Explain the Nurse Licensure Compact."
+    },
+    {
+      "id": "c1a00063-0000-4000-8000-000000000030",
+      "itemType": "multiple_choice",
+      "clientNeeds": "SECE.MOC",
+      "bodySystem": "fundamentals",
+      "subtopics": [
+        "legal-and-ethical-practice"
+      ],
+      "cjmmSkill": "take_action",
+      "difficulty": "difficult",
+      "stem": "A nurse reports repeated unsafe staffing to the manager with no change. The nurse is now considering reporting to an outside agency. Which statement is accurate?",
+      "content": {
+        "options": [
+          {
+            "id": "a",
+            "text": "Nurses who report unsafe conditions in good faith are often protected by whistleblower laws"
+          },
+          {
+            "id": "b",
+            "text": "Nurses can be fired for any outside report"
+          },
+          {
+            "id": "c",
+            "text": "Nurses should post the issue on social media"
+          },
+          {
+            "id": "d",
+            "text": "Nurses must stay silent to protect the facility"
+          }
+        ]
+      },
+      "key": {
+        "correct": "a"
+      },
+      "rationale": {
+        "correct": "Use internal channels first; whistleblower protections support good-faith reporting.",
+        "perOption": {
+          "a": "Many laws protect good-faith reporting.",
+          "b": "Whistleblower protections exist in many states.",
+          "c": "Not an appropriate channel.",
+          "d": "Client safety comes first."
+        },
+        "references": [
+          "Fundamentals of nursing texts (e.g. Potter & Perry)",
+          "Reviewed by the content team on 17 November 2026."
+        ]
+      },
+      "educationalObjective": "Understand whistleblower protections."
+    }
+  ]
+}

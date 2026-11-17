@@ -1,0 +1,2167 @@
+{
+  "notice": "RN bank batch 60: NGN unfolding case studies I. Reviewed by the content team on 17 November 2026. See REVIEW-LOG.md.",
+  "track": "RN",
+  "subtopics": [
+    {
+      "clientNeeds": "PHI.PA",
+      "slug": "shock-and-sepsis",
+      "name": "Shock and sepsis"
+    },
+    {
+      "clientNeeds": "PHI.PA",
+      "slug": "asthma-and-copd-management",
+      "name": "Asthma and COPD management"
+    },
+    {
+      "clientNeeds": "PHI.PPT",
+      "slug": "respiratory-medications",
+      "name": "Respiratory and anti-tuberculosis medications"
+    },
+    {
+      "clientNeeds": "PHI.PA",
+      "slug": "pregnancy-complications",
+      "name": "Pregnancy complications"
+    },
+    {
+      "clientNeeds": "PHI.PPT",
+      "slug": "obstetric-medications",
+      "name": "Obstetric medications"
+    },
+    {
+      "clientNeeds": "PSI",
+      "slug": "alcohol-withdrawal",
+      "name": "Alcohol withdrawal"
+    }
+  ],
+  "questions": [
+    {
+      "id": "c1a00060-0000-4000-8000-000000000001",
+      "itemType": "highlight_text",
+      "clientNeeds": "PHI.PA",
+      "bodySystem": "renal-urinary",
+      "subtopics": [
+        "shock-and-sepsis"
+      ],
+      "cjmmSkill": "recognize_cues",
+      "difficulty": "moderate",
+      "stem": "Review the nurse's note. Highlight the findings that require immediate follow-up.",
+      "content": {
+        "segments": [
+          {
+            "id": "s1",
+            "text": "A 78-year-old client is ",
+            "selectable": false
+          },
+          {
+            "id": "s2",
+            "text": "more confused since yesterday",
+            "selectable": true
+          },
+          {
+            "id": "s3",
+            "text": ". History of ",
+            "selectable": false
+          },
+          {
+            "id": "s4",
+            "text": "benign prostatic hyperplasia",
+            "selectable": true
+          },
+          {
+            "id": "s5",
+            "text": ". Blood pressure ",
+            "selectable": false
+          },
+          {
+            "id": "s6",
+            "text": "88/52 mm Hg, down from a baseline of 142/84",
+            "selectable": true
+          },
+          {
+            "id": "s7",
+            "text": "; heart rate ",
+            "selectable": false
+          },
+          {
+            "id": "s8",
+            "text": "116/min",
+            "selectable": true
+          },
+          {
+            "id": "s9",
+            "text": ". Lactate ",
+            "selectable": false
+          },
+          {
+            "id": "s10",
+            "text": "3.8 mmol/L",
+            "selectable": true
+          },
+          {
+            "id": "s11",
+            "text": ". SpO2 ",
+            "selectable": false
+          },
+          {
+            "id": "s12",
+            "text": "94% on room air",
+            "selectable": true
+          },
+          {
+            "id": "s13",
+            "text": ".",
+            "selectable": false
+          }
+        ]
+      },
+      "key": {
+        "correct": [
+          "s2",
+          "s6",
+          "s8",
+          "s10"
+        ]
+      },
+      "rationale": {
+        "correct": "Acute confusion, hypotension, tachycardia and a high lactate show sepsis with organ hypoperfusion.",
+        "perOption": {
+          "s2": "Acute confusion in an older adult can be the first sign of sepsis and poor brain perfusion.",
+          "s4": "A risk factor for urinary tract infection, but not an acute finding.",
+          "s6": "A large drop from baseline suggests septic shock.",
+          "s8": "Tachycardia is a compensatory response to infection and low blood pressure.",
+          "s10": "A lactate above 2 mmol/L shows tissue hypoperfusion.",
+          "s12": "Acceptable for now; continue to monitor."
+        },
+        "references": [
+          "Medical-surgical nursing texts (e.g. Lewis; Ignatavicius)",
+          "NCSBN NCLEX-RN Test Plan",
+          "Reviewed by the content team on 17 November 2026."
+        ]
+      },
+      "educationalObjective": "Recognize the cues of sepsis in an older adult.",
+      "caseStudyId": "c1c00060-0000-4000-8000-000000000001",
+      "casePosition": 1
+    },
+    {
+      "id": "c1a00060-0000-4000-8000-000000000002",
+      "itemType": "dropdown_cloze",
+      "clientNeeds": "PHI.PA",
+      "bodySystem": "renal-urinary",
+      "subtopics": [
+        "shock-and-sepsis"
+      ],
+      "cjmmSkill": "analyze_cues",
+      "difficulty": "moderate",
+      "stem": "Complete the sentence based on the client's data.",
+      "content": {
+        "template": "The client's findings are most consistent with {{b1}} caused by {{b2}}.",
+        "blanks": [
+          {
+            "id": "b1",
+            "options": [
+              {
+                "id": "a",
+                "text": "septic shock"
+              },
+              {
+                "id": "b",
+                "text": "hypovolemic shock from poor intake alone"
+              },
+              {
+                "id": "c",
+                "text": "hyperosmolar hyperglycemic state"
+              }
+            ]
+          },
+          {
+            "id": "b2",
+            "options": [
+              {
+                "id": "a",
+                "text": "a urinary tract infection"
+              },
+              {
+                "id": "b",
+                "text": "pneumonia"
+              },
+              {
+                "id": "c",
+                "text": "an acute stroke"
+              }
+            ]
+          }
+        ]
+      },
+      "key": {
+        "byBlank": {
+          "b1": "a",
+          "b2": "a"
+        }
+      },
+      "rationale": {
+        "correct": "An older adult with UTI symptoms, fever, hypotension and a high lactate has urosepsis with shock.",
+        "perOption": {
+          "b1:a": "Infection with hypotension and a lactate above 2 mmol/L meets the picture of septic shock.",
+          "b1:b": "Poor intake contributes, but fever, leukocytosis and a positive urinalysis point to sepsis.",
+          "b1:c": "A glucose of 264 mg/dL is far below the levels seen in HHS.",
+          "b2:a": "Dysuria and a urinalysis with nitrites and leukocyte esterase identify the source.",
+          "b2:b": "Breath sounds and oxygenation don't point to a lung source.",
+          "b2:c": "Confusion is explained by sepsis, and there are no focal deficits."
+        },
+        "references": [
+          "Medical-surgical nursing texts (e.g. Lewis; Ignatavicius)",
+          "NCSBN NCLEX-RN Test Plan",
+          "Reviewed by the content team on 17 November 2026."
+        ]
+      },
+      "educationalObjective": "Analyze cues to identify urosepsis.",
+      "caseStudyId": "c1c00060-0000-4000-8000-000000000001",
+      "casePosition": 2
+    },
+    {
+      "id": "c1a00060-0000-4000-8000-000000000003",
+      "itemType": "matrix_mc",
+      "clientNeeds": "PHI.PA",
+      "bodySystem": "renal-urinary",
+      "subtopics": [
+        "shock-and-sepsis"
+      ],
+      "cjmmSkill": "prioritize_hypotheses",
+      "difficulty": "difficult",
+      "stem": "For each complication, indicate whether the client is at high or low immediate risk based on the current data.",
+      "content": {
+        "rows": [
+          {
+            "id": "r1",
+            "text": "Acute kidney injury"
+          },
+          {
+            "id": "r2",
+            "text": "Worsening shock and multiorgan failure"
+          },
+          {
+            "id": "r3",
+            "text": "Acute angle-closure glaucoma"
+          },
+          {
+            "id": "r4",
+            "text": "Falls and injury from confusion"
+          }
+        ],
+        "columns": [
+          {
+            "id": "c1",
+            "text": "High immediate risk"
+          },
+          {
+            "id": "c2",
+            "text": "Low immediate risk"
+          }
+        ]
+      },
+      "key": {
+        "byRow": {
+          "r1": "c1",
+          "r2": "c1",
+          "r3": "c2",
+          "r4": "c1"
+        }
+      },
+      "rationale": {
+        "correct": "Shock threatens the kidneys and other organs, and delirium raises injury risk.",
+        "perOption": {
+          "r1:c1": "Creatinine has nearly doubled from baseline with hypotension.",
+          "r1:c2": "Rising creatinine shows the kidneys are already affected.",
+          "r2:c1": "Blood pressure is still falling and lactate is high.",
+          "r2:c2": "Falling blood pressure shows shock is progressing.",
+          "r3:c1": "Nothing in the data suggests eye disease.",
+          "r3:c2": "No eye symptoms are reported.",
+          "r4:c1": "Acute confusion in an older adult raises fall risk.",
+          "r4:c2": "Delirium is a strong fall risk factor."
+        },
+        "references": [
+          "Medical-surgical nursing texts (e.g. Lewis; Ignatavicius)",
+          "Reviewed by the content team on 17 November 2026."
+        ]
+      },
+      "educationalObjective": "Prioritize the most likely complications of septic shock.",
+      "caseStudyId": "c1c00060-0000-4000-8000-000000000001",
+      "casePosition": 3
+    },
+    {
+      "id": "c1a00060-0000-4000-8000-000000000004",
+      "itemType": "sata",
+      "clientNeeds": "PHI.PA",
+      "bodySystem": "renal-urinary",
+      "subtopics": [
+        "shock-and-sepsis"
+      ],
+      "cjmmSkill": "generate_solutions",
+      "difficulty": "difficult",
+      "stem": "Which prescriptions should the nurse anticipate for this client? Select all that apply.",
+      "content": {
+        "options": [
+          {
+            "id": "a",
+            "text": "Two sets of blood cultures before antibiotics"
+          },
+          {
+            "id": "b",
+            "text": "Broad-spectrum IV antibiotic within 1 hour"
+          },
+          {
+            "id": "c",
+            "text": "IV crystalloid 30 mL/kg"
+          },
+          {
+            "id": "d",
+            "text": "Repeat lactate"
+          },
+          {
+            "id": "e",
+            "text": "Oral fluids only"
+          },
+          {
+            "id": "f",
+            "text": "Hold all insulin for 24 hours"
+          }
+        ]
+      },
+      "key": {
+        "correct": [
+          "a",
+          "b",
+          "c",
+          "d"
+        ]
+      },
+      "rationale": {
+        "correct": "Hour-1 sepsis bundle: lactate, cultures, antibiotics, fluids, then vasopressors if hypotension persists.",
+        "perOption": {
+          "a": "Cultures identify the organism and should be drawn before the first dose.",
+          "b": "Early antibiotics lower deaths from sepsis.",
+          "c": "Recommended for hypotension or a lactate of 4 mmol/L or more; this client is hypotensive.",
+          "d": "A falling lactate shows that perfusion is improving.",
+          "e": "Oral intake can't correct septic shock.",
+          "f": "Glucose still needs management; hyperglycemia worsens outcomes."
+        },
+        "references": [
+          "Medical-surgical nursing texts (e.g. Lewis; Ignatavicius)",
+          "NCSBN NCLEX-RN Test Plan",
+          "Reviewed by the content team on 17 November 2026."
+        ]
+      },
+      "educationalObjective": "Plan sepsis bundle care.",
+      "caseStudyId": "c1c00060-0000-4000-8000-000000000001",
+      "casePosition": 4
+    },
+    {
+      "id": "c1a00060-0000-4000-8000-000000000005",
+      "itemType": "ordered_response",
+      "clientNeeds": "PHI.PA",
+      "bodySystem": "renal-urinary",
+      "subtopics": [
+        "shock-and-sepsis"
+      ],
+      "cjmmSkill": "take_action",
+      "difficulty": "difficult",
+      "stem": "Place the nurse's actions in the order they should be done.",
+      "content": {
+        "items": [
+          {
+            "id": "b",
+            "text": "Draw two sets of blood cultures"
+          },
+          {
+            "id": "a",
+            "text": "Insert two large-bore IV catheters"
+          },
+          {
+            "id": "d",
+            "text": "Give the first dose of IV antibiotic"
+          },
+          {
+            "id": "e",
+            "text": "Measure hourly urine output"
+          },
+          {
+            "id": "c",
+            "text": "Start the IV crystalloid bolus"
+          }
+        ]
+      },
+      "key": {
+        "order": [
+          "a",
+          "b",
+          "c",
+          "d",
+          "e"
+        ],
+        "scoring": "all_or_nothing"
+      },
+      "rationale": {
+        "correct": "Access, cultures, fluids and antibiotics come first; monitoring follows.",
+        "perOption": {
+          "a": "Access is needed for fluids and medications.",
+          "b": "Cultures are drawn before antibiotics.",
+          "c": "Restoring perfusion is urgent.",
+          "d": "Antibiotics are started within the first hour, after cultures.",
+          "e": "Urine output shows whether kidney perfusion is improving."
+        },
+        "references": [
+          "Medical-surgical nursing texts (e.g. Lewis; Ignatavicius)",
+          "Reviewed by the content team on 17 November 2026."
+        ]
+      },
+      "educationalObjective": "Sequence nursing actions in septic shock.",
+      "caseStudyId": "c1c00060-0000-4000-8000-000000000001",
+      "casePosition": 5
+    },
+    {
+      "id": "c1a00060-0000-4000-8000-000000000006",
+      "itemType": "matrix_mc",
+      "clientNeeds": "PHI.PA",
+      "bodySystem": "renal-urinary",
+      "subtopics": [
+        "shock-and-sepsis"
+      ],
+      "cjmmSkill": "evaluate_outcomes",
+      "difficulty": "moderate",
+      "stem": "Four hours later the nurse reassesses the client. For each finding, indicate whether it shows improvement or no improvement.",
+      "content": {
+        "rows": [
+          {
+            "id": "r1",
+            "text": "Blood pressure 118/70 mm Hg"
+          },
+          {
+            "id": "r2",
+            "text": "Lactate 1.6 mmol/L"
+          },
+          {
+            "id": "r3",
+            "text": "Urine output 15 mL/hr"
+          },
+          {
+            "id": "r4",
+            "text": "Oriented to person, place and time"
+          }
+        ],
+        "columns": [
+          {
+            "id": "c1",
+            "text": "Improved"
+          },
+          {
+            "id": "c2",
+            "text": "Not improved"
+          }
+        ]
+      },
+      "key": {
+        "byRow": {
+          "r1": "c1",
+          "r2": "c1",
+          "r3": "c2",
+          "r4": "c1"
+        }
+      },
+      "rationale": {
+        "correct": "Blood pressure, lactate and mental status have improved; low urine output still needs follow-up.",
+        "perOption": {
+          "r1:c1": "Perfusion pressure is restored.",
+          "r1:c2": "This is improvement.",
+          "r2:c1": "Lactate has cleared to normal.",
+          "r2:c2": "This is improvement.",
+          "r3:c1": "Output below 0.5 mL/kg/hr isn't improvement.",
+          "r3:c2": "The kidneys are still poorly perfused; report it.",
+          "r4:c1": "Mental status has returned to baseline.",
+          "r4:c2": "This is improvement."
+        },
+        "references": [
+          "Medical-surgical nursing texts (e.g. Lewis; Ignatavicius)",
+          "Reviewed by the content team on 17 November 2026."
+        ]
+      },
+      "educationalObjective": "Evaluate the response to sepsis treatment.",
+      "caseStudyId": "c1c00060-0000-4000-8000-000000000001",
+      "casePosition": 6
+    },
+    {
+      "id": "c1a00060-0000-4000-8000-000000000007",
+      "itemType": "select_n",
+      "clientNeeds": "PHI.PA",
+      "bodySystem": "pediatrics",
+      "subtopics": [
+        "asthma-and-copd-management"
+      ],
+      "cjmmSkill": "recognize_cues",
+      "difficulty": "moderate",
+      "stem": "Select the 4 findings that show the child's asthma exacerbation is severe.",
+      "content": {
+        "options": [
+          {
+            "id": "a",
+            "text": "Speaking in short phrases"
+          },
+          {
+            "id": "b",
+            "text": "Intercostal and subcostal retractions"
+          },
+          {
+            "id": "c",
+            "text": "SpO2 89% on room air"
+          },
+          {
+            "id": "d",
+            "text": "Peak flow 45% of personal best"
+          },
+          {
+            "id": "e",
+            "text": "Temperature 37.6 °C (99.7 °F)"
+          },
+          {
+            "id": "f",
+            "text": "A cold for 2 days"
+          }
+        ],
+        "selectCount": 4
+      },
+      "key": {
+        "correct": [
+          "a",
+          "b",
+          "c",
+          "d"
+        ]
+      },
+      "rationale": {
+        "correct": "Severity signs: limited speech, retractions, hypoxemia and low peak flow.",
+        "perOption": {
+          "a": "Limited speech shows serious breathlessness.",
+          "b": "Accessory muscle use shows increased work of breathing.",
+          "c": "Hypoxemia below 90% marks a severe exacerbation.",
+          "d": "Below 50% indicates a severe exacerbation.",
+          "e": "A low-grade temperature isn't a severity sign.",
+          "f": "The cold is the likely trigger, not a sign of severity."
+        },
+        "references": [
+          "Pediatric nursing texts (e.g. Hockenberry, Wong's Essentials of Pediatric Nursing)",
+          "Reviewed by the content team on 17 November 2026."
+        ]
+      },
+      "educationalObjective": "Recognize a severe pediatric asthma exacerbation.",
+      "caseStudyId": "c1c00060-0000-4000-8000-000000000002",
+      "casePosition": 1
+    },
+    {
+      "id": "c1a00060-0000-4000-8000-000000000008",
+      "itemType": "dropdown_cloze",
+      "clientNeeds": "PHI.PA",
+      "bodySystem": "pediatrics",
+      "subtopics": [
+        "asthma-and-copd-management"
+      ],
+      "cjmmSkill": "analyze_cues",
+      "difficulty": "moderate",
+      "stem": "Complete the sentence.",
+      "content": {
+        "template": "The child's wheezing and hypoxemia are caused by {{b1}}, most likely triggered by {{b2}}.",
+        "blanks": [
+          {
+            "id": "b1",
+            "options": [
+              {
+                "id": "a",
+                "text": "bronchoconstriction and airway inflammation"
+              },
+              {
+                "id": "b",
+                "text": "fluid in the alveoli"
+              },
+              {
+                "id": "c",
+                "text": "upper airway obstruction"
+              }
+            ]
+          },
+          {
+            "id": "b2",
+            "options": [
+              {
+                "id": "a",
+                "text": "a viral respiratory infection"
+              },
+              {
+                "id": "b",
+                "text": "exercise"
+              },
+              {
+                "id": "c",
+                "text": "a food allergy"
+              }
+            ]
+          }
+        ]
+      },
+      "key": {
+        "byBlank": {
+          "b1": "a",
+          "b2": "a"
+        }
+      },
+      "rationale": {
+        "correct": "A viral infection triggered airway inflammation and bronchospasm.",
+        "perOption": {
+          "b1:a": "Asthma narrows and inflames the lower airways.",
+          "b1:b": "That describes pneumonia or pulmonary edema.",
+          "b1:c": "Upper airway obstruction causes inspiratory stridor, not expiratory wheezes.",
+          "b2:a": "Viral colds are the most common trigger of asthma flares in children.",
+          "b2:b": "No exercise was reported.",
+          "b2:c": "No food exposure was reported."
+        },
+        "references": [
+          "Pediatric nursing texts (e.g. Hockenberry, Wong's Essentials of Pediatric Nursing)",
+          "Reviewed by the content team on 17 November 2026."
+        ]
+      },
+      "educationalObjective": "Analyze the cause of an asthma exacerbation.",
+      "caseStudyId": "c1c00060-0000-4000-8000-000000000002",
+      "casePosition": 2
+    },
+    {
+      "id": "c1a00060-0000-4000-8000-000000000009",
+      "itemType": "multiple_choice",
+      "clientNeeds": "PHI.PA",
+      "bodySystem": "pediatrics",
+      "subtopics": [
+        "asthma-and-copd-management"
+      ],
+      "cjmmSkill": "prioritize_hypotheses",
+      "difficulty": "moderate",
+      "stem": "Which problem is the nurse's priority for this child?",
+      "content": {
+        "options": [
+          {
+            "id": "a",
+            "text": "Impaired gas exchange"
+          },
+          {
+            "id": "b",
+            "text": "Anxiety"
+          },
+          {
+            "id": "c",
+            "text": "Risk for dehydration"
+          },
+          {
+            "id": "d",
+            "text": "Knowledge gap about inhaler technique"
+          }
+        ]
+      },
+      "key": {
+        "correct": "a"
+      },
+      "rationale": {
+        "correct": "Oxygenation comes first.",
+        "perOption": {
+          "a": "Hypoxemia from bronchospasm is the most immediate threat.",
+          "b": "Present, but secondary to the breathing problem.",
+          "c": "Possible with tachypnea, but not the most urgent.",
+          "d": "Teaching comes after the child is stable."
+        },
+        "references": [
+          "Pediatric nursing texts (e.g. Hockenberry, Wong's Essentials of Pediatric Nursing)",
+          "Reviewed by the content team on 17 November 2026."
+        ]
+      },
+      "educationalObjective": "Prioritize gas exchange in acute asthma.",
+      "caseStudyId": "c1c00060-0000-4000-8000-000000000002",
+      "casePosition": 3
+    },
+    {
+      "id": "c1a00060-0000-4000-8000-000000000010",
+      "itemType": "multiple_response_grouping",
+      "clientNeeds": "PHI.PPT",
+      "bodySystem": "pediatrics",
+      "subtopics": [
+        "respiratory-medications"
+      ],
+      "cjmmSkill": "generate_solutions",
+      "difficulty": "difficult",
+      "stem": "For each category, select the actions the nurse should anticipate in the emergency department.",
+      "content": {
+        "groups": [
+          {
+            "id": "g1",
+            "label": "Medications",
+            "options": [
+              {
+                "id": "a",
+                "text": "Nebulized albuterol"
+              },
+              {
+                "id": "b",
+                "text": "Nebulized ipratropium"
+              },
+              {
+                "id": "c",
+                "text": "Systemic corticosteroid"
+              },
+              {
+                "id": "d",
+                "text": "Oral codeine cough syrup"
+              }
+            ]
+          },
+          {
+            "id": "g2",
+            "label": "Monitoring",
+            "options": [
+              {
+                "id": "e",
+                "text": "Continuous pulse oximetry"
+              },
+              {
+                "id": "f",
+                "text": "Repeat respiratory assessment after each treatment"
+              },
+              {
+                "id": "g",
+                "text": "Daily weight only"
+              }
+            ]
+          }
+        ]
+      },
+      "key": {
+        "byGroup": {
+          "g1": [
+            "a",
+            "b",
+            "c"
+          ],
+          "g2": [
+            "e",
+            "f"
+          ]
+        }
+      },
+      "rationale": {
+        "correct": "Acute asthma care: oxygen, short-acting bronchodilators with ipratropium, systemic steroids and close monitoring.",
+        "perOption": {
+          "a": "A short-acting beta2 agonist relieves bronchospasm quickly.",
+          "b": "Added to albuterol in severe exacerbations to improve bronchodilation.",
+          "c": "Reduces airway inflammation; the effect begins within hours.",
+          "d": "Cough suppressants and opioids can depress breathing and aren't used.",
+          "e": "Tracks oxygenation during treatment.",
+          "f": "Shows the response to bronchodilators.",
+          "g": "Not useful in the acute phase."
+        },
+        "references": [
+          "Pediatric nursing texts (e.g. Hockenberry, Wong's Essentials of Pediatric Nursing)",
+          "Nursing pharmacology texts (e.g. Lehne; McCuistion) and the drug's prescribing information",
+          "Reviewed by the content team on 17 November 2026."
+        ]
+      },
+      "educationalObjective": "Plan acute asthma treatment for a child.",
+      "caseStudyId": "c1c00060-0000-4000-8000-000000000002",
+      "casePosition": 4
+    },
+    {
+      "id": "c1a00060-0000-4000-8000-000000000011",
+      "itemType": "multiple_choice",
+      "clientNeeds": "PHI.PA",
+      "bodySystem": "pediatrics",
+      "subtopics": [
+        "asthma-and-copd-management"
+      ],
+      "cjmmSkill": "take_action",
+      "difficulty": "moderate",
+      "stem": "Which action should the nurse take first?",
+      "content": {
+        "options": [
+          {
+            "id": "a",
+            "text": "Apply oxygen and start the nebulized bronchodilator"
+          },
+          {
+            "id": "b",
+            "text": "Obtain a chest x-ray"
+          },
+          {
+            "id": "c",
+            "text": "Teach the parent about avoiding triggers"
+          },
+          {
+            "id": "d",
+            "text": "Weigh the child for medication dosing"
+          }
+        ]
+      },
+      "key": {
+        "correct": "a"
+      },
+      "rationale": {
+        "correct": "Treat breathing first.",
+        "perOption": {
+          "a": "Treats hypoxemia and bronchospasm right away.",
+          "b": "Imaging isn't routine and doesn't treat the problem.",
+          "c": "Teaching comes later.",
+          "d": "An estimated or recent weight can be used; treatment shouldn't wait."
+        },
+        "references": [
+          "Pediatric nursing texts (e.g. Hockenberry, Wong's Essentials of Pediatric Nursing)",
+          "Reviewed by the content team on 17 November 2026."
+        ]
+      },
+      "educationalObjective": "Take action in an acute pediatric asthma exacerbation.",
+      "caseStudyId": "c1c00060-0000-4000-8000-000000000002",
+      "casePosition": 5
+    },
+    {
+      "id": "c1a00060-0000-4000-8000-000000000012",
+      "itemType": "matrix_mc",
+      "clientNeeds": "PHI.PA",
+      "bodySystem": "pediatrics",
+      "subtopics": [
+        "asthma-and-copd-management"
+      ],
+      "cjmmSkill": "evaluate_outcomes",
+      "difficulty": "moderate",
+      "stem": "One hour after treatment, the nurse reassesses the child. For each finding, indicate whether it shows improvement or decline.",
+      "content": {
+        "rows": [
+          {
+            "id": "r1",
+            "text": "Speaking in full sentences"
+          },
+          {
+            "id": "r2",
+            "text": "SpO2 95% on 2 L/min"
+          },
+          {
+            "id": "r3",
+            "text": "Drowsy and difficult to wake"
+          },
+          {
+            "id": "r4",
+            "text": "Peak flow 70% of personal best"
+          }
+        ],
+        "columns": [
+          {
+            "id": "c1",
+            "text": "Improvement"
+          },
+          {
+            "id": "c2",
+            "text": "Decline"
+          }
+        ]
+      },
+      "key": {
+        "byRow": {
+          "r1": "c1",
+          "r2": "c1",
+          "r3": "c2",
+          "r4": "c1"
+        }
+      },
+      "rationale": {
+        "correct": "Drowsiness during an asthma attack is a danger sign, not a sign of rest.",
+        "perOption": {
+          "r1:c1": "Breathlessness has eased.",
+          "r1:c2": "This is improvement.",
+          "r2:c1": "Oxygenation has improved.",
+          "r2:c2": "This is improvement.",
+          "r3:c1": "This isn't improvement.",
+          "r3:c2": "Drowsiness may signal CO2 retention and impending respiratory failure.",
+          "r4:c1": "Airflow has improved.",
+          "r4:c2": "This is improvement."
+        },
+        "references": [
+          "Pediatric nursing texts (e.g. Hockenberry, Wong's Essentials of Pediatric Nursing)",
+          "Reviewed by the content team on 17 November 2026."
+        ]
+      },
+      "educationalObjective": "Evaluate the response to asthma treatment.",
+      "caseStudyId": "c1c00060-0000-4000-8000-000000000002",
+      "casePosition": 6
+    },
+    {
+      "id": "c1a00060-0000-4000-8000-000000000013",
+      "itemType": "highlight_table",
+      "clientNeeds": "PHI.PA",
+      "bodySystem": "maternal-newborn",
+      "subtopics": [
+        "pregnancy-complications"
+      ],
+      "cjmmSkill": "recognize_cues",
+      "difficulty": "moderate",
+      "stem": "Highlight the findings that are severe features of preeclampsia.",
+      "content": {
+        "columns": [
+          "Finding",
+          "Value"
+        ],
+        "rows": [
+          {
+            "id": "r1",
+            "cells": [
+              "Blood pressure on two readings",
+              "164/112 and 168/110 mm Hg"
+            ],
+            "selectable": true
+          },
+          {
+            "id": "r2",
+            "cells": [
+              "Platelets",
+              "96,000/mm3"
+            ],
+            "selectable": true
+          },
+          {
+            "id": "r3",
+            "cells": [
+              "Headache unrelieved by acetaminophen with visual spots",
+              "Present"
+            ],
+            "selectable": true
+          },
+          {
+            "id": "r4",
+            "cells": [
+              "Facial and hand swelling",
+              "Present"
+            ],
+            "selectable": true
+          },
+          {
+            "id": "r5",
+            "cells": [
+              "AST",
+              "88 U/L"
+            ],
+            "selectable": true
+          },
+          {
+            "id": "r6",
+            "cells": [
+              "Fetal heart rate",
+              "145/min, moderate variability"
+            ],
+            "selectable": true
+          }
+        ]
+      },
+      "key": {
+        "correct": [
+          "r1",
+          "r2",
+          "r3",
+          "r5"
+        ]
+      },
+      "rationale": {
+        "correct": "Severe features include BP of 160/110 or more, platelets under 100,000, raised liver enzymes, and neurologic or visual symptoms.",
+        "perOption": {
+          "r1": "160/110 mm Hg or higher on two readings is a severe feature.",
+          "r2": "Below 100,000/mm3 is a severe feature.",
+          "r3": "New neurologic and visual symptoms are severe features.",
+          "r4": "Edema is common in pregnancy and isn't a diagnostic criterion.",
+          "r5": "Liver enzymes at least twice the upper limit of normal are a severe feature.",
+          "r6": "A reassuring fetal heart rate pattern."
+        },
+        "references": [
+          "Maternal-newborn nursing texts (e.g. Perry; Lowdermilk)",
+          "Reviewed by the content team on 17 November 2026."
+        ]
+      },
+      "educationalObjective": "Recognize severe features of preeclampsia.",
+      "caseStudyId": "c1c00060-0000-4000-8000-000000000003",
+      "casePosition": 1
+    },
+    {
+      "id": "c1a00060-0000-4000-8000-000000000014",
+      "itemType": "dropdown_cloze",
+      "clientNeeds": "PHI.PA",
+      "bodySystem": "maternal-newborn",
+      "subtopics": [
+        "pregnancy-complications"
+      ],
+      "cjmmSkill": "analyze_cues",
+      "difficulty": "difficult",
+      "stem": "Complete the sentence.",
+      "content": {
+        "template": "The client is at highest immediate risk for {{b1}}, as shown by {{b2}}.",
+        "blanks": [
+          {
+            "id": "b1",
+            "options": [
+              {
+                "id": "a",
+                "text": "eclamptic seizures"
+              },
+              {
+                "id": "b",
+                "text": "postpartum hemorrhage"
+              },
+              {
+                "id": "c",
+                "text": "gestational diabetes"
+              }
+            ]
+          },
+          {
+            "id": "b2",
+            "options": [
+              {
+                "id": "a",
+                "text": "headache, visual changes and hyperreflexia with clonus"
+              },
+              {
+                "id": "b",
+                "text": "a fetal heart rate of 145/min"
+              },
+              {
+                "id": "c",
+                "text": "a creatinine of 1.0 mg/dL"
+              }
+            ]
+          }
+        ]
+      },
+      "key": {
+        "byBlank": {
+          "b1": "a",
+          "b2": "a"
+        }
+      },
+      "rationale": {
+        "correct": "Persistent headache, visual changes and clonus warn of impending eclampsia.",
+        "perOption": {
+          "b1:a": "Cerebral irritability in severe preeclampsia can progress to seizures.",
+          "b1:b": "A later risk, not the most immediate one.",
+          "b1:c": "Not related to these findings.",
+          "b2:a": "These are warning signs of impending eclampsia.",
+          "b2:b": "A normal fetal heart rate.",
+          "b2:c": "Within normal limits."
+        },
+        "references": [
+          "Maternal-newborn nursing texts (e.g. Perry; Lowdermilk)",
+          "Reviewed by the content team on 17 November 2026."
+        ]
+      },
+      "educationalObjective": "Analyze seizure risk in severe preeclampsia.",
+      "caseStudyId": "c1c00060-0000-4000-8000-000000000003",
+      "casePosition": 2
+    },
+    {
+      "id": "c1a00060-0000-4000-8000-000000000015",
+      "itemType": "multiple_choice",
+      "clientNeeds": "PHI.PA",
+      "bodySystem": "maternal-newborn",
+      "subtopics": [
+        "pregnancy-complications"
+      ],
+      "cjmmSkill": "prioritize_hypotheses",
+      "difficulty": "difficult",
+      "stem": "Which problem is the nurse's priority?",
+      "content": {
+        "options": [
+          {
+            "id": "a",
+            "text": "Risk for seizures and stroke from severe hypertension"
+          },
+          {
+            "id": "b",
+            "text": "Fluid volume excess related to edema"
+          },
+          {
+            "id": "c",
+            "text": "Anxiety about the birth"
+          },
+          {
+            "id": "d",
+            "text": "Knowledge gap about breastfeeding"
+          }
+        ]
+      },
+      "key": {
+        "correct": "a"
+      },
+      "rationale": {
+        "correct": "Preventing eclampsia and stroke comes first.",
+        "perOption": {
+          "a": "These are the most immediate threats to the client's life.",
+          "b": "Secondary to the hypertensive emergency.",
+          "c": "Real, but secondary.",
+          "d": "Addressed later."
+        },
+        "references": [
+          "Maternal-newborn nursing texts (e.g. Perry; Lowdermilk)",
+          "Reviewed by the content team on 17 November 2026."
+        ]
+      },
+      "educationalObjective": "Prioritize problems in severe preeclampsia.",
+      "caseStudyId": "c1c00060-0000-4000-8000-000000000003",
+      "casePosition": 3
+    },
+    {
+      "id": "c1a00060-0000-4000-8000-000000000016",
+      "itemType": "matrix_mr",
+      "clientNeeds": "PHI.PA",
+      "bodySystem": "maternal-newborn",
+      "subtopics": [
+        "pregnancy-complications"
+      ],
+      "cjmmSkill": "generate_solutions",
+      "difficulty": "difficult",
+      "stem": "For each intervention, indicate the goal or goals it supports. Each row may have more than one answer.",
+      "content": {
+        "rows": [
+          {
+            "id": "r1",
+            "text": "Magnesium sulfate infusion"
+          },
+          {
+            "id": "r2",
+            "text": "IV labetalol"
+          },
+          {
+            "id": "r3",
+            "text": "Continuous electronic fetal monitoring"
+          },
+          {
+            "id": "r4",
+            "text": "Quiet, dimly lit room"
+          }
+        ],
+        "columns": [
+          {
+            "id": "c1",
+            "text": "Prevent seizures"
+          },
+          {
+            "id": "c2",
+            "text": "Lower blood pressure"
+          },
+          {
+            "id": "c3",
+            "text": "Monitor fetal well-being"
+          }
+        ],
+        "groupAxis": "row"
+      },
+      "key": {
+        "byGroup": {
+          "r1": [
+            "r1:c1"
+          ],
+          "r2": [
+            "r2:c2"
+          ],
+          "r3": [
+            "r3:c3"
+          ],
+          "r4": [
+            "r4:c1"
+          ]
+        }
+      },
+      "rationale": {
+        "correct": "Severe preeclampsia: magnesium for seizure prevention, rapid antihypertensives, fetal monitoring and a low-stimulation environment.",
+        "perOption": {
+          "r1:c1": "Magnesium is the drug of choice to prevent eclamptic seizures.",
+          "r1:c2": "Magnesium isn't used as an antihypertensive.",
+          "r1:c3": "Magnesium doesn't monitor the fetus.",
+          "r2:c1": "Labetalol doesn't prevent seizures directly.",
+          "r2:c2": "Labetalol lowers severe-range blood pressure.",
+          "r2:c3": "It doesn't monitor the fetus.",
+          "r3:c1": "It doesn't prevent seizures.",
+          "r3:c2": "It doesn't lower blood pressure.",
+          "r3:c3": "It shows how the fetus tolerates the maternal condition and treatment.",
+          "r4:c1": "Reducing stimulation lowers seizure risk.",
+          "r4:c2": "It doesn't directly lower blood pressure.",
+          "r4:c3": "It doesn't monitor the fetus."
+        },
+        "references": [
+          "Maternal-newborn nursing texts (e.g. Perry; Lowdermilk)",
+          "Nursing pharmacology texts (e.g. Lehne; McCuistion) and the drug's prescribing information",
+          "Reviewed by the content team on 17 November 2026."
+        ]
+      },
+      "educationalObjective": "Plan care for severe preeclampsia.",
+      "caseStudyId": "c1c00060-0000-4000-8000-000000000003",
+      "casePosition": 4
+    },
+    {
+      "id": "c1a00060-0000-4000-8000-000000000017",
+      "itemType": "sata",
+      "clientNeeds": "PHI.PPT",
+      "bodySystem": "maternal-newborn",
+      "subtopics": [
+        "obstetric-medications"
+      ],
+      "cjmmSkill": "take_action",
+      "difficulty": "moderate",
+      "stem": "Magnesium sulfate is started. Which actions should the nurse take? Select all that apply.",
+      "content": {
+        "options": [
+          {
+            "id": "a",
+            "text": "Check respiratory rate and deep tendon reflexes every hour"
+          },
+          {
+            "id": "b",
+            "text": "Measure hourly urine output"
+          },
+          {
+            "id": "c",
+            "text": "Keep calcium gluconate at the bedside"
+          },
+          {
+            "id": "d",
+            "text": "Use an infusion pump on a secondary line"
+          },
+          {
+            "id": "e",
+            "text": "Encourage the client to walk to the bathroom"
+          },
+          {
+            "id": "f",
+            "text": "Stop the infusion when the headache goes away"
+          }
+        ]
+      },
+      "key": {
+        "correct": [
+          "a",
+          "b",
+          "c",
+          "d"
+        ]
+      },
+      "rationale": {
+        "correct": "Magnesium sulfate safety: pump, hourly reflexes, breathing and urine output checks, and calcium gluconate ready.",
+        "perOption": {
+          "a": "Loss of reflexes and slow breathing are early signs of toxicity.",
+          "b": "Magnesium is excreted by the kidneys; low output raises the risk of toxicity.",
+          "c": "Calcium gluconate is the antidote for magnesium toxicity.",
+          "d": "Pump control prevents accidental overdose.",
+          "e": "Seizure and fall risk require bed rest with the side rails padded.",
+          "f": "Magnesium usually continues for 24 hours after birth."
+        },
+        "references": [
+          "Maternal-newborn nursing texts (e.g. Perry; Lowdermilk)",
+          "Nursing pharmacology texts (e.g. Lehne; McCuistion) and the drug's prescribing information",
+          "Reviewed by the content team on 17 November 2026."
+        ]
+      },
+      "educationalObjective": "Take action safely during magnesium sulfate therapy.",
+      "caseStudyId": "c1c00060-0000-4000-8000-000000000003",
+      "casePosition": 5
+    },
+    {
+      "id": "c1a00060-0000-4000-8000-000000000018",
+      "itemType": "matrix_mc",
+      "clientNeeds": "PHI.PA",
+      "bodySystem": "maternal-newborn",
+      "subtopics": [
+        "pregnancy-complications"
+      ],
+      "cjmmSkill": "evaluate_outcomes",
+      "difficulty": "moderate",
+      "stem": "Two hours later, the nurse reassesses. For each finding, indicate whether the treatment is effective or not effective.",
+      "content": {
+        "rows": [
+          {
+            "id": "r1",
+            "text": "Blood pressure 146/94 mm Hg"
+          },
+          {
+            "id": "r2",
+            "text": "No seizure activity"
+          },
+          {
+            "id": "r3",
+            "text": "Respiratory rate 8/min"
+          },
+          {
+            "id": "r4",
+            "text": "Deep tendon reflexes 2+"
+          }
+        ],
+        "columns": [
+          {
+            "id": "c1",
+            "text": "Effective"
+          },
+          {
+            "id": "c2",
+            "text": "Not effective"
+          }
+        ]
+      },
+      "key": {
+        "byRow": {
+          "r1": "c1",
+          "r2": "c1",
+          "r3": "c2",
+          "r4": "c1"
+        }
+      },
+      "rationale": {
+        "correct": "Controlled BP, no seizures and normal reflexes show success; a respiratory rate under 12 signals toxicity.",
+        "perOption": {
+          "r1:c1": "Out of the severe range.",
+          "r1:c2": "This shows control.",
+          "r2:c1": "The goal of magnesium therapy is met.",
+          "r2:c2": "This shows effectiveness.",
+          "r3:c1": "A slow rate isn't a treatment goal.",
+          "r3:c2": "Suggests magnesium toxicity; stop the infusion and notify the provider.",
+          "r4:c1": "Reflexes are back to normal.",
+          "r4:c2": "This shows effectiveness without toxicity."
+        },
+        "references": [
+          "Maternal-newborn nursing texts (e.g. Perry; Lowdermilk)",
+          "Reviewed by the content team on 17 November 2026."
+        ]
+      },
+      "educationalObjective": "Evaluate preeclampsia treatment.",
+      "caseStudyId": "c1c00060-0000-4000-8000-000000000003",
+      "casePosition": 6
+    },
+    {
+      "id": "c1a00060-0000-4000-8000-000000000019",
+      "itemType": "select_n",
+      "clientNeeds": "PSI",
+      "bodySystem": "mental-health",
+      "subtopics": [
+        "alcohol-withdrawal"
+      ],
+      "cjmmSkill": "recognize_cues",
+      "difficulty": "moderate",
+      "stem": "Select the 4 findings that most suggest alcohol withdrawal.",
+      "content": {
+        "options": [
+          {
+            "id": "a",
+            "text": "Tremor of both hands"
+          },
+          {
+            "id": "b",
+            "text": "Seeing bugs on the wall"
+          },
+          {
+            "id": "c",
+            "text": "Heart rate up from 88 to 124/min"
+          },
+          {
+            "id": "d",
+            "text": "Sweating"
+          },
+          {
+            "id": "e",
+            "text": "Ankle surgery 2 days ago"
+          },
+          {
+            "id": "f",
+            "text": "SpO2 96% on room air"
+          }
+        ],
+        "selectCount": 4
+      },
+      "key": {
+        "correct": [
+          "a",
+          "b",
+          "c",
+          "d"
+        ]
+      },
+      "rationale": {
+        "correct": "Withdrawal signs: tremor, sweating, tachycardia, hypertension, agitation, hallucinations and seizures.",
+        "perOption": {
+          "a": "Tremor is one of the earliest signs of withdrawal.",
+          "b": "Visual hallucinations occur 12 to 48 hours after the last drink.",
+          "c": "Autonomic hyperactivity raises the heart rate.",
+          "d": "Diaphoresis reflects autonomic hyperactivity.",
+          "e": "This explains the timing (no access to alcohol), not a sign itself.",
+          "f": "Normal oxygenation."
+        },
+        "references": [
+          "Psychiatric-mental health nursing texts (e.g. Varcarolis; Halter)",
+          "Reviewed by the content team on 17 November 2026."
+        ]
+      },
+      "educationalObjective": "Recognize alcohol withdrawal after surgery.",
+      "caseStudyId": "c1c00060-0000-4000-8000-000000000004",
+      "casePosition": 1
+    },
+    {
+      "id": "c1a00060-0000-4000-8000-000000000020",
+      "itemType": "dropdown_table",
+      "clientNeeds": "PSI",
+      "bodySystem": "mental-health",
+      "subtopics": [
+        "alcohol-withdrawal"
+      ],
+      "cjmmSkill": "analyze_cues",
+      "difficulty": "moderate",
+      "stem": "For each time after the last drink, select the withdrawal finding most typical of that period.",
+      "content": {
+        "columns": [
+          "Time after last drink",
+          "Most typical finding"
+        ],
+        "rows": [
+          {
+            "id": "r1",
+            "cells": [
+              {
+                "text": "6 to 24 hours"
+              },
+              {
+                "blankId": "b1"
+              }
+            ]
+          },
+          {
+            "id": "r2",
+            "cells": [
+              {
+                "text": "12 to 48 hours"
+              },
+              {
+                "blankId": "b2"
+              }
+            ]
+          },
+          {
+            "id": "r3",
+            "cells": [
+              {
+                "text": "48 to 72 hours"
+              },
+              {
+                "blankId": "b3"
+              }
+            ]
+          }
+        ],
+        "blanks": [
+          {
+            "id": "b1",
+            "options": [
+              {
+                "id": "a",
+                "text": "Tremor, anxiety and sweating"
+              },
+              {
+                "id": "b",
+                "text": "Delirium tremens"
+              },
+              {
+                "id": "c",
+                "text": "Full recovery"
+              }
+            ]
+          },
+          {
+            "id": "b2",
+            "options": [
+              {
+                "id": "a",
+                "text": "Hallucinations and possible seizures"
+              },
+              {
+                "id": "b",
+                "text": "No symptoms"
+              },
+              {
+                "id": "c",
+                "text": "Wernicke encephalopathy only"
+              }
+            ]
+          },
+          {
+            "id": "b3",
+            "options": [
+              {
+                "id": "a",
+                "text": "Delirium tremens"
+              },
+              {
+                "id": "b",
+                "text": "Mild tremor only"
+              },
+              {
+                "id": "c",
+                "text": "Withdrawal has always ended"
+              }
+            ]
+          }
+        ]
+      },
+      "key": {
+        "byBlank": {
+          "b1": "a",
+          "b2": "a",
+          "b3": "a"
+        }
+      },
+      "rationale": {
+        "correct": "The client's day-2 picture (hallucinations, fever, autonomic signs) fits progression toward delirium tremens.",
+        "perOption": {
+          "b1:a": "Early withdrawal begins within hours.",
+          "b1:b": "DTs typically begin at 48 to 72 hours.",
+          "b1:c": "Symptoms are just beginning.",
+          "b2:a": "Alcoholic hallucinosis and withdrawal seizures peak in this window.",
+          "b2:b": "Symptoms are usually present.",
+          "b2:c": "Wernicke's is from thiamine deficiency, not a stage of withdrawal.",
+          "b3:a": "DTs: confusion, severe autonomic instability and fever.",
+          "b3:b": "By this time severe withdrawal may develop.",
+          "b3:c": "This is when the most dangerous phase can begin."
+        },
+        "references": [
+          "Psychiatric-mental health nursing texts (e.g. Varcarolis; Halter)",
+          "Reviewed by the content team on 17 November 2026."
+        ]
+      },
+      "educationalObjective": "Analyze the timeline of alcohol withdrawal.",
+      "caseStudyId": "c1c00060-0000-4000-8000-000000000004",
+      "casePosition": 2
+    },
+    {
+      "id": "c1a00060-0000-4000-8000-000000000021",
+      "itemType": "multiple_choice",
+      "clientNeeds": "PSI",
+      "bodySystem": "mental-health",
+      "subtopics": [
+        "alcohol-withdrawal"
+      ],
+      "cjmmSkill": "prioritize_hypotheses",
+      "difficulty": "moderate",
+      "stem": "Which problem is the nurse's priority?",
+      "content": {
+        "options": [
+          {
+            "id": "a",
+            "text": "Risk for injury from seizures and delirium"
+          },
+          {
+            "id": "b",
+            "text": "Ineffective coping"
+          },
+          {
+            "id": "c",
+            "text": "Impaired skin integrity at the incision"
+          },
+          {
+            "id": "d",
+            "text": "Knowledge gap about alcohol use"
+          }
+        ]
+      },
+      "key": {
+        "correct": "a"
+      },
+      "rationale": {
+        "correct": "Safety from seizures and delirium comes first.",
+        "perOption": {
+          "a": "Withdrawal can progress to seizures and delirium tremens, which can be fatal.",
+          "b": "Addressed after the client is safe.",
+          "c": "Not the most urgent problem.",
+          "d": "Addressed later."
+        },
+        "references": [
+          "Psychiatric-mental health nursing texts (e.g. Varcarolis; Halter)",
+          "Reviewed by the content team on 17 November 2026."
+        ]
+      },
+      "educationalObjective": "Prioritize safety in alcohol withdrawal.",
+      "caseStudyId": "c1c00060-0000-4000-8000-000000000004",
+      "casePosition": 3
+    },
+    {
+      "id": "c1a00060-0000-4000-8000-000000000022",
+      "itemType": "sata",
+      "clientNeeds": "PSI",
+      "bodySystem": "mental-health",
+      "subtopics": [
+        "alcohol-withdrawal"
+      ],
+      "cjmmSkill": "generate_solutions",
+      "difficulty": "moderate",
+      "stem": "Which interventions should the nurse anticipate? Select all that apply.",
+      "content": {
+        "options": [
+          {
+            "id": "a",
+            "text": "Benzodiazepine dosed by a withdrawal scale such as CIWA-Ar"
+          },
+          {
+            "id": "b",
+            "text": "Thiamine before any glucose-containing fluids"
+          },
+          {
+            "id": "c",
+            "text": "Seizure precautions"
+          },
+          {
+            "id": "d",
+            "text": "A quiet, well-lit room"
+          },
+          {
+            "id": "e",
+            "text": "Restraints as the first intervention"
+          },
+          {
+            "id": "f",
+            "text": "Restrict all oral fluids"
+          }
+        ]
+      },
+      "key": {
+        "correct": [
+          "a",
+          "b",
+          "c",
+          "d"
+        ]
+      },
+      "rationale": {
+        "correct": "Withdrawal care: benzodiazepines, thiamine, fluids and electrolytes, safety and low stimulation.",
+        "perOption": {
+          "a": "Symptom-triggered benzodiazepines are first-line.",
+          "b": "Prevents Wernicke encephalopathy.",
+          "c": "Withdrawal seizures can occur.",
+          "d": "Reduces agitation and misperception of shadows.",
+          "e": "Restraints are a last resort and can increase agitation.",
+          "f": "Clients in withdrawal often need fluids and electrolytes."
+        },
+        "references": [
+          "Psychiatric-mental health nursing texts (e.g. Varcarolis; Halter)",
+          "Nursing pharmacology texts (e.g. Lehne; McCuistion) and the drug's prescribing information",
+          "Reviewed by the content team on 17 November 2026."
+        ]
+      },
+      "educationalObjective": "Plan alcohol withdrawal care.",
+      "caseStudyId": "c1c00060-0000-4000-8000-000000000004",
+      "casePosition": 4
+    },
+    {
+      "id": "c1a00060-0000-4000-8000-000000000023",
+      "itemType": "multiple_choice",
+      "clientNeeds": "PSI",
+      "bodySystem": "mental-health",
+      "subtopics": [
+        "alcohol-withdrawal"
+      ],
+      "cjmmSkill": "take_action",
+      "difficulty": "moderate",
+      "stem": "The client's CIWA-Ar score is 22. What should the nurse do?",
+      "content": {
+        "options": [
+          {
+            "id": "a",
+            "text": "Give the benzodiazepine dose the protocol specifies for this score"
+          },
+          {
+            "id": "b",
+            "text": "Reassess in 4 hours before treating"
+          },
+          {
+            "id": "c",
+            "text": "Give haloperidol instead of a benzodiazepine"
+          },
+          {
+            "id": "d",
+            "text": "Ask the family to bring in alcohol"
+          }
+        ]
+      },
+      "key": {
+        "correct": "a"
+      },
+      "rationale": {
+        "correct": "Symptom-triggered benzodiazepine dosing based on CIWA-Ar score.",
+        "perOption": {
+          "a": "A score above about 15 to 20 indicates severe withdrawal needing medication.",
+          "b": "Delay risks seizures and delirium tremens.",
+          "c": "Antipsychotics don't treat withdrawal and lower the seizure threshold.",
+          "d": "Not an accepted treatment."
+        },
+        "references": [
+          "Psychiatric-mental health nursing texts (e.g. Varcarolis; Halter)",
+          "Nursing pharmacology texts (e.g. Lehne; McCuistion) and the drug's prescribing information",
+          "Reviewed by the content team on 17 November 2026."
+        ]
+      },
+      "educationalObjective": "Act on a withdrawal assessment score.",
+      "caseStudyId": "c1c00060-0000-4000-8000-000000000004",
+      "casePosition": 5
+    },
+    {
+      "id": "c1a00060-0000-4000-8000-000000000024",
+      "itemType": "matrix_mc",
+      "clientNeeds": "PSI",
+      "bodySystem": "mental-health",
+      "subtopics": [
+        "alcohol-withdrawal"
+      ],
+      "cjmmSkill": "evaluate_outcomes",
+      "difficulty": "moderate",
+      "stem": "Six hours later, for each finding, indicate whether it shows improvement or no improvement.",
+      "content": {
+        "rows": [
+          {
+            "id": "r1",
+            "text": "Heart rate 92/min"
+          },
+          {
+            "id": "r2",
+            "text": "No hallucinations reported"
+          },
+          {
+            "id": "r3",
+            "text": "Tremor decreased"
+          },
+          {
+            "id": "r4",
+            "text": "Generalized seizure at 11:00"
+          }
+        ],
+        "columns": [
+          {
+            "id": "c1",
+            "text": "Improved"
+          },
+          {
+            "id": "c2",
+            "text": "Not improved"
+          }
+        ]
+      },
+      "key": {
+        "byRow": {
+          "r1": "c1",
+          "r2": "c1",
+          "r3": "c1",
+          "r4": "c2"
+        }
+      },
+      "rationale": {
+        "correct": "Falling heart rate and fewer symptoms show improvement; a seizure is a serious complication.",
+        "perOption": {
+          "r1:c1": "Autonomic activity has settled.",
+          "r1:c2": "This is improvement.",
+          "r2:c1": "Perceptual symptoms have resolved.",
+          "r2:c2": "This is improvement.",
+          "r3:c1": "Symptoms are easing.",
+          "r3:c2": "This is improvement.",
+          "r4:c1": "A seizure isn't improvement.",
+          "r4:c2": "Shows progression; needs urgent treatment and safety measures."
+        },
+        "references": [
+          "Psychiatric-mental health nursing texts (e.g. Varcarolis; Halter)",
+          "Reviewed by the content team on 17 November 2026."
+        ]
+      },
+      "educationalObjective": "Evaluate alcohol withdrawal treatment.",
+      "caseStudyId": "c1c00060-0000-4000-8000-000000000004",
+      "casePosition": 6
+    }
+  ],
+  "caseStudies": [
+    {
+      "id": "c1c00060-0000-4000-8000-000000000001",
+      "title": "Older adult with sepsis from a urinary tract infection",
+      "scenario": {
+        "tabs": [
+          {
+            "id": "sepsis-notes",
+            "title": "Nurses' notes",
+            "exhibits": [
+              {
+                "id": "sepsis-note",
+                "kind": "text",
+                "title": "Emergency department, 14:00",
+                "body": "A 78-year-old client is brought in by their daughter, who says the client has been \"more confused since yesterday\" and has eaten little. History: type 2 diabetes, hypertension, benign prostatic hyperplasia. The client is oriented to person only. Skin is warm and flushed; mucous membranes are dry. The client reports burning on urination for 3 days."
+              }
+            ]
+          },
+          {
+            "id": "sepsis-vitals",
+            "title": "Vital signs",
+            "exhibits": [
+              {
+                "id": "sepsis-flow",
+                "kind": "flowsheet",
+                "title": "Vital signs",
+                "table": {
+                  "columns": [
+                    "14:05",
+                    "15:30"
+                  ],
+                  "rows": [
+                    {
+                      "label": "Temperature",
+                      "cells": [
+                        "38.9 °C (102 °F)",
+                        "38.6 °C (101.5 °F)"
+                      ]
+                    },
+                    {
+                      "label": "Heart rate",
+                      "cells": [
+                        "116/min",
+                        "122/min"
+                      ]
+                    },
+                    {
+                      "label": "Respiratory rate",
+                      "cells": [
+                        "24/min",
+                        "26/min"
+                      ]
+                    },
+                    {
+                      "label": "Blood pressure",
+                      "cells": [
+                        "88/52 mm Hg (baseline 142/84)",
+                        "84/48 mm Hg"
+                      ]
+                    },
+                    {
+                      "label": "SpO2",
+                      "cells": [
+                        "94% on room air",
+                        "93% on room air"
+                      ]
+                    }
+                  ]
+                }
+              }
+            ]
+          },
+          {
+            "id": "sepsis-labs",
+            "title": "Laboratory results",
+            "exhibits": [
+              {
+                "id": "sepsis-lab",
+                "kind": "table",
+                "title": "Laboratory results, 14:30",
+                "table": {
+                  "columns": [
+                    "Result",
+                    "Reference"
+                  ],
+                  "rows": [
+                    {
+                      "label": "WBC",
+                      "cells": [
+                        "18,400/mm3",
+                        "5,000-10,000/mm3"
+                      ]
+                    },
+                    {
+                      "label": "Lactate",
+                      "cells": [
+                        "3.8 mmol/L",
+                        "below 2 mmol/L"
+                      ]
+                    },
+                    {
+                      "label": "Creatinine",
+                      "cells": [
+                        "1.9 mg/dL (baseline 1.0)",
+                        "0.6-1.2 mg/dL"
+                      ]
+                    },
+                    {
+                      "label": "Glucose",
+                      "cells": [
+                        "264 mg/dL",
+                        "70-110 mg/dL"
+                      ]
+                    },
+                    {
+                      "label": "Urinalysis",
+                      "cells": [
+                        "Positive leukocyte esterase and nitrites, many bacteria",
+                        "Negative"
+                      ]
+                    }
+                  ]
+                }
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "c1c00060-0000-4000-8000-000000000002",
+      "title": "Child with a severe asthma exacerbation",
+      "scenario": {
+        "tabs": [
+          {
+            "id": "asthma-notes",
+            "title": "Nurses' notes",
+            "exhibits": [
+              {
+                "id": "asthma-note",
+                "kind": "text",
+                "title": "Pediatric emergency department, 19:20",
+                "body": "A 7-year-old with asthma has had a cold for 2 days. Tonight the child is coughing and wheezing; the parent gave albuterol twice at home with little relief. The child is sitting upright, speaking in short phrases, with intercostal and subcostal retractions. Expiratory wheezes in all lung fields."
+              }
+            ]
+          },
+          {
+            "id": "asthma-vitals",
+            "title": "Vital signs",
+            "exhibits": [
+              {
+                "id": "asthma-flow",
+                "kind": "flowsheet",
+                "title": "Vital signs",
+                "table": {
+                  "columns": [
+                    "19:25"
+                  ],
+                  "rows": [
+                    {
+                      "label": "Temperature",
+                      "cells": [
+                        "37.6 °C (99.7 °F)"
+                      ]
+                    },
+                    {
+                      "label": "Heart rate",
+                      "cells": [
+                        "138/min"
+                      ]
+                    },
+                    {
+                      "label": "Respiratory rate",
+                      "cells": [
+                        "38/min"
+                      ]
+                    },
+                    {
+                      "label": "SpO2",
+                      "cells": [
+                        "89% on room air"
+                      ]
+                    },
+                    {
+                      "label": "Peak flow",
+                      "cells": [
+                        "45% of personal best"
+                      ]
+                    }
+                  ]
+                }
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "c1c00060-0000-4000-8000-000000000003",
+      "title": "Preeclampsia with severe features at 35 weeks",
+      "scenario": {
+        "tabs": [
+          {
+            "id": "pe-notes",
+            "title": "Nurses' notes",
+            "exhibits": [
+              {
+                "id": "pe-note",
+                "kind": "text",
+                "title": "Labor and delivery triage, 10:10",
+                "body": "A 24-year-old client, gravida 1, at 35 weeks reports a headache for 6 hours that acetaminophen didn't relieve and \"seeing spots.\" Swelling of the face and hands. Fetal heart rate 145/min with moderate variability."
+              }
+            ]
+          },
+          {
+            "id": "pe-vitals",
+            "title": "Vital signs",
+            "exhibits": [
+              {
+                "id": "pe-flow",
+                "kind": "flowsheet",
+                "title": "Vital signs",
+                "table": {
+                  "columns": [
+                    "10:10",
+                    "10:25"
+                  ],
+                  "rows": [
+                    {
+                      "label": "Blood pressure",
+                      "cells": [
+                        "164/112 mm Hg",
+                        "168/110 mm Hg"
+                      ]
+                    },
+                    {
+                      "label": "Heart rate",
+                      "cells": [
+                        "92/min",
+                        "94/min"
+                      ]
+                    },
+                    {
+                      "label": "Respiratory rate",
+                      "cells": [
+                        "18/min",
+                        "18/min"
+                      ]
+                    },
+                    {
+                      "label": "Deep tendon reflexes",
+                      "cells": [
+                        "3+ with 1 beat of clonus",
+                        "3+"
+                      ]
+                    }
+                  ]
+                }
+              }
+            ]
+          },
+          {
+            "id": "pe-labs",
+            "title": "Laboratory results",
+            "exhibits": [
+              {
+                "id": "pe-lab",
+                "kind": "table",
+                "title": "Laboratory results, 10:45",
+                "table": {
+                  "columns": [
+                    "Result",
+                    "Reference"
+                  ],
+                  "rows": [
+                    {
+                      "label": "Platelets",
+                      "cells": [
+                        "96,000/mm3",
+                        "150,000-400,000/mm3"
+                      ]
+                    },
+                    {
+                      "label": "AST",
+                      "cells": [
+                        "88 U/L",
+                        "0-35 U/L"
+                      ]
+                    },
+                    {
+                      "label": "Creatinine",
+                      "cells": [
+                        "1.0 mg/dL",
+                        "0.5-1.1 mg/dL"
+                      ]
+                    },
+                    {
+                      "label": "Urine protein-to-creatinine ratio",
+                      "cells": [
+                        "0.6",
+                        "below 0.3"
+                      ]
+                    }
+                  ]
+                }
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "c1c00060-0000-4000-8000-000000000004",
+      "title": "Alcohol withdrawal after orthopedic surgery",
+      "scenario": {
+        "tabs": [
+          {
+            "id": "aw-notes",
+            "title": "Nurses' notes",
+            "exhibits": [
+              {
+                "id": "aw-note",
+                "kind": "text",
+                "title": "Orthopedic unit, postoperative day 2, 06:00",
+                "body": "A 52-year-old client had open reduction and internal fixation of the ankle 2 days ago. Overnight the client became restless and sweaty, with a tremor of both hands. At 05:45 the client said, \"There are bugs crawling on the wall.\" The client's spouse says the client drinks about a pint of vodka a day; this wasn't documented on admission."
+              }
+            ]
+          },
+          {
+            "id": "aw-vitals",
+            "title": "Vital signs",
+            "exhibits": [
+              {
+                "id": "aw-flow",
+                "kind": "flowsheet",
+                "title": "Vital signs",
+                "table": {
+                  "columns": [
+                    "22:00",
+                    "06:00"
+                  ],
+                  "rows": [
+                    {
+                      "label": "Temperature",
+                      "cells": [
+                        "37.2 °C (99 °F)",
+                        "38.0 °C (100.4 °F)"
+                      ]
+                    },
+                    {
+                      "label": "Heart rate",
+                      "cells": [
+                        "88/min",
+                        "124/min"
+                      ]
+                    },
+                    {
+                      "label": "Blood pressure",
+                      "cells": [
+                        "134/82 mm Hg",
+                        "168/98 mm Hg"
+                      ]
+                    },
+                    {
+                      "label": "Respiratory rate",
+                      "cells": [
+                        "16/min",
+                        "22/min"
+                      ]
+                    },
+                    {
+                      "label": "SpO2",
+                      "cells": [
+                        "97%",
+                        "96% on room air"
+                      ]
+                    }
+                  ]
+                }
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}

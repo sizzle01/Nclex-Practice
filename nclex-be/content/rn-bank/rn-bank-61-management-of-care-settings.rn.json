@@ -1,0 +1,1905 @@
+{
+  "notice": "RN bank batch 61: Management of Care II: settings, quality and staff management. Reviewed by the content team on 17 November 2026. See REVIEW-LOG.md.",
+  "track": "RN",
+  "subtopics": [
+    {
+      "clientNeeds": "SECE.MOC",
+      "slug": "prioritizing-client-care",
+      "name": "Prioritizing client care"
+    },
+    {
+      "clientNeeds": "SECE.MOC",
+      "slug": "delegation-and-supervision",
+      "name": "Delegation and supervision"
+    },
+    {
+      "clientNeeds": "SECE.MOC",
+      "slug": "quality-improvement-and-incident-reporting",
+      "name": "Quality improvement and incident reporting"
+    },
+    {
+      "clientNeeds": "SECE.MOC",
+      "slug": "staff-management-and-conflict",
+      "name": "Staff management and conflict resolution"
+    },
+    {
+      "clientNeeds": "SECE.MOC",
+      "slug": "case-management-and-resources",
+      "name": "Case management and resource use"
+    }
+  ],
+  "questions": [
+    {
+      "id": "c1a00061-0000-4000-8000-000000000001",
+      "itemType": "multiple_choice",
+      "clientNeeds": "SECE.MOC",
+      "bodySystem": "fundamentals",
+      "subtopics": [
+        "prioritizing-client-care"
+      ],
+      "cjmmSkill": "prioritize_hypotheses",
+      "difficulty": "difficult",
+      "stem": "An emergency department triage nurse uses the Emergency Severity Index (ESI). Which client should be assigned ESI level 1?",
+      "content": {
+        "options": [
+          {
+            "id": "a",
+            "text": "A client with an ankle injury who can't bear weight"
+          },
+          {
+            "id": "b",
+            "text": "A client with chest pain who is pale and diaphoretic, with a blood pressure of 78/40 mm Hg"
+          },
+          {
+            "id": "c",
+            "text": "A client with abdominal pain who needs labs and a CT scan, with normal vital signs"
+          },
+          {
+            "id": "d",
+            "text": "A client who needs a prescription refill"
+          }
+        ]
+      },
+      "key": {
+        "correct": "b"
+      },
+      "rationale": {
+        "correct": "ESI 1 means immediate life-saving intervention is needed: unstable airway, breathing or circulation.",
+        "perOption": {
+          "a": "Stable, needs one resource (x-ray): ESI 4.",
+          "b": "ESI 1 is for clients who need immediate life-saving intervention.",
+          "c": "Needs two or more resources but is stable: ESI 3.",
+          "d": "Needs no resources: ESI 5."
+        },
+        "references": [
+          "NCSBN National Guidelines for Nursing Delegation; LaCharity, Prioritization, Delegation & Assignment",
+          "Reviewed by the content team on 17 November 2026."
+        ]
+      },
+      "educationalObjective": "Apply Emergency Severity Index triage."
+    },
+    {
+      "id": "c1a00061-0000-4000-8000-000000000002",
+      "itemType": "multiple_choice",
+      "clientNeeds": "SECE.MOC",
+      "bodySystem": "fundamentals",
+      "subtopics": [
+        "prioritizing-client-care"
+      ],
+      "cjmmSkill": "prioritize_hypotheses",
+      "difficulty": "moderate",
+      "stem": "A clinic nurse is returning phone calls. Which caller should the nurse advise to call 911?",
+      "content": {
+        "options": [
+          {
+            "id": "a",
+            "text": "A client with a sore throat and a temperature of 38.1 °C (100.6 °F)"
+          },
+          {
+            "id": "b",
+            "text": "A client who suddenly can't lift the right arm and has slurred speech that began 20 minutes ago"
+          },
+          {
+            "id": "c",
+            "text": "A client with diabetes whose glucose is 210 mg/dL"
+          },
+          {
+            "id": "d",
+            "text": "A client asking whether to take ibuprofen for back pain"
+          }
+        ]
+      },
+      "key": {
+        "correct": "b"
+      },
+      "rationale": {
+        "correct": "Signs of stroke need emergency medical services: time to treatment determines outcome.",
+        "perOption": {
+          "a": "Can be seen in the clinic or urgent care.",
+          "b": "Sudden weakness and slurred speech suggest stroke; emergency transport saves time.",
+          "c": "Needs advice and follow-up, not an emergency.",
+          "d": "Not an emergency."
+        },
+        "references": [
+          "NCSBN National Guidelines for Nursing Delegation; LaCharity, Prioritization, Delegation & Assignment",
+          "Reviewed by the content team on 17 November 2026."
+        ]
+      },
+      "educationalObjective": "Triage telephone calls safely."
+    },
+    {
+      "id": "c1a00061-0000-4000-8000-000000000003",
+      "itemType": "multiple_choice",
+      "clientNeeds": "SECE.MOC",
+      "bodySystem": "fundamentals",
+      "subtopics": [
+        "prioritizing-client-care"
+      ],
+      "cjmmSkill": "prioritize_hypotheses",
+      "difficulty": "difficult",
+      "stem": "A home health nurse plans visits for the day. Which client should the nurse visit first?",
+      "content": {
+        "options": [
+          {
+            "id": "a",
+            "text": "A client with a stage 2 pressure injury who needs a weekly dressing change"
+          },
+          {
+            "id": "b",
+            "text": "A client on warfarin who called saying their gums have been bleeding since this morning"
+          },
+          {
+            "id": "c",
+            "text": "A client with stable COPD due for a monthly assessment"
+          },
+          {
+            "id": "d",
+            "text": "A client who needs teaching about a new glucometer"
+          }
+        ]
+      },
+      "key": {
+        "correct": "b"
+      },
+      "rationale": {
+        "correct": "Visit first the client with a possible unstable or worsening condition.",
+        "perOption": {
+          "a": "Routine wound care can be scheduled later.",
+          "b": "Active bleeding on an anticoagulant may signal a high INR and needs prompt assessment.",
+          "c": "Stable; routine.",
+          "d": "Teaching can be scheduled later in the day."
+        },
+        "references": [
+          "NCSBN National Guidelines for Nursing Delegation; LaCharity, Prioritization, Delegation & Assignment",
+          "Reviewed by the content team on 17 November 2026."
+        ]
+      },
+      "educationalObjective": "Prioritize home health visits."
+    },
+    {
+      "id": "c1a00061-0000-4000-8000-000000000004",
+      "itemType": "multiple_choice",
+      "clientNeeds": "SECE.MOC",
+      "bodySystem": "fundamentals",
+      "subtopics": [
+        "prioritizing-client-care"
+      ],
+      "cjmmSkill": "prioritize_hypotheses",
+      "difficulty": "moderate",
+      "stem": "In a long-term care facility, which resident should the nurse assess first?",
+      "content": {
+        "options": [
+          {
+            "id": "a",
+            "text": "A resident with dementia who is wandering in the hallway"
+          },
+          {
+            "id": "b",
+            "text": "A resident who has new confusion and a temperature of 38.4 °C (101.1 °F) this morning"
+          },
+          {
+            "id": "c",
+            "text": "A resident who refused breakfast"
+          },
+          {
+            "id": "d",
+            "text": "A resident who wants to call family"
+          }
+        ]
+      },
+      "key": {
+        "correct": "b"
+      },
+      "rationale": {
+        "correct": "An acute change from baseline in an older adult needs prompt assessment.",
+        "perOption": {
+          "a": "Needs supervision, but the behavior is usual for this resident.",
+          "b": "An acute change in mental status with fever suggests infection or sepsis in an older adult.",
+          "c": "Needs follow-up, but not urgent.",
+          "d": "Can be helped later."
+        },
+        "references": [
+          "NCSBN National Guidelines for Nursing Delegation; LaCharity, Prioritization, Delegation & Assignment",
+          "Reviewed by the content team on 17 November 2026."
+        ]
+      },
+      "educationalObjective": "Prioritize residents in long-term care."
+    },
+    {
+      "id": "c1a00061-0000-4000-8000-000000000005",
+      "itemType": "multiple_choice",
+      "clientNeeds": "SECE.MOC",
+      "bodySystem": "cardiovascular",
+      "subtopics": [
+        "prioritizing-client-care"
+      ],
+      "cjmmSkill": "prioritize_hypotheses",
+      "difficulty": "difficult",
+      "stem": "In the intensive care unit, which client needs the nurse's attention first?",
+      "content": {
+        "options": [
+          {
+            "id": "a",
+            "text": "A client on a ventilator whose high-pressure alarm sounds while coughing"
+          },
+          {
+            "id": "b",
+            "text": "A client with an arterial line whose waveform has become dampened"
+          },
+          {
+            "id": "c",
+            "text": "A client whose cardiac monitor shows ventricular fibrillation"
+          },
+          {
+            "id": "d",
+            "text": "A client receiving a sedative infusion who opens eyes to voice"
+          }
+        ]
+      },
+      "key": {
+        "correct": "c"
+      },
+      "rationale": {
+        "correct": "A lethal rhythm needs immediate action.",
+        "perOption": {
+          "a": "Coughing commonly triggers the alarm; it settles when the cough stops.",
+          "b": "Needs troubleshooting soon, but a dampened waveform alone isn't life-threatening.",
+          "c": "Ventricular fibrillation is cardiac arrest; immediate defibrillation is needed.",
+          "d": "Light sedation is often the goal."
+        },
+        "references": [
+          "NCSBN National Guidelines for Nursing Delegation; LaCharity, Prioritization, Delegation & Assignment",
+          "Reviewed by the content team on 17 November 2026."
+        ]
+      },
+      "educationalObjective": "Prioritize in the ICU."
+    },
+    {
+      "id": "c1a00061-0000-4000-8000-000000000006",
+      "itemType": "highlight_table",
+      "clientNeeds": "SECE.MOC",
+      "bodySystem": "fundamentals",
+      "subtopics": [
+        "prioritizing-client-care"
+      ],
+      "cjmmSkill": "recognize_cues",
+      "difficulty": "difficult",
+      "stem": "The charge nurse reviews the unit board at 07:30. Highlight the client situations that need the charge nurse's attention first.",
+      "content": {
+        "columns": [
+          "Room",
+          "Update"
+        ],
+        "rows": [
+          {
+            "id": "r1",
+            "cells": [
+              "201",
+              "Client 1 day after a hysterectomy; pain 4/10 after oral analgesic"
+            ],
+            "selectable": true
+          },
+          {
+            "id": "r2",
+            "cells": [
+              "204",
+              "Client with pneumonia; SpO2 dropped from 95% to 87%, now restless"
+            ],
+            "selectable": true
+          },
+          {
+            "id": "r3",
+            "cells": [
+              "207",
+              "Client awaiting discharge; ride arrives at 11:00"
+            ],
+            "selectable": true
+          },
+          {
+            "id": "r4",
+            "cells": [
+              "210",
+              "Client on heparin infusion; aPTT 140 seconds (target 60-85)"
+            ],
+            "selectable": true
+          },
+          {
+            "id": "r5",
+            "cells": [
+              "212",
+              "Client with diabetes; breakfast glucose 178 mg/dL"
+            ],
+            "selectable": true
+          },
+          {
+            "id": "r6",
+            "cells": [
+              "215",
+              "Client with hip fracture; new pallor and pulselessness of the foot"
+            ],
+            "selectable": true
+          }
+        ]
+      },
+      "key": {
+        "correct": [
+          "r2",
+          "r4",
+          "r6"
+        ]
+      },
+      "rationale": {
+        "correct": "Act on new hypoxemia, a dangerous anticoagulation level and loss of circulation before stable findings.",
+        "perOption": {
+          "r1": "Expected and controlled.",
+          "r2": "Acute hypoxemia with restlessness needs immediate assessment.",
+          "r3": "Routine.",
+          "r4": "Supratherapeutic aPTT puts the client at risk of bleeding; the infusion must be adjusted per protocol.",
+          "r5": "Treat per sliding scale; not urgent.",
+          "r6": "Signs of arterial compromise need emergency action."
+        },
+        "references": [
+          "NCSBN National Guidelines for Nursing Delegation; LaCharity, Prioritization, Delegation & Assignment",
+          "Reviewed by the content team on 17 November 2026."
+        ]
+      },
+      "educationalObjective": "Recognize the most urgent situations on a unit."
+    },
+    {
+      "id": "c1a00061-0000-4000-8000-000000000007",
+      "itemType": "ordered_response",
+      "clientNeeds": "SECE.MOC",
+      "bodySystem": "fundamentals",
+      "subtopics": [
+        "prioritizing-client-care"
+      ],
+      "cjmmSkill": "prioritize_hypotheses",
+      "difficulty": "difficult",
+      "stem": "The nurse receives these four calls at the start of the shift. Place them in the order the nurse should respond, from first to last.",
+      "content": {
+        "items": [
+          {
+            "id": "b",
+            "text": "A client receiving a blood transfusion reports chills and back pain"
+          },
+          {
+            "id": "c",
+            "text": "A client with diabetes reports feeling shaky and sweaty"
+          },
+          {
+            "id": "a",
+            "text": "A client 30 minutes after a thoracentesis reports sudden shortness of breath"
+          },
+          {
+            "id": "d",
+            "text": "A client asks for help to the bathroom"
+          }
+        ]
+      },
+      "key": {
+        "order": [
+          "a",
+          "b",
+          "c",
+          "d"
+        ],
+        "scoring": "all_or_nothing"
+      },
+      "rationale": {
+        "correct": "Breathing first, then an acute transfusion reaction, then hypoglycemia, then routine needs.",
+        "perOption": {
+          "a": "Possible pneumothorax: an airway and breathing emergency.",
+          "b": "Possible hemolytic reaction: the transfusion must be stopped right away.",
+          "c": "Likely hypoglycemia: treat promptly, but the first two are more immediately life-threatening.",
+          "d": "Safety need, but it can be delegated or met after the urgent calls."
+        },
+        "references": [
+          "NCSBN National Guidelines for Nursing Delegation; LaCharity, Prioritization, Delegation & Assignment",
+          "Reviewed by the content team on 17 November 2026."
+        ]
+      },
+      "educationalObjective": "Order responses to competing calls."
+    },
+    {
+      "id": "c1a00061-0000-4000-8000-000000000008",
+      "itemType": "multiple_choice",
+      "clientNeeds": "SECE.MOC",
+      "bodySystem": "fundamentals",
+      "subtopics": [
+        "prioritizing-client-care"
+      ],
+      "cjmmSkill": "prioritize_hypotheses",
+      "difficulty": "moderate",
+      "stem": "The nurse is caring for a client who just returned from surgery. Which finding requires the nurse's immediate action?",
+      "content": {
+        "options": [
+          {
+            "id": "a",
+            "text": "Pain rated 5 out of 10"
+          },
+          {
+            "id": "b",
+            "text": "Snoring respirations with SpO2 of 86%"
+          },
+          {
+            "id": "c",
+            "text": "Urine output 40 mL in the last hour"
+          },
+          {
+            "id": "d",
+            "text": "Small amount of serosanguineous drainage on the dressing"
+          }
+        ]
+      },
+      "key": {
+        "correct": "b"
+      },
+      "rationale": {
+        "correct": "An obstructed airway after anesthesia is the priority.",
+        "perOption": {
+          "a": "Needs treatment, but not the most urgent.",
+          "b": "Snoring after anesthesia suggests a partially obstructed airway; reposition and support the airway now.",
+          "c": "Adequate output.",
+          "d": "Expected after surgery."
+        },
+        "references": [
+          "NCSBN National Guidelines for Nursing Delegation; LaCharity, Prioritization, Delegation & Assignment",
+          "Reviewed by the content team on 17 November 2026."
+        ]
+      },
+      "educationalObjective": "Recognize airway obstruction after surgery."
+    },
+    {
+      "id": "c1a00061-0000-4000-8000-000000000009",
+      "itemType": "matrix_mc",
+      "clientNeeds": "SECE.MOC",
+      "bodySystem": "fundamentals",
+      "subtopics": [
+        "delegation-and-supervision"
+      ],
+      "cjmmSkill": "take_action",
+      "difficulty": "difficult",
+      "stem": "The RN on a rehabilitation unit is delegating tasks. For each task, indicate whether it can be delegated to assistive personnel (AP).",
+      "content": {
+        "rows": [
+          {
+            "id": "r1",
+            "text": "Helping a stable client with range-of-motion exercises taught by the therapist"
+          },
+          {
+            "id": "r2",
+            "text": "Checking a client's blood glucose with a meter, if trained and allowed by policy"
+          },
+          {
+            "id": "r3",
+            "text": "Deciding whether a client is ready to walk without assistance"
+          },
+          {
+            "id": "r4",
+            "text": "Feeding a client with a new swallowing disorder"
+          },
+          {
+            "id": "r5",
+            "text": "Recording intake and output"
+          }
+        ],
+        "columns": [
+          {
+            "id": "c1",
+            "text": "Can delegate to AP"
+          },
+          {
+            "id": "c2",
+            "text": "Cannot delegate to AP"
+          }
+        ]
+      },
+      "key": {
+        "byRow": {
+          "r1": "c1",
+          "r2": "c1",
+          "r3": "c2",
+          "r4": "c2",
+          "r5": "c1"
+        }
+      },
+      "rationale": {
+        "correct": "AP may perform routine, standardized tasks for stable clients; the RN keeps assessment, judgment and care of unstable clients.",
+        "perOption": {
+          "r1:c1": "Routine, standardized task for a stable client.",
+          "r1:c2": "This task can be delegated.",
+          "r2:c1": "Point-of-care glucose checks are delegable to trained AP in many facilities; the RN interprets the result.",
+          "r2:c2": "Delegable when trained and allowed by policy.",
+          "r3:c1": "Requires nursing judgment.",
+          "r3:c2": "Assessment and evaluation can't be delegated.",
+          "r4:c1": "The client is unstable for feeding; aspiration risk needs licensed assessment.",
+          "r4:c2": "A new dysphagia needs licensed staff until a plan is established.",
+          "r5:c1": "Routine measurement.",
+          "r5:c2": "Can be delegated."
+        },
+        "references": [
+          "NCSBN National Guidelines for Nursing Delegation; LaCharity, Prioritization, Delegation & Assignment",
+          "Reviewed by the content team on 17 November 2026."
+        ]
+      },
+      "educationalObjective": "Decide which tasks to delegate on a rehabilitation unit."
+    },
+    {
+      "id": "c1a00061-0000-4000-8000-000000000010",
+      "itemType": "multiple_choice",
+      "clientNeeds": "SECE.MOC",
+      "bodySystem": "fundamentals",
+      "subtopics": [
+        "delegation-and-supervision"
+      ],
+      "cjmmSkill": "take_action",
+      "difficulty": "moderate",
+      "stem": "A nurse from a staffing agency is new to the unit. Which assignment is most appropriate?",
+      "content": {
+        "options": [
+          {
+            "id": "a",
+            "text": "A client receiving a first dose of chemotherapy"
+          },
+          {
+            "id": "b",
+            "text": "Two stable clients recovering from routine surgery"
+          },
+          {
+            "id": "c",
+            "text": "Charge nurse for the shift"
+          },
+          {
+            "id": "d",
+            "text": "A client with a new tracheostomy and frequent suctioning needs"
+          }
+        ]
+      },
+      "key": {
+        "correct": "b"
+      },
+      "rationale": {
+        "correct": "Give new or agency staff stable clients with predictable care.",
+        "perOption": {
+          "a": "Needs a nurse familiar with the unit's protocols and the client's plan.",
+          "b": "Stable clients with predictable care are appropriate for staff new to the unit.",
+          "c": "Requires knowledge of the unit, its staff and resources.",
+          "d": "High-acuity care should go to experienced unit staff."
+        },
+        "references": [
+          "NCSBN National Guidelines for Nursing Delegation; LaCharity, Prioritization, Delegation & Assignment",
+          "Reviewed by the content team on 17 November 2026."
+        ]
+      },
+      "educationalObjective": "Make safe assignments for agency staff."
+    },
+    {
+      "id": "c1a00061-0000-4000-8000-000000000011",
+      "itemType": "select_n",
+      "clientNeeds": "SECE.MOC",
+      "bodySystem": "fundamentals",
+      "subtopics": [
+        "delegation-and-supervision"
+      ],
+      "cjmmSkill": "take_action",
+      "difficulty": "difficult",
+      "stem": "The RN is working with an LPN in a long-term care facility. Select the 3 tasks that are appropriate for the RN to assign to the LPN.",
+      "content": {
+        "options": [
+          {
+            "id": "a",
+            "text": "Giving scheduled insulin to a resident with stable diabetes"
+          },
+          {
+            "id": "b",
+            "text": "Performing a sterile dressing change on a healing wound"
+          },
+          {
+            "id": "c",
+            "text": "Reinforcing fall-prevention teaching the RN started"
+          },
+          {
+            "id": "d",
+            "text": "Doing the admission assessment on a new resident"
+          },
+          {
+            "id": "e",
+            "text": "Developing the plan of care for a resident with a new pressure injury"
+          },
+          {
+            "id": "f",
+            "text": "Evaluating a resident's response to a new pain management plan"
+          }
+        ],
+        "selectCount": 3
+      },
+      "key": {
+        "correct": [
+          "a",
+          "b",
+          "c"
+        ]
+      },
+      "rationale": {
+        "correct": "LPNs give medications and treatments to stable clients and reinforce teaching; RNs assess, plan and evaluate.",
+        "perOption": {
+          "a": "Medication administration to stable residents is within LPN scope.",
+          "b": "Wound care for stable residents is within LPN scope.",
+          "c": "LPNs reinforce teaching.",
+          "d": "Initial assessment is an RN responsibility.",
+          "e": "Care planning is an RN responsibility.",
+          "f": "Evaluation of the plan is an RN responsibility."
+        },
+        "references": [
+          "NCSBN National Guidelines for Nursing Delegation; LaCharity, Prioritization, Delegation & Assignment",
+          "Reviewed by the content team on 17 November 2026."
+        ]
+      },
+      "educationalObjective": "Assign tasks to an LPN in long-term care."
+    },
+    {
+      "id": "c1a00061-0000-4000-8000-000000000012",
+      "itemType": "multiple_choice",
+      "clientNeeds": "SECE.MOC",
+      "bodySystem": "fundamentals",
+      "subtopics": [
+        "quality-improvement-and-incident-reporting"
+      ],
+      "cjmmSkill": "take_action",
+      "difficulty": "moderate",
+      "stem": "A nurse almost gave a medication to the wrong client but caught the error during barcode scanning. What should the nurse do?",
+      "content": {
+        "options": [
+          {
+            "id": "a",
+            "text": "Nothing, because no harm occurred"
+          },
+          {
+            "id": "b",
+            "text": "Report the near miss through the facility's incident reporting system"
+          },
+          {
+            "id": "c",
+            "text": "Document the near miss in the client's medical record"
+          },
+          {
+            "id": "d",
+            "text": "Tell the client about the near miss and ask them to report it"
+          }
+        ]
+      },
+      "key": {
+        "correct": "b"
+      },
+      "rationale": {
+        "correct": "Near misses are reported to support a culture of safety.",
+        "perOption": {
+          "a": "Near misses are reported so the system can be fixed.",
+          "b": "Near-miss reports help find system problems before someone is harmed.",
+          "c": "Incident reports are not part of the medical record.",
+          "d": "Reporting is the nurse's responsibility."
+        },
+        "references": [
+          "NCSBN National Guidelines for Nursing Delegation; LaCharity, Prioritization, Delegation & Assignment",
+          "Reviewed by the content team on 17 November 2026."
+        ]
+      },
+      "educationalObjective": "Report near misses."
+    },
+    {
+      "id": "c1a00061-0000-4000-8000-000000000013",
+      "itemType": "sata",
+      "clientNeeds": "SECE.MOC",
+      "bodySystem": "fundamentals",
+      "subtopics": [
+        "quality-improvement-and-incident-reporting"
+      ],
+      "cjmmSkill": "take_action",
+      "difficulty": "moderate",
+      "stem": "Which statements about incident reports are accurate? Select all that apply.",
+      "content": {
+        "options": [
+          {
+            "id": "a",
+            "text": "They are completed for events that did or could have caused harm"
+          },
+          {
+            "id": "b",
+            "text": "They are filed in the client's medical record"
+          },
+          {
+            "id": "c",
+            "text": "They describe facts without blaming anyone"
+          },
+          {
+            "id": "d",
+            "text": "The nurse writes \"incident report filed\" in the nurse's notes"
+          },
+          {
+            "id": "e",
+            "text": "They are used to find patterns and improve safety"
+          },
+          {
+            "id": "f",
+            "text": "They are completed by the person who saw or was involved in the event"
+          }
+        ]
+      },
+      "key": {
+        "correct": [
+          "a",
+          "c",
+          "e",
+          "f"
+        ]
+      },
+      "rationale": {
+        "correct": "Incident reports are factual, separate from the chart, and used for quality improvement.",
+        "perOption": {
+          "a": "Includes near misses and actual events.",
+          "b": "They are kept separately from the medical record.",
+          "c": "Objective facts support system improvement.",
+          "d": "The medical record shouldn't reference the incident report.",
+          "e": "Quality improvement relies on reporting data.",
+          "f": "The person with first-hand knowledge files the report."
+        },
+        "references": [
+          "NCSBN National Guidelines for Nursing Delegation; LaCharity, Prioritization, Delegation & Assignment",
+          "Reviewed by the content team on 17 November 2026."
+        ]
+      },
+      "educationalObjective": "Complete incident reports correctly."
+    },
+    {
+      "id": "c1a00061-0000-4000-8000-000000000014",
+      "itemType": "multiple_choice",
+      "clientNeeds": "SECE.MOC",
+      "bodySystem": "fundamentals",
+      "subtopics": [
+        "quality-improvement-and-incident-reporting"
+      ],
+      "cjmmSkill": "analyze_cues",
+      "difficulty": "moderate",
+      "stem": "A unit has had three client falls in a month, all at night. What is the best first step for the quality improvement team?",
+      "content": {
+        "options": [
+          {
+            "id": "a",
+            "text": "Discipline the nurses on duty"
+          },
+          {
+            "id": "b",
+            "text": "Gather data about the falls, such as times, causes and contributing factors"
+          },
+          {
+            "id": "c",
+            "text": "Restrain all high-risk clients at night"
+          },
+          {
+            "id": "d",
+            "text": "Stop admitting older adults to the unit"
+          }
+        ]
+      },
+      "key": {
+        "correct": "b"
+      },
+      "rationale": {
+        "correct": "QI begins by collecting and analyzing data to find causes.",
+        "perOption": {
+          "a": "Blame doesn't fix system problems.",
+          "b": "Analyzing data reveals patterns and root causes.",
+          "c": "Restraints increase injury risk and aren't a first-line fix.",
+          "d": "Not realistic or fair."
+        },
+        "references": [
+          "NCSBN National Guidelines for Nursing Delegation; LaCharity, Prioritization, Delegation & Assignment",
+          "Reviewed by the content team on 17 November 2026."
+        ]
+      },
+      "educationalObjective": "Apply quality improvement steps."
+    },
+    {
+      "id": "c1a00061-0000-4000-8000-000000000015",
+      "itemType": "multiple_choice",
+      "clientNeeds": "SECE.MOC",
+      "bodySystem": "fundamentals",
+      "subtopics": [
+        "quality-improvement-and-incident-reporting"
+      ],
+      "cjmmSkill": "analyze_cues",
+      "difficulty": "difficult",
+      "stem": "A client died after receiving the wrong blood type. What type of event is this, and what review is required?",
+      "content": {
+        "options": [
+          {
+            "id": "a",
+            "text": "A near miss requiring no review"
+          },
+          {
+            "id": "b",
+            "text": "A sentinel event requiring a root cause analysis"
+          },
+          {
+            "id": "c",
+            "text": "An expected complication requiring only documentation"
+          },
+          {
+            "id": "d",
+            "text": "A minor event requiring a staff meeting"
+          }
+        ]
+      },
+      "key": {
+        "correct": "b"
+      },
+      "rationale": {
+        "correct": "Sentinel events need a root cause analysis focused on systems, not blame.",
+        "perOption": {
+          "a": "Harm occurred; this isn't a near miss.",
+          "b": "Unexpected death or serious harm is a sentinel event; a root cause analysis looks for system causes.",
+          "c": "Wrong-type transfusion is a preventable error, not an expected complication.",
+          "d": "This is a serious event."
+        },
+        "references": [
+          "NCSBN National Guidelines for Nursing Delegation; LaCharity, Prioritization, Delegation & Assignment",
+          "Reviewed by the content team on 17 November 2026."
+        ]
+      },
+      "educationalObjective": "Recognize a sentinel event."
+    },
+    {
+      "id": "c1a00061-0000-4000-8000-000000000016",
+      "itemType": "dropdown_cloze",
+      "clientNeeds": "SECE.MOC",
+      "bodySystem": "fundamentals",
+      "subtopics": [
+        "quality-improvement-and-incident-reporting"
+      ],
+      "cjmmSkill": "analyze_cues",
+      "difficulty": "moderate",
+      "stem": "Complete the sentence about safety culture.",
+      "content": {
+        "template": "In a just culture, a nurse who made an honest mistake is {{b1}}, while a nurse who knowingly skipped a required safety check is {{b2}}.",
+        "blanks": [
+          {
+            "id": "b1",
+            "options": [
+              {
+                "id": "a",
+                "text": "supported, and the system is examined"
+              },
+              {
+                "id": "b",
+                "text": "fired right away"
+              },
+              {
+                "id": "c",
+                "text": "ignored"
+              }
+            ]
+          },
+          {
+            "id": "b2",
+            "options": [
+              {
+                "id": "a",
+                "text": "held accountable for reckless behavior"
+              },
+              {
+                "id": "b",
+                "text": "treated exactly the same as an honest mistake"
+              },
+              {
+                "id": "c",
+                "text": "rewarded for saving time"
+              }
+            ]
+          }
+        ]
+      },
+      "key": {
+        "byBlank": {
+          "b1": "a",
+          "b2": "a"
+        }
+      },
+      "rationale": {
+        "correct": "Just culture: console human error, coach at-risk behavior, and hold reckless behavior accountable.",
+        "perOption": {
+          "b1:a": "Human error is addressed by improving systems.",
+          "b1:b": "Punishing honest errors discourages reporting.",
+          "b1:c": "Errors are reviewed, not ignored.",
+          "b2:a": "Conscious disregard of safety rules calls for accountability.",
+          "b2:b": "Just culture separates error from reckless behavior.",
+          "b2:c": "Skipping safety checks puts clients at risk."
+        },
+        "references": [
+          "NCSBN National Guidelines for Nursing Delegation; LaCharity, Prioritization, Delegation & Assignment",
+          "Reviewed by the content team on 17 November 2026."
+        ]
+      },
+      "educationalObjective": "Explain just culture."
+    },
+    {
+      "id": "c1a00061-0000-4000-8000-000000000017",
+      "itemType": "multiple_choice",
+      "clientNeeds": "SECE.MOC",
+      "bodySystem": "fundamentals",
+      "subtopics": [
+        "quality-improvement-and-incident-reporting"
+      ],
+      "cjmmSkill": "generate_solutions",
+      "difficulty": "moderate",
+      "stem": "The unit's catheter-associated urinary tract infection (CAUTI) rate has risen. Which change would most likely reduce it?",
+      "content": {
+        "options": [
+          {
+            "id": "a",
+            "text": "Changing all catheters every 3 days"
+          },
+          {
+            "id": "b",
+            "text": "A nurse-driven protocol to remove catheters when criteria are no longer met"
+          },
+          {
+            "id": "c",
+            "text": "Adding antibiotics for all clients with catheters"
+          },
+          {
+            "id": "d",
+            "text": "Irrigating catheters daily"
+          }
+        ]
+      },
+      "key": {
+        "correct": "b"
+      },
+      "rationale": {
+        "correct": "Catheter days drive CAUTI; nurse-driven removal protocols lower rates.",
+        "perOption": {
+          "a": "Routine changes aren't recommended.",
+          "b": "Removing catheters as early as possible is the most effective prevention.",
+          "c": "Prophylactic antibiotics promote resistance.",
+          "d": "Routine irrigation increases infection risk."
+        },
+        "references": [
+          "NCSBN National Guidelines for Nursing Delegation; LaCharity, Prioritization, Delegation & Assignment",
+          "Reviewed by the content team on 17 November 2026."
+        ]
+      },
+      "educationalObjective": "Choose evidence-based quality improvement."
+    },
+    {
+      "id": "c1a00061-0000-4000-8000-000000000018",
+      "itemType": "multiple_choice",
+      "clientNeeds": "SECE.MOC",
+      "bodySystem": "fundamentals",
+      "subtopics": [
+        "staff-management-and-conflict"
+      ],
+      "cjmmSkill": "take_action",
+      "difficulty": "moderate",
+      "stem": "Two nurses are arguing loudly at the nurses' station about a shared assignment. What should the charge nurse do first?",
+      "content": {
+        "options": [
+          {
+            "id": "a",
+            "text": "Tell them to stop and discuss it later"
+          },
+          {
+            "id": "b",
+            "text": "Move the discussion to a private area and listen to both nurses"
+          },
+          {
+            "id": "c",
+            "text": "Report both nurses to the manager"
+          },
+          {
+            "id": "d",
+            "text": "Decide who is right and reassign the work"
+          }
+        ]
+      },
+      "key": {
+        "correct": "b"
+      },
+      "rationale": {
+        "correct": "Address conflict promptly, privately and with both parties heard.",
+        "perOption": {
+          "a": "Avoids the conflict without resolving it.",
+          "b": "Privacy and listening to both sides support resolution.",
+          "c": "Escalation may be needed later, but first try to resolve it.",
+          "d": "Deciding without hearing both sides is unfair."
+        },
+        "references": [
+          "NCSBN National Guidelines for Nursing Delegation; LaCharity, Prioritization, Delegation & Assignment",
+          "Reviewed by the content team on 17 November 2026."
+        ]
+      },
+      "educationalObjective": "Manage conflict between staff."
+    },
+    {
+      "id": "c1a00061-0000-4000-8000-000000000019",
+      "itemType": "multiple_choice",
+      "clientNeeds": "SECE.MOC",
+      "bodySystem": "fundamentals",
+      "subtopics": [
+        "staff-management-and-conflict"
+      ],
+      "cjmmSkill": "take_action",
+      "difficulty": "moderate",
+      "stem": "A new graduate tells the charge nurse that an experienced nurse often makes belittling comments in front of others. What should the charge nurse do?",
+      "content": {
+        "options": [
+          {
+            "id": "a",
+            "text": "Tell the new graduate to toughen up"
+          },
+          {
+            "id": "b",
+            "text": "Take the report seriously and follow the facility's policy for addressing incivility"
+          },
+          {
+            "id": "c",
+            "text": "Confront the experienced nurse in front of the team"
+          },
+          {
+            "id": "d",
+            "text": "Change the new graduate's schedule so they never work together"
+          }
+        ]
+      },
+      "key": {
+        "correct": "b"
+      },
+      "rationale": {
+        "correct": "Incivility and bullying are safety issues and must be addressed.",
+        "perOption": {
+          "a": "Dismisses lateral violence, which harms safety and retention.",
+          "b": "Lateral violence is addressed through policy and leadership.",
+          "c": "Public confrontation is unprofessional.",
+          "d": "Avoidance doesn't address the behavior."
+        },
+        "references": [
+          "NCSBN National Guidelines for Nursing Delegation; LaCharity, Prioritization, Delegation & Assignment",
+          "Reviewed by the content team on 17 November 2026."
+        ]
+      },
+      "educationalObjective": "Respond to workplace incivility."
+    },
+    {
+      "id": "c1a00061-0000-4000-8000-000000000020",
+      "itemType": "multiple_choice",
+      "clientNeeds": "SECE.MOC",
+      "bodySystem": "fundamentals",
+      "subtopics": [
+        "staff-management-and-conflict"
+      ],
+      "cjmmSkill": "take_action",
+      "difficulty": "difficult",
+      "stem": "A nurse is assigned more clients than they believe they can safely care for. What should the nurse do first?",
+      "content": {
+        "options": [
+          {
+            "id": "a",
+            "text": "Refuse the assignment and leave the unit"
+          },
+          {
+            "id": "b",
+            "text": "Accept the assignment and tell no one"
+          },
+          {
+            "id": "c",
+            "text": "Discuss the concerns with the charge nurse and ask for help or a change"
+          },
+          {
+            "id": "d",
+            "text": "Call the state board of nursing"
+          }
+        ]
+      },
+      "key": {
+        "correct": "c"
+      },
+      "rationale": {
+        "correct": "Voice safety concerns about assignments through the chain of command.",
+        "perOption": {
+          "a": "Leaving after accepting report may be client abandonment.",
+          "b": "Unsafe staffing needs to be raised.",
+          "c": "Raise concerns through the chain of command; document per policy (for example, an assignment despite objection form).",
+          "d": "Use internal channels first."
+        },
+        "references": [
+          "NCSBN National Guidelines for Nursing Delegation; LaCharity, Prioritization, Delegation & Assignment",
+          "Reviewed by the content team on 17 November 2026."
+        ]
+      },
+      "educationalObjective": "Respond to an unsafe assignment."
+    },
+    {
+      "id": "c1a00061-0000-4000-8000-000000000021",
+      "itemType": "multiple_choice",
+      "clientNeeds": "SECE.MOC",
+      "bodySystem": "fundamentals",
+      "subtopics": [
+        "staff-management-and-conflict"
+      ],
+      "cjmmSkill": "generate_solutions",
+      "difficulty": "moderate",
+      "stem": "The nurse manager is planning a change to a new documentation system. Which strategy best reduces staff resistance?",
+      "content": {
+        "options": [
+          {
+            "id": "a",
+            "text": "Announce the change one day before go-live"
+          },
+          {
+            "id": "b",
+            "text": "Involve staff early, explain why the change is needed and provide training"
+          },
+          {
+            "id": "c",
+            "text": "Require staff to learn the system on their own time"
+          },
+          {
+            "id": "d",
+            "text": "Avoid answering questions about the change"
+          }
+        ]
+      },
+      "key": {
+        "correct": "b"
+      },
+      "rationale": {
+        "correct": "Change management: involve staff, explain the reason, and support learning.",
+        "perOption": {
+          "a": "Short notice increases resistance.",
+          "b": "Participation and understanding reduce resistance to change.",
+          "c": "Increases frustration.",
+          "d": "Undermines trust."
+        },
+        "references": [
+          "NCSBN National Guidelines for Nursing Delegation; LaCharity, Prioritization, Delegation & Assignment",
+          "Reviewed by the content team on 17 November 2026."
+        ]
+      },
+      "educationalObjective": "Lead change effectively."
+    },
+    {
+      "id": "c1a00061-0000-4000-8000-000000000022",
+      "itemType": "multiple_choice",
+      "clientNeeds": "SECE.MOC",
+      "bodySystem": "fundamentals",
+      "subtopics": [
+        "staff-management-and-conflict"
+      ],
+      "cjmmSkill": "take_action",
+      "difficulty": "moderate",
+      "stem": "A nursing student asks to give a medication the student has not given before. The nurse is the student's preceptor today. What should the nurse do?",
+      "content": {
+        "options": [
+          {
+            "id": "a",
+            "text": "Let the student give it alone to build confidence"
+          },
+          {
+            "id": "b",
+            "text": "Review the medication with the student and supervise the administration"
+          },
+          {
+            "id": "c",
+            "text": "Refuse to let the student give any medications"
+          },
+          {
+            "id": "d",
+            "text": "Give the medication and have the student document it"
+          }
+        ]
+      },
+      "key": {
+        "correct": "b"
+      },
+      "rationale": {
+        "correct": "Supervise students when they perform new skills.",
+        "perOption": {
+          "a": "The student needs supervision with new skills.",
+          "b": "Supervision keeps the client safe while the student learns.",
+          "c": "Supervised practice is appropriate.",
+          "d": "Students shouldn't document care they didn't give."
+        },
+        "references": [
+          "NCSBN National Guidelines for Nursing Delegation; LaCharity, Prioritization, Delegation & Assignment",
+          "Reviewed by the content team on 17 November 2026."
+        ]
+      },
+      "educationalObjective": "Supervise a nursing student."
+    },
+    {
+      "id": "c1a00061-0000-4000-8000-000000000023",
+      "itemType": "multiple_choice",
+      "clientNeeds": "SECE.MOC",
+      "bodySystem": "fundamentals",
+      "subtopics": [
+        "case-management-and-resources"
+      ],
+      "cjmmSkill": "generate_solutions",
+      "difficulty": "moderate",
+      "stem": "A client with heart failure has been readmitted three times in 2 months. Which referral is most likely to reduce readmissions?",
+      "content": {
+        "options": [
+          {
+            "id": "a",
+            "text": "Case management for transitional care and follow-up"
+          },
+          {
+            "id": "b",
+            "text": "Psychiatric consultation"
+          },
+          {
+            "id": "c",
+            "text": "Speech therapy"
+          },
+          {
+            "id": "d",
+            "text": "Chaplain visit"
+          }
+        ]
+      },
+      "key": {
+        "correct": "a"
+      },
+      "rationale": {
+        "correct": "Case management coordinates care across settings for high-risk clients.",
+        "perOption": {
+          "a": "Case managers coordinate follow-up, medications and home support.",
+          "b": "Not indicated by the information given.",
+          "c": "Not related to the readmissions.",
+          "d": "Supportive, but doesn't address the readmission causes."
+        },
+        "references": [
+          "NCSBN National Guidelines for Nursing Delegation; LaCharity, Prioritization, Delegation & Assignment",
+          "Reviewed by the content team on 17 November 2026."
+        ]
+      },
+      "educationalObjective": "Use case management to reduce readmissions."
+    },
+    {
+      "id": "c1a00061-0000-4000-8000-000000000024",
+      "itemType": "multiple_choice",
+      "clientNeeds": "SECE.MOC",
+      "bodySystem": "fundamentals",
+      "subtopics": [
+        "case-management-and-resources"
+      ],
+      "cjmmSkill": "generate_solutions",
+      "difficulty": "moderate",
+      "stem": "A client without insurance needs ongoing diabetes supplies after discharge. Which team member should the nurse contact?",
+      "content": {
+        "options": [
+          {
+            "id": "a",
+            "text": "Social worker"
+          },
+          {
+            "id": "b",
+            "text": "Physical therapist"
+          },
+          {
+            "id": "c",
+            "text": "Respiratory therapist"
+          },
+          {
+            "id": "d",
+            "text": "Dietitian"
+          }
+        ]
+      },
+      "key": {
+        "correct": "a"
+      },
+      "rationale": {
+        "correct": "Social workers help with financial barriers and community resources.",
+        "perOption": {
+          "a": "Social workers connect clients with financial and community resources.",
+          "b": "Not related to supplies.",
+          "c": "Not related.",
+          "d": "Helps with diet, not resources for supplies."
+        },
+        "references": [
+          "NCSBN National Guidelines for Nursing Delegation; LaCharity, Prioritization, Delegation & Assignment",
+          "Reviewed by the content team on 17 November 2026."
+        ]
+      },
+      "educationalObjective": "Refer clients for financial resources."
+    },
+    {
+      "id": "c1a00061-0000-4000-8000-000000000025",
+      "itemType": "multiple_choice",
+      "clientNeeds": "SECE.MOC",
+      "bodySystem": "fundamentals",
+      "subtopics": [
+        "case-management-and-resources"
+      ],
+      "cjmmSkill": "take_action",
+      "difficulty": "moderate",
+      "stem": "A client is being transferred to a skilled nursing facility. Which action is most important for continuity of care?",
+      "content": {
+        "options": [
+          {
+            "id": "a",
+            "text": "Give a verbal or written report to the receiving nurse, including medications and recent changes"
+          },
+          {
+            "id": "b",
+            "text": "Send the client with a list of hospital phone numbers only"
+          },
+          {
+            "id": "c",
+            "text": "Tell the family to explain the client's care"
+          },
+          {
+            "id": "d",
+            "text": "Transfer without a report because the chart is available online"
+          }
+        ]
+      },
+      "key": {
+        "correct": "a"
+      },
+      "rationale": {
+        "correct": "Transitions of care require a complete handoff, including medication reconciliation.",
+        "perOption": {
+          "a": "A complete handoff prevents errors at transitions.",
+          "b": "Not enough information.",
+          "c": "The nurse is responsible for handoff.",
+          "d": "Direct handoff is still needed."
+        },
+        "references": [
+          "NCSBN National Guidelines for Nursing Delegation; LaCharity, Prioritization, Delegation & Assignment",
+          "Reviewed by the content team on 17 November 2026."
+        ]
+      },
+      "educationalObjective": "Ensure continuity during a transfer."
+    },
+    {
+      "id": "c1a00061-0000-4000-8000-000000000026",
+      "itemType": "sata",
+      "clientNeeds": "SECE.MOC",
+      "bodySystem": "fundamentals",
+      "subtopics": [
+        "case-management-and-resources"
+      ],
+      "cjmmSkill": "take_action",
+      "difficulty": "moderate",
+      "stem": "The nurse is completing medication reconciliation at discharge. Which actions are correct? Select all that apply.",
+      "content": {
+        "options": [
+          {
+            "id": "a",
+            "text": "Compare home medications with the hospital medications"
+          },
+          {
+            "id": "b",
+            "text": "Ask about over-the-counter drugs and supplements"
+          },
+          {
+            "id": "c",
+            "text": "Give the client an updated, complete medication list"
+          },
+          {
+            "id": "d",
+            "text": "Assume home medications should all continue"
+          },
+          {
+            "id": "e",
+            "text": "Clarify any discrepancies with the provider"
+          },
+          {
+            "id": "f",
+            "text": "Skip reconciliation if the client takes fewer than three medications"
+          }
+        ]
+      },
+      "key": {
+        "correct": [
+          "a",
+          "b",
+          "c",
+          "e"
+        ]
+      },
+      "rationale": {
+        "correct": "Medication reconciliation at every transition prevents errors.",
+        "perOption": {
+          "a": "Finds omissions and duplications.",
+          "b": "These can interact with prescriptions.",
+          "c": "Clients and the next providers need an accurate list.",
+          "d": "Each must be reviewed for continuation.",
+          "e": "Discrepancies must be resolved before discharge.",
+          "f": "Reconciliation is done for every client."
+        },
+        "references": [
+          "NCSBN National Guidelines for Nursing Delegation; LaCharity, Prioritization, Delegation & Assignment",
+          "Reviewed by the content team on 17 November 2026."
+        ]
+      },
+      "educationalObjective": "Perform medication reconciliation."
+    },
+    {
+      "id": "c1a00061-0000-4000-8000-000000000027",
+      "itemType": "multiple_choice",
+      "clientNeeds": "SECE.MOC",
+      "bodySystem": "fundamentals",
+      "subtopics": [
+        "case-management-and-resources"
+      ],
+      "cjmmSkill": "generate_solutions",
+      "difficulty": "difficult",
+      "stem": "The hospital has one isolation room left and two clients need it. Which client should get the room?",
+      "content": {
+        "options": [
+          {
+            "id": "a",
+            "text": "A client with suspected pulmonary tuberculosis"
+          },
+          {
+            "id": "b",
+            "text": "A client with MRSA in a wound that is covered"
+          },
+          {
+            "id": "c",
+            "text": "Both should share the room"
+          },
+          {
+            "id": "d",
+            "text": "Neither, because isolation rooms are only for clients receiving chemotherapy"
+          }
+        ]
+      },
+      "key": {
+        "correct": "a"
+      },
+      "rationale": {
+        "correct": "Use scarce airborne isolation rooms for airborne infections.",
+        "perOption": {
+          "a": "Airborne infections require a negative-pressure isolation room.",
+          "b": "Contact precautions can be done in a regular private room.",
+          "c": "Clients with different infections shouldn't share a room.",
+          "d": "Not correct."
+        },
+        "references": [
+          "NCSBN National Guidelines for Nursing Delegation; LaCharity, Prioritization, Delegation & Assignment",
+          "Reviewed by the content team on 17 November 2026."
+        ]
+      },
+      "educationalObjective": "Allocate limited resources."
+    },
+    {
+      "id": "c1a00061-0000-4000-8000-000000000028",
+      "itemType": "dropdown_table",
+      "clientNeeds": "SECE.MOC",
+      "bodySystem": "fundamentals",
+      "subtopics": [
+        "prioritizing-client-care"
+      ],
+      "cjmmSkill": "prioritize_hypotheses",
+      "difficulty": "difficult",
+      "stem": "The nurse is caring for four clients. For each client, select the priority action.",
+      "content": {
+        "columns": [
+          "Client",
+          "Priority action"
+        ],
+        "rows": [
+          {
+            "id": "r1",
+            "cells": [
+              {
+                "text": "Client receiving IV vancomycin with flushing and itching of the face and neck"
+              },
+              {
+                "blankId": "b1"
+              }
+            ]
+          },
+          {
+            "id": "r2",
+            "cells": [
+              {
+                "text": "Client 2 days after surgery with a red, swollen, tender calf"
+              },
+              {
+                "blankId": "b2"
+              }
+            ]
+          },
+          {
+            "id": "r3",
+            "cells": [
+              {
+                "text": "Client with a new prescription for an ACE inhibitor who has lip swelling"
+              },
+              {
+                "blankId": "b3"
+              }
+            ]
+          }
+        ],
+        "blanks": [
+          {
+            "id": "b1",
+            "options": [
+              {
+                "id": "a",
+                "text": "Slow the infusion and notify the provider"
+              },
+              {
+                "id": "b",
+                "text": "Speed up the infusion to finish sooner"
+              },
+              {
+                "id": "c",
+                "text": "Apply ice to the face"
+              }
+            ]
+          },
+          {
+            "id": "b2",
+            "options": [
+              {
+                "id": "a",
+                "text": "Keep the client in bed and notify the provider"
+              },
+              {
+                "id": "b",
+                "text": "Massage the calf"
+              },
+              {
+                "id": "c",
+                "text": "Encourage walking"
+              }
+            ]
+          },
+          {
+            "id": "b3",
+            "options": [
+              {
+                "id": "a",
+                "text": "Hold the medication and assess the airway"
+              },
+              {
+                "id": "b",
+                "text": "Give the next dose with food"
+              },
+              {
+                "id": "c",
+                "text": "Document as a minor side effect"
+              }
+            ]
+          }
+        ]
+      },
+      "key": {
+        "byBlank": {
+          "b1": "a",
+          "b2": "a",
+          "b3": "a"
+        }
+      },
+      "rationale": {
+        "correct": "Recognize and act on adverse reactions and complications quickly.",
+        "perOption": {
+          "b1:a": "This is an infusion-rate reaction; slowing the infusion relieves it.",
+          "b1:b": "A faster rate worsens the reaction.",
+          "b1:c": "Doesn't address the cause.",
+          "b2:a": "Suspected DVT: avoid moving the leg until evaluated.",
+          "b2:b": "Can dislodge a clot.",
+          "b2:c": "Not until a DVT is ruled out.",
+          "b3:a": "Angioedema can obstruct the airway.",
+          "b3:b": "The drug must be stopped.",
+          "b3:c": "Angioedema is serious."
+        },
+        "references": [
+          "NCSBN National Guidelines for Nursing Delegation; LaCharity, Prioritization, Delegation & Assignment",
+          "Reviewed by the content team on 17 November 2026."
+        ]
+      },
+      "educationalObjective": "Choose priority actions for several clients."
+    },
+    {
+      "id": "c1a00061-0000-4000-8000-000000000029",
+      "itemType": "multiple_response_grouping",
+      "clientNeeds": "SECE.MOC",
+      "bodySystem": "fundamentals",
+      "subtopics": [
+        "prioritizing-client-care"
+      ],
+      "cjmmSkill": "prioritize_hypotheses",
+      "difficulty": "difficult",
+      "stem": "The nurse is preparing for a busy shift. For each priority level, select the client who belongs there.",
+      "content": {
+        "groups": [
+          {
+            "id": "g1",
+            "label": "See first",
+            "options": [
+              {
+                "id": "a",
+                "text": "Client with a new irregular heart rate and dizziness"
+              },
+              {
+                "id": "b",
+                "text": "Client who needs a routine bath"
+              },
+              {
+                "id": "c",
+                "text": "Client waiting for transport to radiology"
+              }
+            ]
+          },
+          {
+            "id": "g2",
+            "label": "Can be delegated",
+            "options": [
+              {
+                "id": "d",
+                "text": "Client who needs help ordering lunch"
+              },
+              {
+                "id": "e",
+                "text": "Client with new chest pain"
+              },
+              {
+                "id": "f",
+                "text": "Client needing discharge teaching"
+              }
+            ]
+          }
+        ]
+      },
+      "key": {
+        "byGroup": {
+          "g1": [
+            "a"
+          ],
+          "g2": [
+            "d"
+          ]
+        }
+      },
+      "rationale": {
+        "correct": "Urgent changes come first; routine tasks can be delegated.",
+        "perOption": {
+          "a": "New dysrhythmia with symptoms is urgent.",
+          "b": "Not urgent.",
+          "c": "Not urgent.",
+          "d": "A routine task for AP.",
+          "e": "Needs RN assessment.",
+          "f": "Teaching is an RN responsibility."
+        },
+        "references": [
+          "NCSBN National Guidelines for Nursing Delegation; LaCharity, Prioritization, Delegation & Assignment",
+          "Reviewed by the content team on 17 November 2026."
+        ]
+      },
+      "educationalObjective": "Organize priorities and delegation."
+    },
+    {
+      "id": "c1a00061-0000-4000-8000-000000000030",
+      "itemType": "multiple_choice",
+      "clientNeeds": "SECE.MOC",
+      "bodySystem": "fundamentals",
+      "subtopics": [
+        "prioritizing-client-care"
+      ],
+      "cjmmSkill": "prioritize_hypotheses",
+      "difficulty": "moderate",
+      "stem": "Which action should the nurse take first when beginning the shift?",
+      "content": {
+        "options": [
+          {
+            "id": "a",
+            "text": "Review the assignment and get report on all clients"
+          },
+          {
+            "id": "b",
+            "text": "Start giving morning medications"
+          },
+          {
+            "id": "c",
+            "text": "Begin charting"
+          },
+          {
+            "id": "d",
+            "text": "Restock supplies"
+          }
+        ]
+      },
+      "key": {
+        "correct": "a"
+      },
+      "rationale": {
+        "correct": "Begin with report, then plan priorities.",
+        "perOption": {
+          "a": "Information first allows safe prioritization.",
+          "b": "Report and prioritization come first.",
+          "c": "Not first.",
+          "d": "Not first."
+        },
+        "references": [
+          "NCSBN National Guidelines for Nursing Delegation; LaCharity, Prioritization, Delegation & Assignment",
+          "Reviewed by the content team on 17 November 2026."
+        ]
+      },
+      "educationalObjective": "Organize the start of a shift."
+    },
+    {
+      "id": "c1a00061-0000-4000-8000-000000000031",
+      "itemType": "multiple_choice",
+      "clientNeeds": "SECE.MOC",
+      "bodySystem": "fundamentals",
+      "subtopics": [
+        "prioritizing-client-care"
+      ],
+      "cjmmSkill": "prioritize_hypotheses",
+      "difficulty": "difficult",
+      "stem": "The nurse in a dialysis center is caring for four clients. Which client needs immediate attention?",
+      "content": {
+        "options": [
+          {
+            "id": "a",
+            "text": "A client who reports cramping in the legs during dialysis"
+          },
+          {
+            "id": "b",
+            "text": "A client whose potassium before dialysis was 5.6 mEq/L"
+          },
+          {
+            "id": "c",
+            "text": "A client who suddenly has chest pain, shortness of breath and coughing during dialysis"
+          },
+          {
+            "id": "d",
+            "text": "A client who wants to sleep during treatment"
+          }
+        ]
+      },
+      "key": {
+        "correct": "c"
+      },
+      "rationale": {
+        "correct": "Sudden chest pain and dyspnea during dialysis can mean a life-threatening complication such as air embolism.",
+        "perOption": {
+          "a": "Common; manage per protocol.",
+          "b": "Dialysis will lower potassium.",
+          "c": "These may signal an air embolism or another serious complication.",
+          "d": "Not concerning."
+        },
+        "references": [
+          "NCSBN National Guidelines for Nursing Delegation; LaCharity, Prioritization, Delegation & Assignment",
+          "Reviewed by the content team on 17 November 2026."
+        ]
+      },
+      "educationalObjective": "Prioritize in a dialysis setting."
+    },
+    {
+      "id": "c1a00061-0000-4000-8000-000000000032",
+      "itemType": "multiple_choice",
+      "clientNeeds": "SECE.MOC",
+      "bodySystem": "fundamentals",
+      "subtopics": [
+        "delegation-and-supervision"
+      ],
+      "cjmmSkill": "evaluate_outcomes",
+      "difficulty": "moderate",
+      "stem": "The RN observes assistive personnel (AP) taking a blood pressure. Which action by the AP requires the RN to intervene?",
+      "content": {
+        "options": [
+          {
+            "id": "a",
+            "text": "Using a cuff that covers about 80% of the arm's circumference"
+          },
+          {
+            "id": "b",
+            "text": "Taking the blood pressure on the arm with an IV infusing"
+          },
+          {
+            "id": "c",
+            "text": "Supporting the client's arm at heart level"
+          },
+          {
+            "id": "d",
+            "text": "Waiting 5 minutes after the client sits down"
+          }
+        ]
+      },
+      "key": {
+        "correct": "b"
+      },
+      "rationale": {
+        "correct": "Supervision includes correcting unsafe technique.",
+        "perOption": {
+          "a": "Correct cuff size.",
+          "b": "Inflating a cuff over an IV can damage the vein and interrupt the infusion.",
+          "c": "Correct technique.",
+          "d": "Correct technique."
+        },
+        "references": [
+          "NCSBN National Guidelines for Nursing Delegation; LaCharity, Prioritization, Delegation & Assignment",
+          "Reviewed by the content team on 17 November 2026."
+        ]
+      },
+      "educationalObjective": "Supervise delegated vital signs."
+    },
+    {
+      "id": "c1a00061-0000-4000-8000-000000000033",
+      "itemType": "multiple_choice",
+      "clientNeeds": "SECE.MOC",
+      "bodySystem": "fundamentals",
+      "subtopics": [
+        "staff-management-and-conflict"
+      ],
+      "cjmmSkill": "take_action",
+      "difficulty": "moderate",
+      "stem": "An assistive personnel (AP) refuses to help with a client on contact precautions, saying they are afraid of getting sick. What should the nurse do first?",
+      "content": {
+        "options": [
+          {
+            "id": "a",
+            "text": "Report the AP for refusing work"
+          },
+          {
+            "id": "b",
+            "text": "Explain how contact precautions and PPE protect staff, and offer to go in together"
+          },
+          {
+            "id": "c",
+            "text": "Do all the care for that client without discussing it"
+          },
+          {
+            "id": "d",
+            "text": "Ask the client to wait until another AP is available"
+          }
+        ]
+      },
+      "key": {
+        "correct": "b"
+      },
+      "rationale": {
+        "correct": "Address staff concerns with education and support.",
+        "perOption": {
+          "a": "Address the concern first.",
+          "b": "Education and support address fear and maintain care.",
+          "c": "Doesn't solve the issue.",
+          "d": "Delays care."
+        },
+        "references": [
+          "NCSBN National Guidelines for Nursing Delegation; LaCharity, Prioritization, Delegation & Assignment",
+          "Reviewed by the content team on 17 November 2026."
+        ]
+      },
+      "educationalObjective": "Respond to staff safety concerns."
+    }
+  ]
+}

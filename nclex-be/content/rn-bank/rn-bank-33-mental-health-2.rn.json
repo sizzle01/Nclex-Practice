@@ -1,0 +1,1190 @@
+{
+  "notice": "RN bank batch 33: Mental health II: suicide, mood, psychosis, personality and eating disorders. Reviewed by the content team on 17 November 2026. See REVIEW-LOG.md.",
+  "track": "RN",
+  "subtopics": [
+    {
+      "clientNeeds": "PSI",
+      "slug": "suicide-risk-and-safety",
+      "name": "Suicide risk and safety"
+    },
+    {
+      "clientNeeds": "PSI",
+      "slug": "mood-disorders",
+      "name": "Depression and bipolar disorder"
+    },
+    {
+      "clientNeeds": "PSI",
+      "slug": "psychotic-disorders",
+      "name": "Schizophrenia and psychotic disorders"
+    },
+    {
+      "clientNeeds": "PSI",
+      "slug": "personality-disorders",
+      "name": "Personality disorders"
+    },
+    {
+      "clientNeeds": "PSI",
+      "slug": "eating-disorders",
+      "name": "Eating disorders"
+    },
+    {
+      "clientNeeds": "PSI",
+      "slug": "behavior-management-and-milieu",
+      "name": "Behavior management and therapeutic milieu"
+    }
+  ],
+  "questions": [
+    {
+      "id": "c1a00033-0000-4000-8000-000000000001",
+      "itemType": "multiple_choice",
+      "clientNeeds": "PSI",
+      "bodySystem": "mental-health",
+      "subtopics": [
+        "suicide-risk-and-safety"
+      ],
+      "cjmmSkill": "take_action",
+      "difficulty": "moderate",
+      "stem": "A client with depression says, \"Things would be better if I weren't around.\" What is the nurse's best response?",
+      "content": {
+        "options": [
+          {
+            "id": "a",
+            "text": "\"Are you thinking about killing yourself?\""
+          },
+          {
+            "id": "b",
+            "text": "\"You have so much to live for.\""
+          },
+          {
+            "id": "c",
+            "text": "\"Let's talk about this tomorrow.\""
+          },
+          {
+            "id": "d",
+            "text": "\"Everyone feels that way sometimes.\""
+          }
+        ]
+      },
+      "key": {
+        "correct": "a"
+      },
+      "rationale": {
+        "correct": "Ask directly about suicidal thoughts, plan, means and intent.",
+        "perOption": {
+          "a": "Asking directly about suicide doesn't increase risk and is essential for assessment.",
+          "b": "This dismisses the feeling and skips assessment.",
+          "c": "Delay is unsafe.",
+          "d": "This minimizes the statement."
+        },
+        "references": [
+          "Psychiatric-mental health nursing texts (e.g. Varcarolis; Halter)",
+          "Reviewed by the content team on 17 November 2026."
+        ]
+      },
+      "educationalObjective": "Assess suicide risk directly."
+    },
+    {
+      "id": "c1a00033-0000-4000-8000-000000000002",
+      "itemType": "multiple_choice",
+      "clientNeeds": "PSI",
+      "bodySystem": "mental-health",
+      "subtopics": [
+        "suicide-risk-and-safety"
+      ],
+      "cjmmSkill": "analyze_cues",
+      "difficulty": "difficult",
+      "stem": "When is a client with severe depression at increased risk for suicide?",
+      "content": {
+        "options": [
+          {
+            "id": "a",
+            "text": "When antidepressant treatment starts to improve energy, about 10 to 14 days in"
+          },
+          {
+            "id": "b",
+            "text": "During the most severe, withdrawn phase only"
+          },
+          {
+            "id": "c",
+            "text": "Only after discharge"
+          },
+          {
+            "id": "d",
+            "text": "Never once medication is started"
+          }
+        ]
+      },
+      "key": {
+        "correct": "a"
+      },
+      "rationale": {
+        "correct": "Monitor closely as energy improves and in the early weeks of treatment, especially in young people.",
+        "perOption": {
+          "a": "More energy before mood lifts may give the client the energy to act on a plan.",
+          "b": "Risk also rises as energy returns.",
+          "c": "Risk exists throughout care.",
+          "d": "Risk persists."
+        },
+        "references": [
+          "Psychiatric-mental health nursing texts (e.g. Varcarolis; Halter)",
+          "Reviewed by the content team on 17 November 2026."
+        ]
+      },
+      "educationalObjective": "Recognize periods of increased suicide risk."
+    },
+    {
+      "id": "c1a00033-0000-4000-8000-000000000003",
+      "itemType": "sata",
+      "clientNeeds": "PSI",
+      "bodySystem": "mental-health",
+      "subtopics": [
+        "suicide-risk-and-safety"
+      ],
+      "cjmmSkill": "generate_solutions",
+      "difficulty": "moderate",
+      "stem": "A client at high risk for suicide is admitted. Which actions should the nurse include? Select all that apply.",
+      "content": {
+        "options": [
+          {
+            "id": "a",
+            "text": "Remove belts, shoelaces and other items that could be used for self-harm"
+          },
+          {
+            "id": "b",
+            "text": "Place the client on continuous one-to-one observation"
+          },
+          {
+            "id": "c",
+            "text": "Check the client's belongings and the room for hazards"
+          },
+          {
+            "id": "d",
+            "text": "Make a no-suicide contract instead of observation"
+          },
+          {
+            "id": "e",
+            "text": "Assign a room far from the nurses' station"
+          },
+          {
+            "id": "f",
+            "text": "Ask directly about thoughts of suicide regularly"
+          }
+        ]
+      },
+      "key": {
+        "correct": [
+          "a",
+          "b",
+          "c",
+          "f"
+        ]
+      },
+      "rationale": {
+        "correct": "Suicide precautions: remove means, close observation, frequent assessment.",
+        "perOption": {
+          "a": "This removes the means.",
+          "b": "Close observation prevents self-harm.",
+          "c": "This reduces access to means.",
+          "d": "Contracts don't replace safety measures.",
+          "e": "The client should be near staff.",
+          "f": "Ongoing assessment is needed."
+        },
+        "references": [
+          "Psychiatric-mental health nursing texts (e.g. Varcarolis; Halter)",
+          "Reviewed by the content team on 17 November 2026."
+        ]
+      },
+      "educationalObjective": "Implement suicide precautions."
+    },
+    {
+      "id": "c1a00033-0000-4000-8000-000000000004",
+      "itemType": "multiple_choice",
+      "clientNeeds": "PSI",
+      "bodySystem": "mental-health",
+      "subtopics": [
+        "suicide-risk-and-safety"
+      ],
+      "cjmmSkill": "recognize_cues",
+      "difficulty": "moderate",
+      "stem": "A client who has been very depressed suddenly seems calm and cheerful and is giving away prized possessions. What should the nurse suspect?",
+      "content": {
+        "options": [
+          {
+            "id": "a",
+            "text": "The client may have decided on a suicide plan"
+          },
+          {
+            "id": "b",
+            "text": "The depression has resolved"
+          },
+          {
+            "id": "c",
+            "text": "The medication is working perfectly"
+          },
+          {
+            "id": "d",
+            "text": "The client is ready for discharge"
+          }
+        ]
+      },
+      "key": {
+        "correct": "a"
+      },
+      "rationale": {
+        "correct": "Warning signs: sudden calm, giving things away, saying goodbye, putting affairs in order.",
+        "perOption": {
+          "a": "Sudden calm and giving away belongings are warning signs.",
+          "b": "Sudden improvement can be a warning sign.",
+          "c": "Safety must be assessed first.",
+          "d": "Assessment is needed."
+        },
+        "references": [
+          "Psychiatric-mental health nursing texts (e.g. Varcarolis; Halter)",
+          "Reviewed by the content team on 17 November 2026."
+        ]
+      },
+      "educationalObjective": "Recognize suicide warning signs."
+    },
+    {
+      "id": "c1a00033-0000-4000-8000-000000000005",
+      "itemType": "highlight_text",
+      "clientNeeds": "PSI",
+      "bodySystem": "mental-health",
+      "subtopics": [
+        "suicide-risk-and-safety"
+      ],
+      "cjmmSkill": "recognize_cues",
+      "difficulty": "moderate",
+      "stem": "The nurse reviews notes on a client with depression. Highlight the statements or behaviors that are suicide warning signs.",
+      "content": {
+        "segments": [
+          {
+            "id": "s1",
+            "text": "Client states, ",
+            "selectable": false
+          },
+          {
+            "id": "s2",
+            "text": "\"I won't be a burden to anyone much longer.\"",
+            "selectable": true
+          },
+          {
+            "id": "s3",
+            "text": " Yesterday the client ",
+            "selectable": false
+          },
+          {
+            "id": "s4",
+            "text": "gave the dog to a neighbor",
+            "selectable": true
+          },
+          {
+            "id": "s5",
+            "text": ". Staff found ",
+            "selectable": false
+          },
+          {
+            "id": "s6",
+            "text": "several saved-up pills in a sock",
+            "selectable": true
+          },
+          {
+            "id": "s7",
+            "text": ". The client also said, ",
+            "selectable": false
+          },
+          {
+            "id": "s8",
+            "text": "\"I'm looking forward to my daughter's visit next week.\"",
+            "selectable": true
+          },
+          {
+            "id": "s9",
+            "text": ".",
+            "selectable": false
+          }
+        ]
+      },
+      "key": {
+        "correct": [
+          "s2",
+          "s4",
+          "s6"
+        ]
+      },
+      "rationale": {
+        "correct": "Identify verbal, behavioral and situational warning signs of suicide.",
+        "perOption": {
+          "s2": "Talking about being a burden is a warning sign.",
+          "s4": "Giving away possessions is a warning sign.",
+          "s6": "Stockpiling medication suggests a plan.",
+          "s8": "Future-oriented statements are protective."
+        },
+        "references": [
+          "Psychiatric-mental health nursing texts (e.g. Varcarolis; Halter)",
+          "Reviewed by the content team on 17 November 2026."
+        ]
+      },
+      "educationalObjective": "Recognize suicide warning signs in documentation."
+    },
+    {
+      "id": "c1a00033-0000-4000-8000-000000000006",
+      "itemType": "multiple_choice",
+      "clientNeeds": "PSI",
+      "bodySystem": "mental-health",
+      "subtopics": [
+        "mood-disorders"
+      ],
+      "cjmmSkill": "prioritize_hypotheses",
+      "difficulty": "moderate",
+      "stem": "A client with severe depression isn't eating, isn't bathing and hasn't said anything about self-harm. Which need comes first after safety is confirmed?",
+      "content": {
+        "options": [
+          {
+            "id": "a",
+            "text": "Nutrition and fluid intake"
+          },
+          {
+            "id": "b",
+            "text": "Hygiene"
+          },
+          {
+            "id": "c",
+            "text": "Group therapy participation"
+          },
+          {
+            "id": "d",
+            "text": "Discharge planning"
+          }
+        ]
+      },
+      "key": {
+        "correct": "a"
+      },
+      "rationale": {
+        "correct": "Depression: safety first, then physiological needs (nutrition, sleep), then self-care and therapy.",
+        "perOption": {
+          "a": "Physiological needs come next after safety.",
+          "b": "This matters but ranks after nutrition.",
+          "c": "This is lower priority.",
+          "d": "This is lower priority."
+        },
+        "references": [
+          "Psychiatric-mental health nursing texts (e.g. Varcarolis; Halter)",
+          "Reviewed by the content team on 17 November 2026."
+        ]
+      },
+      "educationalObjective": "Prioritize care in severe depression."
+    },
+    {
+      "id": "c1a00033-0000-4000-8000-000000000007",
+      "itemType": "multiple_choice",
+      "clientNeeds": "PSI",
+      "bodySystem": "mental-health",
+      "subtopics": [
+        "mood-disorders"
+      ],
+      "cjmmSkill": "generate_solutions",
+      "difficulty": "moderate",
+      "stem": "A client is scheduled for electroconvulsive therapy (ECT). What should the nurse tell the client?",
+      "content": {
+        "options": [
+          {
+            "id": "a",
+            "text": "\"You may be confused and have some memory loss for a while afterward.\""
+          },
+          {
+            "id": "b",
+            "text": "\"You'll be awake and feel the seizure.\""
+          },
+          {
+            "id": "c",
+            "text": "\"You can eat breakfast right before.\""
+          },
+          {
+            "id": "d",
+            "text": "\"One treatment cures depression permanently.\""
+          }
+        ]
+      },
+      "key": {
+        "correct": "a"
+      },
+      "rationale": {
+        "correct": "ECT: informed consent, NPO, anesthesia and muscle relaxant; monitor for confusion and memory changes.",
+        "perOption": {
+          "a": "Short-term confusion and memory loss are common and usually temporary.",
+          "b": "General anesthesia and a muscle relaxant are used.",
+          "c": "The client is NPO.",
+          "d": "A series of treatments is usual."
+        },
+        "references": [
+          "Psychiatric-mental health nursing texts (e.g. Varcarolis; Halter)",
+          "Reviewed by the content team on 17 November 2026."
+        ]
+      },
+      "educationalObjective": "Teach about ECT."
+    },
+    {
+      "id": "c1a00033-0000-4000-8000-000000000008",
+      "itemType": "multiple_choice",
+      "clientNeeds": "PSI",
+      "bodySystem": "mental-health",
+      "subtopics": [
+        "mood-disorders"
+      ],
+      "cjmmSkill": "generate_solutions",
+      "difficulty": "moderate",
+      "stem": "A client in acute mania won't sit down to eat and has lost weight. What should the nurse offer?",
+      "content": {
+        "options": [
+          {
+            "id": "a",
+            "text": "High-calorie finger foods the client can eat while moving"
+          },
+          {
+            "id": "b",
+            "text": "A large meal at a table with others"
+          },
+          {
+            "id": "c",
+            "text": "Three small meals only"
+          },
+          {
+            "id": "d",
+            "text": "Nothing until the client sits down"
+          }
+        ]
+      },
+      "key": {
+        "correct": "a"
+      },
+      "rationale": {
+        "correct": "Mania: finger foods, fluids, reduced stimulation and rest periods.",
+        "perOption": {
+          "a": "Portable foods meet energy needs.",
+          "b": "The client can't sit, and it's overstimulating.",
+          "c": "This isn't enough for high energy needs.",
+          "d": "This risks malnutrition."
+        },
+        "references": [
+          "Psychiatric-mental health nursing texts (e.g. Varcarolis; Halter)",
+          "Reviewed by the content team on 17 November 2026."
+        ]
+      },
+      "educationalObjective": "Meet nutrition needs in mania."
+    },
+    {
+      "id": "c1a00033-0000-4000-8000-000000000009",
+      "itemType": "multiple_choice",
+      "clientNeeds": "PSI",
+      "bodySystem": "mental-health",
+      "subtopics": [
+        "mood-disorders"
+      ],
+      "cjmmSkill": "take_action",
+      "difficulty": "moderate",
+      "stem": "A client with mania is loud, intrusive and interrupting other clients' activities. What should the nurse do?",
+      "content": {
+        "options": [
+          {
+            "id": "a",
+            "text": "Set clear, consistent limits and guide the client to a quieter area"
+          },
+          {
+            "id": "b",
+            "text": "Encourage the client to join a competitive group game"
+          },
+          {
+            "id": "c",
+            "text": "Argue with the client about the behavior"
+          },
+          {
+            "id": "d",
+            "text": "Ignore the behavior"
+          }
+        ]
+      },
+      "key": {
+        "correct": "a"
+      },
+      "rationale": {
+        "correct": "Mania: low stimulation, consistent limits, simple activities and safety.",
+        "perOption": {
+          "a": "Lower stimulation and firm limits help control behavior.",
+          "b": "Competition increases stimulation.",
+          "c": "This escalates.",
+          "d": "Other clients need protection."
+        },
+        "references": [
+          "Psychiatric-mental health nursing texts (e.g. Varcarolis; Halter)",
+          "Reviewed by the content team on 17 November 2026."
+        ]
+      },
+      "educationalObjective": "Manage behavior in mania."
+    },
+    {
+      "id": "c1a00033-0000-4000-8000-000000000010",
+      "itemType": "multiple_choice",
+      "clientNeeds": "PSI",
+      "bodySystem": "mental-health",
+      "subtopics": [
+        "psychotic-disorders"
+      ],
+      "cjmmSkill": "take_action",
+      "difficulty": "moderate",
+      "stem": "A client with schizophrenia says, \"The voices are telling me I'm bad.\" What is the best response?",
+      "content": {
+        "options": [
+          {
+            "id": "a",
+            "text": "\"I don't hear the voices, but I understand they're real to you. What are they saying?\""
+          },
+          {
+            "id": "b",
+            "text": "\"There are no voices.\""
+          },
+          {
+            "id": "c",
+            "text": "\"What do the voices look like?\""
+          },
+          {
+            "id": "d",
+            "text": "\"Ignore them and they'll go away.\""
+          }
+        ]
+      },
+      "key": {
+        "correct": "a"
+      },
+      "rationale": {
+        "correct": "Hallucinations: acknowledge the experience, present reality and assess content and safety.",
+        "perOption": {
+          "a": "This presents reality without arguing and assesses for command hallucinations.",
+          "b": "Arguing damages trust.",
+          "c": "This reinforces the hallucination.",
+          "d": "This dismisses the experience."
+        },
+        "references": [
+          "Psychiatric-mental health nursing texts (e.g. Varcarolis; Halter)",
+          "Reviewed by the content team on 17 November 2026."
+        ]
+      },
+      "educationalObjective": "Respond to auditory hallucinations."
+    },
+    {
+      "id": "c1a00033-0000-4000-8000-000000000011",
+      "itemType": "multiple_choice",
+      "clientNeeds": "PSI",
+      "bodySystem": "mental-health",
+      "subtopics": [
+        "psychotic-disorders"
+      ],
+      "cjmmSkill": "prioritize_hypotheses",
+      "difficulty": "moderate",
+      "stem": "A client with schizophrenia is hearing voices. What is the most important thing for the nurse to find out?",
+      "content": {
+        "options": [
+          {
+            "id": "a",
+            "text": "Whether the voices are telling the client to harm self or others"
+          },
+          {
+            "id": "b",
+            "text": "Whether the voices are male or female"
+          },
+          {
+            "id": "c",
+            "text": "How long the client has heard voices"
+          },
+          {
+            "id": "d",
+            "text": "Whether the client enjoys the voices"
+          }
+        ]
+      },
+      "key": {
+        "correct": "a"
+      },
+      "rationale": {
+        "correct": "Always assess for command hallucinations.",
+        "perOption": {
+          "a": "Command hallucinations are a safety risk.",
+          "b": "This doesn't affect safety.",
+          "c": "This is less urgent.",
+          "d": "This is less urgent."
+        },
+        "references": [
+          "Psychiatric-mental health nursing texts (e.g. Varcarolis; Halter)",
+          "Reviewed by the content team on 17 November 2026."
+        ]
+      },
+      "educationalObjective": "Assess for command hallucinations."
+    },
+    {
+      "id": "c1a00033-0000-4000-8000-000000000012",
+      "itemType": "multiple_choice",
+      "clientNeeds": "PSI",
+      "bodySystem": "mental-health",
+      "subtopics": [
+        "psychotic-disorders"
+      ],
+      "cjmmSkill": "take_action",
+      "difficulty": "moderate",
+      "stem": "A client says, \"I'm a famous surgeon and need to operate today.\" What is the best response?",
+      "content": {
+        "options": [
+          {
+            "id": "a",
+            "text": "Avoid arguing and focus on the feelings or a reality-based topic"
+          },
+          {
+            "id": "b",
+            "text": "\"You're not a surgeon. You're a patient.\""
+          },
+          {
+            "id": "c",
+            "text": "\"Which operation will you do?\""
+          },
+          {
+            "id": "d",
+            "text": "Laugh along with the client"
+          }
+        ]
+      },
+      "key": {
+        "correct": "a"
+      },
+      "rationale": {
+        "correct": "Delusions: don't argue or agree; focus on feelings and reality.",
+        "perOption": {
+          "a": "Arguing reinforces delusions; reality-based talk is more helpful.",
+          "b": "Direct confrontation increases defensiveness.",
+          "c": "This reinforces the delusion.",
+          "d": "This is disrespectful."
+        },
+        "references": [
+          "Psychiatric-mental health nursing texts (e.g. Varcarolis; Halter)",
+          "Reviewed by the content team on 17 November 2026."
+        ]
+      },
+      "educationalObjective": "Respond to delusions."
+    },
+    {
+      "id": "c1a00033-0000-4000-8000-000000000013",
+      "itemType": "matrix_mc",
+      "clientNeeds": "PSI",
+      "bodySystem": "mental-health",
+      "subtopics": [
+        "psychotic-disorders"
+      ],
+      "cjmmSkill": "analyze_cues",
+      "difficulty": "moderate",
+      "stem": "For each finding, indicate whether it is a positive or negative symptom of schizophrenia.",
+      "content": {
+        "rows": [
+          {
+            "id": "r1",
+            "text": "Hearing voices"
+          },
+          {
+            "id": "r2",
+            "text": "Flat affect"
+          },
+          {
+            "id": "r3",
+            "text": "Fixed false beliefs"
+          },
+          {
+            "id": "r4",
+            "text": "Lack of motivation"
+          },
+          {
+            "id": "r5",
+            "text": "Disorganized speech"
+          }
+        ],
+        "columns": [
+          {
+            "id": "c1",
+            "text": "Positive symptom"
+          },
+          {
+            "id": "c2",
+            "text": "Negative symptom"
+          }
+        ]
+      },
+      "key": {
+        "byRow": {
+          "r1": "c1",
+          "r2": "c2",
+          "r3": "c1",
+          "r4": "c2",
+          "r5": "c1"
+        }
+      },
+      "rationale": {
+        "correct": "Positive symptoms add (hallucinations, delusions, disorganization); negative symptoms take away (flat affect, avolition, alogia, anhedonia).",
+        "perOption": {
+          "r1:c1": "Hallucinations add an experience, so they're positive symptoms.",
+          "r1:c2": "Negative symptoms are losses of normal function.",
+          "r2:c1": "This isn't an added experience.",
+          "r2:c2": "Reduced emotional expression is a negative symptom.",
+          "r3:c1": "Delusions are positive symptoms.",
+          "r3:c2": "This isn't a loss of function.",
+          "r4:c1": "This isn't an added experience.",
+          "r4:c2": "Avolition is a negative symptom.",
+          "r5:c1": "Disorganized thinking is a positive symptom.",
+          "r5:c2": "This isn't a loss of function."
+        },
+        "references": [
+          "Psychiatric-mental health nursing texts (e.g. Varcarolis; Halter)",
+          "Reviewed by the content team on 17 November 2026."
+        ]
+      },
+      "educationalObjective": "Classify symptoms of schizophrenia."
+    },
+    {
+      "id": "c1a00033-0000-4000-8000-000000000014",
+      "itemType": "multiple_choice",
+      "clientNeeds": "PSI",
+      "bodySystem": "mental-health",
+      "subtopics": [
+        "psychotic-disorders"
+      ],
+      "cjmmSkill": "take_action",
+      "difficulty": "moderate",
+      "stem": "A client with paranoia refuses hospital meals, saying the food is poisoned. What should the nurse offer?",
+      "content": {
+        "options": [
+          {
+            "id": "a",
+            "text": "Sealed, prepackaged foods"
+          },
+          {
+            "id": "b",
+            "text": "Force-feeding"
+          },
+          {
+            "id": "c",
+            "text": "A taste of the food from the nurse's plate"
+          },
+          {
+            "id": "d",
+            "text": "No food until the client agrees to eat"
+          }
+        ]
+      },
+      "key": {
+        "correct": "a"
+      },
+      "rationale": {
+        "correct": "Paranoia: build trust, be consistent and use sealed foods.",
+        "perOption": {
+          "a": "Sealed packaging reduces suspicion and supports nutrition.",
+          "b": "This is coercive and harmful.",
+          "c": "This can feed the delusion.",
+          "d": "This risks malnutrition."
+        },
+        "references": [
+          "Psychiatric-mental health nursing texts (e.g. Varcarolis; Halter)",
+          "Reviewed by the content team on 17 November 2026."
+        ]
+      },
+      "educationalObjective": "Meet nutrition needs in a client with paranoia."
+    },
+    {
+      "id": "c1a00033-0000-4000-8000-000000000015",
+      "itemType": "multiple_choice",
+      "clientNeeds": "PSI",
+      "bodySystem": "mental-health",
+      "subtopics": [
+        "personality-disorders"
+      ],
+      "cjmmSkill": "take_action",
+      "difficulty": "moderate",
+      "stem": "A client with borderline personality disorder tells one nurse she is the only one who understands her and that the other nurses are terrible. What should the team do?",
+      "content": {
+        "options": [
+          {
+            "id": "a",
+            "text": "Keep consistent limits and communication across all staff"
+          },
+          {
+            "id": "b",
+            "text": "Assign only that nurse to the client"
+          },
+          {
+            "id": "c",
+            "text": "Agree with the client about the other staff"
+          },
+          {
+            "id": "d",
+            "text": "Ignore the client's comments completely"
+          }
+        ]
+      },
+      "key": {
+        "correct": "a"
+      },
+      "rationale": {
+        "correct": "Borderline personality disorder: splitting, impulsivity and self-harm; use consistent limits and DBT.",
+        "perOption": {
+          "a": "Consistency counters splitting.",
+          "b": "This reinforces splitting.",
+          "c": "This undermines the team.",
+          "d": "Team communication is needed."
+        },
+        "references": [
+          "Psychiatric-mental health nursing texts (e.g. Varcarolis; Halter)",
+          "Reviewed by the content team on 17 November 2026."
+        ]
+      },
+      "educationalObjective": "Manage splitting."
+    },
+    {
+      "id": "c1a00033-0000-4000-8000-000000000016",
+      "itemType": "multiple_choice",
+      "clientNeeds": "PSI",
+      "bodySystem": "mental-health",
+      "subtopics": [
+        "personality-disorders"
+      ],
+      "cjmmSkill": "take_action",
+      "difficulty": "moderate",
+      "stem": "A client with antisocial personality disorder asks a new nurse for extra privileges and flatters her. What should the nurse do?",
+      "content": {
+        "options": [
+          {
+            "id": "a",
+            "text": "Set firm, consistent limits and enforce unit rules"
+          },
+          {
+            "id": "b",
+            "text": "Grant the privileges to build rapport"
+          },
+          {
+            "id": "c",
+            "text": "Share personal information to build trust"
+          },
+          {
+            "id": "d",
+            "text": "Avoid the client"
+          }
+        ]
+      },
+      "key": {
+        "correct": "a"
+      },
+      "rationale": {
+        "correct": "Antisocial personality: manipulation; use firm limits and consistent consequences.",
+        "perOption": {
+          "a": "Clear limits reduce manipulation.",
+          "b": "This reinforces manipulation.",
+          "c": "This crosses boundaries.",
+          "d": "Consistent engagement with limits is better."
+        },
+        "references": [
+          "Psychiatric-mental health nursing texts (e.g. Varcarolis; Halter)",
+          "Reviewed by the content team on 17 November 2026."
+        ]
+      },
+      "educationalObjective": "Set limits with manipulative behavior."
+    },
+    {
+      "id": "c1a00033-0000-4000-8000-000000000017",
+      "itemType": "multiple_choice",
+      "clientNeeds": "PSI",
+      "bodySystem": "mental-health",
+      "subtopics": [
+        "eating-disorders"
+      ],
+      "cjmmSkill": "prioritize_hypotheses",
+      "difficulty": "difficult",
+      "stem": "A client with anorexia nervosa has a heart rate of 42/min, a potassium of 2.8 mEq/L and is dizzy when standing. What is the priority?",
+      "content": {
+        "options": [
+          {
+            "id": "a",
+            "text": "Correcting the physiological instability"
+          },
+          {
+            "id": "b",
+            "text": "Exploring the client's body image"
+          },
+          {
+            "id": "c",
+            "text": "Family therapy"
+          },
+          {
+            "id": "d",
+            "text": "Group therapy"
+          }
+        ]
+      },
+      "key": {
+        "correct": "a"
+      },
+      "rationale": {
+        "correct": "Anorexia: medical stabilization first (cardiac, electrolytes), then nutrition and psychotherapy.",
+        "perOption": {
+          "a": "Bradycardia and hypokalemia can cause fatal dysrhythmias.",
+          "b": "This comes after medical stabilization.",
+          "c": "This is important later.",
+          "d": "This is lower priority."
+        },
+        "references": [
+          "Psychiatric-mental health nursing texts (e.g. Varcarolis; Halter)",
+          "Reviewed by the content team on 17 November 2026."
+        ]
+      },
+      "educationalObjective": "Prioritize care in anorexia nervosa."
+    },
+    {
+      "id": "c1a00033-0000-4000-8000-000000000018",
+      "itemType": "multiple_choice",
+      "clientNeeds": "PSI",
+      "bodySystem": "mental-health",
+      "subtopics": [
+        "eating-disorders"
+      ],
+      "cjmmSkill": "generate_solutions",
+      "difficulty": "moderate",
+      "stem": "Which intervention is appropriate for a client with anorexia nervosa in an inpatient program?",
+      "content": {
+        "options": [
+          {
+            "id": "a",
+            "text": "Supervise meals and observe the client for about 1 hour afterward"
+          },
+          {
+            "id": "b",
+            "text": "Let the client eat alone in their room"
+          },
+          {
+            "id": "c",
+            "text": "Let the client weigh themselves whenever they want"
+          },
+          {
+            "id": "d",
+            "text": "Discuss food and calories at length"
+          }
+        ]
+      },
+      "key": {
+        "correct": "a"
+      },
+      "rationale": {
+        "correct": "Anorexia: supervised meals, blind weights done consistently and focus on feelings.",
+        "perOption": {
+          "a": "This prevents hiding food and purging.",
+          "b": "This allows hiding food.",
+          "c": "Weights are done consistently by staff.",
+          "d": "Focus is on feelings rather than food details."
+        },
+        "references": [
+          "Psychiatric-mental health nursing texts (e.g. Varcarolis; Halter)",
+          "Reviewed by the content team on 17 November 2026."
+        ]
+      },
+      "educationalObjective": "Plan care for anorexia nervosa."
+    },
+    {
+      "id": "c1a00033-0000-4000-8000-000000000019",
+      "itemType": "multiple_choice",
+      "clientNeeds": "PSI",
+      "bodySystem": "mental-health",
+      "subtopics": [
+        "eating-disorders"
+      ],
+      "cjmmSkill": "recognize_cues",
+      "difficulty": "moderate",
+      "stem": "Which findings suggest bulimia nervosa?",
+      "content": {
+        "options": [
+          {
+            "id": "a",
+            "text": "Swollen salivary glands, worn tooth enamel and calluses on the knuckles"
+          },
+          {
+            "id": "b",
+            "text": "Severe weight loss with BMI 14"
+          },
+          {
+            "id": "c",
+            "text": "Increased muscle mass"
+          },
+          {
+            "id": "d",
+            "text": "High potassium"
+          }
+        ]
+      },
+      "key": {
+        "correct": "a"
+      },
+      "rationale": {
+        "correct": "Bulimia: binge-purge cycles, often normal weight, parotid swelling, dental erosion, hypokalemia.",
+        "perOption": {
+          "a": "These come from repeated self-induced vomiting.",
+          "b": "This is more typical of anorexia.",
+          "c": "This isn't typical.",
+          "d": "Vomiting causes low potassium."
+        },
+        "references": [
+          "Psychiatric-mental health nursing texts (e.g. Varcarolis; Halter)",
+          "Reviewed by the content team on 17 November 2026."
+        ]
+      },
+      "educationalObjective": "Recognize bulimia nervosa."
+    },
+    {
+      "id": "c1a00033-0000-4000-8000-000000000020",
+      "itemType": "multiple_choice",
+      "clientNeeds": "PSI",
+      "bodySystem": "mental-health",
+      "subtopics": [
+        "behavior-management-and-milieu"
+      ],
+      "cjmmSkill": "take_action",
+      "difficulty": "moderate",
+      "stem": "A client is pacing, clenching fists and speaking loudly. What should the nurse do first?",
+      "content": {
+        "options": [
+          {
+            "id": "a",
+            "text": "Speak calmly in a low voice, give the client space and offer choices"
+          },
+          {
+            "id": "b",
+            "text": "Apply restraints right away"
+          },
+          {
+            "id": "c",
+            "text": "Stand very close and touch the client's arm"
+          },
+          {
+            "id": "d",
+            "text": "Tell the client to calm down or face consequences"
+          }
+        ]
+      },
+      "key": {
+        "correct": "a"
+      },
+      "rationale": {
+        "correct": "De-escalation: calm voice, safe distance, offer choices, reduce stimulation.",
+        "perOption": {
+          "a": "Verbal de-escalation is the first-line response.",
+          "b": "Restraint is a last resort.",
+          "c": "This may escalate aggression.",
+          "d": "Threats escalate the situation."
+        },
+        "references": [
+          "Psychiatric-mental health nursing texts (e.g. Varcarolis; Halter)",
+          "Reviewed by the content team on 17 November 2026."
+        ]
+      },
+      "educationalObjective": "De-escalate an agitated client."
+    },
+    {
+      "id": "c1a00033-0000-4000-8000-000000000021",
+      "itemType": "multiple_choice",
+      "clientNeeds": "PSI",
+      "bodySystem": "mental-health",
+      "subtopics": [
+        "behavior-management-and-milieu"
+      ],
+      "cjmmSkill": "take_action",
+      "difficulty": "difficult",
+      "stem": "A client was placed in seclusion for violent behavior in an emergency. Which action is required?",
+      "content": {
+        "options": [
+          {
+            "id": "a",
+            "text": "Monitor the client closely and get a provider evaluation within the time set by regulation (often within 1 hour)"
+          },
+          {
+            "id": "b",
+            "text": "Leave the client alone until the next shift"
+          },
+          {
+            "id": "c",
+            "text": "Use seclusion as a consequence for breaking rules"
+          },
+          {
+            "id": "d",
+            "text": "Write a PRN seclusion order"
+          }
+        ]
+      },
+      "key": {
+        "correct": "a"
+      },
+      "rationale": {
+        "correct": "Seclusion and restraint: last resort, time-limited orders, continuous monitoring, release as soon as safe.",
+        "perOption": {
+          "a": "Seclusion requires ongoing monitoring, a timely face-to-face evaluation and documentation.",
+          "b": "Continuous monitoring is required.",
+          "c": "Seclusion isn't punishment.",
+          "d": "PRN orders aren't allowed."
+        },
+        "references": [
+          "Psychiatric-mental health nursing texts (e.g. Varcarolis; Halter)",
+          "Reviewed by the content team on 17 November 2026."
+        ]
+      },
+      "educationalObjective": "Apply seclusion rules."
+    },
+    {
+      "id": "c1a00033-0000-4000-8000-000000000022",
+      "itemType": "multiple_choice",
+      "clientNeeds": "PSI",
+      "bodySystem": "mental-health",
+      "subtopics": [
+        "behavior-management-and-milieu"
+      ],
+      "cjmmSkill": "generate_solutions",
+      "difficulty": "easy",
+      "stem": "Which feature describes a therapeutic milieu on an inpatient psychiatric unit?",
+      "content": {
+        "options": [
+          {
+            "id": "a",
+            "text": "A structured, safe environment where clients take part in community meetings and activities"
+          },
+          {
+            "id": "b",
+            "text": "Clients stay in their rooms all day"
+          },
+          {
+            "id": "c",
+            "text": "No rules, to promote freedom"
+          },
+          {
+            "id": "d",
+            "text": "Staff make all decisions without client input"
+          }
+        ]
+      },
+      "key": {
+        "correct": "a"
+      },
+      "rationale": {
+        "correct": "Milieu therapy: structure, safety, community involvement and client responsibility.",
+        "perOption": {
+          "a": "The milieu uses the environment and community as part of treatment.",
+          "b": "Isolation isn't therapeutic.",
+          "c": "Structure provides safety.",
+          "d": "Client participation is encouraged."
+        },
+        "references": [
+          "Psychiatric-mental health nursing texts (e.g. Varcarolis; Halter)",
+          "Reviewed by the content team on 17 November 2026."
+        ]
+      },
+      "educationalObjective": "Describe a therapeutic milieu."
+    }
+  ]
+}

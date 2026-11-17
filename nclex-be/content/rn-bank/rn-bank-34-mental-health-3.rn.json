@@ -1,0 +1,1178 @@
+{
+  "notice": "RN bank batch 34: Mental health III: substance use, dementia and neurodevelopmental. Reviewed by the content team on 17 November 2026. See REVIEW-LOG.md.",
+  "track": "RN",
+  "subtopics": [
+    {
+      "clientNeeds": "PSI",
+      "slug": "alcohol-withdrawal",
+      "name": "Alcohol withdrawal"
+    },
+    {
+      "clientNeeds": "PHI.PPT",
+      "slug": "psychiatric-medications",
+      "name": "Psychiatric medications"
+    },
+    {
+      "clientNeeds": "PSI",
+      "slug": "substance-use-disorders",
+      "name": "Substance use disorders"
+    },
+    {
+      "clientNeeds": "PSI",
+      "slug": "dementia-and-delirium",
+      "name": "Dementia and delirium"
+    },
+    {
+      "clientNeeds": "SECE.SIC",
+      "slug": "injury-prevention",
+      "name": "Falls and injury prevention"
+    },
+    {
+      "clientNeeds": "PSI",
+      "slug": "neurodevelopmental-disorders",
+      "name": "ADHD and autism spectrum disorder"
+    }
+  ],
+  "questions": [
+    {
+      "id": "c1a00034-0000-4000-8000-000000000001",
+      "itemType": "multiple_choice",
+      "clientNeeds": "PSI",
+      "bodySystem": "mental-health",
+      "subtopics": [
+        "alcohol-withdrawal"
+      ],
+      "cjmmSkill": "analyze_cues",
+      "difficulty": "moderate",
+      "stem": "A client who drinks heavily every day was admitted for surgery. When should the nurse expect withdrawal symptoms to begin?",
+      "content": {
+        "options": [
+          {
+            "id": "a",
+            "text": "About 6 to 24 hours after the last drink"
+          },
+          {
+            "id": "b",
+            "text": "1 week after the last drink"
+          },
+          {
+            "id": "c",
+            "text": "Only if the client is given sedatives"
+          },
+          {
+            "id": "d",
+            "text": "Immediately after the last drink"
+          }
+        ]
+      },
+      "key": {
+        "correct": "a"
+      },
+      "rationale": {
+        "correct": "Alcohol withdrawal: early signs at 6 to 24 hours, seizures at 12 to 48 hours, delirium tremens at 48 to 96 hours.",
+        "perOption": {
+          "a": "Early withdrawal (tremor, anxiety, tachycardia) begins within a day.",
+          "b": "This is too late.",
+          "c": "Withdrawal happens on its own.",
+          "d": "There is a delay of hours."
+        },
+        "references": [
+          "Psychiatric-mental health nursing texts (e.g. Varcarolis; Halter)",
+          "Reviewed by the content team on 17 November 2026."
+        ]
+      },
+      "educationalObjective": "Predict the timing of alcohol withdrawal."
+    },
+    {
+      "id": "c1a00034-0000-4000-8000-000000000002",
+      "itemType": "multiple_choice",
+      "clientNeeds": "PSI",
+      "bodySystem": "mental-health",
+      "subtopics": [
+        "alcohol-withdrawal"
+      ],
+      "cjmmSkill": "take_action",
+      "difficulty": "difficult",
+      "stem": "Three days after admission, a client with heavy alcohol use is confused, sweating and seeing bugs on the wall, with a heart rate of 128/min. What should the nurse anticipate?",
+      "content": {
+        "options": [
+          {
+            "id": "a",
+            "text": "Benzodiazepines, seizure precautions and close monitoring for delirium tremens"
+          },
+          {
+            "id": "b",
+            "text": "Haloperidol alone"
+          },
+          {
+            "id": "c",
+            "text": "Discharge home with family"
+          },
+          {
+            "id": "d",
+            "text": "Restricting all fluids"
+          }
+        ]
+      },
+      "key": {
+        "correct": "a"
+      },
+      "rationale": {
+        "correct": "Delirium tremens: benzodiazepines, fluids, electrolytes, thiamine and a safe environment.",
+        "perOption": {
+          "a": "Delirium tremens is a medical emergency.",
+          "b": "Antipsychotics alone can lower the seizure threshold.",
+          "c": "This is an emergency.",
+          "d": "Clients are often dehydrated."
+        },
+        "references": [
+          "Psychiatric-mental health nursing texts (e.g. Varcarolis; Halter)",
+          "Nursing pharmacology texts (e.g. Lehne; McCuistion) and the drug's prescribing information",
+          "Reviewed by the content team on 17 November 2026."
+        ]
+      },
+      "educationalObjective": "Recognize and manage delirium tremens."
+    },
+    {
+      "id": "c1a00034-0000-4000-8000-000000000003",
+      "itemType": "multiple_choice",
+      "clientNeeds": "PSI",
+      "bodySystem": "mental-health",
+      "subtopics": [
+        "alcohol-withdrawal"
+      ],
+      "cjmmSkill": "take_action",
+      "difficulty": "moderate",
+      "stem": "What is the purpose of the CIWA-Ar scale for a client in alcohol withdrawal?",
+      "content": {
+        "options": [
+          {
+            "id": "a",
+            "text": "To measure withdrawal severity and guide symptom-triggered medication"
+          },
+          {
+            "id": "b",
+            "text": "To diagnose alcohol use disorder"
+          },
+          {
+            "id": "c",
+            "text": "To measure blood alcohol level"
+          },
+          {
+            "id": "d",
+            "text": "To assess suicide risk"
+          }
+        ]
+      },
+      "key": {
+        "correct": "a"
+      },
+      "rationale": {
+        "correct": "Use CIWA-Ar for symptom-triggered treatment of alcohol withdrawal.",
+        "perOption": {
+          "a": "Scores guide benzodiazepine dosing.",
+          "b": "It measures withdrawal, not the disorder.",
+          "c": "This is a lab test.",
+          "d": "This needs other tools."
+        },
+        "references": [
+          "Psychiatric-mental health nursing texts (e.g. Varcarolis; Halter)",
+          "Reviewed by the content team on 17 November 2026."
+        ]
+      },
+      "educationalObjective": "Use the CIWA-Ar scale."
+    },
+    {
+      "id": "c1a00034-0000-4000-8000-000000000004",
+      "itemType": "multiple_choice",
+      "clientNeeds": "PHI.PPT",
+      "bodySystem": "mental-health",
+      "subtopics": [
+        "psychiatric-medications"
+      ],
+      "cjmmSkill": "take_action",
+      "difficulty": "difficult",
+      "stem": "A malnourished client with alcohol use disorder is confused and has an unsteady gait. Which prescription should the nurse give before IV dextrose?",
+      "content": {
+        "options": [
+          {
+            "id": "a",
+            "text": "Thiamine"
+          },
+          {
+            "id": "b",
+            "text": "Folic acid"
+          },
+          {
+            "id": "c",
+            "text": "Vitamin C"
+          },
+          {
+            "id": "d",
+            "text": "Potassium"
+          }
+        ]
+      },
+      "key": {
+        "correct": "a"
+      },
+      "rationale": {
+        "correct": "Give thiamine before glucose in at-risk clients to prevent Wernicke encephalopathy.",
+        "perOption": {
+          "a": "Giving glucose before thiamine can bring on or worsen Wernicke encephalopathy.",
+          "b": "This is helpful but not the priority before glucose.",
+          "c": "This isn't the key vitamin.",
+          "d": "This isn't the specific concern."
+        },
+        "references": [
+          "Nursing pharmacology texts (e.g. Lehne; McCuistion) and the drug's prescribing information",
+          "Reviewed by the content team on 17 November 2026."
+        ]
+      },
+      "educationalObjective": "Prevent Wernicke encephalopathy."
+    },
+    {
+      "id": "c1a00034-0000-4000-8000-000000000005",
+      "itemType": "multiple_choice",
+      "clientNeeds": "PHI.PPT",
+      "bodySystem": "mental-health",
+      "subtopics": [
+        "psychiatric-medications"
+      ],
+      "cjmmSkill": "evaluate_outcomes",
+      "difficulty": "moderate",
+      "stem": "A client taking disulfiram asks what to avoid. Which statement shows correct understanding?",
+      "content": {
+        "options": [
+          {
+            "id": "a",
+            "text": "\"I'll avoid alcohol in any form, including some mouthwashes, cough syrups and sauces.\""
+          },
+          {
+            "id": "b",
+            "text": "\"I can have one drink a day.\""
+          },
+          {
+            "id": "c",
+            "text": "\"I can stop disulfiram and drink the same day.\""
+          },
+          {
+            "id": "d",
+            "text": "\"Disulfiram stops cravings.\""
+          }
+        ]
+      },
+      "key": {
+        "correct": "a"
+      },
+      "rationale": {
+        "correct": "Disulfiram: avoid all hidden alcohol sources; the reaction includes flushing, vomiting and hypotension.",
+        "perOption": {
+          "a": "Even small amounts of alcohol cause a severe reaction.",
+          "b": "Any alcohol causes a reaction.",
+          "c": "The effect lasts up to 2 weeks.",
+          "d": "It deters drinking; it doesn't reduce cravings."
+        },
+        "references": [
+          "Nursing pharmacology texts (e.g. Lehne; McCuistion) and the drug's prescribing information",
+          "Reviewed by the content team on 17 November 2026."
+        ]
+      },
+      "educationalObjective": "Teach about disulfiram."
+    },
+    {
+      "id": "c1a00034-0000-4000-8000-000000000006",
+      "itemType": "multiple_choice",
+      "clientNeeds": "PSI",
+      "bodySystem": "mental-health",
+      "subtopics": [
+        "substance-use-disorders"
+      ],
+      "cjmmSkill": "recognize_cues",
+      "difficulty": "moderate",
+      "stem": "Which findings suggest opioid withdrawal?",
+      "content": {
+        "options": [
+          {
+            "id": "a",
+            "text": "Yawning, runny nose, dilated pupils, diarrhea and muscle aches"
+          },
+          {
+            "id": "b",
+            "text": "Pinpoint pupils and slow breathing"
+          },
+          {
+            "id": "c",
+            "text": "Seizures and hallucinations"
+          },
+          {
+            "id": "d",
+            "text": "Bradycardia and drowsiness"
+          }
+        ]
+      },
+      "key": {
+        "correct": "a"
+      },
+      "rationale": {
+        "correct": "Opioid withdrawal: flu-like symptoms, mydriasis, piloerection, GI upset and cravings.",
+        "perOption": {
+          "a": "These are typical; they're very uncomfortable but rarely life-threatening.",
+          "b": "These suggest overdose.",
+          "c": "These are more typical of alcohol or benzodiazepine withdrawal.",
+          "d": "These aren't typical."
+        },
+        "references": [
+          "Psychiatric-mental health nursing texts (e.g. Varcarolis; Halter)",
+          "Reviewed by the content team on 17 November 2026."
+        ]
+      },
+      "educationalObjective": "Recognize opioid withdrawal."
+    },
+    {
+      "id": "c1a00034-0000-4000-8000-000000000007",
+      "itemType": "multiple_choice",
+      "clientNeeds": "PHI.PPT",
+      "bodySystem": "mental-health",
+      "subtopics": [
+        "psychiatric-medications"
+      ],
+      "cjmmSkill": "analyze_cues",
+      "difficulty": "difficult",
+      "stem": "A client with opioid use disorder is starting buprenorphine. When should the first dose be given?",
+      "content": {
+        "options": [
+          {
+            "id": "a",
+            "text": "When the client is already in mild to moderate withdrawal"
+          },
+          {
+            "id": "b",
+            "text": "Right after the client last used heroin"
+          },
+          {
+            "id": "c",
+            "text": "At the same time as a full opioid agonist"
+          },
+          {
+            "id": "d",
+            "text": "Only after 30 days without any opioids"
+          }
+        ]
+      },
+      "key": {
+        "correct": "a"
+      },
+      "rationale": {
+        "correct": "Buprenorphine is a partial agonist; start it when withdrawal is already present.",
+        "perOption": {
+          "a": "Giving it too early can trigger sudden (precipitated) withdrawal.",
+          "b": "This risks precipitated withdrawal.",
+          "c": "This isn't appropriate.",
+          "d": "This isn't required for buprenorphine."
+        },
+        "references": [
+          "Nursing pharmacology texts (e.g. Lehne; McCuistion) and the drug's prescribing information",
+          "Reviewed by the content team on 17 November 2026."
+        ]
+      },
+      "educationalObjective": "Time the start of buprenorphine."
+    },
+    {
+      "id": "c1a00034-0000-4000-8000-000000000008",
+      "itemType": "multiple_choice",
+      "clientNeeds": "PHI.PPT",
+      "bodySystem": "mental-health",
+      "subtopics": [
+        "psychiatric-medications"
+      ],
+      "cjmmSkill": "analyze_cues",
+      "difficulty": "moderate",
+      "stem": "What must be confirmed before a client starts naltrexone for opioid use disorder?",
+      "content": {
+        "options": [
+          {
+            "id": "a",
+            "text": "The client has been opioid-free for about 7 to 10 days"
+          },
+          {
+            "id": "b",
+            "text": "The client is currently using opioids"
+          },
+          {
+            "id": "c",
+            "text": "The client has a normal blood glucose"
+          },
+          {
+            "id": "d",
+            "text": "The client has been drinking alcohol"
+          }
+        ]
+      },
+      "key": {
+        "correct": "a"
+      },
+      "rationale": {
+        "correct": "Naltrexone is an opioid antagonist; the client must be opioid-free first.",
+        "perOption": {
+          "a": "Naltrexone blocks opioids and causes severe withdrawal if opioids are still present.",
+          "b": "This would cause withdrawal.",
+          "c": "This isn't the key requirement.",
+          "d": "This isn't required."
+        },
+        "references": [
+          "Nursing pharmacology texts (e.g. Lehne; McCuistion) and the drug's prescribing information",
+          "Reviewed by the content team on 17 November 2026."
+        ]
+      },
+      "educationalObjective": "Prepare a client to start naltrexone."
+    },
+    {
+      "id": "c1a00034-0000-4000-8000-000000000009",
+      "itemType": "multiple_choice",
+      "clientNeeds": "PSI",
+      "bodySystem": "mental-health",
+      "subtopics": [
+        "substance-use-disorders"
+      ],
+      "cjmmSkill": "recognize_cues",
+      "difficulty": "moderate",
+      "stem": "A client is unresponsive, with pinpoint pupils and a respiratory rate of 6/min. What does the nurse suspect, and what should be given?",
+      "content": {
+        "options": [
+          {
+            "id": "a",
+            "text": "Opioid overdose; naloxone"
+          },
+          {
+            "id": "b",
+            "text": "Stimulant overdose; a benzodiazepine"
+          },
+          {
+            "id": "c",
+            "text": "Alcohol withdrawal; thiamine"
+          },
+          {
+            "id": "d",
+            "text": "Hypoglycemia; insulin"
+          }
+        ]
+      },
+      "key": {
+        "correct": "a"
+      },
+      "rationale": {
+        "correct": "Opioid overdose: support breathing and give naloxone; watch for re-sedation.",
+        "perOption": {
+          "a": "This triad is typical of opioid overdose.",
+          "b": "Stimulants cause dilated pupils and agitation.",
+          "c": "Withdrawal causes agitation, not coma with pinpoint pupils.",
+          "d": "Insulin would worsen hypoglycemia."
+        },
+        "references": [
+          "Psychiatric-mental health nursing texts (e.g. Varcarolis; Halter)",
+          "Reviewed by the content team on 17 November 2026."
+        ]
+      },
+      "educationalObjective": "Recognize opioid overdose."
+    },
+    {
+      "id": "c1a00034-0000-4000-8000-000000000010",
+      "itemType": "multiple_choice",
+      "clientNeeds": "PSI",
+      "bodySystem": "mental-health",
+      "subtopics": [
+        "substance-use-disorders"
+      ],
+      "cjmmSkill": "recognize_cues",
+      "difficulty": "moderate",
+      "stem": "A client who used cocaine has chest pain, a heart rate of 132/min and a blood pressure of 188/108 mm Hg. What is the main concern?",
+      "content": {
+        "options": [
+          {
+            "id": "a",
+            "text": "Myocardial ischemia from vasoconstriction"
+          },
+          {
+            "id": "b",
+            "text": "Respiratory depression"
+          },
+          {
+            "id": "c",
+            "text": "Hypoglycemia"
+          },
+          {
+            "id": "d",
+            "text": "Withdrawal seizures"
+          }
+        ]
+      },
+      "key": {
+        "correct": "a"
+      },
+      "rationale": {
+        "correct": "Stimulant toxicity: tachycardia, hypertension, chest pain, hyperthermia and agitation.",
+        "perOption": {
+          "a": "Cocaine causes coronary vasospasm, ischemia and dysrhythmias.",
+          "b": "This is more typical of opioids.",
+          "c": "This isn't typical.",
+          "d": "This isn't the main concern now."
+        },
+        "references": [
+          "Psychiatric-mental health nursing texts (e.g. Varcarolis; Halter)",
+          "Reviewed by the content team on 17 November 2026."
+        ]
+      },
+      "educationalObjective": "Recognize stimulant toxicity."
+    },
+    {
+      "id": "c1a00034-0000-4000-8000-000000000011",
+      "itemType": "multiple_choice",
+      "clientNeeds": "PSI",
+      "bodySystem": "mental-health",
+      "subtopics": [
+        "substance-use-disorders"
+      ],
+      "cjmmSkill": "analyze_cues",
+      "difficulty": "easy",
+      "stem": "A client says, \"I don't have a drinking problem. I can stop anytime I want.\" Which defense mechanism is this?",
+      "content": {
+        "options": [
+          {
+            "id": "a",
+            "text": "Denial"
+          },
+          {
+            "id": "b",
+            "text": "Sublimation"
+          },
+          {
+            "id": "c",
+            "text": "Projection"
+          },
+          {
+            "id": "d",
+            "text": "Regression"
+          }
+        ]
+      },
+      "key": {
+        "correct": "a"
+      },
+      "rationale": {
+        "correct": "Denial is a major barrier to treatment in substance use disorders.",
+        "perOption": {
+          "a": "Refusing to acknowledge the problem is common in substance use.",
+          "b": "This channels impulses into acceptable activities.",
+          "c": "This attributes one's feelings to others.",
+          "d": "This is returning to earlier behavior."
+        },
+        "references": [
+          "Psychiatric-mental health nursing texts (e.g. Varcarolis; Halter)",
+          "Reviewed by the content team on 17 November 2026."
+        ]
+      },
+      "educationalObjective": "Recognize denial in substance use."
+    },
+    {
+      "id": "c1a00034-0000-4000-8000-000000000012",
+      "itemType": "multiple_choice",
+      "clientNeeds": "PSI",
+      "bodySystem": "mental-health",
+      "subtopics": [
+        "substance-use-disorders"
+      ],
+      "cjmmSkill": "analyze_cues",
+      "difficulty": "moderate",
+      "stem": "The spouse of a client with alcohol use disorder calls the client's employer to report the client as sick after drinking. What is this behavior?",
+      "content": {
+        "options": [
+          {
+            "id": "a",
+            "text": "Enabling"
+          },
+          {
+            "id": "b",
+            "text": "Healthy support"
+          },
+          {
+            "id": "c",
+            "text": "Codependence recovery"
+          },
+          {
+            "id": "d",
+            "text": "Intervention"
+          }
+        ]
+      },
+      "key": {
+        "correct": "a"
+      },
+      "rationale": {
+        "correct": "Families benefit from support groups such as Al-Anon to stop enabling.",
+        "perOption": {
+          "a": "Protecting the client from consequences allows the drinking to continue.",
+          "b": "This protects the drinking.",
+          "c": "This isn't recovery.",
+          "d": "This isn't a planned intervention."
+        },
+        "references": [
+          "Psychiatric-mental health nursing texts (e.g. Varcarolis; Halter)",
+          "Reviewed by the content team on 17 November 2026."
+        ]
+      },
+      "educationalObjective": "Identify enabling behavior."
+    },
+    {
+      "id": "c1a00034-0000-4000-8000-000000000013",
+      "itemType": "multiple_choice",
+      "clientNeeds": "PSI",
+      "bodySystem": "mental-health",
+      "subtopics": [
+        "substance-use-disorders"
+      ],
+      "cjmmSkill": "analyze_cues",
+      "difficulty": "easy",
+      "stem": "Which question is part of the CAGE screening tool for alcohol use?",
+      "content": {
+        "options": [
+          {
+            "id": "a",
+            "text": "\"Have you ever felt you should cut down on your drinking?\""
+          },
+          {
+            "id": "b",
+            "text": "\"What is your favorite drink?\""
+          },
+          {
+            "id": "c",
+            "text": "\"Do you drink only on weekends?\""
+          },
+          {
+            "id": "d",
+            "text": "\"How old were you when you first drank?\""
+          }
+        ]
+      },
+      "key": {
+        "correct": "a"
+      },
+      "rationale": {
+        "correct": "CAGE: Cut down, Annoyed, Guilty, Eye-opener; two or more yes answers suggest a problem.",
+        "perOption": {
+          "a": "C = Cut down.",
+          "b": "This isn't a screening item.",
+          "c": "This isn't a CAGE item.",
+          "d": "This isn't a CAGE item."
+        },
+        "references": [
+          "Psychiatric-mental health nursing texts (e.g. Varcarolis; Halter)",
+          "Reviewed by the content team on 17 November 2026."
+        ]
+      },
+      "educationalObjective": "Use the CAGE screening questions."
+    },
+    {
+      "id": "c1a00034-0000-4000-8000-000000000014",
+      "itemType": "matrix_mc",
+      "clientNeeds": "PSI",
+      "bodySystem": "mental-health",
+      "subtopics": [
+        "dementia-and-delirium"
+      ],
+      "cjmmSkill": "analyze_cues",
+      "difficulty": "moderate",
+      "stem": "For each feature, indicate whether it is more typical of delirium or dementia.",
+      "content": {
+        "rows": [
+          {
+            "id": "r1",
+            "text": "Sudden onset over hours to days"
+          },
+          {
+            "id": "r2",
+            "text": "Level of awareness that fluctuates during the day"
+          },
+          {
+            "id": "r3",
+            "text": "Gradual decline over years"
+          },
+          {
+            "id": "r4",
+            "text": "Usually reversible when the cause is treated"
+          },
+          {
+            "id": "r5",
+            "text": "Marked inattention"
+          }
+        ],
+        "columns": [
+          {
+            "id": "c1",
+            "text": "Delirium"
+          },
+          {
+            "id": "c2",
+            "text": "Dementia"
+          }
+        ]
+      },
+      "key": {
+        "byRow": {
+          "r1": "c1",
+          "r2": "c1",
+          "r3": "c2",
+          "r4": "c1",
+          "r5": "c1"
+        }
+      },
+      "rationale": {
+        "correct": "Delirium: acute, fluctuating, inattentive, often reversible. Dementia: gradual and progressive.",
+        "perOption": {
+          "r1:c1": "Delirium develops quickly.",
+          "r1:c2": "Dementia develops gradually.",
+          "r2:c1": "Fluctuating awareness is typical of delirium.",
+          "r2:c2": "Consciousness is usually stable in dementia until late.",
+          "r3:c1": "Delirium is acute.",
+          "r3:c2": "Dementia progresses slowly.",
+          "r4:c1": "Delirium often resolves when the cause is treated.",
+          "r4:c2": "Most dementias are progressive.",
+          "r5:c1": "Inattention is a core feature of delirium.",
+          "r5:c2": "Attention is often preserved early in dementia."
+        },
+        "references": [
+          "Psychiatric-mental health nursing texts (e.g. Varcarolis; Halter)",
+          "Reviewed by the content team on 17 November 2026."
+        ]
+      },
+      "educationalObjective": "Distinguish delirium from dementia."
+    },
+    {
+      "id": "c1a00034-0000-4000-8000-000000000015",
+      "itemType": "multiple_choice",
+      "clientNeeds": "PSI",
+      "bodySystem": "mental-health",
+      "subtopics": [
+        "dementia-and-delirium"
+      ],
+      "cjmmSkill": "take_action",
+      "difficulty": "moderate",
+      "stem": "A client with Alzheimer's disease keeps asking for her mother, who died years ago. What is the best response?",
+      "content": {
+        "options": [
+          {
+            "id": "a",
+            "text": "\"You're thinking about your mother. Tell me about her.\""
+          },
+          {
+            "id": "b",
+            "text": "\"Your mother died years ago.\""
+          },
+          {
+            "id": "c",
+            "text": "\"She'll be here soon.\""
+          },
+          {
+            "id": "d",
+            "text": "\"Stop asking about her.\""
+          }
+        ]
+      },
+      "key": {
+        "correct": "a"
+      },
+      "rationale": {
+        "correct": "Use validation and redirection in advanced dementia; avoid arguing.",
+        "perOption": {
+          "a": "Validation addresses the feelings without arguing.",
+          "b": "Repeated reorientation to a painful fact can cause distress.",
+          "c": "This is dishonest.",
+          "d": "This is dismissive."
+        },
+        "references": [
+          "Psychiatric-mental health nursing texts (e.g. Varcarolis; Halter)",
+          "Reviewed by the content team on 17 November 2026."
+        ]
+      },
+      "educationalObjective": "Communicate with a client who has dementia."
+    },
+    {
+      "id": "c1a00034-0000-4000-8000-000000000016",
+      "itemType": "multiple_choice",
+      "clientNeeds": "PSI",
+      "bodySystem": "mental-health",
+      "subtopics": [
+        "dementia-and-delirium"
+      ],
+      "cjmmSkill": "generate_solutions",
+      "difficulty": "moderate",
+      "stem": "A client with dementia becomes more confused and agitated in the late afternoon. Which intervention helps?",
+      "content": {
+        "options": [
+          {
+            "id": "a",
+            "text": "Keep a consistent routine and good lighting, and reduce stimulation in the evening"
+          },
+          {
+            "id": "b",
+            "text": "Schedule baths and visitors in the late afternoon"
+          },
+          {
+            "id": "c",
+            "text": "Turn off all lights early"
+          },
+          {
+            "id": "d",
+            "text": "Change the routine every day"
+          }
+        ]
+      },
+      "key": {
+        "correct": "a"
+      },
+      "rationale": {
+        "correct": "Sundowning: routine, daytime activity, lighting and a calm evening environment.",
+        "perOption": {
+          "a": "Structure and lighting reduce sundowning.",
+          "b": "This adds stimulation at a bad time.",
+          "c": "Shadows can increase confusion.",
+          "d": "Inconsistency worsens confusion."
+        },
+        "references": [
+          "Psychiatric-mental health nursing texts (e.g. Varcarolis; Halter)",
+          "Reviewed by the content team on 17 November 2026."
+        ]
+      },
+      "educationalObjective": "Manage sundowning."
+    },
+    {
+      "id": "c1a00034-0000-4000-8000-000000000017",
+      "itemType": "multiple_choice",
+      "clientNeeds": "SECE.SIC",
+      "bodySystem": "mental-health",
+      "subtopics": [
+        "injury-prevention"
+      ],
+      "cjmmSkill": "generate_solutions",
+      "difficulty": "moderate",
+      "stem": "A client with dementia wanders at home. Which safety measure should the nurse recommend?",
+      "content": {
+        "options": [
+          {
+            "id": "a",
+            "text": "Door alarms and an identification bracelet"
+          },
+          {
+            "id": "b",
+            "text": "Locking the client in the bedroom at night"
+          },
+          {
+            "id": "c",
+            "text": "Sedating the client every evening"
+          },
+          {
+            "id": "d",
+            "text": "Removing all clocks"
+          }
+        ]
+      },
+      "key": {
+        "correct": "a"
+      },
+      "rationale": {
+        "correct": "Wandering: secure the environment, use ID, alarms and supervised walking.",
+        "perOption": {
+          "a": "These reduce the risk of the client getting lost.",
+          "b": "This is unsafe and can be a fire hazard.",
+          "c": "Sedatives increase falls and confusion.",
+          "d": "Clocks help orientation."
+        },
+        "references": [
+          "Psychiatric-mental health nursing texts (e.g. Varcarolis; Halter)",
+          "Reviewed by the content team on 17 November 2026."
+        ]
+      },
+      "educationalObjective": "Promote safety for a client who wanders."
+    },
+    {
+      "id": "c1a00034-0000-4000-8000-000000000018",
+      "itemType": "multiple_choice",
+      "clientNeeds": "PHI.PPT",
+      "bodySystem": "mental-health",
+      "subtopics": [
+        "psychiatric-medications"
+      ],
+      "cjmmSkill": "recognize_cues",
+      "difficulty": "moderate",
+      "stem": "A client with Alzheimer's disease started donepezil. Which finding should the nurse report?",
+      "content": {
+        "options": [
+          {
+            "id": "a",
+            "text": "Heart rate of 48/min with dizziness"
+          },
+          {
+            "id": "b",
+            "text": "Mild nausea in the first week"
+          },
+          {
+            "id": "c",
+            "text": "Slight improvement in memory"
+          },
+          {
+            "id": "d",
+            "text": "Taking it at bedtime"
+          }
+        ]
+      },
+      "key": {
+        "correct": "a"
+      },
+      "rationale": {
+        "correct": "Donepezil: GI upset, bradycardia, syncope and vivid dreams.",
+        "perOption": {
+          "a": "Cholinesterase inhibitors can cause bradycardia and syncope.",
+          "b": "This is common and often improves.",
+          "c": "This is the intended effect.",
+          "d": "This is common practice."
+        },
+        "references": [
+          "Nursing pharmacology texts (e.g. Lehne; McCuistion) and the drug's prescribing information",
+          "Reviewed by the content team on 17 November 2026."
+        ]
+      },
+      "educationalObjective": "Monitor for donepezil adverse effects."
+    },
+    {
+      "id": "c1a00034-0000-4000-8000-000000000019",
+      "itemType": "multiple_choice",
+      "clientNeeds": "PHI.PPT",
+      "bodySystem": "pediatrics",
+      "subtopics": [
+        "psychiatric-medications"
+      ],
+      "cjmmSkill": "generate_solutions",
+      "difficulty": "moderate",
+      "stem": "A child with ADHD is starting methylphenidate. Which instruction should the nurse give?",
+      "content": {
+        "options": [
+          {
+            "id": "a",
+            "text": "Give it in the morning and monitor appetite, sleep and growth"
+          },
+          {
+            "id": "b",
+            "text": "Give it at bedtime"
+          },
+          {
+            "id": "c",
+            "text": "Stop it on weekends without discussing it with the provider"
+          },
+          {
+            "id": "d",
+            "text": "Expect weight gain"
+          }
+        ]
+      },
+      "key": {
+        "correct": "a"
+      },
+      "rationale": {
+        "correct": "Stimulants: morning dosing, monitor height, weight, heart rate and blood pressure; store securely.",
+        "perOption": {
+          "a": "Stimulants can cause insomnia and reduced appetite.",
+          "b": "This causes insomnia.",
+          "c": "Drug holidays should be planned with the provider.",
+          "d": "Appetite and weight often decrease."
+        },
+        "references": [
+          "Nursing pharmacology texts (e.g. Lehne; McCuistion) and the drug's prescribing information",
+          "Pediatric nursing texts (e.g. Hockenberry, Wong's Essentials of Pediatric Nursing)",
+          "Reviewed by the content team on 17 November 2026."
+        ]
+      },
+      "educationalObjective": "Teach about stimulant medication for ADHD."
+    },
+    {
+      "id": "c1a00034-0000-4000-8000-000000000020",
+      "itemType": "multiple_choice",
+      "clientNeeds": "PSI",
+      "bodySystem": "pediatrics",
+      "subtopics": [
+        "neurodevelopmental-disorders"
+      ],
+      "cjmmSkill": "generate_solutions",
+      "difficulty": "moderate",
+      "stem": "A child with autism spectrum disorder is admitted to the hospital. Which intervention is most helpful?",
+      "content": {
+        "options": [
+          {
+            "id": "a",
+            "text": "Keep routines consistent and limit noise and other stimulation"
+          },
+          {
+            "id": "b",
+            "text": "Change caregivers every shift"
+          },
+          {
+            "id": "c",
+            "text": "Keep the room bright and busy"
+          },
+          {
+            "id": "d",
+            "text": "Insist on eye contact during care"
+          }
+        ]
+      },
+      "key": {
+        "correct": "a"
+      },
+      "rationale": {
+        "correct": "Autism: routine, consistent caregivers, reduced stimulation and parents' input on preferences.",
+        "perOption": {
+          "a": "Predictability and low stimulation reduce distress.",
+          "b": "Consistency is important.",
+          "c": "Overstimulation increases distress.",
+          "d": "This may increase anxiety."
+        },
+        "references": [
+          "Pediatric nursing texts (e.g. Hockenberry, Wong's Essentials of Pediatric Nursing)",
+          "Reviewed by the content team on 17 November 2026."
+        ]
+      },
+      "educationalObjective": "Plan care for a child with autism."
+    },
+    {
+      "id": "c1a00034-0000-4000-8000-000000000021",
+      "itemType": "multiple_choice",
+      "clientNeeds": "PHI.PPT",
+      "bodySystem": "mental-health",
+      "subtopics": [
+        "psychiatric-medications"
+      ],
+      "cjmmSkill": "recognize_cues",
+      "difficulty": "moderate",
+      "stem": "A client using varenicline to quit smoking reports new feelings of hopelessness. What should the nurse do?",
+      "content": {
+        "options": [
+          {
+            "id": "a",
+            "text": "Tell the client to report this to the provider right away and assess for suicidal thoughts"
+          },
+          {
+            "id": "b",
+            "text": "Reassure the client that this is normal"
+          },
+          {
+            "id": "c",
+            "text": "Double the dose"
+          },
+          {
+            "id": "d",
+            "text": "Add a nicotine patch"
+          }
+        ]
+      },
+      "key": {
+        "correct": "a"
+      },
+      "rationale": {
+        "correct": "Varenicline: monitor mood and behavior; nausea and vivid dreams are common.",
+        "perOption": {
+          "a": "Varenicline can cause neuropsychiatric effects.",
+          "b": "Mood changes need evaluation.",
+          "c": "This isn't appropriate.",
+          "d": "This doesn't address the mood change."
+        },
+        "references": [
+          "Nursing pharmacology texts (e.g. Lehne; McCuistion) and the drug's prescribing information",
+          "Reviewed by the content team on 17 November 2026."
+        ]
+      },
+      "educationalObjective": "Monitor varenicline for neuropsychiatric effects."
+    },
+    {
+      "id": "c1a00034-0000-4000-8000-000000000022",
+      "itemType": "highlight_table",
+      "clientNeeds": "PSI",
+      "bodySystem": "mental-health",
+      "subtopics": [
+        "alcohol-withdrawal"
+      ],
+      "cjmmSkill": "recognize_cues",
+      "difficulty": "moderate",
+      "stem": "The nurse reviews a client's flowsheet 36 hours after the last drink. Highlight the findings that indicate worsening alcohol withdrawal.",
+      "content": {
+        "columns": [
+          "Finding",
+          "Result"
+        ],
+        "rows": [
+          {
+            "id": "r1",
+            "cells": [
+              "Heart rate",
+              "124/min"
+            ],
+            "selectable": true
+          },
+          {
+            "id": "r2",
+            "cells": [
+              "Blood pressure",
+              "178/100 mm Hg"
+            ],
+            "selectable": true
+          },
+          {
+            "id": "r3",
+            "cells": [
+              "Hands",
+              "Coarse tremor"
+            ],
+            "selectable": true
+          },
+          {
+            "id": "r4",
+            "cells": [
+              "Perception",
+              "Sees insects crawling on the wall"
+            ],
+            "selectable": true
+          },
+          {
+            "id": "r5",
+            "cells": [
+              "Temperature",
+              "37.0 °C (98.6 °F)"
+            ],
+            "selectable": true
+          }
+        ]
+      },
+      "key": {
+        "correct": [
+          "r1",
+          "r2",
+          "r3",
+          "r4"
+        ]
+      },
+      "rationale": {
+        "correct": "Watch for rising vital signs, tremor, hallucinations and confusion.",
+        "perOption": {
+          "r1": "Tachycardia reflects autonomic hyperactivity.",
+          "r2": "Hypertension reflects autonomic hyperactivity.",
+          "r3": "Tremor is a sign of withdrawal.",
+          "r4": "Hallucinations indicate significant withdrawal.",
+          "r5": "This is normal."
+        },
+        "references": [
+          "Psychiatric-mental health nursing texts (e.g. Varcarolis; Halter)",
+          "Reviewed by the content team on 17 November 2026."
+        ]
+      },
+      "educationalObjective": "Recognize worsening alcohol withdrawal."
+    }
+  ]
+}

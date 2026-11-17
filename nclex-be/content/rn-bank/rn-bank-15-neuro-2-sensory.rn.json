@@ -1,0 +1,1319 @@
+{
+  "notice": "RN bank batch 15: Neurological II and sensory: spinal cord, degenerative disorders, eye and ear. Reviewed by the content team on 17 November 2026. See REVIEW-LOG.md.",
+  "track": "RN",
+  "subtopics": [
+    {
+      "clientNeeds": "PHI.PA",
+      "slug": "spinal-cord-injury",
+      "name": "Spinal cord injury"
+    },
+    {
+      "clientNeeds": "PHI.BCC",
+      "slug": "bowel-elimination",
+      "name": "Bowel elimination"
+    },
+    {
+      "clientNeeds": "PHI.PA",
+      "slug": "degenerative-neurological-disorders",
+      "name": "Degenerative and autoimmune neurological disorders"
+    },
+    {
+      "clientNeeds": "PHI.PPT",
+      "slug": "neurological-medications",
+      "name": "Neurological medications"
+    },
+    {
+      "clientNeeds": "PHI.PA",
+      "slug": "eye-and-ear-disorders",
+      "name": "Eye and ear disorders"
+    },
+    {
+      "clientNeeds": "PHI.PPT",
+      "slug": "medication-administration-technique",
+      "name": "Medication administration technique"
+    },
+    {
+      "clientNeeds": "PHI.BCC",
+      "slug": "sensory-impairment-care",
+      "name": "Care of clients with sensory impairment"
+    }
+  ],
+  "questions": [
+    {
+      "id": "c1a00015-0000-4000-8000-000000000001",
+      "itemType": "multiple_choice",
+      "clientNeeds": "PHI.PA",
+      "bodySystem": "neurological",
+      "subtopics": [
+        "spinal-cord-injury"
+      ],
+      "cjmmSkill": "prioritize_hypotheses",
+      "difficulty": "moderate",
+      "stem": "A client has a complete spinal cord injury at the C4 level. What is the nurse's priority?",
+      "content": {
+        "options": [
+          {
+            "id": "a",
+            "text": "Monitoring breathing and airway"
+          },
+          {
+            "id": "b",
+            "text": "Preventing pressure injuries"
+          },
+          {
+            "id": "c",
+            "text": "Starting a bowel program"
+          },
+          {
+            "id": "d",
+            "text": "Teaching about wheelchair use"
+          }
+        ]
+      },
+      "key": {
+        "correct": "a"
+      },
+      "rationale": {
+        "correct": "\"C3, 4, 5 keeps the diaphragm alive.\" High cervical injuries threaten breathing first.",
+        "perOption": {
+          "a": "C3 to C5 supply the phrenic nerve to the diaphragm; injury at C4 can cause respiratory failure.",
+          "b": "This is important but comes after breathing.",
+          "c": "This comes later.",
+          "d": "This comes later."
+        },
+        "references": [
+          "Medical-surgical nursing texts (e.g. Lewis; Ignatavicius)",
+          "Reviewed by the content team on 17 November 2026."
+        ]
+      },
+      "educationalObjective": "Prioritize breathing in a cervical spinal cord injury."
+    },
+    {
+      "id": "c1a00015-0000-4000-8000-000000000002",
+      "itemType": "multiple_choice",
+      "clientNeeds": "PHI.PA",
+      "bodySystem": "neurological",
+      "subtopics": [
+        "spinal-cord-injury"
+      ],
+      "cjmmSkill": "take_action",
+      "difficulty": "difficult",
+      "stem": "A client with a T4 spinal cord injury suddenly has a pounding headache, a blood pressure of 210/110 mm Hg, flushing above the injury and a heart rate of 50/min. What should the nurse do first?",
+      "content": {
+        "options": [
+          {
+            "id": "a",
+            "text": "Sit the client upright with the legs lowered"
+          },
+          {
+            "id": "b",
+            "text": "Give an antihypertensive"
+          },
+          {
+            "id": "c",
+            "text": "Lay the client flat"
+          },
+          {
+            "id": "d",
+            "text": "Check the client's temperature"
+          }
+        ]
+      },
+      "key": {
+        "correct": "a"
+      },
+      "rationale": {
+        "correct": "Autonomic dysreflexia (injury at T6 or above): sit up, loosen clothing, find and remove the trigger (usually a full bladder, then the bowel or skin), and give medication if needed.",
+        "perOption": {
+          "a": "Raising the head lowers blood pressure quickly while the cause is found.",
+          "b": "This comes after positioning and removing the trigger if the BP stays high.",
+          "c": "Lying flat raises blood pressure further.",
+          "d": "This doesn't treat the emergency."
+        },
+        "references": [
+          "Medical-surgical nursing texts (e.g. Lewis; Ignatavicius)",
+          "Reviewed by the content team on 17 November 2026."
+        ]
+      },
+      "educationalObjective": "Respond to autonomic dysreflexia."
+    },
+    {
+      "id": "c1a00015-0000-4000-8000-000000000003",
+      "itemType": "multiple_choice",
+      "clientNeeds": "PHI.PA",
+      "bodySystem": "neurological",
+      "subtopics": [
+        "spinal-cord-injury"
+      ],
+      "cjmmSkill": "analyze_cues",
+      "difficulty": "moderate",
+      "stem": "After sitting a client with autonomic dysreflexia upright, what should the nurse check next?",
+      "content": {
+        "options": [
+          {
+            "id": "a",
+            "text": "The bladder for distention and the catheter for kinks"
+          },
+          {
+            "id": "b",
+            "text": "The client's pupils"
+          },
+          {
+            "id": "c",
+            "text": "The client's blood glucose"
+          },
+          {
+            "id": "d",
+            "text": "Lung sounds"
+          }
+        ]
+      },
+      "key": {
+        "correct": "a"
+      },
+      "rationale": {
+        "correct": "Common triggers: bladder distention, fecal impaction, tight clothing and pressure injuries.",
+        "perOption": {
+          "a": "A full bladder is the most common trigger.",
+          "b": "These aren't the main cause.",
+          "c": "This isn't the main cause.",
+          "d": "This isn't the main cause."
+        },
+        "references": [
+          "Medical-surgical nursing texts (e.g. Lewis; Ignatavicius)",
+          "Reviewed by the content team on 17 November 2026."
+        ]
+      },
+      "educationalObjective": "Identify triggers of autonomic dysreflexia."
+    },
+    {
+      "id": "c1a00015-0000-4000-8000-000000000004",
+      "itemType": "multiple_choice",
+      "clientNeeds": "PHI.PA",
+      "bodySystem": "neurological",
+      "subtopics": [
+        "spinal-cord-injury"
+      ],
+      "cjmmSkill": "recognize_cues",
+      "difficulty": "difficult",
+      "stem": "A client with an acute cervical spinal cord injury has a blood pressure of 78/40 mm Hg and a heart rate of 48/min, with warm, dry skin. What does the nurse suspect?",
+      "content": {
+        "options": [
+          {
+            "id": "a",
+            "text": "Neurogenic shock"
+          },
+          {
+            "id": "b",
+            "text": "Hypovolemic shock"
+          },
+          {
+            "id": "c",
+            "text": "Autonomic dysreflexia"
+          },
+          {
+            "id": "d",
+            "text": "Septic shock"
+          }
+        ]
+      },
+      "key": {
+        "correct": "a"
+      },
+      "rationale": {
+        "correct": "Neurogenic shock: hypotension, bradycardia and warm skin from loss of sympathetic tone.",
+        "perOption": {
+          "a": "Loss of sympathetic tone causes hypotension, bradycardia and warm, dry skin.",
+          "b": "Hypovolemia causes tachycardia and cool skin.",
+          "c": "Dysreflexia causes hypertension.",
+          "d": "There are no signs of infection."
+        },
+        "references": [
+          "Medical-surgical nursing texts (e.g. Lewis; Ignatavicius)",
+          "Reviewed by the content team on 17 November 2026."
+        ]
+      },
+      "educationalObjective": "Recognize neurogenic shock."
+    },
+    {
+      "id": "c1a00015-0000-4000-8000-000000000005",
+      "itemType": "multiple_choice",
+      "clientNeeds": "PHI.PA",
+      "bodySystem": "neurological",
+      "subtopics": [
+        "spinal-cord-injury"
+      ],
+      "cjmmSkill": "take_action",
+      "difficulty": "moderate",
+      "stem": "A client has a halo vest for a cervical spine fracture. Which item must be kept with the client at all times?",
+      "content": {
+        "options": [
+          {
+            "id": "a",
+            "text": "The wrench for removing the vest's front panel"
+          },
+          {
+            "id": "b",
+            "text": "A cervical collar"
+          },
+          {
+            "id": "c",
+            "text": "A sandbag"
+          },
+          {
+            "id": "d",
+            "text": "A urinary catheter"
+          }
+        ]
+      },
+      "key": {
+        "correct": "a"
+      },
+      "rationale": {
+        "correct": "Keep the wrench taped to the halo vest; never use the frame to move the client.",
+        "perOption": {
+          "a": "In a cardiac arrest, the front panel must be removed quickly for CPR.",
+          "b": "The halo already stabilizes the neck.",
+          "c": "This isn't needed.",
+          "d": "This isn't related."
+        },
+        "references": [
+          "Medical-surgical nursing texts (e.g. Lewis; Ignatavicius)",
+          "Reviewed by the content team on 17 November 2026."
+        ]
+      },
+      "educationalObjective": "Ensure halo vest emergency equipment is available."
+    },
+    {
+      "id": "c1a00015-0000-4000-8000-000000000006",
+      "itemType": "multiple_choice",
+      "clientNeeds": "PHI.BCC",
+      "bodySystem": "neurological",
+      "subtopics": [
+        "bowel-elimination"
+      ],
+      "cjmmSkill": "generate_solutions",
+      "difficulty": "moderate",
+      "stem": "Which intervention should the nurse include in a bowel program for a client with a spinal cord injury?",
+      "content": {
+        "options": [
+          {
+            "id": "a",
+            "text": "Scheduled toileting at the same time each day, with digital stimulation or a suppository as prescribed"
+          },
+          {
+            "id": "b",
+            "text": "Low-fiber diet"
+          },
+          {
+            "id": "c",
+            "text": "Limiting fluids"
+          },
+          {
+            "id": "d",
+            "text": "Toileting only when the client feels the urge"
+          }
+        ]
+      },
+      "key": {
+        "correct": "a"
+      },
+      "rationale": {
+        "correct": "Bowel programs use regular timing, fiber, fluids and stimulation to prevent impaction, which can also trigger autonomic dysreflexia.",
+        "perOption": {
+          "a": "A consistent schedule trains the bowel and prevents incontinence and impaction.",
+          "b": "Fiber helps form stool.",
+          "c": "Fluids prevent constipation.",
+          "d": "The client may not feel the urge."
+        },
+        "references": [
+          "Medical-surgical nursing texts (e.g. Lewis; Ignatavicius)",
+          "Reviewed by the content team on 17 November 2026."
+        ]
+      },
+      "educationalObjective": "Plan a bowel program after spinal cord injury."
+    },
+    {
+      "id": "c1a00015-0000-4000-8000-000000000007",
+      "itemType": "multiple_choice",
+      "clientNeeds": "PHI.PA",
+      "bodySystem": "neurological",
+      "subtopics": [
+        "degenerative-neurological-disorders"
+      ],
+      "cjmmSkill": "prioritize_hypotheses",
+      "difficulty": "moderate",
+      "stem": "A client with myasthenia gravis has increasing weakness, trouble swallowing and a weak cough. What is the priority assessment?",
+      "content": {
+        "options": [
+          {
+            "id": "a",
+            "text": "Respiratory status, including vital capacity"
+          },
+          {
+            "id": "b",
+            "text": "Muscle strength in the legs"
+          },
+          {
+            "id": "c",
+            "text": "Skin integrity"
+          },
+          {
+            "id": "d",
+            "text": "Nutritional intake"
+          }
+        ]
+      },
+      "key": {
+        "correct": "a"
+      },
+      "rationale": {
+        "correct": "In myasthenic crisis, monitor breathing closely; intubation may be needed.",
+        "perOption": {
+          "a": "Myasthenic crisis can cause respiratory failure.",
+          "b": "Breathing comes first.",
+          "c": "This isn't the priority.",
+          "d": "This comes after the airway."
+        },
+        "references": [
+          "Medical-surgical nursing texts (e.g. Lewis; Ignatavicius)",
+          "Reviewed by the content team on 17 November 2026."
+        ]
+      },
+      "educationalObjective": "Prioritize assessment in a myasthenic crisis."
+    },
+    {
+      "id": "c1a00015-0000-4000-8000-000000000008",
+      "itemType": "multiple_choice",
+      "clientNeeds": "PHI.PPT",
+      "bodySystem": "neurological",
+      "subtopics": [
+        "neurological-medications"
+      ],
+      "cjmmSkill": "generate_solutions",
+      "difficulty": "moderate",
+      "stem": "A client with myasthenia gravis takes pyridostigmine. When should the client take it?",
+      "content": {
+        "options": [
+          {
+            "id": "a",
+            "text": "30 to 60 minutes before meals, exactly on schedule"
+          },
+          {
+            "id": "b",
+            "text": "At bedtime only"
+          },
+          {
+            "id": "c",
+            "text": "Only when weakness is severe"
+          },
+          {
+            "id": "d",
+            "text": "After meals"
+          }
+        ]
+      },
+      "key": {
+        "correct": "a"
+      },
+      "rationale": {
+        "correct": "Cholinesterase inhibitors must be taken on time; too much causes cholinergic crisis (excess secretions, cramps, weakness).",
+        "perOption": {
+          "a": "Peak effect at mealtime helps chewing and swallowing; late doses worsen weakness.",
+          "b": "This doesn't support daytime function.",
+          "c": "It is taken on a schedule.",
+          "d": "Strength is needed during meals."
+        },
+        "references": [
+          "Nursing pharmacology texts (e.g. Lehne; McCuistion) and the drug's prescribing information",
+          "Reviewed by the content team on 17 November 2026."
+        ]
+      },
+      "educationalObjective": "Teach timing of pyridostigmine."
+    },
+    {
+      "id": "c1a00015-0000-4000-8000-000000000009",
+      "itemType": "multiple_choice",
+      "clientNeeds": "PHI.PA",
+      "bodySystem": "neurological",
+      "subtopics": [
+        "degenerative-neurological-disorders"
+      ],
+      "cjmmSkill": "prioritize_hypotheses",
+      "difficulty": "moderate",
+      "stem": "A client with Guillain-Barré syndrome has weakness that started in the feet and is moving upward. What is the priority?",
+      "content": {
+        "options": [
+          {
+            "id": "a",
+            "text": "Monitoring respiratory function"
+          },
+          {
+            "id": "b",
+            "text": "Starting physical therapy"
+          },
+          {
+            "id": "c",
+            "text": "Managing pain"
+          },
+          {
+            "id": "d",
+            "text": "Teaching about the disease"
+          }
+        ]
+      },
+      "key": {
+        "correct": "a"
+      },
+      "rationale": {
+        "correct": "Guillain-Barré causes ascending paralysis; watch vital capacity and the ability to swallow.",
+        "perOption": {
+          "a": "Ascending paralysis can reach the respiratory muscles.",
+          "b": "This comes later.",
+          "c": "Pain matters, but breathing comes first.",
+          "d": "This isn't the priority."
+        },
+        "references": [
+          "Medical-surgical nursing texts (e.g. Lewis; Ignatavicius)",
+          "Reviewed by the content team on 17 November 2026."
+        ]
+      },
+      "educationalObjective": "Prioritize breathing in Guillain-Barré syndrome."
+    },
+    {
+      "id": "c1a00015-0000-4000-8000-000000000010",
+      "itemType": "multiple_choice",
+      "clientNeeds": "PHI.PA",
+      "bodySystem": "neurological",
+      "subtopics": [
+        "degenerative-neurological-disorders"
+      ],
+      "cjmmSkill": "generate_solutions",
+      "difficulty": "moderate",
+      "stem": "A client with multiple sclerosis says symptoms get worse after a hot shower. What should the nurse teach?",
+      "content": {
+        "options": [
+          {
+            "id": "a",
+            "text": "\"Use lukewarm water and avoid overheating.\""
+          },
+          {
+            "id": "b",
+            "text": "\"Hot showers help your muscles relax.\""
+          },
+          {
+            "id": "c",
+            "text": "\"Take a sauna to improve circulation.\""
+          },
+          {
+            "id": "d",
+            "text": "\"This isn't related to MS.\""
+          }
+        ]
+      },
+      "key": {
+        "correct": "a"
+      },
+      "rationale": {
+        "correct": "Clients with MS should avoid heat, fatigue, stress and infection, which can worsen symptoms.",
+        "perOption": {
+          "a": "Heat slows nerve conduction in demyelinated nerves (the Uhthoff phenomenon).",
+          "b": "Heat worsens MS symptoms.",
+          "c": "This could worsen symptoms.",
+          "d": "Heat sensitivity is common in MS."
+        },
+        "references": [
+          "Medical-surgical nursing texts (e.g. Lewis; Ignatavicius)",
+          "Reviewed by the content team on 17 November 2026."
+        ]
+      },
+      "educationalObjective": "Teach clients with MS to avoid heat."
+    },
+    {
+      "id": "c1a00015-0000-4000-8000-000000000011",
+      "itemType": "multiple_choice",
+      "clientNeeds": "PHI.PPT",
+      "bodySystem": "neurological",
+      "subtopics": [
+        "neurological-medications"
+      ],
+      "cjmmSkill": "generate_solutions",
+      "difficulty": "difficult",
+      "stem": "A client with Parkinson's disease takes carbidopa-levodopa. Which instruction should the nurse give?",
+      "content": {
+        "options": [
+          {
+            "id": "a",
+            "text": "\"Spread protein out through the day and avoid large high-protein meals near your doses.\""
+          },
+          {
+            "id": "b",
+            "text": "\"Take a vitamin B6 supplement.\""
+          },
+          {
+            "id": "c",
+            "text": "\"Stop the medication if your urine darkens.\""
+          },
+          {
+            "id": "d",
+            "text": "\"Stand up quickly to prevent dizziness.\""
+          }
+        ]
+      },
+      "key": {
+        "correct": "a"
+      },
+      "rationale": {
+        "correct": "Carbidopa-levodopa: orthostatic hypotension, dyskinesias, dark urine and protein interaction.",
+        "perOption": {
+          "a": "Dietary protein competes with levodopa for absorption.",
+          "b": "B6 reduces the effect of levodopa alone; it matters less with carbidopa, but it isn't recommended.",
+          "c": "Dark urine or sweat is harmless.",
+          "d": "Orthostatic hypotension is common; rise slowly."
+        },
+        "references": [
+          "Nursing pharmacology texts (e.g. Lehne; McCuistion) and the drug's prescribing information",
+          "Reviewed by the content team on 17 November 2026."
+        ]
+      },
+      "educationalObjective": "Teach about carbidopa-levodopa."
+    },
+    {
+      "id": "c1a00015-0000-4000-8000-000000000012",
+      "itemType": "sata",
+      "clientNeeds": "PHI.PA",
+      "bodySystem": "neurological",
+      "subtopics": [
+        "degenerative-neurological-disorders"
+      ],
+      "cjmmSkill": "recognize_cues",
+      "difficulty": "easy",
+      "stem": "Which findings are expected in a client with Parkinson's disease? Select all that apply.",
+      "content": {
+        "options": [
+          {
+            "id": "a",
+            "text": "Tremor at rest"
+          },
+          {
+            "id": "b",
+            "text": "Slowness of movement"
+          },
+          {
+            "id": "c",
+            "text": "Muscle rigidity"
+          },
+          {
+            "id": "d",
+            "text": "Shuffling gait"
+          },
+          {
+            "id": "e",
+            "text": "Tremor that appears only when reaching for an object"
+          },
+          {
+            "id": "f",
+            "text": "Masklike facial expression"
+          }
+        ]
+      },
+      "key": {
+        "correct": [
+          "a",
+          "b",
+          "c",
+          "d",
+          "f"
+        ]
+      },
+      "rationale": {
+        "correct": "Parkinson's: tremor, rigidity, bradykinesia and postural instability (TRAP).",
+        "perOption": {
+          "a": "Resting tremor is a cardinal sign.",
+          "b": "Bradykinesia is a cardinal sign.",
+          "c": "Rigidity is a cardinal sign.",
+          "d": "This is characteristic.",
+          "e": "This intention tremor suggests a cerebellar problem.",
+          "f": "Reduced facial movement is common."
+        },
+        "references": [
+          "Medical-surgical nursing texts (e.g. Lewis; Ignatavicius)",
+          "Reviewed by the content team on 17 November 2026."
+        ]
+      },
+      "educationalObjective": "Recognize the signs of Parkinson's disease."
+    },
+    {
+      "id": "c1a00015-0000-4000-8000-000000000013",
+      "itemType": "multiple_choice",
+      "clientNeeds": "PHI.PA",
+      "bodySystem": "neurological",
+      "subtopics": [
+        "degenerative-neurological-disorders"
+      ],
+      "cjmmSkill": "generate_solutions",
+      "difficulty": "moderate",
+      "stem": "Which instruction should the nurse give a client with Parkinson's disease to reduce the risk of falls?",
+      "content": {
+        "options": [
+          {
+            "id": "a",
+            "text": "\"Consciously lift your feet and take larger steps, with your feet apart.\""
+          },
+          {
+            "id": "b",
+            "text": "\"Walk quickly with small steps.\""
+          },
+          {
+            "id": "c",
+            "text": "\"Look down at your feet while walking.\""
+          },
+          {
+            "id": "d",
+            "text": "\"Keep throw rugs for cushioning.\""
+          }
+        ]
+      },
+      "key": {
+        "correct": "a"
+      },
+      "rationale": {
+        "correct": "Parkinson's gait training: big steps, wide base, swinging the arms and rocking to start if frozen.",
+        "perOption": {
+          "a": "This counteracts shuffling and improves balance.",
+          "b": "This worsens festination and falls.",
+          "c": "This worsens posture.",
+          "d": "Rugs are a tripping hazard."
+        },
+        "references": [
+          "Medical-surgical nursing texts (e.g. Lewis; Ignatavicius)",
+          "Reviewed by the content team on 17 November 2026."
+        ]
+      },
+      "educationalObjective": "Teach fall prevention in Parkinson's disease."
+    },
+    {
+      "id": "c1a00015-0000-4000-8000-000000000014",
+      "itemType": "multiple_choice",
+      "clientNeeds": "PHI.PA",
+      "bodySystem": "neurological",
+      "subtopics": [
+        "degenerative-neurological-disorders"
+      ],
+      "cjmmSkill": "analyze_cues",
+      "difficulty": "moderate",
+      "stem": "Which statement about amyotrophic lateral sclerosis (ALS) is accurate?",
+      "content": {
+        "options": [
+          {
+            "id": "a",
+            "text": "Cognition usually stays intact while the muscles weaken"
+          },
+          {
+            "id": "b",
+            "text": "It mainly affects sensation"
+          },
+          {
+            "id": "c",
+            "text": "It is cured with surgery"
+          },
+          {
+            "id": "d",
+            "text": "Breathing is never affected"
+          }
+        ]
+      },
+      "key": {
+        "correct": "a"
+      },
+      "rationale": {
+        "correct": "ALS: progressive motor weakness with intact cognition; plan early for breathing and nutrition needs.",
+        "perOption": {
+          "a": "ALS affects motor neurons; most clients stay mentally alert.",
+          "b": "Sensation is usually spared.",
+          "c": "There is no cure.",
+          "d": "Respiratory failure is the usual cause of death."
+        },
+        "references": [
+          "Medical-surgical nursing texts (e.g. Lewis; Ignatavicius)",
+          "Reviewed by the content team on 17 November 2026."
+        ]
+      },
+      "educationalObjective": "Understand the course of ALS."
+    },
+    {
+      "id": "c1a00015-0000-4000-8000-000000000015",
+      "itemType": "multiple_choice",
+      "clientNeeds": "PHI.PA",
+      "bodySystem": "neurological",
+      "subtopics": [
+        "degenerative-neurological-disorders"
+      ],
+      "cjmmSkill": "evaluate_outcomes",
+      "difficulty": "moderate",
+      "stem": "A client with trigeminal neuralgia has facial pain triggered by touch. Which statement shows correct understanding?",
+      "content": {
+        "options": [
+          {
+            "id": "a",
+            "text": "\"I'll chew on the unaffected side and use lukewarm food.\""
+          },
+          {
+            "id": "b",
+            "text": "\"I'll rub my face to ease the pain.\""
+          },
+          {
+            "id": "c",
+            "text": "\"I'll use ice packs on my face.\""
+          },
+          {
+            "id": "d",
+            "text": "\"I'll stop eating to prevent attacks.\""
+          }
+        ]
+      },
+      "key": {
+        "correct": "a"
+      },
+      "rationale": {
+        "correct": "Trigeminal neuralgia: avoid triggers (touch, cold, chewing on the affected side); carbamazepine is often prescribed.",
+        "perOption": {
+          "a": "This avoids triggering the pain.",
+          "b": "Touch triggers attacks.",
+          "c": "Temperature extremes trigger attacks.",
+          "d": "This causes malnutrition."
+        },
+        "references": [
+          "Medical-surgical nursing texts (e.g. Lewis; Ignatavicius)",
+          "Reviewed by the content team on 17 November 2026."
+        ]
+      },
+      "educationalObjective": "Teach a client with trigeminal neuralgia."
+    },
+    {
+      "id": "c1a00015-0000-4000-8000-000000000016",
+      "itemType": "multiple_choice",
+      "clientNeeds": "PHI.PA",
+      "bodySystem": "neurological",
+      "subtopics": [
+        "degenerative-neurological-disorders"
+      ],
+      "cjmmSkill": "generate_solutions",
+      "difficulty": "easy",
+      "stem": "A client with Bell's palsy can't close the right eye. Which intervention is most important?",
+      "content": {
+        "options": [
+          {
+            "id": "a",
+            "text": "Use artificial tears and an eye patch or tape the eyelid closed at night"
+          },
+          {
+            "id": "b",
+            "text": "Apply ice to the face"
+          },
+          {
+            "id": "c",
+            "text": "Avoid chewing"
+          },
+          {
+            "id": "d",
+            "text": "Keep the room dark at all times"
+          }
+        ]
+      },
+      "key": {
+        "correct": "a"
+      },
+      "rationale": {
+        "correct": "Bell's palsy: protect the eye, use moist heat and facial exercises; steroids are often prescribed.",
+        "perOption": {
+          "a": "This protects the cornea from drying and injury.",
+          "b": "This isn't helpful.",
+          "c": "This isn't needed.",
+          "d": "This isn't necessary."
+        },
+        "references": [
+          "Medical-surgical nursing texts (e.g. Lewis; Ignatavicius)",
+          "Reviewed by the content team on 17 November 2026."
+        ]
+      },
+      "educationalObjective": "Protect the eye in Bell's palsy."
+    },
+    {
+      "id": "c1a00015-0000-4000-8000-000000000017",
+      "itemType": "multiple_choice",
+      "clientNeeds": "PHI.PPT",
+      "bodySystem": "neurological",
+      "subtopics": [
+        "neurological-medications"
+      ],
+      "cjmmSkill": "recognize_cues",
+      "difficulty": "moderate",
+      "stem": "Before giving sumatriptan for a migraine, which client history should the nurse report to the provider?",
+      "content": {
+        "options": [
+          {
+            "id": "a",
+            "text": "Angina"
+          },
+          {
+            "id": "b",
+            "text": "Seasonal allergies"
+          },
+          {
+            "id": "c",
+            "text": "Previous migraines"
+          },
+          {
+            "id": "d",
+            "text": "Mild acne"
+          }
+        ]
+      },
+      "key": {
+        "correct": "a"
+      },
+      "rationale": {
+        "correct": "Triptans are contraindicated with coronary artery disease, uncontrolled hypertension and recent ergot use.",
+        "perOption": {
+          "a": "Triptans cause vasoconstriction and are contraindicated in coronary artery disease.",
+          "b": "This isn't a contraindication.",
+          "c": "This is the indication.",
+          "d": "This isn't relevant."
+        },
+        "references": [
+          "Nursing pharmacology texts (e.g. Lehne; McCuistion) and the drug's prescribing information",
+          "Reviewed by the content team on 17 November 2026."
+        ]
+      },
+      "educationalObjective": "Identify contraindications to triptans."
+    },
+    {
+      "id": "c1a00015-0000-4000-8000-000000000018",
+      "itemType": "multiple_choice",
+      "clientNeeds": "PHI.PA",
+      "bodySystem": "neurological",
+      "subtopics": [
+        "eye-and-ear-disorders"
+      ],
+      "cjmmSkill": "evaluate_outcomes",
+      "difficulty": "moderate",
+      "stem": "A client had cataract surgery today. Which statement shows a need for more teaching?",
+      "content": {
+        "options": [
+          {
+            "id": "a",
+            "text": "\"I'll wear my eye shield at night.\""
+          },
+          {
+            "id": "b",
+            "text": "\"I'll bend over to tie my shoes.\""
+          },
+          {
+            "id": "c",
+            "text": "\"I'll report sudden eye pain.\""
+          },
+          {
+            "id": "d",
+            "text": "\"I'll use my eye drops as prescribed.\""
+          }
+        ]
+      },
+      "key": {
+        "correct": "b"
+      },
+      "rationale": {
+        "correct": "After cataract surgery: avoid bending, lifting and straining; wear the shield; report pain or vision loss.",
+        "perOption": {
+          "a": "The shield protects the eye.",
+          "b": "Bending raises eye pressure; the client should avoid bending and heavy lifting.",
+          "c": "Sudden pain may signal a complication.",
+          "d": "This is correct."
+        },
+        "references": [
+          "Medical-surgical nursing texts (e.g. Lewis; Ignatavicius)",
+          "Reviewed by the content team on 17 November 2026."
+        ]
+      },
+      "educationalObjective": "Teach a client after cataract surgery."
+    },
+    {
+      "id": "c1a00015-0000-4000-8000-000000000019",
+      "itemType": "multiple_choice",
+      "clientNeeds": "PHI.PA",
+      "bodySystem": "neurological",
+      "subtopics": [
+        "eye-and-ear-disorders"
+      ],
+      "cjmmSkill": "recognize_cues",
+      "difficulty": "moderate",
+      "stem": "A client reports sudden severe eye pain, blurred vision, halos around lights and nausea. What does the nurse suspect?",
+      "content": {
+        "options": [
+          {
+            "id": "a",
+            "text": "Acute angle-closure glaucoma"
+          },
+          {
+            "id": "b",
+            "text": "Cataract"
+          },
+          {
+            "id": "c",
+            "text": "Macular degeneration"
+          },
+          {
+            "id": "d",
+            "text": "Conjunctivitis"
+          }
+        ]
+      },
+      "key": {
+        "correct": "a"
+      },
+      "rationale": {
+        "correct": "Acute angle-closure glaucoma needs immediate treatment to lower eye pressure.",
+        "perOption": {
+          "a": "This is an emergency that can cause permanent vision loss.",
+          "b": "Cataracts cause gradual, painless blurring.",
+          "c": "This causes gradual central vision loss.",
+          "d": "This causes redness and discharge without vision loss."
+        },
+        "references": [
+          "Medical-surgical nursing texts (e.g. Lewis; Ignatavicius)",
+          "Reviewed by the content team on 17 November 2026."
+        ]
+      },
+      "educationalObjective": "Recognize acute angle-closure glaucoma."
+    },
+    {
+      "id": "c1a00015-0000-4000-8000-000000000020",
+      "itemType": "multiple_choice",
+      "clientNeeds": "PHI.PPT",
+      "bodySystem": "neurological",
+      "subtopics": [
+        "medication-administration-technique"
+      ],
+      "cjmmSkill": "take_action",
+      "difficulty": "moderate",
+      "stem": "The nurse teaches a client to use timolol eye drops. Which instruction reduces systemic side effects?",
+      "content": {
+        "options": [
+          {
+            "id": "a",
+            "text": "\"Press on the inner corner of your eye for 1 to 2 minutes after the drop.\""
+          },
+          {
+            "id": "b",
+            "text": "\"Blink rapidly after each drop.\""
+          },
+          {
+            "id": "c",
+            "text": "\"Use two drops instead of one.\""
+          },
+          {
+            "id": "d",
+            "text": "\"Rinse your eye with water afterward.\""
+          }
+        ]
+      },
+      "key": {
+        "correct": "a"
+      },
+      "rationale": {
+        "correct": "Timolol is a beta-blocker; systemic absorption can cause bradycardia and bronchospasm.",
+        "perOption": {
+          "a": "This blocks drainage into the tear duct, reducing systemic absorption.",
+          "b": "Blinking pumps the drug into the tear duct.",
+          "c": "This increases absorption.",
+          "d": "This washes the medication away."
+        },
+        "references": [
+          "Nursing pharmacology texts (e.g. Lehne; McCuistion) and the drug's prescribing information",
+          "Reviewed by the content team on 17 November 2026."
+        ]
+      },
+      "educationalObjective": "Reduce systemic absorption of eye drops."
+    },
+    {
+      "id": "c1a00015-0000-4000-8000-000000000021",
+      "itemType": "multiple_choice",
+      "clientNeeds": "PHI.PA",
+      "bodySystem": "neurological",
+      "subtopics": [
+        "eye-and-ear-disorders"
+      ],
+      "cjmmSkill": "recognize_cues",
+      "difficulty": "moderate",
+      "stem": "A client reports sudden flashes of light, many new floaters and a feeling of a curtain coming down over one eye. What should the nurse do?",
+      "content": {
+        "options": [
+          {
+            "id": "a",
+            "text": "Arrange immediate evaluation for retinal detachment"
+          },
+          {
+            "id": "b",
+            "text": "Tell the client to rest and recheck in a week"
+          },
+          {
+            "id": "c",
+            "text": "Recommend over-the-counter eye drops"
+          },
+          {
+            "id": "d",
+            "text": "Schedule a routine glasses prescription"
+          }
+        ]
+      },
+      "key": {
+        "correct": "a"
+      },
+      "rationale": {
+        "correct": "Retinal detachment is an emergency.",
+        "perOption": {
+          "a": "These are classic signs; prompt surgery can save vision.",
+          "b": "Delay risks permanent vision loss.",
+          "c": "These won't help.",
+          "d": "This isn't appropriate."
+        },
+        "references": [
+          "Medical-surgical nursing texts (e.g. Lewis; Ignatavicius)",
+          "Reviewed by the content team on 17 November 2026."
+        ]
+      },
+      "educationalObjective": "Recognize retinal detachment."
+    },
+    {
+      "id": "c1a00015-0000-4000-8000-000000000022",
+      "itemType": "multiple_choice",
+      "clientNeeds": "PHI.PA",
+      "bodySystem": "neurological",
+      "subtopics": [
+        "eye-and-ear-disorders"
+      ],
+      "cjmmSkill": "generate_solutions",
+      "difficulty": "moderate",
+      "stem": "A client has age-related macular degeneration. Which tool should the nurse teach the client to use at home?",
+      "content": {
+        "options": [
+          {
+            "id": "a",
+            "text": "Amsler grid"
+          },
+          {
+            "id": "b",
+            "text": "Snellen chart"
+          },
+          {
+            "id": "c",
+            "text": "Tonometer"
+          },
+          {
+            "id": "d",
+            "text": "Peak flow meter"
+          }
+        ]
+      },
+      "key": {
+        "correct": "a"
+      },
+      "rationale": {
+        "correct": "Macular degeneration affects central vision; check daily with an Amsler grid.",
+        "perOption": {
+          "a": "The grid detects new distortion or blind spots in central vision.",
+          "b": "This tests visual acuity in the clinic.",
+          "c": "This measures eye pressure.",
+          "d": "This is a respiratory tool."
+        },
+        "references": [
+          "Medical-surgical nursing texts (e.g. Lewis; Ignatavicius)",
+          "Reviewed by the content team on 17 November 2026."
+        ]
+      },
+      "educationalObjective": "Teach home monitoring for macular degeneration."
+    },
+    {
+      "id": "c1a00015-0000-4000-8000-000000000023",
+      "itemType": "multiple_choice",
+      "clientNeeds": "PHI.BCC",
+      "bodySystem": "neurological",
+      "subtopics": [
+        "sensory-impairment-care"
+      ],
+      "cjmmSkill": "take_action",
+      "difficulty": "easy",
+      "stem": "Which strategy is best when talking with an older adult who has hearing loss?",
+      "content": {
+        "options": [
+          {
+            "id": "a",
+            "text": "Face the client, speak clearly in a lower pitch and reduce background noise"
+          },
+          {
+            "id": "b",
+            "text": "Shout into the client's ear"
+          },
+          {
+            "id": "c",
+            "text": "Speak quickly to save time"
+          },
+          {
+            "id": "d",
+            "text": "Cover your mouth while speaking"
+          }
+        ]
+      },
+      "key": {
+        "correct": "a"
+      },
+      "rationale": {
+        "correct": "Presbycusis affects high frequencies; face the client, speak clearly and lower the pitch.",
+        "perOption": {
+          "a": "This makes lip-reading easier and improves hearing at the frequencies older adults keep.",
+          "b": "Shouting distorts sound.",
+          "c": "This reduces understanding.",
+          "d": "This prevents lip-reading."
+        },
+        "references": [
+          "Fundamentals of nursing texts (e.g. Potter & Perry)",
+          "Reviewed by the content team on 17 November 2026."
+        ]
+      },
+      "educationalObjective": "Communicate with a client who has hearing loss."
+    },
+    {
+      "id": "c1a00015-0000-4000-8000-000000000024",
+      "itemType": "multiple_choice",
+      "clientNeeds": "PHI.PA",
+      "bodySystem": "neurological",
+      "subtopics": [
+        "eye-and-ear-disorders"
+      ],
+      "cjmmSkill": "generate_solutions",
+      "difficulty": "moderate",
+      "stem": "A client with Ménière's disease is having an acute attack of vertigo. What should the nurse do?",
+      "content": {
+        "options": [
+          {
+            "id": "a",
+            "text": "Have the client lie still in a quiet, dim room"
+          },
+          {
+            "id": "b",
+            "text": "Encourage the client to walk"
+          },
+          {
+            "id": "c",
+            "text": "Turn on bright lights"
+          },
+          {
+            "id": "d",
+            "text": "Encourage a high-sodium diet"
+          }
+        ]
+      },
+      "key": {
+        "correct": "a"
+      },
+      "rationale": {
+        "correct": "Ménière's: vertigo, tinnitus and hearing loss; limit sodium and keep the client safe during attacks.",
+        "perOption": {
+          "a": "Movement and stimulation worsen the vertigo.",
+          "b": "Walking risks falls.",
+          "c": "Stimulation worsens symptoms.",
+          "d": "A low-sodium diet is recommended."
+        },
+        "references": [
+          "Medical-surgical nursing texts (e.g. Lewis; Ignatavicius)",
+          "Reviewed by the content team on 17 November 2026."
+        ]
+      },
+      "educationalObjective": "Manage an acute Ménière's attack."
+    },
+    {
+      "id": "c1a00015-0000-4000-8000-000000000025",
+      "itemType": "matrix_mc",
+      "clientNeeds": "PHI.PA",
+      "bodySystem": "neurological",
+      "subtopics": [
+        "degenerative-neurological-disorders"
+      ],
+      "cjmmSkill": "analyze_cues",
+      "difficulty": "difficult",
+      "stem": "For each disorder, indicate its characteristic finding.",
+      "content": {
+        "rows": [
+          {
+            "id": "r1",
+            "text": "Myasthenia gravis"
+          },
+          {
+            "id": "r2",
+            "text": "Guillain-Barré syndrome"
+          },
+          {
+            "id": "r3",
+            "text": "Parkinson's disease"
+          },
+          {
+            "id": "r4",
+            "text": "Multiple sclerosis"
+          }
+        ],
+        "columns": [
+          {
+            "id": "c1",
+            "text": "Ascending paralysis"
+          },
+          {
+            "id": "c2",
+            "text": "Ptosis that worsens later in the day"
+          },
+          {
+            "id": "c3",
+            "text": "Resting tremor"
+          },
+          {
+            "id": "c4",
+            "text": "Symptoms worsen with heat"
+          }
+        ]
+      },
+      "key": {
+        "byRow": {
+          "r1": "c2",
+          "r2": "c1",
+          "r3": "c3",
+          "r4": "c4"
+        }
+      },
+      "rationale": {
+        "correct": "Tell neurological disorders apart by their hallmark features.",
+        "perOption": {
+          "r1:c1": "This is Guillain-Barré.",
+          "r1:c2": "Muscle fatigue worsens with use, so weakness increases later in the day.",
+          "r1:c3": "This is Parkinson's.",
+          "r1:c4": "This is MS.",
+          "r2:c1": "Weakness begins in the legs and moves upward.",
+          "r2:c2": "This is myasthenia gravis.",
+          "r2:c3": "This is Parkinson's.",
+          "r2:c4": "This is MS.",
+          "r3:c1": "This is Guillain-Barré.",
+          "r3:c2": "This is myasthenia gravis.",
+          "r3:c3": "A resting tremor (pill-rolling) is typical.",
+          "r3:c4": "This is MS.",
+          "r4:c1": "This is Guillain-Barré.",
+          "r4:c2": "This is myasthenia gravis.",
+          "r4:c3": "This is Parkinson's.",
+          "r4:c4": "Heat slows conduction in demyelinated nerves."
+        },
+        "references": [
+          "Medical-surgical nursing texts (e.g. Lewis; Ignatavicius)",
+          "Reviewed by the content team on 17 November 2026."
+        ]
+      },
+      "educationalObjective": "Match neurological disorders to key findings."
+    }
+  ]
+}

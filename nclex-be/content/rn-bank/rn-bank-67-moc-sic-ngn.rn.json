@@ -1,0 +1,2109 @@
+{
+  "notice": "RN bank batch 67: Management of Care and Safety: NGN items. Reviewed by the content team on 17 November 2026. See REVIEW-LOG.md.",
+  "track": "RN",
+  "subtopics": [
+    {
+      "clientNeeds": "SECE.MOC",
+      "slug": "prioritizing-client-care",
+      "name": "Prioritizing client care"
+    },
+    {
+      "clientNeeds": "SECE.MOC",
+      "slug": "delegation-and-supervision",
+      "name": "Delegation and supervision"
+    },
+    {
+      "clientNeeds": "SECE.MOC",
+      "slug": "informed-consent",
+      "name": "Informed consent"
+    },
+    {
+      "clientNeeds": "SECE.MOC",
+      "slug": "legal-and-ethical-practice",
+      "name": "Legal and ethical practice"
+    },
+    {
+      "clientNeeds": "SECE.MOC",
+      "slug": "discharge-planning-and-continuity",
+      "name": "Discharge planning and continuity of care"
+    },
+    {
+      "clientNeeds": "SECE.MOC",
+      "slug": "client-rights-and-advocacy",
+      "name": "Client rights and advocacy"
+    },
+    {
+      "clientNeeds": "SECE.MOC",
+      "slug": "confidentiality-and-information-security",
+      "name": "Confidentiality and information security"
+    },
+    {
+      "clientNeeds": "SECE.MOC",
+      "slug": "handoff-and-sbar-communication",
+      "name": "Handoff and SBAR communication"
+    },
+    {
+      "clientNeeds": "SECE.MOC",
+      "slug": "collaboration-and-referrals",
+      "name": "Collaboration and referrals"
+    },
+    {
+      "clientNeeds": "SECE.MOC",
+      "slug": "quality-improvement-and-incident-reporting",
+      "name": "Quality improvement and incident reporting"
+    },
+    {
+      "clientNeeds": "SECE.MOC",
+      "slug": "case-management-and-resources",
+      "name": "Case management and resource use"
+    },
+    {
+      "clientNeeds": "SECE.SIC",
+      "slug": "restraint-safety",
+      "name": "Restraint safety"
+    },
+    {
+      "clientNeeds": "SECE.SIC",
+      "slug": "transmission-based-precautions",
+      "name": "Transmission-based precautions"
+    },
+    {
+      "clientNeeds": "SECE.SIC",
+      "slug": "medication-safety-systems",
+      "name": "Medication safety systems"
+    },
+    {
+      "clientNeeds": "SECE.SIC",
+      "slug": "client-identification-and-error-prevention",
+      "name": "Client identification and error prevention"
+    },
+    {
+      "clientNeeds": "SECE.SIC",
+      "slug": "injury-prevention",
+      "name": "Falls and injury prevention"
+    },
+    {
+      "clientNeeds": "SECE.SIC",
+      "slug": "emergency-and-disaster-response",
+      "name": "Emergency and disaster response"
+    },
+    {
+      "clientNeeds": "SECE.SIC",
+      "slug": "hazardous-materials-and-radiation-safety",
+      "name": "Hazardous materials and radiation safety"
+    }
+  ],
+  "questions": [
+    {
+      "id": "c1a00067-0000-4000-8000-000000000001",
+      "itemType": "highlight_text",
+      "clientNeeds": "SECE.MOC",
+      "bodySystem": "cardiovascular",
+      "subtopics": [
+        "prioritizing-client-care"
+      ],
+      "cjmmSkill": "recognize_cues",
+      "difficulty": "difficult",
+      "stem": "Read the shift report. Highlight the findings that need the nurse's follow-up first.",
+      "content": {
+        "segments": [
+          {
+            "id": "s1",
+            "text": "Room 8: client with heart failure. ",
+            "selectable": false
+          },
+          {
+            "id": "s2",
+            "text": "Weight up 1.8 kg since yesterday",
+            "selectable": true
+          },
+          {
+            "id": "s3",
+            "text": ". ",
+            "selectable": false
+          },
+          {
+            "id": "s4",
+            "text": "Ate 75% of breakfast",
+            "selectable": true
+          },
+          {
+            "id": "s5",
+            "text": ". ",
+            "selectable": false
+          },
+          {
+            "id": "s6",
+            "text": "New crackles in both lung bases",
+            "selectable": true
+          },
+          {
+            "id": "s7",
+            "text": ". ",
+            "selectable": false
+          },
+          {
+            "id": "s8",
+            "text": "Walked in the hall twice",
+            "selectable": true
+          },
+          {
+            "id": "s9",
+            "text": ". ",
+            "selectable": false
+          },
+          {
+            "id": "s10",
+            "text": "Reports needing three pillows to breathe at night",
+            "selectable": true
+          },
+          {
+            "id": "s11",
+            "text": ". ",
+            "selectable": false
+          },
+          {
+            "id": "s12",
+            "text": "Daughter visiting this afternoon",
+            "selectable": true
+          },
+          {
+            "id": "s13",
+            "text": ".",
+            "selectable": false
+          }
+        ]
+      },
+      "key": {
+        "correct": [
+          "s2",
+          "s6",
+          "s10"
+        ]
+      },
+      "rationale": {
+        "correct": "Weight gain, crackles and orthopnea point to worsening heart failure.",
+        "perOption": {
+          "s2": "Rapid weight gain suggests fluid retention.",
+          "s4": "Adequate intake.",
+          "s6": "Signals pulmonary congestion.",
+          "s8": "Activity tolerated.",
+          "s10": "New orthopnea suggests worsening heart failure.",
+          "s12": "Not a clinical concern."
+        },
+        "references": [
+          "NCSBN National Guidelines for Nursing Delegation; LaCharity, Prioritization, Delegation & Assignment",
+          "Reviewed by the content team on 17 November 2026."
+        ]
+      },
+      "educationalObjective": "Recognize cues of deterioration in report."
+    },
+    {
+      "id": "c1a00067-0000-4000-8000-000000000002",
+      "itemType": "matrix_mr",
+      "clientNeeds": "SECE.MOC",
+      "bodySystem": "fundamentals",
+      "subtopics": [
+        "delegation-and-supervision"
+      ],
+      "cjmmSkill": "take_action",
+      "difficulty": "difficult",
+      "stem": "For each task, indicate every staff member who may perform it within usual scope. Each row may have more than one answer.",
+      "content": {
+        "rows": [
+          {
+            "id": "r1",
+            "text": "Measuring vital signs of a stable client"
+          },
+          {
+            "id": "r2",
+            "text": "Giving an IV push opioid"
+          },
+          {
+            "id": "r3",
+            "text": "Reinforcing teaching started by the RN"
+          },
+          {
+            "id": "r4",
+            "text": "Developing the nursing care plan"
+          }
+        ],
+        "columns": [
+          {
+            "id": "c1",
+            "text": "RN"
+          },
+          {
+            "id": "c2",
+            "text": "LPN"
+          },
+          {
+            "id": "c3",
+            "text": "Assistive personnel"
+          }
+        ],
+        "groupAxis": "row"
+      },
+      "key": {
+        "byGroup": {
+          "r1": [
+            "r1:c1",
+            "r1:c2",
+            "r1:c3"
+          ],
+          "r2": [
+            "r2:c1"
+          ],
+          "r3": [
+            "r3:c1",
+            "r3:c2"
+          ],
+          "r4": [
+            "r4:c1"
+          ]
+        }
+      },
+      "rationale": {
+        "correct": "Scope differs by role; the RN keeps assessment, planning and IV push medications.",
+        "perOption": {
+          "r1:c1": "Within RN scope.",
+          "r1:c2": "Within LPN scope.",
+          "r1:c3": "Routine task for AP.",
+          "r2:c1": "Within RN scope.",
+          "r2:c2": "Usually outside LPN scope in most states.",
+          "r2:c3": "Outside AP scope.",
+          "r3:c1": "Within RN scope.",
+          "r3:c2": "LPNs reinforce teaching.",
+          "r3:c3": "AP don't teach.",
+          "r4:c1": "RN responsibility.",
+          "r4:c2": "LPNs contribute data but don't develop the plan.",
+          "r4:c3": "Outside AP scope."
+        },
+        "references": [
+          "NCSBN National Guidelines for Nursing Delegation; LaCharity, Prioritization, Delegation & Assignment",
+          "Reviewed by the content team on 17 November 2026."
+        ]
+      },
+      "educationalObjective": "Identify scope for each team member."
+    },
+    {
+      "id": "c1a00067-0000-4000-8000-000000000003",
+      "itemType": "dropdown_cloze",
+      "clientNeeds": "SECE.MOC",
+      "bodySystem": "fundamentals",
+      "subtopics": [
+        "informed-consent"
+      ],
+      "cjmmSkill": "analyze_cues",
+      "difficulty": "moderate",
+      "stem": "Complete the sentence about informed consent.",
+      "content": {
+        "template": "Before surgery, {{b1}} is responsible for explaining the procedure, risks and alternatives, and {{b2}} witnesses the client's signature.",
+        "blanks": [
+          {
+            "id": "b1",
+            "options": [
+              {
+                "id": "a",
+                "text": "the surgeon"
+              },
+              {
+                "id": "b",
+                "text": "the nurse"
+              },
+              {
+                "id": "c",
+                "text": "the client's family"
+              }
+            ]
+          },
+          {
+            "id": "b2",
+            "options": [
+              {
+                "id": "a",
+                "text": "the nurse"
+              },
+              {
+                "id": "b",
+                "text": "the client's child"
+              },
+              {
+                "id": "c",
+                "text": "no one"
+              }
+            ]
+          }
+        ]
+      },
+      "key": {
+        "byBlank": {
+          "b1": "a",
+          "b2": "a"
+        }
+      },
+      "rationale": {
+        "correct": "The provider explains; the nurse witnesses and checks understanding.",
+        "perOption": {
+          "b1:a": "The person doing the procedure obtains informed consent.",
+          "b1:b": "Nurses don't obtain informed consent for surgery.",
+          "b1:c": "Not their role.",
+          "b2:a": "Nurses often witness the signature and confirm the client's understanding.",
+          "b2:b": "Not usually the witness.",
+          "b2:c": "A witness is required."
+        },
+        "references": [
+          "Fundamentals of nursing texts (e.g. Potter & Perry)",
+          "Reviewed by the content team on 17 November 2026."
+        ]
+      },
+      "educationalObjective": "Explain roles in informed consent."
+    },
+    {
+      "id": "c1a00067-0000-4000-8000-000000000004",
+      "itemType": "dropdown_table",
+      "clientNeeds": "SECE.MOC",
+      "bodySystem": "fundamentals",
+      "subtopics": [
+        "legal-and-ethical-practice"
+      ],
+      "cjmmSkill": "analyze_cues",
+      "difficulty": "difficult",
+      "stem": "For each nursing action, select the legal term that best describes it.",
+      "content": {
+        "columns": [
+          "Action",
+          "Legal term"
+        ],
+        "rows": [
+          {
+            "id": "r1",
+            "cells": [
+              {
+                "text": "Telling a coworker false, damaging information about a client"
+              },
+              {
+                "blankId": "b1"
+              }
+            ]
+          },
+          {
+            "id": "r2",
+            "cells": [
+              {
+                "text": "Not checking a client's allergy before giving penicillin, causing anaphylaxis"
+              },
+              {
+                "blankId": "b2"
+              }
+            ]
+          },
+          {
+            "id": "r3",
+            "cells": [
+              {
+                "text": "Inserting a catheter after a competent client refused"
+              },
+              {
+                "blankId": "b3"
+              }
+            ]
+          }
+        ],
+        "blanks": [
+          {
+            "id": "b1",
+            "options": [
+              {
+                "id": "a",
+                "text": "Slander"
+              },
+              {
+                "id": "b",
+                "text": "Battery"
+              },
+              {
+                "id": "c",
+                "text": "Negligence"
+              }
+            ]
+          },
+          {
+            "id": "b2",
+            "options": [
+              {
+                "id": "a",
+                "text": "Slander"
+              },
+              {
+                "id": "b",
+                "text": "Negligence"
+              },
+              {
+                "id": "c",
+                "text": "False imprisonment"
+              }
+            ]
+          },
+          {
+            "id": "b3",
+            "options": [
+              {
+                "id": "a",
+                "text": "Battery"
+              },
+              {
+                "id": "b",
+                "text": "Libel"
+              },
+              {
+                "id": "c",
+                "text": "Assault"
+              }
+            ]
+          }
+        ]
+      },
+      "key": {
+        "byBlank": {
+          "b1": "a",
+          "b2": "b",
+          "b3": "a"
+        }
+      },
+      "rationale": {
+        "correct": "Know common torts: slander, libel, assault, battery, negligence, false imprisonment.",
+        "perOption": {
+          "b1:a": "Spoken false statements that harm reputation.",
+          "b1:b": "Unwanted touching.",
+          "b1:c": "Failure to meet the standard of care.",
+          "b2:a": "Not a statement.",
+          "b2:b": "A breach of duty that caused harm.",
+          "b2:c": "Not related.",
+          "b3:a": "Touching without consent.",
+          "b3:b": "Written defamation.",
+          "b3:c": "A threat; here the contact occurred."
+        },
+        "references": [
+          "Fundamentals of nursing texts (e.g. Potter & Perry)",
+          "Reviewed by the content team on 17 November 2026."
+        ]
+      },
+      "educationalObjective": "Identify legal terms."
+    },
+    {
+      "id": "c1a00067-0000-4000-8000-000000000005",
+      "itemType": "multiple_response_grouping",
+      "clientNeeds": "SECE.MOC",
+      "bodySystem": "fundamentals",
+      "subtopics": [
+        "discharge-planning-and-continuity"
+      ],
+      "cjmmSkill": "generate_solutions",
+      "difficulty": "difficult",
+      "stem": "A client who lives alone is going home after a hip fracture repair. For each area, select the actions to include in the discharge plan.",
+      "content": {
+        "groups": [
+          {
+            "id": "g1",
+            "label": "Home safety",
+            "options": [
+              {
+                "id": "a",
+                "text": "Remove throw rugs"
+              },
+              {
+                "id": "b",
+                "text": "Install grab bars in the bathroom"
+              },
+              {
+                "id": "c",
+                "text": "Use a low chair without arms"
+              }
+            ]
+          },
+          {
+            "id": "g2",
+            "label": "Follow-up",
+            "options": [
+              {
+                "id": "d",
+                "text": "Schedule home physical therapy"
+              },
+              {
+                "id": "e",
+                "text": "Plan the first follow-up visit with the surgeon"
+              },
+              {
+                "id": "f",
+                "text": "Stop the anticoagulant when pain improves"
+              }
+            ]
+          }
+        ]
+      },
+      "key": {
+        "byGroup": {
+          "g1": [
+            "a",
+            "b"
+          ],
+          "g2": [
+            "d",
+            "e"
+          ]
+        }
+      },
+      "rationale": {
+        "correct": "Discharge plans include home safety and follow-up services.",
+        "perOption": {
+          "a": "Reduces fall risk.",
+          "b": "Supports safe transfers.",
+          "c": "Raised chairs with arms are safer after hip surgery.",
+          "d": "Supports mobility recovery.",
+          "e": "Monitors healing.",
+          "f": "Anticoagulants follow the prescribed duration."
+        },
+        "references": [
+          "NCSBN National Guidelines for Nursing Delegation; LaCharity, Prioritization, Delegation & Assignment",
+          "Reviewed by the content team on 17 November 2026."
+        ]
+      },
+      "educationalObjective": "Plan discharge after hip surgery."
+    },
+    {
+      "id": "c1a00067-0000-4000-8000-000000000006",
+      "itemType": "multiple_choice",
+      "clientNeeds": "SECE.MOC",
+      "bodySystem": "respiratory",
+      "subtopics": [
+        "prioritizing-client-care"
+      ],
+      "cjmmSkill": "prioritize_hypotheses",
+      "difficulty": "difficult",
+      "stem": "Which client should the nurse assess first?",
+      "content": {
+        "options": [
+          {
+            "id": "a",
+            "text": "A client with a chest tube whose drainage changed from serous to 50 mL of bright red blood in the last hour"
+          },
+          {
+            "id": "b",
+            "text": "A client 2 hours after a bronchoscopy who has new stridor"
+          },
+          {
+            "id": "c",
+            "text": "A client with pneumonia whose temperature is 38.3 °C (101 °F)"
+          },
+          {
+            "id": "d",
+            "text": "A client with asthma who needs a scheduled inhaler"
+          }
+        ]
+      },
+      "key": {
+        "correct": "b"
+      },
+      "rationale": {
+        "correct": "Airway threats come first.",
+        "perOption": {
+          "a": "Needs prompt follow-up, but not the most urgent here.",
+          "b": "Stridor signals upper airway obstruction from laryngeal edema.",
+          "c": "Expected.",
+          "d": "Routine."
+        },
+        "references": [
+          "NCSBN National Guidelines for Nursing Delegation; LaCharity, Prioritization, Delegation & Assignment",
+          "Reviewed by the content team on 17 November 2026."
+        ]
+      },
+      "educationalObjective": "Prioritize an airway problem."
+    },
+    {
+      "id": "c1a00067-0000-4000-8000-000000000007",
+      "itemType": "multiple_choice",
+      "clientNeeds": "SECE.MOC",
+      "bodySystem": "fundamentals",
+      "subtopics": [
+        "delegation-and-supervision"
+      ],
+      "cjmmSkill": "evaluate_outcomes",
+      "difficulty": "moderate",
+      "stem": "The RN sees assistive personnel (AP) feeding a client quickly while the client is lying flat. What should the RN do first?",
+      "content": {
+        "options": [
+          {
+            "id": "a",
+            "text": "Wait and report the AP to the manager later"
+          },
+          {
+            "id": "b",
+            "text": "Stop the feeding, raise the head of the bed and coach the AP on safe feeding"
+          },
+          {
+            "id": "c",
+            "text": "Take over all future feedings"
+          },
+          {
+            "id": "d",
+            "text": "Document the observation only"
+          }
+        ]
+      },
+      "key": {
+        "correct": "b"
+      },
+      "rationale": {
+        "correct": "Supervision includes immediate correction of unsafe care.",
+        "perOption": {
+          "a": "The client is at immediate risk.",
+          "b": "Prevents aspiration and corrects practice.",
+          "c": "Coaching is more effective.",
+          "d": "Action is needed."
+        },
+        "references": [
+          "NCSBN National Guidelines for Nursing Delegation; LaCharity, Prioritization, Delegation & Assignment",
+          "Reviewed by the content team on 17 November 2026."
+        ]
+      },
+      "educationalObjective": "Correct unsafe delegated care."
+    },
+    {
+      "id": "c1a00067-0000-4000-8000-000000000008",
+      "itemType": "multiple_choice",
+      "clientNeeds": "SECE.MOC",
+      "bodySystem": "fundamentals",
+      "subtopics": [
+        "client-rights-and-advocacy"
+      ],
+      "cjmmSkill": "take_action",
+      "difficulty": "moderate",
+      "stem": "A client from a different culture prefers that the family make health decisions. The client is competent. What should the nurse do?",
+      "content": {
+        "options": [
+          {
+            "id": "a",
+            "text": "Insist the client make all decisions alone"
+          },
+          {
+            "id": "b",
+            "text": "Confirm the client's preference and document that the client chooses to involve the family"
+          },
+          {
+            "id": "c",
+            "text": "Ignore the family"
+          },
+          {
+            "id": "d",
+            "text": "Let the family override the client's wishes"
+          }
+        ]
+      },
+      "key": {
+        "correct": "b"
+      },
+      "rationale": {
+        "correct": "Respect a competent client's chosen decision-making style.",
+        "perOption": {
+          "a": "Disrespects the client's preference.",
+          "b": "A competent client can choose how decisions are made.",
+          "c": "Not respectful of the client's wishes.",
+          "d": "The client's own choice comes first."
+        },
+        "references": [
+          "Fundamentals of nursing texts (e.g. Potter & Perry)",
+          "Reviewed by the content team on 17 November 2026."
+        ]
+      },
+      "educationalObjective": "Respect cultural decision-making."
+    },
+    {
+      "id": "c1a00067-0000-4000-8000-000000000009",
+      "itemType": "multiple_choice",
+      "clientNeeds": "SECE.MOC",
+      "bodySystem": "fundamentals",
+      "subtopics": [
+        "confidentiality-and-information-security"
+      ],
+      "cjmmSkill": "take_action",
+      "difficulty": "moderate",
+      "stem": "A client's employer calls asking whether the client has a drug problem. What should the nurse say?",
+      "content": {
+        "options": [
+          {
+            "id": "a",
+            "text": "\"Yes, the client is being treated for substance use.\""
+          },
+          {
+            "id": "b",
+            "text": "\"I can't share any information about any client.\""
+          },
+          {
+            "id": "c",
+            "text": "\"Call back after discharge.\""
+          },
+          {
+            "id": "d",
+            "text": "\"I'll ask the client to call you.\""
+          }
+        ]
+      },
+      "key": {
+        "correct": "b"
+      },
+      "rationale": {
+        "correct": "Substance use treatment records have extra privacy protections.",
+        "perOption": {
+          "a": "Violates confidentiality.",
+          "b": "Information isn't shared without the client's written permission.",
+          "c": "Still not allowed.",
+          "d": "May imply the person is a client; better to share nothing."
+        },
+        "references": [
+          "Fundamentals of nursing texts (e.g. Potter & Perry)",
+          "Reviewed by the content team on 17 November 2026."
+        ]
+      },
+      "educationalObjective": "Protect sensitive health information."
+    },
+    {
+      "id": "c1a00067-0000-4000-8000-000000000010",
+      "itemType": "multiple_choice",
+      "clientNeeds": "SECE.MOC",
+      "bodySystem": "fundamentals",
+      "subtopics": [
+        "handoff-and-sbar-communication"
+      ],
+      "cjmmSkill": "take_action",
+      "difficulty": "moderate",
+      "stem": "The nurse receives handoff about a client \"doing fine.\" When the nurse checks the client, the client is pale, sweaty and has a heart rate of 128/min. What should the nurse do first?",
+      "content": {
+        "options": [
+          {
+            "id": "a",
+            "text": "Document that the handoff was inaccurate"
+          },
+          {
+            "id": "b",
+            "text": "Assess the client further and get help as needed"
+          },
+          {
+            "id": "c",
+            "text": "Call the previous nurse to discuss"
+          },
+          {
+            "id": "d",
+            "text": "Wait to see whether it improves"
+          }
+        ]
+      },
+      "key": {
+        "correct": "b"
+      },
+      "rationale": {
+        "correct": "Always verify handoff information with your own assessment.",
+        "perOption": {
+          "a": "Client care comes first.",
+          "b": "Act on what is found.",
+          "c": "Not first.",
+          "d": "Delays care."
+        },
+        "references": [
+          "NCSBN National Guidelines for Nursing Delegation; LaCharity, Prioritization, Delegation & Assignment",
+          "Reviewed by the content team on 17 November 2026."
+        ]
+      },
+      "educationalObjective": "Act on a change found after handoff."
+    },
+    {
+      "id": "c1a00067-0000-4000-8000-000000000011",
+      "itemType": "multiple_choice",
+      "clientNeeds": "SECE.MOC",
+      "bodySystem": "fundamentals",
+      "subtopics": [
+        "collaboration-and-referrals"
+      ],
+      "cjmmSkill": "generate_solutions",
+      "difficulty": "moderate",
+      "stem": "A client with COPD is having trouble using an inhaler correctly despite teaching. Which team member can best help?",
+      "content": {
+        "options": [
+          {
+            "id": "a",
+            "text": "Respiratory therapist"
+          },
+          {
+            "id": "b",
+            "text": "Physical therapist"
+          },
+          {
+            "id": "c",
+            "text": "Dietitian"
+          },
+          {
+            "id": "d",
+            "text": "Chaplain"
+          }
+        ]
+      },
+      "key": {
+        "correct": "a"
+      },
+      "rationale": {
+        "correct": "Use interprofessional expertise for specific needs.",
+        "perOption": {
+          "a": "Respiratory therapists are experts in inhaler technique and devices.",
+          "b": "Not the main focus.",
+          "c": "Not related.",
+          "d": "Not related."
+        },
+        "references": [
+          "NCSBN National Guidelines for Nursing Delegation; LaCharity, Prioritization, Delegation & Assignment",
+          "Reviewed by the content team on 17 November 2026."
+        ]
+      },
+      "educationalObjective": "Refer for inhaler teaching."
+    },
+    {
+      "id": "c1a00067-0000-4000-8000-000000000012",
+      "itemType": "ordered_response",
+      "clientNeeds": "SECE.MOC",
+      "bodySystem": "fundamentals",
+      "subtopics": [
+        "prioritizing-client-care"
+      ],
+      "cjmmSkill": "prioritize_hypotheses",
+      "difficulty": "difficult",
+      "stem": "After report, place the clients in the order the nurse should see them.",
+      "content": {
+        "items": [
+          {
+            "id": "c",
+            "text": "A client with a glucose of 62 mg/dL who is alert"
+          },
+          {
+            "id": "b",
+            "text": "A client with chest pain who received nitroglycerin 5 minutes ago and still has pain"
+          },
+          {
+            "id": "d",
+            "text": "A client who needs help to the bathroom"
+          },
+          {
+            "id": "a",
+            "text": "A client with a new tracheostomy who is coughing and has noisy breathing"
+          }
+        ]
+      },
+      "key": {
+        "order": [
+          "a",
+          "b",
+          "c",
+          "d"
+        ],
+        "scoring": "all_or_nothing"
+      },
+      "rationale": {
+        "correct": "Use ABCs, then other urgent needs, then routine tasks.",
+        "perOption": {
+          "a": "Airway first.",
+          "b": "Possible ACS; circulation.",
+          "c": "Treat promptly but airway and circulation first.",
+          "d": "Can be delegated."
+        },
+        "references": [
+          "NCSBN National Guidelines for Nursing Delegation; LaCharity, Prioritization, Delegation & Assignment",
+          "Reviewed by the content team on 17 November 2026."
+        ]
+      },
+      "educationalObjective": "Order clients by priority."
+    },
+    {
+      "id": "c1a00067-0000-4000-8000-000000000013",
+      "itemType": "multiple_choice",
+      "clientNeeds": "SECE.MOC",
+      "bodySystem": "fundamentals",
+      "subtopics": [
+        "quality-improvement-and-incident-reporting"
+      ],
+      "cjmmSkill": "analyze_cues",
+      "difficulty": "moderate",
+      "stem": "Which question best starts a root cause analysis of a medication error?",
+      "content": {
+        "options": [
+          {
+            "id": "a",
+            "text": "\"Who made the mistake?\""
+          },
+          {
+            "id": "b",
+            "text": "\"What happened, and what in the process allowed it?\""
+          },
+          {
+            "id": "c",
+            "text": "\"How should the nurse be disciplined?\""
+          },
+          {
+            "id": "d",
+            "text": "\"Can we keep this from the client?\""
+          }
+        ]
+      },
+      "key": {
+        "correct": "b"
+      },
+      "rationale": {
+        "correct": "Root cause analysis focuses on processes and systems.",
+        "perOption": {
+          "a": "Blames a person instead of finding causes.",
+          "b": "RCA looks for system factors.",
+          "c": "Not the goal of RCA.",
+          "d": "Errors are disclosed."
+        },
+        "references": [
+          "NCSBN National Guidelines for Nursing Delegation; LaCharity, Prioritization, Delegation & Assignment",
+          "Reviewed by the content team on 17 November 2026."
+        ]
+      },
+      "educationalObjective": "Apply root cause analysis."
+    },
+    {
+      "id": "c1a00067-0000-4000-8000-000000000014",
+      "itemType": "multiple_choice",
+      "clientNeeds": "SECE.MOC",
+      "bodySystem": "fundamentals",
+      "subtopics": [
+        "legal-and-ethical-practice"
+      ],
+      "cjmmSkill": "take_action",
+      "difficulty": "moderate",
+      "stem": "After a medication error causes harm, the provider and nurse meet with the client. What is the appropriate approach?",
+      "content": {
+        "options": [
+          {
+            "id": "a",
+            "text": "Hide the error to avoid a lawsuit"
+          },
+          {
+            "id": "b",
+            "text": "Disclose the error honestly, explain what is being done and apologize"
+          },
+          {
+            "id": "c",
+            "text": "Blame another department"
+          },
+          {
+            "id": "d",
+            "text": "Tell the client to talk to a lawyer"
+          }
+        ]
+      },
+      "key": {
+        "correct": "b"
+      },
+      "rationale": {
+        "correct": "Honest disclosure is an ethical and professional expectation.",
+        "perOption": {
+          "a": "Unethical and often against policy and law.",
+          "b": "Disclosure supports trust and is expected.",
+          "c": "Not appropriate.",
+          "d": "Not helpful."
+        },
+        "references": [
+          "Fundamentals of nursing texts (e.g. Potter & Perry)",
+          "Reviewed by the content team on 17 November 2026."
+        ]
+      },
+      "educationalObjective": "Disclose errors to clients."
+    },
+    {
+      "id": "c1a00067-0000-4000-8000-000000000015",
+      "itemType": "multiple_choice",
+      "clientNeeds": "SECE.MOC",
+      "bodySystem": "fundamentals",
+      "subtopics": [
+        "case-management-and-resources"
+      ],
+      "cjmmSkill": "generate_solutions",
+      "difficulty": "moderate",
+      "stem": "A client with limited mobility can't get groceries after discharge. Which resource is most appropriate?",
+      "content": {
+        "options": [
+          {
+            "id": "a",
+            "text": "A community meal delivery program"
+          },
+          {
+            "id": "b",
+            "text": "Speech therapy"
+          },
+          {
+            "id": "c",
+            "text": "Cardiac rehabilitation"
+          },
+          {
+            "id": "d",
+            "text": "A new prescription"
+          }
+        ]
+      },
+      "key": {
+        "correct": "a"
+      },
+      "rationale": {
+        "correct": "Community resources support safe living at home.",
+        "perOption": {
+          "a": "Meets nutrition needs at home.",
+          "b": "Not related.",
+          "c": "Not related.",
+          "d": "Not related."
+        },
+        "references": [
+          "NCSBN National Guidelines for Nursing Delegation; LaCharity, Prioritization, Delegation & Assignment",
+          "Reviewed by the content team on 17 November 2026."
+        ]
+      },
+      "educationalObjective": "Connect clients with community resources."
+    },
+    {
+      "id": "c1a00067-0000-4000-8000-000000000016",
+      "itemType": "matrix_mc",
+      "clientNeeds": "SECE.MOC",
+      "bodySystem": "fundamentals",
+      "subtopics": [
+        "delegation-and-supervision"
+      ],
+      "cjmmSkill": "take_action",
+      "difficulty": "difficult",
+      "stem": "The RN is assigning clients for the shift. For each client, choose the most appropriate caregiver.",
+      "content": {
+        "rows": [
+          {
+            "id": "r1",
+            "text": "Client with new atrial fibrillation started on a diltiazem infusion"
+          },
+          {
+            "id": "r2",
+            "text": "Client with stable chronic kidney disease who needs scheduled oral medications"
+          },
+          {
+            "id": "r3",
+            "text": "Client being admitted from the emergency department"
+          },
+          {
+            "id": "r4",
+            "text": "Client 3 days after a knee replacement who is walking with a walker"
+          }
+        ],
+        "columns": [
+          {
+            "id": "c1",
+            "text": "RN"
+          },
+          {
+            "id": "c2",
+            "text": "LPN"
+          }
+        ]
+      },
+      "key": {
+        "byRow": {
+          "r1": "c1",
+          "r2": "c2",
+          "r3": "c1",
+          "r4": "c2"
+        }
+      },
+      "rationale": {
+        "correct": "Assign unstable or new clients to the RN, and stable clients with predictable care to the LPN.",
+        "perOption": {
+          "r1:c1": "Titrated IV infusions and unstable rhythm need RN care.",
+          "r1:c2": "Not appropriate for an LPN.",
+          "r2:c1": "Possible, but can be assigned.",
+          "r2:c2": "Stable client with predictable care.",
+          "r3:c1": "Admission assessment is RN work.",
+          "r3:c2": "Not appropriate.",
+          "r4:c1": "Possible, but can be assigned.",
+          "r4:c2": "Stable and predictable."
+        },
+        "references": [
+          "NCSBN National Guidelines for Nursing Delegation; LaCharity, Prioritization, Delegation & Assignment",
+          "Reviewed by the content team on 17 November 2026."
+        ]
+      },
+      "educationalObjective": "Assign clients by stability."
+    },
+    {
+      "id": "c1a00067-0000-4000-8000-000000000017",
+      "itemType": "multiple_choice",
+      "clientNeeds": "SECE.MOC",
+      "bodySystem": "endocrine",
+      "subtopics": [
+        "prioritizing-client-care"
+      ],
+      "cjmmSkill": "prioritize_hypotheses",
+      "difficulty": "moderate",
+      "stem": "Which client should the nurse see first?",
+      "content": {
+        "options": [
+          {
+            "id": "a",
+            "text": "A client with hypothyroidism who feels cold"
+          },
+          {
+            "id": "b",
+            "text": "A client with Addison's disease who is dizzy, with blood pressure 78/44 mm Hg"
+          },
+          {
+            "id": "c",
+            "text": "A client with type 2 diabetes asking about diet"
+          },
+          {
+            "id": "d",
+            "text": "A client with Cushing syndrome who bruises easily"
+          }
+        ]
+      },
+      "key": {
+        "correct": "b"
+      },
+      "rationale": {
+        "correct": "Signs of adrenal crisis need immediate action.",
+        "perOption": {
+          "a": "Expected.",
+          "b": "Possible adrenal crisis.",
+          "c": "Teaching need.",
+          "d": "Expected."
+        },
+        "references": [
+          "NCSBN National Guidelines for Nursing Delegation; LaCharity, Prioritization, Delegation & Assignment",
+          "Reviewed by the content team on 17 November 2026."
+        ]
+      },
+      "educationalObjective": "Prioritize an endocrine emergency."
+    },
+    {
+      "id": "c1a00067-0000-4000-8000-000000000018",
+      "itemType": "multiple_choice",
+      "clientNeeds": "SECE.MOC",
+      "bodySystem": "fundamentals",
+      "subtopics": [
+        "client-rights-and-advocacy"
+      ],
+      "cjmmSkill": "take_action",
+      "difficulty": "moderate",
+      "stem": "A client asks to stop a treatment that is keeping them alive. The client is competent and understands the consequences. What should the nurse do?",
+      "content": {
+        "options": [
+          {
+            "id": "a",
+            "text": "Refuse to involve the provider"
+          },
+          {
+            "id": "b",
+            "text": "Support the client's right and notify the provider to discuss the request"
+          },
+          {
+            "id": "c",
+            "text": "Tell the family to convince the client"
+          },
+          {
+            "id": "d",
+            "text": "Continue treatment without telling the client"
+          }
+        ]
+      },
+      "key": {
+        "correct": "b"
+      },
+      "rationale": {
+        "correct": "Competent clients can refuse life-sustaining treatment.",
+        "perOption": {
+          "a": "The request must be addressed.",
+          "b": "A competent client can refuse treatment.",
+          "c": "Not respectful of autonomy.",
+          "d": "Unethical."
+        },
+        "references": [
+          "Fundamentals of nursing texts (e.g. Potter & Perry)",
+          "Reviewed by the content team on 17 November 2026."
+        ]
+      },
+      "educationalObjective": "Support a client's right to refuse treatment."
+    },
+    {
+      "id": "c1a00067-0000-4000-8000-000000000019",
+      "itemType": "multiple_choice",
+      "clientNeeds": "SECE.MOC",
+      "bodySystem": "fundamentals",
+      "subtopics": [
+        "handoff-and-sbar-communication"
+      ],
+      "cjmmSkill": "take_action",
+      "difficulty": "moderate",
+      "stem": "The nurse is unsure about an order written by the provider. What should the nurse do?",
+      "content": {
+        "options": [
+          {
+            "id": "a",
+            "text": "Guess what the provider meant"
+          },
+          {
+            "id": "b",
+            "text": "Contact the provider to clarify before carrying out the order"
+          },
+          {
+            "id": "c",
+            "text": "Ask another nurse what to do and follow their advice"
+          },
+          {
+            "id": "d",
+            "text": "Ignore the order"
+          }
+        ]
+      },
+      "key": {
+        "correct": "b"
+      },
+      "rationale": {
+        "correct": "Clarify unclear orders with the prescriber.",
+        "perOption": {
+          "a": "Unsafe.",
+          "b": "Clarification prevents errors.",
+          "c": "The prescriber must clarify.",
+          "d": "Not appropriate."
+        },
+        "references": [
+          "NCSBN National Guidelines for Nursing Delegation; LaCharity, Prioritization, Delegation & Assignment",
+          "Reviewed by the content team on 17 November 2026."
+        ]
+      },
+      "educationalObjective": "Clarify unclear orders."
+    },
+    {
+      "id": "c1a00067-0000-4000-8000-000000000020",
+      "itemType": "sata",
+      "clientNeeds": "SECE.MOC",
+      "bodySystem": "fundamentals",
+      "subtopics": [
+        "legal-and-ethical-practice"
+      ],
+      "cjmmSkill": "take_action",
+      "difficulty": "moderate",
+      "stem": "Which actions show professional accountability? Select all that apply.",
+      "content": {
+        "options": [
+          {
+            "id": "a",
+            "text": "Reporting your own medication error"
+          },
+          {
+            "id": "b",
+            "text": "Keeping your clinical knowledge current"
+          },
+          {
+            "id": "c",
+            "text": "Practicing within your scope"
+          },
+          {
+            "id": "d",
+            "text": "Signing for care another nurse gave"
+          },
+          {
+            "id": "e",
+            "text": "Following up on care you delegated"
+          },
+          {
+            "id": "f",
+            "text": "Leaving the unit without handoff"
+          }
+        ]
+      },
+      "key": {
+        "correct": [
+          "a",
+          "b",
+          "c",
+          "e"
+        ]
+      },
+      "rationale": {
+        "correct": "Accountability includes honesty, competence, scope and follow-up.",
+        "perOption": {
+          "a": "Accountability includes owning mistakes.",
+          "b": "Competence is a professional responsibility.",
+          "c": "Protects clients.",
+          "d": "Falsifies the record.",
+          "e": "The RN remains accountable for delegated care.",
+          "f": "Abandonment."
+        },
+        "references": [
+          "Fundamentals of nursing texts (e.g. Potter & Perry)",
+          "Reviewed by the content team on 17 November 2026."
+        ]
+      },
+      "educationalObjective": "Demonstrate professional accountability."
+    },
+    {
+      "id": "c1a00067-0000-4000-8000-000000000021",
+      "itemType": "multiple_choice",
+      "clientNeeds": "SECE.MOC",
+      "bodySystem": "fundamentals",
+      "subtopics": [
+        "delegation-and-supervision"
+      ],
+      "cjmmSkill": "take_action",
+      "difficulty": "moderate",
+      "stem": "Which is an appropriate task for the RN to delegate to an LPN in a home health agency?",
+      "content": {
+        "options": [
+          {
+            "id": "a",
+            "text": "Admission visit and plan of care for a new client"
+          },
+          {
+            "id": "b",
+            "text": "Weekly dressing change and data collection for a stable client"
+          },
+          {
+            "id": "c",
+            "text": "Teaching a new diabetic how to give insulin for the first time"
+          },
+          {
+            "id": "d",
+            "text": "Evaluating whether goals have been met"
+          }
+        ]
+      },
+      "key": {
+        "correct": "b"
+      },
+      "rationale": {
+        "correct": "LPNs provide care to stable clients; RNs admit, plan, teach and evaluate.",
+        "perOption": {
+          "a": "RN responsibility.",
+          "b": "Within LPN scope with RN supervision.",
+          "c": "Initial teaching is RN work.",
+          "d": "RN responsibility."
+        },
+        "references": [
+          "NCSBN National Guidelines for Nursing Delegation; LaCharity, Prioritization, Delegation & Assignment",
+          "Reviewed by the content team on 17 November 2026."
+        ]
+      },
+      "educationalObjective": "Delegate in home health."
+    },
+    {
+      "id": "c1a00067-0000-4000-8000-000000000022",
+      "itemType": "multiple_choice",
+      "clientNeeds": "SECE.MOC",
+      "bodySystem": "neurological",
+      "subtopics": [
+        "prioritizing-client-care"
+      ],
+      "cjmmSkill": "prioritize_hypotheses",
+      "difficulty": "difficult",
+      "stem": "Which client should the nurse see first?",
+      "content": {
+        "options": [
+          {
+            "id": "a",
+            "text": "A client with a spinal cord injury at T4 who has a pounding headache and a blood pressure of 200/110 mm Hg"
+          },
+          {
+            "id": "b",
+            "text": "A client with multiple sclerosis who feels tired"
+          },
+          {
+            "id": "c",
+            "text": "A client with Parkinson's disease who has a tremor"
+          },
+          {
+            "id": "d",
+            "text": "A client with a migraine who wants the lights dimmed"
+          }
+        ]
+      },
+      "key": {
+        "correct": "a"
+      },
+      "rationale": {
+        "correct": "Autonomic dysreflexia needs immediate action.",
+        "perOption": {
+          "a": "Autonomic dysreflexia is a hypertensive emergency.",
+          "b": "Expected.",
+          "c": "Expected.",
+          "d": "Comfort need."
+        },
+        "references": [
+          "NCSBN National Guidelines for Nursing Delegation; LaCharity, Prioritization, Delegation & Assignment",
+          "Reviewed by the content team on 17 November 2026."
+        ]
+      },
+      "educationalObjective": "Prioritize a neurologic emergency."
+    },
+    {
+      "id": "c1a00067-0000-4000-8000-000000000023",
+      "itemType": "multiple_choice",
+      "clientNeeds": "SECE.MOC",
+      "bodySystem": "fundamentals",
+      "subtopics": [
+        "informed-consent"
+      ],
+      "cjmmSkill": "take_action",
+      "difficulty": "moderate",
+      "stem": "A client who doesn't speak English is about to sign a consent form. The provider explained the procedure in English. What should the nurse do?",
+      "content": {
+        "options": [
+          {
+            "id": "a",
+            "text": "Witness the signature"
+          },
+          {
+            "id": "b",
+            "text": "Stop and arrange a qualified interpreter for the provider's explanation"
+          },
+          {
+            "id": "c",
+            "text": "Ask the client's teenage child to translate"
+          },
+          {
+            "id": "d",
+            "text": "Use hand gestures to explain"
+          }
+        ]
+      },
+      "key": {
+        "correct": "b"
+      },
+      "rationale": {
+        "correct": "Informed consent requires understanding in the client's language.",
+        "perOption": {
+          "a": "The client may not understand.",
+          "b": "Consent requires understanding.",
+          "c": "Not a qualified interpreter.",
+          "d": "Not enough for informed consent."
+        },
+        "references": [
+          "Fundamentals of nursing texts (e.g. Potter & Perry)",
+          "Reviewed by the content team on 17 November 2026."
+        ]
+      },
+      "educationalObjective": "Ensure informed consent with language barriers."
+    },
+    {
+      "id": "c1a00067-0000-4000-8000-000000000024",
+      "itemType": "multiple_choice",
+      "clientNeeds": "SECE.MOC",
+      "bodySystem": "fundamentals",
+      "subtopics": [
+        "collaboration-and-referrals"
+      ],
+      "cjmmSkill": "take_action",
+      "difficulty": "moderate",
+      "stem": "The nurse disagrees with a provider's plan to discharge a client who seems unsafe at home. What should the nurse do first?",
+      "content": {
+        "options": [
+          {
+            "id": "a",
+            "text": "Discharge the client as ordered without comment"
+          },
+          {
+            "id": "b",
+            "text": "Share specific assessment findings with the provider and discuss the concern"
+          },
+          {
+            "id": "c",
+            "text": "Tell the client not to leave"
+          },
+          {
+            "id": "d",
+            "text": "Call the hospital administrator right away"
+          }
+        ]
+      },
+      "key": {
+        "correct": "b"
+      },
+      "rationale": {
+        "correct": "Advocate through clear communication, then escalate if needed.",
+        "perOption": {
+          "a": "Concerns must be raised.",
+          "b": "Professional communication comes first.",
+          "c": "Not appropriate.",
+          "d": "Use direct communication first, then the chain of command."
+        },
+        "references": [
+          "NCSBN National Guidelines for Nursing Delegation; LaCharity, Prioritization, Delegation & Assignment",
+          "Reviewed by the content team on 17 November 2026."
+        ]
+      },
+      "educationalObjective": "Advocate about discharge safety."
+    },
+    {
+      "id": "c1a00067-0000-4000-8000-000000000025",
+      "itemType": "highlight_text",
+      "clientNeeds": "SECE.SIC",
+      "bodySystem": "fundamentals",
+      "subtopics": [
+        "restraint-safety"
+      ],
+      "cjmmSkill": "recognize_cues",
+      "difficulty": "difficult",
+      "stem": "The nurse reviews care for a client in wrist restraints. Highlight the actions that are unsafe.",
+      "content": {
+        "segments": [
+          {
+            "id": "s1",
+            "text": "Restraints applied ",
+            "selectable": false
+          },
+          {
+            "id": "s2",
+            "text": "with a time-limited order from the provider",
+            "selectable": true
+          },
+          {
+            "id": "s3",
+            "text": ". AP ",
+            "selectable": false
+          },
+          {
+            "id": "s4",
+            "text": "tied the restraints to the side rails",
+            "selectable": true
+          },
+          {
+            "id": "s5",
+            "text": ". Circulation was ",
+            "selectable": false
+          },
+          {
+            "id": "s6",
+            "text": "checked every 2 hours",
+            "selectable": true
+          },
+          {
+            "id": "s7",
+            "text": ". The client was ",
+            "selectable": false
+          },
+          {
+            "id": "s8",
+            "text": "not offered fluids or toileting for 6 hours",
+            "selectable": true
+          },
+          {
+            "id": "s9",
+            "text": ". The restraint was ",
+            "selectable": false
+          },
+          {
+            "id": "s10",
+            "text": "tied with a quick-release knot",
+            "selectable": true
+          },
+          {
+            "id": "s11",
+            "text": ".",
+            "selectable": false
+          }
+        ]
+      },
+      "key": {
+        "correct": [
+          "s4",
+          "s8"
+        ]
+      },
+      "rationale": {
+        "correct": "Restraints: bed frame, quick-release knot, regular checks and care.",
+        "perOption": {
+          "s2": "Correct.",
+          "s4": "Moving the rails can injure the client; tie to the bed frame.",
+          "s6": "Correct.",
+          "s8": "Basic needs must be met regularly.",
+          "s10": "Correct."
+        },
+        "references": [
+          "Fundamentals of nursing texts (e.g. Potter & Perry)",
+          "Reviewed by the content team on 17 November 2026."
+        ]
+      },
+      "educationalObjective": "Recognize unsafe restraint care."
+    },
+    {
+      "id": "c1a00067-0000-4000-8000-000000000026",
+      "itemType": "matrix_mc",
+      "clientNeeds": "SECE.SIC",
+      "bodySystem": "fundamentals",
+      "subtopics": [
+        "transmission-based-precautions"
+      ],
+      "cjmmSkill": "take_action",
+      "difficulty": "moderate",
+      "stem": "For each item of PPE, indicate whether it is needed when caring for a client with influenza on droplet precautions (no aerosol-generating procedures).",
+      "content": {
+        "rows": [
+          {
+            "id": "r1",
+            "text": "Surgical mask"
+          },
+          {
+            "id": "r2",
+            "text": "N95 respirator"
+          },
+          {
+            "id": "r3",
+            "text": "Gloves for contact with secretions"
+          },
+          {
+            "id": "r4",
+            "text": "Negative-pressure room"
+          }
+        ],
+        "columns": [
+          {
+            "id": "c1",
+            "text": "Needed"
+          },
+          {
+            "id": "c2",
+            "text": "Not needed"
+          }
+        ]
+      },
+      "key": {
+        "byRow": {
+          "r1": "c1",
+          "r2": "c2",
+          "r3": "c1",
+          "r4": "c2"
+        }
+      },
+      "rationale": {
+        "correct": "Droplet precautions: surgical mask, plus standard precautions.",
+        "perOption": {
+          "r1:c1": "Droplet precautions require a mask.",
+          "r1:c2": "A mask is needed.",
+          "r2:c1": "Not required for routine droplet care.",
+          "r2:c2": "Not needed unless doing aerosol-generating procedures.",
+          "r3:c1": "Standard precautions.",
+          "r3:c2": "Needed.",
+          "r4:c1": "Not required for droplet precautions.",
+          "r4:c2": "Not needed."
+        },
+        "references": [
+          "CDC infection control and isolation precautions guidance",
+          "Reviewed by the content team on 17 November 2026."
+        ]
+      },
+      "educationalObjective": "Choose PPE for droplet precautions."
+    },
+    {
+      "id": "c1a00067-0000-4000-8000-000000000027",
+      "itemType": "multiple_choice",
+      "clientNeeds": "SECE.SIC",
+      "bodySystem": "pharmacology",
+      "subtopics": [
+        "medication-safety-systems"
+      ],
+      "cjmmSkill": "take_action",
+      "difficulty": "moderate",
+      "stem": "The nurse is interrupted while preparing a high-alert medication. What should the nurse do after the interruption?",
+      "content": {
+        "options": [
+          {
+            "id": "a",
+            "text": "Continue where the nurse left off"
+          },
+          {
+            "id": "b",
+            "text": "Restart the preparation and recheck everything from the beginning"
+          },
+          {
+            "id": "c",
+            "text": "Ask the client to remind the nurse"
+          },
+          {
+            "id": "d",
+            "text": "Skip the second check to save time"
+          }
+        ]
+      },
+      "key": {
+        "correct": "b"
+      },
+      "rationale": {
+        "correct": "After an interruption, restart the medication process.",
+        "perOption": {
+          "a": "Interruptions cause errors.",
+          "b": "Reduces the risk of errors from interruption.",
+          "c": "Not appropriate.",
+          "d": "Unsafe."
+        },
+        "references": [
+          "Fundamentals of nursing texts (e.g. Potter & Perry)",
+          "Nursing pharmacology texts (e.g. Lehne; McCuistion) and the drug's prescribing information",
+          "Reviewed by the content team on 17 November 2026."
+        ]
+      },
+      "educationalObjective": "Manage interruptions in medication preparation."
+    },
+    {
+      "id": "c1a00067-0000-4000-8000-000000000028",
+      "itemType": "multiple_choice",
+      "clientNeeds": "SECE.SIC",
+      "bodySystem": "fundamentals",
+      "subtopics": [
+        "client-identification-and-error-prevention"
+      ],
+      "cjmmSkill": "take_action",
+      "difficulty": "moderate",
+      "stem": "Two clients on the unit have the same last name. Which action reduces the risk of errors?",
+      "content": {
+        "options": [
+          {
+            "id": "a",
+            "text": "Use room numbers to identify them"
+          },
+          {
+            "id": "b",
+            "text": "Add a name alert to both charts and always use two identifiers"
+          },
+          {
+            "id": "c",
+            "text": "Put both clients in the same room"
+          },
+          {
+            "id": "d",
+            "text": "Call them by first name only"
+          }
+        ]
+      },
+      "key": {
+        "correct": "b"
+      },
+      "rationale": {
+        "correct": "Name alerts and two identifiers prevent wrong-client errors.",
+        "perOption": {
+          "a": "Room numbers aren't identifiers.",
+          "b": "Alerts and two identifiers prevent mix-ups.",
+          "c": "Increases confusion.",
+          "d": "Not a safe identifier."
+        },
+        "references": [
+          "Fundamentals of nursing texts (e.g. Potter & Perry)",
+          "Reviewed by the content team on 17 November 2026."
+        ]
+      },
+      "educationalObjective": "Prevent errors with similar names."
+    },
+    {
+      "id": "c1a00067-0000-4000-8000-000000000029",
+      "itemType": "multiple_choice",
+      "clientNeeds": "SECE.SIC",
+      "bodySystem": "fundamentals",
+      "subtopics": [
+        "injury-prevention"
+      ],
+      "cjmmSkill": "generate_solutions",
+      "difficulty": "moderate",
+      "stem": "A client taking a new sedative is at risk for falls at night. Which intervention is most effective?",
+      "content": {
+        "options": [
+          {
+            "id": "a",
+            "text": "Scheduled toileting before sleep and a bed alarm"
+          },
+          {
+            "id": "b",
+            "text": "Four side rails up"
+          },
+          {
+            "id": "c",
+            "text": "Dim lights with no night light"
+          },
+          {
+            "id": "d",
+            "text": "Tell the client not to get up"
+          }
+        ]
+      },
+      "key": {
+        "correct": "a"
+      },
+      "rationale": {
+        "correct": "Combine scheduled toileting, alarms and lighting.",
+        "perOption": {
+          "a": "Reduces night-time unassisted toileting.",
+          "b": "Considered a restraint and can increase injury.",
+          "c": "Increases fall risk.",
+          "d": "Not reliable."
+        },
+        "references": [
+          "Fundamentals of nursing texts (e.g. Potter & Perry)",
+          "Reviewed by the content team on 17 November 2026."
+        ]
+      },
+      "educationalObjective": "Prevent falls at night."
+    },
+    {
+      "id": "c1a00067-0000-4000-8000-000000000030",
+      "itemType": "multiple_choice",
+      "clientNeeds": "SECE.SIC",
+      "bodySystem": "fundamentals",
+      "subtopics": [
+        "emergency-and-disaster-response"
+      ],
+      "cjmmSkill": "take_action",
+      "difficulty": "moderate",
+      "stem": "The power goes out on the unit. Which equipment should the nurse check first?",
+      "content": {
+        "options": [
+          {
+            "id": "a",
+            "text": "Ventilators and other life-support devices connected to emergency power"
+          },
+          {
+            "id": "b",
+            "text": "Television"
+          },
+          {
+            "id": "c",
+            "text": "Computer for charting"
+          },
+          {
+            "id": "d",
+            "text": "Bed controls"
+          }
+        ]
+      },
+      "key": {
+        "correct": "a"
+      },
+      "rationale": {
+        "correct": "Check life-support devices first in a power outage; use red emergency outlets.",
+        "perOption": {
+          "a": "Life-support must keep working.",
+          "b": "Not essential.",
+          "c": "Not first.",
+          "d": "Not first."
+        },
+        "references": [
+          "Fundamentals of nursing texts (e.g. Potter & Perry)",
+          "Reviewed by the content team on 17 November 2026."
+        ]
+      },
+      "educationalObjective": "Respond to a power outage."
+    },
+    {
+      "id": "c1a00067-0000-4000-8000-000000000031",
+      "itemType": "sata",
+      "clientNeeds": "SECE.SIC",
+      "bodySystem": "hematologic-oncologic",
+      "subtopics": [
+        "hazardous-materials-and-radiation-safety"
+      ],
+      "cjmmSkill": "take_action",
+      "difficulty": "moderate",
+      "stem": "Which actions protect the nurse when giving oral chemotherapy? Select all that apply.",
+      "content": {
+        "options": [
+          {
+            "id": "a",
+            "text": "Wear chemotherapy-tested gloves"
+          },
+          {
+            "id": "b",
+            "text": "Avoid crushing or cutting the tablets"
+          },
+          {
+            "id": "c",
+            "text": "Dispose of waste in a hazardous waste container"
+          },
+          {
+            "id": "d",
+            "text": "Touch the tablets with bare hands"
+          },
+          {
+            "id": "e",
+            "text": "Wash hands after removing gloves"
+          }
+        ]
+      },
+      "key": {
+        "correct": [
+          "a",
+          "b",
+          "c",
+          "e"
+        ]
+      },
+      "rationale": {
+        "correct": "Hazardous drugs need PPE and safe handling even in oral form.",
+        "perOption": {
+          "a": "Prevents skin exposure.",
+          "b": "Prevents aerosol exposure.",
+          "c": "Proper disposal.",
+          "d": "Exposure risk.",
+          "e": "Removes any residue."
+        },
+        "references": [
+          "Nursing pharmacology texts (e.g. Lehne; McCuistion) and the drug's prescribing information",
+          "Reviewed by the content team on 17 November 2026."
+        ]
+      },
+      "educationalObjective": "Handle oral chemotherapy safely."
+    },
+    {
+      "id": "c1a00067-0000-4000-8000-000000000032",
+      "itemType": "multiple_choice",
+      "clientNeeds": "SECE.SIC",
+      "bodySystem": "fundamentals",
+      "subtopics": [
+        "transmission-based-precautions"
+      ],
+      "cjmmSkill": "take_action",
+      "difficulty": "moderate",
+      "stem": "A client with a cough and fever is waiting to be seen and tuberculosis is possible. What should the nurse do?",
+      "content": {
+        "options": [
+          {
+            "id": "a",
+            "text": "Place a surgical mask on the client and move them to an airborne isolation room as soon as possible"
+          },
+          {
+            "id": "b",
+            "text": "Leave the client in the waiting room"
+          },
+          {
+            "id": "c",
+            "text": "Wear only gloves"
+          },
+          {
+            "id": "d",
+            "text": "Ask the client to wait outside"
+          }
+        ]
+      },
+      "key": {
+        "correct": "a"
+      },
+      "rationale": {
+        "correct": "Suspected airborne infection: mask the client and isolate quickly.",
+        "perOption": {
+          "a": "Reduces spread of possible airborne disease.",
+          "b": "Exposes others.",
+          "c": "Not enough.",
+          "d": "Not appropriate care."
+        },
+        "references": [
+          "CDC infection control and isolation precautions guidance",
+          "Reviewed by the content team on 17 November 2026."
+        ]
+      },
+      "educationalObjective": "Isolate possible tuberculosis early."
+    },
+    {
+      "id": "c1a00067-0000-4000-8000-000000000033",
+      "itemType": "multiple_choice",
+      "clientNeeds": "SECE.SIC",
+      "bodySystem": "fundamentals",
+      "subtopics": [
+        "injury-prevention"
+      ],
+      "cjmmSkill": "take_action",
+      "difficulty": "moderate",
+      "stem": "A client with dementia keeps trying to climb out of bed. Which intervention should the nurse try first?",
+      "content": {
+        "options": [
+          {
+            "id": "a",
+            "text": "Apply a vest restraint"
+          },
+          {
+            "id": "b",
+            "text": "Place the bed in the lowest position with floor mats and check on the client often"
+          },
+          {
+            "id": "c",
+            "text": "Raise all four side rails"
+          },
+          {
+            "id": "d",
+            "text": "Give a sedative right away"
+          }
+        ]
+      },
+      "key": {
+        "correct": "b"
+      },
+      "rationale": {
+        "correct": "Use least restrictive alternatives first.",
+        "perOption": {
+          "a": "Restraints are a last resort.",
+          "b": "Least restrictive measures reduce injury if a fall occurs.",
+          "c": "Clients may climb over rails and fall from a greater height.",
+          "d": "Chemical restraint is a last resort."
+        },
+        "references": [
+          "Fundamentals of nursing texts (e.g. Potter & Perry)",
+          "Reviewed by the content team on 17 November 2026."
+        ]
+      },
+      "educationalObjective": "Choose least restrictive fall prevention."
+    },
+    {
+      "id": "c1a00067-0000-4000-8000-000000000034",
+      "itemType": "multiple_choice",
+      "clientNeeds": "SECE.SIC",
+      "bodySystem": "fundamentals",
+      "subtopics": [
+        "client-identification-and-error-prevention"
+      ],
+      "cjmmSkill": "take_action",
+      "difficulty": "moderate",
+      "stem": "A client's wristband is missing at the time of a blood transfusion. What should the nurse do?",
+      "content": {
+        "options": [
+          {
+            "id": "a",
+            "text": "Ask the client their name and proceed"
+          },
+          {
+            "id": "b",
+            "text": "Stop, have a new wristband applied per policy and complete identity verification before starting"
+          },
+          {
+            "id": "c",
+            "text": "Use the room number to confirm identity"
+          },
+          {
+            "id": "d",
+            "text": "Start the transfusion and fix the wristband later"
+          }
+        ]
+      },
+      "key": {
+        "correct": "b"
+      },
+      "rationale": {
+        "correct": "Never give blood without full positive identification.",
+        "perOption": {
+          "a": "Two identifiers and a wristband check are required for transfusions.",
+          "b": "Positive identification prevents fatal ABO errors.",
+          "c": "Room numbers aren't identifiers.",
+          "d": "Unsafe."
+        },
+        "references": [
+          "Fundamentals of nursing texts (e.g. Potter & Perry)",
+          "Reviewed by the content team on 17 November 2026."
+        ]
+      },
+      "educationalObjective": "Verify identity before transfusion."
+    }
+  ]
+}

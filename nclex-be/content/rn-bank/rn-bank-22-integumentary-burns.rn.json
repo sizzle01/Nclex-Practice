@@ -1,0 +1,1480 @@
+{
+  "notice": "RN bank batch 22: Integumentary: pressure injuries, wounds and burns. Reviewed by the content team on 17 November 2026. See REVIEW-LOG.md.",
+  "track": "RN",
+  "subtopics": [
+    {
+      "clientNeeds": "PHI.BCC",
+      "slug": "pressure-injury-prevention",
+      "name": "Pressure injury prevention"
+    },
+    {
+      "clientNeeds": "PHI.RRP",
+      "slug": "post-procedure-complications",
+      "name": "Post-procedure complications"
+    },
+    {
+      "clientNeeds": "PHI.BCC",
+      "slug": "wound-care",
+      "name": "Wound care"
+    },
+    {
+      "clientNeeds": "PHI.PA",
+      "slug": "burn-care",
+      "name": "Burn care"
+    },
+    {
+      "clientNeeds": "PHI.PPT",
+      "slug": "medication-dose-calculations",
+      "name": "Medication dose calculations"
+    },
+    {
+      "clientNeeds": "PHI.PPT",
+      "slug": "adverse-effects-of-medications",
+      "name": "Adverse effects of medications"
+    },
+    {
+      "clientNeeds": "PHI.PA",
+      "slug": "skin-disorders",
+      "name": "Skin disorders and infections"
+    },
+    {
+      "clientNeeds": "HPM",
+      "slug": "skin-cancer-prevention",
+      "name": "Skin cancer prevention"
+    }
+  ],
+  "questions": [
+    {
+      "id": "c1a00022-0000-4000-8000-000000000001",
+      "itemType": "dropdown_table",
+      "clientNeeds": "PHI.BCC",
+      "bodySystem": "integumentary",
+      "subtopics": [
+        "pressure-injury-prevention"
+      ],
+      "cjmmSkill": "analyze_cues",
+      "difficulty": "difficult",
+      "stem": "For each pressure injury description, select the stage.",
+      "content": {
+        "columns": [
+          "Description",
+          "Stage"
+        ],
+        "rows": [
+          {
+            "id": "r1",
+            "cells": [
+              {
+                "text": "Intact skin with redness that doesn't blanch over the sacrum"
+              },
+              {
+                "blankId": "b1"
+              }
+            ]
+          },
+          {
+            "id": "r2",
+            "cells": [
+              {
+                "text": "Shallow open area with a pink-red wound bed and no slough"
+              },
+              {
+                "blankId": "b2"
+              }
+            ]
+          },
+          {
+            "id": "r3",
+            "cells": [
+              {
+                "text": "Full-thickness loss with visible fat but no bone or tendon"
+              },
+              {
+                "blankId": "b3"
+              }
+            ]
+          },
+          {
+            "id": "r4",
+            "cells": [
+              {
+                "text": "Full-thickness loss with exposed bone"
+              },
+              {
+                "blankId": "b4"
+              }
+            ]
+          },
+          {
+            "id": "r5",
+            "cells": [
+              {
+                "text": "Wound bed covered by eschar so the depth can't be seen"
+              },
+              {
+                "blankId": "b5"
+              }
+            ]
+          }
+        ],
+        "blanks": [
+          {
+            "id": "b1",
+            "options": [
+              {
+                "id": "a",
+                "text": "Stage 1"
+              },
+              {
+                "id": "b",
+                "text": "Stage 2"
+              },
+              {
+                "id": "c",
+                "text": "Stage 3"
+              },
+              {
+                "id": "d",
+                "text": "Stage 4"
+              },
+              {
+                "id": "e",
+                "text": "Unstageable"
+              }
+            ]
+          },
+          {
+            "id": "b2",
+            "options": [
+              {
+                "id": "a",
+                "text": "Stage 1"
+              },
+              {
+                "id": "b",
+                "text": "Stage 2"
+              },
+              {
+                "id": "c",
+                "text": "Stage 3"
+              },
+              {
+                "id": "d",
+                "text": "Stage 4"
+              },
+              {
+                "id": "e",
+                "text": "Unstageable"
+              }
+            ]
+          },
+          {
+            "id": "b3",
+            "options": [
+              {
+                "id": "a",
+                "text": "Stage 1"
+              },
+              {
+                "id": "b",
+                "text": "Stage 2"
+              },
+              {
+                "id": "c",
+                "text": "Stage 3"
+              },
+              {
+                "id": "d",
+                "text": "Stage 4"
+              },
+              {
+                "id": "e",
+                "text": "Unstageable"
+              }
+            ]
+          },
+          {
+            "id": "b4",
+            "options": [
+              {
+                "id": "a",
+                "text": "Stage 1"
+              },
+              {
+                "id": "b",
+                "text": "Stage 2"
+              },
+              {
+                "id": "c",
+                "text": "Stage 3"
+              },
+              {
+                "id": "d",
+                "text": "Stage 4"
+              },
+              {
+                "id": "e",
+                "text": "Unstageable"
+              }
+            ]
+          },
+          {
+            "id": "b5",
+            "options": [
+              {
+                "id": "a",
+                "text": "Stage 1"
+              },
+              {
+                "id": "b",
+                "text": "Stage 2"
+              },
+              {
+                "id": "c",
+                "text": "Stage 3"
+              },
+              {
+                "id": "d",
+                "text": "Stage 4"
+              },
+              {
+                "id": "e",
+                "text": "Unstageable"
+              }
+            ]
+          }
+        ]
+      },
+      "key": {
+        "byBlank": {
+          "b1": "a",
+          "b2": "b",
+          "b3": "c",
+          "b4": "d",
+          "b5": "e"
+        }
+      },
+      "rationale": {
+        "correct": "Stage pressure injuries by the deepest tissue visible; slough or eschar that hides the base makes the injury unstageable.",
+        "perOption": {
+          "b1:a": "Intact skin with non-blanchable redness is stage 1.",
+          "b1:b": "This description fits stage 1, not stage 2.",
+          "b1:c": "This description fits stage 1, not stage 3.",
+          "b1:d": "This description fits stage 1, not stage 4.",
+          "b1:e": "This description fits stage 1, not unstageable.",
+          "b2:a": "This description fits stage 2, not stage 1.",
+          "b2:b": "Partial-thickness skin loss with a pink-red bed is stage 2.",
+          "b2:c": "This description fits stage 2, not stage 3.",
+          "b2:d": "This description fits stage 2, not stage 4.",
+          "b2:e": "This description fits stage 2, not unstageable.",
+          "b3:a": "This description fits stage 3, not stage 1.",
+          "b3:b": "This description fits stage 3, not stage 2.",
+          "b3:c": "Full-thickness skin loss with visible fat is stage 3.",
+          "b3:d": "This description fits stage 3, not stage 4.",
+          "b3:e": "This description fits stage 3, not unstageable.",
+          "b4:a": "This description fits stage 4, not stage 1.",
+          "b4:b": "This description fits stage 4, not stage 2.",
+          "b4:c": "This description fits stage 4, not stage 3.",
+          "b4:d": "Exposed bone, tendon or muscle is stage 4.",
+          "b4:e": "This description fits stage 4, not unstageable.",
+          "b5:a": "This description fits unstageable, not stage 1.",
+          "b5:b": "This description fits unstageable, not stage 2.",
+          "b5:c": "This description fits unstageable, not stage 3.",
+          "b5:d": "This description fits unstageable, not stage 4.",
+          "b5:e": "Slough or eschar that hides the base makes it unstageable."
+        },
+        "references": [
+          "Medical-surgical nursing texts (e.g. Lewis; Ignatavicius)",
+          "Reviewed by the content team on 17 November 2026."
+        ]
+      },
+      "educationalObjective": "Stage pressure injuries."
+    },
+    {
+      "id": "c1a00022-0000-4000-8000-000000000002",
+      "itemType": "multiple_choice",
+      "clientNeeds": "PHI.BCC",
+      "bodySystem": "integumentary",
+      "subtopics": [
+        "pressure-injury-prevention"
+      ],
+      "cjmmSkill": "analyze_cues",
+      "difficulty": "moderate",
+      "stem": "Which Braden scale score shows the highest risk for pressure injury?",
+      "content": {
+        "options": [
+          {
+            "id": "a",
+            "text": "9"
+          },
+          {
+            "id": "b",
+            "text": "15"
+          },
+          {
+            "id": "c",
+            "text": "19"
+          },
+          {
+            "id": "d",
+            "text": "23"
+          }
+        ]
+      },
+      "key": {
+        "correct": "a"
+      },
+      "rationale": {
+        "correct": "Braden scale: 6 to 23 points; a lower score means a higher risk.",
+        "perOption": {
+          "a": "Lower Braden scores mean higher risk; 9 or below is very high risk.",
+          "b": "This is mild risk.",
+          "c": "This is no significant risk.",
+          "d": "This is the highest possible score, meaning lowest risk."
+        },
+        "references": [
+          "Medical-surgical nursing texts (e.g. Lewis; Ignatavicius)",
+          "Reviewed by the content team on 17 November 2026."
+        ]
+      },
+      "educationalObjective": "Interpret a Braden scale score."
+    },
+    {
+      "id": "c1a00022-0000-4000-8000-000000000003",
+      "itemType": "sata",
+      "clientNeeds": "PHI.BCC",
+      "bodySystem": "integumentary",
+      "subtopics": [
+        "pressure-injury-prevention"
+      ],
+      "cjmmSkill": "generate_solutions",
+      "difficulty": "moderate",
+      "stem": "Which interventions help prevent pressure injuries in a client on bed rest? Select all that apply.",
+      "content": {
+        "options": [
+          {
+            "id": "a",
+            "text": "Reposition the client at least every 2 hours"
+          },
+          {
+            "id": "b",
+            "text": "Keep the head of the bed at 30 degrees or lower unless contraindicated"
+          },
+          {
+            "id": "c",
+            "text": "Float the heels off the bed"
+          },
+          {
+            "id": "d",
+            "text": "Massage reddened bony areas"
+          },
+          {
+            "id": "e",
+            "text": "Use a donut-shaped cushion"
+          },
+          {
+            "id": "f",
+            "text": "Ensure adequate protein intake"
+          }
+        ]
+      },
+      "key": {
+        "correct": [
+          "a",
+          "b",
+          "c",
+          "f"
+        ]
+      },
+      "rationale": {
+        "correct": "Prevention: reposition, reduce shear, support surfaces, manage moisture, good nutrition, no massage or donuts.",
+        "perOption": {
+          "a": "This relieves pressure.",
+          "b": "This reduces shear on the sacrum.",
+          "c": "Heels are high-risk pressure points.",
+          "d": "Massage can damage the tissue further.",
+          "e": "Donuts reduce blood flow to the surrounding tissue.",
+          "f": "Protein supports skin integrity."
+        },
+        "references": [
+          "Medical-surgical nursing texts (e.g. Lewis; Ignatavicius)",
+          "Reviewed by the content team on 17 November 2026."
+        ]
+      },
+      "educationalObjective": "Prevent pressure injuries."
+    },
+    {
+      "id": "c1a00022-0000-4000-8000-000000000004",
+      "itemType": "multiple_choice",
+      "clientNeeds": "PHI.RRP",
+      "bodySystem": "integumentary",
+      "subtopics": [
+        "post-procedure-complications"
+      ],
+      "cjmmSkill": "take_action",
+      "difficulty": "moderate",
+      "stem": "A client coughs, and loops of bowel come out through the abdominal incision. What should the nurse do first?",
+      "content": {
+        "options": [
+          {
+            "id": "a",
+            "text": "Cover the wound with sterile gauze moistened with sterile saline"
+          },
+          {
+            "id": "b",
+            "text": "Push the bowel back into the abdomen"
+          },
+          {
+            "id": "c",
+            "text": "Apply a dry dressing"
+          },
+          {
+            "id": "d",
+            "text": "Help the client walk to reduce pressure"
+          }
+        ]
+      },
+      "key": {
+        "correct": "a"
+      },
+      "rationale": {
+        "correct": "Evisceration: cover with saline-moistened sterile dressings, low Fowler's position with knees bent, stay with the client and notify the surgeon.",
+        "perOption": {
+          "a": "This protects the organs and keeps them moist.",
+          "b": "This risks injury and contamination.",
+          "c": "Dry gauze sticks to and damages tissue.",
+          "d": "Activity increases pressure."
+        },
+        "references": [
+          "Medical-surgical nursing texts (e.g. Lewis; Ignatavicius)",
+          "Reviewed by the content team on 17 November 2026."
+        ]
+      },
+      "educationalObjective": "Respond to wound evisceration."
+    },
+    {
+      "id": "c1a00022-0000-4000-8000-000000000005",
+      "itemType": "multiple_choice",
+      "clientNeeds": "PHI.BCC",
+      "bodySystem": "integumentary",
+      "subtopics": [
+        "wound-care"
+      ],
+      "cjmmSkill": "analyze_cues",
+      "difficulty": "easy",
+      "stem": "Wound drainage is thin, watery and pale pink. How should the nurse document it?",
+      "content": {
+        "options": [
+          {
+            "id": "a",
+            "text": "Serosanguineous"
+          },
+          {
+            "id": "b",
+            "text": "Purulent"
+          },
+          {
+            "id": "c",
+            "text": "Sanguineous"
+          },
+          {
+            "id": "d",
+            "text": "Serous"
+          }
+        ]
+      },
+      "key": {
+        "correct": "a"
+      },
+      "rationale": {
+        "correct": "Serous = clear; sanguineous = bloody; serosanguineous = pink; purulent = pus.",
+        "perOption": {
+          "a": "Serosanguineous drainage is a mix of serum and blood.",
+          "b": "Purulent drainage is thick and yellow, green or tan.",
+          "c": "Sanguineous drainage is bright red blood.",
+          "d": "Serous drainage is clear and straw-colored."
+        },
+        "references": [
+          "Fundamentals of nursing texts (e.g. Potter & Perry)",
+          "Reviewed by the content team on 17 November 2026."
+        ]
+      },
+      "educationalObjective": "Describe wound drainage accurately."
+    },
+    {
+      "id": "c1a00022-0000-4000-8000-000000000006",
+      "itemType": "multiple_choice",
+      "clientNeeds": "PHI.BCC",
+      "bodySystem": "integumentary",
+      "subtopics": [
+        "wound-care"
+      ],
+      "cjmmSkill": "generate_solutions",
+      "difficulty": "moderate",
+      "stem": "Which nutrients are most important to promote wound healing?",
+      "content": {
+        "options": [
+          {
+            "id": "a",
+            "text": "Protein, vitamin C and zinc"
+          },
+          {
+            "id": "b",
+            "text": "Sodium and potassium"
+          },
+          {
+            "id": "c",
+            "text": "Caffeine and sugar"
+          },
+          {
+            "id": "d",
+            "text": "Fat-free diet"
+          }
+        ]
+      },
+      "key": {
+        "correct": "a"
+      },
+      "rationale": {
+        "correct": "Wound healing needs protein, calories, vitamin C, zinc and fluids.",
+        "perOption": {
+          "a": "These support collagen synthesis and tissue repair.",
+          "b": "These aren't central to healing.",
+          "c": "These don't promote healing.",
+          "d": "Calories are needed for healing."
+        },
+        "references": [
+          "Medical-surgical nursing texts (e.g. Lewis; Ignatavicius)",
+          "Reviewed by the content team on 17 November 2026."
+        ]
+      },
+      "educationalObjective": "Support wound healing with nutrition."
+    },
+    {
+      "id": "c1a00022-0000-4000-8000-000000000007",
+      "itemType": "multiple_choice",
+      "clientNeeds": "PHI.BCC",
+      "bodySystem": "integumentary",
+      "subtopics": [
+        "wound-care"
+      ],
+      "cjmmSkill": "take_action",
+      "difficulty": "moderate",
+      "stem": "How should the nurse obtain a wound culture?",
+      "content": {
+        "options": [
+          {
+            "id": "a",
+            "text": "Clean the wound with sterile saline first, then swab viable tissue"
+          },
+          {
+            "id": "b",
+            "text": "Swab the old drainage on the dressing"
+          },
+          {
+            "id": "c",
+            "text": "Swab the eschar"
+          },
+          {
+            "id": "d",
+            "text": "Apply an antiseptic and swab right away"
+          }
+        ]
+      },
+      "key": {
+        "correct": "a"
+      },
+      "rationale": {
+        "correct": "Wound culture: clean with saline, then swab clean viable tissue (Levine technique).",
+        "perOption": {
+          "a": "Cleaning removes surface contaminants so the culture reflects the infection.",
+          "b": "This collects contaminants.",
+          "c": "Eschar isn't a reliable sample.",
+          "d": "Antiseptic kills the organisms."
+        },
+        "references": [
+          "Medical-surgical nursing texts (e.g. Lewis; Ignatavicius)",
+          "Reviewed by the content team on 17 November 2026."
+        ]
+      },
+      "educationalObjective": "Obtain a wound culture correctly."
+    },
+    {
+      "id": "c1a00022-0000-4000-8000-000000000008",
+      "itemType": "fill_blank_calc",
+      "clientNeeds": "PHI.PA",
+      "bodySystem": "integumentary",
+      "subtopics": [
+        "burn-care"
+      ],
+      "cjmmSkill": "analyze_cues",
+      "difficulty": "moderate",
+      "stem": "Using the rule of nines, calculate the total body surface area burned for an adult with burns to the entire front of the trunk, the entire left arm and the front of the right leg.",
+      "content": {
+        "unit": "%",
+        "decimals": 0,
+        "inputLabel": "TBSA burned"
+      },
+      "key": {
+        "value": 36,
+        "rounding": "exact"
+      },
+      "rationale": {
+        "correct": "Front of trunk = 18%. Entire left arm = 9%. Front of right leg = 9%. Total = 18 + 9 + 9 = 36%.",
+        "perOption": {},
+        "references": [
+          "Medical-surgical nursing texts (e.g. Lewis; Ignatavicius)",
+          "Reviewed by the content team on 17 November 2026."
+        ]
+      },
+      "educationalObjective": "Estimate burn size with the rule of nines."
+    },
+    {
+      "id": "c1a00022-0000-4000-8000-000000000009",
+      "itemType": "multiple_choice",
+      "clientNeeds": "PHI.PA",
+      "bodySystem": "integumentary",
+      "subtopics": [
+        "burn-care"
+      ],
+      "cjmmSkill": "prioritize_hypotheses",
+      "difficulty": "moderate",
+      "stem": "A client was rescued from a house fire. Which finding is the priority?",
+      "content": {
+        "options": [
+          {
+            "id": "a",
+            "text": "Singed nasal hair, soot around the mouth and a hoarse voice"
+          },
+          {
+            "id": "b",
+            "text": "Blisters on the arms"
+          },
+          {
+            "id": "c",
+            "text": "Pain rated 8 out of 10"
+          },
+          {
+            "id": "d",
+            "text": "Anxiety"
+          }
+        ]
+      },
+      "key": {
+        "correct": "a"
+      },
+      "rationale": {
+        "correct": "Inhalation injury threatens the airway; prepare for early intubation.",
+        "perOption": {
+          "a": "These suggest inhalation injury, and airway swelling can progress quickly.",
+          "b": "This is important but not an airway threat.",
+          "c": "Pain needs treatment after the airway is assessed.",
+          "d": "This isn't the priority."
+        },
+        "references": [
+          "Medical-surgical nursing texts (e.g. Lewis; Ignatavicius)",
+          "Reviewed by the content team on 17 November 2026."
+        ]
+      },
+      "educationalObjective": "Prioritize inhalation injury in burns."
+    },
+    {
+      "id": "c1a00022-0000-4000-8000-000000000010",
+      "itemType": "fill_blank_calc",
+      "clientNeeds": "PHI.PPT",
+      "bodySystem": "pharmacology",
+      "subtopics": [
+        "medication-dose-calculations"
+      ],
+      "cjmmSkill": "take_action",
+      "difficulty": "difficult",
+      "stem": "An 80 kg client has burns over 36% of the body. Using the Parkland formula (4 mL × kg × %TBSA), how many mL of lactated Ringer's should the client receive in the first 8 hours after the burn?",
+      "content": {
+        "unit": "mL",
+        "decimals": 0,
+        "inputLabel": "Volume in first 8 hours"
+      },
+      "key": {
+        "value": 5760,
+        "rounding": "exact"
+      },
+      "rationale": {
+        "correct": "Total 24-hour volume = 4 × 80 × 36 = 11,520 mL. Half is given in the first 8 hours = 5,760 mL.",
+        "perOption": {},
+        "references": [
+          "Medical-surgical nursing texts (e.g. Lewis; Ignatavicius)",
+          "Reviewed by the content team on 17 November 2026."
+        ]
+      },
+      "educationalObjective": "Calculate burn fluid resuscitation with the Parkland formula."
+    },
+    {
+      "id": "c1a00022-0000-4000-8000-000000000011",
+      "itemType": "multiple_choice",
+      "clientNeeds": "PHI.PA",
+      "bodySystem": "integumentary",
+      "subtopics": [
+        "burn-care"
+      ],
+      "cjmmSkill": "evaluate_outcomes",
+      "difficulty": "moderate",
+      "stem": "Which finding best shows that fluid resuscitation is adequate in an adult with major burns?",
+      "content": {
+        "options": [
+          {
+            "id": "a",
+            "text": "Urine output of 0.5 mL/kg/hr (about 30 to 50 mL/hr)"
+          },
+          {
+            "id": "b",
+            "text": "Urine output of 10 mL/hr"
+          },
+          {
+            "id": "c",
+            "text": "Blood pressure of 180/100 mm Hg"
+          },
+          {
+            "id": "d",
+            "text": "Weight loss of 2 kg"
+          }
+        ]
+      },
+      "key": {
+        "correct": "a"
+      },
+      "rationale": {
+        "correct": "Titrate burn fluids to urine output (0.5 mL/kg/hr for adults; higher for electrical injury).",
+        "perOption": {
+          "a": "Urine output is the main guide for titrating burn fluids.",
+          "b": "This means under-resuscitation.",
+          "c": "This isn't the target.",
+          "d": "Weight usually rises during resuscitation."
+        },
+        "references": [
+          "Medical-surgical nursing texts (e.g. Lewis; Ignatavicius)",
+          "Reviewed by the content team on 17 November 2026."
+        ]
+      },
+      "educationalObjective": "Evaluate burn fluid resuscitation."
+    },
+    {
+      "id": "c1a00022-0000-4000-8000-000000000012",
+      "itemType": "multiple_choice",
+      "clientNeeds": "PHI.PA",
+      "bodySystem": "integumentary",
+      "subtopics": [
+        "burn-care"
+      ],
+      "cjmmSkill": "analyze_cues",
+      "difficulty": "difficult",
+      "stem": "During the first 24 hours after a major burn, which laboratory finding should the nurse expect?",
+      "content": {
+        "options": [
+          {
+            "id": "a",
+            "text": "High potassium and high hematocrit"
+          },
+          {
+            "id": "b",
+            "text": "Low potassium and low hematocrit"
+          },
+          {
+            "id": "c",
+            "text": "High albumin"
+          },
+          {
+            "id": "d",
+            "text": "Low sodium only"
+          }
+        ]
+      },
+      "key": {
+        "correct": "a"
+      },
+      "rationale": {
+        "correct": "Emergent phase: hyperkalemia, hemoconcentration and metabolic acidosis.",
+        "perOption": {
+          "a": "Cell damage releases potassium, and plasma loss concentrates the blood.",
+          "b": "These are more typical later, during fluid mobilization.",
+          "c": "Albumin falls as it leaks out.",
+          "d": "This isn't the main pattern."
+        },
+        "references": [
+          "Medical-surgical nursing texts (e.g. Lewis; Ignatavicius)",
+          "Reviewed by the content team on 17 November 2026."
+        ]
+      },
+      "educationalObjective": "Predict lab changes in the emergent burn phase."
+    },
+    {
+      "id": "c1a00022-0000-4000-8000-000000000013",
+      "itemType": "multiple_choice",
+      "clientNeeds": "PHI.PA",
+      "bodySystem": "integumentary",
+      "subtopics": [
+        "burn-care"
+      ],
+      "cjmmSkill": "recognize_cues",
+      "difficulty": "difficult",
+      "stem": "A client has full-thickness burns all the way around the lower leg. Which finding requires immediate action?",
+      "content": {
+        "options": [
+          {
+            "id": "a",
+            "text": "Weakening pedal pulse and increasing numbness in the foot"
+          },
+          {
+            "id": "b",
+            "text": "Dry, leathery appearance of the burn"
+          },
+          {
+            "id": "c",
+            "text": "Little pain in the burned area"
+          },
+          {
+            "id": "d",
+            "text": "Mild swelling"
+          }
+        ]
+      },
+      "key": {
+        "correct": "a"
+      },
+      "rationale": {
+        "correct": "Burns that circle a limb need frequent neurovascular checks.",
+        "perOption": {
+          "a": "Tight eschar can cut off circulation; an escharotomy may be needed.",
+          "b": "This is expected with full-thickness burns.",
+          "c": "Nerve endings are destroyed in full-thickness burns.",
+          "d": "Some swelling is expected."
+        },
+        "references": [
+          "Medical-surgical nursing texts (e.g. Lewis; Ignatavicius)",
+          "Reviewed by the content team on 17 November 2026."
+        ]
+      },
+      "educationalObjective": "Recognize the need for escharotomy."
+    },
+    {
+      "id": "c1a00022-0000-4000-8000-000000000014",
+      "itemType": "multiple_choice",
+      "clientNeeds": "PHI.PA",
+      "bodySystem": "integumentary",
+      "subtopics": [
+        "burn-care"
+      ],
+      "cjmmSkill": "take_action",
+      "difficulty": "moderate",
+      "stem": "How should pain medication be given to a client in the emergent phase of a major burn?",
+      "content": {
+        "options": [
+          {
+            "id": "a",
+            "text": "IV"
+          },
+          {
+            "id": "b",
+            "text": "IM"
+          },
+          {
+            "id": "c",
+            "text": "Oral"
+          },
+          {
+            "id": "d",
+            "text": "Subcutaneous"
+          }
+        ]
+      },
+      "key": {
+        "correct": "a"
+      },
+      "rationale": {
+        "correct": "Give burn pain medication IV in the acute phase.",
+        "perOption": {
+          "a": "Poor perfusion makes IM and subcutaneous absorption unreliable.",
+          "b": "Absorption is erratic.",
+          "c": "The GI tract may be slowed.",
+          "d": "Absorption is unreliable."
+        },
+        "references": [
+          "Nursing pharmacology texts (e.g. Lehne; McCuistion) and the drug's prescribing information",
+          "Reviewed by the content team on 17 November 2026."
+        ]
+      },
+      "educationalObjective": "Choose the route for burn analgesia."
+    },
+    {
+      "id": "c1a00022-0000-4000-8000-000000000015",
+      "itemType": "multiple_choice",
+      "clientNeeds": "PHI.PPT",
+      "bodySystem": "integumentary",
+      "subtopics": [
+        "adverse-effects-of-medications"
+      ],
+      "cjmmSkill": "recognize_cues",
+      "difficulty": "moderate",
+      "stem": "A client with burns is treated with silver sulfadiazine cream. Which laboratory value should the nurse monitor?",
+      "content": {
+        "options": [
+          {
+            "id": "a",
+            "text": "White blood cell count"
+          },
+          {
+            "id": "b",
+            "text": "Serum glucose"
+          },
+          {
+            "id": "c",
+            "text": "Platelet count only"
+          },
+          {
+            "id": "d",
+            "text": "Thyroid levels"
+          }
+        ]
+      },
+      "key": {
+        "correct": "a"
+      },
+      "rationale": {
+        "correct": "Silver sulfadiazine: watch for leukopenia and sulfa allergy.",
+        "perOption": {
+          "a": "Silver sulfadiazine can cause transient leukopenia.",
+          "b": "This isn't the key concern.",
+          "c": "This isn't the main concern.",
+          "d": "This isn't relevant."
+        },
+        "references": [
+          "Nursing pharmacology texts (e.g. Lehne; McCuistion) and the drug's prescribing information",
+          "Reviewed by the content team on 17 November 2026."
+        ]
+      },
+      "educationalObjective": "Monitor silver sulfadiazine therapy."
+    },
+    {
+      "id": "c1a00022-0000-4000-8000-000000000016",
+      "itemType": "multiple_choice",
+      "clientNeeds": "PHI.PA",
+      "bodySystem": "integumentary",
+      "subtopics": [
+        "burn-care"
+      ],
+      "cjmmSkill": "generate_solutions",
+      "difficulty": "easy",
+      "stem": "Which diet supports healing for a client with major burns?",
+      "content": {
+        "options": [
+          {
+            "id": "a",
+            "text": "High-calorie, high-protein"
+          },
+          {
+            "id": "b",
+            "text": "Low-calorie"
+          },
+          {
+            "id": "c",
+            "text": "Low-protein"
+          },
+          {
+            "id": "d",
+            "text": "Clear liquids only"
+          }
+        ]
+      },
+      "key": {
+        "correct": "a"
+      },
+      "rationale": {
+        "correct": "Burns cause hypermetabolism; meet needs with high calories and protein, often by early enteral feeding.",
+        "perOption": {
+          "a": "Burns greatly increase metabolic needs.",
+          "b": "This slows healing.",
+          "c": "Protein is essential.",
+          "d": "This isn't enough."
+        },
+        "references": [
+          "Medical-surgical nursing texts (e.g. Lewis; Ignatavicius)",
+          "Reviewed by the content team on 17 November 2026."
+        ]
+      },
+      "educationalObjective": "Plan nutrition for burns."
+    },
+    {
+      "id": "c1a00022-0000-4000-8000-000000000017",
+      "itemType": "multiple_choice",
+      "clientNeeds": "PHI.PA",
+      "bodySystem": "integumentary",
+      "subtopics": [
+        "burn-care"
+      ],
+      "cjmmSkill": "generate_solutions",
+      "difficulty": "moderate",
+      "stem": "Which intervention helps prevent contractures in a client with burns over the joints?",
+      "content": {
+        "options": [
+          {
+            "id": "a",
+            "text": "Positioning the joints in extension and using splints as prescribed"
+          },
+          {
+            "id": "b",
+            "text": "Positioning of comfort, usually flexed"
+          },
+          {
+            "id": "c",
+            "text": "Avoiding range-of-motion exercises"
+          },
+          {
+            "id": "d",
+            "text": "Using pillows under the knees"
+          }
+        ]
+      },
+      "key": {
+        "correct": "a"
+      },
+      "rationale": {
+        "correct": "Burn rehabilitation: extension positioning, splints and ROM exercises.",
+        "perOption": {
+          "a": "This keeps tissue from shortening during healing.",
+          "b": "Flexion promotes contractures.",
+          "c": "ROM prevents contractures.",
+          "d": "This promotes flexion."
+        },
+        "references": [
+          "Medical-surgical nursing texts (e.g. Lewis; Ignatavicius)",
+          "Reviewed by the content team on 17 November 2026."
+        ]
+      },
+      "educationalObjective": "Prevent burn contractures."
+    },
+    {
+      "id": "c1a00022-0000-4000-8000-000000000018",
+      "itemType": "multiple_choice",
+      "clientNeeds": "PHI.PA",
+      "bodySystem": "integumentary",
+      "subtopics": [
+        "burn-care"
+      ],
+      "cjmmSkill": "prioritize_hypotheses",
+      "difficulty": "moderate",
+      "stem": "A client has an electrical burn with small entry and exit wounds. What is the priority?",
+      "content": {
+        "options": [
+          {
+            "id": "a",
+            "text": "Continuous cardiac monitoring"
+          },
+          {
+            "id": "b",
+            "text": "Dressing the small wounds"
+          },
+          {
+            "id": "c",
+            "text": "Discharge teaching"
+          },
+          {
+            "id": "d",
+            "text": "Applying ice"
+          }
+        ]
+      },
+      "key": {
+        "correct": "a"
+      },
+      "rationale": {
+        "correct": "Electrical burns: cardiac monitoring and watching for myoglobinuria (higher urine output goals).",
+        "perOption": {
+          "a": "Electrical current can cause dysrhythmias.",
+          "b": "The visible wounds underestimate the internal damage.",
+          "c": "This isn't appropriate.",
+          "d": "This isn't the priority."
+        },
+        "references": [
+          "Medical-surgical nursing texts (e.g. Lewis; Ignatavicius)",
+          "Reviewed by the content team on 17 November 2026."
+        ]
+      },
+      "educationalObjective": "Prioritize care for an electrical burn."
+    },
+    {
+      "id": "c1a00022-0000-4000-8000-000000000019",
+      "itemType": "multiple_choice",
+      "clientNeeds": "PHI.PA",
+      "bodySystem": "integumentary",
+      "subtopics": [
+        "burn-care"
+      ],
+      "cjmmSkill": "take_action",
+      "difficulty": "easy",
+      "stem": "A worker splashes a strong chemical on the arm. What should the nurse do first?",
+      "content": {
+        "options": [
+          {
+            "id": "a",
+            "text": "Flush with large amounts of water for at least 20 minutes"
+          },
+          {
+            "id": "b",
+            "text": "Apply a neutralizing agent"
+          },
+          {
+            "id": "c",
+            "text": "Cover with a dry dressing"
+          },
+          {
+            "id": "d",
+            "text": "Apply ointment"
+          }
+        ]
+      },
+      "key": {
+        "correct": "a"
+      },
+      "rationale": {
+        "correct": "Chemical burns: remove contaminated clothing (brush off dry powders first) and irrigate thoroughly.",
+        "perOption": {
+          "a": "Flushing removes the chemical and stops the burn.",
+          "b": "Neutralizing can cause a heat reaction.",
+          "c": "The chemical keeps burning.",
+          "d": "This traps the chemical."
+        },
+        "references": [
+          "Medical-surgical nursing texts (e.g. Lewis; Ignatavicius)",
+          "Reviewed by the content team on 17 November 2026."
+        ]
+      },
+      "educationalObjective": "Treat a chemical burn."
+    },
+    {
+      "id": "c1a00022-0000-4000-8000-000000000020",
+      "itemType": "multiple_choice",
+      "clientNeeds": "PHI.PA",
+      "bodySystem": "integumentary",
+      "subtopics": [
+        "skin-disorders"
+      ],
+      "cjmmSkill": "take_action",
+      "difficulty": "easy",
+      "stem": "A client has cellulitis of the lower leg. Which action helps the team track its progression?",
+      "content": {
+        "options": [
+          {
+            "id": "a",
+            "text": "Mark the border of the redness with a skin marker and note the time"
+          },
+          {
+            "id": "b",
+            "text": "Massage the area"
+          },
+          {
+            "id": "c",
+            "text": "Apply ice continuously"
+          },
+          {
+            "id": "d",
+            "text": "Keep the leg dependent"
+          }
+        ]
+      },
+      "key": {
+        "correct": "a"
+      },
+      "rationale": {
+        "correct": "Cellulitis: mark borders, elevate, give antibiotics and watch for systemic signs.",
+        "perOption": {
+          "a": "This shows whether the redness is spreading or shrinking.",
+          "b": "This may spread the infection.",
+          "c": "This isn't standard.",
+          "d": "Elevation reduces swelling."
+        },
+        "references": [
+          "Medical-surgical nursing texts (e.g. Lewis; Ignatavicius)",
+          "Reviewed by the content team on 17 November 2026."
+        ]
+      },
+      "educationalObjective": "Monitor cellulitis."
+    },
+    {
+      "id": "c1a00022-0000-4000-8000-000000000021",
+      "itemType": "multiple_choice",
+      "clientNeeds": "HPM",
+      "bodySystem": "integumentary",
+      "subtopics": [
+        "skin-cancer-prevention"
+      ],
+      "cjmmSkill": "evaluate_outcomes",
+      "difficulty": "easy",
+      "stem": "Which mole should the client have checked by a provider?",
+      "content": {
+        "options": [
+          {
+            "id": "a",
+            "text": "A mole with uneven borders and several colors that has grown recently"
+          },
+          {
+            "id": "b",
+            "text": "A small, round, evenly brown mole that hasn't changed"
+          },
+          {
+            "id": "c",
+            "text": "A freckle that fades in winter"
+          },
+          {
+            "id": "d",
+            "text": "A skin tag on the neck"
+          }
+        ]
+      },
+      "key": {
+        "correct": "a"
+      },
+      "rationale": {
+        "correct": "ABCDE: Asymmetry, Border, Color, Diameter over 6 mm, Evolving.",
+        "perOption": {
+          "a": "Asymmetry, irregular borders, color variation and change suggest melanoma (ABCDE).",
+          "b": "This is a typical benign mole.",
+          "c": "This is benign.",
+          "d": "This is benign."
+        },
+        "references": [
+          "Medical-surgical nursing texts (e.g. Lewis; Ignatavicius)",
+          "Reviewed by the content team on 17 November 2026."
+        ]
+      },
+      "educationalObjective": "Recognize warning signs of melanoma."
+    },
+    {
+      "id": "c1a00022-0000-4000-8000-000000000022",
+      "itemType": "multiple_choice",
+      "clientNeeds": "HPM",
+      "bodySystem": "integumentary",
+      "subtopics": [
+        "skin-cancer-prevention"
+      ],
+      "cjmmSkill": "generate_solutions",
+      "difficulty": "easy",
+      "stem": "Which instruction helps prevent skin cancer?",
+      "content": {
+        "options": [
+          {
+            "id": "a",
+            "text": "Use a broad-spectrum sunscreen of SPF 30 or higher and limit sun exposure between 10 a.m. and 4 p.m."
+          },
+          {
+            "id": "b",
+            "text": "Use tanning beds to build a base tan"
+          },
+          {
+            "id": "c",
+            "text": "Use sunscreen only on cloudy days"
+          },
+          {
+            "id": "d",
+            "text": "Apply sunscreen once a day only"
+          }
+        ]
+      },
+      "key": {
+        "correct": "a"
+      },
+      "rationale": {
+        "correct": "Sun safety: sunscreen, protective clothing, shade and no tanning beds.",
+        "perOption": {
+          "a": "This reduces UV damage.",
+          "b": "Tanning beds raise cancer risk.",
+          "c": "UV exposure occurs on all days.",
+          "d": "Reapply every 2 hours and after swimming."
+        },
+        "references": [
+          "Medical-surgical nursing texts (e.g. Lewis; Ignatavicius)",
+          "Reviewed by the content team on 17 November 2026."
+        ]
+      },
+      "educationalObjective": "Teach skin cancer prevention."
+    },
+    {
+      "id": "c1a00022-0000-4000-8000-000000000023",
+      "itemType": "multiple_choice",
+      "clientNeeds": "PHI.PPT",
+      "bodySystem": "integumentary",
+      "subtopics": [
+        "adverse-effects-of-medications"
+      ],
+      "cjmmSkill": "take_action",
+      "difficulty": "moderate",
+      "stem": "A 19-year-old is starting isotretinoin for severe acne. Which teaching is most important?",
+      "content": {
+        "options": [
+          {
+            "id": "a",
+            "text": "Use two forms of contraception, because the drug causes severe birth defects"
+          },
+          {
+            "id": "b",
+            "text": "Expect the acne to clear in 2 days"
+          },
+          {
+            "id": "c",
+            "text": "Take vitamin A supplements"
+          },
+          {
+            "id": "d",
+            "text": "Donate blood during treatment"
+          }
+        ]
+      },
+      "key": {
+        "correct": "a"
+      },
+      "rationale": {
+        "correct": "Isotretinoin: teratogenic, mood changes, dry skin and lips, no vitamin A and no blood donation.",
+        "perOption": {
+          "a": "Isotretinoin is highly teratogenic; programs require pregnancy prevention and testing.",
+          "b": "Improvement takes weeks to months.",
+          "c": "These add to toxicity.",
+          "d": "Blood donation is prohibited."
+        },
+        "references": [
+          "Nursing pharmacology texts (e.g. Lehne; McCuistion) and the drug's prescribing information",
+          "Reviewed by the content team on 17 November 2026."
+        ]
+      },
+      "educationalObjective": "Teach isotretinoin safety."
+    },
+    {
+      "id": "c1a00022-0000-4000-8000-000000000024",
+      "itemType": "multiple_choice",
+      "clientNeeds": "PHI.BCC",
+      "bodySystem": "integumentary",
+      "subtopics": [
+        "wound-care"
+      ],
+      "cjmmSkill": "take_action",
+      "difficulty": "easy",
+      "stem": "Which action helps prevent skin tears in an older adult?",
+      "content": {
+        "options": [
+          {
+            "id": "a",
+            "text": "Use a lift sheet to move the client and avoid strong adhesive tape"
+          },
+          {
+            "id": "b",
+            "text": "Drag the client up in bed"
+          },
+          {
+            "id": "c",
+            "text": "Use strong adhesive tape on the skin"
+          },
+          {
+            "id": "d",
+            "text": "Bathe with hot water twice a day"
+          }
+        ]
+      },
+      "key": {
+        "correct": "a"
+      },
+      "rationale": {
+        "correct": "Skin tear prevention: lift sheets, padding, gentle handling, moisturizers and silicone tape.",
+        "perOption": {
+          "a": "Fragile skin tears with friction and adhesive removal.",
+          "b": "Friction causes tears.",
+          "c": "This damages fragile skin.",
+          "d": "This dries the skin."
+        },
+        "references": [
+          "Fundamentals of nursing texts (e.g. Potter & Perry)",
+          "Reviewed by the content team on 17 November 2026."
+        ]
+      },
+      "educationalObjective": "Prevent skin tears in older adults."
+    },
+    {
+      "id": "c1a00022-0000-4000-8000-000000000025",
+      "itemType": "highlight_table",
+      "clientNeeds": "PHI.BCC",
+      "bodySystem": "integumentary",
+      "subtopics": [
+        "wound-care"
+      ],
+      "cjmmSkill": "recognize_cues",
+      "difficulty": "moderate",
+      "stem": "The nurse reviews a surgical wound assessment. Highlight the findings that suggest infection.",
+      "content": {
+        "columns": [
+          "Assessment",
+          "Finding"
+        ],
+        "rows": [
+          {
+            "id": "r1",
+            "cells": [
+              "Drainage",
+              "Thick, yellow-green, with a foul odor"
+            ],
+            "selectable": true
+          },
+          {
+            "id": "r2",
+            "cells": [
+              "Surrounding skin",
+              "Redness extending 3 cm beyond the incision"
+            ],
+            "selectable": true
+          },
+          {
+            "id": "r3",
+            "cells": [
+              "Temperature",
+              "38.5 °C (101.3 °F) on postoperative day 4"
+            ],
+            "selectable": true
+          },
+          {
+            "id": "r4",
+            "cells": [
+              "Wound bed",
+              "Pink, granular tissue"
+            ],
+            "selectable": true
+          },
+          {
+            "id": "r5",
+            "cells": [
+              "Wound edges",
+              "Well approximated"
+            ],
+            "selectable": true
+          }
+        ]
+      },
+      "key": {
+        "correct": [
+          "r1",
+          "r2",
+          "r3"
+        ]
+      },
+      "rationale": {
+        "correct": "Signs of wound infection: purulent drainage, spreading erythema, warmth, increasing pain and fever.",
+        "perOption": {
+          "r1": "Purulent drainage indicates infection.",
+          "r2": "Spreading erythema suggests infection.",
+          "r3": "Fever several days after surgery suggests wound infection.",
+          "r4": "Granulation tissue is a sign of healing.",
+          "r5": "This is normal healing."
+        },
+        "references": [
+          "Medical-surgical nursing texts (e.g. Lewis; Ignatavicius)",
+          "Reviewed by the content team on 17 November 2026."
+        ]
+      },
+      "educationalObjective": "Recognize surgical wound infection."
+    }
+  ]
+}
