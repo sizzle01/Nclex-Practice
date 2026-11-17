@@ -1,0 +1,19 @@
+/* One row per weak area: name, score, then how many questions the score is based on. */
+.areas {
+  list-style: none;
+  margin: 0 0 0.75rem;
+  padding: 0;
+  display: grid;
+  gap: 0.5rem;
+}
+
+.areas li {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  column-gap: 0.75rem;
+}
+
+.areas li > :last-child {
+  grid-column: 1 / -1;
+  font-size: 0.875rem;
+}

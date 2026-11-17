@@ -4,6 +4,7 @@ import Link from "next/link";
 import { useRef } from "react";
 import ui from "@/components/ui/ui.module.css";
 import { useMe } from "@/features/auth/AuthProvider";
+import { WeakAreasCard } from "@/features/weak-areas/WeakAreasCard";
 import styles from "./Dashboard.module.css";
 import { DraftsList } from "./DraftsList";
 import { PerformanceOverview } from "./PerformanceOverview";
@@ -12,7 +13,7 @@ import { VerifyEmailBanner } from "./VerifyEmailBanner";
 
 /**
  * /dashboard (interfaces.md 5.2): the verify-email banner, tests in progress, the latest results,
- * and the overall score with the weakest categories.
+ * the overall score with the weakest categories, and practice for the weak areas (F18).
  */
 export function Dashboard() {
   const { data: me } = useMe();
@@ -64,6 +65,7 @@ export function Dashboard() {
             </Link>
           </p>
         </article>
+        <WeakAreasCard />
       </div>
     </section>
   );
