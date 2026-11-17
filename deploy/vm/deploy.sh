@@ -72,7 +72,11 @@ deploy() {
   fi
 
   echo "==> Starting the app"
-  compose up -d --wait --remove-orphans api worker web caddy
+  # The images keep the same :vm tags on every deploy, and on 2026-11-17 compose left the old
+  # containers running after new images were loaded. Every deploy ships new images, so always
+  # recreate the app containers; caddy keeps its own image and only needs to be up.
+  compose up -d --wait --remove-orphans --force-recreate api worker web
+  compose up -d --wait caddy
   ssh_vm "docker image prune -f >/dev/null"
 
   echo "==> Deployed. Open https://$(site_host)"
