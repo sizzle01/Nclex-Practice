@@ -1,0 +1,1266 @@
+{
+  "notice": "RN bank batch 21: Musculoskeletal: fractures, joint replacement, mobility and arthritis. DRAFT - every question must be reviewed by an RN or nurse educator before candidates rely on it.",
+  "track": "RN",
+  "subtopics": [
+    {
+      "clientNeeds": "PHI.RRP",
+      "slug": "fracture-complications",
+      "name": "Fracture complications and neurovascular checks"
+    },
+    {
+      "clientNeeds": "PHI.BCC",
+      "slug": "cast-and-traction-care",
+      "name": "Cast and traction care"
+    },
+    {
+      "clientNeeds": "PHI.RRP",
+      "slug": "joint-replacement-care",
+      "name": "Joint replacement care"
+    },
+    {
+      "clientNeeds": "PHI.BCC",
+      "slug": "mobility-and-assistive-devices",
+      "name": "Mobility and assistive devices"
+    },
+    {
+      "clientNeeds": "HPM",
+      "slug": "bone-health-and-osteoporosis",
+      "name": "Bone health and osteoporosis prevention"
+    },
+    {
+      "clientNeeds": "PHI.PPT",
+      "slug": "musculoskeletal-medications",
+      "name": "Musculoskeletal medications"
+    },
+    {
+      "clientNeeds": "PHI.PA",
+      "slug": "arthritis-and-gout",
+      "name": "Arthritis and gout"
+    },
+    {
+      "clientNeeds": "PHI.BCC",
+      "slug": "amputation-care",
+      "name": "Amputation care"
+    }
+  ],
+  "questions": [
+    {
+      "id": "c1a00021-0000-4000-8000-000000000001",
+      "itemType": "multiple_choice",
+      "clientNeeds": "PHI.RRP",
+      "bodySystem": "musculoskeletal",
+      "subtopics": [
+        "fracture-complications"
+      ],
+      "cjmmSkill": "recognize_cues",
+      "difficulty": "moderate",
+      "stem": "A client with a tibia fracture in a cast reports pain rated 9 out of 10 that isn't relieved by the prescribed opioid. Pain increases when the nurse gently moves the toes. What does the nurse suspect?",
+      "content": {
+        "options": [
+          {
+            "id": "a",
+            "text": "Compartment syndrome"
+          },
+          {
+            "id": "b",
+            "text": "Expected fracture pain"
+          },
+          {
+            "id": "c",
+            "text": "Fat embolism"
+          },
+          {
+            "id": "d",
+            "text": "Osteomyelitis"
+          }
+        ]
+      },
+      "key": {
+        "correct": "a"
+      },
+      "rationale": {
+        "correct": "Compartment syndrome: severe pain unrelieved by opioids and pain with passive stretch come early; pulselessness is late.",
+        "perOption": {
+          "a": "Pain out of proportion to the injury and pain on passive stretch are the earliest signs.",
+          "b": "Expected pain is relieved by analgesics.",
+          "c": "Fat embolism causes respiratory and neurologic signs.",
+          "d": "This develops later, with fever."
+        },
+        "references": [
+          "Medical-surgical nursing texts (e.g. Lewis; Ignatavicius)",
+          "DRAFT: original question written with AI assistance; an RN or nurse educator must check it before candidates rely on it."
+        ]
+      },
+      "educationalObjective": "Recognize early compartment syndrome."
+    },
+    {
+      "id": "c1a00021-0000-4000-8000-000000000002",
+      "itemType": "multiple_choice",
+      "clientNeeds": "PHI.RRP",
+      "bodySystem": "musculoskeletal",
+      "subtopics": [
+        "fracture-complications"
+      ],
+      "cjmmSkill": "take_action",
+      "difficulty": "difficult",
+      "stem": "The nurse suspects compartment syndrome in a client with a casted forearm. What should the nurse do first?",
+      "content": {
+        "options": [
+          {
+            "id": "a",
+            "text": "Notify the provider immediately and keep the arm at heart level"
+          },
+          {
+            "id": "b",
+            "text": "Elevate the arm above the heart"
+          },
+          {
+            "id": "c",
+            "text": "Apply ice and reassess in 2 hours"
+          },
+          {
+            "id": "d",
+            "text": "Give another opioid dose"
+          }
+        ]
+      },
+      "key": {
+        "correct": "a"
+      },
+      "rationale": {
+        "correct": "Compartment syndrome: notify right away, keep the limb at heart level, loosen dressings and prepare for fasciotomy.",
+        "perOption": {
+          "a": "Prompt notification allows bivalving the cast or a fasciotomy; elevating above the heart reduces blood flow.",
+          "b": "Raising it above the heart can reduce arterial flow further.",
+          "c": "Delay can lead to permanent damage.",
+          "d": "This may mask worsening ischemia."
+        },
+        "references": [
+          "Medical-surgical nursing texts (e.g. Lewis; Ignatavicius)",
+          "DRAFT: original question written with AI assistance; an RN or nurse educator must check it before candidates rely on it."
+        ]
+      },
+      "educationalObjective": "Respond to suspected compartment syndrome."
+    },
+    {
+      "id": "c1a00021-0000-4000-8000-000000000003",
+      "itemType": "multiple_choice",
+      "clientNeeds": "PHI.RRP",
+      "bodySystem": "musculoskeletal",
+      "subtopics": [
+        "fracture-complications"
+      ],
+      "cjmmSkill": "recognize_cues",
+      "difficulty": "difficult",
+      "stem": "Two days after a femur fracture, a client suddenly becomes confused and short of breath and has petechiae across the chest. What does the nurse suspect?",
+      "content": {
+        "options": [
+          {
+            "id": "a",
+            "text": "Fat embolism syndrome"
+          },
+          {
+            "id": "b",
+            "text": "Pneumonia"
+          },
+          {
+            "id": "c",
+            "text": "Anxiety"
+          },
+          {
+            "id": "d",
+            "text": "Compartment syndrome"
+          }
+        ]
+      },
+      "key": {
+        "correct": "a"
+      },
+      "rationale": {
+        "correct": "Fat embolism usually appears 24 to 72 hours after a long bone fracture.",
+        "perOption": {
+          "a": "Fat droplets from long bone fractures cause respiratory distress, confusion and petechiae.",
+          "b": "Pneumonia develops more gradually and doesn't cause petechiae.",
+          "c": "This doesn't explain the petechiae.",
+          "d": "This is a limb problem."
+        },
+        "references": [
+          "Medical-surgical nursing texts (e.g. Lewis; Ignatavicius)",
+          "DRAFT: original question written with AI assistance; an RN or nurse educator must check it before candidates rely on it."
+        ]
+      },
+      "educationalObjective": "Recognize fat embolism syndrome."
+    },
+    {
+      "id": "c1a00021-0000-4000-8000-000000000004",
+      "itemType": "sata",
+      "clientNeeds": "PHI.RRP",
+      "bodySystem": "musculoskeletal",
+      "subtopics": [
+        "fracture-complications"
+      ],
+      "cjmmSkill": "recognize_cues",
+      "difficulty": "easy",
+      "stem": "Which assessments are part of a neurovascular check of an injured extremity? Select all that apply.",
+      "content": {
+        "options": [
+          {
+            "id": "a",
+            "text": "Pain"
+          },
+          {
+            "id": "b",
+            "text": "Color of the skin"
+          },
+          {
+            "id": "c",
+            "text": "Pulses distal to the injury"
+          },
+          {
+            "id": "d",
+            "text": "Sensation"
+          },
+          {
+            "id": "e",
+            "text": "Movement of the fingers or toes"
+          },
+          {
+            "id": "f",
+            "text": "Bowel sounds"
+          }
+        ]
+      },
+      "key": {
+        "correct": [
+          "a",
+          "b",
+          "c",
+          "d",
+          "e"
+        ]
+      },
+      "rationale": {
+        "correct": "Check the 6 P's: pain, pallor, pulse, paresthesia, paralysis and poikilothermia (temperature).",
+        "perOption": {
+          "a": "Increasing pain can signal ischemia.",
+          "b": "Pallor or cyanosis suggests poor perfusion.",
+          "c": "Weak or absent pulses suggest arterial compromise.",
+          "d": "Numbness or tingling suggests nerve compression.",
+          "e": "Weakness suggests nerve or muscle damage.",
+          "f": "These aren't part of a neurovascular check."
+        },
+        "references": [
+          "Medical-surgical nursing texts (e.g. Lewis; Ignatavicius)",
+          "DRAFT: original question written with AI assistance; an RN or nurse educator must check it before candidates rely on it."
+        ]
+      },
+      "educationalObjective": "Perform a neurovascular assessment."
+    },
+    {
+      "id": "c1a00021-0000-4000-8000-000000000005",
+      "itemType": "multiple_choice",
+      "clientNeeds": "PHI.BCC",
+      "bodySystem": "musculoskeletal",
+      "subtopics": [
+        "cast-and-traction-care"
+      ],
+      "cjmmSkill": "evaluate_outcomes",
+      "difficulty": "easy",
+      "stem": "A client has a new cast on the lower leg. Which statement shows a need for more teaching?",
+      "content": {
+        "options": [
+          {
+            "id": "a",
+            "text": "\"I'll keep my leg raised for the first day or two.\""
+          },
+          {
+            "id": "b",
+            "text": "\"I'll use a coat hanger to scratch under the cast.\""
+          },
+          {
+            "id": "c",
+            "text": "\"I'll report numbness or tingling.\""
+          },
+          {
+            "id": "d",
+            "text": "\"I'll keep the cast dry.\""
+          }
+        ]
+      },
+      "key": {
+        "correct": "b"
+      },
+      "rationale": {
+        "correct": "Cast care: elevate, keep it dry, don't put objects inside and report neurovascular changes.",
+        "perOption": {
+          "a": "Elevation reduces swelling.",
+          "b": "Objects can break the skin and cause infection.",
+          "c": "These are warning signs.",
+          "d": "Moisture weakens the cast and damages the skin."
+        },
+        "references": [
+          "Medical-surgical nursing texts (e.g. Lewis; Ignatavicius)",
+          "DRAFT: original question written with AI assistance; an RN or nurse educator must check it before candidates rely on it."
+        ]
+      },
+      "educationalObjective": "Teach cast care."
+    },
+    {
+      "id": "c1a00021-0000-4000-8000-000000000006",
+      "itemType": "multiple_choice",
+      "clientNeeds": "PHI.BCC",
+      "bodySystem": "musculoskeletal",
+      "subtopics": [
+        "cast-and-traction-care"
+      ],
+      "cjmmSkill": "evaluate_outcomes",
+      "difficulty": "moderate",
+      "stem": "A client is in Buck's skin traction. Which observation requires the nurse to intervene?",
+      "content": {
+        "options": [
+          {
+            "id": "a",
+            "text": "The weights are hanging freely"
+          },
+          {
+            "id": "b",
+            "text": "The weights are resting on the floor"
+          },
+          {
+            "id": "c",
+            "text": "The client's heel is off the bed"
+          },
+          {
+            "id": "d",
+            "text": "The rope is in the pulley groove"
+          }
+        ]
+      },
+      "key": {
+        "correct": "b"
+      },
+      "rationale": {
+        "correct": "Traction: weights hang freely, ropes are in the pulleys and the client stays aligned.",
+        "perOption": {
+          "a": "This is correct.",
+          "b": "Weights on the floor provide no traction.",
+          "c": "This prevents pressure injury.",
+          "d": "This is correct."
+        },
+        "references": [
+          "Medical-surgical nursing texts (e.g. Lewis; Ignatavicius)",
+          "DRAFT: original question written with AI assistance; an RN or nurse educator must check it before candidates rely on it."
+        ]
+      },
+      "educationalObjective": "Maintain effective traction."
+    },
+    {
+      "id": "c1a00021-0000-4000-8000-000000000007",
+      "itemType": "multiple_choice",
+      "clientNeeds": "PHI.BCC",
+      "bodySystem": "musculoskeletal",
+      "subtopics": [
+        "cast-and-traction-care"
+      ],
+      "cjmmSkill": "take_action",
+      "difficulty": "moderate",
+      "stem": "Which finding at a skeletal traction pin site should the nurse report?",
+      "content": {
+        "options": [
+          {
+            "id": "a",
+            "text": "Thick, yellow-green drainage with redness spreading around the pin"
+          },
+          {
+            "id": "b",
+            "text": "Small amount of clear drainage"
+          },
+          {
+            "id": "c",
+            "text": "Slight crust at the site"
+          },
+          {
+            "id": "d",
+            "text": "Mild tenderness the first day"
+          }
+        ]
+      },
+      "key": {
+        "correct": "a"
+      },
+      "rationale": {
+        "correct": "Pin care: clean per protocol and report purulent drainage, redness or fever.",
+        "perOption": {
+          "a": "This suggests infection, which can lead to osteomyelitis.",
+          "b": "Serous drainage is expected.",
+          "c": "This is common.",
+          "d": "This is expected."
+        },
+        "references": [
+          "Medical-surgical nursing texts (e.g. Lewis; Ignatavicius)",
+          "DRAFT: original question written with AI assistance; an RN or nurse educator must check it before candidates rely on it."
+        ]
+      },
+      "educationalObjective": "Recognize pin site infection."
+    },
+    {
+      "id": "c1a00021-0000-4000-8000-000000000008",
+      "itemType": "multiple_choice",
+      "clientNeeds": "PHI.RRP",
+      "bodySystem": "musculoskeletal",
+      "subtopics": [
+        "fracture-complications"
+      ],
+      "cjmmSkill": "recognize_cues",
+      "difficulty": "easy",
+      "stem": "An older adult fell at home. Which finding suggests a hip fracture?",
+      "content": {
+        "options": [
+          {
+            "id": "a",
+            "text": "The affected leg is shorter and rotated outward"
+          },
+          {
+            "id": "b",
+            "text": "The affected leg is longer and rotated inward"
+          },
+          {
+            "id": "c",
+            "text": "Bruising on the knee only"
+          },
+          {
+            "id": "d",
+            "text": "Full range of motion without pain"
+          }
+        ]
+      },
+      "key": {
+        "correct": "a"
+      },
+      "rationale": {
+        "correct": "Hip fracture: shortening, external rotation and groin or hip pain.",
+        "perOption": {
+          "a": "These are classic signs of a hip fracture.",
+          "b": "This isn't typical.",
+          "c": "This doesn't indicate a hip fracture.",
+          "d": "This makes a fracture unlikely."
+        },
+        "references": [
+          "Medical-surgical nursing texts (e.g. Lewis; Ignatavicius)",
+          "DRAFT: original question written with AI assistance; an RN or nurse educator must check it before candidates rely on it."
+        ]
+      },
+      "educationalObjective": "Recognize a hip fracture."
+    },
+    {
+      "id": "c1a00021-0000-4000-8000-000000000009",
+      "itemType": "multiple_choice",
+      "clientNeeds": "PHI.RRP",
+      "bodySystem": "musculoskeletal",
+      "subtopics": [
+        "joint-replacement-care"
+      ],
+      "cjmmSkill": "evaluate_outcomes",
+      "difficulty": "moderate",
+      "stem": "A client had a posterior-approach total hip replacement. Which statement shows a need for more teaching?",
+      "content": {
+        "options": [
+          {
+            "id": "a",
+            "text": "\"I'll use a raised toilet seat.\""
+          },
+          {
+            "id": "b",
+            "text": "\"I'll keep a pillow between my legs.\""
+          },
+          {
+            "id": "c",
+            "text": "\"I'll cross my legs when I sit.\""
+          },
+          {
+            "id": "d",
+            "text": "\"I won't bend forward to pick things up.\""
+          }
+        ]
+      },
+      "key": {
+        "correct": "c"
+      },
+      "rationale": {
+        "correct": "Posterior hip precautions: no flexion beyond 90 degrees, no crossing the legs and no inward rotation.",
+        "perOption": {
+          "a": "This avoids bending the hip more than 90 degrees.",
+          "b": "This keeps the hip abducted.",
+          "c": "Crossing the legs can dislocate the hip.",
+          "d": "This avoids flexion beyond 90 degrees."
+        },
+        "references": [
+          "Medical-surgical nursing texts (e.g. Lewis; Ignatavicius)",
+          "DRAFT: original question written with AI assistance; an RN or nurse educator must check it before candidates rely on it."
+        ]
+      },
+      "educationalObjective": "Teach hip precautions after hip replacement."
+    },
+    {
+      "id": "c1a00021-0000-4000-8000-000000000010",
+      "itemType": "multiple_choice",
+      "clientNeeds": "PHI.RRP",
+      "bodySystem": "musculoskeletal",
+      "subtopics": [
+        "joint-replacement-care"
+      ],
+      "cjmmSkill": "recognize_cues",
+      "difficulty": "moderate",
+      "stem": "One day after a total hip replacement, the client turns and reports sudden severe hip pain. The operative leg is shorter and rotated. What does the nurse suspect?",
+      "content": {
+        "options": [
+          {
+            "id": "a",
+            "text": "Dislocation of the hip prosthesis"
+          },
+          {
+            "id": "b",
+            "text": "Expected pain"
+          },
+          {
+            "id": "c",
+            "text": "Deep vein thrombosis"
+          },
+          {
+            "id": "d",
+            "text": "Infection"
+          }
+        ]
+      },
+      "key": {
+        "correct": "a"
+      },
+      "rationale": {
+        "correct": "Report suspected dislocation immediately and keep the leg still.",
+        "perOption": {
+          "a": "Sudden pain with shortening and rotation suggests dislocation.",
+          "b": "This isn't expected.",
+          "c": "DVT causes calf swelling.",
+          "d": "Infection develops more slowly."
+        },
+        "references": [
+          "Medical-surgical nursing texts (e.g. Lewis; Ignatavicius)",
+          "DRAFT: original question written with AI assistance; an RN or nurse educator must check it before candidates rely on it."
+        ]
+      },
+      "educationalObjective": "Recognize hip prosthesis dislocation."
+    },
+    {
+      "id": "c1a00021-0000-4000-8000-000000000011",
+      "itemType": "multiple_choice",
+      "clientNeeds": "PHI.RRP",
+      "bodySystem": "musculoskeletal",
+      "subtopics": [
+        "joint-replacement-care"
+      ],
+      "cjmmSkill": "generate_solutions",
+      "difficulty": "moderate",
+      "stem": "Which intervention best reduces the risk of deep vein thrombosis after total knee replacement?",
+      "content": {
+        "options": [
+          {
+            "id": "a",
+            "text": "Early walking with prescribed anticoagulants and compression devices"
+          },
+          {
+            "id": "b",
+            "text": "Keeping a pillow under the knee"
+          },
+          {
+            "id": "c",
+            "text": "Bed rest for 1 week"
+          },
+          {
+            "id": "d",
+            "text": "Limiting fluids"
+          }
+        ]
+      },
+      "key": {
+        "correct": "a"
+      },
+      "rationale": {
+        "correct": "After joint replacement: anticoagulation, mechanical compression, early mobility and hydration.",
+        "perOption": {
+          "a": "Mobility and prophylaxis reduce venous stasis.",
+          "b": "This can cause flexion contracture.",
+          "c": "Immobility increases DVT risk.",
+          "d": "Dehydration increases DVT risk."
+        },
+        "references": [
+          "Medical-surgical nursing texts (e.g. Lewis; Ignatavicius)",
+          "DRAFT: original question written with AI assistance; an RN or nurse educator must check it before candidates rely on it."
+        ]
+      },
+      "educationalObjective": "Prevent DVT after joint replacement."
+    },
+    {
+      "id": "c1a00021-0000-4000-8000-000000000012",
+      "itemType": "multiple_choice",
+      "clientNeeds": "PHI.BCC",
+      "bodySystem": "musculoskeletal",
+      "subtopics": [
+        "mobility-and-assistive-devices"
+      ],
+      "cjmmSkill": "evaluate_outcomes",
+      "difficulty": "easy",
+      "stem": "The nurse is checking a client's crutch use. Which observation requires correction?",
+      "content": {
+        "options": [
+          {
+            "id": "a",
+            "text": "The client rests body weight on the axillary pads"
+          },
+          {
+            "id": "b",
+            "text": "There are 2 to 3 finger widths between the armpit and the crutch pad"
+          },
+          {
+            "id": "c",
+            "text": "The elbows are flexed about 30 degrees"
+          },
+          {
+            "id": "d",
+            "text": "The crutch tips are 15 cm (6 inches) to the side of the feet"
+          }
+        ]
+      },
+      "key": {
+        "correct": "a"
+      },
+      "rationale": {
+        "correct": "Crutches: weight on the hands, a 2 to 3 finger gap at the armpit and elbows flexed 20 to 30 degrees.",
+        "perOption": {
+          "a": "Pressure on the armpits can damage the brachial plexus; weight goes on the hands.",
+          "b": "This is the correct fit.",
+          "c": "This is correct.",
+          "d": "This is correct."
+        },
+        "references": [
+          "Fundamentals of nursing texts (e.g. Potter & Perry)",
+          "DRAFT: original question written with AI assistance; an RN or nurse educator must check it before candidates rely on it."
+        ]
+      },
+      "educationalObjective": "Check correct crutch use."
+    },
+    {
+      "id": "c1a00021-0000-4000-8000-000000000013",
+      "itemType": "multiple_choice",
+      "clientNeeds": "PHI.BCC",
+      "bodySystem": "musculoskeletal",
+      "subtopics": [
+        "mobility-and-assistive-devices"
+      ],
+      "cjmmSkill": "take_action",
+      "difficulty": "moderate",
+      "stem": "A client with a right leg injury is using crutches. How should the client go up stairs?",
+      "content": {
+        "options": [
+          {
+            "id": "a",
+            "text": "Step up with the left (uninjured) leg, then bring up the crutches and the right leg"
+          },
+          {
+            "id": "b",
+            "text": "Step up with the right leg first"
+          },
+          {
+            "id": "c",
+            "text": "Move the crutches up first"
+          },
+          {
+            "id": "d",
+            "text": "Hop up without crutches"
+          }
+        ]
+      },
+      "key": {
+        "correct": "a"
+      },
+      "rationale": {
+        "correct": "Stairs: up with the good leg, down with the crutches and the injured leg.",
+        "perOption": {
+          "a": "\"Up with the good, down with the bad.\"",
+          "b": "The injured leg can't bear the lift.",
+          "c": "The good leg leads going up.",
+          "d": "This is unsafe."
+        },
+        "references": [
+          "Fundamentals of nursing texts (e.g. Potter & Perry)",
+          "DRAFT: original question written with AI assistance; an RN or nurse educator must check it before candidates rely on it."
+        ]
+      },
+      "educationalObjective": "Teach stair climbing with crutches."
+    },
+    {
+      "id": "c1a00021-0000-4000-8000-000000000014",
+      "itemType": "multiple_choice",
+      "clientNeeds": "PHI.BCC",
+      "bodySystem": "musculoskeletal",
+      "subtopics": [
+        "mobility-and-assistive-devices"
+      ],
+      "cjmmSkill": "take_action",
+      "difficulty": "easy",
+      "stem": "A client has weakness in the left leg. How should the client use a cane?",
+      "content": {
+        "options": [
+          {
+            "id": "a",
+            "text": "Hold the cane in the right hand and move it forward with the left leg"
+          },
+          {
+            "id": "b",
+            "text": "Hold the cane in the left hand"
+          },
+          {
+            "id": "c",
+            "text": "Move the cane with the right leg"
+          },
+          {
+            "id": "d",
+            "text": "Hold the cane far in front of the body"
+          }
+        ]
+      },
+      "key": {
+        "correct": "a"
+      },
+      "rationale": {
+        "correct": "Cane: on the strong side, advanced with the weak leg.",
+        "perOption": {
+          "a": "The cane on the strong side supports the weak leg.",
+          "b": "The cane goes on the strong side.",
+          "c": "The cane moves with the weak leg.",
+          "d": "It should be about 15 cm (6 inches) to the side."
+        },
+        "references": [
+          "Fundamentals of nursing texts (e.g. Potter & Perry)",
+          "DRAFT: original question written with AI assistance; an RN or nurse educator must check it before candidates rely on it."
+        ]
+      },
+      "educationalObjective": "Teach correct cane use."
+    },
+    {
+      "id": "c1a00021-0000-4000-8000-000000000015",
+      "itemType": "ordered_response",
+      "clientNeeds": "PHI.BCC",
+      "bodySystem": "musculoskeletal",
+      "subtopics": [
+        "mobility-and-assistive-devices"
+      ],
+      "cjmmSkill": "take_action",
+      "difficulty": "easy",
+      "stem": "A client with a weak right leg is learning to use a standard walker. Place the steps in order.",
+      "content": {
+        "items": [
+          {
+            "id": "b",
+            "text": "Step forward with the weak (right) leg"
+          },
+          {
+            "id": "c",
+            "text": "Step forward with the strong (left) leg"
+          },
+          {
+            "id": "a",
+            "text": "Lift the walker and move it forward about one step's length"
+          }
+        ]
+      },
+      "key": {
+        "order": [
+          "a",
+          "b",
+          "c"
+        ],
+        "scoring": "all_or_nothing"
+      },
+      "rationale": {
+        "correct": "Walker: walker, weak leg, strong leg.",
+        "perOption": {
+          "a": "The walker moves first to provide a base of support.",
+          "b": "The weak leg moves into the walker while weight is supported.",
+          "c": "The strong leg follows."
+        },
+        "references": [
+          "Fundamentals of nursing texts (e.g. Potter & Perry)",
+          "DRAFT: original question written with AI assistance; an RN or nurse educator must check it before candidates rely on it."
+        ]
+      },
+      "educationalObjective": "Teach walker use."
+    },
+    {
+      "id": "c1a00021-0000-4000-8000-000000000016",
+      "itemType": "multiple_choice",
+      "clientNeeds": "HPM",
+      "bodySystem": "musculoskeletal",
+      "subtopics": [
+        "bone-health-and-osteoporosis"
+      ],
+      "cjmmSkill": "generate_solutions",
+      "difficulty": "easy",
+      "stem": "Which instruction helps prevent osteoporosis?",
+      "content": {
+        "options": [
+          {
+            "id": "a",
+            "text": "Get enough calcium and vitamin D and do weight-bearing exercise"
+          },
+          {
+            "id": "b",
+            "text": "Drink more cola"
+          },
+          {
+            "id": "c",
+            "text": "Avoid all exercise"
+          },
+          {
+            "id": "d",
+            "text": "Smoke fewer than five cigarettes a day"
+          }
+        ]
+      },
+      "key": {
+        "correct": "a"
+      },
+      "rationale": {
+        "correct": "Osteoporosis prevention: calcium, vitamin D, weight-bearing exercise, no smoking, limited alcohol and fall prevention.",
+        "perOption": {
+          "a": "These build and maintain bone mass.",
+          "b": "Cola may reduce bone density.",
+          "c": "Inactivity increases bone loss.",
+          "d": "Any smoking increases bone loss."
+        },
+        "references": [
+          "Medical-surgical nursing texts (e.g. Lewis; Ignatavicius)",
+          "DRAFT: original question written with AI assistance; an RN or nurse educator must check it before candidates rely on it."
+        ]
+      },
+      "educationalObjective": "Teach osteoporosis prevention."
+    },
+    {
+      "id": "c1a00021-0000-4000-8000-000000000017",
+      "itemType": "multiple_choice",
+      "clientNeeds": "PHI.PPT",
+      "bodySystem": "musculoskeletal",
+      "subtopics": [
+        "musculoskeletal-medications"
+      ],
+      "cjmmSkill": "evaluate_outcomes",
+      "difficulty": "moderate",
+      "stem": "A client is prescribed alendronate. Which statement shows correct understanding?",
+      "content": {
+        "options": [
+          {
+            "id": "a",
+            "text": "\"I'll take it first thing in the morning with a full glass of water and stay upright for 30 minutes.\""
+          },
+          {
+            "id": "b",
+            "text": "\"I'll take it with breakfast and coffee.\""
+          },
+          {
+            "id": "c",
+            "text": "\"I'll lie down after taking it.\""
+          },
+          {
+            "id": "d",
+            "text": "\"I'll take it with my calcium pill.\""
+          }
+        ]
+      },
+      "key": {
+        "correct": "a"
+      },
+      "rationale": {
+        "correct": "Bisphosphonates: empty stomach, plain water, upright for 30 minutes, no other food or medications for 30 minutes.",
+        "perOption": {
+          "a": "This prevents esophageal irritation and allows absorption.",
+          "b": "Food and drinks other than water reduce absorption.",
+          "c": "Lying down risks esophagitis.",
+          "d": "Calcium reduces absorption."
+        },
+        "references": [
+          "Nursing pharmacology texts (e.g. Lehne; McCuistion) and the drug's prescribing information",
+          "DRAFT: original question written with AI assistance; an RN or nurse educator must check it before candidates rely on it."
+        ]
+      },
+      "educationalObjective": "Teach correct use of alendronate."
+    },
+    {
+      "id": "c1a00021-0000-4000-8000-000000000018",
+      "itemType": "matrix_mc",
+      "clientNeeds": "PHI.PA",
+      "bodySystem": "musculoskeletal",
+      "subtopics": [
+        "arthritis-and-gout"
+      ],
+      "cjmmSkill": "analyze_cues",
+      "difficulty": "moderate",
+      "stem": "For each finding, indicate whether it is more typical of osteoarthritis or rheumatoid arthritis.",
+      "content": {
+        "rows": [
+          {
+            "id": "r1",
+            "text": "Morning stiffness lasting more than 1 hour"
+          },
+          {
+            "id": "r2",
+            "text": "Bony nodes at the finger joints closest to the nails (Heberden's nodes)"
+          },
+          {
+            "id": "r3",
+            "text": "The same joints affected on both sides of the body"
+          },
+          {
+            "id": "r4",
+            "text": "Joint pain that worsens with use and improves with rest"
+          },
+          {
+            "id": "r5",
+            "text": "Fatigue, low-grade fever and weight loss"
+          }
+        ],
+        "columns": [
+          {
+            "id": "c1",
+            "text": "Osteoarthritis"
+          },
+          {
+            "id": "c2",
+            "text": "Rheumatoid arthritis"
+          }
+        ]
+      },
+      "key": {
+        "byRow": {
+          "r1": "c2",
+          "r2": "c1",
+          "r3": "c2",
+          "r4": "c1",
+          "r5": "c2"
+        }
+      },
+      "rationale": {
+        "correct": "OA: degenerative, worse with use, Heberden's nodes. RA: autoimmune, symmetric, long morning stiffness, systemic symptoms.",
+        "perOption": {
+          "r1:c1": "OA stiffness usually lasts under 30 minutes.",
+          "r1:c2": "Prolonged morning stiffness is typical of RA.",
+          "r2:c1": "Heberden's nodes are typical of OA.",
+          "r2:c2": "RA affects the knuckles and wrists rather than causing these nodes.",
+          "r3:c1": "OA is often asymmetric.",
+          "r3:c2": "RA is typically symmetric.",
+          "r4:c1": "Wear-and-tear pain is typical of OA.",
+          "r4:c2": "RA pain is often worse after rest.",
+          "r5:c1": "OA doesn't cause systemic symptoms.",
+          "r5:c2": "RA is a systemic autoimmune disease."
+        },
+        "references": [
+          "Medical-surgical nursing texts (e.g. Lewis; Ignatavicius)",
+          "DRAFT: original question written with AI assistance; an RN or nurse educator must check it before candidates rely on it."
+        ]
+      },
+      "educationalObjective": "Tell osteoarthritis apart from rheumatoid arthritis."
+    },
+    {
+      "id": "c1a00021-0000-4000-8000-000000000019",
+      "itemType": "multiple_choice",
+      "clientNeeds": "PHI.PA",
+      "bodySystem": "musculoskeletal",
+      "subtopics": [
+        "arthritis-and-gout"
+      ],
+      "cjmmSkill": "evaluate_outcomes",
+      "difficulty": "moderate",
+      "stem": "A client with gout is learning about diet. Which food choice shows a need for more teaching?",
+      "content": {
+        "options": [
+          {
+            "id": "a",
+            "text": "Low-fat dairy"
+          },
+          {
+            "id": "b",
+            "text": "Organ meats and shellfish"
+          },
+          {
+            "id": "c",
+            "text": "Cherries"
+          },
+          {
+            "id": "d",
+            "text": "Plenty of water"
+          }
+        ]
+      },
+      "key": {
+        "correct": "b"
+      },
+      "rationale": {
+        "correct": "Gout: limit purines (organ meats, shellfish), alcohol and fructose; drink fluids.",
+        "perOption": {
+          "a": "Low-fat dairy may lower uric acid.",
+          "b": "These are high in purines and raise uric acid.",
+          "c": "Cherries may lower uric acid.",
+          "d": "Fluids help excrete uric acid."
+        },
+        "references": [
+          "Medical-surgical nursing texts (e.g. Lewis; Ignatavicius)",
+          "DRAFT: original question written with AI assistance; an RN or nurse educator must check it before candidates rely on it."
+        ]
+      },
+      "educationalObjective": "Teach dietary management of gout."
+    },
+    {
+      "id": "c1a00021-0000-4000-8000-000000000020",
+      "itemType": "multiple_choice",
+      "clientNeeds": "PHI.PPT",
+      "bodySystem": "musculoskeletal",
+      "subtopics": [
+        "musculoskeletal-medications"
+      ],
+      "cjmmSkill": "evaluate_outcomes",
+      "difficulty": "moderate",
+      "stem": "A client with gout is prescribed allopurinol. Which statement shows a need for more teaching?",
+      "content": {
+        "options": [
+          {
+            "id": "a",
+            "text": "\"I'll take it every day to prevent attacks.\""
+          },
+          {
+            "id": "b",
+            "text": "\"I'll take it to stop the pain of an attack.\""
+          },
+          {
+            "id": "c",
+            "text": "\"I'll drink plenty of fluids.\""
+          },
+          {
+            "id": "d",
+            "text": "\"I'll report any rash.\""
+          }
+        ]
+      },
+      "key": {
+        "correct": "b"
+      },
+      "rationale": {
+        "correct": "Allopurinol prevents gout by lowering uric acid; it doesn't treat acute flares.",
+        "perOption": {
+          "a": "Allopurinol is a long-term preventive drug.",
+          "b": "Allopurinol doesn't treat acute attacks; colchicine, NSAIDs or steroids do.",
+          "c": "Fluids prevent kidney stones.",
+          "d": "A rash can signal a serious reaction."
+        },
+        "references": [
+          "Nursing pharmacology texts (e.g. Lehne; McCuistion) and the drug's prescribing information",
+          "DRAFT: original question written with AI assistance; an RN or nurse educator must check it before candidates rely on it."
+        ]
+      },
+      "educationalObjective": "Teach about allopurinol."
+    },
+    {
+      "id": "c1a00021-0000-4000-8000-000000000021",
+      "itemType": "multiple_choice",
+      "clientNeeds": "PHI.BCC",
+      "bodySystem": "musculoskeletal",
+      "subtopics": [
+        "amputation-care"
+      ],
+      "cjmmSkill": "generate_solutions",
+      "difficulty": "moderate",
+      "stem": "A client had an above-the-knee amputation 2 days ago. Which position helps prevent a hip flexion contracture?",
+      "content": {
+        "options": [
+          {
+            "id": "a",
+            "text": "Lying prone several times a day"
+          },
+          {
+            "id": "b",
+            "text": "Keeping a pillow under the residual limb"
+          },
+          {
+            "id": "c",
+            "text": "Sitting in a chair most of the day"
+          },
+          {
+            "id": "d",
+            "text": "Keeping the head of the bed raised all day"
+          }
+        ]
+      },
+      "key": {
+        "correct": "a"
+      },
+      "rationale": {
+        "correct": "After amputation: prone positioning, no pillows under the limb after 24 hours and limited sitting.",
+        "perOption": {
+          "a": "Lying face down stretches the hip flexors.",
+          "b": "This promotes hip flexion contracture (after the first 24 hours).",
+          "c": "Prolonged sitting promotes flexion.",
+          "d": "This promotes hip flexion."
+        },
+        "references": [
+          "Medical-surgical nursing texts (e.g. Lewis; Ignatavicius)",
+          "DRAFT: original question written with AI assistance; an RN or nurse educator must check it before candidates rely on it."
+        ]
+      },
+      "educationalObjective": "Prevent contractures after amputation."
+    },
+    {
+      "id": "c1a00021-0000-4000-8000-000000000022",
+      "itemType": "multiple_choice",
+      "clientNeeds": "PHI.BCC",
+      "bodySystem": "musculoskeletal",
+      "subtopics": [
+        "amputation-care"
+      ],
+      "cjmmSkill": "take_action",
+      "difficulty": "moderate",
+      "stem": "A client says, \"I can feel my missing foot hurting.\" What is the best response?",
+      "content": {
+        "options": [
+          {
+            "id": "a",
+            "text": "\"Phantom limb pain is real, and we can treat it.\""
+          },
+          {
+            "id": "b",
+            "text": "\"That's impossible, your foot is gone.\""
+          },
+          {
+            "id": "c",
+            "text": "\"It's all in your head.\""
+          },
+          {
+            "id": "d",
+            "text": "\"It will never go away.\""
+          }
+        ]
+      },
+      "key": {
+        "correct": "a"
+      },
+      "rationale": {
+        "correct": "Phantom limb pain is real; it may be treated with medications, mirror therapy and other approaches.",
+        "perOption": {
+          "a": "Phantom pain comes from nerve signals and responds to treatment.",
+          "b": "This dismisses a real experience.",
+          "c": "This dismisses the client.",
+          "d": "It often improves."
+        },
+        "references": [
+          "Medical-surgical nursing texts (e.g. Lewis; Ignatavicius)",
+          "DRAFT: original question written with AI assistance; an RN or nurse educator must check it before candidates rely on it."
+        ]
+      },
+      "educationalObjective": "Respond to phantom limb pain."
+    },
+    {
+      "id": "c1a00021-0000-4000-8000-000000000023",
+      "itemType": "multiple_choice",
+      "clientNeeds": "PHI.BCC",
+      "bodySystem": "musculoskeletal",
+      "subtopics": [
+        "amputation-care"
+      ],
+      "cjmmSkill": "take_action",
+      "difficulty": "moderate",
+      "stem": "How should the nurse wrap a below-the-knee residual limb with an elastic bandage?",
+      "content": {
+        "options": [
+          {
+            "id": "a",
+            "text": "In a figure-eight pattern, with firmer pressure at the end of the limb"
+          },
+          {
+            "id": "b",
+            "text": "In circular turns, tightest near the knee"
+          },
+          {
+            "id": "c",
+            "text": "Loosely, without overlap"
+          },
+          {
+            "id": "d",
+            "text": "Only at night"
+          }
+        ]
+      },
+      "key": {
+        "correct": "a"
+      },
+      "rationale": {
+        "correct": "Residual limb wrapping: figure-eight, distal to proximal, firmest at the end.",
+        "perOption": {
+          "a": "This shapes the limb into a cone for a prosthesis.",
+          "b": "This restricts blood flow.",
+          "c": "This won't shape the limb.",
+          "d": "Wrapping is usually continuous, rewrapped several times a day."
+        },
+        "references": [
+          "Medical-surgical nursing texts (e.g. Lewis; Ignatavicius)",
+          "DRAFT: original question written with AI assistance; an RN or nurse educator must check it before candidates rely on it."
+        ]
+      },
+      "educationalObjective": "Wrap a residual limb correctly."
+    },
+    {
+      "id": "c1a00021-0000-4000-8000-000000000024",
+      "itemType": "multiple_choice",
+      "clientNeeds": "PHI.PA",
+      "bodySystem": "musculoskeletal",
+      "subtopics": [
+        "arthritis-and-gout"
+      ],
+      "cjmmSkill": "recognize_cues",
+      "difficulty": "easy",
+      "stem": "When a client holds both wrists in full flexion for 60 seconds, numbness and tingling occur in the thumb, index and middle fingers. Which condition does this suggest?",
+      "content": {
+        "options": [
+          {
+            "id": "a",
+            "text": "Carpal tunnel syndrome"
+          },
+          {
+            "id": "b",
+            "text": "Gout"
+          },
+          {
+            "id": "c",
+            "text": "Rheumatoid arthritis"
+          },
+          {
+            "id": "d",
+            "text": "Raynaud's phenomenon"
+          }
+        ]
+      },
+      "key": {
+        "correct": "a"
+      },
+      "rationale": {
+        "correct": "Carpal tunnel: positive Phalen and Tinel signs; wrist splinting and ergonomic changes help.",
+        "perOption": {
+          "a": "A positive Phalen test suggests median nerve compression.",
+          "b": "Gout causes joint inflammation.",
+          "c": "This isn't the Phalen test result.",
+          "d": "This involves color changes with cold."
+        },
+        "references": [
+          "Medical-surgical nursing texts (e.g. Lewis; Ignatavicius)",
+          "DRAFT: original question written with AI assistance; an RN or nurse educator must check it before candidates rely on it."
+        ]
+      },
+      "educationalObjective": "Recognize carpal tunnel syndrome."
+    }
+  ]
+}
