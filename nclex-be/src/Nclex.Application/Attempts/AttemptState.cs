@@ -11,6 +11,7 @@ namespace Nclex.Application.Attempts;
 /// <param name="Timer">Server time and timers; the client works out its clock offset from <c>serverNow</c>.</param>
 /// <param name="StaleDraft">True when the draft is over 30 days old, so the UI asks "resume or discard?".</param>
 /// <param name="ResultAvailable">True once the attempt has been graded (F10).</param>
+/// <param name="Adaptive">The adaptive exam's progress (F19); null for every other attempt.</param>
 public sealed record AttemptState(
     Guid Id,
     TestSetRef TestSet,
@@ -24,7 +25,30 @@ public sealed record AttemptState(
     DateTimeOffset StartedAt,
     DateTimeOffset LastActivityAt,
     bool StaleDraft,
-    bool ResultAvailable);
+    bool ResultAvailable,
+    AdaptiveProgress? Adaptive);
+
+/// <summary>
+/// How far an adaptive exam has gone. It never shows the ability estimate while it runs, as on the
+/// NCLEX: only the question count and the rules.
+/// </summary>
+/// <param name="Answered">Questions answered so far.</param>
+/// <param name="MinItems">Questions before the exam may stop on a clear result.</param>
+/// <param name="MaxItems">The exam always stops here.</param>
+/// <param name="Timed">The candidate's choice when starting.</param>
+public sealed record AdaptiveProgress(int Answered, int MinItems, int MaxItems, bool Timed)
+{
+    public static AdaptiveProgress? For(Attempt attempt)
+    {
+        if (!attempt.IsAdaptive)
+        {
+            return null;
+        }
+
+        var state = attempt.ReadCatState();
+        return new AdaptiveProgress(state.AnsweredCount, state.Config.MinItems, state.Config.MaxItems, attempt.Settings.Timed);
+    }
+}
 
 /// <summary>The set an attempt belongs to.</summary>
 public sealed record TestSetRef(Guid Id, string Title);

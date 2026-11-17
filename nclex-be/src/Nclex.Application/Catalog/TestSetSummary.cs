@@ -9,6 +9,7 @@ namespace Nclex.Application.Catalog;
 /// <param name="IsSample">Can be started before verifying an email.</param>
 /// <param name="Locked">True when the set is premium and the user's plan is free.</param>
 /// <param name="MyLastAttempt">The user's latest submitted attempt of the set; null when they have never finished it.</param>
+/// <param name="Adaptive">The length rules of an adaptive exam (F19); null for every other set.</param>
 public sealed record TestSetSummary(
     Guid Id,
     string Title,
@@ -22,7 +23,26 @@ public sealed record TestSetSummary(
     bool IsSample,
     PlanTier AccessTier,
     bool Locked,
-    LastAttemptSummary? MyLastAttempt);
+    LastAttemptSummary? MyLastAttempt,
+    AdaptiveRules? Adaptive = null);
+
+/// <summary>
+/// How long an adaptive exam can run (architecture.md 5.8). Its <c>questionCount</c> is the
+/// maximum, so the card shows "85–150 questions" from these instead.
+/// </summary>
+public sealed record AdaptiveRules(int MinItems, int MaxItems)
+{
+    public static AdaptiveRules? For(TestSet set)
+    {
+        if (set.Kind != TestSetKind.Cat)
+        {
+            return null;
+        }
+
+        var config = set.AdaptiveConfig();
+        return new AdaptiveRules(config.MinItems, config.MaxItems);
+    }
+}
 
 /// <summary>The user's latest submitted attempt of a set.</summary>
 /// <param name="ScorePct">Share of points earned, from 0 to 1.</param>
@@ -33,6 +53,7 @@ public sealed record LastAttemptSummary(Guid Id, decimal ScorePct, DateTimeOffse
 /// <param name="PausePolicy">Pause limits; null values mean no limit.</param>
 /// <param name="Locked">True when the set is premium and the user's plan is free.</param>
 /// <param name="MyLastAttempt">The user's latest submitted attempt of the set; null when they have never finished it.</param>
+/// <param name="Adaptive">The length rules of an adaptive exam (F19); null for every other set.</param>
 public sealed record TestSetDetail(
     Guid Id,
     ExamTrack Track,
@@ -51,7 +72,8 @@ public sealed record TestSetDetail(
     bool IsSample,
     PlanTier AccessTier,
     bool Locked,
-    LastAttemptSummary? MyLastAttempt)
+    LastAttemptSummary? MyLastAttempt,
+    AdaptiveRules? Adaptive = null)
 {
     /// <summary>The detail of <paramref name="set"/> as <paramref name="viewer"/> sees it.</summary>
     public static TestSetDetail From(TestSet set, CatalogViewer viewer, LastAttemptSummary? myLastAttempt = null) => new(
@@ -72,7 +94,8 @@ public sealed record TestSetDetail(
         set.IsSample,
         set.AccessTier,
         viewer.IsLocked(set.AccessTier),
-        myLastAttempt);
+        myLastAttempt,
+        AdaptiveRules.For(set));
 }
 
 /// <summary>Which sets a user may see at all; locking is separate.</summary>

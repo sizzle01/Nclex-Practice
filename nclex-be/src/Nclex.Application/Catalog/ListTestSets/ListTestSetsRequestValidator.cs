@@ -10,9 +10,9 @@ public sealed class ListTestSetsRequestValidator : AbstractValidator<ListTestSet
     {
         RuleFor(r => r.Track).IsInEnum().WithErrorCode(ValidationErrorCodes.InvalidValue);
 
-        // Custom (F07), CAT and assigned sets get listed when the features that create them arrive.
+        // Custom sets have their own lists (F07); assigned sets arrive with phase 3.
         RuleFor(r => r.Kind)
-            .Must(kind => kind is null or TestSetKind.Prebuilt)
+            .Must(kind => kind is null or TestSetKind.Prebuilt or TestSetKind.Cat)
             .WithErrorCode(ValidationErrorCodes.InvalidValue);
 
         RuleFor(r => r.Limit)

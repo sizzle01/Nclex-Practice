@@ -17,7 +17,11 @@ public sealed class ListTestSetsHandler(IAppDbContext db, PlanTierGuard planTier
         // One extra row tells us whether there is a next page.
         var sets = await db.TestSets.AsNoTracking()
             .Where(TestSetVisibility.VisibleTo(viewer.UserId))
-            .Where(s => s.Track == track && s.Kind == TestSetKind.Prebuilt)
+            .Where(s => s.Track == track)
+            // Left out, "curated" means both prebuilt sets and adaptive exams (F19): the Practice page lists both.
+            .Where(s => request.Kind == null
+                ? s.Kind == TestSetKind.Prebuilt || s.Kind == TestSetKind.Cat
+                : s.Kind == request.Kind)
             // Sample sets first, then practice before challenge (the enum's DDL order), then by title.
             .OrderByDescending(s => s.IsSample)
             .ThenBy(s => s.Mode)
@@ -47,5 +51,6 @@ public sealed class ListTestSetsHandler(IAppDbContext db, PlanTierGuard planTier
         set.IsSample,
         set.AccessTier,
         viewer.IsLocked(set.AccessTier),
-        myLastAttempt);
+        myLastAttempt,
+        AdaptiveRules.For(set));
 }

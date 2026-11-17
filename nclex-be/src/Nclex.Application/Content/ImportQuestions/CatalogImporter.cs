@@ -51,12 +51,19 @@ public sealed class CatalogImporter(IAppDbContext db)
             var path = $"testSets[{i}]";
             var existing = existingSets.GetValueOrDefault(set.Id);
             CheckId(set.Id, path, "Set", seenSetIds, existing?.Track, file.Track, issues);
-            if (existing is not null && existing.Kind != TestSetKind.Prebuilt)
+            var kind = set.IsAdaptive ? TestSetKind.Cat : TestSetKind.Prebuilt;
+            if (existing is not null && existing.Kind != kind)
             {
-                issues.Add(new ImportIssue($"{path}.id", ImportIssueCodes.InvalidValue, $"Set {set.Id} exists and is not a curated set."));
+                issues.Add(new ImportIssue($"{path}.id", ImportIssueCodes.InvalidValue, $"Set {set.Id} exists as a {existing.Kind} set and cannot become a {kind} set."));
             }
 
             CheckSettings(set, path, issues);
+            if (set.IsAdaptive)
+            {
+                CheckAdaptive(set, path, issues);
+                continue;
+            }
+
             CheckQuestionIds(set.QuestionIds, path, known, issues);
             CheckCaseStudies(set.QuestionIds, path, cases, issues);
         }
@@ -118,9 +125,20 @@ public sealed class CatalogImporter(IAppDbContext db)
         {
             var settings = source.ToSettings();
             var set = await db.TestSets.SingleOrDefaultAsync(s => s.Id == source.Id, cancellationToken);
+            if (source.IsAdaptive)
+            {
+                var outcome = WriteAdaptive(set, source, file.Track, now);
+                created += outcome == WriteOutcome.Created ? 1 : 0;
+                updated += outcome == WriteOutcome.Updated ? 1 : 0;
+                unchanged += outcome == WriteOutcome.Unchanged ? 1 : 0;
+                continue;
+            }
+
             if (set is null)
             {
-                db.TestSets.Add(TestSet.CreatePrebuilt(source.Id, file.Track, settings, source.QuestionIds.Count, now));
+                var newSet = TestSet.CreatePrebuilt(source.Id, file.Track, settings, source.QuestionIds.Count, now);
+                newSet.SetPublished(source.IsPublished);
+                db.TestSets.Add(newSet);
                 db.TestSetItems.AddRange(TestSetItem.ForQuestions(source.Id, source.QuestionIds));
                 created++;
                 continue;
@@ -130,13 +148,14 @@ public sealed class CatalogImporter(IAppDbContext db)
                 .Select(i => i.QuestionId).ToListAsync(cancellationToken);
             // Order matters for sets: it is the order items are served in.
             var sameItems = currentIds.SequenceEqual(source.QuestionIds);
-            if (sameItems && set.Settings == settings)
+            if (sameItems && set.Settings == settings && set.IsPublished == source.IsPublished)
             {
                 unchanged++;
                 continue;
             }
 
             set.Apply(settings, source.QuestionIds.Count);
+            set.SetPublished(source.IsPublished);
             if (!sameItems)
             {
                 // Deleted straight away, because the new rows reuse the same (set, position) keys.
@@ -148,6 +167,64 @@ public sealed class CatalogImporter(IAppDbContext db)
         }
 
         return new ImportCounts(created, updated, unchanged);
+    }
+
+    private enum WriteOutcome
+    {
+        Created,
+        Updated,
+        Unchanged,
+    }
+
+    // An adaptive exam has no item rows: only its settings and rules (architecture.md 5.8).
+    private WriteOutcome WriteAdaptive(TestSet? set, ImportedTestSet source, ExamTrack track, DateTimeOffset now)
+    {
+        var settings = source.ToSettings();
+        var config = source.CatConfig!;
+        if (set is null)
+        {
+            var created = TestSet.CreateAdaptive(source.Id, track, settings, config, now);
+            created.SetPublished(source.IsPublished);
+            db.TestSets.Add(created);
+            return WriteOutcome.Created;
+        }
+
+        if (set.Settings == settings && set.AdaptiveConfig() == config && set.IsPublished == source.IsPublished)
+        {
+            return WriteOutcome.Unchanged;
+        }
+
+        set.ApplyAdaptive(settings, config);
+        set.SetPublished(source.IsPublished);
+        return WriteOutcome.Updated;
+    }
+
+    private static void CheckAdaptive(ImportedTestSet set, string path, List<ImportIssue> issues)
+    {
+        if (set.CatConfig is not { } config)
+        {
+            issues.Add(new ImportIssue($"{path}.catConfig", ImportIssueCodes.Required, "An adaptive exam needs catConfig with minItems, maxItems and passingTheta."));
+        }
+        else if (!config.IsValid)
+        {
+            issues.Add(new ImportIssue($"{path}.catConfig", ImportIssueCodes.InvalidValue, "minItems must be at least 1 and no more than maxItems."));
+        }
+
+        if (set.QuestionIds is { Count: > 0 })
+        {
+            issues.Add(new ImportIssue($"{path}.questionIds", ImportIssueCodes.InvalidValue, "An adaptive exam picks its questions from the whole bank, so it lists none."));
+        }
+
+        // The NCLEX shows answers only at the end and never lets a candidate go back.
+        if (set.RevealMode != RevealMode.Exam || set.AllowBackNav)
+        {
+            issues.Add(new ImportIssue($"{path}.revealMode", ImportIssueCodes.InvalidValue, "An adaptive exam uses revealMode exam and allowBackNav false."));
+        }
+
+        if (set.IsSample || set.PerQuestionSec is not null || set.PassThreshold is not null)
+        {
+            issues.Add(new ImportIssue(path, ImportIssueCodes.InvalidValue, "An adaptive exam is not a sample, has no per-question timer, and passes on ability rather than a threshold."));
+        }
     }
 
     // Questions a bank or set may use: the file's own, plus active published ones already on the track.
@@ -260,10 +337,10 @@ public sealed class CatalogImporter(IAppDbContext db)
             issues.Add(new ImportIssue($"{path}.title", ImportIssueCodes.Required, "The set needs a title."));
         }
 
-        // CAT sets are generated, not curated (architecture.md 5.8).
-        if (set.Mode is not (TestMode.Practice or TestMode.Challenge))
+        // Adaptive exams (mode cat) are checked by CheckAdaptive; a catConfig on any other set is a mistake.
+        if (!set.IsAdaptive && set.CatConfig is not null)
         {
-            issues.Add(new ImportIssue($"{path}.mode", ImportIssueCodes.InvalidValue, "A curated set is practice or challenge."));
+            issues.Add(new ImportIssue($"{path}.catConfig", ImportIssueCodes.InvalidValue, "Only an adaptive exam (mode cat) has a catConfig."));
         }
 
         if (!set.ToSettings().HasConsistentTiming)

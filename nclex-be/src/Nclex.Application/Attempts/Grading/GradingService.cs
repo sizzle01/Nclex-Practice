@@ -23,6 +23,9 @@ public sealed class GradingService(
     NclexMetrics metrics,
     TimeProvider clock) : IGradingService
 {
+    public Task GradeItemsAsync(IReadOnlyList<AttemptItem> items, CancellationToken cancellationToken) =>
+        GradeAsync([.. items.Where(i => !i.IsGraded)], cancellationToken);
+
     public async Task GradeLockedTutorItemsAsync(Attempt attempt, CancellationToken cancellationToken)
     {
         if (attempt.Settings.RevealMode != RevealMode.Tutor)
@@ -78,8 +81,7 @@ public sealed class GradingService(
 
         var now = clock.GetUtcNow();
         var totals = ResultCalculator.Totals(graded);
-        var threshold = attempt.Settings.PassThreshold;
-        var result = AttemptResult.Create(attempt.Id, totals, threshold, readiness.Evaluate(totals.ScorePct, threshold), now);
+        var result = ScoreResult(attempt, totals, now);
         var scores = ResultCalculator.Breakdown(graded).Select(t => AttemptCategoryScore.From(attempt.Id, t)).ToList();
         db.AttemptResults.Add(result);
         db.AttemptCategoryScores.AddRange(scores);
@@ -88,6 +90,24 @@ public sealed class GradingService(
         await RecordHistoryAsync(attempt.UserId, seen, versions, now, cancellationToken);
         await notifications.PublishAsync(await ResultNotificationAsync(attempt, result, scores, cancellationToken), cancellationToken);
         return result;
+    }
+
+    /// <summary>
+    /// An adaptive exam passes on its ability estimate (architecture.md 5.8); every other attempt
+    /// on its share of points against the set's threshold.
+    /// </summary>
+    private AttemptResult ScoreResult(Attempt attempt, ResultTotals totals, DateTimeOffset now)
+    {
+        if (attempt.IsAdaptive)
+        {
+            // Only confirmed answers are in the estimate: a question on screen when time ran out
+            // is scored in the totals but does not move θ.
+            var state = attempt.ReadCatState();
+            return AttemptResult.CreateAdaptive(attempt.Id, totals, state.Estimate, state.Passed, now);
+        }
+
+        var threshold = attempt.Settings.PassThreshold;
+        return AttemptResult.Create(attempt.Id, totals, threshold, readiness.Evaluate(totals.ScorePct, threshold), now);
     }
 
     private async Task GradeAsync(List<AttemptItem> items, CancellationToken cancellationToken)

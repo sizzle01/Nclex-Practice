@@ -48,6 +48,7 @@ public sealed class AttemptStateReader(IAppDbContext db, TimeProvider clock)
             attempt.StartedAt,
             attempt.LastActivityAt,
             attempt.IsStaleDraftAt(now),
-            ResultAvailable: attempt.Status == AttemptStatus.Submitted);
+            ResultAvailable: attempt.Status == AttemptStatus.Submitted,
+            AdaptiveProgress.For(attempt));
     }
 }

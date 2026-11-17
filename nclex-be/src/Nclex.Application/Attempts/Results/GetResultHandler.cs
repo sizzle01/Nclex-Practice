@@ -47,7 +47,8 @@ public sealed class GetResultHandler(IAppDbContext db, AttemptStore store, Dimen
                 Rows(ScoreDimension.ItemType),
                 Rows(ScoreDimension.CjmmSkill),
                 Rows(ScoreDimension.Difficulty)),
-            [.. WeakestAreas.From(scores).Select(s => new WeakArea(s.Dimension, s.DimensionKey, names.Name(s.Dimension, s.DimensionKey), s.Pct))]);
+            [.. WeakestAreas.From(scores).Select(s => new WeakArea(s.Dimension, s.DimensionKey, names.Name(s.Dimension, s.DimensionKey), s.Pct))],
+            AdaptiveResult.For(attempt));
 
         IReadOnlyList<CategoryResult> Rows(ScoreDimension dimension) =>
             [.. scores

@@ -16,6 +16,12 @@ public interface IGradingService
     Task GradeLockedTutorItemsAsync(Attempt attempt, CancellationToken cancellationToken);
 
     /// <summary>
+    /// Grades <paramref name="items"/> now, whatever the reveal mode: the adaptive exam needs each
+    /// answer's score to pick the next question (architecture.md 5.8). Nothing is revealed.
+    /// </summary>
+    Task GradeItemsAsync(IReadOnlyList<AttemptItem> items, CancellationToken cancellationToken);
+
+    /// <summary>
     /// Grades every item not graded yet (a blank or timed-out item scores 0), then writes the result,
     /// its breakdown, the user's question history and the result notification.
     /// </summary>

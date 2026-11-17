@@ -20,6 +20,12 @@ public sealed class NavigateHandler(IAppDbContext db, AttemptStore store, Attemp
         var clientId = AttemptClient.Require(clientIdHeader);
         await using var transaction = await db.BeginTransactionAsync(cancellationToken);
         var attempt = await guard.LockForWriteAsync(attemptId, clientId, transaction, cancellationToken);
+        if (attempt.IsAdaptive)
+        {
+            // The adaptive exam moves on only through POST /answer (architecture.md 5.8).
+            throw new AppException(AttemptErrors.NotAllowedInAdaptive);
+        }
+
         if (request.ToPosition > attempt.TotalItems)
         {
             throw AppException.ForField("toPosition", ValidationErrorCodes.InvalidValue);

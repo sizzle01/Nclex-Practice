@@ -123,7 +123,7 @@ public sealed record ImportedCaseStudy(Guid Id, string Title, JsonElement Scenar
 /// <summary>A question bank in an import file. It is published when imported.</summary>
 /// <param name="Id">Fixed id of the bank; reuse it to update the bank later.</param>
 /// <param name="Name">Shown to candidates.</param>
-/// <param name="QuestionIds">Ids of questions in this file, or already published on the same track.</param>
+/// <param name="QuestionIds">Ids of questions in this file, or already published on the same track; empty for an adaptive exam.</param>
 /// <param name="Description">Optional longer text.</param>
 /// <param name="AccessTier">free (default) or premium.</param>
 public sealed record ImportedBank(
@@ -134,15 +134,16 @@ public sealed record ImportedBank(
     PlanTier AccessTier = PlanTier.Free);
 
 /// <summary>
-/// A curated test set in an import file (PRD 5.5). It is imported as a published "prebuilt" set
-/// whose items are served in the order of <see cref="QuestionIds"/>.
+/// A curated test set in an import file (PRD 5.5). It is imported as a "prebuilt" set whose items
+/// are served in the order of <see cref="QuestionIds"/>, or, with mode "cat", as an adaptive exam
+/// (kind "cat", F19) that has no question list and picks from the whole track bank.
 /// </summary>
 /// <param name="Id">Fixed id of the set; reuse it to update the set later.</param>
 /// <param name="Title">Shown on the set card.</param>
-/// <param name="Mode">practice or challenge.</param>
+/// <param name="Mode">practice, challenge, or cat for an adaptive exam.</param>
 /// <param name="RevealMode">tutor or exam.</param>
 /// <param name="Timed">Whether a timer runs; a timed set needs perQuestionSec or timeBudgetSec.</param>
-/// <param name="QuestionIds">Ids of questions in this file, or already published on the same track.</param>
+/// <param name="QuestionIds">Ids of questions in this file, or already published on the same track; empty for an adaptive exam.</param>
 /// <param name="Description">Optional text for the detail panel.</param>
 /// <param name="PerQuestionSec">Seconds per item, for timed sets.</param>
 /// <param name="TimeBudgetSec">Seconds for the whole attempt, for timed sets.</param>
@@ -151,6 +152,8 @@ public sealed record ImportedBank(
 /// <param name="AccessTier">free (default) or premium.</param>
 /// <param name="AllowBackNav">Whether candidates may go back; true by default, as in the DDL.</param>
 /// <param name="PausePolicy">Pause limits; no limits by default.</param>
+/// <param name="CatConfig">An adaptive exam's rules, <c>{minItems, maxItems, passingTheta}</c>; required with mode cat, refused otherwise.</param>
+/// <param name="IsPublished">False hides the set from candidates while keeping it, and its attempts, for history (F19).</param>
 public sealed record ImportedTestSet(
     Guid Id,
     string Title,
@@ -165,8 +168,13 @@ public sealed record ImportedTestSet(
     bool IsSample = false,
     PlanTier AccessTier = PlanTier.Free,
     bool AllowBackNav = true,
-    PausePolicy? PausePolicy = null)
+    PausePolicy? PausePolicy = null,
+    Nclex.Domain.Cat.CatConfig? CatConfig = null,
+    bool IsPublished = true)
 {
+    /// <summary>True for an adaptive exam (mode cat).</summary>
+    public bool IsAdaptive => Mode == TestMode.Cat;
+
     /// <summary>The set's settings as the domain stores them.</summary>
     public TestSetSettings ToSettings() => new(
         Title,

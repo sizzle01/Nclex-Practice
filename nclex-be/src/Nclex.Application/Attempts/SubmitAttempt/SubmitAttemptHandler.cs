@@ -41,6 +41,12 @@ public sealed class SubmitAttemptHandler(
         }
 
         AttemptStore.EnsureWritable(attempt, clientId);
+        if (attempt.IsAdaptive)
+        {
+            // Like the NCLEX, an adaptive exam ends on its own: a clear result, the maximum, or time.
+            throw new AppException(AttemptErrors.NotAllowedInAdaptive);
+        }
+
         var now = clock.GetUtcNow();
         await SaveFinalResponsesAsync(attempt, request.FinalResponses ?? [], now, cancellationToken);
         var result = await finalizer.FinalizeAsync(attempt, SubmitReason.User, now, cancellationToken);

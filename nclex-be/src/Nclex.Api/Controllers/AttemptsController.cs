@@ -2,6 +2,7 @@ using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.ModelBinding;
 using Nclex.Application.Attempts;
+using Nclex.Application.Attempts.Adaptive;
 using Nclex.Application.Attempts.DiscardAttempt;
 using Nclex.Application.Attempts.GetAttempt;
 using Nclex.Application.Attempts.GetItem;
@@ -140,6 +141,25 @@ public sealed class AttemptsController : ControllerBase
         [FromServices] SubmitItemHandler handler,
         CancellationToken cancellationToken) =>
         handler.HandleAsync(id, position, clientId, request ?? new SubmitItemRequest(), cancellationToken);
+
+    /// <summary>
+    /// Adaptive exam: confirms the answer to the current question, which is final. The server grades
+    /// it, re-estimates ability, and either adds the next question or ends the exam (F19). A retry of
+    /// an answer already taken returns the current state. Returns 409 ADAPTIVE_ONLY on other attempts.
+    /// </summary>
+    [HttpPost("{id:guid}/items/{position:int}/answer")]
+    [ProducesResponseType<AnswerAdaptiveItemResult>(StatusCodes.Status200OK)]
+    [ProducesResponseType<ProblemDetails>(StatusCodes.Status400BadRequest, "application/problem+json")]
+    [ProducesResponseType<ProblemDetails>(StatusCodes.Status409Conflict, "application/problem+json")]
+    [ProducesResponseType<ProblemDetails>(StatusCodes.Status423Locked, "application/problem+json")]
+    public Task<AnswerAdaptiveItemResult> AnswerAdaptiveItem(
+        Guid id,
+        int position,
+        [FromHeader(Name = AttemptClient.HeaderName)] string? clientId,
+        AnswerAdaptiveItemRequest request,
+        [FromServices] AnswerAdaptiveItemHandler handler,
+        CancellationToken cancellationToken) =>
+        handler.HandleAsync(id, position, clientId, request, cancellationToken);
 
     /// <summary>Moves to another item; the server records the time spent on the one being left.</summary>
     [HttpPost("{id:guid}/navigate")]

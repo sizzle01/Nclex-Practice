@@ -7,7 +7,8 @@ namespace Nclex.Application.Attempts.ListAttempts;
 /// <param name="StaleDraft">True when the draft is over 30 days old, so the dashboard asks "resume or discard?".</param>
 /// <param name="TimeRemainingMs">Exam time left now; null for untimed attempts.</param>
 /// <param name="ScorePct">Share of points earned, 0 to 1, for the history table; null until submitted.</param>
-/// <param name="Passed">Whether the score reached the set's pass threshold; null without a threshold or result.</param>
+/// <param name="Passed">Whether the score reached the set's pass threshold (an adaptive exam: its pass or fail); null without a threshold or result.</param>
+/// <param name="Timed">Whether the attempt runs a timer; an adaptive exam's is the candidate's choice (F19).</param>
 public sealed record AttemptSummary(
     Guid Id,
     TestSetRef TestSet,
@@ -21,7 +22,8 @@ public sealed record AttemptSummary(
     bool StaleDraft,
     long? TimeRemainingMs,
     decimal? ScorePct,
-    bool? Passed);
+    bool? Passed,
+    bool Timed);
 
 /// <summary>Body of GET /attempts: one page, in the cursor format of api.md section 1.</summary>
 /// <param name="NextCursor">Pass as <c>cursor</c> to get the next page; null on the last page.</param>

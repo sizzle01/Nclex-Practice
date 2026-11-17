@@ -5,6 +5,7 @@ namespace Nclex.Application.Attempts.Results;
 
 /// <summary>Body of GET /attempts/{id}/result (api.md section 4).</summary>
 /// <param name="Weakest">The weakest Client Needs categories, worst first.</param>
+/// <param name="Adaptive">How an adaptive exam ended (F19); null for every other attempt.</param>
 public sealed record AttemptResultView(
     Guid AttemptId,
     string Title,
@@ -14,7 +15,53 @@ public sealed record AttemptResultView(
     ResultTime Time,
     ResultReadiness? Readiness,
     ResultBreakdown Breakdown,
-    IReadOnlyList<WeakArea> Weakest);
+    IReadOnlyList<WeakArea> Weakest,
+    AdaptiveResult? Adaptive);
+
+/// <summary>
+/// The outcome of an adaptive exam (architecture.md 5.8). As on the NCLEX it is pass or fail from
+/// the ability estimate: the share of points means little when every question is pitched at the
+/// candidate's level, so the results page leads with this instead.
+/// </summary>
+/// <param name="Passed">Pass or fail.</param>
+/// <param name="ItemsAnswered">Confirmed answers, the ones the decision was made on.</param>
+/// <param name="StopReason">Why the exam ended.</param>
+/// <param name="Timed">Whether the candidate chose the timed exam.</param>
+/// <param name="Disclaimer">Shown beside the result: this is practice, not the NCLEX.</param>
+public sealed record AdaptiveResult(
+    bool Passed,
+    int ItemsAnswered,
+    int MinItems,
+    int MaxItems,
+    Nclex.Domain.Cat.CatStopReason StopReason,
+    bool Timed,
+    string Disclaimer)
+{
+    public const string PracticeDisclaimer =
+        "This adaptive practice exam follows the NCLEX's rules, but its questions are not calibrated on real candidates, so treat the result as an estimate.";
+
+    public static AdaptiveResult? For(Attempt attempt)
+    {
+        if (!attempt.IsAdaptive)
+        {
+            return null;
+        }
+
+        var state = attempt.ReadCatState();
+        // Time running out is the one ending the stop rule never records (the timer finalizes).
+        var reason = attempt.SubmitReason == SubmitReason.TimeExpired
+            ? Nclex.Domain.Cat.CatStopReason.TimeExpired
+            : state.StopReason ?? Nclex.Domain.Cat.CatStopReason.MaxItems;
+        return new AdaptiveResult(
+            state.Passed,
+            state.AnsweredCount,
+            state.Config.MinItems,
+            state.Config.MaxItems,
+            reason,
+            attempt.Settings.Timed,
+            PracticeDisclaimer);
+    }
+}
 
 /// <summary>
 /// The score by each dimension, each list in key order. The JSON names are the dimension names

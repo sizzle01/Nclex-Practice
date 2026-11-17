@@ -1,8 +1,11 @@
 using Microsoft.EntityFrameworkCore;
 using Nclex.Application.Abstractions;
+using Nclex.Application.Attempts.Adaptive;
 using Nclex.Application.Auth;
 using Nclex.Application.Catalog;
 using Nclex.Application.Common;
+using Nclex.Application.Common.Validation;
+using Nclex.Domain.Cat;
 using Nclex.Domain.Entities;
 
 namespace Nclex.Application.Attempts.StartAttempt;
@@ -16,6 +19,7 @@ public sealed class StartAttemptHandler(
     IAppDbContext db,
     PlanTierGuard planTierGuard,
     AttemptStateReader stateReader,
+    AdaptivePicker adaptivePicker,
     TimeProvider clock)
 {
     public async Task<StartAttemptResult> HandleAsync(StartAttemptRequest request, CancellationToken cancellationToken)
@@ -34,10 +38,22 @@ public sealed class StartAttemptHandler(
 
         PlanTierGuard.EnsureAllowed(viewer, set.AccessTier);
 
-        // api.md: starting a prebuilt set again resumes its draft instead of making a second one.
-        if (set.Kind == TestSetKind.Prebuilt && await FindDraftAsync(viewer.UserId, set.Id, cancellationToken) is { } draft)
+        // Only an adaptive exam lets the candidate choose timed or untimed (F19).
+        if (request.Timed is not null && set.Kind != TestSetKind.Cat)
+        {
+            throw AppException.ForField("timed", ValidationErrorCodes.InvalidValue);
+        }
+
+        // api.md: starting a curated set again resumes its draft instead of making a second one.
+        // An adaptive draft keeps the timing chosen when it started.
+        if (set.Kind is TestSetKind.Prebuilt or TestSetKind.Cat && await FindDraftAsync(viewer.UserId, set.Id, cancellationToken) is { } draft)
         {
             return new StartAttemptResult(await stateReader.ReadAsync(draft, cancellationToken), Created: false);
+        }
+
+        if (set.Kind == TestSetKind.Cat)
+        {
+            return new StartAttemptResult(await StartAdaptiveAsync(set, viewer, request.Timed ?? set.Timed, cancellationToken), Created: true);
         }
 
         var versionIds = await CurrentVersionsAsync(set.Id, cancellationToken);
@@ -52,6 +68,27 @@ public sealed class StartAttemptHandler(
         await db.SaveChangesAsync(cancellationToken);
 
         return new StartAttemptResult(await stateReader.ReadAsync(attempt, cancellationToken), Created: true);
+    }
+
+    /// <summary>
+    /// An adaptive exam starts with one question picked at the prior ability; the rest follow the
+    /// answers (architecture.md 5.8).
+    /// </summary>
+    private async Task<AttemptState> StartAdaptiveAsync(TestSet set, CatalogViewer viewer, bool timed, CancellationToken cancellationToken)
+    {
+        if (timed && set.TimeBudgetSec is null)
+        {
+            throw AppException.ForField("timed", ValidationErrorCodes.InvalidValue);
+        }
+
+        var first = await adaptivePicker.NextAsync(set.Track, viewer.Plan, state: null, cancellationToken)
+            ?? throw new AppException(AttemptErrors.NoQuestionsAvailable);
+        var state = CatState.Begin(set.AdaptiveConfig(), new CatStateItem(first.QuestionId, first.Difficulty, first.ClientNeedsId));
+        var (attempt, item) = Attempt.StartAdaptive(viewer.UserId, set, timed, first.QuestionVersionId, state, clock.GetUtcNow());
+        db.Attempts.Add(attempt);
+        db.AttemptItems.Add(item);
+        await db.SaveChangesAsync(cancellationToken);
+        return await stateReader.ReadAsync(attempt, cancellationToken);
     }
 
     private Task<bool> IsEmailVerifiedAsync(Guid userId, CancellationToken cancellationToken) =>

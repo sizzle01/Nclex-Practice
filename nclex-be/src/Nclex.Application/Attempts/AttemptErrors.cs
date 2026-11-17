@@ -86,4 +86,19 @@ public static class AttemptErrors
         "NOT_FOUND",
         AppErrorKind.NotFound,
         "This attempt has no result.");
+
+    /// <summary>
+    /// Navigate or Submit on an adaptive exam: like the NCLEX, it moves forward one confirmed
+    /// answer at a time and ends on its own (architecture.md 5.8).
+    /// </summary>
+    public static readonly AppError NotAllowedInAdaptive = new(
+        "ADAPTIVE_NOT_ALLOWED",
+        AppErrorKind.Conflict,
+        "An adaptive exam moves forward one answer at a time and ends on its own.");
+
+    /// <summary>POST /answer on an attempt that is not an adaptive exam.</summary>
+    public static readonly AppError AdaptiveOnly = new(
+        "ADAPTIVE_ONLY",
+        AppErrorKind.Conflict,
+        "Only an adaptive exam takes answers one at a time this way.");
 }

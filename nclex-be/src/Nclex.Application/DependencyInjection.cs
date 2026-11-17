@@ -16,7 +16,9 @@ using Nclex.Application.Admin.Questions.UpdateDraft;
 using Nclex.Application.Admin.Subtopics;
 using Nclex.Application.Admin.TestSets;
 using Nclex.Application.Admin.Users;
+using Nclex.Application.Abstractions;
 using Nclex.Application.Attempts;
+using Nclex.Application.Attempts.Adaptive;
 using Nclex.Application.Attempts.DiscardAttempt;
 using Nclex.Application.Attempts.Expiry;
 using Nclex.Application.Attempts.GetAttempt;
@@ -176,6 +178,10 @@ public static class DependencyInjection
         services.AddScoped<PauseAttemptHandler>();
         services.AddScoped<ResumeAttemptHandler>();
         services.AddScoped<SubmitItemHandler>();
+        // Adaptive exams (F19). The shared Random is thread-safe; tests that need repeatable picks
+        // use the pure ItemSelector with a seeded one instead.
+        services.AddScoped(sp => new AdaptivePicker(sp.GetRequiredService<IAppDbContext>(), Random.Shared));
+        services.AddScoped<AnswerAdaptiveItemHandler>();
         services.AddScoped<SubmitAttemptHandler>();
         services.AddScoped<GetResultHandler>();
         services.AddScoped<GetRecommendationsHandler>();
