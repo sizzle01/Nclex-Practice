@@ -1,0 +1,1052 @@
+{
+  "notice": "RN bank batch 38: NGN case studies III: major burn and anterior STEMI. DRAFT - every question must be reviewed by an RN or nurse educator before candidates rely on it.",
+  "track": "RN",
+  "subtopics": [
+    {
+      "clientNeeds": "PHI.PA",
+      "slug": "burn-care",
+      "name": "Burn care"
+    },
+    {
+      "clientNeeds": "PHI.PPT",
+      "slug": "medication-dose-calculations",
+      "name": "Medication dose calculations"
+    },
+    {
+      "clientNeeds": "PHI.PA",
+      "slug": "acute-coronary-syndrome",
+      "name": "Acute coronary syndrome"
+    },
+    {
+      "clientNeeds": "PHI.PA",
+      "slug": "cardiac-dysrhythmias",
+      "name": "Cardiac dysrhythmias"
+    }
+  ],
+  "questions": [
+    {
+      "id": "c1a00038-0000-4000-8000-000000000001",
+      "itemType": "highlight_text",
+      "clientNeeds": "PHI.PA",
+      "bodySystem": "integumentary",
+      "subtopics": [
+        "burn-care"
+      ],
+      "cjmmSkill": "recognize_cues",
+      "difficulty": "moderate",
+      "stem": "Highlight the findings in the 0200 note that suggest an inhalation injury.",
+      "content": {
+        "segments": [
+          {
+            "id": "s1",
+            "text": "The client has ",
+            "selectable": false
+          },
+          {
+            "id": "s2",
+            "text": "singed nasal hairs",
+            "selectable": true
+          },
+          {
+            "id": "s3",
+            "text": ", ",
+            "selectable": false
+          },
+          {
+            "id": "s4",
+            "text": "a hoarse voice",
+            "selectable": true
+          },
+          {
+            "id": "s5",
+            "text": " and ",
+            "selectable": false
+          },
+          {
+            "id": "s6",
+            "text": "soot-tinged sputum",
+            "selectable": true
+          },
+          {
+            "id": "s7",
+            "text": ". There are ",
+            "selectable": false
+          },
+          {
+            "id": "s8",
+            "text": "blisters on both forearms",
+            "selectable": true
+          },
+          {
+            "id": "s9",
+            "text": ", and pain is rated ",
+            "selectable": false
+          },
+          {
+            "id": "s10",
+            "text": "8 out of 10",
+            "selectable": true
+          },
+          {
+            "id": "s11",
+            "text": ".",
+            "selectable": false
+          }
+        ]
+      },
+      "key": {
+        "correct": [
+          "s2",
+          "s4",
+          "s6"
+        ]
+      },
+      "rationale": {
+        "correct": "Facial burns, singed hair, hoarseness and carbonaceous sputum signal inhalation injury.",
+        "perOption": {
+          "s2": "This suggests inhaled heat and smoke.",
+          "s4": "Hoarseness suggests airway swelling.",
+          "s6": "Soot in the sputum shows smoke inhalation.",
+          "s8": "These show partial-thickness burns, not an airway injury.",
+          "s10": "Pain needs treatment but isn't a sign of inhalation injury."
+        },
+        "references": [
+          "Medical-surgical nursing texts (e.g. Lewis; Ignatavicius)",
+          "DRAFT: original question written with AI assistance; an RN or nurse educator must check it before candidates rely on it."
+        ]
+      },
+      "educationalObjective": "Recognize inhalation injury.",
+      "caseStudyId": "c1c00038-0000-4000-8000-000000000001",
+      "casePosition": 1
+    },
+    {
+      "id": "c1a00038-0000-4000-8000-000000000002",
+      "itemType": "fill_blank_calc",
+      "clientNeeds": "PHI.PPT",
+      "bodySystem": "pharmacology",
+      "subtopics": [
+        "medication-dose-calculations"
+      ],
+      "cjmmSkill": "analyze_cues",
+      "difficulty": "difficult",
+      "stem": "Using the Parkland formula (4 mL × kg × %TBSA), at what rate (mL/hr) should lactated Ringer's run during the first 8 hours for this 70 kg client with 40% TBSA burns? (Assume the 8 hours start at the time of the burn.)",
+      "content": {
+        "unit": "mL/hr",
+        "decimals": 0,
+        "inputLabel": "Infusion rate"
+      },
+      "key": {
+        "value": 700,
+        "rounding": "exact"
+      },
+      "rationale": {
+        "correct": "Total = 4 × 70 × 40 = 11,200 mL in 24 hours. Half (5,600 mL) in the first 8 hours = 5,600 ÷ 8 = 700 mL/hr.",
+        "perOption": {},
+        "references": [
+          "Medical-surgical nursing texts (e.g. Lewis; Ignatavicius)",
+          "DRAFT: original question written with AI assistance; an RN or nurse educator must check it before candidates rely on it."
+        ]
+      },
+      "educationalObjective": "Calculate a burn resuscitation rate.",
+      "caseStudyId": "c1c00038-0000-4000-8000-000000000001",
+      "casePosition": 2
+    },
+    {
+      "id": "c1a00038-0000-4000-8000-000000000003",
+      "itemType": "multiple_choice",
+      "clientNeeds": "PHI.PA",
+      "bodySystem": "integumentary",
+      "subtopics": [
+        "burn-care"
+      ],
+      "cjmmSkill": "prioritize_hypotheses",
+      "difficulty": "difficult",
+      "stem": "Which problem is the priority for this client?",
+      "content": {
+        "options": [
+          {
+            "id": "a",
+            "text": "Risk of airway obstruction from inhalation injury"
+          },
+          {
+            "id": "b",
+            "text": "Acute pain"
+          },
+          {
+            "id": "c",
+            "text": "Risk of infection"
+          },
+          {
+            "id": "d",
+            "text": "Disturbed body image"
+          }
+        ]
+      },
+      "key": {
+        "correct": "a"
+      },
+      "rationale": {
+        "correct": "Airway first in burns, especially with signs of inhalation injury.",
+        "perOption": {
+          "a": "Airway swelling can progress quickly; early intubation may be needed.",
+          "b": "Pain matters but comes after the airway.",
+          "c": "This is a later concern.",
+          "d": "This is a later concern."
+        },
+        "references": [
+          "Medical-surgical nursing texts (e.g. Lewis; Ignatavicius)",
+          "DRAFT: original question written with AI assistance; an RN or nurse educator must check it before candidates rely on it."
+        ]
+      },
+      "educationalObjective": "Prioritize the airway in burns.",
+      "caseStudyId": "c1c00038-0000-4000-8000-000000000001",
+      "casePosition": 3
+    },
+    {
+      "id": "c1a00038-0000-4000-8000-000000000004",
+      "itemType": "matrix_mc",
+      "clientNeeds": "PHI.PA",
+      "bodySystem": "integumentary",
+      "subtopics": [
+        "burn-care"
+      ],
+      "cjmmSkill": "generate_solutions",
+      "difficulty": "moderate",
+      "stem": "For each intervention, indicate whether it is indicated or not indicated now.",
+      "content": {
+        "rows": [
+          {
+            "id": "r1",
+            "text": "Lactated Ringer's using the Parkland formula"
+          },
+          {
+            "id": "r2",
+            "text": "IV opioid analgesia"
+          },
+          {
+            "id": "r3",
+            "text": "Indwelling urinary catheter for hourly output"
+          },
+          {
+            "id": "r4",
+            "text": "Tetanus prophylaxis if not up to date"
+          },
+          {
+            "id": "r5",
+            "text": "IM morphine"
+          },
+          {
+            "id": "r6",
+            "text": "Restricting fluids to reduce edema"
+          }
+        ],
+        "columns": [
+          {
+            "id": "c1",
+            "text": "Indicated"
+          },
+          {
+            "id": "c2",
+            "text": "Not indicated"
+          }
+        ]
+      },
+      "key": {
+        "byRow": {
+          "r1": "c1",
+          "r2": "c1",
+          "r3": "c1",
+          "r4": "c1",
+          "r5": "c2",
+          "r6": "c2"
+        }
+      },
+      "rationale": {
+        "correct": "Burn care: airway, fluids, IV analgesia, monitoring and tetanus prophylaxis.",
+        "perOption": {
+          "r1:c1": "Large fluid shifts need resuscitation.",
+          "r1:c2": "Fluids are essential.",
+          "r2:c1": "IV is reliable during burn shock.",
+          "r2:c2": "Pain control is needed.",
+          "r3:c1": "Urine output guides fluid titration.",
+          "r3:c2": "This is indicated.",
+          "r4:c1": "Burns are tetanus-prone wounds.",
+          "r4:c2": "This is indicated.",
+          "r5:c1": "Absorption is unreliable in burn shock.",
+          "r5:c2": "IV is preferred.",
+          "r6:c1": "This causes burn shock and kidney injury.",
+          "r6:c2": "This isn't indicated."
+        },
+        "references": [
+          "Medical-surgical nursing texts (e.g. Lewis; Ignatavicius)",
+          "DRAFT: original question written with AI assistance; an RN or nurse educator must check it before candidates rely on it."
+        ]
+      },
+      "educationalObjective": "Select interventions for a major burn.",
+      "caseStudyId": "c1c00038-0000-4000-8000-000000000001",
+      "casePosition": 4
+    },
+    {
+      "id": "c1a00038-0000-4000-8000-000000000005",
+      "itemType": "multiple_choice",
+      "clientNeeds": "PHI.PA",
+      "bodySystem": "integumentary",
+      "subtopics": [
+        "burn-care"
+      ],
+      "cjmmSkill": "take_action",
+      "difficulty": "moderate",
+      "stem": "At 0600 the client's urine output is 18 mL/hr. What should the nurse do?",
+      "content": {
+        "options": [
+          {
+            "id": "a",
+            "text": "Notify the provider and adjust the fluid rate per the burn protocol"
+          },
+          {
+            "id": "b",
+            "text": "Give a diuretic"
+          },
+          {
+            "id": "c",
+            "text": "Keep the rate the same and recheck in 4 hours"
+          },
+          {
+            "id": "d",
+            "text": "Restrict oral fluids"
+          }
+        ]
+      },
+      "key": {
+        "correct": "a"
+      },
+      "rationale": {
+        "correct": "Titrate burn fluids hourly to a target urine output.",
+        "perOption": {
+          "a": "Output below 0.5 mL/kg/hr (35 mL/hr for 70 kg) means under-resuscitation.",
+          "b": "This worsens hypovolemia.",
+          "c": "Delay risks kidney injury.",
+          "d": "This doesn't help."
+        },
+        "references": [
+          "Medical-surgical nursing texts (e.g. Lewis; Ignatavicius)",
+          "DRAFT: original question written with AI assistance; an RN or nurse educator must check it before candidates rely on it."
+        ]
+      },
+      "educationalObjective": "Respond to low urine output in burn resuscitation.",
+      "caseStudyId": "c1c00038-0000-4000-8000-000000000001",
+      "casePosition": 5
+    },
+    {
+      "id": "c1a00038-0000-4000-8000-000000000006",
+      "itemType": "matrix_mc",
+      "clientNeeds": "PHI.PA",
+      "bodySystem": "integumentary",
+      "subtopics": [
+        "burn-care"
+      ],
+      "cjmmSkill": "evaluate_outcomes",
+      "difficulty": "difficult",
+      "stem": "Review the 1000 findings. For each, indicate whether it shows improvement or needs immediate follow-up.",
+      "content": {
+        "rows": [
+          {
+            "id": "r1",
+            "text": "Urine output 40 mL/hr"
+          },
+          {
+            "id": "r2",
+            "text": "Heart rate 110/min"
+          },
+          {
+            "id": "r3",
+            "text": "Blood pressure 110/66 mm Hg"
+          },
+          {
+            "id": "r4",
+            "text": "More hoarse voice with new stridor and SpO2 90%"
+          }
+        ],
+        "columns": [
+          {
+            "id": "c1",
+            "text": "Improvement"
+          },
+          {
+            "id": "c2",
+            "text": "Needs immediate follow-up"
+          }
+        ]
+      },
+      "key": {
+        "byRow": {
+          "r1": "c1",
+          "r2": "c1",
+          "r3": "c1",
+          "r4": "c2"
+        }
+      },
+      "rationale": {
+        "correct": "Even as circulation improves, the airway can deteriorate; reassess often.",
+        "perOption": {
+          "r1:c1": "This now meets the target.",
+          "r1:c2": "This is improving.",
+          "r2:c1": "Tachycardia is improving with fluids.",
+          "r2:c2": "This is improving.",
+          "r3:c1": "Perfusion is improving.",
+          "r3:c2": "This is improving.",
+          "r4:c1": "The airway is worsening.",
+          "r4:c2": "Progressive airway swelling needs immediate intubation."
+        },
+        "references": [
+          "Medical-surgical nursing texts (e.g. Lewis; Ignatavicius)",
+          "DRAFT: original question written with AI assistance; an RN or nurse educator must check it before candidates rely on it."
+        ]
+      },
+      "educationalObjective": "Evaluate outcomes in burn resuscitation.",
+      "caseStudyId": "c1c00038-0000-4000-8000-000000000001",
+      "casePosition": 6
+    },
+    {
+      "id": "c1a00038-0000-4000-8000-000000000007",
+      "itemType": "highlight_table",
+      "clientNeeds": "PHI.PA",
+      "bodySystem": "cardiovascular",
+      "subtopics": [
+        "acute-coronary-syndrome"
+      ],
+      "cjmmSkill": "recognize_cues",
+      "difficulty": "easy",
+      "stem": "Highlight the findings that support acute myocardial infarction.",
+      "content": {
+        "columns": [
+          "Finding",
+          "Result"
+        ],
+        "rows": [
+          {
+            "id": "r1",
+            "cells": [
+              "Chest pressure",
+              "Radiating to the left arm for 40 minutes"
+            ],
+            "selectable": true
+          },
+          {
+            "id": "r2",
+            "cells": [
+              "Skin",
+              "Sweaty"
+            ],
+            "selectable": true
+          },
+          {
+            "id": "r3",
+            "cells": [
+              "12-lead ECG",
+              "ST elevation V1 to V4"
+            ],
+            "selectable": true
+          },
+          {
+            "id": "r4",
+            "cells": [
+              "Troponin I",
+              "Elevated"
+            ],
+            "selectable": true
+          },
+          {
+            "id": "r5",
+            "cells": [
+              "SpO2 at 0900",
+              "95%"
+            ],
+            "selectable": true
+          },
+          {
+            "id": "r6",
+            "cells": [
+              "Glucose",
+              "110 mg/dL"
+            ],
+            "selectable": true
+          }
+        ]
+      },
+      "key": {
+        "correct": [
+          "r1",
+          "r2",
+          "r3",
+          "r4"
+        ]
+      },
+      "rationale": {
+        "correct": "Symptoms, ECG changes and troponin together confirm a STEMI.",
+        "perOption": {
+          "r1": "Ischemic pain is classic for MI.",
+          "r2": "Sweating reflects a sympathetic response to ischemia.",
+          "r3": "ST elevation shows myocardial injury.",
+          "r4": "Troponin confirms myocardial injury.",
+          "r5": "This is acceptable.",
+          "r6": "This isn't specific."
+        },
+        "references": [
+          "Medical-surgical nursing texts (e.g. Lewis; Ignatavicius)",
+          "DRAFT: original question written with AI assistance; an RN or nurse educator must check it before candidates rely on it."
+        ]
+      },
+      "educationalObjective": "Recognize the findings of an MI.",
+      "caseStudyId": "c1c00038-0000-4000-8000-000000000002",
+      "casePosition": 1
+    },
+    {
+      "id": "c1a00038-0000-4000-8000-000000000008",
+      "itemType": "dropdown_cloze",
+      "clientNeeds": "PHI.PA",
+      "bodySystem": "cardiovascular",
+      "subtopics": [
+        "acute-coronary-syndrome"
+      ],
+      "cjmmSkill": "analyze_cues",
+      "difficulty": "moderate",
+      "stem": "Complete the sentence.",
+      "content": {
+        "template": "ST elevation in leads V1 to V4 indicates an {{b1}} STEMI, usually caused by blockage of the {{b2}}.",
+        "blanks": [
+          {
+            "id": "b1",
+            "options": [
+              {
+                "id": "a",
+                "text": "anterior"
+              },
+              {
+                "id": "b",
+                "text": "inferior"
+              },
+              {
+                "id": "c",
+                "text": "lateral"
+              }
+            ]
+          },
+          {
+            "id": "b2",
+            "options": [
+              {
+                "id": "a",
+                "text": "left anterior descending artery"
+              },
+              {
+                "id": "b",
+                "text": "right coronary artery"
+              },
+              {
+                "id": "c",
+                "text": "circumflex artery"
+              }
+            ]
+          }
+        ]
+      },
+      "key": {
+        "byBlank": {
+          "b1": "a",
+          "b2": "a"
+        }
+      },
+      "rationale": {
+        "correct": "Anterior STEMI involves the LAD and carries a high risk of pump failure.",
+        "perOption": {
+          "b1:a": "Leads V1 to V4 look at the anterior wall.",
+          "b1:b": "Inferior MI shows in II, III and aVF.",
+          "b1:c": "Lateral MI shows in I, aVL, V5 and V6.",
+          "b2:a": "The LAD supplies the anterior wall.",
+          "b2:b": "The RCA usually supplies the inferior wall.",
+          "b2:c": "The circumflex usually supplies the lateral wall."
+        },
+        "references": [
+          "Medical-surgical nursing texts (e.g. Lewis; Ignatavicius)",
+          "DRAFT: original question written with AI assistance; an RN or nurse educator must check it before candidates rely on it."
+        ]
+      },
+      "educationalObjective": "Link ECG leads to the affected artery.",
+      "caseStudyId": "c1c00038-0000-4000-8000-000000000002",
+      "casePosition": 2
+    },
+    {
+      "id": "c1a00038-0000-4000-8000-000000000009",
+      "itemType": "multiple_choice",
+      "clientNeeds": "PHI.PA",
+      "bodySystem": "cardiovascular",
+      "subtopics": [
+        "acute-coronary-syndrome"
+      ],
+      "cjmmSkill": "prioritize_hypotheses",
+      "difficulty": "moderate",
+      "stem": "What is the priority goal of treatment for this client?",
+      "content": {
+        "options": [
+          {
+            "id": "a",
+            "text": "Reopen the blocked artery quickly, ideally with PCI within 90 minutes of arrival"
+          },
+          {
+            "id": "b",
+            "text": "Schedule a stress test for tomorrow"
+          },
+          {
+            "id": "c",
+            "text": "Start cardiac rehabilitation"
+          },
+          {
+            "id": "d",
+            "text": "Teach a low-fat diet"
+          }
+        ]
+      },
+      "key": {
+        "correct": "a"
+      },
+      "rationale": {
+        "correct": "STEMI: door-to-balloon time of 90 minutes or less, or fibrinolysis within 30 minutes if PCI isn't available.",
+        "perOption": {
+          "a": "Time is muscle; rapid reperfusion limits damage.",
+          "b": "STEMI needs immediate reperfusion.",
+          "c": "This comes later.",
+          "d": "This comes later."
+        },
+        "references": [
+          "American Heart Association Guidelines for CPR and Emergency Cardiovascular Care",
+          "DRAFT: original question written with AI assistance; an RN or nurse educator must check it before candidates rely on it."
+        ]
+      },
+      "educationalObjective": "Prioritize reperfusion in STEMI.",
+      "caseStudyId": "c1c00038-0000-4000-8000-000000000002",
+      "casePosition": 3
+    },
+    {
+      "id": "c1a00038-0000-4000-8000-000000000010",
+      "itemType": "sata",
+      "clientNeeds": "PHI.PA",
+      "bodySystem": "cardiovascular",
+      "subtopics": [
+        "acute-coronary-syndrome"
+      ],
+      "cjmmSkill": "generate_solutions",
+      "difficulty": "moderate",
+      "stem": "Which interventions should the nurse anticipate before the client goes to the cardiac catheterization lab? Select all that apply.",
+      "content": {
+        "options": [
+          {
+            "id": "a",
+            "text": "Aspirin 162 to 325 mg chewed"
+          },
+          {
+            "id": "b",
+            "text": "Sublingual nitroglycerin if blood pressure allows"
+          },
+          {
+            "id": "c",
+            "text": "Continuous ECG monitoring"
+          },
+          {
+            "id": "d",
+            "text": "IV access"
+          },
+          {
+            "id": "e",
+            "text": "Oxygen at 10 L/min by nonrebreather for an SpO2 of 95%"
+          },
+          {
+            "id": "f",
+            "text": "A treadmill stress test"
+          }
+        ]
+      },
+      "key": {
+        "correct": [
+          "a",
+          "b",
+          "c",
+          "d"
+        ]
+      },
+      "rationale": {
+        "correct": "Pre-PCI: aspirin, antiplatelet and anticoagulant per protocol, nitrates if appropriate, monitoring and rapid transfer.",
+        "perOption": {
+          "a": "Aspirin reduces platelet aggregation.",
+          "b": "This relieves ischemic pain; there's no PDE-5 inhibitor use.",
+          "c": "Dysrhythmias are common early in MI.",
+          "d": "This is needed for medications and the procedure.",
+          "e": "Oxygen is given only when SpO2 is below about 90%.",
+          "f": "This is contraindicated in acute MI."
+        },
+        "references": [
+          "American Heart Association Guidelines for CPR and Emergency Cardiovascular Care",
+          "Nursing pharmacology texts (e.g. Lehne; McCuistion) and the drug's prescribing information",
+          "DRAFT: original question written with AI assistance; an RN or nurse educator must check it before candidates rely on it."
+        ]
+      },
+      "educationalObjective": "Plan initial STEMI care.",
+      "caseStudyId": "c1c00038-0000-4000-8000-000000000002",
+      "casePosition": 4
+    },
+    {
+      "id": "c1a00038-0000-4000-8000-000000000011",
+      "itemType": "multiple_choice",
+      "clientNeeds": "PHI.PA",
+      "bodySystem": "cardiovascular",
+      "subtopics": [
+        "cardiac-dysrhythmias"
+      ],
+      "cjmmSkill": "take_action",
+      "difficulty": "difficult",
+      "stem": "While waiting for transfer, the client becomes unresponsive, with no pulse, and the monitor shows ventricular fibrillation. What should the nurse do first?",
+      "content": {
+        "options": [
+          {
+            "id": "a",
+            "text": "Defibrillate as soon as possible and begin CPR"
+          },
+          {
+            "id": "b",
+            "text": "Synchronized cardioversion"
+          },
+          {
+            "id": "c",
+            "text": "Give atropine"
+          },
+          {
+            "id": "d",
+            "text": "Get a 12-lead ECG"
+          }
+        ]
+      },
+      "key": {
+        "correct": "a"
+      },
+      "rationale": {
+        "correct": "Pulseless VF or VT: CPR and immediate defibrillation, then epinephrine and amiodarone per ACLS.",
+        "perOption": {
+          "a": "Early defibrillation is the most important treatment for VF.",
+          "b": "Pulseless VF needs unsynchronized defibrillation.",
+          "c": "Atropine treats bradycardia.",
+          "d": "This delays lifesaving treatment."
+        },
+        "references": [
+          "American Heart Association Guidelines for CPR and Emergency Cardiovascular Care",
+          "DRAFT: original question written with AI assistance; an RN or nurse educator must check it before candidates rely on it."
+        ]
+      },
+      "educationalObjective": "Respond to ventricular fibrillation.",
+      "caseStudyId": "c1c00038-0000-4000-8000-000000000002",
+      "casePosition": 5
+    },
+    {
+      "id": "c1a00038-0000-4000-8000-000000000012",
+      "itemType": "matrix_mc",
+      "clientNeeds": "PHI.PA",
+      "bodySystem": "cardiovascular",
+      "subtopics": [
+        "acute-coronary-syndrome"
+      ],
+      "cjmmSkill": "evaluate_outcomes",
+      "difficulty": "difficult",
+      "stem": "Review the findings after PCI. For each, indicate whether it shows an expected or improving response or needs follow-up.",
+      "content": {
+        "rows": [
+          {
+            "id": "r1",
+            "text": "No chest pain"
+          },
+          {
+            "id": "r2",
+            "text": "ST segments returning toward baseline"
+          },
+          {
+            "id": "r3",
+            "text": "Radial site soft without hematoma"
+          },
+          {
+            "id": "r4",
+            "text": "New crackles in both lung bases with SpO2 89%"
+          }
+        ],
+        "columns": [
+          {
+            "id": "c1",
+            "text": "Expected or improving"
+          },
+          {
+            "id": "c2",
+            "text": "Needs follow-up"
+          }
+        ]
+      },
+      "key": {
+        "byRow": {
+          "r1": "c1",
+          "r2": "c1",
+          "r3": "c1",
+          "r4": "c2"
+        }
+      },
+      "rationale": {
+        "correct": "After an anterior MI, watch for heart failure, dysrhythmias and bleeding.",
+        "perOption": {
+          "r1:c1": "Reperfusion relieved the ischemia.",
+          "r1:c2": "This is improving.",
+          "r2:c1": "This shows successful reperfusion.",
+          "r2:c2": "This is expected.",
+          "r3:c1": "This shows no bleeding at the access site.",
+          "r3:c2": "This is expected.",
+          "r4:c1": "This isn't improvement.",
+          "r4:c2": "This suggests heart failure after an anterior MI; notify the provider."
+        },
+        "references": [
+          "Medical-surgical nursing texts (e.g. Lewis; Ignatavicius)",
+          "DRAFT: original question written with AI assistance; an RN or nurse educator must check it before candidates rely on it."
+        ]
+      },
+      "educationalObjective": "Evaluate outcomes after PCI.",
+      "caseStudyId": "c1c00038-0000-4000-8000-000000000002",
+      "casePosition": 6
+    }
+  ],
+  "caseStudies": [
+    {
+      "id": "c1c00038-0000-4000-8000-000000000001",
+      "title": "Major burn with inhalation injury",
+      "scenario": {
+        "tabs": [
+          {
+            "id": "burn-notes",
+            "title": "Nurses' notes",
+            "exhibits": [
+              {
+                "id": "burn-note-0200",
+                "kind": "text",
+                "title": "Emergency department, 0200",
+                "body": "A 35-year-old, weight 70 kg, was rescued from a house fire. Partial- and full-thickness burns to the chest, abdomen and both arms, estimated at 40% TBSA. Singed nasal hairs, a hoarse voice and soot-tinged sputum. Blisters on both forearms. Rates pain 8 out of 10."
+              },
+              {
+                "id": "burn-note-1000",
+                "kind": "text",
+                "title": "1000",
+                "body": "The voice is more hoarse, and the nurse hears a new high-pitched sound on inspiration."
+              }
+            ]
+          },
+          {
+            "id": "burn-vitals",
+            "title": "Vital signs and output",
+            "exhibits": [
+              {
+                "id": "burn-flow",
+                "kind": "flowsheet",
+                "title": "Vital signs and urine output",
+                "table": {
+                  "columns": [
+                    "0200",
+                    "0600",
+                    "1000"
+                  ],
+                  "rows": [
+                    {
+                      "label": "Heart rate (/min)",
+                      "cells": [
+                        "124",
+                        "130",
+                        "110"
+                      ]
+                    },
+                    {
+                      "label": "Blood pressure (mm Hg)",
+                      "cells": [
+                        "102/64",
+                        "98/60",
+                        "110/66"
+                      ]
+                    },
+                    {
+                      "label": "Respiratory rate (/min)",
+                      "cells": [
+                        "26",
+                        "28",
+                        "30"
+                      ]
+                    },
+                    {
+                      "label": "SpO2 (%)",
+                      "cells": [
+                        "93",
+                        "92",
+                        "90"
+                      ]
+                    },
+                    {
+                      "label": "Urine output (mL/hr)",
+                      "cells": [
+                        "-",
+                        "18",
+                        "40"
+                      ]
+                    }
+                  ]
+                }
+              }
+            ]
+          },
+          {
+            "id": "burn-labs",
+            "title": "Laboratory results",
+            "exhibits": [
+              {
+                "id": "burn-lab-table",
+                "kind": "table",
+                "title": "Laboratory results",
+                "table": {
+                  "columns": [
+                    "0600"
+                  ],
+                  "rows": [
+                    {
+                      "label": "Potassium (mEq/L)",
+                      "cells": [
+                        "5.6"
+                      ]
+                    },
+                    {
+                      "label": "Hematocrit (%)",
+                      "cells": [
+                        "54"
+                      ]
+                    },
+                    {
+                      "label": "Carboxyhemoglobin (%)",
+                      "cells": [
+                        "12"
+                      ]
+                    }
+                  ]
+                }
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "c1c00038-0000-4000-8000-000000000002",
+      "title": "Anterior STEMI",
+      "scenario": {
+        "tabs": [
+          {
+            "id": "mi-notes",
+            "title": "Nurses' notes",
+            "exhibits": [
+              {
+                "id": "mi-note-0900",
+                "kind": "text",
+                "title": "Emergency department, 0900",
+                "body": "A 62-year-old has had crushing chest pressure radiating to the left arm for 40 minutes, with sweating and nausea. History of hypertension and smoking. No recent use of phosphodiesterase-5 inhibitors. 12-lead ECG: ST elevation in V1 to V4."
+              },
+              {
+                "id": "mi-note-1130",
+                "kind": "text",
+                "title": "After PCI, 1130",
+                "body": "A stent was placed in the left anterior descending artery through the right radial artery. The client reports no chest pain. ST segments are returning toward baseline. The radial site is soft without hematoma. New crackles in both lung bases."
+              }
+            ]
+          },
+          {
+            "id": "mi-vitals",
+            "title": "Vital signs",
+            "exhibits": [
+              {
+                "id": "mi-flow",
+                "kind": "flowsheet",
+                "title": "Vital signs",
+                "table": {
+                  "columns": [
+                    "0900",
+                    "1130"
+                  ],
+                  "rows": [
+                    {
+                      "label": "Blood pressure (mm Hg)",
+                      "cells": [
+                        "150/92",
+                        "122/74"
+                      ]
+                    },
+                    {
+                      "label": "Heart rate (/min)",
+                      "cells": [
+                        "104",
+                        "88"
+                      ]
+                    },
+                    {
+                      "label": "SpO2 (%)",
+                      "cells": [
+                        "95",
+                        "89"
+                      ]
+                    },
+                    {
+                      "label": "Respiratory rate (/min)",
+                      "cells": [
+                        "22",
+                        "24"
+                      ]
+                    }
+                  ]
+                }
+              }
+            ]
+          },
+          {
+            "id": "mi-labs",
+            "title": "Laboratory results",
+            "exhibits": [
+              {
+                "id": "mi-lab-table",
+                "kind": "table",
+                "title": "Laboratory results",
+                "table": {
+                  "columns": [
+                    "0900"
+                  ],
+                  "rows": [
+                    {
+                      "label": "Troponin I",
+                      "cells": [
+                        "Elevated"
+                      ]
+                    },
+                    {
+                      "label": "Glucose",
+                      "cells": [
+                        "110 mg/dL"
+                      ]
+                    },
+                    {
+                      "label": "Potassium",
+                      "cells": [
+                        "4.1 mEq/L"
+                      ]
+                    }
+                  ]
+                }
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}
