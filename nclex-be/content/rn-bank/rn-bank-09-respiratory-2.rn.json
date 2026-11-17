@@ -1,0 +1,1286 @@
+{
+  "notice": "RN bank batch 9: Respiratory II: chest tubes, ventilators, airway care and ARDS. DRAFT - every question must be reviewed by an RN or nurse educator before candidates rely on it.",
+  "track": "RN",
+  "subtopics": [
+    {
+      "clientNeeds": "PHI.PA",
+      "slug": "chest-tube-management",
+      "name": "Chest tube management"
+    },
+    {
+      "clientNeeds": "PHI.PA",
+      "slug": "chest-trauma-and-pneumothorax",
+      "name": "Chest trauma and pneumothorax"
+    },
+    {
+      "clientNeeds": "PHI.PA",
+      "slug": "mechanical-ventilation",
+      "name": "Mechanical ventilation"
+    },
+    {
+      "clientNeeds": "PHI.PA",
+      "slug": "tracheostomy-and-suctioning",
+      "name": "Tracheostomy care and suctioning"
+    },
+    {
+      "clientNeeds": "PHI.PA",
+      "slug": "impaired-oxygenation",
+      "name": "Impaired oxygenation"
+    },
+    {
+      "clientNeeds": "PHI.PA",
+      "slug": "basic-life-support",
+      "name": "Basic life support"
+    },
+    {
+      "clientNeeds": "PHI.RRP",
+      "slug": "post-procedure-complications",
+      "name": "Post-procedure complications"
+    },
+    {
+      "clientNeeds": "HPM",
+      "slug": "cancer-screening",
+      "name": "Cancer screening"
+    }
+  ],
+  "questions": [
+    {
+      "id": "c1a00009-0000-4000-8000-000000000001",
+      "itemType": "multiple_choice",
+      "clientNeeds": "PHI.PA",
+      "bodySystem": "respiratory",
+      "subtopics": [
+        "chest-tube-management"
+      ],
+      "cjmmSkill": "analyze_cues",
+      "difficulty": "moderate",
+      "stem": "The nurse notices continuous bubbling in the water seal chamber of a client's chest drainage system. What should the nurse do first?",
+      "content": {
+        "options": [
+          {
+            "id": "a",
+            "text": "Document the finding as expected"
+          },
+          {
+            "id": "b",
+            "text": "Check the system for an air leak, starting at the client's chest"
+          },
+          {
+            "id": "c",
+            "text": "Clamp the chest tube near the client"
+          },
+          {
+            "id": "d",
+            "text": "Increase the suction"
+          }
+        ]
+      },
+      "key": {
+        "correct": "b"
+      },
+      "rationale": {
+        "correct": "Intermittent bubbling in the water seal can be expected with a pneumothorax as air leaves the chest, but continuous bubbling means an air leak.",
+        "perOption": {
+          "a": "Continuous bubbling in the water seal chamber isn't expected.",
+          "b": "Continuous bubbling means air is entering the system; the nurse checks the dressing and connections to find the leak.",
+          "c": "Clamping can cause a tension pneumothorax and is done only briefly to locate a leak, per policy.",
+          "d": "More suction doesn't fix a leak."
+        },
+        "references": [
+          "Medical-surgical nursing texts (e.g. Lewis; Ignatavicius)",
+          "DRAFT: original question written with AI assistance; an RN or nurse educator must check it before candidates rely on it."
+        ]
+      },
+      "educationalObjective": "Respond to an air leak in a chest drainage system."
+    },
+    {
+      "id": "c1a00009-0000-4000-8000-000000000002",
+      "itemType": "multiple_choice",
+      "clientNeeds": "PHI.PA",
+      "bodySystem": "respiratory",
+      "subtopics": [
+        "chest-tube-management"
+      ],
+      "cjmmSkill": "take_action",
+      "difficulty": "moderate",
+      "stem": "A client's chest tube separates from the drainage system tubing. What should the nurse do first?",
+      "content": {
+        "options": [
+          {
+            "id": "a",
+            "text": "Clamp the chest tube with a hemostat for 1 hour"
+          },
+          {
+            "id": "b",
+            "text": "Put the end of the chest tube 2 to 4 cm (1 to 2 inches) into a bottle of sterile water"
+          },
+          {
+            "id": "c",
+            "text": "Remove the chest tube"
+          },
+          {
+            "id": "d",
+            "text": "Cover the end of the tube with gauze"
+          }
+        ]
+      },
+      "key": {
+        "correct": "b"
+      },
+      "rationale": {
+        "correct": "If the chest tube disconnects, create a water seal right away, then reconnect a new sterile system.",
+        "perOption": {
+          "a": "Prolonged clamping risks a tension pneumothorax.",
+          "b": "This creates a temporary water seal that keeps air from entering the chest.",
+          "c": "The tube shouldn't be removed.",
+          "d": "Gauze doesn't create a seal."
+        },
+        "references": [
+          "Medical-surgical nursing texts (e.g. Lewis; Ignatavicius)",
+          "DRAFT: original question written with AI assistance; an RN or nurse educator must check it before candidates rely on it."
+        ]
+      },
+      "educationalObjective": "Manage a disconnected chest tube."
+    },
+    {
+      "id": "c1a00009-0000-4000-8000-000000000003",
+      "itemType": "multiple_choice",
+      "clientNeeds": "PHI.PA",
+      "bodySystem": "respiratory",
+      "subtopics": [
+        "chest-tube-management"
+      ],
+      "cjmmSkill": "take_action",
+      "difficulty": "moderate",
+      "stem": "A client's chest tube is accidentally pulled out. What should the nurse do first?",
+      "content": {
+        "options": [
+          {
+            "id": "a",
+            "text": "Reinsert the chest tube"
+          },
+          {
+            "id": "b",
+            "text": "Cover the site with a sterile occlusive dressing taped on three sides"
+          },
+          {
+            "id": "c",
+            "text": "Leave the site open to air"
+          },
+          {
+            "id": "d",
+            "text": "Apply a fully sealed dressing and watch the client"
+          }
+        ]
+      },
+      "key": {
+        "correct": "b"
+      },
+      "rationale": {
+        "correct": "Cover the site with a sterile dressing taped on three sides, assess for respiratory distress and notify the provider.",
+        "perOption": {
+          "a": "Only a provider inserts a chest tube.",
+          "b": "A dressing taped on three sides lets air escape but stops air from entering.",
+          "c": "An open site lets air into the pleural space.",
+          "d": "A fully sealed dressing can trap air and cause a tension pneumothorax."
+        },
+        "references": [
+          "Medical-surgical nursing texts (e.g. Lewis; Ignatavicius)",
+          "DRAFT: original question written with AI assistance; an RN or nurse educator must check it before candidates rely on it."
+        ]
+      },
+      "educationalObjective": "Respond when a chest tube comes out."
+    },
+    {
+      "id": "c1a00009-0000-4000-8000-000000000004",
+      "itemType": "sata",
+      "clientNeeds": "PHI.PA",
+      "bodySystem": "respiratory",
+      "subtopics": [
+        "chest-tube-management"
+      ],
+      "cjmmSkill": "generate_solutions",
+      "difficulty": "moderate",
+      "stem": "Which actions are appropriate when caring for a client with a chest tube connected to wet suction? Select all that apply.",
+      "content": {
+        "options": [
+          {
+            "id": "a",
+            "text": "Keep the drainage system below the level of the chest"
+          },
+          {
+            "id": "b",
+            "text": "Keep the tubing free of dependent loops"
+          },
+          {
+            "id": "c",
+            "text": "Expect fluctuation (tidaling) in the water seal chamber with breathing"
+          },
+          {
+            "id": "d",
+            "text": "Expect gentle, continuous bubbling in the suction control chamber"
+          },
+          {
+            "id": "e",
+            "text": "Clamp the tube whenever the client is moved"
+          },
+          {
+            "id": "f",
+            "text": "Strip or milk the tubing routinely every hour"
+          }
+        ]
+      },
+      "key": {
+        "correct": [
+          "a",
+          "b",
+          "c",
+          "d"
+        ]
+      },
+      "rationale": {
+        "correct": "Chest tube care: keep the system below the chest, avoid loops, expect tidaling and gentle suction bubbling, and don't clamp or strip routinely.",
+        "perOption": {
+          "a": "Gravity prevents backflow into the pleural space.",
+          "b": "Loops collect fluid and impede drainage.",
+          "c": "Tidaling shows the system is working and the lung isn't fully expanded.",
+          "d": "Gentle bubbling means the suction is working.",
+          "e": "Routine clamping risks a tension pneumothorax.",
+          "f": "Routine stripping creates high negative pressure and is done only if ordered."
+        },
+        "references": [
+          "Medical-surgical nursing texts (e.g. Lewis; Ignatavicius)",
+          "DRAFT: original question written with AI assistance; an RN or nurse educator must check it before candidates rely on it."
+        ]
+      },
+      "educationalObjective": "Care for a client with a chest tube."
+    },
+    {
+      "id": "c1a00009-0000-4000-8000-000000000005",
+      "itemType": "multiple_response_grouping",
+      "clientNeeds": "PHI.PA",
+      "bodySystem": "respiratory",
+      "subtopics": [
+        "chest-tube-management"
+      ],
+      "cjmmSkill": "recognize_cues",
+      "difficulty": "difficult",
+      "stem": "For each chamber of the client's chest drainage system, select the finding that requires follow-up.",
+      "content": {
+        "groups": [
+          {
+            "id": "g1",
+            "label": "Collection chamber",
+            "options": [
+              {
+                "id": "a",
+                "text": "150 mL of bright red drainage in the last hour"
+              },
+              {
+                "id": "b",
+                "text": "40 mL of serosanguineous drainage over 8 hours"
+              }
+            ]
+          },
+          {
+            "id": "g2",
+            "label": "Water seal chamber",
+            "options": [
+              {
+                "id": "c",
+                "text": "Water level rises and falls with breathing"
+              },
+              {
+                "id": "d",
+                "text": "Constant bubbling"
+              }
+            ]
+          },
+          {
+            "id": "g3",
+            "label": "Suction control chamber (wet suction)",
+            "options": [
+              {
+                "id": "e",
+                "text": "Gentle, continuous bubbling"
+              },
+              {
+                "id": "f",
+                "text": "No bubbling with the wall suction turned on"
+              }
+            ]
+          }
+        ]
+      },
+      "key": {
+        "byGroup": {
+          "g1": [
+            "a"
+          ],
+          "g2": [
+            "d"
+          ],
+          "g3": [
+            "f"
+          ]
+        }
+      },
+      "rationale": {
+        "correct": "Know what is expected in each chamber of the chest drainage system.",
+        "perOption": {
+          "a": "More than about 100 mL/hr of bright red drainage suggests hemorrhage.",
+          "b": "This is expected drainage.",
+          "c": "Tidaling is expected.",
+          "d": "Continuous bubbling indicates an air leak.",
+          "e": "This shows the suction is working.",
+          "f": "No bubbling means the suction isn't working, for example because of a loose connection or a low setting."
+        },
+        "references": [
+          "Medical-surgical nursing texts (e.g. Lewis; Ignatavicius)",
+          "DRAFT: original question written with AI assistance; an RN or nurse educator must check it before candidates rely on it."
+        ]
+      },
+      "educationalObjective": "Assess a chest drainage system."
+    },
+    {
+      "id": "c1a00009-0000-4000-8000-000000000006",
+      "itemType": "multiple_choice",
+      "clientNeeds": "PHI.PA",
+      "bodySystem": "respiratory",
+      "subtopics": [
+        "chest-trauma-and-pneumothorax"
+      ],
+      "cjmmSkill": "recognize_cues",
+      "difficulty": "difficult",
+      "stem": "After a car crash, a client has severe shortness of breath, absent breath sounds on the left and a trachea that has shifted to the right. The blood pressure is 74/40 mm Hg and the neck veins are distended. What does the nurse suspect?",
+      "content": {
+        "options": [
+          {
+            "id": "a",
+            "text": "Left tension pneumothorax"
+          },
+          {
+            "id": "b",
+            "text": "Right simple pneumothorax"
+          },
+          {
+            "id": "c",
+            "text": "Pulmonary contusion"
+          },
+          {
+            "id": "d",
+            "text": "Flail chest"
+          }
+        ]
+      },
+      "key": {
+        "correct": "a"
+      },
+      "rationale": {
+        "correct": "Tension pneumothorax is an emergency treated with needle decompression and then a chest tube.",
+        "perOption": {
+          "a": "Air trapped in the left chest shifts the trachea and mediastinum away from that side and lowers cardiac output.",
+          "b": "The trachea shifts away from a tension pneumothorax; here the problem is on the left.",
+          "c": "A contusion doesn't shift the trachea.",
+          "d": "Flail chest causes paradoxical chest wall movement."
+        },
+        "references": [
+          "Medical-surgical nursing texts (e.g. Lewis; Ignatavicius)",
+          "DRAFT: original question written with AI assistance; an RN or nurse educator must check it before candidates rely on it."
+        ]
+      },
+      "educationalObjective": "Recognize a tension pneumothorax."
+    },
+    {
+      "id": "c1a00009-0000-4000-8000-000000000007",
+      "itemType": "multiple_choice",
+      "clientNeeds": "PHI.PA",
+      "bodySystem": "respiratory",
+      "subtopics": [
+        "chest-trauma-and-pneumothorax"
+      ],
+      "cjmmSkill": "recognize_cues",
+      "difficulty": "moderate",
+      "stem": "A client has several fractured ribs after a fall. Which finding suggests a flail chest?",
+      "content": {
+        "options": [
+          {
+            "id": "a",
+            "text": "Part of the chest wall moves in during inhalation and out during exhalation"
+          },
+          {
+            "id": "b",
+            "text": "Barrel chest"
+          },
+          {
+            "id": "c",
+            "text": "Crackling under the skin when touched"
+          },
+          {
+            "id": "d",
+            "text": "Dullness to percussion"
+          }
+        ]
+      },
+      "key": {
+        "correct": "a"
+      },
+      "rationale": {
+        "correct": "Flail chest occurs when several adjacent ribs break in more than one place; the segment moves opposite to the rest of the chest.",
+        "perOption": {
+          "a": "Paradoxical movement of the chest wall segment is the sign of flail chest.",
+          "b": "This is associated with COPD.",
+          "c": "This is subcutaneous emphysema.",
+          "d": "This suggests fluid or blood in the chest."
+        },
+        "references": [
+          "Medical-surgical nursing texts (e.g. Lewis; Ignatavicius)",
+          "DRAFT: original question written with AI assistance; an RN or nurse educator must check it before candidates rely on it."
+        ]
+      },
+      "educationalObjective": "Recognize flail chest."
+    },
+    {
+      "id": "c1a00009-0000-4000-8000-000000000008",
+      "itemType": "multiple_choice",
+      "clientNeeds": "PHI.PA",
+      "bodySystem": "respiratory",
+      "subtopics": [
+        "mechanical-ventilation"
+      ],
+      "cjmmSkill": "take_action",
+      "difficulty": "moderate",
+      "stem": "The high-pressure alarm sounds on a client's ventilator. The client is coughing, and the nurse hears coarse rhonchi. What should the nurse do?",
+      "content": {
+        "options": [
+          {
+            "id": "a",
+            "text": "Suction the client's airway"
+          },
+          {
+            "id": "b",
+            "text": "Silence the alarm and recheck in 15 minutes"
+          },
+          {
+            "id": "c",
+            "text": "Check for a disconnection in the circuit"
+          },
+          {
+            "id": "d",
+            "text": "Increase the tidal volume"
+          }
+        ]
+      },
+      "key": {
+        "correct": "a"
+      },
+      "rationale": {
+        "correct": "High-pressure alarms come from obstruction (secretions, kinks, biting, coughing, bronchospasm); low-pressure alarms come from leaks or disconnections.",
+        "perOption": {
+          "a": "Secretions raise airway pressure; suctioning clears them.",
+          "b": "Alarms must be investigated, not just silenced.",
+          "c": "Disconnections cause low-pressure alarms.",
+          "d": "This would raise the pressure further."
+        },
+        "references": [
+          "Medical-surgical nursing texts (e.g. Lewis; Ignatavicius)",
+          "DRAFT: original question written with AI assistance; an RN or nurse educator must check it before candidates rely on it."
+        ]
+      },
+      "educationalObjective": "Respond to a high-pressure ventilator alarm."
+    },
+    {
+      "id": "c1a00009-0000-4000-8000-000000000009",
+      "itemType": "multiple_choice",
+      "clientNeeds": "PHI.PA",
+      "bodySystem": "respiratory",
+      "subtopics": [
+        "mechanical-ventilation"
+      ],
+      "cjmmSkill": "take_action",
+      "difficulty": "moderate",
+      "stem": "The low-pressure alarm sounds on a client's ventilator. What should the nurse check first?",
+      "content": {
+        "options": [
+          {
+            "id": "a",
+            "text": "The ventilator tubing connections"
+          },
+          {
+            "id": "b",
+            "text": "The client's airway for secretions"
+          },
+          {
+            "id": "c",
+            "text": "Whether the client is biting the tube"
+          },
+          {
+            "id": "d",
+            "text": "The client's sedation level"
+          }
+        ]
+      },
+      "key": {
+        "correct": "a"
+      },
+      "rationale": {
+        "correct": "Low pressure means air is escaping: check the connections, the circuit and the cuff.",
+        "perOption": {
+          "a": "A disconnection or leak is the most common cause of a low-pressure alarm.",
+          "b": "Secretions cause high-pressure alarms.",
+          "c": "Biting causes high-pressure alarms.",
+          "d": "This isn't the first check for low pressure."
+        },
+        "references": [
+          "Medical-surgical nursing texts (e.g. Lewis; Ignatavicius)",
+          "DRAFT: original question written with AI assistance; an RN or nurse educator must check it before candidates rely on it."
+        ]
+      },
+      "educationalObjective": "Respond to a low-pressure ventilator alarm."
+    },
+    {
+      "id": "c1a00009-0000-4000-8000-000000000010",
+      "itemType": "multiple_choice",
+      "clientNeeds": "PHI.PA",
+      "bodySystem": "respiratory",
+      "subtopics": [
+        "mechanical-ventilation"
+      ],
+      "cjmmSkill": "take_action",
+      "difficulty": "difficult",
+      "stem": "A client's ventilator alarm sounds, the client's SpO2 is falling and the nurse can't find the cause. What should the nurse do?",
+      "content": {
+        "options": [
+          {
+            "id": "a",
+            "text": "Silence the alarm and call the respiratory therapist"
+          },
+          {
+            "id": "b",
+            "text": "Disconnect the client from the ventilator and ventilate manually with a bag-valve device, then call for help"
+          },
+          {
+            "id": "c",
+            "text": "Increase the oxygen on the ventilator to 100% and wait"
+          },
+          {
+            "id": "d",
+            "text": "Reintubate the client"
+          }
+        ]
+      },
+      "key": {
+        "correct": "b"
+      },
+      "rationale": {
+        "correct": "If the cause of an alarm can't be found quickly and the client is in distress, ventilate manually with a bag-valve device.",
+        "perOption": {
+          "a": "The client needs ventilation now.",
+          "b": "Manual ventilation supports the client while the problem is found.",
+          "c": "This may not help if the problem is mechanical.",
+          "d": "Only qualified providers reintubate, and the tube may be in place."
+        },
+        "references": [
+          "Medical-surgical nursing texts (e.g. Lewis; Ignatavicius)",
+          "DRAFT: original question written with AI assistance; an RN or nurse educator must check it before candidates rely on it."
+        ]
+      },
+      "educationalObjective": "Support a ventilated client when the cause of an alarm is unknown."
+    },
+    {
+      "id": "c1a00009-0000-4000-8000-000000000011",
+      "itemType": "sata",
+      "clientNeeds": "PHI.PA",
+      "bodySystem": "respiratory",
+      "subtopics": [
+        "mechanical-ventilation"
+      ],
+      "cjmmSkill": "generate_solutions",
+      "difficulty": "moderate",
+      "stem": "Which actions help prevent ventilator-associated pneumonia? Select all that apply.",
+      "content": {
+        "options": [
+          {
+            "id": "a",
+            "text": "Keep the head of the bed at 30 to 45 degrees"
+          },
+          {
+            "id": "b",
+            "text": "Interrupt sedation daily and assess readiness to wean, as prescribed"
+          },
+          {
+            "id": "c",
+            "text": "Provide regular oral care"
+          },
+          {
+            "id": "d",
+            "text": "Drain condensation in the tubing away from the client"
+          },
+          {
+            "id": "e",
+            "text": "Keep the client flat to prevent pressure injuries"
+          },
+          {
+            "id": "f",
+            "text": "Change the ventilator circuit every day"
+          }
+        ]
+      },
+      "key": {
+        "correct": [
+          "a",
+          "b",
+          "c",
+          "d"
+        ]
+      },
+      "rationale": {
+        "correct": "The VAP bundle includes head-of-bed elevation, daily sedation breaks, oral care and careful circuit management.",
+        "perOption": {
+          "a": "Elevation reduces aspiration of gastric contents.",
+          "b": "Daily sedation breaks shorten ventilation time.",
+          "c": "Oral care reduces bacteria that can be aspirated.",
+          "d": "Draining toward the client can wash bacteria into the airway.",
+          "e": "Lying flat increases aspiration risk.",
+          "f": "Circuits are changed only when soiled or malfunctioning."
+        },
+        "references": [
+          "Medical-surgical nursing texts (e.g. Lewis; Ignatavicius)",
+          "DRAFT: original question written with AI assistance; an RN or nurse educator must check it before candidates rely on it."
+        ]
+      },
+      "educationalObjective": "Prevent ventilator-associated pneumonia."
+    },
+    {
+      "id": "c1a00009-0000-4000-8000-000000000012",
+      "itemType": "multiple_choice",
+      "clientNeeds": "PHI.PA",
+      "bodySystem": "respiratory",
+      "subtopics": [
+        "mechanical-ventilation"
+      ],
+      "cjmmSkill": "evaluate_outcomes",
+      "difficulty": "moderate",
+      "stem": "Right after a client is intubated, the nurse hears breath sounds on the right side but none on the left. What does this suggest?",
+      "content": {
+        "options": [
+          {
+            "id": "a",
+            "text": "The tube is correctly placed"
+          },
+          {
+            "id": "b",
+            "text": "The tube is in the right mainstem bronchus"
+          },
+          {
+            "id": "c",
+            "text": "The tube is in the esophagus"
+          },
+          {
+            "id": "d",
+            "text": "The client has a left pneumothorax"
+          }
+        ]
+      },
+      "key": {
+        "correct": "b"
+      },
+      "rationale": {
+        "correct": "Confirm tube placement with end-tidal CO2, equal breath sounds and a chest x-ray.",
+        "perOption": {
+          "a": "Breath sounds should be equal on both sides.",
+          "b": "The right bronchus is straighter, so a tube inserted too far tends to enter it; it needs to be pulled back.",
+          "c": "An esophageal tube causes absent breath sounds on both sides and sounds over the stomach.",
+          "d": "This is possible but less likely right after intubation."
+        },
+        "references": [
+          "Medical-surgical nursing texts (e.g. Lewis; Ignatavicius)",
+          "DRAFT: original question written with AI assistance; an RN or nurse educator must check it before candidates rely on it."
+        ]
+      },
+      "educationalObjective": "Recognize right mainstem intubation."
+    },
+    {
+      "id": "c1a00009-0000-4000-8000-000000000013",
+      "itemType": "ordered_response",
+      "clientNeeds": "PHI.PA",
+      "bodySystem": "respiratory",
+      "subtopics": [
+        "tracheostomy-and-suctioning"
+      ],
+      "cjmmSkill": "take_action",
+      "difficulty": "moderate",
+      "stem": "The nurse is suctioning a client's tracheostomy. Place the steps in order.",
+      "content": {
+        "items": [
+          {
+            "id": "b",
+            "text": "Pre-oxygenate the client"
+          },
+          {
+            "id": "a",
+            "text": "Perform hand hygiene and put on PPE"
+          },
+          {
+            "id": "d",
+            "text": "Apply intermittent suction while rotating and withdrawing the catheter, for no more than 10 to 15 seconds"
+          },
+          {
+            "id": "e",
+            "text": "Re-oxygenate the client before another pass"
+          },
+          {
+            "id": "c",
+            "text": "Insert the catheter without applying suction"
+          }
+        ]
+      },
+      "key": {
+        "order": [
+          "a",
+          "b",
+          "c",
+          "d",
+          "e"
+        ],
+        "scoring": "all_or_nothing"
+      },
+      "rationale": {
+        "correct": "Use sterile technique, pre-oxygenate, insert without suction, suction while withdrawing for 15 seconds or less, then re-oxygenate.",
+        "perOption": {
+          "a": "Infection control comes first.",
+          "b": "Pre-oxygenating reduces hypoxemia during suctioning.",
+          "c": "Suction during insertion damages the mucosa and removes oxygen.",
+          "d": "Limiting the time prevents hypoxemia.",
+          "e": "This restores oxygenation between passes."
+        },
+        "references": [
+          "Fundamentals of nursing texts (e.g. Potter & Perry)",
+          "Medical-surgical nursing texts (e.g. Lewis; Ignatavicius)",
+          "DRAFT: original question written with AI assistance; an RN or nurse educator must check it before candidates rely on it."
+        ]
+      },
+      "educationalObjective": "Suction a tracheostomy safely."
+    },
+    {
+      "id": "c1a00009-0000-4000-8000-000000000014",
+      "itemType": "multiple_choice",
+      "clientNeeds": "PHI.PA",
+      "bodySystem": "respiratory",
+      "subtopics": [
+        "tracheostomy-and-suctioning"
+      ],
+      "cjmmSkill": "take_action",
+      "difficulty": "easy",
+      "stem": "Which items should be kept at the bedside of a client with a new tracheostomy?",
+      "content": {
+        "options": [
+          {
+            "id": "a",
+            "text": "A spare tracheostomy tube of the same size and one size smaller, with the obturator"
+          },
+          {
+            "id": "b",
+            "text": "A tongue blade and a penlight"
+          },
+          {
+            "id": "c",
+            "text": "A nasal cannula only"
+          },
+          {
+            "id": "d",
+            "text": "A urinary catheter kit"
+          }
+        ]
+      },
+      "key": {
+        "correct": "a"
+      },
+      "rationale": {
+        "correct": "Keep an obturator, a spare tube (same size and one smaller), suction equipment and a bag-valve device at the bedside.",
+        "perOption": {
+          "a": "These allow quick replacement if the tube comes out.",
+          "b": "These aren't essential for airway emergencies.",
+          "c": "This isn't enough for an airway emergency.",
+          "d": "This isn't related to airway safety."
+        },
+        "references": [
+          "Fundamentals of nursing texts (e.g. Potter & Perry)",
+          "DRAFT: original question written with AI assistance; an RN or nurse educator must check it before candidates rely on it."
+        ]
+      },
+      "educationalObjective": "Prepare emergency equipment for a client with a tracheostomy."
+    },
+    {
+      "id": "c1a00009-0000-4000-8000-000000000015",
+      "itemType": "multiple_choice",
+      "clientNeeds": "PHI.PA",
+      "bodySystem": "respiratory",
+      "subtopics": [
+        "tracheostomy-and-suctioning"
+      ],
+      "cjmmSkill": "analyze_cues",
+      "difficulty": "difficult",
+      "stem": "What is the recommended pressure range for a tracheostomy or endotracheal tube cuff?",
+      "content": {
+        "options": [
+          {
+            "id": "a",
+            "text": "5 to 10 cm H2O"
+          },
+          {
+            "id": "b",
+            "text": "20 to 30 cm H2O"
+          },
+          {
+            "id": "c",
+            "text": "40 to 50 cm H2O"
+          },
+          {
+            "id": "d",
+            "text": "60 to 70 cm H2O"
+          }
+        ]
+      },
+      "key": {
+        "correct": "b"
+      },
+      "rationale": {
+        "correct": "Cuff pressure of 20 to 30 cm H2O prevents aspiration and tracheal injury.",
+        "perOption": {
+          "a": "This is too low to seal the airway and prevent aspiration.",
+          "b": "This seals the airway without cutting off blood flow to the tracheal mucosa.",
+          "c": "This high pressure can cause tracheal ischemia and necrosis.",
+          "d": "This would cause tracheal injury."
+        },
+        "references": [
+          "Medical-surgical nursing texts (e.g. Lewis; Ignatavicius)",
+          "DRAFT: original question written with AI assistance; an RN or nurse educator must check it before candidates rely on it."
+        ]
+      },
+      "educationalObjective": "Maintain safe cuff pressure."
+    },
+    {
+      "id": "c1a00009-0000-4000-8000-000000000016",
+      "itemType": "multiple_choice",
+      "clientNeeds": "PHI.PA",
+      "bodySystem": "respiratory",
+      "subtopics": [
+        "impaired-oxygenation"
+      ],
+      "cjmmSkill": "analyze_cues",
+      "difficulty": "difficult",
+      "stem": "A client with sepsis is receiving 80% oxygen by face mask. The PaO2 is 55 mm Hg, and the chest x-ray shows bilateral infiltrates without heart failure. What does the nurse suspect?",
+      "content": {
+        "options": [
+          {
+            "id": "a",
+            "text": "Acute respiratory distress syndrome (ARDS)"
+          },
+          {
+            "id": "b",
+            "text": "COPD exacerbation"
+          },
+          {
+            "id": "c",
+            "text": "Asthma attack"
+          },
+          {
+            "id": "d",
+            "text": "Atelectasis"
+          }
+        ]
+      },
+      "key": {
+        "correct": "a"
+      },
+      "rationale": {
+        "correct": "ARDS shows hypoxemia that doesn't improve with oxygen and bilateral infiltrates without a cardiac cause.",
+        "perOption": {
+          "a": "Refractory hypoxemia with bilateral infiltrates after an insult such as sepsis suggests ARDS.",
+          "b": "COPD doesn't cause new bilateral infiltrates with refractory hypoxemia.",
+          "c": "Asthma doesn't cause bilateral infiltrates.",
+          "d": "Atelectasis usually responds to oxygen and deep breathing."
+        },
+        "references": [
+          "Medical-surgical nursing texts (e.g. Lewis; Ignatavicius)",
+          "DRAFT: original question written with AI assistance; an RN or nurse educator must check it before candidates rely on it."
+        ]
+      },
+      "educationalObjective": "Recognize ARDS."
+    },
+    {
+      "id": "c1a00009-0000-4000-8000-000000000017",
+      "itemType": "multiple_choice",
+      "clientNeeds": "PHI.PA",
+      "bodySystem": "respiratory",
+      "subtopics": [
+        "impaired-oxygenation"
+      ],
+      "cjmmSkill": "analyze_cues",
+      "difficulty": "difficult",
+      "stem": "A client with ARDS is placed in the prone position. What is the purpose of this intervention?",
+      "content": {
+        "options": [
+          {
+            "id": "a",
+            "text": "To prevent pressure injuries"
+          },
+          {
+            "id": "b",
+            "text": "To improve oxygenation by better matching ventilation and blood flow"
+          },
+          {
+            "id": "c",
+            "text": "To make suctioning easier"
+          },
+          {
+            "id": "d",
+            "text": "To reduce sedation needs"
+          }
+        ]
+      },
+      "key": {
+        "correct": "b"
+      },
+      "rationale": {
+        "correct": "Prone positioning recruits collapsed alveoli and improves oxygenation in moderate to severe ARDS.",
+        "perOption": {
+          "a": "Prone positioning increases the risk of pressure injuries on the face and chest.",
+          "b": "Prone positioning opens collapsed back regions of the lungs and improves oxygenation.",
+          "c": "This isn't the main purpose.",
+          "d": "This isn't the purpose."
+        },
+        "references": [
+          "Medical-surgical nursing texts (e.g. Lewis; Ignatavicius)",
+          "DRAFT: original question written with AI assistance; an RN or nurse educator must check it before candidates rely on it."
+        ]
+      },
+      "educationalObjective": "Explain why prone positioning is used in ARDS."
+    },
+    {
+      "id": "c1a00009-0000-4000-8000-000000000018",
+      "itemType": "multiple_choice",
+      "clientNeeds": "PHI.PA",
+      "bodySystem": "respiratory",
+      "subtopics": [
+        "basic-life-support"
+      ],
+      "cjmmSkill": "take_action",
+      "difficulty": "easy",
+      "stem": "In a restaurant, an adult is clutching the throat, can't speak and is making high-pitched sounds. What should the nurse do?",
+      "content": {
+        "options": [
+          {
+            "id": "a",
+            "text": "Encourage the person to keep coughing"
+          },
+          {
+            "id": "b",
+            "text": "Give abdominal thrusts"
+          },
+          {
+            "id": "c",
+            "text": "Begin chest compressions"
+          },
+          {
+            "id": "d",
+            "text": "Perform a blind finger sweep"
+          }
+        ]
+      },
+      "key": {
+        "correct": "b"
+      },
+      "rationale": {
+        "correct": "Severe airway obstruction in a conscious adult: abdominal thrusts until the object comes out or the person becomes unresponsive.",
+        "perOption": {
+          "a": "Inability to speak means the obstruction is severe; coughing isn't enough.",
+          "b": "Abdominal thrusts are used for a conscious adult with a severe airway obstruction.",
+          "c": "Compressions start only if the person becomes unresponsive.",
+          "d": "Blind finger sweeps can push the object deeper."
+        },
+        "references": [
+          "American Heart Association Guidelines for CPR and Emergency Cardiovascular Care",
+          "DRAFT: original question written with AI assistance; an RN or nurse educator must check it before candidates rely on it."
+        ]
+      },
+      "educationalObjective": "Relieve a severe airway obstruction in a conscious adult."
+    },
+    {
+      "id": "c1a00009-0000-4000-8000-000000000019",
+      "itemType": "multiple_choice",
+      "clientNeeds": "PHI.PA",
+      "bodySystem": "respiratory",
+      "subtopics": [
+        "basic-life-support"
+      ],
+      "cjmmSkill": "take_action",
+      "difficulty": "moderate",
+      "stem": "An adult choking victim becomes unresponsive. After calling for help, what should the nurse do?",
+      "content": {
+        "options": [
+          {
+            "id": "a",
+            "text": "Keep giving abdominal thrusts with the victim standing"
+          },
+          {
+            "id": "b",
+            "text": "Begin CPR, looking in the mouth for the object before each set of breaths"
+          },
+          {
+            "id": "c",
+            "text": "Do a blind finger sweep"
+          },
+          {
+            "id": "d",
+            "text": "Wait for the emergency team before doing anything"
+          }
+        ]
+      },
+      "key": {
+        "correct": "b"
+      },
+      "rationale": {
+        "correct": "For an unresponsive choking victim, start CPR and check the mouth before giving breaths.",
+        "perOption": {
+          "a": "The victim must be lowered to the ground.",
+          "b": "Chest compressions can dislodge the object; remove it only if it can be seen.",
+          "c": "Blind sweeps aren't recommended.",
+          "d": "Delaying CPR worsens outcomes."
+        },
+        "references": [
+          "American Heart Association Guidelines for CPR and Emergency Cardiovascular Care",
+          "DRAFT: original question written with AI assistance; an RN or nurse educator must check it before candidates rely on it."
+        ]
+      },
+      "educationalObjective": "Respond when a choking victim becomes unresponsive."
+    },
+    {
+      "id": "c1a00009-0000-4000-8000-000000000020",
+      "itemType": "multiple_choice",
+      "clientNeeds": "PHI.RRP",
+      "bodySystem": "respiratory",
+      "subtopics": [
+        "post-procedure-complications"
+      ],
+      "cjmmSkill": "take_action",
+      "difficulty": "difficult",
+      "stem": "A client has had a left pneumonectomy for lung cancer. How should the nurse position the client?",
+      "content": {
+        "options": [
+          {
+            "id": "a",
+            "text": "On the right (non-operative) side"
+          },
+          {
+            "id": "b",
+            "text": "On the back or turned partly toward the operative side"
+          },
+          {
+            "id": "c",
+            "text": "Prone"
+          },
+          {
+            "id": "d",
+            "text": "Flat in the Trendelenburg position"
+          }
+        ]
+      },
+      "key": {
+        "correct": "b"
+      },
+      "rationale": {
+        "correct": "After pneumonectomy, avoid complete lateral positioning on either side; position on the back or partly on the operative side, per the surgeon's orders.",
+        "perOption": {
+          "a": "Lying on the remaining lung can shift the mediastinum and compress that lung.",
+          "b": "This lets the remaining lung expand fully and avoids shifting the mediastinum.",
+          "c": "Prone positioning isn't used after pneumonectomy.",
+          "d": "This reduces lung expansion."
+        },
+        "references": [
+          "Medical-surgical nursing texts (e.g. Lewis; Ignatavicius)",
+          "DRAFT: original question written with AI assistance; an RN or nurse educator must check it before candidates rely on it."
+        ]
+      },
+      "educationalObjective": "Position a client after pneumonectomy."
+    },
+    {
+      "id": "c1a00009-0000-4000-8000-000000000021",
+      "itemType": "multiple_choice",
+      "clientNeeds": "HPM",
+      "bodySystem": "respiratory",
+      "subtopics": [
+        "cancer-screening"
+      ],
+      "cjmmSkill": "generate_solutions",
+      "difficulty": "moderate",
+      "stem": "Which client meets the criteria for annual low-dose CT screening for lung cancer?",
+      "content": {
+        "options": [
+          {
+            "id": "a",
+            "text": "A 45-year-old who has never smoked"
+          },
+          {
+            "id": "b",
+            "text": "A 62-year-old with a 30 pack-year history who quit 5 years ago"
+          },
+          {
+            "id": "c",
+            "text": "A 72-year-old who quit smoking 25 years ago"
+          },
+          {
+            "id": "d",
+            "text": "A 40-year-old who smokes 1 pack a day"
+          }
+        ]
+      },
+      "key": {
+        "correct": "b"
+      },
+      "rationale": {
+        "correct": "USPSTF: annual low-dose CT for adults 50 to 80 with a history of 20 or more pack-years who currently smoke or quit within the past 15 years.",
+        "perOption": {
+          "a": "This client is too young and has no smoking history.",
+          "b": "Screening is recommended for adults 50 to 80 with at least 20 pack-years who currently smoke or quit within 15 years.",
+          "c": "Quitting more than 15 years ago puts this client outside the criteria.",
+          "d": "This client is too young."
+        },
+        "references": [
+          "U.S. Preventive Services Task Force recommendations",
+          "DRAFT: original question written with AI assistance; an RN or nurse educator must check it before candidates rely on it."
+        ]
+      },
+      "educationalObjective": "Identify clients who meet lung cancer screening criteria."
+    },
+    {
+      "id": "c1a00009-0000-4000-8000-000000000022",
+      "itemType": "fill_blank_calc",
+      "clientNeeds": "HPM",
+      "bodySystem": "respiratory",
+      "subtopics": [
+        "cancer-screening"
+      ],
+      "cjmmSkill": "analyze_cues",
+      "difficulty": "easy",
+      "stem": "A client has smoked 1.5 packs of cigarettes a day for 30 years. How many pack-years is this?",
+      "content": {
+        "unit": "pack-years",
+        "decimals": 0,
+        "inputLabel": "Pack-years"
+      },
+      "key": {
+        "value": 45,
+        "rounding": "exact"
+      },
+      "rationale": {
+        "correct": "Pack-years = packs per day × years smoked = 1.5 × 30 = 45 pack-years.",
+        "perOption": {},
+        "references": [
+          "U.S. Preventive Services Task Force recommendations",
+          "DRAFT: original question written with AI assistance; an RN or nurse educator must check it before candidates rely on it."
+        ]
+      },
+      "educationalObjective": "Calculate a smoking history in pack-years."
+    },
+    {
+      "id": "c1a00009-0000-4000-8000-000000000023",
+      "itemType": "multiple_choice",
+      "clientNeeds": "PHI.PA",
+      "bodySystem": "respiratory",
+      "subtopics": [
+        "impaired-oxygenation"
+      ],
+      "cjmmSkill": "evaluate_outcomes",
+      "difficulty": "moderate",
+      "stem": "A client with obstructive sleep apnea has been prescribed CPAP. Which statement shows understanding?",
+      "content": {
+        "options": [
+          {
+            "id": "a",
+            "text": "\"I'll use it only on nights when I feel very tired.\""
+          },
+          {
+            "id": "b",
+            "text": "\"I'll wear it every time I sleep, including naps.\""
+          },
+          {
+            "id": "c",
+            "text": "\"I'll take a sleeping pill to help me get used to it.\""
+          },
+          {
+            "id": "d",
+            "text": "\"I'll stop using it if the mask leaks.\""
+          }
+        ]
+      },
+      "key": {
+        "correct": "b"
+      },
+      "rationale": {
+        "correct": "CPAP works only when used for all sleep; avoid alcohol and sedatives.",
+        "perOption": {
+          "a": "CPAP must be used every night to work.",
+          "b": "Consistent use keeps the airway open during all sleep.",
+          "c": "Sedatives worsen airway collapse in sleep apnea.",
+          "d": "Mask problems should be fixed, not used as a reason to stop."
+        },
+        "references": [
+          "Medical-surgical nursing texts (e.g. Lewis; Ignatavicius)",
+          "DRAFT: original question written with AI assistance; an RN or nurse educator must check it before candidates rely on it."
+        ]
+      },
+      "educationalObjective": "Teach CPAP use for sleep apnea."
+    },
+    {
+      "id": "c1a00009-0000-4000-8000-000000000024",
+      "itemType": "multiple_choice",
+      "clientNeeds": "PHI.PA",
+      "bodySystem": "respiratory",
+      "subtopics": [
+        "chest-trauma-and-pneumothorax"
+      ],
+      "cjmmSkill": "generate_solutions",
+      "difficulty": "moderate",
+      "stem": "A client with fractured ribs is taking shallow breaths because of pain. Which intervention is most important to prevent complications?",
+      "content": {
+        "options": [
+          {
+            "id": "a",
+            "text": "Wrap the chest tightly with an elastic bandage"
+          },
+          {
+            "id": "b",
+            "text": "Give adequate pain relief and encourage deep breathing while splinting with a pillow"
+          },
+          {
+            "id": "c",
+            "text": "Keep the client on bed rest"
+          },
+          {
+            "id": "d",
+            "text": "Limit fluids"
+          }
+        ]
+      },
+      "key": {
+        "correct": "b"
+      },
+      "rationale": {
+        "correct": "Pain control and deep breathing prevent atelectasis and pneumonia after rib fractures.",
+        "perOption": {
+          "a": "Binding the chest limits expansion and raises the risk of pneumonia.",
+          "b": "Pain control allows deep breathing and coughing, preventing atelectasis and pneumonia.",
+          "c": "Immobility increases respiratory complications.",
+          "d": "Limiting fluids thickens secretions."
+        },
+        "references": [
+          "Medical-surgical nursing texts (e.g. Lewis; Ignatavicius)",
+          "DRAFT: original question written with AI assistance; an RN or nurse educator must check it before candidates rely on it."
+        ]
+      },
+      "educationalObjective": "Prevent pulmonary complications after rib fractures."
+    }
+  ]
+}
