@@ -5801,6 +5801,144 @@ export interface paths {
         patch?: never;
         trace?: never;
     };
+    "/api/v1/me/weak-areas": {
+        parameters: {
+            query?: never;
+            header?: never;
+            path?: never;
+            cookie?: never;
+        };
+        get: {
+            parameters: {
+                query?: {
+                    track?: components["schemas"]["ExamTrack"];
+                };
+                header?: never;
+                path?: never;
+                cookie?: never;
+            };
+            requestBody?: never;
+            responses: {
+                /** @description OK */
+                200: {
+                    headers: {
+                        [name: string]: unknown;
+                    };
+                    content: {
+                        "application/json": components["schemas"]["WeakAreasView"];
+                    };
+                };
+                /** @description Bad Request */
+                400: {
+                    headers: {
+                        [name: string]: unknown;
+                    };
+                    content: {
+                        "application/problem+json": components["schemas"]["ProblemDetails"];
+                        "application/json": unknown;
+                    };
+                };
+                /** @description Unauthorized */
+                401: {
+                    headers: {
+                        [name: string]: unknown;
+                    };
+                    content: {
+                        "application/problem+json": components["schemas"]["ProblemDetails"];
+                        "application/json": unknown;
+                    };
+                };
+            };
+        };
+        put?: never;
+        post?: never;
+        delete?: never;
+        options?: never;
+        head?: never;
+        patch?: never;
+        trace?: never;
+    };
+    "/api/v1/test-sets/weak-areas": {
+        parameters: {
+            query?: never;
+            header?: never;
+            path?: never;
+            cookie?: never;
+        };
+        get?: never;
+        put?: never;
+        post: {
+            parameters: {
+                query?: never;
+                header?: never;
+                path?: never;
+                cookie?: never;
+            };
+            requestBody: {
+                content: {
+                    "application/json": components["schemas"]["StartWeakAreaPracticeRequest"];
+                    "text/json": components["schemas"]["StartWeakAreaPracticeRequest"];
+                    "application/*+json": components["schemas"]["StartWeakAreaPracticeRequest"];
+                };
+            };
+            responses: {
+                /** @description Created */
+                201: {
+                    headers: {
+                        [name: string]: unknown;
+                    };
+                    content: {
+                        "application/json": components["schemas"]["CreateCustomSetResponse"];
+                    };
+                };
+                /** @description Bad Request */
+                400: {
+                    headers: {
+                        [name: string]: unknown;
+                    };
+                    content: {
+                        "application/problem+json": components["schemas"]["ProblemDetails"];
+                        "application/json": unknown;
+                    };
+                };
+                /** @description Unauthorized */
+                401: {
+                    headers: {
+                        [name: string]: unknown;
+                    };
+                    content: {
+                        "application/problem+json": components["schemas"]["ProblemDetails"];
+                        "application/json": unknown;
+                    };
+                };
+                /** @description Forbidden */
+                403: {
+                    headers: {
+                        [name: string]: unknown;
+                    };
+                    content: {
+                        "application/problem+json": components["schemas"]["ProblemDetails"];
+                        "application/json": unknown;
+                    };
+                };
+                /** @description Unprocessable Entity */
+                422: {
+                    headers: {
+                        [name: string]: unknown;
+                    };
+                    content: {
+                        "application/problem+json": components["schemas"]["ProblemDetails"];
+                        "application/json": unknown;
+                    };
+                };
+            };
+        };
+        delete?: never;
+        options?: never;
+        head?: never;
+        patch?: never;
+        trace?: never;
+    };
 }
 export type webhooks = Record<string, never>;
 export interface components {
@@ -6691,6 +6829,9 @@ export interface components {
             /** Format: uuid */
             testSetId: string;
         };
+        StartWeakAreaPracticeRequest: {
+            track?: null | components["schemas"]["ExamTrack"];
+        };
         StreamTicketResponse: {
             ticket: string;
             /** Format: int32 */
@@ -6920,6 +7061,26 @@ export interface components {
             name: string;
             /** Format: double */
             pct: number | string;
+        };
+        WeakAreasView: {
+            track: components["schemas"]["ExamTrack"];
+            areas: components["schemas"]["WeakAreaView"][];
+            /** Format: int32 */
+            attemptsConsidered: number | string;
+            /** Format: int32 */
+            questionsAvailable: number | string;
+            /** Format: int32 */
+            questionCount: number | string;
+        };
+        WeakAreaView: {
+            /** Format: int16 */
+            clientNeedsId: number | string;
+            code: string;
+            name: string;
+            /** Format: double */
+            pct: number | string;
+            /** Format: int32 */
+            items: number | string;
         };
     };
     responses: never;
