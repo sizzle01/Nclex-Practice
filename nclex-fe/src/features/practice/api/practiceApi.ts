@@ -1,4 +1,4 @@
-import { useInfiniteQuery, useQuery } from "@tanstack/react-query";
+import { useQuery } from "@tanstack/react-query";
 import { apiClient } from "@/lib/api/client";
 import { ApiError } from "@/lib/api/errors";
 import type { ApiSchema } from "@/lib/api/types";
@@ -7,8 +7,8 @@ export type TestSetSummary = ApiSchema<"TestSetSummary">;
 export type TestSetDetail = ApiSchema<"TestSetDetail">;
 export type TestSetPage = ApiSchema<"TestSetPage">;
 
-/** Sets per page; the API allows up to 50. */
-const pageSize = 20;
+/** Sets per page: the API's maximum, so the whole RN catalog usually arrives in one request. */
+const pageSize = 50;
 
 /** GET /test-sets?kind=prebuilt: one page of the curated sets on the user's own track. */
 export async function fetchPrebuiltSets(cursor: string | null): Promise<TestSetPage> {
@@ -17,6 +17,21 @@ export async function fetchPrebuiltSets(cursor: string | null): Promise<TestSetP
   });
   if (data) return data;
   throw ApiError.from(response, error);
+}
+
+/**
+ * Every curated set, following nextCursor until the last page. The Practice page groups sets into
+ * sections and tabs, which only makes sense once it has all of them.
+ */
+export async function fetchAllPrebuiltSets(): Promise<TestSetSummary[]> {
+  const sets: TestSetSummary[] = [];
+  let cursor: string | null = null;
+  do {
+    const page: TestSetPage = await fetchPrebuiltSets(cursor);
+    sets.push(...page.items);
+    cursor = page.nextCursor ?? null;
+  } while (cursor !== null);
+  return sets;
 }
 
 /** GET /test-sets/{id}: one set's settings for the detail panel. */
@@ -32,14 +47,9 @@ export function testSetQueryKey(id: string) {
   return ["test-sets", "detail", id] as const;
 }
 
-/** The curated sets, a page at a time ("Show more sets" loads the next one). */
+/** All the curated sets of the user's track, in the API's order. */
 export function usePrebuiltSets() {
-  return useInfiniteQuery({
-    queryKey: testSetsQueryKey,
-    queryFn: ({ pageParam }) => fetchPrebuiltSets(pageParam),
-    initialPageParam: null as string | null,
-    getNextPageParam: (lastPage) => lastPage.nextCursor ?? undefined,
-  });
+  return useQuery({ queryKey: testSetsQueryKey, queryFn: fetchAllPrebuiltSets });
 }
 
 /** One set's details; idle while no set is selected. */
