@@ -1,0 +1,1199 @@
+{
+  "notice": "RN bank batch 24: Basic care and comfort. DRAFT - every question must be reviewed by an RN or nurse educator before candidates rely on it.",
+  "track": "RN",
+  "subtopics": [
+    {
+      "clientNeeds": "PHI.BCC",
+      "slug": "pain-assessment-and-comfort",
+      "name": "Pain assessment and comfort measures"
+    },
+    {
+      "clientNeeds": "PHI.BCC",
+      "slug": "complementary-therapies",
+      "name": "Complementary and alternative therapies"
+    },
+    {
+      "clientNeeds": "PHI.BCC",
+      "slug": "sleep-and-rest",
+      "name": "Sleep and rest"
+    },
+    {
+      "clientNeeds": "PHI.BCC",
+      "slug": "nutrition-and-therapeutic-diets",
+      "name": "Nutrition and therapeutic diets"
+    },
+    {
+      "clientNeeds": "HPM",
+      "slug": "bone-health-and-osteoporosis",
+      "name": "Bone health and osteoporosis prevention"
+    },
+    {
+      "clientNeeds": "PHI.BCC",
+      "slug": "hygiene-and-personal-care",
+      "name": "Hygiene and personal care"
+    },
+    {
+      "clientNeeds": "PHI.BCC",
+      "slug": "immobility-and-positioning",
+      "name": "Immobility and positioning"
+    },
+    {
+      "clientNeeds": "PHI.BCC",
+      "slug": "mobility-and-assistive-devices",
+      "name": "Mobility and assistive devices"
+    },
+    {
+      "clientNeeds": "PHI.BCC",
+      "slug": "bowel-elimination",
+      "name": "Bowel elimination"
+    },
+    {
+      "clientNeeds": "PHI.BCC",
+      "slug": "urinary-elimination-and-catheter-care",
+      "name": "Urinary elimination and catheter care"
+    },
+    {
+      "clientNeeds": "PHI.BCC",
+      "slug": "tube-feeding-care",
+      "name": "Tube feeding care"
+    }
+  ],
+  "questions": [
+    {
+      "id": "c1a00024-0000-4000-8000-000000000001",
+      "itemType": "multiple_choice",
+      "clientNeeds": "PHI.BCC",
+      "bodySystem": "fundamentals",
+      "subtopics": [
+        "pain-assessment-and-comfort"
+      ],
+      "cjmmSkill": "analyze_cues",
+      "difficulty": "easy",
+      "stem": "What is the most reliable indicator of a client's pain?",
+      "content": {
+        "options": [
+          {
+            "id": "a",
+            "text": "The client's own report"
+          },
+          {
+            "id": "b",
+            "text": "The client's facial expression"
+          },
+          {
+            "id": "c",
+            "text": "Changes in vital signs"
+          },
+          {
+            "id": "d",
+            "text": "The nurse's estimate based on the procedure"
+          }
+        ]
+      },
+      "key": {
+        "correct": "a"
+      },
+      "rationale": {
+        "correct": "Self-report is the gold standard; use behavioral scales when the client can't report.",
+        "perOption": {
+          "a": "Pain is whatever the client says it is.",
+          "b": "Expressions vary and can be misleading.",
+          "c": "Vital signs may not change with chronic pain.",
+          "d": "This introduces bias."
+        },
+        "references": [
+          "Fundamentals of nursing texts (e.g. Potter & Perry)",
+          "DRAFT: original question written with AI assistance; an RN or nurse educator must check it before candidates rely on it."
+        ]
+      },
+      "educationalObjective": "Identify the most reliable pain indicator."
+    },
+    {
+      "id": "c1a00024-0000-4000-8000-000000000002",
+      "itemType": "multiple_choice",
+      "clientNeeds": "PHI.BCC",
+      "bodySystem": "fundamentals",
+      "subtopics": [
+        "pain-assessment-and-comfort"
+      ],
+      "cjmmSkill": "take_action",
+      "difficulty": "moderate",
+      "stem": "How should the nurse assess pain in a client with advanced dementia who can't give a self-report?",
+      "content": {
+        "options": [
+          {
+            "id": "a",
+            "text": "Use a behavioral pain scale such as PAINAD"
+          },
+          {
+            "id": "b",
+            "text": "Assume the client has no pain"
+          },
+          {
+            "id": "c",
+            "text": "Ask the client to rate pain from 0 to 10"
+          },
+          {
+            "id": "d",
+            "text": "Rely on vital signs alone"
+          }
+        ]
+      },
+      "key": {
+        "correct": "a"
+      },
+      "rationale": {
+        "correct": "Use validated behavioral scales for nonverbal clients.",
+        "perOption": {
+          "a": "Behavioral scales assess breathing, vocalization, facial expression, body language and consolability.",
+          "b": "Pain is often undertreated in dementia.",
+          "c": "The client can't use a numeric scale.",
+          "d": "Vital signs are unreliable."
+        },
+        "references": [
+          "Fundamentals of nursing texts (e.g. Potter & Perry)",
+          "DRAFT: original question written with AI assistance; an RN or nurse educator must check it before candidates rely on it."
+        ]
+      },
+      "educationalObjective": "Assess pain in a client with dementia."
+    },
+    {
+      "id": "c1a00024-0000-4000-8000-000000000003",
+      "itemType": "multiple_choice",
+      "clientNeeds": "PHI.BCC",
+      "bodySystem": "musculoskeletal",
+      "subtopics": [
+        "pain-assessment-and-comfort"
+      ],
+      "cjmmSkill": "take_action",
+      "difficulty": "moderate",
+      "stem": "A client sprained an ankle 2 hours ago. Which comfort measure is best?",
+      "content": {
+        "options": [
+          {
+            "id": "a",
+            "text": "A cold pack for 15 to 20 minutes at a time"
+          },
+          {
+            "id": "b",
+            "text": "A heating pad for 1 hour"
+          },
+          {
+            "id": "c",
+            "text": "Massaging the ankle firmly"
+          },
+          {
+            "id": "d",
+            "text": "Keeping the ankle hanging down"
+          }
+        ]
+      },
+      "key": {
+        "correct": "a"
+      },
+      "rationale": {
+        "correct": "Use cold for acute injuries in the first 24 to 48 hours, heat later; limit applications to 15 to 20 minutes.",
+        "perOption": {
+          "a": "Cold reduces swelling and pain in the first 24 to 48 hours.",
+          "b": "Heat increases swelling in an acute injury.",
+          "c": "This can increase swelling.",
+          "d": "Elevation reduces swelling."
+        },
+        "references": [
+          "Fundamentals of nursing texts (e.g. Potter & Perry)",
+          "DRAFT: original question written with AI assistance; an RN or nurse educator must check it before candidates rely on it."
+        ]
+      },
+      "educationalObjective": "Choose heat or cold therapy appropriately."
+    },
+    {
+      "id": "c1a00024-0000-4000-8000-000000000004",
+      "itemType": "multiple_choice",
+      "clientNeeds": "PHI.BCC",
+      "bodySystem": "mental-health",
+      "subtopics": [
+        "complementary-therapies"
+      ],
+      "cjmmSkill": "recognize_cues",
+      "difficulty": "moderate",
+      "stem": "A client taking sertraline says they've started St. John's wort. Why is the nurse concerned?",
+      "content": {
+        "options": [
+          {
+            "id": "a",
+            "text": "The combination can cause serotonin syndrome"
+          },
+          {
+            "id": "b",
+            "text": "St. John's wort lowers blood glucose"
+          },
+          {
+            "id": "c",
+            "text": "St. John's wort causes hypothyroidism"
+          },
+          {
+            "id": "d",
+            "text": "There's no concern"
+          }
+        ]
+      },
+      "key": {
+        "correct": "a"
+      },
+      "rationale": {
+        "correct": "St. John's wort interacts with SSRIs (serotonin syndrome) and reduces the effect of many drugs, such as oral contraceptives and warfarin.",
+        "perOption": {
+          "a": "Both increase serotonin.",
+          "b": "This isn't the main concern.",
+          "c": "This isn't the concern.",
+          "d": "There is a significant interaction."
+        },
+        "references": [
+          "Nursing pharmacology texts (e.g. Lehne; McCuistion) and the drug's prescribing information",
+          "DRAFT: original question written with AI assistance; an RN or nurse educator must check it before candidates rely on it."
+        ]
+      },
+      "educationalObjective": "Recognize herbal-drug interactions."
+    },
+    {
+      "id": "c1a00024-0000-4000-8000-000000000005",
+      "itemType": "multiple_choice",
+      "clientNeeds": "PHI.BCC",
+      "bodySystem": "fundamentals",
+      "subtopics": [
+        "complementary-therapies"
+      ],
+      "cjmmSkill": "take_action",
+      "difficulty": "easy",
+      "stem": "A client says, \"I'd like to use acupuncture along with my medicine for back pain.\" What is the nurse's best response?",
+      "content": {
+        "options": [
+          {
+            "id": "a",
+            "text": "\"Let's tell your provider so your care can be coordinated.\""
+          },
+          {
+            "id": "b",
+            "text": "\"Acupuncture doesn't work.\""
+          },
+          {
+            "id": "c",
+            "text": "\"You'll have to stop your medicine.\""
+          },
+          {
+            "id": "d",
+            "text": "\"Do whatever you like without telling anyone.\""
+          }
+        ]
+      },
+      "key": {
+        "correct": "a"
+      },
+      "rationale": {
+        "correct": "Support complementary therapies while making sure the provider knows and screening for interactions.",
+        "perOption": {
+          "a": "This respects the client's choice and supports safe, coordinated care.",
+          "b": "This is dismissive.",
+          "c": "This isn't necessary.",
+          "d": "Coordination is important."
+        },
+        "references": [
+          "Fundamentals of nursing texts (e.g. Potter & Perry)",
+          "DRAFT: original question written with AI assistance; an RN or nurse educator must check it before candidates rely on it."
+        ]
+      },
+      "educationalObjective": "Respond to interest in complementary therapy."
+    },
+    {
+      "id": "c1a00024-0000-4000-8000-000000000006",
+      "itemType": "multiple_choice",
+      "clientNeeds": "PHI.BCC",
+      "bodySystem": "fundamentals",
+      "subtopics": [
+        "sleep-and-rest"
+      ],
+      "cjmmSkill": "evaluate_outcomes",
+      "difficulty": "easy",
+      "stem": "The nurse is teaching sleep hygiene. Which statement shows a need for more teaching?",
+      "content": {
+        "options": [
+          {
+            "id": "a",
+            "text": "\"I'll go to bed at the same time each night.\""
+          },
+          {
+            "id": "b",
+            "text": "\"I'll avoid caffeine after lunch.\""
+          },
+          {
+            "id": "c",
+            "text": "\"I'll watch TV in bed until I fall asleep.\""
+          },
+          {
+            "id": "d",
+            "text": "\"I'll keep my bedroom cool and dark.\""
+          }
+        ]
+      },
+      "key": {
+        "correct": "c"
+      },
+      "rationale": {
+        "correct": "Sleep hygiene: consistent schedule, bed for sleep only, limit caffeine, alcohol and screens.",
+        "perOption": {
+          "a": "A consistent schedule supports sleep.",
+          "b": "Caffeine disrupts sleep.",
+          "c": "Screens and non-sleep activities in bed disrupt sleep.",
+          "d": "This supports sleep."
+        },
+        "references": [
+          "Fundamentals of nursing texts (e.g. Potter & Perry)",
+          "DRAFT: original question written with AI assistance; an RN or nurse educator must check it before candidates rely on it."
+        ]
+      },
+      "educationalObjective": "Teach sleep hygiene."
+    },
+    {
+      "id": "c1a00024-0000-4000-8000-000000000007",
+      "itemType": "multiple_choice",
+      "clientNeeds": "PHI.BCC",
+      "bodySystem": "fundamentals",
+      "subtopics": [
+        "sleep-and-rest"
+      ],
+      "cjmmSkill": "recognize_cues",
+      "difficulty": "moderate",
+      "stem": "An 82-year-old client asks for a sleeping pill. What is the nurse's main concern about sedative-hypnotics in older adults?",
+      "content": {
+        "options": [
+          {
+            "id": "a",
+            "text": "Increased risk of falls and confusion"
+          },
+          {
+            "id": "b",
+            "text": "Weight gain"
+          },
+          {
+            "id": "c",
+            "text": "Hypertension"
+          },
+          {
+            "id": "d",
+            "text": "Increased appetite"
+          }
+        ]
+      },
+      "key": {
+        "correct": "a"
+      },
+      "rationale": {
+        "correct": "Avoid sedative-hypnotics in older adults when possible; try non-drug measures first.",
+        "perOption": {
+          "a": "Sedatives impair balance and cognition in older adults (Beers criteria).",
+          "b": "This isn't the main concern.",
+          "c": "This isn't the main concern.",
+          "d": "This isn't the main concern."
+        },
+        "references": [
+          "Nursing pharmacology texts (e.g. Lehne; McCuistion) and the drug's prescribing information",
+          "DRAFT: original question written with AI assistance; an RN or nurse educator must check it before candidates rely on it."
+        ]
+      },
+      "educationalObjective": "Recognize the risks of sedatives in older adults."
+    },
+    {
+      "id": "c1a00024-0000-4000-8000-000000000008",
+      "itemType": "multiple_choice",
+      "clientNeeds": "PHI.BCC",
+      "bodySystem": "gastrointestinal",
+      "subtopics": [
+        "nutrition-and-therapeutic-diets"
+      ],
+      "cjmmSkill": "take_action",
+      "difficulty": "easy",
+      "stem": "A client is on a clear liquid diet. Which item can the nurse offer?",
+      "content": {
+        "options": [
+          {
+            "id": "a",
+            "text": "Apple juice"
+          },
+          {
+            "id": "b",
+            "text": "Milk"
+          },
+          {
+            "id": "c",
+            "text": "Orange juice with pulp"
+          },
+          {
+            "id": "d",
+            "text": "Ice cream"
+          }
+        ]
+      },
+      "key": {
+        "correct": "a"
+      },
+      "rationale": {
+        "correct": "Clear liquids: water, broth, clear juice, gelatin, popsicles. Full liquids add milk, pudding and ice cream.",
+        "perOption": {
+          "a": "Clear liquids are transparent at room temperature.",
+          "b": "Milk is a full liquid.",
+          "c": "Pulp isn't clear.",
+          "d": "Ice cream is a full liquid."
+        },
+        "references": [
+          "Fundamentals of nursing texts (e.g. Potter & Perry)",
+          "DRAFT: original question written with AI assistance; an RN or nurse educator must check it before candidates rely on it."
+        ]
+      },
+      "educationalObjective": "Choose foods for a clear liquid diet."
+    },
+    {
+      "id": "c1a00024-0000-4000-8000-000000000009",
+      "itemType": "multiple_choice",
+      "clientNeeds": "PHI.BCC",
+      "bodySystem": "cardiovascular",
+      "subtopics": [
+        "nutrition-and-therapeutic-diets"
+      ],
+      "cjmmSkill": "evaluate_outcomes",
+      "difficulty": "easy",
+      "stem": "Which lunch choice is best for a client on a low-sodium diet?",
+      "content": {
+        "options": [
+          {
+            "id": "a",
+            "text": "Grilled fresh chicken with steamed vegetables"
+          },
+          {
+            "id": "b",
+            "text": "Canned soup and crackers"
+          },
+          {
+            "id": "c",
+            "text": "Ham sandwich with pickles"
+          },
+          {
+            "id": "d",
+            "text": "Frozen pizza"
+          }
+        ]
+      },
+      "key": {
+        "correct": "a"
+      },
+      "rationale": {
+        "correct": "Low sodium: choose fresh foods; limit canned, cured, processed and fast foods.",
+        "perOption": {
+          "a": "Fresh, unprocessed foods are low in sodium.",
+          "b": "These are high in sodium.",
+          "c": "Cured meats and pickles are high in sodium.",
+          "d": "Processed foods are high in sodium."
+        },
+        "references": [
+          "Fundamentals of nursing texts (e.g. Potter & Perry)",
+          "DRAFT: original question written with AI assistance; an RN or nurse educator must check it before candidates rely on it."
+        ]
+      },
+      "educationalObjective": "Choose low-sodium foods."
+    },
+    {
+      "id": "c1a00024-0000-4000-8000-000000000010",
+      "itemType": "multiple_choice",
+      "clientNeeds": "PHI.BCC",
+      "bodySystem": "gastrointestinal",
+      "subtopics": [
+        "nutrition-and-therapeutic-diets"
+      ],
+      "cjmmSkill": "evaluate_outcomes",
+      "difficulty": "moderate",
+      "stem": "A client with celiac disease is choosing foods. Which choice is safe?",
+      "content": {
+        "options": [
+          {
+            "id": "a",
+            "text": "Rice"
+          },
+          {
+            "id": "b",
+            "text": "Whole wheat bread"
+          },
+          {
+            "id": "c",
+            "text": "Barley soup"
+          },
+          {
+            "id": "d",
+            "text": "Rye crackers"
+          }
+        ]
+      },
+      "key": {
+        "correct": "a"
+      },
+      "rationale": {
+        "correct": "Celiac disease: avoid wheat, barley and rye; rice, corn and certified gluten-free oats are safe.",
+        "perOption": {
+          "a": "Rice is naturally gluten-free.",
+          "b": "Wheat contains gluten.",
+          "c": "Barley contains gluten.",
+          "d": "Rye contains gluten."
+        },
+        "references": [
+          "Medical-surgical nursing texts (e.g. Lewis; Ignatavicius)",
+          "DRAFT: original question written with AI assistance; an RN or nurse educator must check it before candidates rely on it."
+        ]
+      },
+      "educationalObjective": "Choose gluten-free foods."
+    },
+    {
+      "id": "c1a00024-0000-4000-8000-000000000011",
+      "itemType": "multiple_choice",
+      "clientNeeds": "PHI.BCC",
+      "bodySystem": "gastrointestinal",
+      "subtopics": [
+        "nutrition-and-therapeutic-diets"
+      ],
+      "cjmmSkill": "generate_solutions",
+      "difficulty": "easy",
+      "stem": "Which food is highest in fiber?",
+      "content": {
+        "options": [
+          {
+            "id": "a",
+            "text": "Lentils"
+          },
+          {
+            "id": "b",
+            "text": "White bread"
+          },
+          {
+            "id": "c",
+            "text": "Chicken breast"
+          },
+          {
+            "id": "d",
+            "text": "Yogurt"
+          }
+        ]
+      },
+      "key": {
+        "correct": "a"
+      },
+      "rationale": {
+        "correct": "High-fiber foods: legumes, whole grains, fruits, vegetables, bran.",
+        "perOption": {
+          "a": "Legumes are high in fiber.",
+          "b": "Refined grains are low in fiber.",
+          "c": "Meat has no fiber.",
+          "d": "Dairy has no fiber."
+        },
+        "references": [
+          "Fundamentals of nursing texts (e.g. Potter & Perry)",
+          "DRAFT: original question written with AI assistance; an RN or nurse educator must check it before candidates rely on it."
+        ]
+      },
+      "educationalObjective": "Identify high-fiber foods."
+    },
+    {
+      "id": "c1a00024-0000-4000-8000-000000000012",
+      "itemType": "fill_blank_calc",
+      "clientNeeds": "HPM",
+      "bodySystem": "fundamentals",
+      "subtopics": [
+        "bone-health-and-osteoporosis"
+      ],
+      "cjmmSkill": "analyze_cues",
+      "difficulty": "easy",
+      "stem": "A client weighs 90 kg and is 1.75 m tall. What is the client's body mass index (BMI)? Round to the nearest tenth.",
+      "content": {
+        "unit": "kg/m²",
+        "decimals": 1,
+        "inputLabel": "BMI"
+      },
+      "key": {
+        "value": 29.4,
+        "rounding": "exact"
+      },
+      "rationale": {
+        "correct": "BMI = weight (kg) ÷ height (m)² = 90 ÷ (1.75 × 1.75) = 90 ÷ 3.0625 = 29.4 (overweight range: 25 to 29.9).",
+        "perOption": {},
+        "references": [
+          "Fundamentals of nursing texts (e.g. Potter & Perry)",
+          "DRAFT: original question written with AI assistance; an RN or nurse educator must check it before candidates rely on it."
+        ]
+      },
+      "educationalObjective": "Calculate body mass index."
+    },
+    {
+      "id": "c1a00024-0000-4000-8000-000000000013",
+      "itemType": "multiple_choice",
+      "clientNeeds": "PHI.BCC",
+      "bodySystem": "fundamentals",
+      "subtopics": [
+        "hygiene-and-personal-care"
+      ],
+      "cjmmSkill": "take_action",
+      "difficulty": "moderate",
+      "stem": "How should the nurse provide oral care to an unconscious client?",
+      "content": {
+        "options": [
+          {
+            "id": "a",
+            "text": "Turn the client to the side, have suction ready and use a soft toothette"
+          },
+          {
+            "id": "b",
+            "text": "Keep the client flat and pour water into the mouth to rinse"
+          },
+          {
+            "id": "c",
+            "text": "Skip oral care because the client isn't eating"
+          },
+          {
+            "id": "d",
+            "text": "Use a hard toothbrush and lots of toothpaste"
+          }
+        ]
+      },
+      "key": {
+        "correct": "a"
+      },
+      "rationale": {
+        "correct": "Oral care for unconscious clients: side-lying, minimal fluid, suction available.",
+        "perOption": {
+          "a": "Side-lying and suction prevent aspiration.",
+          "b": "This risks aspiration.",
+          "c": "Oral care prevents infection and pneumonia.",
+          "d": "This can injure tissue and cause aspiration."
+        },
+        "references": [
+          "Fundamentals of nursing texts (e.g. Potter & Perry)",
+          "DRAFT: original question written with AI assistance; an RN or nurse educator must check it before candidates rely on it."
+        ]
+      },
+      "educationalObjective": "Provide safe oral care to an unconscious client."
+    },
+    {
+      "id": "c1a00024-0000-4000-8000-000000000014",
+      "itemType": "multiple_choice",
+      "clientNeeds": "PHI.BCC",
+      "bodySystem": "mental-health",
+      "subtopics": [
+        "hygiene-and-personal-care"
+      ],
+      "cjmmSkill": "take_action",
+      "difficulty": "moderate",
+      "stem": "A client with dementia becomes agitated during the morning shower. What should the nurse do?",
+      "content": {
+        "options": [
+          {
+            "id": "a",
+            "text": "Be flexible: try a towel bath or a different time of day"
+          },
+          {
+            "id": "b",
+            "text": "Insist on completing the shower right away"
+          },
+          {
+            "id": "c",
+            "text": "Restrain the client to finish"
+          },
+          {
+            "id": "d",
+            "text": "Skip bathing for a week"
+          }
+        ]
+      },
+      "key": {
+        "correct": "a"
+      },
+      "rationale": {
+        "correct": "Person-centered care in dementia: flexibility, simple steps, calm approach.",
+        "perOption": {
+          "a": "Adjusting the approach reduces distress while meeting hygiene needs.",
+          "b": "Forcing care increases agitation.",
+          "c": "Restraint isn't appropriate.",
+          "d": "Hygiene needs must still be met."
+        },
+        "references": [
+          "Fundamentals of nursing texts (e.g. Potter & Perry)",
+          "DRAFT: original question written with AI assistance; an RN or nurse educator must check it before candidates rely on it."
+        ]
+      },
+      "educationalObjective": "Adapt hygiene care for a client with dementia."
+    },
+    {
+      "id": "c1a00024-0000-4000-8000-000000000015",
+      "itemType": "multiple_choice",
+      "clientNeeds": "PHI.BCC",
+      "bodySystem": "fundamentals",
+      "subtopics": [
+        "hygiene-and-personal-care"
+      ],
+      "cjmmSkill": "take_action",
+      "difficulty": "easy",
+      "stem": "How should the nurse store a client's dentures overnight?",
+      "content": {
+        "options": [
+          {
+            "id": "a",
+            "text": "In a labeled denture cup with water or cleaning solution"
+          },
+          {
+            "id": "b",
+            "text": "Wrapped in a paper towel on the meal tray"
+          },
+          {
+            "id": "c",
+            "text": "Dry in the drawer"
+          },
+          {
+            "id": "d",
+            "text": "In hot water"
+          }
+        ]
+      },
+      "key": {
+        "correct": "a"
+      },
+      "rationale": {
+        "correct": "Denture care: clean over a padded sink and store in a labeled cup with liquid.",
+        "perOption": {
+          "a": "This prevents warping and loss.",
+          "b": "They may be thrown away.",
+          "c": "Drying can warp them.",
+          "d": "Hot water can warp them."
+        },
+        "references": [
+          "Fundamentals of nursing texts (e.g. Potter & Perry)",
+          "DRAFT: original question written with AI assistance; an RN or nurse educator must check it before candidates rely on it."
+        ]
+      },
+      "educationalObjective": "Care for dentures correctly."
+    },
+    {
+      "id": "c1a00024-0000-4000-8000-000000000016",
+      "itemType": "sata",
+      "clientNeeds": "PHI.BCC",
+      "bodySystem": "fundamentals",
+      "subtopics": [
+        "immobility-and-positioning"
+      ],
+      "cjmmSkill": "recognize_cues",
+      "difficulty": "moderate",
+      "stem": "Which complications can result from prolonged immobility? Select all that apply.",
+      "content": {
+        "options": [
+          {
+            "id": "a",
+            "text": "Pressure injuries"
+          },
+          {
+            "id": "b",
+            "text": "Deep vein thrombosis"
+          },
+          {
+            "id": "c",
+            "text": "Constipation"
+          },
+          {
+            "id": "d",
+            "text": "Pneumonia"
+          },
+          {
+            "id": "e",
+            "text": "Contractures"
+          },
+          {
+            "id": "f",
+            "text": "Increased muscle mass"
+          }
+        ]
+      },
+      "key": {
+        "correct": [
+          "a",
+          "b",
+          "c",
+          "d",
+          "e"
+        ]
+      },
+      "rationale": {
+        "correct": "Immobility affects every system: skin, circulation, lungs, bowels, muscles and bones.",
+        "perOption": {
+          "a": "Constant pressure reduces blood flow to the skin.",
+          "b": "Venous stasis promotes clotting.",
+          "c": "Peristalsis slows.",
+          "d": "Secretions pool in the lungs.",
+          "e": "Joints lose range of motion.",
+          "f": "Immobility causes muscle wasting."
+        },
+        "references": [
+          "Fundamentals of nursing texts (e.g. Potter & Perry)",
+          "DRAFT: original question written with AI assistance; an RN or nurse educator must check it before candidates rely on it."
+        ]
+      },
+      "educationalObjective": "Recognize the complications of immobility."
+    },
+    {
+      "id": "c1a00024-0000-4000-8000-000000000017",
+      "itemType": "multiple_choice",
+      "clientNeeds": "PHI.BCC",
+      "bodySystem": "musculoskeletal",
+      "subtopics": [
+        "immobility-and-positioning"
+      ],
+      "cjmmSkill": "take_action",
+      "difficulty": "easy",
+      "stem": "When performing passive range-of-motion exercises, what should the nurse do?",
+      "content": {
+        "options": [
+          {
+            "id": "a",
+            "text": "Support the joint above and below and stop at the point of resistance or pain"
+          },
+          {
+            "id": "b",
+            "text": "Move each joint past the point of pain"
+          },
+          {
+            "id": "c",
+            "text": "Move the joints quickly"
+          },
+          {
+            "id": "d",
+            "text": "Exercise only the unaffected limbs"
+          }
+        ]
+      },
+      "key": {
+        "correct": "a"
+      },
+      "rationale": {
+        "correct": "Passive ROM: slow, supported and within comfort.",
+        "perOption": {
+          "a": "This prevents injury.",
+          "b": "This causes injury.",
+          "c": "Slow, smooth movements are safer.",
+          "d": "All joints need ROM unless contraindicated."
+        },
+        "references": [
+          "Fundamentals of nursing texts (e.g. Potter & Perry)",
+          "DRAFT: original question written with AI assistance; an RN or nurse educator must check it before candidates rely on it."
+        ]
+      },
+      "educationalObjective": "Perform passive ROM safely."
+    },
+    {
+      "id": "c1a00024-0000-4000-8000-000000000018",
+      "itemType": "multiple_choice",
+      "clientNeeds": "PHI.BCC",
+      "bodySystem": "neurological",
+      "subtopics": [
+        "immobility-and-positioning"
+      ],
+      "cjmmSkill": "generate_solutions",
+      "difficulty": "moderate",
+      "stem": "Which intervention helps prevent foot drop in a client on prolonged bed rest?",
+      "content": {
+        "options": [
+          {
+            "id": "a",
+            "text": "High-top sneakers or a foot board to keep the feet at 90 degrees"
+          },
+          {
+            "id": "b",
+            "text": "A pillow under the knees"
+          },
+          {
+            "id": "c",
+            "text": "Tucking the sheets tightly over the toes"
+          },
+          {
+            "id": "d",
+            "text": "Keeping the feet pointed down"
+          }
+        ]
+      },
+      "key": {
+        "correct": "a"
+      },
+      "rationale": {
+        "correct": "Prevent foot drop with neutral ankle positioning and ROM.",
+        "perOption": {
+          "a": "This keeps the ankles in a neutral position.",
+          "b": "This promotes knee flexion contracture.",
+          "c": "This pushes the feet into plantar flexion.",
+          "d": "This promotes foot drop."
+        },
+        "references": [
+          "Fundamentals of nursing texts (e.g. Potter & Perry)",
+          "DRAFT: original question written with AI assistance; an RN or nurse educator must check it before candidates rely on it."
+        ]
+      },
+      "educationalObjective": "Prevent foot drop."
+    },
+    {
+      "id": "c1a00024-0000-4000-8000-000000000019",
+      "itemType": "ordered_response",
+      "clientNeeds": "PHI.BCC",
+      "bodySystem": "fundamentals",
+      "subtopics": [
+        "mobility-and-assistive-devices"
+      ],
+      "cjmmSkill": "take_action",
+      "difficulty": "moderate",
+      "stem": "The nurse is helping a client with right-sided weakness move from the bed to a wheelchair. Place the steps in order.",
+      "content": {
+        "items": [
+          {
+            "id": "a",
+            "text": "Place the wheelchair on the client's left (strong) side at a slight angle and lock the brakes"
+          },
+          {
+            "id": "c",
+            "text": "Apply a gait belt around the client's waist"
+          },
+          {
+            "id": "b",
+            "text": "Help the client sit on the edge of the bed with feet flat on the floor"
+          },
+          {
+            "id": "d",
+            "text": "Help the client stand and pivot on the strong leg"
+          },
+          {
+            "id": "e",
+            "text": "Lower the client into the wheelchair"
+          }
+        ]
+      },
+      "key": {
+        "order": [
+          "a",
+          "b",
+          "c",
+          "d",
+          "e"
+        ],
+        "scoring": "all_or_nothing"
+      },
+      "rationale": {
+        "correct": "Transfer toward the strong side with locked brakes and a gait belt.",
+        "perOption": {
+          "a": "The client moves toward the strong side, with the chair secured.",
+          "b": "Sitting first lets the blood pressure adjust.",
+          "c": "The belt gives the nurse a secure hold.",
+          "d": "Pivoting on the strong leg is safest.",
+          "e": "A controlled descent prevents falls."
+        },
+        "references": [
+          "Fundamentals of nursing texts (e.g. Potter & Perry)",
+          "DRAFT: original question written with AI assistance; an RN or nurse educator must check it before candidates rely on it."
+        ]
+      },
+      "educationalObjective": "Transfer a client from bed to wheelchair safely."
+    },
+    {
+      "id": "c1a00024-0000-4000-8000-000000000020",
+      "itemType": "multiple_choice",
+      "clientNeeds": "PHI.BCC",
+      "bodySystem": "gastrointestinal",
+      "subtopics": [
+        "bowel-elimination"
+      ],
+      "cjmmSkill": "generate_solutions",
+      "difficulty": "moderate",
+      "stem": "When is the best time for a client in a bowel training program to try to have a bowel movement?",
+      "content": {
+        "options": [
+          {
+            "id": "a",
+            "text": "About 30 minutes after breakfast"
+          },
+          {
+            "id": "b",
+            "text": "Right before bedtime"
+          },
+          {
+            "id": "c",
+            "text": "Only when the client feels the urge"
+          },
+          {
+            "id": "d",
+            "text": "On an empty stomach before breakfast"
+          }
+        ]
+      },
+      "key": {
+        "correct": "a"
+      },
+      "rationale": {
+        "correct": "Bowel training: same time daily, after a meal, with fiber and fluids.",
+        "perOption": {
+          "a": "The gastrocolic reflex after meals stimulates peristalsis.",
+          "b": "This isn't the optimal time.",
+          "c": "A schedule is used.",
+          "d": "The meal triggers the reflex."
+        },
+        "references": [
+          "Fundamentals of nursing texts (e.g. Potter & Perry)",
+          "DRAFT: original question written with AI assistance; an RN or nurse educator must check it before candidates rely on it."
+        ]
+      },
+      "educationalObjective": "Time bowel training correctly."
+    },
+    {
+      "id": "c1a00024-0000-4000-8000-000000000021",
+      "itemType": "multiple_choice",
+      "clientNeeds": "PHI.BCC",
+      "bodySystem": "renal-urinary",
+      "subtopics": [
+        "urinary-elimination-and-catheter-care"
+      ],
+      "cjmmSkill": "generate_solutions",
+      "difficulty": "easy",
+      "stem": "Which intervention is most appropriate for an older adult with functional urinary incontinence?",
+      "content": {
+        "options": [
+          {
+            "id": "a",
+            "text": "Offer scheduled toileting every 2 hours"
+          },
+          {
+            "id": "b",
+            "text": "Insert an indwelling catheter"
+          },
+          {
+            "id": "c",
+            "text": "Restrict fluids all day"
+          },
+          {
+            "id": "d",
+            "text": "Use adult briefs only"
+          }
+        ]
+      },
+      "key": {
+        "correct": "a"
+      },
+      "rationale": {
+        "correct": "Incontinence care: scheduled toileting, easy access to the toilet and skin protection.",
+        "perOption": {
+          "a": "Regular toileting reduces accidents.",
+          "b": "This increases infection risk and isn't first-line.",
+          "c": "This causes dehydration and concentrated urine.",
+          "d": "Briefs don't address the cause."
+        },
+        "references": [
+          "Fundamentals of nursing texts (e.g. Potter & Perry)",
+          "DRAFT: original question written with AI assistance; an RN or nurse educator must check it before candidates rely on it."
+        ]
+      },
+      "educationalObjective": "Manage functional incontinence."
+    },
+    {
+      "id": "c1a00024-0000-4000-8000-000000000022",
+      "itemType": "multiple_choice",
+      "clientNeeds": "PHI.BCC",
+      "bodySystem": "gastrointestinal",
+      "subtopics": [
+        "bowel-elimination"
+      ],
+      "cjmmSkill": "take_action",
+      "difficulty": "difficult",
+      "stem": "While removing a fecal impaction digitally, the nurse notes the client's heart rate drops from 78 to 48/min. What should the nurse do?",
+      "content": {
+        "options": [
+          {
+            "id": "a",
+            "text": "Stop the procedure and assess the client"
+          },
+          {
+            "id": "b",
+            "text": "Continue quickly to finish"
+          },
+          {
+            "id": "c",
+            "text": "Give a laxative"
+          },
+          {
+            "id": "d",
+            "text": "Lower the head of the bed and keep going"
+          }
+        ]
+      },
+      "key": {
+        "correct": "a"
+      },
+      "rationale": {
+        "correct": "Digital removal can stimulate the vagus nerve; stop if bradycardia occurs.",
+        "perOption": {
+          "a": "Rectal stimulation can trigger a vagal response with bradycardia.",
+          "b": "This worsens the vagal response.",
+          "c": "This doesn't address the bradycardia.",
+          "d": "The procedure must stop."
+        },
+        "references": [
+          "Fundamentals of nursing texts (e.g. Potter & Perry)",
+          "DRAFT: original question written with AI assistance; an RN or nurse educator must check it before candidates rely on it."
+        ]
+      },
+      "educationalObjective": "Recognize a vagal response during digital disimpaction."
+    },
+    {
+      "id": "c1a00024-0000-4000-8000-000000000023",
+      "itemType": "multiple_choice",
+      "clientNeeds": "PHI.BCC",
+      "bodySystem": "gastrointestinal",
+      "subtopics": [
+        "tube-feeding-care"
+      ],
+      "cjmmSkill": "take_action",
+      "difficulty": "moderate",
+      "stem": "A client's feeding tube is clogged. What should the nurse try first?",
+      "content": {
+        "options": [
+          {
+            "id": "a",
+            "text": "Flush gently with warm water using a 30 to 60 mL syringe"
+          },
+          {
+            "id": "b",
+            "text": "Flush with cola"
+          },
+          {
+            "id": "c",
+            "text": "Insert a stylet to push through the clog"
+          },
+          {
+            "id": "d",
+            "text": "Use a small syringe with high pressure"
+          }
+        ]
+      },
+      "key": {
+        "correct": "a"
+      },
+      "rationale": {
+        "correct": "Prevent clogs with regular water flushes; clear them gently with warm water.",
+        "perOption": {
+          "a": "Warm water is the first-line way to clear a clog.",
+          "b": "Acidic drinks can make clogs worse.",
+          "c": "This can perforate the tube or GI tract.",
+          "d": "Small syringes create high pressure that can rupture the tube."
+        },
+        "references": [
+          "Fundamentals of nursing texts (e.g. Potter & Perry)",
+          "DRAFT: original question written with AI assistance; an RN or nurse educator must check it before candidates rely on it."
+        ]
+      },
+      "educationalObjective": "Unclog a feeding tube safely."
+    }
+  ]
+}
