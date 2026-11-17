@@ -1,0 +1,1426 @@
+{
+  "notice": "RN bank batch 3: Management of care: legal, ethical and client rights. DRAFT - every question must be reviewed by an RN or nurse educator before candidates rely on it.",
+  "track": "RN",
+  "subtopics": [
+    {
+      "clientNeeds": "SECE.MOC",
+      "slug": "informed-consent",
+      "name": "Informed consent"
+    },
+    {
+      "clientNeeds": "SECE.MOC",
+      "slug": "client-rights-and-advocacy",
+      "name": "Client rights and advocacy"
+    },
+    {
+      "clientNeeds": "SECE.MOC",
+      "slug": "advance-directives",
+      "name": "Advance directives and end-of-life decisions"
+    },
+    {
+      "clientNeeds": "SECE.MOC",
+      "slug": "confidentiality-and-information-security",
+      "name": "Confidentiality and information security"
+    },
+    {
+      "clientNeeds": "SECE.MOC",
+      "slug": "legal-and-ethical-practice",
+      "name": "Legal and ethical practice"
+    },
+    {
+      "clientNeeds": "SECE.MOC",
+      "slug": "discharge-planning-and-continuity",
+      "name": "Discharge planning and continuity of care"
+    }
+  ],
+  "questions": [
+    {
+      "id": "c1a00003-0000-4000-8000-000000000001",
+      "itemType": "multiple_choice",
+      "clientNeeds": "SECE.MOC",
+      "bodySystem": "fundamentals",
+      "subtopics": [
+        "informed-consent"
+      ],
+      "cjmmSkill": "take_action",
+      "difficulty": "moderate",
+      "stem": "A client scheduled for surgery received IV morphine 30 minutes ago and has not yet signed the surgical consent form. The client says, \"Just give me the paper and I'll sign it.\" What should the nurse do?",
+      "content": {
+        "options": [
+          {
+            "id": "a",
+            "text": "Have the client sign the form while a second nurse witnesses"
+          },
+          {
+            "id": "b",
+            "text": "Withhold the form and notify the surgeon"
+          },
+          {
+            "id": "c",
+            "text": "Ask a family member to sign the form"
+          },
+          {
+            "id": "d",
+            "text": "Explain the procedure's risks so the client can sign quickly"
+          }
+        ]
+      },
+      "key": {
+        "correct": "b"
+      },
+      "rationale": {
+        "correct": "Informed consent requires a client who is competent and not under the influence of sedating drugs.",
+        "perOption": {
+          "a": "A witness doesn't fix the problem: the client can't give informed consent while sedated.",
+          "b": "Consent obtained under the effect of an opioid may be invalid; the surgeon must be told and consent obtained when the client is competent.",
+          "c": "A competent adult's consent can't be replaced by a family member's signature just for convenience.",
+          "d": "Explaining the procedure and its risks is the surgeon's responsibility, and the client is still sedated."
+        },
+        "references": [
+          "Fundamentals of nursing texts (e.g. Potter & Perry)",
+          "DRAFT: original question written with AI assistance; an RN or nurse educator must check it before candidates rely on it."
+        ]
+      },
+      "educationalObjective": "Recognize when a client can't give valid informed consent."
+    },
+    {
+      "id": "c1a00003-0000-4000-8000-000000000002",
+      "itemType": "multiple_choice",
+      "clientNeeds": "SECE.MOC",
+      "bodySystem": "fundamentals",
+      "subtopics": [
+        "informed-consent"
+      ],
+      "cjmmSkill": "take_action",
+      "difficulty": "moderate",
+      "stem": "After signing the consent form for a colon resection, a client asks the nurse, \"Will I have to wear a bag on my stomach afterward?\" What should the nurse do?",
+      "content": {
+        "options": [
+          {
+            "id": "a",
+            "text": "Explain the possible need for a colostomy"
+          },
+          {
+            "id": "b",
+            "text": "Reassure the client that most clients don't need a colostomy"
+          },
+          {
+            "id": "c",
+            "text": "Notify the surgeon that the client has questions about the procedure"
+          },
+          {
+            "id": "d",
+            "text": "Tell the client that the consent is already signed, so it's too late to ask"
+          }
+        ]
+      },
+      "key": {
+        "correct": "c"
+      },
+      "rationale": {
+        "correct": "If a client shows they don't understand the procedure, the nurse notifies the provider, who is responsible for informing the client.",
+        "perOption": {
+          "a": "Explaining the procedure and its outcomes is the surgeon's role; the nurse doesn't add new information to the consent.",
+          "b": "This gives false reassurance and goes beyond the nurse's role.",
+          "c": "The client isn't fully informed; the surgeon must answer the questions before surgery proceeds.",
+          "d": "Consent can be withdrawn or clarified at any time before the procedure."
+        },
+        "references": [
+          "Fundamentals of nursing texts (e.g. Potter & Perry)",
+          "DRAFT: original question written with AI assistance; an RN or nurse educator must check it before candidates rely on it."
+        ]
+      },
+      "educationalObjective": "Respond when a client doesn't fully understand a procedure after signing consent."
+    },
+    {
+      "id": "c1a00003-0000-4000-8000-000000000003",
+      "itemType": "sata",
+      "clientNeeds": "SECE.MOC",
+      "bodySystem": "fundamentals",
+      "subtopics": [
+        "informed-consent"
+      ],
+      "cjmmSkill": "analyze_cues",
+      "difficulty": "moderate",
+      "stem": "Which statements about informed consent are accurate? Select all that apply.",
+      "content": {
+        "options": [
+          {
+            "id": "a",
+            "text": "The provider performing the procedure is responsible for explaining it"
+          },
+          {
+            "id": "b",
+            "text": "The client must be told the risks, benefits and alternatives"
+          },
+          {
+            "id": "c",
+            "text": "Consent must be given voluntarily, without coercion"
+          },
+          {
+            "id": "d",
+            "text": "The nurse's signature as witness confirms that the client signed voluntarily"
+          },
+          {
+            "id": "e",
+            "text": "Once signed, consent can't be withdrawn"
+          },
+          {
+            "id": "f",
+            "text": "The nurse's signature confirms that the client understood the procedure's risks"
+          }
+        ]
+      },
+      "key": {
+        "correct": [
+          "a",
+          "b",
+          "c",
+          "d"
+        ]
+      },
+      "rationale": {
+        "correct": "Valid consent needs a competent client, full disclosure by the provider, understanding and voluntary agreement. The nurse witnesses the signature.",
+        "perOption": {
+          "a": "The person doing the procedure explains the risks, benefits and alternatives.",
+          "b": "Disclosure of risks, benefits and alternatives (including no treatment) is required.",
+          "c": "Consent obtained under pressure isn't valid.",
+          "d": "The nurse witnesses that the signature is the client's and given voluntarily.",
+          "e": "A client may withdraw consent at any time, even after signing.",
+          "f": "Confirming understanding is the provider's responsibility; the nurse witnesses only the signature."
+        },
+        "references": [
+          "Fundamentals of nursing texts (e.g. Potter & Perry)",
+          "DRAFT: original question written with AI assistance; an RN or nurse educator must check it before candidates rely on it."
+        ]
+      },
+      "educationalObjective": "Identify the elements of informed consent and the nurse's role."
+    },
+    {
+      "id": "c1a00003-0000-4000-8000-000000000004",
+      "itemType": "multiple_choice",
+      "clientNeeds": "SECE.MOC",
+      "bodySystem": "fundamentals",
+      "subtopics": [
+        "informed-consent"
+      ],
+      "cjmmSkill": "take_action",
+      "difficulty": "moderate",
+      "stem": "An unconscious adult with internal bleeding arrives in the emergency department after a car crash. No family can be reached. How does the team obtain consent for emergency surgery?",
+      "content": {
+        "options": [
+          {
+            "id": "a",
+            "text": "Surgery is delayed until a family member is reached"
+          },
+          {
+            "id": "b",
+            "text": "A court order is needed before surgery"
+          },
+          {
+            "id": "c",
+            "text": "Surgery proceeds under implied consent for an emergency"
+          },
+          {
+            "id": "d",
+            "text": "The nurse signs the consent form for the client"
+          }
+        ]
+      },
+      "key": {
+        "correct": "c"
+      },
+      "rationale": {
+        "correct": "The emergency exception (implied consent) allows treatment needed to save life or limb when the client can't consent.",
+        "perOption": {
+          "a": "Delaying lifesaving treatment would harm the client.",
+          "b": "Seeking a court order would delay emergency treatment unnecessarily.",
+          "c": "In a life-threatening emergency, consent is implied when the client can't consent and no representative is available.",
+          "d": "Nurses don't sign consent on a client's behalf."
+        },
+        "references": [
+          "Fundamentals of nursing texts (e.g. Potter & Perry)",
+          "DRAFT: original question written with AI assistance; an RN or nurse educator must check it before candidates rely on it."
+        ]
+      },
+      "educationalObjective": "Apply implied consent in a life-threatening emergency."
+    },
+    {
+      "id": "c1a00003-0000-4000-8000-000000000005",
+      "itemType": "multiple_choice",
+      "clientNeeds": "SECE.MOC",
+      "bodySystem": "fundamentals",
+      "subtopics": [
+        "client-rights-and-advocacy"
+      ],
+      "cjmmSkill": "take_action",
+      "difficulty": "easy",
+      "stem": "The nurse is admitting a client who speaks limited English. The client's 12-year-old daughter speaks English well. How should the nurse obtain the health history?",
+      "content": {
+        "options": [
+          {
+            "id": "a",
+            "text": "Ask the daughter to interpret"
+          },
+          {
+            "id": "b",
+            "text": "Use a qualified medical interpreter"
+          },
+          {
+            "id": "c",
+            "text": "Speak slowly and loudly in English"
+          },
+          {
+            "id": "d",
+            "text": "Use gestures and written English"
+          }
+        ]
+      },
+      "key": {
+        "correct": "b"
+      },
+      "rationale": {
+        "correct": "Clients with limited English proficiency have a right to a qualified medical interpreter (in person, by phone or by video).",
+        "perOption": {
+          "a": "Children and family members may filter information, and the history may involve sensitive content.",
+          "b": "Trained medical interpreters translate accurately and keep information confidential.",
+          "c": "This doesn't overcome a language barrier.",
+          "d": "This risks misunderstanding important health information."
+        },
+        "references": [
+          "Fundamentals of nursing texts (e.g. Potter & Perry)",
+          "DRAFT: original question written with AI assistance; an RN or nurse educator must check it before candidates rely on it."
+        ]
+      },
+      "educationalObjective": "Use a qualified interpreter for clients with limited English proficiency."
+    },
+    {
+      "id": "c1a00003-0000-4000-8000-000000000006",
+      "itemType": "multiple_choice",
+      "clientNeeds": "SECE.MOC",
+      "bodySystem": "fundamentals",
+      "subtopics": [
+        "advance-directives"
+      ],
+      "cjmmSkill": "evaluate_outcomes",
+      "difficulty": "moderate",
+      "stem": "A client with advanced cancer has a do-not-resuscitate (DNR) order and has developed pneumonia. Which statement by a new nurse requires correction?",
+      "content": {
+        "options": [
+          {
+            "id": "a",
+            "text": "\"We'll keep giving the IV antibiotics as prescribed.\""
+          },
+          {
+            "id": "b",
+            "text": "\"Since the client is DNR, we'll stop the antibiotics and the IV fluids.\""
+          },
+          {
+            "id": "c",
+            "text": "\"We'll keep the client comfortable and treat pain.\""
+          },
+          {
+            "id": "d",
+            "text": "\"If the client stops breathing, we won't start CPR.\""
+          }
+        ]
+      },
+      "key": {
+        "correct": "b"
+      },
+      "rationale": {
+        "correct": "DNR means do not attempt resuscitation; all other appropriate treatment continues unless the client decides otherwise.",
+        "perOption": {
+          "a": "A DNR order doesn't stop other treatments the client wants.",
+          "b": "DNR only means no CPR if the heart or breathing stops; it doesn't mean stopping other care.",
+          "c": "Comfort care continues with a DNR order.",
+          "d": "This correctly describes a DNR order."
+        },
+        "references": [
+          "Fundamentals of nursing texts (e.g. Potter & Perry)",
+          "DRAFT: original question written with AI assistance; an RN or nurse educator must check it before candidates rely on it."
+        ]
+      },
+      "educationalObjective": "Clarify what a DNR order does and does not cover."
+    },
+    {
+      "id": "c1a00003-0000-4000-8000-000000000007",
+      "itemType": "multiple_choice",
+      "clientNeeds": "SECE.MOC",
+      "bodySystem": "fundamentals",
+      "subtopics": [
+        "advance-directives"
+      ],
+      "cjmmSkill": "take_action",
+      "difficulty": "difficult",
+      "stem": "A client who is alert and oriented has named a daughter as health care power of attorney. The client wants to stop dialysis; the daughter wants it to continue. Whose decision should the nurse follow?",
+      "content": {
+        "options": [
+          {
+            "id": "a",
+            "text": "The daughter's, because she is the named health care agent"
+          },
+          {
+            "id": "b",
+            "text": "The client's, because the client has decision-making capacity"
+          },
+          {
+            "id": "c",
+            "text": "The provider's, because they disagree"
+          },
+          {
+            "id": "d",
+            "text": "The ethics committee's"
+          }
+        ]
+      },
+      "key": {
+        "correct": "b"
+      },
+      "rationale": {
+        "correct": "A durable power of attorney for health care takes effect only when the client can't make decisions.",
+        "perOption": {
+          "a": "The agent makes decisions only when the client lacks capacity.",
+          "b": "A competent client makes their own decisions; the power of attorney isn't active while the client has capacity.",
+          "c": "Providers advise but don't override a competent client's choice.",
+          "d": "An ethics consult may help, but the competent client's decision stands."
+        },
+        "references": [
+          "Fundamentals of nursing texts (e.g. Potter & Perry)",
+          "DRAFT: original question written with AI assistance; an RN or nurse educator must check it before candidates rely on it."
+        ]
+      },
+      "educationalObjective": "Respect a competent client's decisions over a health care agent's."
+    },
+    {
+      "id": "c1a00003-0000-4000-8000-000000000008",
+      "itemType": "multiple_choice",
+      "clientNeeds": "SECE.MOC",
+      "bodySystem": "respiratory",
+      "subtopics": [
+        "advance-directives"
+      ],
+      "cjmmSkill": "take_action",
+      "difficulty": "difficult",
+      "stem": "A client whose living will declines mechanical ventilation is now in respiratory failure and can't communicate. The client's son demands that the client be intubated. What is the nurse's best action?",
+      "content": {
+        "options": [
+          {
+            "id": "a",
+            "text": "Prepare for intubation because the son is present"
+          },
+          {
+            "id": "b",
+            "text": "Tell the son that the living will must be followed and leave the room"
+          },
+          {
+            "id": "c",
+            "text": "Advocate for the client's documented wishes and notify the provider, and the ethics committee if needed"
+          },
+          {
+            "id": "d",
+            "text": "Ask the son to sign a new advance directive for the client"
+          }
+        ]
+      },
+      "key": {
+        "correct": "c"
+      },
+      "rationale": {
+        "correct": "The nurse advocates for the client's known wishes in a valid advance directive and involves the provider and ethics team when the family disagrees.",
+        "perOption": {
+          "a": "The family can't override a valid advance directive.",
+          "b": "This ignores the family's distress and the need for team involvement.",
+          "c": "The nurse advocates for the client's stated wishes and involves the provider and ethics resources to resolve the conflict.",
+          "d": "Only the client can create an advance directive."
+        },
+        "references": [
+          "Fundamentals of nursing texts (e.g. Potter & Perry)",
+          "DRAFT: original question written with AI assistance; an RN or nurse educator must check it before candidates rely on it."
+        ]
+      },
+      "educationalObjective": "Advocate for a client's advance directive in a family conflict."
+    },
+    {
+      "id": "c1a00003-0000-4000-8000-000000000009",
+      "itemType": "multiple_choice",
+      "clientNeeds": "SECE.MOC",
+      "bodySystem": "fundamentals",
+      "subtopics": [
+        "confidentiality-and-information-security"
+      ],
+      "cjmmSkill": "evaluate_outcomes",
+      "difficulty": "easy",
+      "stem": "Which action by a nurse violates client confidentiality?",
+      "content": {
+        "options": [
+          {
+            "id": "a",
+            "text": "Discussing a client's diagnosis with a coworker in a crowded elevator"
+          },
+          {
+            "id": "b",
+            "text": "Reporting a client's condition to the oncoming nurse"
+          },
+          {
+            "id": "c",
+            "text": "Sending a client's lab results to the client's primary care provider"
+          },
+          {
+            "id": "d",
+            "text": "Reporting a case of tuberculosis to the health department"
+          }
+        ]
+      },
+      "key": {
+        "correct": "a"
+      },
+      "rationale": {
+        "correct": "HIPAA allows sharing for treatment, payment, operations and legal requirements, but discussions must happen where others can't overhear.",
+        "perOption": {
+          "a": "Others can overhear; private information must be discussed only in private settings.",
+          "b": "Sharing information needed for care is permitted.",
+          "c": "Information shared for treatment is allowed under HIPAA.",
+          "d": "Reporting certain communicable diseases is required by law."
+        },
+        "references": [
+          "Fundamentals of nursing texts (e.g. Potter & Perry)",
+          "DRAFT: original question written with AI assistance; an RN or nurse educator must check it before candidates rely on it."
+        ]
+      },
+      "educationalObjective": "Recognize breaches of confidentiality."
+    },
+    {
+      "id": "c1a00003-0000-4000-8000-000000000010",
+      "itemType": "multiple_choice",
+      "clientNeeds": "SECE.MOC",
+      "bodySystem": "fundamentals",
+      "subtopics": [
+        "confidentiality-and-information-security"
+      ],
+      "cjmmSkill": "evaluate_outcomes",
+      "difficulty": "easy",
+      "stem": "Which action by a staff member requires the charge nurse to intervene?",
+      "content": {
+        "options": [
+          {
+            "id": "a",
+            "text": "A nurse looks up a neighbor's lab results out of curiosity"
+          },
+          {
+            "id": "b",
+            "text": "A nurse logs out of the computer before leaving the workstation"
+          },
+          {
+            "id": "c",
+            "text": "A nurse reviews the record of an assigned client before starting care"
+          },
+          {
+            "id": "d",
+            "text": "A nurse shreds a printed report sheet at the end of the shift"
+          }
+        ]
+      },
+      "key": {
+        "correct": "a"
+      },
+      "rationale": {
+        "correct": "Access client records only when needed for your role in that client's care.",
+        "perOption": {
+          "a": "Accessing records without a care-related reason is a privacy violation, even without sharing them.",
+          "b": "Logging out protects client data.",
+          "c": "This is a legitimate, care-related use.",
+          "d": "Shredding protects client information."
+        },
+        "references": [
+          "Fundamentals of nursing texts (e.g. Potter & Perry)",
+          "DRAFT: original question written with AI assistance; an RN or nurse educator must check it before candidates rely on it."
+        ]
+      },
+      "educationalObjective": "Identify inappropriate access to health records."
+    },
+    {
+      "id": "c1a00003-0000-4000-8000-000000000011",
+      "itemType": "multiple_choice",
+      "clientNeeds": "SECE.MOC",
+      "bodySystem": "fundamentals",
+      "subtopics": [
+        "confidentiality-and-information-security"
+      ],
+      "cjmmSkill": "take_action",
+      "difficulty": "moderate",
+      "stem": "A caller says she is a client's daughter and asks how her mother is doing after surgery. What should the nurse do?",
+      "content": {
+        "options": [
+          {
+            "id": "a",
+            "text": "Give a brief update because the caller is family"
+          },
+          {
+            "id": "b",
+            "text": "Check that the client has authorized this person, for example with the client's privacy code, before sharing information"
+          },
+          {
+            "id": "c",
+            "text": "Say that the client isn't in the hospital"
+          },
+          {
+            "id": "d",
+            "text": "Transfer the call to the surgeon"
+          }
+        ]
+      },
+      "key": {
+        "correct": "b"
+      },
+      "rationale": {
+        "correct": "Confirm that the client has authorized disclosure (such as a privacy code or a release) before sharing information by phone.",
+        "perOption": {
+          "a": "The nurse can't confirm who the caller is or whether the client allows disclosure.",
+          "b": "Information is shared only with people the client has authorized, after verifying their identity.",
+          "c": "Lying isn't appropriate; the nurse can say they can't share information.",
+          "d": "The surgeon is also bound by privacy rules; the caller's authorization still needs checking."
+        },
+        "references": [
+          "Fundamentals of nursing texts (e.g. Potter & Perry)",
+          "DRAFT: original question written with AI assistance; an RN or nurse educator must check it before candidates rely on it."
+        ]
+      },
+      "educationalObjective": "Protect client information during telephone inquiries."
+    },
+    {
+      "id": "c1a00003-0000-4000-8000-000000000012",
+      "itemType": "sata",
+      "clientNeeds": "SECE.MOC",
+      "bodySystem": "fundamentals",
+      "subtopics": [
+        "client-rights-and-advocacy"
+      ],
+      "cjmmSkill": "analyze_cues",
+      "difficulty": "easy",
+      "stem": "The nurse is reviewing the client bill of rights with a newly admitted client. Which rights should the nurse include? Select all that apply.",
+      "content": {
+        "options": [
+          {
+            "id": "a",
+            "text": "Refusing treatment, including medications"
+          },
+          {
+            "id": "b",
+            "text": "Seeing and getting a copy of their own medical record"
+          },
+          {
+            "id": "c",
+            "text": "Privacy during care and examinations"
+          },
+          {
+            "id": "d",
+            "text": "Being told about their diagnosis, treatment and prognosis"
+          },
+          {
+            "id": "e",
+            "text": "Getting any medication they request"
+          },
+          {
+            "id": "f",
+            "text": "Choosing which nurses are allowed to document in their record"
+          }
+        ]
+      },
+      "key": {
+        "correct": [
+          "a",
+          "b",
+          "c",
+          "d"
+        ]
+      },
+      "rationale": {
+        "correct": "Client rights include information, privacy, access to records, participation in decisions and refusal of treatment.",
+        "perOption": {
+          "a": "Competent clients may refuse any treatment.",
+          "b": "Clients have the right to access their records.",
+          "c": "Privacy and dignity are client rights.",
+          "d": "Clients have a right to information about their care.",
+          "e": "Clients can take part in decisions, but providers prescribe based on clinical judgment.",
+          "f": "Documentation is a legal requirement for all care providers."
+        },
+        "references": [
+          "Fundamentals of nursing texts (e.g. Potter & Perry)",
+          "DRAFT: original question written with AI assistance; an RN or nurse educator must check it before candidates rely on it."
+        ]
+      },
+      "educationalObjective": "Identify client rights in health care."
+    },
+    {
+      "id": "c1a00003-0000-4000-8000-000000000013",
+      "itemType": "multiple_choice",
+      "clientNeeds": "SECE.MOC",
+      "bodySystem": "cardiovascular",
+      "subtopics": [
+        "client-rights-and-advocacy"
+      ],
+      "cjmmSkill": "take_action",
+      "difficulty": "easy",
+      "stem": "A client refuses a scheduled dose of metoprolol. What should the nurse do first?",
+      "content": {
+        "options": [
+          {
+            "id": "a",
+            "text": "Explain that the provider ordered the medication, so it must be taken"
+          },
+          {
+            "id": "b",
+            "text": "Ask the client about the reason for refusing"
+          },
+          {
+            "id": "c",
+            "text": "Hide the medication in the client's applesauce"
+          },
+          {
+            "id": "d",
+            "text": "Document the refusal and give the next dose as scheduled"
+          }
+        ]
+      },
+      "key": {
+        "correct": "b"
+      },
+      "rationale": {
+        "correct": "Respect refusal, explore the reason, explain consequences, document and notify the provider.",
+        "perOption": {
+          "a": "Competent clients may refuse medications.",
+          "b": "Exploring the reason may reveal side effects, misunderstanding or a problem that can be addressed.",
+          "c": "Giving medication covertly violates the client's rights.",
+          "d": "Documentation is needed, but the nurse should first find out why and notify the provider."
+        },
+        "references": [
+          "Fundamentals of nursing texts (e.g. Potter & Perry)",
+          "DRAFT: original question written with AI assistance; an RN or nurse educator must check it before candidates rely on it."
+        ]
+      },
+      "educationalObjective": "Respond appropriately to a client's medication refusal."
+    },
+    {
+      "id": "c1a00003-0000-4000-8000-000000000014",
+      "itemType": "multiple_choice",
+      "clientNeeds": "SECE.MOC",
+      "bodySystem": "fundamentals",
+      "subtopics": [
+        "client-rights-and-advocacy"
+      ],
+      "cjmmSkill": "take_action",
+      "difficulty": "moderate",
+      "stem": "A client who is alert and oriented wants to leave the hospital against medical advice (AMA). What should the nurse do?",
+      "content": {
+        "options": [
+          {
+            "id": "a",
+            "text": "Call security to stop the client from leaving"
+          },
+          {
+            "id": "b",
+            "text": "Explain the risks of leaving, notify the provider and ask the client to sign the AMA form"
+          },
+          {
+            "id": "c",
+            "text": "Remove the client's clothing so the client can't leave"
+          },
+          {
+            "id": "d",
+            "text": "Tell the client that insurance won't pay if the client leaves"
+          }
+        ]
+      },
+      "key": {
+        "correct": "b"
+      },
+      "rationale": {
+        "correct": "A competent client may leave AMA. The nurse informs, notifies, documents and doesn't restrain.",
+        "perOption": {
+          "a": "Holding a competent adult against their will can be false imprisonment.",
+          "b": "The nurse informs the client of the risks, involves the provider and documents the event; the client may refuse to sign.",
+          "c": "This is a form of restraint and false imprisonment.",
+          "d": "This is coercive and often inaccurate."
+        },
+        "references": [
+          "Fundamentals of nursing texts (e.g. Potter & Perry)",
+          "DRAFT: original question written with AI assistance; an RN or nurse educator must check it before candidates rely on it."
+        ]
+      },
+      "educationalObjective": "Manage a client leaving against medical advice."
+    },
+    {
+      "id": "c1a00003-0000-4000-8000-000000000015",
+      "itemType": "matrix_mc",
+      "clientNeeds": "SECE.MOC",
+      "bodySystem": "fundamentals",
+      "subtopics": [
+        "legal-and-ethical-practice"
+      ],
+      "cjmmSkill": "analyze_cues",
+      "difficulty": "moderate",
+      "stem": "For each nursing action, indicate the ethical principle it best demonstrates.",
+      "content": {
+        "rows": [
+          {
+            "id": "r1",
+            "text": "Respecting a Jehovah's Witness client's refusal of a blood transfusion"
+          },
+          {
+            "id": "r2",
+            "text": "Turning an immobile client every 2 hours to prevent pressure injuries"
+          },
+          {
+            "id": "r3",
+            "text": "Assigning the last ICU bed by clinical need rather than insurance status"
+          },
+          {
+            "id": "r4",
+            "text": "Answering a client's question about a test result honestly"
+          }
+        ],
+        "columns": [
+          {
+            "id": "c1",
+            "text": "Autonomy"
+          },
+          {
+            "id": "c2",
+            "text": "Beneficence"
+          },
+          {
+            "id": "c3",
+            "text": "Justice"
+          },
+          {
+            "id": "c4",
+            "text": "Veracity"
+          }
+        ]
+      },
+      "key": {
+        "byRow": {
+          "r1": "c1",
+          "r2": "c2",
+          "r3": "c3",
+          "r4": "c4"
+        }
+      },
+      "rationale": {
+        "correct": "Autonomy = self-determination; beneficence = doing good; nonmaleficence = avoiding harm; justice = fairness; veracity = truthfulness; fidelity = keeping promises.",
+        "perOption": {
+          "r1:c1": "Respecting a competent client's choice honors autonomy.",
+          "r1:c2": "Beneficence is doing good; here the nurse is honoring a choice the nurse may not agree with.",
+          "r1:c3": "Justice concerns fair distribution, not individual choices.",
+          "r1:c4": "Veracity is truth-telling.",
+          "r2:c1": "This isn't about the client's choices.",
+          "r2:c2": "Acting to benefit the client is beneficence.",
+          "r2:c3": "This isn't about fair allocation.",
+          "r2:c4": "This isn't about truth-telling.",
+          "r3:c1": "This isn't about the client's own choice.",
+          "r3:c2": "The focus is fairness between clients, not doing good for one.",
+          "r3:c3": "Distributing scarce resources fairly is justice.",
+          "r3:c4": "This isn't about truth-telling.",
+          "r4:c1": "Honesty supports autonomy, but the principle shown is truthfulness.",
+          "r4:c2": "Honesty may help the client, but the principle is truthfulness.",
+          "r4:c3": "This isn't about fair allocation.",
+          "r4:c4": "Telling the truth is veracity."
+        },
+        "references": [
+          "Fundamentals of nursing texts (e.g. Potter & Perry)",
+          "DRAFT: original question written with AI assistance; an RN or nurse educator must check it before candidates rely on it."
+        ]
+      },
+      "educationalObjective": "Match nursing actions to ethical principles."
+    },
+    {
+      "id": "c1a00003-0000-4000-8000-000000000016",
+      "itemType": "multiple_choice",
+      "clientNeeds": "SECE.MOC",
+      "bodySystem": "pediatrics",
+      "subtopics": [
+        "legal-and-ethical-practice"
+      ],
+      "cjmmSkill": "take_action",
+      "difficulty": "moderate",
+      "stem": "A 3-year-old has bruises in different stages of healing on the back and buttocks. The parent says the child \"falls a lot.\" What is the nurse's legal responsibility?",
+      "content": {
+        "options": [
+          {
+            "id": "a",
+            "text": "Report suspected abuse to child protective services"
+          },
+          {
+            "id": "b",
+            "text": "Confront the parent about the injuries"
+          },
+          {
+            "id": "c",
+            "text": "Wait until abuse is confirmed before reporting"
+          },
+          {
+            "id": "d",
+            "text": "Document the findings and discuss them at the next visit"
+          }
+        ]
+      },
+      "key": {
+        "correct": "a"
+      },
+      "rationale": {
+        "correct": "Injuries that don't match the history, especially bruises of different ages in protected areas, must be reported. Nurses are mandated reporters and are protected when reporting in good faith.",
+        "perOption": {
+          "a": "Nurses are mandated reporters; reasonable suspicion is enough to report.",
+          "b": "Confronting the parent may put the child at more risk and isn't the nurse's role.",
+          "c": "Reporters only need reasonable suspicion, not proof.",
+          "d": "Delaying the report leaves the child at risk."
+        },
+        "references": [
+          "Pediatric nursing texts (e.g. Hockenberry, Wong's Essentials of Pediatric Nursing)",
+          "DRAFT: original question written with AI assistance; an RN or nurse educator must check it before candidates rely on it."
+        ]
+      },
+      "educationalObjective": "Fulfill mandatory reporting duties for suspected child abuse."
+    },
+    {
+      "id": "c1a00003-0000-4000-8000-000000000017",
+      "itemType": "multiple_choice",
+      "clientNeeds": "SECE.MOC",
+      "bodySystem": "fundamentals",
+      "subtopics": [
+        "legal-and-ethical-practice"
+      ],
+      "cjmmSkill": "take_action",
+      "difficulty": "moderate",
+      "stem": "An older adult has bruises on both upper arms. The adult child who is the caregiver answers every question for the client. What should the nurse do first?",
+      "content": {
+        "options": [
+          {
+            "id": "a",
+            "text": "Ask the caregiver how the bruises happened"
+          },
+          {
+            "id": "b",
+            "text": "Interview the client privately"
+          },
+          {
+            "id": "c",
+            "text": "Call adult protective services immediately"
+          },
+          {
+            "id": "d",
+            "text": "Document the bruises as accidental"
+          }
+        ]
+      },
+      "key": {
+        "correct": "b"
+      },
+      "rationale": {
+        "correct": "When abuse is suspected, assess the client away from the possible abuser, then report as required.",
+        "perOption": {
+          "a": "The caregiver may be the abuser and the client may not feel safe.",
+          "b": "A private interview gives the client a safe chance to disclose abuse.",
+          "c": "Reporting is needed if abuse is suspected, but the nurse first gathers more data safely.",
+          "d": "This assumes the cause without assessment."
+        },
+        "references": [
+          "Fundamentals of nursing texts (e.g. Potter & Perry)",
+          "DRAFT: original question written with AI assistance; an RN or nurse educator must check it before candidates rely on it."
+        ]
+      },
+      "educationalObjective": "Assess safely for suspected elder abuse."
+    },
+    {
+      "id": "c1a00003-0000-4000-8000-000000000018",
+      "itemType": "multiple_choice",
+      "clientNeeds": "SECE.MOC",
+      "bodySystem": "fundamentals",
+      "subtopics": [
+        "legal-and-ethical-practice"
+      ],
+      "cjmmSkill": "take_action",
+      "difficulty": "moderate",
+      "stem": "The nurse notices that a coworker smells of alcohol, has slurred speech and is preparing medications. What should the nurse do?",
+      "content": {
+        "options": [
+          {
+            "id": "a",
+            "text": "Ignore it unless a medication error occurs"
+          },
+          {
+            "id": "b",
+            "text": "Report the coworker to the charge nurse or supervisor right away"
+          },
+          {
+            "id": "c",
+            "text": "Confront the coworker in front of clients"
+          },
+          {
+            "id": "d",
+            "text": "Talk to the coworker about it after the shift"
+          }
+        ]
+      },
+      "key": {
+        "correct": "b"
+      },
+      "rationale": {
+        "correct": "Suspected impairment must be reported promptly to a supervisor to protect clients.",
+        "perOption": {
+          "a": "Client safety is at risk now.",
+          "b": "Impaired practice puts clients at risk and must be reported through the chain of command immediately.",
+          "c": "Confronting the coworker publicly could escalate the situation and doesn't ensure client safety.",
+          "d": "Waiting allows unsafe care to continue."
+        },
+        "references": [
+          "Fundamentals of nursing texts (e.g. Potter & Perry)",
+          "DRAFT: original question written with AI assistance; an RN or nurse educator must check it before candidates rely on it."
+        ]
+      },
+      "educationalObjective": "Respond to a colleague who seems impaired at work."
+    },
+    {
+      "id": "c1a00003-0000-4000-8000-000000000019",
+      "itemType": "multiple_choice",
+      "clientNeeds": "SECE.MOC",
+      "bodySystem": "pharmacology",
+      "subtopics": [
+        "legal-and-ethical-practice"
+      ],
+      "cjmmSkill": "take_action",
+      "difficulty": "moderate",
+      "stem": "The provider prescribes digoxin 2.5 mg PO daily for an adult client with heart failure. What should the nurse do?",
+      "content": {
+        "options": [
+          {
+            "id": "a",
+            "text": "Give the dose as prescribed"
+          },
+          {
+            "id": "b",
+            "text": "Give 0.25 mg because the order is probably a typo"
+          },
+          {
+            "id": "c",
+            "text": "Hold the medication and contact the provider to clarify the order"
+          },
+          {
+            "id": "d",
+            "text": "Ask the pharmacist to change the dose"
+          }
+        ]
+      },
+      "key": {
+        "correct": "c"
+      },
+      "rationale": {
+        "correct": "The nurse is legally responsible for giving only safe, appropriate doses; questionable orders are clarified with the prescriber, using the chain of command if needed.",
+        "perOption": {
+          "a": "This dose is about ten times the usual maintenance dose.",
+          "b": "The nurse can't change an order without a prescriber's clarification.",
+          "c": "A dose outside the safe range must be clarified with the prescriber before giving it.",
+          "d": "The pharmacist can help, but the prescriber must correct the order."
+        },
+        "references": [
+          "Nursing pharmacology texts (e.g. Lehne; McCuistion) and the drug's prescribing information",
+          "DRAFT: original question written with AI assistance; an RN or nurse educator must check it before candidates rely on it."
+        ]
+      },
+      "educationalObjective": "Clarify an unsafe medication order."
+    },
+    {
+      "id": "c1a00003-0000-4000-8000-000000000020",
+      "itemType": "multiple_choice",
+      "clientNeeds": "SECE.MOC",
+      "bodySystem": "fundamentals",
+      "subtopics": [
+        "legal-and-ethical-practice"
+      ],
+      "cjmmSkill": "take_action",
+      "difficulty": "easy",
+      "stem": "In an emergency, the nurse receives a telephone order from the provider. Which action is correct?",
+      "content": {
+        "options": [
+          {
+            "id": "a",
+            "text": "Write down the order and read it back to the provider for confirmation"
+          },
+          {
+            "id": "b",
+            "text": "Remember the order and write it down after giving the medication"
+          },
+          {
+            "id": "c",
+            "text": "Ask another nurse to listen in instead of reading it back"
+          },
+          {
+            "id": "d",
+            "text": "Ask the provider to text the order"
+          }
+        ]
+      },
+      "key": {
+        "correct": "a"
+      },
+      "rationale": {
+        "correct": "Telephone and verbal orders are written down, read back in full and confirmed, then signed by the provider within the time set by policy.",
+        "perOption": {
+          "a": "Read-back confirms accuracy and is required for verbal and telephone orders.",
+          "b": "Relying on memory risks errors.",
+          "c": "A second listener doesn't replace read-back confirmation.",
+          "d": "Texted orders are not accepted by most facilities because of safety and security concerns."
+        },
+        "references": [
+          "Fundamentals of nursing texts (e.g. Potter & Perry)",
+          "DRAFT: original question written with AI assistance; an RN or nurse educator must check it before candidates rely on it."
+        ]
+      },
+      "educationalObjective": "Receive telephone orders safely."
+    },
+    {
+      "id": "c1a00003-0000-4000-8000-000000000021",
+      "itemType": "multiple_choice",
+      "clientNeeds": "SECE.MOC",
+      "bodySystem": "fundamentals",
+      "subtopics": [
+        "discharge-planning-and-continuity"
+      ],
+      "cjmmSkill": "generate_solutions",
+      "difficulty": "easy",
+      "stem": "When should the nurse start discharge planning for a client admitted for a hip fracture?",
+      "content": {
+        "options": [
+          {
+            "id": "a",
+            "text": "On the day of discharge"
+          },
+          {
+            "id": "b",
+            "text": "After surgery"
+          },
+          {
+            "id": "c",
+            "text": "On admission"
+          },
+          {
+            "id": "d",
+            "text": "When the provider writes the discharge order"
+          }
+        ]
+      },
+      "key": {
+        "correct": "c"
+      },
+      "rationale": {
+        "correct": "Discharge planning starts on admission.",
+        "perOption": {
+          "a": "Planning on the last day leaves no time to arrange services.",
+          "b": "Planning can and should begin before surgery.",
+          "c": "Discharge planning begins at admission so needs and services can be arranged in time.",
+          "d": "Waiting can delay discharge or leave needs unmet."
+        },
+        "references": [
+          "Fundamentals of nursing texts (e.g. Potter & Perry)",
+          "DRAFT: original question written with AI assistance; an RN or nurse educator must check it before candidates rely on it."
+        ]
+      },
+      "educationalObjective": "Identify when discharge planning begins."
+    },
+    {
+      "id": "c1a00003-0000-4000-8000-000000000022",
+      "itemType": "sata",
+      "clientNeeds": "SECE.MOC",
+      "bodySystem": "musculoskeletal",
+      "subtopics": [
+        "discharge-planning-and-continuity"
+      ],
+      "cjmmSkill": "generate_solutions",
+      "difficulty": "moderate",
+      "stem": "An 80-year-old client who lives alone is being discharged after hip surgery. Which actions should the nurse include in discharge planning? Select all that apply.",
+      "content": {
+        "options": [
+          {
+            "id": "a",
+            "text": "Arrange a home safety evaluation"
+          },
+          {
+            "id": "b",
+            "text": "Review the medication list with the client (medication reconciliation)"
+          },
+          {
+            "id": "c",
+            "text": "Arrange physical therapy after discharge"
+          },
+          {
+            "id": "d",
+            "text": "Confirm a follow-up appointment with the surgeon"
+          },
+          {
+            "id": "e",
+            "text": "Tell the client to stop all medications taken before admission"
+          },
+          {
+            "id": "f",
+            "text": "Delay the plan until a family member can visit"
+          }
+        ]
+      },
+      "key": {
+        "correct": [
+          "a",
+          "b",
+          "c",
+          "d"
+        ]
+      },
+      "rationale": {
+        "correct": "Safe discharge covers home safety, medications, therapy, follow-up and support services.",
+        "perOption": {
+          "a": "A home assessment identifies fall hazards and equipment needs.",
+          "b": "Reconciling medications prevents omissions, duplications and interactions.",
+          "c": "Continued therapy supports mobility and recovery.",
+          "d": "Follow-up care supports continuity and early detection of complications.",
+          "e": "Home medications are reconciled, not stopped automatically.",
+          "f": "The plan must be made with the client, who is the decision-maker."
+        },
+        "references": [
+          "Fundamentals of nursing texts (e.g. Potter & Perry)",
+          "DRAFT: original question written with AI assistance; an RN or nurse educator must check it before candidates rely on it."
+        ]
+      },
+      "educationalObjective": "Plan a safe discharge for an older adult."
+    },
+    {
+      "id": "c1a00003-0000-4000-8000-000000000023",
+      "itemType": "multiple_choice",
+      "clientNeeds": "SECE.MOC",
+      "bodySystem": "integumentary",
+      "subtopics": [
+        "discharge-planning-and-continuity"
+      ],
+      "cjmmSkill": "generate_solutions",
+      "difficulty": "moderate",
+      "stem": "A client will go home with a negative-pressure wound therapy device and needs dressing changes three times a week. Which referral should the nurse make?",
+      "content": {
+        "options": [
+          {
+            "id": "a",
+            "text": "Home health nursing through the case manager"
+          },
+          {
+            "id": "b",
+            "text": "Occupational therapy"
+          },
+          {
+            "id": "c",
+            "text": "Hospice"
+          },
+          {
+            "id": "d",
+            "text": "Outpatient physical therapy"
+          }
+        ]
+      },
+      "key": {
+        "correct": "a"
+      },
+      "rationale": {
+        "correct": "Case managers coordinate the services clients need after discharge, such as skilled home nursing.",
+        "perOption": {
+          "a": "The case manager arranges home health nurses to manage the device and dressings.",
+          "b": "OT doesn't manage wound care.",
+          "c": "Hospice is for clients with a terminal illness who are seeking comfort care.",
+          "d": "PT doesn't manage wound dressings."
+        },
+        "references": [
+          "Fundamentals of nursing texts (e.g. Potter & Perry)",
+          "DRAFT: original question written with AI assistance; an RN or nurse educator must check it before candidates rely on it."
+        ]
+      },
+      "educationalObjective": "Coordinate home health services for ongoing skilled care."
+    },
+    {
+      "id": "c1a00003-0000-4000-8000-000000000024",
+      "itemType": "multiple_choice",
+      "clientNeeds": "SECE.MOC",
+      "bodySystem": "neurological",
+      "subtopics": [
+        "legal-and-ethical-practice"
+      ],
+      "cjmmSkill": "take_action",
+      "difficulty": "moderate",
+      "stem": "A client on a ventilator after a severe brain injury is expected to meet criteria for brain death. What should the nurse do according to policy?",
+      "content": {
+        "options": [
+          {
+            "id": "a",
+            "text": "Ask the family about organ donation"
+          },
+          {
+            "id": "b",
+            "text": "Notify the organ procurement organization"
+          },
+          {
+            "id": "c",
+            "text": "Wait until the family asks about donation"
+          },
+          {
+            "id": "d",
+            "text": "Stop the ventilator so the family can grieve"
+          }
+        ]
+      },
+      "key": {
+        "correct": "b"
+      },
+      "rationale": {
+        "correct": "Federal rules require timely referral to the organ procurement organization, whose trained staff approach the family.",
+        "perOption": {
+          "a": "Donation is discussed with the family by trained requesters from the organ procurement organization.",
+          "b": "Hospitals must notify the OPO of imminent or actual deaths so donation can be evaluated.",
+          "c": "Waiting can mean donation is no longer possible.",
+          "d": "Support is continued until death is declared and donation is evaluated."
+        },
+        "references": [
+          "Fundamentals of nursing texts (e.g. Potter & Perry)",
+          "DRAFT: original question written with AI assistance; an RN or nurse educator must check it before candidates rely on it."
+        ]
+      },
+      "educationalObjective": "Follow the referral process for potential organ donation."
+    },
+    {
+      "id": "c1a00003-0000-4000-8000-000000000025",
+      "itemType": "multiple_choice",
+      "clientNeeds": "SECE.MOC",
+      "bodySystem": "pharmacology",
+      "subtopics": [
+        "legal-and-ethical-practice"
+      ],
+      "cjmmSkill": "take_action",
+      "difficulty": "easy",
+      "stem": "Just before giving a medication, the nurse notices it is the wrong drug, and doesn't give it. What should the nurse do next?",
+      "content": {
+        "options": [
+          {
+            "id": "a",
+            "text": "Nothing, because no harm reached the client"
+          },
+          {
+            "id": "b",
+            "text": "Report the near miss through the facility's event reporting system"
+          },
+          {
+            "id": "c",
+            "text": "Document the near miss in the client's medical record"
+          },
+          {
+            "id": "d",
+            "text": "Tell the pharmacist privately and not report it"
+          }
+        ]
+      },
+      "key": {
+        "correct": "b"
+      },
+      "rationale": {
+        "correct": "A just culture encourages reporting errors and near misses so system causes can be fixed.",
+        "perOption": {
+          "a": "Near misses show system weaknesses and should be reported.",
+          "b": "Reporting near misses supports quality improvement and helps prevent future errors.",
+          "c": "Event reports aren't part of the medical record.",
+          "d": "Informal communication skips the quality-improvement process."
+        },
+        "references": [
+          "Fundamentals of nursing texts (e.g. Potter & Perry)",
+          "DRAFT: original question written with AI assistance; an RN or nurse educator must check it before candidates rely on it."
+        ]
+      },
+      "educationalObjective": "Report near misses for quality improvement."
+    },
+    {
+      "id": "c1a00003-0000-4000-8000-000000000026",
+      "itemType": "highlight_text",
+      "clientNeeds": "SECE.MOC",
+      "bodySystem": "fundamentals",
+      "subtopics": [
+        "legal-and-ethical-practice"
+      ],
+      "cjmmSkill": "evaluate_outcomes",
+      "difficulty": "moderate",
+      "stem": "The nurse reviews entries written by a new graduate. Highlight the entries that are inappropriate in the medical record.",
+      "content": {
+        "segments": [
+          {
+            "id": "s1",
+            "text": "\"0900: Client ambulated 30 m (100 ft) with a walker and standby assistance.\"",
+            "selectable": true
+          },
+          {
+            "id": "s2",
+            "text": " ",
+            "selectable": false
+          },
+          {
+            "id": "s3",
+            "text": "\"1000: Client is lazy and refused to walk.\"",
+            "selectable": true
+          },
+          {
+            "id": "s4",
+            "text": " ",
+            "selectable": false
+          },
+          {
+            "id": "s5",
+            "text": "\"1100: Client fell; incident report completed.\"",
+            "selectable": true
+          },
+          {
+            "id": "s6",
+            "text": " ",
+            "selectable": false
+          },
+          {
+            "id": "s7",
+            "text": "\"1200: Client states, 'My pain is a 4 now.'\"",
+            "selectable": true
+          },
+          {
+            "id": "s8",
+            "text": " ",
+            "selectable": false
+          },
+          {
+            "id": "s9",
+            "text": "\"1300: Dr. Kim made an error with the dose again.\"",
+            "selectable": true
+          }
+        ]
+      },
+      "key": {
+        "correct": [
+          "s3",
+          "s5",
+          "s9"
+        ]
+      },
+      "rationale": {
+        "correct": "Medical record entries are objective and factual, include the client's own words and don't mention incident reports or blame.",
+        "perOption": {
+          "s1": "This is objective and specific.",
+          "s3": "Judgmental labels are not facts; the nurse should chart the refusal and the client's words.",
+          "s5": "The incident report shouldn't be mentioned in the record.",
+          "s7": "Quoting the client's words is appropriate.",
+          "s9": "Blaming statements and opinions about others don't belong in the chart."
+        },
+        "references": [
+          "Fundamentals of nursing texts (e.g. Potter & Perry)",
+          "DRAFT: original question written with AI assistance; an RN or nurse educator must check it before candidates rely on it."
+        ]
+      },
+      "educationalObjective": "Identify inappropriate documentation."
+    }
+  ]
+}
