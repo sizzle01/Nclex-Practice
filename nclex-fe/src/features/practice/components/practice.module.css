@@ -138,3 +138,68 @@
 .error {
   color: var(--error);
 }
+
+/* Filter tabs (All, Practice, Timed, Untimed, Adaptive), styled like the case-study exhibit tabs. */
+.tablist {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.25rem;
+  margin-bottom: 1.5rem;
+  border-bottom: 1px solid var(--border);
+}
+
+.tab {
+  min-height: 2.75rem;
+  padding: 0 0.875rem;
+  border: 1px solid var(--border);
+  border-bottom: 0;
+  border-radius: var(--radius-sm) var(--radius-sm) 0 0;
+  background: var(--surface);
+  color: inherit;
+  font: inherit;
+  cursor: pointer;
+}
+
+/* The selected tab is bold and underlined as well as coloured, so colour is never the only cue. */
+.tab[aria-selected="true"] {
+  border-color: var(--accent);
+  box-shadow: inset 0 -3px 0 var(--accent);
+  font-weight: 650;
+}
+
+.tab:focus-visible,
+.tabpanel:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
+}
+
+.tabCount {
+  margin-left: 0.25rem;
+  color: var(--muted);
+  font-size: 0.875rem;
+  font-weight: 400;
+}
+
+.sections {
+  display: grid;
+  gap: 2.25rem;
+}
+
+.section {
+  display: grid;
+  gap: 1rem;
+}
+
+.sectionHeader h2 {
+  margin: 0 0 0.25rem;
+  font-size: 1.25rem;
+}
+
+.sectionHeader p {
+  margin: 0;
+}
+
+.sectionCount {
+  color: var(--muted);
+  font-weight: 400;
+}

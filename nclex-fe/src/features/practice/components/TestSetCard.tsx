@@ -23,9 +23,9 @@ export function TestSetCard({ set, selected, panelId, onOpen }: TestSetCardProps
   return (
     <article aria-labelledby={headingId} className={`${ui.card} ${styles.card} ${selected ? styles.cardSelected : ""}`}>
       <div className={styles.cardHeader}>
-        <h2 id={headingId} className={ui.cardTitle}>
+        <h3 id={headingId} className={ui.cardTitle}>
           {set.title}
-        </h2>
+        </h3>
         <div className={styles.badges}>
           {set.isSample && <span className={ui.badge}>Sample</span>}
           {set.locked && (

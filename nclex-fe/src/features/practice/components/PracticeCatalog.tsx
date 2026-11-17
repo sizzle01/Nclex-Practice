@@ -4,36 +4,54 @@ import Link from "next/link";
 import { usePathname, useRouter, useSearchParams } from "next/navigation";
 import ui from "@/components/ui/ui.module.css";
 import { useMe } from "@/features/auth/AuthProvider";
-import { usePrebuiltSets } from "../api/practiceApi";
+import { type TestSetSummary, usePrebuiltSets } from "../api/practiceApi";
+import { type SetFilter, filterSets, filters, groupSets, parseFilter } from "../setCategories";
 import styles from "./practice.module.css";
-import { TestSetCard, detailsButtonId } from "./TestSetCard";
+import { SetFilterTabs, filterTabId } from "./SetFilterTabs";
+import { SetSectionList } from "./SetSectionList";
+import { detailsButtonId } from "./TestSetCard";
 import { TestSetDetailPanel } from "./TestSetDetailPanel";
 
 const panelId = "test-set-details";
+const tabPanelId = "practice-sets-panel";
+
+/** Builds /practice?filter=…&set=…, leaving out the defaults so the plain URL stays /practice. */
+function catalogUrl(pathname: string, filter: SetFilter, setId: string | null): string {
+  const params = new URLSearchParams();
+  if (filter !== "all") params.set("filter", filter);
+  if (setId) params.set("set", setId);
+  const query = params.toString();
+  return query ? `${pathname}?${query}` : pathname;
+}
 
 /**
- * The /practice screen (interfaces.md 5.2): the curated sets of the user's track as cards, and
- * the details of the set named by ?set=<id>, so a set's details can be linked to and survive a
- * reload.
+ * The /practice screen (interfaces.md 5.2): the curated sets of the user's track under filter tabs
+ * (All, Practice, Timed, Untimed, Adaptive) and grouped into sections, plus the details of the set
+ * named by ?set=<id>. Both the tab and the set live in the URL, so they can be linked to and
+ * survive a reload.
  */
 export function PracticeCatalog() {
   const { data: me } = useMe();
-  const { data, error, isPending, hasNextPage, fetchNextPage, isFetchingNextPage } = usePrebuiltSets();
+  const { data: sets, error, isPending } = usePrebuiltSets();
   const router = useRouter();
   const pathname = usePathname();
-  const selectedId = useSearchParams().get("set");
-
-  const sets = data?.pages.flatMap((page) => page.items) ?? [];
+  const searchParams = useSearchParams();
+  const selectedId = searchParams.get("set");
+  const filter = parseFilter(searchParams.get("filter"));
 
   function openSet(id: string) {
-    router.replace(`${pathname}?set=${encodeURIComponent(id)}`, { scroll: false });
+    router.replace(catalogUrl(pathname, filter, id), { scroll: false });
   }
 
   function closeSet() {
     const id = selectedId;
-    router.replace(pathname, { scroll: false });
+    router.replace(catalogUrl(pathname, filter, null), { scroll: false });
     // Back to the button that opened the panel, so keyboard users keep their place.
     if (id) document.getElementById(detailsButtonId(id))?.focus();
+  }
+
+  function selectFilter(next: SetFilter) {
+    router.replace(catalogUrl(pathname, next, selectedId), { scroll: false });
   }
 
   return (
@@ -57,38 +75,57 @@ export function PracticeCatalog() {
           The sets could not be loaded. Please try again.
         </p>
       )}
-      {data && sets.length === 0 && (
+      {sets && sets.length === 0 && (
         <div className={`${ui.card} ${styles.empty}`}>
           <p className={ui.muted}>There are no practice sets for your track yet. Check back soon.</p>
         </div>
       )}
 
-      {sets.length > 0 && (
-        <div className={`${styles.layout} ${selectedId ? styles.layoutWithPanel : ""}`}>
-          <div>
-            <ul className={styles.list} aria-label="Practice sets">
-              {sets.map((set) => (
-                <li key={set.id}>
-                  <TestSetCard set={set} selected={set.id === selectedId} panelId={panelId} onOpen={openSet} />
-                </li>
-              ))}
-            </ul>
-            {hasNextPage && (
-              <p>
-                <button
-                  type="button"
-                  className={ui.buttonSecondary}
-                  disabled={isFetchingNextPage}
-                  onClick={() => fetchNextPage()}
-                >
-                  {isFetchingNextPage ? "Loading…" : "Show more sets"}
-                </button>
-              </p>
-            )}
+      {sets && sets.length > 0 && (
+        <div>
+          <SetFilterTabs
+            selected={filter}
+            counts={countPerFilter(sets)}
+            panelId={tabPanelId}
+            onSelect={selectFilter}
+          />
+          <div className={`${styles.layout} ${selectedId ? styles.layoutWithPanel : ""}`}>
+            <div role="tabpanel" id={tabPanelId} aria-labelledby={filterTabId(filter)} className={styles.tabpanel}>
+              <TabContent sets={sets} filter={filter} selectedId={selectedId} onOpen={openSet} />
+            </div>
+            {selectedId && <TestSetDetailPanel id={panelId} setId={selectedId} onClose={closeSet} />}
           </div>
-          {selectedId && <TestSetDetailPanel id={panelId} setId={selectedId} onClose={closeSet} />}
         </div>
       )}
     </section>
+  );
+}
+
+function countPerFilter(sets: TestSetSummary[]): Record<SetFilter, number> {
+  return Object.fromEntries(filters.map((f) => [f, filterSets(sets, f).length])) as Record<SetFilter, number>;
+}
+
+interface TabContentProps {
+  sets: TestSetSummary[];
+  filter: SetFilter;
+  selectedId: string | null;
+  onOpen: (id: string) => void;
+}
+
+/** The selected tab's sections, or a note when the tab is empty. */
+function TabContent({ sets, filter, selectedId, onOpen }: TabContentProps) {
+  const sections = groupSets(sets, filter);
+  if (sections.length > 0) {
+    return <SetSectionList sections={sections} selectedId={selectedId} panelId={panelId} onOpen={onOpen} />;
+  }
+  // Adaptive exams arrive with F19 (architecture.md 5.8), so that tab says they are on the way.
+  const message =
+    filter === "adaptive"
+      ? "Adaptive exams are coming soon. Like the real NCLEX, they will stop once your result is clear."
+      : "No sets match this filter yet.";
+  return (
+    <div className={`${ui.card} ${styles.empty}`}>
+      <p className={ui.muted}>{message}</p>
+    </div>
   );
 }
