@@ -391,7 +391,7 @@ Global requirements: visible focus rings; text scale from 100% to 200% without h
 | `/verify-email?token=` | Verification result | `/auth/verify-email` |
 | `/forgot-password`, `/reset-password?token=` | Password reset | `/auth/password/*` |
 | `/dashboard` | Drafts to resume (with % complete and time left), last results, weakest categories, verify-email banner | `/attempts?status=…`, `/me/performance/summary` |
-| `/practice` | Prebuilt sets (Practice, Challenge, Sample), locked badges | `/test-sets?kind=prebuilt` |
+| `/practice` | Prebuilt sets with locked badges, under filter tabs (All, Practice, Timed, Untimed, Adaptive; `?filter=`) and grouped into sections: Start here, Practice sets, Case studies, Mock exams timed / untimed, Adaptive exams | `/test-sets?kind=prebuilt` (every page) |
 | `/practice/custom` | Custom test builder with live available count | `/taxonomy`, `/test-sets/custom/*` |
 | `/attempts/[id]` | **Exam player** | `/attempts/{id}/*` |
 | `/attempts/[id]/results` | Score, readiness estimate, subtopics to study next (F17), category breakdown, time per item | `/attempts/{id}/result`, `/attempts/{id}/recommendations` |
