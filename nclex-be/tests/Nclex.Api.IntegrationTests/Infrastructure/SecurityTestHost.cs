@@ -24,7 +24,8 @@ public sealed class SecurityTestHost : IAsyncDisposable
             builder.ConfigureTestServices(services => services.Replace(ServiceDescriptor.Singleton<TimeProvider>(Clock)));
         });
         ClientIp = TestClientIpStartupFilter.NewIp();
-        Api = new AuthApi(_host, ClientIp);
+        // Creating the first client builds and starts the host.
+        Api = HostStartLock.Run(() => new AuthApi(_host, ClientIp));
     }
 
     public ManualTimeProvider Clock { get; }

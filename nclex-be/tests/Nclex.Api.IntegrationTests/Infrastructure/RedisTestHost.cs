@@ -15,7 +15,8 @@ public sealed class RedisTestHost : IAsyncDisposable
     public RedisTestHost(ApiFactory factory)
     {
         _host = factory.WithWebHostBuilder(builder => builder.UseSetting("ConnectionStrings:Redis", factory.RedisConnectionString));
-        Auth = new AuthApi(_host, TestClientIpStartupFilter.NewIp());
+        // Creating the first client builds and starts the host.
+        Auth = HostStartLock.Run(() => new AuthApi(_host, TestClientIpStartupFilter.NewIp()));
         Attempts = new AttemptsApi(factory, Auth);
         Notifications = new NotificationsApi(Auth);
     }
