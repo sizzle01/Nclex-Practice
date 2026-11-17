@@ -1,0 +1,1319 @@
+{
+  "notice": "RN bank batch 20: Immune and infectious disease. DRAFT - every question must be reviewed by an RN or nurse educator before candidates rely on it.",
+  "track": "RN",
+  "subtopics": [
+    {
+      "clientNeeds": "PHI.PA",
+      "slug": "hiv-and-immunodeficiency",
+      "name": "HIV and immunodeficiency"
+    },
+    {
+      "clientNeeds": "SECE.SIC",
+      "slug": "standard-precautions-and-hand-hygiene",
+      "name": "Standard precautions and hand hygiene"
+    },
+    {
+      "clientNeeds": "PHI.PA",
+      "slug": "autoimmune-disorders",
+      "name": "Autoimmune disorders"
+    },
+    {
+      "clientNeeds": "PHI.PPT",
+      "slug": "immunosuppressant-therapy",
+      "name": "Immunosuppressant and biologic therapy"
+    },
+    {
+      "clientNeeds": "SECE.SIC",
+      "slug": "latex-and-drug-allergies",
+      "name": "Latex and drug allergies"
+    },
+    {
+      "clientNeeds": "PHI.PPT",
+      "slug": "antimicrobial-therapy",
+      "name": "Antimicrobial therapy"
+    },
+    {
+      "clientNeeds": "SECE.SIC",
+      "slug": "transmission-based-precautions",
+      "name": "Transmission-based precautions"
+    }
+  ],
+  "questions": [
+    {
+      "id": "c1a00020-0000-4000-8000-000000000001",
+      "itemType": "multiple_choice",
+      "clientNeeds": "PHI.PA",
+      "bodySystem": "immune",
+      "subtopics": [
+        "hiv-and-immunodeficiency"
+      ],
+      "cjmmSkill": "evaluate_outcomes",
+      "difficulty": "easy",
+      "stem": "The nurse is teaching about HIV transmission. Which statement by the client is correct?",
+      "content": {
+        "options": [
+          {
+            "id": "a",
+            "text": "\"HIV can spread through sharing needles or through unprotected sex.\""
+          },
+          {
+            "id": "b",
+            "text": "\"I can get HIV from hugging someone.\""
+          },
+          {
+            "id": "c",
+            "text": "\"Mosquitoes spread HIV.\""
+          },
+          {
+            "id": "d",
+            "text": "\"Sharing dishes spreads HIV.\""
+          }
+        ]
+      },
+      "key": {
+        "correct": "a"
+      },
+      "rationale": {
+        "correct": "HIV is transmitted through blood, sexual fluids, birth and breastfeeding, not casual contact.",
+        "perOption": {
+          "a": "HIV spreads through blood, semen, vaginal fluids and breast milk.",
+          "b": "Casual contact doesn't spread HIV.",
+          "c": "Insects don't transmit HIV.",
+          "d": "HIV isn't spread this way."
+        },
+        "references": [
+          "CDC infection control and isolation precautions guidance",
+          "DRAFT: original question written with AI assistance; an RN or nurse educator must check it before candidates rely on it."
+        ]
+      },
+      "educationalObjective": "Teach how HIV is transmitted."
+    },
+    {
+      "id": "c1a00020-0000-4000-8000-000000000002",
+      "itemType": "multiple_choice",
+      "clientNeeds": "PHI.PA",
+      "bodySystem": "immune",
+      "subtopics": [
+        "hiv-and-immunodeficiency"
+      ],
+      "cjmmSkill": "evaluate_outcomes",
+      "difficulty": "moderate",
+      "stem": "A client with HIV has had an undetectable viral load for over 6 months on antiretroviral therapy. Which statement shows correct understanding?",
+      "content": {
+        "options": [
+          {
+            "id": "a",
+            "text": "\"If I stay undetectable, I won't pass HIV to my partner through sex.\""
+          },
+          {
+            "id": "b",
+            "text": "\"I'm cured and can stop my medicine.\""
+          },
+          {
+            "id": "c",
+            "text": "\"I no longer need follow-up blood tests.\""
+          },
+          {
+            "id": "d",
+            "text": "\"I can share needles safely now.\""
+          }
+        ]
+      },
+      "key": {
+        "correct": "a"
+      },
+      "rationale": {
+        "correct": "Daily ART keeps the virus suppressed; U=U applies to sexual transmission.",
+        "perOption": {
+          "a": "Undetectable = untransmittable (U=U) for sexual transmission with sustained viral suppression.",
+          "b": "Stopping ART lets the virus rebound.",
+          "c": "Monitoring continues.",
+          "d": "U=U applies to sexual transmission; sharing needles is still unsafe."
+        },
+        "references": [
+          "CDC infection control and isolation precautions guidance",
+          "DRAFT: original question written with AI assistance; an RN or nurse educator must check it before candidates rely on it."
+        ]
+      },
+      "educationalObjective": "Teach about viral suppression and transmission."
+    },
+    {
+      "id": "c1a00020-0000-4000-8000-000000000003",
+      "itemType": "multiple_choice",
+      "clientNeeds": "PHI.PA",
+      "bodySystem": "immune",
+      "subtopics": [
+        "hiv-and-immunodeficiency"
+      ],
+      "cjmmSkill": "analyze_cues",
+      "difficulty": "moderate",
+      "stem": "A client with HIV has a CD4 count of 150 cells/mm3. Which prescription should the nurse expect?",
+      "content": {
+        "options": [
+          {
+            "id": "a",
+            "text": "Trimethoprim-sulfamethoxazole to prevent Pneumocystis pneumonia"
+          },
+          {
+            "id": "b",
+            "text": "No changes are needed"
+          },
+          {
+            "id": "c",
+            "text": "Stopping antiretroviral therapy"
+          },
+          {
+            "id": "d",
+            "text": "Live vaccines to boost immunity"
+          }
+        ]
+      },
+      "key": {
+        "correct": "a"
+      },
+      "rationale": {
+        "correct": "CD4 below 200: AIDS diagnosis and PCP prophylaxis with TMP-SMX.",
+        "perOption": {
+          "a": "A CD4 count below 200 means AIDS and a risk of PCP.",
+          "b": "Prophylaxis is indicated.",
+          "c": "ART must continue.",
+          "d": "Live vaccines are avoided with severe immunosuppression."
+        },
+        "references": [
+          "Medical-surgical nursing texts (e.g. Lewis; Ignatavicius)",
+          "DRAFT: original question written with AI assistance; an RN or nurse educator must check it before candidates rely on it."
+        ]
+      },
+      "educationalObjective": "Anticipate prophylaxis for a low CD4 count."
+    },
+    {
+      "id": "c1a00020-0000-4000-8000-000000000004",
+      "itemType": "multiple_choice",
+      "clientNeeds": "PHI.PA",
+      "bodySystem": "immune",
+      "subtopics": [
+        "hiv-and-immunodeficiency"
+      ],
+      "cjmmSkill": "generate_solutions",
+      "difficulty": "moderate",
+      "stem": "A client starting HIV pre-exposure prophylaxis (PrEP) asks about follow-up. What should the nurse tell the client?",
+      "content": {
+        "options": [
+          {
+            "id": "a",
+            "text": "\"You'll need an HIV test before starting and about every 3 months while on PrEP.\""
+          },
+          {
+            "id": "b",
+            "text": "\"No testing is needed once you start.\""
+          },
+          {
+            "id": "c",
+            "text": "\"PrEP protects against all sexually transmitted infections.\""
+          },
+          {
+            "id": "d",
+            "text": "\"You only need to take it after sex.\""
+          }
+        ]
+      },
+      "key": {
+        "correct": "a"
+      },
+      "rationale": {
+        "correct": "PrEP: daily (or long-acting) medication, HIV and STI testing every 3 months and kidney monitoring.",
+        "perOption": {
+          "a": "Regular testing makes sure HIV isn't treated with PrEP alone and checks kidney function.",
+          "b": "Regular testing is required.",
+          "c": "PrEP only prevents HIV.",
+          "d": "Most regimens are daily."
+        },
+        "references": [
+          "CDC infection control and isolation precautions guidance",
+          "DRAFT: original question written with AI assistance; an RN or nurse educator must check it before candidates rely on it."
+        ]
+      },
+      "educationalObjective": "Teach follow-up for HIV PrEP."
+    },
+    {
+      "id": "c1a00020-0000-4000-8000-000000000005",
+      "itemType": "multiple_choice",
+      "clientNeeds": "SECE.SIC",
+      "bodySystem": "immune",
+      "subtopics": [
+        "standard-precautions-and-hand-hygiene"
+      ],
+      "cjmmSkill": "take_action",
+      "difficulty": "moderate",
+      "stem": "A nurse is stuck with a used needle from a client with HIV. What should the nurse do first?",
+      "content": {
+        "options": [
+          {
+            "id": "a",
+            "text": "Wash the site with soap and water"
+          },
+          {
+            "id": "b",
+            "text": "Squeeze the wound and apply bleach"
+          },
+          {
+            "id": "c",
+            "text": "Wait until the end of the shift to report it"
+          },
+          {
+            "id": "d",
+            "text": "Get tested in 6 months"
+          }
+        ]
+      },
+      "key": {
+        "correct": "a"
+      },
+      "rationale": {
+        "correct": "Needlestick: wash, report right away and start PEP as soon as possible (within 72 hours, ideally within 2).",
+        "perOption": {
+          "a": "Immediate cleaning reduces exposure; then report it and get evaluated for post-exposure prophylaxis.",
+          "b": "Squeezing and caustic agents aren't recommended.",
+          "c": "PEP works best when started within hours.",
+          "d": "Prompt evaluation is needed."
+        },
+        "references": [
+          "CDC infection control and isolation precautions guidance",
+          "DRAFT: original question written with AI assistance; an RN or nurse educator must check it before candidates rely on it."
+        ]
+      },
+      "educationalObjective": "Respond to a needlestick injury."
+    },
+    {
+      "id": "c1a00020-0000-4000-8000-000000000006",
+      "itemType": "multiple_choice",
+      "clientNeeds": "PHI.PA",
+      "bodySystem": "immune",
+      "subtopics": [
+        "hiv-and-immunodeficiency"
+      ],
+      "cjmmSkill": "evaluate_outcomes",
+      "difficulty": "moderate",
+      "stem": "A client is starting antiretroviral therapy. Which statement shows a need for more teaching?",
+      "content": {
+        "options": [
+          {
+            "id": "a",
+            "text": "\"I'll take my medicines at the same time every day.\""
+          },
+          {
+            "id": "b",
+            "text": "\"I'll skip doses on days I feel well.\""
+          },
+          {
+            "id": "c",
+            "text": "\"I'll tell my provider before taking any new medicines or supplements.\""
+          },
+          {
+            "id": "d",
+            "text": "\"I'll keep my lab appointments.\""
+          }
+        ]
+      },
+      "key": {
+        "correct": "b"
+      },
+      "rationale": {
+        "correct": "ART adherence prevents resistance and keeps the virus suppressed.",
+        "perOption": {
+          "a": "Consistent timing maintains drug levels.",
+          "b": "Missed doses allow viral resistance.",
+          "c": "Many drugs interact with ART.",
+          "d": "Monitoring is needed."
+        },
+        "references": [
+          "Nursing pharmacology texts (e.g. Lehne; McCuistion) and the drug's prescribing information",
+          "DRAFT: original question written with AI assistance; an RN or nurse educator must check it before candidates rely on it."
+        ]
+      },
+      "educationalObjective": "Teach adherence to antiretroviral therapy."
+    },
+    {
+      "id": "c1a00020-0000-4000-8000-000000000007",
+      "itemType": "sata",
+      "clientNeeds": "PHI.PA",
+      "bodySystem": "immune",
+      "subtopics": [
+        "hiv-and-immunodeficiency"
+      ],
+      "cjmmSkill": "recognize_cues",
+      "difficulty": "moderate",
+      "stem": "A client with advanced HIV is being discharged. Which symptoms should the client report as possible opportunistic infections? Select all that apply.",
+      "content": {
+        "options": [
+          {
+            "id": "a",
+            "text": "Fever that doesn't go away"
+          },
+          {
+            "id": "b",
+            "text": "A cough that lasts more than a week"
+          },
+          {
+            "id": "c",
+            "text": "White patches in the mouth"
+          },
+          {
+            "id": "d",
+            "text": "New vision changes"
+          },
+          {
+            "id": "e",
+            "text": "Ongoing diarrhea"
+          },
+          {
+            "id": "f",
+            "text": "Gradual weight gain"
+          }
+        ]
+      },
+      "key": {
+        "correct": [
+          "a",
+          "b",
+          "c",
+          "d",
+          "e"
+        ]
+      },
+      "rationale": {
+        "correct": "Report fever, cough, thrush, vision changes, diarrhea, headache and weight loss.",
+        "perOption": {
+          "a": "Persistent fever may mean infection.",
+          "b": "This may suggest TB or PCP.",
+          "c": "Oral thrush is common.",
+          "d": "These may suggest CMV retinitis.",
+          "e": "This may suggest an opportunistic GI infection.",
+          "f": "This isn't a sign of infection."
+        },
+        "references": [
+          "Medical-surgical nursing texts (e.g. Lewis; Ignatavicius)",
+          "DRAFT: original question written with AI assistance; an RN or nurse educator must check it before candidates rely on it."
+        ]
+      },
+      "educationalObjective": "Teach warning signs of opportunistic infections."
+    },
+    {
+      "id": "c1a00020-0000-4000-8000-000000000008",
+      "itemType": "multiple_choice",
+      "clientNeeds": "PHI.PA",
+      "bodySystem": "immune",
+      "subtopics": [
+        "autoimmune-disorders"
+      ],
+      "cjmmSkill": "generate_solutions",
+      "difficulty": "easy",
+      "stem": "A client with systemic lupus erythematosus has a butterfly rash. Which instruction is most important?",
+      "content": {
+        "options": [
+          {
+            "id": "a",
+            "text": "\"Use sunscreen and protective clothing and avoid peak sun hours.\""
+          },
+          {
+            "id": "b",
+            "text": "\"Spend more time in the sun to heal the rash.\""
+          },
+          {
+            "id": "c",
+            "text": "\"Use tanning beds.\""
+          },
+          {
+            "id": "d",
+            "text": "\"Stop all medications during a flare.\""
+          }
+        ]
+      },
+      "key": {
+        "correct": "a"
+      },
+      "rationale": {
+        "correct": "SLE: avoid the sun, manage fatigue, prevent infection and monitor the kidneys.",
+        "perOption": {
+          "a": "Sunlight can trigger flares.",
+          "b": "Sun worsens lupus.",
+          "c": "UV light triggers flares.",
+          "d": "Medications control flares."
+        },
+        "references": [
+          "Medical-surgical nursing texts (e.g. Lewis; Ignatavicius)",
+          "DRAFT: original question written with AI assistance; an RN or nurse educator must check it before candidates rely on it."
+        ]
+      },
+      "educationalObjective": "Teach sun protection in lupus."
+    },
+    {
+      "id": "c1a00020-0000-4000-8000-000000000009",
+      "itemType": "multiple_choice",
+      "clientNeeds": "PHI.PA",
+      "bodySystem": "immune",
+      "subtopics": [
+        "autoimmune-disorders"
+      ],
+      "cjmmSkill": "recognize_cues",
+      "difficulty": "moderate",
+      "stem": "A client with lupus has new swelling of the ankles and foamy urine. What should the nurse suspect?",
+      "content": {
+        "options": [
+          {
+            "id": "a",
+            "text": "Lupus nephritis"
+          },
+          {
+            "id": "b",
+            "text": "Dehydration"
+          },
+          {
+            "id": "c",
+            "text": "Expected joint pain"
+          },
+          {
+            "id": "d",
+            "text": "Sunburn"
+          }
+        ]
+      },
+      "key": {
+        "correct": "a"
+      },
+      "rationale": {
+        "correct": "Lupus nephritis is a serious complication; monitor urine protein, creatinine and blood pressure.",
+        "perOption": {
+          "a": "Kidney involvement causes proteinuria and edema.",
+          "b": "This doesn't fit.",
+          "c": "This isn't joint-related.",
+          "d": "This isn't related."
+        },
+        "references": [
+          "Medical-surgical nursing texts (e.g. Lewis; Ignatavicius)",
+          "DRAFT: original question written with AI assistance; an RN or nurse educator must check it before candidates rely on it."
+        ]
+      },
+      "educationalObjective": "Recognize lupus nephritis."
+    },
+    {
+      "id": "c1a00020-0000-4000-8000-000000000010",
+      "itemType": "multiple_choice",
+      "clientNeeds": "PHI.PPT",
+      "bodySystem": "immune",
+      "subtopics": [
+        "immunosuppressant-therapy"
+      ],
+      "cjmmSkill": "generate_solutions",
+      "difficulty": "moderate",
+      "stem": "A client taking hydroxychloroquine for lupus asks about follow-up care. Which instruction should the nurse give?",
+      "content": {
+        "options": [
+          {
+            "id": "a",
+            "text": "\"Have regular eye exams to check for retinal damage.\""
+          },
+          {
+            "id": "b",
+            "text": "\"Have a hearing test every month.\""
+          },
+          {
+            "id": "c",
+            "text": "\"You'll need weekly INR tests.\""
+          },
+          {
+            "id": "d",
+            "text": "\"No follow-up is needed.\""
+          }
+        ]
+      },
+      "key": {
+        "correct": "a"
+      },
+      "rationale": {
+        "correct": "Hydroxychloroquine: baseline and periodic eye exams.",
+        "perOption": {
+          "a": "Hydroxychloroquine can cause retinal toxicity.",
+          "b": "This isn't the main concern.",
+          "c": "This isn't required.",
+          "d": "Eye monitoring is needed."
+        },
+        "references": [
+          "Nursing pharmacology texts (e.g. Lehne; McCuistion) and the drug's prescribing information",
+          "DRAFT: original question written with AI assistance; an RN or nurse educator must check it before candidates rely on it."
+        ]
+      },
+      "educationalObjective": "Teach monitoring for hydroxychloroquine."
+    },
+    {
+      "id": "c1a00020-0000-4000-8000-000000000011",
+      "itemType": "multiple_choice",
+      "clientNeeds": "PHI.PPT",
+      "bodySystem": "immune",
+      "subtopics": [
+        "immunosuppressant-therapy"
+      ],
+      "cjmmSkill": "evaluate_outcomes",
+      "difficulty": "moderate",
+      "stem": "A client with rheumatoid arthritis is starting weekly methotrexate. Which statement shows a need for more teaching?",
+      "content": {
+        "options": [
+          {
+            "id": "a",
+            "text": "\"I'll take my folic acid as prescribed.\""
+          },
+          {
+            "id": "b",
+            "text": "\"I'll take the methotrexate every day so it works faster.\""
+          },
+          {
+            "id": "c",
+            "text": "\"I'll avoid alcohol.\""
+          },
+          {
+            "id": "d",
+            "text": "\"I'll use reliable birth control.\""
+          }
+        ]
+      },
+      "key": {
+        "correct": "b"
+      },
+      "rationale": {
+        "correct": "Methotrexate for RA: once weekly, folic acid, no alcohol, contraception and monitoring of the CBC and liver tests.",
+        "perOption": {
+          "a": "Folic acid reduces side effects.",
+          "b": "Taking it daily by mistake has caused fatal toxicity; it is a weekly dose.",
+          "c": "Alcohol increases liver toxicity.",
+          "d": "Methotrexate causes birth defects."
+        },
+        "references": [
+          "Nursing pharmacology texts (e.g. Lehne; McCuistion) and the drug's prescribing information",
+          "DRAFT: original question written with AI assistance; an RN or nurse educator must check it before candidates rely on it."
+        ]
+      },
+      "educationalObjective": "Teach safe use of weekly methotrexate."
+    },
+    {
+      "id": "c1a00020-0000-4000-8000-000000000012",
+      "itemType": "multiple_choice",
+      "clientNeeds": "PHI.PPT",
+      "bodySystem": "immune",
+      "subtopics": [
+        "immunosuppressant-therapy"
+      ],
+      "cjmmSkill": "take_action",
+      "difficulty": "moderate",
+      "stem": "Before a client starts adalimumab, which test should the nurse make sure has been done?",
+      "content": {
+        "options": [
+          {
+            "id": "a",
+            "text": "Tuberculosis screening"
+          },
+          {
+            "id": "b",
+            "text": "Bone density scan"
+          },
+          {
+            "id": "c",
+            "text": "Pulmonary function test"
+          },
+          {
+            "id": "d",
+            "text": "Echocardiogram"
+          }
+        ]
+      },
+      "key": {
+        "correct": "a"
+      },
+      "rationale": {
+        "correct": "Biologics (TNF inhibitors): screen for TB and hepatitis B and watch for infection.",
+        "perOption": {
+          "a": "TNF inhibitors can reactivate latent TB.",
+          "b": "This isn't required.",
+          "c": "This isn't required.",
+          "d": "This isn't routinely required."
+        },
+        "references": [
+          "Nursing pharmacology texts (e.g. Lehne; McCuistion) and the drug's prescribing information",
+          "DRAFT: original question written with AI assistance; an RN or nurse educator must check it before candidates rely on it."
+        ]
+      },
+      "educationalObjective": "Screen before starting a TNF inhibitor."
+    },
+    {
+      "id": "c1a00020-0000-4000-8000-000000000013",
+      "itemType": "multiple_choice",
+      "clientNeeds": "PHI.PPT",
+      "bodySystem": "immune",
+      "subtopics": [
+        "immunosuppressant-therapy"
+      ],
+      "cjmmSkill": "generate_solutions",
+      "difficulty": "moderate",
+      "stem": "A client takes tacrolimus after a kidney transplant. Which instruction should the nurse give?",
+      "content": {
+        "options": [
+          {
+            "id": "a",
+            "text": "\"Avoid grapefruit and keep your appointments for blood levels.\""
+          },
+          {
+            "id": "b",
+            "text": "\"Stop the medication if you feel well.\""
+          },
+          {
+            "id": "c",
+            "text": "\"Get live vaccines to protect yourself.\""
+          },
+          {
+            "id": "d",
+            "text": "\"Take it only when you have a fever.\""
+          }
+        ]
+      },
+      "key": {
+        "correct": "a"
+      },
+      "rationale": {
+        "correct": "Calcineurin inhibitors: nephrotoxicity, infection risk, drug interactions and lifelong adherence.",
+        "perOption": {
+          "a": "Grapefruit raises tacrolimus levels; levels must be monitored.",
+          "b": "Stopping causes rejection.",
+          "c": "Live vaccines are avoided.",
+          "d": "It is taken daily."
+        },
+        "references": [
+          "Nursing pharmacology texts (e.g. Lehne; McCuistion) and the drug's prescribing information",
+          "DRAFT: original question written with AI assistance; an RN or nurse educator must check it before candidates rely on it."
+        ]
+      },
+      "educationalObjective": "Teach about immunosuppressant therapy after transplant."
+    },
+    {
+      "id": "c1a00020-0000-4000-8000-000000000014",
+      "itemType": "multiple_choice",
+      "clientNeeds": "SECE.SIC",
+      "bodySystem": "immune",
+      "subtopics": [
+        "latex-and-drug-allergies"
+      ],
+      "cjmmSkill": "recognize_cues",
+      "difficulty": "moderate",
+      "stem": "During admission, which food allergy suggests the client may also be allergic to latex?",
+      "content": {
+        "options": [
+          {
+            "id": "a",
+            "text": "Bananas"
+          },
+          {
+            "id": "b",
+            "text": "Strawberries"
+          },
+          {
+            "id": "c",
+            "text": "Wheat"
+          },
+          {
+            "id": "d",
+            "text": "Eggs"
+          }
+        ]
+      },
+      "key": {
+        "correct": "a"
+      },
+      "rationale": {
+        "correct": "Latex-fruit syndrome: banana, avocado, kiwi, chestnut. Use latex-free equipment.",
+        "perOption": {
+          "a": "Bananas, avocados, kiwi and chestnuts cross-react with latex.",
+          "b": "These aren't a common latex cross-reactor.",
+          "c": "Wheat isn't a latex cross-reactor.",
+          "d": "Eggs aren't a latex cross-reactor."
+        },
+        "references": [
+          "Medical-surgical nursing texts (e.g. Lewis; Ignatavicius)",
+          "DRAFT: original question written with AI assistance; an RN or nurse educator must check it before candidates rely on it."
+        ]
+      },
+      "educationalObjective": "Identify cross-sensitivity with latex allergy."
+    },
+    {
+      "id": "c1a00020-0000-4000-8000-000000000015",
+      "itemType": "multiple_choice",
+      "clientNeeds": "SECE.SIC",
+      "bodySystem": "immune",
+      "subtopics": [
+        "latex-and-drug-allergies"
+      ],
+      "cjmmSkill": "take_action",
+      "difficulty": "moderate",
+      "stem": "A client who had anaphylaxis to penicillin is prescribed cefazolin before surgery. What should the nurse do?",
+      "content": {
+        "options": [
+          {
+            "id": "a",
+            "text": "Contact the provider to clarify before giving it"
+          },
+          {
+            "id": "b",
+            "text": "Give it without checking"
+          },
+          {
+            "id": "c",
+            "text": "Give half the dose"
+          },
+          {
+            "id": "d",
+            "text": "Give diphenhydramine and then the drug"
+          }
+        ]
+      },
+      "key": {
+        "correct": "a"
+      },
+      "rationale": {
+        "correct": "Always clarify orders that may conflict with a documented severe allergy.",
+        "perOption": {
+          "a": "Cross-reactivity is low, but a history of anaphylaxis needs provider review.",
+          "b": "This ignores a serious allergy history.",
+          "c": "This isn't safe practice.",
+          "d": "Premedication doesn't prevent anaphylaxis."
+        },
+        "references": [
+          "Nursing pharmacology texts (e.g. Lehne; McCuistion) and the drug's prescribing information",
+          "DRAFT: original question written with AI assistance; an RN or nurse educator must check it before candidates rely on it."
+        ]
+      },
+      "educationalObjective": "Respond to a possible antibiotic cross-allergy."
+    },
+    {
+      "id": "c1a00020-0000-4000-8000-000000000016",
+      "itemType": "multiple_choice",
+      "clientNeeds": "PHI.PPT",
+      "bodySystem": "immune",
+      "subtopics": [
+        "antimicrobial-therapy"
+      ],
+      "cjmmSkill": "take_action",
+      "difficulty": "easy",
+      "stem": "The nurse is giving the first dose of an IV antibiotic. What should the nurse do?",
+      "content": {
+        "options": [
+          {
+            "id": "a",
+            "text": "Stay nearby and watch for signs of an allergic reaction, especially in the first 15 to 30 minutes"
+          },
+          {
+            "id": "b",
+            "text": "Leave and check back in 2 hours"
+          },
+          {
+            "id": "c",
+            "text": "Give it IV push quickly"
+          },
+          {
+            "id": "d",
+            "text": "Give it with the client's blood transfusion"
+          }
+        ]
+      },
+      "key": {
+        "correct": "a"
+      },
+      "rationale": {
+        "correct": "Monitor closely during a first-dose infusion.",
+        "perOption": {
+          "a": "Anaphylaxis often occurs early with a first dose.",
+          "b": "Early monitoring is needed.",
+          "c": "Follow the recommended rate.",
+          "d": "Drugs aren't mixed with blood."
+        },
+        "references": [
+          "Nursing pharmacology texts (e.g. Lehne; McCuistion) and the drug's prescribing information",
+          "DRAFT: original question written with AI assistance; an RN or nurse educator must check it before candidates rely on it."
+        ]
+      },
+      "educationalObjective": "Monitor for first-dose reactions."
+    },
+    {
+      "id": "c1a00020-0000-4000-8000-000000000017",
+      "itemType": "multiple_choice",
+      "clientNeeds": "PHI.PPT",
+      "bodySystem": "immune",
+      "subtopics": [
+        "antimicrobial-therapy"
+      ],
+      "cjmmSkill": "recognize_cues",
+      "difficulty": "moderate",
+      "stem": "A client has been taking clindamycin for 7 days. Which report should the nurse address first?",
+      "content": {
+        "options": [
+          {
+            "id": "a",
+            "text": "Six watery stools a day with abdominal cramping"
+          },
+          {
+            "id": "b",
+            "text": "Mild nausea"
+          },
+          {
+            "id": "c",
+            "text": "Metallic taste"
+          },
+          {
+            "id": "d",
+            "text": "Mild headache"
+          }
+        ]
+      },
+      "key": {
+        "correct": "a"
+      },
+      "rationale": {
+        "correct": "Antibiotics, especially clindamycin, can lead to C. difficile; report frequent watery diarrhea.",
+        "perOption": {
+          "a": "This suggests C. difficile infection.",
+          "b": "This is less concerning.",
+          "c": "This is minor.",
+          "d": "This is minor."
+        },
+        "references": [
+          "Nursing pharmacology texts (e.g. Lehne; McCuistion) and the drug's prescribing information",
+          "DRAFT: original question written with AI assistance; an RN or nurse educator must check it before candidates rely on it."
+        ]
+      },
+      "educationalObjective": "Recognize antibiotic-associated C. difficile."
+    },
+    {
+      "id": "c1a00020-0000-4000-8000-000000000018",
+      "itemType": "multiple_choice",
+      "clientNeeds": "PHI.PPT",
+      "bodySystem": "immune",
+      "subtopics": [
+        "antimicrobial-therapy"
+      ],
+      "cjmmSkill": "recognize_cues",
+      "difficulty": "moderate",
+      "stem": "A 72-year-old client taking ciprofloxacin reports sudden heel pain. What should the nurse do?",
+      "content": {
+        "options": [
+          {
+            "id": "a",
+            "text": "Tell the client to stop activity and report it to the provider, because this may mean tendon damage"
+          },
+          {
+            "id": "b",
+            "text": "Encourage stretching exercises"
+          },
+          {
+            "id": "c",
+            "text": "Take a double dose"
+          },
+          {
+            "id": "d",
+            "text": "Ignore it as normal aging"
+          }
+        ]
+      },
+      "key": {
+        "correct": "a"
+      },
+      "rationale": {
+        "correct": "Fluoroquinolones: tendon rupture, QT prolongation, photosensitivity and C. difficile.",
+        "perOption": {
+          "a": "Fluoroquinolones can cause tendinitis and tendon rupture, especially in older adults and those on steroids.",
+          "b": "This could cause rupture.",
+          "c": "This isn't appropriate.",
+          "d": "This needs evaluation."
+        },
+        "references": [
+          "Nursing pharmacology texts (e.g. Lehne; McCuistion) and the drug's prescribing information",
+          "DRAFT: original question written with AI assistance; an RN or nurse educator must check it before candidates rely on it."
+        ]
+      },
+      "educationalObjective": "Recognize fluoroquinolone tendon toxicity."
+    },
+    {
+      "id": "c1a00020-0000-4000-8000-000000000019",
+      "itemType": "multiple_choice",
+      "clientNeeds": "PHI.PPT",
+      "bodySystem": "immune",
+      "subtopics": [
+        "antimicrobial-therapy"
+      ],
+      "cjmmSkill": "generate_solutions",
+      "difficulty": "moderate",
+      "stem": "Which instruction should the nurse give a client taking doxycycline?",
+      "content": {
+        "options": [
+          {
+            "id": "a",
+            "text": "\"Avoid taking it with dairy or antacids, protect yourself from the sun, and stay upright for 30 minutes after taking it.\""
+          },
+          {
+            "id": "b",
+            "text": "\"Take it with milk.\""
+          },
+          {
+            "id": "c",
+            "text": "\"Lie down right after taking it.\""
+          },
+          {
+            "id": "d",
+            "text": "\"It's safe for children under 8.\""
+          }
+        ]
+      },
+      "key": {
+        "correct": "a"
+      },
+      "rationale": {
+        "correct": "Tetracyclines: no dairy or antacids, photosensitivity, upright after dosing, avoid in pregnancy and young children.",
+        "perOption": {
+          "a": "Calcium reduces absorption, it causes photosensitivity and it can irritate the esophagus.",
+          "b": "Calcium binds doxycycline.",
+          "c": "This risks esophageal irritation.",
+          "d": "Tetracyclines can stain developing teeth."
+        },
+        "references": [
+          "Nursing pharmacology texts (e.g. Lehne; McCuistion) and the drug's prescribing information",
+          "DRAFT: original question written with AI assistance; an RN or nurse educator must check it before candidates rely on it."
+        ]
+      },
+      "educationalObjective": "Teach about doxycycline."
+    },
+    {
+      "id": "c1a00020-0000-4000-8000-000000000020",
+      "itemType": "multiple_choice",
+      "clientNeeds": "PHI.PPT",
+      "bodySystem": "immune",
+      "subtopics": [
+        "antimicrobial-therapy"
+      ],
+      "cjmmSkill": "generate_solutions",
+      "difficulty": "easy",
+      "stem": "A client is prescribed metronidazole. Which instruction is most important?",
+      "content": {
+        "options": [
+          {
+            "id": "a",
+            "text": "\"Avoid all alcohol during treatment and for at least 3 days afterward.\""
+          },
+          {
+            "id": "b",
+            "text": "\"Take it with grapefruit juice.\""
+          },
+          {
+            "id": "c",
+            "text": "\"Stop it when you feel better.\""
+          },
+          {
+            "id": "d",
+            "text": "\"Increase your caffeine intake.\""
+          }
+        ]
+      },
+      "key": {
+        "correct": "a"
+      },
+      "rationale": {
+        "correct": "Metronidazole: no alcohol, metallic taste, complete the course.",
+        "perOption": {
+          "a": "Alcohol with metronidazole causes severe nausea, vomiting and flushing (a disulfiram-like reaction).",
+          "b": "This isn't the concern.",
+          "c": "The full course is needed.",
+          "d": "This isn't relevant."
+        },
+        "references": [
+          "Nursing pharmacology texts (e.g. Lehne; McCuistion) and the drug's prescribing information",
+          "DRAFT: original question written with AI assistance; an RN or nurse educator must check it before candidates rely on it."
+        ]
+      },
+      "educationalObjective": "Teach about metronidazole and alcohol."
+    },
+    {
+      "id": "c1a00020-0000-4000-8000-000000000021",
+      "itemType": "multiple_choice",
+      "clientNeeds": "PHI.PPT",
+      "bodySystem": "immune",
+      "subtopics": [
+        "antimicrobial-therapy"
+      ],
+      "cjmmSkill": "generate_solutions",
+      "difficulty": "moderate",
+      "stem": "A client is taking sulfamethoxazole-trimethoprim. Which instruction helps prevent crystals forming in the urine?",
+      "content": {
+        "options": [
+          {
+            "id": "a",
+            "text": "Drink plenty of fluids each day"
+          },
+          {
+            "id": "b",
+            "text": "Limit fluids"
+          },
+          {
+            "id": "c",
+            "text": "Take it with antacids"
+          },
+          {
+            "id": "d",
+            "text": "Take it only at night"
+          }
+        ]
+      },
+      "key": {
+        "correct": "a"
+      },
+      "rationale": {
+        "correct": "Sulfonamides: fluids, sun protection and reporting rash, which may signal Stevens-Johnson syndrome.",
+        "perOption": {
+          "a": "Fluids keep the urine dilute and prevent crystalluria.",
+          "b": "This increases crystal formation.",
+          "c": "This doesn't prevent crystals.",
+          "d": "This doesn't prevent crystals."
+        },
+        "references": [
+          "Nursing pharmacology texts (e.g. Lehne; McCuistion) and the drug's prescribing information",
+          "DRAFT: original question written with AI assistance; an RN or nurse educator must check it before candidates rely on it."
+        ]
+      },
+      "educationalObjective": "Prevent crystalluria with sulfonamides."
+    },
+    {
+      "id": "c1a00020-0000-4000-8000-000000000022",
+      "itemType": "multiple_choice",
+      "clientNeeds": "SECE.SIC",
+      "bodySystem": "immune",
+      "subtopics": [
+        "transmission-based-precautions"
+      ],
+      "cjmmSkill": "take_action",
+      "difficulty": "moderate",
+      "stem": "A client has localized herpes zoster (shingles). Which staff member should not be assigned to this client?",
+      "content": {
+        "options": [
+          {
+            "id": "a",
+            "text": "A pregnant nurse who has never had chickenpox or the varicella vaccine"
+          },
+          {
+            "id": "b",
+            "text": "A nurse who had chickenpox as a child"
+          },
+          {
+            "id": "c",
+            "text": "A nurse who received the varicella vaccine"
+          },
+          {
+            "id": "d",
+            "text": "A nurse who had shingles last year"
+          }
+        ]
+      },
+      "key": {
+        "correct": "a"
+      },
+      "rationale": {
+        "correct": "Shingles can spread varicella to non-immune people; cover the lesions. Disseminated zoster needs airborne and contact precautions.",
+        "perOption": {
+          "a": "A person who isn't immune can catch varicella from contact with the lesions.",
+          "b": "This nurse is immune.",
+          "c": "This nurse is immune.",
+          "d": "This nurse is immune."
+        },
+        "references": [
+          "CDC infection control and isolation precautions guidance",
+          "DRAFT: original question written with AI assistance; an RN or nurse educator must check it before candidates rely on it."
+        ]
+      },
+      "educationalObjective": "Assign staff safely for a client with shingles."
+    },
+    {
+      "id": "c1a00020-0000-4000-8000-000000000023",
+      "itemType": "multiple_choice",
+      "clientNeeds": "PHI.PA",
+      "bodySystem": "immune",
+      "subtopics": [
+        "autoimmune-disorders"
+      ],
+      "cjmmSkill": "recognize_cues",
+      "difficulty": "moderate",
+      "stem": "A week after hiking, a client has an expanding red rash with central clearing at the site of a tick bite. What does the nurse suspect?",
+      "content": {
+        "options": [
+          {
+            "id": "a",
+            "text": "Lyme disease"
+          },
+          {
+            "id": "b",
+            "text": "Contact dermatitis"
+          },
+          {
+            "id": "c",
+            "text": "Cellulitis"
+          },
+          {
+            "id": "d",
+            "text": "Shingles"
+          }
+        ]
+      },
+      "key": {
+        "correct": "a"
+      },
+      "rationale": {
+        "correct": "Lyme disease: erythema migrans, then possible joint, nerve and heart involvement. Treat with doxycycline.",
+        "perOption": {
+          "a": "Erythema migrans is the hallmark of early Lyme disease.",
+          "b": "This doesn't follow a tick bite this way.",
+          "c": "Cellulitis is usually warm and tender, without central clearing.",
+          "d": "Shingles follows a nerve path with blisters."
+        },
+        "references": [
+          "CDC infection control and isolation precautions guidance",
+          "DRAFT: original question written with AI assistance; an RN or nurse educator must check it before candidates rely on it."
+        ]
+      },
+      "educationalObjective": "Recognize early Lyme disease."
+    },
+    {
+      "id": "c1a00020-0000-4000-8000-000000000024",
+      "itemType": "matrix_mc",
+      "clientNeeds": "PHI.PPT",
+      "bodySystem": "immune",
+      "subtopics": [
+        "antimicrobial-therapy"
+      ],
+      "cjmmSkill": "analyze_cues",
+      "difficulty": "difficult",
+      "stem": "For each antimicrobial, indicate the adverse effect the nurse should monitor for most closely.",
+      "content": {
+        "rows": [
+          {
+            "id": "r1",
+            "text": "Gentamicin"
+          },
+          {
+            "id": "r2",
+            "text": "Ciprofloxacin"
+          },
+          {
+            "id": "r3",
+            "text": "Metronidazole"
+          },
+          {
+            "id": "r4",
+            "text": "Doxycycline"
+          }
+        ],
+        "columns": [
+          {
+            "id": "c1",
+            "text": "Ototoxicity and nephrotoxicity"
+          },
+          {
+            "id": "c2",
+            "text": "Tendon rupture"
+          },
+          {
+            "id": "c3",
+            "text": "Reaction with alcohol"
+          },
+          {
+            "id": "c4",
+            "text": "Photosensitivity"
+          }
+        ]
+      },
+      "key": {
+        "byRow": {
+          "r1": "c1",
+          "r2": "c2",
+          "r3": "c3",
+          "r4": "c4"
+        }
+      },
+      "rationale": {
+        "correct": "Match each antimicrobial to its signature adverse effect.",
+        "perOption": {
+          "r1:c1": "Aminoglycosides damage the ear and kidney.",
+          "r1:c2": "This is linked to fluoroquinolones.",
+          "r1:c3": "This is linked to metronidazole.",
+          "r1:c4": "This is linked to tetracyclines.",
+          "r2:c1": "This is linked to aminoglycosides.",
+          "r2:c2": "Fluoroquinolones can cause tendon rupture.",
+          "r2:c3": "This is linked to metronidazole.",
+          "r2:c4": "Cipro can cause photosensitivity, but tendon rupture is the hallmark risk.",
+          "r3:c1": "This is linked to aminoglycosides.",
+          "r3:c2": "This is linked to fluoroquinolones.",
+          "r3:c3": "Metronidazole causes a disulfiram-like reaction with alcohol.",
+          "r3:c4": "This isn't the key concern.",
+          "r4:c1": "This is linked to aminoglycosides.",
+          "r4:c2": "This is linked to fluoroquinolones.",
+          "r4:c3": "This is linked to metronidazole.",
+          "r4:c4": "Tetracyclines cause photosensitivity."
+        },
+        "references": [
+          "Nursing pharmacology texts (e.g. Lehne; McCuistion) and the drug's prescribing information",
+          "DRAFT: original question written with AI assistance; an RN or nurse educator must check it before candidates rely on it."
+        ]
+      },
+      "educationalObjective": "Identify key adverse effects of antimicrobials."
+    },
+    {
+      "id": "c1a00020-0000-4000-8000-000000000025",
+      "itemType": "multiple_choice",
+      "clientNeeds": "PHI.PPT",
+      "bodySystem": "immune",
+      "subtopics": [
+        "antimicrobial-therapy"
+      ],
+      "cjmmSkill": "take_action",
+      "difficulty": "moderate",
+      "stem": "When should the nurse draw a trough level for a client receiving IV vancomycin?",
+      "content": {
+        "options": [
+          {
+            "id": "a",
+            "text": "Just before the next scheduled dose"
+          },
+          {
+            "id": "b",
+            "text": "Right after the infusion ends"
+          },
+          {
+            "id": "c",
+            "text": "One hour after the dose"
+          },
+          {
+            "id": "d",
+            "text": "At any time"
+          }
+        ]
+      },
+      "key": {
+        "correct": "a"
+      },
+      "rationale": {
+        "correct": "Trough: just before the next dose. Peak: after distribution, based on the drug.",
+        "perOption": {
+          "a": "The trough is the lowest level, right before the next dose.",
+          "b": "This measures the peak.",
+          "c": "This isn't a trough.",
+          "d": "The timing matters."
+        },
+        "references": [
+          "Nursing pharmacology texts (e.g. Lehne; McCuistion) and the drug's prescribing information",
+          "DRAFT: original question written with AI assistance; an RN or nurse educator must check it before candidates rely on it."
+        ]
+      },
+      "educationalObjective": "Time a trough drug level correctly."
+    }
+  ]
+}
