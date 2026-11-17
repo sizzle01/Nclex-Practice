@@ -9,9 +9,11 @@ Sets (PRD 5.5, api.md section 3):
 - Topic practice: every standalone question, grouped by Client Needs category, in parts of up to
   PART_SIZE, tutor mode, untimed.
 - Case study practice: every NGN unfolding case, CASES_PER_SET cases per set, cases kept whole.
-- Challenges: EXAM_COUNT exams of EXAM_LENGTH items, each published as a timed and an untimed
-  challenge. Each holds CASES_PER_EXAM whole cases and standalone items weighted by the NCLEX-RN
-  test plan midpoints, with no item repeated across exams. F19 will make both versions adaptive.
+- Fixed-length challenges: EXAM_COUNT exams of EXAM_LENGTH items, each as a timed and an untimed
+  challenge. F19 unpublished them (isPublished false) in favour of the adaptive exam; they stay in
+  the file with the same ids and items so earlier attempts keep their set and history.
+- The adaptive exam (F19, architecture.md 5.8): mode cat, no question list; each attempt picks
+  85 to 150 questions from the whole bank, and the candidate chooses timed (5 h) or untimed.
 """
 import json
 import math
@@ -24,6 +26,8 @@ EXAM_LENGTH = 85            # the real NCLEX-RN's minimum length
 CASES_PER_EXAM = 2
 EXAM_SECONDS = 10200        # 2 h 50 min: about 2 minutes per item, like the real exam's pace
 PASS_THRESHOLD = 0.65
+ADAPTIVE_SECONDS = 18000    # 5 hours, the real NCLEX-RN's limit
+ADAPTIVE_CONFIG = {"minItems": 85, "maxItems": 150, "passingTheta": 0}
 
 CATEGORY_NAMES = {
     "SECE.MOC": "Management of Care", "SECE.SIC": "Safety and Infection Control",
@@ -123,12 +127,12 @@ def build_catalog(questions):
         assert len(items) == EXAM_LENGTH and len(set(items)) == EXAM_LENGTH
         exams.append(items)
 
-    # Each exam comes as a timed and an untimed challenge with the same items. Both are fixed at
-    # EXAM_LENGTH until F19 makes them adaptive (architecture.md 5.8: stop between 85 and 150 items).
-    # The timed sets keep the ids they were first published with; the untimed ones come after.
+    # Each exam comes as a timed and an untimed challenge with the same items. The timed sets keep
+    # the ids they were first published with; the untimed ones come after. F19 replaced them with
+    # the adaptive exam, so they are unpublished but kept for the attempts already made on them.
     about = (f"{EXAM_LENGTH} items weighted like the NCLEX-RN test plan, including {CASES_PER_EXAM} case "
-             "studies. Exam rules: no going back, answers and a pass estimate at the end. Fixed length for now; "
-             "an adaptive version that stops between 85 and 150 items, like the real exam, is planned.")
+             "studies. Exam rules: no going back, answers and a pass estimate at the end. Replaced by the "
+             "adaptive exam.")
     clock = f"{EXAM_SECONDS // 3600} h {EXAM_SECONDS % 3600 // 60} min"
     for timed in (True, False):
         for e, items in enumerate(exams, 1):
@@ -138,7 +142,18 @@ def build_catalog(questions):
                 "description": f"{'Timed (' + clock + ').' if timed else 'No time limit.'} {about}",
                 "mode": "challenge", "revealMode": "exam", "timed": timed,
                 **({"timeBudgetSec": EXAM_SECONDS} if timed else {}),
-                "passThreshold": PASS_THRESHOLD, "allowBackNav": False, "accessTier": "free", "questionIds": items})
+                "passThreshold": PASS_THRESHOLD, "allowBackNav": False, "accessTier": "free", "questionIds": items,
+                "isPublished": False})
+
+    # ---- the adaptive exam (F19) ----
+    n += 1
+    sets.append({
+        "id": _set_id(n), "title": "NCLEX-RN adaptive exam",
+        "description": ("Works like the real NCLEX-RN: each question depends on your answers so far, and the exam "
+                        "stops once your result is clear, after 85 to 150 questions. Choose timed (5 hours) or "
+                        "untimed. No going back; answers and rationales at the end."),
+        "mode": "cat", "revealMode": "exam", "timed": True, "timeBudgetSec": ADAPTIVE_SECONDS,
+        "allowBackNav": False, "accessTier": "free", "questionIds": [], "catConfig": ADAPTIVE_CONFIG})
 
     banks =[{"id": BANK_ID, "name": "RN Question Bank",
               "description": f"All {len(questions)} RN bank questions across every NCLEX-RN category and item type.",
