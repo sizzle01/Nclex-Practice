@@ -266,6 +266,17 @@ sequenceDiagram
 
 `GET /test-sets/custom/available-count` gives live counts while the user adjusts the filters.
 
+#### 5.7.1 Weak-area practice (added in F18)
+
+One button on the dashboard and the results page builds a practice test from the candidate's weak areas and starts it (`POST /test-sets/weak-areas`). `GET /me/weak-areas` shows the areas and the test size first.
+
+- **Weak area:** a Client Needs leaf with accuracy under 65% (points earned over the maximum, so partial credit counts) and at least 5 items, summed over the user's **last 10 submitted attempts** on the track. Recent attempts rather than all-time snapshots, so an area the candidate has since improved in stops being called weak. Read from `attempt_category_scores`. Ordered worst first, then more items, then code. When nothing qualifies the app says so; it never invents a weakness.
+- **Why leaves, not F17 subtopics:** F17's per-test rule (one miss in one test) suits a reading list, but most RN subtopics have 5 questions or fewer, too few for a test. Each Client Needs leaf has dozens to hundreds of questions.
+- **Pool:** the custom builder's pool (published, on the track, within the user's plan) for the weak leaves, without case studies, since a case study spans several leaves.
+- **Selection:** each weak leaf gets its test-plan share of the count (as in 5.7); within a leaf, questions the user last missed come first, then unseen ones, then ones last answered correctly. A short leaf leaves its places to the others in the same order. The chosen questions are shuffled.
+- **Size:** 25 questions; fewer when the leaves run short (the card says so before the click); no test under 5.
+- **Set:** an ordinary custom set (`kind='custom'`, owner = user) in practice mode with tutor reveal and no timer, so no new tables. `generator_criteria` records `source: "weak_areas"` and the leaves.
+
 ### 5.8 CAT adaptive mode (Phase 2, designed now)
 
 The schema already supports it: `attempt_items` rows are appended one at a time instead of being created up front, and `attempts.cat_state` holds `{theta, se, administered, contentCounts}`.

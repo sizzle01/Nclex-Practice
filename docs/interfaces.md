@@ -390,11 +390,11 @@ Global requirements: visible focus rings; text scale from 100% to 200% without h
 | `/signup`, `/login` | Auth forms (track selection on signup) | `/auth/*` |
 | `/verify-email?token=` | Verification result | `/auth/verify-email` |
 | `/forgot-password`, `/reset-password?token=` | Password reset | `/auth/password/*` |
-| `/dashboard` | Drafts to resume (with % complete and time left), last results, weakest categories, verify-email banner | `/attempts?status=…`, `/me/performance/summary` |
+| `/dashboard` | Drafts to resume (with % complete and time left), last results, weakest categories, practise your weak areas (F18), verify-email banner | `/attempts?status=…`, `/me/performance/summary`, `/me/weak-areas`, `POST /test-sets/weak-areas` |
 | `/practice` | Prebuilt sets (Practice, Challenge, Sample), locked badges | `/test-sets?kind=prebuilt` |
 | `/practice/custom` | Custom test builder with live available count | `/taxonomy`, `/test-sets/custom/*` |
 | `/attempts/[id]` | **Exam player** | `/attempts/{id}/*` |
-| `/attempts/[id]/results` | Score, readiness estimate, subtopics to study next (F17), category breakdown, time per item | `/attempts/{id}/result`, `/attempts/{id}/recommendations` |
+| `/attempts/[id]/results` | Score, readiness estimate, subtopics to study next (F17), practise your weak areas (F18), category breakdown, time per item | `/attempts/{id}/result`, `/attempts/{id}/recommendations`, `/me/weak-areas`, `POST /test-sets/weak-areas` |
 | `/attempts/[id]/review` | Item-by-item rationale review, filter incorrect / flagged | `/attempts/{id}/review` |
 | `/performance` | Breakdown by dimension, trend charts | `/me/performance/*` |
 | `/history` | Past attempts table | `/attempts?status=submitted` |
