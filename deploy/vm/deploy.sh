@@ -5,6 +5,7 @@
 #   deploy/vm/deploy.sh bootstrap            first time only: copy files, run setup.sh on the VM
 #                                            (asks for the Brevo SMTP key, or reads NCLEX_SMTP_KEY)
 #   deploy/vm/deploy.sh deploy [--seed]      build images here, copy them over, migrate, restart
+#                                            (--seed also imports the sample and the RN question bank)
 #   deploy/vm/deploy.sh restart              apply changed settings (.env, Caddyfile) without new images
 #   deploy/vm/deploy.sh make-admin <email>   give an existing account the admin role
 #   deploy/vm/deploy.sh logs [service]       follow the logs (api, worker, web, caddy, ...)
@@ -29,7 +30,8 @@ compose() { ssh_vm "cd ~/$APP_DIR && docker compose -f compose.vm.yml --env-file
 sync_files() {
   echo "==> Copying deploy files and content to $VM:~/$APP_DIR"
   ssh_vm "mkdir -p ~/$APP_DIR"
-  COPYFILE_DISABLE=1 tar -C "$REPO_ROOT" --no-mac-metadata -czf - \
+  # review/ holds the generated review packet; it isn't content and isn't needed on the VM.
+  COPYFILE_DISABLE=1 tar -C "$REPO_ROOT" --no-mac-metadata --exclude 'nclex-be/content/rn-bank/review' -czf - \
       -s ",^deploy/vm/,," -s ",^nclex-be/content,content," \
       deploy/vm/compose.vm.yml deploy/vm/Caddyfile deploy/vm/.env.example \
       deploy/vm/setup.sh deploy/vm/backup.sh nclex-be/content \
@@ -66,8 +68,7 @@ deploy() {
   if [ "$seed" = true ]; then
     # Only on request: the importer updates questions it already stored, which would undo
     # edits made in the admin screens.
-    echo "==> Importing the sample questions"
-    compose run --rm jobs import-questions /content/sample-questions.rn.json
+    import_content
   fi
 
   echo "==> Starting the app"
@@ -75,6 +76,24 @@ deploy() {
   ssh_vm "docker image prune -f >/dev/null"
 
   echo "==> Deployed. Open https://$(site_host)"
+}
+
+# Imports the sample file first (it creates the original subtopics), then every RN bank file in
+# name order, as docs/features/RN-question-bank.md describes. One SSH session runs the whole loop,
+# and the first failing file stops it; each file is its own transaction, so earlier ones stay.
+import_content() {
+  echo "==> Importing the sample questions and the RN question bank"
+  ssh_vm "bash -s $APP_DIR" <<'REMOTE'
+set -euo pipefail
+cd ~/"$1"
+files=(/content/sample-questions.rn.json)
+for f in content/rn-bank/rn-bank-*.rn.json; do files+=("/$f"); done
+for f in "${files[@]}"; do
+  out=$(docker compose -f compose.vm.yml --env-file .env run --rm -T jobs import-questions "$f" 2>&1) \
+    || { echo "$out"; echo "Import failed: $f" >&2; exit 1; }
+  echo "   ${f##*/}: $(echo "$out" | grep -m1 'question(s)')"
+done
+REMOTE
 }
 
 site_host() { ssh_vm "grep '^SITE_HOST=' ~/$APP_DIR/.env | cut -d= -f2"; }

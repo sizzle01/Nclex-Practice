@@ -265,7 +265,7 @@ Everything lives in `deploy/vm/`:
 **Deploying.** From the repository root on an Apple Silicon Mac: `deploy/vm/deploy.sh deploy`. It
 builds the four arm64 images locally (the VM's one core is too slow), copies them over SSH, starts
 Postgres and Redis, runs the migration bundle (and stops if it fails), then restarts the api,
-worker, web and caddy. Add `--seed` to import the sample questions; leave it off normally, because
+worker, web and caddy. Add `--seed` to import the sample questions and the RN question bank (`nclex-be/content/rn-bank`); leave it off normally, because
 the importer overwrites edits made in the admin screens.
 
 **The address.** `fatimah-test.duckdns.org` is a free DuckDNS name; its IP is set to the VM's on

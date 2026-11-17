@@ -19,7 +19,7 @@ Prerequisites: Docker Desktop on an Apple Silicon Mac, and the SSH key `~/.ssh/o
 ```bash
 cd <repo root>
 deploy/vm/deploy.sh bootstrap        # done once already: Docker, firewall, secrets, backups
-deploy/vm/deploy.sh deploy --seed    # first deploy (imports the sample questions)
+deploy/vm/deploy.sh deploy --seed    # first deploy (imports the sample questions and the RN bank)
 deploy/vm/deploy.sh deploy           # every later deploy
 deploy/vm/deploy.sh restart          # after editing ~/nclex/.env on the VM, or the Caddyfile
 deploy/vm/deploy.sh make-admin you@example.com
