@@ -57,6 +57,20 @@ export const adaptiveSet: TestSetSummary = {
   id: "c1e00000-0000-4000-8000-000000000099",
   title: "Adaptive exam 1",
   mode: "cat",
+  questionCount: 150,
+  timeBudgetSec: 18000,
+  passThreshold: null,
+  adaptive: { minItems: 85, maxItems: 150 },
+};
+
+/** GET /test-sets/{id} for the adaptive exam (F19). */
+export const adaptiveDetail: TestSetDetail = {
+  ...adaptiveSet,
+  track: "RN",
+  kind: "cat",
+  description: "Works like the real NCLEX-RN.",
+  pausePolicy: { maxPauses: null, maxPauseSec: null },
+  allowBackNav: false,
 };
 
 /** GET /test-sets/{id} for the challenge set. */

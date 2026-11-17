@@ -39,6 +39,7 @@ const result: AttemptResultView = {
     difficulty: [],
   },
   weakest: [{ dimension: "client_needs", key: "PHI.PPT", name: "Pharmacological and Parenteral Therapies", pct: 0.48 }],
+  adaptive: null,
 };
 
 const recommendations = {
@@ -89,6 +90,60 @@ describe("ResultsPage", () => {
     expect(score).toHaveTextContent("Likely ready");
     expect(score).toHaveTextContent("(passing threshold 65%)");
     expect(score).toHaveTextContent(disclaimer);
+  });
+
+  it("leads an adaptive exam with pass or fail and why it ended, not a percentage", async () => {
+    replyWith(
+      reply(200, {
+        ...result,
+        submitReason: "cat_stop",
+        readiness: null,
+        adaptive: {
+          passed: true,
+          itemsAnswered: 85,
+          minItems: 85,
+          maxItems: 150,
+          stopReason: "clear_result",
+          timed: false,
+          disclaimer: "This adaptive practice exam follows the NCLEX's rules.",
+        },
+      }),
+    );
+
+    renderPage();
+
+    const outcome = await screen.findByRole("region", { name: "Your result" });
+    expect(outcome).toHaveTextContent("Pass");
+    expect(outcome).toHaveTextContent("85 questions answered (this exam runs 85 to 150)");
+    expect(outcome).toHaveTextContent("The exam stopped as soon as your result was clear.");
+    expect(outcome).toHaveTextContent("Untimed");
+    expect(outcome).not.toHaveTextContent("74%");
+    expect(screen.queryByRole("region", { name: "Your score" })).not.toBeInTheDocument();
+  });
+
+  it("explains a fail when the time ran out", async () => {
+    replyWith(
+      reply(200, {
+        ...result,
+        submitReason: "time_expired",
+        readiness: null,
+        adaptive: {
+          passed: false,
+          itemsAnswered: 60,
+          minItems: 85,
+          maxItems: 150,
+          stopReason: "time_expired",
+          timed: true,
+          disclaimer: "This adaptive practice exam follows the NCLEX's rules.",
+        },
+      }),
+    );
+
+    renderPage();
+
+    const outcome = await screen.findByRole("region", { name: "Your result" });
+    expect(outcome).toHaveTextContent("Fail");
+    expect(outcome).toHaveTextContent("Before the minimum number of questions that is a fail");
   });
 
   it("leaves out the estimate when the set has no threshold", async () => {

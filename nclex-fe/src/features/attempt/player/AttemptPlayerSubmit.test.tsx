@@ -41,6 +41,7 @@ function attemptState(revealMode: "tutor" | "exam"): AttemptState {
     lastActivityAt: "2026-10-28T09:00:00Z",
     staleDraft: false,
     resultAvailable: false,
+    adaptive: null,
   };
 }
 

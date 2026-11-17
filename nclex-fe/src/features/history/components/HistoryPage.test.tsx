@@ -29,6 +29,7 @@ function finished(id: string, title: string, overrides: Partial<AttemptSummary> 
     timeRemainingMs: null,
     scorePct: 0.7123,
     passed: null,
+    timed: false,
     ...overrides,
   };
 }

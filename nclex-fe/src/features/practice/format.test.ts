@@ -1,5 +1,5 @@
 import { describe, expect, it } from "vitest";
-import { formatDuration, pausePolicyLabel, percentLabel, questionCountLabel, timingLabel } from "./format";
+import { formatDuration, pausePolicyLabel, percentLabel, questionCountLabel, setLengthLabel, timingLabel } from "./format";
 
 describe("practice formatting", () => {
   it.each([
@@ -18,6 +18,13 @@ describe("practice formatting", () => {
     expect(timingLabel({ timed: true, timeBudgetSec: 4800, perQuestionSec: null })).toBe("80 minutes");
     expect(timingLabel({ timed: true, timeBudgetSec: null, perQuestionSec: 90 })).toBe("90 s per question");
     expect(timingLabel({ timed: true, timeBudgetSec: 4800, perQuestionSec: 90 })).toBe("80 minutes, 90 s per question");
+  });
+
+  it("shows an adaptive exam's length range and its timing choice (F19)", () => {
+    const adaptive = { minItems: 85, maxItems: 150 };
+    expect(setLengthLabel({ questionCount: 150, adaptive })).toBe("85–150 questions");
+    expect(setLengthLabel({ questionCount: 40, adaptive: null })).toBe("40 questions");
+    expect(timingLabel({ timed: true, timeBudgetSec: 18000, perQuestionSec: null, adaptive })).toBe("5 h or untimed");
   });
 
   it("shows counts, percentages and pause limits in words", () => {

@@ -30,6 +30,7 @@ function draft(overrides: Partial<AttemptSummary>): AttemptSummary {
     timeRemainingMs: null,
     scorePct: null,
     passed: null,
+    timed: false,
     ...overrides,
   };
 }
@@ -64,6 +65,17 @@ describe("DraftsList", () => {
     expect(within(row).getByRole("link", { name: "Resume" })).toHaveAttribute("href", "/attempts/a-1");
     expect(within(row).queryByRole("button", { name: "Discard" })).not.toBeInTheDocument();
     expect(getMock).toHaveBeenCalledWith("/api/v1/attempts", { params: { query: { status: "in_progress,paused" } } });
+  });
+
+  it("shows an adaptive draft's answered count instead of % complete, which it cannot know", async () => {
+    const adaptive = draft({ mode: "cat", timed: true, totalItems: 13, answeredItems: 12, testSet: { id: "s-cat", title: "NCLEX-RN adaptive exam" } });
+    getMock.mockResolvedValue(reply(200, { items: [adaptive], nextCursor: null }));
+
+    renderList();
+
+    const row = await screen.findByRole("article", { name: "NCLEX-RN adaptive exam" });
+    expect(within(row).getByText("Adaptive, timed: 12 answered")).toBeInTheDocument();
+    expect(within(row).queryByRole("progressbar")).not.toBeInTheDocument();
   });
 
   it("says so when nothing is in progress", async () => {

@@ -4,7 +4,7 @@ import userEvent from "@testing-library/user-event";
 import { beforeEach, describe, expect, it, vi } from "vitest";
 import { apiClient } from "@/lib/api/client";
 import { TestSetDetailPanel } from "./TestSetDetailPanel";
-import { challengeDetail } from "./testSets";
+import { adaptiveDetail, challengeDetail } from "./testSets";
 
 // Only the network call is replaced; the query hook and the panel are real.
 vi.mock("@/lib/api/client", () => ({ apiClient: { GET: vi.fn(), POST: vi.fn() } }));
@@ -18,11 +18,11 @@ function reply(status: number, body: unknown) {
   return { data: ok ? body : undefined, error: ok ? undefined : body, response: new Response(null, { status }) } as never;
 }
 
-function renderPanel(onClose = vi.fn()) {
+function renderPanel(onClose = vi.fn(), setId = challengeDetail.id) {
   const queryClient = new QueryClient({ defaultOptions: { queries: { retry: false }, mutations: { retry: false } } });
   render(
     <QueryClientProvider client={queryClient}>
-      <TestSetDetailPanel id="panel" setId={challengeDetail.id} onClose={onClose} />
+      <TestSetDetailPanel id="panel" setId={setId} onClose={onClose} />
     </QueryClientProvider>,
   );
   return { onClose };
@@ -88,6 +88,39 @@ describe("TestSetDetailPanel", () => {
     renderPanel();
 
     expect(await screen.findByRole("alert")).toHaveTextContent("This set is no longer available.");
+  });
+
+  it("shows an adaptive exam's length range and offers timed or untimed, timed first", async () => {
+    getMock.mockResolvedValue(reply(200, adaptiveDetail));
+
+    renderPanel(vi.fn(), adaptiveDetail.id);
+
+    expect(await screen.findByText("85–150 questions, stopping once your result is clear")).toBeInTheDocument();
+    const choice = screen.getByRole("group", { name: "How do you want to take it?" });
+    expect(choice).toBeInTheDocument();
+    expect(screen.getByRole("radio", { name: /^Timed \(5 h\)/ })).toBeChecked();
+    expect(screen.getByRole("radio", { name: /^Untimed/ })).not.toBeChecked();
+  });
+
+  it("starts an adaptive exam with the timing the candidate chose", async () => {
+    getMock.mockResolvedValue(reply(200, adaptiveDetail));
+    postMock.mockResolvedValue(reply(201, { id: "attempt-cat" }));
+    renderPanel(vi.fn(), adaptiveDetail.id);
+
+    await userEvent.click(await screen.findByRole("radio", { name: /^Untimed/ }));
+    await userEvent.click(screen.getByRole("button", { name: "Start" }));
+
+    expect(postMock).toHaveBeenCalledWith("/api/v1/attempts", { body: { testSetId: adaptiveDetail.id, timed: false } });
+    expect(push).toHaveBeenCalledWith("/attempts/attempt-cat");
+  });
+
+  it("offers no timing choice for a fixed-length set", async () => {
+    getMock.mockResolvedValue(reply(200, challengeDetail));
+
+    renderPanel();
+
+    await screen.findByRole("heading", { name: "Comprehensive Challenge 1" });
+    expect(screen.queryByRole("group", { name: "How do you want to take it?" })).not.toBeInTheDocument();
   });
 
   it("closes from its Close button", async () => {

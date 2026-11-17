@@ -53,6 +53,7 @@ function attemptState(overrides: Partial<AttemptState> = {}, timer: Partial<Time
     lastActivityAt: serverNow,
     staleDraft: false,
     resultAvailable: false,
+    adaptive: null,
     ...overrides,
   };
 }

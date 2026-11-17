@@ -60,7 +60,8 @@ describe("PracticeCatalog", () => {
     const exams = screen.getByRole("list", { name: "Mock exams: timed" });
     expect(within(exams).getAllByRole("heading").map((h) => h.textContent)).toEqual(["Comprehensive Challenge 1"]);
     expect(getMock).toHaveBeenCalledWith("/api/v1/test-sets", {
-      params: { query: { kind: "prebuilt", limit: 50, cursor: undefined } },
+      // No kind: prebuilt sets and adaptive exams come together (F19).
+      params: { query: { limit: 50, cursor: undefined } },
     });
   });
 
