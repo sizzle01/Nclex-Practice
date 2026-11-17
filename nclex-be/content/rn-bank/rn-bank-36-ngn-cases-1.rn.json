@@ -1,0 +1,1153 @@
+{
+  "notice": "RN bank batch 36: NGN case studies I: DKA and acute ischemic stroke. DRAFT - every question must be reviewed by an RN or nurse educator before candidates rely on it.",
+  "track": "RN",
+  "subtopics": [
+    {
+      "clientNeeds": "PHI.PA",
+      "slug": "diabetic-ketoacidosis",
+      "name": "Diabetic ketoacidosis"
+    },
+    {
+      "clientNeeds": "PHI.PA",
+      "slug": "stroke-care",
+      "name": "Stroke care"
+    }
+  ],
+  "questions": [
+    {
+      "id": "c1a00036-0000-4000-8000-000000000001",
+      "itemType": "highlight_table",
+      "clientNeeds": "PHI.PA",
+      "bodySystem": "endocrine",
+      "subtopics": [
+        "diabetic-ketoacidosis"
+      ],
+      "cjmmSkill": "recognize_cues",
+      "difficulty": "moderate",
+      "stem": "Review the 0800 findings. Highlight the findings that require immediate follow-up.",
+      "content": {
+        "columns": [
+          "Finding",
+          "0800 result"
+        ],
+        "rows": [
+          {
+            "id": "r1",
+            "cells": [
+              "Glucose",
+              "548 mg/dL"
+            ],
+            "selectable": true
+          },
+          {
+            "id": "r2",
+            "cells": [
+              "Arterial pH",
+              "7.12"
+            ],
+            "selectable": true
+          },
+          {
+            "id": "r3",
+            "cells": [
+              "Bicarbonate",
+              "9 mEq/L"
+            ],
+            "selectable": true
+          },
+          {
+            "id": "r4",
+            "cells": [
+              "Respiratory rate",
+              "32/min, deep"
+            ],
+            "selectable": true
+          },
+          {
+            "id": "r5",
+            "cells": [
+              "SpO2",
+              "98%"
+            ],
+            "selectable": true
+          },
+          {
+            "id": "r6",
+            "cells": [
+              "Temperature",
+              "37.4 °C"
+            ],
+            "selectable": true
+          }
+        ]
+      },
+      "key": {
+        "correct": [
+          "r1",
+          "r2",
+          "r3",
+          "r4"
+        ]
+      },
+      "rationale": {
+        "correct": "Hyperglycemia, acidosis and Kussmaul breathing are the key cues.",
+        "perOption": {
+          "r1": "Severe hyperglycemia from insulin deficiency.",
+          "r2": "Significant acidosis.",
+          "r3": "Bicarbonate is consumed buffering ketoacids.",
+          "r4": "Kussmaul respirations compensate for acidosis.",
+          "r5": "Oxygenation is adequate.",
+          "r6": "There's no significant fever."
+        },
+        "references": [
+          "Medical-surgical nursing texts (e.g. Lewis; Ignatavicius)",
+          "DRAFT: original question written with AI assistance; an RN or nurse educator must check it before candidates rely on it."
+        ]
+      },
+      "educationalObjective": "Recognize key cues in DKA.",
+      "caseStudyId": "c1c00036-0000-4000-8000-000000000001",
+      "casePosition": 1
+    },
+    {
+      "id": "c1a00036-0000-4000-8000-000000000002",
+      "itemType": "dropdown_cloze",
+      "clientNeeds": "PHI.PA",
+      "bodySystem": "endocrine",
+      "subtopics": [
+        "diabetic-ketoacidosis"
+      ],
+      "cjmmSkill": "analyze_cues",
+      "difficulty": "moderate",
+      "stem": "Complete the sentence.",
+      "content": {
+        "template": "The client's findings are most consistent with {{b1}}, most likely caused by {{b2}}.",
+        "blanks": [
+          {
+            "id": "b1",
+            "options": [
+              {
+                "id": "a",
+                "text": "diabetic ketoacidosis"
+              },
+              {
+                "id": "b",
+                "text": "hyperosmolar hyperglycemic state"
+              },
+              {
+                "id": "c",
+                "text": "lactic acidosis from sepsis"
+              }
+            ]
+          },
+          {
+            "id": "b2",
+            "options": [
+              {
+                "id": "a",
+                "text": "stopping insulin while ill"
+              },
+              {
+                "id": "b",
+                "text": "eating too much carbohydrate"
+              },
+              {
+                "id": "c",
+                "text": "an insulin overdose"
+              }
+            ]
+          }
+        ]
+      },
+      "key": {
+        "byBlank": {
+          "b1": "a",
+          "b2": "a"
+        }
+      },
+      "rationale": {
+        "correct": "Insulin deficiency drives fat breakdown and ketoacid production.",
+        "perOption": {
+          "b1:a": "High glucose, low pH and bicarbonate, a wide anion gap and ketones indicate DKA.",
+          "b1:b": "HHS has little ketosis and a near-normal pH.",
+          "b1:c": "There's no sign of infection, and ketones are large.",
+          "b2:a": "Insulin omission is a common trigger of DKA.",
+          "b2:b": "The client has been vomiting and not eating.",
+          "b2:c": "This would cause hypoglycemia."
+        },
+        "references": [
+          "Medical-surgical nursing texts (e.g. Lewis; Ignatavicius)",
+          "DRAFT: original question written with AI assistance; an RN or nurse educator must check it before candidates rely on it."
+        ]
+      },
+      "educationalObjective": "Analyze the cause of DKA.",
+      "caseStudyId": "c1c00036-0000-4000-8000-000000000001",
+      "casePosition": 2
+    },
+    {
+      "id": "c1a00036-0000-4000-8000-000000000003",
+      "itemType": "multiple_choice",
+      "clientNeeds": "PHI.PA",
+      "bodySystem": "endocrine",
+      "subtopics": [
+        "diabetic-ketoacidosis"
+      ],
+      "cjmmSkill": "prioritize_hypotheses",
+      "difficulty": "difficult",
+      "stem": "An IV insulin infusion is about to start. Which complication is the client at highest risk for during treatment?",
+      "content": {
+        "options": [
+          {
+            "id": "a",
+            "text": "Hypokalemia"
+          },
+          {
+            "id": "b",
+            "text": "Hypernatremia"
+          },
+          {
+            "id": "c",
+            "text": "Hypercalcemia"
+          },
+          {
+            "id": "d",
+            "text": "Fluid overload"
+          }
+        ]
+      },
+      "key": {
+        "correct": "a"
+      },
+      "rationale": {
+        "correct": "Monitor potassium closely and replace it before and during insulin therapy.",
+        "perOption": {
+          "a": "Insulin moves potassium into cells; total body potassium is already low despite a normal-looking level.",
+          "b": "This isn't the main risk.",
+          "c": "This isn't related.",
+          "d": "The client is dehydrated, although fluids are monitored."
+        },
+        "references": [
+          "Medical-surgical nursing texts (e.g. Lewis; Ignatavicius)",
+          "DRAFT: original question written with AI assistance; an RN or nurse educator must check it before candidates rely on it."
+        ]
+      },
+      "educationalObjective": "Anticipate hypokalemia during DKA treatment.",
+      "caseStudyId": "c1c00036-0000-4000-8000-000000000001",
+      "casePosition": 3
+    },
+    {
+      "id": "c1a00036-0000-4000-8000-000000000004",
+      "itemType": "matrix_mc",
+      "clientNeeds": "PHI.PA",
+      "bodySystem": "endocrine",
+      "subtopics": [
+        "diabetic-ketoacidosis"
+      ],
+      "cjmmSkill": "generate_solutions",
+      "difficulty": "moderate",
+      "stem": "For each intervention, indicate whether it is indicated or not indicated for this client now.",
+      "content": {
+        "rows": [
+          {
+            "id": "r1",
+            "text": "IV 0.9% sodium chloride bolus"
+          },
+          {
+            "id": "r2",
+            "text": "Continuous IV regular insulin infusion once the potassium is known to be 3.3 mEq/L or higher"
+          },
+          {
+            "id": "r3",
+            "text": "Hourly glucose checks"
+          },
+          {
+            "id": "r4",
+            "text": "Sodium bicarbonate infusion"
+          },
+          {
+            "id": "r5",
+            "text": "Subcutaneous insulin glargine as the only insulin"
+          },
+          {
+            "id": "r6",
+            "text": "Continuous cardiac monitoring"
+          }
+        ],
+        "columns": [
+          {
+            "id": "c1",
+            "text": "Indicated"
+          },
+          {
+            "id": "c2",
+            "text": "Not indicated"
+          }
+        ]
+      },
+      "key": {
+        "byRow": {
+          "r1": "c1",
+          "r2": "c1",
+          "r3": "c1",
+          "r4": "c2",
+          "r5": "c2",
+          "r6": "c1"
+        }
+      },
+      "rationale": {
+        "correct": "DKA bundle: fluids, potassium, IV insulin and close monitoring.",
+        "perOption": {
+          "r1:c1": "Restoring volume is the first priority.",
+          "r1:c2": "Fluids are essential.",
+          "r2:c1": "IV insulin stops ketone production.",
+          "r2:c2": "Insulin is essential.",
+          "r3:c1": "Frequent checks guide the insulin infusion.",
+          "r3:c2": "Monitoring is essential.",
+          "r4:c1": "Bicarbonate is reserved for very severe acidosis (pH below about 6.9).",
+          "r4:c2": "With a pH of 7.12, bicarbonate isn't routinely indicated.",
+          "r5:c1": "Basal insulin alone can't treat acute DKA.",
+          "r5:c2": "IV insulin is needed now.",
+          "r6:c1": "Potassium shifts can cause dysrhythmias.",
+          "r6:c2": "Monitoring is indicated."
+        },
+        "references": [
+          "Medical-surgical nursing texts (e.g. Lewis; Ignatavicius)",
+          "DRAFT: original question written with AI assistance; an RN or nurse educator must check it before candidates rely on it."
+        ]
+      },
+      "educationalObjective": "Select interventions for DKA.",
+      "caseStudyId": "c1c00036-0000-4000-8000-000000000001",
+      "casePosition": 4
+    },
+    {
+      "id": "c1a00036-0000-4000-8000-000000000005",
+      "itemType": "ordered_response",
+      "clientNeeds": "PHI.PA",
+      "bodySystem": "endocrine",
+      "subtopics": [
+        "diabetic-ketoacidosis"
+      ],
+      "cjmmSkill": "take_action",
+      "difficulty": "difficult",
+      "stem": "Place the steps of the client's DKA treatment in the order they should occur.",
+      "content": {
+        "items": [
+          {
+            "id": "e",
+            "text": "Give subcutaneous basal insulin 1 to 2 hours before stopping the infusion, once the anion gap closes"
+          },
+          {
+            "id": "b",
+            "text": "Confirm the potassium level and replace it if needed"
+          },
+          {
+            "id": "d",
+            "text": "Add dextrose to the IV fluids when the glucose falls to about 200 to 250 mg/dL"
+          },
+          {
+            "id": "a",
+            "text": "Start the IV 0.9% sodium chloride bolus"
+          },
+          {
+            "id": "c",
+            "text": "Start the IV regular insulin infusion"
+          }
+        ]
+      },
+      "key": {
+        "order": [
+          "a",
+          "b",
+          "c",
+          "d",
+          "e"
+        ],
+        "scoring": "all_or_nothing"
+      },
+      "rationale": {
+        "correct": "Fluids, potassium, insulin, dextrose, then overlap to subcutaneous insulin.",
+        "perOption": {
+          "a": "Volume comes first.",
+          "b": "Potassium must be 3.3 mEq/L or higher before insulin.",
+          "c": "Insulin stops ketogenesis.",
+          "d": "This prevents hypoglycemia while the acidosis clears.",
+          "e": "Overlapping prevents rebound DKA."
+        },
+        "references": [
+          "Medical-surgical nursing texts (e.g. Lewis; Ignatavicius)",
+          "DRAFT: original question written with AI assistance; an RN or nurse educator must check it before candidates rely on it."
+        ]
+      },
+      "educationalObjective": "Sequence DKA treatment.",
+      "caseStudyId": "c1c00036-0000-4000-8000-000000000001",
+      "casePosition": 5
+    },
+    {
+      "id": "c1a00036-0000-4000-8000-000000000006",
+      "itemType": "matrix_mc",
+      "clientNeeds": "PHI.PA",
+      "bodySystem": "endocrine",
+      "subtopics": [
+        "diabetic-ketoacidosis"
+      ],
+      "cjmmSkill": "evaluate_outcomes",
+      "difficulty": "difficult",
+      "stem": "Review the 1200 findings. For each, indicate whether it shows improvement or needs immediate follow-up.",
+      "content": {
+        "rows": [
+          {
+            "id": "r1",
+            "text": "Glucose 240 mg/dL"
+          },
+          {
+            "id": "r2",
+            "text": "Arterial pH 7.26"
+          },
+          {
+            "id": "r3",
+            "text": "Heart rate 104/min"
+          },
+          {
+            "id": "r4",
+            "text": "Harder to rouse, with a new headache"
+          }
+        ],
+        "columns": [
+          {
+            "id": "c1",
+            "text": "Improvement"
+          },
+          {
+            "id": "c2",
+            "text": "Needs immediate follow-up"
+          }
+        ]
+      },
+      "key": {
+        "byRow": {
+          "r1": "c1",
+          "r2": "c1",
+          "r3": "c1",
+          "r4": "c2"
+        }
+      },
+      "rationale": {
+        "correct": "Evaluate the trends, and recognize worsening neurologic status as an emergency.",
+        "perOption": {
+          "r1:c1": "The glucose is falling steadily.",
+          "r1:c2": "This is an expected response.",
+          "r2:c1": "The acidosis is improving.",
+          "r2:c2": "This is an expected response.",
+          "r3:c1": "The tachycardia is improving with fluids.",
+          "r3:c2": "This is improving.",
+          "r4:c1": "Worsening mental status isn't improvement.",
+          "r4:c2": "This may signal cerebral edema, a dangerous complication; notify the provider right away."
+        },
+        "references": [
+          "Medical-surgical nursing texts (e.g. Lewis; Ignatavicius)",
+          "DRAFT: original question written with AI assistance; an RN or nurse educator must check it before candidates rely on it."
+        ]
+      },
+      "educationalObjective": "Evaluate the response to DKA treatment.",
+      "caseStudyId": "c1c00036-0000-4000-8000-000000000001",
+      "casePosition": 6
+    },
+    {
+      "id": "c1a00036-0000-4000-8000-000000000007",
+      "itemType": "highlight_text",
+      "clientNeeds": "PHI.PA",
+      "bodySystem": "neurological",
+      "subtopics": [
+        "stroke-care"
+      ],
+      "cjmmSkill": "recognize_cues",
+      "difficulty": "easy",
+      "stem": "Highlight the findings in the emergency department note that are consistent with an acute stroke.",
+      "content": {
+        "segments": [
+          {
+            "id": "s1",
+            "text": "The client has ",
+            "selectable": false
+          },
+          {
+            "id": "s2",
+            "text": "right facial droop",
+            "selectable": true
+          },
+          {
+            "id": "s3",
+            "text": ", ",
+            "selectable": false
+          },
+          {
+            "id": "s4",
+            "text": "right arm drift",
+            "selectable": true
+          },
+          {
+            "id": "s5",
+            "text": " and ",
+            "selectable": false
+          },
+          {
+            "id": "s6",
+            "text": "can't form words despite understanding",
+            "selectable": true
+          },
+          {
+            "id": "s7",
+            "text": ". The blood glucose is ",
+            "selectable": false
+          },
+          {
+            "id": "s8",
+            "text": "132 mg/dL",
+            "selectable": true
+          },
+          {
+            "id": "s9",
+            "text": ", and the client has ",
+            "selectable": false
+          },
+          {
+            "id": "s10",
+            "text": "a history of atrial fibrillation",
+            "selectable": true
+          },
+          {
+            "id": "s11",
+            "text": ".",
+            "selectable": false
+          }
+        ]
+      },
+      "key": {
+        "correct": [
+          "s2",
+          "s4",
+          "s6"
+        ]
+      },
+      "rationale": {
+        "correct": "Sudden one-sided weakness, facial droop and speech problems are hallmark stroke signs.",
+        "perOption": {
+          "s2": "Facial asymmetry is a stroke sign.",
+          "s4": "Weakness on one side is a stroke sign.",
+          "s6": "Expressive aphasia suggests a left hemisphere stroke.",
+          "s8": "This rules out hypoglycemia as a mimic; it isn't a stroke sign.",
+          "s10": "This is a risk factor, not a current sign."
+        },
+        "references": [
+          "American Heart Association Guidelines for CPR and Emergency Cardiovascular Care",
+          "DRAFT: original question written with AI assistance; an RN or nurse educator must check it before candidates rely on it."
+        ]
+      },
+      "educationalObjective": "Recognize acute stroke findings.",
+      "caseStudyId": "c1c00036-0000-4000-8000-000000000002",
+      "casePosition": 1
+    },
+    {
+      "id": "c1a00036-0000-4000-8000-000000000008",
+      "itemType": "matrix_mc",
+      "clientNeeds": "PHI.PA",
+      "bodySystem": "neurological",
+      "subtopics": [
+        "stroke-care"
+      ],
+      "cjmmSkill": "analyze_cues",
+      "difficulty": "difficult",
+      "stem": "For each finding, indicate whether it supports giving alteplase now or must be addressed before alteplase.",
+      "content": {
+        "rows": [
+          {
+            "id": "r1",
+            "text": "Last known well at 0845"
+          },
+          {
+            "id": "r2",
+            "text": "CT shows no hemorrhage"
+          },
+          {
+            "id": "r3",
+            "text": "Blood pressure 192/108 mm Hg"
+          },
+          {
+            "id": "r4",
+            "text": "Platelets 210,000/mm3"
+          },
+          {
+            "id": "r5",
+            "text": "INR 1.0"
+          }
+        ],
+        "columns": [
+          {
+            "id": "c1",
+            "text": "Supports giving alteplase"
+          },
+          {
+            "id": "c2",
+            "text": "Must be addressed first"
+          }
+        ]
+      },
+      "key": {
+        "byRow": {
+          "r1": "c1",
+          "r2": "c1",
+          "r3": "c2",
+          "r4": "c1",
+          "r5": "c1"
+        }
+      },
+      "rationale": {
+        "correct": "Eligibility: time window, no hemorrhage, BP below 185/110, adequate platelets and coagulation.",
+        "perOption": {
+          "r1:c1": "The client is within the 3 to 4.5 hour window.",
+          "r1:c2": "Timing is acceptable.",
+          "r2:c1": "Hemorrhage has been excluded.",
+          "r2:c2": "This is required and met.",
+          "r3:c1": "This is above the limit.",
+          "r3:c2": "BP must be below 185/110 before alteplase.",
+          "r4:c1": "The platelets are adequate.",
+          "r4:c2": "This isn't a barrier.",
+          "r5:c1": "Coagulation is normal.",
+          "r5:c2": "This isn't a barrier."
+        },
+        "references": [
+          "American Heart Association Guidelines for CPR and Emergency Cardiovascular Care",
+          "DRAFT: original question written with AI assistance; an RN or nurse educator must check it before candidates rely on it."
+        ]
+      },
+      "educationalObjective": "Analyze eligibility for thrombolysis.",
+      "caseStudyId": "c1c00036-0000-4000-8000-000000000002",
+      "casePosition": 2
+    },
+    {
+      "id": "c1a00036-0000-4000-8000-000000000009",
+      "itemType": "dropdown_cloze",
+      "clientNeeds": "PHI.PA",
+      "bodySystem": "neurological",
+      "subtopics": [
+        "stroke-care"
+      ],
+      "cjmmSkill": "prioritize_hypotheses",
+      "difficulty": "moderate",
+      "stem": "Complete the sentence.",
+      "content": {
+        "template": "The nurse's priority before alteplase is to lower the {{b1}} to below {{b2}}.",
+        "blanks": [
+          {
+            "id": "b1",
+            "options": [
+              {
+                "id": "a",
+                "text": "blood pressure"
+              },
+              {
+                "id": "b",
+                "text": "blood glucose"
+              },
+              {
+                "id": "c",
+                "text": "heart rate"
+              }
+            ]
+          },
+          {
+            "id": "b2",
+            "options": [
+              {
+                "id": "a",
+                "text": "185/110 mm Hg"
+              },
+              {
+                "id": "b",
+                "text": "120/80 mm Hg"
+              },
+              {
+                "id": "c",
+                "text": "140/90 mm Hg"
+              }
+            ]
+          }
+        ]
+      },
+      "key": {
+        "byBlank": {
+          "b1": "a",
+          "b2": "a"
+        }
+      },
+      "rationale": {
+        "correct": "Treat BP to below 185/110 before alteplase and keep it below 180/105 afterward.",
+        "perOption": {
+          "b1:a": "High BP raises the risk of hemorrhage with thrombolysis.",
+          "b1:b": "The glucose is acceptable.",
+          "b1:c": "The heart rate isn't the barrier.",
+          "b2:a": "This is the threshold before alteplase.",
+          "b2:b": "Too aggressive lowering can extend the stroke.",
+          "b2:c": "This isn't the required threshold."
+        },
+        "references": [
+          "American Heart Association Guidelines for CPR and Emergency Cardiovascular Care",
+          "DRAFT: original question written with AI assistance; an RN or nurse educator must check it before candidates rely on it."
+        ]
+      },
+      "educationalObjective": "Prioritize blood pressure before thrombolysis.",
+      "caseStudyId": "c1c00036-0000-4000-8000-000000000002",
+      "casePosition": 3
+    },
+    {
+      "id": "c1a00036-0000-4000-8000-000000000010",
+      "itemType": "sata",
+      "clientNeeds": "PHI.PA",
+      "bodySystem": "neurological",
+      "subtopics": [
+        "stroke-care"
+      ],
+      "cjmmSkill": "generate_solutions",
+      "difficulty": "moderate",
+      "stem": "The client receives alteplase. Which interventions should the nurse include for the next 24 hours? Select all that apply.",
+      "content": {
+        "options": [
+          {
+            "id": "a",
+            "text": "Frequent neurological and vital sign checks per protocol"
+          },
+          {
+            "id": "b",
+            "text": "Keep blood pressure below 180/105 mm Hg"
+          },
+          {
+            "id": "c",
+            "text": "Avoid IM injections and other invasive procedures"
+          },
+          {
+            "id": "d",
+            "text": "Keep the client NPO until a swallow screen is passed"
+          },
+          {
+            "id": "e",
+            "text": "Give aspirin right away"
+          },
+          {
+            "id": "f",
+            "text": "Insert a nasogastric tube right away"
+          }
+        ]
+      },
+      "key": {
+        "correct": [
+          "a",
+          "b",
+          "c",
+          "d"
+        ]
+      },
+      "rationale": {
+        "correct": "Post-thrombolysis care: monitoring, BP control, bleeding precautions, swallow screening.",
+        "perOption": {
+          "a": "Early detection of bleeding or worsening stroke.",
+          "b": "This reduces the risk of hemorrhage.",
+          "c": "This reduces the risk of bleeding.",
+          "d": "This prevents aspiration.",
+          "e": "Antiplatelets are usually held for 24 hours after alteplase.",
+          "f": "Invasive tubes are delayed if possible."
+        },
+        "references": [
+          "American Heart Association Guidelines for CPR and Emergency Cardiovascular Care",
+          "Medical-surgical nursing texts (e.g. Lewis; Ignatavicius)",
+          "DRAFT: original question written with AI assistance; an RN or nurse educator must check it before candidates rely on it."
+        ]
+      },
+      "educationalObjective": "Plan care after alteplase.",
+      "caseStudyId": "c1c00036-0000-4000-8000-000000000002",
+      "casePosition": 4
+    },
+    {
+      "id": "c1a00036-0000-4000-8000-000000000011",
+      "itemType": "multiple_choice",
+      "clientNeeds": "PHI.PA",
+      "bodySystem": "neurological",
+      "subtopics": [
+        "stroke-care"
+      ],
+      "cjmmSkill": "take_action",
+      "difficulty": "difficult",
+      "stem": "During the alteplase infusion, the client suddenly has a severe headache and vomits. What should the nurse do first?",
+      "content": {
+        "options": [
+          {
+            "id": "a",
+            "text": "Stop the alteplase infusion and notify the provider"
+          },
+          {
+            "id": "b",
+            "text": "Give an antiemetic and continue"
+          },
+          {
+            "id": "c",
+            "text": "Increase the infusion to finish faster"
+          },
+          {
+            "id": "d",
+            "text": "Recheck in 30 minutes"
+          }
+        ]
+      },
+      "key": {
+        "correct": "a"
+      },
+      "rationale": {
+        "correct": "A neurologic decline, headache or vomiting during thrombolysis means: stop the infusion, notify the provider and get a CT.",
+        "perOption": {
+          "a": "These signs suggest bleeding in the brain; a stat CT is needed.",
+          "b": "This ignores a possible hemorrhage.",
+          "c": "This worsens bleeding.",
+          "d": "This needs immediate action."
+        },
+        "references": [
+          "American Heart Association Guidelines for CPR and Emergency Cardiovascular Care",
+          "DRAFT: original question written with AI assistance; an RN or nurse educator must check it before candidates rely on it."
+        ]
+      },
+      "educationalObjective": "Respond to suspected hemorrhage during thrombolysis.",
+      "caseStudyId": "c1c00036-0000-4000-8000-000000000002",
+      "casePosition": 5
+    },
+    {
+      "id": "c1a00036-0000-4000-8000-000000000012",
+      "itemType": "matrix_mc",
+      "clientNeeds": "PHI.PA",
+      "bodySystem": "neurological",
+      "subtopics": [
+        "stroke-care"
+      ],
+      "cjmmSkill": "evaluate_outcomes",
+      "difficulty": "moderate",
+      "stem": "On day 2, the nurse reviews new findings. For each, indicate whether it shows an expected or improving response or needs follow-up.",
+      "content": {
+        "rows": [
+          {
+            "id": "r1",
+            "text": "Speech is more fluent"
+          },
+          {
+            "id": "r2",
+            "text": "Right arm drift has decreased"
+          },
+          {
+            "id": "r3",
+            "text": "Blood pressure 168/94 mm Hg"
+          },
+          {
+            "id": "r4",
+            "text": "Black, tarry stool"
+          }
+        ],
+        "columns": [
+          {
+            "id": "c1",
+            "text": "Expected or improving"
+          },
+          {
+            "id": "c2",
+            "text": "Needs follow-up"
+          }
+        ]
+      },
+      "key": {
+        "byRow": {
+          "r1": "c1",
+          "r2": "c1",
+          "r3": "c1",
+          "r4": "c2"
+        }
+      },
+      "rationale": {
+        "correct": "Evaluate neurological recovery and watch for bleeding complications.",
+        "perOption": {
+          "r1:c1": "Improving speech shows recovering function.",
+          "r1:c2": "This is improving.",
+          "r2:c1": "Strength is improving.",
+          "r2:c2": "This is improving.",
+          "r3:c1": "This is within the target (below 180/105).",
+          "r3:c2": "This meets the target.",
+          "r4:c1": "This isn't expected.",
+          "r4:c2": "Black stool suggests GI bleeding after thrombolysis."
+        },
+        "references": [
+          "American Heart Association Guidelines for CPR and Emergency Cardiovascular Care",
+          "DRAFT: original question written with AI assistance; an RN or nurse educator must check it before candidates rely on it."
+        ]
+      },
+      "educationalObjective": "Evaluate outcomes after stroke treatment.",
+      "caseStudyId": "c1c00036-0000-4000-8000-000000000002",
+      "casePosition": 6
+    }
+  ],
+  "caseStudies": [
+    {
+      "id": "c1c00036-0000-4000-8000-000000000001",
+      "title": "Diabetic ketoacidosis",
+      "scenario": {
+        "tabs": [
+          {
+            "id": "notes",
+            "title": "Nurses' notes",
+            "exhibits": [
+              {
+                "id": "note-0800",
+                "kind": "text",
+                "title": "Emergency department, 0800",
+                "body": "A 19-year-old with type 1 diabetes has had vomiting and abdominal pain for 24 hours. The client stopped taking insulin yesterday \"because I wasn't eating.\" Breathing is deep and rapid, with a fruity odor. Mucous membranes are dry. The client is drowsy but oriented."
+              },
+              {
+                "id": "note-1200",
+                "kind": "text",
+                "title": "1200",
+                "body": "The client is harder to rouse than at 0800 and reports a new headache."
+              }
+            ]
+          },
+          {
+            "id": "vitals",
+            "title": "Vital signs",
+            "exhibits": [
+              {
+                "id": "vitals-flow",
+                "kind": "flowsheet",
+                "title": "Vital signs",
+                "table": {
+                  "columns": [
+                    "0800",
+                    "1000",
+                    "1200"
+                  ],
+                  "rows": [
+                    {
+                      "label": "Heart rate (/min)",
+                      "cells": [
+                        "128",
+                        "118",
+                        "104"
+                      ]
+                    },
+                    {
+                      "label": "Respiratory rate (/min)",
+                      "cells": [
+                        "32",
+                        "28",
+                        "22"
+                      ]
+                    },
+                    {
+                      "label": "Blood pressure (mm Hg)",
+                      "cells": [
+                        "96/58",
+                        "104/62",
+                        "112/70"
+                      ]
+                    },
+                    {
+                      "label": "Temperature (°C)",
+                      "cells": [
+                        "37.4",
+                        "37.3",
+                        "37.1"
+                      ]
+                    },
+                    {
+                      "label": "SpO2 (%)",
+                      "cells": [
+                        "98",
+                        "98",
+                        "99"
+                      ]
+                    }
+                  ]
+                }
+              }
+            ]
+          },
+          {
+            "id": "labs",
+            "title": "Laboratory results",
+            "exhibits": [
+              {
+                "id": "labs-table",
+                "kind": "table",
+                "title": "Laboratory results",
+                "table": {
+                  "columns": [
+                    "0800",
+                    "1200"
+                  ],
+                  "rows": [
+                    {
+                      "label": "Glucose (mg/dL)",
+                      "cells": [
+                        "548",
+                        "240"
+                      ]
+                    },
+                    {
+                      "label": "Arterial pH",
+                      "cells": [
+                        "7.12",
+                        "7.26"
+                      ]
+                    },
+                    {
+                      "label": "Bicarbonate (mEq/L)",
+                      "cells": [
+                        "9",
+                        "15"
+                      ]
+                    },
+                    {
+                      "label": "Potassium (mEq/L)",
+                      "cells": [
+                        "5.4",
+                        "3.6"
+                      ]
+                    },
+                    {
+                      "label": "Anion gap",
+                      "cells": [
+                        "26",
+                        "16"
+                      ]
+                    },
+                    {
+                      "label": "Serum ketones",
+                      "cells": [
+                        "Large",
+                        "Moderate"
+                      ]
+                    }
+                  ]
+                }
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "c1c00036-0000-4000-8000-000000000002",
+      "title": "Acute ischemic stroke",
+      "scenario": {
+        "tabs": [
+          {
+            "id": "ed-notes",
+            "title": "Emergency department notes",
+            "exhibits": [
+              {
+                "id": "note-0950",
+                "kind": "text",
+                "title": "Emergency department, 0950",
+                "body": "A 68-year-old with atrial fibrillation who doesn't take an anticoagulant was found by the spouse at 0930 with right arm weakness and garbled speech. Last known well: 0845. Right facial droop and right arm drift. The client understands questions but can't form words. Non-contrast head CT: no hemorrhage."
+              }
+            ]
+          },
+          {
+            "id": "stroke-vitals",
+            "title": "Vital signs",
+            "exhibits": [
+              {
+                "id": "stroke-flow",
+                "kind": "flowsheet",
+                "title": "Vital signs",
+                "table": {
+                  "columns": [
+                    "0950",
+                    "1010",
+                    "1030"
+                  ],
+                  "rows": [
+                    {
+                      "label": "Blood pressure (mm Hg)",
+                      "cells": [
+                        "192/108",
+                        "178/100",
+                        "172/96"
+                      ]
+                    },
+                    {
+                      "label": "Heart rate (/min)",
+                      "cells": [
+                        "98 irregular",
+                        "96 irregular",
+                        "94 irregular"
+                      ]
+                    },
+                    {
+                      "label": "Respiratory rate (/min)",
+                      "cells": [
+                        "18",
+                        "18",
+                        "16"
+                      ]
+                    },
+                    {
+                      "label": "SpO2 (%)",
+                      "cells": [
+                        "96",
+                        "97",
+                        "97"
+                      ]
+                    }
+                  ]
+                }
+              }
+            ]
+          },
+          {
+            "id": "stroke-labs",
+            "title": "Laboratory results",
+            "exhibits": [
+              {
+                "id": "stroke-lab-table",
+                "kind": "table",
+                "title": "Laboratory results",
+                "table": {
+                  "columns": [
+                    "Result"
+                  ],
+                  "rows": [
+                    {
+                      "label": "Platelets",
+                      "cells": [
+                        "210,000/mm3"
+                      ]
+                    },
+                    {
+                      "label": "INR",
+                      "cells": [
+                        "1.0"
+                      ]
+                    },
+                    {
+                      "label": "Glucose",
+                      "cells": [
+                        "132 mg/dL"
+                      ]
+                    },
+                    {
+                      "label": "Creatinine",
+                      "cells": [
+                        "0.9 mg/dL"
+                      ]
+                    }
+                  ]
+                }
+              }
+            ]
+          }
+        ]
+      }
+    }
+  ]
+}
