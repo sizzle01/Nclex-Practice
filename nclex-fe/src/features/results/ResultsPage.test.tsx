@@ -9,6 +9,7 @@ import { ResultsPage } from "./ResultsPage";
 // Only the network call is replaced; the query and the page are real.
 vi.mock("@/lib/api/client", () => ({ apiClient: { GET: vi.fn() } }));
 const getMock = vi.mocked(apiClient.GET);
+vi.mock("next/navigation", () => ({ useRouter: () => ({ push: vi.fn() }) }));
 
 function reply(status: number, body: unknown) {
   const ok = status < 400;
@@ -49,8 +50,14 @@ const recommendations = {
 };
 
 /** Answers the results request with <resultReply> and the suggestions request with <studyReply>. */
+// The weak-areas card (F18) has its own tests; here it just needs an answer.
+const noWeakAreas = { track: "RN", areas: [], attemptsConsidered: 1, questionsAvailable: 0, questionCount: 0 };
+
 function replyWith(resultReply: unknown, studyReply: unknown = reply(200, recommendations)) {
-  getMock.mockImplementation(((path: string) => Promise.resolve(path.endsWith("/recommendations") ? studyReply : resultReply)) as never);
+  getMock.mockImplementation(((path: string) =>
+    Promise.resolve(
+      path.endsWith("/recommendations") ? studyReply : path.endsWith("/me/weak-areas") ? reply(200, noWeakAreas) : resultReply,
+    )) as never);
 }
 
 function renderPage() {
