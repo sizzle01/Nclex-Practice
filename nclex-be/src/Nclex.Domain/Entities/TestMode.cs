@@ -9,6 +9,6 @@ public enum TestMode
     /// <summary>Exam conditions, with a pass/fail estimate.</summary>
     Challenge,
 
-    /// <summary>Computerised adaptive testing (phase 2, architecture.md 5.8).</summary>
+    /// <summary>Computerised adaptive testing: items are picked one at a time from the answers so far (architecture.md 5.8).</summary>
     Cat,
 }

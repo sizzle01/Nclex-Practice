@@ -92,6 +92,19 @@ public sealed class AttemptItem
             State = ItemState.Unseen,
         })];
 
+    /// <summary>One item at <paramref name="position"/>: an adaptive exam adds its items one at a time (architecture.md 5.8).</summary>
+    public static AttemptItem ForVersion(Guid attemptId, int position, Guid questionVersionId)
+    {
+        ArgumentOutOfRangeException.ThrowIfNegativeOrZero(position);
+        return new AttemptItem
+        {
+            AttemptId = attemptId,
+            Position = position,
+            QuestionVersionId = questionVersionId,
+            State = ItemState.Unseen,
+        };
+    }
+
     /// <summary>
     /// Autosave. A null response clears the answer. The caller has already checked the response
     /// against the item type, and holds the attempt's row lock.

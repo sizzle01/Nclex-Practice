@@ -39,4 +39,10 @@ public sealed record AttemptSettings(
         set.PassThreshold,
         set.PausePolicy,
         set.AllowBackNav);
+
+    /// <summary>
+    /// The same settings with no timers: an adaptive exam taken untimed, which the candidate chooses
+    /// when starting it (F19).
+    /// </summary>
+    public AttemptSettings WithoutTimers() => this with { Timed = false, PerQuestionSec = null, TimeBudgetSec = null };
 }

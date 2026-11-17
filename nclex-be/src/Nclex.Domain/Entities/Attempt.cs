@@ -69,8 +69,14 @@ public sealed class Attempt
 
     public DateTimeOffset? LeaseAcquiredAt { get; private set; }
 
-    /// <summary>Adaptive-testing state (phase 2).</summary>
+    /// <summary>
+    /// Adaptive-testing state (<see cref="Cat.CatState"/>, architecture.md 5.8); null for every
+    /// other kind of attempt.
+    /// </summary>
     public JsonDocument? CatState { get; private set; }
+
+    /// <summary>True for an adaptive exam, whose items are added one at a time.</summary>
+    public bool IsAdaptive => Settings.Mode == TestMode.Cat;
 
     public DateTimeOffset StartedAt { get; private set; }
 
@@ -119,6 +125,104 @@ public sealed class Attempt
             LastActivityAt = now,
         };
         return (attempt, AttemptItem.ForVersions(attempt.Id, questionVersionIds));
+    }
+
+    /// <summary>
+    /// Starts an adaptive exam of <paramref name="set"/> with its first question (architecture.md 5.8).
+    /// Later questions are added by <see cref="GiveNextAdaptiveItem"/>. With <paramref name="timed"/>
+    /// false the attempt runs without timers, whatever the set says: the candidate chose (F19).
+    /// </summary>
+    public static (Attempt Attempt, AttemptItem FirstItem) StartAdaptive(
+        Guid userId,
+        TestSet set,
+        bool timed,
+        Guid firstQuestionVersionId,
+        Cat.CatState catState,
+        DateTimeOffset now)
+    {
+        if (set.Mode != TestMode.Cat)
+        {
+            throw new ArgumentException("Only an adaptive set starts an adaptive attempt.", nameof(set));
+        }
+
+        var settings = AttemptSettings.From(set);
+        if (!timed)
+        {
+            settings = settings.WithoutTimers();
+        }
+        else if (settings.TimeBudgetSec is null)
+        {
+            throw new ArgumentException("A timed adaptive exam needs the set's time budget.", nameof(timed));
+        }
+
+        var attempt = new Attempt
+        {
+            Id = Guid.CreateVersion7(now),
+            UserId = userId,
+            TestSetId = set.Id,
+            Track = set.Track,
+            Status = AttemptStatus.InProgress,
+            Settings = settings,
+            TotalItems = 1,
+            CurrentPosition = 1,
+            ExamRemainingMs = settings.TimeBudgetSec * 1000L,
+            CatState = catState.ToJson(),
+            StartedAt = now,
+            LastActivityAt = now,
+        };
+        return (attempt, AttemptItem.ForVersion(attempt.Id, 1, firstQuestionVersionId));
+    }
+
+    /// <summary>The adaptive state; throws for an attempt that is not adaptive.</summary>
+    public Cat.CatState ReadCatState() => CatState is { } json
+        ? Cat.CatState.FromJson(json)
+        : throw new InvalidOperationException("This attempt is not adaptive.");
+
+    /// <summary>
+    /// Adaptive exam: the candidate confirmed the answer to the current item, which is final (there
+    /// is no going back on the NCLEX). The item is locked so it can be graded straight away.
+    /// </summary>
+    public void LockAdaptiveAnswer(AttemptItem current, DateTimeOffset now)
+    {
+        EnsureAdaptiveInProgress();
+        EnsureCurrent(current);
+        current.Leave(now);
+        current.StopTimer(now);
+        current.Lock(now);
+        LastActivityAt = now;
+    }
+
+    /// <summary>Stores the adaptive state after an answer, or when the exam stops.</summary>
+    public void UpdateCatState(Cat.CatState state)
+    {
+        if (!IsAdaptive)
+        {
+            throw new InvalidOperationException("This attempt is not adaptive.");
+        }
+
+        CatState = state.ToJson();
+    }
+
+    /// <summary>
+    /// Adaptive exam: adds <paramref name="questionVersionId"/> as the next item and moves to it.
+    /// The item being left must already be locked by <see cref="LockAdaptiveAnswer"/>.
+    /// </summary>
+    public AttemptItem GiveNextAdaptiveItem(AttemptItem current, Guid questionVersionId, Cat.CatState state, DateTimeOffset now)
+    {
+        EnsureAdaptiveInProgress();
+        EnsureCurrent(current);
+        if (!current.IsLocked)
+        {
+            throw new InvalidOperationException("The current item must be answered before the next one is given.");
+        }
+
+        var next = AttemptItem.ForVersion(Id, TotalItems + 1, questionVersionId);
+        TotalItems = next.Position;
+        CurrentPosition = next.Position;
+        next.Enter(now, PerQuestionMs);
+        UpdateCatState(state);
+        LastActivityAt = now;
+        return next;
     }
 
     /// <summary>True for a draft nobody has touched for longer than <see cref="StaleDraftAge"/>.</summary>
@@ -368,6 +472,14 @@ public sealed class Attempt
         if (!IsDraft)
         {
             throw new InvalidOperationException($"The attempt is {Status}, not a draft.");
+        }
+    }
+
+    private void EnsureAdaptiveInProgress()
+    {
+        if (!IsAdaptive || Status != AttemptStatus.InProgress)
+        {
+            throw new InvalidOperationException("Only an adaptive attempt in progress moves on one answer at a time.");
         }
     }
 

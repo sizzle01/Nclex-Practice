@@ -9,6 +9,6 @@ public enum SubmitReason
     /// <summary>The exam timer ran out (F09).</summary>
     TimeExpired,
 
-    /// <summary>The adaptive engine's stopping rule was met (phase 2).</summary>
+    /// <summary>The adaptive exam ended on its own: a clear result, the item maximum, or no questions left (F19).</summary>
     CatStop,
 }

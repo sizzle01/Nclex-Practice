@@ -60,10 +60,16 @@ public sealed class TestSet
     /// <summary>The custom builder's filters, kept for "retake similar" (F07).</summary>
     public JsonDocument? GeneratorCriteria { get; private set; }
 
-    /// <summary>Stopping rules for CAT sets (phase 2).</summary>
+    /// <summary>
+    /// Stopping rules of an adaptive set, <c>{minItems, maxItems, passingTheta}</c> (<see cref="Cat.CatConfig"/>);
+    /// null for every other kind.
+    /// </summary>
     public JsonDocument? CatConfig { get; private set; }
 
-    /// <summary>How many items the set has; kept in step with its <see cref="TestSetItem"/> rows.</summary>
+    /// <summary>
+    /// How many items the set has; kept in step with its <see cref="TestSetItem"/> rows. An adaptive
+    /// set has no rows: this is its maximum length.
+    /// </summary>
     public int QuestionCount { get; private set; }
 
     public DateTimeOffset CreatedAt { get; private set; }
@@ -122,6 +128,46 @@ public sealed class TestSet
         };
         set.Apply(settings, questionCount);
         return set;
+    }
+
+    /// <summary>
+    /// Creates a published adaptive exam (kind and mode <c>cat</c>, architecture.md 5.8). It has no
+    /// item rows: each attempt picks its questions from the whole track bank as it goes.
+    /// </summary>
+    public static TestSet CreateAdaptive(Guid id, ExamTrack track, TestSetSettings settings, Cat.CatConfig config, DateTimeOffset now)
+    {
+        var set = new TestSet
+        {
+            Id = id,
+            Track = track,
+            Kind = TestSetKind.Cat,
+            IsPublished = true,
+            CreatedAt = now,
+        };
+        set.ApplyAdaptive(settings, config);
+        return set;
+    }
+
+    /// <summary>The stopping rules of an adaptive set; throws for any other kind.</summary>
+    public Cat.CatConfig AdaptiveConfig() => Kind == TestSetKind.Cat && CatConfig is { } json
+        ? Cat.CatState.ConfigFromJson(json)
+        : throw new InvalidOperationException("This set is not adaptive.");
+
+    /// <summary>Replaces an adaptive set's settings and stopping rules, for example on re-import.</summary>
+    public void ApplyAdaptive(TestSetSettings settings, Cat.CatConfig config)
+    {
+        if (settings.Mode != TestMode.Cat)
+        {
+            throw new ArgumentException("An adaptive set runs in mode cat.", nameof(settings));
+        }
+
+        if (!config.IsValid)
+        {
+            throw new ArgumentException("The minimum must be at least 1 and no more than the maximum.", nameof(config));
+        }
+
+        Apply(settings, config.MaxItems);
+        CatConfig = Cat.CatState.ConfigToJson(config);
     }
 
     /// <summary>The settings as a candidate sees them.</summary>

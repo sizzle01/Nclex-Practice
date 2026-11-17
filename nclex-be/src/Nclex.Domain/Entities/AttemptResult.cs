@@ -43,11 +43,29 @@ public sealed class AttemptResult
 
     public ReadinessLabel? ReadinessLabel { get; private set; }
 
-    /// <summary>Adaptive-testing ability estimate (phase 2).</summary>
+    /// <summary>Final ability estimate of an adaptive exam, in logits; null for any other attempt.</summary>
     public decimal? CatTheta { get; private set; }
 
-    /// <summary>Standard error of <see cref="CatTheta"/> (phase 2).</summary>
+    /// <summary>Standard error of <see cref="CatTheta"/>.</summary>
     public decimal? CatSe { get; private set; }
+
+    /// <summary>
+    /// The result of an adaptive exam (architecture.md 5.8). Pass or fail comes from the ability
+    /// estimate, not the share of points, so there is no pass threshold.
+    /// </summary>
+    public static AttemptResult CreateAdaptive(
+        Guid attemptId,
+        ResultTotals totals,
+        Cat.AbilityEstimate estimate,
+        bool passed,
+        DateTimeOffset gradedAt)
+    {
+        var label = passed ? Entities.ReadinessLabel.LikelyReady : Entities.ReadinessLabel.NeedsMorePractice;
+        var result = Create(attemptId, totals, passThreshold: null, new Readiness(passed, label), gradedAt);
+        result.CatTheta = Math.Round((decimal)estimate.Theta, 3);
+        result.CatSe = Math.Round((decimal)estimate.StandardError, 3);
+        return result;
+    }
 
     public DateTimeOffset GradedAt { get; private set; }
 
