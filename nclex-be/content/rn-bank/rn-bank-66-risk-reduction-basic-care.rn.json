@@ -1,0 +1,1689 @@
+{
+  "notice": "RN bank batch 66: Reduction of Risk Potential II and Basic Care and Comfort II. DRAFT - every question must be reviewed by an RN or nurse educator before candidates rely on it.",
+  "track": "RN",
+  "subtopics": [
+    {
+      "clientNeeds": "PHI.RRP",
+      "slug": "laboratory-values-and-monitoring",
+      "name": "Laboratory values and monitoring"
+    },
+    {
+      "clientNeeds": "PHI.RRP",
+      "slug": "cardiovascular-diagnostics-and-monitoring",
+      "name": "Cardiovascular diagnostics and monitoring"
+    },
+    {
+      "clientNeeds": "PHI.RRP",
+      "slug": "renal-and-endocrine-diagnostics",
+      "name": "Renal and endocrine diagnostic tests"
+    },
+    {
+      "clientNeeds": "PHI.RRP",
+      "slug": "specimen-collection",
+      "name": "Specimen collection"
+    },
+    {
+      "clientNeeds": "PHI.RRP",
+      "slug": "post-procedure-complications",
+      "name": "Post-procedure complications"
+    },
+    {
+      "clientNeeds": "PHI.RRP",
+      "slug": "oxygen-therapy-and-devices",
+      "name": "Oxygen therapy and delivery devices"
+    },
+    {
+      "clientNeeds": "PHI.BCC",
+      "slug": "hygiene-and-personal-care",
+      "name": "Hygiene and personal care"
+    },
+    {
+      "clientNeeds": "PHI.BCC",
+      "slug": "nutrition-and-therapeutic-diets",
+      "name": "Nutrition and therapeutic diets"
+    },
+    {
+      "clientNeeds": "PHI.BCC",
+      "slug": "sleep-and-rest",
+      "name": "Sleep and rest"
+    },
+    {
+      "clientNeeds": "PHI.BCC",
+      "slug": "pain-assessment-and-comfort",
+      "name": "Pain assessment and comfort measures"
+    },
+    {
+      "clientNeeds": "PHI.BCC",
+      "slug": "urinary-elimination-and-catheter-care",
+      "name": "Urinary elimination and catheter care"
+    },
+    {
+      "clientNeeds": "PHI.BCC",
+      "slug": "mobility-and-assistive-devices",
+      "name": "Mobility and assistive devices"
+    },
+    {
+      "clientNeeds": "PHI.BCC",
+      "slug": "complementary-therapies",
+      "name": "Complementary and alternative therapies"
+    },
+    {
+      "clientNeeds": "PHI.BCC",
+      "slug": "palliative-and-end-of-life-care",
+      "name": "Palliative and end-of-life care"
+    }
+  ],
+  "questions": [
+    {
+      "id": "c1a00066-0000-4000-8000-000000000001",
+      "itemType": "matrix_mc",
+      "clientNeeds": "PHI.RRP",
+      "bodySystem": "hematologic-oncologic",
+      "subtopics": [
+        "laboratory-values-and-monitoring"
+      ],
+      "cjmmSkill": "analyze_cues",
+      "difficulty": "moderate",
+      "stem": "For each laboratory result, indicate whether it is within the expected adult range or needs follow-up.",
+      "content": {
+        "rows": [
+          {
+            "id": "r1",
+            "text": "Hemoglobin 14 g/dL in an adult male"
+          },
+          {
+            "id": "r2",
+            "text": "Platelets 42,000/mm3"
+          },
+          {
+            "id": "r3",
+            "text": "WBC 7,200/mm3"
+          },
+          {
+            "id": "r4",
+            "text": "INR 1.0 in a client not on anticoagulants"
+          },
+          {
+            "id": "r5",
+            "text": "Creatinine 3.4 mg/dL"
+          }
+        ],
+        "columns": [
+          {
+            "id": "c1",
+            "text": "Expected"
+          },
+          {
+            "id": "c2",
+            "text": "Needs follow-up"
+          }
+        ]
+      },
+      "key": {
+        "byRow": {
+          "r1": "c1",
+          "r2": "c2",
+          "r3": "c1",
+          "r4": "c1",
+          "r5": "c2"
+        }
+      },
+      "rationale": {
+        "correct": "Know common adult reference ranges and follow facility values.",
+        "perOption": {
+          "r1:c1": "Within the usual range (about 13.5-17.5 g/dL).",
+          "r1:c2": "No follow-up needed.",
+          "r2:c1": "Below the usual range (150,000-400,000/mm3).",
+          "r2:c2": "Bleeding risk; report and start bleeding precautions.",
+          "r3:c1": "Within range (5,000-10,000/mm3).",
+          "r3:c2": "No follow-up needed.",
+          "r4:c1": "Normal.",
+          "r4:c2": "No follow-up needed.",
+          "r5:c1": "Well above range (about 0.6-1.2 mg/dL).",
+          "r5:c2": "Suggests impaired kidney function; report."
+        },
+        "references": [
+          "Laboratory reference ranges as used in common NCLEX review texts; follow the facility's ranges",
+          "DRAFT: original question written with AI assistance; an RN or nurse educator must check it before candidates rely on it."
+        ]
+      },
+      "educationalObjective": "Interpret common laboratory values."
+    },
+    {
+      "id": "c1a00066-0000-4000-8000-000000000002",
+      "itemType": "multiple_choice",
+      "clientNeeds": "PHI.RRP",
+      "bodySystem": "cardiovascular",
+      "subtopics": [
+        "laboratory-values-and-monitoring"
+      ],
+      "cjmmSkill": "analyze_cues",
+      "difficulty": "moderate",
+      "stem": "A client with chest pain has a troponin I that is above the reference range and rising on repeat testing. What does this suggest?",
+      "content": {
+        "options": [
+          {
+            "id": "a",
+            "text": "Myocardial injury, such as a myocardial infarction"
+          },
+          {
+            "id": "b",
+            "text": "Normal heart function"
+          },
+          {
+            "id": "c",
+            "text": "Kidney failure only"
+          },
+          {
+            "id": "d",
+            "text": "Liver disease"
+          }
+        ]
+      },
+      "key": {
+        "correct": "a"
+      },
+      "rationale": {
+        "correct": "Serial troponins rising with symptoms indicate myocardial injury.",
+        "perOption": {
+          "a": "Rising troponin indicates heart muscle damage.",
+          "b": "Troponin is normally undetectable or very low.",
+          "c": "Kidney disease can raise troponin, but a rising pattern with chest pain suggests MI.",
+          "d": "Not related."
+        },
+        "references": [
+          "Laboratory reference ranges as used in common NCLEX review texts; follow the facility's ranges",
+          "DRAFT: original question written with AI assistance; an RN or nurse educator must check it before candidates rely on it."
+        ]
+      },
+      "educationalObjective": "Interpret troponin results."
+    },
+    {
+      "id": "c1a00066-0000-4000-8000-000000000003",
+      "itemType": "multiple_choice",
+      "clientNeeds": "PHI.RRP",
+      "bodySystem": "cardiovascular",
+      "subtopics": [
+        "laboratory-values-and-monitoring"
+      ],
+      "cjmmSkill": "analyze_cues",
+      "difficulty": "moderate",
+      "stem": "A client with dyspnea has a B-type natriuretic peptide (BNP) of 980 pg/mL. What does the nurse suspect?",
+      "content": {
+        "options": [
+          {
+            "id": "a",
+            "text": "Heart failure"
+          },
+          {
+            "id": "b",
+            "text": "Pneumonia only"
+          },
+          {
+            "id": "c",
+            "text": "Dehydration"
+          },
+          {
+            "id": "d",
+            "text": "Hypoglycemia"
+          }
+        ]
+      },
+      "key": {
+        "correct": "a"
+      },
+      "rationale": {
+        "correct": "High BNP supports heart failure as the cause of dyspnea.",
+        "perOption": {
+          "a": "BNP rises when the ventricles are stretched by volume overload.",
+          "b": "BNP isn't a marker of pneumonia.",
+          "c": "BNP falls with low volume.",
+          "d": "Not related."
+        },
+        "references": [
+          "Laboratory reference ranges as used in common NCLEX review texts; follow the facility's ranges",
+          "DRAFT: original question written with AI assistance; an RN or nurse educator must check it before candidates rely on it."
+        ]
+      },
+      "educationalObjective": "Interpret BNP."
+    },
+    {
+      "id": "c1a00066-0000-4000-8000-000000000004",
+      "itemType": "multiple_choice",
+      "clientNeeds": "PHI.RRP",
+      "bodySystem": "pharmacology",
+      "subtopics": [
+        "laboratory-values-and-monitoring"
+      ],
+      "cjmmSkill": "take_action",
+      "difficulty": "moderate",
+      "stem": "A client receiving digoxin has a serum level of 2.8 ng/mL and reports nausea and blurred vision. What should the nurse do?",
+      "content": {
+        "options": [
+          {
+            "id": "a",
+            "text": "Give the next dose and recheck tomorrow"
+          },
+          {
+            "id": "b",
+            "text": "Hold the digoxin and notify the provider"
+          },
+          {
+            "id": "c",
+            "text": "Give the dose with food"
+          },
+          {
+            "id": "d",
+            "text": "Encourage a high-potassium diet only"
+          }
+        ]
+      },
+      "key": {
+        "correct": "b"
+      },
+      "rationale": {
+        "correct": "Hold medications with toxic levels and report them.",
+        "perOption": {
+          "a": "The level is toxic.",
+          "b": "Above the usual therapeutic range (about 0.5-2.0 ng/mL) with symptoms of toxicity.",
+          "c": "Doesn't address toxicity.",
+          "d": "Not enough."
+        },
+        "references": [
+          "Laboratory reference ranges as used in common NCLEX review texts; follow the facility's ranges",
+          "Nursing pharmacology texts (e.g. Lehne; McCuistion) and the drug's prescribing information",
+          "DRAFT: original question written with AI assistance; an RN or nurse educator must check it before candidates rely on it."
+        ]
+      },
+      "educationalObjective": "Act on a toxic drug level."
+    },
+    {
+      "id": "c1a00066-0000-4000-8000-000000000005",
+      "itemType": "multiple_choice",
+      "clientNeeds": "PHI.RRP",
+      "bodySystem": "gastrointestinal",
+      "subtopics": [
+        "laboratory-values-and-monitoring"
+      ],
+      "cjmmSkill": "analyze_cues",
+      "difficulty": "moderate",
+      "stem": "A client's liver panel shows ALT and AST three times the upper limit of normal. Which medication history is most important to ask about?",
+      "content": {
+        "options": [
+          {
+            "id": "a",
+            "text": "Acetaminophen use, including combination products"
+          },
+          {
+            "id": "b",
+            "text": "Use of a stool softener"
+          },
+          {
+            "id": "c",
+            "text": "Use of an inhaled bronchodilator"
+          },
+          {
+            "id": "d",
+            "text": "Use of artificial tears"
+          }
+        ]
+      },
+      "key": {
+        "correct": "a"
+      },
+      "rationale": {
+        "correct": "Ask about hepatotoxic drugs when liver enzymes rise.",
+        "perOption": {
+          "a": "Acetaminophen overuse is a common cause of liver injury.",
+          "b": "Not hepatotoxic.",
+          "c": "Not typically hepatotoxic.",
+          "d": "Not related."
+        },
+        "references": [
+          "Laboratory reference ranges as used in common NCLEX review texts; follow the facility's ranges",
+          "DRAFT: original question written with AI assistance; an RN or nurse educator must check it before candidates rely on it."
+        ]
+      },
+      "educationalObjective": "Investigate raised liver enzymes."
+    },
+    {
+      "id": "c1a00066-0000-4000-8000-000000000006",
+      "itemType": "highlight_table",
+      "clientNeeds": "PHI.RRP",
+      "bodySystem": "fundamentals",
+      "subtopics": [
+        "laboratory-values-and-monitoring"
+      ],
+      "cjmmSkill": "recognize_cues",
+      "difficulty": "difficult",
+      "stem": "The nurse reviews morning results. Highlight the results that need to be reported to the provider right away.",
+      "content": {
+        "columns": [
+          "Client",
+          "Result"
+        ],
+        "rows": [
+          {
+            "id": "r1",
+            "cells": [
+              "Client on heparin infusion",
+              "aPTT 145 seconds (target 60-85)"
+            ],
+            "selectable": true
+          },
+          {
+            "id": "r2",
+            "cells": [
+              "Client with diabetes",
+              "Fasting glucose 118 mg/dL"
+            ],
+            "selectable": true
+          },
+          {
+            "id": "r3",
+            "cells": [
+              "Client on vancomycin",
+              "Trough 32 mcg/mL (target 15-20)"
+            ],
+            "selectable": true
+          },
+          {
+            "id": "r4",
+            "cells": [
+              "Client after surgery",
+              "Hemoglobin 11.8 g/dL (yesterday 12.1)"
+            ],
+            "selectable": true
+          },
+          {
+            "id": "r5",
+            "cells": [
+              "Client with sepsis",
+              "Lactate 4.6 mmol/L"
+            ],
+            "selectable": true
+          },
+          {
+            "id": "r6",
+            "cells": [
+              "Client with COPD",
+              "PaCO2 48 mm Hg (baseline 50)"
+            ],
+            "selectable": true
+          }
+        ]
+      },
+      "key": {
+        "correct": [
+          "r1",
+          "r3",
+          "r5"
+        ]
+      },
+      "rationale": {
+        "correct": "Report results that are dangerous or far from target.",
+        "perOption": {
+          "r1": "Supratherapeutic; bleeding risk.",
+          "r2": "Slightly high; routine follow-up.",
+          "r3": "Toxic level; risk of kidney injury.",
+          "r4": "Small expected drop.",
+          "r5": "High lactate indicates hypoperfusion.",
+          "r6": "At baseline."
+        },
+        "references": [
+          "Laboratory reference ranges as used in common NCLEX review texts; follow the facility's ranges",
+          "DRAFT: original question written with AI assistance; an RN or nurse educator must check it before candidates rely on it."
+        ]
+      },
+      "educationalObjective": "Recognize critical lab results."
+    },
+    {
+      "id": "c1a00066-0000-4000-8000-000000000007",
+      "itemType": "multiple_choice",
+      "clientNeeds": "PHI.RRP",
+      "bodySystem": "cardiovascular",
+      "subtopics": [
+        "cardiovascular-diagnostics-and-monitoring"
+      ],
+      "cjmmSkill": "take_action",
+      "difficulty": "moderate",
+      "stem": "A client is scheduled for an exercise stress test. Which instruction should the nurse give?",
+      "content": {
+        "options": [
+          {
+            "id": "a",
+            "text": "Don't eat or smoke for a few hours before the test, and wear comfortable shoes"
+          },
+          {
+            "id": "b",
+            "text": "Drink coffee before the test for energy"
+          },
+          {
+            "id": "c",
+            "text": "Wear dress shoes"
+          },
+          {
+            "id": "d",
+            "text": "Take a double dose of beta blocker"
+          }
+        ]
+      },
+      "key": {
+        "correct": "a"
+      },
+      "rationale": {
+        "correct": "Stress test preparation: no caffeine or smoking, comfortable clothing, medication instructions from the provider.",
+        "perOption": {
+          "a": "Standard preparation for an exercise test.",
+          "b": "Caffeine can affect the results.",
+          "c": "Comfortable walking shoes are needed.",
+          "d": "Beta blockers may be held per the provider because they blunt the heart rate response."
+        },
+        "references": [
+          "Medical-surgical nursing texts (e.g. Lewis; Ignatavicius)",
+          "DRAFT: original question written with AI assistance; an RN or nurse educator must check it before candidates rely on it."
+        ]
+      },
+      "educationalObjective": "Prepare a client for a stress test."
+    },
+    {
+      "id": "c1a00066-0000-4000-8000-000000000008",
+      "itemType": "multiple_choice",
+      "clientNeeds": "PHI.RRP",
+      "bodySystem": "cardiovascular",
+      "subtopics": [
+        "cardiovascular-diagnostics-and-monitoring"
+      ],
+      "cjmmSkill": "recognize_cues",
+      "difficulty": "difficult",
+      "stem": "After a transesophageal echocardiogram (TEE), which finding should the nurse report?",
+      "content": {
+        "options": [
+          {
+            "id": "a",
+            "text": "Mild sore throat"
+          },
+          {
+            "id": "b",
+            "text": "Absent gag reflex 30 minutes after the test"
+          },
+          {
+            "id": "c",
+            "text": "New chest pain, fever and difficulty swallowing several hours later"
+          },
+          {
+            "id": "d",
+            "text": "Drowsiness right after the test"
+          }
+        ]
+      },
+      "key": {
+        "correct": "c"
+      },
+      "rationale": {
+        "correct": "After TEE: keep NPO until the gag reflex returns; watch for perforation.",
+        "perOption": {
+          "a": "Expected.",
+          "b": "Expected while the throat is still numb; keep NPO.",
+          "c": "May indicate esophageal perforation.",
+          "d": "Expected after sedation."
+        },
+        "references": [
+          "Medical-surgical nursing texts (e.g. Lewis; Ignatavicius)",
+          "DRAFT: original question written with AI assistance; an RN or nurse educator must check it before candidates rely on it."
+        ]
+      },
+      "educationalObjective": "Monitor after a transesophageal echocardiogram."
+    },
+    {
+      "id": "c1a00066-0000-4000-8000-000000000009",
+      "itemType": "multiple_choice",
+      "clientNeeds": "PHI.RRP",
+      "bodySystem": "cardiovascular",
+      "subtopics": [
+        "cardiovascular-diagnostics-and-monitoring"
+      ],
+      "cjmmSkill": "take_action",
+      "difficulty": "moderate",
+      "stem": "The nurse places a client on cardiac telemetry. The monitor shows a flat line, but the client is awake and talking. What should the nurse do first?",
+      "content": {
+        "options": [
+          {
+            "id": "a",
+            "text": "Start chest compressions"
+          },
+          {
+            "id": "b",
+            "text": "Check the leads and electrode connections"
+          },
+          {
+            "id": "c",
+            "text": "Call a code"
+          },
+          {
+            "id": "d",
+            "text": "Give atropine"
+          }
+        ]
+      },
+      "key": {
+        "correct": "b"
+      },
+      "rationale": {
+        "correct": "Assess the client first; troubleshoot equipment when findings don't match.",
+        "perOption": {
+          "a": "The client is responsive and clearly has a pulse.",
+          "b": "A loose lead is the most likely cause.",
+          "c": "Not needed for a responsive client.",
+          "d": "Not indicated."
+        },
+        "references": [
+          "Medical-surgical nursing texts (e.g. Lewis; Ignatavicius)",
+          "DRAFT: original question written with AI assistance; an RN or nurse educator must check it before candidates rely on it."
+        ]
+      },
+      "educationalObjective": "Troubleshoot cardiac monitoring."
+    },
+    {
+      "id": "c1a00066-0000-4000-8000-000000000010",
+      "itemType": "multiple_choice",
+      "clientNeeds": "PHI.RRP",
+      "bodySystem": "cardiovascular",
+      "subtopics": [
+        "cardiovascular-diagnostics-and-monitoring"
+      ],
+      "cjmmSkill": "take_action",
+      "difficulty": "moderate",
+      "stem": "The nurse is caring for a client with an arterial line. Which action is correct?",
+      "content": {
+        "options": [
+          {
+            "id": "a",
+            "text": "Keep the transducer at the level of the phlebostatic axis"
+          },
+          {
+            "id": "b",
+            "text": "Let the pressure bag deflate to save supplies"
+          },
+          {
+            "id": "c",
+            "text": "Draw blood without wearing gloves"
+          },
+          {
+            "id": "d",
+            "text": "Leave the line open to air"
+          }
+        ]
+      },
+      "key": {
+        "correct": "a"
+      },
+      "rationale": {
+        "correct": "Arterial lines need leveling, zeroing, a pressurized flush and close monitoring of the site.",
+        "perOption": {
+          "a": "Leveling ensures accurate readings.",
+          "b": "The bag must stay at about 300 mm Hg to keep the line open.",
+          "c": "Standard precautions apply.",
+          "d": "Can cause bleeding or air embolism."
+        },
+        "references": [
+          "Medical-surgical nursing texts (e.g. Lewis; Ignatavicius)",
+          "DRAFT: original question written with AI assistance; an RN or nurse educator must check it before candidates rely on it."
+        ]
+      },
+      "educationalObjective": "Care for an arterial line."
+    },
+    {
+      "id": "c1a00066-0000-4000-8000-000000000011",
+      "itemType": "sata",
+      "clientNeeds": "PHI.RRP",
+      "bodySystem": "cardiovascular",
+      "subtopics": [
+        "cardiovascular-diagnostics-and-monitoring"
+      ],
+      "cjmmSkill": "take_action",
+      "difficulty": "moderate",
+      "stem": "The nurse is placing electrodes for a 12-lead ECG. Which actions improve the quality of the tracing? Select all that apply.",
+      "content": {
+        "options": [
+          {
+            "id": "a",
+            "text": "Clean and dry the skin before applying electrodes"
+          },
+          {
+            "id": "b",
+            "text": "Clip chest hair if needed"
+          },
+          {
+            "id": "c",
+            "text": "Ask the client to lie still and breathe normally"
+          },
+          {
+            "id": "d",
+            "text": "Place limb leads over bones"
+          },
+          {
+            "id": "e",
+            "text": "Keep electrical devices near the client running"
+          }
+        ]
+      },
+      "key": {
+        "correct": [
+          "a",
+          "b",
+          "c"
+        ]
+      },
+      "rationale": {
+        "correct": "Good skin prep and a still client produce accurate ECGs.",
+        "perOption": {
+          "a": "Improves contact.",
+          "b": "Improves adhesion.",
+          "c": "Reduces movement artifact.",
+          "d": "Place on fleshy areas.",
+          "e": "Can cause interference."
+        },
+        "references": [
+          "Medical-surgical nursing texts (e.g. Lewis; Ignatavicius)",
+          "DRAFT: original question written with AI assistance; an RN or nurse educator must check it before candidates rely on it."
+        ]
+      },
+      "educationalObjective": "Obtain a quality ECG."
+    },
+    {
+      "id": "c1a00066-0000-4000-8000-000000000012",
+      "itemType": "multiple_choice",
+      "clientNeeds": "PHI.RRP",
+      "bodySystem": "renal-urinary",
+      "subtopics": [
+        "renal-and-endocrine-diagnostics"
+      ],
+      "cjmmSkill": "take_action",
+      "difficulty": "moderate",
+      "stem": "A client had a percutaneous kidney biopsy. Which nursing action is most important afterward?",
+      "content": {
+        "options": [
+          {
+            "id": "a",
+            "text": "Have the client walk right away"
+          },
+          {
+            "id": "b",
+            "text": "Monitor vital signs and urine for blood, and keep the client on bed rest as ordered"
+          },
+          {
+            "id": "c",
+            "text": "Restrict all fluids"
+          },
+          {
+            "id": "d",
+            "text": "Give aspirin for pain"
+          }
+        ]
+      },
+      "key": {
+        "correct": "b"
+      },
+      "rationale": {
+        "correct": "After kidney biopsy: bed rest, monitor for bleeding, encourage fluids.",
+        "perOption": {
+          "a": "Bed rest is usually ordered to reduce bleeding.",
+          "b": "Bleeding is the main complication.",
+          "c": "Fluids are usually encouraged.",
+          "d": "Increases bleeding risk."
+        },
+        "references": [
+          "Medical-surgical nursing texts (e.g. Lewis; Ignatavicius)",
+          "DRAFT: original question written with AI assistance; an RN or nurse educator must check it before candidates rely on it."
+        ]
+      },
+      "educationalObjective": "Monitor after a kidney biopsy."
+    },
+    {
+      "id": "c1a00066-0000-4000-8000-000000000013",
+      "itemType": "multiple_choice",
+      "clientNeeds": "PHI.RRP",
+      "bodySystem": "renal-urinary",
+      "subtopics": [
+        "renal-and-endocrine-diagnostics"
+      ],
+      "cjmmSkill": "take_action",
+      "difficulty": "moderate",
+      "stem": "A client is having a 24-hour urine collection that starts at 08:00. What should the nurse do first?",
+      "content": {
+        "options": [
+          {
+            "id": "a",
+            "text": "Save the 08:00 void"
+          },
+          {
+            "id": "b",
+            "text": "Have the client void at 08:00, discard it, then save all urine for 24 hours"
+          },
+          {
+            "id": "c",
+            "text": "Collect only morning urine for 24 hours"
+          },
+          {
+            "id": "d",
+            "text": "Keep the collection at room temperature in sunlight"
+          }
+        ]
+      },
+      "key": {
+        "correct": "b"
+      },
+      "rationale": {
+        "correct": "24-hour urine: discard the first void, save everything after, end with a final void at 24 hours.",
+        "perOption": {
+          "a": "The first void is discarded to start with an empty bladder.",
+          "b": "The collection starts with an empty bladder.",
+          "c": "All urine must be collected.",
+          "d": "Keep it on ice or refrigerated per the lab."
+        },
+        "references": [
+          "Medical-surgical nursing texts (e.g. Lewis; Ignatavicius)",
+          "DRAFT: original question written with AI assistance; an RN or nurse educator must check it before candidates rely on it."
+        ]
+      },
+      "educationalObjective": "Collect a 24-hour urine specimen."
+    },
+    {
+      "id": "c1a00066-0000-4000-8000-000000000014",
+      "itemType": "multiple_choice",
+      "clientNeeds": "PHI.RRP",
+      "bodySystem": "endocrine",
+      "subtopics": [
+        "renal-and-endocrine-diagnostics"
+      ],
+      "cjmmSkill": "take_action",
+      "difficulty": "moderate",
+      "stem": "A client is scheduled for a dexamethasone suppression test for suspected Cushing syndrome. What does the nurse explain?",
+      "content": {
+        "options": [
+          {
+            "id": "a",
+            "text": "A dose of dexamethasone is given at night and cortisol is measured in the morning"
+          },
+          {
+            "id": "b",
+            "text": "No medication is given"
+          },
+          {
+            "id": "c",
+            "text": "The client must fast for 3 days"
+          },
+          {
+            "id": "d",
+            "text": "Urine is tested for glucose"
+          }
+        ]
+      },
+      "key": {
+        "correct": "a"
+      },
+      "rationale": {
+        "correct": "Lack of cortisol suppression suggests Cushing syndrome.",
+        "perOption": {
+          "a": "In Cushing syndrome, cortisol doesn't fall as expected.",
+          "b": "Dexamethasone is given.",
+          "c": "Not required.",
+          "d": "Not the test."
+        },
+        "references": [
+          "Medical-surgical nursing texts (e.g. Lewis; Ignatavicius)",
+          "DRAFT: original question written with AI assistance; an RN or nurse educator must check it before candidates rely on it."
+        ]
+      },
+      "educationalObjective": "Explain a dexamethasone suppression test."
+    },
+    {
+      "id": "c1a00066-0000-4000-8000-000000000015",
+      "itemType": "multiple_choice",
+      "clientNeeds": "PHI.RRP",
+      "bodySystem": "endocrine",
+      "subtopics": [
+        "renal-and-endocrine-diagnostics"
+      ],
+      "cjmmSkill": "recognize_cues",
+      "difficulty": "difficult",
+      "stem": "During a water deprivation test for suspected diabetes insipidus, which finding should cause the nurse to stop the test and notify the provider?",
+      "content": {
+        "options": [
+          {
+            "id": "a",
+            "text": "Weight loss of more than 3% of body weight with hypotension"
+          },
+          {
+            "id": "b",
+            "text": "Thirst"
+          },
+          {
+            "id": "c",
+            "text": "Urine output of 50 mL/hr"
+          },
+          {
+            "id": "d",
+            "text": "Mild headache"
+          }
+        ]
+      },
+      "key": {
+        "correct": "a"
+      },
+      "rationale": {
+        "correct": "Water deprivation tests are stopped for significant weight loss or hemodynamic instability.",
+        "perOption": {
+          "a": "Signs of dangerous dehydration.",
+          "b": "Expected.",
+          "c": "May be expected.",
+          "d": "Monitor, but not usually a reason to stop."
+        },
+        "references": [
+          "Medical-surgical nursing texts (e.g. Lewis; Ignatavicius)",
+          "DRAFT: original question written with AI assistance; an RN or nurse educator must check it before candidates rely on it."
+        ]
+      },
+      "educationalObjective": "Monitor a water deprivation test."
+    },
+    {
+      "id": "c1a00066-0000-4000-8000-000000000016",
+      "itemType": "multiple_choice",
+      "clientNeeds": "PHI.RRP",
+      "bodySystem": "renal-urinary",
+      "subtopics": [
+        "renal-and-endocrine-diagnostics"
+      ],
+      "cjmmSkill": "take_action",
+      "difficulty": "moderate",
+      "stem": "After a cystoscopy, the client has pink-tinged urine and mild burning. What should the nurse do?",
+      "content": {
+        "options": [
+          {
+            "id": "a",
+            "text": "Encourage fluids and teach that these effects are expected for a short time"
+          },
+          {
+            "id": "b",
+            "text": "Insert an indwelling catheter"
+          },
+          {
+            "id": "c",
+            "text": "Restrict fluids"
+          },
+          {
+            "id": "d",
+            "text": "Notify the provider immediately"
+          }
+        ]
+      },
+      "key": {
+        "correct": "a"
+      },
+      "rationale": {
+        "correct": "Expected after cystoscopy: pink urine and burning; report clots, fever or retention.",
+        "perOption": {
+          "a": "Mild hematuria and burning are common after cystoscopy.",
+          "b": "Not needed.",
+          "c": "Fluids help.",
+          "d": "Only for bright red bleeding, clots, fever or retention."
+        },
+        "references": [
+          "Medical-surgical nursing texts (e.g. Lewis; Ignatavicius)",
+          "DRAFT: original question written with AI assistance; an RN or nurse educator must check it before candidates rely on it."
+        ]
+      },
+      "educationalObjective": "Teach after cystoscopy."
+    },
+    {
+      "id": "c1a00066-0000-4000-8000-000000000017",
+      "itemType": "ordered_response",
+      "clientNeeds": "PHI.RRP",
+      "bodySystem": "fundamentals",
+      "subtopics": [
+        "specimen-collection"
+      ],
+      "cjmmSkill": "take_action",
+      "difficulty": "moderate",
+      "stem": "Place the steps for drawing blood cultures in order.",
+      "content": {
+        "items": [
+          {
+            "id": "d",
+            "text": "Draw the blood with a butterfly set, filling the aerobic bottle first and then the anaerobic bottle"
+          },
+          {
+            "id": "e",
+            "text": "Label the bottles at the bedside and send them to the lab"
+          },
+          {
+            "id": "b",
+            "text": "Clean the skin with chlorhexidine and let it dry"
+          },
+          {
+            "id": "c",
+            "text": "Clean the tops of the culture bottles"
+          },
+          {
+            "id": "a",
+            "text": "Perform hand hygiene and identify the client with two identifiers"
+          }
+        ]
+      },
+      "key": {
+        "order": [
+          "a",
+          "b",
+          "c",
+          "d",
+          "e"
+        ],
+        "scoring": "all_or_nothing"
+      },
+      "rationale": {
+        "correct": "Careful skin prep reduces contaminated cultures.",
+        "perOption": {
+          "a": "Safety and infection control.",
+          "b": "Reduces contamination.",
+          "c": "Prevents contamination.",
+          "d": "With a butterfly set, the air in the tubing goes into the aerobic bottle, not the anaerobic one.",
+          "e": "Prevents mislabeling."
+        },
+        "references": [
+          "Fundamentals of nursing texts (e.g. Potter & Perry)",
+          "CDC infection control and isolation precautions guidance",
+          "DRAFT: original question written with AI assistance; an RN or nurse educator must check it before candidates rely on it."
+        ]
+      },
+      "educationalObjective": "Collect blood cultures correctly."
+    },
+    {
+      "id": "c1a00066-0000-4000-8000-000000000018",
+      "itemType": "multiple_choice",
+      "clientNeeds": "PHI.RRP",
+      "bodySystem": "gastrointestinal",
+      "subtopics": [
+        "specimen-collection"
+      ],
+      "cjmmSkill": "take_action",
+      "difficulty": "moderate",
+      "stem": "The nurse is collecting a stool sample for occult blood testing. Which instruction is correct?",
+      "content": {
+        "options": [
+          {
+            "id": "a",
+            "text": "Avoid red meat and certain medications before the test, as directed"
+          },
+          {
+            "id": "b",
+            "text": "Collect stool from the toilet water"
+          },
+          {
+            "id": "c",
+            "text": "Take vitamin C supplements before the test"
+          },
+          {
+            "id": "d",
+            "text": "Mix urine with the stool"
+          }
+        ]
+      },
+      "key": {
+        "correct": "a"
+      },
+      "rationale": {
+        "correct": "Follow test-specific diet and medication instructions.",
+        "perOption": {
+          "a": "Some foods and drugs can cause false results with guaiac tests.",
+          "b": "Water can affect the sample.",
+          "c": "Vitamin C can cause a false negative with guaiac tests.",
+          "d": "Contaminates the sample."
+        },
+        "references": [
+          "Fundamentals of nursing texts (e.g. Potter & Perry)",
+          "DRAFT: original question written with AI assistance; an RN or nurse educator must check it before candidates rely on it."
+        ]
+      },
+      "educationalObjective": "Collect stool for occult blood."
+    },
+    {
+      "id": "c1a00066-0000-4000-8000-000000000019",
+      "itemType": "multiple_choice",
+      "clientNeeds": "PHI.RRP",
+      "bodySystem": "respiratory",
+      "subtopics": [
+        "specimen-collection"
+      ],
+      "cjmmSkill": "take_action",
+      "difficulty": "moderate",
+      "stem": "When is the best time to collect a sputum specimen for culture?",
+      "content": {
+        "options": [
+          {
+            "id": "a",
+            "text": "Early in the morning, before eating"
+          },
+          {
+            "id": "b",
+            "text": "Right after a meal"
+          },
+          {
+            "id": "c",
+            "text": "After antibiotics have been started"
+          },
+          {
+            "id": "d",
+            "text": "After mouthwash with alcohol"
+          }
+        ]
+      },
+      "key": {
+        "correct": "a"
+      },
+      "rationale": {
+        "correct": "Collect sputum in the morning, before antibiotics, after rinsing with water.",
+        "perOption": {
+          "a": "Secretions collect overnight.",
+          "b": "Food particles can contaminate the sample.",
+          "c": "Collect before antibiotics.",
+          "d": "Mouthwash can kill organisms; rinse with water instead."
+        },
+        "references": [
+          "Fundamentals of nursing texts (e.g. Potter & Perry)",
+          "DRAFT: original question written with AI assistance; an RN or nurse educator must check it before candidates rely on it."
+        ]
+      },
+      "educationalObjective": "Collect sputum correctly."
+    },
+    {
+      "id": "c1a00066-0000-4000-8000-000000000020",
+      "itemType": "multiple_choice",
+      "clientNeeds": "PHI.RRP",
+      "bodySystem": "fundamentals",
+      "subtopics": [
+        "post-procedure-complications"
+      ],
+      "cjmmSkill": "recognize_cues",
+      "difficulty": "moderate",
+      "stem": "A client's early warning score rises from 2 to 7 over 4 hours. What should the nurse do?",
+      "content": {
+        "options": [
+          {
+            "id": "a",
+            "text": "Recheck in the morning"
+          },
+          {
+            "id": "b",
+            "text": "Assess the client and escalate per protocol, such as calling the rapid response team"
+          },
+          {
+            "id": "c",
+            "text": "Document the score only"
+          },
+          {
+            "id": "d",
+            "text": "Lower the alarm limits"
+          }
+        ]
+      },
+      "key": {
+        "correct": "b"
+      },
+      "rationale": {
+        "correct": "Rising early warning scores need assessment and escalation.",
+        "perOption": {
+          "a": "A rising score signals deterioration.",
+          "b": "Early warning scores trigger escalation.",
+          "c": "Action is needed.",
+          "d": "Not appropriate."
+        },
+        "references": [
+          "Medical-surgical nursing texts (e.g. Lewis; Ignatavicius)",
+          "DRAFT: original question written with AI assistance; an RN or nurse educator must check it before candidates rely on it."
+        ]
+      },
+      "educationalObjective": "Respond to an early warning score."
+    },
+    {
+      "id": "c1a00066-0000-4000-8000-000000000021",
+      "itemType": "multiple_choice",
+      "clientNeeds": "PHI.RRP",
+      "bodySystem": "fundamentals",
+      "subtopics": [
+        "post-procedure-complications"
+      ],
+      "cjmmSkill": "recognize_cues",
+      "difficulty": "difficult",
+      "stem": "A client with a PICC line reports sudden swelling and pain in the arm and neck on the same side. What does the nurse suspect?",
+      "content": {
+        "options": [
+          {
+            "id": "a",
+            "text": "Upper extremity deep vein thrombosis"
+          },
+          {
+            "id": "b",
+            "text": "Normal PICC finding"
+          },
+          {
+            "id": "c",
+            "text": "Dehydration"
+          },
+          {
+            "id": "d",
+            "text": "Allergic reaction to the dressing"
+          }
+        ]
+      },
+      "key": {
+        "correct": "a"
+      },
+      "rationale": {
+        "correct": "PICC complications include DVT, infection and occlusion.",
+        "perOption": {
+          "a": "PICCs can cause clots in the arm veins.",
+          "b": "Swelling and pain aren't normal.",
+          "c": "Not related.",
+          "d": "Would cause local skin reaction, not arm swelling."
+        },
+        "references": [
+          "Medical-surgical nursing texts (e.g. Lewis; Ignatavicius)",
+          "DRAFT: original question written with AI assistance; an RN or nurse educator must check it before candidates rely on it."
+        ]
+      },
+      "educationalObjective": "Recognize PICC complications."
+    },
+    {
+      "id": "c1a00066-0000-4000-8000-000000000022",
+      "itemType": "multiple_choice",
+      "clientNeeds": "PHI.RRP",
+      "bodySystem": "respiratory",
+      "subtopics": [
+        "oxygen-therapy-and-devices"
+      ],
+      "cjmmSkill": "take_action",
+      "difficulty": "moderate",
+      "stem": "A client has an SpO2 of 88% on a pulse oximeter, but is alert, pink and comfortable. The hands are cold. What should the nurse do first?",
+      "content": {
+        "options": [
+          {
+            "id": "a",
+            "text": "Increase the oxygen to 6 L/min"
+          },
+          {
+            "id": "b",
+            "text": "Warm the hands or move the sensor to the earlobe, then recheck"
+          },
+          {
+            "id": "c",
+            "text": "Call the rapid response team"
+          },
+          {
+            "id": "d",
+            "text": "Ignore the reading"
+          }
+        ]
+      },
+      "key": {
+        "correct": "b"
+      },
+      "rationale": {
+        "correct": "Assess the client and the device; cold extremities affect pulse oximetry.",
+        "perOption": {
+          "a": "Check the measurement first.",
+          "b": "Poor perfusion causes falsely low readings.",
+          "c": "The client is stable; verify the reading.",
+          "d": "Needs to be checked."
+        },
+        "references": [
+          "Medical-surgical nursing texts (e.g. Lewis; Ignatavicius)",
+          "DRAFT: original question written with AI assistance; an RN or nurse educator must check it before candidates rely on it."
+        ]
+      },
+      "educationalObjective": "Troubleshoot pulse oximetry."
+    },
+    {
+      "id": "c1a00066-0000-4000-8000-000000000023",
+      "itemType": "multiple_choice",
+      "clientNeeds": "PHI.RRP",
+      "bodySystem": "respiratory",
+      "subtopics": [
+        "oxygen-therapy-and-devices"
+      ],
+      "cjmmSkill": "take_action",
+      "difficulty": "moderate",
+      "stem": "A client is prescribed oxygen at 40% by Venturi mask. Which statement about this device is correct?",
+      "content": {
+        "options": [
+          {
+            "id": "a",
+            "text": "It delivers a precise oxygen concentration"
+          },
+          {
+            "id": "b",
+            "text": "It is the best device for 100% oxygen"
+          },
+          {
+            "id": "c",
+            "text": "The bag must stay deflated"
+          },
+          {
+            "id": "d",
+            "text": "It works without an oxygen source"
+          }
+        ]
+      },
+      "key": {
+        "correct": "a"
+      },
+      "rationale": {
+        "correct": "Venturi masks deliver precise oxygen concentrations, useful in COPD.",
+        "perOption": {
+          "a": "Venturi masks deliver a set FiO2.",
+          "b": "A non-rebreather delivers higher concentrations.",
+          "c": "That describes a non-rebreather, which should stay inflated.",
+          "d": "Needs an oxygen source."
+        },
+        "references": [
+          "Medical-surgical nursing texts (e.g. Lewis; Ignatavicius)",
+          "DRAFT: original question written with AI assistance; an RN or nurse educator must check it before candidates rely on it."
+        ]
+      },
+      "educationalObjective": "Choose oxygen delivery devices."
+    },
+    {
+      "id": "c1a00066-0000-4000-8000-000000000024",
+      "itemType": "multiple_choice",
+      "clientNeeds": "PHI.BCC",
+      "bodySystem": "fundamentals",
+      "subtopics": [
+        "hygiene-and-personal-care"
+      ],
+      "cjmmSkill": "take_action",
+      "difficulty": "easy",
+      "stem": "The nurse is giving oral care to an unconscious client. Which position is best?",
+      "content": {
+        "options": [
+          {
+            "id": "a",
+            "text": "Side-lying with the head turned to the side"
+          },
+          {
+            "id": "b",
+            "text": "Supine and flat"
+          },
+          {
+            "id": "c",
+            "text": "Prone"
+          },
+          {
+            "id": "d",
+            "text": "High Fowler's with the head back"
+          }
+        ]
+      },
+      "key": {
+        "correct": "a"
+      },
+      "rationale": {
+        "correct": "Side-lying prevents aspiration during oral care.",
+        "perOption": {
+          "a": "Prevents aspiration of fluids.",
+          "b": "Raises aspiration risk.",
+          "c": "Not practical or safe.",
+          "d": "Raises aspiration risk."
+        },
+        "references": [
+          "Fundamentals of nursing texts (e.g. Potter & Perry)",
+          "DRAFT: original question written with AI assistance; an RN or nurse educator must check it before candidates rely on it."
+        ]
+      },
+      "educationalObjective": "Give oral care safely."
+    },
+    {
+      "id": "c1a00066-0000-4000-8000-000000000025",
+      "itemType": "multiple_choice",
+      "clientNeeds": "PHI.BCC",
+      "bodySystem": "fundamentals",
+      "subtopics": [
+        "nutrition-and-therapeutic-diets"
+      ],
+      "cjmmSkill": "take_action",
+      "difficulty": "moderate",
+      "stem": "Which meal choice best fits a client on a low-residue diet?",
+      "content": {
+        "options": [
+          {
+            "id": "a",
+            "text": "Whole-grain cereal with berries"
+          },
+          {
+            "id": "b",
+            "text": "White rice, baked chicken and canned peaches"
+          },
+          {
+            "id": "c",
+            "text": "Raw vegetable salad"
+          },
+          {
+            "id": "d",
+            "text": "Bran muffin"
+          }
+        ]
+      },
+      "key": {
+        "correct": "b"
+      },
+      "rationale": {
+        "correct": "Low-residue diets limit fiber.",
+        "perOption": {
+          "a": "High in fiber.",
+          "b": "Low fiber and easy to digest.",
+          "c": "High in fiber.",
+          "d": "High in fiber."
+        },
+        "references": [
+          "Fundamentals of nursing texts (e.g. Potter & Perry)",
+          "DRAFT: original question written with AI assistance; an RN or nurse educator must check it before candidates rely on it."
+        ]
+      },
+      "educationalObjective": "Choose foods for a low-residue diet."
+    },
+    {
+      "id": "c1a00066-0000-4000-8000-000000000026",
+      "itemType": "multiple_choice",
+      "clientNeeds": "PHI.BCC",
+      "bodySystem": "fundamentals",
+      "subtopics": [
+        "sleep-and-rest"
+      ],
+      "cjmmSkill": "generate_solutions",
+      "difficulty": "moderate",
+      "stem": "An older adult has trouble falling asleep at home. Which advice is most appropriate?",
+      "content": {
+        "options": [
+          {
+            "id": "a",
+            "text": "Take a long nap in the afternoon"
+          },
+          {
+            "id": "b",
+            "text": "Keep a regular bedtime and avoid caffeine in the afternoon and evening"
+          },
+          {
+            "id": "c",
+            "text": "Watch television in bed"
+          },
+          {
+            "id": "d",
+            "text": "Drink alcohol at bedtime"
+          }
+        ]
+      },
+      "key": {
+        "correct": "b"
+      },
+      "rationale": {
+        "correct": "Sleep hygiene: routine, no caffeine late, limit screens and alcohol.",
+        "perOption": {
+          "a": "Can make nighttime sleep harder.",
+          "b": "Sleep hygiene improves sleep.",
+          "c": "Screens disrupt sleep.",
+          "d": "Alcohol disrupts sleep."
+        },
+        "references": [
+          "Fundamentals of nursing texts (e.g. Potter & Perry)",
+          "DRAFT: original question written with AI assistance; an RN or nurse educator must check it before candidates rely on it."
+        ]
+      },
+      "educationalObjective": "Teach sleep hygiene."
+    },
+    {
+      "id": "c1a00066-0000-4000-8000-000000000027",
+      "itemType": "multiple_choice",
+      "clientNeeds": "PHI.BCC",
+      "bodySystem": "fundamentals",
+      "subtopics": [
+        "pain-assessment-and-comfort"
+      ],
+      "cjmmSkill": "take_action",
+      "difficulty": "moderate",
+      "stem": "A client rates pain 7 out of 10 but is laughing with visitors. What should the nurse do?",
+      "content": {
+        "options": [
+          {
+            "id": "a",
+            "text": "Document that the client is exaggerating"
+          },
+          {
+            "id": "b",
+            "text": "Accept the client's rating and offer treatment"
+          },
+          {
+            "id": "c",
+            "text": "Wait until the client looks uncomfortable"
+          },
+          {
+            "id": "d",
+            "text": "Give a placebo"
+          }
+        ]
+      },
+      "key": {
+        "correct": "b"
+      },
+      "rationale": {
+        "correct": "Self-report is the most reliable measure of pain.",
+        "perOption": {
+          "a": "Pain is what the client says it is.",
+          "b": "Behavior doesn't always reflect pain intensity.",
+          "c": "Delays treatment.",
+          "d": "Unethical."
+        },
+        "references": [
+          "Fundamentals of nursing texts (e.g. Potter & Perry)",
+          "DRAFT: original question written with AI assistance; an RN or nurse educator must check it before candidates rely on it."
+        ]
+      },
+      "educationalObjective": "Respect self-reported pain."
+    },
+    {
+      "id": "c1a00066-0000-4000-8000-000000000028",
+      "itemType": "multiple_choice",
+      "clientNeeds": "PHI.BCC",
+      "bodySystem": "fundamentals",
+      "subtopics": [
+        "urinary-elimination-and-catheter-care"
+      ],
+      "cjmmSkill": "take_action",
+      "difficulty": "moderate",
+      "stem": "An older adult has urge incontinence. Which intervention is most helpful?",
+      "content": {
+        "options": [
+          {
+            "id": "a",
+            "text": "Scheduled toileting every 2 hours"
+          },
+          {
+            "id": "b",
+            "text": "Limit all fluids"
+          },
+          {
+            "id": "c",
+            "text": "Insert an indwelling catheter"
+          },
+          {
+            "id": "d",
+            "text": "Use adult briefs only"
+          }
+        ]
+      },
+      "key": {
+        "correct": "a"
+      },
+      "rationale": {
+        "correct": "Bladder training and scheduled toileting are first-line for urge incontinence.",
+        "perOption": {
+          "a": "Bladder training reduces urgency episodes.",
+          "b": "Concentrated urine irritates the bladder.",
+          "c": "Raises infection risk; not first-line.",
+          "d": "Doesn't treat the problem."
+        },
+        "references": [
+          "Fundamentals of nursing texts (e.g. Potter & Perry)",
+          "DRAFT: original question written with AI assistance; an RN or nurse educator must check it before candidates rely on it."
+        ]
+      },
+      "educationalObjective": "Manage urge incontinence."
+    },
+    {
+      "id": "c1a00066-0000-4000-8000-000000000029",
+      "itemType": "multiple_choice",
+      "clientNeeds": "PHI.BCC",
+      "bodySystem": "musculoskeletal",
+      "subtopics": [
+        "mobility-and-assistive-devices"
+      ],
+      "cjmmSkill": "take_action",
+      "difficulty": "moderate",
+      "stem": "Which statement shows a client understands how to go down stairs with crutches?",
+      "content": {
+        "options": [
+          {
+            "id": "a",
+            "text": "\"I'll move my good leg down first.\""
+          },
+          {
+            "id": "b",
+            "text": "\"I'll move the crutches and my injured leg down first, then my good leg.\""
+          },
+          {
+            "id": "c",
+            "text": "\"I'll hop down without the crutches.\""
+          },
+          {
+            "id": "d",
+            "text": "\"I'll go down backward.\""
+          }
+        ]
+      },
+      "key": {
+        "correct": "b"
+      },
+      "rationale": {
+        "correct": "Up with the good, down with the bad.",
+        "perOption": {
+          "a": "Going down, the crutches and injured leg go first.",
+          "b": "\"Down with the bad.\"",
+          "c": "Unsafe.",
+          "d": "Not the usual technique."
+        },
+        "references": [
+          "Fundamentals of nursing texts (e.g. Potter & Perry)",
+          "DRAFT: original question written with AI assistance; an RN or nurse educator must check it before candidates rely on it."
+        ]
+      },
+      "educationalObjective": "Teach crutch use on stairs."
+    },
+    {
+      "id": "c1a00066-0000-4000-8000-000000000030",
+      "itemType": "multiple_choice",
+      "clientNeeds": "PHI.BCC",
+      "bodySystem": "pharmacology",
+      "subtopics": [
+        "complementary-therapies"
+      ],
+      "cjmmSkill": "take_action",
+      "difficulty": "moderate",
+      "stem": "A client taking warfarin asks about using ginkgo biloba. What should the nurse say?",
+      "content": {
+        "options": [
+          {
+            "id": "a",
+            "text": "\"It's natural, so it's safe.\""
+          },
+          {
+            "id": "b",
+            "text": "\"Ginkgo can increase bleeding risk with warfarin, so talk with your provider first.\""
+          },
+          {
+            "id": "c",
+            "text": "\"Ginkgo will make warfarin work less.\""
+          },
+          {
+            "id": "d",
+            "text": "\"Take double the dose for memory.\""
+          }
+        ]
+      },
+      "key": {
+        "correct": "b"
+      },
+      "rationale": {
+        "correct": "Ask about herbal supplements; many interact with anticoagulants.",
+        "perOption": {
+          "a": "Herbal products can interact with drugs.",
+          "b": "Ginkgo has antiplatelet effects.",
+          "c": "It increases bleeding risk.",
+          "d": "Unsafe."
+        },
+        "references": [
+          "Fundamentals of nursing texts (e.g. Potter & Perry)",
+          "Nursing pharmacology texts (e.g. Lehne; McCuistion) and the drug's prescribing information",
+          "DRAFT: original question written with AI assistance; an RN or nurse educator must check it before candidates rely on it."
+        ]
+      },
+      "educationalObjective": "Teach about herbal interactions."
+    },
+    {
+      "id": "c1a00066-0000-4000-8000-000000000031",
+      "itemType": "multiple_choice",
+      "clientNeeds": "PHI.BCC",
+      "bodySystem": "fundamentals",
+      "subtopics": [
+        "palliative-and-end-of-life-care"
+      ],
+      "cjmmSkill": "take_action",
+      "difficulty": "moderate",
+      "stem": "A client receiving hospice care has dry mouth and isn't drinking. What should the nurse do?",
+      "content": {
+        "options": [
+          {
+            "id": "a",
+            "text": "Insert a feeding tube"
+          },
+          {
+            "id": "b",
+            "text": "Provide frequent mouth care and moisten the lips"
+          },
+          {
+            "id": "c",
+            "text": "Force fluids"
+          },
+          {
+            "id": "d",
+            "text": "Ignore the dry mouth"
+          }
+        ]
+      },
+      "key": {
+        "correct": "b"
+      },
+      "rationale": {
+        "correct": "End-of-life care focuses on comfort, including mouth care.",
+        "perOption": {
+          "a": "Not consistent with comfort goals.",
+          "b": "Comfort measures relieve dryness.",
+          "c": "Can cause aspiration and discomfort.",
+          "d": "Comfort is the goal."
+        },
+        "references": [
+          "Fundamentals of nursing texts (e.g. Potter & Perry)",
+          "DRAFT: original question written with AI assistance; an RN or nurse educator must check it before candidates rely on it."
+        ]
+      },
+      "educationalObjective": "Provide comfort at the end of life."
+    }
+  ]
+}
