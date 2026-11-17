@@ -23,7 +23,7 @@ export function CreatedSetCard({ created, onBuildAnother }: CreatedSetCardProps)
   const start = useStartAttempt();
 
   function startSet() {
-    start.mutate(set.id, { onSuccess: (attempt) => router.push(`/attempts/${attempt.id}`) });
+    start.mutate({ testSetId: set.id }, { onSuccess: (attempt) => router.push(`/attempts/${attempt.id}`) });
   }
 
   useEffect(() => {

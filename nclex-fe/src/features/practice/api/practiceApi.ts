@@ -10,10 +10,13 @@ export type TestSetPage = ApiSchema<"TestSetPage">;
 /** Sets per page: the API's maximum, so the whole RN catalog usually arrives in one request. */
 const pageSize = 50;
 
-/** GET /test-sets?kind=prebuilt: one page of the curated sets on the user's own track. */
+/**
+ * GET /test-sets: one page of the curated sets on the user's own track. With no kind, the API
+ * returns prebuilt sets and adaptive exams (F19) together, as the Practice page shows both.
+ */
 export async function fetchPrebuiltSets(cursor: string | null): Promise<TestSetPage> {
   const { data, error, response } = await apiClient.GET("/api/v1/test-sets", {
-    params: { query: { kind: "prebuilt", limit: pageSize, cursor: cursor ?? undefined } },
+    params: { query: { limit: pageSize, cursor: cursor ?? undefined } },
   });
   if (data) return data;
   throw ApiError.from(response, error);

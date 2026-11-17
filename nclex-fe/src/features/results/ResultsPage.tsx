@@ -7,7 +7,13 @@ import ui from "@/components/ui/ui.module.css";
 import { WeakAreasCard } from "@/features/weak-areas/WeakAreasCard";
 import { isApiError } from "@/lib/api/errors";
 import { toNumber } from "@/lib/format/toNumber";
-import { type AttemptResultView, type CategoryResult, fetchResult, resultQueryKey } from "../attempt/api/attemptApi";
+import {
+  type AdaptiveResult,
+  type AttemptResultView,
+  type CategoryResult,
+  fetchResult,
+  resultQueryKey,
+} from "../attempt/api/attemptApi";
 import { elapsed, percent, points } from "./format";
 import styles from "./results.module.css";
 import { StudyRecommendations } from "./StudyRecommendations";
@@ -26,7 +32,8 @@ const dimensions: { key: keyof Breakdown; title: string; column: string }[] = [
 
 /**
  * /attempts/[id]/results (interfaces.md 5.2): the score, the readiness estimate with its
- * disclaimer, time per question, what to study next and the breakdown tables.
+ * disclaimer, time per question, what to study next and the breakdown tables. An adaptive exam
+ * (F19) leads with pass or fail and why it ended instead of a percentage.
  */
 export function ResultsPage({ attemptId }: { attemptId: string }) {
   const result = useQuery({ queryKey: resultQueryKey(attemptId), queryFn: () => fetchResult(attemptId) });
@@ -42,7 +49,6 @@ export function ResultsPage({ attemptId }: { attemptId: string }) {
   if (result.isError) return <ResultsError attemptId={attemptId} error={result.error} />;
 
   const { data } = result;
-  const score = data.score;
   return (
     <div className={styles.page}>
       <header>
@@ -53,25 +59,11 @@ export function ResultsPage({ attemptId }: { attemptId: string }) {
         </p>
       </header>
 
-      <section aria-labelledby="score-heading" className={`${ui.card} ${styles.summary}`}>
-        <h2 id="score-heading" className={ui.cardTitle}>
-          Your score
-        </h2>
-        <p className={styles.score}>{percent(score.pct)}</p>
-        <ul className={styles.facts}>
-          <li>
-            {points(score.pointsEarned)} of {points(score.maxPoints)} points
-          </li>
-          <li>
-            {toNumber(score.itemsCorrect)} of {toNumber(score.itemsTotal)} questions fully correct
-          </li>
-          <li>{toNumber(score.itemsAnswered)} answered</li>
-          <li>
-            {elapsed(data.time.totalMs)} in total, {elapsed(data.time.avgPerItemMs)} per question on average
-          </li>
-        </ul>
-        <Readiness readiness={data.readiness} />
-      </section>
+      {data.adaptive ? (
+        <AdaptiveSummary adaptive={data.adaptive} time={data.time} />
+      ) : (
+        <ScoreSummary data={data} />
+      )}
 
       <StudyRecommendations attemptId={attemptId} />
       <WeakAreasCard />
@@ -97,6 +89,69 @@ export function ResultsPage({ attemptId }: { attemptId: string }) {
         )}
       </div>
     </div>
+  );
+}
+
+/** The score of a fixed-length test: points, questions and time, with the readiness estimate. */
+function ScoreSummary({ data }: { data: AttemptResultView }) {
+  const score = data.score;
+  return (
+    <section aria-labelledby="score-heading" className={`${ui.card} ${styles.summary}`}>
+      <h2 id="score-heading" className={ui.cardTitle}>
+        Your score
+      </h2>
+      <p className={styles.score}>{percent(score.pct)}</p>
+      <ul className={styles.facts}>
+        <li>
+          {points(score.pointsEarned)} of {points(score.maxPoints)} points
+        </li>
+        <li>
+          {toNumber(score.itemsCorrect)} of {toNumber(score.itemsTotal)} questions fully correct
+        </li>
+        <li>{toNumber(score.itemsAnswered)} answered</li>
+        <li>
+          {elapsed(data.time.totalMs)} in total, {elapsed(data.time.avgPerItemMs)} per question on average
+        </li>
+      </ul>
+      <Readiness readiness={data.readiness} />
+    </section>
+  );
+}
+
+/** Why an adaptive exam stopped, in the candidate's words. */
+const stopReasons: Record<AdaptiveResult["stopReason"], string> = {
+  clear_result: "The exam stopped as soon as your result was clear.",
+  max_items: "You reached the maximum number of questions, so your final ability estimate decided.",
+  pool_exhausted: "The bank ran out of new questions, so your final ability estimate decided.",
+  time_expired:
+    "The time ran out. Before the minimum number of questions that is a fail; after it, your final ability estimate decided.",
+};
+
+/**
+ * The outcome of an adaptive exam (architecture.md 5.8). No percentage: every question was pitched
+ * at the candidate's level, so most people answer about half correctly whatever their ability.
+ */
+function AdaptiveSummary({ adaptive, time }: { adaptive: AdaptiveResult; time: AttemptResultView["time"] }) {
+  return (
+    <section aria-labelledby="score-heading" className={`${ui.card} ${styles.summary}`}>
+      <h2 id="score-heading" className={ui.cardTitle}>
+        Your result
+      </h2>
+      <p className={`${styles.score} ${adaptive.passed ? styles.pass : styles.fail}`}>
+        {adaptive.passed ? "Pass" : "Fail"}
+      </p>
+      <ul className={styles.facts}>
+        <li>
+          {toNumber(adaptive.itemsAnswered)} questions answered (this exam runs {toNumber(adaptive.minItems)} to{" "}
+          {toNumber(adaptive.maxItems)})
+        </li>
+        <li>{stopReasons[adaptive.stopReason]}</li>
+        <li>
+          {adaptive.timed ? "Timed" : "Untimed"}: {elapsed(time.totalMs)} in total
+        </li>
+      </ul>
+      <p className={ui.muted}>{adaptive.disclaimer}</p>
+    </section>
   );
 }
 

@@ -100,9 +100,15 @@ function HistoryRow({ attempt }: { attempt: AttemptSummary }) {
       <th scope="row" id={titleId}>
         {attempt.testSet.title}
       </th>
-      <td>{modeLabels[attempt.mode]}</td>
+      <td>
+        {modeLabels[attempt.mode]}
+        {attempt.mode === "cat" && (attempt.timed ? ", timed" : ", untimed")}
+      </td>
       <td>{attempt.submittedAt ? new Date(attempt.submittedAt).toLocaleString() : "—"}</td>
-      <td className={styles.number}>{attempt.scorePct === null ? "—" : percent(attempt.scorePct)}</td>
+      {/* An adaptive exam has no meaningful percentage (F19): its outcome column says pass or fail. */}
+      <td className={styles.number}>
+        {attempt.scorePct === null || attempt.mode === "cat" ? "—" : percent(attempt.scorePct)}
+      </td>
       <td>{outcomeLabel(attempt.passed)}</td>
       <td>
         <span className={styles.links}>

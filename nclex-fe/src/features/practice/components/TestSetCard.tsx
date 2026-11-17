@@ -1,6 +1,6 @@
 import ui from "@/components/ui/ui.module.css";
 import type { TestSetSummary } from "../api/practiceApi";
-import { modeLabel, questionCountLabel, timingLabel } from "../format";
+import { modeLabel, setLengthLabel, timingLabel } from "../format";
 import styles from "./practice.module.css";
 
 interface TestSetCardProps {
@@ -37,7 +37,7 @@ export function TestSetCard({ set, selected, panelId, onOpen }: TestSetCardProps
       </div>
       <ul className={styles.facts}>
         <li>{modeLabel(set.mode)}</li>
-        <li>{questionCountLabel(set.questionCount)}</li>
+        <li>{setLengthLabel(set)}</li>
         <li>{timingLabel(set)}</li>
       </ul>
       <div className={styles.cardAction}>

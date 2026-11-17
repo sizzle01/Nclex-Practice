@@ -23,6 +23,8 @@ import { useAttemptSession } from "./useAttemptSession";
  * The exam player at /attempts/[id] (interfaces.md 5.3): top bar with the timers, Pause and the ⋯
  * menu (Save &amp; Exit), the item with its rationale once revealed, bottom bar with
  * mark-for-review, "Report issue" (F15), the save indicator, Prev/Next and Submit, and a navigator drawer.
+ * An adaptive exam (F19) is one question at a time like the NCLEX: no navigator, no going back,
+ * no marking and no Submit; Next confirms the answer and the exam ends on its own.
  */
 export function AttemptPlayer({ attemptId }: { attemptId: string }) {
   const session = useAttemptSession(attemptId);
@@ -39,7 +41,8 @@ export function AttemptPlayer({ attemptId }: { attemptId: string }) {
     if (item) stemRef.current?.focus();
   }, [item?.questionVersionId]); // eslint-disable-line react-hooks/exhaustive-deps
 
-  if (session.openState === "ended") return <Ended byTime={session.endedByTime} resultsPath={session.resultsPath} />;
+  if (session.openState === "ended")
+    return <Ended byTime={session.endedByTime} adaptive={session.endedByAdaptive} resultsPath={session.resultsPath} />;
   if (session.openState === "failed") return <OpenFailed error={session.openError} />;
   if (session.openState === "opening" || !attempt) return <p className={ui.muted}>Opening your test…</p>;
 
@@ -51,6 +54,7 @@ export function AttemptPlayer({ attemptId }: { attemptId: string }) {
   const tutor = attempt.settings.revealMode === "tutor";
   const unanswered = attempt.navigator.filter((entry) => entry.state === "unseen" || entry.state === "seen").length;
   const flagged = attempt.navigator.filter((entry) => entry.flagged).length;
+  const adaptive = session.adaptive;
 
   function goTo(target: number) {
     setNavigatorOpen(false);
@@ -68,9 +72,7 @@ export function AttemptPlayer({ attemptId }: { attemptId: string }) {
         <h1 id={`${stemId}-title`} className={styles.title}>
           {attempt.testSet.title}
         </h1>
-        <span className={styles.position}>
-          Question {position} of {total}
-        </span>
+        <span className={styles.position}>{adaptive ? `Question ${position}` : `Question ${position} of ${total}`}</span>
         <TimerChips examMs={session.examMs} itemMs={session.itemMs} paused={session.paused} />
         <div className={styles.actions}>
           <button
@@ -87,16 +89,18 @@ export function AttemptPlayer({ attemptId }: { attemptId: string }) {
             onSaveAndExit={() => void session.pause("save_exit")}
           />
         </div>
-        <button
-          ref={navigatorButtonRef}
-          type="button"
-          className={ui.buttonSecondary}
-          aria-expanded={navigatorOpen}
-          aria-controls={navigatorId}
-          onClick={() => (navigatorOpen ? closeNavigator() : setNavigatorOpen(true))}
-        >
-          All questions
-        </button>
+        {!adaptive && (
+          <button
+            ref={navigatorButtonRef}
+            type="button"
+            className={ui.buttonSecondary}
+            aria-expanded={navigatorOpen}
+            aria-controls={navigatorId}
+            onClick={() => (navigatorOpen ? closeNavigator() : setNavigatorOpen(true))}
+          >
+            All questions
+          </button>
+        )}
       </header>
 
       {session.pauseError && !session.paused && (
@@ -153,56 +157,75 @@ export function AttemptPlayer({ attemptId }: { attemptId: string }) {
 
       <footer className={`${ui.card} ${styles.bottomBar}`}>
         <div className={styles.actions}>
-          <button
-            type="button"
-            className={ui.buttonGhost}
-            aria-pressed={item?.flagged ?? false}
-            disabled={!item || locked || session.paused}
-            onClick={() => void session.toggleFlag()}
-          >
-            <span aria-hidden="true">⚑</span> Mark for review
-          </button>
+          {!adaptive && (
+            <button
+              type="button"
+              className={ui.buttonGhost}
+              aria-pressed={item?.flagged ?? false}
+              disabled={!item || locked || session.paused}
+              onClick={() => void session.toggleFlag()}
+            >
+              <span aria-hidden="true">⚑</span> Mark for review
+            </button>
+          )}
           {item && (
             <ReportIssueButton questionVersionId={item.questionVersionId} attemptId={attemptId} disabled={session.paused} />
           )}
           <SaveStatusText status={session.saveStatus} />
         </div>
-        <div className={styles.actions}>
-          {tutor && !locked && (
+        {adaptive ? (
+          <div className={styles.actions}>
+            <span id={`${stemId}-final`} className={ui.muted}>
+              Your answer is final once you move on.
+            </span>
+            <button
+              type="button"
+              className={ui.button}
+              aria-describedby={`${stemId}-final`}
+              disabled={!item || session.busy || inputDisabled || session.paused}
+              onClick={() => void session.answerAdaptive()}
+            >
+              {session.submitting ? "Sending…" : "Next ▶"}
+            </button>
+          </div>
+        ) : (
+          <div className={styles.actions}>
+            {tutor && !locked && (
+              <button
+                type="button"
+                className={ui.buttonSecondary}
+                disabled={!item || session.busy || inputDisabled || session.paused}
+                onClick={() => void session.submitItem()}
+              >
+                Submit answer
+              </button>
+            )}
             <button
               type="button"
               className={ui.buttonSecondary}
-              disabled={!item || session.busy || inputDisabled || session.paused}
-              onClick={() => void session.submitItem()}
+              disabled={session.busy || position === 1 || !allowBack}
+              onClick={() => goTo(position! - 1)}
             >
-              Submit answer
+              ◀ Previous
             </button>
-          )}
-          <button
-            type="button"
-            className={ui.buttonSecondary}
-            disabled={session.busy || position === 1 || !allowBack}
-            onClick={() => goTo(position! - 1)}
-          >
-            ◀ Previous
-          </button>
-          <button
-            type="button"
-            className={ui.button}
-            disabled={session.busy || position === total}
-            onClick={() => goTo(position! + 1)}
-          >
-            Next ▶
-          </button>
-          <button
-            type="button"
-            className={ui.button}
-            disabled={session.busy || session.paused || session.leaseLost || session.examTimeUp}
-            onClick={() => setConfirmingSubmit(true)}
-          >
-            Submit test
-          </button>
-        </div>
+            <button
+              type="button"
+              className={ui.button}
+              disabled={session.busy || position === total}
+              onClick={() => goTo(position! + 1)}
+            >
+              Next ▶
+            </button>
+            <button
+              type="button"
+              className={ui.button}
+              disabled={session.busy || session.paused || session.leaseLost || session.examTimeUp}
+              onClick={() => setConfirmingSubmit(true)}
+            >
+              Submit test
+            </button>
+          </div>
+        )}
         {session.navError && (
           <p role="alert" className={styles.error}>
             {session.navError}
@@ -244,13 +267,17 @@ export function AttemptPlayer({ attemptId }: { attemptId: string }) {
  * The attempt is submitted, by the candidate or because its time ran out (ATTEMPT_TIME_EXPIRED).
  * The player is already moving to the results page; the link covers a slow or failed redirect.
  */
-function Ended({ byTime, resultsPath }: { byTime: boolean; resultsPath: string }) {
+function Ended({ byTime, adaptive, resultsPath }: { byTime: boolean; adaptive: boolean; resultsPath: string }) {
+  const heading = byTime ? "Time is up" : adaptive ? "Your exam has ended" : "Test submitted";
+  const message = byTime
+    ? "Your test has been submitted with the answers you saved."
+    : adaptive
+      ? "Like the NCLEX, the exam stopped once it had enough answers to decide your result."
+      : "Your answers have been graded.";
   return (
     <section className={ui.card}>
-      <h1>{byTime ? "Time is up" : "Test submitted"}</h1>
-      <p role="alert">
-        {byTime ? "Your test has been submitted with the answers you saved." : "Your answers have been graded."}
-      </p>
+      <h1>{heading}</h1>
+      <p role="alert">{message}</p>
       <Link href={resultsPath} className={ui.button}>
         See your results
       </Link>

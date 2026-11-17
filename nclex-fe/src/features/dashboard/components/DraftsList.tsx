@@ -52,9 +52,18 @@ function DraftRow({ draft }: { draft: AttemptSummary }) {
         <h3 id={titleId} className={styles.draftTitle}>
           {draft.testSet.title}
         </h3>
-        <span>{percent}% complete</span>
+        {/* An adaptive exam's length is unknown until it stops (F19), so it shows what is done instead. */}
+        {draft.mode === "cat" ? (
+          <span>
+            Adaptive, {draft.timed ? "timed" : "untimed"}: {toNumber(draft.answeredItems)} answered
+          </span>
+        ) : (
+          <span>{percent}% complete</span>
+        )}
       </div>
-      <progress className={styles.progress} max={100} value={percent} aria-labelledby={titleId} />
+      {draft.mode !== "cat" && (
+        <progress className={styles.progress} max={100} value={percent} aria-labelledby={titleId} />
+      )}
       {draft.staleDraft && (
         <p className={styles.stale}>You haven&apos;t worked on this test for over 30 days. Resume it or discard it?</p>
       )}

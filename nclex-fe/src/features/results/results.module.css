@@ -95,3 +95,12 @@
   gap: 1.25rem;
   scroll-margin-top: 5rem;
 }
+
+/* An adaptive exam's Pass or Fail (F19); the word carries the meaning, the colour only supports it. */
+.pass {
+  color: var(--success);
+}
+
+.fail {
+  color: var(--error);
+}

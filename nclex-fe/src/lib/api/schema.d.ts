@@ -2999,6 +2999,102 @@ export interface paths {
         patch?: never;
         trace?: never;
     };
+    "/api/v1/attempts/{id}/items/{position}/answer": {
+        parameters: {
+            query?: never;
+            header?: never;
+            path?: never;
+            cookie?: never;
+        };
+        get?: never;
+        put?: never;
+        post: {
+            parameters: {
+                query?: never;
+                header?: {
+                    "X-Attempt-Client"?: string;
+                };
+                path: {
+                    id: string;
+                    position: number;
+                };
+                cookie?: never;
+            };
+            requestBody: {
+                content: {
+                    "application/json": components["schemas"]["AnswerAdaptiveItemRequest"];
+                    "text/json": components["schemas"]["AnswerAdaptiveItemRequest"];
+                    "application/*+json": components["schemas"]["AnswerAdaptiveItemRequest"];
+                };
+            };
+            responses: {
+                /** @description OK */
+                200: {
+                    headers: {
+                        [name: string]: unknown;
+                    };
+                    content: {
+                        "application/json": components["schemas"]["AnswerAdaptiveItemResult"];
+                    };
+                };
+                /** @description Bad Request */
+                400: {
+                    headers: {
+                        [name: string]: unknown;
+                    };
+                    content: {
+                        "application/problem+json": components["schemas"]["ProblemDetails"];
+                        "application/json": unknown;
+                    };
+                };
+                /** @description Unauthorized */
+                401: {
+                    headers: {
+                        [name: string]: unknown;
+                    };
+                    content: {
+                        "application/problem+json": components["schemas"]["ProblemDetails"];
+                        "application/json": unknown;
+                    };
+                };
+                /** @description Not Found */
+                404: {
+                    headers: {
+                        [name: string]: unknown;
+                    };
+                    content: {
+                        "application/problem+json": components["schemas"]["ProblemDetails"];
+                        "application/json": unknown;
+                    };
+                };
+                /** @description Conflict */
+                409: {
+                    headers: {
+                        [name: string]: unknown;
+                    };
+                    content: {
+                        "application/problem+json": components["schemas"]["ProblemDetails"];
+                        "application/json": unknown;
+                    };
+                };
+                /** @description Locked */
+                423: {
+                    headers: {
+                        [name: string]: unknown;
+                    };
+                    content: {
+                        "application/problem+json": components["schemas"]["ProblemDetails"];
+                        "application/json": unknown;
+                    };
+                };
+            };
+        };
+        delete?: never;
+        options?: never;
+        head?: never;
+        patch?: never;
+        trace?: never;
+    };
     "/api/v1/attempts/{id}/navigate": {
         parameters: {
             query?: never;
@@ -5948,6 +6044,33 @@ export interface components {
             /** Format: date-time */
             accessTokenExpiresAt: string;
         };
+        AdaptiveProgress: {
+            /** Format: int32 */
+            answered: number | string;
+            /** Format: int32 */
+            minItems: number | string;
+            /** Format: int32 */
+            maxItems: number | string;
+            timed: boolean;
+        };
+        AdaptiveResult: {
+            passed: boolean;
+            /** Format: int32 */
+            itemsAnswered: number | string;
+            /** Format: int32 */
+            minItems: number | string;
+            /** Format: int32 */
+            maxItems: number | string;
+            stopReason: components["schemas"]["CatStopReason"];
+            timed: boolean;
+            disclaimer: string;
+        };
+        AdaptiveRules: {
+            /** Format: int32 */
+            minItems: number | string;
+            /** Format: int32 */
+            maxItems: number | string;
+        };
         AdminBankPage: {
             items: components["schemas"]["AdminBankSummary"][];
             nextCursor: null | string;
@@ -6092,6 +6215,15 @@ export interface components {
             /** Format: date-time */
             createdAt: string;
         };
+        AnswerAdaptiveItemRequest: {
+            response: null | components["schemas"]["JsonElement"];
+            /** Format: int32 */
+            clientSeq: null | number | string;
+        };
+        AnswerAdaptiveItemResult: {
+            ended: boolean;
+            attempt: components["schemas"]["AttemptState"];
+        };
         AttemptPage: {
             items: components["schemas"]["AttemptSummary"][];
             nextCursor: null | string;
@@ -6126,6 +6258,7 @@ export interface components {
             readiness: null | components["schemas"]["ResultReadiness"];
             breakdown: components["schemas"]["ResultBreakdown"];
             weakest: components["schemas"]["WeakArea"][];
+            adaptive: null | components["schemas"]["AdaptiveResult"];
         };
         AttemptState: {
             /** Format: uuid */
@@ -6146,6 +6279,7 @@ export interface components {
             lastActivityAt: string;
             staleDraft: boolean;
             resultAvailable: boolean;
+            adaptive: null | components["schemas"]["AdaptiveProgress"];
         };
         AttemptStateSettings: {
             mode: components["schemas"]["TestMode"];
@@ -6182,6 +6316,7 @@ export interface components {
             /** Format: double */
             scorePct: null | number | string;
             passed: null | boolean;
+            timed: boolean;
         };
         AuthResponse: {
             user: components["schemas"]["UserProfile"];
@@ -6257,6 +6392,8 @@ export interface components {
             /** Format: int32 */
             avgTimeMs: number | string;
         };
+        /** @enum {unknown} */
+        CatStopReason: "clear_result" | "max_items" | "time_expired" | "pool_exhausted";
         ChangeEmailRequest: {
             currentPassword: string;
             newEmail: string;
@@ -6828,6 +6965,7 @@ export interface components {
         StartAttemptRequest: {
             /** Format: uuid */
             testSetId: string;
+            timed?: null | boolean;
         };
         StartWeakAreaPracticeRequest: {
             track?: null | components["schemas"]["ExamTrack"];
@@ -6908,6 +7046,7 @@ export interface components {
             accessTier: components["schemas"]["PlanTier"];
             locked: boolean;
             myLastAttempt: null | components["schemas"]["LastAttemptSummary"];
+            adaptive?: null | components["schemas"]["AdaptiveRules"];
         };
         /** @enum {unknown} */
         TestSetKind: "prebuilt" | "custom" | "cat" | "assigned" | null;
@@ -6956,6 +7095,7 @@ export interface components {
             accessTier: components["schemas"]["PlanTier"];
             locked: boolean;
             myLastAttempt: null | components["schemas"]["LastAttemptSummary"];
+            adaptive?: null | components["schemas"]["AdaptiveRules"];
         };
         TimerState: {
             /** Format: date-time */

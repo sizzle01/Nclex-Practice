@@ -30,6 +30,15 @@ export function questionCountLabel(count: number | string): string {
 }
 
 /**
+ * How many questions the card and panel show: an adaptive exam's range ("85–150 questions"),
+ * otherwise the set's count.
+ */
+export function setLengthLabel(set: Pick<TestSetSummary, "questionCount" | "adaptive">): string {
+  if (set.adaptive) return `${toNumber(set.adaptive.minItems)}–${toNumber(set.adaptive.maxItems)} questions`;
+  return questionCountLabel(set.questionCount);
+}
+
+/**
  * A duration as people say it: "45 seconds", "80 minutes" (up to two hours, as exam timers are
  * usually quoted), then "2 h 30 min".
  */
@@ -43,8 +52,14 @@ export function formatDuration(seconds: number | string): string {
   return rest === 0 ? `${hours} h` : `${hours} h ${rest} min`;
 }
 
-/** What the card says about time: "Untimed", "80 minutes", or "90 s per question". */
-export function timingLabel(set: Pick<TestSetSummary, "timed" | "timeBudgetSec" | "perQuestionSec">): string {
+/**
+ * What the card says about time: "Untimed", "80 minutes", or "90 s per question". An adaptive exam
+ * is taken timed or untimed, as the candidate chooses: "5 h or untimed".
+ */
+export function timingLabel(
+  set: Pick<TestSetSummary, "timed" | "timeBudgetSec" | "perQuestionSec"> & Partial<Pick<TestSetSummary, "adaptive">>,
+): string {
+  if (set.adaptive && set.timeBudgetSec != null) return `${formatDuration(set.timeBudgetSec)} or untimed`;
   if (!set.timed) return "Untimed";
   const parts: string[] = [];
   if (set.timeBudgetSec != null) parts.push(formatDuration(set.timeBudgetSec));

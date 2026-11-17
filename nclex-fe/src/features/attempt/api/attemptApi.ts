@@ -22,6 +22,8 @@ export type CategoryResult = ApiSchema<"CategoryResult">;
 export type ReviewPage = ApiSchema<"ReviewPage">;
 export type ReviewFilter = NonNullable<ApiSchema<"ReviewFilter">>;
 export type FinalResponse = ApiSchema<"FinalResponse">;
+export type AnswerAdaptiveItemResult = ApiSchema<"AnswerAdaptiveItemResult">;
+export type AdaptiveResult = NonNullable<ApiSchema<"AdaptiveResult">>;
 
 export function attemptQueryKey(attemptId: string) {
   return ["attempts", attemptId] as const;
@@ -45,9 +47,17 @@ export function reviewQueryKey(attemptId: string, filter: ReviewFilter) {
   return ["attempts", attemptId, "review", filter] as const;
 }
 
+export interface StartAttemptInput {
+  testSetId: string;
+  /** Adaptive exams only (F19): the candidate's choice of timed or untimed. */
+  timed?: boolean;
+}
+
 /** POST /attempts: starts a set, or returns the existing draft of it. */
-export async function startAttempt(testSetId: string): Promise<AttemptState> {
-  const { data, error, response } = await apiClient.POST("/api/v1/attempts", { body: { testSetId } });
+export async function startAttempt({ testSetId, timed }: StartAttemptInput): Promise<AttemptState> {
+  const { data, error, response } = await apiClient.POST("/api/v1/attempts", {
+    body: timed === undefined ? { testSetId } : { testSetId, timed },
+  });
   if (data) return data;
   throw ApiError.from(response, error);
 }
@@ -145,6 +155,25 @@ export async function submitItem(attemptId: string, clientId: string, position: 
     params: { path: { id: attemptId, position }, header: { "X-Attempt-Client": clientId } },
   });
   if (data) return data.reveal;
+  throw ApiError.from(response, error);
+}
+
+/**
+ * POST …/items/{position}/answer: the adaptive exam's Next (F19). The answer is final; the server
+ * grades it and either serves the next question or ends the exam.
+ */
+export async function answerAdaptiveItem(
+  attemptId: string,
+  clientId: string,
+  position: number,
+  answer: unknown,
+  clientSeq: number,
+): Promise<AnswerAdaptiveItemResult> {
+  const { data, error, response } = await apiClient.POST("/api/v1/attempts/{id}/items/{position}/answer", {
+    params: { path: { id: attemptId, position }, header: { "X-Attempt-Client": clientId } },
+    body: { response: answer, clientSeq },
+  });
+  if (data) return data;
   throw ApiError.from(response, error);
 }
 

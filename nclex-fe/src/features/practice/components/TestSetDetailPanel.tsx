@@ -1,17 +1,18 @@
 "use client";
 
 import { useRouter } from "next/navigation";
-import { useEffect, useId, useRef } from "react";
+import { useEffect, useId, useRef, useState } from "react";
 import ui from "@/components/ui/ui.module.css";
 import { useStartAttempt } from "@/features/attempt/api/attemptApi";
 import { isApiError } from "@/lib/api/errors";
 import { useTestSet } from "../api/practiceApi";
 import {
+  formatDuration,
   modeLabel,
   pausePolicyLabel,
   percentLabel,
-  questionCountLabel,
   revealModeLabel,
+  setLengthLabel,
   timingLabel,
 } from "../format";
 import styles from "./practice.module.css";
@@ -25,7 +26,8 @@ interface TestSetDetailPanelProps {
 /**
  * The open set's settings and a Start button, which starts the set (or resumes its draft) and
  * opens the player. Focus moves to the panel's heading when it opens, so keyboard and
- * screen-reader users land on what they asked for.
+ * screen-reader users land on what they asked for. An adaptive exam (F19) first asks whether to
+ * take it timed or untimed; a draft already started keeps the timing it started with.
  */
 export function TestSetDetailPanel({ id, setId, onClose }: TestSetDetailPanelProps) {
   const { data: set, error, isPending } = useTestSet(setId);
@@ -34,9 +36,12 @@ export function TestSetDetailPanel({ id, setId, onClose }: TestSetDetailPanelPro
   const headingId = `${id}-heading`;
   const router = useRouter();
   const start = useStartAttempt();
+  const [timed, setTimed] = useState(true);
+  const timingName = useId();
 
   function startSet() {
-    start.mutate(setId, { onSuccess: (attempt) => router.push(`/attempts/${attempt.id}`) });
+    const input = set?.adaptive ? { testSetId: setId, timed } : { testSetId: setId };
+    start.mutate(input, { onSuccess: (attempt) => router.push(`/attempts/${attempt.id}`) });
   }
 
   useEffect(() => {
@@ -76,7 +81,10 @@ export function TestSetDetailPanel({ id, setId, onClose }: TestSetDetailPanelPro
             <dt>Mode</dt>
             <dd>{modeLabel(set.mode)}</dd>
             <dt>Questions</dt>
-            <dd>{questionCountLabel(set.questionCount)}</dd>
+            <dd>
+              {setLengthLabel(set)}
+              {set.adaptive && ", stopping once your result is clear"}
+            </dd>
             <dt>Timing</dt>
             <dd>{timingLabel(set)}</dd>
             <dt>Answers</dt>
@@ -92,6 +100,21 @@ export function TestSetDetailPanel({ id, setId, onClose }: TestSetDetailPanelPro
             <dt>Pauses</dt>
             <dd>{pausePolicyLabel(set.pausePolicy)}</dd>
           </dl>
+          {set.adaptive && (
+            <fieldset className={styles.timingChoice}>
+              <legend>How do you want to take it?</legend>
+              <label>
+                <input type="radio" name={timingName} checked={timed} onChange={() => setTimed(true)} />
+                Timed{set.timeBudgetSec != null && ` (${formatDuration(set.timeBudgetSec)})`}: submits by itself when
+                time runs out
+              </label>
+              <label>
+                <input type="radio" name={timingName} checked={!timed} onChange={() => setTimed(false)} />
+                Untimed: no clock; the exam still stops by itself
+              </label>
+              <p className={ui.muted}>If you already started this exam, Start resumes it with the timing you chose then.</p>
+            </fieldset>
+          )}
           <div>
             <button
               type="button"

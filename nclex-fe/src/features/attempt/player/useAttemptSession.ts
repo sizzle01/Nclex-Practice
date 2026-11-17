@@ -7,6 +7,7 @@ import { useStore } from "zustand";
 import { isApiError } from "@/lib/api/errors";
 import { toNumber } from "@/lib/format/toNumber";
 import {
+  answerAdaptiveItem,
   attemptQueryKey,
   type AttemptState,
   type CandidateItem,
@@ -100,11 +101,15 @@ export function useAttemptSession(attemptId: string) {
   const attempt = openMutation.isSuccess || openMutation.isPending ? attemptQuery.data : undefined;
   const openExpired = isApiError(openMutation.error, "ATTEMPT_TIME_EXPIRED");
   const [submitted, setSubmitted] = useState(false);
-  const ended = submitted || timeExpired || openExpired || attempt?.status === "submitted";
+  // Set when the adaptive exam stopped on its own after an answer (F19).
+  const [adaptiveEnded, setAdaptiveEnded] = useState(false);
+  const ended = submitted || adaptiveEnded || timeExpired || openExpired || attempt?.status === "submitted";
   const openState: OpenState = ended ? "ended" : attempt ? "open" : openMutation.isError ? "failed" : "opening";
   const position = attempt ? toNumber(attempt.currentPosition) : null;
   const total = attempt ? toNumber(attempt.totalItems) : 0;
   const paused = attempt?.status === "paused";
+  /** The adaptive exam's progress; null for every other attempt. */
+  const adaptive = attempt?.adaptive ?? null;
 
   // A finished attempt belongs on its results page (architecture.md 5.5).
   const resultsPath = `/attempts/${attemptId}/results`;
@@ -342,6 +347,44 @@ export function useAttemptSession(attemptId: string) {
   }
 
   /**
+   * The adaptive exam's Next (architecture.md 5.8): the answer is final. It goes through the save
+   * queue first, so the stored answer and this one carry the same clientSeq, then the server grades
+   * it and serves the next question or ends the exam.
+   */
+  async function answerAdaptive() {
+    if (submitting || position === null) return;
+    if (response === null || response === undefined) {
+      setSubmitError("Choose an answer to continue. Like the NCLEX, this exam does not let you skip a question.");
+      return;
+    }
+
+    setSubmitting(true);
+    setSubmitError(null);
+    try {
+      queue.getState().enqueue(position, response);
+      const clientSeq = queue.getState().pending[position].clientSeq;
+      await queue.getState().flush();
+      if (queue.getState().leaseLost) return;
+      const result = await answerAdaptiveItem(attemptId, clientId, position, response, clientSeq);
+      if (result.ended) {
+        queue.getState().clear();
+        setAdaptiveEnded(true);
+        return;
+      }
+
+      queryClient.setQueryData(attemptKey, result.attempt);
+      // The question just answered is now locked.
+      await queryClient.invalidateQueries({ queryKey: itemQueryKey(attemptId, position) });
+    } catch (error) {
+      handleWriteError(error);
+      if (!isApiError(error, "ATTEMPT_OPENED_ELSEWHERE") && !isApiError(error, "ATTEMPT_TIME_EXPIRED"))
+        setSubmitError("Could not send your answer. Please try again.");
+    } finally {
+      setSubmitting(false);
+    }
+  }
+
+  /**
    * The final Submit (interfaces.md 5.4): flush the save queue, send whatever it still holds (for
    * example while offline) as final responses, then go to the results page.
    */
@@ -387,6 +430,9 @@ export function useAttemptSession(attemptId: string) {
     submitError,
     /** True when the attempt ended because its time ran out, not by the candidate's Submit. */
     endedByTime: timeExpired || openExpired,
+    /** True when an adaptive exam stopped on its own after an answer. */
+    endedByAdaptive: adaptiveEnded,
+    adaptive,
     resultsPath,
     paused,
     pauseError,
@@ -403,6 +449,7 @@ export function useAttemptSession(attemptId: string) {
     continueHere,
     submitItem,
     submitAttempt,
+    answerAdaptive,
   };
 }
 
