@@ -43,6 +43,16 @@ Candidates then meet the questions through the custom builder (F07) and attempt 
 ## 5. Database changes
 None. Content only; it uses the tables from F04, F11 and F17.
 
+### What candidates see
+`catalog.py` (run by `build_all.py`) builds the curated test sets shown on the Practice page and the admin
+"RN Question Bank" (all 1,110). It writes them into the last batch file, because the importer refuses a file without
+questions and the last file imports after every question it lists:
+- 21 topic practice sets: every standalone question, by Client Needs category, in parts of up to 60 (tutor mode, untimed).
+- 2 case study sets: the 10 NGN cases, 5 per set, each kept whole and in order.
+- 4 NCLEX-RN mock exams: 85 items (2 whole cases + 73 standalone items weighted by test-plan midpoints), timed
+  2 h 50 min, no going back, answers and a 65% pass estimate at the end; no item appears in two exams.
+The custom builder (`/practice/custom`) draws from every published question, so it never needed a set.
+
 ## 6. Key decisions and deviations
 - **Original content.** No question is copied or paraphrased from UWorld, Saunders, Kaplan or ATI.
 - **One subtopic registry** (`qb.SUBTOPICS`): a file that declares a slug renames it in the database, so all files must agree.
