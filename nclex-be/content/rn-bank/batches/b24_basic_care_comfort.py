@@ -120,7 +120,7 @@ mc(M(BCC, NUT, "generate_solutions", "easy", "gastrointestinal", "fund"),
    "High-fiber foods: legumes, whole grains, fruits, vegetables, bran.",
    "Identify high-fiber foods."),
 
-calc(M("HPM", "bone-health-and-osteoporosis" , "analyze_cues", "easy", F, "fund"),
+calc(M(BCC, NUT, "analyze_cues", "easy", F, "fund"),
    "A client weighs 90 kg and is 1.75 m tall. What is the client's body mass index (BMI)? Round to the nearest tenth.",
    "kg/m²", 1, "BMI", 29.4,
    "BMI = weight (kg) ÷ height (m)² = 90 ÷ (1.75 × 1.75) = 90 ÷ 3.0625 = 29.4 (overweight range: 25 to 29.9).",

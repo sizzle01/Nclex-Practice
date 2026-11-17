@@ -23,11 +23,6 @@
       "name": "Nutrition and therapeutic diets"
     },
     {
-      "clientNeeds": "HPM",
-      "slug": "bone-health-and-osteoporosis",
-      "name": "Bone health and osteoporosis prevention"
-    },
-    {
       "clientNeeds": "PHI.BCC",
       "slug": "hygiene-and-personal-care",
       "name": "Hygiene and personal care"
@@ -601,10 +596,10 @@
     {
       "id": "c1a00024-0000-4000-8000-000000000012",
       "itemType": "fill_blank_calc",
-      "clientNeeds": "HPM",
+      "clientNeeds": "PHI.BCC",
       "bodySystem": "fundamentals",
       "subtopics": [
-        "bone-health-and-osteoporosis"
+        "nutrition-and-therapeutic-diets"
       ],
       "cjmmSkill": "analyze_cues",
       "difficulty": "easy",
