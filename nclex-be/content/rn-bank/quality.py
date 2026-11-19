@@ -64,6 +64,8 @@ def tricks(q):
     assess = {o["id"]: 1 if ASSESS.search(o["text"].lstrip("\"'")) else 0 for o in options}
     return {
         "longest": _share(length, key),
+        # Writers who trim keys to beat "longest" can make the key the shortest instead.
+        "shortest": _share({i: -n for i, n in length.items()}, key),
         "stem words": _share(overlap, key),
         "skip absolutes": _share(no_absolute, key),
         "assess first": _share(assess, key),
@@ -197,7 +199,7 @@ def markdown(rows, total):
         "",
         "- **Key longest:** share of multiple-choice questions whose key is the single longest option. Chance is about 25%.",
         "- **Best trick:** the best score a test-wise candidate gets on the multiple-choice questions without any nursing",
-        "  knowledge (pick the longest option, the one repeating the stem's words, avoid absolute words, or pick \"assess\").",
+        "  knowledge (pick the longest or the shortest option, the one repeating the stem's words, avoid absolute words, or pick \"assess\").",
         "  Chance is about 25%; hardened files must stay at or below 35%.",
         "- **Absolutes:** share of multiple-choice questions where only wrong options say always, never, all, only and so on.",
         "- **Difficulty:** easy / moderate / difficult.",

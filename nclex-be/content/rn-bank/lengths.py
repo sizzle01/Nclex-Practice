@@ -1,4 +1,4 @@
-"""While rewriting a batch: shows each multiple-choice key's length against the longest wrong option,
+"""While rewriting a batch: shows each multiple-choice key's length against the wrong options' range,
 and the batch's quality-gate problems, without stopping at the first failure.
 
     python3 -I lengths.py 02
@@ -23,6 +23,7 @@ for n, q in enumerate(module.BUILT[1], 1):
         continue
     key = q["key"]["correct"]
     lengths = {o["id"]: len(o["text"]) for o in q["content"]["options"]}
-    wrong = max(v for k, v in lengths.items() if k != key)
-    print(f"{n:3} key {key} {lengths[key]:4} vs {wrong:4}  {'KEY LONGEST' if lengths[key] > wrong else ''}")
+    others = [v for k, v in lengths.items() if k != key]
+    flag = "KEY LONGEST" if lengths[key] > max(others) else "KEY SHORTEST" if lengths[key] < min(others) else ""
+    print(f"{n:3} key {key} {lengths[key]:4}  wrong {min(others):4}-{max(others):4}  {flag}")
 print("\n".join(problems) or "Passes the quality gates.")
