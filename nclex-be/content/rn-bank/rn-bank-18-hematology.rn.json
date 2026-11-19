@@ -1,5 +1,5 @@
 {
-  "notice": "RN bank batch 18: Hematology: anemias, sickle cell, bleeding disorders and transfusion. Reviewed by the content team on 17 November 2026. See REVIEW-LOG.md.",
+  "notice": "RN bank batch 18: Hematology: anemias, sickle cell, bleeding disorders and transfusion. Rewritten to NCLEX-RN difficulty and reviewed by the content team on 19 November 2026. See REVIEW-LOG.md.",
   "track": "RN",
   "subtopics": [
     {
@@ -52,22 +52,22 @@
       "subtopics": [
         "anemias"
       ],
-      "cjmmSkill": "recognize_cues",
-      "difficulty": "easy",
-      "stem": "Which findings are consistent with iron deficiency anemia?",
+      "cjmmSkill": "analyze_cues",
+      "difficulty": "moderate",
+      "stem": "A 34-year-old client with heavy menstrual periods reports fatigue and shortness of breath on stairs. The hemoglobin is 8.9 g/dL with small, pale red cells. Which other findings fit iron deficiency anemia?",
       "content": {
         "options": [
           {
             "id": "a",
-            "text": "Fatigue, pallor, spoon-shaped nails and a low ferritin"
+            "text": "Spoon-shaped nails, a craving for ice and a low ferritin"
           },
           {
             "id": "b",
-            "text": "Beefy red tongue and numbness in the feet"
+            "text": "A smooth, beefy red tongue with numbness in both of the feet"
           },
           {
             "id": "c",
-            "text": "Jaundice and dark urine"
+            "text": "Yellow sclera, dark urine and an enlarged spleen"
           },
           {
             "id": "d",
@@ -79,16 +79,16 @@
         "correct": "a"
       },
       "rationale": {
-        "correct": "Iron deficiency: microcytic anemia, low ferritin, fatigue, pallor and koilonychia.",
+        "correct": "Iron deficiency: microcytic anemia, low ferritin, fatigue, pallor, koilonychia and pica.",
         "perOption": {
-          "a": "Low iron stores reduce hemoglobin production.",
+          "a": "Low iron stores reduce hemoglobin production and cause koilonychia and pica.",
           "b": "These suggest vitamin B12 deficiency.",
           "c": "These suggest hemolysis.",
           "d": "These suggest polycythemia vera."
         },
         "references": [
           "Medical-surgical nursing texts (e.g. Lewis; Ignatavicius)",
-          "Reviewed by the content team on 17 November 2026."
+          "Rewritten to NCLEX-RN difficulty and reviewed by the content team on 19 November 2026."
         ]
       },
       "educationalObjective": "Recognize iron deficiency anemia."
@@ -103,24 +103,24 @@
       ],
       "cjmmSkill": "generate_solutions",
       "difficulty": "moderate",
-      "stem": "Which instruction should the nurse give a client starting oral ferrous sulfate?",
+      "stem": "A client with iron deficiency anemia is starting ferrous sulfate 325 mg twice a day. The client also takes calcium carbonate for heartburn. Which instruction should the nurse give?",
       "content": {
         "options": [
           {
             "id": "a",
-            "text": "\"Take it with orange juice, and expect your stools to be dark.\""
+            "text": "\"Take it with orange juice and expect dark stools.\""
           },
           {
             "id": "b",
-            "text": "\"Take it with milk or antacids.\""
+            "text": "\"Take it together with your calcium antacid each time.\""
           },
           {
             "id": "c",
-            "text": "\"Stop taking it if your stools turn dark.\""
+            "text": "\"Stop taking it if your stools turn dark or black.\""
           },
           {
             "id": "d",
-            "text": "\"Take it with tea.\""
+            "text": "\"Take it with a cup of tea to settle your stomach.\""
           }
         ]
       },
@@ -131,13 +131,13 @@
         "correct": "Oral iron: take with vitamin C, separate from dairy and antacids, use a straw for liquid forms, expect dark stools and prevent constipation.",
         "perOption": {
           "a": "Vitamin C improves absorption, and dark stools are harmless.",
-          "b": "Calcium and antacids reduce absorption.",
-          "c": "Dark stools are expected.",
+          "b": "Calcium and antacids reduce iron absorption.",
+          "c": "Dark stools are expected with iron.",
           "d": "Tea reduces absorption."
         },
         "references": [
           "Nursing pharmacology texts (e.g. Lehne; McCuistion) and the drug's prescribing information",
-          "Reviewed by the content team on 17 November 2026."
+          "Rewritten to NCLEX-RN difficulty and reviewed by the content team on 19 November 2026."
         ]
       },
       "educationalObjective": "Teach about oral iron."
@@ -152,24 +152,24 @@
       ],
       "cjmmSkill": "evaluate_outcomes",
       "difficulty": "moderate",
-      "stem": "A client with pernicious anemia is receiving vitamin B12 injections. Which statement shows a need for more teaching?",
+      "stem": "A 66-year-old client with pernicious anemia received monthly vitamin B12 injections for 3 months and feels much better. Which statement by the client shows a need for more teaching?",
       "content": {
         "options": [
           {
             "id": "a",
-            "text": "\"I'll need these injections for the rest of my life.\""
+            "text": "\"I'll need these shots for the rest of my life.\""
           },
           {
             "id": "b",
-            "text": "\"I'll only need the injections until I feel better.\""
+            "text": "\"I can stop the shots now that I feel better.\""
           },
           {
             "id": "c",
-            "text": "\"The tingling in my feet may improve.\""
+            "text": "\"The tingling in my feet may keep getting better.\""
           },
           {
             "id": "d",
-            "text": "\"I'll keep my follow-up blood tests.\""
+            "text": "\"I'll keep going for my follow-up blood tests.\""
           }
         ]
       },
@@ -177,16 +177,16 @@
         "correct": "b"
       },
       "rationale": {
-        "correct": "Pernicious anemia: lack of intrinsic factor means lifelong B12 replacement (injections, or high-dose oral or nasal forms if prescribed).",
+        "correct": "Pernicious anemia: lack of intrinsic factor means lifelong B12 replacement by injection or high-dose oral or nasal forms, if prescribed.",
         "perOption": {
           "a": "Lack of intrinsic factor is permanent.",
-          "b": "B12 replacement is lifelong because the client can't absorb it from food.",
-          "c": "Neurologic symptoms can improve with treatment.",
+          "b": "B12 replacement is lifelong because the client cannot absorb it from food.",
+          "c": "Neurological symptoms can improve with treatment.",
           "d": "Monitoring is needed."
         },
         "references": [
           "Nursing pharmacology texts (e.g. Lehne; McCuistion) and the drug's prescribing information",
-          "Reviewed by the content team on 17 November 2026."
+          "Rewritten to NCLEX-RN difficulty and reviewed by the content team on 19 November 2026."
         ]
       },
       "educationalObjective": "Teach about lifelong vitamin B12 therapy."
@@ -199,26 +199,26 @@
       "subtopics": [
         "anemias"
       ],
-      "cjmmSkill": "recognize_cues",
+      "cjmmSkill": "analyze_cues",
       "difficulty": "moderate",
-      "stem": "Which finding suggests vitamin B12 deficiency rather than iron deficiency?",
+      "stem": "A 70-year-old client who had a gastric bypass 10 years ago has a hemoglobin of 9.2 g/dL with large red blood cells. Which finding suggests vitamin B12 deficiency rather than iron deficiency?",
       "content": {
         "options": [
           {
             "id": "a",
-            "text": "Smooth, beefy red tongue and tingling in the hands and feet"
+            "text": "Tingling of the feet and an unsteady gait"
           },
           {
             "id": "b",
-            "text": "Spoon-shaped nails"
+            "text": "Thin, spoon-shaped nails on both hands"
           },
           {
             "id": "c",
-            "text": "Craving ice"
+            "text": "A strong craving to chew ice cubes"
           },
           {
             "id": "d",
-            "text": "Low ferritin"
+            "text": "A low serum ferritin on the latest tests"
           }
         ]
       },
@@ -226,16 +226,16 @@
         "correct": "a"
       },
       "rationale": {
-        "correct": "B12 deficiency causes macrocytic anemia with neurologic signs.",
+        "correct": "B12 deficiency causes a macrocytic anemia with neurological signs; it is common after gastric surgery.",
         "perOption": {
-          "a": "B12 is needed for nerve function, so neurologic symptoms point to B12 deficiency.",
+          "a": "B12 is needed for nerve function, so neurological symptoms point to B12 deficiency.",
           "b": "This suggests iron deficiency.",
           "c": "Pica suggests iron deficiency.",
           "d": "This suggests iron deficiency."
         },
         "references": [
           "Medical-surgical nursing texts (e.g. Lewis; Ignatavicius)",
-          "Reviewed by the content team on 17 November 2026."
+          "Rewritten to NCLEX-RN difficulty and reviewed by the content team on 19 November 2026."
         ]
       },
       "educationalObjective": "Tell B12 deficiency apart from iron deficiency."
@@ -250,24 +250,24 @@
       ],
       "cjmmSkill": "analyze_cues",
       "difficulty": "moderate",
-      "stem": "Which client is at highest risk for folic acid deficiency anemia?",
+      "stem": "A clinic nurse is reviewing four clients' histories. Which client is at highest risk for folic acid deficiency anemia?",
       "content": {
         "options": [
           {
             "id": "a",
-            "text": "A client with long-term heavy alcohol use"
+            "text": "A 52-year-old who drinks about a liter of vodka a day and eats little"
           },
           {
             "id": "b",
-            "text": "A client who eats leafy green vegetables daily"
+            "text": "A 30-year-old vegetarian who eats leafy green vegetables daily"
           },
           {
             "id": "c",
-            "text": "A client taking a prenatal vitamin"
+            "text": "A 28-year-old who is 20 weeks pregnant and takes a prenatal vitamin daily"
           },
           {
             "id": "d",
-            "text": "A client who runs marathons"
+            "text": "A 40-year-old who runs marathons and eats a varied diet"
           }
         ]
       },
@@ -275,16 +275,16 @@
         "correct": "a"
       },
       "rationale": {
-        "correct": "Folate deficiency is linked to alcohol use, poor diet, pregnancy and some medications.",
+        "correct": "Folate deficiency is linked with heavy alcohol use, poor diet, pregnancy without supplements and some drugs such as methotrexate.",
         "perOption": {
           "a": "Alcohol impairs folate absorption, and the diet is often poor.",
           "b": "Leafy greens are rich in folate.",
           "c": "Prenatal vitamins contain folic acid.",
-          "d": "This isn't a main risk."
+          "d": "This is not a main risk."
         },
         "references": [
           "Medical-surgical nursing texts (e.g. Lewis; Ignatavicius)",
-          "Reviewed by the content team on 17 November 2026."
+          "Rewritten to NCLEX-RN difficulty and reviewed by the content team on 19 November 2026."
         ]
       },
       "educationalObjective": "Identify risk factors for folate deficiency."
@@ -299,24 +299,24 @@
       ],
       "cjmmSkill": "generate_solutions",
       "difficulty": "moderate",
-      "stem": "A client is admitted in sickle cell vaso-occlusive crisis. Which interventions are the priority?",
+      "stem": "A 24-year-old client with sickle cell disease is admitted in vaso-occlusive crisis with pain of 10 out of 10 in the back and legs. The SpO2 is 93%. Which interventions are the priority?",
       "content": {
         "options": [
           {
             "id": "a",
-            "text": "IV fluids, oxygen if hypoxic and opioid pain relief"
+            "text": "IV fluids, oxygen and prompt IV opioids for the pain"
           },
           {
             "id": "b",
-            "text": "Cold compresses on painful joints"
+            "text": "Cold compresses applied to the painful legs and back"
           },
           {
             "id": "c",
-            "text": "Restricting fluids"
+            "text": "Fluid restriction to reduce strain on the heart"
           },
           {
             "id": "d",
-            "text": "Withholding opioids to avoid addiction"
+            "text": "Delaying opioids to reduce the risk of addiction"
           }
         ]
       },
@@ -324,16 +324,16 @@
         "correct": "a"
       },
       "rationale": {
-        "correct": "Sickle cell crisis: hydration, pain control, oxygen if needed, warmth and treatment of triggers.",
+        "correct": "Sickle cell crisis: hydration, prompt pain control, oxygen if needed, warmth and treatment of triggers.",
         "perOption": {
-          "a": "Hydration reduces sickling, and severe pain needs prompt opioids.",
+          "a": "Hydration reduces sickling, oxygen treats hypoxemia, and severe pain needs prompt opioids.",
           "b": "Cold causes vasoconstriction and more sickling.",
           "c": "Dehydration worsens sickling.",
-          "d": "Undertreating pain is harmful."
+          "d": "Undertreating crisis pain is harmful."
         },
         "references": [
           "Medical-surgical nursing texts (e.g. Lewis; Ignatavicius)",
-          "Reviewed by the content team on 17 November 2026."
+          "Rewritten to NCLEX-RN difficulty and reviewed by the content team on 19 November 2026."
         ]
       },
       "educationalObjective": "Prioritize care in sickle cell crisis."
@@ -348,32 +348,32 @@
       ],
       "cjmmSkill": "generate_solutions",
       "difficulty": "moderate",
-      "stem": "Which factors can trigger a sickle cell crisis and should be avoided? Select all that apply.",
+      "stem": "The nurse is teaching a 17-year-old client with sickle cell disease how to prevent crises. Which factors should the client avoid? Select all that apply.",
       "content": {
         "options": [
           {
             "id": "a",
-            "text": "Dehydration"
+            "text": "Dehydration during sports or hot weather"
           },
           {
             "id": "b",
-            "text": "Infection"
+            "text": "Untreated infections"
           },
           {
             "id": "c",
-            "text": "High altitude"
+            "text": "Mountain trips at high altitude"
           },
           {
             "id": "d",
-            "text": "Exposure to cold"
+            "text": "Swimming in cold water"
           },
           {
             "id": "e",
-            "text": "Drinking plenty of water"
+            "text": "Drinking plenty of water every day"
           },
           {
             "id": "f",
-            "text": "Emotional or physical stress"
+            "text": "Getting the yearly influenza vaccine"
           }
         ]
       },
@@ -382,23 +382,22 @@
           "a",
           "b",
           "c",
-          "d",
-          "f"
+          "d"
         ]
       },
       "rationale": {
-        "correct": "Prevent crises by staying hydrated and warm, avoiding low oxygen and treating infections early.",
+        "correct": "Prevent crises by staying hydrated and warm, avoiding low oxygen, keeping vaccines current and treating infections early.",
         "perOption": {
           "a": "Low fluid volume increases sickling.",
           "b": "Infection increases metabolic demand and sickling.",
           "c": "Low oxygen triggers sickling.",
           "d": "Cold causes vasoconstriction.",
           "e": "Hydration prevents crises.",
-          "f": "Stress can trigger a crisis."
+          "f": "Vaccination helps prevent infection-triggered crises."
         },
         "references": [
           "Medical-surgical nursing texts (e.g. Lewis; Ignatavicius)",
-          "Reviewed by the content team on 17 November 2026."
+          "Rewritten to NCLEX-RN difficulty and reviewed by the content team on 19 November 2026."
         ]
       },
       "educationalObjective": "Teach prevention of sickle cell crises."
@@ -411,9 +410,9 @@
       "subtopics": [
         "sickle-cell-disease"
       ],
-      "cjmmSkill": "recognize_cues",
+      "cjmmSkill": "analyze_cues",
       "difficulty": "difficult",
-      "stem": "A client with sickle cell disease has chest pain, fever, an oxygen saturation of 88% and a new infiltrate on chest x-ray. What does the nurse suspect?",
+      "stem": "A client with sickle cell disease admitted 2 days ago for a pain crisis now has new chest pain, a fever of 38.7 °C, a cough and an SpO2 of 88%. The chest x-ray shows a new infiltrate in the right lower lobe. Which complication does the nurse suspect?",
       "content": {
         "options": [
           {
@@ -426,11 +425,11 @@
           },
           {
             "id": "c",
-            "text": "Anxiety"
+            "text": "Opioid-induced sedation"
           },
           {
             "id": "d",
-            "text": "Iron deficiency"
+            "text": "Iron overload"
           }
         ]
       },
@@ -438,16 +437,16 @@
         "correct": "a"
       },
       "rationale": {
-        "correct": "Acute chest syndrome: chest pain, fever, hypoxia and a new infiltrate. It needs oxygen, antibiotics, pain control and possibly transfusion.",
+        "correct": "Acute chest syndrome: chest pain, fever, hypoxia and a new infiltrate; it needs oxygen, antibiotics, pain control, incentive spirometry and possibly transfusion.",
         "perOption": {
-          "a": "This is a life-threatening complication that needs urgent treatment.",
-          "b": "Hypoxia with a new infiltrate isn't simple crisis pain.",
-          "c": "This doesn't explain the findings.",
-          "d": "This isn't related."
+          "a": "This life-threatening complication needs urgent treatment.",
+          "b": "Hypoxia with a new infiltrate is not simple crisis pain.",
+          "c": "This does not explain fever and an infiltrate.",
+          "d": "This is not related."
         },
         "references": [
           "Medical-surgical nursing texts (e.g. Lewis; Ignatavicius)",
-          "Reviewed by the content team on 17 November 2026."
+          "Rewritten to NCLEX-RN difficulty and reviewed by the content team on 19 November 2026."
         ]
       },
       "educationalObjective": "Recognize acute chest syndrome."
@@ -462,7 +461,7 @@
       ],
       "cjmmSkill": "recognize_cues",
       "difficulty": "moderate",
-      "stem": "A client with sickle cell disease takes hydroxyurea. Which laboratory test is most important to monitor?",
+      "stem": "A 20-year-old client with sickle cell disease has had four pain crises this year and has started hydroxyurea to reduce them. Which laboratory test is most important for the nurse to monitor during treatment?",
       "content": {
         "options": [
           {
@@ -471,15 +470,15 @@
           },
           {
             "id": "b",
-            "text": "Lipid panel"
+            "text": "Fasting lipid panel"
           },
           {
             "id": "c",
-            "text": "Thyroid function"
+            "text": "Thyroid function tests"
           },
           {
             "id": "d",
-            "text": "Urinalysis"
+            "text": "Routine urinalysis"
           }
         ]
       },
@@ -490,13 +489,13 @@
         "correct": "Hydroxyurea increases fetal hemoglobin but can cause myelosuppression; monitor the CBC.",
         "perOption": {
           "a": "Hydroxyurea suppresses the bone marrow.",
-          "b": "This isn't the main concern.",
-          "c": "This isn't the main concern.",
-          "d": "This isn't the main concern."
+          "b": "This is not the main concern.",
+          "c": "This is not the main concern.",
+          "d": "This is not the main concern."
         },
         "references": [
           "Nursing pharmacology texts (e.g. Lehne; McCuistion) and the drug's prescribing information",
-          "Reviewed by the content team on 17 November 2026."
+          "Rewritten to NCLEX-RN difficulty and reviewed by the content team on 19 November 2026."
         ]
       },
       "educationalObjective": "Monitor hydroxyurea therapy."
@@ -509,26 +508,26 @@
       "subtopics": [
         "bleeding-and-clotting-disorders"
       ],
-      "cjmmSkill": "recognize_cues",
+      "cjmmSkill": "analyze_cues",
       "difficulty": "difficult",
-      "stem": "A client with sepsis is oozing blood from IV sites and has petechiae. The platelets are 40,000/mm3, the fibrinogen is low and the D-dimer is high. What does the nurse suspect?",
+      "stem": "A client in septic shock is oozing blood from IV sites and has new petechiae. The platelets are 40,000/mm3, the fibrinogen is low, the PT and aPTT are prolonged, and the D-dimer is high. The client has no history of bleeding problems. Which condition does the nurse suspect?",
       "content": {
         "options": [
           {
             "id": "a",
-            "text": "Disseminated intravascular coagulation (DIC)"
+            "text": "Disseminated intravascular coagulation"
           },
           {
             "id": "b",
-            "text": "Iron deficiency anemia"
+            "text": "Immune thrombocytopenic purpura"
           },
           {
             "id": "c",
-            "text": "Hemophilia"
+            "text": "Hemophilia A"
           },
           {
             "id": "d",
-            "text": "Vitamin B12 deficiency"
+            "text": "Vitamin K deficiency"
           }
         ]
       },
@@ -536,16 +535,16 @@
         "correct": "a"
       },
       "rationale": {
-        "correct": "DIC: low platelets and fibrinogen, prolonged PT and aPTT, high D-dimer. Treat the cause and replace blood products.",
+        "correct": "DIC: low platelets and fibrinogen, prolonged PT and aPTT and a high D-dimer; treat the cause and replace blood products.",
         "perOption": {
           "a": "Widespread clotting uses up platelets and clotting factors, causing bleeding.",
-          "b": "This doesn't cause these lab findings.",
-          "c": "Hemophilia is inherited and has normal platelets.",
-          "d": "This doesn't fit."
+          "b": "ITP lowers platelets but does not cause low fibrinogen and a high D-dimer.",
+          "c": "Hemophilia is inherited and has normal platelets and fibrinogen.",
+          "d": "This prolongs the PT but does not lower platelets or fibrinogen."
         },
         "references": [
           "Medical-surgical nursing texts (e.g. Lewis; Ignatavicius)",
-          "Reviewed by the content team on 17 November 2026."
+          "Rewritten to NCLEX-RN difficulty and reviewed by the content team on 19 November 2026."
         ]
       },
       "educationalObjective": "Recognize DIC."
@@ -560,24 +559,24 @@
       ],
       "cjmmSkill": "take_action",
       "difficulty": "difficult",
-      "stem": "A client has received heparin for 6 days, and the platelet count has dropped from 240,000 to 95,000/mm3. What should the nurse anticipate?",
+      "stem": "A client has received IV heparin for 6 days for a pulmonary embolism. The platelet count has dropped from 240,000 to 95,000/mm3, and the client has a new swollen, painful left leg. What should the nurse anticipate?",
       "content": {
         "options": [
           {
             "id": "a",
-            "text": "Stopping all heparin, including flushes, and starting a non-heparin anticoagulant"
+            "text": "Stopping all heparin, flushes included, and starting argatroban"
           },
           {
             "id": "b",
-            "text": "Increasing the heparin dose"
+            "text": "Increasing the heparin rate to treat the new clot in the left leg"
           },
           {
             "id": "c",
-            "text": "Giving a platelet transfusion"
+            "text": "Giving a platelet transfusion to raise the count back up"
           },
           {
             "id": "d",
-            "text": "Switching to enoxaparin"
+            "text": "Switching from IV heparin to subcutaneous enoxaparin"
           }
         ]
       },
@@ -585,16 +584,16 @@
         "correct": "a"
       },
       "rationale": {
-        "correct": "HIT: platelets fall by more than 50% after 5 to 10 days of heparin. Stop all heparin and use argatroban or another non-heparin agent.",
+        "correct": "HIT: platelets fall by more than 50% after 5 to 10 days of heparin; stop all heparin and use argatroban or another non-heparin anticoagulant.",
         "perOption": {
           "a": "This suggests heparin-induced thrombocytopenia, which carries a high risk of clotting.",
-          "b": "This worsens HIT.",
+          "b": "More heparin worsens HIT.",
           "c": "Platelets may worsen clotting in HIT.",
           "d": "LMWH cross-reacts and is avoided."
         },
         "references": [
           "Nursing pharmacology texts (e.g. Lehne; McCuistion) and the drug's prescribing information",
-          "Reviewed by the content team on 17 November 2026."
+          "Rewritten to NCLEX-RN difficulty and reviewed by the content team on 19 November 2026."
         ]
       },
       "educationalObjective": "Recognize and manage heparin-induced thrombocytopenia."
@@ -609,7 +608,7 @@
       ],
       "cjmmSkill": "generate_solutions",
       "difficulty": "moderate",
-      "stem": "A client's platelet count is 18,000/mm3. Which bleeding precautions should the nurse include? Select all that apply.",
+      "stem": "A client receiving chemotherapy has a platelet count of 18,000/mm3. Which bleeding precautions should the nurse include in the plan of care? Select all that apply.",
       "content": {
         "options": [
           {
@@ -626,11 +625,11 @@
           },
           {
             "id": "d",
-            "text": "Apply pressure for at least 5 minutes after needle removal"
+            "text": "Hold pressure 5 minutes after needle removal"
           },
           {
             "id": "e",
-            "text": "Take aspirin for discomfort"
+            "text": "Take aspirin for headaches"
           },
           {
             "id": "f",
@@ -658,7 +657,7 @@
         },
         "references": [
           "Medical-surgical nursing texts (e.g. Lewis; Ignatavicius)",
-          "Reviewed by the content team on 17 November 2026."
+          "Rewritten to NCLEX-RN difficulty and reviewed by the content team on 19 November 2026."
         ]
       },
       "educationalObjective": "Apply bleeding precautions for thrombocytopenia."
@@ -672,25 +671,25 @@
         "bleeding-and-clotting-disorders"
       ],
       "cjmmSkill": "take_action",
-      "difficulty": "moderate",
-      "stem": "A client with hemophilia A has a painful, swollen knee after a minor fall. What should the nurse do?",
+      "difficulty": "difficult",
+      "stem": "A 15-year-old with hemophilia A has a painful, swollen, warm knee after a minor fall at school. The parent has factor VIII at home. What should the nurse do?",
       "content": {
         "options": [
           {
             "id": "a",
-            "text": "Apply ice, immobilize and elevate the knee, and give factor VIII as prescribed"
+            "text": "Ice, rest and elevation, and factor VIII as prescribed"
           },
           {
             "id": "b",
-            "text": "Apply heat and encourage walking"
+            "text": "Apply a heating pad and encourage walking on the leg to loosen it"
           },
           {
             "id": "c",
-            "text": "Give aspirin for pain"
+            "text": "Give aspirin for the pain and swelling in the knee"
           },
           {
             "id": "d",
-            "text": "Massage the joint"
+            "text": "Massage the knee gently to reduce the swelling"
           }
         ]
       },
@@ -698,17 +697,17 @@
         "correct": "a"
       },
       "rationale": {
-        "correct": "Hemarthrosis: RICE and factor replacement; avoid aspirin and NSAIDs.",
+        "correct": "Hemarthrosis: rest, ice, compression, elevation and factor replacement; avoid aspirin and NSAIDs.",
         "perOption": {
           "a": "This controls bleeding into the joint.",
-          "b": "Heat increases bleeding.",
+          "b": "Heat increases bleeding, and weight-bearing worsens the joint.",
           "c": "Aspirin increases bleeding.",
           "d": "This increases bleeding."
         },
         "references": [
           "Medical-surgical nursing texts (e.g. Lewis; Ignatavicius)",
           "Pediatric nursing texts (e.g. Hockenberry, Wong's Essentials of Pediatric Nursing)",
-          "Reviewed by the content team on 17 November 2026."
+          "Rewritten to NCLEX-RN difficulty and reviewed by the content team on 19 November 2026."
         ]
       },
       "educationalObjective": "Manage bleeding into a joint in hemophilia."
@@ -723,7 +722,7 @@
       ],
       "cjmmSkill": "generate_solutions",
       "difficulty": "moderate",
-      "stem": "A client with polycythemia vera has a high hematocrit. Which treatment should the nurse expect?",
+      "stem": "A 62-year-old client with polycythemia vera has a hematocrit of 58%, a ruddy face, headaches and itching after warm showers. The client had a DVT last year. Which treatment should the nurse expect?",
       "content": {
         "options": [
           {
@@ -732,15 +731,15 @@
           },
           {
             "id": "b",
-            "text": "Iron supplements"
+            "text": "Oral iron supplements"
           },
           {
             "id": "c",
-            "text": "Blood transfusion"
+            "text": "Packed red cell transfusion"
           },
           {
             "id": "d",
-            "text": "Fluid restriction"
+            "text": "Strict fluid restriction"
           }
         ]
       },
@@ -748,7 +747,7 @@
         "correct": "a"
       },
       "rationale": {
-        "correct": "Polycythemia vera: phlebotomy, hydration, and watching for clots and bleeding.",
+        "correct": "Polycythemia vera: phlebotomy, hydration and watching for clots and bleeding.",
         "perOption": {
           "a": "Removing blood lowers its thickness and the risk of clots.",
           "b": "These stimulate red cell production.",
@@ -757,7 +756,7 @@
         },
         "references": [
           "Medical-surgical nursing texts (e.g. Lewis; Ignatavicius)",
-          "Reviewed by the content team on 17 November 2026."
+          "Rewritten to NCLEX-RN difficulty and reviewed by the content team on 19 November 2026."
         ]
       },
       "educationalObjective": "Plan care for polycythemia vera."
@@ -772,24 +771,24 @@
       ],
       "cjmmSkill": "take_action",
       "difficulty": "moderate",
-      "stem": "How should the nurse run a unit of packed red blood cells?",
+      "stem": "A client with a hemoglobin of 6.8 g/dL is to receive a unit of packed red blood cells. The unit arrived from the blood bank 10 minutes ago. How should the nurse run the transfusion?",
       "content": {
         "options": [
           {
             "id": "a",
-            "text": "Start slowly for the first 15 minutes while watching closely, and finish within 4 hours"
+            "text": "Slowly for 15 minutes while watching closely, done within 4 hours"
           },
           {
             "id": "b",
-            "text": "Infuse it over 8 hours"
+            "text": "Over 8 hours to reduce the risk of fluid overload in the client"
           },
           {
             "id": "c",
-            "text": "Infuse it as fast as possible"
+            "text": "As fast as possible so the hemoglobin rises without delay"
           },
           {
             "id": "d",
-            "text": "Refrigerate it on the unit until needed"
+            "text": "After keeping it in the unit refrigerator until the client is ready"
           }
         ]
       },
@@ -797,16 +796,16 @@
         "correct": "a"
       },
       "rationale": {
-        "correct": "Packed RBCs: start slowly, complete within 4 hours and monitor closely.",
+        "correct": "Packed RBCs: start slowly, finish within 4 hours and monitor closely, especially at first.",
         "perOption": {
           "a": "Most severe reactions happen early, and longer infusions raise bacterial risk.",
           "b": "This exceeds the 4-hour limit.",
-          "c": "Fast early rates make a reaction worse.",
-          "d": "Blood is kept in the blood bank refrigerator only."
+          "c": "Fast early rates make any reaction worse.",
+          "d": "Blood is kept only in the blood bank refrigerator."
         },
         "references": [
           "Medical-surgical nursing texts (e.g. Lewis; Ignatavicius)",
-          "Reviewed by the content team on 17 November 2026."
+          "Rewritten to NCLEX-RN difficulty and reviewed by the content team on 19 November 2026."
         ]
       },
       "educationalObjective": "Infuse packed red blood cells safely."
@@ -819,26 +818,26 @@
       "subtopics": [
         "blood-transfusion-reactions"
       ],
-      "cjmmSkill": "recognize_cues",
+      "cjmmSkill": "analyze_cues",
       "difficulty": "difficult",
-      "stem": "An 82-year-old with heart failure is receiving a second unit of blood. The client becomes short of breath, with crackles and a blood pressure of 172/96 mm Hg. What does the nurse suspect?",
+      "stem": "An 82-year-old client with heart failure is receiving a second unit of packed red blood cells. Ninety minutes in, the client becomes short of breath, with crackles in both bases and a blood pressure of 172/96 mm Hg. The temperature is unchanged. Which condition does the nurse suspect?",
       "content": {
         "options": [
           {
             "id": "a",
-            "text": "Transfusion-associated circulatory overload (TACO)"
+            "text": "Transfusion-associated circulatory overload"
           },
           {
             "id": "b",
-            "text": "Hemolytic reaction"
+            "text": "An acute hemolytic transfusion reaction"
           },
           {
             "id": "c",
-            "text": "Allergic reaction"
+            "text": "A mild allergic transfusion reaction"
           },
           {
             "id": "d",
-            "text": "Febrile reaction"
+            "text": "A febrile non-hemolytic reaction"
           }
         ]
       },
@@ -846,16 +845,16 @@
         "correct": "a"
       },
       "rationale": {
-        "correct": "TACO: stop the transfusion, sit the client upright, give oxygen and anticipate a diuretic. Prevent it by infusing slowly.",
+        "correct": "TACO: stop the transfusion, sit the client upright, give oxygen and anticipate a diuretic; prevent it by infusing slowly in at-risk clients.",
         "perOption": {
-          "a": "Volume overload in a client with limited cardiac reserve causes pulmonary edema and hypertension.",
+          "a": "Volume overload with limited cardiac reserve causes pulmonary edema and hypertension.",
           "b": "This causes fever, back pain and hypotension.",
           "c": "This causes hives and itching.",
           "d": "This causes fever and chills."
         },
         "references": [
           "Medical-surgical nursing texts (e.g. Lewis; Ignatavicius)",
-          "Reviewed by the content team on 17 November 2026."
+          "Rewritten to NCLEX-RN difficulty and reviewed by the content team on 19 November 2026."
         ]
       },
       "educationalObjective": "Recognize transfusion-associated circulatory overload."
@@ -870,24 +869,24 @@
       ],
       "cjmmSkill": "take_action",
       "difficulty": "moderate",
-      "stem": "During a transfusion, a client develops mild hives and itching with stable vital signs. What should the nurse do first?",
+      "stem": "Thirty minutes into a transfusion, a client develops a few hives on the chest and mild itching. The vital signs are unchanged from baseline, and breathing is easy. What should the nurse do first?",
       "content": {
         "options": [
           {
             "id": "a",
-            "text": "Stop the transfusion and notify the provider; an antihistamine may be given and the transfusion restarted per order"
+            "text": "Stop the transfusion and notify the provider"
           },
           {
             "id": "b",
-            "text": "Continue the transfusion at a faster rate"
+            "text": "Continue the transfusion at a faster rate to finish it sooner"
           },
           {
             "id": "c",
-            "text": "Discard the unit right away"
+            "text": "Discard the unit right away in the biohazard container"
           },
           {
             "id": "d",
-            "text": "Ignore the hives"
+            "text": "Ignore the hives because they are expected with blood"
           }
         ]
       },
@@ -897,14 +896,14 @@
       "rationale": {
         "correct": "Every reaction starts with stopping the transfusion; only mild allergic reactions may resume after treatment.",
         "perOption": {
-          "a": "Mild allergic reactions may allow restarting the transfusion after an antihistamine, per the provider.",
+          "a": "Every reaction starts with stopping the transfusion; a mild allergic reaction may resume after an antihistamine, per the provider.",
           "b": "This could worsen the reaction.",
-          "c": "The unit is held until the provider decides.",
+          "c": "The unit is kept until the provider decides.",
           "d": "Every reaction needs action."
         },
         "references": [
           "Medical-surgical nursing texts (e.g. Lewis; Ignatavicius)",
-          "Reviewed by the content team on 17 November 2026."
+          "Rewritten to NCLEX-RN difficulty and reviewed by the content team on 19 November 2026."
         ]
       },
       "educationalObjective": "Respond to a mild allergic transfusion reaction."
@@ -919,24 +918,24 @@
       ],
       "cjmmSkill": "generate_solutions",
       "difficulty": "moderate",
-      "stem": "A client who is a Jehovah's Witness has anemia and declines blood products. Which alternative might the nurse discuss with the provider?",
+      "stem": "A competent client who is a Jehovah's Witness has a hemoglobin of 7.4 g/dL after surgery and declines all blood products. Which option might the nurse discuss with the provider?",
       "content": {
         "options": [
           {
             "id": "a",
-            "text": "Erythropoiesis-stimulating agents and iron"
+            "text": "An erythropoiesis-stimulating agent with IV iron"
           },
           {
             "id": "b",
-            "text": "Transfusing anyway in an emergency"
+            "text": "A transfusion anyway, since the hemoglobin is so low"
           },
           {
             "id": "c",
-            "text": "Asking the family to override the refusal"
+            "text": "Asking the client's adult children to override the refusal"
           },
           {
             "id": "d",
-            "text": "Platelet transfusion"
+            "text": "A platelet transfusion instead of red cells"
           }
         ]
       },
@@ -946,14 +945,14 @@
       "rationale": {
         "correct": "Respect the refusal; alternatives include ESAs, iron, volume expanders and blood-conservation techniques.",
         "perOption": {
-          "a": "These raise hemoglobin without transfusion.",
+          "a": "These raise hemoglobin without a transfusion.",
           "b": "A competent client's refusal must be respected.",
-          "c": "The family can't override a competent adult.",
+          "c": "Family cannot override a competent adult.",
           "d": "This is also a blood product."
         },
         "references": [
           "Fundamentals of nursing texts (e.g. Potter & Perry)",
-          "Reviewed by the content team on 17 November 2026."
+          "Rewritten to NCLEX-RN difficulty and reviewed by the content team on 19 November 2026."
         ]
       },
       "educationalObjective": "Advocate for alternatives when a client refuses blood."
@@ -968,7 +967,7 @@
       ],
       "cjmmSkill": "analyze_cues",
       "difficulty": "moderate",
-      "stem": "For each complete blood count result, select the interpretation.",
+      "stem": "A 45-year-old woman is admitted with fever and fatigue. The nurse reviews the complete blood count. For each result, select the interpretation.",
       "content": {
         "columns": [
           "Test",
@@ -980,7 +979,7 @@
             "id": "r1",
             "cells": [
               {
-                "text": "Hemoglobin (adult female)"
+                "text": "Hemoglobin"
               },
               {
                 "text": "8.2 g/dL"
@@ -1081,7 +1080,7 @@
         }
       },
       "rationale": {
-        "correct": "Know the CBC reference ranges and follow the facility's values.",
+        "correct": "Know the CBC reference ranges, and follow the facility's values.",
         "perOption": {
           "b1:a": "Normal is about 12 to 16 g/dL for adult females.",
           "b1:b": "The result is low, not within normal range.",
@@ -1095,7 +1094,7 @@
         },
         "references": [
           "Laboratory reference ranges as used in common NCLEX review texts; follow the facility's ranges",
-          "Reviewed by the content team on 17 November 2026."
+          "Rewritten to NCLEX-RN difficulty and reviewed by the content team on 19 November 2026."
         ]
       },
       "educationalObjective": "Interpret a complete blood count."
@@ -1110,7 +1109,7 @@
       ],
       "cjmmSkill": "analyze_cues",
       "difficulty": "moderate",
-      "stem": "A client's WBC count is 2,000/mm3, with 20% segmented neutrophils and 5% bands. What is the absolute neutrophil count (ANC)?",
+      "stem": "A client receiving chemotherapy for breast cancer has a temperature of 37.6 °C and finished the last cycle 10 days ago. The nurse is deciding whether neutropenic precautions are needed. The WBC count is 2,000/mm3, with 20% segmented neutrophils and 5% bands. What is the absolute neutrophil count (ANC)?",
       "content": {
         "unit": "cells/mm³",
         "decimals": 0,
@@ -1125,7 +1124,7 @@
         "perOption": {},
         "references": [
           "Medical-surgical nursing texts (e.g. Lewis; Ignatavicius)",
-          "Reviewed by the content team on 17 November 2026."
+          "Rewritten to NCLEX-RN difficulty and reviewed by the content team on 19 November 2026."
         ]
       },
       "educationalObjective": "Calculate the absolute neutrophil count."
@@ -1139,25 +1138,25 @@
         "hematologic-medications"
       ],
       "cjmmSkill": "take_action",
-      "difficulty": "moderate",
-      "stem": "A client is receiving IV iron dextran for the first time. What should the nurse do?",
+      "difficulty": "difficult",
+      "stem": "A client with chronic kidney disease and iron deficiency is to receive IV iron dextran for the first time. The client has never had IV iron before. What should the nurse do?",
       "content": {
         "options": [
           {
             "id": "a",
-            "text": "Give a test dose and watch for anaphylaxis, with emergency equipment ready"
+            "text": "Give a test dose and watch for anaphylaxis with emergency drugs ready"
           },
           {
             "id": "b",
-            "text": "Give it IV push quickly"
+            "text": "Push the full dose quickly through the IV to save the client time"
           },
           {
             "id": "c",
-            "text": "Mix it with the client's blood transfusion"
+            "text": "Add the iron to the unit of blood the client is also receiving today"
           },
           {
             "id": "d",
-            "text": "No monitoring is needed"
+            "text": "Give the full dose without monitoring, since the client has no allergies"
           }
         ]
       },
@@ -1165,16 +1164,16 @@
         "correct": "a"
       },
       "rationale": {
-        "correct": "Iron dextran carries a risk of anaphylaxis; newer IV irons have lower risk but still need monitoring.",
+        "correct": "Iron dextran carries a risk of anaphylaxis; newer IV iron products have lower risk but still need monitoring.",
         "perOption": {
-          "a": "Iron dextran can cause anaphylaxis.",
-          "b": "This isn't safe.",
+          "a": "Iron dextran can cause anaphylaxis, so a test dose and close monitoring are needed.",
+          "b": "Rapid administration is not safe.",
           "c": "Medications are never added to blood.",
-          "d": "Monitoring is required."
+          "d": "Monitoring is required even without known allergies."
         },
         "references": [
           "Nursing pharmacology texts (e.g. Lehne; McCuistion) and the drug's prescribing information",
-          "Reviewed by the content team on 17 November 2026."
+          "Rewritten to NCLEX-RN difficulty and reviewed by the content team on 19 November 2026."
         ]
       },
       "educationalObjective": "Give IV iron safely."
@@ -1189,7 +1188,7 @@
       ],
       "cjmmSkill": "analyze_cues",
       "difficulty": "difficult",
-      "stem": "A client with thalassemia receives frequent transfusions. Which medication should the nurse expect to prevent iron overload?",
+      "stem": "A 16-year-old with beta thalassemia major has received red cell transfusions every 3 weeks since early childhood for severe anemia. The ferritin is very high, the liver enzymes are rising, and the client has new heart palpitations and fatigue. Which medication should the nurse expect to be prescribed to prevent further damage?",
       "content": {
         "options": [
           {
@@ -1216,14 +1215,14 @@
       "rationale": {
         "correct": "Chelation therapy (deferoxamine or deferasirox) prevents iron overload from repeated transfusions.",
         "perOption": {
-          "a": "Deferoxamine binds excess iron so it can be excreted.",
-          "b": "This adds iron.",
-          "c": "This isn't related.",
-          "d": "This isn't related."
+          "a": "Deferoxamine binds excess iron so it can be excreted, protecting the heart and liver.",
+          "b": "This adds more iron.",
+          "c": "This is not related.",
+          "d": "This is not related."
         },
         "references": [
           "Nursing pharmacology texts (e.g. Lehne; McCuistion) and the drug's prescribing information",
-          "Reviewed by the content team on 17 November 2026."
+          "Rewritten to NCLEX-RN difficulty and reviewed by the content team on 19 November 2026."
         ]
       },
       "educationalObjective": "Prevent transfusion-related iron overload."
@@ -1238,7 +1237,7 @@
       ],
       "cjmmSkill": "recognize_cues",
       "difficulty": "moderate",
-      "stem": "A client with septic shock is being monitored for disseminated intravascular coagulation. Highlight the findings that suggest DIC.",
+      "stem": "A client with septic shock from a perforated bowel is being monitored for disseminated intravascular coagulation. Highlight the findings that suggest DIC.",
       "content": {
         "segments": [
           {
@@ -1308,11 +1307,11 @@
           "s3": "Low platelets cause petechiae.",
           "s5": "Small clots reduce blood flow to the extremities.",
           "s7": "Fever reflects the sepsis rather than DIC.",
-          "s9": "Bleeding into the urine suggests a coagulopathy."
+          "s9": "Blood in the urine suggests a coagulopathy."
         },
         "references": [
           "Medical-surgical nursing texts (e.g. Lewis; Ignatavicius)",
-          "Reviewed by the content team on 17 November 2026."
+          "Rewritten to NCLEX-RN difficulty and reviewed by the content team on 19 November 2026."
         ]
       },
       "educationalObjective": "Recognize the clinical signs of DIC."
