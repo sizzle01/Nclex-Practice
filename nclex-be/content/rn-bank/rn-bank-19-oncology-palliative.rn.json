@@ -1,5 +1,5 @@
 {
-  "notice": "RN bank batch 19: Oncology and palliative care. Reviewed by the content team on 17 November 2026. See REVIEW-LOG.md.",
+  "notice": "RN bank batch 19: Oncology and palliative care. Rewritten to NCLEX-RN difficulty and reviewed by the content team on 19 November 2026. See REVIEW-LOG.md.",
   "track": "RN",
   "subtopics": [
     {
@@ -42,9 +42,9 @@
       "subtopics": [
         "oncologic-emergencies"
       ],
-      "cjmmSkill": "recognize_cues",
+      "cjmmSkill": "analyze_cues",
       "difficulty": "difficult",
-      "stem": "Two days after starting chemotherapy for leukemia, a client has a potassium of 6.4 mEq/L, a phosphorus of 7.2 mg/dL, a calcium of 7.0 mg/dL and a high uric acid. What does the nurse suspect?",
+      "stem": "Two days after starting induction chemotherapy for acute leukemia with a very high white cell count, a client has a potassium of 6.4 mEq/L, a phosphorus of 7.2 mg/dL, a calcium of 7.0 mg/dL, a high uric acid and falling urine output. Which condition does the nurse suspect?",
       "content": {
         "options": [
           {
@@ -57,11 +57,11 @@
           },
           {
             "id": "c",
-            "text": "SIADH"
+            "text": "Syndrome of inappropriate ADH"
           },
           {
             "id": "d",
-            "text": "Dehydration"
+            "text": "Dehydration from vomiting"
           }
         ]
       },
@@ -69,16 +69,16 @@
         "correct": "a"
       },
       "rationale": {
-        "correct": "Tumor lysis syndrome: prevent it with aggressive hydration and allopurinol or rasburicase; monitor electrolytes and kidney function.",
+        "correct": "Tumor lysis syndrome: prevent it with aggressive hydration and allopurinol or rasburicase, and monitor electrolytes and kidney function.",
         "perOption": {
-          "a": "Rapid cell breakdown releases potassium, phosphorus and uric acid; phosphorus binds calcium.",
-          "b": "The calcium is low.",
-          "c": "SIADH causes hyponatremia.",
-          "d": "This doesn't explain the pattern."
+          "a": "Rapid cell breakdown releases potassium, phosphorus and uric acid, and phosphorus binds calcium.",
+          "b": "The calcium is low, not high.",
+          "c": "SIADH causes hyponatremia, not this pattern.",
+          "d": "This does not explain the electrolyte pattern."
         },
         "references": [
           "Medical-surgical nursing texts (e.g. Lewis; Ignatavicius)",
-          "Reviewed by the content team on 17 November 2026."
+          "Rewritten to NCLEX-RN difficulty and reviewed by the content team on 19 November 2026."
         ]
       },
       "educationalObjective": "Recognize tumor lysis syndrome."
@@ -91,9 +91,9 @@
       "subtopics": [
         "oncologic-emergencies"
       ],
-      "cjmmSkill": "recognize_cues",
-      "difficulty": "moderate",
-      "stem": "A client with lung cancer has swelling of the face and arms, distended neck veins and shortness of breath. What does the nurse suspect?",
+      "cjmmSkill": "analyze_cues",
+      "difficulty": "difficult",
+      "stem": "A 64-year-old client with small-cell lung cancer reports that the collar of the shirt feels tight. The nurse notes swelling of the face and both arms, distended neck veins and shortness of breath when lying flat. Which condition does the nurse suspect?",
       "content": {
         "options": [
           {
@@ -102,15 +102,15 @@
           },
           {
             "id": "b",
-            "text": "Heart failure"
+            "text": "Right-sided heart failure"
           },
           {
             "id": "c",
-            "text": "Allergic reaction"
+            "text": "An allergic reaction to chemotherapy"
           },
           {
             "id": "d",
-            "text": "Pneumonia"
+            "text": "Community-acquired pneumonia"
           }
         ]
       },
@@ -120,14 +120,14 @@
       "rationale": {
         "correct": "SVC syndrome: keep the client upright, give oxygen and prepare for radiation or stenting.",
         "perOption": {
-          "a": "A tumor blocks blood return from the upper body.",
-          "b": "This isn't the best explanation with a mediastinal tumor.",
-          "c": "This doesn't fit.",
-          "d": "This doesn't cause facial and arm swelling."
+          "a": "A tumor in the mediastinum blocks blood return from the upper body.",
+          "b": "Heart failure causes swelling of the legs, not the face and arms.",
+          "c": "This does not fit the slow onset and pattern.",
+          "d": "Pneumonia does not cause facial and arm swelling."
         },
         "references": [
           "Medical-surgical nursing texts (e.g. Lewis; Ignatavicius)",
-          "Reviewed by the content team on 17 November 2026."
+          "Rewritten to NCLEX-RN difficulty and reviewed by the content team on 19 November 2026."
         ]
       },
       "educationalObjective": "Recognize superior vena cava syndrome."
@@ -140,26 +140,26 @@
       "subtopics": [
         "oncologic-emergencies"
       ],
-      "cjmmSkill": "recognize_cues",
-      "difficulty": "moderate",
-      "stem": "A client with metastatic prostate cancer reports new back pain and weakness in both legs. What should the nurse do?",
+      "cjmmSkill": "take_action",
+      "difficulty": "difficult",
+      "stem": "A 72-year-old client with prostate cancer that has spread to the spine reports new, worsening back pain over 3 days and says the legs feel weak and heavy. This morning the client had trouble starting to urinate. What should the nurse do?",
       "content": {
         "options": [
           {
             "id": "a",
-            "text": "Report it right away as a possible spinal cord compression"
+            "text": "Report it at once as possible spinal cord compression"
           },
           {
             "id": "b",
-            "text": "Give a heating pad and reassess tomorrow"
+            "text": "Apply a heating pad to the back and reassess the pain tomorrow"
           },
           {
             "id": "c",
-            "text": "Encourage more walking"
+            "text": "Encourage more walking to keep the legs strong"
           },
           {
             "id": "d",
-            "text": "Document it as expected bone pain"
+            "text": "Document it as expected bone pain from the cancer"
           }
         ]
       },
@@ -167,16 +167,16 @@
         "correct": "a"
       },
       "rationale": {
-        "correct": "Spinal cord compression: new back pain with neurologic changes is an emergency.",
+        "correct": "Spinal cord compression: new back pain with neurological or bladder changes is an emergency.",
         "perOption": {
-          "a": "Early treatment (steroids, radiation) can prevent permanent paralysis.",
+          "a": "Early treatment with steroids and radiation can prevent permanent paralysis.",
           "b": "Delay risks paralysis.",
-          "c": "This isn't appropriate.",
-          "d": "The new weakness is a red flag."
+          "c": "This is not appropriate and may cause a fall.",
+          "d": "New weakness and urinary changes are red flags."
         },
         "references": [
           "Medical-surgical nursing texts (e.g. Lewis; Ignatavicius)",
-          "Reviewed by the content team on 17 November 2026."
+          "Rewritten to NCLEX-RN difficulty and reviewed by the content team on 19 November 2026."
         ]
       },
       "educationalObjective": "Recognize spinal cord compression in cancer."
@@ -191,24 +191,24 @@
       ],
       "cjmmSkill": "take_action",
       "difficulty": "difficult",
-      "stem": "A client receiving chemotherapy has an ANC of 300/mm3 and a temperature of 38.4 °C (101.1 °F). What should the nurse do?",
+      "stem": "A client 9 days after chemotherapy for lymphoma has an ANC of 300/mm3 and a temperature of 38.4 °C (101.1 °F). The client feels well apart from tiredness, and the blood pressure is 118/72. What should the nurse do?",
       "content": {
         "options": [
           {
             "id": "a",
-            "text": "Notify the provider right away, draw blood cultures and expect broad-spectrum antibiotics within 1 hour"
+            "text": "Notify the provider, draw cultures; antibiotics within 1 hour"
           },
           {
             "id": "b",
-            "text": "Give acetaminophen and recheck in 4 hours"
+            "text": "Give acetaminophen and recheck the temperature again in 4 hours"
           },
           {
             "id": "c",
-            "text": "Wait for the culture results"
+            "text": "Wait for the culture results before starting any antibiotic"
           },
           {
             "id": "d",
-            "text": "Encourage fluids and rest"
+            "text": "Encourage fluids and rest, and recheck in the morning"
           }
         ]
       },
@@ -216,16 +216,16 @@
         "correct": "a"
       },
       "rationale": {
-        "correct": "Neutropenic fever (38.3 °C once, or 38.0 °C sustained, with ANC below 500): cultures and antibiotics within 1 hour.",
+        "correct": "Neutropenic fever (38.3 °C once, or 38.0 °C sustained, with an ANC below 500): cultures and antibiotics within 1 hour.",
         "perOption": {
-          "a": "Neutropenic fever is an emergency; sepsis can develop rapidly.",
+          "a": "Neutropenic fever is an emergency, and sepsis can develop quickly even when the client looks well.",
           "b": "Delaying antibiotics increases mortality.",
-          "c": "Antibiotics aren't delayed for results.",
-          "d": "This isn't enough."
+          "c": "Antibiotics are not delayed for results.",
+          "d": "This is not enough."
         },
         "references": [
           "Medical-surgical nursing texts (e.g. Lewis; Ignatavicius)",
-          "Reviewed by the content team on 17 November 2026."
+          "Rewritten to NCLEX-RN difficulty and reviewed by the content team on 19 November 2026."
         ]
       },
       "educationalObjective": "Respond to neutropenic fever."
@@ -240,24 +240,24 @@
       ],
       "cjmmSkill": "generate_solutions",
       "difficulty": "moderate",
-      "stem": "A client receiving chemotherapy has painful mouth sores. Which instruction should the nurse give?",
+      "stem": "A client receiving 5-fluorouracil has painful mouth sores and is eating very little. Which instruction should the nurse give?",
       "content": {
         "options": [
           {
             "id": "a",
-            "text": "Rinse with saline or baking soda solution and use a soft toothbrush"
+            "text": "Rinse with saline or baking soda and use a soft toothbrush"
           },
           {
             "id": "b",
-            "text": "Use an alcohol-based mouthwash"
+            "text": "Rinse with an alcohol-based mouthwash to kill the germs quickly"
           },
           {
             "id": "c",
-            "text": "Eat spicy foods to stimulate appetite"
+            "text": "Eat spicy or acidic foods to help the appetite"
           },
           {
             "id": "d",
-            "text": "Use a firm toothbrush to remove plaque"
+            "text": "Brush with a firm toothbrush to keep plaque away"
           }
         ]
       },
@@ -265,16 +265,16 @@
         "correct": "a"
       },
       "rationale": {
-        "correct": "Mucositis: gentle oral care, bland soft foods, avoid alcohol and tobacco, and use topical anesthetics as prescribed.",
+        "correct": "Mucositis: gentle oral care, bland soft foods, no alcohol or tobacco, and topical anesthetics as prescribed.",
         "perOption": {
           "a": "Gentle rinses clean the mouth and reduce irritation.",
           "b": "Alcohol dries and irritates the mucosa.",
-          "c": "Spicy foods irritate sores.",
+          "c": "Spicy and acidic foods irritate sores.",
           "d": "This injures the mucosa."
         },
         "references": [
           "Medical-surgical nursing texts (e.g. Lewis; Ignatavicius)",
-          "Reviewed by the content team on 17 November 2026."
+          "Rewritten to NCLEX-RN difficulty and reviewed by the content team on 19 November 2026."
         ]
       },
       "educationalObjective": "Manage stomatitis during chemotherapy."
@@ -288,25 +288,25 @@
         "chemotherapy-and-radiation-care"
       ],
       "cjmmSkill": "take_action",
-      "difficulty": "easy",
-      "stem": "When should the nurse give a prescribed antiemetic to a client receiving highly emetogenic chemotherapy?",
+      "difficulty": "moderate",
+      "stem": "A client is about to receive cisplatin, a highly emetogenic chemotherapy drug, at 1000. Ondansetron, dexamethasone and aprepitant are prescribed. When should the nurse give the antiemetics?",
       "content": {
         "options": [
           {
             "id": "a",
-            "text": "Before the chemotherapy starts"
+            "text": "Before the chemotherapy infusion starts"
           },
           {
             "id": "b",
-            "text": "Only if the client vomits"
+            "text": "Only if the client vomits during the infusion"
           },
           {
             "id": "c",
-            "text": "The day after chemotherapy"
+            "text": "On the day after the chemotherapy is given"
           },
           {
             "id": "d",
-            "text": "Only at bedtime"
+            "text": "At bedtime, after the infusion has finished"
           }
         ]
       },
@@ -316,14 +316,14 @@
       "rationale": {
         "correct": "Give antiemetics before chemotherapy and continue them as scheduled for delayed nausea.",
         "perOption": {
-          "a": "Preventing nausea works better than treating it.",
+          "a": "Preventing nausea works far better than treating it.",
           "b": "Prevention is more effective.",
-          "c": "Some regimens continue for days, but the first dose is given before.",
-          "d": "This doesn't cover the infusion."
+          "c": "Some doses continue for days, but the first doses come before.",
+          "d": "This does not cover the infusion."
         },
         "references": [
           "Nursing pharmacology texts (e.g. Lehne; McCuistion) and the drug's prescribing information",
-          "Reviewed by the content team on 17 November 2026."
+          "Rewritten to NCLEX-RN difficulty and reviewed by the content team on 19 November 2026."
         ]
       },
       "educationalObjective": "Time antiemetics for chemotherapy."
@@ -337,8 +337,8 @@
         "chemotherapy-and-radiation-care"
       ],
       "cjmmSkill": "recognize_cues",
-      "difficulty": "moderate",
-      "stem": "A client is receiving doxorubicin. Which adverse effect is most important for the nurse to monitor?",
+      "difficulty": "difficult",
+      "stem": "A 58-year-old client with breast cancer is receiving doxorubicin. Before the fourth cycle, the client reports new shortness of breath when climbing stairs, needing two pillows at night and ankle swelling. The total dose received so far is near the lifetime limit, and the client has a history of hypertension. Which adverse effect does the nurse suspect?",
       "content": {
         "options": [
           {
@@ -351,11 +351,11 @@
           },
           {
             "id": "c",
-            "text": "Hearing loss"
+            "text": "Ototoxicity"
           },
           {
             "id": "d",
-            "text": "Hirsutism"
+            "text": "Nephrotoxicity"
           }
         ]
       },
@@ -363,16 +363,16 @@
         "correct": "a"
       },
       "rationale": {
-        "correct": "Doxorubicin: cardiotoxicity, myelosuppression and red urine (harmless); it is a vesicant.",
+        "correct": "Doxorubicin: cardiotoxicity, myelosuppression, harmless red urine, and it is a vesicant.",
         "perOption": {
           "a": "Doxorubicin can cause dose-related heart failure; heart function is checked before and during treatment.",
-          "b": "This isn't a key effect.",
-          "c": "This is more typical of cisplatin.",
-          "d": "This isn't an effect."
+          "b": "This is not a key effect of doxorubicin.",
+          "c": "Hearing loss is more typical of cisplatin.",
+          "d": "This does not explain dyspnea and ankle swelling."
         },
         "references": [
           "Nursing pharmacology texts (e.g. Lehne; McCuistion) and the drug's prescribing information",
-          "Reviewed by the content team on 17 November 2026."
+          "Rewritten to NCLEX-RN difficulty and reviewed by the content team on 19 November 2026."
         ]
       },
       "educationalObjective": "Monitor for doxorubicin cardiotoxicity."
@@ -387,24 +387,24 @@
       ],
       "cjmmSkill": "generate_solutions",
       "difficulty": "moderate",
-      "stem": "A client is receiving cisplatin. Which intervention helps prevent nephrotoxicity?",
+      "stem": "A client with testicular cancer is scheduled to receive cisplatin. The creatinine is normal. Which intervention helps prevent kidney injury from the drug?",
       "content": {
         "options": [
           {
             "id": "a",
-            "text": "Vigorous IV hydration before and after the infusion"
+            "text": "Generous IV hydration before and after the infusion"
           },
           {
             "id": "b",
-            "text": "Restricting fluids"
+            "text": "Restricting fluids to 1 L on the day of the infusion"
           },
           {
             "id": "c",
-            "text": "Giving NSAIDs"
+            "text": "Giving ibuprofen for any discomfort during treatment"
           },
           {
             "id": "d",
-            "text": "Withholding antiemetics"
+            "text": "Holding the antiemetics to reduce the drug load"
           }
         ]
       },
@@ -412,16 +412,16 @@
         "correct": "a"
       },
       "rationale": {
-        "correct": "Cisplatin: nephrotoxicity, ototoxicity, nausea and electrolyte loss.",
+        "correct": "Cisplatin: nephrotoxicity, ototoxicity, nausea and electrolyte loss, especially magnesium.",
         "perOption": {
           "a": "Hydration dilutes cisplatin and protects the kidneys.",
-          "b": "This increases kidney injury.",
-          "c": "These increase kidney risk.",
-          "d": "This isn't related."
+          "b": "This increases the risk of kidney injury.",
+          "c": "NSAIDs increase kidney risk.",
+          "d": "This is not related to kidney protection."
         },
         "references": [
           "Nursing pharmacology texts (e.g. Lehne; McCuistion) and the drug's prescribing information",
-          "Reviewed by the content team on 17 November 2026."
+          "Rewritten to NCLEX-RN difficulty and reviewed by the content team on 19 November 2026."
         ]
       },
       "educationalObjective": "Prevent cisplatin nephrotoxicity."
@@ -436,24 +436,24 @@
       ],
       "cjmmSkill": "recognize_cues",
       "difficulty": "moderate",
-      "stem": "A client receiving vincristine reports numbness and tingling in the fingers and constipation. What do these findings suggest?",
+      "stem": "A child receiving vincristine for acute lymphoblastic leukemia has numbness and tingling in the fingers, trouble buttoning a shirt and no bowel movement for 4 days. What do these findings suggest?",
       "content": {
         "options": [
           {
             "id": "a",
-            "text": "Neurotoxicity from vincristine"
+            "text": "Neurotoxicity from the vincristine"
           },
           {
             "id": "b",
-            "text": "Hypercalcemia"
+            "text": "Hypercalcemia from the leukemia"
           },
           {
             "id": "c",
-            "text": "An allergic reaction"
+            "text": "An allergic reaction to the drug"
           },
           {
             "id": "d",
-            "text": "Expected improvement"
+            "text": "Expected signs of improvement"
           }
         ]
       },
@@ -461,16 +461,16 @@
         "correct": "a"
       },
       "rationale": {
-        "correct": "Vincristine: neuropathy and constipation; report worsening symptoms.",
+        "correct": "Vincristine: peripheral neuropathy and constipation; report worsening symptoms and use a bowel regimen.",
         "perOption": {
           "a": "Vincristine causes peripheral neuropathy and autonomic effects such as constipation.",
-          "b": "This doesn't explain the numbness.",
-          "c": "This doesn't fit.",
+          "b": "This does not explain the numbness.",
+          "c": "This does not fit.",
           "d": "These are adverse effects."
         },
         "references": [
           "Nursing pharmacology texts (e.g. Lehne; McCuistion) and the drug's prescribing information",
-          "Reviewed by the content team on 17 November 2026."
+          "Rewritten to NCLEX-RN difficulty and reviewed by the content team on 19 November 2026."
         ]
       },
       "educationalObjective": "Recognize vincristine neurotoxicity."
@@ -485,24 +485,24 @@
       ],
       "cjmmSkill": "evaluate_outcomes",
       "difficulty": "moderate",
-      "stem": "A client receiving external beam radiation to the chest asks about skin care. Which statement shows a need for more teaching?",
+      "stem": "A client is in the second week of external beam radiation to the chest and asks about skin care. Which statement by the client shows a need for more teaching?",
       "content": {
         "options": [
           {
             "id": "a",
-            "text": "\"I'll wash the area gently with lukewarm water and mild soap.\""
+            "text": "\"I'll wash the area gently with lukewarm water and a mild soap.\""
           },
           {
             "id": "b",
-            "text": "\"I'll scrub off the ink markings when I shower.\""
+            "text": "\"I'll scrub off the ink markings when I take a shower.\""
           },
           {
             "id": "c",
-            "text": "\"I'll protect the area from the sun.\""
+            "text": "\"I'll keep the area covered and out of the sun.\""
           },
           {
             "id": "d",
-            "text": "\"I'll wear loose cotton clothing.\""
+            "text": "\"I'll wear loose cotton shirts over the treated area.\""
           }
         ]
       },
@@ -519,7 +519,7 @@
         },
         "references": [
           "Medical-surgical nursing texts (e.g. Lewis; Ignatavicius)",
-          "Reviewed by the content team on 17 November 2026."
+          "Rewritten to NCLEX-RN difficulty and reviewed by the content team on 19 November 2026."
         ]
       },
       "educationalObjective": "Teach skin care during radiation therapy."
@@ -533,25 +533,25 @@
         "chemotherapy-and-radiation-care"
       ],
       "cjmmSkill": "generate_solutions",
-      "difficulty": "easy",
-      "stem": "A client starting chemotherapy is worried about hair loss. What is the best response?",
+      "difficulty": "moderate",
+      "stem": "A 30-year-old client starting a chemotherapy regimen that usually causes hair loss says, \"I don't want my kids to see me bald.\" What is the nurse's best response?",
       "content": {
         "options": [
           {
             "id": "a",
-            "text": "\"Hair loss is usually temporary. Let's talk about scarves, wigs or cutting your hair short beforehand.\""
+            "text": "\"Hair loss is usually temporary; let's talk about wigs and scarves.\""
           },
           {
             "id": "b",
-            "text": "\"Don't worry, you won't lose your hair.\""
+            "text": "\"Don't worry, many people on this treatment keep most of their hair.\""
           },
           {
             "id": "c",
-            "text": "\"Hair loss is permanent.\""
+            "text": "\"Hair loss from this treatment is usually permanent.\""
           },
           {
             "id": "d",
-            "text": "\"Hair isn't important compared with your cancer.\""
+            "text": "\"Your hair isn't important compared with beating the cancer.\""
           }
         ]
       },
@@ -559,16 +559,16 @@
         "correct": "a"
       },
       "rationale": {
-        "correct": "Alopecia affects body image; give accurate information and practical options.",
+        "correct": "Alopecia affects body image; give accurate information and practical options, and include the family as the client wishes.",
         "perOption": {
           "a": "This gives accurate information and supports coping.",
-          "b": "This may be false reassurance.",
+          "b": "This may be false reassurance for this regimen.",
           "c": "It is usually temporary.",
           "d": "This dismisses the client's feelings."
         },
         "references": [
           "Medical-surgical nursing texts (e.g. Lewis; Ignatavicius)",
-          "Reviewed by the content team on 17 November 2026."
+          "Rewritten to NCLEX-RN difficulty and reviewed by the content team on 19 November 2026."
         ]
       },
       "educationalObjective": "Support a client facing chemotherapy-related hair loss."
@@ -582,8 +582,8 @@
         "cancer-care"
       ],
       "cjmmSkill": "take_action",
-      "difficulty": "easy",
-      "stem": "After a left mastectomy with lymph node removal, which instruction should the nurse give?",
+      "difficulty": "moderate",
+      "stem": "A client is going home after a left mastectomy with axillary lymph node removal. Which instruction should the nurse give?",
       "content": {
         "options": [
           {
@@ -592,15 +592,15 @@
           },
           {
             "id": "b",
-            "text": "\"Keep your left arm still for 6 months.\""
+            "text": "\"Keep your left arm still and in a sling for the next 6 months.\""
           },
           {
             "id": "c",
-            "text": "\"Carry heavy bags on your left arm.\""
+            "text": "\"Carry your grocery bags on the left side to build strength.\""
           },
           {
             "id": "d",
-            "text": "\"Expect permanent swelling.\""
+            "text": "\"Expect the left arm to stay swollen for the rest of your life.\""
           }
         ]
       },
@@ -608,7 +608,7 @@
         "correct": "a"
       },
       "rationale": {
-        "correct": "After lymph node removal: protect the arm, do prescribed exercises and report swelling.",
+        "correct": "After lymph node removal: protect the arm, do the prescribed exercises and report swelling.",
         "perOption": {
           "a": "This reduces the risk of lymphedema and infection.",
           "b": "Gradual exercise is encouraged.",
@@ -617,7 +617,7 @@
         },
         "references": [
           "Medical-surgical nursing texts (e.g. Lewis; Ignatavicius)",
-          "Reviewed by the content team on 17 November 2026."
+          "Rewritten to NCLEX-RN difficulty and reviewed by the content team on 19 November 2026."
         ]
       },
       "educationalObjective": "Teach lymphedema prevention."
@@ -632,7 +632,7 @@
       ],
       "cjmmSkill": "generate_solutions",
       "difficulty": "moderate",
-      "stem": "A 42-year-old woman at average risk asks when she should have screening mammograms. What is the nurse's best response, based on current USPSTF guidance?",
+      "stem": "A 42-year-old woman with no family history of breast cancer asks when she should have screening mammograms. What is the nurse's best response, based on current USPSTF guidance?",
       "content": {
         "options": [
           {
@@ -641,15 +641,15 @@
           },
           {
             "id": "b",
-            "text": "\"Only after age 60.\""
+            "text": "\"Once a year, starting after age 60.\""
           },
           {
             "id": "c",
-            "text": "\"Only if you feel a lump.\""
+            "text": "\"If you or your doctor feel a lump, not before.\""
           },
           {
             "id": "d",
-            "text": "\"Every 5 years starting at 50.\""
+            "text": "\"Every 5 years, starting at age 50.\""
           }
         ]
       },
@@ -657,16 +657,16 @@
         "correct": "a"
       },
       "rationale": {
-        "correct": "Mammography every 2 years from 40 to 74 (USPSTF 2024); other organizations may advise annual screening.",
+        "correct": "Mammography every 2 years from 40 to 74 (USPSTF 2024); other organizations may advise yearly screening.",
         "perOption": {
-          "a": "USPSTF recommends biennial mammography from 40 to 74 for average-risk women.",
-          "b": "This is too late.",
+          "a": "USPSTF recommends mammography every 2 years from 40 to 74 for average-risk women.",
+          "b": "This starts too late.",
           "c": "Screening is for women without symptoms.",
-          "d": "This isn't the recommendation."
+          "d": "This is not the recommendation."
         },
         "references": [
           "U.S. Preventive Services Task Force recommendations",
-          "Reviewed by the content team on 17 November 2026."
+          "Rewritten to NCLEX-RN difficulty and reviewed by the content team on 19 November 2026."
         ]
       },
       "educationalObjective": "Teach breast cancer screening recommendations."
@@ -681,7 +681,7 @@
       ],
       "cjmmSkill": "generate_solutions",
       "difficulty": "easy",
-      "stem": "When should a young man perform a testicular self-exam?",
+      "stem": "A 19-year-old man asks the nurse how to check his testicles for cancer. When should he do the self-exam?",
       "content": {
         "options": [
           {
@@ -690,15 +690,15 @@
           },
           {
             "id": "b",
-            "text": "Once a year in a cold room"
+            "text": "Yearly, in a cool room"
           },
           {
             "id": "c",
-            "text": "Only after age 50"
+            "text": "After he turns 50"
           },
           {
             "id": "d",
-            "text": "Only if there is pain"
+            "text": "When there is pain"
           }
         ]
       },
@@ -715,7 +715,7 @@
         },
         "references": [
           "Medical-surgical nursing texts (e.g. Lewis; Ignatavicius)",
-          "Reviewed by the content team on 17 November 2026."
+          "Rewritten to NCLEX-RN difficulty and reviewed by the content team on 19 November 2026."
         ]
       },
       "educationalObjective": "Teach testicular self-examination."
@@ -730,7 +730,7 @@
       ],
       "cjmmSkill": "generate_solutions",
       "difficulty": "moderate",
-      "stem": "A 25-year-old asks how often to have cervical cancer screening. What is the best response?",
+      "stem": "A 25-year-old client with a cervix who had a normal Pap test 3 years ago asks how often to have cervical cancer screening. What is the nurse's best response?",
       "content": {
         "options": [
           {
@@ -739,15 +739,15 @@
           },
           {
             "id": "b",
-            "text": "\"Every year.\""
+            "text": "\"A Pap test every year.\""
           },
           {
             "id": "c",
-            "text": "\"Starting at age 30.\""
+            "text": "\"Not until you turn 30.\""
           },
           {
             "id": "d",
-            "text": "\"Only if you have symptoms.\""
+            "text": "\"If you have symptoms.\""
           }
         ]
       },
@@ -758,13 +758,13 @@
         "correct": "Cervical screening: 21 to 29, Pap every 3 years; 30 to 65, HPV testing every 5 years or other approved options.",
         "perOption": {
           "a": "Ages 21 to 29: cytology every 3 years.",
-          "b": "Annual screening isn't recommended for average risk.",
+          "b": "Annual screening is not recommended for average risk.",
           "c": "Screening starts at 21.",
           "d": "Screening is for people without symptoms."
         },
         "references": [
           "U.S. Preventive Services Task Force recommendations",
-          "Reviewed by the content team on 17 November 2026."
+          "Rewritten to NCLEX-RN difficulty and reviewed by the content team on 19 November 2026."
         ]
       },
       "educationalObjective": "Teach cervical cancer screening."
@@ -779,7 +779,7 @@
       ],
       "cjmmSkill": "prioritize_hypotheses",
       "difficulty": "moderate",
-      "stem": "A client has newly diagnosed acute myeloid leukemia. Which nursing problem is the priority?",
+      "stem": "A 50-year-old client with newly diagnosed acute myeloid leukemia has a WBC of 48,000/mm3 with many blasts, a hemoglobin of 8.1 g/dL and platelets of 22,000/mm3. Which nursing problem is the priority?",
       "content": {
         "options": [
           {
@@ -792,11 +792,11 @@
           },
           {
             "id": "c",
-            "text": "Knowledge deficit"
+            "text": "Lack of knowledge"
           },
           {
             "id": "d",
-            "text": "Constipation"
+            "text": "Risk for constipation"
           }
         ]
       },
@@ -804,16 +804,16 @@
         "correct": "a"
       },
       "rationale": {
-        "correct": "Leukemia: infection and bleeding risks are the priorities.",
+        "correct": "Acute leukemia: infection and bleeding risks are the priorities, despite a high white cell count.",
         "perOption": {
-          "a": "Immature white cells don't fight infection, and infection is a leading cause of death.",
-          "b": "This is lower priority.",
-          "c": "This is lower priority.",
-          "d": "This is lower priority."
+          "a": "Immature white cells do not fight infection, and infection is a leading cause of death.",
+          "b": "This is a lower priority.",
+          "c": "This is a lower priority.",
+          "d": "This is a lower priority."
         },
         "references": [
           "Medical-surgical nursing texts (e.g. Lewis; Ignatavicius)",
-          "Reviewed by the content team on 17 November 2026."
+          "Rewritten to NCLEX-RN difficulty and reviewed by the content team on 19 November 2026."
         ]
       },
       "educationalObjective": "Prioritize care in acute leukemia."
@@ -826,26 +826,26 @@
       "subtopics": [
         "cancer-care"
       ],
-      "cjmmSkill": "recognize_cues",
+      "cjmmSkill": "analyze_cues",
       "difficulty": "moderate",
-      "stem": "Which finding is typical of Hodgkin lymphoma?",
+      "stem": "A 24-year-old client has had night sweats, a weight loss of 5 kg and fevers for 2 months. Which finding on examination is typical of Hodgkin lymphoma?",
       "content": {
         "options": [
           {
             "id": "a",
-            "text": "Painless, enlarged lymph node in the neck"
+            "text": "A painless, rubbery lymph node above the collarbone"
           },
           {
             "id": "b",
-            "text": "Tender, red lymph node with sore throat"
+            "text": "A tender, red neck lymph node with a sore throat"
           },
           {
             "id": "c",
-            "text": "Bone pain with kidney injury"
+            "text": "Bone pain with a rising creatinine and anemia"
           },
           {
             "id": "d",
-            "text": "Easy bruising and bleeding gums"
+            "text": "Easy bruising and bleeding of the gums"
           }
         ]
       },
@@ -855,14 +855,14 @@
       "rationale": {
         "correct": "Hodgkin lymphoma: painless lymph node swelling, sometimes with fever, night sweats and weight loss (B symptoms).",
         "perOption": {
-          "a": "Painless lymphadenopathy is the classic presentation.",
+          "a": "Painless lymphadenopathy, often in the neck, is the classic presentation.",
           "b": "This suggests infection.",
           "c": "This suggests multiple myeloma.",
           "d": "This suggests leukemia or low platelets."
         },
         "references": [
           "Medical-surgical nursing texts (e.g. Lewis; Ignatavicius)",
-          "Reviewed by the content team on 17 November 2026."
+          "Rewritten to NCLEX-RN difficulty and reviewed by the content team on 19 November 2026."
         ]
       },
       "educationalObjective": "Recognize Hodgkin lymphoma."
@@ -876,25 +876,25 @@
         "cancer-care"
       ],
       "cjmmSkill": "generate_solutions",
-      "difficulty": "moderate",
-      "stem": "A client with multiple myeloma has bone pain and a high calcium level. Which intervention is most important?",
+      "difficulty": "difficult",
+      "stem": "A 70-year-old client with multiple myeloma has back and rib pain, a calcium of 12.4 mg/dL and a creatinine that has risen from 1.1 to 1.8 mg/dL. The client has no fluid restriction. Which intervention is most important?",
       "content": {
         "options": [
           {
             "id": "a",
-            "text": "Encourage fluids of at least 2 to 3 L a day unless restricted"
+            "text": "Encourage 2 to 3 L of fluid a day"
           },
           {
             "id": "b",
-            "text": "Bed rest"
+            "text": "Keep the client on strict bed rest"
           },
           {
             "id": "c",
-            "text": "Restrict fluids"
+            "text": "Limit fluids to protect the kidneys"
           },
           {
             "id": "d",
-            "text": "High-calcium diet"
+            "text": "Offer a high-calcium diet to help strengthen the weak bones"
           }
         ]
       },
@@ -905,13 +905,13 @@
         "correct": "Multiple myeloma: bone pain, fractures, hypercalcemia and kidney failure; hydration and fall safety are key.",
         "perOption": {
           "a": "Fluids help clear calcium and protect the kidneys from protein damage.",
-          "b": "Immobility increases bone calcium loss.",
+          "b": "Immobility increases calcium loss from bone.",
           "c": "This worsens kidney damage.",
           "d": "This worsens hypercalcemia."
         },
         "references": [
           "Medical-surgical nursing texts (e.g. Lewis; Ignatavicius)",
-          "Reviewed by the content team on 17 November 2026."
+          "Rewritten to NCLEX-RN difficulty and reviewed by the content team on 19 November 2026."
         ]
       },
       "educationalObjective": "Plan care for multiple myeloma."
@@ -926,24 +926,24 @@
       ],
       "cjmmSkill": "generate_solutions",
       "difficulty": "moderate",
-      "stem": "A client with cancer has constant pain. Which approach to pain relief is best?",
+      "stem": "A client with metastatic pancreatic cancer has constant abdominal pain rated 6 to 7 out of 10 that wakes the client at night. The client takes oxycodone 5 mg only when the pain becomes severe. Which change would the nurse expect?",
       "content": {
         "options": [
           {
             "id": "a",
-            "text": "Scheduled, around-the-clock analgesia with a breakthrough dose available"
+            "text": "Scheduled long-acting opioid plus a breakthrough dose"
           },
           {
             "id": "b",
-            "text": "Medication only when pain is severe"
+            "text": "Keep giving the oxycodone when the pain is severe"
           },
           {
             "id": "c",
-            "text": "Avoiding opioids to prevent addiction"
+            "text": "Switch to ibuprofen to avoid opioid addiction"
           },
           {
             "id": "d",
-            "text": "Placebo injections"
+            "text": "Give saline injections to see if the pain is real"
           }
         ]
       },
@@ -953,14 +953,14 @@
       "rationale": {
         "correct": "Cancer pain: around-the-clock dosing, breakthrough doses and preventing side effects such as constipation.",
         "perOption": {
-          "a": "Steady levels prevent pain from returning, and breakthrough doses treat flares.",
+          "a": "Steady levels stop the pain returning, and breakthrough doses treat flares.",
           "b": "This leads to poor control.",
           "c": "Opioids are appropriate for cancer pain.",
-          "d": "These are unethical."
+          "d": "Placebo injections are unethical."
         },
         "references": [
           "Nursing pharmacology texts (e.g. Lehne; McCuistion) and the drug's prescribing information",
-          "Reviewed by the content team on 17 November 2026."
+          "Rewritten to NCLEX-RN difficulty and reviewed by the content team on 19 November 2026."
         ]
       },
       "educationalObjective": "Manage cancer pain effectively."
@@ -974,25 +974,25 @@
         "palliative-and-end-of-life-care"
       ],
       "cjmmSkill": "take_action",
-      "difficulty": "moderate",
-      "stem": "A dying client has noisy, gurgling breathing, and the family is upset. What should the nurse do?",
+      "difficulty": "difficult",
+      "stem": "A client in the last hours of life has noisy, gurgling breathing. The client is unresponsive and appears comfortable, but the family is upset by the sound. What should the nurse do?",
       "content": {
         "options": [
           {
             "id": "a",
-            "text": "Reposition the client on the side and give a prescribed anticholinergic"
+            "text": "Turn the client to the side; give the prescribed glycopyrrolate"
           },
           {
             "id": "b",
-            "text": "Suction deeply every hour"
+            "text": "Suction deep into the airway every hour to clear the secretions"
           },
           {
             "id": "c",
-            "text": "Increase IV fluids"
+            "text": "Increase the IV fluid rate to thin out the secretions in the throat"
           },
           {
             "id": "d",
-            "text": "Ask the family to leave"
+            "text": "Ask the family to wait outside until the noisy breathing stops"
           }
         ]
       },
@@ -1002,14 +1002,14 @@
       "rationale": {
         "correct": "Terminal secretions ('death rattle') are managed with positioning and anticholinergics such as glycopyrrolate, along with family support.",
         "perOption": {
-          "a": "Positioning and drying secretions reduce the noise; explain that it's common near death.",
+          "a": "Positioning and drying secretions reduce the noise; the nurse explains that it is common near death.",
           "b": "Deep suctioning is distressing and usually not effective.",
-          "c": "This increases secretions.",
+          "c": "More fluid increases secretions.",
           "d": "Family presence is supportive."
         },
         "references": [
           "Medical-surgical nursing texts (e.g. Lewis; Ignatavicius)",
-          "Reviewed by the content team on 17 November 2026."
+          "Rewritten to NCLEX-RN difficulty and reviewed by the content team on 19 November 2026."
         ]
       },
       "educationalObjective": "Manage terminal secretions."
@@ -1024,7 +1024,7 @@
       ],
       "cjmmSkill": "generate_solutions",
       "difficulty": "moderate",
-      "stem": "Which comfort measures should the nurse provide for a client who is actively dying? Select all that apply.",
+      "stem": "A client with end-stage heart failure is actively dying in a hospice unit, and the family is at the bedside. Which comfort measures should the nurse provide? Select all that apply.",
       "content": {
         "options": [
           {
@@ -1037,11 +1037,11 @@
           },
           {
             "id": "c",
-            "text": "Pain and symptom medication as prescribed"
+            "text": "Medication for pain and breathlessness"
           },
           {
             "id": "d",
-            "text": "Encouraging family presence"
+            "text": "Encouraging family to stay and touch"
           },
           {
             "id": "e",
@@ -1049,7 +1049,7 @@
           },
           {
             "id": "f",
-            "text": "Limiting visitors to 10 minutes"
+            "text": "Limiting visits to 10 minutes"
           }
         ]
       },
@@ -1073,7 +1073,7 @@
         },
         "references": [
           "Medical-surgical nursing texts (e.g. Lewis; Ignatavicius)",
-          "Reviewed by the content team on 17 November 2026."
+          "Rewritten to NCLEX-RN difficulty and reviewed by the content team on 19 November 2026."
         ]
       },
       "educationalObjective": "Provide comfort care at the end of life."
@@ -1087,25 +1087,25 @@
         "palliative-and-end-of-life-care"
       ],
       "cjmmSkill": "analyze_cues",
-      "difficulty": "easy",
-      "stem": "Which client is eligible for hospice care?",
+      "difficulty": "difficult",
+      "stem": "The case manager is reviewing four clients for hospice referral. Which client meets the usual criteria for hospice care?",
       "content": {
         "options": [
           {
             "id": "a",
-            "text": "A client whose provider certifies a life expectancy of 6 months or less if the disease runs its usual course"
+            "text": "A client whose provider certifies a life expectancy of 6 months or less"
           },
           {
             "id": "b",
-            "text": "Any client with cancer"
+            "text": "A client with newly diagnosed cancer that is likely to be cured"
           },
           {
             "id": "c",
-            "text": "A client who wants curative treatment"
+            "text": "A client with heart failure who wants a heart transplant sometime next year"
           },
           {
             "id": "d",
-            "text": "Only clients in the last week of life"
+            "text": "A client expected to live a few more days, and no longer"
           }
         ]
       },
@@ -1113,16 +1113,16 @@
         "correct": "a"
       },
       "rationale": {
-        "correct": "Hospice: prognosis of 6 months or less, focused on comfort.",
+        "correct": "Hospice: a prognosis of 6 months or less if the disease follows its usual course, with care focused on comfort.",
         "perOption": {
           "a": "This is the standard eligibility rule.",
-          "b": "Eligibility depends on prognosis, not the diagnosis.",
+          "b": "Eligibility depends on prognosis, not on the diagnosis.",
           "c": "Hospice focuses on comfort rather than cure.",
-          "d": "Earlier referral is better."
+          "d": "Hospice is not limited to the last days; earlier referral is better."
         },
         "references": [
           "Medical-surgical nursing texts (e.g. Lewis; Ignatavicius)",
-          "Reviewed by the content team on 17 November 2026."
+          "Rewritten to NCLEX-RN difficulty and reviewed by the content team on 19 November 2026."
         ]
       },
       "educationalObjective": "Identify eligibility for hospice care."
@@ -1137,24 +1137,24 @@
       ],
       "cjmmSkill": "take_action",
       "difficulty": "moderate",
-      "stem": "A client has just died, and no autopsy or coroner's case is involved. What should the nurse do?",
+      "stem": "A client with expected death from lung cancer has just died in the hospital. No autopsy is planned, and it is not a coroner's case. The family is in the waiting room. What should the nurse do?",
       "content": {
         "options": [
           {
             "id": "a",
-            "text": "Remove tubes and lines per policy, clean the body and let the family spend time with the client"
+            "text": "Remove lines per policy, clean the body and invite the family in"
           },
           {
             "id": "b",
-            "text": "Send the body to the morgue right away"
+            "text": "Send the body to the morgue right away to free up the room"
           },
           {
             "id": "c",
-            "text": "Leave all tubes in place"
+            "text": "Leave the tubes and lines in place for the funeral home"
           },
           {
             "id": "d",
-            "text": "Ask the family to leave while care is done, then send them home"
+            "text": "Ask the family to go home and come back once the nurse has finished the care"
           }
         ]
       },
@@ -1166,12 +1166,12 @@
         "perOption": {
           "a": "Postmortem care preserves dignity and supports grieving.",
           "b": "The family should have time with the client.",
-          "c": "Tubes are left only for an autopsy or coroner's case.",
+          "c": "Tubes are left in only for an autopsy or coroner's case.",
           "d": "The family may wish to stay or help."
         },
         "references": [
           "Fundamentals of nursing texts (e.g. Potter & Perry)",
-          "Reviewed by the content team on 17 November 2026."
+          "Rewritten to NCLEX-RN difficulty and reviewed by the content team on 19 November 2026."
         ]
       },
       "educationalObjective": "Provide postmortem care."
@@ -1186,32 +1186,32 @@
       ],
       "cjmmSkill": "generate_solutions",
       "difficulty": "moderate",
-      "stem": "A client will receive oral chemotherapy at home. Select the 3 safety instructions the nurse should give.",
+      "stem": "A client will take oral capecitabine at home. The client's spouse will help, and their adult daughter, who is pregnant, visits often. Select the 3 safety instructions the nurse should give.",
       "content": {
         "options": [
           {
             "id": "a",
-            "text": "Wear gloves when handling the medication or body fluids"
+            "text": "Wear gloves to handle the tablets or body fluids"
           },
           {
             "id": "b",
-            "text": "Flush the toilet twice after use"
+            "text": "Flush the toilet twice after the client uses it"
           },
           {
             "id": "c",
-            "text": "Wash soiled linens separately"
+            "text": "Wash soiled linens separately from other laundry"
           },
           {
             "id": "d",
-            "text": "Crush tablets to make them easier to swallow"
+            "text": "Crush the tablets if they are hard to swallow"
           },
           {
             "id": "e",
-            "text": "Let pregnant family members handle the pills"
+            "text": "Ask the daughter to help set out the doses"
           },
           {
             "id": "f",
-            "text": "Store the medication with family members' medications"
+            "text": "Keep the tablets with the family's other pills"
           }
         ],
         "selectCount": 3
@@ -1224,18 +1224,18 @@
         ]
       },
       "rationale": {
-        "correct": "Chemotherapy is hazardous; protect caregivers from exposure for about 48 hours after doses.",
+        "correct": "Oral chemotherapy is hazardous; protect caregivers from exposure, especially for about 48 hours after doses.",
         "perOption": {
           "a": "Chemotherapy is excreted in body fluids.",
           "b": "This reduces exposure for others.",
           "c": "This prevents contamination.",
           "d": "Crushing releases hazardous particles.",
           "e": "Pregnant people should avoid exposure.",
-          "f": "It should be stored separately and safely."
+          "f": "They are stored separately and safely."
         },
         "references": [
           "Medical-surgical nursing texts (e.g. Lewis; Ignatavicius)",
-          "Reviewed by the content team on 17 November 2026."
+          "Rewritten to NCLEX-RN difficulty and reviewed by the content team on 19 November 2026."
         ]
       },
       "educationalObjective": "Teach home safety for oral chemotherapy."

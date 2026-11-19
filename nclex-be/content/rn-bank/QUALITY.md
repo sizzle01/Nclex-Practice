@@ -29,7 +29,7 @@ Written by `python3 -I build_all.py`; do not edit by hand. See `quality.py` for 
 | 16-gi-1 | 25 | yes | 22 | 14% | 25% (assess first) | 9% | 32 | 1/16/8 |
 | 17-gi-2-liver-pancreas | 24 | yes | 20 | 10% | 24% (assess first) | 15% | 28 | 2/14/8 |
 | 18-hematology | 23 | yes | 18 | 17% | 25% (assess first) | 0% | 35 | 0/16/7 |
-| 19-oncology-palliative | 24 |  | 22 | 82% | 82% (longest) | 27% | 17 | 5/17/2 |
+| 19-oncology-palliative | 24 | yes | 22 | 23% | 25% (longest) | 9% | 32 | 1/15/8 |
 | 20-immune-infectious | 25 |  | 23 | 74% | 74% (longest) | 22% | 16 | 4/20/1 |
 | 21-musculoskeletal | 24 |  | 21 | 76% | 79% (longest) | 29% | 15.5 | 8/14/2 |
 | 22-integumentary-burns | 25 |  | 20 | 90% | 90% (longest) | 20% | 15 | 7/14/4 |
@@ -57,4 +57,4 @@ Written by `python3 -I build_all.py`; do not edit by hand. See `quality.py` for 
 | 65-management-of-care-specialty | 27 | yes | 18 | 17% | 28% (stem words) | 11% | 27 | 2/15/10 |
 | 66-risk-reduction-basic-care | 31 | yes | 27 | 7% | 29% (assess first) | 15% | 32 | 4/17/10 |
 | 67-moc-sic-ngn | 34 | yes | 23 | 0% | 23% (shortest) | 9% | 32 | 0/23/11 |
-| **Whole bank** | 1110 | | 874 | 39% | 41% (skip absolutes) | 13% | 26 | 139/688/283 |
+| **Whole bank** | 1110 | | 874 | 37% | 39% (skip absolutes) | 13% | 26 | 135/686/289 |
