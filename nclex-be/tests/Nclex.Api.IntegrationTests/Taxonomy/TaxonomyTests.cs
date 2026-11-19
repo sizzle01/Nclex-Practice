@@ -56,8 +56,9 @@ public sealed class TaxonomyTests(ApiFactory factory)
         taxonomy.BodySystems[0].ShouldBe(new BodySystemInfo(1, "cardiovascular", "Cardiovascular"));
 
         taxonomy.ItemTypes.Count.ShouldBe(Enum.GetValues<ItemType>().Length);
+        // Every MVP type, plus the Phase 2 types built so far (bowtie, F20).
         taxonomy.ItemTypes.Where(t => t.Available).Select(t => t.Type)
-            .ShouldBe(ItemTypeCatalog.All.Where(d => d.Phase == Phase.Mvp).Select(d => d.Type));
+            .ShouldBe(ItemTypeCatalog.All.Where(d => d.Phase == Phase.Mvp || d.Type == ItemType.Bowtie).Select(d => d.Type));
         taxonomy.ItemTypes.ShouldContain(new ItemTypeInfo(ItemType.Sata, "Select All That Apply", true));
 
         taxonomy.CjmmSkills.ShouldBe(CjmmSkillCatalog.All);

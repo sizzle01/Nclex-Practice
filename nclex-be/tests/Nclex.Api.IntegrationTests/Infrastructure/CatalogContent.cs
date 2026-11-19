@@ -64,6 +64,25 @@ public sealed class CatalogContent(ApiFactory factory)
         return question;
     }
 
+    /// <summary>
+    /// A bowtie question (F20): conditions c1 to c4, actions a1 to a5 and parameters p1 to p5. The
+    /// key is c2, actions a1 and a3, parameters p2 and p4, so a response can earn 0 to 5 points.
+    /// </summary>
+    public static Dictionary<string, object> BowtieQuestion(Guid id)
+    {
+        var question = Question(id, "PHI.PA", "endocrine", difficulty: "difficult");
+        static object[] Numbered(string prefix, int count) =>
+            [.. Enumerable.Range(1, count).Select(i => new { id = $"{prefix}{i}", text = $"Choice {prefix}{i}" })];
+        var ids = new[] { "c1", "c2", "c3", "c4", "a1", "a2", "a3", "a4", "a5", "p1", "p2", "p3", "p4", "p5" };
+        question["itemType"] = "bowtie";
+        question["stem"] = "Complete the diagram for the client.";
+        question["content"] = new { condition = Numbered("c", 4), actions = Numbered("a", 5), parameters = Numbered("p", 5) };
+        question["key"] = new { condition = "c2", actions = new[] { "a1", "a3" }, parameters = new[] { "p2", "p4" } };
+        question["rationale"] = new { correct = "Why c2, a1, a3, p2 and p4", perOption = ids.ToDictionary(o => o, o => $"Because {o}") };
+        question["cjmmSkill"] = "prioritize_hypotheses";
+        return question;
+    }
+
     /// <summary>An untimed practice set; pass <paramref name="settings"/> to override any field.</summary>
     public static Dictionary<string, object?> Set(Guid id, string title, IEnumerable<Guid> questionIds, object? settings = null)
     {

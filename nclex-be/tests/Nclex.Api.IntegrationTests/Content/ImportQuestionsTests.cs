@@ -28,7 +28,7 @@ public sealed class ImportQuestionsTests(ApiFactory factory)
         var first = await ImportAsync(file, files);
         var second = await ImportAsync(QuestionImportFile.Parse(await File.ReadAllTextAsync(SampleFile, TestContext.Current.CancellationToken)), files);
 
-        first.ShouldBe(new ImportResult(Created: 44, Updated: 0, Unchanged: 0, [])
+        first.ShouldBe(new ImportResult(Created: 46, Updated: 0, Unchanged: 0, [])
         {
             Banks = new ImportCounts(1, 0, 0),
             TestSets = new ImportCounts(3, 0, 0),
@@ -36,7 +36,7 @@ public sealed class ImportQuestionsTests(ApiFactory factory)
             CaseStudies = new ImportCounts(1, 0, 0),
             Subtopics = new ImportCounts(34, 0, 0),
         }, "first import");
-        second.ShouldBe(new ImportResult(Created: 0, Updated: 0, Unchanged: 44, [])
+        second.ShouldBe(new ImportResult(Created: 0, Updated: 0, Unchanged: 46, [])
         {
             Banks = new ImportCounts(0, 0, 1),
             TestSets = new ImportCounts(0, 0, 3),
@@ -48,7 +48,7 @@ public sealed class ImportQuestionsTests(ApiFactory factory)
         await using var scope = factory.Services.CreateAsyncScope();
         var db = scope.ServiceProvider.GetRequiredService<AppDbContext>();
         var versions = await db.QuestionVersions.Where(v => ids.Contains(v.QuestionId)).ToListAsync(TestContext.Current.CancellationToken);
-        versions.Count.ShouldBe(44);
+        versions.Count.ShouldBe(46);
         versions.ShouldAllBe(v => v.Status == VersionStatus.Published && v.Version == 1);
         versions.Count(v => v.ItemType == ItemType.MultipleChoice).ShouldBe(10);
         versions.Where(v => v.ItemType == ItemType.MultipleChoice).ShouldAllBe(v => v.MaxPoints == 1);
@@ -64,6 +64,7 @@ public sealed class ImportQuestionsTests(ApiFactory factory)
             .Select(g => (g.Key, g.Count())).ShouldBe(otherMvpTypes.Select(t => (t, caseTypes.Contains(t) ? 3 : 2)), ignoreOrder: true);
         versions.Where(v => v.ItemType == ItemType.SelectN).Select(v => (int)v.MaxPoints).ShouldBe([3, 1], ignoreOrder: true); // per option, then all_or_nothing
         versions.Where(v => v.ItemType == ItemType.OrderedResponse).Select(v => (int)v.MaxPoints).ShouldBe([1, 5], ignoreOrder: true); // all_or_nothing, then per_position
+        versions.Where(v => v.ItemType == ItemType.Bowtie).Select(v => (int)v.MaxPoints).ShouldBe([5, 5]); // F20: one point per slot
 
         var questions = await db.Questions.Where(q => ids.Contains(q.Id)).ToListAsync(TestContext.Current.CancellationToken);
         questions.ShouldAllBe(q => versions.Any(v => v.Id == q.CurrentVersionId));
@@ -80,7 +81,7 @@ public sealed class ImportQuestionsTests(ApiFactory factory)
         sets.ShouldAllBe(s => s.Kind == TestSetKind.Prebuilt && s.IsPublished && s.AccessTier == PlanTier.Free && s.Track == ExamTrack.RN);
         var bank = await db.QuestionBanks.SingleAsync(b => b.Id == file.Banks![0].Id, TestContext.Current.CancellationToken);
         bank.Name.ShouldBe("RN Sample Bank");
-        (await db.QuestionBankItems.CountAsync(i => i.BankId == bank.Id, TestContext.Current.CancellationToken)).ShouldBe(44);
+        (await db.QuestionBankItems.CountAsync(i => i.BankId == bank.Id, TestContext.Current.CancellationToken)).ShouldBe(46);
 
         // F11: six questions carry exhibits, two of them showing the file's image and audio clip.
         versions.Count(v => v.Exhibits.RootElement.GetArrayLength() > 0).ShouldBe(6);
@@ -133,7 +134,7 @@ public sealed class ImportQuestionsTests(ApiFactory factory)
         var file = ImportFile(
             McQuestion(id, clientNeeds: "SECE"),
             McQuestion(id, bodySystem: "spleen"),
-            McQuestion(Guid.NewGuid(), itemType: "bowtie")); // phase 2: no module yet
+            McQuestion(Guid.NewGuid(), itemType: "hotspot")); // phase 2: no module yet
 
         var result = await ImportAsync(file);
 

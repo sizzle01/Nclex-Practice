@@ -3353,6 +3353,226 @@
       ],
       "caseStudyId": "f11c0000-0000-4000-8000-000000000001",
       "casePosition": 6
+    },
+    {
+      "id": "f20a0000-0000-4000-8000-000000000001",
+      "itemType": "bowtie",
+      "clientNeeds": "PHI.PA",
+      "bodySystem": "endocrine",
+      "subtopics": [
+        "diabetic-ketoacidosis"
+      ],
+      "cjmmSkill": "prioritize_hypotheses",
+      "difficulty": "difficult",
+      "stem": "A client with type 1 diabetes is admitted after 2 days of vomiting. Blood glucose is 520 mg/dL, arterial pH 7.21, bicarbonate 12 mEq/L and serum potassium 5.3 mEq/L. Respirations are deep and rapid, and the breath has a fruity odor. Complete the diagram by placing the condition the client is most likely experiencing, 2 actions the nurse should take to address that condition, and 2 parameters the nurse should monitor to assess the client's progress.",
+      "content": {
+        "condition": [
+          {
+            "id": "c1",
+            "text": "Diabetic ketoacidosis"
+          },
+          {
+            "id": "c2",
+            "text": "Hyperosmolar hyperglycemic state"
+          },
+          {
+            "id": "c3",
+            "text": "Hypoglycemia"
+          },
+          {
+            "id": "c4",
+            "text": "Acute pancreatitis"
+          }
+        ],
+        "actions": [
+          {
+            "id": "a1",
+            "text": "Start an infusion of 0.9% sodium chloride"
+          },
+          {
+            "id": "a2",
+            "text": "Start a continuous IV regular insulin infusion as prescribed"
+          },
+          {
+            "id": "a3",
+            "text": "Give insulin glargine subcutaneously instead of IV insulin"
+          },
+          {
+            "id": "a4",
+            "text": "Give sodium bicarbonate by IV push"
+          },
+          {
+            "id": "a5",
+            "text": "Restrict oral and IV fluids"
+          }
+        ],
+        "parameters": [
+          {
+            "id": "p1",
+            "text": "Serum potassium"
+          },
+          {
+            "id": "p2",
+            "text": "Blood glucose every hour"
+          },
+          {
+            "id": "p3",
+            "text": "Serum calcium"
+          },
+          {
+            "id": "p4",
+            "text": "Hemoglobin A1C"
+          },
+          {
+            "id": "p5",
+            "text": "Pupil response"
+          }
+        ]
+      },
+      "key": {
+        "condition": "c1",
+        "actions": [
+          "a1",
+          "a2"
+        ],
+        "parameters": [
+          "p1",
+          "p2"
+        ]
+      },
+      "rationale": {
+        "correct": "The client has DKA. Treatment restores fluid volume with 0.9% sodium chloride and stops ketosis with IV regular insulin, while hourly glucose and frequent potassium levels guard against the two main dangers of treatment: hypoglycemia and hypokalemia.",
+        "perOption": {
+          "c1": "Hyperglycemia with a pH below 7.30, a low bicarbonate and Kussmaul respirations are the hallmarks of DKA in type 1 diabetes.",
+          "c2": "HHS causes extreme hyperglycemia without significant ketoacidosis; this client's pH and bicarbonate show acidosis.",
+          "c3": "The glucose is 520 mg/dL, far above normal.",
+          "c4": "Vomiting can occur with pancreatitis, but it does not explain the hyperglycemia, acidosis and fruity breath together.",
+          "a1": "Isotonic fluid replacement comes first: the client is dehydrated from osmotic diuresis and vomiting.",
+          "a2": "IV regular insulin stops ketone production; the potassium of 5.3 mEq/L is above 3.3, so insulin can safely start.",
+          "a3": "Long-acting subcutaneous insulin acts too slowly and unpredictably to treat DKA.",
+          "a4": "Bicarbonate is not routine in DKA; it is reserved for a pH below about 6.9 and can worsen hypokalemia.",
+          "a5": "The client has a large fluid deficit; restricting fluids would worsen dehydration and perfusion.",
+          "p1": "Insulin moves potassium into the cells, so a normal or high level can fall quickly to dangerous hypokalemia.",
+          "p2": "Hourly glucose guides the insulin rate and tells the nurse when to add dextrose to the IV fluid.",
+          "p3": "Calcium is not a priority parameter in DKA.",
+          "p4": "A1C reflects control over 2 to 3 months and does not change during treatment.",
+          "p5": "Pupil checks are not used to track recovery from DKA unless cerebral edema is suspected."
+        },
+        "references": [
+          "SAMPLE CONTENT: written for development and testing, not reviewed by a nurse educator. Do not use for exam preparation."
+        ]
+      },
+      "educationalObjective": "Treat DKA with isotonic fluids and IV insulin, and monitor glucose and potassium closely."
+    },
+    {
+      "id": "f20a0000-0000-4000-8000-000000000002",
+      "itemType": "bowtie",
+      "clientNeeds": "PHI.PA",
+      "bodySystem": "maternal-newborn",
+      "subtopics": [
+        "postpartum-hemorrhage"
+      ],
+      "cjmmSkill": "take_action",
+      "difficulty": "moderate",
+      "stem": "A client gave birth vaginally 1 hour ago to a 4.3 kg (9 lb 8 oz) newborn. The client has saturated a perineal pad in 15 minutes. The fundus is boggy, 2 cm above the umbilicus and midline. Heart rate is 112/min and blood pressure 98/60 mm Hg. Complete the diagram by placing the condition the client is most likely experiencing, 2 actions the nurse should take to address that condition, and 2 parameters the nurse should monitor to assess the client's progress.",
+      "content": {
+        "condition": [
+          {
+            "id": "c1",
+            "text": "Postpartum hemorrhage from uterine atony"
+          },
+          {
+            "id": "c2",
+            "text": "Cervical laceration"
+          },
+          {
+            "id": "c3",
+            "text": "Full bladder displacing the uterus"
+          },
+          {
+            "id": "c4",
+            "text": "Amniotic fluid embolism"
+          }
+        ],
+        "actions": [
+          {
+            "id": "a1",
+            "text": "Massage the fundus"
+          },
+          {
+            "id": "a2",
+            "text": "Give oxytocin as prescribed"
+          },
+          {
+            "id": "a3",
+            "text": "Apply an ice pack to the perineum"
+          },
+          {
+            "id": "a4",
+            "text": "Place the client in high Fowler's position"
+          },
+          {
+            "id": "a5",
+            "text": "Delay emptying the bladder until the bleeding slows"
+          }
+        ],
+        "parameters": [
+          {
+            "id": "p1",
+            "text": "Fundal tone and height"
+          },
+          {
+            "id": "p2",
+            "text": "Amount of lochia, by weighing pads"
+          },
+          {
+            "id": "p3",
+            "text": "Deep tendon reflexes"
+          },
+          {
+            "id": "p4",
+            "text": "Blood glucose"
+          },
+          {
+            "id": "p5",
+            "text": "Breast engorgement"
+          }
+        ]
+      },
+      "key": {
+        "condition": "c1",
+        "actions": [
+          "a1",
+          "a2"
+        ],
+        "parameters": [
+          "p1",
+          "p2"
+        ]
+      },
+      "rationale": {
+        "correct": "A large newborn overdistends the uterus, which then fails to contract. Fundal massage and oxytocin restore uterine tone, and the nurse tracks fundal tone and weighed blood loss to judge the response.",
+        "perOption": {
+          "c1": "A boggy, high fundus with heavy bleeding after delivering a large newborn points to atony, the most common cause of postpartum hemorrhage.",
+          "c2": "Bleeding from a laceration continues with a firm, well-contracted fundus; this fundus is boggy.",
+          "c3": "A full bladder pushes the fundus up and to one side; this fundus is midline.",
+          "c4": "Amniotic fluid embolism presents with sudden respiratory distress, hypoxia and collapse, usually during or right after birth.",
+          "a1": "Firm fundal massage stimulates the uterus to contract and compress the bleeding vessels.",
+          "a2": "Oxytocin is the first-line uterotonic for uterine atony.",
+          "a3": "Ice reduces perineal swelling but does nothing for uterine bleeding.",
+          "a4": "Sitting upright lowers venous return in a client at risk of shock; keep the client flat with the legs raised if hypotensive.",
+          "a5": "A full bladder stops the uterus from contracting; the client should void or be catheterized.",
+          "p1": "A fundus that stays firm and midline at or below the umbilicus shows the treatment is working.",
+          "p2": "Weighing pads (1 g is about 1 mL) measures the blood loss objectively.",
+          "p3": "Reflexes are monitored for magnesium toxicity, which is not part of this client's care.",
+          "p4": "Glucose is not a key parameter for postpartum hemorrhage.",
+          "p5": "Engorgement develops days after birth and does not reflect bleeding."
+        },
+        "references": [
+          "SAMPLE CONTENT: written for development and testing, not reviewed by a nurse educator. Do not use for exam preparation."
+        ]
+      },
+      "educationalObjective": "Recognize uterine atony and treat it with fundal massage and oxytocin."
     }
   ],
   "caseStudies": [
@@ -3515,7 +3735,7 @@
     {
       "id": "f06b0000-0000-4000-8000-000000000001",
       "name": "RN Sample Bank",
-      "description": "Every sample RN question, across all MVP item types.",
+      "description": "Every sample RN question, across all MVP item types and bowtie.",
       "accessTier": "free",
       "questionIds": [
         "f04a0000-0000-4000-8000-000000000001",
@@ -3561,7 +3781,9 @@
         "f11b0000-0000-4000-8000-000000000001",
         "f11b0000-0000-4000-8000-000000000002",
         "f11b0000-0000-4000-8000-000000000003",
-        "f11b0000-0000-4000-8000-000000000004"
+        "f11b0000-0000-4000-8000-000000000004",
+        "f20a0000-0000-4000-8000-000000000001",
+        "f20a0000-0000-4000-8000-000000000002"
       ]
     }
   ],
