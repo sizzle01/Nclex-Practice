@@ -444,6 +444,19 @@ public sealed class MigrationTests(ApiFactory factory)
         key.ShouldHaveSingleItem().ShouldBe("PRIMARY KEY (user_id, track, dimension, dimension_key)");
     }
 
+    [Fact]
+    public async Task F21_migration_uses_the_2026_name_for_the_rn_safety_category_only()
+    {
+        var names = await QueryAsync(
+            $"""
+            SELECT track::text || ' ' || name AS "Value" FROM client_needs_categories
+            WHERE code = {"SECE.SIC"} ORDER BY track
+            """);
+
+        // The PN row keeps its name until the PN test plan is checked (F21 walkthrough).
+        names.ShouldBe(["RN Safety and Infection Prevention and Control", "PN Safety and Infection Control"]);
+    }
+
     private async Task<List<string>> QueryAsync(FormattableString sql)
     {
         await using var scope = factory.Services.CreateAsyncScope();

@@ -25,7 +25,7 @@ public sealed class TaxonomyTests(ApiFactory factory)
         sece.Children!.ShouldBe(
         [
             new ClientNeedsNode(2, "SECE.MOC", "Management of Care", 15, 21, null),
-            new ClientNeedsNode(3, "SECE.SIC", "Safety and Infection Control", 10, 16, null),
+            new ClientNeedsNode(3, "SECE.SIC", "Safety and Infection Prevention and Control", 10, 16, null),
         ]);
 
         // A category with no subcategories is itself a leaf, so it has the weights.

@@ -171,7 +171,7 @@ public sealed class GradingTests(ApiFactory factory)
         result.GetProperty("readiness").GetProperty("disclaimer").GetString()
             .ShouldBe("This is an estimate based on your practice score, not a prediction of your NCLEX result.");
         var breakdown = result.GetProperty("breakdown");
-        Rows(breakdown, "client_needs").ShouldBe(["PSI Psychosocial Integrity 1/0 0/1", "SECE.MOC Management of Care 1/1 1/1", "SECE.SIC Safety and Infection Control 1/0 1/3"]);
+        Rows(breakdown, "client_needs").ShouldBe(["PSI Psychosocial Integrity 1/0 0/1", "SECE.MOC Management of Care 1/1 1/1", "SECE.SIC Safety and Infection Prevention and Control 1/0 1/3"]);
         Rows(breakdown, "client_needs_parent").ShouldBe(["PSI Psychosocial Integrity 1/0 0/1", "SECE Safe & Effective Care Environment 2/1 2/4"]);
         Rows(breakdown, "item_type").ShouldBe(["multiple_choice Multiple Choice 2/1 1/2", "sata Select All That Apply 1/0 1/3"]);
         Rows(breakdown, "cjmm_skill").ShouldBe(["take_action Take action 1/0 1/3"]);

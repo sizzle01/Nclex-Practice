@@ -8,7 +8,7 @@ public sealed class ItemSelectorTests
     private const short Care = 2;
     private const short Safety = 3;
 
-    // Management of Care weighs 18, Safety and Infection Control 13 (test-plan midpoints).
+    // Management of Care weighs 18, Safety and Infection Prevention and Control 13 (test-plan midpoints).
     private static readonly LeafWeight[] Plan = [new(Care, 18m), new(Safety, 13m)];
 
     [Fact]
