@@ -1,5 +1,5 @@
 {
-  "notice": "RN bank batch 6: Cardiovascular I: ACS, dysrhythmias, anticoagulation and vascular disorders. Reviewed by the content team on 17 November 2026. See REVIEW-LOG.md.",
+  "notice": "RN bank batch 6: Cardiovascular I: ACS, dysrhythmias, anticoagulation and vascular disorders. Rewritten to NCLEX-RN difficulty and reviewed by the content team on 19 November 2026. See REVIEW-LOG.md.",
   "track": "RN",
   "subtopics": [
     {
@@ -94,19 +94,19 @@
         "options": [
           {
             "id": "a",
-            "text": "A client with heart failure whose weight is 0.5 kg (1.1 lb) higher than yesterday"
+            "text": "A client with heart failure whose weight is 0.5 kg higher than yesterday and who has trace ankle edema"
           },
           {
             "id": "b",
-            "text": "A client 4 hours after a femoral cardiac catheterization who reports new low back pain; heart rate 118/min, blood pressure 88/56 mm Hg"
+            "text": "A client 4 hours after a femoral cardiac catheterization with new low back pain; HR 118, BP 88/56"
           },
           {
             "id": "c",
-            "text": "A client with atrial fibrillation taking warfarin whose INR this morning is 2.8"
+            "text": "A client with atrial fibrillation taking warfarin whose INR this morning is 2.8 and who has no bleeding"
           },
           {
             "id": "d",
-            "text": "A client with stable angina who asks for sublingual nitroglycerin before walking in the hall"
+            "text": "A client with stable angina who asks for sublingual nitroglycerin before a planned walk in the hall"
           }
         ]
       },
@@ -114,19 +114,19 @@
         "correct": "b"
       },
       "rationale": {
-        "correct": "New back pain with tachycardia and hypotension after femoral access suggests a retroperitoneal bleed, which is a life-threatening hemorrhage that may show no visible groin hematoma.",
+        "correct": "After femoral catheterization, back or flank pain with tachycardia and hypotension is retroperitoneal bleeding until proven otherwise.",
         "perOption": {
-          "a": "A 0.5 kg overnight gain is below the usual reporting threshold (about 1 to 1.5 kg in a day or 2 kg in a week); it needs monitoring, not immediate action.",
-          "b": "Back or flank pain plus signs of hypovolemic shock after femoral catheterization indicates retroperitoneal bleeding; this client is unstable.",
-          "c": "An INR of 2.8 is within the usual therapeutic range (2 to 3) for atrial fibrillation.",
-          "d": "Taking nitroglycerin before exertion is an appropriate, planned use; the client is stable."
+          "a": "A small gain needs follow-up today, but it does not meet the 1 kg a day threshold and the client is stable.",
+          "b": "Back pain with tachycardia and hypotension after femoral access suggests retroperitoneal bleeding and shock.",
+          "c": "An INR of 2.8 is within the 2 to 3 target.",
+          "d": "Taking nitroglycerin before exertion is an appropriate, planned use."
         },
         "references": [
-          "Medical-surgical nursing texts (e.g. Lewis; Ignatavicius)",
-          "Reviewed by the content team on 17 November 2026."
+          "NCSBN National Guidelines for Nursing Delegation; LaCharity, Prioritization, Delegation & Assignment",
+          "Rewritten to NCLEX-RN difficulty and reviewed by the content team on 19 November 2026."
         ]
       },
-      "educationalObjective": "Recognize retroperitoneal bleeding as the priority after femoral cardiac catheterization."
+      "educationalObjective": "Prioritize a client with signs of retroperitoneal bleeding."
     },
     {
       "id": "c1a00006-0000-4000-8000-000000000002",
@@ -138,24 +138,24 @@
       ],
       "cjmmSkill": "generate_solutions",
       "difficulty": "moderate",
-      "stem": "A client in the emergency department reports crushing substernal chest pain. Blood pressure is 132/84 mm Hg. During the medication history the client states, \"I took sildenafil last night.\" Which prescription should the nurse clarify with the provider before giving it?",
+      "stem": "A client in the emergency department reports crushing substernal chest pain. Blood pressure is 132/84 mm Hg and heart rate 96/min. During the medication history the client says, \"I took sildenafil last night.\" Which prescription should the nurse clarify with the provider before giving it?",
       "content": {
         "options": [
           {
             "id": "a",
-            "text": "Aspirin 324 mg chewed now"
+            "text": "Aspirin 324 mg chewed now, before the ECG is read"
           },
           {
             "id": "b",
-            "text": "Nitroglycerin 0.4 mg sublingual every 5 minutes, up to 3 doses"
+            "text": "Nitroglycerin 0.4 mg sublingual every 5 minutes"
           },
           {
             "id": "c",
-            "text": "12-lead ECG now"
+            "text": "12-lead ECG within 10 minutes"
           },
           {
             "id": "d",
-            "text": "Troponin level now and in 3 hours"
+            "text": "Troponin now and again in 3 hours"
           }
         ]
       },
@@ -163,20 +163,20 @@
         "correct": "b"
       },
       "rationale": {
-        "correct": "Nitrates taken within 24 hours of sildenafil (48 hours for tadalafil) can cause severe, refractory hypotension, so the nitroglycerin order must be clarified.",
+        "correct": "Ask about phosphodiesterase-5 inhibitors (sildenafil, tadalafil) before any nitrate; together they can cause severe hypotension.",
         "perOption": {
-          "a": "Chewed aspirin reduces platelet aggregation and is indicated early in suspected acute coronary syndrome.",
-          "b": "Phosphodiesterase-5 inhibitors potentiate the vasodilating effect of nitrates and can cause profound hypotension.",
-          "c": "A 12-lead ECG should be obtained within 10 minutes of arrival with chest pain.",
-          "d": "Serial troponin levels are needed to confirm or rule out myocardial infarction."
+          "a": "Aspirin is safe with sildenafil and is a core early treatment for acute coronary syndrome.",
+          "b": "Nitrates within 24 to 48 hours of a PDE-5 inhibitor can cause profound hypotension.",
+          "c": "An ECG is needed right away and has no interaction.",
+          "d": "Serial troponins are standard and safe."
         },
         "references": [
           "Nursing pharmacology texts (e.g. Lehne; McCuistion) and the drug's prescribing information",
-          "Medical-surgical nursing texts (e.g. Lewis; Ignatavicius)",
-          "Reviewed by the content team on 17 November 2026."
+          "American Heart Association Guidelines for CPR and Emergency Cardiovascular Care",
+          "Rewritten to NCLEX-RN difficulty and reviewed by the content team on 19 November 2026."
         ]
       },
-      "educationalObjective": "Check for recent phosphodiesterase-5 inhibitor use before giving nitrates."
+      "educationalObjective": "Identify a nitrate contraindication."
     },
     {
       "id": "c1a00006-0000-4000-8000-000000000003",
@@ -188,7 +188,7 @@
       ],
       "cjmmSkill": "analyze_cues",
       "difficulty": "difficult",
-      "stem": "Review the exhibit, then complete the sentence.",
+      "stem": "The nurse reviews the emergency department note for a client with chest pressure. Complete the sentence.",
       "content": {
         "template": "The client's findings are most consistent with {{b1}} myocardial infarction, so the nurse should monitor closely for {{b2}}.",
         "blanks": [
@@ -218,7 +218,7 @@
               },
               {
                 "id": "b",
-                "text": "hypertensive crisis"
+                "text": "a hypertensive crisis"
               },
               {
                 "id": "c",
@@ -235,26 +235,26 @@
         }
       },
       "rationale": {
-        "correct": "ST elevation in leads II, III and aVF shows an inferior MI, usually from right coronary artery occlusion. That artery commonly supplies the SA and AV nodes, so bradycardia and AV blocks are common.",
+        "correct": "ST elevation in II, III and aVF shows an inferior MI, usually from right coronary artery occlusion; that artery commonly supplies the SA and AV nodes, so bradycardia and AV blocks are common.",
         "perOption": {
           "b1:a": "An anterior MI shows ST elevation in V1 to V4.",
           "b1:b": "Leads II, III and aVF look at the inferior wall.",
           "b1:c": "A lateral MI shows ST elevation in I, aVL, V5 and V6.",
           "b2:a": "Right coronary artery occlusion often affects the SA and AV nodes, causing bradycardia and heart blocks.",
-          "b2:b": "MI more often lowers blood pressure; an inferior MI with right ventricular involvement especially causes hypotension.",
+          "b2:b": "MI more often lowers blood pressure, especially an inferior MI with right ventricular involvement.",
           "b2:c": "Hyperkalemia is not a typical complication of the infarct location."
         },
         "references": [
           "Medical-surgical nursing texts (e.g. Lewis; Ignatavicius)",
-          "Reviewed by the content team on 17 November 2026."
+          "Rewritten to NCLEX-RN difficulty and reviewed by the content team on 19 November 2026."
         ]
       },
-      "educationalObjective": "Link ECG lead changes to the infarct location and its expected complications.",
+      "educationalObjective": "Link ECG leads to infarct location and its complications.",
       "exhibits": [
         {
           "id": "ecg",
           "kind": "text",
-          "title": "Emergency department note, 07:40",
+          "title": "Emergency department note, 0740",
           "body": "Client, 61 years old, reports chest pressure and nausea for 40 minutes.\n\n12-lead ECG: ST-segment elevation in leads II, III and aVF.\n\nHeart rate 56/min, blood pressure 98/60 mm Hg, SpO2 95% on room air."
         }
       ]
@@ -269,24 +269,24 @@
       ],
       "cjmmSkill": "take_action",
       "difficulty": "moderate",
-      "stem": "A client is receiving a continuous IV heparin infusion for a deep vein thrombosis. The 06:00 aPTT is 122 seconds (therapeutic range per protocol: 60 to 85 seconds). The client has no signs of bleeding. What should the nurse do first?",
+      "stem": "A client with a deep vein thrombosis is on a continuous IV heparin infusion. The 0600 aPTT is 122 seconds; the protocol's target is 60 to 85 seconds. The client has no bleeding, bruising or blood in the urine. What should the nurse do first?",
       "content": {
         "options": [
           {
             "id": "a",
-            "text": "Continue the infusion and recheck the aPTT in 6 hours"
+            "text": "Continue the infusion and recheck the aPTT in 6 hours as planned"
           },
           {
             "id": "b",
-            "text": "Stop the infusion and follow the heparin protocol or notify the provider"
+            "text": "Stop or reduce the infusion as directed by the heparin protocol"
           },
           {
             "id": "c",
-            "text": "Give vitamin K 10 mg subcutaneously"
+            "text": "Give vitamin K 10 mg subcutaneously to reverse the anticoagulant"
           },
           {
             "id": "d",
-            "text": "Increase the infusion rate by 2 units/kg/hr"
+            "text": "Increase the rate by 2 units/kg/hr as the protocol allows for low levels"
           }
         ]
       },
@@ -294,19 +294,19 @@
         "correct": "b"
       },
       "rationale": {
-        "correct": "An aPTT well above the therapeutic range means a high bleeding risk; the infusion is held and adjusted per protocol or provider order.",
+        "correct": "A supratherapeutic aPTT on heparin is managed by the protocol: hold or reduce the infusion and recheck; protamine is for significant bleeding.",
         "perOption": {
-          "a": "Continuing an infusion with a supratherapeutic aPTT exposes the client to bleeding for 6 more hours.",
-          "b": "Heparin protocols direct the nurse to hold the infusion for a time and then restart at a lower rate when the aPTT is too high.",
-          "c": "Vitamin K reverses warfarin, not heparin; the antidote for heparin is protamine sulfate.",
-          "d": "Increasing the rate would raise the aPTT even further."
+          "a": "Continuing at this rate keeps the client at high risk of bleeding.",
+          "b": "Heparin protocols direct holding or reducing the rate for a high aPTT, then rechecking.",
+          "c": "Vitamin K reverses warfarin, not heparin.",
+          "d": "Increasing the rate would raise the aPTT further."
         },
         "references": [
           "Nursing pharmacology texts (e.g. Lehne; McCuistion) and the drug's prescribing information",
-          "Reviewed by the content team on 17 November 2026."
+          "Rewritten to NCLEX-RN difficulty and reviewed by the content team on 19 November 2026."
         ]
       },
-      "educationalObjective": "Hold heparin when the aPTT is above the therapeutic range and follow the protocol."
+      "educationalObjective": "Respond to a high aPTT on heparin."
     },
     {
       "id": "c1a00006-0000-4000-8000-000000000005",
@@ -318,32 +318,32 @@
       ],
       "cjmmSkill": "evaluate_outcomes",
       "difficulty": "moderate",
-      "stem": "The nurse is teaching a client who is going home on warfarin. Which client statements show correct understanding? Select all that apply.",
+      "stem": "A 66-year-old client with atrial fibrillation is going home on warfarin. Which statements by the client show correct understanding? Select all that apply.",
       "content": {
         "options": [
           {
             "id": "a",
-            "text": "\"I will keep the amount of green leafy vegetables I eat about the same each week.\""
+            "text": "\"I'll keep the amount of green leafy vegetables I eat about the same each week.\""
           },
           {
             "id": "b",
-            "text": "\"I will use a soft toothbrush and an electric razor.\""
+            "text": "\"I'll use a soft toothbrush and an electric razor.\""
           },
           {
             "id": "c",
-            "text": "\"I will call my provider if my stools turn black or tarry.\""
+            "text": "\"I'll call my provider if my stools turn black or tarry.\""
           },
           {
             "id": "d",
-            "text": "\"I can take aspirin for a headache.\""
+            "text": "\"I'll tell my dentist that I take warfarin.\""
           },
           {
             "id": "e",
-            "text": "\"If I miss a dose, I will take two tablets the next day.\""
+            "text": "\"I can take aspirin or ibuprofen for a headache.\""
           },
           {
             "id": "f",
-            "text": "\"I will tell my dentist that I take warfarin.\""
+            "text": "\"If I miss a dose, I'll take two tablets the next day.\""
           }
         ]
       },
@@ -352,25 +352,25 @@
           "a",
           "b",
           "c",
-          "f"
+          "d"
         ]
       },
       "rationale": {
-        "correct": "Safe warfarin use means consistent vitamin K intake, bleeding precautions, reporting signs of bleeding and telling every provider about the drug.",
+        "correct": "Warfarin teaching: steady vitamin K intake, bleeding precautions, reporting signs of bleeding, telling all providers, and no doubling or NSAIDs.",
         "perOption": {
-          "a": "Consistent (not zero) vitamin K intake keeps the INR stable.",
-          "b": "A soft toothbrush and electric razor reduce gum and skin bleeding.",
-          "c": "Black, tarry stools can signal gastrointestinal bleeding.",
-          "d": "Aspirin adds antiplatelet effect and raises bleeding risk; acetaminophen is usually preferred.",
-          "e": "Doubling a dose can make the INR dangerously high; the client should follow the provider's missed-dose instructions.",
-          "f": "Dentists need to know so they can plan for bleeding risk before procedures."
+          "a": "Consistent vitamin K intake keeps the INR stable.",
+          "b": "These reduce bleeding from minor injuries.",
+          "c": "Black stools suggest GI bleeding.",
+          "d": "Dental procedures may need planning.",
+          "e": "Aspirin and NSAIDs increase bleeding risk; acetaminophen in moderation is preferred.",
+          "f": "Doubling a dose raises the INR; the client follows the provider's missed-dose instructions."
         },
         "references": [
           "Nursing pharmacology texts (e.g. Lehne; McCuistion) and the drug's prescribing information",
-          "Reviewed by the content team on 17 November 2026."
+          "Rewritten to NCLEX-RN difficulty and reviewed by the content team on 19 November 2026."
         ]
       },
-      "educationalObjective": "Evaluate understanding of warfarin safety teaching."
+      "educationalObjective": "Evaluate warfarin teaching."
     },
     {
       "id": "c1a00006-0000-4000-8000-000000000006",
@@ -382,7 +382,7 @@
       ],
       "cjmmSkill": "analyze_cues",
       "difficulty": "moderate",
-      "stem": "A client taking digoxin 0.125 mg daily and furosemide 40 mg daily reports loss of appetite, nausea and seeing yellow-green halos around lights. Which laboratory result is most likely contributing to these findings?",
+      "stem": "A client taking digoxin 0.125 mg and furosemide 40 mg daily reports loss of appetite, nausea and seeing yellow-green halos around lights. Which laboratory result is most likely contributing to these findings?",
       "content": {
         "options": [
           {
@@ -407,31 +407,31 @@
         "correct": "a"
       },
       "rationale": {
-        "correct": "The client has signs of digoxin toxicity. Hypokalemia, common with loop diuretics, increases digoxin's binding to the sodium-potassium pump and raises the risk of toxicity.",
+        "correct": "Hypokalemia, hypomagnesemia and hypercalcemia all increase digoxin toxicity; loop diuretics commonly cause the low potassium.",
         "perOption": {
-          "a": "A low potassium level from furosemide increases sensitivity to digoxin and the risk of toxicity and dysrhythmias.",
-          "b": "This sodium level is normal.",
-          "c": "This calcium level is normal; high calcium, not normal calcium, would increase toxicity risk.",
-          "d": "This magnesium level is normal; low magnesium would increase toxicity risk."
+          "a": "Hypokalemia, often from loop diuretics, increases the risk of digoxin toxicity.",
+          "b": "This sodium is normal.",
+          "c": "This calcium is normal; high calcium would increase toxicity.",
+          "d": "This magnesium is normal; low magnesium would increase toxicity."
         },
         "references": [
           "Nursing pharmacology texts (e.g. Lehne; McCuistion) and the drug's prescribing information",
-          "Reviewed by the content team on 17 November 2026."
+          "Rewritten to NCLEX-RN difficulty and reviewed by the content team on 19 November 2026."
         ]
       },
-      "educationalObjective": "Recognize digoxin toxicity and hypokalemia as a risk factor."
+      "educationalObjective": "Link electrolytes to digoxin toxicity."
     },
     {
       "id": "c1a00006-0000-4000-8000-000000000007",
       "itemType": "fill_blank_calc",
       "clientNeeds": "PHI.PPT",
-      "bodySystem": "pharmacology",
+      "bodySystem": "cardiovascular",
       "subtopics": [
         "medication-dose-calculations"
       ],
       "cjmmSkill": "take_action",
       "difficulty": "difficult",
-      "stem": "A client who weighs 80 kg is prescribed a heparin infusion at 18 units/kg/hr. The pharmacy supplies heparin 25,000 units in 250 mL of D5W. At what rate should the nurse set the infusion pump? Round to the nearest tenth.",
+      "stem": "A client with a pulmonary embolism who weighs 80 kg has received an 80 units/kg heparin bolus and is now prescribed a heparin infusion at 18 units/kg/hr. The pharmacy supplies heparin 25,000 units in 250 mL of D5W. The baseline aPTT was 30 seconds. At what rate should the nurse set the infusion pump? Round to the nearest tenth.",
       "content": {
         "unit": "mL/hr",
         "decimals": 1,
@@ -442,11 +442,11 @@
         "rounding": "exact"
       },
       "rationale": {
-        "correct": "Dose: 18 units/kg/hr × 80 kg = 1,440 units/hr. Concentration: 25,000 units ÷ 250 mL = 100 units/mL. Rate: 1,440 ÷ 100 = 14.4 mL/hr.",
+        "correct": "Dose: 18 units/kg/hr × 80 kg = 1,440 units/hr. Concentration: 25,000 units ÷ 250 mL = 100 units/mL. Rate: 1,440 ÷ 100 = 14.4 mL/hr. The bolus and aPTT are not used.",
         "perOption": {},
         "references": [
           "Nursing pharmacology texts (e.g. Lehne; McCuistion) and the drug's prescribing information",
-          "Reviewed by the content team on 17 November 2026."
+          "Rewritten to NCLEX-RN difficulty and reviewed by the content team on 19 November 2026."
         ]
       },
       "educationalObjective": "Calculate a weight-based heparin infusion rate."
@@ -461,32 +461,32 @@
       ],
       "cjmmSkill": "take_action",
       "difficulty": "moderate",
-      "stem": "The nurse finds an adult client unresponsive in a hallway. Place the nurse's actions in order.",
+      "stem": "The nurse finds an adult visitor collapsed and unresponsive in a hospital hallway. An AED is on the wall nearby. Place the nurse's actions in order, from first to last.",
       "content": {
         "items": [
           {
-            "id": "d",
-            "text": "Attach the AED pads to the client's bare chest"
-          },
-          {
-            "id": "a",
-            "text": "Check responsiveness and call for help and an AED"
-          },
-          {
             "id": "f",
             "text": "Resume chest compressions immediately after the shock"
-          },
-          {
-            "id": "b",
-            "text": "Check for breathing and a carotid pulse for no more than 10 seconds"
           },
           {
             "id": "e",
             "text": "Make sure no one is touching the client and deliver the advised shock"
           },
           {
+            "id": "a",
+            "text": "Check responsiveness and shout for help and an AED"
+          },
+          {
+            "id": "d",
+            "text": "Attach the AED pads to the bare chest as soon as it arrives"
+          },
+          {
             "id": "c",
             "text": "Begin chest compressions at 100 to 120 per minute"
+          },
+          {
+            "id": "b",
+            "text": "Check for breathing and a carotid pulse for no more than 10 seconds"
           }
         ]
       },
@@ -502,21 +502,21 @@
         "scoring": "all_or_nothing"
       },
       "rationale": {
-        "correct": "Recognize the arrest and activate help, confirm no pulse, start compressions, use the AED as soon as it arrives, then resume compressions right away.",
+        "correct": "Adult BLS: check, call, pulse and breathing check, compressions, AED as soon as available, shock, then resume compressions immediately.",
         "perOption": {
-          "a": "Activating the emergency response early brings the AED and the team.",
-          "b": "The pulse and breathing check is brief so compressions are not delayed.",
-          "c": "High-quality compressions maintain blood flow to the brain and heart until defibrillation.",
-          "d": "The AED is applied as soon as it is available.",
-          "e": "Everyone must be clear of the client before the shock to prevent injury.",
-          "f": "Compressions resume immediately; rhythm is not rechecked until 2 minutes of CPR are done."
+          "a": "Recognize the arrest and activate the response.",
+          "b": "Confirm arrest quickly without delaying compressions.",
+          "c": "Start high-quality CPR at once.",
+          "d": "Early rhythm analysis guides defibrillation.",
+          "e": "Clear everyone for safety, then shock.",
+          "f": "Compressions restart without a pulse check."
         },
         "references": [
           "American Heart Association Guidelines for CPR and Emergency Cardiovascular Care",
-          "Reviewed by the content team on 17 November 2026."
+          "Rewritten to NCLEX-RN difficulty and reviewed by the content team on 19 November 2026."
         ]
       },
-      "educationalObjective": "Perform adult BLS with an AED in the correct order."
+      "educationalObjective": "Perform adult basic life support in order."
     },
     {
       "id": "c1a00006-0000-4000-8000-000000000009",
@@ -528,7 +528,7 @@
       ],
       "cjmmSkill": "take_action",
       "difficulty": "difficult",
-      "stem": "A client's cardiac monitor shows monomorphic ventricular tachycardia at 180/min. The client has a palpable pulse but is confused and pale, with a blood pressure of 72/40 mm Hg. Which intervention should the nurse prepare for first?",
+      "stem": "A client's monitor shows monomorphic ventricular tachycardia at 180/min. The client has a palpable carotid pulse but is confused and pale, with a blood pressure of 72/40 mm Hg. The defibrillator is at the bedside. Which intervention should the nurse prepare for first?",
       "content": {
         "options": [
           {
@@ -541,11 +541,11 @@
           },
           {
             "id": "c",
-            "text": "Starting chest compressions"
+            "text": "Begin chest compressions"
           },
           {
             "id": "d",
-            "text": "IV adenosine 6 mg rapid push"
+            "text": "IV amiodarone 150 mg over 10 minutes"
           }
         ]
       },
@@ -553,19 +553,19 @@
         "correct": "b"
       },
       "rationale": {
-        "correct": "Ventricular tachycardia with a pulse and signs of instability (hypotension, altered mental status) is treated with synchronized cardioversion.",
+        "correct": "Unstable VT with a pulse (hypotension, altered mental status) is treated with synchronized cardioversion; pulseless VT is defibrillated.",
         "perOption": {
-          "a": "Unsynchronized defibrillation is for pulseless VT or ventricular fibrillation.",
-          "b": "Synchronizing the shock with the QRS avoids delivering it during the T wave and causing ventricular fibrillation.",
-          "c": "Compressions are for a client without a pulse; this client has one.",
-          "d": "Adenosine treats regular narrow-complex supraventricular tachycardia, not unstable VT."
+          "a": "Unsynchronized shocks are for pulseless VT or VF.",
+          "b": "VT with a pulse and signs of instability needs synchronized cardioversion.",
+          "c": "The client has a pulse, so compressions are not indicated.",
+          "d": "Amiodarone is for stable VT; this client is unstable."
         },
         "references": [
           "American Heart Association Guidelines for CPR and Emergency Cardiovascular Care",
-          "Reviewed by the content team on 17 November 2026."
+          "Rewritten to NCLEX-RN difficulty and reviewed by the content team on 19 November 2026."
         ]
       },
-      "educationalObjective": "Choose synchronized cardioversion for unstable tachycardia with a pulse."
+      "educationalObjective": "Treat unstable ventricular tachycardia with a pulse."
     },
     {
       "id": "c1a00006-0000-4000-8000-000000000010",
@@ -577,7 +577,7 @@
       ],
       "cjmmSkill": "generate_solutions",
       "difficulty": "difficult",
-      "stem": "A client has had atrial fibrillation for an unknown length of time and is not taking an anticoagulant. Elective cardioversion is planned. Which test should the nurse expect to be done before the cardioversion?",
+      "stem": "A 72-year-old client has had atrial fibrillation for an unknown length of time and has not been taking an anticoagulant. The client's heart rate is 96/min and blood pressure 128/76. The provider plans elective cardioversion today. Which test should the nurse expect before the cardioversion?",
       "content": {
         "options": [
           {
@@ -590,11 +590,11 @@
           },
           {
             "id": "c",
-            "text": "Pulmonary function tests"
+            "text": "Transthoracic echocardiogram only"
           },
           {
             "id": "d",
-            "text": "Holter monitoring for 48 hours"
+            "text": "48-hour Holter monitoring"
           }
         ]
       },
@@ -602,19 +602,19 @@
         "correct": "a"
       },
       "rationale": {
-        "correct": "Atrial fibrillation lasting 48 hours or more (or of unknown duration) can form clots in the left atrium. Cardioversion can dislodge them, so a TEE is done to rule out thrombus, or the client is anticoagulated for about 3 weeks first.",
+        "correct": "Atrial fibrillation of unknown or more than 48 hours' duration needs either 3 weeks of anticoagulation or a TEE to rule out clot before cardioversion.",
         "perOption": {
-          "a": "A TEE gives a clear view of the left atrial appendage, where clots usually form.",
-          "b": "A stress test evaluates ischemia, not atrial clots, and is unsafe for an unstable rhythm.",
-          "c": "Pulmonary function tests do not affect the safety of cardioversion.",
-          "d": "The rhythm is already known; prolonged monitoring does not reduce the stroke risk."
+          "a": "A TEE checks the left atrial appendage for thrombus, which could embolize after cardioversion.",
+          "b": "A stress test does not look for an atrial clot.",
+          "c": "A surface echo cannot reliably see the left atrial appendage.",
+          "d": "Holter monitoring records the rhythm but does not detect clots."
         },
         "references": [
           "Medical-surgical nursing texts (e.g. Lewis; Ignatavicius)",
-          "Reviewed by the content team on 17 November 2026."
+          "Rewritten to NCLEX-RN difficulty and reviewed by the content team on 19 November 2026."
         ]
       },
-      "educationalObjective": "Prevent stroke before cardioversion of atrial fibrillation of unknown duration."
+      "educationalObjective": "Anticipate testing before cardioversion."
     },
     {
       "id": "c1a00006-0000-4000-8000-000000000011",
@@ -626,7 +626,7 @@
       ],
       "cjmmSkill": "analyze_cues",
       "difficulty": "moderate",
-      "stem": "For each finding, indicate whether it is more consistent with peripheral arterial disease or chronic venous insufficiency.",
+      "stem": "The nurse is assessing two clinic clients with leg symptoms, one with peripheral arterial disease and one with chronic venous insufficiency. For each finding, choose the condition it fits best.",
       "content": {
         "rows": [
           {
@@ -651,7 +651,7 @@
           },
           {
             "id": "r6",
-            "text": "Pitting edema of the lower legs"
+            "text": "Pitting edema of the lower legs by evening"
           }
         ],
         "columns": [
@@ -676,27 +676,27 @@
         }
       },
       "rationale": {
-        "correct": "Arterial disease starves tissue of blood (pain, pallor, hair loss, relief with dependency). Venous disease pools blood in the legs (edema, brown staining, medial ankle ulcers).",
+        "correct": "Arterial disease: claudication, thin hairless skin, deep ulcers, pain relieved by dependency. Venous disease: edema, brown staining, shallow medial ulcers, relief with elevation.",
         "perOption": {
-          "r1:c1": "Intermittent claudication comes from muscle ischemia when arterial flow can't meet demand.",
-          "r1:c2": "Venous insufficiency causes aching and heaviness, not exercise-induced pain relieved by rest.",
-          "r2:c1": "Arterial disease causes pallor or dependent rubor, not brown staining.",
-          "r2:c2": "Hemosiderin deposits from pooled red cells stain the skin brown.",
-          "r3:c1": "Chronic poor arterial flow leads to thin, shiny, hairless skin.",
-          "r3:c2": "Venous disease thickens and discolors the skin rather than causing hair loss.",
-          "r4:c1": "Arterial ulcers are deep, round and on the toes or pressure points.",
-          "r4:c2": "Venous ulcers are shallow, irregular and near the medial malleolus.",
-          "r5:c1": "Gravity improves arterial flow, so dangling the legs relieves ischemic pain.",
-          "r5:c2": "Venous symptoms improve with elevation, not dependency.",
-          "r6:c1": "Edema is not a typical feature of arterial disease.",
-          "r6:c2": "Raised venous pressure pushes fluid into the tissues, causing edema."
+          "r1:c1": "Intermittent claudication is classic for PAD.",
+          "r1:c2": "Venous pain is aching and eases with elevation, not rest alone.",
+          "r2:c1": "PAD causes pallor or dependent rubor.",
+          "r2:c2": "Hemosiderin staining is typical of venous disease.",
+          "r3:c1": "Poor arterial supply causes thin, hairless skin.",
+          "r3:c2": "Venous disease causes thick, discolored skin.",
+          "r4:c1": "Arterial ulcers are deep and punched out, often on the toes.",
+          "r4:c2": "Venous ulcers are shallow and irregular near the medial ankle.",
+          "r5:c1": "Dependency improves arterial flow.",
+          "r5:c2": "Venous symptoms worsen when the legs hang down.",
+          "r6:c1": "Edema is not typical of PAD.",
+          "r6:c2": "Venous pooling causes edema."
         },
         "references": [
           "Medical-surgical nursing texts (e.g. Lewis; Ignatavicius)",
-          "Reviewed by the content team on 17 November 2026."
+          "Rewritten to NCLEX-RN difficulty and reviewed by the content team on 19 November 2026."
         ]
       },
-      "educationalObjective": "Tell peripheral arterial disease from venous insufficiency by assessment findings."
+      "educationalObjective": "Distinguish arterial from venous disease."
     },
     {
       "id": "c1a00006-0000-4000-8000-000000000012",
@@ -708,7 +708,7 @@
       ],
       "cjmmSkill": "recognize_cues",
       "difficulty": "moderate",
-      "stem": "A client is 2 days postoperative after a total hip replacement. The client suddenly says, \"I can't catch my breath.\" Select the 4 findings that are most consistent with a pulmonary embolism.",
+      "stem": "A client 2 days after a total hip replacement suddenly says, \"I can't catch my breath.\" Select the 4 findings that are most consistent with a pulmonary embolism.",
       "content": {
         "options": [
           {
@@ -717,27 +717,27 @@
           },
           {
             "id": "b",
-            "text": "Heart rate 124/min"
+            "text": "Heart rate of 124/min"
           },
           {
             "id": "c",
-            "text": "SpO2 86% on room air"
+            "text": "SpO2 of 86% on room air"
           },
           {
             "id": "d",
-            "text": "States \"I feel like something terrible is about to happen\""
+            "text": "\"I feel like something terrible is about to happen\""
           },
           {
             "id": "e",
-            "text": "Heart rate 52/min"
+            "text": "Heart rate of 52/min"
           },
           {
             "id": "f",
-            "text": "Productive cough with thick yellow sputum for 3 days"
+            "text": "Thick yellow sputum and a productive cough for 3 days"
           },
           {
             "id": "g",
-            "text": "Temperature 38.9 °C (102 °F) with chills"
+            "text": "Temperature of 38.9 °C (102 °F) with shaking chills"
           }
         ],
         "selectCount": 4
@@ -751,22 +751,22 @@
         ]
       },
       "rationale": {
-        "correct": "Sudden dyspnea after orthopedic surgery, with pleuritic chest pain, tachycardia, hypoxemia and a sense of doom, is the classic presentation of pulmonary embolism.",
+        "correct": "PE: sudden dyspnea, pleuritic chest pain, tachycardia, hypoxemia and anxiety, often after surgery or immobility.",
         "perOption": {
-          "a": "Pleuritic chest pain occurs when the embolism causes pleural irritation or infarction.",
-          "b": "Tachycardia is the most common sign as the heart compensates for hypoxemia.",
-          "c": "Blocked perfusion creates a ventilation-perfusion mismatch and hypoxemia.",
-          "d": "Anxiety and a sense of impending doom are common with an acute PE.",
-          "e": "PE usually causes tachycardia, not bradycardia.",
-          "f": "A cough with purulent sputum developing over days suggests pneumonia.",
-          "g": "High fever with chills points to infection rather than an acute embolism."
+          "a": "Pleuritic chest pain is common with PE.",
+          "b": "Tachycardia is the most common sign.",
+          "c": "Hypoxemia results from the ventilation-perfusion mismatch.",
+          "d": "A sense of impending doom is common.",
+          "e": "PE causes tachycardia, not bradycardia.",
+          "f": "These suggest pneumonia.",
+          "g": "High fever with chills suggests infection."
         },
         "references": [
           "Medical-surgical nursing texts (e.g. Lewis; Ignatavicius)",
-          "Reviewed by the content team on 17 November 2026."
+          "Rewritten to NCLEX-RN difficulty and reviewed by the content team on 19 November 2026."
         ]
       },
-      "educationalObjective": "Recognize the signs of pulmonary embolism after orthopedic surgery."
+      "educationalObjective": "Recognize pulmonary embolism."
     },
     {
       "id": "c1a00006-0000-4000-8000-000000000013",
@@ -777,8 +777,8 @@
         "venous-thromboembolism"
       ],
       "cjmmSkill": "take_action",
-      "difficulty": "moderate",
-      "stem": "A client 2 days after hip replacement suddenly develops dyspnea, pleuritic chest pain and an SpO2 of 86%. What is the nurse's first action?",
+      "difficulty": "difficult",
+      "stem": "A client 2 days after a hip replacement suddenly becomes short of breath with pleuritic chest pain. The SpO2 is 86% on room air and the heart rate is 122/min. What is the nurse's first action?",
       "content": {
         "options": [
           {
@@ -795,7 +795,7 @@
           },
           {
             "id": "d",
-            "text": "Draw a D-dimer level"
+            "text": "Draw a D-dimer level before calling the provider"
           }
         ]
       },
@@ -803,19 +803,19 @@
         "correct": "b"
       },
       "rationale": {
-        "correct": "Treat the airway and breathing problem first: positioning upright and giving oxygen improve oxygenation while the nurse calls the rapid response team and diagnostics and anticoagulation follow.",
+        "correct": "Suspected PE: support oxygenation first, call for help, then diagnostics and anticoagulation.",
         "perOption": {
-          "a": "Diagnosis is needed, but not before correcting severe hypoxemia.",
-          "b": "Sitting upright eases breathing, and oxygen treats the hypoxemia right away.",
-          "c": "Anticoagulation prevents clot extension but does not fix the immediate hypoxemia.",
-          "d": "D-dimer is a screening test; it does not help a client who is already hypoxic."
+          "a": "Imaging confirms PE, but oxygenation comes first.",
+          "b": "Supporting oxygenation is the immediate priority.",
+          "c": "Anticoagulation follows initial stabilization and assessment.",
+          "d": "A D-dimer is less useful here and delays treatment."
         },
         "references": [
           "Medical-surgical nursing texts (e.g. Lewis; Ignatavicius)",
-          "Reviewed by the content team on 17 November 2026."
+          "Rewritten to NCLEX-RN difficulty and reviewed by the content team on 19 November 2026."
         ]
       },
-      "educationalObjective": "Address oxygenation first in a suspected pulmonary embolism."
+      "educationalObjective": "Take first action for suspected PE."
     },
     {
       "id": "c1a00006-0000-4000-8000-000000000014",
@@ -827,24 +827,24 @@
       ],
       "cjmmSkill": "prioritize_hypotheses",
       "difficulty": "moderate",
-      "stem": "A client started lisinopril 10 mg daily 3 weeks ago for hypertension. Which report from the client needs immediate action by the nurse?",
+      "stem": "A client started lisinopril 10 mg daily 3 weeks ago for hypertension. Which report from the client needs the nurse's immediate action?",
       "content": {
         "options": [
           {
             "id": "a",
-            "text": "\"I've had a dry, tickly cough for a week.\""
+            "text": "\"I've had a dry, tickly cough for about a week now.\""
           },
           {
             "id": "b",
-            "text": "\"I feel a little dizzy when I stand up quickly.\""
+            "text": "\"I feel a little dizzy when I stand up quickly in the morning.\""
           },
           {
             "id": "c",
-            "text": "\"My lips and tongue started swelling this morning.\""
+            "text": "\"My lips and tongue started swelling up this morning.\""
           },
           {
             "id": "d",
-            "text": "\"My lab report says my potassium is 5.0.\""
+            "text": "\"My lab report from yesterday says my potassium is 5.0.\""
           }
         ]
       },
@@ -852,19 +852,19 @@
         "correct": "c"
       },
       "rationale": {
-        "correct": "Angioedema is a rare but life-threatening ACE inhibitor reaction that can obstruct the airway; it can occur at any time during therapy.",
+        "correct": "Angioedema from ACE inhibitors can happen at any time and threatens the airway; stop the drug and get emergency care.",
         "perOption": {
-          "a": "A dry cough is a common ACE inhibitor side effect; it should be reported, but it is not an emergency.",
-          "b": "Orthostatic dizziness is expected early on; the client should rise slowly.",
-          "c": "Lip and tongue swelling can progress to airway obstruction and needs emergency care; the drug is stopped permanently.",
-          "d": "ACE inhibitors raise potassium; 5.0 mEq/L is at the upper limit of normal and needs monitoring."
+          "a": "A dry cough is common with ACE inhibitors and is reviewed, but it is not urgent.",
+          "b": "Mild orthostatic dizziness needs teaching and follow-up.",
+          "c": "Angioedema can obstruct the airway and needs emergency care.",
+          "d": "A potassium of 5.0 is at the upper limit of normal."
         },
         "references": [
           "Nursing pharmacology texts (e.g. Lehne; McCuistion) and the drug's prescribing information",
-          "Reviewed by the content team on 17 November 2026."
+          "Rewritten to NCLEX-RN difficulty and reviewed by the content team on 19 November 2026."
         ]
       },
-      "educationalObjective": "Recognize angioedema as the priority ACE inhibitor adverse effect."
+      "educationalObjective": "Recognize angioedema from an ACE inhibitor."
     },
     {
       "id": "c1a00006-0000-4000-8000-000000000015",
@@ -875,33 +875,37 @@
         "hypertension-management"
       ],
       "cjmmSkill": "generate_solutions",
-      "difficulty": "easy",
-      "stem": "The nurse is teaching a client newly diagnosed with primary hypertension about lifestyle changes. Which instructions should the nurse include? Select all that apply.",
+      "difficulty": "moderate",
+      "stem": "A 48-year-old client newly diagnosed with primary hypertension (blood pressure 148/94 mm Hg on three visits) is starting lifestyle changes. Which instructions should the nurse include? Select all that apply.",
       "content": {
         "options": [
           {
             "id": "a",
-            "text": "Limit sodium intake to less than 2,300 mg per day"
+            "text": "Limit sodium to less than 2,300 mg a day"
           },
           {
             "id": "b",
-            "text": "Aim for at least 150 minutes of moderate aerobic activity each week"
+            "text": "Aim for 150 minutes of moderate aerobic activity each week"
           },
           {
             "id": "c",
-            "text": "Stop the blood pressure medication once your readings are normal"
+            "text": "Eat more fruits, vegetables and low-fat dairy"
           },
           {
             "id": "d",
-            "text": "Eat more fruits, vegetables and low-fat dairy products"
+            "text": "Limit alcohol to 1 drink a day for women or 2 for men"
           },
           {
             "id": "e",
-            "text": "Limit alcohol to no more than 1 drink a day for women or 2 for men"
+            "text": "Stop smoking"
           },
           {
             "id": "f",
-            "text": "Stop smoking"
+            "text": "Stop the blood pressure medicine once readings are normal"
+          },
+          {
+            "id": "g",
+            "text": "Replace table salt with a salt substitute freely"
           }
         ]
       },
@@ -909,27 +913,28 @@
         "correct": [
           "a",
           "b",
+          "c",
           "d",
-          "e",
-          "f"
+          "e"
         ]
       },
       "rationale": {
-        "correct": "DASH-style eating, sodium restriction, regular exercise, limited alcohol and not smoking all lower blood pressure and cardiovascular risk.",
+        "correct": "Lifestyle changes for hypertension: less sodium, DASH diet, activity, limited alcohol and no smoking, alongside prescribed medication.",
         "perOption": {
-          "a": "Less sodium reduces fluid retention and blood pressure; 1,500 mg per day is ideal for many adults.",
-          "b": "Regular aerobic exercise lowers systolic pressure.",
-          "c": "Normal readings usually mean the medication is working; stopping it can cause rebound hypertension.",
-          "d": "The DASH diet is rich in potassium, calcium and magnesium, which lower blood pressure.",
-          "e": "Heavy alcohol intake raises blood pressure.",
-          "f": "Nicotine causes vasoconstriction and speeds up atherosclerosis."
+          "a": "Lower sodium lowers blood pressure; 1,500 mg is ideal for many.",
+          "b": "Regular activity lowers blood pressure.",
+          "c": "The DASH eating plan lowers blood pressure.",
+          "d": "Heavy drinking raises blood pressure.",
+          "e": "Smoking adds to cardiovascular risk.",
+          "f": "Normal readings usually mean the treatment is working.",
+          "g": "Many substitutes contain potassium, which can be dangerous with some drugs; check first."
         },
         "references": [
           "Medical-surgical nursing texts (e.g. Lewis; Ignatavicius)",
-          "Reviewed by the content team on 17 November 2026."
+          "Rewritten to NCLEX-RN difficulty and reviewed by the content team on 19 November 2026."
         ]
       },
-      "educationalObjective": "Teach lifestyle changes that lower blood pressure."
+      "educationalObjective": "Teach lifestyle changes for hypertension."
     },
     {
       "id": "c1a00006-0000-4000-8000-000000000016",
@@ -941,24 +946,24 @@
       ],
       "cjmmSkill": "take_action",
       "difficulty": "moderate",
-      "stem": "A client with heart failure is due for furosemide 40 mg IV. This morning's potassium level is 3.2 mEq/L. What should the nurse do?",
+      "stem": "A client with heart failure is due for furosemide 40 mg IV at 0900. This morning's potassium is 3.2 mEq/L and the client has had six premature ventricular contractions in the last hour. What should the nurse do?",
       "content": {
         "options": [
           {
             "id": "a",
-            "text": "Give the furosemide and recheck the potassium tomorrow"
+            "text": "Give the furosemide and recheck the potassium tomorrow morning"
           },
           {
             "id": "b",
-            "text": "Give the furosemide with a glass of orange juice"
+            "text": "Give the furosemide with a glass of orange juice for potassium"
           },
           {
             "id": "c",
-            "text": "Hold the furosemide and contact the provider about the potassium level"
+            "text": "Hold the furosemide and contact the provider about the potassium"
           },
           {
             "id": "d",
-            "text": "Give the furosemide and ask for a low-sodium diet"
+            "text": "Give the furosemide and ask the dietitian to add more potassium"
           }
         ]
       },
@@ -966,19 +971,19 @@
         "correct": "c"
       },
       "rationale": {
-        "correct": "Furosemide wastes potassium. Giving it with a potassium of 3.2 mEq/L risks worse hypokalemia and dysrhythmias, so the nurse contacts the provider before giving it (for example, for potassium replacement).",
+        "correct": "Check potassium before loop diuretics; hold and report hypokalemia, especially with dysrhythmias.",
         "perOption": {
-          "a": "Waiting a day risks dangerous hypokalemia and dysrhythmias.",
-          "b": "Orange juice can't correct a significant deficit before an IV loop diuretic takes effect.",
-          "c": "The provider needs to decide whether to replace potassium or change the dose before more potassium is lost.",
-          "d": "Restricting sodium is reasonable in heart failure but ignores the low potassium."
+          "a": "More diuresis would lower the potassium further while ectopy is present.",
+          "b": "Diet cannot correct a low level quickly enough.",
+          "c": "Hypokalemia with ventricular ectopy must be addressed before more potassium-wasting diuretic is given.",
+          "d": "This delays correction of a low level with ectopy."
         },
         "references": [
           "Nursing pharmacology texts (e.g. Lehne; McCuistion) and the drug's prescribing information",
-          "Reviewed by the content team on 17 November 2026."
+          "Rewritten to NCLEX-RN difficulty and reviewed by the content team on 19 November 2026."
         ]
       },
-      "educationalObjective": "Check the potassium level before giving a loop diuretic."
+      "educationalObjective": "Hold a loop diuretic for hypokalemia."
     },
     {
       "id": "c1a00006-0000-4000-8000-000000000017",
@@ -989,8 +994,8 @@
         "post-procedure-complications"
       ],
       "cjmmSkill": "take_action",
-      "difficulty": "easy",
-      "stem": "One hour after a cardiac catheterization through the right femoral artery, the client says, \"My groin feels warm and wet.\" The nurse finds bright red blood on the dressing. What is the nurse's first action?",
+      "difficulty": "moderate",
+      "stem": "One hour after a cardiac catheterization through the right femoral artery, the client says, \"My groin feels warm and wet.\" The nurse finds bright red blood soaking the dressing. What is the nurse's first action?",
       "content": {
         "options": [
           {
@@ -999,15 +1004,15 @@
           },
           {
             "id": "b",
-            "text": "Notify the provider"
+            "text": "Call the cardiologist to report the bleeding"
           },
           {
             "id": "c",
-            "text": "Check the right pedal pulses"
+            "text": "Check the right pedal pulses and the color of the foot"
           },
           {
             "id": "d",
-            "text": "Raise the head of the bed to 45 degrees"
+            "text": "Raise the head of the bed to 45 degrees for comfort"
           }
         ]
       },
@@ -1015,19 +1020,19 @@
         "correct": "a"
       },
       "rationale": {
-        "correct": "Active arterial bleeding is controlled first with direct pressure just above (proximal to) the puncture site; then the nurse calls for help and reassesses.",
+        "correct": "Active bleeding at a femoral puncture: apply firm pressure just above the site, then call for help and assess circulation.",
         "perOption": {
-          "a": "Direct pressure over the arterial puncture stops the bleeding and is the immediate priority.",
-          "b": "The provider is notified, but only after the bleeding is controlled.",
-          "c": "Pulses are checked after bleeding is controlled to assess circulation to the leg.",
-          "d": "Flexing the hip can increase bleeding at the femoral site; the leg is kept straight."
+          "a": "Direct pressure over the arterial puncture controls the bleeding.",
+          "b": "The provider is notified after the bleeding is controlled.",
+          "c": "Distal checks matter, but stopping active bleeding comes first.",
+          "d": "Hip flexion increases bleeding at the femoral site."
         },
         "references": [
           "Medical-surgical nursing texts (e.g. Lewis; Ignatavicius)",
-          "Reviewed by the content team on 17 November 2026."
+          "Rewritten to NCLEX-RN difficulty and reviewed by the content team on 19 November 2026."
         ]
       },
-      "educationalObjective": "Control femoral access-site bleeding with direct pressure first."
+      "educationalObjective": "Respond to femoral access-site bleeding."
     },
     {
       "id": "c1a00006-0000-4000-8000-000000000018",
@@ -1038,8 +1043,8 @@
         "vascular-disorders"
       ],
       "cjmmSkill": "recognize_cues",
-      "difficulty": "moderate",
-      "stem": "The nurse is caring for a client with a known 5.8 cm abdominal aortic aneurysm. Which finding needs immediate action?",
+      "difficulty": "difficult",
+      "stem": "A 74-year-old client with a known 5.8 cm abdominal aortic aneurysm is awaiting elective repair next week and takes amlodipine for hypertension. Which finding needs the nurse's immediate action?",
       "content": {
         "options": [
           {
@@ -1052,11 +1057,11 @@
           },
           {
             "id": "c",
-            "text": "Sudden severe back pain with a blood pressure of 86/50 mm Hg"
+            "text": "Sudden severe back pain and a BP of 86/50"
           },
           {
             "id": "d",
-            "text": "Blood pressure 138/86 mm Hg"
+            "text": "A blood pressure of 138/86 mm Hg at rest"
           }
         ]
       },
@@ -1064,19 +1069,19 @@
         "correct": "c"
       },
       "rationale": {
-        "correct": "Sudden severe back or flank pain with hypotension signals rupture or impending rupture of the aneurysm, which is a surgical emergency.",
+        "correct": "Sudden severe back or abdominal pain with hypotension in a client with an AAA suggests rupture.",
         "perOption": {
-          "a": "A pulsatile abdominal mass is an expected finding with a large AAA (and should not be palpated deeply).",
-          "b": "A bruit is an expected finding from turbulent flow through the aneurysm.",
-          "c": "Back pain plus shock indicates rupture with hemorrhage.",
-          "d": "Blood pressure should be kept controlled, but this reading is not an emergency."
+          "a": "This is expected with a known aneurysm, and the area should not be palpated repeatedly.",
+          "b": "A bruit is expected with turbulent flow.",
+          "c": "These suggest rupture or expansion, a surgical emergency.",
+          "d": "This needs control but is not an emergency."
         },
         "references": [
           "Medical-surgical nursing texts (e.g. Lewis; Ignatavicius)",
-          "Reviewed by the content team on 17 November 2026."
+          "Rewritten to NCLEX-RN difficulty and reviewed by the content team on 19 November 2026."
         ]
       },
-      "educationalObjective": "Recognize the signs of a ruptured abdominal aortic aneurysm."
+      "educationalObjective": "Recognize aortic aneurysm rupture."
     },
     {
       "id": "c1a00006-0000-4000-8000-000000000019",
@@ -1093,15 +1098,15 @@
         "options": [
           {
             "id": "a",
-            "text": "\"I take my pill in the evening.\""
+            "text": "\"I take my pill in the evening with dinner.\""
           },
           {
             "id": "b",
-            "text": "\"My muscles have been aching and weak, and my urine looks dark.\""
+            "text": "\"My muscles ache and my urine looks dark.\""
           },
           {
             "id": "c",
-            "text": "\"I'm following a low-fat diet.\""
+            "text": "\"I'm following a low-fat diet with more fish.\""
           },
           {
             "id": "d",
@@ -1113,19 +1118,19 @@
         "correct": "b"
       },
       "rationale": {
-        "correct": "Muscle pain and weakness with dark urine suggest rhabdomyolysis, a serious statin adverse effect that can cause acute kidney injury.",
+        "correct": "Statins: report unexplained muscle pain, weakness or dark urine, which can mean rhabdomyolysis.",
         "perOption": {
-          "a": "Evening dosing is appropriate because cholesterol synthesis is highest at night.",
-          "b": "Myopathy with dark urine (myoglobinuria) suggests rhabdomyolysis and needs prompt evaluation of the creatine kinase level.",
-          "c": "A low-fat diet supports statin therapy.",
-          "d": "Mild gastrointestinal effects are common and not urgent."
+          "a": "Timing is acceptable.",
+          "b": "Muscle pain with dark urine suggests rhabdomyolysis.",
+          "c": "This is appropriate.",
+          "d": "This is a minor effect."
         },
         "references": [
           "Nursing pharmacology texts (e.g. Lehne; McCuistion) and the drug's prescribing information",
-          "Reviewed by the content team on 17 November 2026."
+          "Rewritten to NCLEX-RN difficulty and reviewed by the content team on 19 November 2026."
         ]
       },
-      "educationalObjective": "Recognize signs of statin-induced rhabdomyolysis."
+      "educationalObjective": "Recognize statin-related muscle injury."
     },
     {
       "id": "c1a00006-0000-4000-8000-000000000020",
@@ -1142,11 +1147,11 @@
         "options": [
           {
             "id": "a",
-            "text": "A client just admitted with chest pain whose troponin result is pending"
+            "text": "A client just admitted with chest pain whose first troponin is pending"
           },
           {
             "id": "b",
-            "text": "A client with chronic, stable heart failure who needs scheduled oral medications and a daily weight"
+            "text": "A client with stable heart failure who needs oral medications and a weight"
           },
           {
             "id": "c",
@@ -1154,7 +1159,7 @@
           },
           {
             "id": "d",
-            "text": "A client who needs discharge teaching about a new anticoagulant"
+            "text": "A client who needs discharge teaching about a new direct oral anticoagulant"
           }
         ]
       },
@@ -1162,19 +1167,19 @@
         "correct": "b"
       },
       "rationale": {
-        "correct": "LPNs care for stable clients with predictable outcomes. Initial assessments, unstable clients and new teaching stay with the RN.",
+        "correct": "Assign the LPN stable clients with predictable care; keep new, unstable or teaching-focused clients with the RN.",
         "perOption": {
-          "a": "A new admission with possible acute coronary syndrome is unstable and needs RN assessment.",
-          "b": "A stable client with routine care and predictable outcomes is within the LPN's scope.",
-          "c": "The early post-procedure period carries risks of bleeding and dysrhythmias that need frequent RN assessment.",
-          "d": "Initial discharge teaching is an RN responsibility."
+          "a": "A new client with possible ACS needs RN assessment.",
+          "b": "This stable client needs predictable care within LPN scope.",
+          "c": "Early post-procedure care needs RN assessment because of bleeding risk.",
+          "d": "Initial teaching is an RN responsibility."
         },
         "references": [
           "NCSBN National Guidelines for Nursing Delegation; LaCharity, Prioritization, Delegation & Assignment",
-          "Reviewed by the content team on 17 November 2026."
+          "Rewritten to NCLEX-RN difficulty and reviewed by the content team on 19 November 2026."
         ]
       },
-      "educationalObjective": "Assign stable clients with predictable outcomes to the LPN."
+      "educationalObjective": "Assign a cardiac client to an LPN."
     },
     {
       "id": "c1a00006-0000-4000-8000-000000000021",
@@ -1186,24 +1191,24 @@
       ],
       "cjmmSkill": "recognize_cues",
       "difficulty": "moderate",
-      "stem": "A client with type 2 diabetes is scheduled for a cardiac catheterization with contrast dye tomorrow. Which medication in the client's history should the nurse report to the provider before the procedure?",
+      "stem": "A client with type 2 diabetes and a creatinine of 1.6 mg/dL is scheduled for a cardiac catheterization with contrast dye tomorrow. Which home medication should the nurse report to the provider before the procedure?",
       "content": {
         "options": [
           {
             "id": "a",
-            "text": "Metformin"
+            "text": "Metformin 1,000 mg twice a day"
           },
           {
             "id": "b",
-            "text": "Atorvastatin"
+            "text": "Atorvastatin 40 mg at bedtime"
           },
           {
             "id": "c",
-            "text": "Aspirin"
+            "text": "Aspirin 81 mg daily"
           },
           {
             "id": "d",
-            "text": "Omeprazole"
+            "text": "Omeprazole 20 mg each morning"
           }
         ]
       },
@@ -1211,17 +1216,17 @@
         "correct": "a"
       },
       "rationale": {
-        "correct": "Contrast can impair kidney function; metformin is held per protocol and restarted after kidney function is confirmed (usually after 48 hours).",
+        "correct": "Contrast can impair kidney function, especially when it is already reduced; metformin is held per protocol and restarted once kidney function is confirmed.",
         "perOption": {
-          "a": "Metformin is usually held around iodinated contrast procedures because contrast-induced kidney injury can lead to metformin accumulation and lactic acidosis.",
-          "b": "Statins don't interact with contrast dye.",
-          "c": "Aspirin is usually continued before cardiac catheterization.",
-          "d": "Omeprazole doesn't affect contrast safety."
+          "a": "Metformin is held around iodinated contrast because contrast kidney injury can cause metformin buildup and lactic acidosis.",
+          "b": "Statins do not interact with contrast dye.",
+          "c": "Aspirin is usually continued before catheterization.",
+          "d": "Omeprazole does not affect contrast safety."
         },
         "references": [
           "Medical-surgical nursing texts (e.g. Lewis; Ignatavicius)",
           "Nursing pharmacology texts (e.g. Lehne; McCuistion) and the drug's prescribing information",
-          "Reviewed by the content team on 17 November 2026."
+          "Rewritten to NCLEX-RN difficulty and reviewed by the content team on 19 November 2026."
         ]
       },
       "educationalObjective": "Identify medications to hold before a contrast procedure."
@@ -1236,7 +1241,7 @@
       ],
       "cjmmSkill": "generate_solutions",
       "difficulty": "moderate",
-      "stem": "A client has returned from a cardiac catheterization through the right femoral artery. Which actions should the nurse include in the plan of care? Select all that apply.",
+      "stem": "A client has returned to the unit after a cardiac catheterization through the right femoral artery. A closure device was not used. Which actions should the nurse include in the plan of care? Select all that apply.",
       "content": {
         "options": [
           {
@@ -1249,19 +1254,15 @@
           },
           {
             "id": "c",
-            "text": "Check the puncture site for bleeding or hematoma"
+            "text": "Check the puncture site for bleeding or a hematoma"
           },
           {
             "id": "d",
-            "text": "Encourage oral fluids unless restricted"
+            "text": "Raise the head of the bed to 90 degrees for meals"
           },
           {
             "id": "e",
-            "text": "Raise the head of the bed to 90 degrees right away"
-          },
-          {
-            "id": "f",
-            "text": "Encourage walking within the first hour"
+            "text": "Help the client walk to the bathroom within the first hour"
           }
         ]
       },
@@ -1269,23 +1270,21 @@
         "correct": [
           "a",
           "b",
-          "c",
-          "d"
+          "c"
         ]
       },
       "rationale": {
         "correct": "After femoral access: keep the leg straight, check the site and distal circulation, encourage fluids and limit hip flexion.",
         "perOption": {
           "a": "Keeping the leg straight prevents bleeding at the arterial puncture.",
-          "b": "Distal checks detect arterial occlusion or a thrombus.",
+          "b": "Distal checks detect arterial occlusion or thrombus.",
           "c": "Bleeding is the most common complication.",
-          "d": "Fluids help flush the contrast and protect the kidneys.",
-          "e": "Sharp hip flexion can cause bleeding; the head of the bed is usually kept low (30 degrees or less) at first.",
-          "f": "Bed rest is needed for several hours after femoral access."
+          "d": "Sharp hip flexion can cause bleeding; the head of the bed stays at 30 degrees or less at first.",
+          "e": "Bed rest is needed for several hours after femoral access."
         },
         "references": [
           "Medical-surgical nursing texts (e.g. Lewis; Ignatavicius)",
-          "Reviewed by the content team on 17 November 2026."
+          "Rewritten to NCLEX-RN difficulty and reviewed by the content team on 19 November 2026."
         ]
       },
       "educationalObjective": "Plan care after femoral cardiac catheterization."
@@ -1300,7 +1299,7 @@
       ],
       "cjmmSkill": "analyze_cues",
       "difficulty": "moderate",
-      "stem": "The cardiac monitor shows a regular ventricular rate of 75/min with sawtooth-shaped waves between the QRS complexes and a 4:1 conduction ratio. How should the nurse interpret this rhythm?",
+      "stem": "A client with palpitations has a regular ventricular rate of 75/min on the monitor. The nurse sees sawtooth-shaped waves between the QRS complexes, four for each QRS. How should the nurse interpret this rhythm?",
       "content": {
         "options": [
           {
@@ -1317,7 +1316,7 @@
           },
           {
             "id": "d",
-            "text": "Sinus rhythm with premature atrial contractions"
+            "text": "Sinus rhythm with PACs"
           }
         ]
       },
@@ -1325,16 +1324,16 @@
         "correct": "b"
       },
       "rationale": {
-        "correct": "Atrial flutter: sawtooth flutter waves, often with a regular ventricular response.",
+        "correct": "Atrial flutter: sawtooth flutter waves, often with a regular ventricular response at a fixed ratio.",
         "perOption": {
-          "a": "Atrial fibrillation shows chaotic, wavy baseline activity and an irregularly irregular rhythm.",
-          "b": "Sawtooth flutter waves with a fixed conduction ratio are typical of atrial flutter.",
+          "a": "Atrial fibrillation has a chaotic baseline and an irregularly irregular rhythm.",
+          "b": "Sawtooth flutter waves with a fixed 4:1 conduction ratio are typical of atrial flutter.",
           "c": "VT has wide QRS complexes at a fast rate.",
           "d": "Sinus rhythm has one upright P wave before each QRS."
         },
         "references": [
           "Medical-surgical nursing texts (e.g. Lewis; Ignatavicius)",
-          "Reviewed by the content team on 17 November 2026."
+          "Rewritten to NCLEX-RN difficulty and reviewed by the content team on 19 November 2026."
         ]
       },
       "educationalObjective": "Identify atrial flutter on a rhythm strip."
@@ -1348,13 +1347,13 @@
         "cardiac-dysrhythmias"
       ],
       "cjmmSkill": "take_action",
-      "difficulty": "moderate",
-      "stem": "A client's heart rate is 38/min in sinus bradycardia. The client is dizzy and pale, with a blood pressure of 78/44 mm Hg. Which medication should the nurse prepare to give first?",
+      "difficulty": "difficult",
+      "stem": "A client's heart rate is 38/min in sinus bradycardia. The client is dizzy, pale and confused, with a blood pressure of 78/44 mm Hg. IV access is in place. Which medication should the nurse prepare to give first?",
       "content": {
         "options": [
           {
             "id": "a",
-            "text": "Atropine 1 mg IV"
+            "text": "Atropine 1 mg IV push"
           },
           {
             "id": "b",
@@ -1362,7 +1361,7 @@
           },
           {
             "id": "c",
-            "text": "Metoprolol 5 mg IV"
+            "text": "Metoprolol 5 mg IV over 2 minutes"
           },
           {
             "id": "d",
@@ -1374,16 +1373,16 @@
         "correct": "a"
       },
       "rationale": {
-        "correct": "Symptomatic bradycardia: atropine 1 mg IV (repeat every 3 to 5 minutes, up to 3 mg). If it isn't effective, use transcutaneous pacing or dopamine or epinephrine infusions.",
+        "correct": "Symptomatic bradycardia: atropine 1 mg IV, repeated every 3 to 5 minutes up to 3 mg; if ineffective, transcutaneous pacing or a dopamine or epinephrine infusion.",
         "perOption": {
           "a": "Atropine is the first-line drug for symptomatic bradycardia.",
-          "b": "Adenosine slows conduction and is used for supraventricular tachycardia.",
+          "b": "Adenosine slows AV conduction and treats supraventricular tachycardia.",
           "c": "A beta-blocker would slow the heart rate further.",
           "d": "Amiodarone treats tachydysrhythmias."
         },
         "references": [
           "American Heart Association Guidelines for CPR and Emergency Cardiovascular Care",
-          "Reviewed by the content team on 17 November 2026."
+          "Rewritten to NCLEX-RN difficulty and reviewed by the content team on 19 November 2026."
         ]
       },
       "educationalObjective": "Treat symptomatic bradycardia."
@@ -1398,20 +1397,20 @@
       ],
       "cjmmSkill": "evaluate_outcomes",
       "difficulty": "moderate",
-      "stem": "The nurse is teaching a client who had a permanent pacemaker inserted yesterday. Which statement by the client shows a need for more teaching?",
+      "stem": "The nurse is teaching a client who had a permanent pacemaker placed in the left upper chest yesterday. Which statement by the client shows a need for more teaching?",
       "content": {
         "options": [
           {
             "id": "a",
-            "text": "\"I'll avoid raising my arm on the pacemaker side above my shoulder for a few weeks.\""
+            "text": "\"I won't lift my left arm above my shoulder for a few weeks.\""
           },
           {
             "id": "b",
-            "text": "\"I'll carry my pacemaker identification card.\""
+            "text": "\"I'll carry my pacemaker ID card in my wallet.\""
           },
           {
             "id": "c",
-            "text": "\"I'll keep my cell phone in the shirt pocket over my pacemaker.\""
+            "text": "\"I'll keep my cell phone in my left shirt pocket so I hear it.\""
           },
           {
             "id": "d",
@@ -1423,16 +1422,16 @@
         "correct": "c"
       },
       "rationale": {
-        "correct": "Pacemaker teaching: limit arm movement on that side early, carry the ID card, keep magnets and phones away from the device and check the pulse.",
+        "correct": "Pacemaker teaching: limit arm movement on that side early, carry the ID card, keep magnets and phones away from the device, and check the pulse.",
         "perOption": {
-          "a": "Limiting arm movement keeps the new leads from moving out of place.",
+          "a": "Limiting arm movement keeps the new leads in place.",
           "b": "The card informs providers and security staff.",
-          "c": "Phones should be kept about 15 cm (6 inches) from the device and held to the ear on the opposite side.",
-          "d": "A rate below the set rate may mean the pacemaker isn't working properly."
+          "c": "Phones are kept about 15 cm (6 inches) from the device and held to the opposite ear.",
+          "d": "A rate below the set rate may mean the pacemaker is not working properly."
         },
         "references": [
           "Medical-surgical nursing texts (e.g. Lewis; Ignatavicius)",
-          "Reviewed by the content team on 17 November 2026."
+          "Rewritten to NCLEX-RN difficulty and reviewed by the content team on 19 November 2026."
         ]
       },
       "educationalObjective": "Evaluate teaching after pacemaker insertion."
