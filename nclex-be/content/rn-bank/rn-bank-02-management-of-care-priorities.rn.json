@@ -1,5 +1,5 @@
 {
-  "notice": "RN bank batch 2: Management of care: prioritization, delegation and communication. Reviewed by the content team on 17 November 2026. See REVIEW-LOG.md.",
+  "notice": "RN bank batch 2: Management of care: prioritization, delegation and communication. Rewritten to NCLEX-RN difficulty and reviewed by the content team on 19 November 2026. See REVIEW-LOG.md.",
   "track": "RN",
   "subtopics": [
     {
@@ -28,50 +28,50 @@
       "id": "c1a00002-0000-4000-8000-000000000001",
       "itemType": "multiple_choice",
       "clientNeeds": "SECE.MOC",
-      "bodySystem": "endocrine",
+      "bodySystem": "respiratory",
       "subtopics": [
         "prioritizing-client-care"
       ],
       "cjmmSkill": "prioritize_hypotheses",
-      "difficulty": "moderate",
-      "stem": "After receiving report, which client should the nurse assess first?",
+      "difficulty": "difficult",
+      "stem": "The nurse on a surgical unit receives handoff report on four clients. Which client should the nurse assess first?",
       "content": {
         "options": [
           {
             "id": "a",
-            "text": "A client with COPD whose oxygen saturation is 89% on 2 L/min by nasal cannula"
+            "text": "A 68-year-old with COPD whose SpO2 is 88% on 2 L/min, respirations 24/min, who says the morning breathlessness is usual"
           },
           {
             "id": "b",
-            "text": "A client 6 hours after a thyroidectomy who has new high-pitched sounds on inspiration"
+            "text": "A 46-year-old 6 hours after a thyroidectomy who reports tingling around the lips; the voice has been hoarse since surgery"
           },
           {
             "id": "c",
-            "text": "A client with a hip fracture who rates pain 7 out of 10"
+            "text": "A 72-year-old 2 days after a hip arthroplasty who is suddenly restless, respirations 28/min, SpO2 90% on room air"
           },
           {
             "id": "d",
-            "text": "A client with type 2 diabetes whose glucose before lunch is 250 mg/dL"
+            "text": "A 31-year-old with type 1 diabetes whose glucose before breakfast is 288 mg/dL with negative urine ketones"
           }
         ]
       },
       "key": {
-        "correct": "b"
+        "correct": "c"
       },
       "rationale": {
-        "correct": "Airway comes first: new stridor after neck surgery can progress to complete obstruction.",
+        "correct": "See first the client with a sudden, unexpected change in breathing or circulation. Expected or baseline abnormal findings (COPD saturations, hoarseness after neck surgery) can wait.",
         "perOption": {
-          "a": "A saturation of 88% to 92% is often the target for clients with COPD.",
-          "b": "Stridor signals airway obstruction from edema, hematoma or hypocalcemia-induced laryngospasm; it is an airway emergency.",
-          "c": "Pain needs treatment soon but is not life-threatening.",
-          "d": "Hyperglycemia needs follow-up but is not an immediate threat."
+          "a": "An SpO2 of 88% to 92% is the usual target in COPD, and the client describes a baseline pattern, so this can wait for the first round.",
+          "b": "Perioral tingling is an early sign of hypocalcemia and needs a calcium level and assessment soon, but the airway is not yet compromised and hoarseness is expected.",
+          "c": "Sudden restlessness, tachypnea and new hypoxemia after hip surgery suggest pulmonary embolism, a life-threatening change from baseline.",
+          "d": "Hyperglycemia without ketones needs correction-scale insulin but is not immediately life-threatening."
         },
         "references": [
           "NCSBN National Guidelines for Nursing Delegation; LaCharity, Prioritization, Delegation & Assignment",
-          "Reviewed by the content team on 17 November 2026."
+          "Rewritten to NCLEX-RN difficulty and reviewed by the content team on 19 November 2026."
         ]
       },
-      "educationalObjective": "Prioritize an airway threat over other abnormal findings."
+      "educationalObjective": "Prioritize a sudden respiratory change over expected abnormal findings."
     },
     {
       "id": "c1a00002-0000-4000-8000-000000000002",
@@ -83,41 +83,41 @@
       ],
       "cjmmSkill": "prioritize_hypotheses",
       "difficulty": "difficult",
-      "stem": "Which client should the nurse see first?",
+      "stem": "The nurse is caring for four clients on a medical unit. Which client should the nurse see first?",
       "content": {
         "options": [
           {
             "id": "a",
-            "text": "A client in sickle cell crisis who rates pain 9 out of 10 and is due for an opioid in 30 minutes"
+            "text": "A client in sickle cell crisis rating pain 9 out of 10, whose last IV morphine was 2 hours ago; the next dose is due in 1 hour"
           },
           {
             "id": "b",
-            "text": "A client with suspected appendicitis who says the abdominal pain suddenly went away, now with a heart rate of 118/min"
+            "text": "A client with pyelonephritis, temperature 38.4 °C (101.1 °F), heart rate 96/min, blood pressure 122/74, on IV ceftriaxone since this morning"
           },
           {
             "id": "c",
-            "text": "A client with a urinary tract infection whose temperature is 38.2 °C (100.8 °F)"
+            "text": "A client admitted with suspected appendicitis who says the pain suddenly got much better; heart rate is now 118/min"
           },
           {
             "id": "d",
-            "text": "A client with gastroenteritis who vomited twice this morning"
+            "text": "A client with gastroenteritis who vomited three times overnight; blood pressure 108/68 lying and 102/64 sitting"
           }
         ]
       },
       "key": {
-        "correct": "b"
+        "correct": "c"
       },
       "rationale": {
-        "correct": "An unexpected change, such as sudden pain relief with new tachycardia, outranks expected findings, even severe pain.",
+        "correct": "An unexpected improvement in pain with new tachycardia is a red flag. An expected finding, even a severe one, ranks below a sign of a new complication.",
         "perOption": {
-          "a": "Severe pain is a priority, but the medication is scheduled and the client's condition is expected.",
-          "b": "Sudden relief of appendicitis pain followed by tachycardia suggests perforation, which can lead to peritonitis and sepsis.",
-          "c": "A low-grade fever is expected with infection and is not unstable.",
-          "d": "Vomiting needs monitoring for dehydration but is not an emergency."
+          "a": "Severe pain in sickle cell crisis is expected and treated on a schedule; the nurse can call for an earlier dose after the unstable client is seen.",
+          "b": "Fever with mild tachycardia is expected while antibiotics take effect; the blood pressure is stable.",
+          "c": "Sudden relief of appendicitis pain followed by new tachycardia suggests perforation, which leads to peritonitis and sepsis.",
+          "d": "A small postural drop needs fluids and monitoring but is not yet unstable."
         },
         "references": [
           "NCSBN National Guidelines for Nursing Delegation; LaCharity, Prioritization, Delegation & Assignment",
-          "Reviewed by the content team on 17 November 2026."
+          "Rewritten to NCLEX-RN difficulty and reviewed by the content team on 19 November 2026."
         ]
       },
       "educationalObjective": "Recognize perforation of the appendix as an emergency."
@@ -126,50 +126,50 @@
       "id": "c1a00002-0000-4000-8000-000000000003",
       "itemType": "multiple_choice",
       "clientNeeds": "SECE.MOC",
-      "bodySystem": "neurological",
+      "bodySystem": "cardiovascular",
       "subtopics": [
         "prioritizing-client-care"
       ],
-      "cjmmSkill": "prioritize_hypotheses",
-      "difficulty": "moderate",
-      "stem": "The charge nurse is reviewing updates on four clients. Which client needs the nurse's attention first?",
+      "cjmmSkill": "recognize_cues",
+      "difficulty": "difficult",
+      "stem": "The charge nurse receives four updates from the nursing team. Which client needs the charge nurse's attention first?",
       "content": {
         "options": [
           {
             "id": "a",
-            "text": "A client 1 hour after a cardiac catheterization who needs vital signs checked"
+            "text": "A client 2 hours after a femoral-approach cardiac catheterization who reports new low back pain; heart rate 112/min"
           },
           {
             "id": "b",
-            "text": "A client receiving vancomycin whose trough level is due before the next dose"
+            "text": "A client with a head injury whose Glasgow Coma Scale score is 14 because of confusion about the date, unchanged since admission"
           },
           {
             "id": "c",
-            "text": "A client with a chest tube who has gentle tidaling in the water seal chamber"
+            "text": "A client with a chest tube for a pneumothorax whose water seal chamber bubbles briefly each time the client coughs"
           },
           {
             "id": "d",
-            "text": "A client with a head injury whose right pupil is now larger than the left and sluggish"
+            "text": "A client receiving IV vancomycin whose trough level has not been drawn and the next dose is due in 60 minutes"
           }
         ]
       },
       "key": {
-        "correct": "d"
+        "correct": "a"
       },
       "rationale": {
-        "correct": "A change in pupil size and reaction is a late, ominous sign of increased intracranial pressure.",
+        "correct": "After a femoral puncture, back or flank pain with tachycardia is retroperitoneal bleeding until proven otherwise. Expected and stable findings come later.",
         "perOption": {
-          "a": "Routine post-procedure checks can be done next or delegated if the client is stable.",
-          "b": "The trough level is timed with the next dose and can wait.",
-          "c": "Tidaling with breathing is expected and shows the system is working.",
-          "d": "A new unequal, sluggish pupil signals rising intracranial pressure and possible brain herniation."
+          "a": "New back or flank pain with tachycardia after a femoral puncture suggests retroperitoneal bleeding, which can cause shock with no visible hematoma.",
+          "b": "A stable score that matches the admission baseline is reassuring; a drop of 2 or more points would be urgent.",
+          "c": "Intermittent bubbling with coughing is expected while air leaves the pleural space; continuous bubbling would suggest a leak.",
+          "d": "The trough is drawn within 30 minutes before the dose, so there is still time to obtain it."
         },
         "references": [
           "NCSBN National Guidelines for Nursing Delegation; LaCharity, Prioritization, Delegation & Assignment",
-          "Reviewed by the content team on 17 November 2026."
+          "Rewritten to NCLEX-RN difficulty and reviewed by the content team on 19 November 2026."
         ]
       },
-      "educationalObjective": "Identify signs of increasing intracranial pressure as a priority."
+      "educationalObjective": "Recognize retroperitoneal bleeding after cardiac catheterization."
     },
     {
       "id": "c1a00002-0000-4000-8000-000000000004",
@@ -180,42 +180,42 @@
         "prioritizing-client-care"
       ],
       "cjmmSkill": "prioritize_hypotheses",
-      "difficulty": "easy",
-      "stem": "A client 1 day after abdominal surgery has pain rated 6 out of 10, is anxious about going home, has weak, ineffective coughing with coarse crackles, and has not walked yet. Which problem is the priority?",
+      "difficulty": "moderate",
+      "stem": "A client 1 day after an open abdominal surgery rates incisional pain 6 out of 10, is anxious about going home, has a weak cough with coarse crackles in both lower lobes, has had a urine output of 35 mL/hr, and has not yet walked. Which nursing problem is the priority?",
       "content": {
         "options": [
           {
             "id": "a",
-            "text": "Ineffective airway clearance"
+            "text": "Acute pain related to the abdominal incision"
           },
           {
             "id": "b",
-            "text": "Acute pain"
+            "text": "Risk for deficient fluid volume"
           },
           {
             "id": "c",
-            "text": "Anxiety"
+            "text": "Ineffective airway clearance"
           },
           {
             "id": "d",
-            "text": "Risk for impaired walking"
+            "text": "Anxiety related to discharge"
           }
         ]
       },
       "key": {
-        "correct": "a"
+        "correct": "c"
       },
       "rationale": {
-        "correct": "Use ABC and Maslow: actual airway problems come before pain, mobility and psychosocial needs.",
+        "correct": "Use airway, breathing, circulation, then Maslow: an actual airway problem comes before pain, risk problems and psychosocial needs. Treating pain can be part of the airway plan.",
         "perOption": {
-          "a": "Airway problems threaten oxygenation and come first under ABC priorities.",
-          "b": "Pain is important, and managing it helps coughing, but airway clearance is the higher priority.",
-          "c": "Psychosocial needs come after physiological ones.",
-          "d": "A potential problem ranks below an actual airway problem."
+          "a": "Pain does need treatment, partly because it stops the client coughing, but it is not the direct threat.",
+          "b": "An output of 35 mL/hr is above the 30 mL/hr minimum, and a risk problem ranks below an actual one.",
+          "c": "Coarse crackles with a weak cough mean secretions are retained now; this threatens oxygenation and leads to atelectasis and pneumonia.",
+          "d": "Psychosocial needs follow physiological ones."
         },
         "references": [
           "Fundamentals of nursing texts (e.g. Potter & Perry)",
-          "Reviewed by the content team on 17 November 2026."
+          "Rewritten to NCLEX-RN difficulty and reviewed by the content team on 19 November 2026."
         ]
       },
       "educationalObjective": "Apply ABC and Maslow priorities to nursing problems."
@@ -230,24 +230,24 @@
       ],
       "cjmmSkill": "recognize_cues",
       "difficulty": "moderate",
-      "stem": "Which finding requires the nurse's immediate follow-up?",
+      "stem": "The nurse is reviewing findings on four clients who had procedures today. Which finding requires the nurse's immediate follow-up?",
       "content": {
         "options": [
           {
             "id": "a",
-            "text": "A client with cirrhosis has a distended abdomen with a fluid wave"
+            "text": "A client 3 hours after a bronchoscopy whose gag reflex has returned and who is coughing up blood-tinged sputum"
           },
           {
             "id": "b",
-            "text": "A client 2 hours after a colonoscopy with polyp removal has a rigid, board-like abdomen"
+            "text": "A client 4 hours after a colonoscopy with polyp removal whose abdomen is firm with guarding; heart rate 110/min"
           },
           {
             "id": "c",
-            "text": "A client with pneumonia is coughing up yellow sputum"
+            "text": "A client 2 hours after removal of 3 L of ascitic fluid whose blood pressure is 110/68, from 116/72 before the procedure"
           },
           {
             "id": "d",
-            "text": "A client after total knee replacement rates pain 5 out of 10"
+            "text": "A client 1 hour after a thoracentesis with a small amount of serous drainage on the puncture-site dressing"
           }
         ]
       },
@@ -255,19 +255,19 @@
         "correct": "b"
       },
       "rationale": {
-        "correct": "Separate expected findings of a known condition from unexpected findings that suggest a complication.",
+        "correct": "Compare each finding with what the procedure normally causes. Abdominal rigidity or guarding with tachycardia after any bowel procedure suggests perforation.",
         "perOption": {
-          "a": "Ascites is an expected finding in cirrhosis.",
-          "b": "A rigid abdomen after colonoscopy suggests bowel perforation and peritonitis.",
-          "c": "Purulent sputum is expected with bacterial pneumonia.",
-          "d": "Moderate pain is expected after joint replacement."
+          "a": "A small amount of blood-tinged sputum is expected after a bronchoscopy, especially after a biopsy.",
+          "b": "A firm, guarded abdomen with tachycardia after polypectomy suggests bowel perforation and peritonitis.",
+          "c": "A small drop after paracentesis needs monitoring but is within an expected range.",
+          "d": "Minor drainage at the puncture site is expected."
         },
         "references": [
           "Medical-surgical nursing texts (e.g. Lewis; Ignatavicius)",
-          "Reviewed by the content team on 17 November 2026."
+          "Rewritten to NCLEX-RN difficulty and reviewed by the content team on 19 November 2026."
         ]
       },
-      "educationalObjective": "Distinguish expected findings from complications."
+      "educationalObjective": "Distinguish expected findings from complications after procedures."
     },
     {
       "id": "c1a00002-0000-4000-8000-000000000006",
@@ -279,28 +279,28 @@
       ],
       "cjmmSkill": "prioritize_hypotheses",
       "difficulty": "difficult",
-      "stem": "The nurse has just received report. Place the clients in the order the nurse should see them, from first to last.",
+      "stem": "The nurse has just received report on five clients and has one assistive personnel to help. Place the clients in the order the nurse should see them, from first to last.",
       "content": {
         "items": [
           {
             "id": "c",
-            "text": "A client with diabetes who is alert, with a glucose of 62 mg/dL"
+            "text": "A client with diabetes who is sweaty and shaky with a glucose of 58 mg/dL but alert and able to swallow"
           },
           {
             "id": "a",
-            "text": "A client 4 hours after a thyroidectomy who has new stridor"
+            "text": "A client 3 hours after a thyroidectomy who has new noisy breathing on inspiration and an SpO2 of 91%"
           },
           {
             "id": "b",
-            "text": "A client 2 hours after surgery with a saturated dressing, heart rate 116/min and blood pressure 92/58 mm Hg"
+            "text": "A client 2 hours after a hysterectomy with a heart rate of 124/min, blood pressure 88/50 and a saturated dressing"
           },
           {
             "id": "e",
-            "text": "A client who needs discharge teaching before going home this afternoon"
+            "text": "A client with stable heart failure who needs discharge teaching before going home this afternoon"
           },
           {
             "id": "d",
-            "text": "A client 1 day after surgery requesting pain medication for pain rated 6 out of 10"
+            "text": "A client 1 day after a laparoscopic cholecystectomy rating shoulder pain 7 out of 10 who is due for oral oxycodone"
           }
         ]
       },
@@ -315,17 +315,17 @@
         "scoring": "all_or_nothing"
       },
       "rationale": {
-        "correct": "Order by airway, breathing and circulation first, then other physiological needs, then teaching for stable clients.",
+        "correct": "Order by airway, then breathing and circulation, then other urgent physiological needs that are quick to fix, then expected discomfort, then teaching.",
         "perOption": {
-          "a": "Airway obstruction is the most immediate threat to life.",
-          "b": "Bleeding with signs of shock is a circulation threat; it comes after the airway.",
-          "c": "Hypoglycemia needs treatment soon, but the client is alert and can take oral carbohydrate.",
-          "d": "Pain is important but stable.",
-          "e": "Teaching for a stable client can wait until urgent needs are met."
+          "a": "Stridor after neck surgery is an airway emergency and comes first.",
+          "b": "Hemorrhage with signs of shock is the circulation threat; it follows only the airway.",
+          "c": "Symptomatic hypoglycemia needs treatment within minutes, but the client can take oral glucose, which the nurse can give quickly.",
+          "d": "Referred shoulder pain from the gas used in laparoscopy is expected; it needs treatment but is not dangerous.",
+          "e": "Teaching a stable client is important but can wait until urgent needs are met."
         },
         "references": [
           "NCSBN National Guidelines for Nursing Delegation; LaCharity, Prioritization, Delegation & Assignment",
-          "Reviewed by the content team on 17 November 2026."
+          "Rewritten to NCLEX-RN difficulty and reviewed by the content team on 19 November 2026."
         ]
       },
       "educationalObjective": "Order several clients by priority."
@@ -340,55 +340,55 @@
       ],
       "cjmmSkill": "take_action",
       "difficulty": "moderate",
-      "stem": "The nurse is working with assistive personnel (AP). Which tasks can the nurse delegate to the AP? Select all that apply.",
+      "stem": "The RN is planning care for a medical-surgical unit with assistive personnel (AP). Which tasks can the RN delegate to the AP? Select all that apply.",
       "content": {
         "options": [
           {
             "id": "a",
-            "text": "Measuring intake and output for a client with heart failure"
+            "text": "Measuring and recording intake and output for a client with heart failure"
           },
           {
             "id": "b",
-            "text": "Helping a client walk on the second day after surgery"
+            "text": "Checking placement of a nasogastric tube before an intermittent tube feeding"
           },
           {
             "id": "c",
-            "text": "Assessing the skin of a newly admitted client"
+            "text": "Walking a client 2 days after surgery who walked yesterday without problems"
           },
           {
             "id": "d",
-            "text": "Collecting a stool specimen for occult blood"
+            "text": "Feeding a client with a new stroke at the first meal after a swallowing evaluation"
           },
           {
             "id": "e",
-            "text": "Feeding a client who has dysphagia after a recent stroke"
+            "text": "Obtaining a fingerstick glucose on a stable client before lunch"
           },
           {
             "id": "f",
-            "text": "Teaching a client how to use an incentive spirometer"
+            "text": "Taking the first vital signs of a client who arrived from surgery 10 minutes ago"
           }
         ]
       },
       "key": {
         "correct": [
           "a",
-          "b",
-          "d"
+          "c",
+          "e"
         ]
       },
       "rationale": {
-        "correct": "Delegate tasks that are routine, have predictable outcomes and are for stable clients. Assessment, teaching, evaluation and care of unstable clients stay with the nurse.",
+        "correct": "Delegate routine tasks with predictable outcomes for stable clients. Assessment, judgments such as tube placement, and care with a high or unpredictable risk stay with licensed nurses.",
         "perOption": {
-          "a": "Measuring and recording I&O is a standard task with a predictable outcome.",
-          "b": "Ambulating a stable client is within the AP's role.",
-          "c": "Assessment is an RN responsibility and cannot be delegated.",
-          "d": "Specimen collection is a routine task with a predictable outcome.",
-          "e": "A client with dysphagia has a high aspiration risk and needs a licensed nurse or specially trained staff.",
-          "f": "Teaching is an RN responsibility; the AP may remind the client to use it after the RN teaches."
+          "a": "Measuring and recording I&O is a routine task with a predictable outcome; the RN interprets the totals.",
+          "b": "Verifying tube placement needs assessment and judgment, so it stays with a licensed nurse.",
+          "c": "Ambulating a stable client who has already walked safely is within the AP role.",
+          "d": "The first meal after a dysphagia evaluation carries a high aspiration risk and needs a licensed nurse to watch the swallow.",
+          "e": "Point-of-care glucose testing on a stable client is a routine, delegable task once the AP is trained; the RN acts on the result.",
+          "f": "The first post-operative check is part of the RN's initial assessment of a client who may be unstable."
         },
         "references": [
           "NCSBN National Guidelines for Nursing Delegation; LaCharity, Prioritization, Delegation & Assignment",
-          "Reviewed by the content team on 17 November 2026."
+          "Rewritten to NCLEX-RN difficulty and reviewed by the content team on 19 November 2026."
         ]
       },
       "educationalObjective": "Choose tasks that can be delegated to assistive personnel."
@@ -403,32 +403,32 @@
       ],
       "cjmmSkill": "take_action",
       "difficulty": "difficult",
-      "stem": "For each task, indicate the staff member the RN should assign it to. Choose the person with the most limited scope who can safely do the task.",
+      "stem": "The RN is making assignments for the shift with an LPN and assistive personnel. For each task, choose the staff member the RN should assign it to: the person with the most limited scope who can do the task safely.",
       "content": {
         "rows": [
           {
             "id": "r1",
-            "text": "Admission assessment of a newly admitted client"
+            "text": "First assessment of a client transferred from intensive care 1 hour ago"
           },
           {
             "id": "r2",
-            "text": "Giving scheduled oral medications to a stable client"
+            "text": "Giving scheduled oral digoxin to a stable client whose apical pulse is 78/min"
           },
           {
             "id": "r3",
-            "text": "Reinforcing low-sodium diet teaching the RN started"
+            "text": "Inserting an indwelling urinary catheter in a stable client"
           },
           {
             "id": "r4",
-            "text": "Helping a stable client walk to the bathroom"
+            "text": "Applying sequential compression devices to a client 1 day after surgery"
           },
           {
             "id": "r5",
-            "text": "Giving IV push morphine to a client after surgery"
+            "text": "Hanging a unit of packed red blood cells"
           },
           {
             "id": "r6",
-            "text": "Developing the plan of care for a new client"
+            "text": "Reinforcing low-sodium diet teaching that the RN started yesterday"
           }
         ],
         "columns": [
@@ -453,34 +453,34 @@
           "r3": "c2",
           "r4": "c3",
           "r5": "c1",
-          "r6": "c1"
+          "r6": "c2"
         }
       },
       "rationale": {
-        "correct": "RNs keep assessment, planning, initial teaching, evaluation and unstable clients. LPNs care for stable clients, give most medications and reinforce teaching. APs do routine tasks.",
+        "correct": "RNs keep initial assessment, unstable clients, blood products and the plan of care. LPNs give medications and do procedures for stable clients and reinforce teaching. APs do routine tasks with predictable outcomes.",
         "perOption": {
-          "r1:c1": "Initial assessment needs RN judgment.",
-          "r1:c2": "LPNs collect data but can't do the initial assessment.",
-          "r1:c3": "APs can't assess.",
-          "r2:c1": "The RN could do this, but the LPN can safely do it too.",
-          "r2:c2": "Giving medications to stable clients is within LPN scope.",
-          "r2:c3": "APs don't give medications in acute care.",
-          "r3:c1": "The RN can, but reinforcing existing teaching is within LPN scope.",
-          "r3:c2": "LPNs reinforce teaching the RN has done.",
-          "r3:c3": "APs don't teach clients.",
-          "r4:c1": "This doesn't need RN skills.",
-          "r4:c2": "This doesn't need LPN skills.",
-          "r4:c3": "Ambulating a stable client is a routine AP task.",
-          "r5:c1": "IV push opioids need RN assessment before and after.",
-          "r5:c2": "In most states, LPNs may not give IV push medications.",
-          "r5:c3": "APs don't give medications.",
-          "r6:c1": "Planning care is an RN responsibility.",
-          "r6:c2": "LPNs contribute data but don't develop the plan.",
-          "r6:c3": "APs don't plan care."
+          "r1:c1": "A transfer from intensive care needs an RN's initial assessment.",
+          "r1:c2": "LPNs collect data but cannot do the initial assessment of a client whose condition may change.",
+          "r1:c3": "APs cannot assess.",
+          "r2:c1": "The RN could, but the task is within LPN scope.",
+          "r2:c2": "Giving oral medications and checking the apical pulse for a stable client is within LPN scope.",
+          "r2:c3": "APs do not give medications in acute care.",
+          "r3:c1": "The RN could, but a sterile procedure for a stable client is within LPN scope.",
+          "r3:c2": "Catheter insertion in a stable client is an LPN skill.",
+          "r3:c3": "Catheter insertion is a sterile, invasive procedure outside the AP role in most facilities.",
+          "r4:c1": "This does not need RN skills.",
+          "r4:c2": "This does not need LPN skills.",
+          "r4:c3": "Applying compression devices to a stable client is a routine AP task.",
+          "r5:c1": "Starting a transfusion and watching the first 15 minutes for a reaction needs RN assessment.",
+          "r5:c2": "In most states LPNs may not start blood products.",
+          "r5:c3": "APs do not give blood.",
+          "r6:c1": "The RN could, but reinforcing teaching is within LPN scope.",
+          "r6:c2": "LPNs reinforce teaching an RN has started.",
+          "r6:c3": "APs do not teach clients."
         },
         "references": [
           "NCSBN National Guidelines for Nursing Delegation; LaCharity, Prioritization, Delegation & Assignment",
-          "Reviewed by the content team on 17 November 2026."
+          "Rewritten to NCLEX-RN difficulty and reviewed by the content team on 19 November 2026."
         ]
       },
       "educationalObjective": "Match tasks to the scope of the RN, LPN and AP."
@@ -495,41 +495,41 @@
       ],
       "cjmmSkill": "take_action",
       "difficulty": "moderate",
-      "stem": "Which client is most appropriate for the RN to assign to an LPN?",
+      "stem": "The RN is making assignments on a medical-surgical unit and has one LPN on the team. Which client is most appropriate to assign to the LPN?",
       "content": {
         "options": [
           {
             "id": "a",
-            "text": "A client with stable type 2 diabetes who needs sliding-scale insulin and a simple dressing change"
+            "text": "A client returned from the post-anesthesia unit 1 hour ago after a bowel resection"
           },
           {
             "id": "b",
-            "text": "A client who had a tracheostomy placed 4 hours ago"
+            "text": "A client on a heparin infusion whose aPTT result is due now with a rate change by protocol"
           },
           {
             "id": "c",
-            "text": "A client in the first 15 minutes of a blood transfusion"
+            "text": "A client with heart failure going home this afternoon who needs teaching about three new medications"
           },
           {
             "id": "d",
-            "text": "A client who needs an admission assessment"
+            "text": "A client with type 2 diabetes who needs correction-scale insulin and a foot-ulcer dressing change"
           }
         ]
       },
       "key": {
-        "correct": "a"
+        "correct": "d"
       },
       "rationale": {
-        "correct": "Assign the LPN stable clients with predictable outcomes whose care uses standard procedures.",
+        "correct": "Assign the LPN stable clients with predictable outcomes and standard procedures. Keep new post-op clients, high-alert titrations and initial teaching with the RN.",
         "perOption": {
-          "a": "This client is stable, and the care involves routine skills within LPN scope.",
-          "b": "A new tracheostomy carries a risk of airway complications and needs RN assessment.",
-          "c": "The early part of a transfusion is when reactions happen; the RN monitors the client.",
-          "d": "Admission assessment is an RN responsibility."
+          "a": "A client in the first hours after surgery can change quickly and needs RN assessment.",
+          "b": "Titrating a high-alert infusion by protocol needs RN judgment.",
+          "c": "Discharge teaching about new medications is an RN responsibility.",
+          "d": "This client is stable, and the care uses standard procedures within LPN scope."
         },
         "references": [
           "NCSBN National Guidelines for Nursing Delegation; LaCharity, Prioritization, Delegation & Assignment",
-          "Reviewed by the content team on 17 November 2026."
+          "Rewritten to NCLEX-RN difficulty and reviewed by the content team on 19 November 2026."
         ]
       },
       "educationalObjective": "Assign clients appropriately to an LPN."
@@ -544,41 +544,41 @@
       ],
       "cjmmSkill": "take_action",
       "difficulty": "moderate",
-      "stem": "A nurse who usually works in pediatrics is floated to an adult medical-surgical unit. Which client should the charge nurse assign to this nurse?",
+      "stem": "A nurse who usually works in pediatrics is floated to an adult medical-surgical unit for the shift. Which client should the charge nurse assign to this nurse?",
       "content": {
         "options": [
           {
             "id": "a",
-            "text": "A client with pneumonia receiving IV antibiotics"
+            "text": "A client 1 day after a thoracotomy with a chest tube to suction"
           },
           {
             "id": "b",
-            "text": "A client with a new chest tube after a thoracotomy"
+            "text": "A client with cellulitis of the leg receiving IV cefazolin every 8 hours"
           },
           {
             "id": "c",
-            "text": "A client on telemetry with a new second-degree heart block"
+            "text": "A client with new atrial fibrillation on a diltiazem infusion being titrated"
           },
           {
             "id": "d",
-            "text": "A client with diabetic ketoacidosis on an insulin infusion"
+            "text": "A client with diabetic ketoacidosis on an insulin infusion adjusted hourly"
           }
         ]
       },
       "key": {
-        "correct": "a"
+        "correct": "b"
       },
       "rationale": {
-        "correct": "Float nurses get stable clients whose care doesn't need unit-specific expertise.",
+        "correct": "Give a float nurse stable clients whose care does not need the unit's specialist skills.",
         "perOption": {
-          "a": "This stable client's care uses skills that any RN has, so it's suitable for a floating nurse.",
-          "b": "A new chest tube needs experience with adult surgical complications.",
-          "c": "An unstable cardiac rhythm needs a nurse experienced in cardiac care.",
-          "d": "An insulin infusion with hourly titration is complex and unstable care."
+          "a": "A new chest tube after chest surgery needs experience with adult surgical complications.",
+          "b": "This stable client's care uses skills any RN has, so it suits a nurse from another unit.",
+          "c": "Titrating a cardiac infusion for a new dysrhythmia needs adult cardiac experience.",
+          "d": "Hourly insulin titration with electrolyte replacement is complex, unstable care."
         },
         "references": [
           "NCSBN National Guidelines for Nursing Delegation; LaCharity, Prioritization, Delegation & Assignment",
-          "Reviewed by the content team on 17 November 2026."
+          "Rewritten to NCLEX-RN difficulty and reviewed by the content team on 19 November 2026."
         ]
       },
       "educationalObjective": "Assign appropriate clients to a float nurse."
@@ -592,25 +592,25 @@
         "delegation-and-supervision"
       ],
       "cjmmSkill": "take_action",
-      "difficulty": "easy",
-      "stem": "Assistive personnel report that a client's blood pressure is 168/98 mm Hg. Two hours ago it was 132/80 mm Hg. What should the nurse do?",
+      "difficulty": "moderate",
+      "stem": "Assistive personnel report that a client 1 day after a hip replacement has a blood pressure of 168/98 mm Hg. Two hours ago it was 132/80 mm Hg. The client has a PRN prescription for IV hydralazine if the systolic pressure is above 160 mm Hg. What should the nurse do?",
       "content": {
         "options": [
           {
             "id": "a",
-            "text": "Tell the AP to recheck the blood pressure in 1 hour"
+            "text": "Ask the AP to recheck the blood pressure with a larger cuff in 15 minutes"
           },
           {
             "id": "b",
-            "text": "Give the client a PRN antihypertensive right away"
+            "text": "Give the PRN hydralazine, because the reading meets the prescribed limit"
           },
           {
             "id": "c",
-            "text": "Go to the client, recheck the blood pressure and assess the client"
+            "text": "Go to the client, recheck the pressure and look for pain or a full bladder"
           },
           {
             "id": "d",
-            "text": "Document the reading and tell the next shift"
+            "text": "Document the reading and ask the AP to report it again at the next check"
           }
         ]
       },
@@ -618,16 +618,16 @@
         "correct": "c"
       },
       "rationale": {
-        "correct": "The RN keeps responsibility for evaluating data that an AP collects; abnormal findings need the nurse's own assessment.",
+        "correct": "The RN stays accountable for data the AP collects. An unexpected value needs the nurse's own reassessment, including common reversible causes, before treatment.",
         "perOption": {
-          "a": "Waiting delays assessment of a significant change.",
-          "b": "The nurse must confirm the reading and assess the client first.",
-          "c": "An unexpected change reported by an AP needs the nurse's own assessment.",
-          "d": "A significant change must be acted on, not handed off."
+          "a": "A wrong cuff size is possible, but asking the AP to recheck later delays the nurse's own assessment of a large change.",
+          "b": "The order applies to a confirmed reading; the nurse must verify the value and look for a cause first.",
+          "c": "The nurse verifies AP-collected data that shows a large change, and pain or urinary retention commonly raise blood pressure after surgery.",
+          "d": "A significant change must be acted on now, not at the next routine check."
         },
         "references": [
           "NCSBN National Guidelines for Nursing Delegation; LaCharity, Prioritization, Delegation & Assignment",
-          "Reviewed by the content team on 17 November 2026."
+          "Rewritten to NCLEX-RN difficulty and reviewed by the content team on 19 November 2026."
         ]
       },
       "educationalObjective": "Follow up on abnormal data reported by assistive personnel."
@@ -642,41 +642,41 @@
       ],
       "cjmmSkill": "take_action",
       "difficulty": "moderate",
-      "stem": "The nurse is delegating vital sign checks for a client after surgery to assistive personnel. Which instruction is best?",
+      "stem": "The nurse is delegating vital sign checks to assistive personnel for a client who returned from a bowel resection 2 hours ago. Which instruction to the AP is best?",
       "content": {
         "options": [
           {
             "id": "a",
-            "text": "\"Take the vital signs and let me know if anything is abnormal.\""
+            "text": "\"Take his vital signs every 30 minutes, and let me know if anything changes.\""
           },
           {
             "id": "b",
-            "text": "\"Take the vital signs every hour and tell me right away if the systolic pressure is below 100 or the heart rate is above 110.\""
+            "text": "\"Take his vital signs every hour and chart them, and I will review the chart each hour.\""
           },
           {
             "id": "c",
-            "text": "\"Check the vital signs when you have time.\""
+            "text": "\"Take his vital signs every hour; if the pressure is low, lay him flat and recheck.\""
           },
           {
             "id": "d",
-            "text": "\"Take the vital signs and decide whether the client needs pain medication.\""
+            "text": "\"Every hour, take his vitals; tell me at once if systolic is under 100 or pulse over 110.\""
           }
         ]
       },
       "key": {
-        "correct": "b"
+        "correct": "d"
       },
       "rationale": {
-        "correct": "Effective delegation gives specific instructions: what, when and which findings to report.",
+        "correct": "Good delegation states what to do, how often, and exactly which findings to report, and when.",
         "perOption": {
-          "a": "The AP may not know which values are abnormal for this client.",
-          "b": "Clear frequency and specific values to report meet the right-communication part of delegation.",
-          "c": "This gives no frequency or reporting criteria.",
-          "d": "Decisions about medication need nursing judgment and can't be delegated."
+          "a": "The AP may not know what counts as a significant change for this client.",
+          "b": "This gives no criteria for reporting, so a dangerous value could sit in the chart until the nurse looks.",
+          "c": "This asks the AP to judge and intervene, which needs nursing assessment.",
+          "d": "A clear frequency and specific values to report meet the right-communication part of delegation."
         },
         "references": [
           "NCSBN National Guidelines for Nursing Delegation; LaCharity, Prioritization, Delegation & Assignment",
-          "Reviewed by the content team on 17 November 2026."
+          "Rewritten to NCLEX-RN difficulty and reviewed by the content team on 19 November 2026."
         ]
       },
       "educationalObjective": "Give clear, specific instructions when delegating."
@@ -691,24 +691,24 @@
       ],
       "cjmmSkill": "take_action",
       "difficulty": "moderate",
-      "stem": "The nurse asks assistive personnel to insert a straight urinary catheter. The AP says, \"I've never been trained to do that.\" What is the nurse's best action?",
+      "stem": "The nurse asks an assistive personnel to insert a straight urinary catheter for a stable client, as the facility's policy allows for trained AP. The AP says, \"I haven't been checked off on that yet.\" What is the nurse's best action?",
       "content": {
         "options": [
           {
             "id": "a",
-            "text": "Tell the AP to watch a video and then do the procedure"
+            "text": "Show the AP the steps at the bedside first, then have the AP insert it while the nurse watches closely"
           },
           {
             "id": "b",
-            "text": "Ask the AP to do it with another AP watching"
+            "text": "Ask another AP who has been checked off to coach this AP through the procedure"
           },
           {
             "id": "c",
-            "text": "Do the catheterization or assign it to competent staff, and arrange training for the AP"
+            "text": "Insert the catheter or give it to competent staff, and tell the manager about the training need"
           },
           {
             "id": "d",
-            "text": "Report the AP to the nurse manager for refusing an assignment"
+            "text": "Reassign some of the AP's other clients so the AP has time to look the procedure up"
           }
         ]
       },
@@ -716,16 +716,16 @@
         "correct": "c"
       },
       "rationale": {
-        "correct": "Under the right-person part of delegation, the delegatee must be competent; the nurse stays responsible for the care being done.",
+        "correct": "Under the right-person rule of delegation, the delegatee must be competent and validated. The nurse remains responsible for making sure the care is done.",
         "perOption": {
-          "a": "A video doesn't confirm competence.",
-          "b": "Another AP can't supervise or verify competence.",
-          "c": "Only competent staff may do a delegated task; the nurse ensures the care is done and addresses the training gap.",
-          "d": "Declining a task outside one's competence is appropriate, not insubordination."
+          "a": "Competency must be validated through the facility's process, not taught for the first time on a client who needs care now.",
+          "b": "Another AP cannot supervise or validate competence.",
+          "c": "Only a competent delegatee may do a task; the nurse makes sure the care happens and reports the training gap.",
+          "d": "Reading about a procedure does not establish competence."
         },
         "references": [
           "NCSBN National Guidelines for Nursing Delegation; LaCharity, Prioritization, Delegation & Assignment",
-          "Reviewed by the content team on 17 November 2026."
+          "Rewritten to NCLEX-RN difficulty and reviewed by the content team on 19 November 2026."
         ]
       },
       "educationalObjective": "Respond when a delegatee lacks competence for a task."
@@ -740,24 +740,24 @@
       ],
       "cjmmSkill": "take_action",
       "difficulty": "moderate",
-      "stem": "The nurse calls the provider about a client whose urine output has dropped. Place the nurse's statements in SBAR order.",
+      "stem": "The nurse is calling the surgeon at 0200 about a client 2 days after a bowel resection whose urine output has fallen. Place the nurse's statements in SBAR order, from first to last.",
       "content": {
         "items": [
           {
             "id": "a",
-            "text": "\"I'm calling about Mr. Lee in room 12, whose urine output has been 15 mL/hr for the last 3 hours.\""
+            "text": "\"I'm calling about Mr. Lee in room 12. His urine output has been 15 mL an hour for 3 hours.\""
           },
           {
             "id": "b",
-            "text": "\"He's 2 days after a bowel resection and has been receiving IV fluids at 75 mL/hr.\""
+            "text": "\"He is 2 days after a bowel resection, and his IV has been running at 75 mL an hour since surgery.\""
           },
           {
             "id": "d",
-            "text": "\"I'd like an order for a fluid bolus and a basic metabolic panel. Can you see him within the hour?\""
+            "text": "\"Would you prescribe a fluid bolus and a basic metabolic panel, and see him within the hour?\""
           },
           {
             "id": "c",
-            "text": "\"His blood pressure is 96/60, heart rate 108, and his mucous membranes are dry. I think he may be volume depleted.\""
+            "text": "\"His pressure is 96/60, pulse 108 and his mouth is dry. I think he is volume depleted.\""
           }
         ]
       },
@@ -771,7 +771,7 @@
         "scoring": "all_or_nothing"
       },
       "rationale": {
-        "correct": "SBAR (Situation, Background, Assessment, Recommendation) organizes urgent communication so key information isn't missed.",
+        "correct": "SBAR (Situation, Background, Assessment, Recommendation) puts the reason for the call first and ends with a clear request, so nothing important is lost at night.",
         "perOption": {
           "a": "Situation: what is happening now.",
           "b": "Background: the relevant history and treatment.",
@@ -780,7 +780,7 @@
         },
         "references": [
           "NCSBN National Guidelines for Nursing Delegation; LaCharity, Prioritization, Delegation & Assignment",
-          "Reviewed by the content team on 17 November 2026."
+          "Rewritten to NCLEX-RN difficulty and reviewed by the content team on 19 November 2026."
         ]
       },
       "educationalObjective": "Structure communication with a provider using SBAR."
@@ -795,41 +795,41 @@
       ],
       "cjmmSkill": "take_action",
       "difficulty": "moderate",
-      "stem": "During end-of-shift handoff for a client 1 day after surgery, which information is most important to report?",
+      "stem": "The nurse is giving end-of-shift handoff on a client 1 day after a lobectomy. Which information is most important for the oncoming nurse?",
       "content": {
         "options": [
           {
             "id": "a",
-            "text": "The client's family visited in the afternoon"
+            "text": "The PCA morphine was stopped at 1600 and the first dose of oral oxycodone was given at 1630"
           },
           {
             "id": "b",
-            "text": "The client's oxygen saturation dropped to 90% at 1500 and the client is now on 2 L/min of oxygen"
+            "text": "The family wants an update from the surgeon at morning rounds tomorrow"
           },
           {
             "id": "c",
-            "text": "The client prefers to shower in the evening"
+            "text": "The client walked in the hall twice and ate most of the dinner tray"
           },
           {
             "id": "d",
-            "text": "The client ate 75% of lunch"
+            "text": "SpO2 fell to 89% at 1500, oxygen was started at 2 L/min and a blood gas is pending"
           }
         ]
       },
       "key": {
-        "correct": "b"
+        "correct": "d"
       },
       "rationale": {
-        "correct": "Handoff should highlight changes in condition, new interventions and pending follow-up.",
+        "correct": "Lead the handoff with changes in condition, new treatments and results still pending, because these need action on the next shift.",
         "perOption": {
-          "a": "Visits rarely affect the next shift's priorities.",
-          "b": "A change in condition and a new intervention need follow-up by the oncoming nurse.",
-          "c": "Preferences are useful but not the priority.",
-          "d": "Normal intake is useful but less important than a change in respiratory status."
+          "a": "The pain plan change matters, and the oncoming nurse needs it, but the client is not unstable because of it.",
+          "b": "This is a reasonable request to pass on but does not affect safety tonight.",
+          "c": "Progress is useful context but needs no follow-up.",
+          "d": "A change in condition with a new treatment and a pending result needs the oncoming nurse's follow-up first."
         },
         "references": [
           "NCSBN National Guidelines for Nursing Delegation; LaCharity, Prioritization, Delegation & Assignment",
-          "Reviewed by the content team on 17 November 2026."
+          "Rewritten to NCLEX-RN difficulty and reviewed by the content team on 19 November 2026."
         ]
       },
       "educationalObjective": "Identify priority information for a handoff report."
@@ -843,21 +843,21 @@
         "collaboration-and-referrals"
       ],
       "cjmmSkill": "generate_solutions",
-      "difficulty": "easy",
-      "stem": "A client recovering from a stroke coughs and chokes when drinking water. Which referral should the nurse request?",
+      "difficulty": "moderate",
+      "stem": "A client recovering from a left-sided stroke has a wet, gurgling voice after sips of water and coughs during meals. The family asks whether the client should switch to thickened liquids. Which referral should the nurse request?",
       "content": {
         "options": [
           {
             "id": "a",
-            "text": "Physical therapist"
+            "text": "Registered dietitian"
           },
           {
             "id": "b",
-            "text": "Speech-language pathologist"
+            "text": "Occupational therapist"
           },
           {
             "id": "c",
-            "text": "Occupational therapist"
+            "text": "Speech-language pathologist"
           },
           {
             "id": "d",
@@ -866,19 +866,19 @@
         ]
       },
       "key": {
-        "correct": "b"
+        "correct": "c"
       },
       "rationale": {
-        "correct": "Coughing or choking while drinking suggests dysphagia; the speech-language pathologist evaluates swallowing.",
+        "correct": "A wet voice and coughing with fluids suggest dysphagia and aspiration risk. The speech-language pathologist evaluates the swallow and sets the diet consistency.",
         "perOption": {
-          "a": "PT focuses on mobility, strength and gait.",
-          "b": "An SLP assesses swallowing and recommends diet textures and techniques to prevent aspiration.",
-          "c": "OT focuses on fine motor skills and activities of daily living.",
-          "d": "RT manages breathing treatments and ventilation, not swallowing."
+          "a": "The dietitian plans nutrition and can adjust textures once a swallowing plan exists, but does not evaluate the swallow.",
+          "b": "OT helps with self-feeding and adaptive utensils, not the swallow itself.",
+          "c": "The SLP evaluates swallowing and decides on liquid consistency and safe-swallow techniques.",
+          "d": "RT manages airway clearance and breathing treatments, not dysphagia."
         },
         "references": [
           "Medical-surgical nursing texts (e.g. Lewis; Ignatavicius)",
-          "Reviewed by the content team on 17 November 2026."
+          "Rewritten to NCLEX-RN difficulty and reviewed by the content team on 19 November 2026."
         ]
       },
       "educationalObjective": "Refer a client with dysphagia to the right discipline."
@@ -893,20 +893,20 @@
       ],
       "cjmmSkill": "generate_solutions",
       "difficulty": "easy",
-      "stem": "A client with rheumatoid arthritis has trouble buttoning clothes and holding utensils. Which team member is best suited to help?",
+      "stem": "A client with rheumatoid arthritis has trouble buttoning clothes, opening jars and holding a fork because of hand deformities. Which team member is best suited to help with these problems?",
       "content": {
         "options": [
           {
             "id": "a",
-            "text": "Occupational therapist"
-          },
-          {
-            "id": "b",
             "text": "Physical therapist"
           },
           {
+            "id": "b",
+            "text": "Occupational therapist"
+          },
+          {
             "id": "c",
-            "text": "Dietitian"
+            "text": "Home health aide"
           },
           {
             "id": "d",
@@ -915,19 +915,19 @@
         ]
       },
       "key": {
-        "correct": "a"
+        "correct": "b"
       },
       "rationale": {
-        "correct": "OT focuses on ADLs and adaptive equipment such as button hooks and built-up utensils.",
+        "correct": "Occupational therapy focuses on activities of daily living, fine motor tasks and adaptive equipment.",
         "perOption": {
-          "a": "OT helps clients adapt to activities of daily living with assistive devices and fine-motor training.",
-          "b": "PT addresses walking, strength and large-muscle function.",
-          "c": "A dietitian addresses nutrition, not fine motor tasks.",
-          "d": "Social workers address resources, finances and coping."
+          "a": "PT works on walking, strength and range of motion of large joints.",
+          "b": "OT helps clients do daily activities with adaptive equipment such as button hooks and built-up utensils.",
+          "c": "An aide can help with care but does not provide adaptive training or equipment.",
+          "d": "Social workers help with resources, finances and coping."
         },
         "references": [
           "Medical-surgical nursing texts (e.g. Lewis; Ignatavicius)",
-          "Reviewed by the content team on 17 November 2026."
+          "Rewritten to NCLEX-RN difficulty and reviewed by the content team on 19 November 2026."
         ]
       },
       "educationalObjective": "Refer a client to occupational therapy for ADL limitations."
@@ -942,32 +942,32 @@
       ],
       "cjmmSkill": "recognize_cues",
       "difficulty": "moderate",
-      "stem": "Which client findings should prompt the nurse to call the rapid response team? Select all that apply.",
+      "stem": "The nurse is reviewing data for clients on a medical unit. Which findings meet common criteria for calling the rapid response team? Select all that apply.",
       "content": {
         "options": [
           {
             "id": "a",
-            "text": "New confusion in a client who was alert and oriented 1 hour ago"
+            "text": "A client who was alert 1 hour ago is now confused and pulling at the IV"
           },
           {
             "id": "b",
-            "text": "Oxygen saturation of 87% despite 4 L/min of oxygen"
+            "text": "SpO2 of 89% on 4 L/min by nasal cannula with respirations of 28/min"
           },
           {
             "id": "c",
-            "text": "Heart rate of 136/min"
+            "text": "Heart rate of 138/min that started 20 minutes ago"
           },
           {
             "id": "d",
-            "text": "Systolic blood pressure of 84 mm Hg"
+            "text": "Urine output of 40 mL total over the last 4 hours"
           },
           {
             "id": "e",
-            "text": "Chronic back pain rated 6 out of 10"
+            "text": "Systolic pressure of 96 mm Hg in a client whose baseline is 98 mm Hg"
           },
           {
             "id": "f",
-            "text": "Temperature of 37.9 °C (100.2 °F)"
+            "text": "Temperature of 38.3 °C (100.9 °F) with a heart rate of 88/min"
           }
         ]
       },
@@ -980,18 +980,18 @@
         ]
       },
       "rationale": {
-        "correct": "Rapid response teams are called for acute changes in mental status, breathing, heart rate, blood pressure or oxygenation, before a cardiac arrest happens.",
+        "correct": "Call the rapid response team for acute changes in mental status, breathing, heart rate, blood pressure, oxygenation or urine output, before an arrest happens. Compare values with the client's baseline.",
         "perOption": {
           "a": "An acute change in mental status is an early warning sign of deterioration.",
-          "b": "Persistent hypoxemia despite oxygen meets rapid response criteria.",
-          "c": "Heart rates over about 130/min are a common rapid response trigger.",
-          "d": "Hypotension under 90 mm Hg signals possible shock.",
-          "e": "Chronic pain is managed through the usual plan of care.",
-          "f": "A low-grade temperature alone doesn't meet rapid response criteria."
+          "b": "Hypoxemia despite oxygen with tachypnea meets rapid response criteria.",
+          "c": "A sustained heart rate above 130/min is a common trigger.",
+          "d": "Output below about 50 mL over 4 hours is a common trigger because it suggests poor perfusion.",
+          "e": "This low-normal value matches the client's baseline.",
+          "f": "A fever with a normal heart rate needs follow-up but does not meet rapid response criteria on its own."
         },
         "references": [
           "NCSBN National Guidelines for Nursing Delegation; LaCharity, Prioritization, Delegation & Assignment",
-          "Reviewed by the content team on 17 November 2026."
+          "Rewritten to NCLEX-RN difficulty and reviewed by the content team on 19 November 2026."
         ]
       },
       "educationalObjective": "Recognize criteria for calling a rapid response team."
@@ -1005,8 +1005,8 @@
         "prioritizing-client-care"
       ],
       "cjmmSkill": "recognize_cues",
-      "difficulty": "moderate",
-      "stem": "The nurse reviews morning laboratory results for six clients. Highlight the results that require immediate follow-up.",
+      "difficulty": "difficult",
+      "stem": "The nurse reviews morning laboratory results for six clients. Highlight the results that require the nurse's immediate follow-up.",
       "content": {
         "columns": [
           "Client",
@@ -1016,8 +1016,8 @@
           {
             "id": "r1",
             "cells": [
-              "Client with chronic kidney disease",
-              "Potassium 6.2 mEq/L"
+              "Client with chronic kidney disease, no ECG changes",
+              "Potassium 5.4 mEq/L"
             ],
             "selectable": true
           },
@@ -1025,39 +1025,39 @@
             "id": "r2",
             "cells": [
               "Client taking warfarin for atrial fibrillation",
-              "INR 2.5"
+              "INR 4.8"
             ],
             "selectable": true
           },
           {
             "id": "r3",
             "cells": [
-              "Client with an upper GI bleed",
-              "Hemoglobin 6.8 g/dL"
+              "Client admitted with an upper GI bleed",
+              "Hemoglobin 7.9 g/dL, down from 9.6 g/dL last evening"
             ],
             "selectable": true
           },
           {
             "id": "r4",
             "cells": [
-              "Client 1 day after surgery",
-              "WBC 11,000/mm3"
+              "Client 1 day after a hip replacement",
+              "WBC 11,800/mm3"
             ],
             "selectable": true
           },
           {
             "id": "r5",
             "cells": [
-              "Client with type 1 diabetes",
-              "Glucose 48 mg/dL"
+              "Client with type 1 diabetes before breakfast",
+              "Glucose 64 mg/dL"
             ],
             "selectable": true
           },
           {
             "id": "r6",
             "cells": [
-              "Client with pneumonia",
-              "Sodium 136 mEq/L"
+              "Client with community-acquired pneumonia",
+              "Sodium 137 mEq/L"
             ],
             "selectable": true
           }
@@ -1065,24 +1065,24 @@
       },
       "key": {
         "correct": [
-          "r1",
+          "r2",
           "r3",
           "r5"
         ]
       },
       "rationale": {
-        "correct": "Critical values that threaten the heart, oxygen delivery or the brain need immediate follow-up; expected or therapeutic results don't.",
+        "correct": "Look at the trend and the client, not only the number: a falling hemoglobin, a supratherapeutic INR and hypoglycemia need action now; a mildly abnormal value expected for the condition can wait.",
         "perOption": {
-          "r1": "Hyperkalemia above 6 mEq/L can cause life-threatening dysrhythmias.",
-          "r2": "An INR of 2 to 3 is therapeutic for atrial fibrillation.",
-          "r3": "Hemoglobin below 7 g/dL with active bleeding usually needs a transfusion.",
-          "r4": "A mild rise in WBC is common after surgery.",
-          "r5": "A glucose under 54 mg/dL is clinically significant hypoglycemia and needs treatment now.",
-          "r6": "This sodium level is within the normal range (135 to 145)."
+          "r1": "A mildly raised potassium is common in chronic kidney disease and is not critical without ECG changes.",
+          "r2": "An INR well above the 2 to 3 target raises bleeding risk; the provider needs to know before the next dose.",
+          "r3": "A fall of nearly 2 g/dL overnight shows active bleeding, even though the value is above 7.",
+          "r4": "A mild rise in white cells is common after surgery.",
+          "r5": "A glucose below 70 mg/dL is hypoglycemia and needs treatment now, even without symptoms.",
+          "r6": "This sodium is within the normal range."
         },
         "references": [
           "Laboratory reference ranges as used in common NCLEX review texts; follow the facility's ranges",
-          "Reviewed by the content team on 17 November 2026."
+          "Rewritten to NCLEX-RN difficulty and reviewed by the content team on 19 November 2026."
         ]
       },
       "educationalObjective": "Identify laboratory results that need immediate action."
@@ -1097,41 +1097,41 @@
       ],
       "cjmmSkill": "prioritize_hypotheses",
       "difficulty": "moderate",
-      "stem": "The clinic nurse has four phone messages. Which call should the nurse return first?",
+      "stem": "The clinic nurse has four phone messages from clients seen this week. Which call should the nurse return first?",
       "content": {
         "options": [
           {
             "id": "a",
-            "text": "A client 1 day after discharge from a TURP who has bright red urine with clots and cannot urinate"
+            "text": "A client started on lisinopril 3 days ago who reports a dry, tickling cough"
           },
           {
             "id": "b",
-            "text": "A client taking an opioid who has not had a bowel movement in 2 days"
+            "text": "A client taking oxycodone after surgery who has not had a bowel movement in 3 days"
           },
           {
             "id": "c",
-            "text": "A client asking whether to take a statin in the morning or the evening"
+            "text": "A client discharged after a TURP yesterday who is passing clots and cannot urinate"
           },
           {
             "id": "d",
-            "text": "A client 1 week after a knee arthroscopy who rates pain 3 out of 10"
+            "text": "A client 1 week after a knee arthroscopy with mild swelling around the knee and pain of 3"
           }
         ]
       },
       "key": {
-        "correct": "a"
+        "correct": "c"
       },
       "rationale": {
-        "correct": "Return calls about possible complications first: urinary retention with active bleeding.",
+        "correct": "Return first the call that describes a possible complication needing same-day care: urinary retention with active bleeding after prostate surgery.",
         "perOption": {
-          "a": "Clots with an inability to void suggest catheter or urethral obstruction with bleeding; retention and hemorrhage need urgent care.",
-          "b": "Constipation needs teaching but isn't urgent.",
-          "c": "A medication timing question isn't urgent.",
-          "d": "Mild pain is expected and stable."
+          "a": "A dry cough is a common ACE-inhibitor effect that needs a medication review but is not urgent; facial or tongue swelling would be.",
+          "b": "Opioid constipation needs teaching and a laxative but is not urgent.",
+          "c": "Clots with inability to void suggest obstruction and bleeding; bladder distention worsens bleeding and needs urgent care.",
+          "d": "Mild swelling and pain around the joint are expected at this point."
         },
         "references": [
           "NCSBN National Guidelines for Nursing Delegation; LaCharity, Prioritization, Delegation & Assignment",
-          "Reviewed by the content team on 17 November 2026."
+          "Rewritten to NCLEX-RN difficulty and reviewed by the content team on 19 November 2026."
         ]
       },
       "educationalObjective": "Prioritize telephone follow-up calls."
@@ -1146,12 +1146,12 @@
       ],
       "cjmmSkill": "take_action",
       "difficulty": "moderate",
-      "stem": "The RN is working with an LPN on a medical-surgical unit. Select the 2 tasks the RN can assign to the LPN.",
+      "stem": "The RN is working with an LPN on a medical-surgical unit. Which 2 tasks can the RN assign to the LPN?",
       "content": {
         "options": [
           {
             "id": "a",
-            "text": "Reinforcing the RN's teaching about foot care for a client with diabetes"
+            "text": "Reinforcing the foot-care teaching the RN gave a client with diabetes"
           },
           {
             "id": "b",
@@ -1159,15 +1159,15 @@
           },
           {
             "id": "c",
-            "text": "Doing the first teaching for a client starting insulin"
+            "text": "Teaching a client newly prescribed insulin how to draw up a dose"
           },
           {
             "id": "d",
-            "text": "Assessing a client who has just come back from surgery"
+            "text": "Assessing a client who has just returned to the unit from surgery"
           },
           {
             "id": "e",
-            "text": "Evaluating a client's response to a new antihypertensive"
+            "text": "Evaluating how a client is responding to a new antihypertensive"
           }
         ],
         "selectCount": 2
@@ -1179,17 +1179,17 @@
         ]
       },
       "rationale": {
-        "correct": "LPNs can give most medications to stable clients and reinforce teaching; RNs keep initial assessment, teaching and evaluation.",
+        "correct": "LPNs give medications to stable clients and reinforce teaching. Initial assessment, initial teaching and evaluation stay with the RN.",
         "perOption": {
           "a": "Reinforcing teaching the RN has done is within LPN scope.",
           "b": "Giving IM medications to stable clients is within LPN scope.",
           "c": "Initial teaching is an RN responsibility.",
-          "d": "Initial post-op assessment of a potentially unstable client is an RN responsibility.",
-          "e": "Evaluation is an RN responsibility."
+          "d": "The first post-op assessment of a client who may be unstable belongs to the RN.",
+          "e": "Evaluating the outcome of care is an RN responsibility."
         },
         "references": [
           "NCSBN National Guidelines for Nursing Delegation; LaCharity, Prioritization, Delegation & Assignment",
-          "Reviewed by the content team on 17 November 2026."
+          "Rewritten to NCLEX-RN difficulty and reviewed by the content team on 19 November 2026."
         ]
       },
       "educationalObjective": "Choose tasks within the LPN's scope."
@@ -1204,41 +1204,41 @@
       ],
       "cjmmSkill": "take_action",
       "difficulty": "easy",
-      "stem": "Which instruction from the RN to assistive personnel is inappropriate?",
+      "stem": "The RN is giving assignments to assistive personnel at the start of the shift. Which instruction from the RN is inappropriate?",
       "content": {
         "options": [
           {
             "id": "a",
-            "text": "\"Please help Mr. Ruiz with his shower this morning.\""
+            "text": "\"Please help Mr. Ruiz shower, and tell me if he gets short of breath.\""
           },
           {
             "id": "b",
-            "text": "\"Please check Mrs. Chen's IV site and tell me if it looks infected.\""
+            "text": "\"Please record how much Ms. Patel drinks and urinates during your shift.\""
           },
           {
             "id": "c",
-            "text": "\"Please record how much Ms. Patel drinks during your shift.\""
+            "text": "\"Please turn Mr. Ali every 2 hours and tell me about any reddened areas of skin.\""
           },
           {
             "id": "d",
-            "text": "\"Please help Mr. Ali turn every 2 hours.\""
+            "text": "\"Please check Mrs. Chen's IV site and decide whether it needs restarting.\""
           }
         ]
       },
       "key": {
-        "correct": "b"
+        "correct": "d"
       },
       "rationale": {
-        "correct": "APs can report what they see, but judging whether a finding is normal is an assessment that stays with the nurse.",
+        "correct": "APs can report what they observe, but deciding what an observation means is an assessment that stays with the nurse.",
         "perOption": {
-          "a": "Hygiene care for a stable client can be delegated.",
-          "b": "Deciding whether an IV site is infected is an assessment; the AP can't make that judgment.",
-          "c": "Measuring intake is an appropriate AP task.",
-          "d": "Repositioning is an appropriate AP task."
+          "a": "Hygiene care for a stable client with a clear reporting instruction is appropriate.",
+          "b": "Measuring intake and output is an appropriate AP task.",
+          "c": "Repositioning and reporting what is seen are appropriate AP tasks.",
+          "d": "Deciding whether an IV must be restarted is an assessment and judgment the AP cannot make."
         },
         "references": [
           "NCSBN National Guidelines for Nursing Delegation; LaCharity, Prioritization, Delegation & Assignment",
-          "Reviewed by the content team on 17 November 2026."
+          "Rewritten to NCLEX-RN difficulty and reviewed by the content team on 19 November 2026."
         ]
       },
       "educationalObjective": "Avoid delegating assessment to assistive personnel."
@@ -1252,25 +1252,25 @@
         "prioritizing-client-care"
       ],
       "cjmmSkill": "take_action",
-      "difficulty": "moderate",
-      "stem": "One hour after surgery, a client rates pain 8 out of 10, feels nauseated, is anxious and has an oxygen saturation of 88% on room air. What should the nurse do first?",
+      "difficulty": "difficult",
+      "stem": "One hour after an open cholecystectomy, a client rates incisional pain 8 out of 10, is nauseated and anxious, and has respirations of 22/min with fine crackles at both bases. The SpO2 is 88% on room air. The client has PRN prescriptions for IV morphine, IV ondansetron and oxygen. What should the nurse do first?",
       "content": {
         "options": [
           {
             "id": "a",
-            "text": "Give the prescribed IV opioid"
+            "text": "Coach the client to use the incentive spirometer 10 times"
           },
           {
             "id": "b",
-            "text": "Give the prescribed antiemetic"
+            "text": "Give the prescribed IV morphine for the pain"
           },
           {
             "id": "c",
-            "text": "Raise the head of the bed and apply oxygen"
+            "text": "Raise the head of the bed and start the prescribed oxygen"
           },
           {
             "id": "d",
-            "text": "Stay with the client and offer reassurance"
+            "text": "Give the prescribed IV ondansetron for the nausea"
           }
         ]
       },
@@ -1278,16 +1278,16 @@
         "correct": "c"
       },
       "rationale": {
-        "correct": "Treat the oxygenation problem first. Anxiety and restlessness can be early signs of hypoxemia.",
+        "correct": "Treat the oxygenation problem first; anxiety and restlessness may themselves be signs of hypoxemia. Pain control and lung expansion follow.",
         "perOption": {
-          "a": "Opioids can depress breathing further; oxygenation comes first.",
-          "b": "Nausea matters but isn't the most urgent problem.",
-          "c": "Hypoxemia is the most immediate threat; positioning and oxygen improve it quickly.",
-          "d": "Reassurance helps, but the cause of the anxiety may be hypoxemia."
+          "a": "Deep breathing helps the crackles, but the client is hypoxemic now and cannot breathe deeply with this pain; it comes after oxygen.",
+          "b": "Pain relief will help the client breathe deeply, but an opioid can depress breathing further in a client who is already hypoxemic.",
+          "c": "Hypoxemia is the most immediate threat, and positioning with oxygen improves it within minutes.",
+          "d": "Nausea matters, but it is not the most dangerous problem."
         },
         "references": [
           "Fundamentals of nursing texts (e.g. Potter & Perry)",
-          "Reviewed by the content team on 17 November 2026."
+          "Rewritten to NCLEX-RN difficulty and reviewed by the content team on 19 November 2026."
         ]
       },
       "educationalObjective": "Prioritize oxygenation among several post-op problems."
@@ -1302,20 +1302,20 @@
       ],
       "cjmmSkill": "recognize_cues",
       "difficulty": "difficult",
-      "stem": "For each client, select the finding that requires immediate follow-up.",
+      "stem": "The nurse is reviewing three clients. For each client, select the finding that requires immediate follow-up.",
       "content": {
         "groups": [
           {
             "id": "g1",
-            "label": "Client with COPD",
+            "label": "Client with COPD on 2 L/min of oxygen",
             "options": [
               {
                 "id": "a",
-                "text": "Oxygen saturation 90% on 2 L/min"
+                "text": "SpO2 of 90%"
               },
               {
                 "id": "b",
-                "text": "New confusion and drowsiness"
+                "text": "New drowsiness with a morning headache"
               },
               {
                 "id": "c",
@@ -1325,19 +1325,19 @@
           },
           {
             "id": "g2",
-            "label": "Client 1 day after total knee replacement",
+            "label": "Client 1 day after a total knee replacement",
             "options": [
               {
                 "id": "d",
-                "text": "50 mL of drainage in the wound drain over 8 hours"
+                "text": "120 mL in the wound drain over 8 hours"
               },
               {
                 "id": "e",
-                "text": "Calf pain and swelling of the operative leg"
+                "text": "Calf 3 cm larger than the other leg and tender"
               },
               {
                 "id": "f",
-                "text": "Pain rated 4 out of 10 with medication"
+                "text": "Pain of 4 out of 10 after oral medication"
               }
             ]
           },
@@ -1347,7 +1347,7 @@
             "options": [
               {
                 "id": "g",
-                "text": "Flushing and a red rash on the face and neck during the infusion"
+                "text": "Red, itchy flushing of the face and neck during the infusion"
               },
               {
                 "id": "h",
@@ -1355,7 +1355,7 @@
               },
               {
                 "id": "i",
-                "text": "IV site without redness or swelling"
+                "text": "Creatinine of 1.0 mg/dL, unchanged from admission"
               }
             ]
           }
@@ -1375,21 +1375,21 @@
         }
       },
       "rationale": {
-        "correct": "In each client, look for the unexpected finding that signals a complication.",
+        "correct": "For each client, find the unexpected finding that signals a complication, and check abnormal-looking values against what is expected for that condition.",
         "perOption": {
-          "a": "This is within the usual target for COPD.",
-          "b": "New confusion may signal carbon dioxide retention (hypercapnia).",
+          "a": "This is within the usual COPD target of 88% to 92%.",
+          "b": "Drowsiness and headache suggest carbon dioxide retention (hypercapnia).",
           "c": "A barrel chest is an expected long-term finding.",
-          "d": "This amount of drainage is expected early after surgery.",
-          "e": "These findings suggest deep vein thrombosis.",
+          "d": "Drainage of this amount is expected in the first day.",
+          "e": "One-sided calf swelling and tenderness suggest deep vein thrombosis.",
           "f": "Controlled pain is expected.",
-          "g": "This is an infusion reaction (vancomycin flushing syndrome); slow or stop the infusion and notify the provider.",
+          "g": "This infusion reaction usually means the rate is too fast; stop or slow the infusion and notify the provider.",
           "h": "A therapeutic trough shows correct dosing.",
-          "i": "This is a normal IV site."
+          "i": "Stable kidney function is reassuring with a nephrotoxic drug."
         },
         "references": [
           "NCSBN National Guidelines for Nursing Delegation; LaCharity, Prioritization, Delegation & Assignment",
-          "Reviewed by the content team on 17 November 2026."
+          "Rewritten to NCLEX-RN difficulty and reviewed by the content team on 19 November 2026."
         ]
       },
       "educationalObjective": "Identify findings that need follow-up across several clients."
@@ -1403,42 +1403,42 @@
         "prioritizing-client-care"
       ],
       "cjmmSkill": "prioritize_hypotheses",
-      "difficulty": "moderate",
-      "stem": "At the start of the shift, which task should the nurse do first?",
+      "difficulty": "difficult",
+      "stem": "At the start of a day shift on a medical unit, the nurse has four tasks. Which task should the nurse do first?",
       "content": {
         "options": [
           {
             "id": "a",
-            "text": "Give an IV antibiotic that is now 30 minutes late"
+            "text": "Give a scheduled third-day dose of IV cefazolin that is now 30 minutes late"
           },
           {
             "id": "b",
-            "text": "Assess a client who reports new chest pain"
+            "text": "Check the glucose of a client whose rapid-acting insulin is due when the tray arrives"
           },
           {
             "id": "c",
-            "text": "Check the blood glucose of a client due for insulin before breakfast"
+            "text": "Call the pharmacy about a missing dose of levothyroxine"
           },
           {
             "id": "d",
-            "text": "Call the pharmacy about a missing medication"
+            "text": "See a 70-year-old woman with diabetes who told the AP she has jaw pain and nausea"
           }
         ]
       },
       "key": {
-        "correct": "b"
+        "correct": "d"
       },
       "rationale": {
-        "correct": "Assessing a potentially unstable client comes before scheduled tasks.",
+        "correct": "A possible acute coronary syndrome comes before scheduled tasks, and its atypical signs (jaw pain, nausea, fatigue) are common in women, older adults and people with diabetes.",
         "perOption": {
-          "a": "A slightly late antibiotic matters but is less urgent than possible ischemia.",
-          "b": "New chest pain may be acute coronary syndrome and needs immediate assessment.",
-          "c": "This can follow the assessment of the client with chest pain.",
-          "d": "This can wait or be handled by another team member."
+          "a": "A slightly late scheduled antibiotic matters, but it is not as time-critical as possible ischemia.",
+          "b": "This is time-sensitive, but the meal has not arrived and it can follow the assessment.",
+          "c": "Missing levothyroxine for a short time is not dangerous; another team member can make the call.",
+          "d": "Jaw pain with nausea can be acute coronary syndrome, which women and people with diabetes often have without chest pain."
         },
         "references": [
           "NCSBN National Guidelines for Nursing Delegation; LaCharity, Prioritization, Delegation & Assignment",
-          "Reviewed by the content team on 17 November 2026."
+          "Rewritten to NCLEX-RN difficulty and reviewed by the content team on 19 November 2026."
         ]
       },
       "educationalObjective": "Prioritize tasks at the start of a shift."
