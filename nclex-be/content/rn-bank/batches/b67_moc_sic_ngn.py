@@ -123,7 +123,7 @@ mc(M(MOC, D, "evaluate_outcomes", "moderate", "fundamentals", "mgmt"),
    "Correct unsafe delegated care."),
 
 mc(M(MOC, A, "take_action", "moderate", "fundamentals", "fund"),
-   "A competent 70-year-old client tells the nurse that in her culture the eldest son makes health decisions and she wants him to decide about her treatment for breast cancer. What should the nurse do?",
+   "A competent 70-year-old woman tells the nurse that in her culture the eldest son makes health decisions and she wants him to decide about her treatment for breast cancer. What should the nurse do?",
    [("Tell her that the law requires her to make each decision herself", False,
      "A competent client can choose to involve others; insisting otherwise disrespects her preference."),
     ("Confirm her wishes and document that she involves her son", True,

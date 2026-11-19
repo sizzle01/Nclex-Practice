@@ -18,7 +18,7 @@ items = [
 mc(M(MOC, P, "prioritize_hypotheses", "difficult", "maternal-newborn", "mgmt ob"),
    "The nurse on a labor and delivery unit receives report on four clients. Which client should the nurse see first?",
    [("A client at 39 weeks, 4 cm dilated, contracting every 4 minutes, who is asking for an epidural", False,
-     "She needs attention soon, but she and the fetus are stable."),
+     "The client needs attention soon, but the client and the fetus are stable."),
     ("A client at 32 weeks with sudden severe abdominal pain, a rigid uterus and dark vaginal bleeding", True,
      "These findings suggest placental abruption, an emergency for both the client and the fetus."),
     ("A client at 38 weeks whose membranes ruptured with clear fluid; fetal heart rate 140 with moderate variability", False,
@@ -345,7 +345,7 @@ matrix_mc(M(MOC, P, "prioritize_hypotheses", "moderate", "fundamentals", "mgmt")
 
 mc(M(MOC, D, "take_action", "difficult", "fundamentals", "mgmt"),
    "The RN is assigning work to an LPN on a medical unit at the start of the day shift. Which instruction to the LPN is most appropriate?",
-   [("\"Check on room 5 when you get a chance and do whatever she needs.\"", False,
+   [("\"Check on room 5 when you get a chance and do whatever the client needs.\"", False,
      "This is too vague to be safe."),
     ("\"Give the 1000 meds in 3 and 4; tell me if a systolic is under 100.\"", True,
      "This states the task, the time and exactly what to report."),

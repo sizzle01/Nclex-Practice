@@ -165,7 +165,7 @@ mc(M(MOC, D, "take_action", "moderate", "cardiovascular", "mgmt"),
    "Follow up on abnormal data reported by assistive personnel."),
 
 mc(M(MOC, D, "take_action", "moderate", F, "mgmt"),
-   "The nurse is delegating vital sign checks to assistive personnel for a client who returned from a bowel resection 2 hours ago. Which instruction to the AP is best?",
+   "The nurse is delegating vital sign checks to assistive personnel for Mr. Diaz, who returned from a bowel resection 2 hours ago. Which instruction to the AP is best?",
    [("\"Take his vital signs every 30 minutes, and let me know if anything changes.\"", False,
      "The AP may not know what counts as a significant change for this client."),
     ("\"Take his vital signs every hour and chart them, and I will review the chart each hour.\"", False,

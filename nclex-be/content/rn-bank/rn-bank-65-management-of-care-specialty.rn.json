@@ -81,7 +81,7 @@
       "rationale": {
         "correct": "Placental abruption threatens both lives and needs immediate action; stable labor and mild hypertension without severe features can follow.",
         "perOption": {
-          "a": "She needs attention soon, but she and the fetus are stable.",
+          "a": "The client needs attention soon, but the client and the fetus are stable.",
           "b": "These findings suggest placental abruption, an emergency for both the client and the fetus.",
           "c": "Clear fluid and a reassuring fetal heart rate are stable findings.",
           "d": "This may be preeclampsia and needs assessment soon, but there are no severe features and it is less urgent than an abruption."
@@ -1621,7 +1621,7 @@
         "options": [
           {
             "id": "a",
-            "text": "\"Check on room 5 when you get a chance and do whatever she needs.\""
+            "text": "\"Check on room 5 when you get a chance and do whatever the client needs.\""
           },
           {
             "id": "b",

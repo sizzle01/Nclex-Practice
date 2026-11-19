@@ -54,7 +54,7 @@ Written by `python3 -I build_all.py`; do not edit by hand. See `quality.py` for 
 | 62-safety-systems | 32 | yes | 24 | 12% | 25% (assess first) | 12% | 31 | 4/18/10 |
 | 63-management-of-care-legal-it | 30 | yes | 25 | 20% | 25% (assess first) | 12% | 35 | 3/18/9 |
 | 64-safety-infection-injury | 29 | yes | 24 | 17% | 25% (assess first) | 12% | 29 | 3/17/9 |
-| 65-management-of-care-specialty | 27 | yes | 18 | 22% | 28% (stem words) | 11% | 27 | 2/15/10 |
+| 65-management-of-care-specialty | 27 | yes | 18 | 17% | 28% (stem words) | 11% | 27 | 2/15/10 |
 | 66-risk-reduction-basic-care | 31 | yes | 27 | 7% | 29% (assess first) | 15% | 32 | 4/17/10 |
 | 67-moc-sic-ngn | 34 | yes | 23 | 0% | 23% (shortest) | 9% | 32 | 0/23/11 |
 | **Whole bank** | 1110 | | 874 | 39% | 41% (skip absolutes) | 13% | 26 | 139/688/283 |

@@ -370,7 +370,7 @@ mc(M(BCC, "mobility-and-assistive-devices", "evaluate_outcomes", "easy", "muscul
    "Teach crutch use on stairs."),
 
 mc(M(BCC, "complementary-therapies", "take_action", "moderate", "pharmacology", "fund ph"),
-   "A 70-year-old client who takes warfarin for atrial fibrillation asks, \"My friend takes ginkgo for her memory. Can I try it?\" What should the nurse say?",
+   "A 70-year-old client who takes warfarin for atrial fibrillation asks, \"My friend takes ginkgo for memory. Can I try it?\" What should the nurse say?",
    [("\"Ginkgo is natural, so it's safe with your other medicines.\"", False,
      "Herbal products can interact with prescribed drugs."),
     ("\"Ginkgo can raise your bleeding risk; ask your provider first.\"", True,

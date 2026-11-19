@@ -216,7 +216,7 @@
       ],
       "cjmmSkill": "analyze_cues",
       "difficulty": "moderate",
-      "stem": "A competent adult admitted voluntarily for chest pain says she is going home. Staff lock the unit door and tell her she cannot leave until the cardiologist sees her tomorrow. No legal hold has been placed. Which tort does this describe?",
+      "stem": "A competent woman admitted voluntarily for chest pain says she is going home. Staff lock the unit door and tell her she cannot leave until the cardiologist sees her tomorrow. No legal hold has been placed. Which tort does this describe?",
       "content": {
         "options": [
           {
@@ -692,7 +692,7 @@
       ],
       "cjmmSkill": "take_action",
       "difficulty": "difficult",
-      "stem": "A client scheduled for a mastectomy tomorrow tells the nurse, \"The surgeon said this is my only option, but my friend had a lumpectomy and radiation. I wanted to ask about that, but the surgeon was in a hurry.\" The consent form has not been signed. What should the nurse do?",
+      "stem": "A woman scheduled for a mastectomy tomorrow tells the nurse, \"The surgeon said this is my only option, but my friend had a lumpectomy and radiation. I wanted to ask about that, but the surgeon was in a hurry.\" The consent form has not been signed. What should the nurse do?",
       "content": {
         "options": [
           {

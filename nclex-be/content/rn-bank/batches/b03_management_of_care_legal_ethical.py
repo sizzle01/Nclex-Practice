@@ -96,7 +96,7 @@ mc(M(MOC, R, "take_action", "moderate", F, "fund"),
    "Use a qualified interpreter for clients with limited English proficiency."),
 
 mc(M(MOC, AD, "evaluate_outcomes", "difficult", F, "fund"),
-   "A client with metastatic breast cancer has a do-not-resuscitate (DNR) order and is being treated for pneumonia. The client has said she wants all treatment except CPR and intubation. Which statement by a new nurse requires correction?",
+   "Ms. Grant, a client with metastatic breast cancer, has a do-not-resuscitate (DNR) order and is being treated for pneumonia. The client has said she wants all treatment except CPR and intubation. Which statement by a new nurse requires correction?",
    [("\"We will keep giving her antibiotics and oxygen as prescribed.\"", False,
      "A DNR order does not stop other treatments the client wants."),
     ("\"We can still call the rapid response team if her breathing gets worse.\"", False,
