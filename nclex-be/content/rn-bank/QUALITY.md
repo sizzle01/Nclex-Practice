@@ -51,10 +51,10 @@ Written by `python3 -I build_all.py`; do not edit by hand. See `quality.py` for 
 | 38-ngn-cases-3 | 12 |  | 4 | 100% | 100% (longest) | 0% | 14 | 1/6/5 |
 | 60-ngn-cases-1 | 24 |  | 5 | 80% | 80% (longest) | 0% | 13 | 0/17/7 |
 | 61-management-of-care-settings | 33 | yes | 24 | 25% | 31% (skip absolutes) | 4% | 26 | 3/19/11 |
-| 62-safety-systems | 32 |  | 24 | 75% | 77% (longest) | 17% | 16 | 1/23/8 |
+| 62-safety-systems | 32 | yes | 24 | 12% | 25% (assess first) | 12% | 31 | 4/18/10 |
 | 63-management-of-care-legal-it | 30 |  | 25 | 88% | 88% (longest) | 24% | 20 | 0/22/8 |
 | 64-safety-infection-injury | 29 |  | 24 | 92% | 92% (longest) | 33% | 16 | 1/24/4 |
 | 65-management-of-care-specialty | 27 |  | 18 | 83% | 86% (longest) | 11% | 15 | 0/14/13 |
 | 66-risk-reduction-basic-care | 31 |  | 27 | 93% | 94% (longest) | 26% | 17 | 1/26/4 |
 | 67-moc-sic-ngn | 34 |  | 23 | 87% | 89% (longest) | 17% | 18 | 0/25/9 |
-| **Whole bank** | 1110 | | 874 | 66% | 68% (longest) | 16% | 18 | 154/728/228 |
+| **Whole bank** | 1110 | | 874 | 65% | 67% (longest) | 15% | 18.5 | 157/723/230 |

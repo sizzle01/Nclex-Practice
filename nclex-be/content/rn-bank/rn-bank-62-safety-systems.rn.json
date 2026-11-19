@@ -1,5 +1,5 @@
 {
-  "notice": "RN bank batch 62: Safety and Infection Prevention and Control II: medication systems, security and infection prevention. Reviewed by the content team on 17 November 2026. See REVIEW-LOG.md.",
+  "notice": "RN bank batch 62: Safety and Infection Prevention and Control II: medication systems, security and infection prevention. Rewritten to NCLEX-RN difficulty and reviewed by the content team on 19 November 2026. See REVIEW-LOG.md.",
   "track": "RN",
   "subtopics": [
     {
@@ -59,24 +59,24 @@
       ],
       "cjmmSkill": "take_action",
       "difficulty": "moderate",
-      "stem": "The barcode scanner won't read a client's wristband before a scheduled medication. What should the nurse do?",
+      "stem": "At 0900 the nurse scans a client's wristband before giving metoprolol, but the scanner cannot read the worn barcode. The client is alert and states their name and date of birth correctly. What should the nurse do?",
       "content": {
         "options": [
           {
             "id": "a",
-            "text": "Scan a spare wristband taped to the bedside table"
+            "text": "Type the medical record number into the system by hand and give the dose"
           },
           {
             "id": "b",
-            "text": "Get a new wristband printed, apply it, and then scan"
+            "text": "Print and put on a new wristband, then scan it before giving the dose"
           },
           {
             "id": "c",
-            "text": "Give the medication without scanning because the nurse knows the client"
+            "text": "Scan the spare label in the client's chart, since it has the same barcode"
           },
           {
             "id": "d",
-            "text": "Skip the dose and document the scanner problem"
+            "text": "Give the dose after checking two identifiers, then report the scanner fault"
           }
         ]
       },
@@ -84,17 +84,17 @@
         "correct": "b"
       },
       "rationale": {
-        "correct": "Barcode workarounds cause errors; correct the problem and complete the check.",
+        "correct": "Barcode workarounds cause errors; fix the problem and complete the check rather than bypassing it.",
         "perOption": {
-          "a": "Scanning anything other than the band on the client defeats the safety check.",
-          "b": "Fix the problem rather than working around the system.",
-          "c": "Familiarity isn't a safe identifier.",
-          "d": "Missing a dose isn't necessary; fix the wristband."
+          "a": "Manual entry is a workaround that skips the check the barcode provides.",
+          "b": "Fixing the cause keeps the barcode check in place; a short delay is safe for this dose.",
+          "c": "A label that is not on the client does not confirm the client's identity.",
+          "d": "Two identifiers are needed, but bypassing the scan removes a safety layer that can easily be restored."
         },
         "references": [
           "Fundamentals of nursing texts (e.g. Potter & Perry)",
           "Nursing pharmacology texts (e.g. Lehne; McCuistion) and the drug's prescribing information",
-          "Reviewed by the content team on 17 November 2026."
+          "Rewritten to NCLEX-RN difficulty and reviewed by the content team on 19 November 2026."
         ]
       },
       "educationalObjective": "Avoid barcode workarounds."
@@ -109,7 +109,7 @@
       ],
       "cjmmSkill": "take_action",
       "difficulty": "moderate",
-      "stem": "Which abbreviations or notations should the nurse avoid because they are on the Joint Commission \"Do Not Use\" list? Select all that apply.",
+      "stem": "A nurse educator is reviewing order-writing errors with new nurses. Which notations are on the Joint Commission \"Do Not Use\" list? Select all that apply.",
       "content": {
         "options": [
           {
@@ -118,15 +118,15 @@
           },
           {
             "id": "b",
-            "text": "\"QD\" for daily"
+            "text": "\"IU\" for international units"
           },
           {
             "id": "c",
-            "text": "A trailing zero, as in 5.0 mg"
+            "text": "\"QD\" for daily"
           },
           {
             "id": "d",
-            "text": "A leading zero, as in 0.5 mg"
+            "text": "A trailing zero, as in 5.0 mg"
           },
           {
             "id": "e",
@@ -134,6 +134,10 @@
           },
           {
             "id": "f",
+            "text": "A leading zero, as in 0.5 mg"
+          },
+          {
+            "id": "g",
             "text": "\"mL\" for milliliters"
           }
         ]
@@ -143,23 +147,25 @@
           "a",
           "b",
           "c",
+          "d",
           "e"
         ]
       },
       "rationale": {
-        "correct": "Write \"units\", \"daily\", use leading zeros and never trailing zeros, and write out drug names.",
+        "correct": "Write \"units\" and \"international units\", write \"daily\", always use leading zeros and never trailing zeros, and write out drug names.",
         "perOption": {
-          "a": "Can be misread as 0 or 4, causing large insulin errors.",
-          "b": "Can be confused with QID.",
-          "c": "The decimal can be missed, causing a 10-fold overdose.",
-          "d": "Leading zeros are required before a decimal point.",
-          "e": "Can be confused with magnesium sulfate.",
-          "f": "An accepted abbreviation."
+          "a": "It can be misread as 0 or 4, causing large insulin errors.",
+          "b": "It can be misread as IV or 10.",
+          "c": "It can be confused with QID.",
+          "d": "The decimal point can be missed, causing a tenfold overdose.",
+          "e": "It can be confused with magnesium sulfate.",
+          "f": "Leading zeros are required before a decimal point.",
+          "g": "This is an accepted abbreviation."
         },
         "references": [
           "Fundamentals of nursing texts (e.g. Potter & Perry)",
           "Nursing pharmacology texts (e.g. Lehne; McCuistion) and the drug's prescribing information",
-          "Reviewed by the content team on 17 November 2026."
+          "Rewritten to NCLEX-RN difficulty and reviewed by the content team on 19 November 2026."
         ]
       },
       "educationalObjective": "Avoid error-prone abbreviations."
@@ -173,25 +179,25 @@
         "medication-safety-systems"
       ],
       "cjmmSkill": "take_action",
-      "difficulty": "moderate",
-      "stem": "The nurse is programming an IV pump for a heparin infusion. The pump's drug library warns that the rate exceeds the hard limit. What should the nurse do?",
+      "difficulty": "difficult",
+      "stem": "The nurse is programming a smart pump for a heparin infusion at 18 units/kg/hr for a client who weighs 92 kg. The pump's drug library shows a hard-limit alert that the dose is too high and will not start. What should the nurse do?",
       "content": {
         "options": [
           {
             "id": "a",
-            "text": "Override the limit and start the infusion"
+            "text": "Program the heparin as a basic infusion outside the drug library"
           },
           {
             "id": "b",
-            "text": "Stop and recheck the order, concentration and calculation"
+            "text": "Recheck the order, the bag concentration and the values entered"
           },
           {
             "id": "c",
-            "text": "Program the infusion as a basic infusion outside the drug library"
+            "text": "Ask the pharmacy to raise the hard limit for this client"
           },
           {
             "id": "d",
-            "text": "Ask another nurse to start the infusion"
+            "text": "Ask a second nurse to program the pump on a different channel"
           }
         ]
       },
@@ -199,17 +205,17 @@
         "correct": "b"
       },
       "rationale": {
-        "correct": "Smart pump alerts are a safety net; investigate them rather than bypass them.",
+        "correct": "Smart pump alerts are a safety net. Investigate the alert by checking the order, concentration and entry, rather than bypassing it.",
         "perOption": {
-          "a": "Hard limits can't be overridden because the dose is likely dangerous.",
-          "b": "The alert often means a programming or calculation error.",
-          "c": "Bypassing the library removes the safety check.",
-          "d": "Doesn't address the error."
+          "a": "Bypassing the library removes the safety check that just caught a possible error.",
+          "b": "A hard-limit alert usually means a programming or calculation error, such as the wrong weight units or concentration.",
+          "c": "Hard limits mark doses that are dangerous; the cause of the alert must be found first.",
+          "d": "Another person or channel does not address why the alert fired."
         },
         "references": [
           "Fundamentals of nursing texts (e.g. Potter & Perry)",
           "Nursing pharmacology texts (e.g. Lehne; McCuistion) and the drug's prescribing information",
-          "Reviewed by the content team on 17 November 2026."
+          "Rewritten to NCLEX-RN difficulty and reviewed by the content team on 19 November 2026."
         ]
       },
       "educationalObjective": "Respond to smart pump limits."
@@ -224,42 +230,42 @@
       ],
       "cjmmSkill": "take_action",
       "difficulty": "moderate",
-      "stem": "Which high-alert medication typically needs an independent double check by a second nurse before administration?",
+      "stem": "The nurse is preparing four medications for clients on a medical unit. Facility policy requires an independent double check by a second nurse for certain high-alert drugs. Which medication needs this check?",
       "content": {
         "options": [
           {
             "id": "a",
-            "text": "Oral acetaminophen"
+            "text": "An IV regular insulin infusion"
           },
           {
             "id": "b",
-            "text": "IV insulin infusion"
+            "text": "IV ondansetron 4 mg for nausea"
           },
           {
             "id": "c",
-            "text": "Oral multivitamin"
+            "text": "Oral metoprolol tartrate 25 mg"
           },
           {
             "id": "d",
-            "text": "Topical hydrocortisone"
+            "text": "IV pantoprazole 40 mg daily"
           }
         ]
       },
       "key": {
-        "correct": "b"
+        "correct": "a"
       },
       "rationale": {
-        "correct": "High-alert drugs (insulin, heparin, opioids, potassium, chemotherapy) often require independent double checks.",
+        "correct": "High-alert drugs such as insulin, heparin, IV opioids, concentrated potassium and chemotherapy often need independent double checks.",
         "perOption": {
-          "a": "Not a high-alert medication.",
-          "b": "IV insulin is high-alert; many facilities require an independent double check.",
-          "c": "Not high-alert.",
-          "d": "Not high-alert."
+          "a": "IV insulin is a high-alert medication; many facilities require an independent double check.",
+          "b": "Ondansetron is not classed as a high-alert medication.",
+          "c": "Oral beta-blockers are not classed as high-alert medications.",
+          "d": "Pantoprazole is not a high-alert medication."
         },
         "references": [
           "Fundamentals of nursing texts (e.g. Potter & Perry)",
           "Nursing pharmacology texts (e.g. Lehne; McCuistion) and the drug's prescribing information",
-          "Reviewed by the content team on 17 November 2026."
+          "Rewritten to NCLEX-RN difficulty and reviewed by the content team on 19 November 2026."
         ]
       },
       "educationalObjective": "Identify high-alert medications."
@@ -274,24 +280,24 @@
       ],
       "cjmmSkill": "analyze_cues",
       "difficulty": "moderate",
-      "stem": "The pharmacy stocks hydroxyzine and hydralazine in the same bin. Which strategy best reduces the risk of a mix-up?",
+      "stem": "After a near miss, the pharmacy finds that hydroxyzine and hydralazine tablets are stored in neighboring bins in the unit's automated cabinet. Which change best reduces the risk of a mix-up?",
       "content": {
         "options": [
           {
             "id": "a",
-            "text": "Store look-alike, sound-alike drugs separately and use tall-man lettering"
+            "text": "Store the two drugs apart and label them with tall-man lettering"
           },
           {
             "id": "b",
-            "text": "Ask nurses to read labels more carefully"
+            "text": "Remind nurses at each huddle to read the labels more carefully"
           },
           {
             "id": "c",
-            "text": "Remove both drugs from the unit"
+            "text": "Put a bright \"Use caution\" sticker on each of the two bins"
           },
           {
             "id": "d",
-            "text": "Label the bin \"Use caution\""
+            "text": "Have the pharmacist approve every dose of either drug first"
           }
         ]
       },
@@ -299,17 +305,17 @@
         "correct": "a"
       },
       "rationale": {
-        "correct": "System fixes (separation, tall-man lettering, barcoding) work better than warnings.",
+        "correct": "System fixes such as separation, tall-man lettering and barcoding work better than reminders and warnings.",
         "perOption": {
-          "a": "Separation and tall-man lettering (hydrOXYzine, hydrALAZINE) reduce confusion.",
-          "b": "Relying only on vigilance isn't a system fix.",
-          "c": "Not practical.",
-          "d": "A weak, general warning."
+          "a": "Separation plus tall-man lettering (hydrOXYzine, hydrALAZINE) is a system fix that reduces confusion.",
+          "b": "Relying on vigilance alone is not a system fix.",
+          "c": "A general warning is a weak strategy that staff quickly stop noticing.",
+          "d": "This adds delay without addressing the storage problem."
         },
         "references": [
           "Fundamentals of nursing texts (e.g. Potter & Perry)",
           "Nursing pharmacology texts (e.g. Lehne; McCuistion) and the drug's prescribing information",
-          "Reviewed by the content team on 17 November 2026."
+          "Rewritten to NCLEX-RN difficulty and reviewed by the content team on 19 November 2026."
         ]
       },
       "educationalObjective": "Reduce look-alike, sound-alike drug errors."
@@ -324,30 +330,30 @@
       ],
       "cjmmSkill": "take_action",
       "difficulty": "difficult",
-      "stem": "For each situation, indicate whether the nurse should proceed or stop and clarify.",
+      "stem": "The nurse is reviewing new medication orders on a medical unit before giving the 0900 doses. For each order, choose whether the nurse should give the medication or stop and clarify the order first.",
       "content": {
         "rows": [
           {
             "id": "r1",
-            "text": "An order reads \"metoprolol 25 mg PO BID\" and the client's heart rate is 78/min"
+            "text": "\"Metoprolol 25 mg PO BID\"; the heart rate is 78/min and blood pressure 134/82"
           },
           {
             "id": "r2",
-            "text": "An order reads \"insulin regular 10 U subcut\""
+            "text": "\"Insulin regular 10 U subcut now\""
           },
           {
             "id": "r3",
-            "text": "An order reads \"morphine 2 mg IV every 2 hours as needed\" without an indication"
+            "text": "\"Morphine 2 mg IV every 2 hours as needed\" with no reason given"
           },
           {
             "id": "r4",
-            "text": "An order reads \"furosemide 40 mg IV daily\" and the potassium is 4.2 mEq/L"
+            "text": "\"Furosemide 40 mg IV daily\"; the potassium is 4.2 mEq/L"
           }
         ],
         "columns": [
           {
             "id": "c1",
-            "text": "Proceed"
+            "text": "Give as ordered"
           },
           {
             "id": "c2",
@@ -364,21 +370,21 @@
         }
       },
       "rationale": {
-        "correct": "Clarify incomplete or error-prone orders before giving medication.",
+        "correct": "Clarify incomplete or error-prone orders before giving the medication; give complete orders when the client's data are safe.",
         "perOption": {
-          "r1:c1": "The order is complete and the parameter is safe.",
-          "r1:c2": "No reason to stop.",
-          "r2:c1": "\"U\" could be read as 10 or 100.",
-          "r2:c2": "Clarify and have the order written with \"units\".",
+          "r1:c1": "The order is complete and the client's values are safe.",
+          "r1:c2": "There is no reason to stop.",
+          "r2:c1": "\"U\" could be read as 0, so 10 U might become 100.",
+          "r2:c2": "Clarify and have the order rewritten with \"units\".",
           "r3:c1": "PRN orders need an indication.",
-          "r3:c2": "Clarify the indication (for example, pain rated 4 to 6).",
-          "r4:c1": "Order and potassium level are acceptable.",
-          "r4:c2": "No reason to stop."
+          "r3:c2": "Clarify the indication, such as pain rated 4 to 6.",
+          "r4:c1": "The order and the potassium level are acceptable.",
+          "r4:c2": "There is no reason to stop."
         },
         "references": [
           "Fundamentals of nursing texts (e.g. Potter & Perry)",
           "Nursing pharmacology texts (e.g. Lehne; McCuistion) and the drug's prescribing information",
-          "Reviewed by the content team on 17 November 2026."
+          "Rewritten to NCLEX-RN difficulty and reviewed by the content team on 19 November 2026."
         ]
       },
       "educationalObjective": "Decide when to clarify orders."
@@ -393,24 +399,24 @@
       ],
       "cjmmSkill": "take_action",
       "difficulty": "moderate",
-      "stem": "An infant security alarm sounds on the postpartum unit. What should the nurse do first?",
+      "stem": "An infant security alarm sounds on the postpartum unit, and the overhead page announces the facility's infant abduction code. What should the nurse do first?",
       "content": {
         "options": [
           {
             "id": "a",
-            "text": "Check that all infants are with their mothers or in the nursery and watch exits per the facility's code"
+            "text": "Check that every infant is accounted for and watch the unit exits"
           },
           {
             "id": "b",
-            "text": "Turn off the alarm"
+            "text": "Silence the alarm at the panel, then look for the cause of the alert"
           },
           {
             "id": "c",
-            "text": "Leave the unit to look for the infant in the parking lot"
+            "text": "Go to the parking garage to look for anyone carrying an infant"
           },
           {
             "id": "d",
-            "text": "Wait for security to arrive before doing anything"
+            "text": "Wait at the nurses' station until security arrives and gives orders"
           }
         ]
       },
@@ -418,16 +424,16 @@
         "correct": "a"
       },
       "rationale": {
-        "correct": "Infant abduction prevention: ID bands, security tags, staff identification and coordinated codes.",
+        "correct": "Infant abduction prevention relies on ID bands, security tags, staff identification and a practiced code response.",
         "perOption": {
-          "a": "The infant abduction code calls for securing exits and accounting for every infant.",
-          "b": "The alarm must be investigated.",
-          "c": "Follow the code; security handles the search.",
-          "d": "Staff act immediately per the code."
+          "a": "The abduction code calls for securing exits and accounting for every infant right away.",
+          "b": "The alarm must be treated as real until every infant is accounted for.",
+          "c": "Staff follow the code on the unit; security handles the wider search.",
+          "d": "Staff act immediately according to the code."
         },
         "references": [
           "Fundamentals of nursing texts (e.g. Potter & Perry)",
-          "Reviewed by the content team on 17 November 2026."
+          "Rewritten to NCLEX-RN difficulty and reviewed by the content team on 19 November 2026."
         ]
       },
       "educationalObjective": "Respond to an infant security alert."
@@ -442,28 +448,28 @@
       ],
       "cjmmSkill": "generate_solutions",
       "difficulty": "moderate",
-      "stem": "Which teaching helps prevent infant abduction? Select all that apply.",
+      "stem": "The nurse is teaching new parents on the postpartum unit how to keep their newborn safe from abduction. Which instructions should the nurse include? Select all that apply.",
       "content": {
         "options": [
           {
             "id": "a",
-            "text": "Only give your baby to staff with the correct hospital ID badge"
+            "text": "Hand your baby only to staff wearing the unit's special photo ID badge"
           },
           {
             "id": "b",
-            "text": "Keep the baby's crib on the side away from the door"
+            "text": "Keep the bassinet on the side of the bed away from the door"
           },
           {
             "id": "c",
-            "text": "Leave the baby in the room while you shower if the door is closed"
+            "text": "Do not post the baby's photo or room number on social media"
           },
           {
             "id": "d",
-            "text": "Don't post your baby's photos and room details on social media"
+            "text": "Leave the baby in the room while you shower if the door is closed"
           },
           {
             "id": "e",
-            "text": "Let any visitor take the baby for a walk in the hallway"
+            "text": "Let a visitor you know take the baby for a walk in the hallway"
           }
         ]
       },
@@ -471,21 +477,21 @@
         "correct": [
           "a",
           "b",
-          "d"
+          "c"
         ]
       },
       "rationale": {
-        "correct": "Teach parents to verify identity and never leave the infant unattended.",
+        "correct": "Teach parents to check staff identity, keep the infant within sight and limit public details.",
         "perOption": {
           "a": "Abductors may pose as staff.",
-          "b": "Makes quick removal harder.",
-          "c": "Never leave the baby alone.",
-          "d": "Public details help abductors.",
+          "b": "This makes quick removal harder.",
+          "c": "Public details help abductors.",
+          "d": "The baby is never left alone.",
           "e": "Infants stay in the room with the parents."
         },
         "references": [
           "Fundamentals of nursing texts (e.g. Potter & Perry)",
-          "Reviewed by the content team on 17 November 2026."
+          "Rewritten to NCLEX-RN difficulty and reviewed by the content team on 19 November 2026."
         ]
       },
       "educationalObjective": "Teach infant security."
@@ -500,24 +506,24 @@
       ],
       "cjmmSkill": "take_action",
       "difficulty": "difficult",
-      "stem": "Staff are told an active shooter is in the hospital. What should the nurse do?",
+      "stem": "An overhead page announces an active shooter on the floor below. The nurse is in a hallway near the stairwell with two clients who can walk. What should the nurse do?",
       "content": {
         "options": [
           {
             "id": "a",
-            "text": "Run if there is a safe path, hide if not, and fight only as a last resort"
+            "text": "Take the clients down the stairwell if it is safe; hide if not"
           },
           {
             "id": "b",
-            "text": "Gather all clients in the hallway"
+            "text": "Move the clients into the hallway so that they can all be counted"
           },
           {
             "id": "c",
-            "text": "Go toward the sound of gunfire to help"
+            "text": "Pull the nearest fire alarm so that the whole building leaves at once"
           },
           {
             "id": "d",
-            "text": "Call family members to warn them"
+            "text": "Go to the nurses' station so that the police can find the staff"
           }
         ]
       },
@@ -525,16 +531,16 @@
         "correct": "a"
       },
       "rationale": {
-        "correct": "Active shooter: run, hide, fight; secure clients in rooms when evacuation isn't possible.",
+        "correct": "Active shooter response is run, hide, fight; secure clients in locked rooms when evacuation is not possible.",
         "perOption": {
-          "a": "\"Run, hide, fight\" is the standard response.",
-          "b": "Exposes clients to danger.",
-          "c": "Increases risk.",
-          "d": "Not the priority."
+          "a": "\"Run, hide, fight\": leave if there is a safe route, hide and lock in if not, and fight only as a last resort.",
+          "b": "Gathering people in a hallway exposes them to danger.",
+          "c": "A fire alarm can draw people into the shooter's path.",
+          "d": "The station is exposed; staff protect themselves and clients first."
         },
         "references": [
           "Fundamentals of nursing texts (e.g. Potter & Perry)",
-          "Reviewed by the content team on 17 November 2026."
+          "Rewritten to NCLEX-RN difficulty and reviewed by the content team on 19 November 2026."
         ]
       },
       "educationalObjective": "Respond to an active shooter."
@@ -549,24 +555,24 @@
       ],
       "cjmmSkill": "take_action",
       "difficulty": "moderate",
-      "stem": "A visitor becomes verbally threatening at the nurses' station. Which action by the nurse is safest?",
+      "stem": "A visitor upset about a long wait raises their voice, clenches their fists and steps toward the nurse at the nurses' station. Which action by the nurse is safest?",
       "content": {
         "options": [
           {
             "id": "a",
-            "text": "Stand between the visitor and the exit"
+            "text": "Step between the visitor and the exit so the visitor cannot leave"
           },
           {
             "id": "b",
-            "text": "Keep a safe distance, stay calm, keep an exit open and call security"
+            "text": "Keep a safe distance, speak calmly, keep an exit open and call security"
           },
           {
             "id": "c",
-            "text": "Turn your back to show you aren't afraid"
+            "text": "Turn away and return to charting to show the visitor you are not afraid"
           },
           {
             "id": "d",
-            "text": "Raise your voice to take control"
+            "text": "Raise your voice firmly so the visitor knows you are in control"
           }
         ]
       },
@@ -576,15 +582,15 @@
       "rationale": {
         "correct": "Workplace violence: keep distance, keep an exit, de-escalate and get help early.",
         "perOption": {
-          "a": "Blocking the exit can escalate the situation.",
-          "b": "Distance, calm tone and help protect staff.",
+          "a": "Blocking an exit can escalate the situation.",
+          "b": "Distance, a calm tone, an escape route and early help protect staff.",
           "c": "Never turn your back on someone who is threatening.",
-          "d": "Escalates."
+          "d": "Raising your voice escalates the situation."
         },
         "references": [
           "Fundamentals of nursing texts (e.g. Potter & Perry)",
           "Psychiatric-mental health nursing texts (e.g. Varcarolis; Halter)",
-          "Reviewed by the content team on 17 November 2026."
+          "Rewritten to NCLEX-RN difficulty and reviewed by the content team on 19 November 2026."
         ]
       },
       "educationalObjective": "Stay safe with a threatening visitor."
@@ -599,41 +605,41 @@
       ],
       "cjmmSkill": "take_action",
       "difficulty": "moderate",
-      "stem": "A client with dementia is found trying to leave the building. What should the nurse do after returning the client safely?",
+      "stem": "A client with dementia was found at the main entrance trying to leave the hospital and has been brought back safely. What should the nurse do next?",
       "content": {
         "options": [
           {
             "id": "a",
-            "text": "Apply restraints for the rest of the stay"
+            "text": "Apply a vest restraint whenever the client is in bed at night"
           },
           {
             "id": "b",
-            "text": "Assess the elopement risk, use a wander alert device, and increase supervision"
+            "text": "Ask the provider for a PRN sedative to keep the client in bed"
           },
           {
             "id": "c",
-            "text": "Lock the client in the room"
+            "text": "Assess elopement risk, use a wander-alert band and increase supervision"
           },
           {
             "id": "d",
-            "text": "Give a sedative to keep the client in bed"
+            "text": "Move the client to the room nearest the stairwell for easier watching"
           }
         ]
       },
       "key": {
-        "correct": "b"
+        "correct": "c"
       },
       "rationale": {
-        "correct": "Elopement prevention: risk assessment, wander alert devices, supervision and engagement.",
+        "correct": "Elopement prevention uses risk assessment, wander-alert devices, supervision and engagement, not restraint.",
         "perOption": {
-          "a": "Restraints aren't the first-line response.",
-          "b": "Least restrictive measures reduce elopement risk.",
-          "c": "Seclusion isn't appropriate.",
-          "d": "Chemical restraint is a last resort."
+          "a": "Restraints are not the first response and raise the risk of injury.",
+          "b": "A chemical restraint is a last resort.",
+          "c": "Least restrictive measures, such as alert devices, supervision and engagement, reduce elopement risk.",
+          "d": "A room near an exit makes elopement easier; a room near the nurses' station is better."
         },
         "references": [
           "Fundamentals of nursing texts (e.g. Potter & Perry)",
-          "Reviewed by the content team on 17 November 2026."
+          "Rewritten to NCLEX-RN difficulty and reviewed by the content team on 19 November 2026."
         ]
       },
       "educationalObjective": "Prevent client elopement."
@@ -648,7 +654,7 @@
       ],
       "cjmmSkill": "take_action",
       "difficulty": "moderate",
-      "stem": "Which actions are part of a surgical site infection (SSI) prevention bundle? Select all that apply.",
+      "stem": "The perioperative nurse is preparing a client with diabetes for an elective colectomy. Which actions are part of a surgical site infection (SSI) prevention bundle? Select all that apply.",
       "content": {
         "options": [
           {
@@ -661,7 +667,7 @@
           },
           {
             "id": "c",
-            "text": "Keeping glucose controlled around surgery"
+            "text": "Keeping blood glucose controlled before, during and after surgery"
           },
           {
             "id": "d",
@@ -669,11 +675,11 @@
           },
           {
             "id": "e",
-            "text": "Shaving the site the night before surgery"
+            "text": "Shaving the operative site the night before surgery"
           },
           {
             "id": "f",
-            "text": "Continuing prophylactic antibiotics for 7 days after routine surgery"
+            "text": "Continuing prophylactic antibiotics for 7 days after surgery"
           }
         ]
       },
@@ -686,18 +692,18 @@
         ]
       },
       "rationale": {
-        "correct": "SSI prevention: timely antibiotics, clippers, glucose control, normothermia.",
+        "correct": "SSI prevention: timely antibiotics, clippers instead of razors, glucose control and normothermia.",
         "perOption": {
-          "a": "Gives effective tissue levels at the time of incision.",
+          "a": "This gives effective tissue levels at the time of incision.",
           "b": "Razors cause small cuts that raise infection risk.",
           "c": "Hyperglycemia increases SSI risk.",
           "d": "Normothermia supports immune function and healing.",
-          "e": "Increases infection risk.",
+          "e": "Shaving increases infection risk.",
           "f": "Prophylaxis usually stops within 24 hours."
         },
         "references": [
           "CDC infection control and isolation precautions guidance",
-          "Reviewed by the content team on 17 November 2026."
+          "Rewritten to NCLEX-RN difficulty and reviewed by the content team on 19 November 2026."
         ]
       },
       "educationalObjective": "Apply surgical site infection prevention."
@@ -712,7 +718,7 @@
       ],
       "cjmmSkill": "generate_solutions",
       "difficulty": "difficult",
-      "stem": "For each intervention, indicate the healthcare-associated infection or infections it helps prevent. Each row may have more than one answer.",
+      "stem": "An infection prevention nurse is teaching ICU staff about prevention bundles. For each intervention, choose the healthcare-associated infection or infections it helps prevent. Each row may have more than one answer.",
       "content": {
         "rows": [
           {
@@ -725,15 +731,15 @@
           },
           {
             "id": "r3",
-            "text": "Head of bed at 30 to 45 degrees"
+            "text": "Head of bed raised 30 to 45 degrees"
           },
           {
             "id": "r4",
-            "text": "Scrub the hub before access"
+            "text": "Scrubbing the hub before each access"
           },
           {
             "id": "r5",
-            "text": "Keep the drainage bag below the bladder"
+            "text": "Keeping the drainage bag below the bladder"
           }
         ],
         "columns": [
@@ -784,19 +790,19 @@
           "r2:c1": "Remove catheters as soon as possible.",
           "r2:c2": "Remove central lines as soon as possible.",
           "r2:c3": "Daily sedation breaks and weaning checks shorten ventilation.",
-          "r3:c1": "Not related to urinary catheters.",
-          "r3:c2": "Not related to central lines.",
-          "r3:c3": "Reduces aspiration of secretions.",
-          "r4:c1": "Not related to urinary catheters.",
-          "r4:c2": "Removes bacteria from the access port.",
-          "r4:c3": "Not related to ventilation.",
-          "r5:c1": "Prevents backflow.",
-          "r5:c2": "Not related to central lines.",
-          "r5:c3": "Not related to ventilation."
+          "r3:c1": "This is not related to urinary catheters.",
+          "r3:c2": "This is not related to central lines.",
+          "r3:c3": "It reduces aspiration of secretions.",
+          "r4:c1": "This is not related to urinary catheters.",
+          "r4:c2": "It removes bacteria from the access port.",
+          "r4:c3": "This is not related to ventilation.",
+          "r5:c1": "It prevents backflow into the bladder.",
+          "r5:c2": "This is not related to central lines.",
+          "r5:c3": "This is not related to ventilation."
         },
         "references": [
           "CDC infection control and isolation precautions guidance",
-          "Reviewed by the content team on 17 November 2026."
+          "Rewritten to NCLEX-RN difficulty and reviewed by the content team on 19 November 2026."
         ]
       },
       "educationalObjective": "Match prevention bundles to infections."
@@ -810,25 +816,25 @@
         "healthcare-associated-infection-prevention"
       ],
       "cjmmSkill": "take_action",
-      "difficulty": "moderate",
-      "stem": "How should the nurse clean a shared blood pressure cuff between clients on a medical unit?",
+      "difficulty": "easy",
+      "stem": "The nurse is moving a shared blood pressure cuff from one client's room to another on a medical unit. How should the nurse clean it?",
       "content": {
         "options": [
           {
             "id": "a",
-            "text": "Wipe it with an approved disinfectant and allow the contact time on the label"
+            "text": "Wipe it with an approved disinfectant for the label's contact time"
           },
           {
             "id": "b",
-            "text": "Rinse it with tap water"
+            "text": "Rinse it under warm running tap water and let it air-dry fully"
           },
           {
             "id": "c",
-            "text": "Leave it uncleaned if it looks clean"
+            "text": "Leave it uncleaned when there is no visible soil anywhere on the cuff"
           },
           {
             "id": "d",
-            "text": "Sterilize it in an autoclave after each use"
+            "text": "Send it to central sterile supply to be autoclaved before reuse"
           }
         ]
       },
@@ -836,16 +842,16 @@
         "correct": "a"
       },
       "rationale": {
-        "correct": "Non-critical equipment needs disinfection between clients.",
+        "correct": "Non-critical equipment needs disinfection, with the correct contact time, between clients.",
         "perOption": {
-          "a": "Low-level disinfection with proper contact time kills common organisms.",
-          "b": "Water doesn't disinfect.",
+          "a": "Low-level disinfection with the right contact time kills common organisms.",
+          "b": "Water does not disinfect.",
           "c": "Organisms can be present without visible soil.",
           "d": "Non-critical items need disinfection, not sterilization."
         },
         "references": [
           "CDC infection control and isolation precautions guidance",
-          "Reviewed by the content team on 17 November 2026."
+          "Rewritten to NCLEX-RN difficulty and reviewed by the content team on 19 November 2026."
         ]
       },
       "educationalObjective": "Disinfect shared equipment."
@@ -860,24 +866,24 @@
       ],
       "cjmmSkill": "take_action",
       "difficulty": "moderate",
-      "stem": "A nurse has a fever and a productive cough. What should the nurse do?",
+      "stem": "A nurse on an oncology unit wakes up with a temperature of 38.3 °C (100.9 °F), a sore throat and a productive cough before a scheduled shift. What should the nurse do?",
       "content": {
         "options": [
           {
             "id": "a",
-            "text": "Work as usual while wearing a mask"
+            "text": "Work the shift while wearing a surgical mask at all times"
           },
           {
             "id": "b",
-            "text": "Follow the facility's employee health policy, which usually means not working with clients"
+            "text": "Follow the employee health policy and stay away from clients"
           },
           {
             "id": "c",
-            "text": "Work only with clients who are not immunocompromised"
+            "text": "Ask to care only for clients who are not on chemotherapy"
           },
           {
             "id": "d",
-            "text": "Take an antipyretic so the fever doesn't show"
+            "text": "Take an antipyretic before the shift so the fever does not show"
           }
         ]
       },
@@ -885,16 +891,16 @@
         "correct": "b"
       },
       "rationale": {
-        "correct": "Staff illness policies protect clients.",
+        "correct": "Staff illness policies protect clients; staff with fever and respiratory symptoms stay home and follow employee health guidance.",
         "perOption": {
-          "a": "Sick staff can spread infection to vulnerable clients.",
-          "b": "Staff with infectious illnesses should stay away from clients.",
-          "c": "Still a risk.",
-          "d": "Masks symptoms and doesn't reduce spread."
+          "a": "A mask lowers but does not remove the risk to immunocompromised clients.",
+          "b": "Staff with infectious illnesses stay away from clients, especially vulnerable ones.",
+          "c": "Every client on the unit is still at risk.",
+          "d": "This hides symptoms without reducing spread."
         },
         "references": [
           "CDC infection control and isolation precautions guidance",
-          "Reviewed by the content team on 17 November 2026."
+          "Rewritten to NCLEX-RN difficulty and reviewed by the content team on 19 November 2026."
         ]
       },
       "educationalObjective": "Follow staff illness policies."
@@ -908,8 +914,8 @@
         "healthcare-associated-infection-prevention"
       ],
       "cjmmSkill": "generate_solutions",
-      "difficulty": "moderate",
-      "stem": "Which vaccination is recommended every year for health care workers?",
+      "difficulty": "easy",
+      "stem": "A new nurse is reviewing the hospital's vaccination requirements for staff. Which vaccine is recommended every year for health care workers?",
       "content": {
         "options": [
           {
@@ -918,7 +924,7 @@
           },
           {
             "id": "b",
-            "text": "Hepatitis A"
+            "text": "Hepatitis B"
           },
           {
             "id": "c",
@@ -934,16 +940,16 @@
         "correct": "a"
       },
       "rationale": {
-        "correct": "Health care workers need annual influenza vaccine and proof of hepatitis B, MMR and varicella immunity.",
+        "correct": "Health care workers need annual influenza vaccine and proof of immunity to hepatitis B, MMR and varicella.",
         "perOption": {
           "a": "Annual influenza vaccination protects staff and clients.",
-          "b": "Not required annually.",
-          "c": "Usually 2 lifetime doses or proof of immunity.",
-          "d": "Boosted every 10 years."
+          "b": "Hepatitis B is a series with proof of immunity, not yearly.",
+          "c": "MMR is usually 2 lifetime doses or proof of immunity.",
+          "d": "Tetanus is boosted every 10 years."
         },
         "references": [
           "CDC infection control and isolation precautions guidance",
-          "Reviewed by the content team on 17 November 2026."
+          "Rewritten to NCLEX-RN difficulty and reviewed by the content team on 19 November 2026."
         ]
       },
       "educationalObjective": "Know staff vaccination recommendations."
@@ -958,24 +964,24 @@
       ],
       "cjmmSkill": "take_action",
       "difficulty": "easy",
-      "stem": "A client in the waiting room is coughing and sneezing. What should the nurse do first?",
+      "stem": "A client in the clinic waiting room is coughing and sneezing repeatedly. Other clients, including a mother with a newborn, are seated nearby. What should the nurse do first?",
       "content": {
         "options": [
           {
             "id": "a",
-            "text": "Offer the client a mask and tissues and seat them away from others if possible"
+            "text": "Offer the client a mask and tissues and a seat away from others"
           },
           {
             "id": "b",
-            "text": "Ask the client to leave"
+            "text": "Ask the client to wait outside until the provider is ready"
           },
           {
             "id": "c",
-            "text": "Ignore the cough"
+            "text": "Move the mother and newborn to an exam room and leave the client"
           },
           {
             "id": "d",
-            "text": "Give the client an antibiotic"
+            "text": "Ask the provider to prescribe an antibiotic before the visit"
           }
         ]
       },
@@ -983,16 +989,16 @@
         "correct": "a"
       },
       "rationale": {
-        "correct": "Respiratory hygiene: masks, tissues, hand hygiene and distance.",
+        "correct": "Respiratory hygiene: masks, tissues, hand hygiene and distance for anyone with respiratory symptoms.",
         "perOption": {
-          "a": "Respiratory hygiene and cough etiquette reduce spread.",
-          "b": "The client still needs care.",
-          "c": "Respiratory hygiene is needed.",
-          "d": "Not appropriate."
+          "a": "Respiratory hygiene and cough etiquette reduce spread right away.",
+          "b": "The client still needs care, and sending them outside is not necessary.",
+          "c": "Moving one family helps them but does not stop the spread to others.",
+          "d": "Antibiotics are not indicated and do not stop the spread now."
         },
         "references": [
           "CDC infection control and isolation precautions guidance",
-          "Reviewed by the content team on 17 November 2026."
+          "Rewritten to NCLEX-RN difficulty and reviewed by the content team on 19 November 2026."
         ]
       },
       "educationalObjective": "Apply respiratory hygiene."
@@ -1007,24 +1013,24 @@
       ],
       "cjmmSkill": "take_action",
       "difficulty": "difficult",
-      "stem": "A client is admitted with suspected Ebola virus disease. Which action is most important?",
+      "stem": "A client who returned 10 days ago from an area with an Ebola outbreak arrives with a fever, vomiting and diarrhea. The client is placed in a private room. Which precautions should the nurse use?",
       "content": {
         "options": [
           {
             "id": "a",
-            "text": "Use full PPE with a trained observer during donning and doffing"
+            "text": "Full PPE put on and taken off with a trained observer watching"
           },
           {
             "id": "b",
-            "text": "Use standard precautions only"
+            "text": "Airborne isolation with a fit-tested N95 respirator and no gown"
           },
           {
             "id": "c",
-            "text": "Place the client in a shared room"
+            "text": "Contact precautions with a standard isolation gown and gloves"
           },
           {
             "id": "d",
-            "text": "Wear a surgical mask only"
+            "text": "Droplet precautions with a surgical mask and protective goggles"
           }
         ]
       },
@@ -1032,16 +1038,16 @@
         "correct": "a"
       },
       "rationale": {
-        "correct": "High-consequence infections need strict PPE protocols with a trained observer.",
+        "correct": "High-consequence infections such as Ebola need strict PPE protocols with a trained observer during donning and doffing.",
         "perOption": {
-          "a": "Ebola spreads through body fluids; a trained observer prevents self-contamination.",
-          "b": "Not enough.",
-          "c": "The client needs a private room.",
-          "d": "Not enough."
+          "a": "Ebola spreads through body fluids; a trained observer prevents self-contamination during donning and doffing.",
+          "b": "Ebola is spread by body fluids, and an N95 alone does not protect the skin and mucous membranes.",
+          "c": "Standard contact precautions do not give enough protection for Ebola.",
+          "d": "Droplet precautions do not protect against heavy body-fluid exposure."
         },
         "references": [
           "CDC infection control and isolation precautions guidance",
-          "Reviewed by the content team on 17 November 2026."
+          "Rewritten to NCLEX-RN difficulty and reviewed by the content team on 19 November 2026."
         ]
       },
       "educationalObjective": "Apply precautions for high-consequence infections."
@@ -1054,26 +1060,26 @@
       "subtopics": [
         "equipment-and-home-safety"
       ],
-      "cjmmSkill": "take_action",
+      "cjmmSkill": "recognize_cues",
       "difficulty": "difficult",
-      "stem": "A client is scheduled for an MRI. Which finding should the nurse report before the scan?",
+      "stem": "The nurse is completing the screening checklist for a client scheduled for an MRI of the lumbar spine. Which finding should the nurse report to the radiology team before the scan?",
       "content": {
         "options": [
           {
             "id": "a",
-            "text": "Client is allergic to shellfish"
+            "text": "The client is allergic to shellfish and iodine"
           },
           {
             "id": "b",
-            "text": "Client has a cardiac pacemaker"
+            "text": "The client had a pacemaker placed 8 years ago"
           },
           {
             "id": "c",
-            "text": "Client wears glasses"
+            "text": "The client had a titanium hip replacement 2 years ago"
           },
           {
             "id": "d",
-            "text": "Client had an x-ray last week"
+            "text": "The client takes metformin for type 2 diabetes"
           }
         ]
       },
@@ -1081,16 +1087,16 @@
         "correct": "b"
       },
       "rationale": {
-        "correct": "MRI screening: implants, pacemakers, metal fragments, medication patches with metal.",
+        "correct": "MRI screening asks about implanted devices, pacemakers, metal fragments and patches containing metal; contrast-related questions differ between CT and MRI.",
         "perOption": {
-          "a": "Not a contraindication to MRI itself.",
-          "b": "Many pacemakers aren't MRI-safe; the magnet can affect device function or heat leads.",
-          "c": "Glasses are removed but not a concern.",
-          "d": "Not related."
+          "a": "Iodine allergy matters for CT contrast; MRI uses gadolinium and the magnet is the main concern.",
+          "b": "Many older pacemakers are not MRI-safe; the magnet can affect device function or heat the leads.",
+          "c": "Most modern joint implants are MRI-safe, though the team notes them.",
+          "d": "Metformin is held for iodinated CT contrast, not for MRI."
         },
         "references": [
           "Fundamentals of nursing texts (e.g. Potter & Perry)",
-          "Reviewed by the content team on 17 November 2026."
+          "Rewritten to NCLEX-RN difficulty and reviewed by the content team on 19 November 2026."
         ]
       },
       "educationalObjective": "Screen clients before MRI."
@@ -1105,24 +1111,24 @@
       ],
       "cjmmSkill": "take_action",
       "difficulty": "moderate",
-      "stem": "Before defibrillating a client, what should the nurse do?",
+      "stem": "A client in the emergency department is in ventricular fibrillation, and the nurse is about to deliver a shock with a manual defibrillator. The client is on oxygen by nonrebreather mask and has a nitroglycerin patch on the chest. What should the nurse do immediately before delivering the shock?",
       "content": {
         "options": [
           {
             "id": "a",
-            "text": "Make sure no one is touching the client or bed and say \"All clear\""
+            "text": "Make sure no one is touching the client or bed, and call \"all clear\""
           },
           {
             "id": "b",
-            "text": "Leave oxygen flowing across the chest"
+            "text": "Leave the oxygen mask flowing so that the client stays well oxygenated"
           },
           {
             "id": "c",
-            "text": "Apply pads over a medication patch"
+            "text": "Place the pads over the nitroglycerin patch to save time"
           },
           {
             "id": "d",
-            "text": "Wet the client's chest"
+            "text": "Wipe the chest with a wet cloth to improve contact with the pads"
           }
         ]
       },
@@ -1130,16 +1136,16 @@
         "correct": "a"
       },
       "rationale": {
-        "correct": "Defibrillation safety: clear everyone, remove oxygen and patches from the field, dry chest.",
+        "correct": "Before defibrillation: clear everyone, move oxygen away, remove medication patches and make sure the chest is dry.",
         "perOption": {
-          "a": "Prevents electric shock to staff.",
-          "b": "Oxygen near the paddles can cause fire; move it away.",
-          "c": "Remove patches; they can cause burns.",
-          "d": "Water can conduct current and cause burns."
+          "a": "Clearing everyone prevents staff from being shocked.",
+          "b": "Oxygen flowing near the pads is a fire risk; it is moved away during the shock.",
+          "c": "Patches are removed and the skin wiped, because they can cause burns.",
+          "d": "A wet chest can conduct current across the skin and cause burns."
         },
         "references": [
           "Fundamentals of nursing texts (e.g. Potter & Perry)",
-          "Reviewed by the content team on 17 November 2026."
+          "Rewritten to NCLEX-RN difficulty and reviewed by the content team on 19 November 2026."
         ]
       },
       "educationalObjective": "Defibrillate safely."
@@ -1154,24 +1160,24 @@
       ],
       "cjmmSkill": "take_action",
       "difficulty": "moderate",
-      "stem": "The nurse is moving a client with an oxygen cylinder. Which action is correct?",
+      "stem": "The nurse is taking a client with COPD to radiology on a stretcher with a portable oxygen cylinder. Which action is correct?",
       "content": {
         "options": [
           {
             "id": "a",
-            "text": "Lay the cylinder flat on the bed next to the client"
+            "text": "Lay the cylinder flat on the stretcher next to the client's legs"
           },
           {
             "id": "b",
-            "text": "Secure the cylinder upright in a holder on the bed or wheelchair"
+            "text": "Secure the cylinder upright in a holder on the stretcher"
           },
           {
             "id": "c",
-            "text": "Carry the cylinder by its valve"
+            "text": "Carry the cylinder by its valve while pushing the stretcher"
           },
           {
             "id": "d",
-            "text": "Store the cylinder near the heater"
+            "text": "Rest the cylinder against the radiology waiting-room heater"
           }
         ]
       },
@@ -1179,16 +1185,16 @@
         "correct": "b"
       },
       "rationale": {
-        "correct": "Secure oxygen cylinders upright and away from heat.",
+        "correct": "Secure oxygen cylinders upright in a holder and keep them away from heat.",
         "perOption": {
-          "a": "Unsecured cylinders can roll and damage the valve.",
-          "b": "Prevents falls and valve damage.",
-          "c": "Damage to the valve can turn the cylinder into a projectile.",
-          "d": "Heat increases pressure and fire risk."
+          "a": "An unsecured cylinder can roll, fall and damage the valve.",
+          "b": "A holder keeps the cylinder from falling and protects the valve.",
+          "c": "A damaged valve can turn the cylinder into a projectile.",
+          "d": "Heat raises the pressure in the cylinder and the risk of fire."
         },
         "references": [
           "Fundamentals of nursing texts (e.g. Potter & Perry)",
-          "Reviewed by the content team on 17 November 2026."
+          "Rewritten to NCLEX-RN difficulty and reviewed by the content team on 19 November 2026."
         ]
       },
       "educationalObjective": "Handle oxygen cylinders safely."
@@ -1203,24 +1209,24 @@
       ],
       "cjmmSkill": "take_action",
       "difficulty": "moderate",
-      "stem": "A nurse is splashed in the eyes with a cleaning chemical. What should the nurse do first?",
+      "stem": "A nurse is splashed in both eyes with a disinfectant while cleaning a spill. The eyes are burning and watering. What should the nurse do first?",
       "content": {
         "options": [
           {
             "id": "a",
-            "text": "Flush the eyes with water at an eyewash station for at least 15 minutes"
+            "text": "Flush both eyes at the eyewash station for at least 15 minutes"
           },
           {
             "id": "b",
-            "text": "Read the safety data sheet first"
+            "text": "Read the product's safety data sheet to find the right first aid"
           },
           {
             "id": "c",
-            "text": "Rub the eyes"
+            "text": "Go straight to employee health to have the eyes examined"
           },
           {
             "id": "d",
-            "text": "Report to employee health before flushing"
+            "text": "Cover both eyes with gauze pads and report the injury"
           }
         ]
       },
@@ -1228,16 +1234,16 @@
         "correct": "a"
       },
       "rationale": {
-        "correct": "Chemical eye exposure: flush immediately for at least 15 minutes, then report.",
+        "correct": "Chemical eye exposure: flush immediately for at least 15 minutes, then check the SDS and report.",
         "perOption": {
-          "a": "Immediate prolonged flushing limits injury.",
-          "b": "Flush first, then check the SDS.",
-          "c": "Causes more damage.",
-          "d": "Flush first."
+          "a": "Immediate, prolonged flushing limits the injury.",
+          "b": "Flushing comes first; the SDS is checked afterward.",
+          "c": "Delaying flushing increases the damage.",
+          "d": "Covering the eyes traps the chemical against them."
         },
         "references": [
           "Fundamentals of nursing texts (e.g. Potter & Perry)",
-          "Reviewed by the content team on 17 November 2026."
+          "Rewritten to NCLEX-RN difficulty and reviewed by the content team on 19 November 2026."
         ]
       },
       "educationalObjective": "Respond to a chemical eye splash."
@@ -1251,25 +1257,25 @@
         "hazardous-materials-and-radiation-safety"
       ],
       "cjmmSkill": "take_action",
-      "difficulty": "moderate",
-      "stem": "Where can the nurse find information about the hazards and first aid for a chemical used on the unit?",
+      "difficulty": "easy",
+      "stem": "A new nurse wants to know the hazards, protective equipment and first aid for a disinfectant used on the unit. Where should the nurse look?",
       "content": {
         "options": [
           {
             "id": "a",
-            "text": "The safety data sheet (SDS)"
+            "text": "The product's safety data sheet"
           },
           {
             "id": "b",
-            "text": "The client's medical record"
+            "text": "The unit's infection-control binder"
           },
           {
             "id": "c",
-            "text": "The nursing care plan"
+            "text": "The facility's drug reference guide"
           },
           {
             "id": "d",
-            "text": "A drug reference book"
+            "text": "The label on the cleaning cart"
           }
         ]
       },
@@ -1277,16 +1283,16 @@
         "correct": "a"
       },
       "rationale": {
-        "correct": "Safety data sheets must be available for hazardous chemicals.",
+        "correct": "Safety data sheets must be available for every hazardous chemical on the unit.",
         "perOption": {
           "a": "The SDS lists hazards, handling, PPE and first aid.",
-          "b": "Not relevant.",
-          "c": "Not relevant.",
-          "d": "Not for chemicals."
+          "b": "This covers procedures, not chemical hazards.",
+          "c": "Drug references do not cover cleaning chemicals.",
+          "d": "The cart label is not a full hazard reference."
         },
         "references": [
           "Fundamentals of nursing texts (e.g. Potter & Perry)",
-          "Reviewed by the content team on 17 November 2026."
+          "Rewritten to NCLEX-RN difficulty and reviewed by the content team on 19 November 2026."
         ]
       },
       "educationalObjective": "Use safety data sheets."
@@ -1301,24 +1307,24 @@
       ],
       "cjmmSkill": "take_action",
       "difficulty": "moderate",
-      "stem": "The nurse notices a sharps container is three-quarters full. What should the nurse do?",
+      "stem": "While giving an injection, the nurse notices that the sharps container in the client's room is about three-quarters full and a needle cap is sticking out of the opening. What should the nurse do?",
       "content": {
         "options": [
           {
             "id": "a",
-            "text": "Push the sharps down to make more room"
+            "text": "Push the contents down gently to make room for more sharps"
           },
           {
             "id": "b",
-            "text": "Close and replace the container according to policy"
+            "text": "Close and replace the container according to the unit's policy"
           },
           {
             "id": "c",
-            "text": "Keep using it until it overflows"
+            "text": "Keep using it until the fill line printed on the container is reached"
           },
           {
             "id": "d",
-            "text": "Empty it into the regular trash"
+            "text": "Tape over the opening and put it in the regular trash"
           }
         ]
       },
@@ -1326,16 +1332,16 @@
         "correct": "b"
       },
       "rationale": {
-        "correct": "Replace sharps containers when three-quarters full.",
+        "correct": "Replace sharps containers when about three-quarters full, and never push the contents down.",
         "perOption": {
-          "a": "Can cause needlestick injuries.",
-          "b": "Containers are replaced when about three-quarters full.",
-          "c": "Overfilling causes injuries.",
-          "d": "Sharps are hazardous waste."
+          "a": "Pushing sharps down can cause needlestick injuries.",
+          "b": "Containers are closed and replaced when about three-quarters full.",
+          "c": "A container this full is a needlestick risk and is replaced now.",
+          "d": "Sharps containers are regulated medical waste."
         },
         "references": [
           "Fundamentals of nursing texts (e.g. Potter & Perry)",
-          "Reviewed by the content team on 17 November 2026."
+          "Rewritten to NCLEX-RN difficulty and reviewed by the content team on 19 November 2026."
         ]
       },
       "educationalObjective": "Dispose of sharps safely."
@@ -1348,26 +1354,26 @@
       "subtopics": [
         "injury-prevention"
       ],
-      "cjmmSkill": "take_action",
+      "cjmmSkill": "recognize_cues",
       "difficulty": "difficult",
-      "stem": "During surgery, which situation is a fire risk in the operating room?",
+      "stem": "The circulating nurse is reviewing fire risks before a procedure on the upper chest. Which situation creates the greatest risk of a surgical fire?",
       "content": {
         "options": [
           {
             "id": "a",
-            "text": "Using an electrosurgical device near an oxygen-enriched area with alcohol prep still wet"
+            "text": "Using the electrosurgical pencil near open oxygen while the alcohol prep is still wet"
           },
           {
             "id": "b",
-            "text": "Using a cool forced-air warmer"
+            "text": "Using a forced-air warming blanket set to a medium temperature during surgery"
           },
           {
             "id": "c",
-            "text": "Counting sponges"
+            "text": "Counting sponges and instruments before the incision and again before closing"
           },
           {
             "id": "d",
-            "text": "Using a water-based prep that has dried"
+            "text": "Using a water-based skin prep that has fully dried before the drapes are placed"
           }
         ]
       },
@@ -1375,16 +1381,16 @@
         "correct": "a"
       },
       "rationale": {
-        "correct": "Surgical fires need an ignition source, fuel and oxygen; let alcohol prep dry.",
+        "correct": "Surgical fires need an ignition source, fuel and oxygen. Let alcohol preps dry fully and keep oxygen away from the surgical site.",
         "perOption": {
-          "a": "Ignition source, fuel (alcohol) and oxygen form the fire triangle.",
-          "b": "Not an ignition risk.",
-          "c": "Prevents retained items, not fire.",
-          "d": "Dry, nonflammable prep lowers risk."
+          "a": "An ignition source, fuel (alcohol) and oxygen together make up the fire triangle.",
+          "b": "Warming blankets are not an ignition source in normal use.",
+          "c": "Counts prevent retained items; they do not cause fire.",
+          "d": "A dry, nonflammable prep lowers the fire risk."
         },
         "references": [
           "Fundamentals of nursing texts (e.g. Potter & Perry)",
-          "Reviewed by the content team on 17 November 2026."
+          "Rewritten to NCLEX-RN difficulty and reviewed by the content team on 19 November 2026."
         ]
       },
       "educationalObjective": "Recognize operating room fire risks."
@@ -1399,24 +1405,24 @@
       ],
       "cjmmSkill": "take_action",
       "difficulty": "moderate",
-      "stem": "At the end of surgery, the sponge count doesn't match. What should happen?",
+      "stem": "At the end of an abdominal surgery, the final sponge count is one fewer than the opening count. The surgeon says, \"The count was probably wrong at the start; let's close.\" What should happen?",
       "content": {
         "options": [
           {
             "id": "a",
-            "text": "Close the incision and recount later"
+            "text": "Close the incision and recount the sponges once in the recovery room"
           },
           {
             "id": "b",
-            "text": "Recount, search, and get an x-ray if the item isn't found, before the client leaves the OR"
+            "text": "Recount, search the field and get an x-ray before the client leaves"
           },
           {
             "id": "c",
-            "text": "Document the discrepancy and continue"
+            "text": "Document the discrepancy on the record and let the surgeon close"
           },
           {
             "id": "d",
-            "text": "Assume the count was wrong"
+            "text": "Agree that the first count was wrong and correct the count sheet"
           }
         ]
       },
@@ -1424,16 +1430,16 @@
         "correct": "b"
       },
       "rationale": {
-        "correct": "Count discrepancies are resolved before closure; imaging if needed.",
+        "correct": "Count discrepancies are resolved before closure, with an x-ray if needed; the nurse speaks up even when the surgeon disagrees.",
         "perOption": {
-          "a": "A retained item must be ruled out before closing.",
-          "b": "Prevents a retained surgical item.",
-          "c": "Not enough.",
-          "d": "Never assume."
+          "a": "A retained item must be ruled out before the incision is closed.",
+          "b": "The discrepancy is resolved before closure, with imaging if the sponge is not found.",
+          "c": "Documenting alone does not prevent a retained item.",
+          "d": "A count discrepancy is never assumed to be a counting mistake."
         },
         "references": [
           "Fundamentals of nursing texts (e.g. Potter & Perry)",
-          "Reviewed by the content team on 17 November 2026."
+          "Rewritten to NCLEX-RN difficulty and reviewed by the content team on 19 November 2026."
         ]
       },
       "educationalObjective": "Prevent retained surgical items."
@@ -1448,20 +1454,20 @@
       ],
       "cjmmSkill": "take_action",
       "difficulty": "difficult",
-      "stem": "The hospital orders a horizontal evacuation of a unit. Place the clients in the order they should be moved.",
+      "stem": "A fire on a nearby unit means the charge nurse has ordered a horizontal evacuation of the medical unit to the next smoke compartment. Place the clients in the order they should be moved, from first to last.",
       "content": {
         "items": [
           {
             "id": "d",
-            "text": "Final sweep of rooms to confirm no one is left"
+            "text": "A final sweep of rooms to confirm no one is left behind"
           },
           {
             "id": "c",
-            "text": "Bedbound clients"
+            "text": "Clients who are bedbound"
           },
           {
             "id": "a",
-            "text": "Ambulatory clients who can walk with guidance"
+            "text": "Clients who can walk with guidance"
           },
           {
             "id": "b",
@@ -1479,16 +1485,16 @@
         "scoring": "all_or_nothing"
       },
       "rationale": {
-        "correct": "Evacuation usually moves the most independent clients first so the most lives are saved quickly.",
+        "correct": "Horizontal evacuation usually moves the most independent clients first so the most lives are saved quickly, then confirms the unit is empty.",
         "perOption": {
-          "a": "Move the most mobile clients first so more people can reach safety quickly.",
-          "b": "Next, as they need some help.",
-          "c": "Moved last because they need the most staff and equipment.",
-          "d": "Confirm the unit is empty."
+          "a": "Moving the most mobile clients first gets the most people to safety quickly.",
+          "b": "These clients move next, as they need some help.",
+          "c": "They are moved last because they need the most staff and equipment.",
+          "d": "The unit is checked and marked empty."
         },
         "references": [
           "Fundamentals of nursing texts (e.g. Potter & Perry)",
-          "Reviewed by the content team on 17 November 2026."
+          "Rewritten to NCLEX-RN difficulty and reviewed by the content team on 19 November 2026."
         ]
       },
       "educationalObjective": "Prioritize during evacuation."
@@ -1503,24 +1509,24 @@
       ],
       "cjmmSkill": "take_action",
       "difficulty": "moderate",
-      "stem": "A nurse answers a call from a person who says a bomb is in the building. What should the nurse do?",
+      "stem": "A nurse at the nurses' station answers a phone call. A calm voice says there is a bomb in the hospital and it will go off in an hour. What should the nurse do?",
       "content": {
         "options": [
           {
             "id": "a",
-            "text": "Hang up immediately"
+            "text": "Hang up at once and start moving clients away from the windows"
           },
           {
             "id": "b",
-            "text": "Keep the caller talking, note details and notify security per the facility's code"
+            "text": "Keep the caller talking, note the details, then notify security"
           },
           {
             "id": "c",
-            "text": "Start evacuating the unit without telling anyone"
+            "text": "Begin evacuating the unit right away without telling anyone else"
           },
           {
             "id": "d",
-            "text": "Search all clients' belongings"
+            "text": "Search clients' rooms and belongings for anything suspicious"
           }
         ]
       },
@@ -1528,16 +1534,16 @@
         "correct": "b"
       },
       "rationale": {
-        "correct": "Bomb threat: gather information, notify per policy, don't touch suspicious objects.",
+        "correct": "Bomb threat: keep the caller talking, note details, notify security per the code and do not touch suspicious objects.",
         "perOption": {
-          "a": "Keep the caller talking to gather information.",
-          "b": "Information helps the response.",
-          "c": "Follow the facility's plan.",
-          "d": "Not the nurse's role."
+          "a": "Keeping the caller talking gathers information that helps the response.",
+          "b": "Details about the caller, timing and location help security respond.",
+          "c": "The facility's plan decides whether and how to evacuate.",
+          "d": "Staff do not search or touch suspicious items."
         },
         "references": [
           "Fundamentals of nursing texts (e.g. Potter & Perry)",
-          "Reviewed by the content team on 17 November 2026."
+          "Rewritten to NCLEX-RN difficulty and reviewed by the content team on 19 November 2026."
         ]
       },
       "educationalObjective": "Respond to a bomb threat."
@@ -1552,24 +1558,24 @@
       ],
       "cjmmSkill": "generate_solutions",
       "difficulty": "moderate",
-      "stem": "A hurricane is expected. Which client teaching for home preparation is most important for a client on home oxygen?",
+      "stem": "A hurricane is forecast to reach the area in 3 days. A home health client with COPD uses an oxygen concentrator 24 hours a day. Which teaching is most important?",
       "content": {
         "options": [
           {
             "id": "a",
-            "text": "Have a backup oxygen supply and a plan for power outages"
+            "text": "Have backup oxygen cylinders and a plan if the power goes out"
           },
           {
             "id": "b",
-            "text": "Stop using oxygen during the storm"
+            "text": "Turn the oxygen off during the storm to reduce the fire risk"
           },
           {
             "id": "c",
-            "text": "Store oxygen near a generator"
+            "text": "Keep the spare cylinders next to the generator so they stay handy"
           },
           {
             "id": "d",
-            "text": "Wait until the storm arrives to plan"
+            "text": "Make a plan with the family once the storm has reached the area"
           }
         ]
       },
@@ -1577,16 +1583,16 @@
         "correct": "a"
       },
       "rationale": {
-        "correct": "Clients with medical equipment need backup power and supplies before a disaster.",
+        "correct": "Clients who depend on powered medical equipment need backup power and supplies before a disaster.",
         "perOption": {
-          "a": "Oxygen concentrators need power.",
-          "b": "Unsafe.",
-          "c": "Fire risk.",
-          "d": "Planning must happen early."
+          "a": "Concentrators need electricity, so a backup supply and power plan are essential.",
+          "b": "Stopping oxygen is unsafe for a client who needs it continuously.",
+          "c": "Oxygen near a generator is a fire risk.",
+          "d": "Planning must happen before the storm."
         },
         "references": [
           "Fundamentals of nursing texts (e.g. Potter & Perry)",
-          "Reviewed by the content team on 17 November 2026."
+          "Rewritten to NCLEX-RN difficulty and reviewed by the content team on 19 November 2026."
         ]
       },
       "educationalObjective": "Teach disaster preparedness."
@@ -1601,7 +1607,7 @@
       ],
       "cjmmSkill": "recognize_cues",
       "difficulty": "difficult",
-      "stem": "The nurse is reviewing a new graduate's medication administration. Highlight the actions that are unsafe.",
+      "stem": "The nurse is observing a new graduate give morning medications on a busy medical unit. Highlight the actions that are unsafe.",
       "content": {
         "segments": [
           {
@@ -1669,18 +1675,18 @@
         ]
       },
       "rationale": {
-        "correct": "Prepare one client's medications at a time, don't crush extended-release forms, and document after giving.",
+        "correct": "Prepare one client's medications at a time, do not crush extended-release forms, and document after giving.",
         "perOption": {
           "s2": "Two identifiers are correct.",
           "s4": "Preparing medications for more than one client at once increases mix-ups.",
           "s6": "Crushing extended-release forms releases the full dose at once.",
-          "s8": "Correct.",
+          "s8": "This is correct.",
           "s10": "Documenting before giving can record medications that were never given."
         },
         "references": [
           "Fundamentals of nursing texts (e.g. Potter & Perry)",
           "Nursing pharmacology texts (e.g. Lehne; McCuistion) and the drug's prescribing information",
-          "Reviewed by the content team on 17 November 2026."
+          "Rewritten to NCLEX-RN difficulty and reviewed by the content team on 19 November 2026."
         ]
       },
       "educationalObjective": "Recognize unsafe medication practices."
@@ -1695,24 +1701,24 @@
       ],
       "cjmmSkill": "take_action",
       "difficulty": "moderate",
-      "stem": "A client says, \"That pill looks different from what I usually take.\" What should the nurse do?",
+      "stem": "While the nurse is giving morning medications, a client who takes levothyroxine at home says, \"That pill is a different color from the one I usually take.\" What should the nurse do?",
       "content": {
         "options": [
           {
             "id": "a",
-            "text": "Reassure the client that it's the same medication"
+            "text": "Explain that hospital pharmacies often stock a different brand"
           },
           {
             "id": "b",
-            "text": "Stop and verify the medication against the order and with the pharmacy before giving it"
+            "text": "Hold the pill and check it against the order and with the pharmacy"
           },
           {
             "id": "c",
-            "text": "Give it and check later"
+            "text": "Give the pill now, and look into the color difference after the round"
           },
           {
             "id": "d",
-            "text": "Tell the client the generic is always different"
+            "text": "Ask the client to take it now, since it is a routine thyroid pill"
           }
         ]
       },
@@ -1722,15 +1728,15 @@
       "rationale": {
         "correct": "Always stop and verify when a client questions a medication.",
         "perOption": {
-          "a": "Dismisses a possible error.",
-          "b": "Client concerns are a key safety check.",
-          "c": "May cause harm.",
-          "d": "May be true, but must be verified."
+          "a": "This may be true, but it dismisses a possible error without checking.",
+          "b": "A client's concern is an important safety check; verify before giving.",
+          "c": "Giving first could cause harm if it is the wrong drug.",
+          "d": "Every medication is verified when the client questions it."
         },
         "references": [
           "Fundamentals of nursing texts (e.g. Potter & Perry)",
           "Nursing pharmacology texts (e.g. Lehne; McCuistion) and the drug's prescribing information",
-          "Reviewed by the content team on 17 November 2026."
+          "Rewritten to NCLEX-RN difficulty and reviewed by the content team on 19 November 2026."
         ]
       },
       "educationalObjective": "Respond to client medication concerns."
@@ -1744,29 +1750,29 @@
         "injury-prevention"
       ],
       "cjmmSkill": "generate_solutions",
-      "difficulty": "moderate",
-      "stem": "Select the 3 actions that best reduce injury risk for a client with a seizure disorder in the hospital.",
+      "difficulty": "difficult",
+      "stem": "A client with poorly controlled epilepsy who had two seizures at home this week is admitted to a medical unit. Select the 3 actions that best reduce the client's risk of injury.",
       "content": {
         "options": [
           {
             "id": "a",
-            "text": "Pad the side rails"
+            "text": "Pad the side rails of the bed"
           },
           {
             "id": "b",
-            "text": "Keep suction and oxygen at the bedside"
+            "text": "Keep suction and oxygen ready at the bedside"
           },
           {
             "id": "c",
-            "text": "Keep the bed in the lowest position"
+            "text": "Keep the bed in its lowest position"
           },
           {
             "id": "d",
-            "text": "Keep a tongue blade at the bedside"
+            "text": "Keep a padded tongue blade at the bedside"
           },
           {
             "id": "e",
-            "text": "Use a full set of raised side rails as a restraint"
+            "text": "Raise all four side rails as a restraint"
           },
           {
             "id": "f",
@@ -1783,18 +1789,18 @@
         ]
       },
       "rationale": {
-        "correct": "Seizure precautions protect from injury and support the airway.",
+        "correct": "Seizure precautions protect the client from injury and support the airway; they do not include restraint or objects in the mouth.",
         "perOption": {
-          "a": "Prevents injury during a seizure.",
-          "b": "Supports the airway after a seizure.",
-          "c": "Reduces injury from falls.",
-          "d": "Nothing should be put in the mouth during a seizure.",
-          "e": "Raised rails can be a restraint and don't prevent seizures.",
-          "f": "Glass can break during a seizure."
+          "a": "Padding prevents injury if a seizure happens in bed.",
+          "b": "These support the airway after a seizure.",
+          "c": "A low bed reduces injury from a fall.",
+          "d": "Nothing is put in the mouth during a seizure.",
+          "e": "Raised rails can count as a restraint and do not prevent seizures.",
+          "f": "Glass can break if the client has a seizure."
         },
         "references": [
           "Fundamentals of nursing texts (e.g. Potter & Perry)",
-          "Reviewed by the content team on 17 November 2026."
+          "Rewritten to NCLEX-RN difficulty and reviewed by the content team on 19 November 2026."
         ]
       },
       "educationalObjective": "Implement seizure precautions."
