@@ -11,10 +11,15 @@ import json
 import random
 from pathlib import Path
 
+import quality
+
 HERE = Path(__file__).resolve().parent
 # Review status shown to candidates under each rationale. The full record (who, when, scope) is in
 # REVIEW-LOG.md; it deliberately claims no clinical credential, because none was recorded.
 REVIEW_STATUS = "Reviewed by the content team on 17 November 2026."
+# Batches rewritten to real NCLEX-RN difficulty (build(..., hardened=True)) say so instead, and must pass
+# the quality gates in quality.py. Changing this text publishes a new version of every hardened question.
+HARDENED_STATUS = "Rewritten to NCLEX-RN difficulty and reviewed by the content team on 19 November 2026."
 
 REFS = {
     "ms": "Medical-surgical nursing texts (e.g. Lewis; Ignatavicius)",
@@ -301,29 +306,36 @@ def _cid(batch, n):
     return f"c1c{batch:05d}-0000-4000-8000-{n:012d}"
 
 
-def build(batch, slug, title, items, cases=()):
+def build(batch, slug, title, items, cases=(), hardened=False):
+    """Writes rn-bank-NN-<slug>.rn.json. Question ids come from each item's position, so a rewrite must
+    keep the batch's items in the same order (and the same item types) to update questions in place."""
+    status = HARDENED_STATUS if hardened else REVIEW_STATUS
     questions, case_rows, n = [], [], 0
     for item in items:
         n += 1
-        questions.append(_finish(item, _qid(batch, n)))
+        questions.append(_finish(item, _qid(batch, n), status))
     for c_n, c in enumerate(cases, 1):
         cid = _cid(batch, c_n)
         case_rows.append({"id": cid, "title": c["title"], "scenario": c["scenario"]})
         assert 1 <= len(c["questions"]) <= 6
         for pos, item in enumerate(c["questions"], 1):
             n += 1
-            q = _finish(item, _qid(batch, n))
+            q = _finish(item, _qid(batch, n), status)
             q["caseStudyId"], q["casePosition"] = cid, pos
             questions.append(q)
 
     _check(questions, case_rows)
+    if hardened:
+        problems = quality.gate(questions)
+        if problems:
+            raise SystemExit(f"Batch {batch} is marked hardened but fails the quality gates:\n  " + "\n  ".join(problems))
     used = []
     for q in questions:
         for s in q["subtopics"]:
             if s not in used:
                 used.append(s)
     out = {
-        "notice": f"RN bank batch {batch}: {title}. {REVIEW_STATUS} See REVIEW-LOG.md.",
+        "notice": f"RN bank batch {batch}: {title}. {status} See REVIEW-LOG.md.",
         "track": "RN",
         "subtopics": [{"clientNeeds": SUBTOPICS[s][0], "slug": s, "name": SUBTOPICS[s][1]} for s in used],
         "questions": questions,
@@ -332,16 +344,22 @@ def build(batch, slug, title, items, cases=()):
         out["caseStudies"] = case_rows
     path = HERE / f"rn-bank-{batch:02d}-{slug}.rn.json"
     path.write_text(json.dumps(out, indent=2, ensure_ascii=False) + "\n", encoding="utf-8")
+    if hardened:
+        HARDENED_FILES.add(path.name)
     return path, questions
 
 
-def _finish(item, qid):
+# Names of the files built with hardened=True in this run; build_all.py reports and checks them.
+HARDENED_FILES = set()
+
+
+def _finish(item, qid, status):
     q = {"id": qid}
     for k in ("itemType", "clientNeeds", "bodySystem", "subtopics", "cjmmSkill", "difficulty", "stem",
               "content", "key"):
         q[k] = item[k]
     q["rationale"] = {"correct": item["_why"], "perOption": item["_per"],
-                      "references": [REFS[r] for r in item["_refs"]] + [REVIEW_STATUS]}
+                      "references": [REFS[r] for r in item["_refs"]] + [status]}
     q["educationalObjective"] = item["educationalObjective"]
     if "exhibits" in item:
         q["exhibits"] = item["exhibits"]
