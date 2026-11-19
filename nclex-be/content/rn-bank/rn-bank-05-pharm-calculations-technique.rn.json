@@ -1,5 +1,5 @@
 {
-  "notice": "RN bank batch 5: Pharmacology: dosage calculation and administration technique. Reviewed by the content team on 17 November 2026. See REVIEW-LOG.md.",
+  "notice": "RN bank batch 5: Pharmacology: dosage calculation and administration technique. Rewritten to NCLEX-RN difficulty and reviewed by the content team on 19 November 2026. See REVIEW-LOG.md.",
   "track": "RN",
   "subtopics": [
     {
@@ -23,38 +23,38 @@
         "medication-dose-calculations"
       ],
       "cjmmSkill": "take_action",
-      "difficulty": "easy",
-      "stem": "The provider prescribes cephalexin 0.5 g PO every 6 hours. The tablets available are 250 mg each. How many tablets should the nurse give per dose?",
+      "difficulty": "moderate",
+      "stem": "A client with cellulitis of the lower leg who weighs 82 kg is prescribed cephalexin 0.5 g orally every 6 hours. The client's creatinine clearance is 78 mL/min and the temperature is 38.1 °C (100.6 °F). The pharmacy supplies cephalexin 250 mg capsules. How many capsules should the nurse give for each dose?",
       "content": {
-        "unit": "tablets",
+        "unit": "capsules",
         "decimals": 0,
-        "inputLabel": "Tablets per dose"
+        "inputLabel": "Capsules per dose"
       },
       "key": {
         "value": 2,
         "rounding": "exact"
       },
       "rationale": {
-        "correct": "Convert: 0.5 g = 500 mg. Tablets: 500 mg ÷ 250 mg per tablet = 2 tablets.",
+        "correct": "Convert: 0.5 g = 500 mg. Capsules: 500 mg ÷ 250 mg per capsule = 2 capsules. The weight, creatinine clearance and temperature are not needed for this dose.",
         "perOption": {},
         "references": [
           "Nursing pharmacology texts (e.g. Lehne; McCuistion) and the drug's prescribing information",
-          "Reviewed by the content team on 17 November 2026."
+          "Rewritten to NCLEX-RN difficulty and reviewed by the content team on 19 November 2026."
         ]
       },
-      "educationalObjective": "Convert grams to milligrams and calculate the number of tablets."
+      "educationalObjective": "Convert grams to milligrams and calculate the number of capsules."
     },
     {
       "id": "c1a00005-0000-4000-8000-000000000002",
       "itemType": "fill_blank_calc",
       "clientNeeds": "PHI.PPT",
-      "bodySystem": "pharmacology",
+      "bodySystem": "pediatrics",
       "subtopics": [
         "medication-dose-calculations"
       ],
       "cjmmSkill": "take_action",
-      "difficulty": "easy",
-      "stem": "The provider prescribes amoxicillin 400 mg PO. The suspension contains 250 mg/5 mL. How many mL should the nurse give?",
+      "difficulty": "moderate",
+      "stem": "A 4-year-old with acute otitis media who weighs 18 kg is prescribed amoxicillin 400 mg orally every 12 hours. The pharmacy reconstitutes amoxicillin oral suspension 250 mg/5 mL. The child's temperature is 38.6 °C (101.5 °F), and the parent asks for an oral syringe. How many mL should the nurse give for each dose?",
       "content": {
         "unit": "mL",
         "decimals": 0,
@@ -65,11 +65,11 @@
         "rounding": "exact"
       },
       "rationale": {
-        "correct": "Volume = (dose wanted ÷ dose on hand) × volume = (400 ÷ 250) × 5 mL = 8 mL.",
+        "correct": "Volume = (dose wanted ÷ dose on hand) × volume = (400 mg ÷ 250 mg) × 5 mL = 8 mL. The weight confirms the dose is reasonable but is not part of this calculation.",
         "perOption": {},
         "references": [
           "Nursing pharmacology texts (e.g. Lehne; McCuistion) and the drug's prescribing information",
-          "Reviewed by the content team on 17 November 2026."
+          "Rewritten to NCLEX-RN difficulty and reviewed by the content team on 19 November 2026."
         ]
       },
       "educationalObjective": "Calculate a liquid oral dose."
@@ -84,11 +84,11 @@
       ],
       "cjmmSkill": "take_action",
       "difficulty": "easy",
-      "stem": "The provider prescribes ketorolac 15 mg IM. The vial contains 30 mg/mL. How many mL should the nurse give? Round to the nearest tenth.",
+      "stem": "The provider prescribes ketorolac 15 mg IV every 6 hours for a client's post-operative pain. The vial contains 30 mg/mL. How many mL should the nurse draw up? Round to the nearest tenth.",
       "content": {
         "unit": "mL",
         "decimals": 1,
-        "inputLabel": "Volume to inject"
+        "inputLabel": "Volume to draw up"
       },
       "key": {
         "value": 0.5,
@@ -99,7 +99,7 @@
         "perOption": {},
         "references": [
           "Nursing pharmacology texts (e.g. Lehne; McCuistion) and the drug's prescribing information",
-          "Reviewed by the content team on 17 November 2026."
+          "Rewritten to NCLEX-RN difficulty and reviewed by the content team on 19 November 2026."
         ]
       },
       "educationalObjective": "Calculate an injectable dose."
@@ -113,26 +113,26 @@
         "medication-dose-calculations"
       ],
       "cjmmSkill": "take_action",
-      "difficulty": "moderate",
-      "stem": "The provider prescribes 1,000 mL of lactated Ringer's solution over 8 hours. The tubing's drop factor is 15 gtt/mL. At how many drops per minute should the nurse set a gravity infusion? Round to the nearest whole number.",
+      "difficulty": "difficult",
+      "stem": "At 0800 the nurse started 1,000 mL of lactated Ringer's solution to infuse over 8 hours by gravity, using tubing with a drop factor of 15 gtt/mL. At 1100 the nurse finds that only 450 mL has infused. The provider says to infuse the remaining volume over the remaining 5 hours. At how many drops per minute should the nurse set the infusion? Round to the nearest whole number.",
       "content": {
         "unit": "gtt/min",
         "decimals": 0,
         "inputLabel": "Drip rate"
       },
       "key": {
-        "value": 31,
+        "value": 28,
         "rounding": "exact"
       },
       "rationale": {
-        "correct": "gtt/min = (volume × drop factor) ÷ time in minutes = (1,000 × 15) ÷ 480 = 31.25, rounded to 31 gtt/min.",
+        "correct": "Remaining volume: 1,000 − 450 = 550 mL. Remaining time: 5 hours = 300 minutes. gtt/min = (550 mL × 15 gtt/mL) ÷ 300 min = 27.5, rounded to 28 gtt/min.",
         "perOption": {},
         "references": [
           "Nursing pharmacology texts (e.g. Lehne; McCuistion) and the drug's prescribing information",
-          "Reviewed by the content team on 17 November 2026."
+          "Rewritten to NCLEX-RN difficulty and reviewed by the content team on 19 November 2026."
         ]
       },
-      "educationalObjective": "Calculate a gravity drip rate."
+      "educationalObjective": "Recalculate a gravity drip rate when an infusion is behind schedule."
     },
     {
       "id": "c1a00005-0000-4000-8000-000000000005",
@@ -143,26 +143,26 @@
         "medication-dose-calculations"
       ],
       "cjmmSkill": "take_action",
-      "difficulty": "easy",
-      "stem": "An IV piggyback of 100 mL is to infuse over 30 minutes. At what rate should the nurse set the pump?",
+      "difficulty": "moderate",
+      "stem": "A client with methicillin-resistant Staphylococcus aureus bacteremia is prescribed vancomycin 1.25 g IV every 12 hours. The pharmacy sends the dose in 250 mL of 0.9% sodium chloride, labeled to infuse over 2 hours to prevent an infusion reaction. The client's trough was 15 mcg/mL. At what rate should the nurse set the pump?",
       "content": {
         "unit": "mL/hr",
         "decimals": 0,
         "inputLabel": "Infusion rate"
       },
       "key": {
-        "value": 200,
+        "value": 125,
         "rounding": "exact"
       },
       "rationale": {
-        "correct": "mL/hr = 100 mL ÷ 0.5 hr = 200 mL/hr.",
+        "correct": "mL/hr = volume ÷ time = 250 mL ÷ 2 hr = 125 mL/hr. The dose and trough level are not needed to set the rate.",
         "perOption": {},
         "references": [
           "Nursing pharmacology texts (e.g. Lehne; McCuistion) and the drug's prescribing information",
-          "Reviewed by the content team on 17 November 2026."
+          "Rewritten to NCLEX-RN difficulty and reviewed by the content team on 19 November 2026."
         ]
       },
-      "educationalObjective": "Calculate a pump rate for a short infusion."
+      "educationalObjective": "Calculate a pump rate for an intermittent infusion."
     },
     {
       "id": "c1a00005-0000-4000-8000-000000000006",
@@ -174,7 +174,7 @@
       ],
       "cjmmSkill": "take_action",
       "difficulty": "difficult",
-      "stem": "A child weighs 22 lb. The provider prescribes cefazolin 25 mg/kg/day IV, divided into doses every 8 hours. How many mg should the nurse give per dose? Round to the nearest tenth.",
+      "stem": "A child with a bone infection weighs 22 lb. The provider prescribes cefazolin 25 mg/kg/day IV, divided into equal doses every 8 hours. The pharmacy reconstitutes the cefazolin to 100 mg/mL. The child's last dose was at 0600 and the next is due at 1400. How many mg should the nurse give for each dose? Round to the nearest tenth.",
       "content": {
         "unit": "mg",
         "decimals": 1,
@@ -185,11 +185,11 @@
         "rounding": "exact"
       },
       "rationale": {
-        "correct": "Weight: 22 lb ÷ 2.2 = 10 kg. Daily dose: 25 mg/kg × 10 kg = 250 mg/day. Every 8 hours = 3 doses: 250 ÷ 3 = 83.3 mg per dose.",
+        "correct": "Weight: 22 lb ÷ 2.2 = 10 kg. Daily dose: 25 mg/kg × 10 kg = 250 mg/day. Every 8 hours is 3 doses: 250 ÷ 3 = 83.3 mg per dose.",
         "perOption": {},
         "references": [
           "Nursing pharmacology texts (e.g. Lehne; McCuistion) and the drug's prescribing information",
-          "Reviewed by the content team on 17 November 2026."
+          "Rewritten to NCLEX-RN difficulty and reviewed by the content team on 19 November 2026."
         ]
       },
       "educationalObjective": "Calculate a divided weight-based pediatric dose."
@@ -198,31 +198,31 @@
       "id": "c1a00005-0000-4000-8000-000000000007",
       "itemType": "fill_blank_calc",
       "clientNeeds": "PHI.PPT",
-      "bodySystem": "pharmacology",
+      "bodySystem": "hematologic-oncologic",
       "subtopics": [
         "medication-dose-calculations"
       ],
       "cjmmSkill": "take_action",
-      "difficulty": "easy",
-      "stem": "The provider prescribes heparin 5,000 units subcutaneously. The vial contains 10,000 units/mL. How many mL should the nurse give? Round to the nearest tenth.",
+      "difficulty": "difficult",
+      "stem": "A client with a pulmonary embolism who weighs 88 kg is started on a heparin infusion. The protocol calls for a bolus of 80 units/kg, then an infusion of 18 units/kg/hr. The pharmacy sends heparin 25,000 units in 500 mL of D5W. The baseline aPTT is 31 seconds. At what rate should the nurse set the pump for the infusion? Round to the nearest tenth.",
       "content": {
-        "unit": "mL",
+        "unit": "mL/hr",
         "decimals": 1,
-        "inputLabel": "Volume to inject"
+        "inputLabel": "Infusion rate"
       },
       "key": {
-        "value": 0.5,
+        "value": 31.7,
         "rounding": "exact"
       },
       "rationale": {
-        "correct": "Volume = 5,000 units ÷ 10,000 units/mL = 0.5 mL.",
+        "correct": "Dose: 18 units/kg/hr × 88 kg = 1,584 units/hr. Concentration: 25,000 units ÷ 500 mL = 50 units/mL. Rate: 1,584 ÷ 50 = 31.68, rounded to 31.7 mL/hr. The bolus and aPTT are not part of the infusion rate.",
         "perOption": {},
         "references": [
           "Nursing pharmacology texts (e.g. Lehne; McCuistion) and the drug's prescribing information",
-          "Reviewed by the content team on 17 November 2026."
+          "Rewritten to NCLEX-RN difficulty and reviewed by the content team on 19 November 2026."
         ]
       },
-      "educationalObjective": "Calculate a subcutaneous heparin dose."
+      "educationalObjective": "Calculate a weight-based heparin infusion rate."
     },
     {
       "id": "c1a00005-0000-4000-8000-000000000008",
@@ -234,7 +234,7 @@
       ],
       "cjmmSkill": "take_action",
       "difficulty": "difficult",
-      "stem": "A client who weighs 80 kg is prescribed dopamine at 5 mcg/kg/min. The bag contains dopamine 400 mg in 250 mL of D5W. At what rate should the nurse set the pump?",
+      "stem": "A client in cardiogenic shock who weighs 80 kg is prescribed dopamine at 5 mcg/kg/min. The bag contains dopamine 400 mg in 250 mL of D5W. The client's blood pressure is 82/50 mm Hg, the heart rate is 112/min and urine output is low. At what rate in mL/hr should the nurse set the pump?",
       "content": {
         "unit": "mL/hr",
         "decimals": 0,
@@ -249,7 +249,7 @@
         "perOption": {},
         "references": [
           "Nursing pharmacology texts (e.g. Lehne; McCuistion) and the drug's prescribing information",
-          "Reviewed by the content team on 17 November 2026."
+          "Rewritten to NCLEX-RN difficulty and reviewed by the content team on 19 November 2026."
         ]
       },
       "educationalObjective": "Calculate a mcg/kg/min infusion rate."
@@ -263,38 +263,38 @@
         "medication-dose-calculations"
       ],
       "cjmmSkill": "take_action",
-      "difficulty": "easy",
-      "stem": "500 mL of 0.9% sodium chloride is infusing at 125 mL/hr. How many hours will the infusion take?",
+      "difficulty": "moderate",
+      "stem": "At 0800 the nurse starts 1,000 mL of 0.9% sodium chloride at 125 mL/hr for a client with dehydration. At 1200 the provider increases the rate to 150 mL/hr because the client's urine output is low. How many hours after 1200 will the infusion finish? Round to the nearest tenth.",
       "content": {
         "unit": "hours",
-        "decimals": 0,
-        "inputLabel": "Infusion time"
+        "decimals": 1,
+        "inputLabel": "Hours after 1200"
       },
       "key": {
-        "value": 4,
+        "value": 3.3,
         "rounding": "exact"
       },
       "rationale": {
-        "correct": "Time = volume ÷ rate = 500 mL ÷ 125 mL/hr = 4 hours.",
+        "correct": "From 0800 to 1200 (4 hours) at 125 mL/hr, 500 mL infused, leaving 500 mL. Time = 500 mL ÷ 150 mL/hr = 3.33, rounded to 3.3 hours.",
         "perOption": {},
         "references": [
           "Nursing pharmacology texts (e.g. Lehne; McCuistion) and the drug's prescribing information",
-          "Reviewed by the content team on 17 November 2026."
+          "Rewritten to NCLEX-RN difficulty and reviewed by the content team on 19 November 2026."
         ]
       },
-      "educationalObjective": "Calculate infusion time."
+      "educationalObjective": "Calculate the remaining infusion time after a rate change."
     },
     {
       "id": "c1a00005-0000-4000-8000-000000000010",
       "itemType": "fill_blank_calc",
       "clientNeeds": "PHI.PPT",
-      "bodySystem": "pharmacology",
+      "bodySystem": "pediatrics",
       "subtopics": [
         "medication-dose-calculations"
       ],
       "cjmmSkill": "take_action",
       "difficulty": "moderate",
-      "stem": "A client is to receive 50 mL/hr of D5W through microdrip tubing (60 gtt/mL). At how many drops per minute should the nurse set the infusion?",
+      "stem": "A 16-kg child with gastroenteritis is to receive D5 0.45% sodium chloride at 50 mL/hr. No infusion pump is available, so the nurse sets up a gravity infusion with microdrip tubing (60 gtt/mL). The child had six episodes of vomiting today. At how many drops per minute should the nurse set the infusion?",
       "content": {
         "unit": "gtt/min",
         "decimals": 0,
@@ -309,7 +309,7 @@
         "perOption": {},
         "references": [
           "Nursing pharmacology texts (e.g. Lehne; McCuistion) and the drug's prescribing information",
-          "Reviewed by the content team on 17 November 2026."
+          "Rewritten to NCLEX-RN difficulty and reviewed by the content team on 19 November 2026."
         ]
       },
       "educationalObjective": "Calculate a microdrip rate."
@@ -324,7 +324,7 @@
       ],
       "cjmmSkill": "take_action",
       "difficulty": "difficult",
-      "stem": "A 1 g vial of ceftriaxone is reconstituted with 2.4 mL of sterile water to make 350 mg/mL. The provider prescribes 500 mg IM. How many mL should the nurse give? Round to the nearest tenth.",
+      "stem": "A client with gonorrhea is prescribed ceftriaxone 500 mg IM once. The 1 g vial label says to add 2.1 mL of 1% lidocaine to make 350 mg/mL; the nurse follows the label. The client weighs 64 kg, has no drug allergies and will be treated for chlamydia as well. How many mL should the nurse inject? Round to the nearest tenth.",
       "content": {
         "unit": "mL",
         "decimals": 1,
@@ -335,11 +335,11 @@
         "rounding": "exact"
       },
       "rationale": {
-        "correct": "Volume = 500 mg ÷ 350 mg/mL = 1.43 mL, rounded to 1.4 mL.",
+        "correct": "Volume = 500 mg ÷ 350 mg/mL = 1.43 mL, rounded to 1.4 mL. The diluent volume and the weight are not used.",
         "perOption": {},
         "references": [
           "Nursing pharmacology texts (e.g. Lehne; McCuistion) and the drug's prescribing information",
-          "Reviewed by the content team on 17 November 2026."
+          "Rewritten to NCLEX-RN difficulty and reviewed by the content team on 19 November 2026."
         ]
       },
       "educationalObjective": "Calculate a dose from a reconstituted medication."
@@ -354,7 +354,7 @@
       ],
       "cjmmSkill": "take_action",
       "difficulty": "moderate",
-      "stem": "The provider prescribes potassium chloride 20 mEq in 100 mL of 0.9% sodium chloride to infuse over 2 hours. At what rate should the nurse set the pump?",
+      "stem": "A client with a potassium of 3.2 mEq/L is prescribed potassium chloride 20 mEq in 100 mL of 0.9% sodium chloride through a peripheral IV. Facility policy limits peripheral potassium to 10 mEq/hr. The client's urine output is 60 mL/hr. At what rate should the nurse set the pump to give the potassium at the maximum allowed rate?",
       "content": {
         "unit": "mL/hr",
         "decimals": 0,
@@ -365,14 +365,14 @@
         "rounding": "exact"
       },
       "rationale": {
-        "correct": "Rate = 100 mL ÷ 2 hr = 50 mL/hr (10 mEq/hr, within the usual peripheral limit).",
+        "correct": "Concentration: 20 mEq ÷ 100 mL = 0.2 mEq/mL. Rate: 10 mEq/hr ÷ 0.2 mEq/mL = 50 mL/hr, so the bag runs over 2 hours.",
         "perOption": {},
         "references": [
           "Nursing pharmacology texts (e.g. Lehne; McCuistion) and the drug's prescribing information",
-          "Reviewed by the content team on 17 November 2026."
+          "Rewritten to NCLEX-RN difficulty and reviewed by the content team on 19 November 2026."
         ]
       },
-      "educationalObjective": "Calculate an IV potassium infusion rate."
+      "educationalObjective": "Calculate an IV potassium infusion rate within a safety limit."
     },
     {
       "id": "c1a00005-0000-4000-8000-000000000013",
@@ -384,42 +384,42 @@
       ],
       "cjmmSkill": "analyze_cues",
       "difficulty": "difficult",
-      "stem": "A child who weighs 15 kg is prescribed acetaminophen 200 mg PO every 6 hours as needed. The safe dose is 10 to 15 mg/kg/dose. What should the nurse do?",
+      "stem": "A 3-year-old with a fever weighs 15 kg. The provider prescribes acetaminophen 250 mg orally every 4 hours as needed. The drug reference lists a safe dose of 10 to 15 mg/kg per dose. The child's temperature is 39.2 °C (102.6 °F). What should the nurse do?",
       "content": {
         "options": [
           {
             "id": "a",
-            "text": "Give the dose, because it is within the safe range"
+            "text": "Give the dose, because it falls within the safe dose range"
           },
           {
             "id": "b",
-            "text": "Hold the dose, because it is too high"
+            "text": "Hold the dose and contact the provider because it is too high"
           },
           {
             "id": "c",
-            "text": "Hold the dose, because it is too low to be effective"
+            "text": "Give 225 mg instead, the highest dose in the safe range"
           },
           {
             "id": "d",
-            "text": "Give half the dose to be safe"
+            "text": "Give the dose and check the child's liver tests in the morning"
           }
         ]
       },
       "key": {
-        "correct": "a"
+        "correct": "b"
       },
       "rationale": {
-        "correct": "Calculate the safe range (mg/kg × weight) and compare it with the prescribed dose before giving any pediatric medication.",
+        "correct": "Calculate the safe range (mg/kg × weight) and compare it with the prescribed dose before giving any pediatric medication. A dose outside the range is held and clarified.",
         "perOption": {
-          "a": "The safe range is 150 to 225 mg per dose (10 × 15 to 15 × 15), and 200 mg falls within it.",
-          "b": "200 mg is below the 225 mg maximum.",
-          "c": "200 mg is above the 150 mg minimum.",
-          "d": "Changing the dose without an order isn't appropriate, and the dose is already safe."
+          "a": "The safe range is 150 to 225 mg per dose (10 to 15 mg × 15 kg); 250 mg is above it.",
+          "b": "250 mg is above the 225 mg maximum, so the order is clarified before anything is given.",
+          "c": "The nurse cannot change the dose without a new prescription.",
+          "d": "Giving a dose known to be above the safe range is unsafe, whatever monitoring follows."
         },
         "references": [
           "Nursing pharmacology texts (e.g. Lehne; McCuistion) and the drug's prescribing information",
           "Pediatric nursing texts (e.g. Hockenberry, Wong's Essentials of Pediatric Nursing)",
-          "Reviewed by the content team on 17 November 2026."
+          "Rewritten to NCLEX-RN difficulty and reviewed by the content team on 19 November 2026."
         ]
       },
       "educationalObjective": "Verify a pediatric dose against the safe range."
@@ -434,24 +434,24 @@
       ],
       "cjmmSkill": "evaluate_outcomes",
       "difficulty": "moderate",
-      "stem": "A client with stable angina has been prescribed sublingual nitroglycerin. Which statement shows correct understanding of chest pain management?",
+      "stem": "A client with stable angina is going home with sublingual nitroglycerin 0.4 mg tablets. Which statement shows the client understands what to do during an episode of chest pain?",
       "content": {
         "options": [
           {
             "id": "a",
-            "text": "\"I'll take up to three tablets, 5 minutes apart, before calling for help.\""
+            "text": "\"I'll take three tablets, 5 minutes apart, before calling for help.\""
           },
           {
             "id": "b",
-            "text": "\"If my pain isn't better 5 minutes after the first tablet, I'll call 911.\""
+            "text": "\"If the pain isn't better 5 minutes after one tablet, I'll call 911.\""
           },
           {
             "id": "c",
-            "text": "\"I'll swallow the tablet with water.\""
+            "text": "\"I'll swallow a tablet with a glass of water as soon as the pain starts.\""
           },
           {
             "id": "d",
-            "text": "\"I'll keep the tablets in a plastic pill box in my car.\""
+            "text": "\"I'll keep a few tablets loose in a pill box in my car.\""
           }
         ]
       },
@@ -459,17 +459,17 @@
         "correct": "b"
       },
       "rationale": {
-        "correct": "Sit down, take one tablet under the tongue and call 911 if the pain is unimproved or worse after 5 minutes.",
+        "correct": "Sit down, put one tablet under the tongue, and call 911 if the pain is unimproved or worse after 5 minutes.",
         "perOption": {
-          "a": "Emergency services should be called if pain isn't better or is worse 5 minutes after the first dose.",
-          "b": "Current guidance: call 911 if chest pain is unimproved or worse 5 minutes after one dose.",
+          "a": "Emergency services are called if the pain is not better 5 minutes after the first tablet.",
+          "b": "Current guidance is to call 911 if chest pain is unimproved or worse 5 minutes after one dose.",
           "c": "Sublingual nitroglycerin dissolves under the tongue; swallowing it reduces its effect.",
-          "d": "Nitroglycerin is kept in its original dark glass bottle, away from heat and light."
+          "d": "Nitroglycerin is kept in its original dark glass bottle, away from heat, light and moisture."
         },
         "references": [
           "Nursing pharmacology texts (e.g. Lehne; McCuistion) and the drug's prescribing information",
           "American Heart Association Guidelines for CPR and Emergency Cardiovascular Care",
-          "Reviewed by the content team on 17 November 2026."
+          "Rewritten to NCLEX-RN difficulty and reviewed by the content team on 19 November 2026."
         ]
       },
       "educationalObjective": "Teach correct use of sublingual nitroglycerin."
@@ -493,15 +493,15 @@
           },
           {
             "id": "b",
-            "text": "Give the drops first, wait about 5 minutes, then give the ointment"
+            "text": "Give the drops, wait 5 minutes, then the ointment"
           },
           {
             "id": "c",
-            "text": "Mix the drops into the ointment"
+            "text": "Mix the drops into the ointment in a cup"
           },
           {
             "id": "d",
-            "text": "Give both at once"
+            "text": "Give the drops and the ointment at the very same time"
           }
         ]
       },
@@ -509,17 +509,17 @@
         "correct": "b"
       },
       "rationale": {
-        "correct": "Give eye drops before ointment and wait about 5 minutes between different eye medications.",
+        "correct": "Give eye drops before ointment, and wait about 5 minutes between different eye medications.",
         "perOption": {
           "a": "Ointment forms a barrier that keeps drops from being absorbed.",
           "b": "Drops go first so they are absorbed; then the ointment.",
-          "c": "Medications aren't mixed.",
+          "c": "Medications are not mixed.",
           "d": "Giving them together reduces the effect of the drops."
         },
         "references": [
           "Nursing pharmacology texts (e.g. Lehne; McCuistion) and the drug's prescribing information",
           "Fundamentals of nursing texts (e.g. Potter & Perry)",
-          "Reviewed by the content team on 17 November 2026."
+          "Rewritten to NCLEX-RN difficulty and reviewed by the content team on 19 November 2026."
         ]
       },
       "educationalObjective": "Sequence eye medications correctly."
@@ -534,7 +534,7 @@
       ],
       "cjmmSkill": "take_action",
       "difficulty": "easy",
-      "stem": "The nurse is giving ear drops to a 2-year-old. How should the nurse position the ear?",
+      "stem": "The nurse is giving antibiotic ear drops to a 2-year-old with otitis externa. How should the nurse position the ear?",
       "content": {
         "options": [
           {
@@ -551,7 +551,7 @@
           },
           {
             "id": "d",
-            "text": "Don't move the pinna"
+            "text": "Leave the pinna as it is"
           }
         ]
       },
@@ -563,12 +563,12 @@
         "perOption": {
           "a": "In children under 3, the ear canal points upward, so pulling the pinna down and back straightens it.",
           "b": "This is the technique for adults and children over 3.",
-          "c": "This doesn't straighten the canal.",
+          "c": "This does not straighten the canal.",
           "d": "Straightening the canal helps the drops reach the eardrum."
         },
         "references": [
           "Pediatric nursing texts (e.g. Hockenberry, Wong's Essentials of Pediatric Nursing)",
-          "Reviewed by the content team on 17 November 2026."
+          "Rewritten to NCLEX-RN difficulty and reviewed by the content team on 19 November 2026."
         ]
       },
       "educationalObjective": "Give ear drops to a young child."
@@ -583,24 +583,24 @@
       ],
       "cjmmSkill": "evaluate_outcomes",
       "difficulty": "moderate",
-      "stem": "A client uses an albuterol inhaler and a fluticasone inhaler every morning. Which statement shows correct understanding?",
+      "stem": "A client with persistent asthma uses an albuterol inhaler and a fluticasone inhaler every morning. Which statement by the client shows correct understanding?",
       "content": {
         "options": [
           {
             "id": "a",
-            "text": "\"I'll use the fluticasone first, then the albuterol.\""
+            "text": "\"I'll use the fluticasone first so it can coat my airways for the albuterol.\""
           },
           {
             "id": "b",
-            "text": "\"I'll use the albuterol first, wait a few minutes, then use the fluticasone and rinse my mouth.\""
+            "text": "\"I'll use albuterol, wait a few minutes, then fluticasone and rinse my mouth.\""
           },
           {
             "id": "c",
-            "text": "\"I'll use fluticasone when I have an asthma attack.\""
+            "text": "\"I'll take two extra puffs of fluticasone when I start wheezing in the night.\""
           },
           {
             "id": "d",
-            "text": "\"I don't need to rinse my mouth after the fluticasone.\""
+            "text": "\"I need to rinse my mouth after the albuterol, not after the fluticasone.\""
           }
         ]
       },
@@ -610,14 +610,14 @@
       "rationale": {
         "correct": "Use the bronchodilator before the inhaled corticosteroid, then rinse the mouth after the steroid.",
         "perOption": {
-          "a": "The bronchodilator should be used first to open the airways.",
+          "a": "The bronchodilator goes first to open the airways.",
           "b": "Albuterol opens the airways so the steroid reaches deeper, and rinsing prevents oral candidiasis.",
-          "c": "Inhaled steroids are for prevention; albuterol is the rescue inhaler.",
-          "d": "Rinsing prevents thrush and hoarseness."
+          "c": "Inhaled steroids prevent symptoms; albuterol is the rescue inhaler.",
+          "d": "Rinsing after the steroid prevents thrush and hoarseness."
         },
         "references": [
           "Nursing pharmacology texts (e.g. Lehne; McCuistion) and the drug's prescribing information",
-          "Reviewed by the content team on 17 November 2026."
+          "Rewritten to NCLEX-RN difficulty and reviewed by the content team on 19 November 2026."
         ]
       },
       "educationalObjective": "Teach the sequence for bronchodilator and corticosteroid inhalers."
@@ -631,17 +631,17 @@
         "medication-administration-technique"
       ],
       "cjmmSkill": "evaluate_outcomes",
-      "difficulty": "moderate",
-      "stem": "The nurse is observing a student give medications through a client's nasogastric feeding tube. Which action requires the nurse to intervene?",
+      "difficulty": "difficult",
+      "stem": "The nurse is observing a nursing student give four medications through a client's nasogastric tube while a continuous feeding is running. The client is prescribed phenytoin suspension, famotidine, a multivitamin and docusate liquid. Which action by the student requires the nurse to intervene?",
       "content": {
         "options": [
           {
             "id": "a",
-            "text": "Checks tube placement before giving medications"
+            "text": "Pauses the feeding and checks tube placement before giving anything"
           },
           {
             "id": "b",
-            "text": "Mixes all of the crushed medications together in one cup"
+            "text": "Mixes the crushed and liquid medications together in one cup"
           },
           {
             "id": "c",
@@ -649,7 +649,7 @@
           },
           {
             "id": "d",
-            "text": "Uses the liquid form of a medication when one is available"
+            "text": "Leaves the feeding off for a while around the phenytoin, as the policy says"
           }
         ]
       },
@@ -657,17 +657,17 @@
         "correct": "b"
       },
       "rationale": {
-        "correct": "Give each medication separately, flushing with water between medications.",
+        "correct": "Give each enteral medication separately with water flushes between them, and hold feedings around drugs such as phenytoin that bind to formula.",
         "perOption": {
-          "a": "Placement is verified before anything is put into the tube.",
-          "b": "Each medication is given separately with a flush between them to prevent interactions and tube clogging.",
-          "c": "Flushing keeps the tube open and ensures the full dose is given.",
-          "d": "Liquid forms are preferred for tube administration."
+          "a": "Placement is checked and the feeding paused before medications are given.",
+          "b": "Each medication is given separately with a water flush between, to prevent interactions and clogging.",
+          "c": "Flushing keeps the tube open and makes sure the full dose is given.",
+          "d": "Tube feedings bind phenytoin, so holding the feeding around the dose is correct."
         },
         "references": [
           "Nursing pharmacology texts (e.g. Lehne; McCuistion) and the drug's prescribing information",
           "Fundamentals of nursing texts (e.g. Potter & Perry)",
-          "Reviewed by the content team on 17 November 2026."
+          "Rewritten to NCLEX-RN difficulty and reviewed by the content team on 19 November 2026."
         ]
       },
       "educationalObjective": "Give medications safely through an enteral tube."
@@ -681,8 +681,8 @@
         "medication-administration-technique"
       ],
       "cjmmSkill": "take_action",
-      "difficulty": "easy",
-      "stem": "Which site should the nurse use to give an intramuscular vaccine to a 4-month-old infant?",
+      "difficulty": "moderate",
+      "stem": "A 4-month-old infant is due for DTaP, inactivated polio and pneumococcal vaccines at a well-child visit. The infant weighs 6.5 kg and is sitting on the parent's lap. Which site should the nurse use for the intramuscular injections?",
       "content": {
         "options": [
           {
@@ -707,16 +707,16 @@
         "correct": "b"
       },
       "rationale": {
-        "correct": "In infants, the vastus lateralis is the preferred IM site.",
+        "correct": "In infants, the vastus lateralis is the preferred IM site; separate injections in the same thigh are spaced about 2.5 cm (1 inch) apart.",
         "perOption": {
           "a": "The infant deltoid is too small for most IM injections.",
           "b": "The vastus lateralis is well developed in infants and has no major nerves or vessels nearby.",
-          "c": "The dorsogluteal site risks sciatic nerve injury and isn't used in infants.",
+          "c": "The dorsogluteal site risks sciatic nerve injury and is not used in infants.",
           "d": "This site is used in older children and adults; the vastus lateralis is preferred in infants."
         },
         "references": [
           "Pediatric nursing texts (e.g. Hockenberry, Wong's Essentials of Pediatric Nursing)",
-          "Reviewed by the content team on 17 November 2026."
+          "Rewritten to NCLEX-RN difficulty and reviewed by the content team on 19 November 2026."
         ]
       },
       "educationalObjective": "Select the IM site for an infant."
@@ -731,24 +731,24 @@
       ],
       "cjmmSkill": "take_action",
       "difficulty": "moderate",
-      "stem": "The nurse is giving a tuberculin skin test. Which technique is correct?",
+      "stem": "A nurse starting a new job needs a tuberculin skin test with 0.1 mL of purified protein derivative. The occupational health nurse is giving the test. Which technique is correct?",
       "content": {
         "options": [
           {
             "id": "a",
-            "text": "Inject at a 45-degree angle into the subcutaneous tissue"
+            "text": "Inject at a 45-degree angle into the subcutaneous tissue of the upper arm"
           },
           {
             "id": "b",
-            "text": "Inject at a 10- to 15-degree angle with the bevel up to form a small wheal"
+            "text": "Inject at a 10- to 15-degree angle, bevel up, to raise a small wheal"
           },
           {
             "id": "c",
-            "text": "Inject at a 90-degree angle into the deltoid"
+            "text": "Inject at a 90-degree angle into the deltoid muscle"
           },
           {
             "id": "d",
-            "text": "Massage the site after the injection"
+            "text": "Massage the site after the injection to spread the antigen"
           }
         ]
       },
@@ -760,12 +760,12 @@
         "perOption": {
           "a": "This is a subcutaneous injection.",
           "b": "The intradermal technique places the antigen just under the epidermis.",
-          "c": "This is an IM injection.",
+          "c": "This is an intramuscular injection.",
           "d": "Massage can spread the antigen and affect the result."
         },
         "references": [
           "Fundamentals of nursing texts (e.g. Potter & Perry)",
-          "Reviewed by the content team on 17 November 2026."
+          "Rewritten to NCLEX-RN difficulty and reviewed by the content team on 19 November 2026."
         ]
       },
       "educationalObjective": "Perform an intradermal injection."
@@ -779,25 +779,25 @@
         "medication-administration-technique"
       ],
       "cjmmSkill": "take_action",
-      "difficulty": "easy",
-      "stem": "The nurse is measuring 15 mL of a liquid medication in a medicine cup. How should the nurse read the volume?",
+      "difficulty": "moderate",
+      "stem": "The nurse is measuring 15 mL of lactulose for a client with hepatic encephalopathy, using a graduated medicine cup. How should the nurse read the volume?",
       "content": {
         "options": [
           {
             "id": "a",
-            "text": "At the top edge of the curve of the liquid, holding the cup above eye level"
+            "text": "At the top edge of the curved liquid, holding the cup slightly above eye level"
           },
           {
             "id": "b",
-            "text": "At the bottom of the meniscus with the cup at eye level on a flat surface"
+            "text": "At the bottom of the curved surface, with the cup flat at eye level"
           },
           {
             "id": "c",
-            "text": "By holding the cup in the hand and estimating"
+            "text": "By holding the cup in the hand and lining it up with the 15 mL mark"
           },
           {
             "id": "d",
-            "text": "By filling the cup to the brim"
+            "text": "At the line where the liquid touches the side of the cup, from above"
           }
         ]
       },
@@ -805,16 +805,16 @@
         "correct": "b"
       },
       "rationale": {
-        "correct": "Read liquid measurements at the bottom of the meniscus, at eye level, on a flat surface.",
+        "correct": "Read liquid measurements at the bottom of the meniscus, at eye level, with the cup on a flat surface.",
         "perOption": {
           "a": "Reading from above or below eye level distorts the measurement.",
           "b": "The bottom of the meniscus at eye level gives the accurate volume.",
-          "c": "Holding the cup can tilt it.",
-          "d": "This gives an inaccurate dose."
+          "c": "Holding the cup can tilt it and give a wrong reading.",
+          "d": "The edge where liquid climbs the cup overstates the volume."
         },
         "references": [
           "Fundamentals of nursing texts (e.g. Potter & Perry)",
-          "Reviewed by the content team on 17 November 2026."
+          "Rewritten to NCLEX-RN difficulty and reviewed by the content team on 19 November 2026."
         ]
       },
       "educationalObjective": "Measure liquid medications accurately."
@@ -828,25 +828,25 @@
         "medication-administration-technique"
       ],
       "cjmmSkill": "analyze_cues",
-      "difficulty": "moderate",
-      "stem": "A client has difficulty swallowing pills. Which medication may the nurse crush?",
+      "difficulty": "difficult",
+      "stem": "A client who had a stroke now has trouble swallowing tablets and asks the nurse to crush the 0900 medications into applesauce. The speech-language pathologist has cleared the client for pureed foods. Which medication may the nurse crush?",
       "content": {
         "options": [
           {
             "id": "a",
-            "text": "Metoprolol succinate extended-release"
+            "text": "Metoprolol succinate extended-release 50 mg"
           },
           {
             "id": "b",
-            "text": "Enteric-coated aspirin"
+            "text": "Aspirin 81 mg enteric-coated tablet"
           },
           {
             "id": "c",
-            "text": "Acetaminophen 325 mg regular tablet"
+            "text": "Atorvastatin 40 mg immediate-release tablet"
           },
           {
             "id": "d",
-            "text": "Nifedipine extended-release"
+            "text": "Nifedipine extended-release 30 mg tablet"
           }
         ]
       },
@@ -854,16 +854,16 @@
         "correct": "c"
       },
       "rationale": {
-        "correct": "Don't crush extended-release (ER, XL, SR, CR), enteric-coated or sublingual products. Check with the pharmacist or ask for a liquid form.",
+        "correct": "Do not crush extended-release (ER, XL, SR, CR), enteric-coated or sublingual products. Check with the pharmacist, or ask for a liquid form.",
         "perOption": {
           "a": "Crushing an extended-release tablet releases the whole dose at once.",
           "b": "Crushing destroys the coating that protects the stomach.",
-          "c": "Plain immediate-release tablets can usually be crushed.",
+          "c": "Plain immediate-release tablets such as atorvastatin can usually be crushed.",
           "d": "Crushing an extended-release calcium channel blocker can cause severe hypotension."
         },
         "references": [
           "Nursing pharmacology texts (e.g. Lehne; McCuistion) and the drug's prescribing information",
-          "Reviewed by the content team on 17 November 2026."
+          "Rewritten to NCLEX-RN difficulty and reviewed by the content team on 19 November 2026."
         ]
       },
       "educationalObjective": "Identify medications that must not be crushed."
@@ -878,7 +878,7 @@
       ],
       "cjmmSkill": "take_action",
       "difficulty": "moderate",
-      "stem": "The nurse is teaching a client how to self-inject insulin with a syringe. Which instructions should the nurse include? Select all that apply.",
+      "stem": "A 66-year-old client with type 2 diabetes is starting NPH and regular insulin twice a day and will draw up doses with a syringe at home. Which instructions should the nurse include in the teaching? Select all that apply.",
       "content": {
         "options": [
           {
@@ -891,15 +891,15 @@
           },
           {
             "id": "c",
-            "text": "Roll cloudy insulin gently between the palms before drawing it up"
+            "text": "Roll the cloudy insulin gently between the palms before drawing it up"
           },
           {
             "id": "d",
-            "text": "Shake the NPH vial vigorously"
+            "text": "Shake the NPH vial hard so the insulin is fully mixed"
           },
           {
             "id": "e",
-            "text": "Massage the site after injecting"
+            "text": "Massage the site for a minute after each injection"
           },
           {
             "id": "f",
@@ -916,7 +916,7 @@
         ]
       },
       "rationale": {
-        "correct": "Insulin teaching: correct site rotation, technique, mixing and storage.",
+        "correct": "Insulin teaching covers site rotation, injection technique, mixing and storage.",
         "perOption": {
           "a": "Rotating within one area prevents lipohypertrophy and keeps absorption consistent.",
           "b": "This is the usual angle for subcutaneous insulin with short needles.",
@@ -928,7 +928,7 @@
         "references": [
           "Nursing pharmacology texts (e.g. Lehne; McCuistion) and the drug's prescribing information",
           "Fundamentals of nursing texts (e.g. Potter & Perry)",
-          "Reviewed by the content team on 17 November 2026."
+          "Rewritten to NCLEX-RN difficulty and reviewed by the content team on 19 November 2026."
         ]
       },
       "educationalObjective": "Teach self-injection of insulin."
@@ -943,24 +943,24 @@
       ],
       "cjmmSkill": "take_action",
       "difficulty": "moderate",
-      "stem": "Before giving medications, when should the nurse compare the medication label with the medication administration record?",
+      "stem": "A nurse is preparing 0900 medications for a client from an automated dispensing cabinet. At which points should the nurse compare each medication label with the medication administration record?",
       "content": {
         "options": [
           {
             "id": "a",
-            "text": "Only once, at the bedside"
+            "text": "Once, at the bedside, just before giving the medication"
           },
           {
             "id": "b",
-            "text": "When taking the medication from storage, when preparing it and at the bedside before giving it"
+            "text": "When removing it, when preparing it, and at the bedside"
           },
           {
             "id": "c",
-            "text": "Only when the medication is new"
+            "text": "When a medication is new for this client"
           },
           {
             "id": "d",
-            "text": "After giving the medication, when documenting"
+            "text": "After giving it, while documenting in the record"
           }
         ]
       },
@@ -968,16 +968,16 @@
         "correct": "b"
       },
       "rationale": {
-        "correct": "Do three checks against the MAR: when retrieving, when preparing and at the bedside, along with the rights of medication administration.",
+        "correct": "Check each medication against the MAR three times: when retrieving, when preparing and at the bedside, along with the rights of medication administration.",
         "perOption": {
-          "a": "One check doesn't give enough safety.",
-          "b": "Three checks give three chances to catch an error.",
+          "a": "One check does not give enough chances to catch an error.",
+          "b": "Three checks give three chances to catch an error before it reaches the client.",
           "c": "Every medication is checked every time.",
-          "d": "Checks after giving are too late to prevent an error."
+          "d": "A check after giving is too late to prevent an error."
         },
         "references": [
           "Fundamentals of nursing texts (e.g. Potter & Perry)",
-          "Reviewed by the content team on 17 November 2026."
+          "Rewritten to NCLEX-RN difficulty and reviewed by the content team on 19 November 2026."
         ]
       },
       "educationalObjective": "Apply the three checks of medication administration."

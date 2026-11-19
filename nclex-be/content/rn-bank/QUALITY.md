@@ -15,7 +15,7 @@ Written by `python3 -I build_all.py`; do not edit by hand. See `quality.py` for 
 | 02-management-of-care-priorities | 25 | yes | 17 | 24% | 32% (skip absolutes) | 6% | 27 | 2/14/9 |
 | 03-management-of-care-legal-ethical | 26 | yes | 21 | 24% | 26% (longest) | 5% | 35 | 3/15/8 |
 | 04-pharm-high-alert | 26 | yes | 19 | 26% | 34% (stem words) | 11% | 37 | 1/17/8 |
-| 05-pharm-calculations-technique | 24 |  | 11 | 55% | 59% (longest) | 9% | 23 | 10/10/4 |
+| 05-pharm-calculations-technique | 24 | yes | 11 | 18% | 32% (longest) | 0% | 48.5 | 3/13/8 |
 | 06-cardiovascular-1 | 25 |  | 17 | 53% | 59% (longest) | 0% | 27 | 3/17/5 |
 | 07-cardiovascular-2 | 24 |  | 18 | 56% | 56% (longest) | 6% | 21.5 | 2/16/6 |
 | 08-respiratory-1 | 24 |  | 19 | 47% | 50% (longest) | 21% | 19 | 4/17/3 |
@@ -57,4 +57,4 @@ Written by `python3 -I build_all.py`; do not edit by hand. See `quality.py` for 
 | 65-management-of-care-specialty | 27 |  | 18 | 83% | 86% (longest) | 11% | 15 | 0/14/13 |
 | 66-risk-reduction-basic-care | 31 |  | 27 | 93% | 94% (longest) | 26% | 17 | 1/26/4 |
 | 67-moc-sic-ngn | 34 |  | 23 | 87% | 89% (longest) | 17% | 18 | 0/25/9 |
-| **Whole bank** | 1110 | | 874 | 70% | 71% (longest) | 17% | 18 | 158/726/226 |
+| **Whole bank** | 1110 | | 874 | 69% | 71% (longest) | 16% | 18 | 151/729/230 |
