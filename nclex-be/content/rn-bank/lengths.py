@@ -13,11 +13,15 @@ import quality  # noqa: E402
 
 problems = []
 real_gate = quality.gate
-quality.gate = lambda questions: problems.extend(real_gate(questions)) or []
-path = next((HERE / "batches").glob(f"b{sys.argv[1]}_*.py"))
-spec = importlib.util.spec_from_file_location(path.stem, path)
-module = importlib.util.module_from_spec(spec)
-spec.loader.exec_module(module)
+target = next((HERE / "batches").glob(f"b{sys.argv[1]}_*.py"))
+# Earlier batches register subtopics later ones use, so load every batch up to the target in order.
+for path in sorted((HERE / "batches").glob("b*.py")):
+    quality.gate = (lambda qs: problems.extend(real_gate(qs)) or []) if path == target else (lambda qs: [])
+    spec = importlib.util.spec_from_file_location(path.stem, path)
+    module = importlib.util.module_from_spec(spec)
+    spec.loader.exec_module(module)
+    if path == target:
+        break
 for n, q in enumerate(module.BUILT[1], 1):
     if q["itemType"] != "multiple_choice":
         continue
