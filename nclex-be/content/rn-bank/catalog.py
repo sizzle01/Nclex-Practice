@@ -27,7 +27,9 @@ CASES_PER_EXAM = 2
 EXAM_SECONDS = 10200        # 2 h 50 min: about 2 minutes per item, like the real exam's pace
 PASS_THRESHOLD = 0.65
 ADAPTIVE_SECONDS = 18000    # 5 hours, the real NCLEX-RN's limit
-ADAPTIVE_CONFIG = {"minItems": 85, "maxItems": 150, "passingTheta": 0}
+# The pass line sits half a logit above "moderate" until the bank is rewritten to real NCLEX difficulty
+# and calibrated: the 2026-11-17 questions were easier than their tiers, which inflated ability (θ).
+ADAPTIVE_CONFIG = {"minItems": 85, "maxItems": 150, "passingTheta": 0.5}
 
 CATEGORY_NAMES = {
     "SECE.MOC": "Management of Care", "SECE.SIC": "Safety and Infection Prevention and Control",
@@ -151,7 +153,8 @@ def build_catalog(questions):
         "id": _set_id(n), "title": "NCLEX-RN adaptive exam",
         "description": ("Works like the real NCLEX-RN: each question depends on your answers so far, and the exam "
                         "stops once your result is clear, after 85 to 150 questions. Choose timed (5 hours) or "
-                        "untimed. No going back; answers and rationales at the end."),
+                        "untimed. No going back; answers and rationales at the end. The questions are being rewritten "
+                        "to real NCLEX difficulty and recalibrated, so treat your result as a practice estimate."),
         "mode": "cat", "revealMode": "exam", "timed": True, "timeBudgetSec": ADAPTIVE_SECONDS,
         "allowBackNav": False, "accessTier": "free", "questionIds": [], "catConfig": ADAPTIVE_CONFIG})
 

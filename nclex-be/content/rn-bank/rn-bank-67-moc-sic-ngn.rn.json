@@ -5389,7 +5389,7 @@
     {
       "id": "c1e00000-0000-4000-8000-000000000032",
       "title": "NCLEX-RN adaptive exam",
-      "description": "Works like the real NCLEX-RN: each question depends on your answers so far, and the exam stops once your result is clear, after 85 to 150 questions. Choose timed (5 hours) or untimed. No going back; answers and rationales at the end.",
+      "description": "Works like the real NCLEX-RN: each question depends on your answers so far, and the exam stops once your result is clear, after 85 to 150 questions. Choose timed (5 hours) or untimed. No going back; answers and rationales at the end. The questions are being rewritten to real NCLEX difficulty and recalibrated, so treat your result as a practice estimate.",
       "mode": "cat",
       "revealMode": "exam",
       "timed": true,
@@ -5400,7 +5400,7 @@
       "catConfig": {
         "minItems": 85,
         "maxItems": 150,
-        "passingTheta": 0
+        "passingTheta": 0.5
       }
     }
   ]
