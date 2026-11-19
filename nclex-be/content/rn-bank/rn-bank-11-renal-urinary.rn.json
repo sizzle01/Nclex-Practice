@@ -1,5 +1,5 @@
 {
-  "notice": "RN bank batch 11: Renal and urinary: kidney disease, dialysis and urinary disorders. Reviewed by the content team on 17 November 2026. See REVIEW-LOG.md.",
+  "notice": "RN bank batch 11: Renal and urinary: kidney disease, dialysis and urinary disorders. Rewritten to NCLEX-RN difficulty and reviewed by the content team on 19 November 2026. See REVIEW-LOG.md.",
   "track": "RN",
   "subtopics": [
     {
@@ -59,24 +59,24 @@
       ],
       "cjmmSkill": "analyze_cues",
       "difficulty": "difficult",
-      "stem": "A client has had severe vomiting and diarrhea for 3 days and has a urine output of 15 mL/hr. Which finding suggests the acute kidney injury is prerenal?",
+      "stem": "A 78-year-old client has had severe vomiting and diarrhea for 3 days. The blood pressure is 92/58 mm Hg, and the urine output is 15 mL/hr. The creatinine has risen from 0.9 to 1.8 mg/dL. Which finding suggests that the acute kidney injury is prerenal?",
       "content": {
         "options": [
           {
             "id": "a",
-            "text": "A BUN-to-creatinine ratio greater than 20:1 with concentrated urine"
+            "text": "A BUN-to-creatinine ratio over 20:1 and concentrated urine"
           },
           {
             "id": "b",
-            "text": "Muddy brown casts in the urine"
+            "text": "Muddy brown granular casts seen in the urine sediment"
           },
           {
             "id": "c",
-            "text": "Hydronephrosis on ultrasound"
+            "text": "Hydronephrosis of both kidneys seen on the renal ultrasound"
           },
           {
             "id": "d",
-            "text": "Red blood cell casts"
+            "text": "Red blood cell casts and heavy protein in the urine"
           }
         ]
       },
@@ -86,14 +86,14 @@
       "rationale": {
         "correct": "Prerenal AKI comes from poor perfusion (dehydration, hemorrhage, heart failure) and often reverses with fluids.",
         "perOption": {
-          "a": "Low kidney perfusion leads to reabsorption of urea and water, producing a high BUN:creatinine ratio and concentrated urine.",
+          "a": "Low kidney perfusion leads to reabsorption of urea and water, giving a high BUN:creatinine ratio and concentrated urine.",
           "b": "These suggest acute tubular necrosis, an intrarenal cause.",
           "c": "This suggests a postrenal obstruction.",
           "d": "These suggest glomerulonephritis."
         },
         "references": [
           "Medical-surgical nursing texts (e.g. Lewis; Ignatavicius)",
-          "Reviewed by the content team on 17 November 2026."
+          "Rewritten to NCLEX-RN difficulty and reviewed by the content team on 19 November 2026."
         ]
       },
       "educationalObjective": "Identify prerenal acute kidney injury."
@@ -108,7 +108,7 @@
       ],
       "cjmmSkill": "prioritize_hypotheses",
       "difficulty": "moderate",
-      "stem": "A client is in the oliguric phase of acute kidney injury. Which laboratory value is the nurse's priority to monitor?",
+      "stem": "A client in the oliguric phase of acute kidney injury after a cardiac arrest has a urine output of 200 mL in 24 hours, has gained 2 kg and has crackles at both lung bases. Which laboratory value is the nurse's priority to monitor?",
       "content": {
         "options": [
           {
@@ -135,14 +135,14 @@
       "rationale": {
         "correct": "During oliguria, watch potassium, fluid overload and acidosis.",
         "perOption": {
-          "a": "The kidneys can't excrete potassium, so hyperkalemia can cause fatal dysrhythmias.",
+          "a": "The kidneys cannot excrete potassium, so hyperkalemia can cause fatal dysrhythmias.",
           "b": "Anemia develops more slowly.",
-          "c": "Albumin isn't the immediate risk.",
-          "d": "Glucose isn't the main risk."
+          "c": "Albumin is not the immediate risk.",
+          "d": "Glucose is not the main risk."
         },
         "references": [
           "Medical-surgical nursing texts (e.g. Lewis; Ignatavicius)",
-          "Reviewed by the content team on 17 November 2026."
+          "Rewritten to NCLEX-RN difficulty and reviewed by the content team on 19 November 2026."
         ]
       },
       "educationalObjective": "Prioritize monitoring in oliguric AKI."
@@ -156,25 +156,25 @@
         "kidney-injury-and-disease"
       ],
       "cjmmSkill": "evaluate_outcomes",
-      "difficulty": "easy",
-      "stem": "The nurse is teaching a client with chronic kidney disease about diet. Which food choice shows a need for more teaching?",
+      "difficulty": "moderate",
+      "stem": "The nurse is teaching a client with stage 4 chronic kidney disease, a potassium of 5.6 mEq/L and a phosphorus of 6.2 mg/dL about diet. Which lunch choice shows a need for more teaching?",
       "content": {
         "options": [
           {
             "id": "a",
-            "text": "Apples"
+            "text": "A turkey sandwich on white bread with apple slices"
           },
           {
             "id": "b",
-            "text": "Bananas and oranges"
+            "text": "A baked potato with cheese and a glass of orange juice"
           },
           {
             "id": "c",
-            "text": "White rice"
+            "text": "White rice with green beans and a small chicken breast"
           },
           {
             "id": "d",
-            "text": "Green beans"
+            "text": "A salad of lettuce and cucumber with an oil dressing"
           }
         ]
       },
@@ -184,14 +184,14 @@
       "rationale": {
         "correct": "CKD diets usually limit potassium, phosphorus, sodium and fluid, with moderate protein before dialysis.",
         "perOption": {
-          "a": "Apples are relatively low in potassium.",
-          "b": "These are high in potassium, which the kidneys can't remove.",
-          "c": "White rice is lower in potassium and phosphorus than whole grains.",
-          "d": "Green beans are relatively low in potassium."
+          "a": "These are lower in potassium and phosphorus.",
+          "b": "Potatoes and orange juice are high in potassium, and cheese is high in phosphorus.",
+          "c": "These are lower in potassium and phosphorus.",
+          "d": "These are low in potassium and phosphorus."
         },
         "references": [
           "Medical-surgical nursing texts (e.g. Lewis; Ignatavicius)",
-          "Reviewed by the content team on 17 November 2026."
+          "Rewritten to NCLEX-RN difficulty and reviewed by the content team on 19 November 2026."
         ]
       },
       "educationalObjective": "Teach dietary restrictions for CKD."
@@ -206,12 +206,12 @@
       ],
       "cjmmSkill": "recognize_cues",
       "difficulty": "moderate",
-      "stem": "Which findings should the nurse expect in a client with stage 5 chronic kidney disease? Select all that apply.",
+      "stem": "The nurse is reviewing laboratory results for a client with stage 5 chronic kidney disease who is not yet on dialysis and reports fatigue and itching. Which findings should the nurse expect? Select all that apply.",
       "content": {
         "options": [
           {
             "id": "a",
-            "text": "Anemia"
+            "text": "Low hemoglobin"
           },
           {
             "id": "b",
@@ -227,11 +227,11 @@
           },
           {
             "id": "e",
-            "text": "Metabolic acidosis"
+            "text": "Low potassium"
           },
           {
             "id": "f",
-            "text": "Low potassium"
+            "text": "High bicarbonate"
           }
         ]
       },
@@ -240,23 +240,22 @@
           "a",
           "b",
           "c",
-          "d",
-          "e"
+          "d"
         ]
       },
       "rationale": {
-        "correct": "End-stage CKD causes anemia, hyperkalemia, hyperphosphatemia, hypocalcemia, acidosis and fluid overload.",
+        "correct": "End-stage CKD causes anemia, hyperkalemia, hyperphosphatemia, hypocalcemia, metabolic acidosis and fluid overload.",
         "perOption": {
           "a": "The kidneys make less erythropoietin.",
-          "b": "Phosphorus builds up because the kidneys can't excrete it.",
+          "b": "Phosphorus builds up because the kidneys cannot excrete it.",
           "c": "Calcium falls as phosphorus rises and vitamin D activation drops.",
           "d": "Potassium builds up.",
-          "e": "The kidneys can't excrete acid.",
-          "f": "Potassium usually rises in end-stage kidney disease."
+          "e": "Potassium usually rises in end-stage kidney disease.",
+          "f": "The kidneys cannot excrete acid, so bicarbonate falls (metabolic acidosis)."
         },
         "references": [
           "Medical-surgical nursing texts (e.g. Lewis; Ignatavicius)",
-          "Reviewed by the content team on 17 November 2026."
+          "Rewritten to NCLEX-RN difficulty and reviewed by the content team on 19 November 2026."
         ]
       },
       "educationalObjective": "Recognize complications of chronic kidney disease."
@@ -271,24 +270,24 @@
       ],
       "cjmmSkill": "recognize_cues",
       "difficulty": "moderate",
-      "stem": "A client with CKD is due for epoetin alfa. Which finding should the nurse report to the provider before giving it?",
+      "stem": "A client with chronic kidney disease is due for epoetin alfa subcutaneously. Which finding should the nurse report to the provider before giving it?",
       "content": {
         "options": [
           {
             "id": "a",
-            "text": "Hemoglobin 9.2 g/dL"
+            "text": "A hemoglobin of 9.2 g/dL"
           },
           {
             "id": "b",
-            "text": "Blood pressure 182/104 mm Hg"
+            "text": "A blood pressure of 182/104 mm Hg"
           },
           {
             "id": "c",
-            "text": "Serum iron within normal range"
+            "text": "A ferritin and iron level in the normal range"
           },
           {
             "id": "d",
-            "text": "Mild fatigue"
+            "text": "Mild fatigue after walking to the bathroom"
           }
         ]
       },
@@ -299,13 +298,13 @@
         "correct": "Before epoetin, check blood pressure and hemoglobin; the target is usually below about 11 g/dL to reduce cardiovascular risk.",
         "perOption": {
           "a": "Anemia is the reason for the drug.",
-          "b": "Epoetin can raise blood pressure and increase the risk of stroke; uncontrolled hypertension is a contraindication.",
+          "b": "Epoetin can raise blood pressure and increase stroke risk; uncontrolled hypertension is a reason to hold it.",
           "c": "Adequate iron is needed for epoetin to work.",
-          "d": "Fatigue is a symptom of anemia."
+          "d": "Fatigue is a symptom of the anemia being treated."
         },
         "references": [
           "Nursing pharmacology texts (e.g. Lehne; McCuistion) and the drug's prescribing information",
-          "Reviewed by the content team on 17 November 2026."
+          "Rewritten to NCLEX-RN difficulty and reviewed by the content team on 19 November 2026."
         ]
       },
       "educationalObjective": "Check safety parameters before giving epoetin."
@@ -320,24 +319,24 @@
       ],
       "cjmmSkill": "take_action",
       "difficulty": "moderate",
-      "stem": "A client with CKD is prescribed sevelamer. When should the client take it?",
+      "stem": "A client with chronic kidney disease and a phosphorus of 6.4 mg/dL is starting sevelamer. The client asks when to take it. What should the nurse say?",
       "content": {
         "options": [
           {
             "id": "a",
-            "text": "At bedtime"
+            "text": "\"Take it at bedtime so it works overnight.\""
           },
           {
             "id": "b",
-            "text": "With meals"
+            "text": "\"Take it with each meal.\""
           },
           {
             "id": "c",
-            "text": "On an empty stomach"
+            "text": "\"Take it on an empty stomach before breakfast.\""
           },
           {
             "id": "d",
-            "text": "Once a week"
+            "text": "\"Take it once a week on the same day.\""
           }
         ]
       },
@@ -345,16 +344,16 @@
         "correct": "b"
       },
       "rationale": {
-        "correct": "Phosphate binders (sevelamer, calcium acetate) are taken with meals.",
+        "correct": "Phosphate binders such as sevelamer and calcium acetate are taken with meals.",
         "perOption": {
-          "a": "It must be with food to bind dietary phosphorus.",
-          "b": "Phosphate binders bind phosphorus in food so it isn't absorbed.",
-          "c": "Without food there's no phosphorus to bind.",
-          "d": "It is taken with each meal."
+          "a": "It must be taken with food to bind dietary phosphorus.",
+          "b": "Phosphate binders bind phosphorus in food so it is not absorbed.",
+          "c": "Without food there is no phosphorus to bind.",
+          "d": "It is taken with every meal."
         },
         "references": [
           "Nursing pharmacology texts (e.g. Lehne; McCuistion) and the drug's prescribing information",
-          "Reviewed by the content team on 17 November 2026."
+          "Rewritten to NCLEX-RN difficulty and reviewed by the content team on 19 November 2026."
         ]
       },
       "educationalObjective": "Teach correct timing of phosphate binders."
@@ -368,25 +367,25 @@
         "dialysis-care"
       ],
       "cjmmSkill": "evaluate_outcomes",
-      "difficulty": "easy",
-      "stem": "A client has an arteriovenous fistula in the left arm for hemodialysis. Which action by a staff member requires correction?",
+      "difficulty": "difficult",
+      "stem": "A client has a new arteriovenous fistula in the left forearm for hemodialysis. The charge nurse is observing staff. Which action requires the charge nurse to intervene?",
       "content": {
         "options": [
           {
             "id": "a",
-            "text": "Checks for a thrill over the fistula"
+            "text": "An LPN feels for a thrill over the fistula at the start of the shift"
           },
           {
             "id": "b",
-            "text": "Listens for a bruit over the fistula"
+            "text": "The RN listens for a bruit over the fistula with a stethoscope"
           },
           {
             "id": "c",
-            "text": "Takes the blood pressure on the left arm"
+            "text": "An AP takes the blood pressure using the client's left arm"
           },
           {
             "id": "d",
-            "text": "Draws blood from the right arm"
+            "text": "A phlebotomist draws the morning blood from the right arm"
           }
         ]
       },
@@ -394,7 +393,7 @@
         "correct": "c"
       },
       "rationale": {
-        "correct": "Protect the access arm: no blood pressures, IVs or blood draws, and no tight clothing.",
+        "correct": "Protect the access arm: no blood pressures, IVs or blood draws, and no tight clothing on that arm.",
         "perOption": {
           "a": "Feeling the thrill confirms flow.",
           "b": "Hearing the bruit confirms flow.",
@@ -403,7 +402,7 @@
         },
         "references": [
           "Medical-surgical nursing texts (e.g. Lewis; Ignatavicius)",
-          "Reviewed by the content team on 17 November 2026."
+          "Rewritten to NCLEX-RN difficulty and reviewed by the content team on 19 November 2026."
         ]
       },
       "educationalObjective": "Protect a hemodialysis access."
@@ -418,12 +417,12 @@
       ],
       "cjmmSkill": "recognize_cues",
       "difficulty": "moderate",
-      "stem": "When assessing a client's arteriovenous fistula, the nurse can't feel a thrill or hear a bruit. What should the nurse do?",
+      "stem": "During morning assessment of a client who receives hemodialysis three times a week, the nurse cannot feel a thrill or hear a bruit over the arteriovenous fistula. Yesterday both were present. What should the nurse do?",
       "content": {
         "options": [
           {
             "id": "a",
-            "text": "Document this as normal"
+            "text": "Document the finding as expected on a non-dialysis day"
           },
           {
             "id": "b",
@@ -431,11 +430,11 @@
           },
           {
             "id": "c",
-            "text": "Apply a warm compress and recheck tomorrow"
+            "text": "Apply a warm compress and recheck it tomorrow"
           },
           {
             "id": "d",
-            "text": "Flush the fistula with saline"
+            "text": "Flush the fistula gently with normal saline"
           }
         ]
       },
@@ -445,14 +444,14 @@
       "rationale": {
         "correct": "Loss of the thrill or bruit means thrombosis until proven otherwise.",
         "perOption": {
-          "a": "Absent thrill and bruit isn't normal.",
+          "a": "An absent thrill and bruit is never normal.",
           "b": "This suggests the fistula has clotted, and early treatment may save it.",
           "c": "Delay risks losing the access.",
-          "d": "Fistulas aren't flushed."
+          "d": "Fistulas are not flushed."
         },
         "references": [
           "Medical-surgical nursing texts (e.g. Lewis; Ignatavicius)",
-          "Reviewed by the content team on 17 November 2026."
+          "Rewritten to NCLEX-RN difficulty and reviewed by the content team on 19 November 2026."
         ]
       },
       "educationalObjective": "Recognize a clotted dialysis access."
@@ -467,7 +466,7 @@
       ],
       "cjmmSkill": "analyze_cues",
       "difficulty": "difficult",
-      "stem": "Near the end of a client's first hemodialysis session, the client reports a headache and nausea and becomes restless and confused. What does the nurse suspect?",
+      "stem": "A client with a BUN of 140 mg/dL is having a first hemodialysis session. Near the end of the session, the client reports a headache and nausea and becomes restless and confused. The blood pressure is 138/84. Which condition does the nurse suspect?",
       "content": {
         "options": [
           {
@@ -476,15 +475,15 @@
           },
           {
             "id": "b",
-            "text": "Hyperkalemia"
+            "text": "Hyperkalemia from inadequate dialysis"
           },
           {
             "id": "c",
-            "text": "Fluid overload"
+            "text": "Fluid overload from the dialysis circuit"
           },
           {
             "id": "d",
-            "text": "Air embolism"
+            "text": "Air embolism from the dialysis lines"
           }
         ]
       },
@@ -492,16 +491,16 @@
         "correct": "a"
       },
       "rationale": {
-        "correct": "Disequilibrium syndrome is most likely during early sessions; slower, shorter dialysis helps prevent it.",
+        "correct": "Disequilibrium syndrome is most likely in early sessions with a very high BUN; slower, shorter dialysis helps prevent it.",
         "perOption": {
-          "a": "Rapid removal of urea causes fluid to shift into the brain, causing headache, nausea, restlessness and confusion.",
+          "a": "Rapid removal of urea causes fluid to shift into the brain, giving headache, nausea, restlessness and confusion.",
           "b": "Dialysis lowers potassium.",
           "c": "Dialysis removes fluid.",
           "d": "Air embolism causes sudden chest pain and dyspnea."
         },
         "references": [
           "Medical-surgical nursing texts (e.g. Lewis; Ignatavicius)",
-          "Reviewed by the content team on 17 November 2026."
+          "Rewritten to NCLEX-RN difficulty and reviewed by the content team on 19 November 2026."
         ]
       },
       "educationalObjective": "Recognize dialysis disequilibrium syndrome."
@@ -516,7 +515,7 @@
       ],
       "cjmmSkill": "recognize_cues",
       "difficulty": "moderate",
-      "stem": "A client on peritoneal dialysis has cloudy dialysate output and abdominal pain. What should the nurse suspect?",
+      "stem": "A client on home peritoneal dialysis calls the clinic. The dialysate coming out has been cloudy since yesterday, and the client has abdominal pain and a temperature of 38.2 °C (100.8 °F). What should the nurse suspect?",
       "content": {
         "options": [
           {
@@ -541,16 +540,16 @@
         "correct": "a"
       },
       "rationale": {
-        "correct": "Report cloudy effluent; a sample is sent for cell count and culture, and antibiotics are often given.",
+        "correct": "Report cloudy effluent; a sample is sent for cell count and culture, and antibiotics are usually started.",
         "perOption": {
-          "a": "Cloudy effluent with abdominal pain is the classic sign of peritonitis.",
+          "a": "Cloudy effluent with abdominal pain and fever is the classic sign of peritonitis.",
           "b": "Effluent should be clear and pale yellow.",
-          "c": "Constipation slows outflow but doesn't make it cloudy.",
-          "d": "This doesn't make the effluent cloudy."
+          "c": "Constipation slows outflow but does not make it cloudy.",
+          "d": "This does not make the effluent cloudy."
         },
         "references": [
           "Medical-surgical nursing texts (e.g. Lewis; Ignatavicius)",
-          "Reviewed by the content team on 17 November 2026."
+          "Rewritten to NCLEX-RN difficulty and reviewed by the content team on 19 November 2026."
         ]
       },
       "educationalObjective": "Recognize peritonitis in peritoneal dialysis."
@@ -565,24 +564,24 @@
       ],
       "cjmmSkill": "take_action",
       "difficulty": "moderate",
-      "stem": "The outflow of a client's peritoneal dialysate is slow. What should the nurse do first?",
+      "stem": "During an exchange, the outflow of a client's peritoneal dialysate is slow, and only half of the expected volume has drained. The client has not had a bowel movement in 3 days. What should the nurse do first?",
       "content": {
         "options": [
           {
             "id": "a",
-            "text": "Turn the client from side to side and check the tubing for kinks"
+            "text": "Turn the client side to side and check the tubing for kinks"
           },
           {
             "id": "b",
-            "text": "Push the fluid out with a syringe"
+            "text": "Draw the fluid out of the catheter with a large syringe"
           },
           {
             "id": "c",
-            "text": "Raise the drainage bag above the abdomen"
+            "text": "Raise the drainage bag above the level of the abdomen"
           },
           {
             "id": "d",
-            "text": "Remove the catheter"
+            "text": "Call the provider to have the catheter removed"
           }
         ]
       },
@@ -590,16 +589,16 @@
         "correct": "a"
       },
       "rationale": {
-        "correct": "Slow outflow is often due to position, kinks, a full bowel or catheter migration.",
+        "correct": "Slow outflow is often due to position, kinks, a full bowel or catheter migration; check these first and treat constipation.",
         "perOption": {
           "a": "Repositioning and straightening the tubing often restore flow.",
-          "b": "Forcing fluid can damage the catheter.",
+          "b": "Forcing fluid can damage the catheter and the peritoneum.",
           "c": "The bag should be below the abdomen so gravity drains it.",
-          "d": "This is not a nursing action."
+          "d": "This is premature; simple measures come first."
         },
         "references": [
           "Medical-surgical nursing texts (e.g. Lewis; Ignatavicius)",
-          "Reviewed by the content team on 17 November 2026."
+          "Rewritten to NCLEX-RN difficulty and reviewed by the content team on 19 November 2026."
         ]
       },
       "educationalObjective": "Troubleshoot slow peritoneal dialysis outflow."
@@ -613,25 +612,25 @@
         "urinary-elimination-and-catheter-care"
       ],
       "cjmmSkill": "evaluate_outcomes",
-      "difficulty": "easy",
-      "stem": "The nurse is teaching a woman with recurrent urinary tract infections. Which statement shows a need for more teaching?",
+      "difficulty": "moderate",
+      "stem": "The nurse is teaching a 28-year-old woman who has had three urinary tract infections in a year. Which statement shows a need for more teaching?",
       "content": {
         "options": [
           {
             "id": "a",
-            "text": "\"I'll wipe from front to back.\""
+            "text": "\"I'll wipe from front to back after using the toilet.\""
           },
           {
             "id": "b",
-            "text": "\"I'll urinate after sex.\""
+            "text": "\"I'll urinate soon after sexual intercourse.\""
           },
           {
             "id": "c",
-            "text": "\"I'll take a bubble bath every day to stay clean.\""
+            "text": "\"I'll take a bubble bath every day to keep clean.\""
           },
           {
             "id": "d",
-            "text": "\"I'll drink plenty of fluids.\""
+            "text": "\"I'll drink plenty of water throughout the day.\""
           }
         ]
       },
@@ -639,7 +638,7 @@
         "correct": "c"
       },
       "rationale": {
-        "correct": "UTI prevention: fluids, frequent voiding, voiding after intercourse, front-to-back hygiene, avoiding irritants.",
+        "correct": "UTI prevention: fluids, frequent voiding, voiding after intercourse, front-to-back hygiene and avoiding irritants.",
         "perOption": {
           "a": "This reduces bacteria entering the urethra.",
           "b": "This flushes bacteria out.",
@@ -648,7 +647,7 @@
         },
         "references": [
           "Medical-surgical nursing texts (e.g. Lewis; Ignatavicius)",
-          "Reviewed by the content team on 17 November 2026."
+          "Rewritten to NCLEX-RN difficulty and reviewed by the content team on 19 November 2026."
         ]
       },
       "educationalObjective": "Teach UTI prevention."
@@ -661,26 +660,26 @@
       "subtopics": [
         "urinary-tract-and-prostate-disorders"
       ],
-      "cjmmSkill": "recognize_cues",
+      "cjmmSkill": "analyze_cues",
       "difficulty": "moderate",
-      "stem": "Which findings most suggest pyelonephritis rather than a bladder infection?",
+      "stem": "A 30-year-old client has burning on urination and urinary frequency. Which additional findings most suggest pyelonephritis rather than a bladder infection?",
       "content": {
         "options": [
           {
             "id": "a",
-            "text": "Burning on urination"
+            "text": "Burning that is worst at the very end of urination"
           },
           {
             "id": "b",
-            "text": "Fever, chills and flank pain with costovertebral angle tenderness"
+            "text": "Fever, chills and flank pain with CVA tenderness"
           },
           {
             "id": "c",
-            "text": "Urinary frequency"
+            "text": "Needing to urinate every 30 minutes"
           },
           {
             "id": "d",
-            "text": "Cloudy urine"
+            "text": "Cloudy urine with a strong odor"
           }
         ]
       },
@@ -688,7 +687,7 @@
         "correct": "b"
       },
       "rationale": {
-        "correct": "Upper tract infection causes systemic signs and flank pain.",
+        "correct": "Upper urinary tract infection causes systemic signs and flank pain with costovertebral angle tenderness.",
         "perOption": {
           "a": "This occurs with both.",
           "b": "These show the infection has reached the kidney.",
@@ -697,7 +696,7 @@
         },
         "references": [
           "Medical-surgical nursing texts (e.g. Lewis; Ignatavicius)",
-          "Reviewed by the content team on 17 November 2026."
+          "Rewritten to NCLEX-RN difficulty and reviewed by the content team on 19 November 2026."
         ]
       },
       "educationalObjective": "Tell pyelonephritis apart from cystitis."
@@ -711,25 +710,25 @@
         "urinary-tract-and-prostate-disorders"
       ],
       "cjmmSkill": "generate_solutions",
-      "difficulty": "easy",
-      "stem": "A client is admitted with renal colic from a suspected kidney stone. Which instruction is most important?",
+      "difficulty": "moderate",
+      "stem": "A client is admitted with severe right flank pain radiating to the groin from a suspected 4 mm kidney stone. Pain is controlled with IV ketorolac. Which instruction is most important for the nurse to give?",
       "content": {
         "options": [
           {
             "id": "a",
-            "text": "Strain all urine"
+            "text": "Strain all urine and save anything that is caught"
           },
           {
             "id": "b",
-            "text": "Limit fluids to 1 L a day"
+            "text": "Limit fluids to 1 L a day to reduce the pain"
           },
           {
             "id": "c",
-            "text": "Stay on bed rest"
+            "text": "Stay in bed and rest until the stone has fully passed"
           },
           {
             "id": "d",
-            "text": "Avoid all dairy products"
+            "text": "Avoid all milk, cheese and yogurt"
           }
         ]
       },
@@ -737,16 +736,16 @@
         "correct": "a"
       },
       "rationale": {
-        "correct": "Kidney stone care: pain control, fluids and straining the urine to catch the stone.",
+        "correct": "Kidney stone care: pain control, fluids, walking and straining the urine to catch the stone.",
         "perOption": {
           "a": "Catching the stone allows analysis and guides prevention.",
           "b": "Fluids help pass the stone, unless restricted for another reason.",
           "c": "Walking may help the stone pass.",
-          "d": "Calcium restriction isn't routinely recommended."
+          "d": "Calcium restriction is not routinely recommended."
         },
         "references": [
           "Medical-surgical nursing texts (e.g. Lewis; Ignatavicius)",
-          "Reviewed by the content team on 17 November 2026."
+          "Rewritten to NCLEX-RN difficulty and reviewed by the content team on 19 November 2026."
         ]
       },
       "educationalObjective": "Plan care for a client with a kidney stone."
@@ -761,7 +760,7 @@
       ],
       "cjmmSkill": "prioritize_hypotheses",
       "difficulty": "easy",
-      "stem": "A client with a kidney stone is pacing and crying with severe flank pain. What is the nurse's priority?",
+      "stem": "A client with a kidney stone is pacing, crying and rating flank pain as 10 out of 10. The client also asks how to prevent future stones. What is the nurse's priority?",
       "content": {
         "options": [
           {
@@ -770,15 +769,15 @@
           },
           {
             "id": "b",
-            "text": "Teaching about diet"
+            "text": "Diet teaching"
           },
           {
             "id": "c",
-            "text": "Measuring intake and output"
+            "text": "Intake and output"
           },
           {
             "id": "d",
-            "text": "Collecting a 24-hour urine"
+            "text": "A 24-hour urine"
           }
         ]
       },
@@ -786,16 +785,16 @@
         "correct": "a"
       },
       "rationale": {
-        "correct": "Renal colic is severe; treat the pain first.",
+        "correct": "Renal colic is severe; treat the pain first, then teach.",
         "perOption": {
-          "a": "Renal colic is extremely painful; analgesia (often NSAIDs and opioids) is the priority.",
+          "a": "Renal colic is extremely painful; analgesia, often NSAIDs and opioids, is the priority.",
           "b": "Teaching comes after the pain is controlled.",
-          "c": "This matters but isn't the priority.",
+          "c": "This matters but is not the priority.",
           "d": "This comes later."
         },
         "references": [
           "Medical-surgical nursing texts (e.g. Lewis; Ignatavicius)",
-          "Reviewed by the content team on 17 November 2026."
+          "Rewritten to NCLEX-RN difficulty and reviewed by the content team on 19 November 2026."
         ]
       },
       "educationalObjective": "Prioritize pain management in renal colic."
@@ -810,24 +809,24 @@
       ],
       "cjmmSkill": "evaluate_outcomes",
       "difficulty": "easy",
-      "stem": "A client taking phenazopyridine says, \"My urine is bright orange.\" What should the nurse tell the client?",
+      "stem": "A client started phenazopyridine yesterday for UTI discomfort and calls the clinic saying, \"My urine is bright orange.\" What should the nurse tell the client?",
       "content": {
         "options": [
           {
             "id": "a",
-            "text": "\"This is an expected effect of the medication.\""
+            "text": "\"This is an expected effect of the medicine.\""
           },
           {
             "id": "b",
-            "text": "\"Stop the medication right away.\""
+            "text": "\"Stop the medicine right away and call back.\""
           },
           {
             "id": "c",
-            "text": "\"This means you have blood in your urine.\""
+            "text": "\"This means there's blood in your urine.\""
           },
           {
             "id": "d",
-            "text": "\"Go to the emergency department.\""
+            "text": "\"Go to the emergency department now.\""
           }
         ]
       },
@@ -835,16 +834,16 @@
         "correct": "a"
       },
       "rationale": {
-        "correct": "Phenazopyridine is a urinary analgesic that turns urine orange; use it only short term.",
+        "correct": "Phenazopyridine is a urinary analgesic that turns urine orange; it is used only short term.",
         "perOption": {
-          "a": "Phenazopyridine colors the urine red-orange and can stain clothing and contact lenses.",
-          "b": "This is harmless.",
+          "a": "Phenazopyridine turns urine red-orange and can stain clothing and contact lenses.",
+          "b": "The color change is harmless.",
           "c": "The color comes from the drug.",
-          "d": "This isn't an emergency."
+          "d": "This is not an emergency."
         },
         "references": [
           "Nursing pharmacology texts (e.g. Lehne; McCuistion) and the drug's prescribing information",
-          "Reviewed by the content team on 17 November 2026."
+          "Rewritten to NCLEX-RN difficulty and reviewed by the content team on 19 November 2026."
         ]
       },
       "educationalObjective": "Teach the expected effects of phenazopyridine."
@@ -859,24 +858,24 @@
       ],
       "cjmmSkill": "generate_solutions",
       "difficulty": "moderate",
-      "stem": "A client with benign prostatic hyperplasia is starting tamsulosin. Which instruction should the nurse give?",
+      "stem": "A 72-year-old client with benign prostatic hyperplasia is starting tamsulosin 0.4 mg daily. The client also takes lisinopril. Which instruction should the nurse give?",
       "content": {
         "options": [
           {
             "id": "a",
-            "text": "\"Take it at bedtime and get up slowly.\""
+            "text": "\"Take it 30 minutes after the same meal each day and get up slowly.\""
           },
           {
             "id": "b",
-            "text": "\"Take it only when you have trouble urinating.\""
+            "text": "\"Take it only on the days when you have trouble starting your stream.\""
           },
           {
             "id": "c",
-            "text": "\"Increase your caffeine to help you urinate.\""
+            "text": "\"Drink more coffee to help your bladder empty fully.\""
           },
           {
             "id": "d",
-            "text": "\"It will shrink your prostate in a few days.\""
+            "text": "\"It will shrink your prostate within a few days.\""
           }
         ]
       },
@@ -886,14 +885,14 @@
       "rationale": {
         "correct": "Alpha blockers relax the prostate and bladder neck but can cause dizziness and orthostatic hypotension.",
         "perOption": {
-          "a": "Tamsulosin can cause orthostatic hypotension, especially with the first doses.",
-          "b": "It is taken daily.",
+          "a": "Tamsulosin can cause orthostatic hypotension, especially with early doses and with other blood pressure drugs.",
+          "b": "It is taken every day.",
           "c": "Caffeine can worsen urgency.",
-          "d": "Tamsulosin relaxes smooth muscle; it doesn't shrink the prostate."
+          "d": "Tamsulosin relaxes smooth muscle; it does not shrink the prostate."
         },
         "references": [
           "Nursing pharmacology texts (e.g. Lehne; McCuistion) and the drug's prescribing information",
-          "Reviewed by the content team on 17 November 2026."
+          "Rewritten to NCLEX-RN difficulty and reviewed by the content team on 19 November 2026."
         ]
       },
       "educationalObjective": "Teach about tamsulosin."
@@ -907,25 +906,25 @@
         "post-procedure-complications"
       ],
       "cjmmSkill": "take_action",
-      "difficulty": "moderate",
-      "stem": "A client is receiving continuous bladder irrigation after a transurethral resection of the prostate (TURP). The drainage is bright red with clots, and the output is less than the irrigation inflow. What should the nurse do first?",
+      "difficulty": "difficult",
+      "stem": "A client is receiving continuous bladder irrigation after a transurethral resection of the prostate. The drainage is bright red with clots, the output over the last hour is less than the irrigation inflow, and the client reports bladder spasms. What should the nurse do first?",
       "content": {
         "options": [
           {
             "id": "a",
-            "text": "Increase the irrigation rate"
+            "text": "Increase the irrigation rate to clear the clots"
           },
           {
             "id": "b",
-            "text": "Check the catheter and tubing for kinks or clots and irrigate per protocol"
+            "text": "Check the catheter for kinks or clots and irrigate per protocol"
           },
           {
             "id": "c",
-            "text": "Clamp the catheter"
+            "text": "Clamp the catheter until the spasms settle"
           },
           {
             "id": "d",
-            "text": "Document the findings and reassess in 1 hour"
+            "text": "Give the PRN belladonna and opium suppository and reassess in an hour"
           }
         ]
       },
@@ -933,16 +932,16 @@
         "correct": "b"
       },
       "rationale": {
-        "correct": "After TURP, keep the catheter draining; output should exceed the irrigant. Adjust the irrigation rate to keep the drainage light pink.",
+        "correct": "After TURP, keep the catheter draining; output should exceed the irrigant, and the irrigation rate is adjusted to keep the drainage light pink.",
         "perOption": {
-          "a": "Increasing inflow while outflow is blocked can distend the bladder.",
+          "a": "Increasing inflow while outflow is blocked distends the bladder.",
           "b": "Less output than input suggests obstruction, which must be cleared.",
           "c": "Clamping worsens retention and bleeding.",
-          "d": "Obstruction needs immediate action."
+          "d": "Treating spasms helps later, but the obstruction must be cleared first."
         },
         "references": [
           "Medical-surgical nursing texts (e.g. Lewis; Ignatavicius)",
-          "Reviewed by the content team on 17 November 2026."
+          "Rewritten to NCLEX-RN difficulty and reviewed by the content team on 19 November 2026."
         ]
       },
       "educationalObjective": "Manage continuous bladder irrigation after TURP."
@@ -957,7 +956,7 @@
       ],
       "cjmmSkill": "analyze_cues",
       "difficulty": "moderate",
-      "stem": "During an 8-hour shift, a client receiving continuous bladder irrigation has 3,200 mL of drainage. The irrigation solution used was 2,000 mL. What is the client's actual urine output?",
+      "stem": "A client receiving continuous bladder irrigation after a prostate resection has 3,200 mL of drainage in the collection bag at the end of an 8-hour shift. The irrigation solution used in the same period was 2,000 mL. What is the client's actual urine output for the shift?",
       "content": {
         "unit": "mL",
         "decimals": 0,
@@ -972,7 +971,7 @@
         "perOption": {},
         "references": [
           "Medical-surgical nursing texts (e.g. Lewis; Ignatavicius)",
-          "Reviewed by the content team on 17 November 2026."
+          "Rewritten to NCLEX-RN difficulty and reviewed by the content team on 19 November 2026."
         ]
       },
       "educationalObjective": "Calculate true urine output during bladder irrigation."
@@ -986,25 +985,25 @@
         "urinary-elimination-and-catheter-care"
       ],
       "cjmmSkill": "evaluate_outcomes",
-      "difficulty": "easy",
-      "stem": "Which action requires the nurse to intervene to prevent a catheter-associated urinary tract infection?",
+      "difficulty": "difficult",
+      "stem": "The nurse is rounding on clients with indwelling urinary catheters. Which observation requires the nurse to intervene to prevent a catheter-associated urinary tract infection?",
       "content": {
         "options": [
           {
             "id": "a",
-            "text": "Keeping the drainage bag below the level of the bladder"
+            "text": "A drainage bag hanging from the bed frame below the level of the bladder"
           },
           {
             "id": "b",
-            "text": "Hanging the drainage bag on the bed rail at the level of the shoulders"
+            "text": "A drainage bag hooked onto the rail at shoulder height for transport"
           },
           {
             "id": "c",
-            "text": "Securing the catheter to the thigh"
+            "text": "A catheter secured to the upper thigh with a securement device"
           },
           {
             "id": "d",
-            "text": "Keeping the system closed"
+            "text": "A closed system with the drainage port kept clamped and covered"
           }
         ]
       },
@@ -1021,7 +1020,7 @@
         },
         "references": [
           "CDC infection control and isolation precautions guidance",
-          "Reviewed by the content team on 17 November 2026."
+          "Rewritten to NCLEX-RN difficulty and reviewed by the content team on 19 November 2026."
         ]
       },
       "educationalObjective": "Prevent catheter-associated UTIs."
@@ -1036,24 +1035,24 @@
       ],
       "cjmmSkill": "take_action",
       "difficulty": "moderate",
-      "stem": "While inserting a urinary catheter in a female client, the nurse accidentally inserts it into the vagina. What should the nurse do?",
+      "stem": "While inserting a urinary catheter in a female client, the nurse realizes the catheter has gone into the vagina. No urine returns. What should the nurse do?",
       "content": {
         "options": [
           {
             "id": "a",
-            "text": "Remove the catheter and insert it into the urethra"
+            "text": "Remove the catheter and reinsert it into the urethra right away"
           },
           {
             "id": "b",
-            "text": "Leave the catheter in the vagina as a landmark and insert a new sterile catheter into the urethra"
+            "text": "Leave it in place; insert a new sterile catheter in the urethra"
           },
           {
             "id": "c",
-            "text": "Wipe the catheter with an antiseptic and reinsert it"
+            "text": "Wipe the catheter with antiseptic, then reinsert it in the urethra"
           },
           {
             "id": "d",
-            "text": "Stop the procedure and try again tomorrow"
+            "text": "Stop the procedure and try again on the next shift"
           }
         ]
       },
@@ -1064,13 +1063,13 @@
         "correct": "A contaminated catheter is never reinserted; use a new sterile one.",
         "perOption": {
           "a": "The catheter is now contaminated.",
-          "b": "The misplaced catheter marks where not to go; a new sterile catheter prevents infection.",
-          "c": "Wiping doesn't restore sterility.",
-          "d": "The client still needs the catheter."
+          "b": "The misplaced catheter marks where not to go, and a new sterile catheter prevents infection.",
+          "c": "Wiping does not restore sterility.",
+          "d": "The client still needs the catheter now."
         },
         "references": [
           "Fundamentals of nursing texts (e.g. Potter & Perry)",
-          "Reviewed by the content team on 17 November 2026."
+          "Rewritten to NCLEX-RN difficulty and reviewed by the content team on 19 November 2026."
         ]
       },
       "educationalObjective": "Correct a misplaced urinary catheter."
@@ -1084,25 +1083,25 @@
         "urinary-elimination-and-catheter-care"
       ],
       "cjmmSkill": "take_action",
-      "difficulty": "easy",
-      "stem": "Eight hours after surgery, a client hasn't urinated and reports lower abdominal fullness. What should the nurse do first?",
+      "difficulty": "difficult",
+      "stem": "Eight hours after a spinal anesthetic for a knee replacement, a client has not urinated and reports lower abdominal fullness. The client has received 1,600 mL of IV fluid. The provider has prescribed intermittent catheterization for retention over 400 mL. What should the nurse do first?",
       "content": {
         "options": [
           {
             "id": "a",
-            "text": "Insert an indwelling catheter"
+            "text": "Insert an indwelling catheter to drain the bladder"
           },
           {
             "id": "b",
-            "text": "Assess the bladder with a bladder scanner"
+            "text": "Scan the bladder with a bladder scanner"
           },
           {
             "id": "c",
-            "text": "Restrict fluids"
+            "text": "Restrict oral and IV fluids until the client voids"
           },
           {
             "id": "d",
-            "text": "Give a diuretic"
+            "text": "Ask the provider for a dose of IV furosemide"
           }
         ]
       },
@@ -1112,14 +1111,14 @@
       "rationale": {
         "correct": "Assess first: palpate the bladder and use a bladder scan before catheterizing.",
         "perOption": {
-          "a": "First confirm retention; a straight catheter may be enough.",
+          "a": "Retention should be confirmed first, and an intermittent catheter is prescribed.",
           "b": "A bladder scan measures retained urine and guides the next step.",
-          "c": "This doesn't treat retention.",
-          "d": "A diuretic would increase bladder volume."
+          "c": "This does not treat retention.",
+          "d": "A diuretic would add to the bladder volume."
         },
         "references": [
           "Medical-surgical nursing texts (e.g. Lewis; Ignatavicius)",
-          "Reviewed by the content team on 17 November 2026."
+          "Rewritten to NCLEX-RN difficulty and reviewed by the content team on 19 November 2026."
         ]
       },
       "educationalObjective": "Assess for postoperative urinary retention."
@@ -1134,24 +1133,24 @@
       ],
       "cjmmSkill": "generate_solutions",
       "difficulty": "moderate",
-      "stem": "A client with diabetes and mild CKD is having a CT scan with IV contrast. Which intervention best prevents contrast-induced kidney injury?",
+      "stem": "A client with type 2 diabetes and a creatinine of 1.6 mg/dL is scheduled for a CT scan with IV contrast. The client takes ibuprofen for arthritis. Which intervention best prevents contrast-induced kidney injury?",
       "content": {
         "options": [
           {
             "id": "a",
-            "text": "Restricting fluids before the scan"
+            "text": "Restrict fluids for 12 hours before the scan to limit urine"
           },
           {
             "id": "b",
-            "text": "IV or oral hydration before and after the scan as prescribed"
+            "text": "Give IV or oral hydration before and after, as prescribed"
           },
           {
             "id": "c",
-            "text": "Giving a potassium supplement"
+            "text": "Give a potassium supplement the morning of the scan"
           },
           {
             "id": "d",
-            "text": "Taking an NSAID for pain afterward"
+            "text": "Take ibuprofen after the scan for any discomfort"
           }
         ]
       },
@@ -1159,16 +1158,16 @@
         "correct": "b"
       },
       "rationale": {
-        "correct": "Prevent contrast nephropathy with hydration, holding nephrotoxic drugs and monitoring creatinine.",
+        "correct": "Prevent contrast nephropathy with hydration, holding nephrotoxic drugs such as NSAIDs and monitoring creatinine.",
         "perOption": {
           "a": "Dehydration increases the risk.",
           "b": "Hydration dilutes the contrast and keeps urine flowing.",
-          "c": "This doesn't protect the kidneys.",
+          "c": "This does not protect the kidneys.",
           "d": "NSAIDs increase the risk of kidney injury."
         },
         "references": [
           "Medical-surgical nursing texts (e.g. Lewis; Ignatavicius)",
-          "Reviewed by the content team on 17 November 2026."
+          "Rewritten to NCLEX-RN difficulty and reviewed by the content team on 19 November 2026."
         ]
       },
       "educationalObjective": "Prevent contrast-induced kidney injury."
@@ -1181,26 +1180,26 @@
       "subtopics": [
         "kidney-injury-and-disease"
       ],
-      "cjmmSkill": "recognize_cues",
-      "difficulty": "moderate",
-      "stem": "Two weeks after a strep throat infection, a client has tea-colored urine, puffiness around the eyes and a blood pressure of 158/96 mm Hg. What does the nurse suspect?",
+      "cjmmSkill": "analyze_cues",
+      "difficulty": "difficult",
+      "stem": "Two weeks after a strep throat infection, a 9-year-old has tea-colored urine, puffiness around the eyes that is worse in the morning, a decreased urine output and a blood pressure of 138/92 mm Hg. The urinalysis shows red cells and red cell casts. Which condition does the nurse suspect?",
       "content": {
         "options": [
           {
             "id": "a",
-            "text": "Acute post-streptococcal glomerulonephritis"
+            "text": "Post-streptococcal glomerulonephritis"
           },
           {
             "id": "b",
-            "text": "Urinary tract infection"
+            "text": "A lower urinary tract infection"
           },
           {
             "id": "c",
-            "text": "Kidney stones"
+            "text": "A kidney stone in the ureter"
           },
           {
             "id": "d",
-            "text": "Nephrotic syndrome"
+            "text": "Nephrotic syndrome after the infection"
           }
         ]
       },
@@ -1208,17 +1207,17 @@
         "correct": "a"
       },
       "rationale": {
-        "correct": "Post-streptococcal glomerulonephritis: hematuria (cola-colored urine), edema and hypertension 1 to 3 weeks after a strep infection.",
+        "correct": "Post-streptococcal glomerulonephritis: cola-colored urine, edema and hypertension 1 to 3 weeks after a strep infection.",
         "perOption": {
           "a": "Hematuria, edema and hypertension after a strep infection are typical.",
-          "b": "A UTI doesn't cause periorbital edema and hypertension.",
+          "b": "A UTI does not cause periorbital edema and hypertension.",
           "c": "Stones cause pain, not edema and hypertension.",
-          "d": "Nephrotic syndrome causes massive proteinuria and edema without the typical hematuria."
+          "d": "Nephrotic syndrome causes heavy proteinuria and edema, usually without hypertension and cola-colored urine."
         },
         "references": [
           "Medical-surgical nursing texts (e.g. Lewis; Ignatavicius)",
           "Pediatric nursing texts (e.g. Hockenberry, Wong's Essentials of Pediatric Nursing)",
-          "Reviewed by the content team on 17 November 2026."
+          "Rewritten to NCLEX-RN difficulty and reviewed by the content team on 19 November 2026."
         ]
       },
       "educationalObjective": "Recognize post-streptococcal glomerulonephritis."
@@ -1233,7 +1232,7 @@
       ],
       "cjmmSkill": "analyze_cues",
       "difficulty": "moderate",
-      "stem": "For each kidney function result, select the interpretation.",
+      "stem": "A 66-year-old client with long-standing diabetes and hypertension has routine kidney function tests at a clinic visit. For each result, select the interpretation.",
       "content": {
         "columns": [
           "Test",
@@ -1346,7 +1345,7 @@
         }
       },
       "rationale": {
-        "correct": "A raised BUN and creatinine with a low GFR shows reduced kidney function.",
+        "correct": "A raised BUN and creatinine with a low GFR show reduced kidney function.",
         "perOption": {
           "b1:a": "The result is high, not low.",
           "b1:b": "The result is high, not within normal range.",
@@ -1360,7 +1359,7 @@
         },
         "references": [
           "Laboratory reference ranges as used in common NCLEX review texts; follow the facility's ranges",
-          "Reviewed by the content team on 17 November 2026."
+          "Rewritten to NCLEX-RN difficulty and reviewed by the content team on 19 November 2026."
         ]
       },
       "educationalObjective": "Interpret kidney function tests."
@@ -1374,25 +1373,25 @@
         "kidney-injury-and-disease"
       ],
       "cjmmSkill": "recognize_cues",
-      "difficulty": "moderate",
-      "stem": "Three months after a kidney transplant, which finding should the client report right away?",
+      "difficulty": "difficult",
+      "stem": "Three months after a kidney transplant, a client who takes tacrolimus, mycophenolate and prednisone calls the clinic. Which report should the nurse act on right away?",
       "content": {
         "options": [
           {
             "id": "a",
-            "text": "Fever, tenderness over the transplant site and decreased urine output"
+            "text": "Fever, tenderness over the transplant and less urine"
           },
           {
             "id": "b",
-            "text": "Increased appetite"
+            "text": "A bigger appetite and some weight gain over the month"
           },
           {
             "id": "c",
-            "text": "Mild hand tremor"
+            "text": "A mild hand tremor, mostly noticed when writing"
           },
           {
             "id": "d",
-            "text": "A stable weight"
+            "text": "Weight unchanged and urine output the same as last week"
           }
         ]
       },
@@ -1400,16 +1399,16 @@
         "correct": "a"
       },
       "rationale": {
-        "correct": "Rejection signs: fever, graft tenderness, falling urine output, weight gain and rising creatinine.",
+        "correct": "Signs of rejection: fever, graft tenderness, falling urine output, weight gain and a rising creatinine.",
         "perOption": {
-          "a": "These may signal rejection, which needs prompt treatment.",
+          "a": "These may signal rejection or infection, both of which need prompt treatment.",
           "b": "This is often due to steroids.",
-          "c": "This is a common side effect of tacrolimus; it should be mentioned but isn't urgent.",
+          "c": "This is a common side effect of tacrolimus; it is reported but is not urgent.",
           "d": "This is reassuring."
         },
         "references": [
           "Medical-surgical nursing texts (e.g. Lewis; Ignatavicius)",
-          "Reviewed by the content team on 17 November 2026."
+          "Rewritten to NCLEX-RN difficulty and reviewed by the content team on 19 November 2026."
         ]
       },
       "educationalObjective": "Recognize signs of kidney transplant rejection."
