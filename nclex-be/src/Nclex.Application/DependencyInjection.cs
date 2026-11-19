@@ -88,6 +88,7 @@ using Nclex.Application.Users.GetMe;
 using Nclex.Application.Users.UpdateMe;
 using Nclex.Domain.Grading;
 using Nclex.Domain.ItemTypes;
+using Nclex.Domain.ItemTypes.Bowtie;
 using Nclex.Domain.ItemTypes.Dropdown;
 using Nclex.Domain.ItemTypes.FillBlankCalc;
 using Nclex.Domain.ItemTypes.Grouped;
@@ -330,6 +331,9 @@ public static class DependencyInjection
         services.TryAddEnumerable(ServiceDescriptor.Singleton<IItemTypeModule, HighlightTableModule>());
         services.TryAddEnumerable(ServiceDescriptor.Singleton<IItemTypeModule, FillBlankCalcModule>());
         services.TryAddEnumerable(ServiceDescriptor.Singleton<IItemTypeModule, OrderedResponseModule>());
+
+        // Phase 2 types, registered as each one is built. Bowtie arrived in F20.
+        services.TryAddEnumerable(ServiceDescriptor.Singleton<IItemTypeModule, BowtieModule>());
         services.TryAddSingleton<ItemTypeRegistry>();
         return services;
     }

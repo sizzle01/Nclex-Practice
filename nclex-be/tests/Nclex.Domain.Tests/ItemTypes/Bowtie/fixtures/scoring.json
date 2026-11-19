@@ -1,0 +1,526 @@
+[
+  {
+    "name": "every slot correct",
+    "content": {
+      "condition": [
+        {
+          "id": "c1",
+          "text": "Hypovolemic shock"
+        },
+        {
+          "id": "c2",
+          "text": "Sepsis"
+        },
+        {
+          "id": "c3",
+          "text": "Pulmonary embolism"
+        },
+        {
+          "id": "c4",
+          "text": "Heart failure"
+        }
+      ],
+      "actions": [
+        {
+          "id": "a1",
+          "text": "Obtain blood cultures"
+        },
+        {
+          "id": "a2",
+          "text": "Restrict fluids"
+        },
+        {
+          "id": "a3",
+          "text": "Give a 30 mL/kg crystalloid bolus"
+        },
+        {
+          "id": "a4",
+          "text": "Apply a cooling blanket"
+        },
+        {
+          "id": "a5",
+          "text": "Place in Trendelenburg position"
+        }
+      ],
+      "parameters": [
+        {
+          "id": "p1",
+          "text": "Daily weight"
+        },
+        {
+          "id": "p2",
+          "text": "Serum lactate"
+        },
+        {
+          "id": "p3",
+          "text": "Blood glucose"
+        },
+        {
+          "id": "p4",
+          "text": "Mean arterial pressure"
+        },
+        {
+          "id": "p5",
+          "text": "Pupil response"
+        }
+      ]
+    },
+    "key": {
+      "condition": "c2",
+      "actions": [
+        "a1",
+        "a3"
+      ],
+      "parameters": [
+        "p2",
+        "p4"
+      ]
+    },
+    "response": {
+      "condition": "c2",
+      "actions": [
+        "a3",
+        "a1"
+      ],
+      "parameters": [
+        "p4",
+        "p2"
+      ]
+    },
+    "expectedPoints": 5
+  },
+  {
+    "name": "wrong condition, both wings correct",
+    "content": {
+      "condition": [
+        {
+          "id": "c1",
+          "text": "Hypovolemic shock"
+        },
+        {
+          "id": "c2",
+          "text": "Sepsis"
+        },
+        {
+          "id": "c3",
+          "text": "Pulmonary embolism"
+        },
+        {
+          "id": "c4",
+          "text": "Heart failure"
+        }
+      ],
+      "actions": [
+        {
+          "id": "a1",
+          "text": "Obtain blood cultures"
+        },
+        {
+          "id": "a2",
+          "text": "Restrict fluids"
+        },
+        {
+          "id": "a3",
+          "text": "Give a 30 mL/kg crystalloid bolus"
+        },
+        {
+          "id": "a4",
+          "text": "Apply a cooling blanket"
+        },
+        {
+          "id": "a5",
+          "text": "Place in Trendelenburg position"
+        }
+      ],
+      "parameters": [
+        {
+          "id": "p1",
+          "text": "Daily weight"
+        },
+        {
+          "id": "p2",
+          "text": "Serum lactate"
+        },
+        {
+          "id": "p3",
+          "text": "Blood glucose"
+        },
+        {
+          "id": "p4",
+          "text": "Mean arterial pressure"
+        },
+        {
+          "id": "p5",
+          "text": "Pupil response"
+        }
+      ]
+    },
+    "key": {
+      "condition": "c2",
+      "actions": [
+        "a1",
+        "a3"
+      ],
+      "parameters": [
+        "p2",
+        "p4"
+      ]
+    },
+    "response": {
+      "condition": "c1",
+      "actions": [
+        "a1",
+        "a3"
+      ],
+      "parameters": [
+        "p2",
+        "p4"
+      ]
+    },
+    "expectedPoints": 4
+  },
+  {
+    "name": "one right and one wrong in each wing: wrong picks cost nothing",
+    "content": {
+      "condition": [
+        {
+          "id": "c1",
+          "text": "Hypovolemic shock"
+        },
+        {
+          "id": "c2",
+          "text": "Sepsis"
+        },
+        {
+          "id": "c3",
+          "text": "Pulmonary embolism"
+        },
+        {
+          "id": "c4",
+          "text": "Heart failure"
+        }
+      ],
+      "actions": [
+        {
+          "id": "a1",
+          "text": "Obtain blood cultures"
+        },
+        {
+          "id": "a2",
+          "text": "Restrict fluids"
+        },
+        {
+          "id": "a3",
+          "text": "Give a 30 mL/kg crystalloid bolus"
+        },
+        {
+          "id": "a4",
+          "text": "Apply a cooling blanket"
+        },
+        {
+          "id": "a5",
+          "text": "Place in Trendelenburg position"
+        }
+      ],
+      "parameters": [
+        {
+          "id": "p1",
+          "text": "Daily weight"
+        },
+        {
+          "id": "p2",
+          "text": "Serum lactate"
+        },
+        {
+          "id": "p3",
+          "text": "Blood glucose"
+        },
+        {
+          "id": "p4",
+          "text": "Mean arterial pressure"
+        },
+        {
+          "id": "p5",
+          "text": "Pupil response"
+        }
+      ]
+    },
+    "key": {
+      "condition": "c2",
+      "actions": [
+        "a1",
+        "a3"
+      ],
+      "parameters": [
+        "p2",
+        "p4"
+      ]
+    },
+    "response": {
+      "condition": "c2",
+      "actions": [
+        "a1",
+        "a2"
+      ],
+      "parameters": [
+        "p1",
+        "p4"
+      ]
+    },
+    "expectedPoints": 3
+  },
+  {
+    "name": "half filled: only the condition placed",
+    "content": {
+      "condition": [
+        {
+          "id": "c1",
+          "text": "Hypovolemic shock"
+        },
+        {
+          "id": "c2",
+          "text": "Sepsis"
+        },
+        {
+          "id": "c3",
+          "text": "Pulmonary embolism"
+        },
+        {
+          "id": "c4",
+          "text": "Heart failure"
+        }
+      ],
+      "actions": [
+        {
+          "id": "a1",
+          "text": "Obtain blood cultures"
+        },
+        {
+          "id": "a2",
+          "text": "Restrict fluids"
+        },
+        {
+          "id": "a3",
+          "text": "Give a 30 mL/kg crystalloid bolus"
+        },
+        {
+          "id": "a4",
+          "text": "Apply a cooling blanket"
+        },
+        {
+          "id": "a5",
+          "text": "Place in Trendelenburg position"
+        }
+      ],
+      "parameters": [
+        {
+          "id": "p1",
+          "text": "Daily weight"
+        },
+        {
+          "id": "p2",
+          "text": "Serum lactate"
+        },
+        {
+          "id": "p3",
+          "text": "Blood glucose"
+        },
+        {
+          "id": "p4",
+          "text": "Mean arterial pressure"
+        },
+        {
+          "id": "p5",
+          "text": "Pupil response"
+        }
+      ]
+    },
+    "key": {
+      "condition": "c2",
+      "actions": [
+        "a1",
+        "a3"
+      ],
+      "parameters": [
+        "p2",
+        "p4"
+      ]
+    },
+    "response": {
+      "condition": "c2",
+      "actions": [],
+      "parameters": []
+    },
+    "expectedPoints": 1
+  },
+  {
+    "name": "every slot wrong",
+    "content": {
+      "condition": [
+        {
+          "id": "c1",
+          "text": "Hypovolemic shock"
+        },
+        {
+          "id": "c2",
+          "text": "Sepsis"
+        },
+        {
+          "id": "c3",
+          "text": "Pulmonary embolism"
+        },
+        {
+          "id": "c4",
+          "text": "Heart failure"
+        }
+      ],
+      "actions": [
+        {
+          "id": "a1",
+          "text": "Obtain blood cultures"
+        },
+        {
+          "id": "a2",
+          "text": "Restrict fluids"
+        },
+        {
+          "id": "a3",
+          "text": "Give a 30 mL/kg crystalloid bolus"
+        },
+        {
+          "id": "a4",
+          "text": "Apply a cooling blanket"
+        },
+        {
+          "id": "a5",
+          "text": "Place in Trendelenburg position"
+        }
+      ],
+      "parameters": [
+        {
+          "id": "p1",
+          "text": "Daily weight"
+        },
+        {
+          "id": "p2",
+          "text": "Serum lactate"
+        },
+        {
+          "id": "p3",
+          "text": "Blood glucose"
+        },
+        {
+          "id": "p4",
+          "text": "Mean arterial pressure"
+        },
+        {
+          "id": "p5",
+          "text": "Pupil response"
+        }
+      ]
+    },
+    "key": {
+      "condition": "c2",
+      "actions": [
+        "a1",
+        "a3"
+      ],
+      "parameters": [
+        "p2",
+        "p4"
+      ]
+    },
+    "response": {
+      "condition": "c4",
+      "actions": [
+        "a2",
+        "a5"
+      ],
+      "parameters": [
+        "p1",
+        "p5"
+      ]
+    },
+    "expectedPoints": 0
+  },
+  {
+    "name": "blank response",
+    "content": {
+      "condition": [
+        {
+          "id": "c1",
+          "text": "Hypovolemic shock"
+        },
+        {
+          "id": "c2",
+          "text": "Sepsis"
+        },
+        {
+          "id": "c3",
+          "text": "Pulmonary embolism"
+        },
+        {
+          "id": "c4",
+          "text": "Heart failure"
+        }
+      ],
+      "actions": [
+        {
+          "id": "a1",
+          "text": "Obtain blood cultures"
+        },
+        {
+          "id": "a2",
+          "text": "Restrict fluids"
+        },
+        {
+          "id": "a3",
+          "text": "Give a 30 mL/kg crystalloid bolus"
+        },
+        {
+          "id": "a4",
+          "text": "Apply a cooling blanket"
+        },
+        {
+          "id": "a5",
+          "text": "Place in Trendelenburg position"
+        }
+      ],
+      "parameters": [
+        {
+          "id": "p1",
+          "text": "Daily weight"
+        },
+        {
+          "id": "p2",
+          "text": "Serum lactate"
+        },
+        {
+          "id": "p3",
+          "text": "Blood glucose"
+        },
+        {
+          "id": "p4",
+          "text": "Mean arterial pressure"
+        },
+        {
+          "id": "p5",
+          "text": "Pupil response"
+        }
+      ]
+    },
+    "key": {
+      "condition": "c2",
+      "actions": [
+        "a1",
+        "a3"
+      ],
+      "parameters": [
+        "p2",
+        "p4"
+      ]
+    },
+    "response": null,
+    "expectedPoints": 0
+  }
+]

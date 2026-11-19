@@ -1,5 +1,6 @@
 using System.Text.Json;
 using Nclex.Domain.ItemTypes;
+using Nclex.Domain.ItemTypes.Bowtie;
 using Nclex.Domain.ItemTypes.Dropdown;
 using Nclex.Domain.ItemTypes.FillBlankCalc;
 using Nclex.Domain.ItemTypes.Grouped;
@@ -33,6 +34,7 @@ public sealed class GradingFixtureTests
         ["HighlightTable"] = new HighlightTableModule(),
         ["FillBlankCalc"] = new FillBlankCalcModule(),
         ["OrderedResponse"] = new OrderedResponseModule(),
+        ["Bowtie"] = new BowtieModule(),
     };
 
     private static string FixturesRoot => Path.Combine(AppContext.BaseDirectory, "ItemTypes");
@@ -58,10 +60,13 @@ public sealed class GradingFixtureTests
     }
 
     [Fact]
-    public void Every_mvp_item_type_has_a_fixtures_folder()
+    public void Every_built_item_type_has_a_fixtures_folder()
     {
-        ModulesByFolder.Values.Select(m => m.Type)
-            .ShouldBe(ItemTypeCatalog.All.Where(d => d.Phase == Phase.Mvp).Select(d => d.Type), ignoreOrder: true);
+        // Every MVP type, plus the Phase 2 types built so far (bowtie, F20).
+        ItemType[] builtPhase2 = [ItemType.Bowtie];
+        ModulesByFolder.Values.Select(m => m.Type).ShouldBe(
+            ItemTypeCatalog.All.Where(d => d.Phase == Phase.Mvp).Select(d => d.Type).Concat(builtPhase2),
+            ignoreOrder: true);
     }
 
     [Fact]
