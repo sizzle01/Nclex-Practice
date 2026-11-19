@@ -776,7 +776,7 @@ namespace Nclex.Infrastructure.Persistence.Migrations
                         {
                             Id = (short)3,
                             Code = "SECE.SIC",
-                            Name = "Safety and Infection Control",
+                            Name = "Safety and Infection Prevention and Control",
                             ParentId = (short)1,
                             SortOrder = (short)2,
                             Track = ExamTrack.RN,

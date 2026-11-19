@@ -4,7 +4,7 @@ namespace Nclex.Infrastructure.Persistence.Seed;
 
 /// <summary>
 /// The NCLEX test plans' Client Needs trees and the body-system tags, loaded by the F04_Taxonomy
-/// migration. RN follows PRD 2.4 (NCSBN 2023 RN test plan); the PN plan differs in its categories
+/// migration. RN follows PRD 2.4 (NCSBN 2023 RN test plan, whose weights the 2026 plan keeps); the PN plan differs in its categories
 /// and weights, so it is seeded separately (database.md section 2.3). Weights are percentages and are
 /// set on the leaves that questions are tagged to.
 /// </summary>
@@ -19,7 +19,8 @@ internal static class TaxonomySeedData
         // RN
         Category(1, ExamTrack.RN, null, "SECE", "Safe & Effective Care Environment", 1),
         Category(2, ExamTrack.RN, 1, "SECE.MOC", "Management of Care", 1, 15, 21),
-        Category(3, ExamTrack.RN, 1, "SECE.SIC", "Safety and Infection Control", 2, 10, 16),
+        // Renamed in F21 to the 2026 RN test plan's wording (same code and weights).
+        Category(3, ExamTrack.RN, 1, "SECE.SIC", "Safety and Infection Prevention and Control", 2, 10, 16),
         Category(4, ExamTrack.RN, null, "HPM", "Health Promotion and Maintenance", 2, 6, 12),
         Category(5, ExamTrack.RN, null, "PSI", "Psychosocial Integrity", 3, 6, 12),
         Category(6, ExamTrack.RN, null, "PHI", "Physiological Integrity", 4),
