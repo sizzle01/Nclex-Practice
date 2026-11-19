@@ -144,7 +144,7 @@ Validation: email in RFC 5322 format, at most 254 characters. Password must be 1
   "clientNeeds": [
     { "id": 1, "code": "SECE", "name": "Safe & Effective Care Environment", "children": [
       { "id": 2, "code": "SECE.MOC", "name": "Management of Care", "weightMin": 15, "weightMax": 21 },
-      { "id": 3, "code": "SECE.SIC", "name": "Safety and Infection Control", "weightMin": 10, "weightMax": 16 } ] }
+      { "id": 3, "code": "SECE.SIC", "name": "Safety and Infection Prevention and Control", "weightMin": 10, "weightMax": 16 } ] }
   ],
   "bodySystems": [ { "id": 1, "slug": "cardiovascular", "name": "Cardiovascular" } ],
   "itemTypes": [ { "type": "sata", "label": "Select All That Apply", "available": true } ],

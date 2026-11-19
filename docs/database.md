@@ -201,7 +201,7 @@ CREATE TABLE body_systems (
 );
 ```
 
-Seed data for RN follows PRD §2.4. The PN test plan is seeded separately because its categories and weights differ.
+Seed data for RN follows PRD §2.4. F21 renamed `SECE.SIC` to "Safety and Infection Prevention and Control", the 2026 NCLEX-RN test plan's wording (the weights are unchanged). The PN test plan is seeded separately because its categories and weights differ; its `SECE.SIC` keeps the old name.
 
 ### 2.4 Content
 
