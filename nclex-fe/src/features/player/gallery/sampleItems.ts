@@ -1,5 +1,6 @@
-// The first question of each MVP type in nclex-be/content/sample-questions.rn.json, each with a
-// partly wrong answer and the reveal the backend graders give for it, so every kind of mark shows.
+// The first question of each MVP type in nclex-be/content/sample-questions.rn.json, plus the first
+// bowtie (F20), each with a partly wrong answer and the reveal the backend graders give for it, so
+// every kind of mark shows.
 import type { GalleryItem } from "./galleryTypes";
 
 export const sampleItems: GalleryItem[] = [
@@ -1328,6 +1329,197 @@ export const sampleItems: GalleryItem[] = [
         bodySystem: "pharmacology",
         cjmmSkill: "take_action",
         difficulty: "easy",
+      },
+    },
+  },
+  {
+    itemType: "bowtie",
+    stem: "A client with type 1 diabetes is admitted after 2 days of vomiting. Blood glucose is 520 mg/dL, arterial pH 7.21, bicarbonate 12 mEq/L and serum potassium 5.3 mEq/L. Respirations are deep and rapid, and the breath has a fruity odor. Complete the diagram by placing the condition the client is most likely experiencing, 2 actions the nurse should take to address that condition, and 2 parameters the nurse should monitor to assess the client's progress.",
+    content: {
+      condition: [
+        {
+          id: "c1",
+          text: "Diabetic ketoacidosis",
+        },
+        {
+          id: "c2",
+          text: "Hyperosmolar hyperglycemic state",
+        },
+        {
+          id: "c3",
+          text: "Hypoglycemia",
+        },
+        {
+          id: "c4",
+          text: "Acute pancreatitis",
+        },
+      ],
+      actions: [
+        {
+          id: "a1",
+          text: "Start an infusion of 0.9% sodium chloride",
+        },
+        {
+          id: "a2",
+          text: "Start a continuous IV regular insulin infusion as prescribed",
+        },
+        {
+          id: "a3",
+          text: "Give insulin glargine subcutaneously instead of IV insulin",
+        },
+        {
+          id: "a4",
+          text: "Give sodium bicarbonate by IV push",
+        },
+        {
+          id: "a5",
+          text: "Restrict oral and IV fluids",
+        },
+      ],
+      parameters: [
+        {
+          id: "p1",
+          text: "Serum potassium",
+        },
+        {
+          id: "p2",
+          text: "Blood glucose every hour",
+        },
+        {
+          id: "p3",
+          text: "Serum calcium",
+        },
+        {
+          id: "p4",
+          text: "Hemoglobin A1C",
+        },
+        {
+          id: "p5",
+          text: "Pupil response",
+        },
+      ],
+    },
+    revealResponse: {
+      condition: "c2",
+      actions: ["a1", "a4"],
+      parameters: ["p1", "p2"],
+    },
+    reveal: {
+      answerKey: {
+        condition: "c1",
+        actions: ["a1", "a2"],
+        parameters: ["p1", "p2"],
+      },
+      grade: {
+        points: 3,
+        maxPoints: 5,
+        isCorrect: false,
+        detail: [
+          {
+            target: "c1",
+            delta: 0,
+            missed: true,
+          },
+          {
+            target: "c2",
+            delta: 0,
+            selected: "c2",
+            missed: false,
+          },
+          {
+            target: "c3",
+            delta: 0,
+            missed: false,
+          },
+          {
+            target: "c4",
+            delta: 0,
+            missed: false,
+          },
+          {
+            target: "a1",
+            delta: 1,
+            selected: "a1",
+            missed: false,
+          },
+          {
+            target: "a2",
+            delta: 0,
+            missed: true,
+          },
+          {
+            target: "a3",
+            delta: 0,
+            missed: false,
+          },
+          {
+            target: "a4",
+            delta: 0,
+            selected: "a4",
+            missed: false,
+          },
+          {
+            target: "a5",
+            delta: 0,
+            missed: false,
+          },
+          {
+            target: "p1",
+            delta: 1,
+            selected: "p1",
+            missed: false,
+          },
+          {
+            target: "p2",
+            delta: 1,
+            selected: "p2",
+            missed: false,
+          },
+          {
+            target: "p3",
+            delta: 0,
+            missed: false,
+          },
+          {
+            target: "p4",
+            delta: 0,
+            missed: false,
+          },
+          {
+            target: "p5",
+            delta: 0,
+            missed: false,
+          },
+        ],
+      },
+      rationale: {
+        correct: "The client has DKA. Treatment restores fluid volume with 0.9% sodium chloride and stops ketosis with IV regular insulin, while hourly glucose and frequent potassium levels guard against the two main dangers of treatment: hypoglycemia and hypokalemia.",
+        perOption: {
+          c1: "Hyperglycemia with a pH below 7.30, a low bicarbonate and Kussmaul respirations are the hallmarks of DKA in type 1 diabetes.",
+          c2: "HHS causes extreme hyperglycemia without significant ketoacidosis; this client's pH and bicarbonate show acidosis.",
+          c3: "The glucose is 520 mg/dL, far above normal.",
+          c4: "Vomiting can occur with pancreatitis, but it does not explain the hyperglycemia, acidosis and fruity breath together.",
+          a1: "Isotonic fluid replacement comes first: the client is dehydrated from osmotic diuresis and vomiting.",
+          a2: "IV regular insulin stops ketone production; the potassium of 5.3 mEq/L is above 3.3, so insulin can safely start.",
+          a3: "Long-acting subcutaneous insulin acts too slowly and unpredictably to treat DKA.",
+          a4: "Bicarbonate is not routine in DKA; it is reserved for a pH below about 6.9 and can worsen hypokalemia.",
+          a5: "The client has a large fluid deficit; restricting fluids would worsen dehydration and perfusion.",
+          p1: "Insulin moves potassium into the cells, so a normal or high level can fall quickly to dangerous hypokalemia.",
+          p2: "Hourly glucose guides the insulin rate and tells the nurse when to add dextrose to the IV fluid.",
+          p3: "Calcium is not a priority parameter in DKA.",
+          p4: "A1C reflects control over 2 to 3 months and does not change during treatment.",
+          p5: "Pupil checks are not used to track recovery from DKA unless cerebral edema is suspected.",
+        },
+        references: [
+          "SAMPLE CONTENT: written for development and testing, not reviewed by a nurse educator. Do not use for exam preparation.",
+        ],
+      },
+      educationalObjective: "Treat DKA with isotonic fluids and IV insulin, and monitor glucose and potassium closely.",
+      tags: {
+        clientNeeds: "PHI.PA",
+        bodySystem: "endocrine",
+        cjmmSkill: "prioritize_hypotheses",
+        difficulty: "difficult",
       },
     },
   },

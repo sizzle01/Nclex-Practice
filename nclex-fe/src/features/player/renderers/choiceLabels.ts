@@ -30,6 +30,12 @@ export function choiceLabels(itemType: ItemType, content: unknown): Map<string, 
       return new Map(list<{ id: string; cells: string[] }>(c.rows).map((r) => [r.id, r.cells.join(", ")]));
     case "ordered_response":
       return optionLabels(c.items);
+    case "bowtie":
+      return new Map([
+        ...labelled("Condition", c.condition),
+        ...labelled("Action", c.actions),
+        ...labelled("Parameter", c.parameters),
+      ]);
     default:
       return optionLabels(c.options);
   }
@@ -42,6 +48,11 @@ function matrixLabels(c: Record<string, unknown>) {
       columns.map((column) => [`${row.id}:${column.id}`, `${row.text}: ${column.text}`] as const),
     ),
   );
+}
+
+// Bowtie option ids are unique across its three lists; the prefix says which list an option is from.
+function labelled(listName: string, options: unknown) {
+  return list<Option>(options).map((o) => [o.id, `${listName}: ${o.text}`] as const);
 }
 
 function optionLabels(options: unknown) {

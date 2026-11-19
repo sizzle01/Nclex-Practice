@@ -14,7 +14,7 @@ const content = {
   ],
 };
 
-function renderItem(itemType: "multiple_choice" | "sata" | "bowtie", response: unknown = null, disabled = false) {
+function renderItem(itemType: "multiple_choice" | "sata" | "hotspot", response: unknown = null, disabled = false) {
   const onChange = vi.fn();
   const onToggleStrike = vi.fn();
   const { container } = render(
@@ -144,13 +144,13 @@ describe("select all that apply", () => {
 });
 
 it("explains phase 2 item types, which have no renderer yet", () => {
-  renderItem("bowtie");
+  renderItem("hotspot");
 
   expect(screen.getByRole("note")).toHaveTextContent("can't be answered in the player yet");
 });
 
-it("has a real renderer for every MVP item type", () => {
-  const mvp = [
+it("has a real renderer for every MVP item type and bowtie", () => {
+  const built = [
     "multiple_choice",
     "sata",
     "select_n",
@@ -163,7 +163,8 @@ it("has a real renderer for every MVP item type", () => {
     "highlight_table",
     "fill_blank_calc",
     "ordered_response",
+    "bowtie",
   ] as const;
 
-  for (const itemType of mvp) expect(renderers[itemType], itemType).not.toBe(UnsupportedRenderer);
+  for (const itemType of built) expect(renderers[itemType], itemType).not.toBe(UnsupportedRenderer);
 });

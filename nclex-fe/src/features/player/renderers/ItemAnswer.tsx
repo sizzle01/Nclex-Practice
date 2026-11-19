@@ -1,4 +1,5 @@
 import type { ComponentType } from "react";
+import { BowtieRenderer } from "./BowtieRenderer";
 import { CalcRenderer } from "./CalcRenderer";
 import { DropdownClozeRenderer } from "./DropdownClozeRenderer";
 import { DropdownTableRenderer } from "./DropdownTableRenderer";
@@ -17,7 +18,7 @@ type AnyRenderer = ComponentType<ItemRendererProps<never, never>>;
 
 /**
  * The renderer for each item type (interfaces.md 5.4). Phase 2 types show a notice until their
- * own feature. The payload shapes are checked by the server, so each renderer can trust its
+ * own feature (bowtie has its renderer since F20). The payload shapes are checked by the server, so each renderer can trust its
  * content and response to have its type's shape.
  */
 export const renderers: Record<ItemType, AnyRenderer> = {
@@ -36,7 +37,7 @@ export const renderers: Record<ItemType, AnyRenderer> = {
   dropdown_rationale: UnsupportedRenderer,
   drag_drop_cloze: UnsupportedRenderer,
   drag_drop_rationale: UnsupportedRenderer,
-  bowtie: UnsupportedRenderer,
+  bowtie: BowtieRenderer,
   hotspot: UnsupportedRenderer,
 };
 

@@ -5,13 +5,13 @@ import { expect, it } from "vitest";
 import { ItemGallery } from "./ItemGallery";
 import { sampleItems } from "./sampleItems";
 
-it("shows every MVP item type with a working renderer", () => {
+it("shows every MVP item type and bowtie with a working renderer", () => {
   renderGallery();
 
   for (const { itemType } of sampleItems) {
     expect(screen.getByRole("heading", { name: itemType, level: 2 }), itemType).toBeInTheDocument();
   }
-  expect(sampleItems).toHaveLength(12);
+  expect(sampleItems).toHaveLength(13);
   expect(screen.queryByText(/can't be answered in the player yet/)).not.toBeInTheDocument();
 });
 
