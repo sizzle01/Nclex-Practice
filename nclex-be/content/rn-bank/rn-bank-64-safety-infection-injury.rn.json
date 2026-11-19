@@ -1,5 +1,5 @@
 {
-  "notice": "RN bank batch 64: Safety and Infection Prevention and Control III: precautions, asepsis and injury prevention. Reviewed by the content team on 17 November 2026. See REVIEW-LOG.md.",
+  "notice": "RN bank batch 64: Safety and Infection Prevention and Control III: precautions, asepsis and injury prevention. Rewritten to NCLEX-RN difficulty and reviewed by the content team on 19 November 2026. See REVIEW-LOG.md.",
   "track": "RN",
   "subtopics": [
     {
@@ -53,42 +53,42 @@
         "transmission-based-precautions"
       ],
       "cjmmSkill": "take_action",
-      "difficulty": "moderate",
-      "stem": "Several clients on a unit develop vomiting and diarrhea, and norovirus is suspected. Which action is most effective?",
+      "difficulty": "difficult",
+      "stem": "Within 24 hours, four clients and two staff members on a long-term care unit develop sudden vomiting and watery diarrhea. Norovirus is suspected. Which measure is most effective in stopping the spread?",
       "content": {
         "options": [
           {
             "id": "a",
-            "text": "Use alcohol-based hand rub only"
+            "text": "Contact precautions, soap-and-water handwashing and bleach-based cleaning"
           },
           {
             "id": "b",
-            "text": "Use contact precautions, wash hands with soap and water, and clean with a bleach-based disinfectant"
+            "text": "Contact precautions, with alcohol hand rub used after leaving each room"
           },
           {
             "id": "c",
-            "text": "Use airborne precautions"
+            "text": "Droplet precautions for the residents who are vomiting"
           },
           {
             "id": "d",
-            "text": "Give all clients antibiotics"
+            "text": "Cohorting ill residents together while keeping the usual cleaning products"
           }
         ]
       },
       "key": {
-        "correct": "b"
+        "correct": "a"
       },
       "rationale": {
-        "correct": "Norovirus: contact precautions, soap and water, bleach-based cleaning, exclude ill staff.",
+        "correct": "Norovirus: contact precautions, soap-and-water handwashing, bleach-based cleaning, and keeping ill staff home until 48 hours after symptoms end.",
         "perOption": {
-          "a": "Alcohol is less effective against norovirus.",
-          "b": "Norovirus is hardy; soap and water and bleach products are recommended.",
-          "c": "Norovirus isn't airborne in the usual sense.",
-          "d": "Antibiotics don't treat viruses."
+          "a": "Norovirus resists alcohol and many disinfectants; soap and water plus a bleach-based product are recommended.",
+          "b": "Alcohol rub is less effective against norovirus than handwashing with soap and water.",
+          "c": "Masks protect against splashes, but the main routes are hands and surfaces.",
+          "d": "Cohorting helps, but routine products may not kill norovirus."
         },
         "references": [
           "CDC infection control and isolation precautions guidance",
-          "Reviewed by the content team on 17 November 2026."
+          "Rewritten to NCLEX-RN difficulty and reviewed by the content team on 19 November 2026."
         ]
       },
       "educationalObjective": "Control a norovirus outbreak."
@@ -102,8 +102,8 @@
         "transmission-based-precautions"
       ],
       "cjmmSkill": "analyze_cues",
-      "difficulty": "difficult",
-      "stem": "For each condition, select the precautions the nurse should use in addition to standard precautions.",
+      "difficulty": "moderate",
+      "stem": "The charge nurse is assigning rooms and isolation signs for five new admissions arriving from the emergency department this evening, each with a confirmed diagnosis. For each condition, choose the precautions needed in addition to standard precautions.",
       "content": {
         "rows": [
           {
@@ -116,7 +116,7 @@
           },
           {
             "id": "r3",
-            "text": "Carbapenem-resistant Enterobacterales (CRE) in urine"
+            "text": "Carbapenem-resistant Enterobacterales (CRE) in the urine"
           },
           {
             "id": "r4",
@@ -152,27 +152,27 @@
         }
       },
       "rationale": {
-        "correct": "Know the precautions for common conditions.",
+        "correct": "Know the precautions for common conditions: varicella is airborne plus contact; mumps and rubella are droplet; resistant organisms and lice are contact.",
         "perOption": {
-          "r1:c1": "Contact alone isn't enough; varicella is airborne.",
+          "r1:c1": "Contact alone is not enough; varicella is airborne.",
           "r1:c2": "Varicella spreads through the air, not only droplets.",
-          "r1:c3": "Varicella needs airborne and contact precautions until lesions crust.",
+          "r1:c3": "Varicella needs airborne and contact precautions until the lesions crust.",
           "r2:c1": "Mumps is spread by respiratory droplets.",
           "r2:c2": "Use droplet precautions.",
-          "r2:c3": "Airborne precautions aren't required.",
-          "r3:c1": "Spread by contact with the client and surroundings.",
-          "r3:c2": "Not spread by droplets.",
-          "r3:c3": "Not airborne.",
-          "r4:c1": "Spread by direct contact.",
-          "r4:c2": "Not droplet.",
-          "r4:c3": "Not airborne.",
+          "r2:c3": "Airborne precautions are not required.",
+          "r3:c1": "CRE spreads by contact with the client and surroundings.",
+          "r3:c2": "CRE is not spread by droplets.",
+          "r3:c3": "CRE is not airborne.",
+          "r4:c1": "Lice spread by direct contact.",
+          "r4:c2": "Lice are not spread by droplets.",
+          "r4:c3": "Lice are not airborne.",
           "r5:c1": "Rubella spreads by droplets.",
-          "r5:c2": "Use droplet precautions; pregnant staff should not care for the client.",
-          "r5:c3": "Not airborne."
+          "r5:c2": "Use droplet precautions; pregnant staff who are not immune should not care for the client.",
+          "r5:c3": "Rubella is not airborne."
         },
         "references": [
           "CDC infection control and isolation precautions guidance",
-          "Reviewed by the content team on 17 November 2026."
+          "Rewritten to NCLEX-RN difficulty and reviewed by the content team on 19 November 2026."
         ]
       },
       "educationalObjective": "Choose precautions for common infections."
@@ -186,25 +186,25 @@
         "transmission-based-precautions"
       ],
       "cjmmSkill": "take_action",
-      "difficulty": "moderate",
-      "stem": "A pregnant nurse is assigned to a client with suspected rubella. What should the charge nurse do?",
+      "difficulty": "difficult",
+      "stem": "A nurse who is 14 weeks pregnant is assigned to a client admitted with fever, a fine pink rash and swollen lymph nodes behind the ears. Rubella is suspected. The nurse's rubella immunity status is not on file. What should the charge nurse do?",
       "content": {
         "options": [
           {
             "id": "a",
-            "text": "Keep the assignment if the nurse wears a mask"
+            "text": "Keep the assignment if the nurse wears a fit-tested N95 respirator"
           },
           {
             "id": "b",
-            "text": "Reassign the client to a nurse who isn't pregnant and is immune"
+            "text": "Reassign the client to a nurse who is not pregnant and is immune"
           },
           {
             "id": "c",
-            "text": "Allow the nurse to decide"
+            "text": "Draw a rubella titer and keep the assignment while waiting for the result"
           },
           {
             "id": "d",
-            "text": "Place the client on contact precautions only"
+            "text": "Place the client on contact precautions and keep the assignment"
           }
         ]
       },
@@ -212,16 +212,16 @@
         "correct": "b"
       },
       "rationale": {
-        "correct": "Pregnant staff shouldn't care for clients with rubella or varicella unless immune and policy allows.",
+        "correct": "Pregnant staff who may not be immune should not care for clients with rubella or varicella.",
         "perOption": {
-          "a": "Rubella can cause serious birth defects; avoid exposure.",
-          "b": "Protects the pregnant nurse and the fetus.",
-          "c": "The charge nurse should prevent risk.",
-          "d": "Rubella needs droplet precautions."
+          "a": "A respirator lowers the risk, but a nonimmune pregnant nurse should not be exposed to rubella.",
+          "b": "Rubella in pregnancy can cause congenital rubella syndrome; exposure is avoided altogether.",
+          "c": "The exposure would happen before the result is known.",
+          "d": "Rubella needs droplet precautions, and the assignment is still unsafe."
         },
         "references": [
           "CDC infection control and isolation precautions guidance",
-          "Reviewed by the content team on 17 November 2026."
+          "Rewritten to NCLEX-RN difficulty and reviewed by the content team on 19 November 2026."
         ]
       },
       "educationalObjective": "Protect pregnant staff."
@@ -236,24 +236,24 @@
       ],
       "cjmmSkill": "take_action",
       "difficulty": "moderate",
-      "stem": "A client on airborne precautions for tuberculosis needs to go to radiology. What should the nurse do?",
+      "stem": "A client on airborne precautions for suspected pulmonary tuberculosis needs a CT scan of the chest today. The first sputum smear is pending. What should the nurse do?",
       "content": {
         "options": [
           {
             "id": "a",
-            "text": "Have the client wear a surgical mask during transport"
+            "text": "Place a surgical mask on the client for the trip to radiology"
           },
           {
             "id": "b",
-            "text": "Have the client wear an N95 respirator"
+            "text": "Place an N95 respirator on the client for the trip to radiology"
           },
           {
             "id": "c",
-            "text": "Postpone all tests until isolation ends"
+            "text": "Have the transporter wear an N95 and leave the client unmasked"
           },
           {
             "id": "d",
-            "text": "Transport without a mask"
+            "text": "Postpone the CT scan until three sputum smears are negative"
           }
         ]
       },
@@ -261,16 +261,16 @@
         "correct": "a"
       },
       "rationale": {
-        "correct": "Clients on airborne precautions wear a surgical mask outside the room.",
+        "correct": "Clients on airborne precautions wear a surgical mask whenever they leave the room.",
         "perOption": {
-          "a": "A surgical mask on the client reduces spread of droplet nuclei.",
-          "b": "N95s are for staff; the client wears a surgical mask.",
-          "c": "Necessary tests can be done with precautions.",
-          "d": "Increases exposure."
+          "a": "A surgical mask on the client traps droplet nuclei at the source during transport.",
+          "b": "Respirators protect the wearer; the client wears a surgical mask.",
+          "c": "An unmasked client exposes everyone along the route.",
+          "d": "Necessary tests can go ahead with precautions."
         },
         "references": [
           "CDC infection control and isolation precautions guidance",
-          "Reviewed by the content team on 17 November 2026."
+          "Rewritten to NCLEX-RN difficulty and reviewed by the content team on 19 November 2026."
         ]
       },
       "educationalObjective": "Transport a client on airborne precautions."
@@ -285,24 +285,24 @@
       ],
       "cjmmSkill": "take_action",
       "difficulty": "moderate",
-      "stem": "Which item should the nurse confirm before admitting a client to an airborne infection isolation room?",
+      "stem": "The nurse is preparing a room for a client with suspected measles who is arriving from the emergency department. What should the nurse confirm before the client is moved into the room?",
       "content": {
         "options": [
           {
             "id": "a",
-            "text": "The room has negative pressure and the door stays closed"
+            "text": "The room has negative pressure and the door will stay closed"
           },
           {
             "id": "b",
-            "text": "The room has positive pressure"
+            "text": "The room has positive pressure with HEPA-filtered air"
           },
           {
             "id": "c",
-            "text": "The window is open"
+            "text": "The room is near the station so the door can stay open"
           },
           {
             "id": "d",
-            "text": "The room is next to the nurses' station"
+            "text": "The window can be opened to bring in fresh outdoor air"
           }
         ]
       },
@@ -310,16 +310,16 @@
         "correct": "a"
       },
       "rationale": {
-        "correct": "Airborne rooms need negative pressure, closed doors and frequent air exchanges.",
+        "correct": "Airborne isolation rooms need verified negative pressure, a closed door and frequent air exchanges.",
         "perOption": {
-          "a": "Negative pressure keeps air from flowing into the hallway.",
-          "b": "Positive pressure is for protective environments.",
-          "c": "Doesn't create safe airflow.",
-          "d": "Location isn't the key factor."
+          "a": "Negative pressure keeps contaminated air from flowing into the hallway.",
+          "b": "Positive pressure is for protective environments and would push air out of the room.",
+          "c": "An open door breaks the pressure difference.",
+          "d": "An open window does not create safe, directed airflow."
         },
         "references": [
           "CDC infection control and isolation precautions guidance",
-          "Reviewed by the content team on 17 November 2026."
+          "Rewritten to NCLEX-RN difficulty and reviewed by the content team on 19 November 2026."
         ]
       },
       "educationalObjective": "Prepare an airborne isolation room."
@@ -334,24 +334,24 @@
       ],
       "cjmmSkill": "take_action",
       "difficulty": "difficult",
-      "stem": "Which client should be placed in a protective environment (positive-pressure room)?",
+      "stem": "The hospital has one positive-pressure (protective environment) room available, and four clients on the waiting list each need a private room. Which client should the nurse recommend for this room?",
       "content": {
         "options": [
           {
             "id": "a",
-            "text": "A client with active tuberculosis"
+            "text": "A client with active pulmonary tuberculosis on the first day of treatment"
           },
           {
             "id": "b",
-            "text": "A client after an allogeneic stem cell transplant"
+            "text": "A client 7 days after an allogeneic stem cell transplant for leukemia"
           },
           {
             "id": "c",
-            "text": "A client with MRSA"
+            "text": "A client on chemotherapy with an ANC of 1,200/mm3"
           },
           {
             "id": "d",
-            "text": "A client with influenza"
+            "text": "A client with MRSA pneumonia on IV vancomycin"
           }
         ]
       },
@@ -359,16 +359,16 @@
         "correct": "b"
       },
       "rationale": {
-        "correct": "Protective environments (positive pressure, HEPA filtration) are for stem cell transplant clients.",
+        "correct": "Protective environments (positive pressure, HEPA filtration) are for allogeneic stem cell transplant clients.",
         "perOption": {
-          "a": "Needs negative pressure.",
+          "a": "Tuberculosis needs negative pressure so air does not leave the room.",
           "b": "Severely immunocompromised clients need protection from outside organisms.",
-          "c": "Needs contact precautions.",
-          "d": "Needs droplet precautions."
+          "c": "This neutrophil count is only mildly low and does not need a protective environment.",
+          "d": "MRSA needs contact precautions, and positive pressure would push organisms outward."
         },
         "references": [
           "CDC infection control and isolation precautions guidance",
-          "Reviewed by the content team on 17 November 2026."
+          "Rewritten to NCLEX-RN difficulty and reviewed by the content team on 19 November 2026."
         ]
       },
       "educationalObjective": "Choose a protective environment."
@@ -382,25 +382,25 @@
         "transmission-based-precautions"
       ],
       "cjmmSkill": "take_action",
-      "difficulty": "moderate",
-      "stem": "A visitor wants to visit a client on contact precautions. What should the nurse do?",
+      "difficulty": "easy",
+      "stem": "A client's daughter arrives to visit her father, who is on contact precautions for a VRE wound infection. What should the nurse do?",
       "content": {
         "options": [
           {
             "id": "a",
-            "text": "Tell the visitor they can't visit"
+            "text": "Tell her visits are not allowed while he is on contact precautions"
           },
           {
             "id": "b",
-            "text": "Teach the visitor about hand hygiene and the facility's PPE policy for visitors"
+            "text": "Teach her hand hygiene and the visitor PPE policy"
           },
           {
             "id": "c",
-            "text": "Let the visitor enter without precautions"
+            "text": "Let her enter without precautions, as she is family"
           },
           {
             "id": "d",
-            "text": "Ask the client to come to the lobby"
+            "text": "Ask the client to meet her in the lobby instead"
           }
         ]
       },
@@ -411,13 +411,13 @@
         "correct": "Teach visitors about precautions and hand hygiene.",
         "perOption": {
           "a": "Visitors are usually allowed with precautions.",
-          "b": "Visitors follow precautions per policy.",
-          "c": "Visitors can spread organisms.",
-          "d": "The client shouldn't leave the room unnecessarily."
+          "b": "Visitors follow precautions according to facility policy.",
+          "c": "Visitors can carry organisms to others.",
+          "d": "The client should not leave the room unnecessarily."
         },
         "references": [
           "CDC infection control and isolation precautions guidance",
-          "Reviewed by the content team on 17 November 2026."
+          "Rewritten to NCLEX-RN difficulty and reviewed by the content team on 19 November 2026."
         ]
       },
       "educationalObjective": "Guide visitors in isolation rooms."
@@ -432,32 +432,32 @@
       ],
       "cjmmSkill": "take_action",
       "difficulty": "moderate",
-      "stem": "Which actions support antimicrobial stewardship? Select all that apply.",
+      "stem": "The antimicrobial stewardship team is teaching nurses on a medical unit. Which actions support antimicrobial stewardship? Select all that apply.",
       "content": {
         "options": [
           {
             "id": "a",
-            "text": "Collecting cultures before starting antibiotics"
+            "text": "Collecting cultures before the first antibiotic dose"
           },
           {
             "id": "b",
-            "text": "Reviewing antibiotics at 48 to 72 hours"
+            "text": "Prompting a review of antibiotics at 48 to 72 hours"
           },
           {
             "id": "c",
-            "text": "Asking for antibiotics for a viral cold"
+            "text": "Using the shortest effective course for the infection"
           },
           {
             "id": "d",
-            "text": "Using the shortest effective course"
+            "text": "Teaching clients not to share or save antibiotics"
           },
           {
             "id": "e",
-            "text": "Teaching clients to finish the prescribed course and not share antibiotics"
+            "text": "Asking for an antibiotic for a client with a cold"
           },
           {
             "id": "f",
-            "text": "Saving leftover antibiotics for future illness"
+            "text": "Keeping clients on IV antibiotics until discharge"
           }
         ]
       },
@@ -465,23 +465,23 @@
         "correct": [
           "a",
           "b",
-          "d",
-          "e"
+          "c",
+          "d"
         ]
       },
       "rationale": {
-        "correct": "Stewardship: right drug, right dose, right duration, only when needed.",
+        "correct": "Stewardship means the right drug, at the right dose, for the right duration, only when needed.",
         "perOption": {
           "a": "Cultures guide narrowing to the right drug.",
-          "b": "Allows de-escalation or stopping.",
-          "c": "Antibiotics don't treat viruses.",
-          "d": "Reduces resistance and side effects.",
-          "e": "Reduces misuse.",
-          "f": "Leads to misuse."
+          "b": "The review allows de-escalation or stopping.",
+          "c": "Shorter effective courses reduce resistance and side effects.",
+          "d": "This reduces misuse.",
+          "e": "Antibiotics do not treat viruses.",
+          "f": "Switching to oral therapy when appropriate is part of stewardship."
         },
         "references": [
           "CDC infection control and isolation precautions guidance",
-          "Reviewed by the content team on 17 November 2026."
+          "Rewritten to NCLEX-RN difficulty and reviewed by the content team on 19 November 2026."
         ]
       },
       "educationalObjective": "Support antimicrobial stewardship."
@@ -496,41 +496,41 @@
       ],
       "cjmmSkill": "take_action",
       "difficulty": "moderate",
-      "stem": "The nurse is collecting a blood specimen. Which action is correct?",
+      "stem": "The nurse has just drawn blood from a client using a safety needle. The sharps container is across the room. What should the nurse do with the needle?",
       "content": {
         "options": [
           {
             "id": "a",
-            "text": "Recap the needle using two hands"
+            "text": "Activate the safety device, then carry it to the sharps container"
           },
           {
             "id": "b",
-            "text": "Activate the safety device and place the needle in a sharps container right away"
+            "text": "Recap it with two hands so it can be carried safely across the room"
           },
           {
             "id": "c",
-            "text": "Bend the needle before disposal"
+            "text": "Bend the needle against the tray so it cannot be reused"
           },
           {
             "id": "d",
-            "text": "Place the needle on the bedside table to dispose of later"
+            "text": "Leave it on the bedside table and dispose of it after labeling"
           }
         ]
       },
       "key": {
-        "correct": "b"
+        "correct": "a"
       },
       "rationale": {
-        "correct": "Never recap; use safety devices and sharps containers at the point of use.",
+        "correct": "Never recap with two hands; activate safety devices and dispose of sharps right away.",
         "perOption": {
-          "a": "Increases needlestick risk.",
-          "b": "Prevents needlestick injury.",
-          "c": "Increases injury risk.",
-          "d": "Unsafe."
+          "a": "Activating the safety feature at once, then disposing of it, prevents needlestick injuries.",
+          "b": "Two-handed recapping is a common cause of needlesticks.",
+          "c": "Bending needles causes injuries.",
+          "d": "An uncovered needle left out is a hazard to the nurse and others."
         },
         "references": [
           "CDC infection control and isolation precautions guidance",
-          "Reviewed by the content team on 17 November 2026."
+          "Rewritten to NCLEX-RN difficulty and reviewed by the content team on 19 November 2026."
         ]
       },
       "educationalObjective": "Prevent needlestick injuries."
@@ -545,24 +545,24 @@
       ],
       "cjmmSkill": "take_action",
       "difficulty": "easy",
-      "stem": "How should the nurse handle soiled linen?",
+      "stem": "The nurse is changing the bed of a client who was incontinent of stool. How should the nurse handle the soiled linen?",
       "content": {
         "options": [
           {
             "id": "a",
-            "text": "Hold it close to the uniform when carrying it"
+            "text": "Hold it close to the body while carrying it out"
           },
           {
             "id": "b",
-            "text": "Roll it inward and carry it away from the body to the linen bag"
+            "text": "Roll it inward and hold it away from the body"
           },
           {
             "id": "c",
-            "text": "Shake it out to check for items"
+            "text": "Shake it out first to check for belongings"
           },
           {
             "id": "d",
-            "text": "Put it on the floor"
+            "text": "Put it on the floor until the bed is made"
           }
         ]
       },
@@ -570,16 +570,16 @@
         "correct": "b"
       },
       "rationale": {
-        "correct": "Handle linen with minimal agitation, away from the body.",
+        "correct": "Handle linen with minimal agitation, rolled inward and away from the body.",
         "perOption": {
-          "a": "Contaminates the uniform.",
-          "b": "Contains contamination.",
-          "c": "Spreads organisms.",
-          "d": "Contaminates the environment."
+          "a": "This contaminates the uniform.",
+          "b": "This contains contamination.",
+          "c": "Shaking spreads organisms.",
+          "d": "This contaminates the environment."
         },
         "references": [
           "CDC infection control and isolation precautions guidance",
-          "Reviewed by the content team on 17 November 2026."
+          "Rewritten to NCLEX-RN difficulty and reviewed by the content team on 19 November 2026."
         ]
       },
       "educationalObjective": "Handle soiled linen safely."
@@ -594,7 +594,7 @@
       ],
       "cjmmSkill": "take_action",
       "difficulty": "moderate",
-      "stem": "Place the steps for applying sterile gloves (open method) in order.",
+      "stem": "The nurse is about to insert an indwelling urinary catheter and must put on sterile gloves using the open method. Place the steps in order, from first to last.",
       "content": {
         "items": [
           {
@@ -630,17 +630,17 @@
         "scoring": "all_or_nothing"
       },
       "rationale": {
-        "correct": "Sterile gloving: bare skin touches only the inside cuff; sterile touches sterile.",
+        "correct": "Sterile gloving: bare skin touches only the inside of the cuff, and sterile touches only sterile.",
         "perOption": {
-          "a": "Prepares a sterile field.",
+          "a": "This prepares a sterile field.",
           "b": "Only the inside of the cuff is touched with bare skin.",
-          "c": "Keeps the outside sterile.",
+          "c": "This keeps the outside of the glove sterile.",
           "d": "Sterile touches sterile.",
-          "e": "Maintains sterility."
+          "e": "This maintains sterility."
         },
         "references": [
           "Fundamentals of nursing texts (e.g. Potter & Perry)",
-          "Reviewed by the content team on 17 November 2026."
+          "Rewritten to NCLEX-RN difficulty and reviewed by the content team on 19 November 2026."
         ]
       },
       "educationalObjective": "Apply sterile gloves."
@@ -655,12 +655,12 @@
       ],
       "cjmmSkill": "take_action",
       "difficulty": "moderate",
-      "stem": "During a sterile dressing change, the nurse's gloved hand touches the bed rail. What should the nurse do?",
+      "stem": "During a sterile central line dressing change, the nurse's gloved hand brushes the bed rail while reaching for the antiseptic. The new dressing is not yet on. What should the nurse do?",
       "content": {
         "options": [
           {
             "id": "a",
-            "text": "Continue because the bed rail looked clean"
+            "text": "Continue, since the bed rail was cleaned at the start of the shift"
           },
           {
             "id": "b",
@@ -668,11 +668,11 @@
           },
           {
             "id": "c",
-            "text": "Wipe the glove with alcohol"
+            "text": "Wipe the glove with an alcohol pad and let it dry before going on"
           },
           {
             "id": "d",
-            "text": "Use the other hand only"
+            "text": "Finish with the other hand, keeping the touched hand off the field"
           }
         ]
       },
@@ -680,16 +680,16 @@
         "correct": "b"
       },
       "rationale": {
-        "correct": "Any break in sterile technique requires correction.",
+        "correct": "Any break in sterile technique must be corrected before the procedure continues.",
         "perOption": {
-          "a": "The glove is now contaminated.",
-          "b": "Contaminated gloves must be replaced.",
-          "c": "Doesn't restore sterility.",
-          "d": "The contaminated glove may touch the field."
+          "a": "The glove is now contaminated, whatever the rail looked like.",
+          "b": "Contaminated gloves are replaced before the procedure continues.",
+          "c": "Alcohol does not make a glove sterile again.",
+          "d": "The contaminated glove may still touch the field."
         },
         "references": [
           "Fundamentals of nursing texts (e.g. Potter & Perry)",
-          "Reviewed by the content team on 17 November 2026."
+          "Rewritten to NCLEX-RN difficulty and reviewed by the content team on 19 November 2026."
         ]
       },
       "educationalObjective": "Correct a break in sterile technique."
@@ -704,7 +704,7 @@
       ],
       "cjmmSkill": "take_action",
       "difficulty": "moderate",
-      "stem": "Which procedure requires surgical asepsis rather than medical asepsis?",
+      "stem": "The nurse is planning care for four clients. Which procedure requires surgical asepsis (sterile technique) rather than medical asepsis (clean technique)?",
       "content": {
         "options": [
           {
@@ -713,15 +713,15 @@
           },
           {
             "id": "b",
-            "text": "Giving oral medications"
+            "text": "Giving a feeding through an established gastrostomy tube"
           },
           {
             "id": "c",
-            "text": "Bathing a client"
+            "text": "Suctioning the mouth with a Yankauer catheter"
           },
           {
             "id": "d",
-            "text": "Measuring blood pressure"
+            "text": "Removing a peripheral IV catheter from the forearm"
           }
         ]
       },
@@ -729,16 +729,16 @@
         "correct": "a"
       },
       "rationale": {
-        "correct": "Sterile technique is used when entering sterile body areas or caring for central lines.",
+        "correct": "Sterile technique is used when entering sterile body areas, such as the bladder, or caring for central lines.",
         "perOption": {
           "a": "Entering a sterile body cavity requires sterile technique.",
-          "b": "Clean technique.",
-          "c": "Clean technique.",
-          "d": "Clean technique."
+          "b": "The GI tract is not sterile; clean technique is used.",
+          "c": "Oral suctioning uses clean technique.",
+          "d": "Removing a peripheral IV uses clean technique."
         },
         "references": [
           "Fundamentals of nursing texts (e.g. Potter & Perry)",
-          "Reviewed by the content team on 17 November 2026."
+          "Rewritten to NCLEX-RN difficulty and reviewed by the content team on 19 November 2026."
         ]
       },
       "educationalObjective": "Distinguish surgical from medical asepsis."
@@ -752,25 +752,25 @@
         "injury-prevention"
       ],
       "cjmmSkill": "take_action",
-      "difficulty": "moderate",
-      "stem": "A client with diabetic neuropathy asks for a heating pad for foot pain. What should the nurse do?",
+      "difficulty": "difficult",
+      "stem": "A client with long-standing type 2 diabetes and peripheral neuropathy reports burning pain in both feet at night and asks for a heating pad. The client cannot feel a monofilament on either sole. What should the nurse do?",
       "content": {
         "options": [
           {
             "id": "a",
-            "text": "Apply it on the highest setting"
+            "text": "Apply the heating pad on the low setting for 20 minutes, checking the skin after"
           },
           {
             "id": "b",
-            "text": "Explain that heating pads can cause burns because of reduced sensation, and offer alternatives"
+            "text": "Explain that heat can burn feet that can't feel it, and offer other relief"
           },
           {
             "id": "c",
-            "text": "Apply it directly to the skin for 1 hour"
+            "text": "Wrap the heating pad in a towel and leave it on while the client sleeps"
           },
           {
             "id": "d",
-            "text": "Let the client sleep with it on"
+            "text": "Ask the client's spouse to check the pad's temperature by hand"
           }
         ]
       },
@@ -778,16 +778,16 @@
         "correct": "b"
       },
       "rationale": {
-        "correct": "Avoid heat therapy on areas with reduced sensation.",
+        "correct": "Avoid heat therapy on areas with reduced sensation, and treat neuropathic pain with other measures and prescribed drugs.",
         "perOption": {
-          "a": "Burn risk is high.",
-          "b": "Neuropathy prevents the client from feeling heat damage.",
-          "c": "Causes burns.",
-          "d": "Prolonged heat causes burns."
+          "a": "Even low heat can burn skin that cannot sense temperature.",
+          "b": "Loss of sensation means the client cannot feel heat damage; other measures are offered.",
+          "c": "Prolonged heat on insensate skin causes burns.",
+          "d": "The spouse's sense of warmth does not protect skin that cannot feel heat."
         },
         "references": [
           "Fundamentals of nursing texts (e.g. Potter & Perry)",
-          "Reviewed by the content team on 17 November 2026."
+          "Rewritten to NCLEX-RN difficulty and reviewed by the content team on 19 November 2026."
         ]
       },
       "educationalObjective": "Prevent burns from heat therapy."
@@ -801,25 +801,25 @@
         "injury-prevention"
       ],
       "cjmmSkill": "take_action",
-      "difficulty": "moderate",
-      "stem": "The nurse is applying a cold pack to a client's sprained ankle. Which action is correct?",
+      "difficulty": "easy",
+      "stem": "The nurse is applying a cold pack to a client's sprained ankle 1 hour after the injury. Which action is correct?",
       "content": {
         "options": [
           {
             "id": "a",
-            "text": "Place the ice directly on the skin"
+            "text": "Place the ice pack directly on the skin"
           },
           {
             "id": "b",
-            "text": "Cover the pack with a cloth and apply for about 15 to 20 minutes"
+            "text": "Cover the pack and apply it for 15 to 20 minutes"
           },
           {
             "id": "c",
-            "text": "Leave it on overnight"
+            "text": "Leave the pack in place overnight"
           },
           {
             "id": "d",
-            "text": "Apply it to the opposite ankle"
+            "text": "Alternate it with a heating pad every 5 minutes"
           }
         ]
       },
@@ -827,16 +827,16 @@
         "correct": "b"
       },
       "rationale": {
-        "correct": "Cold therapy: protective layer, 15 to 20 minutes, check skin.",
+        "correct": "Cold therapy: a protective layer, 15 to 20 minutes, and a skin check.",
         "perOption": {
-          "a": "Can cause frostbite.",
-          "b": "Prevents tissue injury.",
-          "c": "Prolonged cold causes tissue damage.",
-          "d": "Not effective."
+          "a": "Direct ice can cause frostbite.",
+          "b": "A covering and a time limit prevent tissue injury.",
+          "c": "Prolonged cold damages tissue.",
+          "d": "Heat in the first days increases swelling."
         },
         "references": [
           "Fundamentals of nursing texts (e.g. Potter & Perry)",
-          "Reviewed by the content team on 17 November 2026."
+          "Rewritten to NCLEX-RN difficulty and reviewed by the content team on 19 November 2026."
         ]
       },
       "educationalObjective": "Apply cold therapy safely."
@@ -851,24 +851,24 @@
       ],
       "cjmmSkill": "take_action",
       "difficulty": "moderate",
-      "stem": "Before transferring a client from bed to a wheelchair, what should the nurse do first?",
+      "stem": "The nurse is helping a client with right-sided weakness after a stroke move from the bed to a wheelchair for the first time. What should the nurse do before the transfer?",
       "content": {
         "options": [
           {
             "id": "a",
-            "text": "Lock the wheelchair wheels and the bed"
+            "text": "Lock the bed and wheelchair wheels and put on a gait belt"
           },
           {
             "id": "b",
-            "text": "Remove the footrests after the transfer"
+            "text": "Place the wheelchair on the client's right, weaker side"
           },
           {
             "id": "c",
-            "text": "Ask the client to hold the nurse's neck"
+            "text": "Raise the bed to its highest position to make standing easier"
           },
           {
             "id": "d",
-            "text": "Raise the bed to its highest position"
+            "text": "Have the client put both arms around the nurse's neck"
           }
         ]
       },
@@ -876,16 +876,16 @@
         "correct": "a"
       },
       "rationale": {
-        "correct": "Lock wheels and use a gait belt before transfers.",
+        "correct": "Before a transfer: lock wheels, use a gait belt, and place the chair on the client's stronger side.",
         "perOption": {
-          "a": "Prevents the chair or bed from moving during transfer.",
-          "b": "Footrests are moved out of the way before the transfer.",
-          "c": "Can injure the nurse.",
-          "d": "The bed should be at the height of the chair or lower."
+          "a": "Locked wheels keep the bed and chair still, and a gait belt gives the nurse a safe hold.",
+          "b": "The chair goes on the stronger (left) side so the client can pivot on the strong leg.",
+          "c": "The bed should be level with the chair seat or a little higher, not at its highest.",
+          "d": "This can injure the nurse and does not support the client safely."
         },
         "references": [
           "Fundamentals of nursing texts (e.g. Potter & Perry)",
-          "Reviewed by the content team on 17 November 2026."
+          "Rewritten to NCLEX-RN difficulty and reviewed by the content team on 19 November 2026."
         ]
       },
       "educationalObjective": "Transfer a client safely."
@@ -900,24 +900,24 @@
       ],
       "cjmmSkill": "take_action",
       "difficulty": "moderate",
-      "stem": "The nurse is lifting a box of supplies from the floor. Which body mechanics are correct?",
+      "stem": "A nurse needs to lift a heavy carton of IV fluids from the floor of the supply room onto a shelf at waist height. Which technique is correct?",
       "content": {
         "options": [
           {
             "id": "a",
-            "text": "Bend at the waist with straight legs"
+            "text": "Bend at the waist with straight legs and lift with the arms"
           },
           {
             "id": "b",
-            "text": "Bend the knees, keep the back straight and hold the load close to the body"
+            "text": "Bend the knees, keep the back straight and hold the carton close"
           },
           {
             "id": "c",
-            "text": "Twist while lifting"
+            "text": "Twist the body toward the shelf while lifting the carton"
           },
           {
             "id": "d",
-            "text": "Hold the box at arm's length"
+            "text": "Hold the carton at arm's length to keep it off the uniform"
           }
         ]
       },
@@ -925,16 +925,16 @@
         "correct": "b"
       },
       "rationale": {
-        "correct": "Body mechanics: wide base, bend knees, keep the load close, avoid twisting.",
+        "correct": "Body mechanics: a wide base, bent knees, the load held close, and no twisting.",
         "perOption": {
-          "a": "Strains the back.",
-          "b": "Uses leg muscles and reduces back strain.",
-          "c": "Increases injury risk.",
-          "d": "Increases strain."
+          "a": "This strains the lower back.",
+          "b": "This uses the leg muscles and keeps the load near the center of gravity.",
+          "c": "Twisting while lifting increases back injury.",
+          "d": "Holding a load away from the body increases strain."
         },
         "references": [
           "Fundamentals of nursing texts (e.g. Potter & Perry)",
-          "Reviewed by the content team on 17 November 2026."
+          "Rewritten to NCLEX-RN difficulty and reviewed by the content team on 19 November 2026."
         ]
       },
       "educationalObjective": "Use correct body mechanics."
@@ -947,26 +947,26 @@
       "subtopics": [
         "injury-prevention"
       ],
-      "cjmmSkill": "take_action",
+      "cjmmSkill": "recognize_cues",
       "difficulty": "difficult",
-      "stem": "A confused client's head is caught between the mattress and the side rail. What is the main risk, and how is it prevented?",
+      "stem": "On a night round, the nurse finds a confused 88-year-old client with the head and neck wedged in the gap between the mattress and a raised half-rail. The nurse frees the client, who is unhurt. Which risk does this show, and how is it best prevented?",
       "content": {
         "options": [
           {
             "id": "a",
-            "text": "Entrapment and asphyxia; prevented by a correctly fitted mattress and bed checks"
+            "text": "Entrapment and asphyxia; prevented by mattress fit and rail checks"
           },
           {
             "id": "b",
-            "text": "Falls; prevented by raising all rails"
+            "text": "Falls from bed; prevented by raising the rails on both sides at night"
           },
           {
             "id": "c",
-            "text": "Pressure injury; prevented by turning"
+            "text": "Pressure injury; prevented by turning the client every 2 hours"
           },
           {
             "id": "d",
-            "text": "Infection; prevented by hand hygiene"
+            "text": "Wandering; prevented by a bed exit alarm and a room near the station"
           }
         ]
       },
@@ -974,16 +974,16 @@
         "correct": "a"
       },
       "rationale": {
-        "correct": "Bed entrapment is prevented by proper bed and mattress fit and rail assessment.",
+        "correct": "Bed entrapment is prevented by the right mattress fit, regular bed-system checks and rail assessment.",
         "perOption": {
-          "a": "Gaps between rails and mattresses cause entrapment.",
-          "b": "Raising all rails can increase entrapment.",
-          "c": "Not the main issue.",
-          "d": "Not related."
+          "a": "Gaps between rails and mattresses cause entrapment; the bed system is checked and fitted.",
+          "b": "Raising all rails can increase entrapment and fall injuries.",
+          "c": "Turning prevents pressure injury, but that is not the danger shown here.",
+          "d": "These help with wandering but do not remove the gap that trapped the client."
         },
         "references": [
           "Fundamentals of nursing texts (e.g. Potter & Perry)",
-          "Reviewed by the content team on 17 November 2026."
+          "Rewritten to NCLEX-RN difficulty and reviewed by the content team on 19 November 2026."
         ]
       },
       "educationalObjective": "Prevent bed entrapment."
@@ -998,7 +998,7 @@
       ],
       "cjmmSkill": "recognize_cues",
       "difficulty": "moderate",
-      "stem": "The nurse is doing a safety round. Highlight the findings that need to be corrected.",
+      "stem": "The charge nurse is doing a fall-safety round on a medical unit at 2200. Highlight the findings that need to be corrected.",
       "content": {
         "columns": [
           "Room",
@@ -1009,7 +1009,7 @@
             "id": "r1",
             "cells": [
               "301",
-              "Bed in lowest position with brakes locked"
+              "Bed in the lowest position with brakes locked"
             ],
             "selectable": true
           },
@@ -1017,7 +1017,7 @@
             "id": "r2",
             "cells": [
               "302",
-              "Call light on the floor out of reach"
+              "Call light on the floor out of the client's reach"
             ],
             "selectable": true
           },
@@ -1025,7 +1025,7 @@
             "id": "r3",
             "cells": [
               "303",
-              "Wet floor near the bathroom with no sign"
+              "Wet floor near the bathroom with no warning sign"
             ],
             "selectable": true
           },
@@ -1041,7 +1041,7 @@
             "id": "r5",
             "cells": [
               "305",
-              "Client wearing socks without grips"
+              "Client walking in socks without grips"
             ],
             "selectable": true
           },
@@ -1049,7 +1049,7 @@
             "id": "r6",
             "cells": [
               "306",
-              "Walker within reach"
+              "Walker within the client's reach"
             ],
             "selectable": true
           }
@@ -1063,18 +1063,18 @@
         ]
       },
       "rationale": {
-        "correct": "Safety rounds catch fall hazards early.",
+        "correct": "Safety rounds find fall hazards early: call lights, floors, footwear and equipment within reach.",
         "perOption": {
-          "r1": "Safe.",
-          "r2": "The client can't call for help.",
-          "r3": "Slip hazard.",
-          "r4": "Safe.",
-          "r5": "Slip hazard; use non-skid footwear.",
-          "r6": "Safe."
+          "r1": "This is safe.",
+          "r2": "The client cannot call for help.",
+          "r3": "This is a slip hazard.",
+          "r4": "This is safe.",
+          "r5": "This is a slip hazard; non-skid footwear is needed.",
+          "r6": "This is safe."
         },
         "references": [
           "Fundamentals of nursing texts (e.g. Potter & Perry)",
-          "Reviewed by the content team on 17 November 2026."
+          "Rewritten to NCLEX-RN difficulty and reviewed by the content team on 19 November 2026."
         ]
       },
       "educationalObjective": "Identify environmental safety hazards."
@@ -1089,24 +1089,24 @@
       ],
       "cjmmSkill": "take_action",
       "difficulty": "moderate",
-      "stem": "A client asks to use a personal hair dryer in the hospital. What should the nurse do?",
+      "stem": "A client admitted for a week of IV antibiotics asks to use the hair dryer brought from home. What should the nurse do?",
       "content": {
         "options": [
           {
             "id": "a",
-            "text": "Allow it without checking"
+            "text": "Let the client use it, since it belongs to the client"
           },
           {
             "id": "b",
-            "text": "Have the equipment checked per facility policy before use"
+            "text": "Have the dryer checked under facility policy before it is used"
           },
           {
             "id": "c",
-            "text": "Let the client use it in the shower"
+            "text": "Let the client use it in the shower room where there is an outlet"
           },
           {
             "id": "d",
-            "text": "Plug it into an extension cord"
+            "text": "Plug it into an extension cord so it reaches the bathroom mirror"
           }
         ]
       },
@@ -1114,16 +1114,16 @@
         "correct": "b"
       },
       "rationale": {
-        "correct": "Personal electrical devices are checked before use.",
+        "correct": "Personal electrical devices are checked for safety before use in the hospital.",
         "perOption": {
-          "a": "Personal electrical devices may be unsafe.",
-          "b": "Biomedical engineering checks devices for electrical safety.",
-          "c": "Electrical hazard.",
-          "d": "Extension cords increase hazard."
+          "a": "Personal electrical devices may be unsafe in a hospital.",
+          "b": "Biomedical engineering checks personal devices for electrical safety.",
+          "c": "Using electrical devices near water is a shock hazard.",
+          "d": "Extension cords add electrical hazards."
         },
         "references": [
           "Fundamentals of nursing texts (e.g. Potter & Perry)",
-          "Reviewed by the content team on 17 November 2026."
+          "Rewritten to NCLEX-RN difficulty and reviewed by the content team on 19 November 2026."
         ]
       },
       "educationalObjective": "Ensure electrical safety."
@@ -1138,24 +1138,24 @@
       ],
       "cjmmSkill": "take_action",
       "difficulty": "moderate",
-      "stem": "A nurse gets a mild tingling shock when touching an IV pump. What should the nurse do?",
+      "stem": "While adjusting an IV pump, the nurse feels a mild tingling shock. The client's antibiotic is running through the pump. What should the nurse do?",
       "content": {
         "options": [
           {
             "id": "a",
-            "text": "Keep using it carefully"
+            "text": "Keep using the pump, but touch it only when wearing gloves"
           },
           {
             "id": "b",
-            "text": "Remove it from use, label it as broken and report it to biomedical engineering"
+            "text": "Replace the pump, tag it as faulty and send it for repair"
           },
           {
             "id": "c",
-            "text": "Wrap it in a towel"
+            "text": "Wrap the pump in a towel so the metal parts are covered"
           },
           {
             "id": "d",
-            "text": "Unplug and replug it"
+            "text": "Unplug the pump, plug it back in and see if the tingling stops"
           }
         ]
       },
@@ -1163,16 +1163,16 @@
         "correct": "b"
       },
       "rationale": {
-        "correct": "Remove faulty equipment from service and report it.",
+        "correct": "Remove faulty electrical equipment from service at once, tag it and report it.",
         "perOption": {
-          "a": "Electrical faults can cause serious injury.",
-          "b": "Faulty equipment must be taken out of service.",
-          "c": "Doesn't fix the fault.",
-          "d": "Doesn't fix the fault."
+          "a": "Gloves do not prevent electrical injury from a faulty device.",
+          "b": "Faulty equipment is taken out of service and repaired before reuse.",
+          "c": "Covering the pump does not fix the fault.",
+          "d": "This does not fix the fault and risks another shock."
         },
         "references": [
           "Fundamentals of nursing texts (e.g. Potter & Perry)",
-          "Reviewed by the content team on 17 November 2026."
+          "Rewritten to NCLEX-RN difficulty and reviewed by the content team on 19 November 2026."
         ]
       },
       "educationalObjective": "Respond to faulty equipment."
@@ -1187,7 +1187,7 @@
       ],
       "cjmmSkill": "analyze_cues",
       "difficulty": "difficult",
-      "stem": "Several clients arrive with fever followed by a rash of firm, deep blisters that are all at the same stage, starting on the face and arms. Which bioterrorism agent does the nurse suspect?",
+      "stem": "Several unrelated adults arrive at the emergency department over 2 days with high fever and back pain, followed by a rash of firm, deep blisters that are all at the same stage and are thickest on the face, arms and palms. None of them has traveled recently or been vaccinated against smallpox. Which agent does the nurse suspect?",
       "content": {
         "options": [
           {
@@ -1204,7 +1204,7 @@
           },
           {
             "id": "d",
-            "text": "Botulism"
+            "text": "Monkeypox"
           }
         ]
       },
@@ -1212,16 +1212,16 @@
         "correct": "a"
       },
       "rationale": {
-        "correct": "Smallpox needs airborne and contact precautions and immediate notification of public health.",
+        "correct": "Suspected smallpox needs airborne and contact precautions and immediate notification of public health.",
         "perOption": {
-          "a": "Smallpox lesions are deep, firm, at the same stage and concentrated on the face and limbs.",
-          "b": "Varicella lesions appear in different stages and concentrate on the trunk.",
-          "c": "Cutaneous anthrax causes a painless black eschar.",
-          "d": "Botulism causes descending paralysis."
+          "a": "Smallpox lesions are deep, firm, all at the same stage, and thickest on the face and limbs, including the palms.",
+          "b": "Varicella lesions appear in crops at different stages and are thickest on the trunk.",
+          "c": "Cutaneous anthrax causes a painless black eschar, not a widespread blistering rash.",
+          "d": "Mpox lesions can look similar but usually come with swollen lymph nodes and often start in the genital area."
         },
         "references": [
           "CDC infection control and isolation precautions guidance",
-          "Reviewed by the content team on 17 November 2026."
+          "Rewritten to NCLEX-RN difficulty and reviewed by the content team on 19 November 2026."
         ]
       },
       "educationalObjective": "Recognize smallpox."
@@ -1236,24 +1236,24 @@
       ],
       "cjmmSkill": "take_action",
       "difficulty": "moderate",
-      "stem": "A hospital is preparing for a pandemic surge. Which action supports safe care?",
+      "stem": "A respiratory virus pandemic is spreading in the region, and the hospital expects a surge of admissions. Which action by the hospital best supports safe care?",
       "content": {
         "options": [
           {
             "id": "a",
-            "text": "Train staff in PPE use and plan for cohorting and surge capacity"
+            "text": "Train staff in PPE use and plan cohort units and surge capacity"
           },
           {
             "id": "b",
-            "text": "Stop using PPE to save supplies"
+            "text": "Reserve N95 respirators for intensive care staff to save supplies"
           },
           {
             "id": "c",
-            "text": "Cancel all hand hygiene training"
+            "text": "Pause hand hygiene audits so staff can focus on caring for clients"
           },
           {
             "id": "d",
-            "text": "Admit all clients to shared rooms regardless of diagnosis"
+            "text": "Admit clients to shared rooms in order of arrival, whatever the diagnosis"
           }
         ]
       },
@@ -1261,16 +1261,16 @@
         "correct": "a"
       },
       "rationale": {
-        "correct": "Pandemic preparedness: PPE training, cohorting, surge planning.",
+        "correct": "Pandemic preparedness: PPE training, cohorting and surge planning.",
         "perOption": {
-          "a": "Preparation reduces transmission and maintains care.",
-          "b": "Unsafe.",
-          "c": "Unsafe.",
-          "d": "Increases spread."
+          "a": "Preparation reduces transmission and keeps care going during a surge.",
+          "b": "Rationing respirators for staff exposed elsewhere puts them at risk.",
+          "c": "Hand hygiene matters even more during a pandemic.",
+          "d": "Mixing infected and uninfected clients increases spread."
         },
         "references": [
           "CDC infection control and isolation precautions guidance",
-          "Reviewed by the content team on 17 November 2026."
+          "Rewritten to NCLEX-RN difficulty and reviewed by the content team on 19 November 2026."
         ]
       },
       "educationalObjective": "Prepare for a pandemic surge."
@@ -1283,43 +1283,43 @@
       "subtopics": [
         "emergency-and-disaster-response"
       ],
-      "cjmmSkill": "take_action",
-      "difficulty": "moderate",
-      "stem": "During a disaster, the nurse is assigned to a shelter. Which client needs the most immediate attention?",
+      "cjmmSkill": "prioritize_hypotheses",
+      "difficulty": "difficult",
+      "stem": "Two days after a hurricane, a nurse is working at an emergency shelter. Which person needs the nurse's attention first?",
       "content": {
         "options": [
           {
             "id": "a",
-            "text": "A client with a minor cut on the hand"
+            "text": "A 40-year-old with type 1 diabetes who has had no insulin for a day and is now confused"
           },
           {
             "id": "b",
-            "text": "A client with diabetes who has no insulin and feels confused"
+            "text": "A 72-year-old with COPD whose inhaler ran out, who has mild wheezing and an SpO2 of 93%"
           },
           {
             "id": "c",
-            "text": "A client who is anxious but oriented"
+            "text": "An 8-year-old with a 3 cm laceration on the forearm that has stopped bleeding"
           },
           {
             "id": "d",
-            "text": "A client asking for a blanket"
+            "text": "A 30-year-old who is breathing fast and has tingling fingers after seeing the damage"
           }
         ]
       },
       "key": {
-        "correct": "b"
+        "correct": "a"
       },
       "rationale": {
-        "correct": "In shelters, prioritize clients with chronic illness who lost access to medication and have new symptoms.",
+        "correct": "In shelters, see first people with chronic illness who have lost their medication and now have new, serious symptoms.",
         "perOption": {
-          "a": "Minor.",
-          "b": "Possible hyperglycemia or hypoglycemia; needs immediate assessment.",
-          "c": "Supportive care.",
-          "d": "Not urgent."
+          "a": "Missed insulin with new confusion suggests diabetic ketoacidosis or severe glucose changes, which are life-threatening.",
+          "b": "This person needs a replacement inhaler soon but is stable.",
+          "c": "A clean, controlled wound can wait for care.",
+          "d": "Anxiety-related hyperventilation needs calm support but is not life-threatening."
         },
         "references": [
           "Fundamentals of nursing texts (e.g. Potter & Perry)",
-          "Reviewed by the content team on 17 November 2026."
+          "Rewritten to NCLEX-RN difficulty and reviewed by the content team on 19 November 2026."
         ]
       },
       "educationalObjective": "Prioritize in a shelter setting."
@@ -1334,24 +1334,24 @@
       ],
       "cjmmSkill": "take_action",
       "difficulty": "moderate",
-      "stem": "A portable x-ray is being taken in the room of a client the nurse is caring for. What should the nurse do?",
+      "stem": "A radiology technologist arrives to take a portable chest x-ray of a client the nurse is caring for. The nurse is hanging an IV bag at the bedside. What should the nurse do?",
       "content": {
         "options": [
           {
             "id": "a",
-            "text": "Stay at the bedside without protection"
+            "text": "Finish hanging the IV at the bedside while the x-ray is taken"
           },
           {
             "id": "b",
-            "text": "Step out of the room or stand behind a lead shield"
+            "text": "Step out of the room or stand behind a lead shield during the x-ray"
           },
           {
             "id": "c",
-            "text": "Hold the client in place without a lead apron"
+            "text": "Hold the client's arm out of the way during the x-ray without an apron"
           },
           {
             "id": "d",
-            "text": "Ask a pregnant coworker to hold the client"
+            "text": "Ask a pregnant coworker to help position the client during the x-ray"
           }
         ]
       },
@@ -1359,16 +1359,16 @@
         "correct": "b"
       },
       "rationale": {
-        "correct": "Radiation safety: time, distance, shielding.",
+        "correct": "Radiation safety uses time, distance and shielding.",
         "perOption": {
-          "a": "Increases exposure.",
+          "a": "Staying close without protection increases exposure.",
           "b": "Distance and shielding reduce exposure.",
-          "c": "Unsafe; if holding is needed, wear protection.",
-          "d": "Pregnant staff should avoid exposure."
+          "c": "If holding is needed, a lead apron and gloves are worn.",
+          "d": "Pregnant staff should avoid radiation exposure."
         },
         "references": [
           "Fundamentals of nursing texts (e.g. Potter & Perry)",
-          "Reviewed by the content team on 17 November 2026."
+          "Rewritten to NCLEX-RN difficulty and reviewed by the content team on 19 November 2026."
         ]
       },
       "educationalObjective": "Reduce radiation exposure."
@@ -1383,24 +1383,24 @@
       ],
       "cjmmSkill": "take_action",
       "difficulty": "moderate",
-      "stem": "A mercury thermometer breaks in a client's room. What should the nurse do?",
+      "stem": "An old mercury thermometer that a client brought from home breaks on the floor of the room, and small beads of mercury roll under the bed. What should the nurse do?",
       "content": {
         "options": [
           {
             "id": "a",
-            "text": "Vacuum the mercury"
+            "text": "Vacuum the beads up so that no mercury is left behind"
           },
           {
             "id": "b",
-            "text": "Follow the facility's hazardous spill procedure and keep people out of the area"
+            "text": "Keep people out and follow the hazardous spill procedure"
           },
           {
             "id": "c",
-            "text": "Sweep it into the trash"
+            "text": "Sweep the beads into a dustpan and put them in the trash"
           },
           {
             "id": "d",
-            "text": "Pour it down the sink"
+            "text": "Wipe the beads up with a wet paper towel and rinse it in the sink"
           }
         ]
       },
@@ -1408,16 +1408,16 @@
         "correct": "b"
       },
       "rationale": {
-        "correct": "Follow hazardous spill procedures.",
+        "correct": "Follow the hazardous spill procedure and keep people out of the area until it is cleaned.",
         "perOption": {
-          "a": "Spreads mercury vapor.",
-          "b": "Mercury is hazardous and needs special cleanup.",
-          "c": "Unsafe.",
-          "d": "Contaminates water."
+          "a": "Vacuuming spreads mercury vapor through the air.",
+          "b": "Mercury is hazardous and needs special cleanup with a spill kit.",
+          "c": "Mercury must not go in regular trash.",
+          "d": "Rinsing mercury down the sink contaminates the water supply."
         },
         "references": [
           "Fundamentals of nursing texts (e.g. Potter & Perry)",
-          "Reviewed by the content team on 17 November 2026."
+          "Rewritten to NCLEX-RN difficulty and reviewed by the content team on 19 November 2026."
         ]
       },
       "educationalObjective": "Respond to a mercury spill."
@@ -1430,9 +1430,9 @@
       "subtopics": [
         "transmission-based-precautions"
       ],
-      "cjmmSkill": "recognize_cues",
-      "difficulty": "moderate",
-      "stem": "A client is admitted with fever, cough and a rash. Select the 2 conditions that require an airborne isolation room.",
+      "cjmmSkill": "analyze_cues",
+      "difficulty": "difficult",
+      "stem": "An emergency department nurse is reviewing five clients waiting for admission, each with fever and cough, some with a rash. Two private rooms with negative pressure are available, and the rest of the unit has ordinary private rooms with the doors kept closed. Select the 2 conditions that require an airborne infection isolation room.",
       "content": {
         "options": [
           {
@@ -1453,7 +1453,7 @@
           },
           {
             "id": "e",
-            "text": "Bacterial pneumonia"
+            "text": "Meningococcal meningitis"
           }
         ],
         "selectCount": 2
@@ -1465,17 +1465,17 @@
         ]
       },
       "rationale": {
-        "correct": "Airborne: measles, varicella, disseminated zoster, tuberculosis.",
+        "correct": "Airborne: measles, varicella, disseminated zoster and tuberculosis.",
         "perOption": {
           "a": "Measles is airborne.",
-          "b": "Airborne and contact precautions.",
-          "c": "Droplet.",
-          "d": "Droplet.",
-          "e": "Standard precautions in most cases."
+          "b": "Disseminated zoster needs airborne and contact precautions.",
+          "c": "Influenza needs droplet precautions.",
+          "d": "Pertussis needs droplet precautions.",
+          "e": "Meningococcal disease needs droplet precautions."
         },
         "references": [
           "CDC infection control and isolation precautions guidance",
-          "Reviewed by the content team on 17 November 2026."
+          "Rewritten to NCLEX-RN difficulty and reviewed by the content team on 19 November 2026."
         ]
       },
       "educationalObjective": "Identify airborne infections."
@@ -1489,25 +1489,25 @@
         "healthcare-associated-infection-prevention"
       ],
       "cjmmSkill": "take_action",
-      "difficulty": "moderate",
-      "stem": "A client has Candida auris colonization. Which action is most important?",
+      "difficulty": "difficult",
+      "stem": "A client transferred from a long-term care facility has a skin swab positive for Candida auris colonization. The client has no signs of infection. Which action is most important?",
       "content": {
         "options": [
           {
             "id": "a",
-            "text": "Contact precautions and cleaning with a disinfectant effective against C. auris"
+            "text": "Contact precautions and cleaning with a disinfectant that kills C. auris"
           },
           {
             "id": "b",
-            "text": "No precautions because it's colonization only"
+            "text": "Standard precautions, since the client has no signs of infection"
           },
           {
             "id": "c",
-            "text": "Airborne precautions"
+            "text": "Airborne precautions in a negative-pressure room until swabs are negative"
           },
           {
             "id": "d",
-            "text": "Discharge the client early"
+            "text": "An antifungal course to clear the colonization before any other care"
           }
         ]
       },
@@ -1515,16 +1515,16 @@
         "correct": "a"
       },
       "rationale": {
-        "correct": "C. auris: contact precautions, appropriate disinfectant, notify infection prevention.",
+        "correct": "C. auris: contact precautions, a disinfectant effective against it, and notifying infection prevention.",
         "perOption": {
-          "a": "C. auris spreads on surfaces and is often drug-resistant.",
-          "b": "Colonized clients can spread it.",
-          "c": "Not airborne.",
-          "d": "Not a control measure."
+          "a": "C. auris spreads on hands and surfaces and resists many disinfectants and antifungals.",
+          "b": "Colonized clients can spread C. auris to others.",
+          "c": "C. auris is not airborne.",
+          "d": "Colonization is not treated with antifungals; infection control is the priority."
         },
         "references": [
           "CDC infection control and isolation precautions guidance",
-          "Reviewed by the content team on 17 November 2026."
+          "Rewritten to NCLEX-RN difficulty and reviewed by the content team on 19 November 2026."
         ]
       },
       "educationalObjective": "Manage C. auris."
@@ -1539,24 +1539,24 @@
       ],
       "cjmmSkill": "take_action",
       "difficulty": "moderate",
-      "stem": "When should the nurse wear eye protection?",
+      "stem": "A new graduate is about to irrigate a client's infected abdominal wound and asks whether eye protection is needed. Which answer by the nurse is correct?",
       "content": {
         "options": [
           {
             "id": "a",
-            "text": "Whenever splashes of blood or body fluids are likely"
+            "text": "\"Wear it whenever a splash of blood or body fluid is likely.\""
           },
           {
             "id": "b",
-            "text": "Only for clients with HIV"
+            "text": "\"Wear it for clients who are known to have a bloodborne infection.\""
           },
           {
             "id": "c",
-            "text": "Only in the operating room"
+            "text": "\"Wear it during sterile procedures, such as inserting a catheter.\""
           },
           {
             "id": "d",
-            "text": "Never, if gloves are worn"
+            "text": "\"Wear it if you can't wear gloves for the procedure.\""
           }
         ]
       },
@@ -1564,16 +1564,16 @@
         "correct": "a"
       },
       "rationale": {
-        "correct": "Choose PPE based on the expected exposure.",
+        "correct": "Choose PPE based on the expected exposure: eye protection for any likely splash.",
         "perOption": {
-          "a": "Standard precautions include eye protection for splash risk.",
-          "b": "Standard precautions apply to all clients.",
-          "c": "Splashes can happen anywhere.",
-          "d": "Gloves don't protect the eyes."
+          "a": "Standard precautions include eye protection whenever a splash is likely.",
+          "b": "Standard precautions apply to every client, whatever the diagnosis.",
+          "c": "Eye protection depends on splash risk, not on sterility.",
+          "d": "Gloves protect the hands, not the eyes."
         },
         "references": [
           "CDC infection control and isolation precautions guidance",
-          "Reviewed by the content team on 17 November 2026."
+          "Rewritten to NCLEX-RN difficulty and reviewed by the content team on 19 November 2026."
         ]
       },
       "educationalObjective": "Use eye protection appropriately."
