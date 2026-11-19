@@ -1,5 +1,5 @@
 {
-  "notice": "RN bank batch 14: Neurological I: stroke, ICP, seizures and meningitis. Reviewed by the content team on 17 November 2026. See REVIEW-LOG.md.",
+  "notice": "RN bank batch 14: Neurological I: stroke, ICP, seizures and meningitis. Rewritten to NCLEX-RN difficulty and reviewed by the content team on 19 November 2026. See REVIEW-LOG.md.",
   "track": "RN",
   "subtopics": [
     {
@@ -54,24 +54,24 @@
       ],
       "cjmmSkill": "analyze_cues",
       "difficulty": "moderate",
-      "stem": "A client has had a stroke in the right cerebral hemisphere. Which finding should the nurse expect?",
+      "stem": "A 70-year-old client had an ischemic stroke in the right cerebral hemisphere 2 days ago. The family says the client keeps trying to get out of bed alone. Which group of findings should the nurse expect with this stroke?",
       "content": {
         "options": [
           {
             "id": "a",
-            "text": "Right-sided weakness and aphasia"
+            "text": "Right-sided weakness, aphasia and slow, cautious behavior"
           },
           {
             "id": "b",
-            "text": "Left-sided weakness, impulsive behavior and neglect of the left side"
+            "text": "Left-sided weakness, impulsiveness and neglect of the left side"
           },
           {
             "id": "c",
-            "text": "Slow, cautious behavior"
+            "text": "Right-sided weakness and trouble reading and writing"
           },
           {
             "id": "d",
-            "text": "Loss of the ability to read and write"
+            "text": "Weakness of both legs with loss of bladder control"
           }
         ]
       },
@@ -79,16 +79,16 @@
         "correct": "b"
       },
       "rationale": {
-        "correct": "Right-brain stroke: left-sided weakness, neglect, impulsivity and poor judgment, so safety is the main concern. Left-brain stroke: right-sided weakness, aphasia and slow, cautious behavior.",
+        "correct": "Right-brain stroke: left-sided weakness, neglect, impulsiveness and poor judgment, so safety is the main concern. Left-brain stroke: right-sided weakness, aphasia and slow, cautious behavior.",
         "perOption": {
           "a": "These occur with left hemisphere strokes.",
-          "b": "Right hemisphere damage affects the left side of the body, spatial awareness and judgment.",
-          "c": "Cautious behavior is typical of left hemisphere strokes.",
-          "d": "Language deficits are usually from left hemisphere damage."
+          "b": "Right hemisphere damage affects the left side, spatial awareness and judgment.",
+          "c": "Language deficits usually come from left hemisphere damage.",
+          "d": "This pattern suggests a spinal cord problem, not a hemispheric stroke."
         },
         "references": [
           "Medical-surgical nursing texts (e.g. Lewis; Ignatavicius)",
-          "Reviewed by the content team on 17 November 2026."
+          "Rewritten to NCLEX-RN difficulty and reviewed by the content team on 19 November 2026."
         ]
       },
       "educationalObjective": "Predict deficits after a right hemisphere stroke."
@@ -103,24 +103,24 @@
       ],
       "cjmmSkill": "take_action",
       "difficulty": "moderate",
-      "stem": "A client with expressive (Broca's) aphasia understands what is said but has trouble speaking. Which communication strategy is best?",
+      "stem": "A client with expressive (Broca) aphasia after a left-sided stroke understands what is said but struggles to find words and becomes tearful. Which communication strategy is best?",
       "content": {
         "options": [
           {
             "id": "a",
-            "text": "Speak loudly"
+            "text": "Speak more loudly and slowly so each word is heard"
           },
           {
             "id": "b",
-            "text": "Ask yes-or-no questions and offer a picture or communication board"
+            "text": "Ask yes-or-no questions and offer a picture board"
           },
           {
             "id": "c",
-            "text": "Finish the client's sentences quickly"
+            "text": "Finish the client's sentences to save frustration"
           },
           {
             "id": "d",
-            "text": "Avoid talking to the client to prevent frustration"
+            "text": "Limit conversation until the speech has recovered"
           }
         ]
       },
@@ -128,16 +128,16 @@
         "correct": "b"
       },
       "rationale": {
-        "correct": "Expressive aphasia: comprehension is intact, speech isn't. Give time and use simple questions and aids.",
+        "correct": "Expressive aphasia: comprehension is intact but speech is not; give time and use simple questions and aids.",
         "perOption": {
-          "a": "The client's hearing isn't the problem.",
+          "a": "The client's hearing and understanding are not the problem.",
           "b": "These let the client communicate without needing fluent speech.",
           "c": "This can frustrate the client and discourage attempts to speak.",
-          "d": "Isolation worsens recovery."
+          "d": "Isolation slows recovery."
         },
         "references": [
           "Medical-surgical nursing texts (e.g. Lewis; Ignatavicius)",
-          "Reviewed by the content team on 17 November 2026."
+          "Rewritten to NCLEX-RN difficulty and reviewed by the content team on 19 November 2026."
         ]
       },
       "educationalObjective": "Communicate with a client who has expressive aphasia."
@@ -152,7 +152,7 @@
       ],
       "cjmmSkill": "take_action",
       "difficulty": "moderate",
-      "stem": "A client arrives with sudden right-sided weakness and slurred speech that began 1 hour ago. Which test should the nurse expect first?",
+      "stem": "A 66-year-old client arrives at the emergency department with sudden right-sided weakness and slurred speech that began 1 hour ago. The glucose is 118 mg/dL. Which test should the nurse expect first?",
       "content": {
         "options": [
           {
@@ -161,15 +161,15 @@
           },
           {
             "id": "b",
-            "text": "MRI of the brain"
+            "text": "MRI of the brain with gadolinium"
           },
           {
             "id": "c",
-            "text": "Lumbar puncture"
+            "text": "Lumbar puncture for cerebrospinal fluid"
           },
           {
             "id": "d",
-            "text": "Carotid ultrasound"
+            "text": "Carotid ultrasound of both sides"
           }
         ]
       },
@@ -180,13 +180,13 @@
         "correct": "Get a non-contrast head CT immediately to tell ischemic from hemorrhagic stroke.",
         "perOption": {
           "a": "A CT quickly rules out hemorrhage before thrombolytic therapy.",
-          "b": "An MRI takes longer and isn't the usual first test.",
-          "c": "This isn't the initial stroke test.",
+          "b": "An MRI takes longer and is not the usual first test.",
+          "c": "This is not the initial stroke test.",
           "d": "This is done later to find the cause."
         },
         "references": [
           "Medical-surgical nursing texts (e.g. Lewis; Ignatavicius)",
-          "Reviewed by the content team on 17 November 2026."
+          "Rewritten to NCLEX-RN difficulty and reviewed by the content team on 19 November 2026."
         ]
       },
       "educationalObjective": "Identify the first diagnostic test for a suspected stroke."
@@ -201,24 +201,24 @@
       ],
       "cjmmSkill": "take_action",
       "difficulty": "difficult",
-      "stem": "A client with an acute ischemic stroke is a candidate for alteplase. The blood pressure is 196/112 mm Hg. What should the nurse anticipate?",
+      "stem": "A client with an acute ischemic stroke that began 90 minutes ago is a candidate for alteplase. The CT shows no bleeding, and the blood pressure is 196/112 mm Hg. What should the nurse anticipate?",
       "content": {
         "options": [
           {
             "id": "a",
-            "text": "Giving alteplase right away"
+            "text": "Starting the alteplase right away, since time is brain tissue"
           },
           {
             "id": "b",
-            "text": "Lowering the blood pressure below 185/110 before giving alteplase"
+            "text": "Lowering the pressure below 185/110 before alteplase"
           },
           {
             "id": "c",
-            "text": "Lowering the blood pressure to below 120/80"
+            "text": "Bringing the pressure down to 120/80 within the hour"
           },
           {
             "id": "d",
-            "text": "Withholding all blood pressure treatment"
+            "text": "Holding the antihypertensives so the brain stays perfused"
           }
         ]
       },
@@ -226,16 +226,16 @@
         "correct": "b"
       },
       "rationale": {
-        "correct": "Before alteplase, keep BP below 185/110; after it, keep BP below 180/105 for 24 hours.",
+        "correct": "Before alteplase, the blood pressure must be below 185/110; afterward, keep it below 180/105 for 24 hours.",
         "perOption": {
           "a": "Blood pressure must be below 185/110 before alteplase.",
           "b": "High blood pressure raises the risk of bleeding into the brain.",
-          "c": "Rapid lowering can extend the stroke.",
+          "c": "Rapid, deep lowering can extend the stroke.",
           "d": "This pressure is too high for thrombolysis."
         },
         "references": [
           "American Heart Association Guidelines for CPR and Emergency Cardiovascular Care",
-          "Reviewed by the content team on 17 November 2026."
+          "Rewritten to NCLEX-RN difficulty and reviewed by the content team on 19 November 2026."
         ]
       },
       "educationalObjective": "Manage blood pressure before thrombolysis."
@@ -250,24 +250,24 @@
       ],
       "cjmmSkill": "generate_solutions",
       "difficulty": "moderate",
-      "stem": "After a stroke, a client has homonymous hemianopsia on the left. Which intervention is most appropriate?",
+      "stem": "After a right-sided stroke, a client has left homonymous hemianopsia and leaves the food on the left half of the plate. Which intervention is most appropriate for long-term recovery?",
       "content": {
         "options": [
           {
             "id": "a",
-            "text": "Place the meal tray and call light on the client's left side"
+            "text": "Place the tray and call light on the client's left side"
           },
           {
             "id": "b",
-            "text": "Teach the client to turn the head to scan the left side"
+            "text": "Teach the client to turn the head to scan to the left"
           },
           {
             "id": "c",
-            "text": "Patch the client's left eye"
+            "text": "Place a patch over the client's left eye during meals"
           },
           {
             "id": "d",
-            "text": "Approach the client from the left"
+            "text": "Approach the client from the left so the client adapts"
           }
         ]
       },
@@ -275,16 +275,16 @@
         "correct": "b"
       },
       "rationale": {
-        "correct": "Hemianopsia: place items in the intact field at first and teach scanning toward the lost side.",
+        "correct": "Hemianopsia: place items in the intact field at first, and teach scanning toward the lost side.",
         "perOption": {
-          "a": "The client can't see the left visual field.",
+          "a": "The client cannot see the left visual field, so items there are missed.",
           "b": "Scanning makes up for the lost visual field.",
-          "c": "Patching doesn't help hemianopsia.",
+          "c": "Patching does not help hemianopsia.",
           "d": "This startles the client."
         },
         "references": [
           "Medical-surgical nursing texts (e.g. Lewis; Ignatavicius)",
-          "Reviewed by the content team on 17 November 2026."
+          "Rewritten to NCLEX-RN difficulty and reviewed by the content team on 19 November 2026."
         ]
       },
       "educationalObjective": "Plan care for homonymous hemianopsia."
@@ -299,24 +299,24 @@
       ],
       "cjmmSkill": "generate_solutions",
       "difficulty": "moderate",
-      "stem": "A client with left-sided neglect after a stroke ignores the left arm. Which intervention should the nurse include?",
+      "stem": "A client with left-sided neglect after a stroke ignores the left arm, which often hangs off the wheelchair. Which intervention should the nurse include in the plan of care?",
       "content": {
         "options": [
           {
             "id": "a",
-            "text": "Dress the client's unaffected side first"
+            "text": "Dress the client's unaffected right side first each morning"
           },
           {
             "id": "b",
-            "text": "Remind the client to look at and touch the left arm and position it safely"
+            "text": "Cue the client to look at the left arm and position it safely"
           },
           {
             "id": "c",
-            "text": "Keep the left arm under the covers"
+            "text": "Keep the left arm under the blanket so it stays warm"
           },
           {
             "id": "d",
-            "text": "Ignore the neglect, because it will resolve on its own"
+            "text": "Avoid mentioning the arm, since the neglect will fade with time"
           }
         ]
       },
@@ -327,13 +327,13 @@
         "correct": "Unilateral neglect: cue the client to attend to the affected side and protect the limb.",
         "perOption": {
           "a": "The affected side is dressed first.",
-          "b": "Cueing the client increases awareness and prevents injury to the neglected limb.",
+          "b": "Cueing increases awareness and prevents injury to the neglected limb.",
           "c": "This increases neglect and the risk of injury.",
           "d": "Active cueing helps recovery."
         },
         "references": [
           "Medical-surgical nursing texts (e.g. Lewis; Ignatavicius)",
-          "Reviewed by the content team on 17 November 2026."
+          "Rewritten to NCLEX-RN difficulty and reviewed by the content team on 19 November 2026."
         ]
       },
       "educationalObjective": "Plan care for unilateral neglect."
@@ -348,16 +348,16 @@
       ],
       "cjmmSkill": "recognize_cues",
       "difficulty": "easy",
-      "stem": "Which findings are warning signs of a stroke that should prompt the client's family to call 911? Select all that apply.",
+      "stem": "The nurse is teaching the family of a client at high risk for stroke. Which sudden signs should prompt the family to call 911? Select all that apply.",
       "content": {
         "options": [
           {
             "id": "a",
-            "text": "Sudden loss of balance"
+            "text": "Loss of balance or coordination"
           },
           {
             "id": "b",
-            "text": "Sudden vision loss or double vision"
+            "text": "Vision loss or double vision"
           },
           {
             "id": "c",
@@ -369,11 +369,15 @@
           },
           {
             "id": "e",
-            "text": "Slurred speech"
+            "text": "Slurred or confused speech"
           },
           {
             "id": "f",
-            "text": "Fever and chills"
+            "text": "Fever with chills"
+          },
+          {
+            "id": "g",
+            "text": "A headache that builds slowly over several days and eases with rest"
           }
         ]
       },
@@ -394,11 +398,12 @@
           "c": "F: face.",
           "d": "A: arm.",
           "e": "S: speech.",
-          "f": "These suggest infection."
+          "f": "These suggest infection.",
+          "g": "A gradual headache that eases is not a stroke warning sign; a sudden, severe one is."
         },
         "references": [
           "American Heart Association Guidelines for CPR and Emergency Cardiovascular Care",
-          "Reviewed by the content team on 17 November 2026."
+          "Rewritten to NCLEX-RN difficulty and reviewed by the content team on 19 November 2026."
         ]
       },
       "educationalObjective": "Teach the warning signs of stroke."
@@ -413,24 +418,24 @@
       ],
       "cjmmSkill": "recognize_cues",
       "difficulty": "moderate",
-      "stem": "Which finding is the earliest sign of increasing intracranial pressure?",
+      "stem": "A client admitted with a subdural hematoma is being monitored for increased intracranial pressure. Which finding is the earliest sign that the pressure is rising?",
       "content": {
         "options": [
           {
             "id": "a",
-            "text": "Change in level of consciousness, such as restlessness or confusion"
+            "text": "New restlessness and confusion about where the client is"
           },
           {
             "id": "b",
-            "text": "Fixed, dilated pupils"
+            "text": "Fixed and dilated pupils that do not react to light"
           },
           {
             "id": "c",
-            "text": "Bradycardia and a widened pulse pressure"
+            "text": "Bradycardia with a widening pulse pressure on the monitor"
           },
           {
             "id": "d",
-            "text": "Decerebrate posturing"
+            "text": "Rigid extension of the arms and legs to pain"
           }
         ]
       },
@@ -438,16 +443,16 @@
         "correct": "a"
       },
       "rationale": {
-        "correct": "A change in LOC is the earliest sign of rising ICP.",
+        "correct": "A change in level of consciousness is the earliest sign of rising ICP.",
         "perOption": {
-          "a": "The level of consciousness is the most sensitive early indicator.",
+          "a": "A change in level of consciousness is the most sensitive early sign.",
           "b": "This is a late sign.",
-          "c": "These are late (Cushing's triad).",
-          "d": "This is a late sign."
+          "c": "These are late signs (Cushing triad).",
+          "d": "Decerebrate posturing is a late sign."
         },
         "references": [
           "Medical-surgical nursing texts (e.g. Lewis; Ignatavicius)",
-          "Reviewed by the content team on 17 November 2026."
+          "Rewritten to NCLEX-RN difficulty and reviewed by the content team on 19 November 2026."
         ]
       },
       "educationalObjective": "Recognize early increased ICP."
@@ -462,24 +467,24 @@
       ],
       "cjmmSkill": "recognize_cues",
       "difficulty": "difficult",
-      "stem": "A client with a head injury has a blood pressure that has risen from 138/80 to 184/70 mm Hg, a heart rate that has fallen from 88 to 52/min and irregular breathing. What do these findings indicate?",
+      "stem": "A client with a head injury has a blood pressure that has risen from 138/80 to 184/70 mm Hg, a heart rate that has fallen from 88 to 52/min, and irregular breathing. What do these findings indicate?",
       "content": {
         "options": [
           {
             "id": "a",
-            "text": "Cushing's triad, a late sign of increased ICP"
+            "text": "Cushing triad, a late sign of increased ICP"
           },
           {
             "id": "b",
-            "text": "Hypovolemic shock"
+            "text": "Hypovolemic shock from internal bleeding"
           },
           {
             "id": "c",
-            "text": "Neurogenic shock"
+            "text": "Neurogenic shock from a cervical spine injury"
           },
           {
             "id": "d",
-            "text": "Expected recovery"
+            "text": "Expected recovery as the swelling goes down"
           }
         ]
       },
@@ -487,19 +492,19 @@
         "correct": "a"
       },
       "rationale": {
-        "correct": "Cushing's triad: hypertension with widening pulse pressure, bradycardia and irregular respirations. Notify the provider immediately.",
+        "correct": "Cushing triad: hypertension with a widening pulse pressure, bradycardia and irregular respirations; notify the provider at once.",
         "perOption": {
-          "a": "Widening pulse pressure, bradycardia and irregular respirations signal impending herniation.",
+          "a": "A widening pulse pressure, bradycardia and irregular respirations signal impending herniation.",
           "b": "Shock causes hypotension and tachycardia.",
-          "c": "Neurogenic shock causes hypotension and bradycardia.",
+          "c": "Neurogenic shock causes hypotension with bradycardia.",
           "d": "These signs are ominous."
         },
         "references": [
           "Medical-surgical nursing texts (e.g. Lewis; Ignatavicius)",
-          "Reviewed by the content team on 17 November 2026."
+          "Rewritten to NCLEX-RN difficulty and reviewed by the content team on 19 November 2026."
         ]
       },
-      "educationalObjective": "Recognize Cushing's triad."
+      "educationalObjective": "Recognize Cushing triad."
     },
     {
       "id": "c1a00014-0000-4000-8000-000000000010",
@@ -511,7 +516,7 @@
       ],
       "cjmmSkill": "generate_solutions",
       "difficulty": "moderate",
-      "stem": "Which interventions help reduce intracranial pressure? Select all that apply.",
+      "stem": "A client with a traumatic brain injury has an intracranial pressure of 22 mm Hg. Which interventions help reduce the pressure? Select all that apply.",
       "content": {
         "options": [
           {
@@ -520,23 +525,23 @@
           },
           {
             "id": "b",
-            "text": "Keep the head in a midline position"
+            "text": "Keep the head and neck in a midline position"
           },
           {
             "id": "c",
-            "text": "Avoid sharp hip flexion"
+            "text": "Avoid sharp flexion of the hips"
           },
           {
             "id": "d",
-            "text": "Space out nursing activities"
+            "text": "Space out nursing care with rest periods"
           },
           {
             "id": "e",
-            "text": "Place the client in Trendelenburg"
+            "text": "Place the client in Trendelenburg for a short time"
           },
           {
             "id": "f",
-            "text": "Encourage vigorous coughing"
+            "text": "Encourage the client to cough hard every hour"
           }
         ]
       },
@@ -555,12 +560,12 @@
           "b": "Turning the head can block the jugular veins.",
           "c": "Hip flexion raises abdominal and intracranial pressure.",
           "d": "Clustering many activities can raise ICP.",
-          "e": "Head-down positioning raises ICP.",
+          "e": "A head-down position raises ICP.",
           "f": "Coughing raises ICP."
         },
         "references": [
           "Medical-surgical nursing texts (e.g. Lewis; Ignatavicius)",
-          "Reviewed by the content team on 17 November 2026."
+          "Rewritten to NCLEX-RN difficulty and reviewed by the content team on 19 November 2026."
         ]
       },
       "educationalObjective": "Plan interventions to reduce ICP."
@@ -575,41 +580,41 @@
       ],
       "cjmmSkill": "take_action",
       "difficulty": "difficult",
-      "stem": "A client with cerebral edema is receiving IV mannitol. Which assessment is most important?",
+      "stem": "A client with cerebral edema after a traumatic brain injury is receiving IV mannitol every 6 hours. The serum osmolality this morning is 328 mOsm/kg, and urine output has been 250 mL/hr. What should the nurse do before the next dose?",
       "content": {
         "options": [
           {
             "id": "a",
-            "text": "Serum osmolality, urine output and signs of fluid and electrolyte imbalance"
+            "text": "Give the dose as scheduled, since the output shows it is working"
           },
           {
             "id": "b",
-            "text": "Blood glucose"
+            "text": "Hold the dose and notify the provider of the osmolality"
           },
           {
             "id": "c",
-            "text": "Temperature"
+            "text": "Give the dose faster to reduce the time the client has a full bladder"
           },
           {
             "id": "d",
-            "text": "Liver enzymes"
+            "text": "Restrict oral and IV fluids until the next dose is given"
           }
         ]
       },
       "key": {
-        "correct": "a"
+        "correct": "b"
       },
       "rationale": {
-        "correct": "Mannitol: monitor osmolality (hold if above about 320 mOsm/kg), urine output, electrolytes and signs of heart failure. Use an in-line filter.",
+        "correct": "Mannitol: monitor osmolality (hold if above about 320 mOsm/kg), urine output, electrolytes and signs of heart failure, and use an in-line filter.",
         "perOption": {
-          "a": "Mannitol is an osmotic diuretic; it can cause dehydration, electrolyte shifts and kidney injury.",
-          "b": "This isn't the main concern.",
-          "c": "This isn't the main concern.",
-          "d": "Mannitol isn't hepatotoxic."
+          "a": "An osmolality above about 320 mOsm/kg means the next dose may cause dangerous dehydration.",
+          "b": "Mannitol is usually held when the osmolality is above about 320 mOsm/kg because of the risk of kidney injury and dehydration.",
+          "c": "Changing the rate does not address the high osmolality.",
+          "d": "Restricting fluids would worsen the dehydration."
         },
         "references": [
           "Nursing pharmacology texts (e.g. Lehne; McCuistion) and the drug's prescribing information",
-          "Reviewed by the content team on 17 November 2026."
+          "Rewritten to NCLEX-RN difficulty and reviewed by the content team on 19 November 2026."
         ]
       },
       "educationalObjective": "Monitor a client receiving mannitol."
@@ -623,25 +628,25 @@
         "intracranial-pressure-and-head-injury"
       ],
       "cjmmSkill": "take_action",
-      "difficulty": "moderate",
-      "stem": "A client with a head injury has clear fluid draining from the nose and bruising behind the ears. Which action should the nurse avoid?",
+      "difficulty": "difficult",
+      "stem": "A 40-year-old client injured in a fall from a ladder has clear fluid draining from the nose and bruising behind both ears. The client needs gastric decompression. Which action should the nurse avoid?",
       "content": {
         "options": [
           {
             "id": "a",
-            "text": "Nasotracheal suctioning or inserting a nasogastric tube"
+            "text": "Inserting a nasogastric tube"
           },
           {
             "id": "b",
-            "text": "Checking the drainage for a halo sign"
+            "text": "Checking the drainage for a halo sign on gauze"
           },
           {
             "id": "c",
-            "text": "Raising the head of the bed"
+            "text": "Raising the head of the bed to 30 degrees"
           },
           {
             "id": "d",
-            "text": "Notifying the provider"
+            "text": "Notifying the provider of the drainage"
           }
         ]
       },
@@ -649,16 +654,16 @@
         "correct": "a"
       },
       "rationale": {
-        "correct": "Basal skull fracture: Battle sign (bruising behind the ear), raccoon eyes and CSF leak. Nothing goes in through the nose.",
+        "correct": "Basal skull fracture: Battle sign, raccoon eyes and CSF leak; nothing is passed through the nose, and an orogastric tube is used instead.",
         "perOption": {
-          "a": "These suggest a basal skull fracture; tubes through the nose can enter the brain.",
-          "b": "A halo on gauze suggests CSF.",
+          "a": "These findings suggest a basal skull fracture; a tube through the nose can enter the brain.",
+          "b": "A halo on gauze suggests CSF and is appropriate to check.",
           "c": "This is appropriate.",
           "d": "This is appropriate."
         },
         "references": [
           "Medical-surgical nursing texts (e.g. Lewis; Ignatavicius)",
-          "Reviewed by the content team on 17 November 2026."
+          "Rewritten to NCLEX-RN difficulty and reviewed by the content team on 19 November 2026."
         ]
       },
       "educationalObjective": "Avoid nasal tubes in suspected basal skull fracture."
@@ -673,7 +678,7 @@
       ],
       "cjmmSkill": "recognize_cues",
       "difficulty": "difficult",
-      "stem": "A client was briefly unconscious after a fall, then woke and talked normally. Two hours later, the client is hard to wake and has a dilated right pupil. What does the nurse suspect?",
+      "stem": "A 23-year-old was knocked out for about a minute after being hit in the temple by a baseball, then woke, talked normally and said only that the head ached. Two hours later, the client is hard to wake and has a dilated right pupil. Which condition does the nurse suspect?",
       "content": {
         "options": [
           {
@@ -690,7 +695,7 @@
           },
           {
             "id": "d",
-            "text": "Migraine"
+            "text": "Migraine with aura"
           }
         ]
       },
@@ -698,16 +703,16 @@
         "correct": "a"
       },
       "rationale": {
-        "correct": "An epidural hematoma is a neurosurgical emergency.",
+        "correct": "An epidural hematoma is a neurosurgical emergency; the lucid interval can be falsely reassuring.",
         "perOption": {
           "a": "A brief loss of consciousness, a lucid interval, then rapid decline is typical of arterial bleeding.",
-          "b": "A concussion doesn't cause a delayed decline with pupil changes.",
-          "c": "This develops over weeks.",
-          "d": "This doesn't fit."
+          "b": "A concussion does not cause a delayed decline with pupil changes.",
+          "c": "A chronic subdural develops over weeks.",
+          "d": "This does not fit the picture."
         },
         "references": [
           "Medical-surgical nursing texts (e.g. Lewis; Ignatavicius)",
-          "Reviewed by the content team on 17 November 2026."
+          "Rewritten to NCLEX-RN difficulty and reviewed by the content team on 19 November 2026."
         ]
       },
       "educationalObjective": "Recognize an epidural hematoma."
@@ -722,7 +727,7 @@
       ],
       "cjmmSkill": "analyze_cues",
       "difficulty": "moderate",
-      "stem": "A client opens the eyes only to painful stimuli, uses inappropriate words and withdraws from pain. What is the Glasgow Coma Scale score?",
+      "stem": "The nurse is assessing a client 6 hours after a head injury. The client opens the eyes only when the nail bed is pressed, says random inappropriate words, and pulls the hand away from the painful stimulus. What is the client's Glasgow Coma Scale score?",
       "content": {
         "unit": "points",
         "decimals": 0,
@@ -737,7 +742,7 @@
         "perOption": {},
         "references": [
           "Medical-surgical nursing texts (e.g. Lewis; Ignatavicius)",
-          "Reviewed by the content team on 17 November 2026."
+          "Rewritten to NCLEX-RN difficulty and reviewed by the content team on 19 November 2026."
         ]
       },
       "educationalObjective": "Calculate a Glasgow Coma Scale score."
@@ -752,7 +757,7 @@
       ],
       "cjmmSkill": "evaluate_outcomes",
       "difficulty": "moderate",
-      "stem": "A client with a mild concussion is being discharged. Which statement shows a need for more teaching?",
+      "stem": "A 17-year-old with a mild concussion from a football tackle is being discharged from the emergency department with a parent. Which statement shows a need for more teaching?",
       "content": {
         "options": [
           {
@@ -761,15 +766,15 @@
           },
           {
             "id": "b",
-            "text": "\"I'll have someone stay with me for the first 24 hours.\""
+            "text": "\"My mom will stay with me and wake me tonight as instructed.\""
           },
           {
             "id": "c",
-            "text": "\"I can go back to playing football this weekend if I feel okay.\""
+            "text": "\"I can play in Saturday's game if I feel fine by then.\""
           },
           {
             "id": "d",
-            "text": "\"I'll avoid alcohol.\""
+            "text": "\"I'll take it easy at school and limit screen time for now.\""
           }
         ]
       },
@@ -777,16 +782,16 @@
         "correct": "c"
       },
       "rationale": {
-        "correct": "Concussion: watch for red flags, rest and return gradually to activity with clearance.",
+        "correct": "Concussion: watch for red flags, rest, and return to activity gradually with clearance.",
         "perOption": {
           "a": "These are warning signs.",
           "b": "Observation is recommended.",
-          "c": "Return to contact sports requires gradual progression and medical clearance.",
-          "d": "Alcohol can mask symptoms."
+          "c": "Return to contact sports needs a gradual plan and medical clearance.",
+          "d": "Cognitive rest early on is appropriate."
         },
         "references": [
           "Medical-surgical nursing texts (e.g. Lewis; Ignatavicius)",
-          "Reviewed by the content team on 17 November 2026."
+          "Rewritten to NCLEX-RN difficulty and reviewed by the content team on 19 November 2026."
         ]
       },
       "educationalObjective": "Teach a client after a concussion."
@@ -801,7 +806,7 @@
       ],
       "cjmmSkill": "take_action",
       "difficulty": "difficult",
-      "stem": "A client has been having one tonic-clonic seizure after another for 6 minutes without waking in between. Which medication should the nurse prepare to give first?",
+      "stem": "A client with epilepsy has had one tonic-clonic seizure after another for 6 minutes without waking in between. The nurse has turned the client on the side and given oxygen. IV access is in place, and the glucose is 104 mg/dL. Which medication should the nurse prepare to give first?",
       "content": {
         "options": [
           {
@@ -814,11 +819,11 @@
           },
           {
             "id": "c",
-            "text": "IV levetiracetam first"
+            "text": "IV levetiracetam"
           },
           {
             "id": "d",
-            "text": "Oral carbamazepine"
+            "text": "Rectal acetaminophen"
           }
         ]
       },
@@ -829,14 +834,14 @@
         "correct": "Status epilepticus: protect the airway, give a benzodiazepine (IV lorazepam, or IM midazolam), then a second-line drug.",
         "perOption": {
           "a": "A benzodiazepine is first-line for status epilepticus.",
-          "b": "Oral drugs aren't effective during a seizure.",
-          "c": "This is second-line, after a benzodiazepine.",
-          "d": "Oral drugs aren't used in an emergency."
+          "b": "Oral drugs cannot be given during a seizure.",
+          "c": "This is second-line, given after a benzodiazepine.",
+          "d": "This does not stop seizures."
         },
         "references": [
           "Medical-surgical nursing texts (e.g. Lewis; Ignatavicius)",
           "Nursing pharmacology texts (e.g. Lehne; McCuistion) and the drug's prescribing information",
-          "Reviewed by the content team on 17 November 2026."
+          "Rewritten to NCLEX-RN difficulty and reviewed by the content team on 19 November 2026."
         ]
       },
       "educationalObjective": "Treat status epilepticus."
@@ -850,25 +855,25 @@
         "seizure-management"
       ],
       "cjmmSkill": "take_action",
-      "difficulty": "easy",
-      "stem": "After a client's seizure, what is most important for the nurse to document?",
+      "difficulty": "moderate",
+      "stem": "The nurse witnessed a client's seizure from start to finish. Which documentation is most useful to the provider?",
       "content": {
         "options": [
           {
             "id": "a",
-            "text": "Time it started, how long it lasted, the body parts involved and the client's condition afterward"
+            "text": "When it began and ended, what moved and how the client was after"
           },
           {
             "id": "b",
-            "text": "Only the time it started"
+            "text": "The time the seizure started and the name of the nurse who saw it"
           },
           {
             "id": "c",
-            "text": "What the client ate that day"
+            "text": "What the client ate and drank in the 4 hours before the seizure"
           },
           {
             "id": "d",
-            "text": "The names of visitors present"
+            "text": "Which family members were present when the seizure happened"
           }
         ]
       },
@@ -879,13 +884,13 @@
         "correct": "Document onset, duration, progression, type of movements, level of consciousness, incontinence and the post-ictal state.",
         "perOption": {
           "a": "These details help identify the seizure type and guide treatment.",
-          "b": "This isn't enough.",
-          "c": "This isn't the key data.",
-          "d": "This isn't relevant."
+          "b": "This is not enough information.",
+          "c": "This is not the key data.",
+          "d": "This is not relevant."
         },
         "references": [
           "Medical-surgical nursing texts (e.g. Lewis; Ignatavicius)",
-          "Reviewed by the content team on 17 November 2026."
+          "Rewritten to NCLEX-RN difficulty and reviewed by the content team on 19 November 2026."
         ]
       },
       "educationalObjective": "Document a seizure."
@@ -900,41 +905,41 @@
       ],
       "cjmmSkill": "take_action",
       "difficulty": "difficult",
-      "stem": "The nurse is giving phenytoin IV. Which action is correct?",
+      "stem": "The nurse is preparing a loading dose of IV phenytoin for a client with recurrent seizures. The client has a peripheral IV with D5W running. Which action is correct?",
       "content": {
         "options": [
           {
             "id": "a",
-            "text": "Mix it with D5W"
+            "text": "Flush the line with saline and give it no faster than 50 mg/min"
           },
           {
             "id": "b",
-            "text": "Give it with 0.9% sodium chloride, no faster than 50 mg/min, and monitor the ECG and blood pressure"
+            "text": "Add the phenytoin to the running D5W bag so that it is diluted"
           },
           {
             "id": "c",
-            "text": "Give it IM"
+            "text": "Give it by deep IM injection to avoid irritating the client's vein"
           },
           {
             "id": "d",
-            "text": "Give it as a rapid IV push"
+            "text": "Push it rapidly over 1 minute to stop seizures sooner"
           }
         ]
       },
       "key": {
-        "correct": "b"
+        "correct": "a"
       },
       "rationale": {
-        "correct": "IV phenytoin: saline only, slow rate, an in-line filter and cardiac monitoring.",
+        "correct": "IV phenytoin: saline only, a slow rate, an in-line filter, and cardiac and blood pressure monitoring.",
         "perOption": {
-          "a": "Phenytoin precipitates in dextrose.",
-          "b": "Phenytoin is compatible only with saline; rapid infusion can cause hypotension and dysrhythmias.",
-          "c": "IM phenytoin is erratic and damages tissue.",
+          "a": "Phenytoin is compatible only with saline; a rapid infusion can cause hypotension and dysrhythmias.",
+          "b": "Phenytoin precipitates in dextrose.",
+          "c": "IM phenytoin is erratically absorbed and damages tissue.",
           "d": "Rapid administration is dangerous."
         },
         "references": [
           "Nursing pharmacology texts (e.g. Lehne; McCuistion) and the drug's prescribing information",
-          "Reviewed by the content team on 17 November 2026."
+          "Rewritten to NCLEX-RN difficulty and reviewed by the content team on 19 November 2026."
         ]
       },
       "educationalObjective": "Give IV phenytoin safely."
@@ -949,24 +954,24 @@
       ],
       "cjmmSkill": "recognize_cues",
       "difficulty": "moderate",
-      "stem": "A client's phenytoin level is 28 mcg/mL (therapeutic range 10 to 20). Which finding should the nurse expect?",
+      "stem": "A client taking phenytoin 100 mg three times a day has a level of 28 mcg/mL (therapeutic range 10 to 20). The client recently started fluconazole. Which findings should the nurse expect?",
       "content": {
         "options": [
           {
             "id": "a",
-            "text": "Nystagmus, unsteady gait and slurred speech"
+            "text": "Nystagmus, an unsteady gait and slurred speech"
           },
           {
             "id": "b",
-            "text": "Increased alertness"
+            "text": "Increased alertness and difficulty sleeping"
           },
           {
             "id": "c",
-            "text": "Hypertension"
+            "text": "A sudden rise in blood pressure"
           },
           {
             "id": "d",
-            "text": "Weight loss"
+            "text": "Unintended weight loss and frequent loose stools"
           }
         ]
       },
@@ -974,16 +979,16 @@
         "correct": "a"
       },
       "rationale": {
-        "correct": "Phenytoin toxicity: nystagmus, ataxia, slurred speech and confusion. Long-term effects include gingival hyperplasia.",
+        "correct": "Phenytoin toxicity: nystagmus, ataxia, slurred speech and confusion; many drugs, such as fluconazole, raise levels.",
         "perOption": {
           "a": "These are signs of phenytoin toxicity.",
           "b": "Toxicity causes sedation.",
-          "c": "This isn't typical.",
-          "d": "This isn't typical."
+          "c": "This is not typical.",
+          "d": "These are not typical."
         },
         "references": [
           "Nursing pharmacology texts (e.g. Lehne; McCuistion) and the drug's prescribing information",
-          "Reviewed by the content team on 17 November 2026."
+          "Rewritten to NCLEX-RN difficulty and reviewed by the content team on 19 November 2026."
         ]
       },
       "educationalObjective": "Recognize phenytoin toxicity."
@@ -998,24 +1003,24 @@
       ],
       "cjmmSkill": "evaluate_outcomes",
       "difficulty": "moderate",
-      "stem": "A client is starting levetiracetam for seizures. Which statement shows a need for more teaching?",
+      "stem": "A 26-year-old client has started levetiracetam after a first seizure. Which statement by the client shows a need for more teaching?",
       "content": {
         "options": [
           {
             "id": "a",
-            "text": "\"I'll tell my provider if I feel depressed or have thoughts of hurting myself.\""
+            "text": "\"I'll tell my provider if I feel depressed or think about hurting myself.\""
           },
           {
             "id": "b",
-            "text": "\"I'll stop the medicine once my seizures stop.\""
+            "text": "\"I'll stop taking it once I've gone a month without a seizure.\""
           },
           {
             "id": "c",
-            "text": "\"I won't drive until my provider says it's safe.\""
+            "text": "\"I won't drive until my provider tells me it's safe.\""
           },
           {
             "id": "d",
-            "text": "\"I may feel drowsy at first.\""
+            "text": "\"I may feel drowsy for the first couple of weeks.\""
           }
         ]
       },
@@ -1023,16 +1028,16 @@
         "correct": "b"
       },
       "rationale": {
-        "correct": "Never stop antiseizure drugs suddenly; watch for mood changes.",
+        "correct": "Never stop antiseizure drugs suddenly; watch for mood changes and suicidal thoughts.",
         "perOption": {
           "a": "Antiseizure drugs carry a warning about mood changes and suicidal thoughts.",
           "b": "Stopping suddenly can trigger seizures, including status epilepticus.",
           "c": "Driving restrictions apply.",
-          "d": "Drowsiness is common."
+          "d": "Drowsiness is common early on."
         },
         "references": [
           "Nursing pharmacology texts (e.g. Lehne; McCuistion) and the drug's prescribing information",
-          "Reviewed by the content team on 17 November 2026."
+          "Rewritten to NCLEX-RN difficulty and reviewed by the content team on 19 November 2026."
         ]
       },
       "educationalObjective": "Teach a client about antiseizure medication."
@@ -1047,24 +1052,24 @@
       ],
       "cjmmSkill": "recognize_cues",
       "difficulty": "moderate",
-      "stem": "A client has fever, headache and a stiff neck. When the nurse flexes the client's neck, the client's hips and knees flex. What does this finding indicate?",
+      "stem": "A college student has a fever of 39.4 °C, a severe headache and a stiff neck. When the nurse flexes the client's neck, the client's hips and knees flex. What does this finding indicate?",
       "content": {
         "options": [
           {
             "id": "a",
-            "text": "Positive Brudzinski sign, suggesting meningeal irritation"
+            "text": "A positive Brudzinski sign, suggesting meningeal irritation"
           },
           {
             "id": "b",
-            "text": "Positive Babinski sign"
+            "text": "A positive Babinski sign, suggesting damage to the brain itself"
           },
           {
             "id": "c",
-            "text": "Positive Romberg test"
+            "text": "A positive Romberg test, suggesting a balance problem"
           },
           {
             "id": "d",
-            "text": "Normal reflex"
+            "text": "A normal reflex response in a young adult"
           }
         ]
       },
@@ -1075,13 +1080,13 @@
         "correct": "Signs of meningeal irritation: nuchal rigidity, Brudzinski sign and Kernig sign.",
         "perOption": {
           "a": "This finding suggests meningitis.",
-          "b": "Babinski involves the toes fanning out when the sole is stroked.",
-          "c": "Romberg tests balance.",
-          "d": "This isn't normal."
+          "b": "The Babinski sign involves the toes fanning out when the sole is stroked.",
+          "c": "The Romberg test checks balance.",
+          "d": "This is not normal."
         },
         "references": [
           "Medical-surgical nursing texts (e.g. Lewis; Ignatavicius)",
-          "Reviewed by the content team on 17 November 2026."
+          "Rewritten to NCLEX-RN difficulty and reviewed by the content team on 19 November 2026."
         ]
       },
       "educationalObjective": "Recognize signs of meningitis."
@@ -1096,24 +1101,24 @@
       ],
       "cjmmSkill": "take_action",
       "difficulty": "moderate",
-      "stem": "A client is admitted with suspected bacterial (meningococcal) meningitis. Which precautions should the nurse put in place?",
+      "stem": "A client with confirmed meningococcal meningitis has been on droplet precautions since IV ceftriaxone was started yesterday at 1400. The family asks when they can visit without masks. What should the nurse tell them?",
       "content": {
         "options": [
           {
             "id": "a",
-            "text": "Droplet precautions until 24 hours of effective antibiotics"
+            "text": "\"When the precautions end, 24 hours after the antibiotics were started.\""
           },
           {
             "id": "b",
-            "text": "Airborne precautions"
+            "text": "\"Once the client has finished the full 7-day course of IV antibiotics at home.\""
           },
           {
             "id": "c",
-            "text": "Contact precautions only"
+            "text": "\"Masks are not needed, because meningitis does not spread to visitors.\""
           },
           {
             "id": "d",
-            "text": "No precautions needed"
+            "text": "\"Not until a repeat lumbar puncture shows the fluid is clear.\""
           }
         ]
       },
@@ -1121,16 +1126,16 @@
         "correct": "a"
       },
       "rationale": {
-        "correct": "Meningococcal meningitis: droplet precautions until 24 hours of antibiotics; close contacts may need prophylaxis.",
+        "correct": "Meningococcal meningitis: droplet precautions until 24 hours of effective antibiotics; close contacts may need prophylaxis.",
         "perOption": {
-          "a": "Meningococcus spreads by respiratory droplets.",
-          "b": "Meningococcus isn't airborne.",
-          "c": "This doesn't cover droplet spread.",
-          "d": "Precautions are needed."
+          "a": "Droplet precautions for meningococcal disease continue until 24 hours of effective antibiotics.",
+          "b": "Precautions do not need to last the full course.",
+          "c": "Meningococcus spreads by respiratory droplets.",
+          "d": "A repeat lumbar puncture is not required to end precautions."
         },
         "references": [
           "CDC infection control and isolation precautions guidance",
-          "Reviewed by the content team on 17 November 2026."
+          "Rewritten to NCLEX-RN difficulty and reviewed by the content team on 19 November 2026."
         ]
       },
       "educationalObjective": "Apply precautions for meningococcal meningitis."
@@ -1145,24 +1150,24 @@
       ],
       "cjmmSkill": "take_action",
       "difficulty": "easy",
-      "stem": "How should the nurse position a client for a lumbar puncture?",
+      "stem": "A client with suspected meningitis is about to have a lumbar puncture at the bedside. How should the nurse position the client?",
       "content": {
         "options": [
           {
             "id": "a",
-            "text": "Side-lying with the knees drawn up and the chin tucked"
+            "text": "Side-lying, knees drawn up, chin tucked"
           },
           {
             "id": "b",
-            "text": "Prone with a pillow under the head"
+            "text": "Prone, with a pillow under the head and chest"
           },
           {
             "id": "c",
-            "text": "Supine"
+            "text": "Supine, with the arms at the sides"
           },
           {
             "id": "d",
-            "text": "High Fowler's"
+            "text": "Sitting upright with the back straight"
           }
         ]
       },
@@ -1170,16 +1175,16 @@
         "correct": "a"
       },
       "rationale": {
-        "correct": "Lumbar puncture: fetal position (or sitting and leaning forward); afterward, encourage fluids and watch for headache.",
+        "correct": "Lumbar puncture: fetal position, or sitting and leaning forward; afterward, encourage fluids and watch for headache.",
         "perOption": {
           "a": "Curving the spine widens the spaces between the vertebrae.",
-          "b": "This doesn't open the spaces.",
-          "c": "This doesn't give access.",
-          "d": "This isn't the typical position."
+          "b": "This does not open the spaces.",
+          "c": "This does not give access.",
+          "d": "Sitting is possible only when leaning forward to curve the spine."
         },
         "references": [
           "Medical-surgical nursing texts (e.g. Lewis; Ignatavicius)",
-          "Reviewed by the content team on 17 November 2026."
+          "Rewritten to NCLEX-RN difficulty and reviewed by the content team on 19 November 2026."
         ]
       },
       "educationalObjective": "Position a client for a lumbar puncture."
@@ -1193,25 +1198,25 @@
         "neurological-assessment-and-procedures"
       ],
       "cjmmSkill": "analyze_cues",
-      "difficulty": "moderate",
-      "stem": "Which posture indicates the most severe brain dysfunction?",
+      "difficulty": "difficult",
+      "stem": "The nurse is assessing four clients with brain injuries in the neuro ICU. Which response to a painful stimulus indicates the most severe brain dysfunction?",
       "content": {
         "options": [
           {
             "id": "a",
-            "text": "Decerebrate posturing (arms and legs extended)"
+            "text": "Rigid extension of the arms and legs with the wrists turned outward"
           },
           {
             "id": "b",
-            "text": "Decorticate posturing (arms flexed toward the chest)"
+            "text": "Bending of the arms toward the chest with the legs extended"
           },
           {
             "id": "c",
-            "text": "Localizing to pain"
+            "text": "Reaching toward the site of the painful stimulus to try to push it away"
           },
           {
             "id": "d",
-            "text": "Following commands"
+            "text": "Opening the eyes and squeezing the nurse's hand when asked"
           }
         ]
       },
@@ -1219,16 +1224,16 @@
         "correct": "a"
       },
       "rationale": {
-        "correct": "Decerebrate (extension) is worse than decorticate (flexion).",
+        "correct": "Decerebrate (extension) posturing is worse than decorticate (flexion) posturing.",
         "perOption": {
-          "a": "Extension posturing indicates brainstem damage and a worse prognosis.",
-          "b": "This indicates damage higher in the brain and is less severe.",
-          "c": "This is a purposeful response.",
-          "d": "This is normal."
+          "a": "Extension (decerebrate) posturing indicates brainstem damage and a worse prognosis.",
+          "b": "Flexion (decorticate) posturing indicates damage higher in the brain and is less severe.",
+          "c": "Localizing to pain is a purposeful response.",
+          "d": "Following commands is a normal response."
         },
         "references": [
           "Medical-surgical nursing texts (e.g. Lewis; Ignatavicius)",
-          "Reviewed by the content team on 17 November 2026."
+          "Rewritten to NCLEX-RN difficulty and reviewed by the content team on 19 November 2026."
         ]
       },
       "educationalObjective": "Interpret abnormal posturing."
@@ -1243,7 +1248,7 @@
       ],
       "cjmmSkill": "recognize_cues",
       "difficulty": "moderate",
-      "stem": "A client with hypertension calls the nurse. Highlight the findings that require emergency evaluation for a possible hemorrhagic stroke.",
+      "stem": "A 58-year-old client with poorly controlled hypertension calls the clinic nurse. Highlight the findings that require emergency evaluation for a possible hemorrhagic stroke.",
       "content": {
         "segments": [
           {
@@ -1293,7 +1298,7 @@
           },
           {
             "id": "s10",
-            "text": "taking blood pressure medication this morning",
+            "text": "taking blood pressure medicine this morning",
             "selectable": true
           },
           {
@@ -1316,12 +1321,12 @@
           "s2": "A thunderclap headache suggests subarachnoid hemorrhage.",
           "s4": "Vomiting with a sudden headache suggests raised ICP.",
           "s6": "Blood in the subarachnoid space irritates the meninges.",
-          "s8": "Allergies aren't related.",
-          "s10": "This isn't an alarming finding."
+          "s8": "Allergies are not related.",
+          "s10": "This is not an alarming finding."
         },
         "references": [
           "Medical-surgical nursing texts (e.g. Lewis; Ignatavicius)",
-          "Reviewed by the content team on 17 November 2026."
+          "Rewritten to NCLEX-RN difficulty and reviewed by the content team on 19 November 2026."
         ]
       },
       "educationalObjective": "Recognize signs of hemorrhagic stroke."
