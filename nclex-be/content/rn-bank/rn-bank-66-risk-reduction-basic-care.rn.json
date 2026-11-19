@@ -1,5 +1,5 @@
 {
-  "notice": "RN bank batch 66: Reduction of Risk Potential II and Basic Care and Comfort II. Reviewed by the content team on 17 November 2026. See REVIEW-LOG.md.",
+  "notice": "RN bank batch 66: Reduction of Risk Potential II and Basic Care and Comfort II. Rewritten to NCLEX-RN difficulty and reviewed by the content team on 19 November 2026. See REVIEW-LOG.md.",
   "track": "RN",
   "subtopics": [
     {
@@ -84,12 +84,12 @@
       ],
       "cjmmSkill": "analyze_cues",
       "difficulty": "moderate",
-      "stem": "For each laboratory result, indicate whether it is within the expected adult range or needs follow-up.",
+      "stem": "The nurse is reviewing admission laboratory results for a 58-year-old client with no known kidney or blood disorders who takes no regular medications. For each result, choose whether it is within the expected adult range or needs follow-up.",
       "content": {
         "rows": [
           {
             "id": "r1",
-            "text": "Hemoglobin 14 g/dL in an adult male"
+            "text": "Potassium 5.0 mEq/L"
           },
           {
             "id": "r2",
@@ -101,7 +101,7 @@
           },
           {
             "id": "r4",
-            "text": "INR 1.0 in a client not on anticoagulants"
+            "text": "Sodium 128 mEq/L"
           },
           {
             "id": "r5",
@@ -124,27 +124,27 @@
           "r1": "c1",
           "r2": "c2",
           "r3": "c1",
-          "r4": "c1",
+          "r4": "c2",
           "r5": "c2"
         }
       },
       "rationale": {
-        "correct": "Know common adult reference ranges and follow facility values.",
+        "correct": "Know common adult reference ranges, and use the facility's ranges in practice.",
         "perOption": {
-          "r1:c1": "Within the usual range (about 13.5-17.5 g/dL).",
-          "r1:c2": "No follow-up needed.",
-          "r2:c1": "Below the usual range (150,000-400,000/mm3).",
-          "r2:c2": "Bleeding risk; report and start bleeding precautions.",
-          "r3:c1": "Within range (5,000-10,000/mm3).",
-          "r3:c2": "No follow-up needed.",
-          "r4:c1": "Normal.",
-          "r4:c2": "No follow-up needed.",
-          "r5:c1": "Well above range (about 0.6-1.2 mg/dL).",
-          "r5:c2": "Suggests impaired kidney function; report."
+          "r1:c1": "This is within the usual range (3.5 to 5.0 mEq/L).",
+          "r1:c2": "No follow-up is needed.",
+          "r2:c1": "This is well below the usual range (150,000 to 400,000/mm3).",
+          "r2:c2": "There is a bleeding risk; report it and start bleeding precautions.",
+          "r3:c1": "This is within range (5,000 to 10,000/mm3).",
+          "r3:c2": "No follow-up is needed.",
+          "r4:c1": "This is below the usual range (135 to 145 mEq/L).",
+          "r4:c2": "Hyponatremia can cause confusion and seizures; report it.",
+          "r5:c1": "This is well above the usual range (about 0.6 to 1.2 mg/dL).",
+          "r5:c2": "It suggests impaired kidney function; report it."
         },
         "references": [
           "Laboratory reference ranges as used in common NCLEX review texts; follow the facility's ranges",
-          "Reviewed by the content team on 17 November 2026."
+          "Rewritten to NCLEX-RN difficulty and reviewed by the content team on 19 November 2026."
         ]
       },
       "educationalObjective": "Interpret common laboratory values."
@@ -158,25 +158,25 @@
         "laboratory-values-and-monitoring"
       ],
       "cjmmSkill": "analyze_cues",
-      "difficulty": "moderate",
-      "stem": "A client with chest pain has a troponin I that is above the reference range and rising on repeat testing. What does this suggest?",
+      "difficulty": "difficult",
+      "stem": "A 61-year-old client came to the emergency department with chest pressure that started 2 hours ago. The first high-sensitivity troponin was at the upper limit of normal; the repeat 3 hours later is five times higher. The chest pressure has eased with nitroglycerin. How should the nurse interpret these results?",
       "content": {
         "options": [
           {
             "id": "a",
-            "text": "Myocardial injury, such as a myocardial infarction"
+            "text": "They show heart muscle injury, such as a myocardial infarction"
           },
           {
             "id": "b",
-            "text": "Normal heart function"
+            "text": "They point to pulmonary embolism as the most likely cause"
           },
           {
             "id": "c",
-            "text": "Kidney failure only"
+            "text": "They are the expected pattern once the chest pain has fully stopped"
           },
           {
             "id": "d",
-            "text": "Liver disease"
+            "text": "They suggest a lab error, since the first result was normal"
           }
         ]
       },
@@ -184,16 +184,16 @@
         "correct": "a"
       },
       "rationale": {
-        "correct": "Serial troponins rising with symptoms indicate myocardial injury.",
+        "correct": "Serial troponins that rise with symptoms indicate myocardial injury; a normal first value does not rule it out.",
         "perOption": {
-          "a": "Rising troponin indicates heart muscle damage.",
-          "b": "Troponin is normally undetectable or very low.",
-          "c": "Kidney disease can raise troponin, but a rising pattern with chest pain suggests MI.",
-          "d": "Not related."
+          "a": "A rising troponin with symptoms indicates myocardial injury, whatever the response to nitroglycerin.",
+          "b": "PE can raise troponin, but chest pressure eased by nitroglycerin with this pattern points to the heart.",
+          "c": "Troponin should not rise when there is no heart muscle damage.",
+          "d": "Troponin often starts normal and rises over hours; that is why it is repeated."
         },
         "references": [
           "Laboratory reference ranges as used in common NCLEX review texts; follow the facility's ranges",
-          "Reviewed by the content team on 17 November 2026."
+          "Rewritten to NCLEX-RN difficulty and reviewed by the content team on 19 November 2026."
         ]
       },
       "educationalObjective": "Interpret troponin results."
@@ -208,7 +208,7 @@
       ],
       "cjmmSkill": "analyze_cues",
       "difficulty": "moderate",
-      "stem": "A client with dyspnea has a B-type natriuretic peptide (BNP) of 980 pg/mL. What does the nurse suspect?",
+      "stem": "A 74-year-old client with hypertension has had shortness of breath on exertion and swollen ankles for a week. The nurse hears crackles at both lung bases. The B-type natriuretic peptide (BNP) is 980 pg/mL. Which condition does this result support?",
       "content": {
         "options": [
           {
@@ -217,15 +217,15 @@
           },
           {
             "id": "b",
-            "text": "Pneumonia only"
+            "text": "COPD exacerbation"
           },
           {
             "id": "c",
-            "text": "Dehydration"
+            "text": "Community-acquired pneumonia"
           },
           {
             "id": "d",
-            "text": "Hypoglycemia"
+            "text": "Dehydration"
           }
         ]
       },
@@ -233,16 +233,16 @@
         "correct": "a"
       },
       "rationale": {
-        "correct": "High BNP supports heart failure as the cause of dyspnea.",
+        "correct": "A high BNP supports heart failure as the cause of shortness of breath.",
         "perOption": {
           "a": "BNP rises when the ventricles are stretched by volume overload.",
-          "b": "BNP isn't a marker of pneumonia.",
-          "c": "BNP falls with low volume.",
-          "d": "Not related."
+          "b": "COPD alone does not raise BNP this much.",
+          "c": "BNP is not a marker of pneumonia.",
+          "d": "BNP falls, not rises, with low volume."
         },
         "references": [
           "Laboratory reference ranges as used in common NCLEX review texts; follow the facility's ranges",
-          "Reviewed by the content team on 17 November 2026."
+          "Rewritten to NCLEX-RN difficulty and reviewed by the content team on 19 November 2026."
         ]
       },
       "educationalObjective": "Interpret BNP."
@@ -256,25 +256,25 @@
         "laboratory-values-and-monitoring"
       ],
       "cjmmSkill": "take_action",
-      "difficulty": "moderate",
-      "stem": "A client receiving digoxin has a serum level of 2.8 ng/mL and reports nausea and blurred vision. What should the nurse do?",
+      "difficulty": "difficult",
+      "stem": "A client who takes digoxin 0.25 mg daily and furosemide reports nausea, poor appetite and seeing yellow halos around lights. The apical pulse is 64/min. The digoxin level is 2.8 ng/mL and the potassium is 3.1 mEq/L. The digoxin dose is due now. What should the nurse do?",
       "content": {
         "options": [
           {
             "id": "a",
-            "text": "Give the next dose and recheck tomorrow"
+            "text": "Give the digoxin, because the apical pulse is above 60/min"
           },
           {
             "id": "b",
-            "text": "Hold the digoxin and notify the provider"
+            "text": "Hold the digoxin and notify the provider of the level and symptoms"
           },
           {
             "id": "c",
-            "text": "Give the dose with food"
+            "text": "Give the PRN potassium supplement, then give the digoxin"
           },
           {
             "id": "d",
-            "text": "Encourage a high-potassium diet only"
+            "text": "Hold the dose and report the level at the provider's morning rounds"
           }
         ]
       },
@@ -282,17 +282,17 @@
         "correct": "b"
       },
       "rationale": {
-        "correct": "Hold medications with toxic levels and report them.",
+        "correct": "Hold a drug whose level is toxic, especially with symptoms, and report it promptly; hypokalemia increases digoxin toxicity.",
         "perOption": {
-          "a": "The level is toxic.",
-          "b": "Above the usual therapeutic range (about 0.5-2.0 ng/mL) with symptoms of toxicity.",
-          "c": "Doesn't address toxicity.",
-          "d": "Not enough."
+          "a": "The heart rate does not cancel a toxic level with symptoms.",
+          "b": "The level is above the therapeutic range, there are signs of toxicity, and low potassium increases the risk.",
+          "c": "Correcting potassium is needed, but the digoxin is still held because of toxicity.",
+          "d": "Toxicity with symptoms needs prompt notification, not a wait until rounds."
         },
         "references": [
           "Laboratory reference ranges as used in common NCLEX review texts; follow the facility's ranges",
           "Nursing pharmacology texts (e.g. Lehne; McCuistion) and the drug's prescribing information",
-          "Reviewed by the content team on 17 November 2026."
+          "Rewritten to NCLEX-RN difficulty and reviewed by the content team on 19 November 2026."
         ]
       },
       "educationalObjective": "Act on a toxic drug level."
@@ -307,24 +307,24 @@
       ],
       "cjmmSkill": "analyze_cues",
       "difficulty": "moderate",
-      "stem": "A client's liver panel shows ALT and AST three times the upper limit of normal. Which medication history is most important to ask about?",
+      "stem": "A 46-year-old client with chronic back pain who drinks three or four beers a night has an ALT and AST three times the upper limit of normal. Which part of the medication history is most important for the nurse to ask about?",
       "content": {
         "options": [
           {
             "id": "a",
-            "text": "Acetaminophen use, including combination products"
+            "text": "Acetaminophen use, including cold and sleep products with it"
           },
           {
             "id": "b",
-            "text": "Use of a stool softener"
+            "text": "How long the client has taken levothyroxine for hypothyroidism"
           },
           {
             "id": "c",
-            "text": "Use of an inhaled bronchodilator"
+            "text": "Whether omeprazole is taken before or after breakfast"
           },
           {
             "id": "d",
-            "text": "Use of artificial tears"
+            "text": "Whether metoprolol is taken at the same time each day"
           }
         ]
       },
@@ -332,16 +332,16 @@
         "correct": "a"
       },
       "rationale": {
-        "correct": "Ask about hepatotoxic drugs when liver enzymes rise.",
+        "correct": "When liver enzymes rise, ask about hepatotoxic drugs, especially acetaminophen with alcohol.",
         "perOption": {
-          "a": "Acetaminophen overuse is a common cause of liver injury.",
-          "b": "Not hepatotoxic.",
-          "c": "Not typically hepatotoxic.",
-          "d": "Not related."
+          "a": "Acetaminophen overuse, especially with alcohol, is a common cause of liver injury.",
+          "b": "Levothyroxine is not a common cause of liver injury.",
+          "c": "The timing of a proton pump inhibitor does not affect the liver.",
+          "d": "Metoprolol timing is not linked to liver injury."
         },
         "references": [
           "Laboratory reference ranges as used in common NCLEX review texts; follow the facility's ranges",
-          "Reviewed by the content team on 17 November 2026."
+          "Rewritten to NCLEX-RN difficulty and reviewed by the content team on 19 November 2026."
         ]
       },
       "educationalObjective": "Investigate raised liver enzymes."
@@ -356,7 +356,7 @@
       ],
       "cjmmSkill": "recognize_cues",
       "difficulty": "difficult",
-      "stem": "The nurse reviews morning results. Highlight the results that need to be reported to the provider right away.",
+      "stem": "The nurse is reviewing morning results for six clients on a medical-surgical unit. Highlight the results that need to be reported to the provider right away.",
       "content": {
         "columns": [
           "Client",
@@ -366,15 +366,15 @@
           {
             "id": "r1",
             "cells": [
-              "Client on heparin infusion",
-              "aPTT 145 seconds (target 60-85)"
+              "Client on a heparin infusion",
+              "aPTT 145 seconds (target 60 to 85)"
             ],
             "selectable": true
           },
           {
             "id": "r2",
             "cells": [
-              "Client with diabetes",
+              "Client with type 2 diabetes",
               "Fasting glucose 118 mg/dL"
             ],
             "selectable": true
@@ -383,14 +383,14 @@
             "id": "r3",
             "cells": [
               "Client on vancomycin",
-              "Trough 32 mcg/mL (target 15-20)"
+              "Trough 32 mcg/mL (target 15 to 20)"
             ],
             "selectable": true
           },
           {
             "id": "r4",
             "cells": [
-              "Client after surgery",
+              "Client 1 day after surgery",
               "Hemoglobin 11.8 g/dL (yesterday 12.1)"
             ],
             "selectable": true
@@ -421,18 +421,18 @@
         ]
       },
       "rationale": {
-        "correct": "Report results that are dangerous or far from target.",
+        "correct": "Report results that are dangerous or far from target; compare others with the client's baseline and expected course.",
         "perOption": {
-          "r1": "Supratherapeutic; bleeding risk.",
-          "r2": "Slightly high; routine follow-up.",
-          "r3": "Toxic level; risk of kidney injury.",
-          "r4": "Small expected drop.",
-          "r5": "High lactate indicates hypoperfusion.",
-          "r6": "At baseline."
+          "r1": "This is supratherapeutic, with a risk of bleeding.",
+          "r2": "This is slightly high and needs routine follow-up.",
+          "r3": "This is a toxic level with a risk of kidney injury.",
+          "r4": "This is a small, expected drop.",
+          "r5": "A high lactate indicates poor tissue perfusion.",
+          "r6": "This matches the client's baseline."
         },
         "references": [
           "Laboratory reference ranges as used in common NCLEX review texts; follow the facility's ranges",
-          "Reviewed by the content team on 17 November 2026."
+          "Rewritten to NCLEX-RN difficulty and reviewed by the content team on 19 November 2026."
         ]
       },
       "educationalObjective": "Recognize critical lab results."
@@ -447,24 +447,24 @@
       ],
       "cjmmSkill": "take_action",
       "difficulty": "moderate",
-      "stem": "A client is scheduled for an exercise stress test. Which instruction should the nurse give?",
+      "stem": "A client is scheduled for a treadmill exercise stress test at 0900 tomorrow. Which instruction should the nurse give?",
       "content": {
         "options": [
           {
             "id": "a",
-            "text": "Don't eat or smoke for a few hours before the test, and wear comfortable shoes"
+            "text": "No caffeine for a day, nothing to eat for a few hours, walking shoes"
           },
           {
             "id": "b",
-            "text": "Drink coffee before the test for energy"
+            "text": "Drink a cup of coffee before the test so you have energy to walk"
           },
           {
             "id": "c",
-            "text": "Wear dress shoes"
+            "text": "Wear firm dress shoes, which support the ankles on the treadmill"
           },
           {
             "id": "d",
-            "text": "Take a double dose of beta blocker"
+            "text": "Eat a large breakfast so that you don't feel faint on the treadmill"
           }
         ]
       },
@@ -472,16 +472,16 @@
         "correct": "a"
       },
       "rationale": {
-        "correct": "Stress test preparation: no caffeine or smoking, comfortable clothing, medication instructions from the provider.",
+        "correct": "Stress test preparation: no caffeine or smoking beforehand, a light or no meal, comfortable shoes, and medication instructions from the provider.",
         "perOption": {
-          "a": "Standard preparation for an exercise test.",
-          "b": "Caffeine can affect the results.",
+          "a": "Caffeine affects the results, a full stomach can cause nausea, and walking shoes are needed for the treadmill.",
+          "b": "Caffeine can change the heart rate and blood pressure response.",
           "c": "Comfortable walking shoes are needed.",
-          "d": "Beta blockers may be held per the provider because they blunt the heart rate response."
+          "d": "A heavy meal before exercise can cause nausea and affect the results."
         },
         "references": [
           "Medical-surgical nursing texts (e.g. Lewis; Ignatavicius)",
-          "Reviewed by the content team on 17 November 2026."
+          "Rewritten to NCLEX-RN difficulty and reviewed by the content team on 19 November 2026."
         ]
       },
       "educationalObjective": "Prepare a client for a stress test."
@@ -496,24 +496,24 @@
       ],
       "cjmmSkill": "recognize_cues",
       "difficulty": "difficult",
-      "stem": "After a transesophageal echocardiogram (TEE), which finding should the nurse report?",
+      "stem": "A client had a transesophageal echocardiogram (TEE) under moderate sedation this morning and was discharged to the unit. Which finding later in the day should the nurse report to the provider?",
       "content": {
         "options": [
           {
             "id": "a",
-            "text": "Mild sore throat"
+            "text": "A mild sore throat when the client swallows saliva"
           },
           {
             "id": "b",
-            "text": "Absent gag reflex 30 minutes after the test"
+            "text": "No gag reflex 30 minutes after the end of the test"
           },
           {
             "id": "c",
-            "text": "New chest pain, fever and difficulty swallowing several hours later"
+            "text": "Chest pain, fever and painful swallowing hours later"
           },
           {
             "id": "d",
-            "text": "Drowsiness right after the test"
+            "text": "Drowsiness during the first hour after the test ended"
           }
         ]
       },
@@ -521,16 +521,16 @@
         "correct": "c"
       },
       "rationale": {
-        "correct": "After TEE: keep NPO until the gag reflex returns; watch for perforation.",
+        "correct": "After a TEE, keep the client NPO until the gag reflex returns and watch for signs of esophageal perforation.",
         "perOption": {
-          "a": "Expected.",
-          "b": "Expected while the throat is still numb; keep NPO.",
-          "c": "May indicate esophageal perforation.",
-          "d": "Expected after sedation."
+          "a": "A mild sore throat is expected after the probe is passed.",
+          "b": "The throat is still numb from the anesthetic spray; the client stays NPO until the gag reflex returns.",
+          "c": "These findings suggest esophageal perforation, a rare but serious complication.",
+          "d": "Drowsiness is expected after sedation."
         },
         "references": [
           "Medical-surgical nursing texts (e.g. Lewis; Ignatavicius)",
-          "Reviewed by the content team on 17 November 2026."
+          "Rewritten to NCLEX-RN difficulty and reviewed by the content team on 19 November 2026."
         ]
       },
       "educationalObjective": "Monitor after a transesophageal echocardiogram."
@@ -544,13 +544,13 @@
         "cardiovascular-diagnostics-and-monitoring"
       ],
       "cjmmSkill": "take_action",
-      "difficulty": "moderate",
-      "stem": "The nurse places a client on cardiac telemetry. The monitor shows a flat line, but the client is awake and talking. What should the nurse do first?",
+      "difficulty": "difficult",
+      "stem": "The nurse at the central monitoring station sees that a client's telemetry tracing has suddenly become a flat line. On entering the room, the nurse finds the client sitting up, talking on the phone and in no distress. What should the nurse do first?",
       "content": {
         "options": [
           {
             "id": "a",
-            "text": "Start chest compressions"
+            "text": "Start chest compressions and call for help"
           },
           {
             "id": "b",
@@ -558,11 +558,11 @@
           },
           {
             "id": "c",
-            "text": "Call a code"
+            "text": "Call a code so the team brings the defibrillator"
           },
           {
             "id": "d",
-            "text": "Give atropine"
+            "text": "Prepare the transcutaneous pacing pads"
           }
         ]
       },
@@ -570,16 +570,16 @@
         "correct": "b"
       },
       "rationale": {
-        "correct": "Assess the client first; troubleshoot equipment when findings don't match.",
+        "correct": "Always assess the client first; when the monitor and the client disagree, troubleshoot the equipment.",
         "perOption": {
           "a": "The client is responsive and clearly has a pulse.",
-          "b": "A loose lead is the most likely cause.",
-          "c": "Not needed for a responsive client.",
-          "d": "Not indicated."
+          "b": "A loose lead or electrode is the most likely cause when the client is clearly well.",
+          "c": "There is no cardiac arrest in a client who is talking.",
+          "d": "Pacing is not indicated for a client with a normal mental status and no symptoms."
         },
         "references": [
           "Medical-surgical nursing texts (e.g. Lewis; Ignatavicius)",
-          "Reviewed by the content team on 17 November 2026."
+          "Rewritten to NCLEX-RN difficulty and reviewed by the content team on 19 November 2026."
         ]
       },
       "educationalObjective": "Troubleshoot cardiac monitoring."
@@ -593,25 +593,25 @@
         "cardiovascular-diagnostics-and-monitoring"
       ],
       "cjmmSkill": "take_action",
-      "difficulty": "moderate",
-      "stem": "The nurse is caring for a client with an arterial line. Which action is correct?",
+      "difficulty": "difficult",
+      "stem": "The nurse in the intensive care unit is caring for a client in septic shock with a radial arterial line that is used for continuous blood pressure readings. Which action is correct?",
       "content": {
         "options": [
           {
             "id": "a",
-            "text": "Keep the transducer at the level of the phlebostatic axis"
+            "text": "Keep the transducer level with the phlebostatic axis"
           },
           {
             "id": "b",
-            "text": "Let the pressure bag deflate to save supplies"
+            "text": "Keep the pressure bag inflated to 150 mm Hg throughout"
           },
           {
             "id": "c",
-            "text": "Draw blood without wearing gloves"
+            "text": "Push a heparin flush before every blood draw"
           },
           {
             "id": "d",
-            "text": "Leave the line open to air"
+            "text": "Zero the system only when the line is first placed"
           }
         ]
       },
@@ -619,16 +619,16 @@
         "correct": "a"
       },
       "rationale": {
-        "correct": "Arterial lines need leveling, zeroing, a pressurized flush and close monitoring of the site.",
+        "correct": "Arterial lines need correct leveling, zeroing, a pressure bag at about 300 mm Hg and close monitoring of the site and limb.",
         "perOption": {
-          "a": "Leveling ensures accurate readings.",
-          "b": "The bag must stay at about 300 mm Hg to keep the line open.",
-          "c": "Standard precautions apply.",
-          "d": "Can cause bleeding or air embolism."
+          "a": "Leveling at the phlebostatic axis (fourth intercostal space, mid-axillary line) gives accurate readings.",
+          "b": "The bag is kept at about 300 mm Hg so the flush overcomes arterial pressure.",
+          "c": "Routine heparin pushes are not part of arterial line care.",
+          "d": "The system is zeroed at setup and per policy, and whenever readings are questionable."
         },
         "references": [
           "Medical-surgical nursing texts (e.g. Lewis; Ignatavicius)",
-          "Reviewed by the content team on 17 November 2026."
+          "Rewritten to NCLEX-RN difficulty and reviewed by the content team on 19 November 2026."
         ]
       },
       "educationalObjective": "Care for an arterial line."
@@ -643,28 +643,28 @@
       ],
       "cjmmSkill": "take_action",
       "difficulty": "moderate",
-      "stem": "The nurse is placing electrodes for a 12-lead ECG. Which actions improve the quality of the tracing? Select all that apply.",
+      "stem": "The nurse is recording a 12-lead ECG on a 70-year-old client with a hairy chest who is anxious and shivering. Which actions will improve the quality of the tracing? Select all that apply.",
       "content": {
         "options": [
           {
             "id": "a",
-            "text": "Clean and dry the skin before applying electrodes"
+            "text": "Clean and dry the skin before applying the electrodes"
           },
           {
             "id": "b",
-            "text": "Clip chest hair if needed"
+            "text": "Clip chest hair where the electrodes will go"
           },
           {
             "id": "c",
-            "text": "Ask the client to lie still and breathe normally"
+            "text": "Cover the client with a blanket and ask them to lie still and breathe normally"
           },
           {
             "id": "d",
-            "text": "Place limb leads over bones"
+            "text": "Place the limb electrodes over bony areas such as the wrist bones"
           },
           {
             "id": "e",
-            "text": "Keep electrical devices near the client running"
+            "text": "Keep the bedside fan and other devices running near the client"
           }
         ]
       },
@@ -676,17 +676,17 @@
         ]
       },
       "rationale": {
-        "correct": "Good skin prep and a still client produce accurate ECGs.",
+        "correct": "Good skin preparation, a warm and still client, and fewer nearby devices produce an accurate ECG.",
         "perOption": {
-          "a": "Improves contact.",
-          "b": "Improves adhesion.",
-          "c": "Reduces movement artifact.",
-          "d": "Place on fleshy areas.",
-          "e": "Can cause interference."
+          "a": "This improves contact.",
+          "b": "This improves adhesion.",
+          "c": "Warmth and stillness reduce muscle and movement artifact.",
+          "d": "Electrodes go on fleshy areas.",
+          "e": "Electrical devices can cause interference."
         },
         "references": [
           "Medical-surgical nursing texts (e.g. Lewis; Ignatavicius)",
-          "Reviewed by the content team on 17 November 2026."
+          "Rewritten to NCLEX-RN difficulty and reviewed by the content team on 19 November 2026."
         ]
       },
       "educationalObjective": "Obtain a quality ECG."
@@ -700,42 +700,42 @@
         "renal-and-endocrine-diagnostics"
       ],
       "cjmmSkill": "take_action",
-      "difficulty": "moderate",
-      "stem": "A client had a percutaneous kidney biopsy. Which nursing action is most important afterward?",
+      "difficulty": "difficult",
+      "stem": "A client has just returned to the unit after a percutaneous kidney biopsy. Which nursing action is most important in the first hours afterward?",
       "content": {
         "options": [
           {
             "id": "a",
-            "text": "Have the client walk right away"
+            "text": "Keep to bed rest; check vital signs and urine for blood"
           },
           {
             "id": "b",
-            "text": "Monitor vital signs and urine for blood, and keep the client on bed rest as ordered"
+            "text": "Help the client walk in the hallway early to prevent blood clots"
           },
           {
             "id": "c",
-            "text": "Restrict all fluids"
+            "text": "Limit the client's fluids for 24 hours so the kidney can rest"
           },
           {
             "id": "d",
-            "text": "Give aspirin for pain"
+            "text": "Give the PRN ibuprofen for the client's flank discomfort"
           }
         ]
       },
       "key": {
-        "correct": "b"
+        "correct": "a"
       },
       "rationale": {
-        "correct": "After kidney biopsy: bed rest, monitor for bleeding, encourage fluids.",
+        "correct": "After a kidney biopsy: bed rest, frequent vital signs, checks of urine for blood, and encouraging fluids.",
         "perOption": {
-          "a": "Bed rest is usually ordered to reduce bleeding.",
-          "b": "Bleeding is the main complication.",
-          "c": "Fluids are usually encouraged.",
-          "d": "Increases bleeding risk."
+          "a": "Bleeding is the main complication, so bed rest and close monitoring come first.",
+          "b": "Early walking increases the risk of bleeding from the biopsy site.",
+          "c": "Fluids are usually encouraged to keep urine flowing and prevent clots.",
+          "d": "NSAIDs increase bleeding risk after a biopsy."
         },
         "references": [
           "Medical-surgical nursing texts (e.g. Lewis; Ignatavicius)",
-          "Reviewed by the content team on 17 November 2026."
+          "Rewritten to NCLEX-RN difficulty and reviewed by the content team on 19 November 2026."
         ]
       },
       "educationalObjective": "Monitor after a kidney biopsy."
@@ -750,24 +750,24 @@
       ],
       "cjmmSkill": "take_action",
       "difficulty": "moderate",
-      "stem": "A client is having a 24-hour urine collection that starts at 08:00. What should the nurse do first?",
+      "stem": "A client is to start a 24-hour urine collection for creatinine clearance at 0800. The client last urinated at 0600. What should the nurse do at 0800?",
       "content": {
         "options": [
           {
             "id": "a",
-            "text": "Save the 08:00 void"
+            "text": "Save the 0800 urine as the first sample of the whole collection"
           },
           {
             "id": "b",
-            "text": "Have the client void at 08:00, discard it, then save all urine for 24 hours"
+            "text": "Have the client void, discard it, then save all urine for a day"
           },
           {
             "id": "c",
-            "text": "Collect only morning urine for 24 hours"
+            "text": "Save the first morning urine each day of the collection period"
           },
           {
             "id": "d",
-            "text": "Keep the collection at room temperature in sunlight"
+            "text": "Keep the container at room temperature on the sunny windowsill"
           }
         ]
       },
@@ -775,16 +775,16 @@
         "correct": "b"
       },
       "rationale": {
-        "correct": "24-hour urine: discard the first void, save everything after, end with a final void at 24 hours.",
+        "correct": "24-hour urine: discard the first void, save everything after it, and finish with a final void at the 24-hour mark.",
         "perOption": {
-          "a": "The first void is discarded to start with an empty bladder.",
-          "b": "The collection starts with an empty bladder.",
-          "c": "All urine must be collected.",
-          "d": "Keep it on ice or refrigerated per the lab."
+          "a": "The first void is discarded so the collection starts with an empty bladder.",
+          "b": "The collection starts with an empty bladder and ends with a final void at 0800 the next day.",
+          "c": "All urine produced during the 24 hours must be collected.",
+          "d": "The container is kept on ice or refrigerated as the lab directs."
         },
         "references": [
           "Medical-surgical nursing texts (e.g. Lewis; Ignatavicius)",
-          "Reviewed by the content team on 17 November 2026."
+          "Rewritten to NCLEX-RN difficulty and reviewed by the content team on 19 November 2026."
         ]
       },
       "educationalObjective": "Collect a 24-hour urine specimen."
@@ -799,24 +799,24 @@
       ],
       "cjmmSkill": "take_action",
       "difficulty": "moderate",
-      "stem": "A client is scheduled for a dexamethasone suppression test for suspected Cushing syndrome. What does the nurse explain?",
+      "stem": "A client with weight gain, a round face, purple striae and high blood pressure is scheduled for an overnight dexamethasone suppression test for suspected Cushing syndrome. What should the nurse explain about the test?",
       "content": {
         "options": [
           {
             "id": "a",
-            "text": "A dose of dexamethasone is given at night and cortisol is measured in the morning"
+            "text": "Dexamethasone is taken at night, and cortisol is checked next morning"
           },
           {
             "id": "b",
-            "text": "No medication is given"
+            "text": "A cortisol level is drawn every hour overnight without any medication"
           },
           {
             "id": "c",
-            "text": "The client must fast for 3 days"
+            "text": "The client must fast for 3 days before the test"
           },
           {
             "id": "d",
-            "text": "Urine is tested for glucose"
+            "text": "Urine is collected overnight and tested for glucose in the morning"
           }
         ]
       },
@@ -824,16 +824,16 @@
         "correct": "a"
       },
       "rationale": {
-        "correct": "Lack of cortisol suppression suggests Cushing syndrome.",
+        "correct": "Failure of cortisol to fall after dexamethasone suggests Cushing syndrome.",
         "perOption": {
-          "a": "In Cushing syndrome, cortisol doesn't fall as expected.",
-          "b": "Dexamethasone is given.",
-          "c": "Not required.",
-          "d": "Not the test."
+          "a": "In Cushing syndrome, cortisol does not fall after dexamethasone as it normally would.",
+          "b": "Dexamethasone is given; hourly sampling is not part of this test.",
+          "c": "Prolonged fasting is not required.",
+          "d": "This test measures cortisol, not urine glucose."
         },
         "references": [
           "Medical-surgical nursing texts (e.g. Lewis; Ignatavicius)",
-          "Reviewed by the content team on 17 November 2026."
+          "Rewritten to NCLEX-RN difficulty and reviewed by the content team on 19 November 2026."
         ]
       },
       "educationalObjective": "Explain a dexamethasone suppression test."
@@ -848,24 +848,24 @@
       ],
       "cjmmSkill": "recognize_cues",
       "difficulty": "difficult",
-      "stem": "During a water deprivation test for suspected diabetes insipidus, which finding should cause the nurse to stop the test and notify the provider?",
+      "stem": "A client with suspected diabetes insipidus is having a supervised water deprivation test. The client weighed 70 kg at the start. Which finding should cause the nurse to stop the test and notify the provider?",
       "content": {
         "options": [
           {
             "id": "a",
-            "text": "Weight loss of more than 3% of body weight with hypotension"
+            "text": "Weight of 67.5 kg and blood pressure of 86/50"
           },
           {
             "id": "b",
-            "text": "Thirst"
+            "text": "Increasing thirst and a dry mouth after 4 hours"
           },
           {
             "id": "c",
-            "text": "Urine output of 50 mL/hr"
+            "text": "Urine output of 50 mL in the last hour"
           },
           {
             "id": "d",
-            "text": "Mild headache"
+            "text": "A mild headache that the client rates 2 out of 10"
           }
         ]
       },
@@ -873,16 +873,16 @@
         "correct": "a"
       },
       "rationale": {
-        "correct": "Water deprivation tests are stopped for significant weight loss or hemodynamic instability.",
+        "correct": "Stop a water deprivation test for weight loss of about 3% or more, hypotension or other signs of significant dehydration.",
         "perOption": {
-          "a": "Signs of dangerous dehydration.",
-          "b": "Expected.",
-          "c": "May be expected.",
-          "d": "Monitor, but not usually a reason to stop."
+          "a": "A weight loss of more than 3% with hypotension shows dangerous dehydration.",
+          "b": "Thirst is expected while fluids are withheld.",
+          "c": "Some ongoing urine output is expected during the test.",
+          "d": "This is monitored but is not usually a reason to stop."
         },
         "references": [
           "Medical-surgical nursing texts (e.g. Lewis; Ignatavicius)",
-          "Reviewed by the content team on 17 November 2026."
+          "Rewritten to NCLEX-RN difficulty and reviewed by the content team on 19 November 2026."
         ]
       },
       "educationalObjective": "Monitor a water deprivation test."
@@ -897,24 +897,24 @@
       ],
       "cjmmSkill": "take_action",
       "difficulty": "moderate",
-      "stem": "After a cystoscopy, the client has pink-tinged urine and mild burning. What should the nurse do?",
+      "stem": "Two hours after a diagnostic cystoscopy, a client has pink-tinged urine and mild burning on urination. Vital signs are normal and the client has voided twice. What should the nurse do?",
       "content": {
         "options": [
           {
             "id": "a",
-            "text": "Encourage fluids and teach that these effects are expected for a short time"
+            "text": "Encourage fluids and explain these effects usually settle soon"
           },
           {
             "id": "b",
-            "text": "Insert an indwelling catheter"
+            "text": "Insert an indwelling catheter to measure urine output accurately"
           },
           {
             "id": "c",
-            "text": "Restrict fluids"
+            "text": "Limit fluids for the rest of the day to reduce the burning"
           },
           {
             "id": "d",
-            "text": "Notify the provider immediately"
+            "text": "Notify the provider at once about the pink color of the urine"
           }
         ]
       },
@@ -922,16 +922,16 @@
         "correct": "a"
       },
       "rationale": {
-        "correct": "Expected after cystoscopy: pink urine and burning; report clots, fever or retention.",
+        "correct": "After cystoscopy, pink urine and burning are expected; report clots, fever, bright red bleeding or inability to void.",
         "perOption": {
-          "a": "Mild hematuria and burning are common after cystoscopy.",
-          "b": "Not needed.",
-          "c": "Fluids help.",
-          "d": "Only for bright red bleeding, clots, fever or retention."
+          "a": "Mild hematuria and burning are common after cystoscopy, and fluids help clear the bladder.",
+          "b": "The client is voiding, so a catheter is not needed and adds infection risk.",
+          "c": "Fluids help; restricting them concentrates the urine.",
+          "d": "The provider is called for bright red bleeding, clots, fever or retention, not for pink urine."
         },
         "references": [
           "Medical-surgical nursing texts (e.g. Lewis; Ignatavicius)",
-          "Reviewed by the content team on 17 November 2026."
+          "Rewritten to NCLEX-RN difficulty and reviewed by the content team on 19 November 2026."
         ]
       },
       "educationalObjective": "Teach after cystoscopy."
@@ -946,12 +946,12 @@
       ],
       "cjmmSkill": "take_action",
       "difficulty": "moderate",
-      "stem": "Place the steps for drawing blood cultures in order.",
+      "stem": "A client with suspected sepsis needs blood cultures before the first antibiotic dose. Place the steps for drawing the cultures in order, from first to last.",
       "content": {
         "items": [
           {
             "id": "d",
-            "text": "Draw the blood with a butterfly set, filling the aerobic bottle first and then the anaerobic bottle"
+            "text": "Draw the blood with a butterfly set, filling the aerobic bottle first, then the anaerobic"
           },
           {
             "id": "e",
@@ -982,18 +982,18 @@
         "scoring": "all_or_nothing"
       },
       "rationale": {
-        "correct": "Careful skin prep reduces contaminated cultures.",
+        "correct": "Careful skin and bottle preparation reduces contaminated cultures, and cultures are drawn before antibiotics.",
         "perOption": {
-          "a": "Safety and infection control.",
-          "b": "Reduces contamination.",
-          "c": "Prevents contamination.",
+          "a": "This is for safety and infection control.",
+          "b": "This reduces skin contamination.",
+          "c": "This prevents contamination of the sample.",
           "d": "With a butterfly set, the air in the tubing goes into the aerobic bottle, not the anaerobic one.",
-          "e": "Prevents mislabeling."
+          "e": "This prevents mislabeling."
         },
         "references": [
           "Fundamentals of nursing texts (e.g. Potter & Perry)",
           "CDC infection control and isolation precautions guidance",
-          "Reviewed by the content team on 17 November 2026."
+          "Rewritten to NCLEX-RN difficulty and reviewed by the content team on 19 November 2026."
         ]
       },
       "educationalObjective": "Collect blood cultures correctly."
@@ -1008,24 +1008,24 @@
       ],
       "cjmmSkill": "take_action",
       "difficulty": "moderate",
-      "stem": "The nurse is collecting a stool sample for occult blood testing. Which instruction is correct?",
+      "stem": "A client is going home with a kit for a guaiac-based fecal occult blood test on three separate stools. Which instruction should the nurse give?",
       "content": {
         "options": [
           {
             "id": "a",
-            "text": "Avoid red meat and certain medications before the test, as directed"
+            "text": "Avoid red meat, NSAIDs and vitamin C for a few days beforehand"
           },
           {
             "id": "b",
-            "text": "Collect stool from the toilet water"
+            "text": "Collect each sample from the water in the toilet bowl after flushing"
           },
           {
             "id": "c",
-            "text": "Take vitamin C supplements before the test"
+            "text": "Take a daily vitamin C tablet during the test to protect the bowel"
           },
           {
             "id": "d",
-            "text": "Mix urine with the stool"
+            "text": "Collect all three samples from one bowel movement to save time"
           }
         ]
       },
@@ -1033,16 +1033,16 @@
         "correct": "a"
       },
       "rationale": {
-        "correct": "Follow test-specific diet and medication instructions.",
+        "correct": "Follow test-specific diet and medication instructions, and collect from separate stools.",
         "perOption": {
-          "a": "Some foods and drugs can cause false results with guaiac tests.",
-          "b": "Water can affect the sample.",
-          "c": "Vitamin C can cause a false negative with guaiac tests.",
-          "d": "Contaminates the sample."
+          "a": "These can cause false results with guaiac-based tests.",
+          "b": "Toilet water and cleaners can affect the sample.",
+          "c": "Vitamin C can cause a false-negative result.",
+          "d": "Samples come from three separate bowel movements to catch bleeding that comes and goes."
         },
         "references": [
           "Fundamentals of nursing texts (e.g. Potter & Perry)",
-          "Reviewed by the content team on 17 November 2026."
+          "Rewritten to NCLEX-RN difficulty and reviewed by the content team on 19 November 2026."
         ]
       },
       "educationalObjective": "Collect stool for occult blood."
@@ -1056,8 +1056,8 @@
         "specimen-collection"
       ],
       "cjmmSkill": "take_action",
-      "difficulty": "moderate",
-      "stem": "When is the best time to collect a sputum specimen for culture?",
+      "difficulty": "easy",
+      "stem": "A client with suspected pneumonia needs a sputum specimen for culture before antibiotics start. When is the best time to collect it?",
       "content": {
         "options": [
           {
@@ -1066,15 +1066,15 @@
           },
           {
             "id": "b",
-            "text": "Right after a meal"
+            "text": "Right after a meal, when the client is alert"
           },
           {
             "id": "c",
-            "text": "After antibiotics have been started"
+            "text": "After the first antibiotic dose is given"
           },
           {
             "id": "d",
-            "text": "After mouthwash with alcohol"
+            "text": "After the client uses an alcohol mouthwash"
           }
         ]
       },
@@ -1082,16 +1082,16 @@
         "correct": "a"
       },
       "rationale": {
-        "correct": "Collect sputum in the morning, before antibiotics, after rinsing with water.",
+        "correct": "Collect sputum in the early morning, before antibiotics, after rinsing the mouth with water.",
         "perOption": {
-          "a": "Secretions collect overnight.",
+          "a": "Secretions collect overnight, giving a better sample.",
           "b": "Food particles can contaminate the sample.",
-          "c": "Collect before antibiotics.",
+          "c": "Cultures are collected before antibiotics.",
           "d": "Mouthwash can kill organisms; rinse with water instead."
         },
         "references": [
           "Fundamentals of nursing texts (e.g. Potter & Perry)",
-          "Reviewed by the content team on 17 November 2026."
+          "Rewritten to NCLEX-RN difficulty and reviewed by the content team on 19 November 2026."
         ]
       },
       "educationalObjective": "Collect sputum correctly."
@@ -1105,42 +1105,42 @@
         "post-procedure-complications"
       ],
       "cjmmSkill": "recognize_cues",
-      "difficulty": "moderate",
-      "stem": "A client's early warning score rises from 2 to 7 over 4 hours. What should the nurse do?",
+      "difficulty": "difficult",
+      "stem": "A client 2 days after a bowel resection has an early warning score that has risen from 2 to 7 over 4 hours, with a new heart rate of 118/min and respirations of 26/min. What should the nurse do?",
       "content": {
         "options": [
           {
             "id": "a",
-            "text": "Recheck in the morning"
+            "text": "Assess the client and call the rapid response team per protocol"
           },
           {
             "id": "b",
-            "text": "Assess the client and escalate per protocol, such as calling the rapid response team"
+            "text": "Recheck the score at the next scheduled set of vital signs in 4 hours"
           },
           {
             "id": "c",
-            "text": "Document the score only"
+            "text": "Report the score to the surgeon during morning rounds"
           },
           {
             "id": "d",
-            "text": "Lower the alarm limits"
+            "text": "Increase vital signs to hourly and document the trend"
           }
         ]
       },
       "key": {
-        "correct": "b"
+        "correct": "a"
       },
       "rationale": {
-        "correct": "Rising early warning scores need assessment and escalation.",
+        "correct": "Rising early warning scores need bedside assessment and escalation according to the protocol.",
         "perOption": {
-          "a": "A rising score signals deterioration.",
-          "b": "Early warning scores trigger escalation.",
-          "c": "Action is needed.",
-          "d": "Not appropriate."
+          "a": "A rising early warning score with these changes signals deterioration and triggers escalation.",
+          "b": "Waiting allows the client to deteriorate further.",
+          "c": "A score this high needs action now, not at rounds.",
+          "d": "Closer monitoring alone does not get the client the assessment and help needed."
         },
         "references": [
           "Medical-surgical nursing texts (e.g. Lewis; Ignatavicius)",
-          "Reviewed by the content team on 17 November 2026."
+          "Rewritten to NCLEX-RN difficulty and reviewed by the content team on 19 November 2026."
         ]
       },
       "educationalObjective": "Respond to an early warning score."
@@ -1153,9 +1153,9 @@
       "subtopics": [
         "post-procedure-complications"
       ],
-      "cjmmSkill": "recognize_cues",
+      "cjmmSkill": "analyze_cues",
       "difficulty": "difficult",
-      "stem": "A client with a PICC line reports sudden swelling and pain in the arm and neck on the same side. What does the nurse suspect?",
+      "stem": "A client who has had a PICC line in the right arm for 3 weeks reports new swelling and aching of the right arm and the right side of the neck. The arm is larger than the left, and the line still flushes easily. What does the nurse suspect?",
       "content": {
         "options": [
           {
@@ -1164,15 +1164,15 @@
           },
           {
             "id": "b",
-            "text": "Normal PICC finding"
+            "text": "Migration of the catheter tip"
           },
           {
             "id": "c",
-            "text": "Dehydration"
+            "text": "Phlebitis at the insertion site"
           },
           {
             "id": "d",
-            "text": "Allergic reaction to the dressing"
+            "text": "Infiltration of the infusing fluid"
           }
         ]
       },
@@ -1180,16 +1180,16 @@
         "correct": "a"
       },
       "rationale": {
-        "correct": "PICC complications include DVT, infection and occlusion.",
+        "correct": "PICC complications include deep vein thrombosis, infection, occlusion and tip migration.",
         "perOption": {
-          "a": "PICCs can cause clots in the arm veins.",
-          "b": "Swelling and pain aren't normal.",
-          "c": "Not related.",
-          "d": "Would cause local skin reaction, not arm swelling."
+          "a": "Swelling of the arm and neck on the PICC side suggests a clot in the arm or central veins.",
+          "b": "Tip migration can cause arrhythmias or a hard-to-flush line, not this pattern of swelling.",
+          "c": "Phlebitis causes redness and tenderness along the vein near the site, not neck swelling.",
+          "d": "A PICC that flushes easily without swelling at the site makes infiltration unlikely."
         },
         "references": [
           "Medical-surgical nursing texts (e.g. Lewis; Ignatavicius)",
-          "Reviewed by the content team on 17 November 2026."
+          "Rewritten to NCLEX-RN difficulty and reviewed by the content team on 19 November 2026."
         ]
       },
       "educationalObjective": "Recognize PICC complications."
@@ -1204,24 +1204,24 @@
       ],
       "cjmmSkill": "take_action",
       "difficulty": "moderate",
-      "stem": "A client has an SpO2 of 88% on a pulse oximeter, but is alert, pink and comfortable. The hands are cold. What should the nurse do first?",
+      "stem": "A pulse oximeter on a client's finger reads 88%, but the client is alert, pink, breathing comfortably at 16/min and talking in full sentences. The client's hands feel cold. What should the nurse do first?",
       "content": {
         "options": [
           {
             "id": "a",
-            "text": "Increase the oxygen to 6 L/min"
+            "text": "Increase the oxygen flow to 6 L/min by nasal cannula right away"
           },
           {
             "id": "b",
-            "text": "Warm the hands or move the sensor to the earlobe, then recheck"
+            "text": "Warm the hand or move the probe to the earlobe, then recheck"
           },
           {
             "id": "c",
-            "text": "Call the rapid response team"
+            "text": "Call the rapid response team for a low saturation"
           },
           {
             "id": "d",
-            "text": "Ignore the reading"
+            "text": "Ask for an arterial blood gas before doing anything else"
           }
         ]
       },
@@ -1229,16 +1229,16 @@
         "correct": "b"
       },
       "rationale": {
-        "correct": "Assess the client and the device; cold extremities affect pulse oximetry.",
+        "correct": "Assess the client and the device; cold extremities, movement and nail polish affect pulse oximetry.",
         "perOption": {
-          "a": "Check the measurement first.",
-          "b": "Poor perfusion causes falsely low readings.",
-          "c": "The client is stable; verify the reading.",
-          "d": "Needs to be checked."
+          "a": "The reading should be checked before treatment is changed.",
+          "b": "Poor perfusion in cold fingers often causes falsely low readings.",
+          "c": "The client is stable; the reading needs verifying first.",
+          "d": "A simple recheck comes before an invasive test."
         },
         "references": [
           "Medical-surgical nursing texts (e.g. Lewis; Ignatavicius)",
-          "Reviewed by the content team on 17 November 2026."
+          "Rewritten to NCLEX-RN difficulty and reviewed by the content team on 19 November 2026."
         ]
       },
       "educationalObjective": "Troubleshoot pulse oximetry."
@@ -1251,26 +1251,26 @@
       "subtopics": [
         "oxygen-therapy-and-devices"
       ],
-      "cjmmSkill": "take_action",
+      "cjmmSkill": "analyze_cues",
       "difficulty": "moderate",
-      "stem": "A client is prescribed oxygen at 40% by Venturi mask. Which statement about this device is correct?",
+      "stem": "A client with COPD and chronic carbon dioxide retention is prescribed oxygen at 28% by Venturi mask. A student asks why this device was chosen. Which explanation by the nurse is correct?",
       "content": {
         "options": [
           {
             "id": "a",
-            "text": "It delivers a precise oxygen concentration"
+            "text": "It gives a precise oxygen concentration whatever the breathing"
           },
           {
             "id": "b",
-            "text": "It is the best device for 100% oxygen"
+            "text": "It delivers the highest oxygen concentration of any mask"
           },
           {
             "id": "c",
-            "text": "The bag must stay deflated"
+            "text": "Its reservoir bag lets the client rebreathe exhaled carbon dioxide"
           },
           {
             "id": "d",
-            "text": "It works without an oxygen source"
+            "text": "It works without an oxygen source, using room air alone"
           }
         ]
       },
@@ -1278,16 +1278,16 @@
         "correct": "a"
       },
       "rationale": {
-        "correct": "Venturi masks deliver precise oxygen concentrations, useful in COPD.",
+        "correct": "Venturi masks deliver precise oxygen concentrations, which is useful in COPD with carbon dioxide retention.",
         "perOption": {
-          "a": "Venturi masks deliver a set FiO2.",
-          "b": "A non-rebreather delivers higher concentrations.",
-          "c": "That describes a non-rebreather, which should stay inflated.",
-          "d": "Needs an oxygen source."
+          "a": "Venturi masks deliver a set FiO2, which helps avoid giving too much oxygen in COPD.",
+          "b": "A nonrebreather delivers higher concentrations.",
+          "c": "Venturi masks have no reservoir bag.",
+          "d": "A Venturi mask needs an oxygen source."
         },
         "references": [
           "Medical-surgical nursing texts (e.g. Lewis; Ignatavicius)",
-          "Reviewed by the content team on 17 November 2026."
+          "Rewritten to NCLEX-RN difficulty and reviewed by the content team on 19 November 2026."
         ]
       },
       "educationalObjective": "Choose oxygen delivery devices."
@@ -1302,24 +1302,24 @@
       ],
       "cjmmSkill": "take_action",
       "difficulty": "easy",
-      "stem": "The nurse is giving oral care to an unconscious client. Which position is best?",
+      "stem": "The nurse is giving oral care to an unconscious client who is not intubated. How should the nurse position the client?",
       "content": {
         "options": [
           {
             "id": "a",
-            "text": "Side-lying with the head turned to the side"
+            "text": "Side-lying, with the head turned to the side"
           },
           {
             "id": "b",
-            "text": "Supine and flat"
+            "text": "Supine and flat, with the head on one pillow"
           },
           {
             "id": "c",
-            "text": "Prone"
+            "text": "Prone, with the face turned to the side"
           },
           {
             "id": "d",
-            "text": "High Fowler's with the head back"
+            "text": "High Fowler's, with the head tilted back"
           }
         ]
       },
@@ -1327,16 +1327,16 @@
         "correct": "a"
       },
       "rationale": {
-        "correct": "Side-lying prevents aspiration during oral care.",
+        "correct": "Side-lying prevents aspiration during oral care for an unconscious client.",
         "perOption": {
-          "a": "Prevents aspiration of fluids.",
-          "b": "Raises aspiration risk.",
-          "c": "Not practical or safe.",
-          "d": "Raises aspiration risk."
+          "a": "This lets fluid drain out and prevents aspiration.",
+          "b": "Lying flat raises aspiration risk.",
+          "c": "This is not practical or safe for oral care.",
+          "d": "Tilting the head back raises aspiration risk."
         },
         "references": [
           "Fundamentals of nursing texts (e.g. Potter & Perry)",
-          "Reviewed by the content team on 17 November 2026."
+          "Rewritten to NCLEX-RN difficulty and reviewed by the content team on 19 November 2026."
         ]
       },
       "educationalObjective": "Give oral care safely."
@@ -1350,13 +1350,13 @@
         "nutrition-and-therapeutic-diets"
       ],
       "cjmmSkill": "take_action",
-      "difficulty": "moderate",
-      "stem": "Which meal choice best fits a client on a low-residue diet?",
+      "difficulty": "easy",
+      "stem": "A client with a flare of Crohn disease has been prescribed a low-residue diet. Which lunch choice best fits this diet?",
       "content": {
         "options": [
           {
             "id": "a",
-            "text": "Whole-grain cereal with berries"
+            "text": "Whole-grain cereal with fresh berries"
           },
           {
             "id": "b",
@@ -1364,11 +1364,11 @@
           },
           {
             "id": "c",
-            "text": "Raw vegetable salad"
+            "text": "A raw vegetable salad with chickpeas and a whole-wheat roll"
           },
           {
             "id": "d",
-            "text": "Bran muffin"
+            "text": "A bran muffin with an apple"
           }
         ]
       },
@@ -1376,16 +1376,16 @@
         "correct": "b"
       },
       "rationale": {
-        "correct": "Low-residue diets limit fiber.",
+        "correct": "Low-residue diets limit fiber, whole grains, raw fruit and vegetables, and legumes.",
         "perOption": {
-          "a": "High in fiber.",
-          "b": "Low fiber and easy to digest.",
-          "c": "High in fiber.",
-          "d": "High in fiber."
+          "a": "This is high in fiber.",
+          "b": "These foods are low in fiber and easy to digest.",
+          "c": "This is high in fiber.",
+          "d": "This is high in fiber."
         },
         "references": [
           "Fundamentals of nursing texts (e.g. Potter & Perry)",
-          "Reviewed by the content team on 17 November 2026."
+          "Rewritten to NCLEX-RN difficulty and reviewed by the content team on 19 November 2026."
         ]
       },
       "educationalObjective": "Choose foods for a low-residue diet."
@@ -1400,24 +1400,24 @@
       ],
       "cjmmSkill": "generate_solutions",
       "difficulty": "moderate",
-      "stem": "An older adult has trouble falling asleep at home. Which advice is most appropriate?",
+      "stem": "A 76-year-old client tells the nurse at a clinic visit, \"I lie awake for an hour or more every night.\" The client naps after lunch, drinks iced tea in the evening and watches television in bed. Which advice is most appropriate?",
       "content": {
         "options": [
           {
             "id": "a",
-            "text": "Take a long nap in the afternoon"
+            "text": "\"Try a longer nap after lunch to make up for the lost sleep.\""
           },
           {
             "id": "b",
-            "text": "Keep a regular bedtime and avoid caffeine in the afternoon and evening"
+            "text": "\"Keep a regular bedtime and avoid caffeine after midday.\""
           },
           {
             "id": "c",
-            "text": "Watch television in bed"
+            "text": "\"Watch a relaxing program in bed until you feel sleepy.\""
           },
           {
             "id": "d",
-            "text": "Drink alcohol at bedtime"
+            "text": "\"Have a glass of wine at bedtime to help you relax.\""
           }
         ]
       },
@@ -1425,16 +1425,16 @@
         "correct": "b"
       },
       "rationale": {
-        "correct": "Sleep hygiene: routine, no caffeine late, limit screens and alcohol.",
+        "correct": "Sleep hygiene: a regular routine, no late caffeine, short naps, no screens in bed and no alcohol at bedtime.",
         "perOption": {
-          "a": "Can make nighttime sleep harder.",
-          "b": "Sleep hygiene improves sleep.",
-          "c": "Screens disrupt sleep.",
-          "d": "Alcohol disrupts sleep."
+          "a": "Long daytime naps make it harder to fall asleep at night.",
+          "b": "A routine and avoiding late caffeine, such as iced tea, improve sleep.",
+          "c": "Screens in bed disrupt sleep.",
+          "d": "Alcohol disrupts sleep later in the night."
         },
         "references": [
           "Fundamentals of nursing texts (e.g. Potter & Perry)",
-          "Reviewed by the content team on 17 November 2026."
+          "Rewritten to NCLEX-RN difficulty and reviewed by the content team on 19 November 2026."
         ]
       },
       "educationalObjective": "Teach sleep hygiene."
@@ -1449,24 +1449,24 @@
       ],
       "cjmmSkill": "take_action",
       "difficulty": "moderate",
-      "stem": "A client rates pain 7 out of 10 but is laughing with visitors. What should the nurse do?",
+      "stem": "A client 1 day after a knee replacement rates pain 7 out of 10 and asks for medication, but is laughing and chatting with visitors. What should the nurse do?",
       "content": {
         "options": [
           {
             "id": "a",
-            "text": "Document that the client is exaggerating"
+            "text": "Document that the client's behavior does not match the rating"
           },
           {
             "id": "b",
-            "text": "Accept the client's rating and offer treatment"
+            "text": "Accept the client's rating and offer the prescribed analgesic"
           },
           {
             "id": "c",
-            "text": "Wait until the client looks uncomfortable"
+            "text": "Wait until the visitors leave to see whether the client looks uncomfortable"
           },
           {
             "id": "d",
-            "text": "Give a placebo"
+            "text": "Offer an ice pack and a distraction instead of the medication"
           }
         ]
       },
@@ -1474,16 +1474,16 @@
         "correct": "b"
       },
       "rationale": {
-        "correct": "Self-report is the most reliable measure of pain.",
+        "correct": "Self-report is the most reliable measure of pain; treat it and reassess.",
         "perOption": {
-          "a": "Pain is what the client says it is.",
-          "b": "Behavior doesn't always reflect pain intensity.",
-          "c": "Delays treatment.",
-          "d": "Unethical."
+          "a": "Pain is what the client says it is; behavior does not disprove it.",
+          "b": "Self-report is the most reliable measure of pain, and people cope in different ways.",
+          "c": "This delays treatment of reported pain.",
+          "d": "Non-drug measures help, but they do not replace treatment of reported severe pain."
         },
         "references": [
           "Fundamentals of nursing texts (e.g. Potter & Perry)",
-          "Reviewed by the content team on 17 November 2026."
+          "Rewritten to NCLEX-RN difficulty and reviewed by the content team on 19 November 2026."
         ]
       },
       "educationalObjective": "Respect self-reported pain."
@@ -1498,24 +1498,24 @@
       ],
       "cjmmSkill": "take_action",
       "difficulty": "moderate",
-      "stem": "An older adult has urge incontinence. Which intervention is most helpful?",
+      "stem": "An 80-year-old client in long-term care has urge incontinence several times a day, often while trying to reach the bathroom. Which intervention is most helpful?",
       "content": {
         "options": [
           {
             "id": "a",
-            "text": "Scheduled toileting every 2 hours"
+            "text": "Toileting on a set schedule, such as every 2 hours while awake"
           },
           {
             "id": "b",
-            "text": "Limit all fluids"
+            "text": "Limiting the resident's fluids to 500 mL a day to reduce urine volume"
           },
           {
             "id": "c",
-            "text": "Insert an indwelling catheter"
+            "text": "Inserting an indwelling catheter to keep the resident dry"
           },
           {
             "id": "d",
-            "text": "Use adult briefs only"
+            "text": "Using adult briefs so that accidents are contained"
           }
         ]
       },
@@ -1525,14 +1525,14 @@
       "rationale": {
         "correct": "Bladder training and scheduled toileting are first-line for urge incontinence.",
         "perOption": {
-          "a": "Bladder training reduces urgency episodes.",
-          "b": "Concentrated urine irritates the bladder.",
-          "c": "Raises infection risk; not first-line.",
-          "d": "Doesn't treat the problem."
+          "a": "Scheduled toileting and bladder training reduce urgency episodes.",
+          "b": "Concentrated urine irritates the bladder and causes dehydration.",
+          "c": "Catheters raise infection risk and are not a first-line treatment.",
+          "d": "Briefs manage the problem but do not treat it."
         },
         "references": [
           "Fundamentals of nursing texts (e.g. Potter & Perry)",
-          "Reviewed by the content team on 17 November 2026."
+          "Rewritten to NCLEX-RN difficulty and reviewed by the content team on 19 November 2026."
         ]
       },
       "educationalObjective": "Manage urge incontinence."
@@ -1545,26 +1545,26 @@
       "subtopics": [
         "mobility-and-assistive-devices"
       ],
-      "cjmmSkill": "take_action",
-      "difficulty": "moderate",
-      "stem": "Which statement shows a client understands how to go down stairs with crutches?",
+      "cjmmSkill": "evaluate_outcomes",
+      "difficulty": "easy",
+      "stem": "A client with a sprained right ankle who is not allowed to bear weight on that leg is learning to use crutches. Which statement shows the client understands how to go down stairs?",
       "content": {
         "options": [
           {
             "id": "a",
-            "text": "\"I'll move my good leg down first.\""
+            "text": "\"I'll step down with my left leg first.\""
           },
           {
             "id": "b",
-            "text": "\"I'll move the crutches and my injured leg down first, then my good leg.\""
+            "text": "\"The crutches and my right leg go down first.\""
           },
           {
             "id": "c",
-            "text": "\"I'll hop down without the crutches.\""
+            "text": "\"I'll hop down the stairs without the crutches.\""
           },
           {
             "id": "d",
-            "text": "\"I'll go down backward.\""
+            "text": "\"I'll turn around and go down backward.\""
           }
         ]
       },
@@ -1575,13 +1575,13 @@
         "correct": "Up with the good, down with the bad.",
         "perOption": {
           "a": "Going down, the crutches and injured leg go first.",
-          "b": "\"Down with the bad.\"",
-          "c": "Unsafe.",
-          "d": "Not the usual technique."
+          "b": "\"Down with the bad\": crutches and injured leg go down first.",
+          "c": "This is unsafe.",
+          "d": "This is not the usual technique."
         },
         "references": [
           "Fundamentals of nursing texts (e.g. Potter & Perry)",
-          "Reviewed by the content team on 17 November 2026."
+          "Rewritten to NCLEX-RN difficulty and reviewed by the content team on 19 November 2026."
         ]
       },
       "educationalObjective": "Teach crutch use on stairs."
@@ -1596,24 +1596,24 @@
       ],
       "cjmmSkill": "take_action",
       "difficulty": "moderate",
-      "stem": "A client taking warfarin asks about using ginkgo biloba. What should the nurse say?",
+      "stem": "A 70-year-old client who takes warfarin for atrial fibrillation asks, \"My friend takes ginkgo for her memory. Can I try it?\" What should the nurse say?",
       "content": {
         "options": [
           {
             "id": "a",
-            "text": "\"It's natural, so it's safe.\""
+            "text": "\"Ginkgo is natural, so it's safe with your other medicines.\""
           },
           {
             "id": "b",
-            "text": "\"Ginkgo can increase bleeding risk with warfarin, so talk with your provider first.\""
+            "text": "\"Ginkgo can raise your bleeding risk; ask your provider first.\""
           },
           {
             "id": "c",
-            "text": "\"Ginkgo will make warfarin work less.\""
+            "text": "\"Ginkgo will make your warfarin work less well, so please avoid it.\""
           },
           {
             "id": "d",
-            "text": "\"Take double the dose for memory.\""
+            "text": "\"You can take it if you stop the warfarin on the same days.\""
           }
         ]
       },
@@ -1621,17 +1621,17 @@
         "correct": "b"
       },
       "rationale": {
-        "correct": "Ask about herbal supplements; many interact with anticoagulants.",
+        "correct": "Ask clients about herbal supplements; many, including ginkgo, interact with anticoagulants.",
         "perOption": {
-          "a": "Herbal products can interact with drugs.",
-          "b": "Ginkgo has antiplatelet effects.",
-          "c": "It increases bleeding risk.",
-          "d": "Unsafe."
+          "a": "Herbal products can interact with prescribed drugs.",
+          "b": "Ginkgo has antiplatelet effects that add to warfarin's effect.",
+          "c": "Ginkgo increases bleeding risk rather than reducing warfarin's effect.",
+          "d": "Stopping warfarin without the provider is unsafe."
         },
         "references": [
           "Fundamentals of nursing texts (e.g. Potter & Perry)",
           "Nursing pharmacology texts (e.g. Lehne; McCuistion) and the drug's prescribing information",
-          "Reviewed by the content team on 17 November 2026."
+          "Rewritten to NCLEX-RN difficulty and reviewed by the content team on 19 November 2026."
         ]
       },
       "educationalObjective": "Teach about herbal interactions."
@@ -1646,24 +1646,24 @@
       ],
       "cjmmSkill": "take_action",
       "difficulty": "moderate",
-      "stem": "A client receiving hospice care has dry mouth and isn't drinking. What should the nurse do?",
+      "stem": "A client receiving hospice care at home for end-stage heart failure is no longer drinking and has a dry mouth and cracked lips. The family asks what they can do. What should the nurse recommend?",
       "content": {
         "options": [
           {
             "id": "a",
-            "text": "Insert a feeding tube"
+            "text": "Ask the provider about starting IV fluids to keep the client hydrated"
           },
           {
             "id": "b",
-            "text": "Provide frequent mouth care and moisten the lips"
+            "text": "Give frequent mouth care and moisten the lips with a swab and balm"
           },
           {
             "id": "c",
-            "text": "Force fluids"
+            "text": "Encourage the client to drink a full glass of water every hour"
           },
           {
             "id": "d",
-            "text": "Ignore the dry mouth"
+            "text": "Ask about a feeding tube to provide fluids and nutrition"
           }
         ]
       },
@@ -1671,16 +1671,16 @@
         "correct": "b"
       },
       "rationale": {
-        "correct": "End-of-life care focuses on comfort, including mouth care.",
+        "correct": "End-of-life care focuses on comfort, including frequent mouth and lip care.",
         "perOption": {
-          "a": "Not consistent with comfort goals.",
-          "b": "Comfort measures relieve dryness.",
-          "c": "Can cause aspiration and discomfort.",
-          "d": "Comfort is the goal."
+          "a": "IV fluids at the end of life can worsen fluid overload and are not in line with comfort goals.",
+          "b": "Comfort measures relieve dryness, which is the main source of distress.",
+          "c": "Pushing fluids can cause choking and discomfort.",
+          "d": "A feeding tube does not match the comfort goals of hospice care."
         },
         "references": [
           "Fundamentals of nursing texts (e.g. Potter & Perry)",
-          "Reviewed by the content team on 17 November 2026."
+          "Rewritten to NCLEX-RN difficulty and reviewed by the content team on 19 November 2026."
         ]
       },
       "educationalObjective": "Provide comfort at the end of life."
