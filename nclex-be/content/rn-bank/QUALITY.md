@@ -20,7 +20,7 @@ Written by `python3 -I build_all.py`; do not edit by hand. See `quality.py` for 
 | 07-cardiovascular-2 | 24 | yes | 18 | 11% | 31% (shortest) | 6% | 31.5 | 1/15/8 |
 | 08-respiratory-1 | 24 | yes | 19 | 21% | 32% (shortest) | 5% | 32 | 2/14/8 |
 | 09-respiratory-2 | 24 | yes | 19 | 11% | 30% (stem words) | 11% | 31 | 3/13/8 |
-| 10-fluids-electrolytes-acid-base | 26 |  | 20 | 55% | 55% (longest) | 5% | 20.5 | 3/16/7 |
+| 10-fluids-electrolytes-acid-base | 26 | yes | 20 | 20% | 30% (skip absolutes) | 5% | 33.5 | 2/16/8 |
 | 11-renal-urinary | 26 |  | 23 | 65% | 65% (longest) | 4% | 20 | 8/16/2 |
 | 12-endocrine-diabetes | 24 |  | 19 | 68% | 71% (longest) | 26% | 17.5 | 4/11/9 |
 | 13-endocrine-thyroid-adrenal-pituitary | 23 |  | 19 | 63% | 66% (longest) | 5% | 19 | 1/18/4 |
@@ -57,4 +57,4 @@ Written by `python3 -I build_all.py`; do not edit by hand. See `quality.py` for 
 | 65-management-of-care-specialty | 27 | yes | 18 | 22% | 28% (stem words) | 11% | 27 | 2/15/10 |
 | 66-risk-reduction-basic-care | 31 | yes | 27 | 7% | 29% (assess first) | 15% | 32 | 4/17/10 |
 | 67-moc-sic-ngn | 34 | yes | 23 | 0% | 23% (shortest) | 9% | 32 | 0/23/11 |
-| **Whole bank** | 1110 | | 874 | 51% | 53% (longest) | 14% | 22 | 162/696/252 |
+| **Whole bank** | 1110 | | 874 | 50% | 53% (longest) | 14% | 22 | 161/696/253 |
