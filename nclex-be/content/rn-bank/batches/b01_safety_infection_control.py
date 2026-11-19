@@ -1,4 +1,4 @@
-"""Batch 1: Safety and Infection Control (SECE.SIC, 10-16% of the NCLEX-RN)."""
+"""Batch 1: Safety and Infection Prevention and Control (SECE.SIC, 10-16% of the NCLEX-RN)."""
 from qb import *
 
 add_subtopics({
@@ -262,4 +262,4 @@ select_n(M(SIC, "neutropenic-precautions", "generate_solutions", "moderate", "he
    "Implement neutropenic precautions."),
 ]
 
-BUILT = build(1, "safety-infection-control", "Safety and infection control", items)
+BUILT = build(1, "safety-infection-control", "Safety and infection prevention and control", items)

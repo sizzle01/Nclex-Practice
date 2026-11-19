@@ -1,4 +1,4 @@
-"""Batch 64: Safety and Infection Control III - precautions by condition, asepsis, injury prevention, biological threats (SECE.SIC)."""
+"""Batch 64: Safety and Infection Prevention and Control III - precautions by condition, asepsis, injury prevention, biological threats (SECE.SIC)."""
 from qb import *
 
 SIC = "SECE.SIC"
@@ -289,4 +289,4 @@ mc(M(SIC, SP, "take_action", "moderate", F, "cdc"),
    "Use eye protection appropriately."),
 ]
 
-BUILT = build(64, "safety-infection-injury", "Safety and Infection Control III: precautions, asepsis and injury prevention", items)
+BUILT = build(64, "safety-infection-injury", "Safety and Infection Prevention and Control III: precautions, asepsis and injury prevention", items)

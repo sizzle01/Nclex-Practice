@@ -16,7 +16,7 @@ HERE = Path(__file__).resolve().parent
 OUT = HERE / "review"
 
 CLIENT_NEEDS = {
-    "SECE.MOC": "Management of Care", "SECE.SIC": "Safety and Infection Control",
+    "SECE.MOC": "Management of Care", "SECE.SIC": "Safety and Infection Prevention and Control",
     "HPM": "Health Promotion and Maintenance", "PSI": "Psychosocial Integrity",
     "PHI.BCC": "Basic Care and Comfort", "PHI.PPT": "Pharmacological and Parenteral Therapies",
     "PHI.RRP": "Reduction of Risk Potential", "PHI.PA": "Physiological Adaptation",

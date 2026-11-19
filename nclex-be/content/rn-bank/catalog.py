@@ -30,7 +30,7 @@ ADAPTIVE_SECONDS = 18000    # 5 hours, the real NCLEX-RN's limit
 ADAPTIVE_CONFIG = {"minItems": 85, "maxItems": 150, "passingTheta": 0}
 
 CATEGORY_NAMES = {
-    "SECE.MOC": "Management of Care", "SECE.SIC": "Safety and Infection Control",
+    "SECE.MOC": "Management of Care", "SECE.SIC": "Safety and Infection Prevention and Control",
     "HPM": "Health Promotion and Maintenance", "PSI": "Psychosocial Integrity",
     "PHI.BCC": "Basic Care and Comfort", "PHI.PPT": "Pharmacological and Parenteral Therapies",
     "PHI.RRP": "Reduction of Risk Potential", "PHI.PA": "Physiological Adaptation",

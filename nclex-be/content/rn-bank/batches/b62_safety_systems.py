@@ -1,4 +1,4 @@
-"""Batch 62: Safety and Infection Control II - medication safety systems, security, HAI prevention, equipment and environment (SECE.SIC)."""
+"""Batch 62: Safety and Infection Prevention and Control II - medication safety systems, security, HAI prevention, equipment and environment (SECE.SIC)."""
 from qb import *
 
 add_subtopics({
@@ -331,4 +331,4 @@ select_n(M(SIC, INJ, "generate_solutions", "moderate", "fundamentals", "fund"),
    "Implement seizure precautions."),
 ]
 
-BUILT = build(62, "safety-systems", "Safety and Infection Control II: medication systems, security and infection prevention", items)
+BUILT = build(62, "safety-systems", "Safety and Infection Prevention and Control II: medication systems, security and infection prevention", items)

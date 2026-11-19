@@ -268,7 +268,7 @@ mc(M(MOC, CO, "take_action", "moderate", "fundamentals", "mgmt"),
    "Advocate through clear communication, then escalate if needed.",
    "Advocate about discharge safety."),
 
-# ================= Safety and Infection Control =================
+# ================= Safety and Infection Prevention and Control =================
 hl_text(M(SIC, RS, "recognize_cues", "difficult", "fundamentals", "fund"),
    "The nurse reviews care for a client in wrist restraints. Highlight the actions that are unsafe.",
    ["Restraints applied ",
