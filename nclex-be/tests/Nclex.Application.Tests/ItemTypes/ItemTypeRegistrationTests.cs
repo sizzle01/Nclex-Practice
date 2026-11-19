@@ -26,10 +26,11 @@ public sealed class ItemTypeRegistrationTests
     }
 
     [Fact]
-    public void Phase_2_types_are_not_registered_yet()
+    public void Of_the_phase_2_types_only_bowtie_is_registered()
     {
         using var services = new ServiceCollection().AddContentImport().BuildServiceProvider();
 
-        services.GetServices<IItemTypeModule>().ShouldAllBe(m => m.Phase == Phase.Mvp);
+        // Bowtie arrived in F20; the other Phase 2 types still have no module.
+        services.GetServices<IItemTypeModule>().Where(m => m.Phase != Phase.Mvp).Select(m => m.Type).ShouldBe([ItemType.Bowtie]);
     }
 }
