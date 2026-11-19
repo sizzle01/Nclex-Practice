@@ -1,5 +1,5 @@
 {
-  "notice": "RN bank batch 16: Gastrointestinal I: upper GI, bowel disorders, tubes and ostomies. Reviewed by the content team on 17 November 2026. See REVIEW-LOG.md.",
+  "notice": "RN bank batch 16: Gastrointestinal I: upper GI, bowel disorders, tubes and ostomies. Rewritten to NCLEX-RN difficulty and reviewed by the content team on 19 November 2026. See REVIEW-LOG.md.",
   "track": "RN",
   "subtopics": [
     {
@@ -53,25 +53,25 @@
         "upper-gi-disorders-and-bleeding"
       ],
       "cjmmSkill": "evaluate_outcomes",
-      "difficulty": "easy",
-      "stem": "The nurse is teaching a client with gastroesophageal reflux disease (GERD). Which statement shows a need for more teaching?",
+      "difficulty": "moderate",
+      "stem": "A 52-year-old client with gastroesophageal reflux disease (GERD) has nighttime heartburn and a cough. The nurse reviews lifestyle changes. Which statement by the client shows a need for more teaching?",
       "content": {
         "options": [
           {
             "id": "a",
-            "text": "\"I'll raise the head of my bed on blocks.\""
+            "text": "\"I'll put blocks under the head of my bed to raise it.\""
           },
           {
             "id": "b",
-            "text": "\"I'll have a snack right before I go to bed.\""
+            "text": "\"I'll have my evening snack right before I go to bed.\""
           },
           {
             "id": "c",
-            "text": "\"I'll cut down on coffee, chocolate and peppermint.\""
+            "text": "\"I'll cut back on coffee, chocolate and peppermint tea.\""
           },
           {
             "id": "d",
-            "text": "\"I'll eat smaller meals.\""
+            "text": "\"I'll eat smaller meals and try to lose some weight.\""
           }
         ]
       },
@@ -84,11 +84,11 @@
           "a": "Elevation reduces nighttime reflux.",
           "b": "Eating within 2 to 3 hours of lying down increases reflux.",
           "c": "These relax the lower esophageal sphincter.",
-          "d": "Smaller meals reduce stomach pressure."
+          "d": "Smaller meals and weight loss reduce stomach pressure."
         },
         "references": [
           "Medical-surgical nursing texts (e.g. Lewis; Ignatavicius)",
-          "Reviewed by the content team on 17 November 2026."
+          "Rewritten to NCLEX-RN difficulty and reviewed by the content team on 19 November 2026."
         ]
       },
       "educationalObjective": "Teach lifestyle changes for GERD."
@@ -103,24 +103,24 @@
       ],
       "cjmmSkill": "evaluate_outcomes",
       "difficulty": "moderate",
-      "stem": "A client with a Helicobacter pylori ulcer is prescribed amoxicillin, clarithromycin and omeprazole. Which statement shows correct understanding?",
+      "stem": "A client with a duodenal ulcer caused by Helicobacter pylori is prescribed amoxicillin, clarithromycin and omeprazole for 14 days. Which statement by the client shows correct understanding?",
       "content": {
         "options": [
           {
             "id": "a",
-            "text": "\"I'll take all the medicines for the full 14 days, even if I feel better.\""
+            "text": "\"I'll take every pill for 14 days, even once I feel better.\""
           },
           {
             "id": "b",
-            "text": "\"I'll stop the antibiotics once the pain goes away.\""
+            "text": "\"I'll stop the antibiotics once my stomach pain goes away.\""
           },
           {
             "id": "c",
-            "text": "\"I only need the omeprazole.\""
+            "text": "\"The omeprazole is the main medicine; the others are extra.\""
           },
           {
             "id": "d",
-            "text": "\"I'll take ibuprofen for any pain.\""
+            "text": "\"I'll take ibuprofen for any pain while I'm on these pills.\""
           }
         ]
       },
@@ -128,16 +128,16 @@
         "correct": "a"
       },
       "rationale": {
-        "correct": "H. pylori therapy combines antibiotics with acid suppression; complete the full course.",
+        "correct": "H. pylori therapy combines antibiotics with acid suppression; the client completes the full course.",
         "perOption": {
-          "a": "Completing therapy eradicates H. pylori and prevents the ulcer from coming back.",
+          "a": "Completing therapy eradicates H. pylori and prevents the ulcer from returning.",
           "b": "Stopping early allows recurrence and resistance.",
           "c": "The antibiotics are needed to eliminate the infection.",
           "d": "NSAIDs worsen ulcers."
         },
         "references": [
           "Nursing pharmacology texts (e.g. Lehne; McCuistion) and the drug's prescribing information",
-          "Reviewed by the content team on 17 November 2026."
+          "Rewritten to NCLEX-RN difficulty and reviewed by the content team on 19 November 2026."
         ]
       },
       "educationalObjective": "Teach adherence to H. pylori therapy."
@@ -150,26 +150,26 @@
       "subtopics": [
         "upper-gi-disorders-and-bleeding"
       ],
-      "cjmmSkill": "recognize_cues",
-      "difficulty": "moderate",
-      "stem": "A client with a history of peptic ulcer disease suddenly has severe epigastric pain that spreads across the abdomen. The abdomen is rigid and board-like. What does the nurse suspect?",
+      "cjmmSkill": "analyze_cues",
+      "difficulty": "difficult",
+      "stem": "A 60-year-old client with a history of peptic ulcer disease who takes naproxen daily suddenly has severe epigastric pain that spreads across the abdomen. The abdomen is rigid, the client lies very still, and the heart rate is 118/min. Which complication does the nurse suspect?",
       "content": {
         "options": [
           {
             "id": "a",
-            "text": "Perforation"
+            "text": "Perforation of the ulcer"
           },
           {
             "id": "b",
-            "text": "Gastroesophageal reflux"
+            "text": "A flare of reflux esophagitis"
           },
           {
             "id": "c",
-            "text": "Constipation"
+            "text": "Pyloric obstruction from scarring"
           },
           {
             "id": "d",
-            "text": "Expected ulcer pain"
+            "text": "Expected ulcer pain after a meal"
           }
         ]
       },
@@ -177,16 +177,16 @@
         "correct": "a"
       },
       "rationale": {
-        "correct": "Perforation: sudden severe pain, rigid abdomen, signs of shock. Keep the client NPO and notify the provider immediately.",
+        "correct": "Perforation: sudden severe pain, a rigid abdomen and signs of shock; keep the client NPO and notify the provider at once.",
         "perOption": {
           "a": "Sudden severe pain with a rigid abdomen suggests perforation with peritonitis, a surgical emergency.",
           "b": "GERD causes burning, not a rigid abdomen.",
-          "c": "This doesn't cause a rigid abdomen.",
-          "d": "Ulcer pain doesn't cause a board-like abdomen."
+          "c": "Obstruction causes vomiting and fullness, not a board-like abdomen.",
+          "d": "Ulcer pain does not cause a rigid abdomen and tachycardia."
         },
         "references": [
           "Medical-surgical nursing texts (e.g. Lewis; Ignatavicius)",
-          "Reviewed by the content team on 17 November 2026."
+          "Rewritten to NCLEX-RN difficulty and reviewed by the content team on 19 November 2026."
         ]
       },
       "educationalObjective": "Recognize a perforated ulcer."
@@ -200,25 +200,25 @@
         "upper-gi-disorders-and-bleeding"
       ],
       "cjmmSkill": "take_action",
-      "difficulty": "moderate",
-      "stem": "A client is vomiting coffee-ground material, with a heart rate of 120/min and a blood pressure of 88/54 mm Hg. What should the nurse do first?",
+      "difficulty": "difficult",
+      "stem": "A client with alcohol use disorder is vomiting coffee-ground material. The heart rate is 120/min, the blood pressure is 88/54 mm Hg, and the client is anxious. What should the nurse do first?",
       "content": {
         "options": [
           {
             "id": "a",
-            "text": "Insert two large-bore IV catheters and start fluids as prescribed"
+            "text": "Insert two large-bore IVs and start fluids as prescribed"
           },
           {
             "id": "b",
-            "text": "Give an oral antacid"
+            "text": "Give a dose of liquid antacid to coat the stomach"
           },
           {
             "id": "c",
-            "text": "Schedule an endoscopy for next week"
+            "text": "Call the endoscopy unit to schedule a scope tomorrow"
           },
           {
             "id": "d",
-            "text": "Encourage oral fluids"
+            "text": "Offer sips of cold water to settle the nausea"
           }
         ]
       },
@@ -226,16 +226,16 @@
         "correct": "a"
       },
       "rationale": {
-        "correct": "Upper GI bleed: ABCs, large-bore IV access, fluids and blood, PPIs and urgent endoscopy.",
+        "correct": "Upper GI bleed: ABCs, large-bore IV access, fluids and blood, a proton pump inhibitor and urgent endoscopy.",
         "perOption": {
           "a": "Restoring volume treats the hypovolemic shock from bleeding.",
-          "b": "This doesn't address shock.",
-          "c": "Endoscopy is urgent, after stabilization.",
-          "d": "The client should be NPO."
+          "b": "This does not address shock.",
+          "c": "Endoscopy is urgent and follows stabilization.",
+          "d": "The client is kept NPO."
         },
         "references": [
           "Medical-surgical nursing texts (e.g. Lewis; Ignatavicius)",
-          "Reviewed by the content team on 17 November 2026."
+          "Rewritten to NCLEX-RN difficulty and reviewed by the content team on 19 November 2026."
         ]
       },
       "educationalObjective": "Stabilize a client with an upper GI bleed."
@@ -249,25 +249,25 @@
         "gi-medications"
       ],
       "cjmmSkill": "generate_solutions",
-      "difficulty": "easy",
-      "stem": "When should a client take omeprazole for the best effect?",
+      "difficulty": "moderate",
+      "stem": "A client with erosive esophagitis is prescribed omeprazole 20 mg daily. The client usually eats breakfast at 0700 and takes all medicines with dinner. When should the nurse teach the client to take the omeprazole?",
       "content": {
         "options": [
           {
             "id": "a",
-            "text": "30 to 60 minutes before breakfast"
+            "text": "Around 0630, before breakfast"
           },
           {
             "id": "b",
-            "text": "At bedtime with a snack"
+            "text": "With dinner, along with the other medicines"
           },
           {
             "id": "c",
-            "text": "With an antacid"
+            "text": "At bedtime with a small snack"
           },
           {
             "id": "d",
-            "text": "Only when heartburn occurs"
+            "text": "On the days when heartburn occurs"
           }
         ]
       },
@@ -275,16 +275,16 @@
         "correct": "a"
       },
       "rationale": {
-        "correct": "PPIs: take before breakfast. Long-term use is linked to C. difficile, fractures and low magnesium.",
+        "correct": "PPIs: take before breakfast; long-term use is linked with C. difficile, fractures and low magnesium.",
         "perOption": {
-          "a": "PPIs work best when taken before the first meal of the day.",
-          "b": "This isn't the best timing.",
-          "c": "Antacids aren't needed with it.",
+          "a": "PPIs work best when taken 30 to 60 minutes before the first meal of the day.",
+          "b": "Taking it with food reduces its effect.",
+          "c": "This is not the best timing.",
           "d": "Most PPIs are taken daily."
         },
         "references": [
           "Nursing pharmacology texts (e.g. Lehne; McCuistion) and the drug's prescribing information",
-          "Reviewed by the content team on 17 November 2026."
+          "Rewritten to NCLEX-RN difficulty and reviewed by the content team on 19 November 2026."
         ]
       },
       "educationalObjective": "Teach timing for proton pump inhibitors."
@@ -299,24 +299,24 @@
       ],
       "cjmmSkill": "generate_solutions",
       "difficulty": "moderate",
-      "stem": "A client is prescribed sucralfate. Which instruction should the nurse give?",
+      "stem": "A client with a gastric ulcer is prescribed sucralfate 1 g four times a day and also takes levothyroxine and an antacid. Which instruction should the nurse give?",
       "content": {
         "options": [
           {
             "id": "a",
-            "text": "\"Take it on an empty stomach, and separate it from other medications by 2 hours.\""
+            "text": "\"Take it on an empty stomach, 2 hours apart from other drugs.\""
           },
           {
             "id": "b",
-            "text": "\"Take it with antacids at the same time.\""
+            "text": "\"Take it at the same time as the antacid so they work together.\""
           },
           {
             "id": "c",
-            "text": "\"Take it only at bedtime.\""
+            "text": "\"Take the four doses together at bedtime for convenience.\""
           },
           {
             "id": "d",
-            "text": "\"Chew it with milk.\""
+            "text": "\"Chew the tablet with a glass of milk to protect the ulcer.\""
           }
         ]
       },
@@ -326,14 +326,14 @@
       "rationale": {
         "correct": "Sucralfate forms a protective barrier; take it 1 hour before meals and separate it from other drugs.",
         "perOption": {
-          "a": "Sucralfate coats ulcers and can bind other drugs.",
-          "b": "Antacids interfere with it.",
+          "a": "Sucralfate coats ulcers and can bind other drugs, reducing their absorption.",
+          "b": "Antacids interfere with sucralfate.",
           "c": "It is usually taken before meals and at bedtime.",
-          "d": "This isn't the instruction."
+          "d": "This is not the instruction."
         },
         "references": [
           "Nursing pharmacology texts (e.g. Lehne; McCuistion) and the drug's prescribing information",
-          "Reviewed by the content team on 17 November 2026."
+          "Rewritten to NCLEX-RN difficulty and reviewed by the content team on 19 November 2026."
         ]
       },
       "educationalObjective": "Teach correct use of sucralfate."
@@ -348,12 +348,12 @@
       ],
       "cjmmSkill": "evaluate_outcomes",
       "difficulty": "moderate",
-      "stem": "A client who had a gastrectomy has dumping syndrome. Which statement shows correct understanding?",
+      "stem": "A client who had a partial gastrectomy 3 weeks ago reports cramping, sweating and a racing heart 20 minutes after meals. Which statement by the client shows correct understanding of how to manage this?",
       "content": {
         "options": [
           {
             "id": "a",
-            "text": "\"I'll eat small meals, lower in carbohydrates and higher in protein, and avoid drinking with meals.\""
+            "text": "\"I'll eat small, high-protein meals and drink between meals.\""
           },
           {
             "id": "b",
@@ -361,11 +361,11 @@
           },
           {
             "id": "c",
-            "text": "\"I'll walk right after eating.\""
+            "text": "\"I'll take a brisk walk right after I finish eating each meal.\""
           },
           {
             "id": "d",
-            "text": "\"I'll eat three large meals a day.\""
+            "text": "\"I'll eat three large meals so I'm not eating all day.\""
           }
         ]
       },
@@ -382,7 +382,7 @@
         },
         "references": [
           "Medical-surgical nursing texts (e.g. Lewis; Ignatavicius)",
-          "Reviewed by the content team on 17 November 2026."
+          "Rewritten to NCLEX-RN difficulty and reviewed by the content team on 19 November 2026."
         ]
       },
       "educationalObjective": "Teach dietary management of dumping syndrome."
@@ -397,12 +397,12 @@
       ],
       "cjmmSkill": "evaluate_outcomes",
       "difficulty": "moderate",
-      "stem": "Which method best confirms initial placement of a nasogastric feeding tube before the first feeding?",
+      "stem": "A small-bore nasogastric feeding tube has just been inserted for a client who had a stroke. The first feeding is prescribed. Which method should the nurse use to confirm placement before the first feeding?",
       "content": {
         "options": [
           {
             "id": "a",
-            "text": "Chest or abdominal x-ray"
+            "text": "A chest or abdominal x-ray"
           },
           {
             "id": "b",
@@ -410,11 +410,11 @@
           },
           {
             "id": "c",
-            "text": "Placing the tube end in water to look for bubbles"
+            "text": "Placing the end of the tube in a cup of water"
           },
           {
             "id": "d",
-            "text": "Asking the client to speak"
+            "text": "Asking the client to speak or hum"
           }
         ]
       },
@@ -422,17 +422,17 @@
         "correct": "a"
       },
       "rationale": {
-        "correct": "Confirm initial placement by x-ray. At the bedside, check gastric aspirate pH (5 or less) and the external tube length.",
+        "correct": "Confirm initial placement by x-ray; at the bedside afterward, check gastric aspirate pH (5 or less) and the external tube length.",
         "perOption": {
-          "a": "An x-ray is the most reliable method to confirm initial placement.",
+          "a": "An x-ray is the most reliable way to confirm initial placement.",
           "b": "This method is unreliable.",
           "c": "This is unsafe and unreliable.",
-          "d": "This doesn't confirm placement."
+          "d": "This does not confirm placement."
         },
         "references": [
           "Medical-surgical nursing texts (e.g. Lewis; Ignatavicius)",
           "Fundamentals of nursing texts (e.g. Potter & Perry)",
-          "Reviewed by the content team on 17 November 2026."
+          "Rewritten to NCLEX-RN difficulty and reviewed by the content team on 19 November 2026."
         ]
       },
       "educationalObjective": "Confirm feeding tube placement."
@@ -446,25 +446,25 @@
         "tube-feeding-care"
       ],
       "cjmmSkill": "evaluate_outcomes",
-      "difficulty": "moderate",
-      "stem": "A client is receiving a continuous tube feeding. Which action by assistive personnel requires the nurse to intervene?",
+      "difficulty": "difficult",
+      "stem": "A client is receiving a continuous tube feeding at 60 mL/hr. Which action by assistive personnel requires the nurse to intervene?",
       "content": {
         "options": [
           {
             "id": "a",
-            "text": "Lowers the head of the bed flat to change the linens while the feeding runs"
+            "text": "Lays the bed flat to change linens with the feeding running"
           },
           {
             "id": "b",
-            "text": "Keeps the head of the bed at 35 degrees"
+            "text": "Keeps the head of the bed at 35 degrees through the whole shift"
           },
           {
             "id": "c",
-            "text": "Reports that the client is coughing"
+            "text": "Tells the nurse that the client has started coughing"
           },
           {
             "id": "d",
-            "text": "Records the volume of the feeding infused"
+            "text": "Records the volume infused at the end of the shift"
           }
         ]
       },
@@ -474,14 +474,14 @@
       "rationale": {
         "correct": "Keep the head of the bed at 30 degrees or higher during feedings, and pause the feeding if the client must lie flat.",
         "perOption": {
-          "a": "Lying flat with the feeding running increases the risk of aspiration; the feeding should be paused.",
+          "a": "Lying flat with the feeding running increases aspiration risk; the feeding is paused first.",
           "b": "This is correct.",
           "c": "This is appropriate to report.",
           "d": "This is appropriate."
         },
         "references": [
           "Medical-surgical nursing texts (e.g. Lewis; Ignatavicius)",
-          "Reviewed by the content team on 17 November 2026."
+          "Rewritten to NCLEX-RN difficulty and reviewed by the content team on 19 November 2026."
         ]
       },
       "educationalObjective": "Prevent aspiration during tube feeding."
@@ -494,26 +494,26 @@
       "subtopics": [
         "bowel-disorders"
       ],
-      "cjmmSkill": "recognize_cues",
+      "cjmmSkill": "analyze_cues",
       "difficulty": "moderate",
-      "stem": "Which findings suggest a small bowel obstruction?",
+      "stem": "A 68-year-old client who had abdominal surgery 2 years ago has had crampy abdominal pain and vomiting since last night. Which findings suggest a small bowel obstruction?",
       "content": {
         "options": [
           {
             "id": "a",
-            "text": "Vomiting, abdominal distention and high-pitched bowel sounds"
+            "text": "Distention with high-pitched bowel sounds"
           },
           {
             "id": "b",
-            "text": "Diarrhea with blood"
+            "text": "Bloody diarrhea with lower abdominal pain"
           },
           {
             "id": "c",
-            "text": "Weight gain and constipation over months"
+            "text": "Weight gain with constipation over months"
           },
           {
             "id": "d",
-            "text": "Heartburn after meals"
+            "text": "Burning chest pain after spicy meals"
           }
         ]
       },
@@ -521,16 +521,16 @@
         "correct": "a"
       },
       "rationale": {
-        "correct": "Bowel obstruction: distention, pain, vomiting and changing bowel sounds; managed with NG decompression and NPO status.",
+        "correct": "Bowel obstruction: distention, crampy pain, vomiting and changing bowel sounds; managed with NG decompression and NPO status.",
         "perOption": {
-          "a": "Early obstruction causes high-pitched bowel sounds above the blockage and vomiting.",
+          "a": "Early obstruction causes high-pitched bowel sounds above the blockage, distention and vomiting.",
           "b": "This suggests colitis.",
-          "c": "This isn't acute obstruction.",
+          "c": "This is not an acute obstruction.",
           "d": "This suggests GERD."
         },
         "references": [
           "Medical-surgical nursing texts (e.g. Lewis; Ignatavicius)",
-          "Reviewed by the content team on 17 November 2026."
+          "Rewritten to NCLEX-RN difficulty and reviewed by the content team on 19 November 2026."
         ]
       },
       "educationalObjective": "Recognize a small bowel obstruction."
@@ -545,7 +545,7 @@
       ],
       "cjmmSkill": "analyze_cues",
       "difficulty": "difficult",
-      "stem": "For each feature, indicate whether it is more typical of ulcerative colitis or Crohn's disease.",
+      "stem": "The nurse is caring for two clients with inflammatory bowel disease, one with ulcerative colitis and one with Crohn disease, and is preparing to teach both clients about their condition. For each feature, choose the condition it is more typical of.",
       "content": {
         "rows": [
           {
@@ -576,7 +576,7 @@
           },
           {
             "id": "c2",
-            "text": "Crohn's disease"
+            "text": "Crohn disease"
           }
         ]
       },
@@ -590,25 +590,25 @@
         }
       },
       "rationale": {
-        "correct": "UC: continuous, colon only, mucosal, bloody. Crohn's: skip lesions, full thickness, anywhere in the GI tract, fistulas.",
+        "correct": "UC: continuous, colon only, mucosal and bloody. Crohn disease: skip lesions, full thickness, anywhere in the GI tract, with fistulas.",
         "perOption": {
           "r1:c1": "UC spreads continuously from the rectum.",
-          "r1:c2": "Crohn's has patchy skip lesions.",
+          "r1:c2": "Crohn disease has patchy skip lesions.",
           "r2:c1": "UC is limited to the colon and rectum.",
-          "r2:c2": "Crohn's can affect any part of the GI tract.",
+          "r2:c2": "Crohn disease can affect any part of the GI tract.",
           "r3:c1": "Bloody diarrhea is typical of UC.",
-          "r3:c2": "Crohn's diarrhea is usually less bloody.",
+          "r3:c2": "Crohn diarrhea is usually less bloody.",
           "r4:c1": "These are uncommon in UC.",
           "r4:c2": "Inflammation through the full bowel wall causes fistulas.",
           "r5:c1": "Colectomy removes the disease in UC.",
-          "r5:c2": "Crohn's can recur elsewhere after surgery."
+          "r5:c2": "Crohn disease can recur elsewhere after surgery."
         },
         "references": [
           "Medical-surgical nursing texts (e.g. Lewis; Ignatavicius)",
-          "Reviewed by the content team on 17 November 2026."
+          "Rewritten to NCLEX-RN difficulty and reviewed by the content team on 19 November 2026."
         ]
       },
-      "educationalObjective": "Tell ulcerative colitis apart from Crohn's disease."
+      "educationalObjective": "Tell ulcerative colitis apart from Crohn disease."
     },
     {
       "id": "c1a00016-0000-4000-8000-000000000012",
@@ -619,25 +619,25 @@
         "bowel-disorders"
       ],
       "cjmmSkill": "generate_solutions",
-      "difficulty": "moderate",
-      "stem": "During a flare of inflammatory bowel disease, which diet should the nurse expect?",
+      "difficulty": "difficult",
+      "stem": "A client with a severe flare of Crohn disease has 10 liquid stools a day, a new enterocutaneous fistula, an albumin of 2.4 g/dL and a 7 kg weight loss. Which nutrition plan should the nurse anticipate?",
       "content": {
         "options": [
           {
             "id": "a",
-            "text": "Low-residue, high-protein, high-calorie"
+            "text": "Bowel rest with parenteral nutrition"
           },
           {
             "id": "b",
-            "text": "High-fiber"
+            "text": "A high-fiber diet to bulk up the stools"
           },
           {
             "id": "c",
-            "text": "High-fat"
+            "text": "A high-fat diet to increase calories"
           },
           {
             "id": "d",
-            "text": "Unrestricted dairy"
+            "text": "A regular diet with extra dairy for protein"
           }
         ]
       },
@@ -645,16 +645,16 @@
         "correct": "a"
       },
       "rationale": {
-        "correct": "IBD flare: low residue, adequate protein and calories, and NPO or parenteral nutrition if severe.",
+        "correct": "Severe IBD flare with fistula or malnutrition: bowel rest with parenteral nutrition; milder flares use a low-residue, high-protein diet.",
         "perOption": {
-          "a": "Low residue rests the bowel, while protein and calories meet healing needs.",
-          "b": "Fiber can worsen diarrhea and cramping during a flare.",
+          "a": "Bowel rest lets the fistula and bowel heal while PN meets high protein and calorie needs.",
+          "b": "Fiber worsens diarrhea and cramping during a flare.",
           "c": "Fat may worsen diarrhea.",
-          "d": "Lactose intolerance is common."
+          "d": "Lactose intolerance is common, and the bowel needs rest."
         },
         "references": [
           "Medical-surgical nursing texts (e.g. Lewis; Ignatavicius)",
-          "Reviewed by the content team on 17 November 2026."
+          "Rewritten to NCLEX-RN difficulty and reviewed by the content team on 19 November 2026."
         ]
       },
       "educationalObjective": "Plan nutrition during an IBD flare."
@@ -669,24 +669,24 @@
       ],
       "cjmmSkill": "generate_solutions",
       "difficulty": "moderate",
-      "stem": "A client has recovered from an episode of acute diverticulitis. Which diet should the nurse teach for prevention?",
+      "stem": "A 61-year-old client is going home after recovering from an episode of acute diverticulitis treated with bowel rest and antibiotics. Which diet should the nurse teach to help prevent further episodes?",
       "content": {
         "options": [
           {
             "id": "a",
-            "text": "High-fiber"
+            "text": "A high-fiber diet with plenty of fluids"
           },
           {
             "id": "b",
-            "text": "Low-fiber"
+            "text": "A low-fiber diet for the rest of the client's life"
           },
           {
             "id": "c",
-            "text": "Clear liquids only"
+            "text": "Clear liquids whenever the client feels bloated"
           },
           {
             "id": "d",
-            "text": "High-fat"
+            "text": "A high-fat diet to keep the stool soft"
           }
         ]
       },
@@ -697,13 +697,13 @@
         "correct": "Acute diverticulitis: bowel rest and antibiotics. Prevention: a high-fiber diet with fluids.",
         "perOption": {
           "a": "Fiber softens stool and lowers pressure in the colon.",
-          "b": "Low fiber is used during the acute phase only.",
-          "c": "This is for acute episodes.",
-          "d": "This isn't preventive."
+          "b": "Low fiber is used only during the acute phase.",
+          "c": "Clear liquids are for acute episodes.",
+          "d": "This is not preventive."
         },
         "references": [
           "Medical-surgical nursing texts (e.g. Lewis; Ignatavicius)",
-          "Reviewed by the content team on 17 November 2026."
+          "Rewritten to NCLEX-RN difficulty and reviewed by the content team on 19 November 2026."
         ]
       },
       "educationalObjective": "Teach diet to prevent diverticulitis."
@@ -717,25 +717,25 @@
         "bowel-disorders"
       ],
       "cjmmSkill": "take_action",
-      "difficulty": "moderate",
-      "stem": "A client with suspected appendicitis asks for a heating pad for abdominal pain. What should the nurse do?",
+      "difficulty": "difficult",
+      "stem": "A 19-year-old client admitted with suspected appendicitis rates right lower abdominal pain as 7 out of 10 and asks for a heating pad. What should the nurse do?",
       "content": {
         "options": [
           {
             "id": "a",
-            "text": "Explain that heat should be avoided, and offer a cold pack if appropriate"
+            "text": "Explain that heat is avoided; offer a cold pack if prescribed"
           },
           {
             "id": "b",
-            "text": "Apply the heating pad"
+            "text": "Place a heating pad on the lower abdomen on the low setting for comfort"
           },
           {
             "id": "c",
-            "text": "Give a laxative"
+            "text": "Give the PRN laxative to relieve any constipation"
           },
           {
             "id": "d",
-            "text": "Give an enema"
+            "text": "Give a small enema to relieve abdominal pressure"
           }
         ]
       },
@@ -743,16 +743,16 @@
         "correct": "a"
       },
       "rationale": {
-        "correct": "Appendicitis: avoid heat, laxatives and enemas; keep NPO and prepare for surgery.",
+        "correct": "Suspected appendicitis: avoid heat, laxatives and enemas; keep the client NPO and prepare for surgery.",
         "perOption": {
           "a": "Heat may increase inflammation and the risk of rupture.",
-          "b": "Heat isn't recommended.",
+          "b": "Heat is not recommended.",
           "c": "Laxatives can cause perforation.",
           "d": "Enemas can cause perforation."
         },
         "references": [
           "Medical-surgical nursing texts (e.g. Lewis; Ignatavicius)",
-          "Reviewed by the content team on 17 November 2026."
+          "Rewritten to NCLEX-RN difficulty and reviewed by the content team on 19 November 2026."
         ]
       },
       "educationalObjective": "Prevent rupture in suspected appendicitis."
@@ -767,24 +767,24 @@
       ],
       "cjmmSkill": "generate_solutions",
       "difficulty": "moderate",
-      "stem": "At what age should an adult at average risk begin colorectal cancer screening?",
+      "stem": "A 46-year-old client at average risk for colorectal cancer has never been screened and says, \"I'll wait until I'm 50, like my father did.\" What should the nurse tell the client?",
       "content": {
         "options": [
           {
             "id": "a",
-            "text": "45"
+            "text": "\"Screening for average-risk adults now starts at age 45.\""
           },
           {
             "id": "b",
-            "text": "30"
+            "text": "\"You're right; screening for most people starts at 50.\""
           },
           {
             "id": "c",
-            "text": "60"
+            "text": "\"Screening isn't needed unless you notice blood in the stool.\""
           },
           {
             "id": "d",
-            "text": "Only when symptoms appear"
+            "text": "\"You should wait until 60 if you have no family history.\""
           }
         ]
       },
@@ -792,16 +792,16 @@
         "correct": "a"
       },
       "rationale": {
-        "correct": "Colorectal screening starts at 45 (colonoscopy every 10 years or other approved tests).",
+        "correct": "Colorectal screening starts at 45 for average-risk adults, by colonoscopy every 10 years or another approved test.",
         "perOption": {
           "a": "Current recommendations start screening for average-risk adults at 45.",
-          "b": "This is too early for average risk.",
-          "c": "This is too late.",
-          "d": "Screening is for people without symptoms."
+          "b": "The starting age was lowered to 45.",
+          "c": "Screening is for people without symptoms.",
+          "d": "This is too late."
         },
         "references": [
           "U.S. Preventive Services Task Force recommendations",
-          "Reviewed by the content team on 17 November 2026."
+          "Rewritten to NCLEX-RN difficulty and reviewed by the content team on 19 November 2026."
         ]
       },
       "educationalObjective": "Identify the starting age for colorectal cancer screening."
@@ -815,25 +815,25 @@
         "gi-diagnostic-procedures"
       ],
       "cjmmSkill": "evaluate_outcomes",
-      "difficulty": "easy",
-      "stem": "A client is preparing for a colonoscopy. Which statement shows a need for more teaching?",
+      "difficulty": "moderate",
+      "stem": "A client is preparing at home for a colonoscopy tomorrow morning. Which statement by the client shows a need for more teaching?",
       "content": {
         "options": [
           {
             "id": "a",
-            "text": "\"I'll have clear liquids the day before.\""
+            "text": "\"I'll stick to clear liquids for the whole day today.\""
           },
           {
             "id": "b",
-            "text": "\"I'll drink red gelatin and grape juice.\""
+            "text": "\"I'll have red gelatin and grape juice tonight.\""
           },
           {
             "id": "c",
-            "text": "\"I'll finish the whole bowel prep.\""
+            "text": "\"I'll drink all of the bowel prep, even if it's hard.\""
           },
           {
             "id": "d",
-            "text": "\"I'll arrange for a ride home.\""
+            "text": "\"My sister will drive me home after the test.\""
           }
         ]
       },
@@ -841,16 +841,16 @@
         "correct": "b"
       },
       "rationale": {
-        "correct": "Colonoscopy prep: clear liquids, no red or purple dyes, complete bowel prep, a ride home.",
+        "correct": "Colonoscopy prep: clear liquids, no red or purple dyes, the complete bowel prep and a ride home.",
         "perOption": {
           "a": "This is correct.",
           "b": "Red and purple liquids can look like blood in the colon.",
           "c": "A complete prep allows a clear view.",
-          "d": "Sedation is used."
+          "d": "Sedation is used, so a ride home is needed."
         },
         "references": [
           "Medical-surgical nursing texts (e.g. Lewis; Ignatavicius)",
-          "Reviewed by the content team on 17 November 2026."
+          "Rewritten to NCLEX-RN difficulty and reviewed by the content team on 19 November 2026."
         ]
       },
       "educationalObjective": "Teach colonoscopy preparation."
@@ -864,25 +864,25 @@
         "ostomy-care"
       ],
       "cjmmSkill": "recognize_cues",
-      "difficulty": "easy",
-      "stem": "Which stoma appearance should the nurse report right away?",
+      "difficulty": "moderate",
+      "stem": "The nurse is assessing four clients with new ostomies on the first day after surgery. Which stoma finding should the nurse report to the surgeon right away?",
       "content": {
         "options": [
           {
             "id": "a",
-            "text": "Moist and beefy red"
+            "text": "A moist, beefy red stoma with mucus"
           },
           {
             "id": "b",
-            "text": "Pink with slight bleeding when touched"
+            "text": "A pink stoma that bleeds slightly when cleaned"
           },
           {
             "id": "c",
-            "text": "Dark purple to black"
+            "text": "A stoma that has turned dark purple to black"
           },
           {
             "id": "d",
-            "text": "Slightly swollen in the first days after surgery"
+            "text": "A stoma that is slightly swollen and shiny"
           }
         ]
       },
@@ -893,13 +893,13 @@
         "correct": "A healthy stoma is moist and red-pink; a dusky or black stoma needs immediate attention.",
         "perOption": {
           "a": "This is a healthy stoma.",
-          "b": "Slight bleeding is normal.",
-          "c": "This indicates poor blood supply (necrosis).",
-          "d": "Edema is expected early."
+          "b": "Slight bleeding when cleaned is normal.",
+          "c": "This indicates poor blood supply and necrosis.",
+          "d": "Edema is expected in the first days."
         },
         "references": [
           "Medical-surgical nursing texts (e.g. Lewis; Ignatavicius)",
-          "Reviewed by the content team on 17 November 2026."
+          "Rewritten to NCLEX-RN difficulty and reviewed by the content team on 19 November 2026."
         ]
       },
       "educationalObjective": "Assess a stoma."
@@ -913,8 +913,8 @@
         "ostomy-care"
       ],
       "cjmmSkill": "generate_solutions",
-      "difficulty": "moderate",
-      "stem": "A client with a new ileostomy is going home. Which instruction is most important?",
+      "difficulty": "difficult",
+      "stem": "A 34-year-old client with a new ileostomy for ulcerative colitis is going home. The output has been 1,200 mL a day of liquid stool. Which instruction is most important?",
       "content": {
         "options": [
           {
@@ -923,15 +923,15 @@
           },
           {
             "id": "b",
-            "text": "Irrigate the ileostomy daily"
+            "text": "Irrigate the ileostomy each morning to make the output regular"
           },
           {
             "id": "c",
-            "text": "Expect formed stool"
+            "text": "Expect the stool to become formed within a few weeks"
           },
           {
             "id": "d",
-            "text": "Limit fluids to reduce output"
+            "text": "Limit fluids so that the output is lower"
           }
         ]
       },
@@ -939,16 +939,16 @@
         "correct": "a"
       },
       "rationale": {
-        "correct": "Ileostomy: high risk of fluid and electrolyte loss; chew food well and watch for blockage.",
+        "correct": "Ileostomy: a high risk of fluid and electrolyte loss; chew food well and watch for blockage.",
         "perOption": {
-          "a": "Ileostomy output is liquid and contains electrolytes; dehydration is a major risk.",
-          "b": "Ileostomies aren't irrigated.",
-          "c": "Ileostomy output is liquid.",
+          "a": "Ileostomy output is liquid and contains electrolytes, so dehydration is a major risk.",
+          "b": "Ileostomies are not irrigated.",
+          "c": "Ileostomy output stays liquid to pasty.",
           "d": "This causes dehydration."
         },
         "references": [
           "Medical-surgical nursing texts (e.g. Lewis; Ignatavicius)",
-          "Reviewed by the content team on 17 November 2026."
+          "Rewritten to NCLEX-RN difficulty and reviewed by the content team on 19 November 2026."
         ]
       },
       "educationalObjective": "Teach ileostomy self-care."
@@ -963,7 +963,7 @@
       ],
       "cjmmSkill": "take_action",
       "difficulty": "easy",
-      "stem": "How large should the opening of the pouch skin barrier be compared with the stoma?",
+      "stem": "The nurse is teaching a client how to cut the skin barrier for a new colostomy pouch. How large should the opening be compared with the stoma?",
       "content": {
         "options": [
           {
@@ -972,15 +972,15 @@
           },
           {
             "id": "b",
-            "text": "Exactly the same size"
+            "text": "Exactly the same size, so no skin shows"
           },
           {
             "id": "c",
-            "text": "About 2.5 cm (1 inch) larger"
+            "text": "About 2.5 cm (1 inch) larger, for comfort"
           },
           {
             "id": "d",
-            "text": "Smaller than the stoma"
+            "text": "Slightly smaller, so the seal is tight"
           }
         ]
       },
@@ -997,7 +997,7 @@
         },
         "references": [
           "Medical-surgical nursing texts (e.g. Lewis; Ignatavicius)",
-          "Reviewed by the content team on 17 November 2026."
+          "Rewritten to NCLEX-RN difficulty and reviewed by the content team on 19 November 2026."
         ]
       },
       "educationalObjective": "Fit an ostomy pouch correctly."
@@ -1011,25 +1011,25 @@
         "bowel-elimination"
       ],
       "cjmmSkill": "generate_solutions",
-      "difficulty": "easy",
-      "stem": "Which instruction should the nurse give an older adult with chronic constipation?",
+      "difficulty": "moderate",
+      "stem": "An 80-year-old client in assisted living has had hard stools every 4 to 5 days for months and takes a stimulant laxative most days. The client drinks about 800 mL a day. Which instruction should the nurse give?",
       "content": {
         "options": [
           {
             "id": "a",
-            "text": "Increase fiber and fluids, and stay active"
+            "text": "Increase fiber and fluids and stay as active as possible"
           },
           {
             "id": "b",
-            "text": "Use stimulant laxatives daily"
+            "text": "Keep taking the stimulant laxative each day"
           },
           {
             "id": "c",
-            "text": "Ignore the urge to have a bowel movement"
+            "text": "Wait to use the toilet until the urge is strong"
           },
           {
             "id": "d",
-            "text": "Limit fluids"
+            "text": "Drink less so that the bladder is not overworked"
           }
         ]
       },
@@ -1040,13 +1040,13 @@
         "correct": "Prevent constipation with fiber, fluids, activity and responding promptly to the urge.",
         "perOption": {
           "a": "These promote regular bowel movements.",
-          "b": "Daily use can cause dependence.",
-          "c": "This worsens constipation.",
+          "b": "Daily stimulant use can cause dependence.",
+          "c": "Ignoring or delaying the urge worsens constipation.",
           "d": "This worsens constipation."
         },
         "references": [
           "Fundamentals of nursing texts (e.g. Potter & Perry)",
-          "Reviewed by the content team on 17 November 2026."
+          "Rewritten to NCLEX-RN difficulty and reviewed by the content team on 19 November 2026."
         ]
       },
       "educationalObjective": "Teach constipation prevention."
@@ -1061,24 +1061,24 @@
       ],
       "cjmmSkill": "generate_solutions",
       "difficulty": "moderate",
-      "stem": "A client is starting long-term oxycodone. Which bowel regimen should the nurse anticipate?",
+      "stem": "A client with cancer pain is starting long-acting oxycodone twice a day. Which bowel regimen should the nurse anticipate?",
       "content": {
         "options": [
           {
             "id": "a",
-            "text": "A stool softener with a stimulant laxative, started with the opioid"
+            "text": "A stool softener plus a stimulant laxative, started now"
           },
           {
             "id": "b",
-            "text": "A bulk-forming laxative alone with limited fluids"
+            "text": "A bulk-forming laxative alone, with fluids limited to 1 L a day"
           },
           {
             "id": "c",
-            "text": "No regimen unless constipation develops"
+            "text": "No regimen unless constipation develops later in treatment"
           },
           {
             "id": "d",
-            "text": "Daily enemas"
+            "text": "A daily soapsuds enema to keep the bowel empty"
           }
         ]
       },
@@ -1086,16 +1086,16 @@
         "correct": "a"
       },
       "rationale": {
-        "correct": "Opioid-induced constipation doesn't resolve with time; start a preventive regimen.",
+        "correct": "Opioid-induced constipation does not resolve with time; start a preventive regimen with the opioid.",
         "perOption": {
-          "a": "Opioids slow bowel movement; preventive treatment is needed.",
+          "a": "Opioids slow the bowel, so preventive treatment is started at once.",
           "b": "Bulk without enough fluid can cause impaction.",
           "c": "Prevention is recommended.",
-          "d": "These aren't first-line."
+          "d": "Enemas are not first-line."
         },
         "references": [
           "Nursing pharmacology texts (e.g. Lehne; McCuistion) and the drug's prescribing information",
-          "Reviewed by the content team on 17 November 2026."
+          "Rewritten to NCLEX-RN difficulty and reviewed by the content team on 19 November 2026."
         ]
       },
       "educationalObjective": "Prevent opioid-induced constipation."
@@ -1110,24 +1110,24 @@
       ],
       "cjmmSkill": "recognize_cues",
       "difficulty": "moderate",
-      "stem": "A client is receiving IV ondansetron. Which finding is most important to monitor?",
+      "stem": "A client with chemotherapy-induced nausea is receiving IV ondansetron and also takes citalopram for depression and methadone for chronic pain. Which finding is most important for the nurse to monitor?",
       "content": {
         "options": [
           {
             "id": "a",
-            "text": "QT interval on the ECG"
+            "text": "The QT interval on the ECG"
           },
           {
             "id": "b",
-            "text": "Blood glucose"
+            "text": "The capillary blood glucose"
           },
           {
             "id": "c",
-            "text": "Hearing"
+            "text": "Hearing and balance"
           },
           {
             "id": "d",
-            "text": "Urine color"
+            "text": "The color of the urine"
           }
         ]
       },
@@ -1135,16 +1135,16 @@
         "correct": "a"
       },
       "rationale": {
-        "correct": "Ondansetron: QT prolongation, headache and constipation.",
+        "correct": "Ondansetron can prolong the QT interval, especially with other QT-prolonging drugs; it also causes headache and constipation.",
         "perOption": {
-          "a": "Ondansetron can prolong the QT interval and cause dysrhythmias.",
-          "b": "This isn't the key concern.",
-          "c": "This isn't the key concern.",
-          "d": "This isn't the key concern."
+          "a": "Ondansetron, citalopram and methadone can each prolong the QT interval and cause dysrhythmias.",
+          "b": "This is not the key concern.",
+          "c": "This is not the key concern.",
+          "d": "This is not the key concern."
         },
         "references": [
           "Nursing pharmacology texts (e.g. Lehne; McCuistion) and the drug's prescribing information",
-          "Reviewed by the content team on 17 November 2026."
+          "Rewritten to NCLEX-RN difficulty and reviewed by the content team on 19 November 2026."
         ]
       },
       "educationalObjective": "Monitor for ondansetron adverse effects."
@@ -1157,9 +1157,9 @@
       "subtopics": [
         "bowel-disorders"
       ],
-      "cjmmSkill": "recognize_cues",
-      "difficulty": "moderate",
-      "stem": "On the second day after abdominal surgery, the client has a distended abdomen, no bowel sounds and no flatus. What does the nurse suspect?",
+      "cjmmSkill": "analyze_cues",
+      "difficulty": "difficult",
+      "stem": "On the third day after an open colectomy, a client has a distended, tympanic abdomen, no bowel sounds in any quadrant, no flatus and nausea. The client is taking IV morphine and has a potassium of 3.2 mEq/L. Which condition does the nurse suspect?",
       "content": {
         "options": [
           {
@@ -1168,15 +1168,15 @@
           },
           {
             "id": "b",
-            "text": "Normal recovery"
+            "text": "Expected recovery after abdominal surgery"
           },
           {
             "id": "c",
-            "text": "Appendicitis"
+            "text": "Leak at the bowel anastomosis"
           },
           {
             "id": "d",
-            "text": "Diarrhea"
+            "text": "Clostridioides difficile colitis"
           }
         ]
       },
@@ -1184,16 +1184,16 @@
         "correct": "a"
       },
       "rationale": {
-        "correct": "Paralytic ileus: NPO, NG decompression if needed, early walking and electrolyte correction.",
+        "correct": "Paralytic ileus: NPO, NG decompression if needed, early walking, fewer opioids and correction of electrolytes.",
         "perOption": {
-          "a": "Reduced peristalsis after surgery causes absent bowel sounds and distention.",
-          "b": "Absent bowel sounds with distention isn't expected by day 2.",
-          "c": "This isn't the likely cause.",
-          "d": "This doesn't fit."
+          "a": "Reduced peristalsis after surgery, worsened by opioids and low potassium, causes absent bowel sounds and distention.",
+          "b": "Absent bowel sounds with distention are not expected by day 3.",
+          "c": "A leak usually causes fever, increasing pain and signs of peritonitis.",
+          "d": "This causes diarrhea, not absent bowel sounds."
         },
         "references": [
           "Medical-surgical nursing texts (e.g. Lewis; Ignatavicius)",
-          "Reviewed by the content team on 17 November 2026."
+          "Rewritten to NCLEX-RN difficulty and reviewed by the content team on 19 November 2026."
         ]
       },
       "educationalObjective": "Recognize postoperative ileus."
@@ -1207,8 +1207,8 @@
         "tube-feeding-care"
       ],
       "cjmmSkill": "take_action",
-      "difficulty": "easy",
-      "stem": "A client is to receive 1,440 mL of enteral formula continuously over 24 hours. At what rate should the nurse set the feeding pump?",
+      "difficulty": "moderate",
+      "stem": "A client with dysphagia after a stroke is to receive 1,440 mL of enteral formula continuously over 24 hours through a gastrostomy tube, with 30 mL water flushes every 4 hours. The client weighs 70 kg and the head of the bed is at 35 degrees. At what rate should the nurse set the feeding pump?",
       "content": {
         "unit": "mL/hr",
         "decimals": 0,
@@ -1219,11 +1219,11 @@
         "rounding": "exact"
       },
       "rationale": {
-        "correct": "Rate = 1,440 mL ÷ 24 hr = 60 mL/hr.",
+        "correct": "Rate = 1,440 mL ÷ 24 hr = 60 mL/hr. The water flushes are given separately and are not part of the formula rate.",
         "perOption": {},
         "references": [
           "Fundamentals of nursing texts (e.g. Potter & Perry)",
-          "Reviewed by the content team on 17 November 2026."
+          "Rewritten to NCLEX-RN difficulty and reviewed by the content team on 19 November 2026."
         ]
       },
       "educationalObjective": "Calculate a continuous tube feeding rate."
@@ -1238,7 +1238,7 @@
       ],
       "cjmmSkill": "take_action",
       "difficulty": "moderate",
-      "stem": "The nurse is inserting a nasogastric tube. Place the steps in order.",
+      "stem": "The nurse is inserting a nasogastric tube for decompression in a client with a bowel obstruction. Place the steps in order, from first to last.",
       "content": {
         "items": [
           {
@@ -1274,17 +1274,17 @@
         "scoring": "all_or_nothing"
       },
       "rationale": {
-        "correct": "Measure, lubricate, insert, flex and swallow, confirm placement.",
+        "correct": "Measure, lubricate, insert, flex and swallow, then confirm placement.",
         "perOption": {
           "a": "Measuring sets how far to insert the tube.",
           "b": "Lubrication makes insertion easier and reduces trauma.",
           "c": "This follows the natural curve of the nasopharynx.",
-          "d": "Flexing the neck and swallowing help guide the tube into the esophagus.",
-          "e": "Placement must be verified to prevent aspiration."
+          "d": "Flexing the neck and swallowing guide the tube into the esophagus.",
+          "e": "Placement is verified before use to prevent aspiration."
         },
         "references": [
           "Fundamentals of nursing texts (e.g. Potter & Perry)",
-          "Reviewed by the content team on 17 November 2026."
+          "Rewritten to NCLEX-RN difficulty and reviewed by the content team on 19 November 2026."
         ]
       },
       "educationalObjective": "Insert a nasogastric tube in the correct sequence."
