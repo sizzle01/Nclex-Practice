@@ -97,6 +97,7 @@ def _scenario_words(q):
     texts += [cell if isinstance(cell, str) else cell.get("text", "") for r in c.get("rows", []) for cell in r.get("cells", [])]
     texts += [seg["text"] for seg in c.get("segments", [])]
     texts += [c["template"]] if "template" in c else []
+    texts += [o["text"] for b in c.get("blanks", []) for o in b["options"]]
     return len(_words(q["stem"])) + sum(len(_words(t)) for t in texts)
 
 
