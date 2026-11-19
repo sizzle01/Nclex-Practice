@@ -53,8 +53,8 @@ Written by `python3 -I build_all.py`; do not edit by hand. See `quality.py` for 
 | 61-management-of-care-settings | 33 | yes | 24 | 25% | 31% (skip absolutes) | 4% | 26 | 3/19/11 |
 | 62-safety-systems | 32 | yes | 24 | 12% | 25% (assess first) | 12% | 31 | 4/18/10 |
 | 63-management-of-care-legal-it | 30 | yes | 25 | 20% | 25% (assess first) | 12% | 35 | 3/18/9 |
-| 64-safety-infection-injury | 29 |  | 24 | 92% | 92% (longest) | 33% | 16 | 1/24/4 |
+| 64-safety-infection-injury | 29 | yes | 24 | 17% | 25% (assess first) | 12% | 29 | 3/17/9 |
 | 65-management-of-care-specialty | 27 |  | 18 | 83% | 86% (longest) | 11% | 15 | 0/14/13 |
 | 66-risk-reduction-basic-care | 31 |  | 27 | 93% | 94% (longest) | 26% | 17 | 1/26/4 |
 | 67-moc-sic-ngn | 34 |  | 23 | 87% | 89% (longest) | 17% | 18 | 0/25/9 |
-| **Whole bank** | 1110 | | 874 | 63% | 65% (longest) | 15% | 19 | 160/719/231 |
+| **Whole bank** | 1110 | | 874 | 61% | 63% (longest) | 15% | 19 | 162/712/236 |

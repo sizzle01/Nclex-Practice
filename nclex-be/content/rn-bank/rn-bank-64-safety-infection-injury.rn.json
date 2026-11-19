@@ -501,7 +501,7 @@
         "options": [
           {
             "id": "a",
-            "text": "Activate the safety device, then carry it to the sharps container"
+            "text": "Engage the needle's protective shield, then discard it right away"
           },
           {
             "id": "b",
@@ -664,7 +664,7 @@
           },
           {
             "id": "b",
-            "text": "Remove the gloves, perform hand hygiene and put on new sterile gloves"
+            "text": "Discard both gloves, clean the hands and put on a fresh pair"
           },
           {
             "id": "c",
@@ -1098,7 +1098,7 @@
           },
           {
             "id": "b",
-            "text": "Have the dryer checked under facility policy before it is used"
+            "text": "Ask biomedical engineering to inspect it first, as policy requires"
           },
           {
             "id": "c",
