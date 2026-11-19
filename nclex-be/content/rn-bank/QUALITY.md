@@ -27,7 +27,7 @@ Written by `python3 -I build_all.py`; do not edit by hand. See `quality.py` for 
 | 14-neuro-1 | 25 | yes | 21 | 5% | 29% (assess first) | 0% | 31 | 2/15/8 |
 | 15-neuro-2-sensory | 25 | yes | 23 | 13% | 27% (assess first) | 13% | 31 | 3/14/8 |
 | 16-gi-1 | 25 | yes | 22 | 14% | 25% (assess first) | 9% | 32 | 1/16/8 |
-| 17-gi-2-liver-pancreas | 24 |  | 20 | 80% | 80% (longest) | 10% | 14 | 8/14/2 |
+| 17-gi-2-liver-pancreas | 24 | yes | 20 | 10% | 24% (assess first) | 15% | 28 | 2/14/8 |
 | 18-hematology | 23 |  | 18 | 78% | 81% (longest) | 0% | 17 | 1/17/5 |
 | 19-oncology-palliative | 24 |  | 22 | 82% | 82% (longest) | 27% | 17 | 5/17/2 |
 | 20-immune-infectious | 25 |  | 23 | 74% | 74% (longest) | 22% | 16 | 4/20/1 |
@@ -57,4 +57,4 @@ Written by `python3 -I build_all.py`; do not edit by hand. See `quality.py` for 
 | 65-management-of-care-specialty | 27 | yes | 18 | 22% | 28% (stem words) | 11% | 27 | 2/15/10 |
 | 66-risk-reduction-basic-care | 31 | yes | 27 | 7% | 29% (assess first) | 15% | 32 | 4/17/10 |
 | 67-moc-sic-ngn | 34 | yes | 23 | 0% | 23% (shortest) | 9% | 32 | 0/23/11 |
-| **Whole bank** | 1110 | | 874 | 42% | 44% (longest) | 13% | 25 | 146/689/275 |
+| **Whole bank** | 1110 | | 874 | 40% | 42% (skip absolutes) | 13% | 26 | 140/689/281 |

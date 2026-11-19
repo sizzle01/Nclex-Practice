@@ -1,5 +1,5 @@
 {
-  "notice": "RN bank batch 17: Gastrointestinal II: liver, pancreas, gallbladder and hepatitis. Reviewed by the content team on 17 November 2026. See REVIEW-LOG.md.",
+  "notice": "RN bank batch 17: Gastrointestinal II: liver, pancreas, gallbladder and hepatitis. Rewritten to NCLEX-RN difficulty and reviewed by the content team on 19 November 2026. See REVIEW-LOG.md.",
   "track": "RN",
   "subtopics": [
     {
@@ -49,24 +49,24 @@
       ],
       "cjmmSkill": "recognize_cues",
       "difficulty": "moderate",
-      "stem": "Which finding is an early sign of hepatic encephalopathy in a client with cirrhosis?",
+      "stem": "A 58-year-old client with alcohol-related cirrhosis is admitted with worsening ascites. The family says the client has been sleeping during the day and awake at night. Which finding is an early sign of hepatic encephalopathy?",
       "content": {
         "options": [
           {
             "id": "a",
-            "text": "Flapping tremor of the hands when the arms are held out (asterixis)"
+            "text": "A flapping tremor of the hands when the arms are held out"
           },
           {
             "id": "b",
-            "text": "Jaundice"
+            "text": "Yellow sclera and skin that have been present for months"
           },
           {
             "id": "c",
-            "text": "Ascites"
+            "text": "A tense, distended abdomen with a fluid wave on percussion"
           },
           {
             "id": "d",
-            "text": "Spider angiomas"
+            "text": "Small red spider-shaped lesions on the chest"
           }
         ]
       },
@@ -74,16 +74,16 @@
         "correct": "a"
       },
       "rationale": {
-        "correct": "Hepatic encephalopathy: confusion, asterixis, sleep changes and fetor hepaticus.",
+        "correct": "Hepatic encephalopathy: confusion, sleep reversal, asterixis and fetor hepaticus.",
         "perOption": {
-          "a": "Asterixis and subtle confusion are early signs of rising ammonia.",
+          "a": "Asterixis and subtle confusion or sleep reversal are early signs of rising ammonia.",
           "b": "Jaundice reflects bilirubin, not encephalopathy.",
           "c": "Ascites reflects portal hypertension and low albumin.",
-          "d": "These reflect hormone changes in liver disease."
+          "d": "Spider angiomas reflect hormone changes in liver disease."
         },
         "references": [
           "Medical-surgical nursing texts (e.g. Lewis; Ignatavicius)",
-          "Reviewed by the content team on 17 November 2026."
+          "Rewritten to NCLEX-RN difficulty and reviewed by the content team on 19 November 2026."
         ]
       },
       "educationalObjective": "Recognize early hepatic encephalopathy."
@@ -98,24 +98,24 @@
       ],
       "cjmmSkill": "evaluate_outcomes",
       "difficulty": "moderate",
-      "stem": "A client with hepatic encephalopathy is receiving lactulose. Which finding shows the medication is working?",
+      "stem": "A client with hepatic encephalopathy has been receiving lactulose 30 mL four times a day for 2 days. Which finding best shows the medication is working as intended?",
       "content": {
         "options": [
           {
             "id": "a",
-            "text": "Two to three soft stools a day and improved mental status"
+            "text": "Two or three soft stools a day and clearer thinking"
           },
           {
             "id": "b",
-            "text": "No bowel movements"
+            "text": "No bowel movement since the drug was started"
           },
           {
             "id": "c",
-            "text": "Ten watery stools a day"
+            "text": "Ten watery stools a day and new dizziness on standing up"
           },
           {
             "id": "d",
-            "text": "Increased ammonia level"
+            "text": "An ammonia level that has risen since admission"
           }
         ]
       },
@@ -123,16 +123,16 @@
         "correct": "a"
       },
       "rationale": {
-        "correct": "Lactulose: titrate to 2 to 3 soft stools daily; monitor potassium and hydration.",
+        "correct": "Lactulose is adjusted to 2 to 3 soft stools a day; monitor potassium and hydration.",
         "perOption": {
           "a": "Lactulose traps ammonia in the bowel and removes it in the stool.",
-          "b": "This means it isn't working.",
+          "b": "This means it is not working.",
           "c": "Excessive diarrhea causes dehydration and electrolyte loss.",
           "d": "The ammonia should fall."
         },
         "references": [
           "Nursing pharmacology texts (e.g. Lehne; McCuistion) and the drug's prescribing information",
-          "Reviewed by the content team on 17 November 2026."
+          "Rewritten to NCLEX-RN difficulty and reviewed by the content team on 19 November 2026."
         ]
       },
       "educationalObjective": "Evaluate the response to lactulose."
@@ -147,24 +147,24 @@
       ],
       "cjmmSkill": "generate_solutions",
       "difficulty": "moderate",
-      "stem": "A client with cirrhosis has ascites. Which diet should the nurse expect?",
+      "stem": "A client with cirrhosis and tense ascites is starting spironolactone and furosemide. The client asks what to eat at home. Which diet should the nurse expect to teach?",
       "content": {
         "options": [
           {
             "id": "a",
-            "text": "Sodium restricted to about 2 g a day"
+            "text": "Sodium limited to about 2 g a day, with adequate protein"
           },
           {
             "id": "b",
-            "text": "High-sodium"
+            "text": "A high-sodium diet to replace what the diuretics remove"
           },
           {
             "id": "c",
-            "text": "Unlimited fluids and sodium"
+            "text": "Unrestricted salt as long as the client takes the diuretics"
           },
           {
             "id": "d",
-            "text": "No protein"
+            "text": "A protein-free diet to prevent confusion"
           }
         ]
       },
@@ -174,14 +174,14 @@
       "rationale": {
         "correct": "Ascites: sodium restriction, diuretics (spironolactone with furosemide) and paracentesis when needed.",
         "perOption": {
-          "a": "Sodium restriction reduces fluid accumulation.",
-          "b": "This worsens ascites.",
+          "a": "Sodium restriction reduces fluid build-up, and enough protein prevents malnutrition.",
+          "b": "Extra sodium worsens ascites.",
           "c": "This worsens ascites.",
-          "d": "Severe protein restriction isn't recommended; adequate protein prevents malnutrition."
+          "d": "Severe protein restriction is not recommended; it worsens malnutrition."
         },
         "references": [
           "Medical-surgical nursing texts (e.g. Lewis; Ignatavicius)",
-          "Reviewed by the content team on 17 November 2026."
+          "Rewritten to NCLEX-RN difficulty and reviewed by the content team on 19 November 2026."
         ]
       },
       "educationalObjective": "Plan diet for ascites."
@@ -196,24 +196,24 @@
       ],
       "cjmmSkill": "prioritize_hypotheses",
       "difficulty": "difficult",
-      "stem": "A client with cirrhosis is vomiting large amounts of bright red blood. What is the nurse's priority?",
+      "stem": "A client with cirrhosis and known esophageal varices suddenly vomits a large amount of bright red blood. The client is pale and drowsy, with a heart rate of 128/min and a blood pressure of 84/50 mm Hg. What is the nurse's priority?",
       "content": {
         "options": [
           {
             "id": "a",
-            "text": "Protecting the airway and preparing for rapid IV access and fluids"
+            "text": "Protect the airway and prepare for rapid IV access and fluids"
           },
           {
             "id": "b",
-            "text": "Giving lactulose"
+            "text": "Give the scheduled dose of lactulose to prevent confusion"
           },
           {
             "id": "c",
-            "text": "Measuring abdominal girth"
+            "text": "Measure the client's abdominal girth and weight"
           },
           {
             "id": "d",
-            "text": "Teaching about alcohol cessation"
+            "text": "Teach the client about stopping alcohol to prevent rebleeding"
           }
         ]
       },
@@ -221,16 +221,16 @@
         "correct": "a"
       },
       "rationale": {
-        "correct": "Variceal bleeding: airway, IV access, blood products, octreotide and urgent endoscopy (banding).",
+        "correct": "Variceal bleeding: airway, IV access, blood products, octreotide and urgent endoscopic banding.",
         "perOption": {
-          "a": "Bleeding varices can cause aspiration and shock; airway and circulation come first.",
-          "b": "This isn't the immediate priority.",
-          "c": "This isn't urgent.",
+          "a": "Bleeding varices cause aspiration and shock; the airway and circulation come first.",
+          "b": "This is not the immediate priority.",
+          "c": "This is not urgent.",
           "d": "This comes later."
         },
         "references": [
           "Medical-surgical nursing texts (e.g. Lewis; Ignatavicius)",
-          "Reviewed by the content team on 17 November 2026."
+          "Rewritten to NCLEX-RN difficulty and reviewed by the content team on 19 November 2026."
         ]
       },
       "educationalObjective": "Prioritize care in variceal bleeding."
@@ -244,17 +244,17 @@
         "liver-disorders"
       ],
       "cjmmSkill": "evaluate_outcomes",
-      "difficulty": "moderate",
-      "stem": "A client with esophageal varices is going home on propranolol. Which statement shows a need for more teaching?",
+      "difficulty": "difficult",
+      "stem": "A client with esophageal varices that were banded this week is going home on propranolol. Which statement by the client shows a need for more teaching?",
       "content": {
         "options": [
           {
             "id": "a",
-            "text": "\"I'll avoid alcohol completely.\""
+            "text": "\"I won't drink any alcohol from now on.\""
           },
           {
             "id": "b",
-            "text": "\"I'll take ibuprofen for headaches.\""
+            "text": "\"I'll take ibuprofen when I get headaches.\""
           },
           {
             "id": "c",
@@ -262,7 +262,7 @@
           },
           {
             "id": "d",
-            "text": "\"This medicine lowers the pressure in my varices.\""
+            "text": "\"This pill lowers the pressure in my varices.\""
           }
         ]
       },
@@ -270,17 +270,17 @@
         "correct": "b"
       },
       "rationale": {
-        "correct": "Variceal bleeding prevention: nonselective beta-blockers, no NSAIDs or alcohol, avoid straining.",
+        "correct": "Variceal bleeding prevention: nonselective beta-blockers, no NSAIDs or alcohol, and avoiding straining.",
         "perOption": {
           "a": "Alcohol worsens liver disease.",
-          "b": "NSAIDs increase bleeding risk; acetaminophen in limited doses may be advised instead.",
+          "b": "NSAIDs increase bleeding risk; limited acetaminophen may be advised instead.",
           "c": "Straining raises portal pressure.",
           "d": "Nonselective beta-blockers reduce portal pressure."
         },
         "references": [
           "Medical-surgical nursing texts (e.g. Lewis; Ignatavicius)",
           "Nursing pharmacology texts (e.g. Lehne; McCuistion) and the drug's prescribing information",
-          "Reviewed by the content team on 17 November 2026."
+          "Rewritten to NCLEX-RN difficulty and reviewed by the content team on 19 November 2026."
         ]
       },
       "educationalObjective": "Teach prevention of variceal bleeding."
@@ -294,8 +294,8 @@
         "gi-diagnostic-procedures"
       ],
       "cjmmSkill": "take_action",
-      "difficulty": "easy",
-      "stem": "Before a paracentesis, what should the nurse ask the client to do?",
+      "difficulty": "moderate",
+      "stem": "A client with cirrhosis and tense ascites is about to have a bedside paracentesis. The client drank a large glass of water an hour ago. What should the nurse ask the client to do just before the procedure?",
       "content": {
         "options": [
           {
@@ -304,15 +304,15 @@
           },
           {
             "id": "b",
-            "text": "Drink 1 L of water"
+            "text": "Drink another glass of water"
           },
           {
             "id": "c",
-            "text": "Lie prone"
+            "text": "Lie prone on the bed"
           },
           {
             "id": "d",
-            "text": "Eat a large meal"
+            "text": "Eat a light snack"
           }
         ]
       },
@@ -320,16 +320,16 @@
         "correct": "a"
       },
       "rationale": {
-        "correct": "Before paracentesis: have the client void, take baseline vitals, weight and girth, and sit the client upright.",
+        "correct": "Before paracentesis: have the client void, record baseline vitals, weight and girth, and sit the client upright.",
         "perOption": {
           "a": "An empty bladder reduces the risk of puncturing it.",
-          "b": "This isn't needed.",
-          "c": "The client sits upright or in high Fowler's.",
-          "d": "This isn't needed."
+          "b": "Extra fluid is not needed.",
+          "c": "The client sits upright or in high Fowler's position.",
+          "d": "This is not needed."
         },
         "references": [
           "Medical-surgical nursing texts (e.g. Lewis; Ignatavicius)",
-          "Reviewed by the content team on 17 November 2026."
+          "Rewritten to NCLEX-RN difficulty and reviewed by the content team on 19 November 2026."
         ]
       },
       "educationalObjective": "Prepare a client for paracentesis."
@@ -343,25 +343,25 @@
         "gi-diagnostic-procedures"
       ],
       "cjmmSkill": "recognize_cues",
-      "difficulty": "moderate",
-      "stem": "After 5 L of fluid is removed during a paracentesis, which finding should the nurse report?",
+      "difficulty": "difficult",
+      "stem": "During a large-volume paracentesis on a client with cirrhosis, 5 L of fluid has been removed. Which finding should the nurse report to the provider right away?",
       "content": {
         "options": [
           {
             "id": "a",
-            "text": "Blood pressure falls from 128/78 to 88/50 mm Hg with a heart rate of 118/min"
+            "text": "BP down from 128/78 to 88/50, with a heart rate of 118/min"
           },
           {
             "id": "b",
-            "text": "Decreased abdominal girth"
+            "text": "An abdominal girth that is 14 cm smaller than before the procedure"
           },
           {
             "id": "c",
-            "text": "Easier breathing"
+            "text": "The client saying that breathing feels much easier now"
           },
           {
             "id": "d",
-            "text": "Small amount of clear drainage at the site"
+            "text": "A small amount of clear fluid leaking at the needle site"
           }
         ]
       },
@@ -374,11 +374,11 @@
           "a": "Removing a large volume can shift fluid out of the vessels and cause hypotension.",
           "b": "This is the expected outcome.",
           "c": "This is expected.",
-          "d": "This is minor."
+          "d": "This is minor and expected."
         },
         "references": [
           "Medical-surgical nursing texts (e.g. Lewis; Ignatavicius)",
-          "Reviewed by the content team on 17 November 2026."
+          "Rewritten to NCLEX-RN difficulty and reviewed by the content team on 19 November 2026."
         ]
       },
       "educationalObjective": "Monitor for complications after paracentesis."
@@ -393,7 +393,7 @@
       ],
       "cjmmSkill": "take_action",
       "difficulty": "moderate",
-      "stem": "After a percutaneous liver biopsy, how should the nurse position the client?",
+      "stem": "A client with suspected hepatitis has just had a percutaneous liver biopsy. How should the nurse position the client for the next few hours?",
       "content": {
         "options": [
           {
@@ -402,15 +402,15 @@
           },
           {
             "id": "b",
-            "text": "On the left side"
+            "text": "On the left side with the knees bent toward the chest"
           },
           {
             "id": "c",
-            "text": "Prone"
+            "text": "Prone, with a pillow under the abdomen and hips"
           },
           {
             "id": "d",
-            "text": "High Fowler's"
+            "text": "High Fowler's, with the legs raised on pillows"
           }
         ]
       },
@@ -418,16 +418,16 @@
         "correct": "a"
       },
       "rationale": {
-        "correct": "After liver biopsy: lie on the right side for a few hours and watch for bleeding.",
+        "correct": "After a liver biopsy: lie on the right side for a few hours and watch for bleeding.",
         "perOption": {
-          "a": "Lying on the right side puts pressure on the puncture site and reduces bleeding.",
-          "b": "This doesn't compress the site.",
-          "c": "This isn't the position.",
-          "d": "This doesn't compress the site."
+          "a": "Lying on the right side presses on the puncture site and reduces bleeding.",
+          "b": "This does not compress the site.",
+          "c": "This is not the position used.",
+          "d": "This does not compress the site."
         },
         "references": [
           "Medical-surgical nursing texts (e.g. Lewis; Ignatavicius)",
-          "Reviewed by the content team on 17 November 2026."
+          "Rewritten to NCLEX-RN difficulty and reviewed by the content team on 19 November 2026."
         ]
       },
       "educationalObjective": "Position a client after liver biopsy."
@@ -441,8 +441,8 @@
         "gi-diagnostic-procedures"
       ],
       "cjmmSkill": "recognize_cues",
-      "difficulty": "moderate",
-      "stem": "Before a liver biopsy, which laboratory results are most important to review?",
+      "difficulty": "difficult",
+      "stem": "A client with chronic hepatitis C is scheduled for a percutaneous liver biopsy tomorrow. The client takes aspirin 81 mg daily and drinks two or three glasses of wine most nights. Which laboratory results are most important for the nurse to review before the procedure?",
       "content": {
         "options": [
           {
@@ -451,15 +451,15 @@
           },
           {
             "id": "b",
-            "text": "Serum potassium"
+            "text": "Serum potassium and sodium"
           },
           {
             "id": "c",
-            "text": "Urinalysis"
+            "text": "Urinalysis and urine culture"
           },
           {
             "id": "d",
-            "text": "Lipid panel"
+            "text": "Fasting lipid panel and glucose"
           }
         ]
       },
@@ -467,16 +467,16 @@
         "correct": "a"
       },
       "rationale": {
-        "correct": "Check coagulation and platelets before liver biopsy.",
+        "correct": "Check coagulation and platelets, and review anticoagulant or antiplatelet use, before a liver biopsy.",
         "perOption": {
-          "a": "The liver is vascular, and liver disease impairs clotting.",
-          "b": "This is less important for bleeding risk.",
-          "c": "This isn't relevant.",
-          "d": "This isn't relevant."
+          "a": "The liver is very vascular, and liver disease impairs clotting.",
+          "b": "These are less important for bleeding risk.",
+          "c": "These are not relevant.",
+          "d": "These are not relevant."
         },
         "references": [
           "Medical-surgical nursing texts (e.g. Lewis; Ignatavicius)",
-          "Reviewed by the content team on 17 November 2026."
+          "Rewritten to NCLEX-RN difficulty and reviewed by the content team on 19 November 2026."
         ]
       },
       "educationalObjective": "Review labs before a liver biopsy."
@@ -491,32 +491,32 @@
       ],
       "cjmmSkill": "recognize_cues",
       "difficulty": "moderate",
-      "stem": "Which findings should the nurse expect in a client with advanced cirrhosis? Select all that apply.",
+      "stem": "The nurse is admitting a 62-year-old client with advanced alcohol-related cirrhosis. Which findings should the nurse expect? Select all that apply.",
       "content": {
         "options": [
           {
             "id": "a",
-            "text": "Jaundice"
+            "text": "Yellow skin and sclera"
           },
           {
             "id": "b",
-            "text": "Ascites"
+            "text": "A distended abdomen with a fluid wave"
           },
           {
             "id": "c",
-            "text": "Spider angiomas"
+            "text": "Bruising from minor bumps"
           },
           {
             "id": "d",
-            "text": "Easy bruising"
+            "text": "A high serum albumin level"
           },
           {
             "id": "e",
-            "text": "High serum albumin"
+            "text": "A low serum ammonia level"
           },
           {
             "id": "f",
-            "text": "Asterixis"
+            "text": "Weight loss without any swelling"
           }
         ]
       },
@@ -524,24 +524,22 @@
         "correct": [
           "a",
           "b",
-          "c",
-          "d",
-          "f"
+          "c"
         ]
       },
       "rationale": {
         "correct": "Cirrhosis: jaundice, ascites, bruising, spider angiomas, palmar erythema, encephalopathy and varices.",
         "perOption": {
-          "a": "The liver can't process bilirubin.",
-          "b": "Portal hypertension and low albumin cause fluid buildup.",
-          "c": "These come from hormone changes.",
-          "d": "Clotting factor production falls.",
-          "e": "Albumin falls in cirrhosis.",
-          "f": "This suggests encephalopathy."
+          "a": "The liver cannot process bilirubin.",
+          "b": "Portal hypertension and low albumin cause ascites.",
+          "c": "Clotting factor production falls.",
+          "d": "Albumin falls in cirrhosis.",
+          "e": "Ammonia rises when the liver cannot clear it.",
+          "f": "Fluid retention usually causes swelling and weight gain despite muscle loss."
         },
         "references": [
           "Medical-surgical nursing texts (e.g. Lewis; Ignatavicius)",
-          "Reviewed by the content team on 17 November 2026."
+          "Rewritten to NCLEX-RN difficulty and reviewed by the content team on 19 November 2026."
         ]
       },
       "educationalObjective": "Recognize the findings of cirrhosis."
@@ -556,7 +554,7 @@
       ],
       "cjmmSkill": "analyze_cues",
       "difficulty": "moderate",
-      "stem": "The nurse reviews laboratory results for a client with cirrhosis. Highlight the abnormal results.",
+      "stem": "The nurse is reviewing the morning laboratory results for a 60-year-old client admitted with decompensated cirrhosis. Highlight the abnormal results.",
       "content": {
         "columns": [
           "Test",
@@ -622,18 +620,18 @@
         ]
       },
       "rationale": {
-        "correct": "Liver disease: raised enzymes, bilirubin and ammonia, with low albumin and a prolonged PT.",
+        "correct": "Liver disease: raised enzymes, bilirubin and ammonia, with a low albumin and a prolonged PT.",
         "perOption": {
           "r1": "This is elevated, showing liver cell injury.",
           "r2": "This is low (normal about 3.5 to 5.0), showing reduced synthesis.",
-          "r3": "This is elevated, causing jaundice.",
-          "r4": "This is elevated, linked to encephalopathy.",
+          "r3": "This is elevated and causes jaundice.",
+          "r4": "This is elevated and linked to encephalopathy.",
           "r5": "This is normal.",
           "r6": "This is normal."
         },
         "references": [
           "Laboratory reference ranges as used in common NCLEX review texts; follow the facility's ranges",
-          "Reviewed by the content team on 17 November 2026."
+          "Rewritten to NCLEX-RN difficulty and reviewed by the content team on 19 November 2026."
         ]
       },
       "educationalObjective": "Interpret liver laboratory results."
@@ -647,8 +645,8 @@
         "liver-disorders"
       ],
       "cjmmSkill": "analyze_cues",
-      "difficulty": "moderate",
-      "stem": "A client with cirrhosis is newly confused and drowsy, with asterixis and an ammonia level of 120 mcg/dL. Complete the sentence.",
+      "difficulty": "difficult",
+      "stem": "A 64-year-old client with cirrhosis who was constipated for 4 days and stopped taking lactulose at home is now confused and drowsy, with asterixis and an ammonia level of 120 mcg/dL. Complete the sentence.",
       "content": {
         "template": "These findings indicate {{b1}}, and the nurse should anticipate a prescription for {{b2}}.",
         "blanks": [
@@ -695,18 +693,18 @@
         }
       },
       "rationale": {
-        "correct": "Treat hepatic encephalopathy with lactulose (and often rifaximin); avoid sedatives.",
+        "correct": "Treat hepatic encephalopathy with lactulose, often with rifaximin, look for triggers such as constipation or bleeding, and avoid sedatives.",
         "perOption": {
-          "b1:a": "High ammonia with confusion and asterixis indicates hepatic encephalopathy.",
-          "b1:b": "Withdrawal causes tremors and agitation, not asterixis with high ammonia.",
+          "b1:a": "A high ammonia with confusion and asterixis indicates hepatic encephalopathy.",
+          "b1:b": "Withdrawal causes tremors and agitation, not asterixis with a high ammonia.",
           "b1:c": "The findings point to ammonia.",
-          "b2:a": "Lactulose lowers ammonia.",
-          "b2:b": "This isn't treatment.",
+          "b2:a": "Lactulose lowers ammonia, and constipation is a common trigger.",
+          "b2:b": "This is not a treatment.",
           "b2:c": "Sedatives worsen encephalopathy."
         },
         "references": [
           "Medical-surgical nursing texts (e.g. Lewis; Ignatavicius)",
-          "Reviewed by the content team on 17 November 2026."
+          "Rewritten to NCLEX-RN difficulty and reviewed by the content team on 19 November 2026."
         ]
       },
       "educationalObjective": "Recognize and treat hepatic encephalopathy."
@@ -721,7 +719,7 @@
       ],
       "cjmmSkill": "analyze_cues",
       "difficulty": "moderate",
-      "stem": "For each type of viral hepatitis, indicate its main route of transmission.",
+      "stem": "A community health nurse is preparing a teaching session on viral hepatitis for staff and residents of a homeless shelter, where a resident was recently diagnosed with hepatitis. For each type of hepatitis, choose its main route of transmission.",
       "content": {
         "rows": [
           {
@@ -760,21 +758,21 @@
         }
       },
       "rationale": {
-        "correct": "Hepatitis A and E: fecal-oral. Hepatitis B: blood, sex, birth. Hepatitis C: mainly blood.",
+        "correct": "Hepatitis A and E: fecal-oral. Hepatitis B: blood, sex and birth. Hepatitis C: mainly blood.",
         "perOption": {
           "r1:c1": "Hepatitis A spreads through contaminated food and water.",
-          "r1:c2": "Hepatitis A isn't mainly bloodborne.",
-          "r1:c3": "Hepatitis A isn't mainly bloodborne.",
-          "r2:c1": "Hepatitis B isn't fecal-oral.",
+          "r1:c2": "Hepatitis A is not mainly bloodborne.",
+          "r1:c3": "Hepatitis A is not mainly bloodborne.",
+          "r2:c1": "Hepatitis B is not fecal-oral.",
           "r2:c2": "Hepatitis B spreads through blood, sex and from parent to newborn.",
           "r2:c3": "Blood is one route, but sex and birth are also major routes.",
-          "r3:c1": "Hepatitis C isn't fecal-oral.",
+          "r3:c1": "Hepatitis C is not fecal-oral.",
           "r3:c2": "Sexual and birth transmission occur but are less common.",
           "r3:c3": "Hepatitis C spreads mainly through blood, especially shared needles."
         },
         "references": [
           "CDC infection control and isolation precautions guidance",
-          "Reviewed by the content team on 17 November 2026."
+          "Rewritten to NCLEX-RN difficulty and reviewed by the content team on 19 November 2026."
         ]
       },
       "educationalObjective": "Identify transmission routes of viral hepatitis."
@@ -788,25 +786,25 @@
         "hepatitis-prevention"
       ],
       "cjmmSkill": "generate_solutions",
-      "difficulty": "easy",
-      "stem": "A new nursing student asks about the hepatitis B vaccine. What is the best response?",
+      "difficulty": "moderate",
+      "stem": "A new nursing student who has never been vaccinated against hepatitis B asks about the vaccine before starting clinical placements. Which response by the nurse is best?",
       "content": {
         "options": [
           {
             "id": "a",
-            "text": "\"It's given as a series of doses, and a blood test can confirm immunity.\""
+            "text": "\"It's a series of doses, and a blood test can confirm immunity.\""
           },
           {
             "id": "b",
-            "text": "\"One dose gives lifelong protection.\""
+            "text": "\"One dose before your first placement protects you for life.\""
           },
           {
             "id": "c",
-            "text": "\"It isn't recommended for health care workers.\""
+            "text": "\"It isn't recommended for students who wear gloves at all times.\""
           },
           {
             "id": "d",
-            "text": "\"It also protects against hepatitis C.\""
+            "text": "\"It also protects you against hepatitis C if you are stuck.\""
           }
         ]
       },
@@ -814,16 +812,16 @@
         "correct": "a"
       },
       "rationale": {
-        "correct": "Hepatitis B vaccination is recommended for all infants, most adults and health care workers.",
+        "correct": "Hepatitis B vaccination is recommended for all infants, most adults and all health care workers.",
         "perOption": {
           "a": "The vaccine is a 2- or 3-dose series, and health care workers often have a titer checked.",
-          "b": "A series is required.",
-          "c": "It is strongly recommended.",
+          "b": "A full series is required.",
+          "c": "It is strongly recommended for health care students and workers.",
           "d": "There is no hepatitis C vaccine."
         },
         "references": [
           "CDC/ACIP immunization schedules",
-          "Reviewed by the content team on 17 November 2026."
+          "Rewritten to NCLEX-RN difficulty and reviewed by the content team on 19 November 2026."
         ]
       },
       "educationalObjective": "Teach about hepatitis B vaccination."
@@ -838,12 +836,12 @@
       ],
       "cjmmSkill": "take_action",
       "difficulty": "easy",
-      "stem": "Which position may ease the pain of acute pancreatitis?",
+      "stem": "A client with acute pancreatitis is restless with severe epigastric pain that goes through to the back. Which position may ease the pain?",
       "content": {
         "options": [
           {
             "id": "a",
-            "text": "Sitting up and leaning forward, or lying curled on the side"
+            "text": "Sitting up and leaning forward"
           },
           {
             "id": "b",
@@ -851,11 +849,11 @@
           },
           {
             "id": "c",
-            "text": "Trendelenburg"
+            "text": "Head lowered below the feet"
           },
           {
             "id": "d",
-            "text": "Prone"
+            "text": "Lying face down on the bed"
           }
         ]
       },
@@ -863,16 +861,16 @@
         "correct": "a"
       },
       "rationale": {
-        "correct": "Pancreatitis pain eases with sitting forward or the fetal position.",
+        "correct": "Pancreatitis pain eases with sitting forward or lying curled on the side.",
         "perOption": {
-          "a": "These positions reduce stretching of the inflamed pancreas.",
+          "a": "This position reduces stretching of the inflamed pancreas.",
           "b": "This may worsen the pain.",
-          "c": "This isn't helpful.",
-          "d": "This isn't typical."
+          "c": "This is not helpful.",
+          "d": "This is not typical."
         },
         "references": [
           "Medical-surgical nursing texts (e.g. Lewis; Ignatavicius)",
-          "Reviewed by the content team on 17 November 2026."
+          "Rewritten to NCLEX-RN difficulty and reviewed by the content team on 19 November 2026."
         ]
       },
       "educationalObjective": "Position a client with pancreatitis for comfort."
@@ -886,25 +884,25 @@
         "pancreas-and-gallbladder-disorders"
       ],
       "cjmmSkill": "analyze_cues",
-      "difficulty": "easy",
-      "stem": "Which laboratory finding best supports a diagnosis of acute pancreatitis?",
+      "difficulty": "moderate",
+      "stem": "A 44-year-old client with a history of heavy alcohol use has severe epigastric pain radiating to the back, nausea and vomiting. Which laboratory finding best supports a diagnosis of acute pancreatitis?",
       "content": {
         "options": [
           {
             "id": "a",
-            "text": "Serum lipase more than three times normal"
+            "text": "A serum lipase more than three times normal"
           },
           {
             "id": "b",
-            "text": "Low amylase"
+            "text": "A serum amylase that is below the normal range"
           },
           {
             "id": "c",
-            "text": "Low glucose"
+            "text": "A blood glucose of 58 mg/dL"
           },
           {
             "id": "d",
-            "text": "Low white blood cell count"
+            "text": "A white blood cell count of 3,200/mm3"
           }
         ]
       },
@@ -912,16 +910,16 @@
         "correct": "a"
       },
       "rationale": {
-        "correct": "Pancreatitis: raised lipase and amylase, epigastric pain radiating to the back.",
+        "correct": "Pancreatitis: a raised lipase and amylase, with epigastric pain radiating to the back.",
         "perOption": {
-          "a": "Lipase is the most specific marker.",
-          "b": "Amylase rises.",
-          "c": "Glucose often rises.",
+          "a": "Lipase is the most specific marker of pancreatitis.",
+          "b": "Amylase rises, not falls.",
+          "c": "Glucose often rises in pancreatitis.",
           "d": "The WBC usually rises."
         },
         "references": [
           "Medical-surgical nursing texts (e.g. Lewis; Ignatavicius)",
-          "Reviewed by the content team on 17 November 2026."
+          "Rewritten to NCLEX-RN difficulty and reviewed by the content team on 19 November 2026."
         ]
       },
       "educationalObjective": "Interpret laboratory findings in pancreatitis."
@@ -935,8 +933,8 @@
         "pancreas-and-gallbladder-disorders"
       ],
       "cjmmSkill": "take_action",
-      "difficulty": "moderate",
-      "stem": "A client is admitted with severe acute pancreatitis. Which intervention is the priority?",
+      "difficulty": "difficult",
+      "stem": "A client is admitted with severe acute pancreatitis. The heart rate is 124/min, the blood pressure is 92/56, the urine output is 20 mL/hr and pain is 9 out of 10. Which interventions are the priority?",
       "content": {
         "options": [
           {
@@ -945,15 +943,15 @@
           },
           {
             "id": "b",
-            "text": "A high-fat diet"
+            "text": "A low-fat diet started at the next meal"
           },
           {
             "id": "c",
-            "text": "Ambulating every hour"
+            "text": "Walking in the hallway every hour"
           },
           {
             "id": "d",
-            "text": "Teaching about alcohol"
+            "text": "Teaching about alcohol and support groups"
           }
         ]
       },
@@ -961,16 +959,16 @@
         "correct": "a"
       },
       "rationale": {
-        "correct": "Acute pancreatitis: aggressive fluids, analgesia, bowel rest, then early nutrition when tolerated.",
+        "correct": "Acute pancreatitis: aggressive fluids, analgesia and bowel rest, then early nutrition when tolerated.",
         "perOption": {
-          "a": "Fluid shifts can cause hypovolemic shock; pain is severe.",
-          "b": "Fat stimulates the pancreas.",
-          "c": "This isn't the priority.",
+          "a": "Large fluid shifts can cause hypovolemic shock, and the pain is severe.",
+          "b": "Oral intake waits until the client is stable and the pain eases.",
+          "c": "This is not the priority.",
           "d": "This comes later."
         },
         "references": [
           "Medical-surgical nursing texts (e.g. Lewis; Ignatavicius)",
-          "Reviewed by the content team on 17 November 2026."
+          "Rewritten to NCLEX-RN difficulty and reviewed by the content team on 19 November 2026."
         ]
       },
       "educationalObjective": "Prioritize care in acute pancreatitis."
@@ -983,9 +981,9 @@
       "subtopics": [
         "pancreas-and-gallbladder-disorders"
       ],
-      "cjmmSkill": "recognize_cues",
+      "cjmmSkill": "analyze_cues",
       "difficulty": "difficult",
-      "stem": "A client with acute pancreatitis reports tingling around the mouth and has muscle twitching. Which imbalance does the nurse suspect?",
+      "stem": "On the third day of treatment for severe acute pancreatitis, a client reports tingling around the mouth and in the fingers. The nurse notes muscle twitching and a positive Chvostek sign. The client has been NPO with IV fluids and has a large area of necrosis on the CT scan. Which imbalance does the nurse suspect?",
       "content": {
         "options": [
           {
@@ -1010,16 +1008,16 @@
         "correct": "a"
       },
       "rationale": {
-        "correct": "Pancreatitis can cause hypocalcemia; monitor for tetany.",
+        "correct": "Pancreatitis can cause hypocalcemia; monitor for tetany and replace calcium as prescribed.",
         "perOption": {
-          "a": "Calcium binds to fatty deposits in pancreatitis, lowering serum calcium.",
-          "b": "This decreases excitability.",
-          "c": "This doesn't cause these signs.",
-          "d": "This doesn't cause these signs."
+          "a": "Calcium binds to areas of fat necrosis in pancreatitis, lowering serum calcium.",
+          "b": "High calcium decreases neuromuscular excitability.",
+          "c": "This does not cause these signs.",
+          "d": "This does not cause these signs."
         },
         "references": [
           "Medical-surgical nursing texts (e.g. Lewis; Ignatavicius)",
-          "Reviewed by the content team on 17 November 2026."
+          "Rewritten to NCLEX-RN difficulty and reviewed by the content team on 19 November 2026."
         ]
       },
       "educationalObjective": "Recognize hypocalcemia in pancreatitis."
@@ -1034,24 +1032,24 @@
       ],
       "cjmmSkill": "generate_solutions",
       "difficulty": "moderate",
-      "stem": "A client with chronic pancreatitis is prescribed pancrelipase. When should the client take it?",
+      "stem": "A client with chronic pancreatitis has pale, greasy, foul-smelling stools and is starting pancrelipase capsules. When should the nurse teach the client to take them?",
       "content": {
         "options": [
           {
             "id": "a",
-            "text": "With meals and snacks"
+            "text": "With each meal and snack"
           },
           {
             "id": "b",
-            "text": "At bedtime"
+            "text": "At bedtime on an empty stomach"
           },
           {
             "id": "c",
-            "text": "Only when stools are fatty"
+            "text": "Only on days with fatty stools"
           },
           {
             "id": "d",
-            "text": "Once a week"
+            "text": "Once a week on the same day"
           }
         ]
       },
@@ -1059,16 +1057,16 @@
         "correct": "a"
       },
       "rationale": {
-        "correct": "Pancreatic enzymes: take with meals; the goal is fewer fatty stools (steatorrhea).",
+        "correct": "Pancreatic enzymes are taken with meals and snacks; the goal is fewer fatty stools and stable weight.",
         "perOption": {
           "a": "Enzymes must be present with food to digest fats and proteins.",
           "b": "There is no food to digest.",
-          "c": "It is taken with all meals.",
-          "d": "It is taken with every meal."
+          "c": "It is taken with every meal.",
+          "d": "It is taken with every meal and snack."
         },
         "references": [
           "Nursing pharmacology texts (e.g. Lehne; McCuistion) and the drug's prescribing information",
-          "Reviewed by the content team on 17 November 2026."
+          "Rewritten to NCLEX-RN difficulty and reviewed by the content team on 19 November 2026."
         ]
       },
       "educationalObjective": "Teach timing of pancreatic enzyme replacement."
@@ -1081,26 +1079,26 @@
       "subtopics": [
         "pancreas-and-gallbladder-disorders"
       ],
-      "cjmmSkill": "recognize_cues",
-      "difficulty": "easy",
-      "stem": "Which finding is typical of acute cholecystitis?",
+      "cjmmSkill": "analyze_cues",
+      "difficulty": "difficult",
+      "stem": "A 42-year-old client comes to the emergency department with pain, nausea and a temperature of 38.3 °C (101 °F) that began an hour after a fried-chicken dinner. Which pain pattern is typical of acute cholecystitis?",
       "content": {
         "options": [
           {
             "id": "a",
-            "text": "Right upper quadrant pain after a fatty meal, radiating to the right shoulder"
+            "text": "Right upper quadrant pain radiating to the right shoulder"
           },
           {
             "id": "b",
-            "text": "Left lower quadrant pain"
+            "text": "Left lower quadrant pain with a recent change in bowel habits"
           },
           {
             "id": "c",
-            "text": "Pain relieved by eating"
+            "text": "Epigastric pain that is relieved by eating food"
           },
           {
             "id": "d",
-            "text": "Periumbilical pain moving to the right lower quadrant"
+            "text": "Pain near the navel that moves to the lower right"
           }
         ]
       },
@@ -1108,16 +1106,16 @@
         "correct": "a"
       },
       "rationale": {
-        "correct": "Cholecystitis: RUQ pain after fatty meals, positive Murphy sign, nausea and fever.",
+        "correct": "Cholecystitis: right upper quadrant pain after fatty meals, a positive Murphy sign, nausea and fever.",
         "perOption": {
-          "a": "Fat stimulates the gallbladder to contract against a blockage.",
+          "a": "Fat makes the gallbladder contract against a blockage, and pain is referred to the shoulder.",
           "b": "This suggests diverticulitis.",
           "c": "This suggests a duodenal ulcer.",
           "d": "This suggests appendicitis."
         },
         "references": [
           "Medical-surgical nursing texts (e.g. Lewis; Ignatavicius)",
-          "Reviewed by the content team on 17 November 2026."
+          "Rewritten to NCLEX-RN difficulty and reviewed by the content team on 19 November 2026."
         ]
       },
       "educationalObjective": "Recognize cholecystitis."
@@ -1131,25 +1129,25 @@
         "post-procedure-complications"
       ],
       "cjmmSkill": "generate_solutions",
-      "difficulty": "easy",
-      "stem": "After a laparoscopic cholecystectomy, a client has pain in the right shoulder. What should the nurse do?",
+      "difficulty": "moderate",
+      "stem": "On the evening after a laparoscopic cholecystectomy, a client reports aching pain in the right shoulder. Vital signs are stable, and the abdomen is soft. What should the nurse do?",
       "content": {
         "options": [
           {
             "id": "a",
-            "text": "Encourage walking and explain the pain is from the gas used during surgery"
+            "text": "Encourage walking; explain the gas from surgery causes it"
           },
           {
             "id": "b",
-            "text": "Notify the surgeon of a complication"
+            "text": "Notify the surgeon of a likely complication from the surgery"
           },
           {
             "id": "c",
-            "text": "Apply ice to the shoulder"
+            "text": "Apply an ice pack to the shoulder for 20 minutes"
           },
           {
             "id": "d",
-            "text": "Keep the client flat in bed"
+            "text": "Keep the client flat in bed until the morning"
           }
         ]
       },
@@ -1157,16 +1155,16 @@
         "correct": "a"
       },
       "rationale": {
-        "correct": "Shoulder pain after laparoscopy is common and comes from residual CO2.",
+        "correct": "Shoulder pain after laparoscopy is common and comes from residual carbon dioxide.",
         "perOption": {
           "a": "Carbon dioxide irritates the diaphragm and causes referred shoulder pain; walking helps it absorb.",
-          "b": "This is expected.",
-          "c": "Walking is more helpful.",
-          "d": "Walking is better."
+          "b": "This finding is expected.",
+          "c": "Walking is more helpful for gas pain.",
+          "d": "Walking is better than bed rest."
         },
         "references": [
           "Medical-surgical nursing texts (e.g. Lewis; Ignatavicius)",
-          "Reviewed by the content team on 17 November 2026."
+          "Rewritten to NCLEX-RN difficulty and reviewed by the content team on 19 November 2026."
         ]
       },
       "educationalObjective": "Manage shoulder pain after laparoscopic surgery."
@@ -1180,25 +1178,25 @@
         "liver-disorders"
       ],
       "cjmmSkill": "generate_solutions",
-      "difficulty": "easy",
-      "stem": "A client with jaundice has severe itching. Which intervention should the nurse include?",
+      "difficulty": "moderate",
+      "stem": "A client with jaundice from a blocked bile duct is scratching the arms until they bleed. Which intervention should the nurse include in the plan of care?",
       "content": {
         "options": [
           {
             "id": "a",
-            "text": "Cool baths with baking soda and keeping the fingernails short"
+            "text": "Cool baths with baking soda and keeping the nails short"
           },
           {
             "id": "b",
-            "text": "Hot showers"
+            "text": "Hot showers twice a day to soothe the itchy skin on the arms"
           },
           {
             "id": "c",
-            "text": "Alcohol-based lotions"
+            "text": "An alcohol-based lotion applied after bathing"
           },
           {
             "id": "d",
-            "text": "Wool blankets"
+            "text": "Wool blankets to keep the client warm at night"
           }
         ]
       },
@@ -1206,16 +1204,16 @@
         "correct": "a"
       },
       "rationale": {
-        "correct": "Pruritus from bile salts: cool environment, soothing baths, short nails and prescribed medications such as cholestyramine.",
+        "correct": "Itching from bile salts: a cool environment, soothing baths, short nails and prescribed medications such as cholestyramine.",
         "perOption": {
           "a": "These reduce itching and skin damage from scratching.",
           "b": "Heat worsens itching.",
-          "c": "These dry the skin.",
+          "c": "Alcohol dries the skin.",
           "d": "Wool irritates the skin."
         },
         "references": [
           "Medical-surgical nursing texts (e.g. Lewis; Ignatavicius)",
-          "Reviewed by the content team on 17 November 2026."
+          "Rewritten to NCLEX-RN difficulty and reviewed by the content team on 19 November 2026."
         ]
       },
       "educationalObjective": "Relieve pruritus in jaundice."
@@ -1230,24 +1228,24 @@
       ],
       "cjmmSkill": "evaluate_outcomes",
       "difficulty": "moderate",
-      "stem": "A client with liver disease asks about using acetaminophen for headaches. What is the nurse's best response?",
+      "stem": "A client with compensated cirrhosis asks the nurse what to take for occasional headaches. What is the nurse's best response?",
       "content": {
         "options": [
           {
             "id": "a",
-            "text": "\"Use it only as your provider directs, usually at a lower daily maximum, and avoid alcohol.\""
+            "text": "\"Use acetaminophen only as directed, at a lower limit, with no alcohol.\""
           },
           {
             "id": "b",
-            "text": "\"You can take as much as you need.\""
+            "text": "\"Take as much acetaminophen as you need, since it's gentle.\""
           },
           {
             "id": "c",
-            "text": "\"Take it with wine to help it work.\""
+            "text": "\"Take your acetaminophen with a glass of wine to relax.\""
           },
           {
             "id": "d",
-            "text": "\"Ibuprofen is safer for you.\""
+            "text": "\"Ibuprofen is a safer choice for people who have liver disease like yours.\""
           }
         ]
       },
@@ -1257,14 +1255,14 @@
       "rationale": {
         "correct": "In liver disease, acetaminophen is used cautiously at lower doses, and NSAIDs are generally avoided.",
         "perOption": {
-          "a": "The liver metabolizes acetaminophen; lower limits (often 2 g a day) reduce hepatotoxicity.",
+          "a": "The liver metabolizes acetaminophen, so lower limits (often 2 g a day) reduce hepatotoxicity.",
           "b": "This risks liver damage.",
           "c": "Alcohol increases toxicity.",
           "d": "NSAIDs increase bleeding and kidney risk in cirrhosis."
         },
         "references": [
           "Nursing pharmacology texts (e.g. Lehne; McCuistion) and the drug's prescribing information",
-          "Reviewed by the content team on 17 November 2026."
+          "Rewritten to NCLEX-RN difficulty and reviewed by the content team on 19 November 2026."
         ]
       },
       "educationalObjective": "Teach safe analgesic use in liver disease."
@@ -1279,24 +1277,24 @@
       ],
       "cjmmSkill": "generate_solutions",
       "difficulty": "easy",
-      "stem": "Which measure best prevents the spread of hepatitis A in a child care center?",
+      "stem": "Two toddlers at a child care center have been diagnosed with hepatitis A. Which measure best prevents further spread at the center?",
       "content": {
         "options": [
           {
             "id": "a",
-            "text": "Thorough handwashing after diaper changes and before preparing food"
+            "text": "Handwashing after diaper changes and before food"
           },
           {
             "id": "b",
-            "text": "Wearing masks"
+            "text": "Having staff wear masks in the classrooms"
           },
           {
             "id": "c",
-            "text": "Screening blood donations"
+            "text": "Screening the staff for bloodborne infections"
           },
           {
             "id": "d",
-            "text": "Avoiding sharing needles"
+            "text": "Avoiding the sharing of needles or razors"
           }
         ]
       },
@@ -1307,13 +1305,13 @@
         "correct": "Prevent hepatitis A with hand hygiene, safe food and water, and vaccination.",
         "perOption": {
           "a": "Hepatitis A spreads by the fecal-oral route.",
-          "b": "Hepatitis A isn't airborne.",
-          "c": "This prevents bloodborne hepatitis.",
+          "b": "Hepatitis A is not airborne.",
+          "c": "This targets bloodborne hepatitis.",
           "d": "This prevents bloodborne hepatitis."
         },
         "references": [
           "CDC infection control and isolation precautions guidance",
-          "Reviewed by the content team on 17 November 2026."
+          "Rewritten to NCLEX-RN difficulty and reviewed by the content team on 19 November 2026."
         ]
       },
       "educationalObjective": "Prevent hepatitis A transmission."
