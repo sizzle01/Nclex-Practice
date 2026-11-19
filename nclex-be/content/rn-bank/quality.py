@@ -26,7 +26,9 @@ MAX_KEY_LENGTH_RATIO = 1.20       # key length / longest wrong option, per quest
 MAX_SELECT_LENGTH_RATIO = 1.25    # SATA/select N: mean correct length / mean wrong length
 MAX_TRICK_SCORE = 0.35            # best test-wise trick on a batch's multiple-choice questions
 MAX_ABSOLUTE_ONLY_WRONG = 0.15    # share of MC where only wrong options use absolute words
-MIN_STEM_WORDS = {"moderate": 30, "difficult": 40}
+# Words of clinical picture (stem plus answer choices: in "which client first" items the data is in the
+# options, as on the real exam) for a standalone item without exhibits.
+MIN_SCENARIO_WORDS = {"moderate": 45, "difficult": 60}
 MAX_EASY_SHARE = 0.15
 MIN_DIFFICULT_SHARE = 0.30
 DUPLICATE_SIMILARITY = 0.85
@@ -85,6 +87,17 @@ def _stem_words(q):
     return len(_words(q["stem"]))
 
 
+def _scenario_words(q):
+    c = q["content"]
+    texts = [o["text"] for o in c.get("options", [])] + [r["text"] for r in c.get("rows", []) if "text" in r]
+    texts += [i["text"] for i in c.get("items", [])]
+    texts += [o["text"] for g in c.get("groups", []) for o in g["options"]]
+    texts += [cell if isinstance(cell, str) else cell.get("text", "") for r in c.get("rows", []) for cell in r.get("cells", [])]
+    texts += [seg["text"] for seg in c.get("segments", [])]
+    texts += [c["template"]] if "template" in c else []
+    return len(_words(q["stem"])) + sum(len(_words(t)) for t in texts)
+
+
 def _needs_long_stem(q):
     # Case-study items carry their data in the case tabs, and exhibits carry it beside the stem.
     return "caseStudyId" not in q and not q.get("exhibits")
@@ -97,6 +110,8 @@ def summary(questions):
     for q in mc:
         for name, s in tricks(q).items():
             trick_scores[name] = trick_scores.get(name, 0) + s
+    # No "always pick C" trick: the player shuffles options per attempt (SeededShuffle), so the key's
+    # position in the file tells a candidate nothing.
     best = max(trick_scores.items(), key=lambda kv: kv[1]) if mc else ("-", 0)
     tiers = {t: sum(q["difficulty"] == t for q in questions) for t in ("easy", "moderate", "difficult")}
     return {
@@ -121,17 +136,18 @@ def gate(questions):
             options, key = _mc(q)
             key_len = next(len(o["text"]) for o in options if o["id"] == key)
             longest_wrong = max(len(o["text"]) for o in options if o["id"] != key)
-            if key_len > MAX_KEY_LENGTH_RATIO * longest_wrong:
+            # Short options (single terms) differ by a few letters; only a real gap is a tell.
+            if key_len > MAX_KEY_LENGTH_RATIO * longest_wrong and key_len - longest_wrong >= 10:
                 errors.append(f"{where}: key is {key_len / longest_wrong:.2f}x the longest wrong option")
         if t in ("sata", "select_n"):
             right = [len(o["text"]) for o in q["content"]["options"] if o["id"] in q["key"]["correct"]]
             wrong = [len(o["text"]) for o in q["content"]["options"] if o["id"] not in q["key"]["correct"]]
             if wrong and statistics.mean(right) > MAX_SELECT_LENGTH_RATIO * statistics.mean(wrong):
                 errors.append(f"{where}: correct options are much longer than wrong ones")
-        minimum = MIN_STEM_WORDS.get(q["difficulty"])
-        if minimum and _needs_long_stem(q) and _stem_words(q) < minimum:
-            errors.append(f"{where}: {q['difficulty']} stem has {_stem_words(q)} words, needs {minimum} "
-                          "(give the clinical picture, or add an exhibit)")
+        minimum = MIN_SCENARIO_WORDS.get(q["difficulty"])
+        if minimum and _needs_long_stem(q) and _scenario_words(q) < minimum:
+            errors.append(f"{where}: {q['difficulty']} item has {_scenario_words(q)} words of stem and options, "
+                          f"needs {minimum} (give the clinical picture, or add an exhibit)")
 
     s = summary(questions)
     if s["mc"] >= 8:
