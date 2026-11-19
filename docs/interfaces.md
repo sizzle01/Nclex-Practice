@@ -100,7 +100,7 @@ Each item type defines four payloads (C# records plus a validator on the backend
 | `dropdown_rationale` | P2 | Rationale (all-or-nothing per group) | groups |
 | `drag_drop_cloze` | P2 | 0/1 per target | targets |
 | `drag_drop_rationale` | P2 | Rationale (all-or-nothing per pair or triad) | groups |
-| `bowtie` | P2 | 0/1 per well slot | 5 |
+| `bowtie` | P2, built in F20 | 0/1 per well slot | 5 |
 | `hotspot` | P2 | 0/1 | 1 |
 
 ### 2.1 `multiple_choice`
@@ -219,7 +219,12 @@ interface BowtieContent {
 }
 interface BowtieKey      { condition: OptionId; actions: [OptionId, OptionId]; parameters: [OptionId, OptionId] }
 interface BowtieResponse { condition: OptionId | null; actions: OptionId[]; parameters: OptionId[] }
-// 0/1 per well slot, max 5
+// 0/1 per well slot, max 5; a wrong option in a slot costs nothing
+// Built in F20 (Nclex.Domain/ItemTypes/Bowtie). Authoring rules: each list has 4 to 8 options (the exam
+// shows 4 conditions and 5 actions and parameters); option ids are unique across all three lists,
+// because rationale.perOption is keyed by id; the key names options from the right list, with two
+// different actions and two different parameters. Responses may be partly filled (at most 2 per wing).
+// Present shuffles each list with its own seed. Grade detail has one entry per option, like SATA.
 
 // hotspot
 interface HotspotContent  { mediaId: string; width: number; height: number;
@@ -364,6 +369,7 @@ These requirements cover WCAG 2.1 AA (PRD §6.4, §8). Every renderer must satis
 | Calc | Numeric input, unit shown as a suffix | `aria-describedby` gives the unit and decimals | `inputmode="decimal"` |
 | Ordered | Select an item, then move it with arrow keys, or use "Move up / Move down" buttons | Live region announces the new position | Tap-to-select, tap-to-place |
 | Drag-drop (P2) | Same as Ordered: pick a token, then pick a target | Live region announcements | Tap-to-place (PRD §8) |
+| Bowtie (F20) | Pick an option (Enter, Space or click; `aria-pressed`), and focus moves to the first free slot of its kind; Enter places it there. Escape cancels the pick. Each filled slot has its own Remove button | Each slot is a button named for its place and contents ("Action to take, slot 1 of 2: empty"); each list is a labelled `group`; a live region announces picks, placements and removals | Tap to pick, tap a slot; or drag an option onto a slot. One column on narrow screens |
 | Hotspot (P2) | Tab cycles through regions | Each region has a `label` | Tap |
 | Media | Captions (WebVTT) required, transcript link | — | — |
 

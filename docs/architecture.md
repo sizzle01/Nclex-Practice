@@ -209,7 +209,7 @@ Nclex.Domain.Tests/ItemTypes/<Type>/
 - **Trend, chart/exhibit, audio, video and graphic-option items are not separate types.** They are any base item type plus `exhibits[]` (a flowsheet, chart, media) or options with `mediaId`. This matches the PRD's note that trend scoring "depends on underlying item type".
 
 MVP types: `multiple_choice`, `sata`, `select_n`, `matrix_mc`, `matrix_mr`, `multiple_response_grouping`, `dropdown_cloze`, `dropdown_table`, `highlight_text`, `highlight_table`, `fill_blank_calc`, `ordered_response`.
-Phase 2: `drag_drop_cloze`, `drag_drop_rationale`, `dropdown_rationale`, `bowtie`, `hotspot`.
+Phase 2: `drag_drop_cloze`, `drag_drop_rationale`, `dropdown_rationale`, `bowtie` (built in F20), `hotspot`.
 
 ### 5.5 Grading, results and notification pipeline
 
