@@ -1,5 +1,5 @@
 {
-  "notice": "RN bank batch 12: Endocrine I: diabetes mellitus. Reviewed by the content team on 17 November 2026. See REVIEW-LOG.md.",
+  "notice": "RN bank batch 12: Endocrine I: diabetes mellitus. Rewritten to NCLEX-RN difficulty and reviewed by the content team on 19 November 2026. See REVIEW-LOG.md.",
   "track": "RN",
   "subtopics": [
     {
@@ -54,12 +54,12 @@
       ],
       "cjmmSkill": "take_action",
       "difficulty": "moderate",
-      "stem": "A hospitalized client with type 1 diabetes is found unresponsive. The capillary glucose is 38 mg/dL, and the client has an IV line. What should the nurse do first?",
+      "stem": "A hospitalized client with type 1 diabetes is found unresponsive and sweaty at 0300. The capillary glucose is 38 mg/dL, and the client has a patent IV line. What should the nurse do first?",
       "content": {
         "options": [
           {
             "id": "a",
-            "text": "Give 4 oz of orange juice"
+            "text": "Squeeze a tube of glucose gel inside the client's cheek"
           },
           {
             "id": "b",
@@ -67,11 +67,11 @@
           },
           {
             "id": "c",
-            "text": "Recheck the glucose in 15 minutes"
+            "text": "Recheck the glucose in 15 minutes to confirm it"
           },
           {
             "id": "d",
-            "text": "Give the scheduled insulin"
+            "text": "Call the provider and wait for a new prescription"
           }
         ]
       },
@@ -79,17 +79,17 @@
         "correct": "b"
       },
       "rationale": {
-        "correct": "Severe hypoglycemia: IV dextrose if there is IV access, or glucagon (IM, subcutaneous or intranasal) if not.",
+        "correct": "Severe hypoglycemia: IV dextrose when there is IV access, or glucagon (IM, subcutaneous or intranasal) when there is not.",
         "perOption": {
-          "a": "An unresponsive client can't swallow safely.",
-          "b": "IV dextrose rapidly corrects severe hypoglycemia in a client with IV access.",
+          "a": "An unresponsive client cannot swallow safely.",
+          "b": "IV dextrose rapidly corrects severe hypoglycemia when there is IV access.",
           "c": "Waiting delays treatment of a dangerous low.",
-          "d": "Insulin would worsen the hypoglycemia."
+          "d": "Hypoglycemia protocols allow the nurse to treat immediately."
         },
         "references": [
           "Medical-surgical nursing texts (e.g. Lewis; Ignatavicius)",
           "American Diabetes Association Standards of Care",
-          "Reviewed by the content team on 17 November 2026."
+          "Rewritten to NCLEX-RN difficulty and reviewed by the content team on 19 November 2026."
         ]
       },
       "educationalObjective": "Treat severe hypoglycemia in a client who can't swallow."
@@ -104,7 +104,7 @@
       ],
       "cjmmSkill": "take_action",
       "difficulty": "easy",
-      "stem": "A client is shaky and sweaty with a glucose of 62 mg/dL. The client is alert and can swallow. Which snack should the nurse give?",
+      "stem": "A client with diabetes is shaky and sweaty with a glucose of 62 mg/dL. The client is alert and able to swallow. Which snack should the nurse give first?",
       "content": {
         "options": [
           {
@@ -113,15 +113,15 @@
           },
           {
             "id": "b",
-            "text": "A slice of cheese"
+            "text": "A cheese stick and crackers"
           },
           {
             "id": "c",
-            "text": "A chocolate bar"
+            "text": "A chocolate candy bar"
           },
           {
             "id": "d",
-            "text": "A large meal right away"
+            "text": "The full lunch tray now"
           }
         ]
       },
@@ -129,16 +129,16 @@
         "correct": "a"
       },
       "rationale": {
-        "correct": "15-15 rule: give 15 g of fast carbohydrate, recheck in 15 minutes and repeat if still below 70 mg/dL.",
+        "correct": "The 15-15 rule: give 15 g of fast carbohydrate, recheck in 15 minutes, and repeat if still below 70 mg/dL.",
         "perOption": {
           "a": "This provides about 15 g of fast-acting carbohydrate.",
           "b": "Protein and fat raise glucose slowly.",
-          "c": "The fat slows absorption.",
-          "d": "Fast carbohydrate comes first; a snack or meal follows once the glucose recovers."
+          "c": "The fat in chocolate slows absorption.",
+          "d": "Fast carbohydrate comes first; a meal follows once the glucose recovers."
         },
         "references": [
           "American Diabetes Association Standards of Care",
-          "Reviewed by the content team on 17 November 2026."
+          "Rewritten to NCLEX-RN difficulty and reviewed by the content team on 19 November 2026."
         ]
       },
       "educationalObjective": "Treat mild hypoglycemia."
@@ -153,24 +153,24 @@
       ],
       "cjmmSkill": "analyze_cues",
       "difficulty": "difficult",
-      "stem": "A client with diabetes takes metoprolol. Why is this client at risk for not recognizing hypoglycemia?",
+      "stem": "A client with type 1 diabetes who started metoprolol last month says, \"I had a sugar of 48 yesterday and didn't feel anything until I got confused.\" Which explanation should the nurse give?",
       "content": {
         "options": [
           {
             "id": "a",
-            "text": "Beta-blockers block warning signs such as a fast heartbeat and tremor"
+            "text": "Metoprolol blocks warning signs such as a racing heart and shakiness"
           },
           {
             "id": "b",
-            "text": "Beta-blockers raise blood glucose"
+            "text": "Metoprolol raises blood glucose, so lows are less likely to happen"
           },
           {
             "id": "c",
-            "text": "Beta-blockers cause excessive sweating"
+            "text": "Metoprolol causes heavy sweating that hides the usual symptoms"
           },
           {
             "id": "d",
-            "text": "Beta-blockers make the client sleep more"
+            "text": "Metoprolol makes people sleep more deeply, so they miss the low readings"
           }
         ]
       },
@@ -180,14 +180,14 @@
       "rationale": {
         "correct": "Beta-blockers can mask the adrenergic symptoms of hypoglycemia; clients should check their glucose more often.",
         "perOption": {
-          "a": "Beta-blockers blunt the adrenergic response that causes palpitations and shakiness; sweating may still occur.",
-          "b": "They can mask and prolong hypoglycemia rather than raise glucose.",
-          "c": "Sweating isn't increased.",
-          "d": "This isn't the mechanism."
+          "a": "Beta-blockers blunt the adrenergic response that causes palpitations and tremor; sweating may still occur.",
+          "b": "Beta-blockers can mask and prolong hypoglycemia rather than raise glucose.",
+          "c": "Sweating is not increased.",
+          "d": "This is not the mechanism."
         },
         "references": [
           "Nursing pharmacology texts (e.g. Lehne; McCuistion) and the drug's prescribing information",
-          "Reviewed by the content team on 17 November 2026."
+          "Rewritten to NCLEX-RN difficulty and reviewed by the content team on 19 November 2026."
         ]
       },
       "educationalObjective": "Recognize medications that mask hypoglycemia."
@@ -202,20 +202,20 @@
       ],
       "cjmmSkill": "take_action",
       "difficulty": "moderate",
-      "stem": "A client is admitted with diabetic ketoacidosis. Which prescription should the nurse start first?",
+      "stem": "A 19-year-old with type 1 diabetes is admitted with diabetic ketoacidosis. The glucose is 540 mg/dL, the potassium is 4.8 mEq/L, and the heart rate is 128/min. Which prescription should the nurse start first?",
       "content": {
         "options": [
           {
             "id": "a",
-            "text": "IV 0.9% sodium chloride"
+            "text": "IV 0.9% sodium chloride bolus"
           },
           {
             "id": "b",
-            "text": "Subcutaneous insulin glargine"
+            "text": "Subcutaneous insulin glargine 20 units"
           },
           {
             "id": "c",
-            "text": "Sodium bicarbonate IV"
+            "text": "IV sodium bicarbonate infusion"
           },
           {
             "id": "d",
@@ -227,16 +227,16 @@
         "correct": "a"
       },
       "rationale": {
-        "correct": "DKA treatment order: fluids, check potassium, IV insulin, then add dextrose once glucose falls to about 200 to 250 mg/dL.",
+        "correct": "DKA treatment order: fluids, check potassium, IV insulin, then add dextrose once the glucose falls to about 200 to 250 mg/dL.",
         "perOption": {
           "a": "Severe dehydration is the immediate threat; fluids restore perfusion and lower the glucose.",
           "b": "DKA needs IV regular insulin, started after fluids and a potassium check.",
-          "c": "Bicarbonate is rarely used, only for severe acidosis.",
-          "d": "The client isn't ready to eat."
+          "c": "Bicarbonate is rarely used, and only for very severe acidosis.",
+          "d": "The client is not ready to eat."
         },
         "references": [
           "Medical-surgical nursing texts (e.g. Lewis; Ignatavicius)",
-          "Reviewed by the content team on 17 November 2026."
+          "Rewritten to NCLEX-RN difficulty and reviewed by the content team on 19 November 2026."
         ]
       },
       "educationalObjective": "Begin DKA treatment in the correct order."
@@ -251,24 +251,24 @@
       ],
       "cjmmSkill": "take_action",
       "difficulty": "difficult",
-      "stem": "A client with DKA on an insulin infusion now has a glucose of 220 mg/dL and an anion gap that hasn't closed. What should the nurse anticipate?",
+      "stem": "A client recovering from DKA has been on an IV insulin infusion for 20 hours. The anion gap has closed, the bicarbonate is 21 mEq/L, and the client is eating breakfast. The provider prescribes subcutaneous insulin glargine and stopping the infusion. What should the nurse do?",
       "content": {
         "options": [
           {
             "id": "a",
-            "text": "Stop the insulin infusion"
+            "text": "Stop the insulin infusion now, then give the glargine at bedtime"
           },
           {
             "id": "b",
-            "text": "Add dextrose to the IV fluids and continue the insulin"
+            "text": "Give the glargine and keep the infusion running 1 to 2 hours"
           },
           {
             "id": "c",
-            "text": "Switch to subcutaneous insulin right away"
+            "text": "Keep the infusion until the glucose falls below 100 mg/dL"
           },
           {
             "id": "d",
-            "text": "Give a glucose tablet"
+            "text": "Stop the infusion and give glargine once the glucose rises"
           }
         ]
       },
@@ -276,19 +276,19 @@
         "correct": "b"
       },
       "rationale": {
-        "correct": "When glucose reaches about 200 to 250 mg/dL in DKA, add dextrose and continue insulin until the acidosis resolves.",
+        "correct": "When moving from IV to subcutaneous insulin after DKA, give the basal dose and overlap the infusion by 1 to 2 hours.",
         "perOption": {
-          "a": "Insulin is still needed to clear the ketones.",
-          "b": "Dextrose prevents hypoglycemia while the insulin keeps clearing the ketoacidosis.",
-          "c": "The switch happens when the gap closes and the client can eat.",
-          "d": "Glucose is given IV to balance the infusion."
+          "a": "A gap with no insulin lets ketones return quickly.",
+          "b": "Overlapping prevents a gap in insulin, because IV insulin acts for only minutes.",
+          "c": "The infusion is not continued to reach that target.",
+          "d": "Waiting for the glucose to rise invites rebound ketoacidosis."
         },
         "references": [
           "Medical-surgical nursing texts (e.g. Lewis; Ignatavicius)",
-          "Reviewed by the content team on 17 November 2026."
+          "Rewritten to NCLEX-RN difficulty and reviewed by the content team on 19 November 2026."
         ]
       },
-      "educationalObjective": "Adjust DKA treatment as the glucose falls."
+      "educationalObjective": "Transition insulin safely after DKA."
     },
     {
       "id": "c1a00012-0000-4000-8000-000000000006",
@@ -300,24 +300,24 @@
       ],
       "cjmmSkill": "analyze_cues",
       "difficulty": "difficult",
-      "stem": "Before starting an insulin infusion for DKA, the nurse sees the potassium is 3.0 mEq/L. Why is this important?",
+      "stem": "Before starting an insulin infusion for DKA, the nurse sees the potassium is 3.0 mEq/L. The glucose is 610 mg/dL and the pH is 7.12. Why is the potassium result important?",
       "content": {
         "options": [
           {
             "id": "a",
-            "text": "Insulin will raise the potassium to a dangerous level"
+            "text": "Insulin will push the potassium up to a dangerously high level quickly"
           },
           {
             "id": "b",
-            "text": "Insulin moves potassium into cells, so the low potassium must be corrected first"
+            "text": "Insulin drives potassium into cells, so it is corrected first"
           },
           {
             "id": "c",
-            "text": "The potassium doesn't matter in DKA"
+            "text": "The potassium does not matter once fluids are running"
           },
           {
             "id": "d",
-            "text": "Low potassium means the DKA is resolving"
+            "text": "A low potassium shows that the DKA is already resolving"
           }
         ]
       },
@@ -325,16 +325,16 @@
         "correct": "b"
       },
       "rationale": {
-        "correct": "In DKA, total body potassium is low even if the blood level looks normal. Hold insulin if the potassium is below 3.3 mEq/L and replace it first.",
+        "correct": "In DKA, total body potassium is low even when the blood level looks normal. Hold insulin if the potassium is below 3.3 mEq/L and replace it first.",
         "perOption": {
           "a": "Insulin lowers potassium.",
           "b": "Starting insulin with a potassium below 3.3 mEq/L can cause life-threatening hypokalemia.",
           "c": "Potassium shifts are a major risk.",
-          "d": "This isn't a marker of resolution."
+          "d": "This is not a marker of resolution."
         },
         "references": [
           "Medical-surgical nursing texts (e.g. Lewis; Ignatavicius)",
-          "Reviewed by the content team on 17 November 2026."
+          "Rewritten to NCLEX-RN difficulty and reviewed by the content team on 19 November 2026."
         ]
       },
       "educationalObjective": "Check potassium before starting insulin in DKA."
@@ -349,7 +349,7 @@
       ],
       "cjmmSkill": "analyze_cues",
       "difficulty": "moderate",
-      "stem": "Review the exhibit, then complete the sentence.",
+      "stem": "The nurse reviews the laboratory results and the nurse's note for a newly admitted client. Complete the sentence.",
       "content": {
         "template": "The client's findings are most consistent with {{b1}}, and the nurse's first priority is {{b2}}.",
         "blanks": [
@@ -366,7 +366,7 @@
               },
               {
                 "id": "c",
-                "text": "hypoglycemia"
+                "text": "severe hypoglycemia"
               }
             ]
           },
@@ -379,11 +379,11 @@
               },
               {
                 "id": "b",
-                "text": "teaching about diet"
+                "text": "diabetes diet teaching"
               },
               {
                 "id": "c",
-                "text": "giving glucagon"
+                "text": "an IV glucagon dose"
               }
             ]
           }
@@ -396,7 +396,7 @@
         }
       },
       "rationale": {
-        "correct": "DKA: glucose above 250 mg/dL, pH below 7.30, bicarbonate below 18 mEq/L and ketones. Start with fluids.",
+        "correct": "DKA: glucose above 250 mg/dL, pH below 7.30, bicarbonate below 18 mEq/L and ketones; start with fluids.",
         "perOption": {
           "b1:a": "High glucose, low pH and bicarbonate, and ketones show DKA.",
           "b1:b": "HHS has little or no ketosis and usually a pH above 7.3.",
@@ -407,7 +407,7 @@
         },
         "references": [
           "Medical-surgical nursing texts (e.g. Lewis; Ignatavicius)",
-          "Reviewed by the content team on 17 November 2026."
+          "Rewritten to NCLEX-RN difficulty and reviewed by the content team on 19 November 2026."
         ]
       },
       "educationalObjective": "Recognize DKA and its first treatment.",
@@ -472,7 +472,7 @@
       ],
       "cjmmSkill": "analyze_cues",
       "difficulty": "difficult",
-      "stem": "For each finding, indicate whether it is more typical of diabetic ketoacidosis (DKA) or hyperosmolar hyperglycemic state (HHS).",
+      "stem": "The emergency department nurse is caring for two clients with severe hyperglycemia, one with DKA and one with HHS. For each finding, choose the condition it is more typical of.",
       "content": {
         "rows": [
           {
@@ -527,12 +527,12 @@
           "r3:c2": "HHS has little acidosis to compensate for.",
           "r4:c1": "DKA usually develops over hours, often in type 1 diabetes.",
           "r4:c2": "HHS develops slowly in older adults with type 2 diabetes.",
-          "r5:c1": "Dehydration occurs in DKA, but it is usually more profound in HHS.",
-          "r5:c2": "HHS causes extreme dehydration and neurologic changes."
+          "r5:c1": "Dehydration occurs in DKA but is usually more profound in HHS.",
+          "r5:c2": "HHS causes extreme dehydration and neurological changes."
         },
         "references": [
           "Medical-surgical nursing texts (e.g. Lewis; Ignatavicius)",
-          "Reviewed by the content team on 17 November 2026."
+          "Rewritten to NCLEX-RN difficulty and reviewed by the content team on 19 November 2026."
         ]
       },
       "educationalObjective": "Distinguish DKA from HHS."
@@ -547,24 +547,24 @@
       ],
       "cjmmSkill": "take_action",
       "difficulty": "moderate",
-      "stem": "An older adult with type 2 diabetes is admitted with hyperosmolar hyperglycemic state. What is the priority intervention?",
+      "stem": "An 81-year-old client with type 2 diabetes is brought in from a nursing home with confusion, a glucose of 880 mg/dL, no ketones and a blood pressure of 88/54. What is the priority intervention?",
       "content": {
         "options": [
           {
             "id": "a",
-            "text": "Aggressive IV fluid replacement"
+            "text": "Rapid IV fluid replacement"
           },
           {
             "id": "b",
-            "text": "Bicarbonate infusion"
+            "text": "An IV sodium bicarbonate infusion"
           },
           {
             "id": "c",
-            "text": "High-dose oral hypoglycemics"
+            "text": "A higher dose of the client's oral glipizide"
           },
           {
             "id": "d",
-            "text": "Fluid restriction"
+            "text": "Fluid restriction to protect the heart"
           }
         ]
       },
@@ -575,13 +575,13 @@
         "correct": "Fluid replacement is the cornerstone of HHS treatment, followed by insulin and electrolyte replacement.",
         "perOption": {
           "a": "Severe dehydration is the main problem in HHS.",
-          "b": "HHS doesn't involve significant acidosis.",
-          "c": "These are too slow and aren't appropriate in the acute phase.",
+          "b": "HHS does not involve significant acidosis.",
+          "c": "Oral agents are too slow and not appropriate in the acute phase.",
           "d": "This would worsen the dehydration."
         },
         "references": [
           "Medical-surgical nursing texts (e.g. Lewis; Ignatavicius)",
-          "Reviewed by the content team on 17 November 2026."
+          "Rewritten to NCLEX-RN difficulty and reviewed by the content team on 19 November 2026."
         ]
       },
       "educationalObjective": "Prioritize care in HHS."
@@ -596,24 +596,24 @@
       ],
       "cjmmSkill": "evaluate_outcomes",
       "difficulty": "moderate",
-      "stem": "A client with type 1 diabetes has the flu and isn't eating much. Which statement shows a need for more teaching about sick-day management?",
+      "stem": "A 22-year-old with type 1 diabetes has influenza with nausea and is eating very little. Which statement by the client shows a need for more teaching about sick-day management?",
       "content": {
         "options": [
           {
             "id": "a",
-            "text": "\"I'll check my blood sugar every 3 to 4 hours.\""
+            "text": "\"I'll check my blood sugar every 3 to 4 hours while I'm sick.\""
           },
           {
             "id": "b",
-            "text": "\"I'll skip my insulin because I'm not eating.\""
+            "text": "\"I'll skip my long-acting insulin since I'm not eating.\""
           },
           {
             "id": "c",
-            "text": "\"I'll check for ketones if my sugar is over 240.\""
+            "text": "\"I'll test for ketones if my sugar is over 240.\""
           },
           {
             "id": "d",
-            "text": "\"I'll drink sugar-free fluids often.\""
+            "text": "\"I'll sip sugar-free fluids often to stay hydrated.\""
           }
         ]
       },
@@ -621,7 +621,7 @@
         "correct": "b"
       },
       "rationale": {
-        "correct": "Sick-day rules: keep taking insulin, monitor glucose and ketones, drink fluids and call the provider if vomiting continues or ketones are moderate to high.",
+        "correct": "Sick-day rules: keep taking insulin, monitor glucose and ketones, drink fluids, and call the provider if vomiting continues or ketones are moderate to high.",
         "perOption": {
           "a": "Frequent checks are recommended.",
           "b": "Illness raises glucose; basal insulin must continue to prevent DKA.",
@@ -630,7 +630,7 @@
         },
         "references": [
           "American Diabetes Association Standards of Care",
-          "Reviewed by the content team on 17 November 2026."
+          "Rewritten to NCLEX-RN difficulty and reviewed by the content team on 19 November 2026."
         ]
       },
       "educationalObjective": "Teach sick-day rules for diabetes."
@@ -645,32 +645,32 @@
       ],
       "cjmmSkill": "generate_solutions",
       "difficulty": "moderate",
-      "stem": "The nurse is teaching foot care to a client with diabetic peripheral neuropathy. Which instructions should the nurse include? Select all that apply.",
+      "stem": "A 66-year-old client with type 2 diabetes cannot feel a monofilament on either foot. Which foot-care instructions should the nurse include? Select all that apply.",
       "content": {
         "options": [
           {
             "id": "a",
-            "text": "Check your feet every day, using a mirror if needed"
+            "text": "Look at your feet every day, using a mirror if needed"
           },
           {
             "id": "b",
-            "text": "Wash and dry your feet well, especially between the toes"
+            "text": "Dry your feet well, especially between the toes"
           },
           {
             "id": "c",
-            "text": "Always wear shoes or slippers, even indoors"
+            "text": "Wear shoes or slippers at all times, even indoors"
           },
           {
             "id": "d",
-            "text": "Soak your feet in hot water every day"
+            "text": "Have toenails trimmed straight across or by a podiatrist"
           },
           {
             "id": "e",
-            "text": "Use a heating pad on cold feet"
+            "text": "Soak your feet in hot water every evening"
           },
           {
             "id": "f",
-            "text": "Have toenails trimmed straight across or by a podiatrist"
+            "text": "Warm cold feet with a heating pad at night"
           }
         ]
       },
@@ -679,7 +679,7 @@
           "a",
           "b",
           "c",
-          "f"
+          "d"
         ]
       },
       "rationale": {
@@ -688,13 +688,13 @@
           "a": "Daily checks catch injuries early.",
           "b": "Moisture between the toes promotes infection.",
           "c": "This protects numb feet from injury.",
-          "d": "Soaking dries the skin, and reduced sensation risks burns.",
-          "e": "Reduced sensation risks burns.",
-          "f": "This prevents ingrown nails and cuts."
+          "d": "This prevents ingrown nails and cuts.",
+          "e": "Soaking dries the skin, and reduced sensation risks burns.",
+          "f": "Reduced sensation risks burns."
         },
         "references": [
           "American Diabetes Association Standards of Care",
-          "Reviewed by the content team on 17 November 2026."
+          "Rewritten to NCLEX-RN difficulty and reviewed by the content team on 19 November 2026."
         ]
       },
       "educationalObjective": "Teach foot care for diabetic neuropathy."
@@ -709,24 +709,24 @@
       ],
       "cjmmSkill": "recognize_cues",
       "difficulty": "moderate",
-      "stem": "A client taking metformin calls the clinic. Which report should the nurse address first?",
+      "stem": "A client with type 2 diabetes and reduced kidney function who takes metformin 1,000 mg twice a day calls the clinic. Which report should the nurse address first?",
       "content": {
         "options": [
           {
             "id": "a",
-            "text": "Mild diarrhea in the first week"
+            "text": "Mild diarrhea that started in the first week of taking it"
           },
           {
             "id": "b",
-            "text": "Muscle pain, fast breathing and unusual sleepiness"
+            "text": "Muscle aches, fast breathing and unusual sleepiness"
           },
           {
             "id": "c",
-            "text": "A metallic taste"
+            "text": "A metallic taste in the mouth after taking the dose"
           },
           {
             "id": "d",
-            "text": "Asking whether to take it with meals"
+            "text": "A question about whether to take it with meals"
           }
         ]
       },
@@ -743,7 +743,7 @@
         },
         "references": [
           "Nursing pharmacology texts (e.g. Lehne; McCuistion) and the drug's prescribing information",
-          "Reviewed by the content team on 17 November 2026."
+          "Rewritten to NCLEX-RN difficulty and reviewed by the content team on 19 November 2026."
         ]
       },
       "educationalObjective": "Recognize signs of metformin-associated lactic acidosis."
@@ -758,7 +758,7 @@
       ],
       "cjmmSkill": "generate_solutions",
       "difficulty": "moderate",
-      "stem": "A client is starting glipizide. Which adverse effect is most important for the nurse to teach about?",
+      "stem": "A 74-year-old client who lives alone and often skips lunch is starting glipizide 5 mg before breakfast. The client's A1C is 8.4% and creatinine is normal. Which adverse effect is most important for the nurse to teach about?",
       "content": {
         "options": [
           {
@@ -783,7 +783,7 @@
         "correct": "a"
       },
       "rationale": {
-        "correct": "Sulfonylureas: take before breakfast, don't skip meals and recognize and treat hypoglycemia.",
+        "correct": "Sulfonylureas: take before breakfast, do not skip meals, and recognize and treat hypoglycemia; older adults are at higher risk.",
         "perOption": {
           "a": "Sulfonylureas stimulate insulin release and can cause hypoglycemia, especially if meals are skipped.",
           "b": "Sulfonylureas often cause weight gain.",
@@ -792,7 +792,7 @@
         },
         "references": [
           "Nursing pharmacology texts (e.g. Lehne; McCuistion) and the drug's prescribing information",
-          "Reviewed by the content team on 17 November 2026."
+          "Rewritten to NCLEX-RN difficulty and reviewed by the content team on 19 November 2026."
         ]
       },
       "educationalObjective": "Teach about sulfonylurea-induced hypoglycemia."
@@ -807,24 +807,24 @@
       ],
       "cjmmSkill": "generate_solutions",
       "difficulty": "difficult",
-      "stem": "A client is starting empagliflozin. Which instruction should the nurse include?",
+      "stem": "A 58-year-old client with type 2 diabetes and heart failure is starting empagliflozin in addition to metformin. Which instruction should the nurse include?",
       "content": {
         "options": [
           {
             "id": "a",
-            "text": "\"Report genital itching or discharge and stay well hydrated.\""
+            "text": "\"Report genital itching or discharge, and drink enough fluids.\""
           },
           {
             "id": "b",
-            "text": "\"This medication commonly causes hypoglycemia when taken alone.\""
+            "text": "\"This medicine often causes low blood sugar when taken with metformin.\""
           },
           {
             "id": "c",
-            "text": "\"Take it only when your sugar is high.\""
+            "text": "\"Take it on the days when your sugar reading is high.\""
           },
           {
             "id": "d",
-            "text": "\"Limit your water intake.\""
+            "text": "\"Limit your water so the medicine stays concentrated.\""
           }
         ]
       },
@@ -832,16 +832,16 @@
         "correct": "a"
       },
       "rationale": {
-        "correct": "SGLT2 inhibitors: genital infections, UTIs, dehydration and rare euglycemic DKA.",
+        "correct": "SGLT2 inhibitors: genital infections, UTIs, dehydration and rare euglycemic DKA; they also benefit heart failure.",
         "perOption": {
-          "a": "SGLT2 inhibitors put glucose into the urine, raising the risk of genital yeast infections and dehydration.",
-          "b": "Alone, SGLT2 inhibitors rarely cause hypoglycemia.",
+          "a": "SGLT2 inhibitors put glucose in the urine, raising the risk of genital yeast infections and dehydration.",
+          "b": "With metformin alone, SGLT2 inhibitors rarely cause hypoglycemia.",
           "c": "It is taken daily.",
           "d": "Hydration is important."
         },
         "references": [
           "Nursing pharmacology texts (e.g. Lehne; McCuistion) and the drug's prescribing information",
-          "Reviewed by the content team on 17 November 2026."
+          "Rewritten to NCLEX-RN difficulty and reviewed by the content team on 19 November 2026."
         ]
       },
       "educationalObjective": "Teach about SGLT2 inhibitors."
@@ -856,24 +856,24 @@
       ],
       "cjmmSkill": "analyze_cues",
       "difficulty": "difficult",
-      "stem": "Which history would contraindicate starting semaglutide?",
+      "stem": "A 45-year-old client with type 2 diabetes and a BMI of 36 asks about starting semaglutide after a friend lost weight on it. Which finding in the client's history would contraindicate it?",
       "content": {
         "options": [
           {
             "id": "a",
-            "text": "Family history of medullary thyroid carcinoma"
+            "text": "A sister treated for medullary thyroid carcinoma"
           },
           {
             "id": "b",
-            "text": "Obesity"
+            "text": "An A1C of 8.6% on metformin alone"
           },
           {
             "id": "c",
-            "text": "Type 2 diabetes"
+            "text": "Blood pressure of 142/88 on lisinopril"
           },
           {
             "id": "d",
-            "text": "Hypertension"
+            "text": "A history of gallstones removed 10 years ago"
           }
         ]
       },
@@ -883,14 +883,14 @@
       "rationale": {
         "correct": "GLP-1 agonists: watch for pancreatitis and GI effects; they are contraindicated with a history of medullary thyroid cancer or MEN 2.",
         "perOption": {
-          "a": "GLP-1 receptor agonists carry a warning about thyroid C-cell tumors and are contraindicated with a personal or family history of medullary thyroid cancer or MEN 2.",
-          "b": "Obesity is an indication.",
-          "c": "Type 2 diabetes is an indication.",
-          "d": "This isn't a contraindication."
+          "a": "GLP-1 receptor agonists are contraindicated with a personal or family history of medullary thyroid cancer or MEN 2.",
+          "b": "This is a reason to add a drug, not a contraindication.",
+          "c": "Hypertension is not a contraindication.",
+          "d": "A past cholecystectomy is not a contraindication."
         },
         "references": [
           "Nursing pharmacology texts (e.g. Lehne; McCuistion) and the drug's prescribing information",
-          "Reviewed by the content team on 17 November 2026."
+          "Rewritten to NCLEX-RN difficulty and reviewed by the content team on 19 November 2026."
         ]
       },
       "educationalObjective": "Identify contraindications to GLP-1 receptor agonists."
@@ -905,16 +905,16 @@
       ],
       "cjmmSkill": "analyze_cues",
       "difficulty": "easy",
-      "stem": "A client's hemoglobin A1C is 9.2%. What does this result tell the nurse?",
+      "stem": "A client with type 2 diabetes asks what a hemoglobin A1C of 9.2% means. What should the nurse explain?",
       "content": {
         "options": [
           {
             "id": "a",
-            "text": "Glucose control has been poor over the past 2 to 3 months"
+            "text": "Glucose has been high on average for about 3 months"
           },
           {
             "id": "b",
-            "text": "The client is hypoglycemic today"
+            "text": "The client's glucose is dangerously low at this moment"
           },
           {
             "id": "c",
@@ -922,7 +922,7 @@
           },
           {
             "id": "d",
-            "text": "The client doesn't have diabetes"
+            "text": "The client does not have diabetes after all"
           }
         ]
       },
@@ -933,13 +933,13 @@
         "correct": "A1C shows long-term glucose control; a target below 7% is common for adults.",
         "perOption": {
           "a": "The A1C reflects average glucose over about 3 months; most adults aim for below 7%.",
-          "b": "A1C doesn't reflect a single day.",
+          "b": "A1C does not reflect a single day.",
           "c": "9.2% is well above target.",
           "d": "6.5% or higher is diagnostic of diabetes."
         },
         "references": [
           "American Diabetes Association Standards of Care",
-          "Reviewed by the content team on 17 November 2026."
+          "Rewritten to NCLEX-RN difficulty and reviewed by the content team on 19 November 2026."
         ]
       },
       "educationalObjective": "Interpret a hemoglobin A1C."
@@ -954,24 +954,24 @@
       ],
       "cjmmSkill": "analyze_cues",
       "difficulty": "difficult",
-      "stem": "A client who takes NPH insulin at bedtime has high fasting glucose each morning. A 0300 check shows 52 mg/dL. Which explanation is most likely?",
+      "stem": "A client who takes NPH insulin at bedtime has fasting glucose readings of 220 to 250 mg/dL each morning. The provider asks the client to check at 0300 for 3 nights, and the readings are 52, 48 and 55 mg/dL. Which explanation is most likely?",
       "content": {
         "options": [
           {
             "id": "a",
-            "text": "Dawn phenomenon"
+            "text": "The dawn phenomenon"
           },
           {
             "id": "b",
-            "text": "Somogyi effect"
+            "text": "The Somogyi effect"
           },
           {
             "id": "c",
-            "text": "Insulin resistance"
+            "text": "Increasing insulin resistance"
           },
           {
             "id": "d",
-            "text": "Insufficient bedtime insulin"
+            "text": "Too little bedtime insulin"
           }
         ]
       },
@@ -979,16 +979,16 @@
         "correct": "b"
       },
       "rationale": {
-        "correct": "Somogyi effect: low at 0300, high in the morning, so reduce the evening insulin or add a snack. Dawn phenomenon: normal at 0300, high in the morning, so adjust the timing or dose.",
+        "correct": "Somogyi effect: low at 0300 and high in the morning, so reduce the evening insulin or add a snack. Dawn phenomenon: normal at 0300 and high in the morning, so adjust the timing or dose.",
         "perOption": {
           "a": "In the dawn phenomenon, the 0300 glucose is normal or high.",
           "b": "Nighttime hypoglycemia triggers counter-regulatory hormones that cause rebound morning hyperglycemia.",
-          "c": "This doesn't explain the nighttime low.",
-          "d": "More insulin would worsen the nighttime low."
+          "c": "This does not explain the nighttime lows.",
+          "d": "More insulin would worsen the nighttime lows."
         },
         "references": [
           "Medical-surgical nursing texts (e.g. Lewis; Ignatavicius)",
-          "Reviewed by the content team on 17 November 2026."
+          "Rewritten to NCLEX-RN difficulty and reviewed by the content team on 19 November 2026."
         ]
       },
       "educationalObjective": "Tell the Somogyi effect from the dawn phenomenon."
@@ -1003,24 +1003,24 @@
       ],
       "cjmmSkill": "generate_solutions",
       "difficulty": "moderate",
-      "stem": "A client with type 1 diabetes checks the glucose before exercising, and it is 290 mg/dL with moderate urine ketones. What should the nurse tell the client?",
+      "stem": "A 17-year-old with type 1 diabetes checks the glucose before soccer practice. It is 290 mg/dL with moderate urine ketones. What should the nurse tell the client?",
       "content": {
         "options": [
           {
             "id": "a",
-            "text": "\"Go ahead and exercise to lower your sugar.\""
+            "text": "\"Go to practice, since exercise will bring your sugar down.\""
           },
           {
             "id": "b",
-            "text": "\"Don't exercise now; follow your plan for high glucose and ketones.\""
+            "text": "\"Skip practice today and follow your plan for ketones.\""
           },
           {
             "id": "c",
-            "text": "\"Eat a snack before you exercise.\""
+            "text": "\"Eat a snack with carbohydrate before you start practice.\""
           },
           {
             "id": "d",
-            "text": "\"Exercise is never safe for people with type 1 diabetes.\""
+            "text": "\"Exercise isn't safe for people with type 1 diabetes.\""
           }
         ]
       },
@@ -1028,7 +1028,7 @@
         "correct": "b"
       },
       "rationale": {
-        "correct": "Avoid vigorous exercise when the glucose is above about 250 mg/dL with ketones. Carry fast carbohydrate during exercise.",
+        "correct": "Avoid vigorous exercise when glucose is above about 250 mg/dL with ketones, and carry fast carbohydrate during exercise.",
         "perOption": {
           "a": "Exercise with ketosis can worsen hyperglycemia and ketoacidosis.",
           "b": "Exercise is postponed when ketones are present.",
@@ -1037,7 +1037,7 @@
         },
         "references": [
           "American Diabetes Association Standards of Care",
-          "Reviewed by the content team on 17 November 2026."
+          "Rewritten to NCLEX-RN difficulty and reviewed by the content team on 19 November 2026."
         ]
       },
       "educationalObjective": "Teach safe exercise for diabetes."
@@ -1052,24 +1052,24 @@
       ],
       "cjmmSkill": "analyze_cues",
       "difficulty": "moderate",
-      "stem": "Which result confirms a diagnosis of diabetes mellitus?",
+      "stem": "The clinic nurse is reviewing screening results for four adults without known diabetes. Which result confirms a diagnosis of diabetes mellitus?",
       "content": {
         "options": [
           {
             "id": "a",
-            "text": "Fasting plasma glucose of 132 mg/dL on two separate days"
+            "text": "Fasting glucose of 132 mg/dL on two separate days"
           },
           {
             "id": "b",
-            "text": "Random glucose of 160 mg/dL without symptoms"
+            "text": "A random glucose of 160 mg/dL with no symptoms"
           },
           {
             "id": "c",
-            "text": "A1C of 6.0%"
+            "text": "A hemoglobin A1C of 6.0% on a single test"
           },
           {
             "id": "d",
-            "text": "Fasting glucose of 105 mg/dL"
+            "text": "A fasting glucose of 105 mg/dL this morning"
           }
         ]
       },
@@ -1080,13 +1080,13 @@
         "correct": "Diagnostic criteria: fasting glucose 126 or higher, A1C 6.5% or higher, 2-hour OGTT 200 or higher, or random glucose 200 or higher with symptoms.",
         "perOption": {
           "a": "A fasting glucose of 126 mg/dL or higher, confirmed by repeat testing, is diagnostic.",
-          "b": "A random glucose needs to be 200 or higher with symptoms.",
+          "b": "A random glucose must be 200 or higher with symptoms.",
           "c": "This is in the prediabetes range (5.7% to 6.4%).",
           "d": "This is prediabetes (100 to 125)."
         },
         "references": [
           "American Diabetes Association Standards of Care",
-          "Reviewed by the content team on 17 November 2026."
+          "Rewritten to NCLEX-RN difficulty and reviewed by the content team on 19 November 2026."
         ]
       },
       "educationalObjective": "Apply diabetes diagnostic criteria."
@@ -1100,25 +1100,25 @@
         "diabetes-self-management"
       ],
       "cjmmSkill": "generate_solutions",
-      "difficulty": "easy",
-      "stem": "How often should a client with diabetes have a dilated eye exam to screen for retinopathy?",
+      "difficulty": "moderate",
+      "stem": "A client diagnosed with type 2 diabetes 3 years ago has never had an eye exam and says, \"My vision is fine, so I don't need one.\" What should the nurse tell the client?",
       "content": {
         "options": [
           {
             "id": "a",
-            "text": "Every 5 years"
+            "text": "\"You need an eye exam about every 5 years.\""
           },
           {
             "id": "b",
-            "text": "Every year, or as directed by the eye care provider"
+            "text": "\"A dilated eye exam every year finds damage early.\""
           },
           {
             "id": "c",
-            "text": "Only if vision changes"
+            "text": "\"You're right; you can wait until your vision changes.\""
           },
           {
             "id": "d",
-            "text": "Only at diagnosis"
+            "text": "\"An eye exam is needed just at the time of diagnosis.\""
           }
         ]
       },
@@ -1129,13 +1129,13 @@
         "correct": "Clients with diabetes need an annual dilated eye exam, along with yearly kidney screening and foot exams.",
         "perOption": {
           "a": "This is too long between exams.",
-          "b": "Annual screening finds retinopathy early, when treatment can prevent vision loss.",
+          "b": "Annual screening finds retinopathy before symptoms, when treatment can prevent vision loss.",
           "c": "Early retinopathy has no symptoms.",
           "d": "Screening continues for life."
         },
         "references": [
           "American Diabetes Association Standards of Care",
-          "Reviewed by the content team on 17 November 2026."
+          "Rewritten to NCLEX-RN difficulty and reviewed by the content team on 19 November 2026."
         ]
       },
       "educationalObjective": "Teach routine screening for diabetes complications."
@@ -1150,7 +1150,7 @@
       ],
       "cjmmSkill": "recognize_cues",
       "difficulty": "easy",
-      "stem": "A client with type 1 diabetes took insulin and missed lunch. Highlight the findings that suggest hypoglycemia.",
+      "stem": "A client with type 1 diabetes took mealtime insulin and then missed lunch. Highlight the findings that suggest hypoglycemia.",
       "content": {
         "segments": [
           {
@@ -1240,7 +1240,7 @@
         },
         "references": [
           "Medical-surgical nursing texts (e.g. Lewis; Ignatavicius)",
-          "Reviewed by the content team on 17 November 2026."
+          "Rewritten to NCLEX-RN difficulty and reviewed by the content team on 19 November 2026."
         ]
       },
       "educationalObjective": "Recognize the signs of hypoglycemia."
@@ -1255,24 +1255,24 @@
       ],
       "cjmmSkill": "take_action",
       "difficulty": "difficult",
-      "stem": "A client with type 1 diabetes is NPO for surgery in the morning. What should the nurse do about the client's usual insulin?",
+      "stem": "A client with type 1 diabetes who uses insulin glargine at bedtime and lispro with meals is NPO after midnight for a cholecystectomy at 0900. What should the nurse do about the client's insulin?",
       "content": {
         "options": [
           {
             "id": "a",
-            "text": "Hold all insulin until the client eats again"
+            "text": "Hold the insulin from midnight until the client is eating again"
           },
           {
             "id": "b",
-            "text": "Contact the provider for an adjusted basal insulin dose and monitor glucose closely"
+            "text": "Ask about a lower glargine dose and check the glucose often"
           },
           {
             "id": "c",
-            "text": "Give the full mealtime insulin as usual"
+            "text": "Give the usual breakfast lispro dose at 0700 as it is scheduled"
           },
           {
             "id": "d",
-            "text": "Switch the client to an oral diabetes drug"
+            "text": "Switch to an oral diabetes drug until after surgery"
           }
         ]
       },
@@ -1283,14 +1283,14 @@
         "correct": "Type 1 diabetes always needs basal insulin; adjust it while NPO and monitor glucose closely.",
         "perOption": {
           "a": "People with type 1 diabetes always need basal insulin to prevent DKA.",
-          "b": "The basal dose is usually reduced, not stopped, while the client is NPO, with frequent glucose checks.",
+          "b": "The basal dose is usually reduced, not stopped, while NPO, with frequent glucose checks.",
           "c": "Mealtime insulin without food causes hypoglycemia.",
-          "d": "Oral drugs don't work in type 1 diabetes."
+          "d": "Oral drugs do not work in type 1 diabetes."
         },
         "references": [
           "American Diabetes Association Standards of Care",
           "Medical-surgical nursing texts (e.g. Lewis; Ignatavicius)",
-          "Reviewed by the content team on 17 November 2026."
+          "Rewritten to NCLEX-RN difficulty and reviewed by the content team on 19 November 2026."
         ]
       },
       "educationalObjective": "Manage insulin for a client with type 1 diabetes who is NPO."
@@ -1305,24 +1305,24 @@
       ],
       "cjmmSkill": "evaluate_outcomes",
       "difficulty": "moderate",
-      "stem": "A client with diabetes who takes insulin asks about drinking alcohol. Which statement shows correct understanding?",
+      "stem": "A 30-year-old with type 1 diabetes asks the nurse about drinking alcohol at a wedding this weekend. Which statement by the client shows correct understanding?",
       "content": {
         "options": [
           {
             "id": "a",
-            "text": "\"I'll drink only on an empty stomach so it doesn't raise my sugar.\""
+            "text": "\"I'll drink before I eat so the alcohol doesn't raise my sugar.\""
           },
           {
             "id": "b",
-            "text": "\"If I drink, I'll have it with food and check my sugar, including before bed.\""
+            "text": "\"I'll drink with food and check my sugar, including at bedtime.\""
           },
           {
             "id": "c",
-            "text": "\"I'll take extra insulin when I drink.\""
+            "text": "\"I'll take a few extra units of insulin to cover the drinks.\""
           },
           {
             "id": "d",
-            "text": "\"Alcohol has no effect on my blood sugar.\""
+            "text": "\"Alcohol won't affect my sugar if I stick to beer.\""
           }
         ]
       },
@@ -1330,16 +1330,16 @@
         "correct": "b"
       },
       "rationale": {
-        "correct": "Alcohol can cause delayed hypoglycemia; drink in moderation with food and monitor glucose.",
+        "correct": "Alcohol can cause delayed hypoglycemia; drink in moderation with food and monitor glucose, including overnight.",
         "perOption": {
           "a": "Alcohol without food increases the risk of hypoglycemia.",
-          "b": "Alcohol blocks the liver from releasing glucose; delayed hypoglycemia can happen overnight.",
-          "c": "This increases the hypoglycemia risk.",
-          "d": "Alcohol can cause hypoglycemia."
+          "b": "Alcohol stops the liver releasing glucose, so delayed hypoglycemia can happen overnight.",
+          "c": "This increases the risk of hypoglycemia.",
+          "d": "Any alcohol can cause hypoglycemia."
         },
         "references": [
           "American Diabetes Association Standards of Care",
-          "Reviewed by the content team on 17 November 2026."
+          "Rewritten to NCLEX-RN difficulty and reviewed by the content team on 19 November 2026."
         ]
       },
       "educationalObjective": "Teach safe alcohol use with diabetes."
@@ -1354,7 +1354,7 @@
       ],
       "cjmmSkill": "take_action",
       "difficulty": "difficult",
-      "stem": "A client's insulin-to-carbohydrate ratio is 1 unit per 15 g. The correction factor is 1 unit for every 50 mg/dL above 150 mg/dL. Before a meal containing 75 g of carbohydrate, the glucose is 250 mg/dL. How many units of rapid-acting insulin should the client take?",
+      "stem": "A client with type 1 diabetes uses an insulin-to-carbohydrate ratio of 1 unit per 15 g and a correction factor of 1 unit for every 50 mg/dL above 150 mg/dL. Before a lunch containing 75 g of carbohydrate, the glucose is 250 mg/dL. The client's basal insulin was taken last night. How many units of rapid-acting insulin should the client take?",
       "content": {
         "unit": "units",
         "decimals": 0,
@@ -1369,7 +1369,7 @@
         "perOption": {},
         "references": [
           "American Diabetes Association Standards of Care",
-          "Reviewed by the content team on 17 November 2026."
+          "Rewritten to NCLEX-RN difficulty and reviewed by the content team on 19 November 2026."
         ]
       },
       "educationalObjective": "Calculate a mealtime insulin dose with a correction."

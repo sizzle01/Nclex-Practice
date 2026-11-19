@@ -22,7 +22,7 @@ Written by `python3 -I build_all.py`; do not edit by hand. See `quality.py` for 
 | 09-respiratory-2 | 24 | yes | 19 | 11% | 30% (stem words) | 11% | 31 | 3/13/8 |
 | 10-fluids-electrolytes-acid-base | 26 | yes | 20 | 20% | 30% (skip absolutes) | 5% | 33.5 | 2/16/8 |
 | 11-renal-urinary | 26 | yes | 23 | 4% | 27% (assess first) | 9% | 36 | 2/16/8 |
-| 12-endocrine-diabetes | 24 |  | 19 | 68% | 71% (longest) | 26% | 17.5 | 4/11/9 |
+| 12-endocrine-diabetes | 24 | yes | 19 | 16% | 29% (assess first) | 11% | 33 | 3/12/9 |
 | 13-endocrine-thyroid-adrenal-pituitary | 23 |  | 19 | 63% | 66% (longest) | 5% | 19 | 1/18/4 |
 | 14-neuro-1 | 25 |  | 21 | 76% | 76% (longest) | 14% | 19 | 3/16/6 |
 | 15-neuro-2-sensory | 25 |  | 23 | 83% | 83% (longest) | 17% | 18 | 3/18/4 |
@@ -57,4 +57,4 @@ Written by `python3 -I build_all.py`; do not edit by hand. See `quality.py` for 
 | 65-management-of-care-specialty | 27 | yes | 18 | 22% | 28% (stem words) | 11% | 27 | 2/15/10 |
 | 66-risk-reduction-basic-care | 31 | yes | 27 | 7% | 29% (assess first) | 15% | 32 | 4/17/10 |
 | 67-moc-sic-ngn | 34 | yes | 23 | 0% | 23% (shortest) | 9% | 32 | 0/23/11 |
-| **Whole bank** | 1110 | | 874 | 49% | 51% (longest) | 14% | 23 | 155/696/259 |
+| **Whole bank** | 1110 | | 874 | 48% | 50% (longest) | 14% | 23 | 154/697/259 |
