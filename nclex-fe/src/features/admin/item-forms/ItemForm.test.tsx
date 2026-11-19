@@ -1,4 +1,4 @@
-import { render, screen } from "@testing-library/react";
+import { render, screen, within } from "@testing-library/react";
 import userEvent from "@testing-library/user-event";
 import { useState } from "react";
 import { describe, expect, it } from "vitest";
@@ -91,6 +91,31 @@ describe("ItemForm", () => {
     await userEvent.click(screen.getAllByRole("checkbox", { name: "Selectable" })[0]);
 
     expect(latest.value.answerKey).toEqual({ correct: [] });
+  });
+
+  it("bowtie: one condition, and at most two correct actions and parameters", async () => {
+    const { latest } = renderForm("bowtie");
+
+    await userEvent.click(screen.getAllByRole("radio", { name: "Correct" })[2]);
+    const actions = screen.getByRole("group", { name: "Actions to take" });
+    const actionBoxes = within(actions).getAllByRole("checkbox", { name: "Correct" });
+    expect(actionBoxes[2]).toBeDisabled();
+    await userEvent.click(actionBoxes[0]);
+    await userEvent.click(actionBoxes[2]);
+
+    expect(latest.value.answerKey).toEqual({ condition: "c3", actions: ["a2", "a3"], parameters: ["p1", "p2"] });
+  });
+
+  it("bowtie: new options get their list's prefix, and a removed one leaves the key", async () => {
+    const { latest } = renderForm("bowtie");
+    const parameters = within(screen.getByRole("group", { name: "Parameters to monitor" }));
+
+    await userEvent.click(parameters.getByRole("button", { name: "Add choice" }));
+    await userEvent.click(parameters.getByRole("button", { name: "Remove p1" }));
+
+    const content = latest.value.content as { parameters: Array<{ id: string }> };
+    expect(content.parameters.map((o) => o.id)).toEqual(["p2", "p3", "p4", "p5", "p6"]);
+    expect(latest.value.answerKey).toMatchObject({ parameters: ["p2"] });
   });
 
   it("calculation: a tolerance replaces rounding", async () => {

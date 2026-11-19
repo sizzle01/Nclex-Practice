@@ -87,6 +87,11 @@ export function emptyItem(type: AuthorableType): ItemParts {
       };
     case "fill_blank_calc":
       return { content: { unit: "mL/hr", decimals: 0, inputLabel: "" }, answerKey: { value: 0, rounding: "exact" } };
+    case "bowtie":
+      return {
+        content: { condition: headers("c", 4), actions: headers("a", 5), parameters: headers("p", 5) },
+        answerKey: { condition: "c1", actions: ["a1", "a2"], parameters: ["p1", "p2"] },
+      };
   }
 }
 

@@ -28,6 +28,7 @@ export interface ItemContentByType {
   highlight_text: { segments: Array<{ id: string; text: string; selectable: boolean }> };
   highlight_table: { columns: string[]; rows: Array<{ id: string; cells: string[]; selectable: boolean }> };
   fill_blank_calc: { unit: string; decimals: number; inputLabel?: string | null };
+  bowtie: { condition: Option[]; actions: Option[]; parameters: Option[] };
 }
 
 export interface ItemKeyByType {
@@ -43,9 +44,10 @@ export interface ItemKeyByType {
   highlight_text: { correct: string[] };
   highlight_table: { correct: string[] };
   fill_blank_calc: { value: number; tolerance?: number | null; rounding: "exact" | "round" };
+  bowtie: { condition: string; actions: string[]; parameters: string[] };
 }
 
-/** The item types the console can author: the MVP ones (interfaces.md 2.1 to 2.9). */
+/** The item types the console can author: the MVP ones (interfaces.md 2.1 to 2.9) and bowtie (F20). */
 export type AuthorableType = keyof ItemContentByType;
 
 export const authorableTypes: Array<{ type: AuthorableType; label: string }> = [
@@ -61,6 +63,7 @@ export const authorableTypes: Array<{ type: AuthorableType; label: string }> = [
   { type: "highlight_table", label: "Highlight Table" },
   { type: "fill_blank_calc", label: "Fill in the Blank (Calculation)" },
   { type: "ordered_response", label: "Ordered Response" },
+  { type: "bowtie", label: "Bowtie" },
 ];
 
 export function isAuthorable(type: ItemType): type is AuthorableType {

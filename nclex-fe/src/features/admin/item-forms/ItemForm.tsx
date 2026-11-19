@@ -1,6 +1,7 @@
 "use client";
 
 import type { ComponentType } from "react";
+import { BowtieForm } from "./BowtieForm";
 import { CalcForm } from "./CalcForm";
 import { MultipleChoiceForm, OrderedResponseForm, SataForm, SelectNForm } from "./ChoiceForms";
 import { DropdownClozeForm, DropdownTableForm } from "./DropdownForms";
@@ -11,7 +12,7 @@ import type { AuthorableType, ItemFormProps, ItemParts } from "./payloads";
 
 type AnyForm = ComponentType<ItemFormProps<never>>;
 
-/** The form for each MVP item type (interfaces.md 2.1 to 2.9). */
+/** The form for each MVP item type (interfaces.md 2.1 to 2.9) and bowtie (F20). */
 const forms: Record<AuthorableType, AnyForm> = {
   multiple_choice: MultipleChoiceForm as AnyForm,
   sata: SataForm as AnyForm,
@@ -25,6 +26,7 @@ const forms: Record<AuthorableType, AnyForm> = {
   highlight_text: HighlightTextForm as AnyForm,
   highlight_table: HighlightTableForm as AnyForm,
   fill_blank_calc: CalcForm as AnyForm,
+  bowtie: BowtieForm as AnyForm,
 };
 
 interface ItemFormSwitchProps {
