@@ -1,5 +1,5 @@
 {
-  "notice": "RN bank batch 63: Management of Care III: legal duties, ethics, advocacy and health IT. Reviewed by the content team on 17 November 2026. See REVIEW-LOG.md.",
+  "notice": "RN bank batch 63: Management of Care III: legal duties, ethics, advocacy and health IT. Rewritten to NCLEX-RN difficulty and reviewed by the content team on 19 November 2026. See REVIEW-LOG.md.",
   "track": "RN",
   "subtopics": [
     {
@@ -52,26 +52,26 @@
       "subtopics": [
         "legal-and-ethical-practice"
       ],
-      "cjmmSkill": "take_action",
+      "cjmmSkill": "analyze_cues",
       "difficulty": "moderate",
-      "stem": "An off-duty nurse stops to help at a car crash and gives first aid. What protects the nurse legally?",
+      "stem": "An off-duty nurse stops at a highway crash, checks the driver's breathing and holds pressure on a bleeding scalp wound until paramedics arrive. The nurse is not paid and stays within first-aid skills. What protects the nurse legally?",
       "content": {
         "options": [
           {
             "id": "a",
-            "text": "Good Samaritan laws, as long as the nurse acts within training and without gross negligence"
+            "text": "A Good Samaritan law, if care is within training and not grossly negligent"
           },
           {
             "id": "b",
-            "text": "The hospital's malpractice insurance"
+            "text": "The employer's malpractice policy, because the nurse holds an active license"
           },
           {
             "id": "c",
-            "text": "Nothing; nurses should never help off duty"
+            "text": "The nurse's personal liability policy bought for work"
           },
           {
             "id": "d",
-            "text": "The client's signed consent"
+            "text": "The injured driver's implied consent to emergency treatment"
           }
         ]
       },
@@ -79,16 +79,16 @@
         "correct": "a"
       },
       "rationale": {
-        "correct": "Good Samaritan laws protect good-faith emergency care within the person's training.",
+        "correct": "Good Samaritan laws protect good-faith emergency care given without pay and within the person's training.",
         "perOption": {
-          "a": "These laws protect people who give emergency help in good faith without payment.",
-          "b": "Usually covers only work done for the employer.",
-          "c": "Helping in good faith is encouraged and protected.",
-          "d": "Consent isn't practical in an emergency."
+          "a": "Good Samaritan laws protect people who give emergency help in good faith, without payment, within their training.",
+          "b": "Employer policies usually cover only work done for the employer.",
+          "c": "A personal policy may help, but Good Samaritan laws are the main protection here.",
+          "d": "Implied consent allows treatment to begin, but it is not protection from liability."
         },
         "references": [
           "Fundamentals of nursing texts (e.g. Potter & Perry)",
-          "Reviewed by the content team on 17 November 2026."
+          "Rewritten to NCLEX-RN difficulty and reviewed by the content team on 19 November 2026."
         ]
       },
       "educationalObjective": "Apply Good Samaritan laws."
@@ -103,32 +103,32 @@
       ],
       "cjmmSkill": "take_action",
       "difficulty": "moderate",
-      "stem": "Which situations must the nurse report to the proper authorities as required by law in most states? Select all that apply.",
+      "stem": "The emergency department nurse is reviewing the day's cases with a new graduate. Which situations must be reported to the proper authorities by law in most states? Select all that apply.",
       "content": {
         "options": [
           {
             "id": "a",
-            "text": "A gunshot wound"
+            "text": "A client treated for a gunshot wound to the thigh"
           },
           {
             "id": "b",
-            "text": "Suspected abuse of a dependent adult"
+            "text": "Suspected neglect of an adult with dementia by a caregiver"
           },
           {
             "id": "c",
-            "text": "A new diagnosis of measles"
+            "text": "A child with a new diagnosis of measles"
           },
           {
             "id": "d",
-            "text": "A client's seasonal allergy"
+            "text": "A positive syphilis test in a pregnant client"
           },
           {
             "id": "e",
-            "text": "A client's decision to refuse surgery"
+            "text": "A client's decision to refuse a recommended surgery"
           },
           {
             "id": "f",
-            "text": "A positive syphilis test"
+            "text": "A client's seasonal allergies needing a prescription"
           }
         ]
       },
@@ -137,22 +137,22 @@
           "a",
           "b",
           "c",
-          "f"
+          "d"
         ]
       },
       "rationale": {
-        "correct": "Mandatory reports include certain injuries, abuse and communicable diseases.",
+        "correct": "Mandatory reports include certain injuries, abuse and neglect, and listed communicable diseases.",
         "perOption": {
           "a": "Most states require reporting gunshot and stab wounds.",
-          "b": "Nurses are mandated reporters of elder and dependent adult abuse.",
+          "b": "Nurses are mandated reporters of elder and dependent-adult abuse and neglect.",
           "c": "Measles is a reportable communicable disease.",
-          "d": "Not reportable.",
-          "e": "A client's right; not reportable.",
-          "f": "Syphilis is a reportable disease."
+          "d": "Syphilis is a reportable disease.",
+          "e": "Refusal is the client's right and is not reportable.",
+          "f": "Allergies are not reportable."
         },
         "references": [
           "Fundamentals of nursing texts (e.g. Potter & Perry)",
-          "Reviewed by the content team on 17 November 2026."
+          "Rewritten to NCLEX-RN difficulty and reviewed by the content team on 19 November 2026."
         ]
       },
       "educationalObjective": "Identify mandatory reporting duties."
@@ -167,7 +167,7 @@
       ],
       "cjmmSkill": "analyze_cues",
       "difficulty": "moderate",
-      "stem": "A nurse tells a confused client, \"If you try to get up again, I'll tie you to the bed.\" Which tort does this describe?",
+      "stem": "A confused client keeps trying to climb out of bed at night. Frustrated, a nurse says to the client, \"If you get up one more time, I'm going to tie you to the bed.\" The nurse does not touch the client. Which tort does this describe?",
       "content": {
         "options": [
           {
@@ -180,11 +180,11 @@
           },
           {
             "id": "c",
-            "text": "Defamation"
+            "text": "False imprisonment"
           },
           {
             "id": "d",
-            "text": "Invasion of privacy"
+            "text": "Defamation"
           }
         ]
       },
@@ -192,16 +192,16 @@
         "correct": "a"
       },
       "rationale": {
-        "correct": "Assault is a threat; battery is unwanted touching.",
+        "correct": "Assault is a threat of harmful contact; battery is unwanted touching; false imprisonment is unlawful restraint.",
         "perOption": {
-          "a": "Assault is a threat that makes a person fear harmful contact.",
-          "b": "Battery is actual touching without consent.",
-          "c": "Defamation is a false statement that harms someone's reputation.",
-          "d": "Not related."
+          "a": "Assault is a threat that makes a person fear harmful or offensive contact.",
+          "b": "Battery is actual touching without consent; no contact happened.",
+          "c": "False imprisonment requires actual restraint of movement.",
+          "d": "Defamation is a false statement that harms someone's reputation."
         },
         "references": [
           "Fundamentals of nursing texts (e.g. Potter & Perry)",
-          "Reviewed by the content team on 17 November 2026."
+          "Rewritten to NCLEX-RN difficulty and reviewed by the content team on 19 November 2026."
         ]
       },
       "educationalObjective": "Recognize assault."
@@ -216,7 +216,7 @@
       ],
       "cjmmSkill": "analyze_cues",
       "difficulty": "moderate",
-      "stem": "A competent client who is admitted voluntarily is kept from leaving the unit by staff locking the door. Which tort does this describe?",
+      "stem": "A competent adult admitted voluntarily for chest pain says she is going home. Staff lock the unit door and tell her she cannot leave until the cardiologist sees her tomorrow. No legal hold has been placed. Which tort does this describe?",
       "content": {
         "options": [
           {
@@ -229,7 +229,7 @@
           },
           {
             "id": "c",
-            "text": "Libel"
+            "text": "Assault"
           },
           {
             "id": "d",
@@ -241,16 +241,16 @@
         "correct": "a"
       },
       "rationale": {
-        "correct": "Competent clients may leave unless a lawful hold applies.",
+        "correct": "A competent client may leave unless a lawful hold applies; locking her in is false imprisonment.",
         "perOption": {
           "a": "Unlawfully restricting a competent person's movement is false imprisonment.",
-          "b": "Negligence is failure to meet the standard of care.",
-          "c": "Libel is written defamation.",
-          "d": "Not related."
+          "b": "Negligence is failing to meet the standard of care, causing harm.",
+          "c": "Assault is a threat of harmful contact.",
+          "d": "Abandonment is ending care without a proper handoff."
         },
         "references": [
           "Fundamentals of nursing texts (e.g. Potter & Perry)",
-          "Reviewed by the content team on 17 November 2026."
+          "Rewritten to NCLEX-RN difficulty and reviewed by the content team on 19 November 2026."
         ]
       },
       "educationalObjective": "Recognize false imprisonment."
@@ -264,8 +264,8 @@
         "legal-and-ethical-practice"
       ],
       "cjmmSkill": "analyze_cues",
-      "difficulty": "moderate",
-      "stem": "Which document defines the legal scope of practice for registered nurses in a state?",
+      "difficulty": "easy",
+      "stem": "A new graduate asks where the legal limits of an RN's practice are set. Which document defines the legal scope of practice for registered nurses in a state?",
       "content": {
         "options": [
           {
@@ -282,7 +282,7 @@
           },
           {
             "id": "d",
-            "text": "The client bill of rights"
+            "text": "The unit's procedure book"
           }
         ]
       },
@@ -290,16 +290,16 @@
         "correct": "a"
       },
       "rationale": {
-        "correct": "The nurse practice act sets the legal scope of nursing practice.",
+        "correct": "The nurse practice act sets the legal scope of nursing practice; facility policy can only be the same or narrower.",
         "perOption": {
           "a": "Each state's nurse practice act defines scope of practice and licensure.",
-          "b": "Policies can't expand legal scope.",
-          "c": "An ethical guide, not law.",
-          "d": "Describes client rights."
+          "b": "Facility policies cannot expand legal scope.",
+          "c": "The Code is an ethical guide, not law.",
+          "d": "Procedures describe how, not the legal scope."
         },
         "references": [
           "Fundamentals of nursing texts (e.g. Potter & Perry)",
-          "Reviewed by the content team on 17 November 2026."
+          "Rewritten to NCLEX-RN difficulty and reviewed by the content team on 19 November 2026."
         ]
       },
       "educationalObjective": "Identify the source of scope of practice."
@@ -314,24 +314,24 @@
       ],
       "cjmmSkill": "take_action",
       "difficulty": "moderate",
-      "stem": "A nurse sees a post on social media by a coworker that includes a photo of a client's wound with no face shown. What should the nurse do?",
+      "stem": "A nurse sees that a coworker has posted a photo of a client's unusual wound on a private social media account, with the caption \"Wild night on 4 West!\" The client's face is not shown. What should the nurse do?",
       "content": {
         "options": [
           {
             "id": "a",
-            "text": "Ignore it because the client can't be identified"
+            "text": "Leave it alone, since the client's face cannot be seen"
           },
           {
             "id": "b",
-            "text": "Report it according to facility policy"
+            "text": "Report it according to the facility's social media policy"
           },
           {
             "id": "c",
-            "text": "Like the post to show support"
+            "text": "Comment on the post asking the coworker to blur the wound"
           },
           {
             "id": "d",
-            "text": "Share the post with other nurses for learning"
+            "text": "Message the coworker privately and keep it between the two of them"
           }
         ]
       },
@@ -339,16 +339,16 @@
         "correct": "b"
       },
       "rationale": {
-        "correct": "Never post client information or images on social media.",
+        "correct": "Never post client information or images on social media; report breaches through policy.",
         "perOption": {
-          "a": "Details can still identify a client, and posting violates policy and privacy.",
-          "b": "Posting client images without consent violates privacy and professional standards.",
-          "c": "Endorses a privacy violation.",
-          "d": "Spreads the violation."
+          "a": "The unit, date and wound can still identify the client, and posting breaches privacy.",
+          "b": "Posting client images without consent violates privacy and professional standards and must be reported.",
+          "c": "Engaging publicly spreads the post further and does not fix the breach.",
+          "d": "A privacy breach must be reported, not handled informally."
         },
         "references": [
           "Fundamentals of nursing texts (e.g. Potter & Perry)",
-          "Reviewed by the content team on 17 November 2026."
+          "Rewritten to NCLEX-RN difficulty and reviewed by the content team on 19 November 2026."
         ]
       },
       "educationalObjective": "Respond to a social media privacy breach."
@@ -363,24 +363,24 @@
       ],
       "cjmmSkill": "analyze_cues",
       "difficulty": "difficult",
-      "stem": "Which situation shows all four elements of malpractice (duty, breach, causation, harm)?",
+      "stem": "A risk manager is reviewing four events. Which event shows all four elements of malpractice: duty, breach, causation and harm?",
       "content": {
         "options": [
           {
             "id": "a",
-            "text": "A nurse forgets to document a vital sign that was normal"
+            "text": "A nurse forgot to chart a normal blood pressure, and the client was discharged well"
           },
           {
             "id": "b",
-            "text": "A nurse doesn't report a client's falling blood pressure, and the client later has a stroke from untreated hemorrhage"
+            "text": "A nurse ignored a falling blood pressure, and the client had a stroke from bleeding"
           },
           {
             "id": "c",
-            "text": "A client falls despite every fall precaution being in place"
+            "text": "A client fell and broke a hip even though every fall precaution in the plan was in place"
           },
           {
             "id": "d",
-            "text": "A nurse gives a medication late, and the client has no effects"
+            "text": "A nurse gave an antibiotic 90 minutes late, and the client had no ill effects"
           }
         ]
       },
@@ -388,16 +388,16 @@
         "correct": "b"
       },
       "rationale": {
-        "correct": "Malpractice requires duty, breach, causation and damages.",
+        "correct": "Malpractice requires all four elements: a duty, a breach of the standard of care, causation and damages.",
         "perOption": {
-          "a": "No harm resulted.",
-          "b": "Duty existed, the standard was breached, and the breach caused harm.",
-          "c": "No breach of duty.",
-          "d": "No harm."
+          "a": "There was a breach of documentation standards, but no harm resulted.",
+          "b": "The nurse had a duty, breached the standard, and the breach caused harm.",
+          "c": "Harm occurred, but there was no breach of the standard of care.",
+          "d": "There was a breach, but no harm resulted."
         },
         "references": [
           "Fundamentals of nursing texts (e.g. Potter & Perry)",
-          "Reviewed by the content team on 17 November 2026."
+          "Rewritten to NCLEX-RN difficulty and reviewed by the content team on 19 November 2026."
         ]
       },
       "educationalObjective": "Analyze the elements of malpractice."
@@ -412,24 +412,24 @@
       ],
       "cjmmSkill": "take_action",
       "difficulty": "difficult",
-      "stem": "A client arrives at the emergency department in active labor but has no insurance. What is the legal requirement?",
+      "stem": "A 24-year-old with no insurance arrives at a private hospital's emergency department in active labor, with contractions every 3 minutes. The registration clerk asks whether the client should be sent to the county hospital 20 miles away. What does the law require?",
       "content": {
         "options": [
           {
             "id": "a",
-            "text": "Transfer the client to a public hospital immediately"
+            "text": "Transfer to the county hospital once the client's insurance status is confirmed"
           },
           {
             "id": "b",
-            "text": "Provide a medical screening exam and stabilizing treatment regardless of ability to pay"
+            "text": "A medical screening exam and stabilizing care, whatever the client can pay"
           },
           {
             "id": "c",
-            "text": "Ask for payment before treatment"
+            "text": "Payment or a payment plan before anything other than a fetal heart check"
           },
           {
             "id": "d",
-            "text": "Refuse care because of the hospital's policy"
+            "text": "Treatment if the on-call obstetrician agrees to accept the client"
           }
         ]
       },
@@ -437,16 +437,16 @@
         "correct": "b"
       },
       "rationale": {
-        "correct": "EMTALA requires emergency screening and stabilization regardless of payment.",
+        "correct": "EMTALA requires emergency screening and stabilizing treatment, including for active labor, regardless of ability to pay.",
         "perOption": {
-          "a": "Transfer before stabilization violates EMTALA.",
-          "b": "EMTALA requires screening and stabilization for anyone who comes to the ED.",
-          "c": "Not allowed before screening and stabilization.",
-          "d": "Violates federal law."
+          "a": "Transfer before screening and stabilization violates EMTALA.",
+          "b": "EMTALA requires screening and stabilization, including delivery in active labor, for anyone who comes to the ED.",
+          "c": "Asking about payment cannot delay screening or stabilization.",
+          "d": "The duty to screen and stabilize does not depend on a physician agreeing."
         },
         "references": [
           "Fundamentals of nursing texts (e.g. Potter & Perry)",
-          "Reviewed by the content team on 17 November 2026."
+          "Rewritten to NCLEX-RN difficulty and reviewed by the content team on 19 November 2026."
         ]
       },
       "educationalObjective": "Apply EMTALA requirements."
@@ -461,12 +461,12 @@
       ],
       "cjmmSkill": "analyze_cues",
       "difficulty": "difficult",
-      "stem": "For each situation, indicate the ethical principle that is most at stake.",
+      "stem": "The unit's ethics resource nurse is discussing four situations with staff. For each situation, choose the ethical principle that is most at stake.",
       "content": {
         "rows": [
           {
             "id": "r1",
-            "text": "A competent client refuses dialysis after being told the risks"
+            "text": "A competent client refuses dialysis after hearing the risks"
           },
           {
             "id": "r2",
@@ -474,7 +474,7 @@
           },
           {
             "id": "r3",
-            "text": "Holding a sedative that would further lower a client's dangerously low blood pressure"
+            "text": "Holding a sedative that would lower a client's already dangerous blood pressure"
           },
           {
             "id": "r4",
@@ -511,26 +511,26 @@
       "rationale": {
         "correct": "Autonomy is self-determination, beneficence is doing good, justice is fairness, and nonmaleficence is avoiding harm.",
         "perOption": {
-          "r1:c1": "The client's right to decide.",
-          "r1:c2": "Not the main issue.",
-          "r1:c3": "Not the main issue.",
-          "r1:c4": "Not the main issue.",
-          "r2:c1": "Not the main issue.",
-          "r2:c2": "Not the main issue.",
-          "r2:c3": "Fair distribution of scarce resources.",
-          "r2:c4": "Not the main issue.",
-          "r3:c1": "Not the main issue.",
+          "r1:c1": "The client's right to decide is at stake.",
+          "r1:c2": "This is not the main issue.",
+          "r1:c3": "This is not the main issue.",
+          "r1:c4": "This is not the main issue.",
+          "r2:c1": "This is not the main issue.",
+          "r2:c2": "This is not the main issue.",
+          "r2:c3": "Fair distribution of scarce resources is at stake.",
+          "r2:c4": "This is not the main issue.",
+          "r3:c1": "This is not the main issue.",
           "r3:c2": "Related, but the focus is avoiding harm.",
-          "r3:c3": "Not the main issue.",
-          "r3:c4": "Avoiding harm.",
+          "r3:c3": "This is not the main issue.",
+          "r3:c4": "Avoiding harm is at stake.",
           "r4:c1": "Related, but the focus is doing good.",
-          "r4:c2": "Acting for the client's benefit.",
-          "r4:c3": "Not the main issue.",
-          "r4:c4": "Not the main issue."
+          "r4:c2": "Acting for the client's benefit is at stake.",
+          "r4:c3": "This is not the main issue.",
+          "r4:c4": "This is not the main issue."
         },
         "references": [
           "Fundamentals of nursing texts (e.g. Potter & Perry)",
-          "Reviewed by the content team on 17 November 2026."
+          "Rewritten to NCLEX-RN difficulty and reviewed by the content team on 19 November 2026."
         ]
       },
       "educationalObjective": "Apply ethical principles."
@@ -545,7 +545,7 @@
       ],
       "cjmmSkill": "analyze_cues",
       "difficulty": "difficult",
-      "stem": "A client dying of cancer receives increasing doses of morphine for severe pain. The family worries the morphine may shorten life. Which principle supports giving it?",
+      "stem": "A client dying of pancreatic cancer receives increasing doses of IV morphine for severe pain. The client's son says, \"I'm afraid the morphine will make him die sooner.\" The client's pain is now controlled. Which ethical principle supports continuing to give the morphine for pain?",
       "content": {
         "options": [
           {
@@ -554,15 +554,15 @@
           },
           {
             "id": "b",
-            "text": "Paternalism"
+            "text": "The principle of paternalism"
           },
           {
             "id": "c",
-            "text": "Fidelity"
+            "text": "The principle of fidelity"
           },
           {
             "id": "d",
-            "text": "Veracity"
+            "text": "The principle of veracity"
           }
         ]
       },
@@ -570,16 +570,16 @@
         "correct": "a"
       },
       "rationale": {
-        "correct": "Double effect: the intent is pain relief, not hastening death.",
+        "correct": "Double effect: when the intent is pain relief, not hastening death, giving the opioid is ethical.",
         "perOption": {
-          "a": "An action intended to relieve suffering is ethical even if a foreseen but unintended effect occurs.",
-          "b": "Overriding a client's wishes; not relevant here.",
-          "c": "Keeping promises.",
-          "d": "Truth-telling."
+          "a": "An act meant to relieve suffering is ethical even if a foreseen, unintended effect follows.",
+          "b": "Paternalism is overriding a client's wishes for their own good, which is not happening here.",
+          "c": "Fidelity is keeping promises.",
+          "d": "Veracity is truth-telling."
         },
         "references": [
           "Fundamentals of nursing texts (e.g. Potter & Perry)",
-          "Reviewed by the content team on 17 November 2026."
+          "Rewritten to NCLEX-RN difficulty and reviewed by the content team on 19 November 2026."
         ]
       },
       "educationalObjective": "Explain the principle of double effect."
@@ -594,24 +594,24 @@
       ],
       "cjmmSkill": "take_action",
       "difficulty": "moderate",
-      "stem": "A nurse is asked to take part in a procedure that conflicts with the nurse's personal beliefs. What should the nurse do?",
+      "stem": "A nurse is scheduled to assist with a procedure next week that conflicts with the nurse's deeply held personal beliefs. What should the nurse do?",
       "content": {
         "options": [
           {
             "id": "a",
-            "text": "Refuse in front of the client"
+            "text": "Tell the client at the bedside that the nurse will not take part"
           },
           {
             "id": "b",
-            "text": "Tell the supervisor ahead of time and make sure the client's care is handed off safely"
+            "text": "Tell the manager in advance so the client's care is safely reassigned"
           },
           {
             "id": "c",
-            "text": "Leave the unit without telling anyone"
+            "text": "Leave the unit when the procedure starts without telling anyone"
           },
           {
             "id": "d",
-            "text": "Try to talk the client out of the procedure"
+            "text": "Share the nurse's concerns with the client so the client can reconsider"
           }
         ]
       },
@@ -619,16 +619,16 @@
         "correct": "b"
       },
       "rationale": {
-        "correct": "Conscientious objection requires notice and safe transfer of care.",
+        "correct": "Conscientious objection requires advance notice and a safe transfer of care, without judging the client.",
         "perOption": {
-          "a": "Unprofessional and distressing to the client.",
-          "b": "Conscientious objection is acceptable when care isn't abandoned.",
-          "c": "Abandonment.",
-          "d": "Imposes the nurse's values."
+          "a": "Refusing in front of the client is unprofessional and distressing.",
+          "b": "Conscientious objection is acceptable when it is raised early and care is not abandoned.",
+          "c": "Walking away from assigned care is abandonment.",
+          "d": "This imposes the nurse's values on the client."
         },
         "references": [
           "Fundamentals of nursing texts (e.g. Potter & Perry)",
-          "Reviewed by the content team on 17 November 2026."
+          "Rewritten to NCLEX-RN difficulty and reviewed by the content team on 19 November 2026."
         ]
       },
       "educationalObjective": "Handle a conscientious objection."
@@ -643,24 +643,24 @@
       ],
       "cjmmSkill": "take_action",
       "difficulty": "moderate",
-      "stem": "A client who is deaf and uses American Sign Language needs teaching before a procedure. What should the nurse do?",
+      "stem": "A client who is deaf and uses American Sign Language (ASL) needs teaching before a cardiac catheterization this afternoon. The client's hearing teenage daughter is visiting. What should the nurse do?",
       "content": {
         "options": [
           {
             "id": "a",
-            "text": "Write notes in English"
+            "text": "Write the key teaching points in English for the client to read"
           },
           {
             "id": "b",
-            "text": "Arrange a qualified ASL interpreter"
+            "text": "Arrange a qualified ASL interpreter, in person or by video"
           },
           {
             "id": "c",
-            "text": "Ask a family member to sign"
+            "text": "Ask the daughter to sign the teaching, since she knows the client well"
           },
           {
             "id": "d",
-            "text": "Speak slowly and loudly"
+            "text": "Face the client and speak slowly so the client can lip-read"
           }
         ]
       },
@@ -668,16 +668,16 @@
         "correct": "b"
       },
       "rationale": {
-        "correct": "Use qualified sign language interpreters.",
+        "correct": "Use qualified sign language interpreters, in person or by video, for clients who are deaf.",
         "perOption": {
-          "a": "ASL users may not read English fluently.",
-          "b": "Clients are entitled to effective communication.",
-          "c": "Family interpreters may be inaccurate and breach privacy.",
-          "d": "Not effective for a deaf client."
+          "a": "Many ASL users are not fluent readers of English, so written notes may not work.",
+          "b": "Clients are entitled to effective communication through a qualified interpreter.",
+          "c": "Family interpreters may be inaccurate and breach privacy, and a child should not interpret.",
+          "d": "Lip-reading catches only part of speech and is not reliable for teaching."
         },
         "references": [
           "Fundamentals of nursing texts (e.g. Potter & Perry)",
-          "Reviewed by the content team on 17 November 2026."
+          "Rewritten to NCLEX-RN difficulty and reviewed by the content team on 19 November 2026."
         ]
       },
       "educationalObjective": "Advocate for effective communication."
@@ -691,25 +691,25 @@
         "client-rights-and-advocacy"
       ],
       "cjmmSkill": "take_action",
-      "difficulty": "moderate",
-      "stem": "A client says, \"The doctor said the surgery is my only option, but I wanted to hear about others.\" What should the nurse do?",
+      "difficulty": "difficult",
+      "stem": "A client scheduled for a mastectomy tomorrow tells the nurse, \"The surgeon said this is my only option, but my friend had a lumpectomy and radiation. I wanted to ask about that, but the surgeon was in a hurry.\" The consent form has not been signed. What should the nurse do?",
       "content": {
         "options": [
           {
             "id": "a",
-            "text": "Tell the client the doctor knows best"
+            "text": "Reassure the client that the surgeon has chosen the best option for her"
           },
           {
             "id": "b",
-            "text": "Tell the provider the client wants to discuss alternatives before consenting"
+            "text": "Tell the surgeon the client wants to discuss alternatives before consenting"
           },
           {
             "id": "c",
-            "text": "Explain alternatives in detail to the client"
+            "text": "Explain the differences between mastectomy and lumpectomy to the client"
           },
           {
             "id": "d",
-            "text": "Cancel the surgery"
+            "text": "Postpone tomorrow's surgery on the schedule until the client is completely sure"
           }
         ]
       },
@@ -717,16 +717,16 @@
         "correct": "b"
       },
       "rationale": {
-        "correct": "Nurses advocate by making sure clients get the information they need.",
+        "correct": "Nurses advocate by making sure the provider answers the client's questions about alternatives before consent.",
         "perOption": {
-          "a": "Doesn't respect the client's right to information.",
-          "b": "Advocacy supports informed decision-making.",
-          "c": "The provider explains the options as part of informed consent.",
-          "d": "Not the nurse's decision."
+          "a": "This dismisses the client's right to information about alternatives.",
+          "b": "Advocacy means making sure the client gets the information needed for an informed choice.",
+          "c": "The surgeon explains options and alternatives as part of informed consent.",
+          "d": "Rescheduling is not the nurse's decision."
         },
         "references": [
           "Fundamentals of nursing texts (e.g. Potter & Perry)",
-          "Reviewed by the content team on 17 November 2026."
+          "Rewritten to NCLEX-RN difficulty and reviewed by the content team on 19 November 2026."
         ]
       },
       "educationalObjective": "Advocate for informed choices."
@@ -741,24 +741,24 @@
       ],
       "cjmmSkill": "analyze_cues",
       "difficulty": "difficult",
-      "stem": "A 16-year-old asks to be tested and treated for a sexually transmitted infection without telling the parents. What applies in most states?",
+      "stem": "A 16-year-old comes to a clinic alone, reports painful urination and a discharge, and asks to be tested and treated for a sexually transmitted infection without the parents being told. What applies in most states?",
       "content": {
         "options": [
           {
             "id": "a",
-            "text": "The minor can consent to STI testing and treatment"
+            "text": "The adolescent can consent to STI testing and treatment"
           },
           {
             "id": "b",
-            "text": "Parental consent is always required"
+            "text": "A parent signs the consent before testing is done"
           },
           {
             "id": "c",
-            "text": "The nurse must call the parents"
+            "text": "The nurse must notify a parent once a test is positive"
           },
           {
             "id": "d",
-            "text": "Testing must wait until age 18"
+            "text": "Testing can be done, but treatment waits for a parent"
           }
         ]
       },
@@ -768,14 +768,14 @@
       "rationale": {
         "correct": "Minors can consent to some services, such as STI care, contraception and substance use treatment, depending on state law.",
         "perOption": {
-          "a": "Most states let minors consent to STI care.",
-          "b": "STI care is a common exception.",
-          "c": "Confidentiality applies.",
-          "d": "Not true."
+          "a": "Most states allow minors to consent to STI care so they are not deterred from getting it.",
+          "b": "STI care is one of the common exceptions to parental consent.",
+          "c": "Confidentiality applies to care the minor consented to.",
+          "d": "The exception covers both testing and treatment."
         },
         "references": [
           "Fundamentals of nursing texts (e.g. Potter & Perry)",
-          "Reviewed by the content team on 17 November 2026."
+          "Rewritten to NCLEX-RN difficulty and reviewed by the content team on 19 November 2026."
         ]
       },
       "educationalObjective": "Apply consent exceptions for minors."
@@ -788,26 +788,26 @@
       "subtopics": [
         "informed-consent"
       ],
-      "cjmmSkill": "take_action",
+      "cjmmSkill": "evaluate_outcomes",
       "difficulty": "moderate",
-      "stem": "A client is asked to join a research study. Which statement by the client shows understanding of research consent?",
+      "stem": "A client with heart failure is invited to join a clinical trial of a new medication and has read the consent document. Which statement by the client shows understanding of research consent?",
       "content": {
         "options": [
           {
             "id": "a",
-            "text": "\"I have to stay in the study once I sign.\""
+            "text": "\"Once I sign, I have to stay in the study until it ends.\""
           },
           {
             "id": "b",
-            "text": "\"I can leave the study at any time without losing my usual care.\""
+            "text": "\"I can leave the study whenever I want and still get my usual care.\""
           },
           {
             "id": "c",
-            "text": "\"My care will be worse if I don't join.\""
+            "text": "\"My doctor will look after me less carefully if I say no.\""
           },
           {
             "id": "d",
-            "text": "\"The researchers don't need to tell me the risks.\""
+            "text": "\"The researchers will tell me the risks if something goes wrong.\""
           }
         ]
       },
@@ -815,16 +815,16 @@
         "correct": "b"
       },
       "rationale": {
-        "correct": "Research consent is voluntary, informed and can be withdrawn.",
+        "correct": "Research consent is voluntary and informed, and it can be withdrawn at any time without affecting usual care.",
         "perOption": {
-          "a": "Participants can withdraw at any time.",
-          "b": "Voluntary participation and withdrawal are required.",
-          "c": "Refusing can't affect care.",
-          "d": "Risks must be explained."
+          "a": "Participants may withdraw at any time.",
+          "b": "Participation is voluntary, and withdrawing cannot affect usual care.",
+          "c": "Refusing to take part cannot affect the client's care.",
+          "d": "Known risks must be explained before consent."
         },
         "references": [
           "Fundamentals of nursing texts (e.g. Potter & Perry)",
-          "Reviewed by the content team on 17 November 2026."
+          "Rewritten to NCLEX-RN difficulty and reviewed by the content team on 19 November 2026."
         ]
       },
       "educationalObjective": "Evaluate understanding of research consent."
@@ -839,24 +839,24 @@
       ],
       "cjmmSkill": "take_action",
       "difficulty": "difficult",
-      "stem": "A client with a valid POLST form stating \"comfort measures only\" stops breathing. The family asks staff to start CPR. What should the nurse do?",
+      "stem": "A 91-year-old nursing home resident with a valid POLST form stating \"Do not attempt resuscitation; comfort measures only\" is found not breathing and without a pulse. The resident's daughter, who has just arrived, shouts, \"Do something! Start CPR!\" What should the nurse do?",
       "content": {
         "options": [
           {
             "id": "a",
-            "text": "Start CPR because the family asked"
+            "text": "Start CPR, because the family member at the bedside has asked for it"
           },
           {
             "id": "b",
-            "text": "Follow the POLST, notify the provider and support the family"
+            "text": "Follow the POLST order, notify the provider and support the daughter"
           },
           {
             "id": "c",
-            "text": "Call the hospital lawyer before doing anything"
+            "text": "Call the facility's lawyer for advice before doing anything else"
           },
           {
             "id": "d",
-            "text": "Ask the family to sign a new form"
+            "text": "Start CPR while another nurse looks for the resident's other children"
           }
         ]
       },
@@ -864,16 +864,16 @@
         "correct": "b"
       },
       "rationale": {
-        "correct": "Honor valid advance directives and POLST orders.",
+        "correct": "Honor a valid POLST or advance directive, and support grieving family members.",
         "perOption": {
-          "a": "The client's documented wishes take priority.",
-          "b": "A POLST is a medical order reflecting the client's wishes.",
-          "c": "Delays and isn't needed.",
-          "d": "The client's own wishes stand."
+          "a": "The resident's documented wishes and the POLST order take priority.",
+          "b": "A POLST is a medical order reflecting the resident's wishes and is honored.",
+          "c": "This delays care and is not needed for a valid order.",
+          "d": "Starting CPR violates the order, whoever else is reached."
         },
         "references": [
           "Fundamentals of nursing texts (e.g. Potter & Perry)",
-          "Reviewed by the content team on 17 November 2026."
+          "Rewritten to NCLEX-RN difficulty and reviewed by the content team on 19 November 2026."
         ]
       },
       "educationalObjective": "Follow a POLST order."
@@ -888,24 +888,24 @@
       ],
       "cjmmSkill": "take_action",
       "difficulty": "moderate",
-      "stem": "Two adult children of an unconscious client disagree about continuing life support. The client has no advance directive. What should the nurse do?",
+      "stem": "An unconscious client on a ventilator after a cardiac arrest has no advance directive and no named health care agent. The client's two adult children disagree: one wants all treatment continued, the other says their parent would never want this. What should the nurse do?",
       "content": {
         "options": [
           {
             "id": "a",
-            "text": "Follow the wishes of the oldest child"
+            "text": "Follow the wishes of the older child, who is the legal next of kin"
           },
           {
             "id": "b",
-            "text": "Request an ethics consultation and a family meeting with the team"
+            "text": "Ask for an ethics consultation and a family meeting with the team"
           },
           {
             "id": "c",
-            "text": "Stop life support"
+            "text": "Ask the provider to begin withdrawing the ventilator today"
           },
           {
             "id": "d",
-            "text": "Take a vote among all family members"
+            "text": "Ask the client's relatives to vote on what should happen"
           }
         ]
       },
@@ -913,16 +913,16 @@
         "correct": "b"
       },
       "rationale": {
-        "correct": "Ethics committees help resolve surrogate disagreements.",
+        "correct": "Ethics committees help resolve conflicts between surrogates by focusing on what the client would have wanted.",
         "perOption": {
-          "a": "Age isn't the basis for surrogate decisions.",
-          "b": "Ethics consultation helps resolve conflicts about care.",
-          "c": "Not without a proper decision.",
-          "d": "Not an accepted process."
+          "a": "Both adult children usually have equal standing; age alone does not decide.",
+          "b": "An ethics consultation and a team meeting help the family reach a decision based on the client's values.",
+          "c": "Treatment is not withdrawn without a proper decision process.",
+          "d": "A vote is not an accepted way to make surrogate decisions."
         },
         "references": [
           "Fundamentals of nursing texts (e.g. Potter & Perry)",
-          "Reviewed by the content team on 17 November 2026."
+          "Rewritten to NCLEX-RN difficulty and reviewed by the content team on 19 November 2026."
         ]
       },
       "educationalObjective": "Respond to family conflict about care."
@@ -937,24 +937,24 @@
       ],
       "cjmmSkill": "take_action",
       "difficulty": "moderate",
-      "stem": "A nurse wants to look up a neighbor's lab results because the neighbor is a client in the hospital. What is correct?",
+      "stem": "A nurse's husband is admitted to another unit in the same hospital. The nurse wants to see his morning lab results and has access to the electronic health record. What should the nurse do?",
       "content": {
         "options": [
           {
             "id": "a",
-            "text": "It's fine because the nurse has system access"
+            "text": "Look up the results, because spouses share medical information"
           },
           {
             "id": "b",
-            "text": "Access only records needed for your assigned work"
+            "text": "Ask the husband or his care team for them, as any visitor would"
           },
           {
             "id": "c",
-            "text": "It's fine if the neighbor wouldn't mind"
+            "text": "Look up the results if the husband gives verbal permission first"
           },
           {
             "id": "d",
-            "text": "It's fine if the nurse doesn't tell anyone"
+            "text": "Look up the results but avoid sharing them with any coworkers"
           }
         ]
       },
@@ -962,16 +962,16 @@
         "correct": "b"
       },
       "rationale": {
-        "correct": "Access client records only as needed for your role.",
+        "correct": "Use record access only for your assigned work (the minimum necessary standard), even for family members.",
         "perOption": {
-          "a": "Access is only for clients the nurse is caring for.",
-          "b": "HIPAA's minimum necessary standard limits access to job duties.",
-          "c": "Permission isn't assumed.",
-          "d": "Unauthorized access is still a violation."
+          "a": "Being a spouse does not create a work-related reason to open the record.",
+          "b": "Access is limited to records needed for the nurse's job; family information comes through the usual channels.",
+          "c": "Permission to share does not authorize the nurse to use work access.",
+          "d": "Unauthorized access is a violation even if nothing is shared."
         },
         "references": [
           "Fundamentals of nursing texts (e.g. Potter & Perry)",
-          "Reviewed by the content team on 17 November 2026."
+          "Rewritten to NCLEX-RN difficulty and reviewed by the content team on 19 November 2026."
         ]
       },
       "educationalObjective": "Apply the minimum necessary standard."
@@ -985,25 +985,25 @@
         "health-information-technology"
       ],
       "cjmmSkill": "take_action",
-      "difficulty": "moderate",
-      "stem": "The electronic health record goes down unexpectedly. What should the nurse do?",
+      "difficulty": "easy",
+      "stem": "During the evening shift, the electronic health record and the medication scanning system go down without warning. What should the nurse do?",
       "content": {
         "options": [
           {
             "id": "a",
-            "text": "Stop giving medications until the system is back"
+            "text": "Stop giving medications until the system is working"
           },
           {
             "id": "b",
-            "text": "Use the facility's downtime procedures and paper forms"
+            "text": "Use the facility's downtime procedures and forms"
           },
           {
             "id": "c",
-            "text": "Write notes on scrap paper and throw them away later"
+            "text": "Write notes on scrap paper and throw them out later"
           },
           {
             "id": "d",
-            "text": "Tell clients to come back later"
+            "text": "Postpone all charting until the end of the shift"
           }
         ]
       },
@@ -1011,16 +1011,16 @@
         "correct": "b"
       },
       "rationale": {
-        "correct": "Know the facility's downtime procedures.",
+        "correct": "Know and use the facility's downtime procedures for documentation and medication administration.",
         "perOption": {
-          "a": "Care continues using downtime procedures.",
+          "a": "Care continues during downtime.",
           "b": "Downtime procedures keep care and documentation safe.",
           "c": "Records must be kept properly.",
-          "d": "Not appropriate."
+          "d": "Timely documentation still matters."
         },
         "references": [
           "Fundamentals of nursing texts (e.g. Potter & Perry)",
-          "Reviewed by the content team on 17 November 2026."
+          "Rewritten to NCLEX-RN difficulty and reviewed by the content team on 19 November 2026."
         ]
       },
       "educationalObjective": "Respond to an EHR outage."
@@ -1035,24 +1035,24 @@
       ],
       "cjmmSkill": "analyze_cues",
       "difficulty": "moderate",
-      "stem": "Which documentation practice in the electronic health record is unsafe?",
+      "stem": "The nurse manager is auditing documentation in the electronic health record. Which practice found in the audit is unsafe?",
       "content": {
         "options": [
           {
             "id": "a",
-            "text": "Copying the previous shift's assessment forward without reassessing"
+            "text": "Copying the last shift's assessment forward without reassessing"
           },
           {
             "id": "b",
-            "text": "Documenting soon after care"
+            "text": "Documenting a client's refusal of care along with the client's own words"
           },
           {
             "id": "c",
-            "text": "Logging off when leaving the computer"
+            "text": "Charting a dressing change within 30 minutes of finishing it"
           },
           {
             "id": "d",
-            "text": "Documenting a client's refusal of care"
+            "text": "Logging off the workstation before walking away from it"
           }
         ]
       },
@@ -1060,16 +1060,16 @@
         "correct": "a"
       },
       "rationale": {
-        "correct": "Document only what you assessed; avoid copy-and-paste errors.",
+        "correct": "Document only what you assessed and did; avoid copy-forward and copy-and-paste errors.",
         "perOption": {
-          "a": "Copy-forward can record findings that are no longer true.",
-          "b": "Timely documentation is correct.",
-          "c": "Correct.",
-          "d": "Correct."
+          "a": "Copy-forward can record findings that are no longer true and hide changes.",
+          "b": "Recording refusals and the client's words is correct.",
+          "c": "Timely documentation is correct.",
+          "d": "Logging off protects client information."
         },
         "references": [
           "Fundamentals of nursing texts (e.g. Potter & Perry)",
-          "Reviewed by the content team on 17 November 2026."
+          "Rewritten to NCLEX-RN difficulty and reviewed by the content team on 19 November 2026."
         ]
       },
       "educationalObjective": "Avoid unsafe EHR practices."
@@ -1084,24 +1084,24 @@
       ],
       "cjmmSkill": "take_action",
       "difficulty": "moderate",
-      "stem": "A drug interaction alert appears in the EHR when the nurse scans a medication. Which action is best?",
+      "stem": "The nurse scans a dose of clarithromycin for a client who takes simvastatin, and the electronic health record shows a drug interaction alert. The unit has many alerts each day. What should the nurse do?",
       "content": {
         "options": [
           {
             "id": "a",
-            "text": "Override the alert because alerts are frequent"
+            "text": "Override the alert, since most alerts on the unit are not significant"
           },
           {
             "id": "b",
-            "text": "Read the alert and check with the pharmacist or provider before giving the drug"
+            "text": "Read the alert and ask the pharmacist or provider before giving it"
           },
           {
             "id": "c",
-            "text": "Give half the dose"
+            "text": "Give half of the clarithromycin dose and recheck the alert later"
           },
           {
             "id": "d",
-            "text": "Turn off alerts for the unit"
+            "text": "Ask the informatics team to turn off interaction alerts for the unit"
           }
         ]
       },
@@ -1109,16 +1109,16 @@
         "correct": "b"
       },
       "rationale": {
-        "correct": "Respond to clinical decision support alerts thoughtfully.",
+        "correct": "Respond to clinical decision support alerts by reading them and checking with the pharmacist or provider, not by habitually overriding.",
         "perOption": {
-          "a": "Alert fatigue causes errors.",
-          "b": "Alerts may show real risks.",
-          "c": "Not within the nurse's scope.",
-          "d": "Removes a safety feature."
+          "a": "Alert fatigue causes errors; this interaction can cause serious muscle injury.",
+          "b": "The alert may show a real risk that needs a change in therapy.",
+          "c": "Changing the dose is outside the nurse's scope.",
+          "d": "Turning off alerts removes a safety feature."
         },
         "references": [
           "Fundamentals of nursing texts (e.g. Potter & Perry)",
-          "Reviewed by the content team on 17 November 2026."
+          "Rewritten to NCLEX-RN difficulty and reviewed by the content team on 19 November 2026."
         ]
       },
       "educationalObjective": "Respond to EHR alerts."
@@ -1132,8 +1132,8 @@
         "health-information-technology"
       ],
       "cjmmSkill": "take_action",
-      "difficulty": "moderate",
-      "stem": "The nurse is doing a telehealth visit from home. Which action protects the client's privacy?",
+      "difficulty": "easy",
+      "stem": "A nurse is holding a telehealth follow-up visit from home with a client recovering from pneumonia. Which action best protects the client's privacy?",
       "content": {
         "options": [
           {
@@ -1142,15 +1142,15 @@
           },
           {
             "id": "b",
-            "text": "Using a personal social media video call"
+            "text": "Using a personal social media video call app"
           },
           {
             "id": "c",
-            "text": "Doing the visit in a coffee shop"
+            "text": "Holding the visit at a quiet table in a coffee shop"
           },
           {
             "id": "d",
-            "text": "Recording the visit on a personal phone"
+            "text": "Recording the visit on a personal phone for notes"
           }
         ]
       },
@@ -1158,16 +1158,16 @@
         "correct": "a"
       },
       "rationale": {
-        "correct": "Telehealth privacy: secure platform, private setting.",
+        "correct": "Telehealth privacy requires a secure, approved platform and a private setting.",
         "perOption": {
           "a": "Telehealth must use secure platforms and private spaces.",
-          "b": "Not secure.",
+          "b": "Social media apps are not secure for health care.",
           "c": "Others can overhear.",
-          "d": "Not secure."
+          "d": "Personal devices are not secure."
         },
         "references": [
           "Fundamentals of nursing texts (e.g. Potter & Perry)",
-          "Reviewed by the content team on 17 November 2026."
+          "Rewritten to NCLEX-RN difficulty and reviewed by the content team on 19 November 2026."
         ]
       },
       "educationalObjective": "Protect privacy in telehealth."
@@ -1182,7 +1182,7 @@
       ],
       "cjmmSkill": "generate_solutions",
       "difficulty": "moderate",
-      "stem": "A client on several medications has frequent falls and dizziness. Which team member is most helpful for a medication review?",
+      "stem": "An 82-year-old client who takes nine medications, including a sleeping pill, a diuretic and two blood pressure drugs, has had three falls and frequent dizziness when standing at home this month. Which team member is most helpful for a medication review?",
       "content": {
         "options": [
           {
@@ -1191,15 +1191,15 @@
           },
           {
             "id": "b",
-            "text": "Dietitian"
+            "text": "Physical therapist"
           },
           {
             "id": "c",
-            "text": "Respiratory therapist"
+            "text": "Dietitian"
           },
           {
             "id": "d",
-            "text": "Chaplain"
+            "text": "Case manager"
           }
         ]
       },
@@ -1207,16 +1207,16 @@
         "correct": "a"
       },
       "rationale": {
-        "correct": "Pharmacists review medications for interactions and fall-risk drugs.",
+        "correct": "Pharmacists review medication lists for interactions and drugs that raise fall risk in older adults.",
         "perOption": {
           "a": "Pharmacists find interactions, duplications and drugs that raise fall risk.",
-          "b": "Not for medication review.",
-          "c": "Not related.",
-          "d": "Not related."
+          "b": "PT helps with strength and balance, but does not review medications.",
+          "c": "A dietitian does not review medications.",
+          "d": "A case manager coordinates services, not medication review."
         },
         "references": [
           "Fundamentals of nursing texts (e.g. Potter & Perry)",
-          "Reviewed by the content team on 17 November 2026."
+          "Rewritten to NCLEX-RN difficulty and reviewed by the content team on 19 November 2026."
         ]
       },
       "educationalObjective": "Collaborate with a pharmacist."
@@ -1231,7 +1231,7 @@
       ],
       "cjmmSkill": "generate_solutions",
       "difficulty": "moderate",
-      "stem": "A client recovering from a stroke can't hold a fork or button a shirt. Which referral is most appropriate?",
+      "stem": "A client recovering from a right-sided stroke has left-sided weakness and wants to dress and bathe without help before going home. Swallowing and speech are normal, and the client walks with a cane. Which referral is most appropriate?",
       "content": {
         "options": [
           {
@@ -1240,15 +1240,15 @@
           },
           {
             "id": "b",
-            "text": "Speech therapy"
+            "text": "Speech-language pathology"
           },
           {
             "id": "c",
-            "text": "Respiratory therapy"
+            "text": "Physical therapy"
           },
           {
             "id": "d",
-            "text": "Social work"
+            "text": "Case management"
           }
         ]
       },
@@ -1256,16 +1256,16 @@
         "correct": "a"
       },
       "rationale": {
-        "correct": "OT focuses on daily living skills.",
+        "correct": "Occupational therapy focuses on activities of daily living such as dressing and bathing.",
         "perOption": {
-          "a": "OT helps with fine motor skills and activities of daily living.",
-          "b": "Addresses swallowing and communication.",
-          "c": "Not related.",
-          "d": "Not the main need."
+          "a": "OT helps clients relearn activities of daily living with adaptive techniques and equipment.",
+          "b": "Swallowing and speech are normal.",
+          "c": "PT focuses on walking and mobility; dressing and bathing are OT's focus.",
+          "d": "A case manager coordinates services but does not train ADLs."
         },
         "references": [
           "Fundamentals of nursing texts (e.g. Potter & Perry)",
-          "Reviewed by the content team on 17 November 2026."
+          "Rewritten to NCLEX-RN difficulty and reviewed by the content team on 19 November 2026."
         ]
       },
       "educationalObjective": "Choose the right therapy referral."
@@ -1280,7 +1280,7 @@
       ],
       "cjmmSkill": "take_action",
       "difficulty": "moderate",
-      "stem": "The nurse is giving a handoff using I-PASS. Place the parts in order.",
+      "stem": "The nurse is handing off a client who had a hip replacement this morning to the night nurse using the I-PASS format. Place the parts of the handoff in order, from first to last.",
       "content": {
         "items": [
           {
@@ -1316,17 +1316,17 @@
         "scoring": "all_or_nothing"
       },
       "rationale": {
-        "correct": "I-PASS: Illness severity, Patient summary, Action list, Situation awareness, Synthesis.",
+        "correct": "I-PASS: Illness severity, Patient summary, Action list, Situation awareness, Synthesis by receiver.",
         "perOption": {
-          "a": "Tells the receiver how worried to be.",
-          "b": "Gives context.",
-          "c": "Clarifies tasks.",
-          "d": "What could go wrong and what to do.",
-          "e": "Confirms understanding."
+          "a": "This tells the receiver how worried to be.",
+          "b": "This gives the context.",
+          "c": "This makes tasks clear.",
+          "d": "This covers what could go wrong and what to do.",
+          "e": "This confirms understanding."
         },
         "references": [
           "NCSBN National Guidelines for Nursing Delegation; LaCharity, Prioritization, Delegation & Assignment",
-          "Reviewed by the content team on 17 November 2026."
+          "Rewritten to NCLEX-RN difficulty and reviewed by the content team on 19 November 2026."
         ]
       },
       "educationalObjective": "Use I-PASS for handoff."
@@ -1341,24 +1341,24 @@
       ],
       "cjmmSkill": "take_action",
       "difficulty": "moderate",
-      "stem": "During a code, the team leader asks the nurse to give epinephrine 1 mg IV. What should the nurse do?",
+      "stem": "During a cardiac arrest, the code team leader says, \"Give epinephrine 1 mg IV push.\" The nurse at the medication cart has the drug ready. What should the nurse do?",
       "content": {
         "options": [
           {
             "id": "a",
-            "text": "Give it without speaking to save time"
+            "text": "Give it straight away without speaking, to save time"
           },
           {
             "id": "b",
-            "text": "Repeat the order back, give it and announce when it's given"
+            "text": "Repeat the order back, give it and say when it is in"
           },
           {
             "id": "c",
-            "text": "Wait for a written order"
+            "text": "Wait for the order to be written before giving it"
           },
           {
             "id": "d",
-            "text": "Ask another nurse to decide"
+            "text": "Ask the recorder to confirm the dose before giving it"
           }
         ]
       },
@@ -1366,16 +1366,16 @@
         "correct": "b"
       },
       "rationale": {
-        "correct": "Closed-loop communication: repeat back, carry out, confirm.",
+        "correct": "Closed-loop communication: repeat the order back, carry it out, then confirm it is done.",
         "perOption": {
-          "a": "Closed-loop communication prevents errors.",
-          "b": "Closed-loop communication confirms each order.",
-          "c": "Verbal orders are used in emergencies.",
-          "d": "The leader directs the code."
+          "a": "Closed-loop communication prevents errors in a noisy room.",
+          "b": "Closed-loop communication confirms each order and its completion.",
+          "c": "Verbal orders are used during emergencies.",
+          "d": "The leader gave the order; repeating it back to the leader confirms it."
         },
         "references": [
           "NCSBN National Guidelines for Nursing Delegation; LaCharity, Prioritization, Delegation & Assignment",
-          "Reviewed by the content team on 17 November 2026."
+          "Rewritten to NCLEX-RN difficulty and reviewed by the content team on 19 November 2026."
         ]
       },
       "educationalObjective": "Use closed-loop communication."
@@ -1390,12 +1390,12 @@
       ],
       "cjmmSkill": "recognize_cues",
       "difficulty": "difficult",
-      "stem": "The nurse reviews a colleague's documentation. Highlight the entries that are inappropriate.",
+      "stem": "The nurse is reviewing a colleague's notes for a client 2 days after a hip replacement before co-signing the shift summary. Highlight the entries that are inappropriate.",
       "content": {
         "segments": [
           {
             "id": "s1",
-            "text": "08:00 ",
+            "text": "0800 ",
             "selectable": false
           },
           {
@@ -1405,7 +1405,7 @@
           },
           {
             "id": "s3",
-            "text": " 09:15 ",
+            "text": " 0915 ",
             "selectable": false
           },
           {
@@ -1415,7 +1415,7 @@
           },
           {
             "id": "s5",
-            "text": " 10:00 ",
+            "text": " 1000 ",
             "selectable": false
           },
           {
@@ -1425,17 +1425,17 @@
           },
           {
             "id": "s7",
-            "text": " 10:05 ",
+            "text": " 1005 ",
             "selectable": false
           },
           {
             "id": "s8",
-            "text": "Client found sitting on the floor beside the bed; denies pain; provider notified at 10:07.",
+            "text": "Client found sitting on the floor beside the bed; denies pain; provider notified at 1007.",
             "selectable": true
           },
           {
             "id": "s9",
-            "text": " 11:00 ",
+            "text": " 1100 ",
             "selectable": false
           },
           {
@@ -1455,15 +1455,15 @@
       "rationale": {
         "correct": "Document facts objectively; leave out opinions, blame and references to incident reports.",
         "perOption": {
-          "s2": "Objective and appropriate.",
-          "s4": "Judgmental and subjective.",
-          "s6": "Incident reports aren't mentioned in the medical record.",
-          "s8": "Factual and complete.",
-          "s10": "Blaming statements don't belong in the record."
+          "s2": "This is objective and appropriate.",
+          "s4": "This is judgmental and subjective.",
+          "s6": "Incident reports are not mentioned in the medical record.",
+          "s8": "This is factual and complete.",
+          "s10": "Blaming statements do not belong in the record."
         },
         "references": [
           "Fundamentals of nursing texts (e.g. Potter & Perry)",
-          "Reviewed by the content team on 17 November 2026."
+          "Rewritten to NCLEX-RN difficulty and reviewed by the content team on 19 November 2026."
         ]
       },
       "educationalObjective": "Recognize inappropriate documentation."
@@ -1478,32 +1478,32 @@
       ],
       "cjmmSkill": "take_action",
       "difficulty": "moderate",
-      "stem": "Which actions support a client with low health literacy? Select all that apply.",
+      "stem": "A client with heart failure who left school at age 14 is going home on four new medications. The nurse suspects the client has low health literacy. Which actions should the nurse take? Select all that apply.",
       "content": {
         "options": [
           {
             "id": "a",
-            "text": "Use plain language and avoid medical jargon"
+            "text": "Use plain language and avoid medical terms"
           },
           {
             "id": "b",
-            "text": "Use the teach-back method"
+            "text": "Ask the client to explain the plan back in their own words"
           },
           {
             "id": "c",
-            "text": "Give large amounts of written information at once"
-          },
-          {
-            "id": "d",
             "text": "Focus on the two or three most important points"
           },
           {
+            "id": "d",
+            "text": "Use pictures, pill charts or demonstrations"
+          },
+          {
             "id": "e",
-            "text": "Use pictures or demonstrations"
+            "text": "Give the full set of printed leaflets to read at home"
           },
           {
             "id": "f",
-            "text": "Ask \"Do you understand?\" and move on"
+            "text": "Ask \"Do you understand?\" and move on if the client says yes"
           }
         ]
       },
@@ -1511,23 +1511,23 @@
         "correct": [
           "a",
           "b",
-          "d",
-          "e"
+          "c",
+          "d"
         ]
       },
       "rationale": {
-        "correct": "Health literacy strategies: plain language, teach-back, few key points, visuals.",
+        "correct": "Health literacy strategies: plain language, teach-back, a few key points and visual aids.",
         "perOption": {
-          "a": "Improves understanding.",
-          "b": "Confirms understanding.",
-          "c": "Overwhelms the client.",
-          "d": "Key messages are remembered better.",
-          "e": "Visual aids help understanding.",
+          "a": "Plain language improves understanding.",
+          "b": "Teach-back confirms understanding.",
+          "c": "Key messages are remembered better.",
+          "d": "Visual aids help understanding.",
+          "e": "Large amounts of print overwhelm the client.",
           "f": "Clients may say yes without understanding."
         },
         "references": [
           "Fundamentals of nursing texts (e.g. Potter & Perry)",
-          "Reviewed by the content team on 17 November 2026."
+          "Rewritten to NCLEX-RN difficulty and reviewed by the content team on 19 November 2026."
         ]
       },
       "educationalObjective": "Teach clients with low health literacy."
@@ -1542,24 +1542,24 @@
       ],
       "cjmmSkill": "take_action",
       "difficulty": "moderate",
-      "stem": "A nurse with a multistate license lives in one compact state and wants to work in another compact state. What is true?",
+      "stem": "A nurse with a multistate license whose primary residence is in one Nurse Licensure Compact state accepts a travel position in another compact state. What is true?",
       "content": {
         "options": [
           {
             "id": "a",
-            "text": "The nurse must get a new license in the second state"
+            "text": "The nurse needs a new license from the second state before starting work"
           },
           {
             "id": "b",
-            "text": "The nurse may practice in other compact states under the home-state multistate license"
+            "text": "The nurse may work there under the multistate license and local law"
           },
           {
             "id": "c",
-            "text": "The nurse can practice anywhere in the world"
+            "text": "The nurse may now practice in any state or any country without restriction"
           },
           {
             "id": "d",
-            "text": "The nurse must give up the home-state license"
+            "text": "The nurse gives up the home-state license to work in the other state"
           }
         ]
       },
@@ -1567,16 +1567,16 @@
         "correct": "b"
       },
       "rationale": {
-        "correct": "The Nurse Licensure Compact lets nurses practice across member states.",
+        "correct": "The Nurse Licensure Compact lets nurses practice across member states, following the practice laws where the client is located.",
         "perOption": {
-          "a": "The compact allows practice in other member states.",
-          "b": "The Nurse Licensure Compact allows this, following each state's practice laws.",
+          "a": "The compact lets the nurse work in other member states on the multistate license.",
+          "b": "The Nurse Licensure Compact allows this, and the nurse follows the practice laws of the state where the client is.",
           "c": "The compact covers member states only.",
-          "d": "Not required."
+          "d": "The home-state license is what allows multistate practice."
         },
         "references": [
           "Fundamentals of nursing texts (e.g. Potter & Perry)",
-          "Reviewed by the content team on 17 November 2026."
+          "Rewritten to NCLEX-RN difficulty and reviewed by the content team on 19 November 2026."
         ]
       },
       "educationalObjective": "Explain the Nurse Licensure Compact."
@@ -1591,24 +1591,24 @@
       ],
       "cjmmSkill": "take_action",
       "difficulty": "difficult",
-      "stem": "A nurse reports repeated unsafe staffing to the manager with no change. The nurse is now considering reporting to an outside agency. Which statement is accurate?",
+      "stem": "A nurse has reported dangerous staffing levels to the unit manager and the director of nursing several times in writing over 3 months, with no change. Two clients have fallen. The nurse is now considering reporting to the state health department. Which statement is accurate?",
       "content": {
         "options": [
           {
             "id": "a",
-            "text": "Nurses who report unsafe conditions in good faith are often protected by whistleblower laws"
+            "text": "Good-faith reports of unsafe conditions are often protected by whistleblower laws"
           },
           {
             "id": "b",
-            "text": "Nurses can be fired for any outside report"
+            "text": "The nurse can be fired for any report made outside of the organization"
           },
           {
             "id": "c",
-            "text": "Nurses should post the issue on social media"
+            "text": "The nurse should post the details on social media to get public attention"
           },
           {
             "id": "d",
-            "text": "Nurses must stay silent to protect the facility"
+            "text": "The nurse should stay silent to protect the facility's reputation in the community"
           }
         ]
       },
@@ -1616,16 +1616,16 @@
         "correct": "a"
       },
       "rationale": {
-        "correct": "Use internal channels first; whistleblower protections support good-faith reporting.",
+        "correct": "Use internal channels first; whistleblower protections support good-faith reporting to outside agencies when internal reports fail.",
         "perOption": {
-          "a": "Many laws protect good-faith reporting.",
+          "a": "Many state and federal laws protect nurses who report unsafe conditions in good faith after using internal channels.",
           "b": "Whistleblower protections exist in many states.",
-          "c": "Not an appropriate channel.",
-          "d": "Client safety comes first."
+          "c": "Social media is not an appropriate channel and may breach privacy.",
+          "d": "Client safety comes before the facility's reputation."
         },
         "references": [
           "Fundamentals of nursing texts (e.g. Potter & Perry)",
-          "Reviewed by the content team on 17 November 2026."
+          "Rewritten to NCLEX-RN difficulty and reviewed by the content team on 19 November 2026."
         ]
       },
       "educationalObjective": "Understand whistleblower protections."
