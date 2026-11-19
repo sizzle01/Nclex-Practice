@@ -23,7 +23,7 @@ export const testTaxonomy: Taxonomy = {
   itemTypes: [
     { type: "multiple_choice", label: "Multiple Choice", available: true },
     { type: "sata", label: "Select All That Apply", available: true },
-    { type: "bowtie", label: "Bowtie", available: false },
+    { type: "hotspot", label: "Hotspot", available: false },
   ],
   cjmmSkills: [],
 };

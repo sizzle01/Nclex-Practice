@@ -79,7 +79,7 @@ describe("CustomBuilder", () => {
     await renderBuilder();
 
     expect(screen.getByRole("checkbox", { name: "Select All That Apply" })).toBeInTheDocument();
-    expect(screen.queryByRole("checkbox", { name: "Bowtie" })).not.toBeInTheDocument();
+    expect(screen.queryByRole("checkbox", { name: "Hotspot" })).not.toBeInTheDocument();
   });
 
   it("warns when more questions are asked for than match", async () => {
