@@ -34,7 +34,7 @@ Written by `python3 -I build_all.py`; do not edit by hand. See `quality.py` for 
 | 21-musculoskeletal | 24 | yes | 21 | 14% | 25% (assess first) | 14% | 29 | 2/14/8 |
 | 22-integumentary-burns | 25 | yes | 20 | 5% | 25% (assess first) | 10% | 31 | 2/15/8 |
 | 23-perioperative | 23 | yes | 20 | 10% | 29% (assess first) | 10% | 32 | 2/14/7 |
-| 24-basic-care-comfort | 23 |  | 20 | 65% | 68% (longest) | 10% | 13 | 10/12/1 |
+| 24-basic-care-comfort | 23 | yes | 20 | 15% | 25% (shortest) | 10% | 31 | 2/14/7 |
 | 25-health-promotion-lifespan | 24 |  | 22 | 68% | 77% (skip absolutes) | 27% | 13 | 11/13/0 |
 | 26-maternity-antepartum | 25 |  | 23 | 52% | 57% (skip absolutes) | 26% | 19 | 5/15/5 |
 | 27-maternity-intrapartum | 24 |  | 22 | 68% | 73% (longest) | 0% | 18.5 | 4/12/8 |
@@ -57,4 +57,4 @@ Written by `python3 -I build_all.py`; do not edit by hand. See `quality.py` for 
 | 65-management-of-care-specialty | 27 | yes | 18 | 17% | 28% (stem words) | 11% | 27 | 2/15/10 |
 | 66-risk-reduction-basic-care | 31 | yes | 27 | 7% | 29% (assess first) | 15% | 32 | 4/17/10 |
 | 67-moc-sic-ngn | 34 | yes | 23 | 0% | 23% (shortest) | 9% | 32 | 0/23/11 |
-| **Whole bank** | 1110 | | 874 | 30% | 34% (skip absolutes) | 11% | 28 | 117/682/311 |
+| **Whole bank** | 1110 | | 874 | 29% | 33% (skip absolutes) | 11% | 28 | 109/684/317 |

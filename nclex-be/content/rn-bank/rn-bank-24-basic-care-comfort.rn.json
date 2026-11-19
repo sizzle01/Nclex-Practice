@@ -1,5 +1,5 @@
 {
-  "notice": "RN bank batch 24: Basic care and comfort. Reviewed by the content team on 17 November 2026. See REVIEW-LOG.md.",
+  "notice": "RN bank batch 24: Basic care and comfort. Rewritten to NCLEX-RN difficulty and reviewed by the content team on 19 November 2026. See REVIEW-LOG.md.",
   "track": "RN",
   "subtopics": [
     {
@@ -62,26 +62,26 @@
       "subtopics": [
         "pain-assessment-and-comfort"
       ],
-      "cjmmSkill": "analyze_cues",
-      "difficulty": "easy",
-      "stem": "What is the most reliable indicator of a client's pain?",
+      "cjmmSkill": "evaluate_outcomes",
+      "difficulty": "difficult",
+      "stem": "At 1000 the nurse gave morphine 4 mg IV push to a client 1 day after a bowel resection who rated pain 8 out of 10. When should the nurse reassess the client's pain and sedation?",
       "content": {
         "options": [
           {
             "id": "a",
-            "text": "The client's own report"
+            "text": "At about 1015 to 1030, at the drug's peak"
           },
           {
             "id": "b",
-            "text": "The client's facial expression"
+            "text": "At 1100, an hour after the dose"
           },
           {
             "id": "c",
-            "text": "Changes in vital signs"
+            "text": "At the next scheduled vital signs at 1200"
           },
           {
             "id": "d",
-            "text": "The nurse's estimate based on the procedure"
+            "text": "Only if the client uses the call light"
           }
         ]
       },
@@ -89,19 +89,19 @@
         "correct": "a"
       },
       "rationale": {
-        "correct": "Self-report is the gold standard; use behavioral scales when the client can't report.",
+        "correct": "Reassess pain and sedation at the drug's peak: about 15 to 30 minutes after IV and about 60 minutes after oral opioids.",
         "perOption": {
-          "a": "Pain is whatever the client says it is.",
-          "b": "Expressions vary and can be misleading.",
-          "c": "Vital signs may not change with chronic pain.",
-          "d": "This introduces bias."
+          "a": "IV opioids peak in about 15 to 30 minutes, when both relief and sedation are greatest.",
+          "b": "This misses the peak, when sedation is most likely.",
+          "c": "This is too late to judge the effect or catch oversedation.",
+          "d": "Reassessment is the nurse's responsibility."
         },
         "references": [
           "Fundamentals of nursing texts (e.g. Potter & Perry)",
-          "Reviewed by the content team on 17 November 2026."
+          "Rewritten to NCLEX-RN difficulty and reviewed by the content team on 19 November 2026."
         ]
       },
-      "educationalObjective": "Identify the most reliable pain indicator."
+      "educationalObjective": "Time pain reassessment after an opioid."
     },
     {
       "id": "c1a00024-0000-4000-8000-000000000002",
@@ -112,8 +112,8 @@
         "pain-assessment-and-comfort"
       ],
       "cjmmSkill": "take_action",
-      "difficulty": "moderate",
-      "stem": "How should the nurse assess pain in a client with advanced dementia who can't give a self-report?",
+      "difficulty": "difficult",
+      "stem": "A client with advanced dementia who cannot speak is grimacing, moaning and guarding the right hip 2 days after a hip repair. How should the nurse assess this client's pain?",
       "content": {
         "options": [
           {
@@ -122,15 +122,15 @@
           },
           {
             "id": "b",
-            "text": "Assume the client has no pain"
+            "text": "Assume the client is not in pain because the client is not asking"
           },
           {
             "id": "c",
-            "text": "Ask the client to rate pain from 0 to 10"
+            "text": "Ask the client to rate the pain on a 0 to 10 scale"
           },
           {
             "id": "d",
-            "text": "Rely on vital signs alone"
+            "text": "Rely on changes in heart rate and blood pressure alone"
           }
         ]
       },
@@ -138,16 +138,16 @@
         "correct": "a"
       },
       "rationale": {
-        "correct": "Use validated behavioral scales for nonverbal clients.",
+        "correct": "Use validated behavioral pain scales for clients who cannot report pain.",
         "perOption": {
           "a": "Behavioral scales assess breathing, vocalization, facial expression, body language and consolability.",
           "b": "Pain is often undertreated in dementia.",
-          "c": "The client can't use a numeric scale.",
-          "d": "Vital signs are unreliable."
+          "c": "The client cannot use a numeric scale.",
+          "d": "Vital signs are unreliable indicators of pain."
         },
         "references": [
           "Fundamentals of nursing texts (e.g. Potter & Perry)",
-          "Reviewed by the content team on 17 November 2026."
+          "Rewritten to NCLEX-RN difficulty and reviewed by the content team on 19 November 2026."
         ]
       },
       "educationalObjective": "Assess pain in a client with dementia."
@@ -162,24 +162,24 @@
       ],
       "cjmmSkill": "take_action",
       "difficulty": "moderate",
-      "stem": "A client sprained an ankle 2 hours ago. Which comfort measure is best?",
+      "stem": "A 16-year-old sprained an ankle playing basketball 2 hours ago. The ankle is swollen and tender, and an x-ray shows no fracture. Which comfort measure is best right now?",
       "content": {
         "options": [
           {
             "id": "a",
-            "text": "A cold pack for 15 to 20 minutes at a time"
+            "text": "A wrapped cold pack for 15 to 20 minutes at a time"
           },
           {
             "id": "b",
-            "text": "A heating pad for 1 hour"
+            "text": "A heating pad on the ankle for about an hour at a time"
           },
           {
             "id": "c",
-            "text": "Massaging the ankle firmly"
+            "text": "Firm massage of the ankle to move the swelling"
           },
           {
             "id": "d",
-            "text": "Keeping the ankle hanging down"
+            "text": "Letting the foot hang down over the bed"
           }
         ]
       },
@@ -187,7 +187,7 @@
         "correct": "a"
       },
       "rationale": {
-        "correct": "Use cold for acute injuries in the first 24 to 48 hours, heat later; limit applications to 15 to 20 minutes.",
+        "correct": "Use cold for acute injuries in the first 24 to 48 hours and heat later, limiting each application to 15 to 20 minutes.",
         "perOption": {
           "a": "Cold reduces swelling and pain in the first 24 to 48 hours.",
           "b": "Heat increases swelling in an acute injury.",
@@ -196,7 +196,7 @@
         },
         "references": [
           "Fundamentals of nursing texts (e.g. Potter & Perry)",
-          "Reviewed by the content team on 17 November 2026."
+          "Rewritten to NCLEX-RN difficulty and reviewed by the content team on 19 November 2026."
         ]
       },
       "educationalObjective": "Choose heat or cold therapy appropriately."
@@ -209,18 +209,18 @@
       "subtopics": [
         "complementary-therapies"
       ],
-      "cjmmSkill": "recognize_cues",
-      "difficulty": "moderate",
-      "stem": "A client taking sertraline says they've started St. John's wort. Why is the nurse concerned?",
+      "cjmmSkill": "analyze_cues",
+      "difficulty": "difficult",
+      "stem": "A client taking sertraline 100 mg daily for depression tells the nurse, \"I started St. John's wort last week to give it a boost.\" The client reports feeling restless and sweaty, with diarrhea. Why is the nurse concerned?",
       "content": {
         "options": [
           {
             "id": "a",
-            "text": "The combination can cause serotonin syndrome"
+            "text": "Together they can cause serotonin syndrome"
           },
           {
             "id": "b",
-            "text": "St. John's wort lowers blood glucose"
+            "text": "St. John's wort lowers blood glucose sharply"
           },
           {
             "id": "c",
@@ -228,7 +228,7 @@
           },
           {
             "id": "d",
-            "text": "There's no concern"
+            "text": "St. John's wort makes sertraline weaker"
           }
         ]
       },
@@ -238,14 +238,14 @@
       "rationale": {
         "correct": "St. John's wort interacts with SSRIs (serotonin syndrome) and reduces the effect of many drugs, such as oral contraceptives and warfarin.",
         "perOption": {
-          "a": "Both increase serotonin.",
-          "b": "This isn't the main concern.",
-          "c": "This isn't the concern.",
-          "d": "There is a significant interaction."
+          "a": "Both increase serotonin, and restlessness, sweating and diarrhea are early signs.",
+          "b": "This is not the main concern.",
+          "c": "This is not the concern.",
+          "d": "The danger is too much serotonin, not a weaker effect."
         },
         "references": [
           "Nursing pharmacology texts (e.g. Lehne; McCuistion) and the drug's prescribing information",
-          "Reviewed by the content team on 17 November 2026."
+          "Rewritten to NCLEX-RN difficulty and reviewed by the content team on 19 November 2026."
         ]
       },
       "educationalObjective": "Recognize herbal-drug interactions."
@@ -259,8 +259,8 @@
         "complementary-therapies"
       ],
       "cjmmSkill": "take_action",
-      "difficulty": "easy",
-      "stem": "A client says, \"I'd like to use acupuncture along with my medicine for back pain.\" What is the nurse's best response?",
+      "difficulty": "moderate",
+      "stem": "A client with chronic low back pain who takes duloxetine says, \"I'd like to try acupuncture along with my medicine.\" What is the nurse's best response?",
       "content": {
         "options": [
           {
@@ -269,15 +269,15 @@
           },
           {
             "id": "b",
-            "text": "\"Acupuncture doesn't work.\""
+            "text": "\"There isn't any evidence that acupuncture helps back pain.\""
           },
           {
             "id": "c",
-            "text": "\"You'll have to stop your medicine.\""
+            "text": "\"You'll need to stop the duloxetine before you try acupuncture.\""
           },
           {
             "id": "d",
-            "text": "\"Do whatever you like without telling anyone.\""
+            "text": "\"Go ahead, but there's no need to mention it to your provider.\""
           }
         ]
       },
@@ -288,13 +288,13 @@
         "correct": "Support complementary therapies while making sure the provider knows and screening for interactions.",
         "perOption": {
           "a": "This respects the client's choice and supports safe, coordinated care.",
-          "b": "This is dismissive.",
-          "c": "This isn't necessary.",
+          "b": "This is dismissive and inaccurate.",
+          "c": "This is not necessary.",
           "d": "Coordination is important."
         },
         "references": [
           "Fundamentals of nursing texts (e.g. Potter & Perry)",
-          "Reviewed by the content team on 17 November 2026."
+          "Rewritten to NCLEX-RN difficulty and reviewed by the content team on 19 November 2026."
         ]
       },
       "educationalObjective": "Respond to interest in complementary therapy."
@@ -308,42 +308,42 @@
         "sleep-and-rest"
       ],
       "cjmmSkill": "evaluate_outcomes",
-      "difficulty": "easy",
-      "stem": "The nurse is teaching sleep hygiene. Which statement shows a need for more teaching?",
+      "difficulty": "moderate",
+      "stem": "A nurse who has just started working night shifts says, \"I can't sleep during the day.\" The occupational health nurse gives advice. Which statement by the nurse shows a need for more teaching?",
       "content": {
         "options": [
           {
             "id": "a",
-            "text": "\"I'll go to bed at the same time each night.\""
+            "text": "\"I'll keep the same sleep times on my days off as far as I can.\""
           },
           {
             "id": "b",
-            "text": "\"I'll avoid caffeine after lunch.\""
+            "text": "\"I'll have a strong coffee on my drive home to stay alert.\""
           },
           {
             "id": "c",
-            "text": "\"I'll watch TV in bed until I fall asleep.\""
+            "text": "\"I'll use blackout curtains and earplugs when I sleep.\""
           },
           {
             "id": "d",
-            "text": "\"I'll keep my bedroom cool and dark.\""
+            "text": "\"I'll wear sunglasses on the way home in the morning.\""
           }
         ]
       },
       "key": {
-        "correct": "c"
+        "correct": "b"
       },
       "rationale": {
-        "correct": "Sleep hygiene: consistent schedule, bed for sleep only, limit caffeine, alcohol and screens.",
+        "correct": "Shift-work sleep: a consistent schedule, a dark and quiet room, limited morning light and no caffeine late in the shift.",
         "perOption": {
           "a": "A consistent schedule supports sleep.",
-          "b": "Caffeine disrupts sleep.",
-          "c": "Screens and non-sleep activities in bed disrupt sleep.",
-          "d": "This supports sleep."
+          "b": "Caffeine late in the shift disrupts daytime sleep.",
+          "c": "A dark, quiet room supports daytime sleep.",
+          "d": "Limiting morning light helps the body prepare for sleep."
         },
         "references": [
           "Fundamentals of nursing texts (e.g. Potter & Perry)",
-          "Reviewed by the content team on 17 November 2026."
+          "Rewritten to NCLEX-RN difficulty and reviewed by the content team on 19 November 2026."
         ]
       },
       "educationalObjective": "Teach sleep hygiene."
@@ -356,26 +356,26 @@
       "subtopics": [
         "sleep-and-rest"
       ],
-      "cjmmSkill": "recognize_cues",
+      "cjmmSkill": "analyze_cues",
       "difficulty": "moderate",
-      "stem": "An 82-year-old client asks for a sleeping pill. What is the nurse's main concern about sedative-hypnotics in older adults?",
+      "stem": "An 82-year-old client admitted with pneumonia cannot sleep in the hospital and asks for a sleeping pill. The client walks with a walker. What is the nurse's main concern about sedative-hypnotics for this client?",
       "content": {
         "options": [
           {
             "id": "a",
-            "text": "Increased risk of falls and confusion"
+            "text": "A higher risk of falls and confusion"
           },
           {
             "id": "b",
-            "text": "Weight gain"
+            "text": "A large gain in weight over a short time"
           },
           {
             "id": "c",
-            "text": "Hypertension"
+            "text": "A rise in blood pressure the next day"
           },
           {
             "id": "d",
-            "text": "Increased appetite"
+            "text": "A larger appetite at breakfast"
           }
         ]
       },
@@ -383,16 +383,16 @@
         "correct": "a"
       },
       "rationale": {
-        "correct": "Avoid sedative-hypnotics in older adults when possible; try non-drug measures first.",
+        "correct": "Avoid sedative-hypnotics in older adults when possible, and try non-drug measures first.",
         "perOption": {
           "a": "Sedatives impair balance and cognition in older adults (Beers criteria).",
-          "b": "This isn't the main concern.",
-          "c": "This isn't the main concern.",
-          "d": "This isn't the main concern."
+          "b": "This is not the main concern.",
+          "c": "This is not the main concern.",
+          "d": "This is not the main concern."
         },
         "references": [
           "Nursing pharmacology texts (e.g. Lehne; McCuistion) and the drug's prescribing information",
-          "Reviewed by the content team on 17 November 2026."
+          "Rewritten to NCLEX-RN difficulty and reviewed by the content team on 19 November 2026."
         ]
       },
       "educationalObjective": "Recognize the risks of sedatives in older adults."
@@ -406,8 +406,8 @@
         "nutrition-and-therapeutic-diets"
       ],
       "cjmmSkill": "take_action",
-      "difficulty": "easy",
-      "stem": "A client is on a clear liquid diet. Which item can the nurse offer?",
+      "difficulty": "moderate",
+      "stem": "A client recovering from a bowel obstruction has bowel sounds and passed flatus this morning. The NG tube was removed, and the diet is advanced to clear liquids. The client asks for something to drink. Which item can the nurse offer?",
       "content": {
         "options": [
           {
@@ -416,15 +416,15 @@
           },
           {
             "id": "b",
-            "text": "Milk"
+            "text": "A cup of milk"
           },
           {
             "id": "c",
-            "text": "Orange juice with pulp"
+            "text": "Orange juice"
           },
           {
             "id": "d",
-            "text": "Ice cream"
+            "text": "Vanilla pudding"
           }
         ]
       },
@@ -432,16 +432,16 @@
         "correct": "a"
       },
       "rationale": {
-        "correct": "Clear liquids: water, broth, clear juice, gelatin, popsicles. Full liquids add milk, pudding and ice cream.",
+        "correct": "Clear liquids: water, broth, clear juice, gelatin and ice pops; full liquids add milk, pudding and ice cream.",
         "perOption": {
           "a": "Clear liquids are transparent at room temperature.",
           "b": "Milk is a full liquid.",
-          "c": "Pulp isn't clear.",
-          "d": "Ice cream is a full liquid."
+          "c": "Juice with pulp is not clear.",
+          "d": "Pudding is a full liquid."
         },
         "references": [
           "Fundamentals of nursing texts (e.g. Potter & Perry)",
-          "Reviewed by the content team on 17 November 2026."
+          "Rewritten to NCLEX-RN difficulty and reviewed by the content team on 19 November 2026."
         ]
       },
       "educationalObjective": "Choose foods for a clear liquid diet."
@@ -455,25 +455,25 @@
         "nutrition-and-therapeutic-diets"
       ],
       "cjmmSkill": "evaluate_outcomes",
-      "difficulty": "easy",
-      "stem": "Which lunch choice is best for a client on a low-sodium diet?",
+      "difficulty": "moderate",
+      "stem": "A client with heart failure on a 2 g sodium diet is choosing lunch from the hospital menu. Which choice best fits the diet?",
       "content": {
         "options": [
           {
             "id": "a",
-            "text": "Grilled fresh chicken with steamed vegetables"
+            "text": "Grilled chicken with steamed vegetables"
           },
           {
             "id": "b",
-            "text": "Canned soup and crackers"
+            "text": "Canned chicken soup with crackers"
           },
           {
             "id": "c",
-            "text": "Ham sandwich with pickles"
+            "text": "A ham sandwich with a dill pickle"
           },
           {
             "id": "d",
-            "text": "Frozen pizza"
+            "text": "A slice of frozen pepperoni pizza"
           }
         ]
       },
@@ -481,7 +481,7 @@
         "correct": "a"
       },
       "rationale": {
-        "correct": "Low sodium: choose fresh foods; limit canned, cured, processed and fast foods.",
+        "correct": "Low-sodium diets: choose fresh foods and limit canned, cured, processed and fast foods.",
         "perOption": {
           "a": "Fresh, unprocessed foods are low in sodium.",
           "b": "These are high in sodium.",
@@ -490,7 +490,7 @@
         },
         "references": [
           "Fundamentals of nursing texts (e.g. Potter & Perry)",
-          "Reviewed by the content team on 17 November 2026."
+          "Rewritten to NCLEX-RN difficulty and reviewed by the content team on 19 November 2026."
         ]
       },
       "educationalObjective": "Choose low-sodium foods."
@@ -505,24 +505,24 @@
       ],
       "cjmmSkill": "evaluate_outcomes",
       "difficulty": "moderate",
-      "stem": "A client with celiac disease is choosing foods. Which choice is safe?",
+      "stem": "A 24-year-old client newly diagnosed with celiac disease is choosing foods for a family picnic and wants to avoid a flare. Which choice is safe?",
       "content": {
         "options": [
           {
             "id": "a",
-            "text": "Rice"
+            "text": "A rice and bean salad"
           },
           {
             "id": "b",
-            "text": "Whole wheat bread"
+            "text": "A whole wheat bread roll"
           },
           {
             "id": "c",
-            "text": "Barley soup"
+            "text": "A bowl of barley soup"
           },
           {
             "id": "d",
-            "text": "Rye crackers"
+            "text": "Rye crackers with cheese"
           }
         ]
       },
@@ -532,14 +532,14 @@
       "rationale": {
         "correct": "Celiac disease: avoid wheat, barley and rye; rice, corn and certified gluten-free oats are safe.",
         "perOption": {
-          "a": "Rice is naturally gluten-free.",
+          "a": "Rice and beans are naturally gluten-free.",
           "b": "Wheat contains gluten.",
           "c": "Barley contains gluten.",
           "d": "Rye contains gluten."
         },
         "references": [
           "Medical-surgical nursing texts (e.g. Lewis; Ignatavicius)",
-          "Reviewed by the content team on 17 November 2026."
+          "Rewritten to NCLEX-RN difficulty and reviewed by the content team on 19 November 2026."
         ]
       },
       "educationalObjective": "Choose gluten-free foods."
@@ -553,25 +553,25 @@
         "nutrition-and-therapeutic-diets"
       ],
       "cjmmSkill": "generate_solutions",
-      "difficulty": "easy",
-      "stem": "Which food is highest in fiber?",
+      "difficulty": "moderate",
+      "stem": "An 80-year-old client with chronic constipation wants to add more fiber to the diet and drinks plenty of water. Which food has the most fiber per serving?",
       "content": {
         "options": [
           {
             "id": "a",
-            "text": "Lentils"
+            "text": "A cup of cooked lentils"
           },
           {
             "id": "b",
-            "text": "White bread"
+            "text": "Two slices of white bread"
           },
           {
             "id": "c",
-            "text": "Chicken breast"
+            "text": "A grilled chicken breast"
           },
           {
             "id": "d",
-            "text": "Yogurt"
+            "text": "A cup of plain yogurt"
           }
         ]
       },
@@ -579,16 +579,16 @@
         "correct": "a"
       },
       "rationale": {
-        "correct": "High-fiber foods: legumes, whole grains, fruits, vegetables, bran.",
+        "correct": "High-fiber foods: legumes, whole grains, fruits, vegetables and bran, with enough fluid.",
         "perOption": {
-          "a": "Legumes are high in fiber.",
+          "a": "Legumes are very high in fiber.",
           "b": "Refined grains are low in fiber.",
           "c": "Meat has no fiber.",
           "d": "Dairy has no fiber."
         },
         "references": [
           "Fundamentals of nursing texts (e.g. Potter & Perry)",
-          "Reviewed by the content team on 17 November 2026."
+          "Rewritten to NCLEX-RN difficulty and reviewed by the content team on 19 November 2026."
         ]
       },
       "educationalObjective": "Identify high-fiber foods."
@@ -603,7 +603,7 @@
       ],
       "cjmmSkill": "analyze_cues",
       "difficulty": "easy",
-      "stem": "A client weighs 90 kg and is 1.75 m tall. What is the client's body mass index (BMI)? Round to the nearest tenth.",
+      "stem": "A 45-year-old client at a wellness visit weighs 90 kg and is 1.75 m tall. The client asks whether the weight is healthy. What is the client's body mass index (BMI)? Round to the nearest tenth.",
       "content": {
         "unit": "kg/m²",
         "decimals": 1,
@@ -614,11 +614,11 @@
         "rounding": "exact"
       },
       "rationale": {
-        "correct": "BMI = weight (kg) ÷ height (m)² = 90 ÷ (1.75 × 1.75) = 90 ÷ 3.0625 = 29.4 (overweight range: 25 to 29.9).",
+        "correct": "BMI = weight (kg) ÷ height (m)² = 90 ÷ (1.75 × 1.75) = 90 ÷ 3.0625 = 29.4, in the overweight range of 25 to 29.9.",
         "perOption": {},
         "references": [
           "Fundamentals of nursing texts (e.g. Potter & Perry)",
-          "Reviewed by the content team on 17 November 2026."
+          "Rewritten to NCLEX-RN difficulty and reviewed by the content team on 19 November 2026."
         ]
       },
       "educationalObjective": "Calculate body mass index."
@@ -633,24 +633,24 @@
       ],
       "cjmmSkill": "take_action",
       "difficulty": "moderate",
-      "stem": "How should the nurse provide oral care to an unconscious client?",
+      "stem": "A client who had a stroke 3 days ago is awake but has a weak swallow and drools from the left side of the mouth. How should the nurse give oral care?",
       "content": {
         "options": [
           {
             "id": "a",
-            "text": "Turn the client to the side, have suction ready and use a soft toothette"
+            "text": "Sit the client up and use a soft brush and suction"
           },
           {
             "id": "b",
-            "text": "Keep the client flat and pour water into the mouth to rinse"
+            "text": "Lay the client flat and rinse with a large cup of water"
           },
           {
             "id": "c",
-            "text": "Skip oral care because the client isn't eating"
+            "text": "Skip oral care until the client can swallow normally"
           },
           {
             "id": "d",
-            "text": "Use a hard toothbrush and lots of toothpaste"
+            "text": "Use a hard toothbrush and plenty of foamy toothpaste"
           }
         ]
       },
@@ -658,19 +658,19 @@
         "correct": "a"
       },
       "rationale": {
-        "correct": "Oral care for unconscious clients: side-lying, minimal fluid, suction available.",
+        "correct": "Oral care for clients with dysphagia: upright or side-lying, minimal fluid and suction at hand.",
         "perOption": {
-          "a": "Side-lying and suction prevent aspiration.",
+          "a": "An upright position and suction prevent aspiration while the mouth is cleaned.",
           "b": "This risks aspiration.",
-          "c": "Oral care prevents infection and pneumonia.",
+          "c": "Oral care prevents infection and aspiration pneumonia.",
           "d": "This can injure tissue and cause aspiration."
         },
         "references": [
           "Fundamentals of nursing texts (e.g. Potter & Perry)",
-          "Reviewed by the content team on 17 November 2026."
+          "Rewritten to NCLEX-RN difficulty and reviewed by the content team on 19 November 2026."
         ]
       },
-      "educationalObjective": "Provide safe oral care to an unconscious client."
+      "educationalObjective": "Provide safe oral care to a client with dysphagia."
     },
     {
       "id": "c1a00024-0000-4000-8000-000000000014",
@@ -681,25 +681,25 @@
         "hygiene-and-personal-care"
       ],
       "cjmmSkill": "take_action",
-      "difficulty": "moderate",
-      "stem": "A client with dementia becomes agitated during the morning shower. What should the nurse do?",
+      "difficulty": "difficult",
+      "stem": "A client with dementia in a long-term care unit becomes agitated, shouts and swings an arm at the aide during the morning shower. What should the nurse do?",
       "content": {
         "options": [
           {
             "id": "a",
-            "text": "Be flexible: try a towel bath or a different time of day"
+            "text": "Stop and try a towel bath or a different time of day"
           },
           {
             "id": "b",
-            "text": "Insist on completing the shower right away"
+            "text": "Insist on finishing the shower quickly while the client is wet"
           },
           {
             "id": "c",
-            "text": "Restrain the client to finish"
+            "text": "Ask a second aide to hold the client's arms to finish"
           },
           {
             "id": "d",
-            "text": "Skip bathing for a week"
+            "text": "Skip bathing for a week until the client is calmer"
           }
         ]
       },
@@ -707,16 +707,16 @@
         "correct": "a"
       },
       "rationale": {
-        "correct": "Person-centered care in dementia: flexibility, simple steps, calm approach.",
+        "correct": "Person-centered care in dementia: flexibility, simple steps and a calm approach.",
         "perOption": {
           "a": "Adjusting the approach reduces distress while meeting hygiene needs.",
-          "b": "Forcing care increases agitation.",
-          "c": "Restraint isn't appropriate.",
+          "b": "Forcing care increases agitation and the risk of injury.",
+          "c": "Restraining the client is not appropriate.",
           "d": "Hygiene needs must still be met."
         },
         "references": [
           "Fundamentals of nursing texts (e.g. Potter & Perry)",
-          "Reviewed by the content team on 17 November 2026."
+          "Rewritten to NCLEX-RN difficulty and reviewed by the content team on 19 November 2026."
         ]
       },
       "educationalObjective": "Adapt hygiene care for a client with dementia."
@@ -731,24 +731,24 @@
       ],
       "cjmmSkill": "take_action",
       "difficulty": "easy",
-      "stem": "How should the nurse store a client's dentures overnight?",
+      "stem": "An 86-year-old client removes upper and lower dentures before going to sleep in the hospital. How should the nurse store the dentures overnight?",
       "content": {
         "options": [
           {
             "id": "a",
-            "text": "In a labeled denture cup with water or cleaning solution"
+            "text": "In a labeled denture cup with water or soaking solution"
           },
           {
             "id": "b",
-            "text": "Wrapped in a paper towel on the meal tray"
+            "text": "Wrapped in a paper towel on the bedside meal tray"
           },
           {
             "id": "c",
-            "text": "Dry in the drawer"
+            "text": "Dry, in the top drawer of the bedside table until the morning"
           },
           {
             "id": "d",
-            "text": "In hot water"
+            "text": "In a cup of very hot water to disinfect them"
           }
         ]
       },
@@ -765,7 +765,7 @@
         },
         "references": [
           "Fundamentals of nursing texts (e.g. Potter & Perry)",
-          "Reviewed by the content team on 17 November 2026."
+          "Rewritten to NCLEX-RN difficulty and reviewed by the content team on 19 November 2026."
         ]
       },
       "educationalObjective": "Care for dentures correctly."
@@ -780,7 +780,7 @@
       ],
       "cjmmSkill": "recognize_cues",
       "difficulty": "moderate",
-      "stem": "Which complications can result from prolonged immobility? Select all that apply.",
+      "stem": "A 79-year-old client has been on bed rest for 10 days after a pelvic fracture. Which complications is the client at risk for because of the immobility? Select all that apply.",
       "content": {
         "options": [
           {
@@ -801,11 +801,11 @@
           },
           {
             "id": "e",
-            "text": "Contractures"
+            "text": "An increase in muscle mass"
           },
           {
             "id": "f",
-            "text": "Increased muscle mass"
+            "text": "Higher bone density"
           }
         ]
       },
@@ -814,8 +814,7 @@
           "a",
           "b",
           "c",
-          "d",
-          "e"
+          "d"
         ]
       },
       "rationale": {
@@ -825,12 +824,12 @@
           "b": "Venous stasis promotes clotting.",
           "c": "Peristalsis slows.",
           "d": "Secretions pool in the lungs.",
-          "e": "Joints lose range of motion.",
-          "f": "Immobility causes muscle wasting."
+          "e": "Immobility causes muscle wasting.",
+          "f": "Immobility causes bone loss."
         },
         "references": [
           "Fundamentals of nursing texts (e.g. Potter & Perry)",
-          "Reviewed by the content team on 17 November 2026."
+          "Rewritten to NCLEX-RN difficulty and reviewed by the content team on 19 November 2026."
         ]
       },
       "educationalObjective": "Recognize the complications of immobility."
@@ -844,25 +843,25 @@
         "immobility-and-positioning"
       ],
       "cjmmSkill": "take_action",
-      "difficulty": "easy",
-      "stem": "When performing passive range-of-motion exercises, what should the nurse do?",
+      "difficulty": "moderate",
+      "stem": "The nurse is doing passive range-of-motion exercises for a client with left-sided paralysis after a stroke. Which technique is correct?",
       "content": {
         "options": [
           {
             "id": "a",
-            "text": "Support the joint above and below and stop at the point of resistance or pain"
+            "text": "Support above and below each joint; stop at resistance or pain"
           },
           {
             "id": "b",
-            "text": "Move each joint past the point of pain"
+            "text": "Move each joint a little past the point of pain to stretch it"
           },
           {
             "id": "c",
-            "text": "Move the joints quickly"
+            "text": "Move the joints quickly to finish all of them in the time available"
           },
           {
             "id": "d",
-            "text": "Exercise only the unaffected limbs"
+            "text": "Exercise only the right arm and leg, which the client can move"
           }
         ]
       },
@@ -870,16 +869,16 @@
         "correct": "a"
       },
       "rationale": {
-        "correct": "Passive ROM: slow, supported and within comfort.",
+        "correct": "Passive range of motion: slow, supported and within comfort.",
         "perOption": {
-          "a": "This prevents injury.",
+          "a": "This prevents injury to joints that the client cannot protect.",
           "b": "This causes injury.",
           "c": "Slow, smooth movements are safer.",
-          "d": "All joints need ROM unless contraindicated."
+          "d": "The affected joints need range of motion most."
         },
         "references": [
           "Fundamentals of nursing texts (e.g. Potter & Perry)",
-          "Reviewed by the content team on 17 November 2026."
+          "Rewritten to NCLEX-RN difficulty and reviewed by the content team on 19 November 2026."
         ]
       },
       "educationalObjective": "Perform passive ROM safely."
@@ -894,24 +893,24 @@
       ],
       "cjmmSkill": "generate_solutions",
       "difficulty": "moderate",
-      "stem": "Which intervention helps prevent foot drop in a client on prolonged bed rest?",
+      "stem": "A client in the ICU has been sedated and on a ventilator for 9 days. Which intervention helps prevent foot drop?",
       "content": {
         "options": [
           {
             "id": "a",
-            "text": "High-top sneakers or a foot board to keep the feet at 90 degrees"
+            "text": "High-top sneakers or a footboard at 90 degrees"
           },
           {
             "id": "b",
-            "text": "A pillow under the knees"
+            "text": "A pillow under the knees to keep both legs relaxed"
           },
           {
             "id": "c",
-            "text": "Tucking the sheets tightly over the toes"
+            "text": "Sheets tucked in tightly over the toes"
           },
           {
             "id": "d",
-            "text": "Keeping the feet pointed down"
+            "text": "Letting the feet rest pointed down for comfort"
           }
         ]
       },
@@ -919,16 +918,16 @@
         "correct": "a"
       },
       "rationale": {
-        "correct": "Prevent foot drop with neutral ankle positioning and ROM.",
+        "correct": "Prevent foot drop with neutral ankle positioning and range-of-motion exercises.",
         "perOption": {
           "a": "This keeps the ankles in a neutral position.",
-          "b": "This promotes knee flexion contracture.",
+          "b": "This promotes a knee flexion contracture.",
           "c": "This pushes the feet into plantar flexion.",
           "d": "This promotes foot drop."
         },
         "references": [
           "Fundamentals of nursing texts (e.g. Potter & Perry)",
-          "Reviewed by the content team on 17 November 2026."
+          "Rewritten to NCLEX-RN difficulty and reviewed by the content team on 19 November 2026."
         ]
       },
       "educationalObjective": "Prevent foot drop."
@@ -943,7 +942,7 @@
       ],
       "cjmmSkill": "take_action",
       "difficulty": "moderate",
-      "stem": "The nurse is helping a client with right-sided weakness move from the bed to a wheelchair. Place the steps in order.",
+      "stem": "The nurse is helping a client with right-sided weakness move from the bed to a wheelchair. Place the steps in order, from first to last.",
       "content": {
         "items": [
           {
@@ -979,7 +978,7 @@
         "scoring": "all_or_nothing"
       },
       "rationale": {
-        "correct": "Transfer toward the strong side with locked brakes and a gait belt.",
+        "correct": "Transfer toward the strong side, with locked brakes and a gait belt.",
         "perOption": {
           "a": "The client moves toward the strong side, with the chair secured.",
           "b": "Sitting first lets the blood pressure adjust.",
@@ -989,7 +988,7 @@
         },
         "references": [
           "Fundamentals of nursing texts (e.g. Potter & Perry)",
-          "Reviewed by the content team on 17 November 2026."
+          "Rewritten to NCLEX-RN difficulty and reviewed by the content team on 19 November 2026."
         ]
       },
       "educationalObjective": "Transfer a client from bed to wheelchair safely."
@@ -1004,7 +1003,7 @@
       ],
       "cjmmSkill": "generate_solutions",
       "difficulty": "moderate",
-      "stem": "When is the best time for a client in a bowel training program to try to have a bowel movement?",
+      "stem": "A client with multiple sclerosis is starting a bowel training program at home. When is the best time for the client to try to have a bowel movement each day?",
       "content": {
         "options": [
           {
@@ -1013,15 +1012,15 @@
           },
           {
             "id": "b",
-            "text": "Right before bedtime"
+            "text": "Right before going to bed"
           },
           {
             "id": "c",
-            "text": "Only when the client feels the urge"
+            "text": "Whenever the urge happens"
           },
           {
             "id": "d",
-            "text": "On an empty stomach before breakfast"
+            "text": "On waking, before eating"
           }
         ]
       },
@@ -1029,16 +1028,16 @@
         "correct": "a"
       },
       "rationale": {
-        "correct": "Bowel training: same time daily, after a meal, with fiber and fluids.",
+        "correct": "Bowel training: the same time daily, after a meal, with fiber and fluids.",
         "perOption": {
           "a": "The gastrocolic reflex after meals stimulates peristalsis.",
-          "b": "This isn't the optimal time.",
-          "c": "A schedule is used.",
+          "b": "This is not the best time.",
+          "c": "A set schedule is used.",
           "d": "The meal triggers the reflex."
         },
         "references": [
           "Fundamentals of nursing texts (e.g. Potter & Perry)",
-          "Reviewed by the content team on 17 November 2026."
+          "Rewritten to NCLEX-RN difficulty and reviewed by the content team on 19 November 2026."
         ]
       },
       "educationalObjective": "Time bowel training correctly."
@@ -1052,25 +1051,25 @@
         "urinary-elimination-and-catheter-care"
       ],
       "cjmmSkill": "generate_solutions",
-      "difficulty": "easy",
-      "stem": "Which intervention is most appropriate for an older adult with functional urinary incontinence?",
+      "difficulty": "difficult",
+      "stem": "An 88-year-old resident with severe arthritis and mild dementia is continent when helped to the toilet but often wets before reaching it. The resident's bladder empties completely. Which intervention is most appropriate?",
       "content": {
         "options": [
           {
             "id": "a",
-            "text": "Offer scheduled toileting every 2 hours"
+            "text": "Toileting help every 2 hours and clothes easy to undo"
           },
           {
             "id": "b",
-            "text": "Insert an indwelling catheter"
+            "text": "An indwelling catheter to keep the skin dry"
           },
           {
             "id": "c",
-            "text": "Restrict fluids all day"
+            "text": "Limiting fluids to 500 mL a day to reduce wetting"
           },
           {
             "id": "d",
-            "text": "Use adult briefs only"
+            "text": "Adult briefs, changed when the resident is wet"
           }
         ]
       },
@@ -1078,16 +1077,16 @@
         "correct": "a"
       },
       "rationale": {
-        "correct": "Incontinence care: scheduled toileting, easy access to the toilet and skin protection.",
+        "correct": "Functional incontinence: scheduled toileting, easy access to the toilet, simple clothing and skin protection.",
         "perOption": {
-          "a": "Regular toileting reduces accidents.",
-          "b": "This increases infection risk and isn't first-line.",
+          "a": "Functional incontinence is caused by mobility and thinking barriers, so scheduled help and easy clothing address the cause.",
+          "b": "This raises infection risk and is not first-line.",
           "c": "This causes dehydration and concentrated urine.",
-          "d": "Briefs don't address the cause."
+          "d": "Briefs do not address the cause."
         },
         "references": [
           "Fundamentals of nursing texts (e.g. Potter & Perry)",
-          "Reviewed by the content team on 17 November 2026."
+          "Rewritten to NCLEX-RN difficulty and reviewed by the content team on 19 November 2026."
         ]
       },
       "educationalObjective": "Manage functional incontinence."
@@ -1102,7 +1101,7 @@
       ],
       "cjmmSkill": "take_action",
       "difficulty": "difficult",
-      "stem": "While removing a fecal impaction digitally, the nurse notes the client's heart rate drops from 78 to 48/min. What should the nurse do?",
+      "stem": "While removing a fecal impaction digitally from an 84-year-old client, the nurse notes that the heart rate has dropped from 78 to 48/min and the client looks pale and lightheaded. What should the nurse do?",
       "content": {
         "options": [
           {
@@ -1111,11 +1110,11 @@
           },
           {
             "id": "b",
-            "text": "Continue quickly to finish"
+            "text": "Finish quickly so the stimulation ends sooner"
           },
           {
             "id": "c",
-            "text": "Give a laxative"
+            "text": "Give a stimulant laxative and stop for the day"
           },
           {
             "id": "d",
@@ -1127,16 +1126,16 @@
         "correct": "a"
       },
       "rationale": {
-        "correct": "Digital removal can stimulate the vagus nerve; stop if bradycardia occurs.",
+        "correct": "Digital removal can stimulate the vagus nerve; stop if bradycardia occurs and assess the client.",
         "perOption": {
           "a": "Rectal stimulation can trigger a vagal response with bradycardia.",
-          "b": "This worsens the vagal response.",
-          "c": "This doesn't address the bradycardia.",
+          "b": "Continuing worsens the vagal response.",
+          "c": "This does not address the bradycardia.",
           "d": "The procedure must stop."
         },
         "references": [
           "Fundamentals of nursing texts (e.g. Potter & Perry)",
-          "Reviewed by the content team on 17 November 2026."
+          "Rewritten to NCLEX-RN difficulty and reviewed by the content team on 19 November 2026."
         ]
       },
       "educationalObjective": "Recognize a vagal response during digital disimpaction."
@@ -1150,25 +1149,25 @@
         "tube-feeding-care"
       ],
       "cjmmSkill": "take_action",
-      "difficulty": "moderate",
-      "stem": "A client's feeding tube is clogged. What should the nurse try first?",
+      "difficulty": "difficult",
+      "stem": "A client's small-bore feeding tube has stopped flowing after crushed medications were given through it. Tube placement was confirmed this morning. What should the nurse try first?",
       "content": {
         "options": [
           {
             "id": "a",
-            "text": "Flush gently with warm water using a 30 to 60 mL syringe"
+            "text": "Flush gently with warm water using a 60 mL syringe"
           },
           {
             "id": "b",
-            "text": "Flush with cola"
+            "text": "Flush with cola from the tray to dissolve the clog"
           },
           {
             "id": "c",
-            "text": "Insert a stylet to push through the clog"
+            "text": "Insert the stylet to push through the clog"
           },
           {
             "id": "d",
-            "text": "Use a small syringe with high pressure"
+            "text": "Use a 3 mL syringe to push the water through hard"
           }
         ]
       },
@@ -1176,16 +1175,16 @@
         "correct": "a"
       },
       "rationale": {
-        "correct": "Prevent clogs with regular water flushes; clear them gently with warm water.",
+        "correct": "Prevent clogs with regular water flushes and liquid forms of drugs; clear clogs gently with warm water and a large syringe.",
         "perOption": {
-          "a": "Warm water is the first-line way to clear a clog.",
+          "a": "Warm water in a large syringe is the first-line way to clear a clog safely.",
           "b": "Acidic drinks can make clogs worse.",
-          "c": "This can perforate the tube or GI tract.",
+          "c": "This can perforate the tube or the GI tract.",
           "d": "Small syringes create high pressure that can rupture the tube."
         },
         "references": [
           "Fundamentals of nursing texts (e.g. Potter & Perry)",
-          "Reviewed by the content team on 17 November 2026."
+          "Rewritten to NCLEX-RN difficulty and reviewed by the content team on 19 November 2026."
         ]
       },
       "educationalObjective": "Unclog a feeding tube safely."
