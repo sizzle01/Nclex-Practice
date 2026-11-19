@@ -31,7 +31,7 @@ const weak: WeakAreasView = {
   track: "RN",
   areas: [
     { clientNeedsId: 7, code: "PHI.PPT", name: "Pharmacological and Parenteral Therapies", pct: 0.42, items: 12 },
-    { clientNeedsId: 3, code: "SECE.SIC", name: "Safety and Infection Control", pct: 0.6, items: 5 },
+    { clientNeedsId: 3, code: "SECE.SIC", name: "Safety and Infection Prevention and Control", pct: 0.6, items: 5 },
   ],
   attemptsConsidered: 4,
   questionsAvailable: 180,
@@ -53,7 +53,7 @@ describe("Practice your weak areas card", () => {
     const items = within(await screen.findByRole("list")).getAllByRole("listitem");
     expect(items.map((i) => i.textContent)).toEqual([
       "Pharmacological and Parenteral Therapies42%12 questions",
-      "Safety and Infection Control60%5 questions",
+      "Safety and Infection Prevention and Control60%5 questions",
     ]);
     expect(screen.getByText(/Under 65% in your last 4 tests/)).toBeInTheDocument();
     expect(screen.queryByText(/shorter than the usual/)).not.toBeInTheDocument();

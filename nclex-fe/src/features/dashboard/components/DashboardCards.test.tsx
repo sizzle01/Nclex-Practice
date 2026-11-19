@@ -29,7 +29,7 @@ const summary: PerformanceSummary = {
   avgTimeMs: 70_000,
   weakest: [
     { key: "PHI.PPT", name: "Pharmacological and Parenteral Therapies", itemsAnswered: 12, itemsCorrect: 4, accuracy: 0.41, avgTimeMs: 90_000, attemptsCount: 3 },
-    { key: "SECE.SIC", name: "Safety and Infection Control", itemsAnswered: 9, itemsCorrect: 5, accuracy: 0.56, avgTimeMs: 60_000, attemptsCount: 2 },
+    { key: "SECE.SIC", name: "Safety and Infection Prevention and Control", itemsAnswered: 9, itemsCorrect: 5, accuracy: 0.56, avgTimeMs: 60_000, attemptsCount: 2 },
   ],
 };
 
@@ -45,7 +45,7 @@ describe("dashboard performance card", () => {
     const items = within(screen.getByRole("list")).getAllByRole("listitem");
     expect(items.map((i) => i.textContent)).toEqual([
       "Pharmacological and Parenteral Therapies41%12 questions",
-      "Safety and Infection Control56%9 questions",
+      "Safety and Infection Prevention and Control56%9 questions",
     ]);
   });
 

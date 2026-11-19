@@ -66,7 +66,7 @@ describe("CustomBuilder", () => {
     await waitFor(() => expect(countQueries()).toHaveLength(1));
 
     await user.click(screen.getByRole("checkbox", { name: "Management of Care" }));
-    await user.click(screen.getByRole("checkbox", { name: "Safety and Infection Control" }));
+    await user.click(screen.getByRole("checkbox", { name: "Safety and Infection Prevention and Control" }));
     await user.click(screen.getByRole("checkbox", { name: "Select All That Apply" }));
 
     await waitFor(() => expect(countQueries()).toHaveLength(2));

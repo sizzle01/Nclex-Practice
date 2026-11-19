@@ -24,7 +24,7 @@ describe("CategoryTree", () => {
 
     expect(screen.getByTestId("value")).toHaveTextContent("2,3");
     expect(screen.getByRole("checkbox", { name: "Management of Care" })).toBeChecked();
-    expect(screen.getByRole("checkbox", { name: "Safety and Infection Control" })).toBeChecked();
+    expect(screen.getByRole("checkbox", { name: "Safety and Infection Prevention and Control" })).toBeChecked();
   });
 
   it("shows a category as mixed when only some subcategories are chosen", async () => {

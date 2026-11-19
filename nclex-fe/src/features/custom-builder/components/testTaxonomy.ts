@@ -11,7 +11,7 @@ export const testTaxonomy: Taxonomy = {
       weightMax: null,
       children: [
         { id: 2, code: "SECE.MOC", name: "Management of Care", weightMin: 15, weightMax: 21, children: null },
-        { id: 3, code: "SECE.SIC", name: "Safety and Infection Control", weightMin: 10, weightMax: 16, children: null },
+        { id: 3, code: "SECE.SIC", name: "Safety and Infection Prevention and Control", weightMin: 10, weightMax: 16, children: null },
       ],
     },
     { id: 5, code: "PSI", name: "Psychosocial Integrity", weightMin: 6, weightMax: 12, children: null },
