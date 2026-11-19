@@ -1,5 +1,5 @@
 {
-  "notice": "RN bank batch 8: Respiratory I: asthma, COPD, pneumonia, oxygen and TB. Reviewed by the content team on 17 November 2026. See REVIEW-LOG.md.",
+  "notice": "RN bank batch 8: Respiratory I: asthma, COPD, pneumonia, oxygen and TB. Rewritten to NCLEX-RN difficulty and reviewed by the content team on 19 November 2026. See REVIEW-LOG.md.",
   "track": "RN",
   "subtopics": [
     {
@@ -37,18 +37,18 @@
       "subtopics": [
         "asthma-and-copd-management"
       ],
-      "cjmmSkill": "recognize_cues",
+      "cjmmSkill": "analyze_cues",
       "difficulty": "difficult",
-      "stem": "A client in a severe asthma attack was wheezing loudly on arrival. Twenty minutes later, the nurse hears no wheezing and very faint breath sounds. The client is drowsy, and the SpO2 is 86%. How should the nurse interpret this change?",
+      "stem": "A 19-year-old in a severe asthma attack was wheezing loudly on arrival in the emergency department. Twenty minutes and two albuterol treatments later, the nurse hears no wheezing and very faint breath sounds. The client is drowsy, and the SpO2 is 86%. How should the nurse interpret this change?",
       "content": {
         "options": [
           {
             "id": "a",
-            "text": "The bronchospasm is resolving"
+            "text": "The bronchospasm is easing in response to the albuterol"
           },
           {
             "id": "b",
-            "text": "Airflow is now so limited that respiratory failure is imminent"
+            "text": "Airflow is so limited that respiratory failure is near"
           },
           {
             "id": "c",
@@ -56,7 +56,7 @@
           },
           {
             "id": "d",
-            "text": "The pulse oximeter is malfunctioning"
+            "text": "The pulse oximeter probe is giving a false low reading"
           }
         ]
       },
@@ -64,16 +64,16 @@
         "correct": "b"
       },
       "rationale": {
-        "correct": "Absent wheezing in severe asthma is an ominous sign; prepare for intubation.",
+        "correct": "Absent wheezing in severe asthma is an ominous sign; call for help and prepare for intubation.",
         "perOption": {
-          "a": "Improvement would come with better air movement and oxygenation, not drowsiness and hypoxemia.",
-          "b": "A 'silent chest' means too little air is moving to make wheezes; with drowsiness, it signals impending respiratory arrest.",
+          "a": "Improvement brings better air movement and oxygenation, not drowsiness and hypoxemia.",
+          "b": "A silent chest means too little air moves to make wheezes; with drowsiness, it signals impending respiratory arrest.",
           "c": "Drowsiness with hypoxemia signals carbon dioxide retention, not rest.",
           "d": "The clinical picture matches the reading."
         },
         "references": [
           "Medical-surgical nursing texts (e.g. Lewis; Ignatavicius)",
-          "Reviewed by the content team on 17 November 2026."
+          "Rewritten to NCLEX-RN difficulty and reviewed by the content team on 19 November 2026."
         ]
       },
       "educationalObjective": "Recognize a silent chest as impending respiratory failure."
@@ -87,8 +87,8 @@
         "asthma-and-copd-management"
       ],
       "cjmmSkill": "take_action",
-      "difficulty": "easy",
-      "stem": "A client with asthma arrives with wheezing, chest tightness and an SpO2 of 91%. Which medication should the nurse give first?",
+      "difficulty": "moderate",
+      "stem": "A client with asthma arrives at urgent care with wheezing, chest tightness, a respiratory rate of 28/min and an SpO2 of 91%. The client's medications include fluticasone, salmeterol and montelukast. Which medication should the nurse give first?",
       "content": {
         "options": [
           {
@@ -97,15 +97,15 @@
           },
           {
             "id": "b",
-            "text": "Salmeterol by inhaler"
+            "text": "An extra dose of the salmeterol inhaler"
           },
           {
             "id": "c",
-            "text": "Montelukast orally"
+            "text": "The evening montelukast dose early"
           },
           {
             "id": "d",
-            "text": "Fluticasone by inhaler"
+            "text": "Two extra puffs of fluticasone"
           }
         ]
       },
@@ -115,15 +115,15 @@
       "rationale": {
         "correct": "Short-acting beta2 agonists such as albuterol are the rescue medication for acute bronchospasm.",
         "perOption": {
-          "a": "A short-acting beta2 agonist rapidly relaxes the bronchial smooth muscle and is the first-line rescue drug.",
+          "a": "A short-acting beta2 agonist relaxes bronchial smooth muscle within minutes and is the rescue drug.",
           "b": "Salmeterol is a long-acting maintenance drug and too slow for rescue.",
-          "c": "Leukotriene modifiers are for prevention.",
-          "d": "Inhaled steroids reduce inflammation over time but don't relieve acute bronchospasm."
+          "c": "Leukotriene modifiers prevent symptoms; they do not relieve an attack.",
+          "d": "Inhaled steroids reduce inflammation over days and do not relieve acute bronchospasm."
         },
         "references": [
           "Medical-surgical nursing texts (e.g. Lewis; Ignatavicius)",
           "Nursing pharmacology texts (e.g. Lehne; McCuistion) and the drug's prescribing information",
-          "Reviewed by the content team on 17 November 2026."
+          "Rewritten to NCLEX-RN difficulty and reviewed by the content team on 19 November 2026."
         ]
       },
       "educationalObjective": "Choose the rescue medication for an asthma exacerbation."
@@ -137,25 +137,25 @@
         "asthma-and-copd-management"
       ],
       "cjmmSkill": "take_action",
-      "difficulty": "moderate",
-      "stem": "A client with asthma uses a peak flow meter. Today's reading is 45% of the client's personal best, and the client is short of breath. What should the client do according to the asthma action plan?",
+      "difficulty": "difficult",
+      "stem": "A client with asthma whose personal best peak flow is 500 L/min calls the clinic. This morning's reading is 225 L/min, and the client is short of breath while talking. According to the asthma action plan, what should the nurse tell the client?",
       "content": {
         "options": [
           {
             "id": "a",
-            "text": "Continue usual medications and recheck tomorrow"
+            "text": "\"Keep taking your usual medicines and check again tomorrow.\""
           },
           {
             "id": "b",
-            "text": "Use the rescue inhaler and seek emergency care now"
+            "text": "\"Use your rescue inhaler and get emergency care right now.\""
           },
           {
             "id": "c",
-            "text": "Double the dose of the inhaled steroid"
+            "text": "\"Double your inhaled steroid dose for the next 3 days.\""
           },
           {
             "id": "d",
-            "text": "Rest and avoid using the inhaler to prevent tolerance"
+            "text": "\"Rest today and hold the inhaler so you don't build up tolerance.\""
           }
         ]
       },
@@ -163,16 +163,16 @@
         "correct": "b"
       },
       "rationale": {
-        "correct": "Peak flow zones: green 80-100%, yellow 50-79% (use rescue medication and follow the plan), red below 50% (emergency).",
+        "correct": "Peak flow zones: green 80% to 100%, yellow 50% to 79% (rescue medication and follow the plan), red below 50% (emergency).",
         "perOption": {
-          "a": "This is the green-zone response (80% or more).",
-          "b": "Below 50% of personal best is the red zone and needs immediate treatment and emergency care.",
-          "c": "Doubling the steroid isn't an emergency treatment.",
+          "a": "This is the green-zone response, for 80% or more of personal best.",
+          "b": "225 is 45% of personal best, the red zone, which needs immediate treatment and emergency care.",
+          "c": "Doubling the steroid is not an emergency treatment.",
           "d": "Withholding rescue medication is dangerous."
         },
         "references": [
           "Medical-surgical nursing texts (e.g. Lewis; Ignatavicius)",
-          "Reviewed by the content team on 17 November 2026."
+          "Rewritten to NCLEX-RN difficulty and reviewed by the content team on 19 November 2026."
         ]
       },
       "educationalObjective": "Interpret peak flow zones."
@@ -187,16 +187,16 @@
       ],
       "cjmmSkill": "generate_solutions",
       "difficulty": "moderate",
-      "stem": "The nurse is teaching a client newly diagnosed with asthma. Which instructions should the nurse include? Select all that apply.",
+      "stem": "The nurse is teaching a 24-year-old client newly diagnosed with persistent asthma who has a cat. Which instructions should the nurse include? Select all that apply.",
       "content": {
         "options": [
           {
             "id": "a",
-            "text": "Identify and avoid your triggers, such as smoke, dust and pet dander"
+            "text": "Learn your triggers, such as smoke, dust and pet dander, and limit exposure"
           },
           {
             "id": "b",
-            "text": "Carry your rescue inhaler at all times"
+            "text": "Carry your rescue inhaler with you wherever you go"
           },
           {
             "id": "c",
@@ -204,15 +204,19 @@
           },
           {
             "id": "d",
-            "text": "Use salmeterol when you have an asthma attack"
-          },
-          {
-            "id": "e",
             "text": "Rinse your mouth after using your inhaled steroid"
           },
           {
+            "id": "e",
+            "text": "Keep your controller inhaler daily, even when you feel well"
+          },
+          {
             "id": "f",
-            "text": "Stop your controller medication when you have no symptoms"
+            "text": "Use your salmeterol inhaler when an asthma attack starts"
+          },
+          {
+            "id": "g",
+            "text": "Stop the controller medicine in summer when symptoms are mild"
           }
         ]
       },
@@ -221,23 +225,25 @@
           "a",
           "b",
           "c",
+          "d",
           "e"
         ]
       },
       "rationale": {
-        "correct": "Asthma self-management combines trigger control, correct inhaler use and daily controllers, with a rescue inhaler always available.",
+        "correct": "Asthma self-management combines trigger control, correct inhaler technique and daily controllers, with a rescue inhaler always available.",
         "perOption": {
           "a": "Avoiding triggers reduces attacks.",
-          "b": "Rapid access to albuterol is essential during an attack.",
+          "b": "Quick access to albuterol is essential during an attack.",
           "c": "A spacer improves delivery to the lungs.",
-          "d": "Salmeterol is a long-acting drug for maintenance, never for rescue.",
-          "e": "Rinsing prevents oral thrush.",
-          "f": "Controller drugs prevent attacks and are taken daily even when well."
+          "d": "Rinsing prevents oral thrush.",
+          "e": "Controller drugs prevent attacks and are taken every day.",
+          "f": "Salmeterol is a long-acting drug for maintenance, never for rescue.",
+          "g": "Stopping controllers leads to loss of control."
         },
         "references": [
           "Medical-surgical nursing texts (e.g. Lewis; Ignatavicius)",
           "Nursing pharmacology texts (e.g. Lehne; McCuistion) and the drug's prescribing information",
-          "Reviewed by the content team on 17 November 2026."
+          "Rewritten to NCLEX-RN difficulty and reviewed by the content team on 19 November 2026."
         ]
       },
       "educationalObjective": "Teach asthma self-management."
@@ -252,24 +258,24 @@
       ],
       "cjmmSkill": "evaluate_outcomes",
       "difficulty": "moderate",
-      "stem": "A client has started montelukast for asthma. Which statement by the client shows a need for more teaching?",
+      "stem": "A 16-year-old client has started montelukast 10 mg each evening for asthma. Which statement by the client shows a need for more teaching?",
       "content": {
         "options": [
           {
             "id": "a",
-            "text": "\"I'll take it every evening.\""
+            "text": "\"I'll take it in the evening at about the same time each day.\""
           },
           {
             "id": "b",
-            "text": "\"I'll take it when I start to wheeze.\""
+            "text": "\"I'll take an extra one when I start to wheeze.\""
           },
           {
             "id": "c",
-            "text": "\"I'll tell my provider if I have mood changes or bad dreams.\""
+            "text": "\"I'll tell my parents if I notice mood changes or bad dreams.\""
           },
           {
             "id": "d",
-            "text": "\"I'll keep using my albuterol inhaler for attacks.\""
+            "text": "\"I'll keep using my albuterol inhaler when I have an attack.\""
           }
         ]
       },
@@ -277,16 +283,16 @@
         "correct": "b"
       },
       "rationale": {
-        "correct": "Leukotriene modifiers are for long-term control, not rescue; watch for neuropsychiatric effects.",
+        "correct": "Leukotriene modifiers are for long-term control, not rescue; report mood changes, sleep disturbance or suicidal thoughts.",
         "perOption": {
-          "a": "Montelukast is usually taken once daily in the evening.",
-          "b": "Montelukast prevents symptoms; it doesn't relieve acute bronchospasm.",
+          "a": "Montelukast is taken once daily, usually in the evening.",
+          "b": "Montelukast prevents symptoms; it does not relieve acute bronchospasm.",
           "c": "Montelukast can cause neuropsychiatric effects that should be reported.",
           "d": "Albuterol remains the rescue drug."
         },
         "references": [
           "Nursing pharmacology texts (e.g. Lehne; McCuistion) and the drug's prescribing information",
-          "Reviewed by the content team on 17 November 2026."
+          "Rewritten to NCLEX-RN difficulty and reviewed by the content team on 19 November 2026."
         ]
       },
       "educationalObjective": "Teach correct use of montelukast."
@@ -301,24 +307,24 @@
       ],
       "cjmmSkill": "take_action",
       "difficulty": "difficult",
-      "stem": "A client with COPD exacerbation is receiving oxygen at 6 L/min by nasal cannula. The SpO2 is 98%, and the client has become increasingly drowsy. What should the nurse do?",
+      "stem": "A client with a COPD exacerbation and known carbon dioxide retention is receiving oxygen at 6 L/min by nasal cannula, which a family member turned up. The SpO2 is 98%, and the client has become increasingly drowsy and hard to rouse. What should the nurse do?",
       "content": {
         "options": [
           {
             "id": "a",
-            "text": "Increase the oxygen to keep the client comfortable"
+            "text": "Increase the oxygen further, since the client looks tired"
           },
           {
             "id": "b",
-            "text": "Lower the oxygen to keep the SpO2 at 88% to 92% as prescribed and obtain an arterial blood gas"
+            "text": "Titrate oxygen to SpO2 88% to 92% and get an ABG"
           },
           {
             "id": "c",
-            "text": "Stop the oxygen completely"
+            "text": "Stop the oxygen completely until the client wakes up"
           },
           {
             "id": "d",
-            "text": "Let the client sleep and reassess at the next routine check"
+            "text": "Let the client sleep and reassess at the next vital signs"
           }
         ]
       },
@@ -326,16 +332,16 @@
         "correct": "b"
       },
       "rationale": {
-        "correct": "Many clients with COPD have a target SpO2 of 88% to 92%; excess oxygen may increase CO2 retention and drowsiness.",
+        "correct": "Many clients with COPD have a target SpO2 of 88% to 92%; excess oxygen can increase CO2 retention and drowsiness.",
         "perOption": {
           "a": "More oxygen can worsen carbon dioxide retention.",
-          "b": "Excess oxygen in some clients with COPD can worsen hypercapnia; target saturations are lower and an ABG shows the CO2 level.",
-          "c": "Stopping oxygen risks hypoxemia.",
+          "b": "Excess oxygen in some clients with COPD worsens hypercapnia; the target is lower, and an ABG measures the CO2.",
+          "c": "Stopping oxygen risks severe hypoxemia.",
           "d": "Increasing drowsiness may mean hypercapnia and needs action now."
         },
         "references": [
           "Medical-surgical nursing texts (e.g. Lewis; Ignatavicius)",
-          "Reviewed by the content team on 17 November 2026."
+          "Rewritten to NCLEX-RN difficulty and reviewed by the content team on 19 November 2026."
         ]
       },
       "educationalObjective": "Manage oxygen therapy in a client with COPD."
@@ -350,24 +356,24 @@
       ],
       "cjmmSkill": "analyze_cues",
       "difficulty": "easy",
-      "stem": "The nurse teaches a client with COPD to use pursed-lip breathing. What is the main purpose of this technique?",
+      "stem": "The nurse teaches a client with COPD to use pursed-lip breathing during activity. What is the main purpose of this technique?",
       "content": {
         "options": [
           {
             "id": "a",
-            "text": "To strengthen the diaphragm"
+            "text": "To strengthen the diaphragm muscle"
           },
           {
             "id": "b",
-            "text": "To keep the airways open longer during exhalation so trapped air can leave"
+            "text": "To keep airways open longer as the client breathes out"
           },
           {
             "id": "c",
-            "text": "To increase the respiratory rate"
+            "text": "To speed up the client's breathing rate"
           },
           {
             "id": "d",
-            "text": "To loosen secretions"
+            "text": "To loosen secretions so they can be coughed up"
           }
         ]
       },
@@ -375,16 +381,16 @@
         "correct": "b"
       },
       "rationale": {
-        "correct": "Pursed-lip breathing prolongs exhalation and reduces air trapping.",
+        "correct": "Pursed-lip breathing lengthens exhalation and reduces air trapping.",
         "perOption": {
           "a": "Diaphragmatic breathing is a different technique.",
-          "b": "Pursed lips create back-pressure that keeps small airways from collapsing, improving emptying.",
+          "b": "Pursed lips create back-pressure that keeps small airways open, so trapped air can leave.",
           "c": "The goal is a slower, controlled rate.",
           "d": "Huff coughing and airway clearance devices loosen secretions."
         },
         "references": [
           "Medical-surgical nursing texts (e.g. Lewis; Ignatavicius)",
-          "Reviewed by the content team on 17 November 2026."
+          "Rewritten to NCLEX-RN difficulty and reviewed by the content team on 19 November 2026."
         ]
       },
       "educationalObjective": "Explain the purpose of pursed-lip breathing."
@@ -399,24 +405,24 @@
       ],
       "cjmmSkill": "generate_solutions",
       "difficulty": "moderate",
-      "stem": "A client with severe COPD has lost weight and becomes short of breath while eating. Which nutrition advice should the nurse give?",
+      "stem": "A client with severe COPD has lost 5 kg over 3 months and becomes short of breath while eating. Body mass index is 18.5. Which nutrition advice should the nurse give?",
       "content": {
         "options": [
           {
             "id": "a",
-            "text": "Eat three large meals a day"
+            "text": "\"Eat three large meals a day so that you don't have to eat as often.\""
           },
           {
             "id": "b",
-            "text": "Eat small, frequent, high-calorie, high-protein meals and rest before eating"
+            "text": "\"Eat small, frequent, high-calorie meals and rest before eating.\""
           },
           {
             "id": "c",
-            "text": "Drink plenty of fluids with each meal"
+            "text": "\"Drink plenty of fluids with each meal to help food go down.\""
           },
           {
             "id": "d",
-            "text": "Follow a low-calorie diet"
+            "text": "\"Follow a low-calorie diet so you have less weight to carry.\""
           }
         ]
       },
@@ -433,7 +439,7 @@
         },
         "references": [
           "Medical-surgical nursing texts (e.g. Lewis; Ignatavicius)",
-          "Reviewed by the content team on 17 November 2026."
+          "Rewritten to NCLEX-RN difficulty and reviewed by the content team on 19 November 2026."
         ]
       },
       "educationalObjective": "Teach nutrition strategies for COPD."
@@ -446,34 +452,34 @@
       "subtopics": [
         "asthma-and-copd-management"
       ],
-      "cjmmSkill": "recognize_cues",
+      "cjmmSkill": "analyze_cues",
       "difficulty": "moderate",
-      "stem": "Which findings are expected in a client with long-standing COPD? Select all that apply.",
+      "stem": "The nurse is assessing a 70-year-old client with long-standing COPD at a routine clinic visit. Which findings are expected for this client? Select all that apply.",
       "content": {
         "options": [
           {
             "id": "a",
-            "text": "Barrel chest"
+            "text": "Barrel-shaped chest"
           },
           {
             "id": "b",
-            "text": "Clubbing of the fingers"
+            "text": "Use of neck muscles to help breathe"
           },
           {
             "id": "c",
-            "text": "Use of accessory muscles to breathe"
-          },
-          {
-            "id": "d",
             "text": "Prolonged expiration"
           },
           {
+            "id": "d",
+            "text": "Sudden sharp pain on one side of the chest"
+          },
+          {
             "id": "e",
-            "text": "Sudden, sharp chest pain on one side"
+            "text": "SpO2 of 99% on room air"
           },
           {
             "id": "f",
-            "text": "Oxygen saturation of 99% on room air"
+            "text": "New confusion since this morning"
           }
         ]
       },
@@ -481,23 +487,22 @@
         "correct": [
           "a",
           "b",
-          "c",
-          "d"
+          "c"
         ]
       },
       "rationale": {
-        "correct": "Chronic COPD findings: barrel chest, accessory muscle use, prolonged expiration, clubbing and lower baseline saturation.",
+        "correct": "Chronic COPD findings include a barrel chest, accessory muscle use, prolonged expiration and a lower baseline saturation; new or sudden changes are not expected.",
         "perOption": {
           "a": "Air trapping increases the chest's front-to-back diameter.",
-          "b": "Chronic hypoxemia can cause clubbing.",
-          "c": "Accessory muscles help move air when the diaphragm is flattened.",
-          "d": "Narrowed airways slow air leaving the lungs.",
-          "e": "Sudden pain on one side may mean a pneumothorax, a complication rather than an expected finding.",
-          "f": "Clients with severe COPD often have lower baseline saturations."
+          "b": "Accessory muscles help when the diaphragm is flattened.",
+          "c": "Narrowed airways slow air leaving the lungs.",
+          "d": "Sudden one-sided pain may mean a pneumothorax, a complication.",
+          "e": "Clients with severe COPD often have lower baseline saturations.",
+          "f": "Acute confusion may signal hypercapnia or infection and is not expected."
         },
         "references": [
           "Medical-surgical nursing texts (e.g. Lewis; Ignatavicius)",
-          "Reviewed by the content team on 17 November 2026."
+          "Rewritten to NCLEX-RN difficulty and reviewed by the content team on 19 November 2026."
         ]
       },
       "educationalObjective": "Recognize expected findings in COPD."
@@ -512,24 +517,24 @@
       ],
       "cjmmSkill": "evaluate_outcomes",
       "difficulty": "moderate",
-      "stem": "A client with COPD has been prescribed tiotropium. Which statement shows a need for more teaching?",
+      "stem": "A client with COPD has been prescribed tiotropium by dry-powder inhaler. Which statement by the client shows a need for more teaching?",
       "content": {
         "options": [
           {
             "id": "a",
-            "text": "\"I'll use it once a day, every day.\""
+            "text": "\"I'll use it once a day, at the same time each day.\""
           },
           {
             "id": "b",
-            "text": "\"I'll use it when I suddenly can't breathe.\""
+            "text": "\"I'll use it when I suddenly can't catch my breath.\""
           },
           {
             "id": "c",
-            "text": "\"I'll keep the powder out of my eyes.\""
+            "text": "\"I'll be careful not to get the powder in my eyes.\""
           },
           {
             "id": "d",
-            "text": "\"I may notice a dry mouth.\""
+            "text": "\"I might notice my mouth feels dry while taking it.\""
           }
         ]
       },
@@ -541,12 +546,12 @@
         "perOption": {
           "a": "Tiotropium is a once-daily maintenance drug.",
           "b": "Tiotropium is a long-acting anticholinergic for maintenance, not rescue.",
-          "c": "Contact with the eyes can cause blurred vision and raise eye pressure.",
+          "c": "Contact with the eyes can blur vision and raise eye pressure.",
           "d": "Dry mouth is a common anticholinergic effect."
         },
         "references": [
           "Nursing pharmacology texts (e.g. Lehne; McCuistion) and the drug's prescribing information",
-          "Reviewed by the content team on 17 November 2026."
+          "Rewritten to NCLEX-RN difficulty and reviewed by the content team on 19 November 2026."
         ]
       },
       "educationalObjective": "Teach correct use of tiotropium."
@@ -560,25 +565,25 @@
         "pneumonia-care"
       ],
       "cjmmSkill": "recognize_cues",
-      "difficulty": "moderate",
-      "stem": "An 84-year-old client is admitted with suspected pneumonia. Which finding is often the earliest or only sign of pneumonia in older adults?",
+      "difficulty": "difficult",
+      "stem": "An 84-year-old client from a nursing home is admitted with suspected pneumonia. The temperature is 37.4 °C (99.3 °F), and the client has no cough or chest pain. Which finding is often the earliest or only sign of pneumonia in older adults?",
       "content": {
         "options": [
           {
             "id": "a",
-            "text": "High fever with shaking chills"
+            "text": "A high fever with shaking chills"
           },
           {
             "id": "b",
-            "text": "New confusion"
+            "text": "New confusion or a change in behavior"
           },
           {
             "id": "c",
-            "text": "Productive cough with rust-colored sputum"
+            "text": "A cough with rust-colored sputum"
           },
           {
             "id": "d",
-            "text": "Pleuritic chest pain"
+            "text": "Sharp chest pain on deep breathing"
           }
         ]
       },
@@ -586,16 +591,16 @@
         "correct": "b"
       },
       "rationale": {
-        "correct": "Older adults often show atypical signs of infection, such as confusion, falls or reduced appetite.",
+        "correct": "Older adults often have atypical signs of infection, such as confusion, falls or poor appetite, without fever.",
         "perOption": {
           "a": "Older adults often have a blunted fever response.",
           "b": "Acute confusion or delirium is often the first sign of infection in older adults.",
           "c": "Classic signs may be absent in older adults.",
-          "d": "This may be absent or not reported."
+          "d": "Pleuritic pain may be absent or not reported."
         },
         "references": [
           "Medical-surgical nursing texts (e.g. Lewis; Ignatavicius)",
-          "Reviewed by the content team on 17 November 2026."
+          "Rewritten to NCLEX-RN difficulty and reviewed by the content team on 19 November 2026."
         ]
       },
       "educationalObjective": "Recognize atypical presentations of pneumonia in older adults."
@@ -610,7 +615,7 @@
       ],
       "cjmmSkill": "take_action",
       "difficulty": "difficult",
-      "stem": "A client has pneumonia in the right lung only. Which position will best improve oxygenation?",
+      "stem": "A client with pneumonia confined to the right lower lobe has an SpO2 of 89% on 4 L/min by nasal cannula. The client can turn independently, and the left lung is clear. Which position will best improve oxygenation?",
       "content": {
         "options": [
           {
@@ -623,11 +628,11 @@
           },
           {
             "id": "c",
-            "text": "Prone"
+            "text": "Lying prone with the head turned"
           },
           {
             "id": "d",
-            "text": "Supine and flat"
+            "text": "Lying flat on the back"
           }
         ]
       },
@@ -637,14 +642,14 @@
       "rationale": {
         "correct": "'Good lung down' matches blood flow to ventilation in one-sided lung disease.",
         "perOption": {
-          "a": "The affected lung would get more blood flow but can't oxygenate it well.",
+          "a": "The affected lung would get more blood flow but cannot oxygenate it well.",
           "b": "With the good lung down, gravity sends more blood to the lung that ventilates best.",
           "c": "Prone positioning is used for ARDS, not one-sided pneumonia.",
           "d": "A flat position reduces lung expansion."
         },
         "references": [
           "Medical-surgical nursing texts (e.g. Lewis; Ignatavicius)",
-          "Reviewed by the content team on 17 November 2026."
+          "Rewritten to NCLEX-RN difficulty and reviewed by the content team on 19 November 2026."
         ]
       },
       "educationalObjective": "Position a client with one-sided pneumonia to improve oxygenation."
@@ -659,32 +664,36 @@
       ],
       "cjmmSkill": "generate_solutions",
       "difficulty": "moderate",
-      "stem": "Which interventions should the nurse include for a client with pneumonia? Select all that apply.",
+      "stem": "A 66-year-old client with community-acquired pneumonia has thick secretions, crackles in the right base and no fluid restrictions. Which interventions should the nurse include in the plan of care? Select all that apply.",
       "content": {
         "options": [
           {
             "id": "a",
-            "text": "Encourage use of the incentive spirometer about 10 times an hour while awake"
+            "text": "Incentive spirometer about 10 times an hour while awake"
           },
           {
             "id": "b",
-            "text": "Encourage fluid intake of 2 to 3 L a day unless restricted"
+            "text": "Fluid intake of 2 to 3 L a day"
           },
           {
             "id": "c",
-            "text": "Help the client walk as tolerated"
+            "text": "Walking in the hall as tolerated"
           },
           {
             "id": "d",
-            "text": "Keep the head of the bed elevated"
+            "text": "Head of the bed raised"
           },
           {
             "id": "e",
-            "text": "Restrict fluids to dry up secretions"
+            "text": "Coughing and deep breathing every 2 hours"
           },
           {
             "id": "f",
-            "text": "Discourage coughing to save energy"
+            "text": "Fluid restriction to dry up the secretions"
+          },
+          {
+            "id": "g",
+            "text": "Bed rest to save energy for recovery"
           }
         ]
       },
@@ -693,22 +702,24 @@
           "a",
           "b",
           "c",
-          "d"
+          "d",
+          "e"
         ]
       },
       "rationale": {
         "correct": "Pneumonia care: airway clearance, fluids, deep breathing, mobility and positioning.",
         "perOption": {
           "a": "Deep breathing opens collapsed alveoli and helps clear secretions.",
-          "b": "Fluids thin secretions.",
-          "c": "Walking improves ventilation and mobilizes secretions.",
+          "b": "Fluids thin secretions when there is no restriction.",
+          "c": "Walking improves ventilation and moves secretions.",
           "d": "Elevation improves lung expansion.",
-          "e": "Restricting fluids thickens secretions.",
-          "f": "Coughing clears secretions."
+          "e": "This clears secretions.",
+          "f": "Restricting fluids thickens secretions.",
+          "g": "Immobility worsens secretion clearance and increases complications."
         },
         "references": [
           "Medical-surgical nursing texts (e.g. Lewis; Ignatavicius)",
-          "Reviewed by the content team on 17 November 2026."
+          "Rewritten to NCLEX-RN difficulty and reviewed by the content team on 19 November 2026."
         ]
       },
       "educationalObjective": "Plan care for a client with pneumonia."
@@ -723,24 +734,24 @@
       ],
       "cjmmSkill": "generate_solutions",
       "difficulty": "moderate",
-      "stem": "A client with dysphagia after a stroke has been cleared for a soft diet. Which action best reduces the risk of aspiration?",
+      "stem": "A client with dysphagia after a stroke has been cleared by the speech-language pathologist for a soft diet with nectar-thick liquids. Which action best reduces the risk of aspiration during meals?",
       "content": {
         "options": [
           {
             "id": "a",
-            "text": "Have the client lie at 30 degrees while eating"
+            "text": "Have the client recline at 30 degrees so the food goes down slowly"
           },
           {
             "id": "b",
-            "text": "Have the client sit upright at 90 degrees and tuck the chin when swallowing"
+            "text": "Have the client sit upright and tuck the chin when swallowing"
           },
           {
             "id": "c",
-            "text": "Give thin liquids with every bite"
+            "text": "Give a sip of thin water after each bite to clear the mouth"
           },
           {
             "id": "d",
-            "text": "Use a straw for all liquids"
+            "text": "Offer all liquids through a straw so the client can control them"
           }
         ]
       },
@@ -748,16 +759,16 @@
         "correct": "b"
       },
       "rationale": {
-        "correct": "Aspiration precautions: upright at 90 degrees, chin tuck, small bites, thickened liquids as ordered and staying upright after meals.",
+        "correct": "Aspiration precautions: sit upright at 90 degrees, chin tuck, small bites, liquids thickened as ordered, and stay upright after meals.",
         "perOption": {
           "a": "A semi-reclined position raises aspiration risk.",
-          "b": "Upright positioning and the chin tuck protect the airway.",
+          "b": "Sitting upright with a chin tuck protects the airway.",
           "c": "Thin liquids are harder to control and more likely to be aspirated.",
           "d": "Straws can deliver liquid too quickly."
         },
         "references": [
           "Medical-surgical nursing texts (e.g. Lewis; Ignatavicius)",
-          "Reviewed by the content team on 17 November 2026."
+          "Rewritten to NCLEX-RN difficulty and reviewed by the content team on 19 November 2026."
         ]
       },
       "educationalObjective": "Prevent aspiration in a client with dysphagia."
@@ -772,24 +783,24 @@
       ],
       "cjmmSkill": "generate_solutions",
       "difficulty": "moderate",
-      "stem": "A client with COPD needs a precise, controlled concentration of oxygen. Which device should the nurse expect to use?",
+      "stem": "A client with pneumonia has an SpO2 of 85% on 6 L/min by nasal cannula, with a respiratory rate of 30/min. The provider asks the nurse to switch to a device that delivers a higher oxygen concentration right away. Which device should the nurse expect to use?",
       "content": {
         "options": [
           {
             "id": "a",
-            "text": "Nasal cannula"
+            "text": "Nasal cannula at a higher flow rate"
           },
           {
             "id": "b",
-            "text": "Venturi mask"
+            "text": "Nonrebreather mask at 15 L/min"
           },
           {
             "id": "c",
-            "text": "Simple face mask"
+            "text": "Simple face mask at 5 L/min"
           },
           {
             "id": "d",
-            "text": "Nonrebreather mask"
+            "text": "Venturi mask set at 28%"
           }
         ]
       },
@@ -797,19 +808,19 @@
         "correct": "b"
       },
       "rationale": {
-        "correct": "The Venturi mask is the most precise low-flow device and is useful for clients with COPD.",
+        "correct": "When hypoxemia persists on a nasal cannula, a nonrebreather or high-flow device gives a much higher FiO2.",
         "perOption": {
-          "a": "The FiO2 from a nasal cannula varies with the breathing pattern.",
-          "b": "A Venturi mask delivers a precise FiO2 (about 24% to 60%).",
-          "c": "A simple mask delivers a variable FiO2.",
-          "d": "A nonrebreather gives a high, imprecise FiO2."
+          "a": "A standard cannula is limited to about 6 L/min and 44% oxygen.",
+          "b": "A nonrebreather delivers the highest concentration of the low-flow devices, about 60% to 90%.",
+          "c": "A simple mask at this flow gives less oxygen than the current cannula.",
+          "d": "A 28% Venturi gives less oxygen than the current setting."
         },
         "references": [
           "Medical-surgical nursing texts (e.g. Lewis; Ignatavicius)",
-          "Reviewed by the content team on 17 November 2026."
+          "Rewritten to NCLEX-RN difficulty and reviewed by the content team on 19 November 2026."
         ]
       },
-      "educationalObjective": "Choose an oxygen device that delivers a precise FiO2."
+      "educationalObjective": "Choose an oxygen device that delivers a high FiO2."
     },
     {
       "id": "c1a00008-0000-4000-8000-000000000016",
@@ -820,25 +831,25 @@
         "oxygen-therapy-and-devices"
       ],
       "cjmmSkill": "evaluate_outcomes",
-      "difficulty": "moderate",
-      "stem": "A client is receiving oxygen by nonrebreather mask at 15 L/min. Which observation requires the nurse's action?",
+      "difficulty": "difficult",
+      "stem": "A client with acute hypoxemia is receiving oxygen by nonrebreather mask at 15 L/min. On rounds, the nurse checks the setup. Which observation requires the nurse's action?",
       "content": {
         "options": [
           {
             "id": "a",
-            "text": "The reservoir bag collapses completely when the client breathes in"
+            "text": "The reservoir bag collapses fully each time the client breathes in"
           },
           {
             "id": "b",
-            "text": "The one-way valves on the mask are in place"
+            "text": "The one-way valves on the side of the mask are in place"
           },
           {
             "id": "c",
-            "text": "The mask fits snugly over the nose and mouth"
+            "text": "The mask fits snugly over the nose and mouth with the strap on"
           },
           {
             "id": "d",
-            "text": "SpO2 is 95%"
+            "text": "The client's SpO2 has risen from 84% to 95% since it was applied"
           }
         ]
       },
@@ -846,16 +857,16 @@
         "correct": "a"
       },
       "rationale": {
-        "correct": "A nonrebreather's reservoir bag must stay inflated; increase the flow or check the device if it collapses.",
+        "correct": "A nonrebreather's reservoir bag must stay inflated; raise the flow or check the device if it collapses.",
         "perOption": {
-          "a": "The bag should stay at least partly inflated; collapse means the client isn't getting enough oxygen.",
-          "b": "The valves prevent rebreathing exhaled air.",
+          "a": "The bag should stay at least partly inflated; collapse means the client is not getting enough oxygen.",
+          "b": "The valves stop the client rebreathing exhaled air.",
           "c": "A snug fit is correct.",
-          "d": "This is a good saturation."
+          "d": "This shows a good response."
         },
         "references": [
           "Medical-surgical nursing texts (e.g. Lewis; Ignatavicius)",
-          "Reviewed by the content team on 17 November 2026."
+          "Rewritten to NCLEX-RN difficulty and reviewed by the content team on 19 November 2026."
         ]
       },
       "educationalObjective": "Monitor a nonrebreather mask correctly."
@@ -870,12 +881,12 @@
       ],
       "cjmmSkill": "take_action",
       "difficulty": "moderate",
-      "stem": "A provider prescribes oxygen at 10 L/min by nasal cannula. What should the nurse do?",
+      "stem": "A provider prescribes oxygen at 10 L/min by standard nasal cannula for a client with an SpO2 of 88%. The unit has no high-flow cannula equipment. What should the nurse do?",
       "content": {
         "options": [
           {
             "id": "a",
-            "text": "Set the flow at 10 L/min"
+            "text": "Set the cannula flow at 10 L/min as prescribed"
           },
           {
             "id": "b",
@@ -883,11 +894,11 @@
           },
           {
             "id": "c",
-            "text": "Apply a nonrebreather mask instead"
+            "text": "Put a nonrebreather mask on the client instead"
           },
           {
             "id": "d",
-            "text": "Set it at 6 L/min without telling the provider"
+            "text": "Set it at 6 L/min and leave the order as written"
           }
         ]
       },
@@ -895,16 +906,16 @@
         "correct": "b"
       },
       "rationale": {
-        "correct": "A standard nasal cannula delivers 1 to 6 L/min (about 24% to 44% FiO2); higher needs call for another device, such as a high-flow cannula.",
+        "correct": "A standard nasal cannula delivers 1 to 6 L/min (about 24% to 44% oxygen); higher needs call for another device.",
         "perOption": {
-          "a": "Nasal cannulas are generally limited to about 6 L/min (standard devices).",
-          "b": "Flows above 6 L/min by standard nasal cannula dry the mucosa without increasing FiO2 much; another device is needed.",
-          "c": "The nurse can't change the device without an order.",
-          "d": "Changing the dose without an order isn't appropriate."
+          "a": "A standard nasal cannula is limited to about 6 L/min.",
+          "b": "Flows above 6 L/min by standard cannula dry the mucosa without adding much oxygen; another device is needed.",
+          "c": "The nurse cannot change the device without a prescription.",
+          "d": "Changing the dose without telling the provider is not appropriate."
         },
         "references": [
           "Medical-surgical nursing texts (e.g. Lewis; Ignatavicius)",
-          "Reviewed by the content team on 17 November 2026."
+          "Rewritten to NCLEX-RN difficulty and reviewed by the content team on 19 November 2026."
         ]
       },
       "educationalObjective": "Recognize the limits of a standard nasal cannula."
@@ -918,8 +929,8 @@
         "pneumonia-care"
       ],
       "cjmmSkill": "recognize_cues",
-      "difficulty": "moderate",
-      "stem": "The nurse reviews the flowsheet of a client being treated for pneumonia. Highlight the findings that require follow-up.",
+      "difficulty": "difficult",
+      "stem": "The nurse is reviewing the flowsheet of a 72-year-old client on day 2 of treatment for pneumonia. Highlight the findings that require follow-up.",
       "content": {
         "columns": [
           "Time",
@@ -976,17 +987,17 @@
         ]
       },
       "rationale": {
-        "correct": "Watch for signs of deterioration: rising respiratory rate, falling saturation and changes in mental status.",
+        "correct": "Watch for signs of deterioration in pneumonia: a rising respiratory rate, falling saturation and a change in mental status.",
         "perOption": {
-          "r1": "A falling temperature shows treatment response.",
-          "r2": "Tachypnea above about 24 to 28/min is a sign of worsening respiratory status.",
+          "r1": "A falling temperature shows a response to treatment.",
+          "r2": "Tachypnea above about 24 to 28/min signals worsening respiratory status.",
           "r3": "Hypoxemia despite oxygen needs action.",
           "r4": "This is expected with bacterial pneumonia.",
           "r5": "New confusion may mean worsening hypoxemia or sepsis."
         },
         "references": [
           "Medical-surgical nursing texts (e.g. Lewis; Ignatavicius)",
-          "Reviewed by the content team on 17 November 2026."
+          "Rewritten to NCLEX-RN difficulty and reviewed by the content team on 19 November 2026."
         ]
       },
       "educationalObjective": "Identify signs of worsening pneumonia."
@@ -1001,24 +1012,24 @@
       ],
       "cjmmSkill": "take_action",
       "difficulty": "easy",
-      "stem": "How should the nurse position a client for a thoracentesis?",
+      "stem": "A client with a large pleural effusion is about to have a thoracentesis at the bedside. How should the nurse position the client?",
       "content": {
         "options": [
           {
             "id": "a",
-            "text": "Sitting on the edge of the bed, leaning forward over the bedside table"
+            "text": "Sitting up, leaning over the bedside table"
           },
           {
             "id": "b",
-            "text": "Supine and flat"
+            "text": "Lying flat on the back with arms at the sides"
           },
           {
             "id": "c",
-            "text": "Trendelenburg"
+            "text": "Trendelenburg with the head down"
           },
           {
             "id": "d",
-            "text": "Prone with the arms at the sides"
+            "text": "Lying prone on the bed"
           }
         ]
       },
@@ -1026,16 +1037,16 @@
         "correct": "a"
       },
       "rationale": {
-        "correct": "Thoracentesis: sit upright, leaning forward. Afterward, watch for pneumothorax and bleeding.",
+        "correct": "For thoracentesis, the client sits upright, leaning forward; afterward, watch for pneumothorax and bleeding.",
         "perOption": {
-          "a": "This widens the spaces between the ribs and lets fluid collect at the base of the lungs.",
-          "b": "This doesn't give access to the posterior chest.",
-          "c": "This is unsafe and doesn't help access.",
-          "d": "This doesn't spread the ribs."
+          "a": "This widens the spaces between the ribs and lets fluid collect at the lung bases.",
+          "b": "This does not give access to the back of the chest.",
+          "c": "This is unsafe and does not help access.",
+          "d": "This does not spread the ribs."
         },
         "references": [
           "Medical-surgical nursing texts (e.g. Lewis; Ignatavicius)",
-          "Reviewed by the content team on 17 November 2026."
+          "Rewritten to NCLEX-RN difficulty and reviewed by the content team on 19 November 2026."
         ]
       },
       "educationalObjective": "Position a client for thoracentesis."
@@ -1050,7 +1061,7 @@
       ],
       "cjmmSkill": "take_action",
       "difficulty": "moderate",
-      "stem": "A client has just returned from a bronchoscopy. Which action should the nurse take before giving the client anything to drink?",
+      "stem": "A client returned from a bronchoscopy with biopsy 45 minutes ago and is asking for a drink of water. Which action should the nurse take before giving the client anything to drink?",
       "content": {
         "options": [
           {
@@ -1059,15 +1070,15 @@
           },
           {
             "id": "b",
-            "text": "Check the client's blood glucose"
+            "text": "Check the client's blood glucose level"
           },
           {
             "id": "c",
-            "text": "Give a sip of ice water to test swallowing"
+            "text": "Give a small sip of ice water to test the swallow"
           },
           {
             "id": "d",
-            "text": "Have the client lie flat for 4 hours"
+            "text": "Lower the head of the bed flat for 4 hours"
           }
         ]
       },
@@ -1075,16 +1086,16 @@
         "correct": "a"
       },
       "rationale": {
-        "correct": "After bronchoscopy, keep the client NPO until the gag reflex returns, usually in 2 hours.",
+        "correct": "After bronchoscopy, keep the client NPO until the gag reflex returns, usually in about 2 hours.",
         "perOption": {
           "a": "The throat is numbed during the procedure; drinking before the gag reflex returns risks aspiration.",
-          "b": "This isn't specific to bronchoscopy.",
-          "c": "Fluids aren't given until the gag reflex is confirmed.",
-          "d": "Semi-Fowler's is preferred."
+          "b": "This is not specific to bronchoscopy.",
+          "c": "Nothing is given by mouth until the gag reflex is confirmed.",
+          "d": "A semi-Fowler's position is preferred."
         },
         "references": [
           "Medical-surgical nursing texts (e.g. Lewis; Ignatavicius)",
-          "Reviewed by the content team on 17 November 2026."
+          "Rewritten to NCLEX-RN difficulty and reviewed by the content team on 19 November 2026."
         ]
       },
       "educationalObjective": "Prevent aspiration after bronchoscopy."
@@ -1098,25 +1109,25 @@
         "respiratory-medications"
       ],
       "cjmmSkill": "recognize_cues",
-      "difficulty": "moderate",
-      "stem": "A client taking isoniazid for tuberculosis calls the clinic. Which report should the nurse address first?",
+      "difficulty": "difficult",
+      "stem": "A client on month 2 of isoniazid and rifampin for latent tuberculosis calls the clinic with several concerns. Which report should the nurse address first?",
       "content": {
         "options": [
           {
             "id": "a",
-            "text": "Orange-red urine"
+            "text": "\"My urine and tears have turned orange-red.\""
           },
           {
             "id": "b",
-            "text": "Yellowing of the skin and dark urine"
+            "text": "\"My skin looks yellow and my urine is dark.\""
           },
           {
             "id": "c",
-            "text": "Mild nausea after taking the medication"
+            "text": "\"I feel a little queasy after taking the pills.\""
           },
           {
             "id": "d",
-            "text": "Asking whether to take vitamin B6"
+            "text": "\"Should I be taking vitamin B6 with these pills?\""
           }
         ]
       },
@@ -1124,16 +1135,16 @@
         "correct": "b"
       },
       "rationale": {
-        "correct": "Isoniazid can cause hepatitis and peripheral neuropathy. Avoid alcohol, monitor liver function and give vitamin B6.",
+        "correct": "Isoniazid can cause hepatitis and peripheral neuropathy: avoid alcohol, monitor liver function and give vitamin B6.",
         "perOption": {
           "a": "Orange body fluids are expected with rifampin, not a toxicity.",
-          "b": "Jaundice signals hepatotoxicity, a serious adverse effect of isoniazid.",
-          "c": "Mild nausea can be managed.",
+          "b": "Jaundice and dark urine signal hepatotoxicity, a serious adverse effect of isoniazid.",
+          "c": "Mild nausea can be managed by taking the drug with a small snack.",
           "d": "Pyridoxine is often prescribed to prevent neuropathy; this is a teaching question."
         },
         "references": [
           "Nursing pharmacology texts (e.g. Lehne; McCuistion) and the drug's prescribing information",
-          "Reviewed by the content team on 17 November 2026."
+          "Rewritten to NCLEX-RN difficulty and reviewed by the content team on 19 November 2026."
         ]
       },
       "educationalObjective": "Recognize isoniazid hepatotoxicity."
@@ -1148,20 +1159,20 @@
       ],
       "cjmmSkill": "evaluate_outcomes",
       "difficulty": "moderate",
-      "stem": "A client is starting treatment for active pulmonary tuberculosis. Which statement shows a need for more teaching?",
+      "stem": "A client with active pulmonary tuberculosis is starting a four-drug regimen with directly observed therapy. Which statement by the client shows a need for more teaching?",
       "content": {
         "options": [
           {
             "id": "a",
-            "text": "\"I'll take my medications for at least 6 months.\""
+            "text": "\"I'll take my medicines for at least 6 months.\""
           },
           {
             "id": "b",
-            "text": "\"I'll stop the medications once my cough goes away.\""
+            "text": "\"I'll stop the pills once my cough has gone away.\""
           },
           {
             "id": "c",
-            "text": "\"I'll cover my mouth and nose when I cough.\""
+            "text": "\"I'll cover my mouth and nose when I cough or sneeze.\""
           },
           {
             "id": "d",
@@ -1183,7 +1194,7 @@
         "references": [
           "Nursing pharmacology texts (e.g. Lehne; McCuistion) and the drug's prescribing information",
           "CDC infection control and isolation precautions guidance",
-          "Reviewed by the content team on 17 November 2026."
+          "Rewritten to NCLEX-RN difficulty and reviewed by the content team on 19 November 2026."
         ]
       },
       "educationalObjective": "Teach adherence to tuberculosis treatment."
@@ -1197,8 +1208,8 @@
         "respiratory-diagnostic-procedures"
       ],
       "cjmmSkill": "take_action",
-      "difficulty": "easy",
-      "stem": "The nurse is teaching a client to use an incentive spirometer. Place the steps in order.",
+      "difficulty": "moderate",
+      "stem": "The nurse is teaching a client how to use an incentive spirometer on the first day after abdominal surgery. Place the steps in order, from first to last.",
       "content": {
         "items": [
           {
@@ -1234,7 +1245,7 @@
         "scoring": "all_or_nothing"
       },
       "rationale": {
-        "correct": "Incentive spirometry: sit up, exhale, seal, inhale slowly and deeply, hold, exhale. Repeat about 10 times an hour while awake.",
+        "correct": "Incentive spirometry: sit up, exhale, seal, inhale slowly and deeply, hold, then exhale; repeat about 10 times an hour while awake.",
         "perOption": {
           "a": "Sitting upright allows full lung expansion.",
           "b": "This empties the lungs before the deep breath.",
@@ -1244,7 +1255,7 @@
         },
         "references": [
           "Fundamentals of nursing texts (e.g. Potter & Perry)",
-          "Reviewed by the content team on 17 November 2026."
+          "Rewritten to NCLEX-RN difficulty and reviewed by the content team on 19 November 2026."
         ]
       },
       "educationalObjective": "Teach incentive spirometer use."
@@ -1259,7 +1270,7 @@
       ],
       "cjmmSkill": "generate_solutions",
       "difficulty": "moderate",
-      "stem": "A client has had influenza symptoms for 24 hours and is prescribed oseltamivir. What should the nurse tell the client about this medication?",
+      "stem": "A 52-year-old client has had fever, body aches and a cough for 24 hours and tests positive for influenza A. The provider prescribes oseltamivir. What should the nurse tell the client about this medication?",
       "content": {
         "options": [
           {
@@ -1268,15 +1279,15 @@
           },
           {
             "id": "b",
-            "text": "\"It replaces your yearly flu vaccine.\""
+            "text": "\"It means you can skip your yearly flu vaccine from now on, too.\""
           },
           {
             "id": "c",
-            "text": "\"It kills the bacteria that cause the flu.\""
+            "text": "\"It kills the bacteria that cause the flu and its complications.\""
           },
           {
             "id": "d",
-            "text": "\"You'll only need one dose.\""
+            "text": "\"You'll take a single dose today and that will be the course.\""
           }
         ]
       },
@@ -1284,16 +1295,16 @@
         "correct": "a"
       },
       "rationale": {
-        "correct": "Start influenza antivirals within 48 hours of symptom onset; vaccination is still recommended every year.",
+        "correct": "Start influenza antivirals within 48 hours of symptom onset; yearly vaccination is still recommended.",
         "perOption": {
-          "a": "Antivirals reduce the length and severity of illness most when started early.",
-          "b": "Oseltamivir doesn't replace vaccination.",
-          "c": "Influenza is a virus.",
-          "d": "Treatment is usually twice daily for 5 days."
+          "a": "Antivirals shorten the illness most when started early.",
+          "b": "Oseltamivir does not replace vaccination.",
+          "c": "Influenza is caused by a virus.",
+          "d": "Treatment is usually twice a day for 5 days."
         },
         "references": [
           "Nursing pharmacology texts (e.g. Lehne; McCuistion) and the drug's prescribing information",
-          "Reviewed by the content team on 17 November 2026."
+          "Rewritten to NCLEX-RN difficulty and reviewed by the content team on 19 November 2026."
         ]
       },
       "educationalObjective": "Teach about influenza antiviral therapy."
