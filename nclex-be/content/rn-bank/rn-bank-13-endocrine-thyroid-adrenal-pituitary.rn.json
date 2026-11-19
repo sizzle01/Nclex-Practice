@@ -1,5 +1,5 @@
 {
-  "notice": "RN bank batch 13: Endocrine II: thyroid, parathyroid, adrenal and pituitary. Reviewed by the content team on 17 November 2026. See REVIEW-LOG.md.",
+  "notice": "RN bank batch 13: Endocrine II: thyroid, parathyroid, adrenal and pituitary. Rewritten to NCLEX-RN difficulty and reviewed by the content team on 19 November 2026. See REVIEW-LOG.md.",
   "track": "RN",
   "subtopics": [
     {
@@ -42,26 +42,26 @@
       "subtopics": [
         "thyroid-and-parathyroid-disorders"
       ],
-      "cjmmSkill": "recognize_cues",
-      "difficulty": "easy",
-      "stem": "Which findings should the nurse expect in a client with hyperthyroidism (Graves disease)?",
+      "cjmmSkill": "analyze_cues",
+      "difficulty": "moderate",
+      "stem": "A 34-year-old client reports feeling anxious and shaky for 2 months and has lost 6 kg without trying. The nurse notes bulging eyes and an enlarged thyroid. Which other findings should the nurse expect?",
       "content": {
         "options": [
           {
             "id": "a",
-            "text": "Weight loss, heat intolerance and tachycardia"
+            "text": "Heat intolerance, frequent stools and a heart rate of 112/min"
           },
           {
             "id": "b",
-            "text": "Weight gain, cold intolerance and bradycardia"
+            "text": "Cold intolerance, constipation and a resting heart rate of 54/min"
           },
           {
             "id": "c",
-            "text": "Constipation and dry, coarse hair"
+            "text": "Dry, coarse hair and puffy skin around the eyes"
           },
           {
             "id": "d",
-            "text": "Lethargy and slowed speech"
+            "text": "Slow speech and a delayed relaxation of the reflexes"
           }
         ]
       },
@@ -69,16 +69,16 @@
         "correct": "a"
       },
       "rationale": {
-        "correct": "Hyperthyroidism: weight loss, heat intolerance, tachycardia, nervousness, diarrhea and exophthalmos (in Graves).",
+        "correct": "Hyperthyroidism: weight loss, heat intolerance, tachycardia, nervousness, diarrhea and, in Graves disease, exophthalmos.",
         "perOption": {
-          "a": "Excess thyroid hormone speeds metabolism.",
+          "a": "Excess thyroid hormone speeds metabolism, causing heat intolerance, diarrhea and tachycardia.",
           "b": "These are signs of hypothyroidism.",
           "c": "These are signs of hypothyroidism.",
           "d": "These are signs of hypothyroidism."
         },
         "references": [
           "Medical-surgical nursing texts (e.g. Lewis; Ignatavicius)",
-          "Reviewed by the content team on 17 November 2026."
+          "Rewritten to NCLEX-RN difficulty and reviewed by the content team on 19 November 2026."
         ]
       },
       "educationalObjective": "Recognize the signs of hyperthyroidism."
@@ -93,24 +93,24 @@
       ],
       "cjmmSkill": "analyze_cues",
       "difficulty": "difficult",
-      "stem": "A client in thyroid storm has a temperature of 40.1 °C (104.2 °F) and a heart rate of 156/min. Which prescription should the nurse question?",
+      "stem": "A client with untreated Graves disease is admitted in thyroid storm after an appendectomy. The temperature is 40.1 °C (104.2 °F), the heart rate is 156/min, and the client is agitated. Which prescription should the nurse question?",
       "content": {
         "options": [
           {
             "id": "a",
-            "text": "Propylthiouracil (PTU)"
+            "text": "Propylthiouracil (PTU) 200 mg by mouth every 4 hours"
           },
           {
             "id": "b",
-            "text": "Propranolol"
+            "text": "Propranolol 40 mg by mouth every 6 hours"
           },
           {
             "id": "c",
-            "text": "Aspirin for the fever"
+            "text": "Aspirin 650 mg every 4 hours for the fever"
           },
           {
             "id": "d",
-            "text": "A cooling blanket"
+            "text": "A cooling blanket set to 37 °C"
           }
         ]
       },
@@ -118,7 +118,7 @@
         "correct": "c"
       },
       "rationale": {
-        "correct": "Thyroid storm: antithyroid drugs, then iodine, a beta-blocker, steroids, acetaminophen and cooling. Avoid aspirin.",
+        "correct": "Thyroid storm: an antithyroid drug, then iodine, a beta-blocker, steroids, acetaminophen and cooling; avoid aspirin.",
         "perOption": {
           "a": "PTU blocks thyroid hormone synthesis and conversion.",
           "b": "Beta-blockers control the heart rate and adrenergic symptoms.",
@@ -128,7 +128,7 @@
         "references": [
           "Medical-surgical nursing texts (e.g. Lewis; Ignatavicius)",
           "Nursing pharmacology texts (e.g. Lehne; McCuistion) and the drug's prescribing information",
-          "Reviewed by the content team on 17 November 2026."
+          "Rewritten to NCLEX-RN difficulty and reviewed by the content team on 19 November 2026."
         ]
       },
       "educationalObjective": "Manage thyroid storm safely."
@@ -143,24 +143,24 @@
       ],
       "cjmmSkill": "recognize_cues",
       "difficulty": "moderate",
-      "stem": "A client taking methimazole calls the clinic. Which report should the nurse address first?",
+      "stem": "A client who started methimazole 6 weeks ago calls the clinic with several concerns. Which report should the nurse address first?",
       "content": {
         "options": [
           {
             "id": "a",
-            "text": "Fever and a sore throat"
+            "text": "A fever of 38.6 °C and a sore throat since yesterday"
           },
           {
             "id": "b",
-            "text": "Mild itching"
+            "text": "Mild itching on both arms that starts after a hot shower"
           },
           {
             "id": "c",
-            "text": "Feeling less anxious"
+            "text": "Feeling calmer and sleeping better than before"
           },
           {
             "id": "d",
-            "text": "Slight weight gain"
+            "text": "A weight gain of 1.5 kg over the past month"
           }
         ]
       },
@@ -168,16 +168,16 @@
         "correct": "a"
       },
       "rationale": {
-        "correct": "Thionamides (methimazole, PTU) can cause agranulocytosis; tell clients to report fever and sore throat right away.",
+        "correct": "Thionamides (methimazole, PTU) can cause agranulocytosis; clients report fever and sore throat right away.",
         "perOption": {
-          "a": "These can signal agranulocytosis, a serious adverse effect; a WBC count is needed.",
-          "b": "Mild rash or itching is a minor effect.",
+          "a": "These can signal agranulocytosis, a serious adverse effect; a WBC count is needed now.",
+          "b": "Mild itching or rash is a minor effect.",
           "c": "This shows the drug is working.",
           "d": "This is expected as metabolism normalizes."
         },
         "references": [
           "Nursing pharmacology texts (e.g. Lehne; McCuistion) and the drug's prescribing information",
-          "Reviewed by the content team on 17 November 2026."
+          "Rewritten to NCLEX-RN difficulty and reviewed by the content team on 19 November 2026."
         ]
       },
       "educationalObjective": "Recognize agranulocytosis from antithyroid drugs."
@@ -192,24 +192,24 @@
       ],
       "cjmmSkill": "evaluate_outcomes",
       "difficulty": "moderate",
-      "stem": "A client received radioactive iodine therapy for hyperthyroidism today. Which statement shows a need for more teaching?",
+      "stem": "A client received an oral dose of radioactive iodine for hyperthyroidism this morning and is going home. Which statement shows a need for more teaching?",
       "content": {
         "options": [
           {
             "id": "a",
-            "text": "\"I'll flush the toilet twice after I use it for a few days.\""
+            "text": "\"I'll flush the toilet twice each time I use it for a few days.\""
           },
           {
             "id": "b",
-            "text": "\"I'll use separate utensils and wash them separately.\""
+            "text": "\"I'll use my own utensils and wash them separately.\""
           },
           {
             "id": "c",
-            "text": "\"I'll hold my newborn grandchild on my lap for long periods this week.\""
+            "text": "\"I'll babysit my newborn grandson this weekend as planned.\""
           },
           {
             "id": "d",
-            "text": "\"I'll sleep alone for a few nights.\""
+            "text": "\"I'll sleep alone in the spare room for a few nights.\""
           }
         ]
       },
@@ -217,16 +217,16 @@
         "correct": "c"
       },
       "rationale": {
-        "correct": "After radioactive iodine, limit close contact (especially with children and pregnant people) and follow hygiene precautions for the period specified.",
+        "correct": "After radioactive iodine, limit close contact, especially with children and pregnant people, and follow hygiene precautions for the time specified.",
         "perOption": {
           "a": "This reduces radiation exposure from urine.",
           "b": "Saliva may contain radioactive iodine.",
-          "c": "Close, prolonged contact with infants, children and pregnant people should be avoided for several days.",
+          "c": "Close, prolonged contact with infants, children and pregnant people is avoided for several days.",
           "d": "This reduces exposure to others."
         },
         "references": [
           "Medical-surgical nursing texts (e.g. Lewis; Ignatavicius)",
-          "Reviewed by the content team on 17 November 2026."
+          "Rewritten to NCLEX-RN difficulty and reviewed by the content team on 19 November 2026."
         ]
       },
       "educationalObjective": "Teach precautions after radioactive iodine therapy."
@@ -241,24 +241,24 @@
       ],
       "cjmmSkill": "generate_solutions",
       "difficulty": "moderate",
-      "stem": "How should the nurse teach a client to take levothyroxine?",
+      "stem": "A 62-year-old client newly prescribed levothyroxine 50 mcg also takes a calcium supplement and an iron tablet each morning. How should the nurse teach the client to take the levothyroxine?",
       "content": {
         "options": [
           {
             "id": "a",
-            "text": "In the morning on an empty stomach, 30 to 60 minutes before breakfast"
+            "text": "Before breakfast on an empty stomach, apart from calcium and iron"
           },
           {
             "id": "b",
-            "text": "At bedtime with a snack"
+            "text": "At bedtime with a small snack so that it doesn't upset the stomach"
           },
           {
             "id": "c",
-            "text": "With calcium supplements"
+            "text": "With the calcium and iron so all three are taken together"
           },
           {
             "id": "d",
-            "text": "Only when tired"
+            "text": "Only on days when the client feels tired or cold"
           }
         ]
       },
@@ -266,16 +266,16 @@
         "correct": "a"
       },
       "rationale": {
-        "correct": "Levothyroxine: take on an empty stomach, separate it from calcium and iron by 4 hours and report palpitations or chest pain (signs of excess).",
+        "correct": "Levothyroxine: take on an empty stomach, separate it from calcium and iron by 4 hours, and report palpitations or chest pain, which are signs of excess.",
         "perOption": {
-          "a": "Food, calcium and iron reduce absorption; consistent timing keeps levels steady.",
+          "a": "Food, calcium and iron reduce absorption, and consistent timing keeps levels steady.",
           "b": "Food reduces absorption.",
-          "c": "Calcium binds levothyroxine.",
-          "d": "It is taken every day for life."
+          "c": "Calcium and iron bind levothyroxine.",
+          "d": "It is taken every day, usually for life."
         },
         "references": [
           "Nursing pharmacology texts (e.g. Lehne; McCuistion) and the drug's prescribing information",
-          "Reviewed by the content team on 17 November 2026."
+          "Rewritten to NCLEX-RN difficulty and reviewed by the content team on 19 November 2026."
         ]
       },
       "educationalObjective": "Teach correct use of levothyroxine."
@@ -290,24 +290,24 @@
       ],
       "cjmmSkill": "prioritize_hypotheses",
       "difficulty": "difficult",
-      "stem": "An older adult with untreated hypothyroidism is admitted with hypothermia, a respiratory rate of 8/min and lethargy. What is the priority?",
+      "stem": "An 80-year-old client with untreated hypothyroidism is brought in from home in winter. The temperature is 34.2 °C (93.6 °F), respirations are 8/min, the heart rate is 48/min, and the client is barely rousable. What is the priority?",
       "content": {
         "options": [
           {
             "id": "a",
-            "text": "Rewarming with a heating blanket"
+            "text": "Rewarm the client quickly with a forced-air heating blanket"
           },
           {
             "id": "b",
-            "text": "Supporting the airway and breathing"
+            "text": "Support the airway and breathing"
           },
           {
             "id": "c",
-            "text": "Giving oral levothyroxine"
+            "text": "Give the client's levothyroxine by mouth with water"
           },
           {
             "id": "d",
-            "text": "Encouraging fluids"
+            "text": "Start IV fluids at a fast rate for the low heart rate"
           }
         ]
       },
@@ -317,14 +317,14 @@
       "rationale": {
         "correct": "Myxedema coma is an emergency: support breathing, then give IV levothyroxine and corticosteroids, rewarm passively and correct sodium and glucose.",
         "perOption": {
-          "a": "Rapid rewarming can cause vasodilation and collapse; it isn't the first priority.",
-          "b": "Myxedema coma causes hypoventilation and respiratory failure; airway and breathing come first.",
-          "c": "IV thyroid hormone is used, and only after the airway is secured.",
-          "d": "Fluids are given cautiously because of the risk of hyponatremia."
+          "a": "Rapid active rewarming can cause vasodilation and collapse, and it is not the first priority.",
+          "b": "Myxedema coma causes hypoventilation and respiratory failure, so airway and breathing come first.",
+          "c": "IV thyroid hormone is used, and only after the airway is secure.",
+          "d": "Fluids are given cautiously because of the risk of fluid overload and hyponatremia."
         },
         "references": [
           "Medical-surgical nursing texts (e.g. Lewis; Ignatavicius)",
-          "Reviewed by the content team on 17 November 2026."
+          "Rewritten to NCLEX-RN difficulty and reviewed by the content team on 19 November 2026."
         ]
       },
       "educationalObjective": "Prioritize care in myxedema coma."
@@ -339,16 +339,16 @@
       ],
       "cjmmSkill": "analyze_cues",
       "difficulty": "moderate",
-      "stem": "For each finding, indicate whether it is more consistent with hyperthyroidism or hypothyroidism.",
+      "stem": "The clinic nurse is comparing the findings of two clients, one with untreated hyperthyroidism and one with untreated hypothyroidism. For each finding, choose the condition it is more consistent with.",
       "content": {
         "rows": [
           {
             "id": "r1",
-            "text": "Heart rate 118/min"
+            "text": "Heart rate of 118/min at rest"
           },
           {
             "id": "r2",
-            "text": "Constipation"
+            "text": "Constipation for several months"
           },
           {
             "id": "r3",
@@ -356,7 +356,7 @@
           },
           {
             "id": "r4",
-            "text": "Weight gain with decreased appetite"
+            "text": "Weight gain with a smaller appetite"
           },
           {
             "id": "r5",
@@ -389,7 +389,7 @@
         }
       },
       "rationale": {
-        "correct": "Hyperthyroid = everything speeds up; hypothyroid = everything slows down.",
+        "correct": "Hyperthyroid: everything speeds up. Hypothyroid: everything slows down.",
         "perOption": {
           "r1:c1": "Thyroid hormone increases the heart rate.",
           "r1:c2": "Hypothyroidism slows the heart rate.",
@@ -397,16 +397,16 @@
           "r2:c2": "A slowed metabolism slows the bowel.",
           "r3:c1": "Increased metabolism produces heat.",
           "r3:c2": "Hypothyroidism causes cold intolerance.",
-          "r4:c1": "Hyperthyroidism causes weight loss with increased appetite.",
+          "r4:c1": "Hyperthyroidism causes weight loss with a bigger appetite.",
           "r4:c2": "A slowed metabolism leads to weight gain.",
           "r5:c1": "Exophthalmos occurs with Graves disease.",
-          "r5:c2": "This isn't a feature of hypothyroidism.",
+          "r5:c2": "This is not a feature of hypothyroidism.",
           "r6:c1": "Hyperthyroidism causes warm, moist skin.",
           "r6:c2": "Hypothyroidism causes dry skin and coarse hair."
         },
         "references": [
           "Medical-surgical nursing texts (e.g. Lewis; Ignatavicius)",
-          "Reviewed by the content team on 17 November 2026."
+          "Rewritten to NCLEX-RN difficulty and reviewed by the content team on 19 November 2026."
         ]
       },
       "educationalObjective": "Tell hyperthyroidism from hypothyroidism by findings."
@@ -421,24 +421,24 @@
       ],
       "cjmmSkill": "generate_solutions",
       "difficulty": "moderate",
-      "stem": "A client is returning from a total thyroidectomy. Which items should the nurse make sure are at the bedside?",
+      "stem": "A client is returning to the surgical unit after a total thyroidectomy for thyroid cancer. Which items should the nurse make sure are at the bedside?",
       "content": {
         "options": [
           {
             "id": "a",
-            "text": "Calcium gluconate and a tracheostomy set"
+            "text": "Calcium gluconate and an emergency tracheostomy set"
           },
           {
             "id": "b",
-            "text": "Potassium chloride and a urinary catheter"
+            "text": "Potassium chloride and a straight urinary catheter kit"
           },
           {
             "id": "c",
-            "text": "Insulin and glucose meter"
+            "text": "Regular insulin and a capillary glucose meter"
           },
           {
             "id": "d",
-            "text": "Heparin and an IV pump"
+            "text": "A heparin infusion and an extra infusion pump"
           }
         ]
       },
@@ -449,13 +449,13 @@
         "correct": "After thyroidectomy, watch for airway obstruction, hemorrhage, hypocalcemia (tetany) and thyroid storm.",
         "perOption": {
           "a": "Hypocalcemia from parathyroid injury and airway obstruction are the main early risks.",
-          "b": "These aren't specific to thyroidectomy.",
-          "c": "These aren't specific to thyroidectomy.",
-          "d": "These aren't specific to thyroidectomy."
+          "b": "These are not specific to thyroidectomy.",
+          "c": "These are not specific to thyroidectomy.",
+          "d": "These are not specific to thyroidectomy."
         },
         "references": [
           "Medical-surgical nursing texts (e.g. Lewis; Ignatavicius)",
-          "Reviewed by the content team on 17 November 2026."
+          "Rewritten to NCLEX-RN difficulty and reviewed by the content team on 19 November 2026."
         ]
       },
       "educationalObjective": "Prepare for complications after thyroidectomy."
@@ -470,7 +470,7 @@
       ],
       "cjmmSkill": "recognize_cues",
       "difficulty": "moderate",
-      "stem": "After a parathyroidectomy, the nurse taps the client's cheek in front of the ear and the facial muscles twitch. What does this suggest?",
+      "stem": "On the day after a parathyroidectomy, a client reports numbness and tingling of the fingers and around the mouth. When the nurse taps the client's cheek just in front of the ear, the corner of the mouth twitches. What does this suggest?",
       "content": {
         "options": [
           {
@@ -487,7 +487,7 @@
           },
           {
             "id": "d",
-            "text": "Normal recovery"
+            "text": "Expected recovery"
           }
         ]
       },
@@ -495,16 +495,16 @@
         "correct": "a"
       },
       "rationale": {
-        "correct": "Watch for hypocalcemia after parathyroid or thyroid surgery: tingling, Chvostek and Trousseau signs.",
+        "correct": "Watch for hypocalcemia after parathyroid or thyroid surgery: tingling, and Chvostek and Trousseau signs.",
         "perOption": {
           "a": "A positive Chvostek sign indicates hypocalcemia from reduced parathyroid hormone.",
           "b": "Hypercalcemia reduces neuromuscular excitability.",
-          "c": "This isn't a sign of hyperkalemia.",
-          "d": "Facial twitching isn't normal."
+          "c": "This is not a sign of hyperkalemia.",
+          "d": "Facial twitching and numbness are not expected."
         },
         "references": [
           "Medical-surgical nursing texts (e.g. Lewis; Ignatavicius)",
-          "Reviewed by the content team on 17 November 2026."
+          "Rewritten to NCLEX-RN difficulty and reviewed by the content team on 19 November 2026."
         ]
       },
       "educationalObjective": "Recognize hypocalcemia after parathyroidectomy."
@@ -517,26 +517,26 @@
       "subtopics": [
         "adrenal-disorders"
       ],
-      "cjmmSkill": "recognize_cues",
-      "difficulty": "moderate",
-      "stem": "Which findings are consistent with Addison's disease (adrenal insufficiency)?",
+      "cjmmSkill": "analyze_cues",
+      "difficulty": "difficult",
+      "stem": "A 46-year-old client has had fatigue, weight loss and dizziness when standing for several months. The nurse notes darkened skin on the knuckles and gums. Which laboratory findings fit the suspected diagnosis of Addison disease?",
       "content": {
         "options": [
           {
             "id": "a",
-            "text": "Hypotension, darkened skin, low sodium and high potassium"
+            "text": "Sodium 128, potassium 5.6 and glucose 62"
           },
           {
             "id": "b",
-            "text": "Hypertension, moon face and high glucose"
+            "text": "Sodium 146, potassium 3.1 and glucose 210"
           },
           {
             "id": "c",
-            "text": "Weight gain and fluid retention"
+            "text": "Sodium 138, potassium 4.2 and glucose 96"
           },
           {
             "id": "d",
-            "text": "High sodium and low potassium"
+            "text": "Sodium 150, potassium 3.4 and glucose 88"
           }
         ]
       },
@@ -544,16 +544,16 @@
         "correct": "a"
       },
       "rationale": {
-        "correct": "Addison's: fatigue, weight loss, hypotension, hyponatremia, hyperkalemia, hypoglycemia and bronze skin.",
+        "correct": "Addison disease: fatigue, weight loss, hypotension, hyponatremia, hyperkalemia, hypoglycemia and hyperpigmentation.",
         "perOption": {
-          "a": "Lack of cortisol and aldosterone causes salt wasting, potassium retention and hyperpigmentation.",
-          "b": "These suggest Cushing's syndrome.",
-          "c": "Addison's causes weight loss and dehydration.",
-          "d": "Aldosterone deficiency causes the opposite."
+          "a": "Lack of cortisol and aldosterone causes salt wasting, potassium retention and hypoglycemia.",
+          "b": "These fit Cushing syndrome or aldosteronism.",
+          "c": "These are normal results.",
+          "d": "A high sodium and low potassium do not fit aldosterone deficiency."
         },
         "references": [
           "Medical-surgical nursing texts (e.g. Lewis; Ignatavicius)",
-          "Reviewed by the content team on 17 November 2026."
+          "Rewritten to NCLEX-RN difficulty and reviewed by the content team on 19 November 2026."
         ]
       },
       "educationalObjective": "Recognize adrenal insufficiency."
@@ -568,7 +568,7 @@
       ],
       "cjmmSkill": "recognize_cues",
       "difficulty": "difficult",
-      "stem": "A client with Addison's disease stopped taking hydrocortisone 3 days ago and now has vomiting. Highlight the findings consistent with adrenal crisis.",
+      "stem": "A client with Addison disease stopped taking hydrocortisone 3 days ago because of vomiting and now has severe weakness and abdominal pain. Highlight the findings consistent with adrenal crisis.",
       "content": {
         "columns": [
           "Finding",
@@ -634,19 +634,19 @@
         ]
       },
       "rationale": {
-        "correct": "Adrenal crisis: shock, hyponatremia, hyperkalemia and hypoglycemia, often triggered by stopping steroids or by stress.",
+        "correct": "Adrenal crisis: shock, hyponatremia, hyperkalemia and hypoglycemia, often triggered by stopping steroids or by physical stress.",
         "perOption": {
           "r1": "Severe hypotension and shock are the main danger in adrenal crisis.",
           "r2": "Aldosterone deficiency causes sodium loss.",
           "r3": "Aldosterone deficiency causes potassium retention.",
           "r4": "Cortisol deficiency causes hypoglycemia.",
-          "r5": "A normal temperature doesn't point to adrenal crisis.",
-          "r6": "This is a normal hemoglobin."
+          "r5": "A normal temperature does not point to adrenal crisis.",
+          "r6": "This hemoglobin is normal."
         },
         "references": [
           "Medical-surgical nursing texts (e.g. Lewis; Ignatavicius)",
           "Laboratory reference ranges as used in common NCLEX review texts; follow the facility's ranges",
-          "Reviewed by the content team on 17 November 2026."
+          "Rewritten to NCLEX-RN difficulty and reviewed by the content team on 19 November 2026."
         ]
       },
       "educationalObjective": "Recognize adrenal crisis."
@@ -660,25 +660,25 @@
         "adrenal-disorders"
       ],
       "cjmmSkill": "take_action",
-      "difficulty": "moderate",
-      "stem": "A client is in adrenal crisis. Which prescription should the nurse give first?",
+      "difficulty": "difficult",
+      "stem": "A client in adrenal crisis has a blood pressure of 78/46, a glucose of 58 mg/dL and a potassium of 5.9 mEq/L. Which set of prescriptions should the nurse give first?",
       "content": {
         "options": [
           {
             "id": "a",
-            "text": "IV hydrocortisone with IV 0.9% sodium chloride"
+            "text": "IV hydrocortisone with IV 0.9% sodium chloride and dextrose"
           },
           {
             "id": "b",
-            "text": "Oral fludrocortisone"
+            "text": "Oral fludrocortisone with salty broth and fluids by mouth"
           },
           {
             "id": "c",
-            "text": "Potassium chloride IV"
+            "text": "IV potassium chloride to stabilize the heart rhythm right away"
           },
           {
             "id": "d",
-            "text": "Insulin"
+            "text": "IV regular insulin with dextrose for the potassium level"
           }
         ]
       },
@@ -686,16 +686,16 @@
         "correct": "a"
       },
       "rationale": {
-        "correct": "Adrenal crisis: IV hydrocortisone, IV fluids with dextrose as needed and correction of electrolytes.",
+        "correct": "Adrenal crisis: IV hydrocortisone, IV saline with dextrose, and monitoring of electrolytes and glucose.",
         "perOption": {
-          "a": "Replacing cortisol and volume reverses the shock.",
-          "b": "Oral drugs are too slow in a crisis.",
+          "a": "Replacing cortisol and volume, with glucose, reverses the shock and hypoglycemia.",
+          "b": "Oral treatment is too slow in a crisis.",
           "c": "The potassium is already high.",
-          "d": "Insulin would worsen the hypoglycemia."
+          "d": "Insulin would worsen the hypoglycemia, and cortisol replacement corrects the potassium."
         },
         "references": [
           "Medical-surgical nursing texts (e.g. Lewis; Ignatavicius)",
-          "Reviewed by the content team on 17 November 2026."
+          "Rewritten to NCLEX-RN difficulty and reviewed by the content team on 19 November 2026."
         ]
       },
       "educationalObjective": "Treat adrenal crisis."
@@ -710,7 +710,7 @@
       ],
       "cjmmSkill": "prioritize_hypotheses",
       "difficulty": "moderate",
-      "stem": "A client has Cushing's syndrome. Which nursing problem is the priority?",
+      "stem": "A client with Cushing syndrome from long-term prednisone has a round face, thin skin with bruises, a glucose of 186 mg/dL and a blood pressure of 152/94. Which nursing problem is the priority?",
       "content": {
         "options": [
           {
@@ -719,15 +719,15 @@
           },
           {
             "id": "b",
-            "text": "Disturbed body image"
+            "text": "Disturbed body image related to the round face"
           },
           {
             "id": "c",
-            "text": "Knowledge deficit"
+            "text": "Lack of knowledge about the diagnosis"
           },
           {
             "id": "d",
-            "text": "Risk for hypoglycemia"
+            "text": "Risk for hypoglycemia between meals"
           }
         ]
       },
@@ -735,19 +735,19 @@
         "correct": "a"
       },
       "rationale": {
-        "correct": "Cushing's: moon face, buffalo hump, hyperglycemia, hypertension, hypokalemia, thin skin and infection risk.",
+        "correct": "Cushing syndrome: moon face, buffalo hump, hyperglycemia, hypertension, hypokalemia, thin skin and infection risk.",
         "perOption": {
-          "a": "Excess cortisol suppresses the immune system and masks signs of infection.",
-          "b": "This is important but not the priority over physical risk.",
-          "c": "This is lower priority.",
-          "d": "Cushing's causes hyperglycemia."
+          "a": "Excess cortisol suppresses immunity and hides the usual signs of infection.",
+          "b": "This matters, but physical risks come first.",
+          "c": "This is a lower priority.",
+          "d": "Cushing syndrome causes hyperglycemia, not hypoglycemia."
         },
         "references": [
           "Medical-surgical nursing texts (e.g. Lewis; Ignatavicius)",
-          "Reviewed by the content team on 17 November 2026."
+          "Rewritten to NCLEX-RN difficulty and reviewed by the content team on 19 November 2026."
         ]
       },
-      "educationalObjective": "Prioritize care for Cushing's syndrome."
+      "educationalObjective": "Prioritize care for Cushing syndrome."
     },
     {
       "id": "c1a00013-0000-4000-8000-000000000014",
@@ -759,24 +759,24 @@
       ],
       "cjmmSkill": "evaluate_outcomes",
       "difficulty": "moderate",
-      "stem": "A client has taken prednisone 20 mg daily for 3 months. Which statement shows a need for more teaching?",
+      "stem": "A client with rheumatoid arthritis has taken prednisone 20 mg daily for 3 months. The provider plans to stop it. Which statement by the client shows a need for more teaching?",
       "content": {
         "options": [
           {
             "id": "a",
-            "text": "\"I'll take it with food.\""
+            "text": "\"I'll keep taking it with breakfast to protect my stomach.\""
           },
           {
             "id": "b",
-            "text": "\"I'll stop taking it as soon as I feel better.\""
+            "text": "\"I'll stop taking it as soon as my joints feel better.\""
           },
           {
             "id": "c",
-            "text": "\"I'll check my blood sugar as instructed.\""
+            "text": "\"I'll keep checking my blood sugar as I was shown.\""
           },
           {
             "id": "d",
-            "text": "\"I'll avoid people who are sick.\""
+            "text": "\"I'll stay away from people who are sick with colds.\""
           }
         ]
       },
@@ -784,16 +784,16 @@
         "correct": "b"
       },
       "rationale": {
-        "correct": "Long-term corticosteroids suppress the adrenal glands; they must be tapered, never stopped abruptly.",
+        "correct": "Long-term corticosteroids suppress the adrenal glands; they are tapered, never stopped abruptly.",
         "perOption": {
           "a": "Food reduces stomach irritation.",
-          "b": "Stopping suddenly after long-term use can cause adrenal crisis; the dose must be tapered.",
+          "b": "Stopping suddenly after long-term use can cause adrenal crisis; the dose is tapered.",
           "c": "Steroids raise glucose.",
           "d": "Steroids increase infection risk."
         },
         "references": [
           "Nursing pharmacology texts (e.g. Lehne; McCuistion) and the drug's prescribing information",
-          "Reviewed by the content team on 17 November 2026."
+          "Rewritten to NCLEX-RN difficulty and reviewed by the content team on 19 November 2026."
         ]
       },
       "educationalObjective": "Teach safe discontinuation of corticosteroids."
@@ -808,20 +808,20 @@
       ],
       "cjmmSkill": "recognize_cues",
       "difficulty": "moderate",
-      "stem": "Which adverse effects should the nurse monitor for in a client on long-term corticosteroid therapy? Select all that apply.",
+      "stem": "A 68-year-old client has taken prednisone 15 mg daily for a year for polymyalgia rheumatica. Which adverse effects should the nurse monitor for? Select all that apply.",
       "content": {
         "options": [
           {
             "id": "a",
-            "text": "Hyperglycemia"
+            "text": "High blood glucose"
           },
           {
             "id": "b",
-            "text": "Osteoporosis"
+            "text": "Loss of bone density"
           },
           {
             "id": "c",
-            "text": "Increased risk of infection"
+            "text": "Infections with few signs"
           },
           {
             "id": "d",
@@ -829,11 +829,15 @@
           },
           {
             "id": "e",
-            "text": "Hypoglycemia"
+            "text": "Mood changes or trouble sleeping"
           },
           {
             "id": "f",
-            "text": "Mood changes"
+            "text": "Low blood glucose between meals"
+          },
+          {
+            "id": "g",
+            "text": "Thickened, tougher skin"
           }
         ]
       },
@@ -843,22 +847,23 @@
           "b",
           "c",
           "d",
-          "f"
+          "e"
         ]
       },
       "rationale": {
-        "correct": "Steroid adverse effects: hyperglycemia, infection, osteoporosis, weight gain, mood changes, peptic ulcers and adrenal suppression.",
+        "correct": "Steroid adverse effects: hyperglycemia, infection, osteoporosis, weight gain, mood changes, thin skin, peptic ulcers and adrenal suppression.",
         "perOption": {
           "a": "Steroids increase glucose production.",
           "b": "Steroids reduce bone formation.",
-          "c": "Steroids suppress immunity.",
+          "c": "Steroids suppress immunity and blunt fever.",
           "d": "Steroids increase appetite and retain sodium.",
-          "e": "Steroids raise glucose.",
-          "f": "Steroids can cause euphoria, irritability or psychosis."
+          "e": "Steroids can cause euphoria, irritability, insomnia or psychosis.",
+          "f": "Steroids raise glucose.",
+          "g": "Steroids thin the skin and make it bruise easily."
         },
         "references": [
           "Nursing pharmacology texts (e.g. Lehne; McCuistion) and the drug's prescribing information",
-          "Reviewed by the content team on 17 November 2026."
+          "Rewritten to NCLEX-RN difficulty and reviewed by the content team on 19 November 2026."
         ]
       },
       "educationalObjective": "Monitor for corticosteroid adverse effects."
@@ -873,16 +878,16 @@
       ],
       "cjmmSkill": "take_action",
       "difficulty": "moderate",
-      "stem": "A client with suspected pheochromocytoma has episodes of severe headache, sweating and a racing heart. Which action should the nurse avoid?",
+      "stem": "A client with suspected pheochromocytoma has episodes of severe headache, sweating and a racing heart. The blood pressure during an episode was 230/124. Which action should the nurse avoid?",
       "content": {
         "options": [
           {
             "id": "a",
-            "text": "Monitoring blood pressure often"
+            "text": "Checking the blood pressure often, including during episodes"
           },
           {
             "id": "b",
-            "text": "Palpating the abdomen deeply"
+            "text": "Palpating the abdomen deeply during the assessment"
           },
           {
             "id": "c",
@@ -890,7 +895,7 @@
           },
           {
             "id": "d",
-            "text": "Providing a calm environment"
+            "text": "Keeping the room quiet and limiting stimulation"
           }
         ]
       },
@@ -903,11 +908,11 @@
           "a": "Frequent monitoring is needed.",
           "b": "Pressing on the tumor can release catecholamines and trigger a hypertensive crisis.",
           "c": "This is the diagnostic test.",
-          "d": "This reduces stimulation."
+          "d": "This reduces triggers."
         },
         "references": [
           "Medical-surgical nursing texts (e.g. Lewis; Ignatavicius)",
-          "Reviewed by the content team on 17 November 2026."
+          "Rewritten to NCLEX-RN difficulty and reviewed by the content team on 19 November 2026."
         ]
       },
       "educationalObjective": "Prevent a hypertensive crisis in pheochromocytoma."
@@ -922,7 +927,7 @@
       ],
       "cjmmSkill": "analyze_cues",
       "difficulty": "difficult",
-      "stem": "A client has hypertension that is hard to control and a potassium level of 2.9 mEq/L. Which disorder does the nurse suspect?",
+      "stem": "A 44-year-old client has hypertension that remains above 160/100 on three medications and has a potassium of 2.9 mEq/L. The client takes no diuretic, eats a normal diet and reports muscle weakness and frequent urination at night. The sodium is 145 mEq/L. Which disorder does the nurse suspect?",
       "content": {
         "options": [
           {
@@ -931,7 +936,7 @@
           },
           {
             "id": "b",
-            "text": "Addison's disease"
+            "text": "Addison disease"
           },
           {
             "id": "c",
@@ -947,16 +952,16 @@
         "correct": "a"
       },
       "rationale": {
-        "correct": "Primary aldosteronism: hypertension with hypokalemia; spironolactone or surgery may be used.",
+        "correct": "Primary aldosteronism: resistant hypertension with hypokalemia; treatment is spironolactone or surgery.",
         "perOption": {
-          "a": "Excess aldosterone retains sodium and water (hypertension) and wastes potassium.",
-          "b": "Addison's causes hypotension and hyperkalemia.",
-          "c": "Hypothyroidism doesn't typically cause hypokalemia.",
+          "a": "Excess aldosterone retains sodium and water, causing hypertension, and wastes potassium.",
+          "b": "Addison disease causes hypotension and hyperkalemia.",
+          "c": "Hypothyroidism does not typically cause hypokalemia.",
           "d": "DI causes hypernatremia and polyuria."
         },
         "references": [
           "Medical-surgical nursing texts (e.g. Lewis; Ignatavicius)",
-          "Reviewed by the content team on 17 November 2026."
+          "Rewritten to NCLEX-RN difficulty and reviewed by the content team on 19 November 2026."
         ]
       },
       "educationalObjective": "Recognize primary aldosteronism."
@@ -969,26 +974,26 @@
       "subtopics": [
         "pituitary-disorders"
       ],
-      "cjmmSkill": "recognize_cues",
-      "difficulty": "moderate",
-      "stem": "A client with small-cell lung cancer has a sodium of 124 mEq/L, concentrated urine and weight gain without edema. Which condition does the nurse suspect?",
+      "cjmmSkill": "analyze_cues",
+      "difficulty": "difficult",
+      "stem": "A client with small-cell lung cancer has a sodium of 124 mEq/L, a urine specific gravity of 1.030 and a 2 kg weight gain without edema. The blood pressure is normal, and the client takes no diuretics. Which condition does the nurse suspect?",
       "content": {
         "options": [
           {
             "id": "a",
-            "text": "Syndrome of inappropriate antidiuretic hormone (SIADH)"
+            "text": "Syndrome of inappropriate ADH"
           },
           {
             "id": "b",
-            "text": "Diabetes insipidus"
+            "text": "Central diabetes insipidus"
           },
           {
             "id": "c",
-            "text": "Dehydration"
+            "text": "Dehydration from poor intake"
           },
           {
             "id": "d",
-            "text": "Heart failure"
+            "text": "Heart failure with fluid overload"
           }
         ]
       },
@@ -996,16 +1001,16 @@
         "correct": "a"
       },
       "rationale": {
-        "correct": "SIADH: dilutional hyponatremia, concentrated urine, weight gain without edema; often caused by lung cancer, head injury or certain drugs.",
+        "correct": "SIADH: dilutional hyponatremia, concentrated urine and weight gain without edema; often caused by lung cancer, head injury or certain drugs.",
         "perOption": {
-          "a": "Excess ADH retains water, diluting sodium while the urine is concentrated.",
-          "b": "DI causes dilute urine and high sodium.",
-          "c": "Dehydration causes weight loss and high sodium.",
+          "a": "Excess ADH retains water, diluting the sodium while the urine stays concentrated.",
+          "b": "DI causes dilute urine and a high sodium.",
+          "c": "Dehydration causes weight loss and a high sodium.",
           "d": "Heart failure usually causes edema."
         },
         "references": [
           "Medical-surgical nursing texts (e.g. Lewis; Ignatavicius)",
-          "Reviewed by the content team on 17 November 2026."
+          "Rewritten to NCLEX-RN difficulty and reviewed by the content team on 19 November 2026."
         ]
       },
       "educationalObjective": "Recognize SIADH."
@@ -1020,24 +1025,24 @@
       ],
       "cjmmSkill": "generate_solutions",
       "difficulty": "moderate",
-      "stem": "Which intervention should the nurse expect for a client with SIADH and mild hyponatremia?",
+      "stem": "A client with SIADH after a head injury has a sodium of 129 mEq/L and mild headache. Which intervention should the nurse expect to be prescribed?",
       "content": {
         "options": [
           {
             "id": "a",
-            "text": "Fluid restriction"
+            "text": "Fluid restriction of 800 to 1,000 mL a day"
           },
           {
             "id": "b",
-            "text": "Encouraging fluids"
+            "text": "Encouraging the client to drink 2 L of water a day"
           },
           {
             "id": "c",
-            "text": "Hypotonic IV fluids"
+            "text": "An IV infusion of 0.45% sodium chloride"
           },
           {
             "id": "d",
-            "text": "Desmopressin"
+            "text": "Intranasal desmopressin twice a day"
           }
         ]
       },
@@ -1045,16 +1050,16 @@
         "correct": "a"
       },
       "rationale": {
-        "correct": "Treat SIADH with fluid restriction, treat the cause, use hypertonic saline only for severe symptoms and take seizure precautions.",
+        "correct": "Treat SIADH with fluid restriction and by treating the cause; hypertonic saline is for severe symptoms, with seizure precautions.",
         "perOption": {
-          "a": "Restricting fluids (often 800 to 1,000 mL a day) reduces water retention.",
-          "b": "This worsens hyponatremia.",
-          "c": "These lower sodium further.",
-          "d": "Desmopressin is ADH and would worsen SIADH."
+          "a": "Restricting fluids reduces water retention.",
+          "b": "Extra water worsens hyponatremia.",
+          "c": "Hypotonic fluid lowers sodium further.",
+          "d": "Desmopressin acts like ADH and would worsen SIADH."
         },
         "references": [
           "Medical-surgical nursing texts (e.g. Lewis; Ignatavicius)",
-          "Reviewed by the content team on 17 November 2026."
+          "Rewritten to NCLEX-RN difficulty and reviewed by the content team on 19 November 2026."
         ]
       },
       "educationalObjective": "Plan care for SIADH."
@@ -1116,18 +1121,18 @@
         }
       },
       "rationale": {
-        "correct": "Diabetes insipidus: polyuria, very dilute urine (specific gravity below about 1.005), thirst and rising sodium.",
+        "correct": "Diabetes insipidus: polyuria, very dilute urine (specific gravity below about 1.005), thirst and a rising sodium.",
         "perOption": {
           "b1:a": "Large volumes of dilute urine after pituitary surgery suggest ADH deficiency.",
           "b1:b": "SIADH causes low urine output with concentrated urine.",
-          "b1:c": "There's no evidence of hyperglycemia or ketosis.",
+          "b1:c": "There is no evidence of hyperglycemia or ketosis.",
           "b2:a": "Desmopressin replaces ADH.",
           "b2:b": "A diuretic would worsen the fluid loss.",
           "b2:c": "Restricting fluids would cause severe dehydration."
         },
         "references": [
           "Medical-surgical nursing texts (e.g. Lewis; Ignatavicius)",
-          "Reviewed by the content team on 17 November 2026."
+          "Rewritten to NCLEX-RN difficulty and reviewed by the content team on 19 November 2026."
         ]
       },
       "educationalObjective": "Recognize and treat diabetes insipidus."
@@ -1142,7 +1147,7 @@
       ],
       "cjmmSkill": "recognize_cues",
       "difficulty": "moderate",
-      "stem": "A client taking desmopressin reports a headache and has gained 2 kg in 2 days. What should the nurse suspect?",
+      "stem": "A client with diabetes insipidus who started desmopressin 4 days ago reports a headache and nausea and has gained 2 kg in 2 days. The client has kept drinking 4 L of water a day. What should the nurse suspect?",
       "content": {
         "options": [
           {
@@ -1151,15 +1156,15 @@
           },
           {
             "id": "b",
-            "text": "Dehydration"
+            "text": "Dehydration from the diabetes insipidus"
           },
           {
             "id": "c",
-            "text": "The expected therapeutic effect"
+            "text": "The expected effect of the medicine"
           },
           {
             "id": "d",
-            "text": "Hyperglycemia"
+            "text": "High blood glucose from the desmopressin"
           }
         ]
       },
@@ -1169,14 +1174,14 @@
       "rationale": {
         "correct": "Desmopressin: monitor weight, intake and output and sodium; report headache, confusion and weight gain.",
         "perOption": {
-          "a": "Too much ADH effect retains water; headache and weight gain are early signs.",
+          "a": "Too much ADH effect plus high intake retains water; headache, nausea and weight gain are early signs.",
           "b": "Weight gain suggests fluid retention, not loss.",
-          "c": "A rapid 2 kg gain isn't expected.",
-          "d": "Desmopressin doesn't affect glucose."
+          "c": "A rapid 2 kg gain with symptoms is not expected.",
+          "d": "Desmopressin does not affect glucose."
         },
         "references": [
           "Nursing pharmacology texts (e.g. Lehne; McCuistion) and the drug's prescribing information",
-          "Reviewed by the content team on 17 November 2026."
+          "Rewritten to NCLEX-RN difficulty and reviewed by the content team on 19 November 2026."
         ]
       },
       "educationalObjective": "Recognize desmopressin-induced water intoxication."
@@ -1191,12 +1196,12 @@
       ],
       "cjmmSkill": "take_action",
       "difficulty": "moderate",
-      "stem": "After a transsphenoidal hypophysectomy, a client has clear fluid dripping from the nose. What should the nurse do?",
+      "stem": "On the second day after a transsphenoidal hypophysectomy, a client has clear, watery fluid dripping from the nose when leaning forward and reports a headache. What should the nurse do?",
       "content": {
         "options": [
           {
             "id": "a",
-            "text": "Have the client blow the nose gently"
+            "text": "Ask the client to blow the nose gently to clear the fluid"
           },
           {
             "id": "b",
@@ -1204,11 +1209,11 @@
           },
           {
             "id": "c",
-            "text": "Pack the nose with gauze"
+            "text": "Pack the nose with sterile gauze to stop the drip"
           },
           {
             "id": "d",
-            "text": "Encourage coughing and deep breathing"
+            "text": "Encourage coughing and deep breathing every hour"
           }
         ]
       },
@@ -1216,16 +1221,16 @@
         "correct": "b"
       },
       "rationale": {
-        "correct": "After transsphenoidal surgery: avoid coughing, sneezing, blowing the nose and bending over; report clear drainage, which may be CSF.",
+        "correct": "After transsphenoidal surgery: avoid coughing, sneezing, blowing the nose and bending over, and report clear drainage, which may be CSF.",
         "perOption": {
           "a": "Blowing the nose raises pressure and can worsen a leak.",
           "b": "Clear drainage that is positive for glucose suggests cerebrospinal fluid.",
-          "c": "Packing doesn't address a CSF leak.",
+          "c": "Packing does not address a CSF leak.",
           "d": "Coughing raises intracranial pressure and should be avoided."
         },
         "references": [
           "Medical-surgical nursing texts (e.g. Lewis; Ignatavicius)",
-          "Reviewed by the content team on 17 November 2026."
+          "Rewritten to NCLEX-RN difficulty and reviewed by the content team on 19 November 2026."
         ]
       },
       "educationalObjective": "Recognize a CSF leak after pituitary surgery."
@@ -1240,24 +1245,24 @@
       ],
       "cjmmSkill": "generate_solutions",
       "difficulty": "moderate",
-      "stem": "A client with Graves disease has exophthalmos. Which intervention helps protect the client's eyes?",
+      "stem": "A client with Graves disease has exophthalmos and reports gritty, dry eyes, especially in the morning. Which intervention helps protect the client's eyes?",
       "content": {
         "options": [
           {
             "id": "a",
-            "text": "Use artificial tears and elevate the head of the bed"
+            "text": "Artificial tears during the day and a raised head of the bed"
           },
           {
             "id": "b",
-            "text": "Keep the room brightly lit"
+            "text": "Bright room lighting so the client can see clearly"
           },
           {
             "id": "c",
-            "text": "Avoid closing the eyes at night"
+            "text": "Keeping the eyes uncovered at night so they can breathe"
           },
           {
             "id": "d",
-            "text": "Limit fluids"
+            "text": "Limiting fluids to reduce the swelling around both of the eyes"
           }
         ]
       },
@@ -1265,16 +1270,16 @@
         "correct": "a"
       },
       "rationale": {
-        "correct": "Exophthalmos care: artificial tears, sunglasses, elevating the head and taping the eyelids at night if needed.",
+        "correct": "Exophthalmos care: artificial tears, sunglasses, a raised head of the bed and taping the eyelids at night if needed.",
         "perOption": {
           "a": "Lubrication protects the cornea, and elevation reduces swelling behind the eyes.",
-          "b": "Bright light can irritate the eyes; dark glasses help.",
+          "b": "Bright light irritates the eyes; dark glasses help.",
           "c": "The eyelids may need to be taped closed at night to protect the cornea.",
-          "d": "This doesn't help the eyes."
+          "d": "This does not help the eyes."
         },
         "references": [
           "Medical-surgical nursing texts (e.g. Lewis; Ignatavicius)",
-          "Reviewed by the content team on 17 November 2026."
+          "Rewritten to NCLEX-RN difficulty and reviewed by the content team on 19 November 2026."
         ]
       },
       "educationalObjective": "Protect the eyes in exophthalmos."
