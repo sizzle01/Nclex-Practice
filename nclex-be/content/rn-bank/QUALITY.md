@@ -32,7 +32,7 @@ Written by `python3 -I build_all.py`; do not edit by hand. See `quality.py` for 
 | 19-oncology-palliative | 24 | yes | 22 | 23% | 25% (longest) | 9% | 32 | 1/15/8 |
 | 20-immune-infectious | 25 | yes | 23 | 17% | 29% (stem words) | 4% | 30 | 2/15/8 |
 | 21-musculoskeletal | 24 | yes | 21 | 14% | 25% (assess first) | 14% | 29 | 2/14/8 |
-| 22-integumentary-burns | 25 |  | 20 | 90% | 90% (longest) | 20% | 15 | 7/14/4 |
+| 22-integumentary-burns | 25 | yes | 20 | 5% | 25% (assess first) | 10% | 31 | 2/15/8 |
 | 23-perioperative | 23 |  | 20 | 90% | 90% (longest) | 15% | 19 | 7/14/2 |
 | 24-basic-care-comfort | 23 |  | 20 | 65% | 68% (longest) | 10% | 13 | 10/12/1 |
 | 25-health-promotion-lifespan | 24 |  | 22 | 68% | 77% (skip absolutes) | 27% | 13 | 11/13/0 |
@@ -57,4 +57,4 @@ Written by `python3 -I build_all.py`; do not edit by hand. See `quality.py` for 
 | 65-management-of-care-specialty | 27 | yes | 18 | 17% | 28% (stem words) | 11% | 27 | 2/15/10 |
 | 66-risk-reduction-basic-care | 31 | yes | 27 | 7% | 29% (assess first) | 15% | 32 | 4/17/10 |
 | 67-moc-sic-ngn | 34 | yes | 23 | 0% | 23% (shortest) | 9% | 32 | 0/23/11 |
-| **Whole bank** | 1110 | | 874 | 34% | 37% (skip absolutes) | 12% | 27 | 127/681/302 |
+| **Whole bank** | 1110 | | 874 | 32% | 35% (skip absolutes) | 12% | 27 | 122/682/306 |
