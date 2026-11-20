@@ -187,7 +187,7 @@ def _timed_blocks(cases):
             "title": f"Timed case study block {block['number']}",
             "description": (f"{len(block['caseIds'])} unfolding case studies ({len(ids)} questions) from mixed body "
                             f"systems, at the NCLEX-RN pace: {minutes // 60} h {minutes % 60:02d} min, one 10-minute "
-                            "break, no going back. Answers and rationales at the end."),
+                            "break, no going back. Answers, rationales and your clinical judgment results at the end."),
             "mode": "challenge", "revealMode": "exam", "timed": True, "timeBudgetSec": budget,
             "allowBackNav": False, "pausePolicy": BLOCK_PAUSE_POLICY, "outcomeHidden": True, "accessTier": "free",
             "questionIds": ids})

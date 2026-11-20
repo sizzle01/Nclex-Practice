@@ -401,9 +401,9 @@ Global requirements: visible focus rings; text scale from 100% to 200% without h
 | `/practice` | Prebuilt sets with locked badges, under filter tabs (All, Practice, Timed, Untimed, Adaptive; `?filter=`) and grouped into sections: Start here, Practice sets, Case studies, Mock exams timed / untimed, Adaptive exams. An adaptive exam's card shows "85–150 questions" and "5 h or untimed", and its detail panel asks Timed or Untimed (a radio group) before Start (F19) | `/test-sets` with no kind: prebuilt sets and adaptive exams (every page) |
 | `/practice/custom` | Custom test builder with live available count | `/taxonomy`, `/test-sets/custom/*` |
 | `/attempts/[id]` | **Exam player** | `/attempts/{id}/*` |
-| `/attempts/[id]/results` | Score (an adaptive exam leads with Pass / Fail, why it ended and the questions answered, with no percentage; F19), readiness estimate, subtopics to study next (F17), practise your weak areas (F18), category breakdown, time per item | `/attempts/{id}/result`, `/attempts/{id}/recommendations`, `/me/weak-areas`, `POST /test-sets/weak-areas` |
+| `/attempts/[id]/results` | Score (an adaptive exam leads with Pass / Fail, why it ended and the questions answered, with no percentage; F19), readiness estimate (none for a timed case-study block, F24), clinical judgment panel: each CJMM step in model order with its standard (below, near or above passing), first half against second half with time per question, and a note when the second half drops (F25), subtopics to study next (F17), practise your weak areas (F18), category breakdown, time per item | `/attempts/{id}/result`, `/attempts/{id}/recommendations`, `/me/weak-areas`, `POST /test-sets/weak-areas` |
 | `/attempts/[id]/review` | Item-by-item rationale review, filter incorrect / flagged | `/attempts/{id}/review` |
-| `/performance` | Breakdown by dimension, trend charts | `/me/performance/*` |
+| `/performance` | Clinical judgment steps across the last five timed tests (F25), breakdown by dimension, trend charts | `/me/performance/*` |
 | `/history` | Past attempts table | `/attempts?status=submitted` |
 | `/notifications` | Full notification history | `/notifications` |
 | `/settings/account` | Profile, track, change email or password, delete account | `/me*` |
