@@ -1646,6 +1646,12 @@ namespace Nclex.Infrastructure.Persistence.Migrations
                         .HasDefaultValue(TestMode.Practice)
                         .HasColumnName("mode");
 
+                    b.Property<bool>("OutcomeHidden")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("boolean")
+                        .HasDefaultValue(false)
+                        .HasColumnName("outcome_hidden");
+
                     b.Property<Guid?>("OwnerUserId")
                         .HasColumnType("uuid")
                         .HasColumnName("owner_user_id");
@@ -2083,6 +2089,9 @@ namespace Nclex.Infrastructure.Persistence.Migrations
                             b1.Property<string>("Mode")
                                 .IsRequired()
                                 .HasJsonPropertyName("mode");
+
+                            b1.Property<bool>("OutcomeHidden")
+                                .HasJsonPropertyName("outcomeHidden");
 
                             b1.Property<decimal?>("PassThreshold")
                                 .HasJsonPropertyName("passThreshold");
