@@ -60,4 +60,5 @@ Written by `python3 -I build_all.py`; do not edit by hand. See `quality.py` for 
 | 68-moc-priorities-delegation-legal | 25 | yes | 17 | 29% | 33% (stem words) | 12% | 33 | 2/13/10 |
 | 69-safety-health-promotion-psychosocial | 25 | yes | 17 | 24% | 32% (skip absolutes) | 6% | 33 | 1/15/9 |
 | 70-pharmacology-basic-care | 25 | yes | 17 | 24% | 32% (assess first) | 12% | 40 | 2/12/11 |
-| **Whole bank** | 1185 | | 924 | 14% | 25% (assess first) | 7% | 33 | 94/688/403 |
+| 71-risk-reduction-adaptation-cases | 25 | yes | 11 | 9% | 30% (stem words) | 9% | 34 | 1/14/10 |
+| **Whole bank** | 1210 | | 935 | 14% | 25% (assess first) | 7% | 33 | 95/702/413 |
