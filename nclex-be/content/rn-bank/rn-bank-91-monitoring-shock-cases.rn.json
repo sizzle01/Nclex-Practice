@@ -903,7 +903,7 @@
           },
           {
             "id": "d",
-            "text": "Oxygen only at night, while the client is sleeping"
+            "text": "Oxygen at night, while the client is asleep"
           }
         ]
       },
@@ -1354,7 +1354,7 @@
           },
           {
             "id": "c",
-            "text": "Give meperidine every 3 hours as the preferred opioid"
+            "text": "Give meperidine at 3-hour intervals as the preferred opioid"
           },
           {
             "id": "d",
@@ -1814,7 +1814,7 @@
         "options": [
           {
             "id": "a",
-            "text": "Checking the blood glucose every hour"
+            "text": "Checking the blood glucose on the hour"
           },
           {
             "id": "b",
