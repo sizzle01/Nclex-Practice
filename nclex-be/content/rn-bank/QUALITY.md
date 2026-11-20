@@ -78,4 +78,5 @@ Written by `python3 -I build_all.py`; do not edit by hand. See `quality.py` for 
 | 86-pharmacotherapy-comfort-depth | 25 | yes | 18 | 17% | 28% (assess first) | 0% | 31 | 1/11/13 |
 | 87-hemodynamics-critical-cases | 25 | yes | 11 | 9% | 27% (shortest) | 0% | 26 | 0/9/16 |
 | 88-moc-team-systems-safety | 25 | yes | 10 | 10% | 15% (shortest) | 0% | 22 | 0/10/15 |
-| **Whole bank** | 1635 | | 1216 | 13% | 25% (assess first) | 6% | 32 | 117/911/607 |
+| 89-infection-screening-psychosocial | 25 | yes | 11 | 9% | 30% (assess first) | 0% | 29 | 0/14/11 |
+| **Whole bank** | 1660 | | 1227 | 13% | 25% (assess first) | 6% | 32 | 117/925/618 |
