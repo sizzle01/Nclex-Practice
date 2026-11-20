@@ -1,5 +1,5 @@
 {
-  "notice": "RN bank batch 33: Mental health II: suicide, mood, psychosis, personality and eating disorders. Reviewed by the content team on 17 November 2026. See REVIEW-LOG.md.",
+  "notice": "RN bank batch 33: Mental health II: suicide, mood, psychosis, personality and eating disorders. Rewritten to NCLEX-RN difficulty and reviewed by the content team on 19 November 2026. See REVIEW-LOG.md.",
   "track": "RN",
   "subtopics": [
     {
@@ -43,8 +43,8 @@
         "suicide-risk-and-safety"
       ],
       "cjmmSkill": "take_action",
-      "difficulty": "moderate",
-      "stem": "A client with depression says, \"Things would be better if I weren't around.\" What is the nurse's best response?",
+      "difficulty": "difficult",
+      "stem": "A 58-year-old client recently widowed, who lives alone and owns a handgun, comes to the clinic for insomnia. While the nurse takes vital signs, the client says, \"Things would be easier for everyone if I weren't around.\" What is the nurse's best response?",
       "content": {
         "options": [
           {
@@ -53,15 +53,15 @@
           },
           {
             "id": "b",
-            "text": "\"You have so much to live for.\""
+            "text": "\"Your family would be devastated if anything happened to you.\""
           },
           {
             "id": "c",
-            "text": "\"Let's talk about this tomorrow.\""
+            "text": "\"Let's get your sleep sorted out first, and then we can talk.\""
           },
           {
             "id": "d",
-            "text": "\"Everyone feels that way sometimes.\""
+            "text": "\"Grief is hard. Most people feel that way for a while.\""
           }
         ]
       },
@@ -69,16 +69,16 @@
         "correct": "a"
       },
       "rationale": {
-        "correct": "Ask directly about suicidal thoughts, plan, means and intent.",
+        "correct": "Ask directly about suicidal thoughts, plan, means and intent. Risk factors: older age, recent loss, living alone, access to a firearm.",
         "perOption": {
-          "a": "Asking directly about suicide doesn't increase risk and is essential for assessment.",
-          "b": "This dismisses the feeling and skips assessment.",
-          "c": "Delay is unsafe.",
+          "a": "Asking directly about suicide does not increase risk and is essential; this client has several risk factors.",
+          "b": "This induces guilt and skips assessment.",
+          "c": "Delaying assessment of a suicide cue is unsafe.",
           "d": "This minimizes the statement."
         },
         "references": [
           "Psychiatric-mental health nursing texts (e.g. Varcarolis; Halter)",
-          "Reviewed by the content team on 17 November 2026."
+          "Rewritten to NCLEX-RN difficulty and reviewed by the content team on 19 November 2026."
         ]
       },
       "educationalObjective": "Assess suicide risk directly."
@@ -93,24 +93,24 @@
       ],
       "cjmmSkill": "analyze_cues",
       "difficulty": "difficult",
-      "stem": "When is a client with severe depression at increased risk for suicide?",
+      "stem": "A 19-year-old was admitted with severe depression 12 days ago and started sertraline on admission. The client used to stay in bed but now attends groups, is eating and says, \"I have more energy now.\" Mood is still low. Which interpretation by the nurse is most accurate?",
       "content": {
         "options": [
           {
             "id": "a",
-            "text": "When antidepressant treatment starts to improve energy, about 10 to 14 days in"
+            "text": "The client's suicide risk may be higher now than on admission"
           },
           {
             "id": "b",
-            "text": "During the most severe, withdrawn phase only"
+            "text": "The client is recovering and can move to less frequent observation"
           },
           {
             "id": "c",
-            "text": "Only after discharge"
+            "text": "The medicine is not working and the dose needs to be raised"
           },
           {
             "id": "d",
-            "text": "Never once medication is started"
+            "text": "The client's risk is low because the client is taking part in groups"
           }
         ]
       },
@@ -120,14 +120,14 @@
       "rationale": {
         "correct": "Monitor closely as energy improves and in the early weeks of treatment, especially in young people.",
         "perOption": {
-          "a": "More energy before mood lifts may give the client the energy to act on a plan.",
-          "b": "Risk also rises as energy returns.",
-          "c": "Risk exists throughout care.",
-          "d": "Risk persists."
+          "a": "Energy often returns before mood lifts, which can give the client the energy to act on a plan; young adults on antidepressants need close watching.",
+          "b": "Improved energy with low mood is a high-risk period.",
+          "c": "Antidepressants take 2 to 6 weeks for full effect on mood.",
+          "d": "Participation does not rule out suicidal intent."
         },
         "references": [
           "Psychiatric-mental health nursing texts (e.g. Varcarolis; Halter)",
-          "Reviewed by the content team on 17 November 2026."
+          "Rewritten to NCLEX-RN difficulty and reviewed by the content team on 19 November 2026."
         ]
       },
       "educationalObjective": "Recognize periods of increased suicide risk."
@@ -142,32 +142,32 @@
       ],
       "cjmmSkill": "generate_solutions",
       "difficulty": "moderate",
-      "stem": "A client at high risk for suicide is admitted. Which actions should the nurse include? Select all that apply.",
+      "stem": "A client is admitted to the psychiatric unit after a suicide attempt by hanging. The client says, \"I'll find a way next time.\" Which actions should the nurse include in the plan of care? Select all that apply.",
       "content": {
         "options": [
           {
             "id": "a",
-            "text": "Remove belts, shoelaces and other items that could be used for self-harm"
+            "text": "Remove belts, shoelaces, cords and other items that could be used as a ligature"
           },
           {
             "id": "b",
-            "text": "Place the client on continuous one-to-one observation"
+            "text": "Start continuous one-to-one observation within arm's length"
           },
           {
             "id": "c",
-            "text": "Check the client's belongings and the room for hazards"
+            "text": "Search the client's belongings and the room for hazards"
           },
           {
             "id": "d",
-            "text": "Make a no-suicide contract instead of observation"
+            "text": "Ask directly about suicidal thoughts at regular intervals"
           },
           {
             "id": "e",
-            "text": "Assign a room far from the nurses' station"
+            "text": "Have the client sign a no-suicide contract instead of observation"
           },
           {
             "id": "f",
-            "text": "Ask directly about thoughts of suicide regularly"
+            "text": "Assign a private room at the end of the hall for privacy"
           }
         ]
       },
@@ -176,7 +176,7 @@
           "a",
           "b",
           "c",
-          "f"
+          "d"
         ]
       },
       "rationale": {
@@ -185,13 +185,13 @@
           "a": "This removes the means.",
           "b": "Close observation prevents self-harm.",
           "c": "This reduces access to means.",
-          "d": "Contracts don't replace safety measures.",
-          "e": "The client should be near staff.",
-          "f": "Ongoing assessment is needed."
+          "d": "Ongoing assessment is needed.",
+          "e": "Contracts do not replace safety measures.",
+          "f": "The client should be near staff."
         },
         "references": [
           "Psychiatric-mental health nursing texts (e.g. Varcarolis; Halter)",
-          "Reviewed by the content team on 17 November 2026."
+          "Rewritten to NCLEX-RN difficulty and reviewed by the content team on 19 November 2026."
         ]
       },
       "educationalObjective": "Implement suicide precautions."
@@ -205,8 +205,8 @@
         "suicide-risk-and-safety"
       ],
       "cjmmSkill": "recognize_cues",
-      "difficulty": "moderate",
-      "stem": "A client who has been very depressed suddenly seems calm and cheerful and is giving away prized possessions. What should the nurse suspect?",
+      "difficulty": "difficult",
+      "stem": "A client with severe depression who has barely spoken for a week is suddenly calm and smiling, has given a favorite watch to a roommate and asks the nurse to mail letters to family members. What should the nurse suspect?",
       "content": {
         "options": [
           {
@@ -215,15 +215,15 @@
           },
           {
             "id": "b",
-            "text": "The depression has resolved"
+            "text": "The antidepressant has reached its full effect"
           },
           {
             "id": "c",
-            "text": "The medication is working perfectly"
+            "text": "The client is getting ready for discharge next week"
           },
           {
             "id": "d",
-            "text": "The client is ready for discharge"
+            "text": "The client is making friends on the unit"
           }
         ]
       },
@@ -233,14 +233,14 @@
       "rationale": {
         "correct": "Warning signs: sudden calm, giving things away, saying goodbye, putting affairs in order.",
         "perOption": {
-          "a": "Sudden calm and giving away belongings are warning signs.",
-          "b": "Sudden improvement can be a warning sign.",
-          "c": "Safety must be assessed first.",
-          "d": "Assessment is needed."
+          "a": "Sudden calm, giving away belongings and saying goodbye are warning signs.",
+          "b": "Sudden improvement with these behaviors is a warning sign.",
+          "c": "Goodbye letters and giving away belongings need assessment.",
+          "d": "Giving away prized possessions is a warning sign."
         },
         "references": [
           "Psychiatric-mental health nursing texts (e.g. Varcarolis; Halter)",
-          "Reviewed by the content team on 17 November 2026."
+          "Rewritten to NCLEX-RN difficulty and reviewed by the content team on 19 November 2026."
         ]
       },
       "educationalObjective": "Recognize suicide warning signs."
@@ -255,7 +255,7 @@
       ],
       "cjmmSkill": "recognize_cues",
       "difficulty": "moderate",
-      "stem": "The nurse reviews notes on a client with depression. Highlight the statements or behaviors that are suicide warning signs.",
+      "stem": "The nurse reviews the shift notes on a client admitted for depression 4 days ago. Highlight the statements or behaviors that are suicide warning signs.",
       "content": {
         "segments": [
           {
@@ -275,12 +275,12 @@
           },
           {
             "id": "s4",
-            "text": "gave the dog to a neighbor",
+            "text": "asked a visitor to take the dog to a neighbor",
             "selectable": true
           },
           {
             "id": "s5",
-            "text": ". Staff found ",
+            "text": ". During a room check, staff found ",
             "selectable": false
           },
           {
@@ -290,16 +290,26 @@
           },
           {
             "id": "s7",
-            "text": ". The client also said, ",
+            "text": ". The client ",
             "selectable": false
           },
           {
             "id": "s8",
-            "text": "\"I'm looking forward to my daughter's visit next week.\"",
+            "text": "ate half of breakfast and lunch",
             "selectable": true
           },
           {
             "id": "s9",
+            "text": " and said, ",
+            "selectable": false
+          },
+          {
+            "id": "s10",
+            "text": "\"I'm looking forward to my daughter's visit next week.\"",
+            "selectable": true
+          },
+          {
+            "id": "s11",
             "text": ".",
             "selectable": false
           }
@@ -316,13 +326,14 @@
         "correct": "Identify verbal, behavioral and situational warning signs of suicide.",
         "perOption": {
           "s2": "Talking about being a burden is a warning sign.",
-          "s4": "Giving away possessions is a warning sign.",
+          "s4": "Giving away pets or possessions is a warning sign.",
           "s6": "Stockpiling medication suggests a plan.",
-          "s8": "Future-oriented statements are protective."
+          "s8": "Poor appetite is common in depression but is not a suicide warning sign.",
+          "s10": "Future-oriented statements are protective."
         },
         "references": [
           "Psychiatric-mental health nursing texts (e.g. Varcarolis; Halter)",
-          "Reviewed by the content team on 17 November 2026."
+          "Rewritten to NCLEX-RN difficulty and reviewed by the content team on 19 November 2026."
         ]
       },
       "educationalObjective": "Recognize suicide warning signs in documentation."
@@ -337,7 +348,7 @@
       ],
       "cjmmSkill": "prioritize_hypotheses",
       "difficulty": "moderate",
-      "stem": "A client with severe depression isn't eating, isn't bathing and hasn't said anything about self-harm. Which need comes first after safety is confirmed?",
+      "stem": "A client with severe depression has eaten less than a quarter of meals for 5 days, drinks little, has not bathed and stays in bed. The client denies suicidal thoughts and has no plan. The client has lost 3 kg. Which need comes first after safety is confirmed?",
       "content": {
         "options": [
           {
@@ -346,15 +357,15 @@
           },
           {
             "id": "b",
-            "text": "Hygiene"
+            "text": "Bathing and personal hygiene"
           },
           {
             "id": "c",
-            "text": "Group therapy participation"
+            "text": "Getting the client to attend group therapy"
           },
           {
             "id": "d",
-            "text": "Discharge planning"
+            "text": "Planning for discharge and outpatient care"
           }
         ]
       },
@@ -365,13 +376,13 @@
         "correct": "Depression: safety first, then physiological needs (nutrition, sleep), then self-care and therapy.",
         "perOption": {
           "a": "Physiological needs come next after safety.",
-          "b": "This matters but ranks after nutrition.",
+          "b": "This matters but ranks after nutrition and fluids.",
           "c": "This is lower priority.",
           "d": "This is lower priority."
         },
         "references": [
           "Psychiatric-mental health nursing texts (e.g. Varcarolis; Halter)",
-          "Reviewed by the content team on 17 November 2026."
+          "Rewritten to NCLEX-RN difficulty and reviewed by the content team on 19 November 2026."
         ]
       },
       "educationalObjective": "Prioritize care in severe depression."
@@ -386,24 +397,24 @@
       ],
       "cjmmSkill": "generate_solutions",
       "difficulty": "moderate",
-      "stem": "A client is scheduled for electroconvulsive therapy (ECT). What should the nurse tell the client?",
+      "stem": "A 70-year-old client with depression that has not responded to three antidepressants is scheduled for the first of a series of electroconvulsive therapy (ECT) treatments. The client asks what to expect. What should the nurse tell the client?",
       "content": {
         "options": [
           {
             "id": "a",
-            "text": "\"You may be confused and have some memory loss for a while afterward.\""
+            "text": "\"You may be confused and forget things for a while afterward.\""
           },
           {
             "id": "b",
-            "text": "\"You'll be awake and feel the seizure.\""
+            "text": "\"You'll be awake but relaxed, and you may feel the seizure.\""
           },
           {
             "id": "c",
-            "text": "\"You can eat breakfast right before.\""
+            "text": "\"Have a light breakfast that morning so you have energy.\""
           },
           {
             "id": "d",
-            "text": "\"One treatment cures depression permanently.\""
+            "text": "\"Most people need just one treatment to get lasting relief.\""
           }
         ]
       },
@@ -415,12 +426,12 @@
         "perOption": {
           "a": "Short-term confusion and memory loss are common and usually temporary.",
           "b": "General anesthesia and a muscle relaxant are used.",
-          "c": "The client is NPO.",
-          "d": "A series of treatments is usual."
+          "c": "The client is NPO before the procedure.",
+          "d": "A series of 6 to 12 treatments is usual."
         },
         "references": [
           "Psychiatric-mental health nursing texts (e.g. Varcarolis; Halter)",
-          "Reviewed by the content team on 17 November 2026."
+          "Rewritten to NCLEX-RN difficulty and reviewed by the content team on 19 November 2026."
         ]
       },
       "educationalObjective": "Teach about ECT."
@@ -434,25 +445,25 @@
         "mood-disorders"
       ],
       "cjmmSkill": "generate_solutions",
-      "difficulty": "moderate",
-      "stem": "A client in acute mania won't sit down to eat and has lost weight. What should the nurse offer?",
+      "difficulty": "easy",
+      "stem": "A client in acute mania paces the halls, will not sit for more than a minute or two and has lost 4 kg since admission. The client drinks water but leaves meal trays untouched. What should the nurse offer?",
       "content": {
         "options": [
           {
             "id": "a",
-            "text": "High-calorie finger foods the client can eat while moving"
+            "text": "Sandwiches and fruit the client can eat while walking"
           },
           {
             "id": "b",
-            "text": "A large meal at a table with others"
+            "text": "A full hot meal at a table in the busy dining room"
           },
           {
             "id": "c",
-            "text": "Three small meals only"
+            "text": "A low-calorie diet with three small meals a day"
           },
           {
             "id": "d",
-            "text": "Nothing until the client sits down"
+            "text": "No food until the client agrees to sit for a meal"
           }
         ]
       },
@@ -462,14 +473,14 @@
       "rationale": {
         "correct": "Mania: finger foods, fluids, reduced stimulation and rest periods.",
         "perOption": {
-          "a": "Portable foods meet energy needs.",
-          "b": "The client can't sit, and it's overstimulating.",
-          "c": "This isn't enough for high energy needs.",
+          "a": "Portable, high-calorie foods meet high energy needs.",
+          "b": "The client cannot sit, and the dining room is overstimulating.",
+          "c": "This does not meet high energy needs.",
           "d": "This risks malnutrition."
         },
         "references": [
           "Psychiatric-mental health nursing texts (e.g. Varcarolis; Halter)",
-          "Reviewed by the content team on 17 November 2026."
+          "Rewritten to NCLEX-RN difficulty and reviewed by the content team on 19 November 2026."
         ]
       },
       "educationalObjective": "Meet nutrition needs in mania."
@@ -484,24 +495,24 @@
       ],
       "cjmmSkill": "take_action",
       "difficulty": "moderate",
-      "stem": "A client with mania is loud, intrusive and interrupting other clients' activities. What should the nurse do?",
+      "stem": "A client with bipolar disorder in a manic episode is talking loudly, telling jokes about other clients and taking over a card game in the dayroom. Other clients are getting angry. What should the nurse do?",
       "content": {
         "options": [
           {
             "id": "a",
-            "text": "Set clear, consistent limits and guide the client to a quieter area"
+            "text": "Walk the client to a quieter area and set clear limits"
           },
           {
             "id": "b",
-            "text": "Encourage the client to join a competitive group game"
+            "text": "Suggest the client lead a competitive group game"
           },
           {
             "id": "c",
-            "text": "Argue with the client about the behavior"
+            "text": "Explain to the client in detail why the jokes are hurtful"
           },
           {
             "id": "d",
-            "text": "Ignore the behavior"
+            "text": "Let the other clients tell the client how they feel"
           }
         ]
       },
@@ -511,14 +522,14 @@
       "rationale": {
         "correct": "Mania: low stimulation, consistent limits, simple activities and safety.",
         "perOption": {
-          "a": "Lower stimulation and firm limits help control behavior.",
+          "a": "Lower stimulation and firm, consistent limits help control behavior.",
           "b": "Competition increases stimulation.",
-          "c": "This escalates.",
-          "d": "Other clients need protection."
+          "c": "Long explanations are lost on a client with racing thoughts.",
+          "d": "This can escalate into conflict."
         },
         "references": [
           "Psychiatric-mental health nursing texts (e.g. Varcarolis; Halter)",
-          "Reviewed by the content team on 17 November 2026."
+          "Rewritten to NCLEX-RN difficulty and reviewed by the content team on 19 November 2026."
         ]
       },
       "educationalObjective": "Manage behavior in mania."
@@ -532,25 +543,25 @@
         "psychotic-disorders"
       ],
       "cjmmSkill": "take_action",
-      "difficulty": "moderate",
-      "stem": "A client with schizophrenia says, \"The voices are telling me I'm bad.\" What is the best response?",
+      "difficulty": "difficult",
+      "stem": "A client with schizophrenia sits in a corner with the head tilted, mumbling, and then says to the nurse, \"The voices are telling me I'm bad and I deserve to be punished.\" What is the best response?",
       "content": {
         "options": [
           {
             "id": "a",
-            "text": "\"I don't hear the voices, but I understand they're real to you. What are they saying?\""
+            "text": "\"I don't hear them. They sound scary. What are they telling you to do?\""
           },
           {
             "id": "b",
-            "text": "\"There are no voices.\""
+            "text": "\"There are no voices. It's your illness talking to you.\""
           },
           {
             "id": "c",
-            "text": "\"What do the voices look like?\""
+            "text": "\"Tell me what the voices sound like. Are they male or female?\""
           },
           {
             "id": "d",
-            "text": "\"Ignore them and they'll go away.\""
+            "text": "\"Try to ignore them, and they'll fade when your medicine starts working.\""
           }
         ]
       },
@@ -562,12 +573,12 @@
         "perOption": {
           "a": "This presents reality without arguing and assesses for command hallucinations.",
           "b": "Arguing damages trust.",
-          "c": "This reinforces the hallucination.",
-          "d": "This dismisses the experience."
+          "c": "This focuses on details that reinforce the hallucination rather than safety.",
+          "d": "This dismisses the experience and misses safety."
         },
         "references": [
           "Psychiatric-mental health nursing texts (e.g. Varcarolis; Halter)",
-          "Reviewed by the content team on 17 November 2026."
+          "Rewritten to NCLEX-RN difficulty and reviewed by the content team on 19 November 2026."
         ]
       },
       "educationalObjective": "Respond to auditory hallucinations."
@@ -582,24 +593,24 @@
       ],
       "cjmmSkill": "prioritize_hypotheses",
       "difficulty": "moderate",
-      "stem": "A client with schizophrenia is hearing voices. What is the most important thing for the nurse to find out?",
+      "stem": "A client with schizophrenia admitted last night says the voices have been getting louder for a week since the client stopped taking risperidone. The client looks frightened. What is the most important thing for the nurse to find out?",
       "content": {
         "options": [
           {
             "id": "a",
-            "text": "Whether the voices are telling the client to harm self or others"
+            "text": "Whether the voices tell the client to harm self or others"
           },
           {
             "id": "b",
-            "text": "Whether the voices are male or female"
+            "text": "Why the client stopped taking the risperidone last week"
           },
           {
             "id": "c",
-            "text": "How long the client has heard voices"
+            "text": "How many different voices the client is hearing"
           },
           {
             "id": "d",
-            "text": "Whether the client enjoys the voices"
+            "text": "Whether the client has a family member to call"
           }
         ]
       },
@@ -610,13 +621,13 @@
         "correct": "Always assess for command hallucinations.",
         "perOption": {
           "a": "Command hallucinations are a safety risk.",
-          "b": "This doesn't affect safety.",
-          "c": "This is less urgent.",
+          "b": "Adherence matters, but safety comes first.",
+          "c": "This does not affect immediate safety.",
           "d": "This is less urgent."
         },
         "references": [
           "Psychiatric-mental health nursing texts (e.g. Varcarolis; Halter)",
-          "Reviewed by the content team on 17 November 2026."
+          "Rewritten to NCLEX-RN difficulty and reviewed by the content team on 19 November 2026."
         ]
       },
       "educationalObjective": "Assess for command hallucinations."
@@ -631,24 +642,24 @@
       ],
       "cjmmSkill": "take_action",
       "difficulty": "moderate",
-      "stem": "A client says, \"I'm a famous surgeon and need to operate today.\" What is the best response?",
+      "stem": "A client with schizophrenia approaches the nurse in a hospital gown and says, \"I'm the chief surgeon here, and I need to get to the operating room for my first case.\" What is the best response?",
       "content": {
         "options": [
           {
             "id": "a",
-            "text": "Avoid arguing and focus on the feelings or a reality-based topic"
+            "text": "\"Being important seems to matter to you. Let's walk to the dayroom.\""
           },
           {
             "id": "b",
-            "text": "\"You're not a surgeon. You're a patient.\""
+            "text": "\"You're not a surgeon. You're a patient on the psychiatric unit.\""
           },
           {
             "id": "c",
-            "text": "\"Which operation will you do?\""
+            "text": "\"Which operation are you planning to perform this morning?\""
           },
           {
             "id": "d",
-            "text": "Laugh along with the client"
+            "text": "\"I'll call the operating room to see whether they're ready for you now.\""
           }
         ]
       },
@@ -656,16 +667,16 @@
         "correct": "a"
       },
       "rationale": {
-        "correct": "Delusions: don't argue or agree; focus on feelings and reality.",
+        "correct": "Delusions: do not argue or agree; focus on feelings and reality.",
         "perOption": {
-          "a": "Arguing reinforces delusions; reality-based talk is more helpful.",
+          "a": "This avoids arguing, responds to the feeling and redirects to reality.",
           "b": "Direct confrontation increases defensiveness.",
           "c": "This reinforces the delusion.",
-          "d": "This is disrespectful."
+          "d": "This agrees with and reinforces the delusion."
         },
         "references": [
           "Psychiatric-mental health nursing texts (e.g. Varcarolis; Halter)",
-          "Reviewed by the content team on 17 November 2026."
+          "Rewritten to NCLEX-RN difficulty and reviewed by the content team on 19 November 2026."
         ]
       },
       "educationalObjective": "Respond to delusions."
@@ -680,28 +691,32 @@
       ],
       "cjmmSkill": "analyze_cues",
       "difficulty": "moderate",
-      "stem": "For each finding, indicate whether it is a positive or negative symptom of schizophrenia.",
+      "stem": "The nurse is reviewing the admission assessment of a 22-year-old with a first episode of schizophrenia. For each finding, indicate whether it is a positive or negative symptom.",
       "content": {
         "rows": [
           {
             "id": "r1",
-            "text": "Hearing voices"
+            "text": "Hears a voice commenting on what the client does"
           },
           {
             "id": "r2",
-            "text": "Flat affect"
+            "text": "Face shows little expression during the interview"
           },
           {
             "id": "r3",
-            "text": "Fixed false beliefs"
+            "text": "Believes neighbors put a camera in the ceiling"
           },
           {
             "id": "r4",
-            "text": "Lack of motivation"
+            "text": "Has stopped going to class or seeing friends"
           },
           {
             "id": "r5",
-            "text": "Disorganized speech"
+            "text": "Jumps between unrelated topics when answering"
+          },
+          {
+            "id": "r6",
+            "text": "Answers in one or two words"
           }
         ],
         "columns": [
@@ -721,26 +736,29 @@
           "r2": "c2",
           "r3": "c1",
           "r4": "c2",
-          "r5": "c1"
+          "r5": "c1",
+          "r6": "c2"
         }
       },
       "rationale": {
         "correct": "Positive symptoms add (hallucinations, delusions, disorganization); negative symptoms take away (flat affect, avolition, alogia, anhedonia).",
         "perOption": {
-          "r1:c1": "Hallucinations add an experience, so they're positive symptoms.",
+          "r1:c1": "Hallucinations add an experience, so they are positive symptoms.",
           "r1:c2": "Negative symptoms are losses of normal function.",
-          "r2:c1": "This isn't an added experience.",
-          "r2:c2": "Reduced emotional expression is a negative symptom.",
+          "r2:c1": "This is not an added experience.",
+          "r2:c2": "Reduced emotional expression (flat affect) is a negative symptom.",
           "r3:c1": "Delusions are positive symptoms.",
-          "r3:c2": "This isn't a loss of function.",
-          "r4:c1": "This isn't an added experience.",
-          "r4:c2": "Avolition is a negative symptom.",
-          "r5:c1": "Disorganized thinking is a positive symptom.",
-          "r5:c2": "This isn't a loss of function."
+          "r3:c2": "This is not a loss of function.",
+          "r4:c1": "This is not an added experience.",
+          "r4:c2": "Avolition and social withdrawal are negative symptoms.",
+          "r5:c1": "Disorganized speech is a positive symptom.",
+          "r5:c2": "This is not a loss of function.",
+          "r6:c1": "This is not an added experience.",
+          "r6:c2": "Poverty of speech (alogia) is a negative symptom."
         },
         "references": [
           "Psychiatric-mental health nursing texts (e.g. Varcarolis; Halter)",
-          "Reviewed by the content team on 17 November 2026."
+          "Rewritten to NCLEX-RN difficulty and reviewed by the content team on 19 November 2026."
         ]
       },
       "educationalObjective": "Classify symptoms of schizophrenia."
@@ -755,24 +773,24 @@
       ],
       "cjmmSkill": "take_action",
       "difficulty": "moderate",
-      "stem": "A client with paranoia refuses hospital meals, saying the food is poisoned. What should the nurse offer?",
+      "stem": "A client with paranoid schizophrenia has refused all hospital meals for 2 days, saying the kitchen staff are poisoning the food. The client drinks only from sealed water bottles. What should the nurse offer?",
       "content": {
         "options": [
           {
             "id": "a",
-            "text": "Sealed, prepackaged foods"
+            "text": "Sealed, prepackaged foods the client can open"
           },
           {
             "id": "b",
-            "text": "Force-feeding"
+            "text": "A nasogastric tube feeding to prevent malnutrition"
           },
           {
             "id": "c",
-            "text": "A taste of the food from the nurse's plate"
+            "text": "A taste of each food by the nurse to show it is safe"
           },
           {
             "id": "d",
-            "text": "No food until the client agrees to eat"
+            "text": "A plan to withhold privileges until the client eats"
           }
         ]
       },
@@ -783,13 +801,13 @@
         "correct": "Paranoia: build trust, be consistent and use sealed foods.",
         "perOption": {
           "a": "Sealed packaging reduces suspicion and supports nutrition.",
-          "b": "This is coercive and harmful.",
-          "c": "This can feed the delusion.",
-          "d": "This risks malnutrition."
+          "b": "This is coercive and not warranted yet.",
+          "c": "This can feed the delusion and does not build trust.",
+          "d": "This is punitive."
         },
         "references": [
           "Psychiatric-mental health nursing texts (e.g. Varcarolis; Halter)",
-          "Reviewed by the content team on 17 November 2026."
+          "Rewritten to NCLEX-RN difficulty and reviewed by the content team on 19 November 2026."
         ]
       },
       "educationalObjective": "Meet nutrition needs in a client with paranoia."
@@ -803,25 +821,25 @@
         "personality-disorders"
       ],
       "cjmmSkill": "take_action",
-      "difficulty": "moderate",
-      "stem": "A client with borderline personality disorder tells one nurse she is the only one who understands her and that the other nurses are terrible. What should the team do?",
+      "difficulty": "difficult",
+      "stem": "A client with borderline personality disorder tells the day nurse, \"You're the only one who understands me. The night nurses are cruel.\" The client asks to have only this nurse assigned. Night staff report the client said the same about them. What should the team do?",
       "content": {
         "options": [
           {
             "id": "a",
-            "text": "Keep consistent limits and communication across all staff"
+            "text": "Agree on consistent rules and talk often as a team"
           },
           {
             "id": "b",
-            "text": "Assign only that nurse to the client"
+            "text": "Assign the day nurse to the client on as many shifts as possible"
           },
           {
             "id": "c",
-            "text": "Agree with the client about the other staff"
+            "text": "Have the day nurse tell the client the night nurses are kind"
           },
           {
             "id": "d",
-            "text": "Ignore the client's comments completely"
+            "text": "Transfer the client to another unit with a new team"
           }
         ]
       },
@@ -829,16 +847,16 @@
         "correct": "a"
       },
       "rationale": {
-        "correct": "Borderline personality disorder: splitting, impulsivity and self-harm; use consistent limits and DBT.",
+        "correct": "Borderline personality disorder: splitting, impulsivity and self-harm; use consistent limits, team communication and DBT.",
         "perOption": {
-          "a": "Consistency counters splitting.",
+          "a": "Consistency across all staff counters splitting.",
           "b": "This reinforces splitting.",
-          "c": "This undermines the team.",
-          "d": "Team communication is needed."
+          "c": "Defending staff can draw the nurse into the split.",
+          "d": "Splitting will continue with any team."
         },
         "references": [
           "Psychiatric-mental health nursing texts (e.g. Varcarolis; Halter)",
-          "Reviewed by the content team on 17 November 2026."
+          "Rewritten to NCLEX-RN difficulty and reviewed by the content team on 19 November 2026."
         ]
       },
       "educationalObjective": "Manage splitting."
@@ -853,24 +871,24 @@
       ],
       "cjmmSkill": "take_action",
       "difficulty": "moderate",
-      "stem": "A client with antisocial personality disorder asks a new nurse for extra privileges and flatters her. What should the nurse do?",
+      "stem": "A client with antisocial personality disorder tells a new nurse, \"You're so much smarter than the others. You'd let me have my phone after 9 p.m., wouldn't you?\" Unit rules collect phones at 9 p.m. What should the nurse do?",
       "content": {
         "options": [
           {
             "id": "a",
-            "text": "Set firm, consistent limits and enforce unit rules"
+            "text": "Restate the rule and collect the phone at 9 p.m."
           },
           {
             "id": "b",
-            "text": "Grant the privileges to build rapport"
+            "text": "Let the client keep the phone tonight to build rapport"
           },
           {
             "id": "c",
-            "text": "Share personal information to build trust"
+            "text": "Tell the client the rule is unfair but must be followed"
           },
           {
             "id": "d",
-            "text": "Avoid the client"
+            "text": "Avoid the client for the rest of the shift"
           }
         ]
       },
@@ -880,14 +898,14 @@
       "rationale": {
         "correct": "Antisocial personality: manipulation; use firm limits and consistent consequences.",
         "perOption": {
-          "a": "Clear limits reduce manipulation.",
-          "b": "This reinforces manipulation.",
-          "c": "This crosses boundaries.",
+          "a": "Clear, consistent limits reduce manipulation.",
+          "b": "This rewards manipulation.",
+          "c": "This undermines the team and the rules.",
           "d": "Consistent engagement with limits is better."
         },
         "references": [
           "Psychiatric-mental health nursing texts (e.g. Varcarolis; Halter)",
-          "Reviewed by the content team on 17 November 2026."
+          "Rewritten to NCLEX-RN difficulty and reviewed by the content team on 19 November 2026."
         ]
       },
       "educationalObjective": "Set limits with manipulative behavior."
@@ -902,24 +920,24 @@
       ],
       "cjmmSkill": "prioritize_hypotheses",
       "difficulty": "difficult",
-      "stem": "A client with anorexia nervosa has a heart rate of 42/min, a potassium of 2.8 mEq/L and is dizzy when standing. What is the priority?",
+      "stem": "A 17-year-old with anorexia nervosa is admitted with a BMI of 14.5. The heart rate is 42/min, blood pressure falls from 94/60 to 76/48 mm Hg on standing, potassium is 2.8 mEq/L and phosphorus is 2.4 mg/dL. Which action is the priority?",
       "content": {
         "options": [
           {
             "id": "a",
-            "text": "Correcting the physiological instability"
+            "text": "Begin cardiac monitoring and correct the electrolytes"
           },
           {
             "id": "b",
-            "text": "Exploring the client's body image"
+            "text": "Start a high-calorie diet to restore weight quickly"
           },
           {
             "id": "c",
-            "text": "Family therapy"
+            "text": "Explore how the client sees their body"
           },
           {
             "id": "d",
-            "text": "Group therapy"
+            "text": "Arrange a family therapy session this week"
           }
         ]
       },
@@ -927,16 +945,16 @@
         "correct": "a"
       },
       "rationale": {
-        "correct": "Anorexia: medical stabilization first (cardiac, electrolytes), then nutrition and psychotherapy.",
+        "correct": "Anorexia: medical stabilization first (cardiac, electrolytes), then slow refeeding and psychotherapy.",
         "perOption": {
-          "a": "Bradycardia and hypokalemia can cause fatal dysrhythmias.",
-          "b": "This comes after medical stabilization.",
-          "c": "This is important later.",
-          "d": "This is lower priority."
+          "a": "Bradycardia and hypokalemia can cause fatal dysrhythmias; stabilization comes first.",
+          "b": "Rapid refeeding risks refeeding syndrome, especially with low phosphorus.",
+          "c": "This comes after medical stabilization.",
+          "d": "This is important later."
         },
         "references": [
           "Psychiatric-mental health nursing texts (e.g. Varcarolis; Halter)",
-          "Reviewed by the content team on 17 November 2026."
+          "Rewritten to NCLEX-RN difficulty and reviewed by the content team on 19 November 2026."
         ]
       },
       "educationalObjective": "Prioritize care in anorexia nervosa."
@@ -951,24 +969,24 @@
       ],
       "cjmmSkill": "generate_solutions",
       "difficulty": "moderate",
-      "stem": "Which intervention is appropriate for a client with anorexia nervosa in an inpatient program?",
+      "stem": "A client with anorexia nervosa in an inpatient program has been medically stabilized and is gaining weight slowly. Staff notice napkins left on the tray and the client spending time in the bathroom after meals. Which intervention is most appropriate?",
       "content": {
         "options": [
           {
             "id": "a",
-            "text": "Supervise meals and observe the client for about 1 hour afterward"
+            "text": "Supervise meals and observe the client for 1 hour after"
           },
           {
             "id": "b",
-            "text": "Let the client eat alone in their room"
+            "text": "Let the client eat alone in the room to reduce stress"
           },
           {
             "id": "c",
-            "text": "Let the client weigh themselves whenever they want"
+            "text": "Let the client weigh themself each morning in the room"
           },
           {
             "id": "d",
-            "text": "Discuss food and calories at length"
+            "text": "Talk with the client about calories in each food choice"
           }
         ]
       },
@@ -980,12 +998,12 @@
         "perOption": {
           "a": "This prevents hiding food and purging.",
           "b": "This allows hiding food.",
-          "c": "Weights are done consistently by staff.",
-          "d": "Focus is on feelings rather than food details."
+          "c": "Weights are done by staff on a schedule, often blind.",
+          "d": "The focus is on feelings rather than food details."
         },
         "references": [
           "Psychiatric-mental health nursing texts (e.g. Varcarolis; Halter)",
-          "Reviewed by the content team on 17 November 2026."
+          "Rewritten to NCLEX-RN difficulty and reviewed by the content team on 19 November 2026."
         ]
       },
       "educationalObjective": "Plan care for anorexia nervosa."
@@ -1000,24 +1018,24 @@
       ],
       "cjmmSkill": "recognize_cues",
       "difficulty": "moderate",
-      "stem": "Which findings suggest bulimia nervosa?",
+      "stem": "A 20-year-old college student at a normal weight comes to the clinic for fatigue. The student says, \"Sometimes I eat a lot and feel out of control.\" Which other findings would most suggest bulimia nervosa?",
       "content": {
         "options": [
           {
             "id": "a",
-            "text": "Swollen salivary glands, worn tooth enamel and calluses on the knuckles"
+            "text": "Swollen cheeks and calluses on the knuckles"
           },
           {
             "id": "b",
-            "text": "Severe weight loss with BMI 14"
+            "text": "A BMI of 15 and fine, soft hair on the arms"
           },
           {
             "id": "c",
-            "text": "Increased muscle mass"
+            "text": "A potassium of 5.6 mEq/L and peaked T waves"
           },
           {
             "id": "d",
-            "text": "High potassium"
+            "text": "Weight gain of 10 kg over the past year"
           }
         ]
       },
@@ -1027,14 +1045,14 @@
       "rationale": {
         "correct": "Bulimia: binge-purge cycles, often normal weight, parotid swelling, dental erosion, hypokalemia.",
         "perOption": {
-          "a": "These come from repeated self-induced vomiting.",
-          "b": "This is more typical of anorexia.",
-          "c": "This isn't typical.",
-          "d": "Vomiting causes low potassium."
+          "a": "Parotid swelling and Russell sign come from repeated self-induced vomiting.",
+          "b": "Severe low weight and lanugo are more typical of anorexia.",
+          "c": "Vomiting causes low potassium.",
+          "d": "People with bulimia are often at a normal, stable weight."
         },
         "references": [
           "Psychiatric-mental health nursing texts (e.g. Varcarolis; Halter)",
-          "Reviewed by the content team on 17 November 2026."
+          "Rewritten to NCLEX-RN difficulty and reviewed by the content team on 19 November 2026."
         ]
       },
       "educationalObjective": "Recognize bulimia nervosa."
@@ -1048,25 +1066,25 @@
         "behavior-management-and-milieu"
       ],
       "cjmmSkill": "take_action",
-      "difficulty": "moderate",
-      "stem": "A client is pacing, clenching fists and speaking loudly. What should the nurse do first?",
+      "difficulty": "difficult",
+      "stem": "A client who was denied an off-unit pass is pacing in the hallway, clenching both fists and shouting, \"This place is a prison!\" Other clients are moving away. The client has not hit anyone. What should the nurse do first?",
       "content": {
         "options": [
           {
             "id": "a",
-            "text": "Speak calmly in a low voice, give the client space and offer choices"
+            "text": "Speak calmly, keep a safe distance and offer choices"
           },
           {
             "id": "b",
-            "text": "Apply restraints right away"
+            "text": "Call for a show of force and prepare restraints"
           },
           {
             "id": "c",
-            "text": "Stand very close and touch the client's arm"
+            "text": "Stand close and place a hand on the client's arm to calm them"
           },
           {
             "id": "d",
-            "text": "Tell the client to calm down or face consequences"
+            "text": "Tell the client to calm down or the pass will be taken away for a week"
           }
         ]
       },
@@ -1076,14 +1094,14 @@
       "rationale": {
         "correct": "De-escalation: calm voice, safe distance, offer choices, reduce stimulation.",
         "perOption": {
-          "a": "Verbal de-escalation is the first-line response.",
-          "b": "Restraint is a last resort.",
-          "c": "This may escalate aggression.",
+          "a": "Verbal de-escalation is the first-line response to rising agitation.",
+          "b": "Restraint is a last resort when de-escalation fails.",
+          "c": "Touch and closeness may be seen as a threat.",
           "d": "Threats escalate the situation."
         },
         "references": [
           "Psychiatric-mental health nursing texts (e.g. Varcarolis; Halter)",
-          "Reviewed by the content team on 17 November 2026."
+          "Rewritten to NCLEX-RN difficulty and reviewed by the content team on 19 November 2026."
         ]
       },
       "educationalObjective": "De-escalate an agitated client."
@@ -1098,24 +1116,24 @@
       ],
       "cjmmSkill": "take_action",
       "difficulty": "difficult",
-      "stem": "A client was placed in seclusion for violent behavior in an emergency. Which action is required?",
+      "stem": "At 1400, a client who punched a staff member was placed in seclusion in an emergency by the charge nurse. The client is now yelling but not hitting the walls. Which action is required?",
       "content": {
         "options": [
           {
             "id": "a",
-            "text": "Monitor the client closely and get a provider evaluation within the time set by regulation (often within 1 hour)"
+            "text": "Observe continuously; a provider must see the client within 1 hour"
           },
           {
             "id": "b",
-            "text": "Leave the client alone until the next shift"
+            "text": "Check on the client every 2 hours until the next shift"
           },
           {
             "id": "c",
-            "text": "Use seclusion as a consequence for breaking rules"
+            "text": "Keep the client in seclusion until the yelling has stopped for 4 hours"
           },
           {
             "id": "d",
-            "text": "Write a PRN seclusion order"
+            "text": "Obtain a PRN seclusion order for future episodes"
           }
         ]
       },
@@ -1125,14 +1143,14 @@
       "rationale": {
         "correct": "Seclusion and restraint: last resort, time-limited orders, continuous monitoring, release as soon as safe.",
         "perOption": {
-          "a": "Seclusion requires ongoing monitoring, a timely face-to-face evaluation and documentation.",
+          "a": "Seclusion requires ongoing monitoring, a face-to-face evaluation within 1 hour and documentation.",
           "b": "Continuous monitoring is required.",
-          "c": "Seclusion isn't punishment.",
-          "d": "PRN orders aren't allowed."
+          "c": "Release happens as soon as the client is safe, not as a consequence.",
+          "d": "PRN orders for seclusion are not allowed."
         },
         "references": [
           "Psychiatric-mental health nursing texts (e.g. Varcarolis; Halter)",
-          "Reviewed by the content team on 17 November 2026."
+          "Rewritten to NCLEX-RN difficulty and reviewed by the content team on 19 November 2026."
         ]
       },
       "educationalObjective": "Apply seclusion rules."
@@ -1147,24 +1165,24 @@
       ],
       "cjmmSkill": "generate_solutions",
       "difficulty": "easy",
-      "stem": "Which feature describes a therapeutic milieu on an inpatient psychiatric unit?",
+      "stem": "A new graduate nurse is orienting to an inpatient psychiatric unit and asks the preceptor what \"milieu therapy\" means. Which description should the preceptor give?",
       "content": {
         "options": [
           {
             "id": "a",
-            "text": "A structured, safe environment where clients take part in community meetings and activities"
+            "text": "A safe, structured unit where clients take part in community life"
           },
           {
             "id": "b",
-            "text": "Clients stay in their rooms all day"
+            "text": "Clients rest in their rooms for most of the day to reduce stimulation"
           },
           {
             "id": "c",
-            "text": "No rules, to promote freedom"
+            "text": "A unit with few rules so that clients can practice freedom"
           },
           {
             "id": "d",
-            "text": "Staff make all decisions without client input"
+            "text": "Staff make the unit decisions so clients can focus on getting well"
           }
         ]
       },
@@ -1175,13 +1193,13 @@
         "correct": "Milieu therapy: structure, safety, community involvement and client responsibility.",
         "perOption": {
           "a": "The milieu uses the environment and community as part of treatment.",
-          "b": "Isolation isn't therapeutic.",
+          "b": "Isolation is not therapeutic.",
           "c": "Structure provides safety.",
           "d": "Client participation is encouraged."
         },
         "references": [
           "Psychiatric-mental health nursing texts (e.g. Varcarolis; Halter)",
-          "Reviewed by the content team on 17 November 2026."
+          "Rewritten to NCLEX-RN difficulty and reviewed by the content team on 19 November 2026."
         ]
       },
       "educationalObjective": "Describe a therapeutic milieu."
