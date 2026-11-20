@@ -1,5 +1,5 @@
 {
-  "notice": "RN bank batch 38: NGN case studies III: major burn and anterior STEMI. Reviewed by the content team on 17 November 2026. See REVIEW-LOG.md.",
+  "notice": "RN bank batch 38: NGN case studies III: major burn and anterior STEMI. Rewritten to NCLEX-RN difficulty and reviewed by the content team on 19 November 2026. See REVIEW-LOG.md.",
   "track": "RN",
   "subtopics": [
     {
@@ -112,7 +112,7 @@
         },
         "references": [
           "Medical-surgical nursing texts (e.g. Lewis; Ignatavicius)",
-          "Reviewed by the content team on 17 November 2026."
+          "Rewritten to NCLEX-RN difficulty and reviewed by the content team on 19 November 2026."
         ]
       },
       "educationalObjective": "Recognize inhalation injury.",
@@ -144,7 +144,7 @@
         "perOption": {},
         "references": [
           "Medical-surgical nursing texts (e.g. Lewis; Ignatavicius)",
-          "Reviewed by the content team on 17 November 2026."
+          "Rewritten to NCLEX-RN difficulty and reviewed by the content team on 19 November 2026."
         ]
       },
       "educationalObjective": "Calculate a burn resuscitation rate.",
@@ -161,7 +161,7 @@
       ],
       "cjmmSkill": "prioritize_hypotheses",
       "difficulty": "difficult",
-      "stem": "Which problem is the priority for this client?",
+      "stem": "At 0200, the client is talking in a hoarse voice, the SpO2 is 93% on a nonrebreather mask, the blood pressure is 102/64 mm Hg and fluid resuscitation is starting. Which problem is the priority for this client?",
       "content": {
         "options": [
           {
@@ -170,15 +170,15 @@
           },
           {
             "id": "b",
-            "text": "Acute pain"
+            "text": "Hypovolemia from burn shock and large fluid shifts"
           },
           {
             "id": "c",
-            "text": "Risk of infection"
+            "text": "Carbon monoxide poisoning from the house fire"
           },
           {
             "id": "d",
-            "text": "Disturbed body image"
+            "text": "Acute pain from partial-thickness burns"
           }
         ]
       },
@@ -188,14 +188,14 @@
       "rationale": {
         "correct": "Airway first in burns, especially with signs of inhalation injury.",
         "perOption": {
-          "a": "Airway swelling can progress quickly; early intubation may be needed.",
-          "b": "Pain matters but comes after the airway.",
-          "c": "This is a later concern.",
-          "d": "This is a later concern."
+          "a": "Airway swelling can progress over hours to complete obstruction; early intubation may be needed.",
+          "b": "Fluids are started, but a closing airway kills faster than burn shock.",
+          "c": "This is treated with 100% oxygen, which is already given; the airway threat is greater.",
+          "d": "Pain matters but comes after the airway and circulation."
         },
         "references": [
           "Medical-surgical nursing texts (e.g. Lewis; Ignatavicius)",
-          "Reviewed by the content team on 17 November 2026."
+          "Rewritten to NCLEX-RN difficulty and reviewed by the content team on 19 November 2026."
         ]
       },
       "educationalObjective": "Prioritize the airway in burns.",
@@ -279,7 +279,7 @@
         },
         "references": [
           "Medical-surgical nursing texts (e.g. Lewis; Ignatavicius)",
-          "Reviewed by the content team on 17 November 2026."
+          "Rewritten to NCLEX-RN difficulty and reviewed by the content team on 19 November 2026."
         ]
       },
       "educationalObjective": "Select interventions for a major burn.",
@@ -296,24 +296,24 @@
       ],
       "cjmmSkill": "take_action",
       "difficulty": "moderate",
-      "stem": "At 0600 the client's urine output is 18 mL/hr. What should the nurse do?",
+      "stem": "At 0600 the client's urine output is 18 mL/hr, the heart rate is 130/min and the hematocrit is 54%. The lactated Ringer's is running at the calculated rate. What should the nurse do?",
       "content": {
         "options": [
           {
             "id": "a",
-            "text": "Notify the provider and adjust the fluid rate per the burn protocol"
+            "text": "Increase the lactated Ringer's rate per the burn protocol"
           },
           {
             "id": "b",
-            "text": "Give a diuretic"
+            "text": "Ask the provider for IV furosemide to increase the urine output"
           },
           {
             "id": "c",
-            "text": "Keep the rate the same and recheck in 4 hours"
+            "text": "Keep the current rate, since it matches the Parkland formula"
           },
           {
             "id": "d",
-            "text": "Restrict oral fluids"
+            "text": "Flush the urinary catheter to check that it is not blocked"
           }
         ]
       },
@@ -323,14 +323,14 @@
       "rationale": {
         "correct": "Titrate burn fluids hourly to a target urine output.",
         "perOption": {
-          "a": "Output below 0.5 mL/kg/hr (35 mL/hr for 70 kg) means under-resuscitation.",
-          "b": "This worsens hypovolemia.",
-          "c": "Delay risks kidney injury.",
-          "d": "This doesn't help."
+          "a": "Output below 0.5 mL/kg/hr (35 mL/hr for 70 kg) with a high hematocrit means under-resuscitation.",
+          "b": "A diuretic worsens hypovolemia and hides the true volume status.",
+          "c": "The formula is a starting point; fluids are titrated to urine output.",
+          "d": "Low output with tachycardia and hemoconcentration points to hypovolemia."
         },
         "references": [
           "Medical-surgical nursing texts (e.g. Lewis; Ignatavicius)",
-          "Reviewed by the content team on 17 November 2026."
+          "Rewritten to NCLEX-RN difficulty and reviewed by the content team on 19 November 2026."
         ]
       },
       "educationalObjective": "Respond to low urine output in burn resuscitation.",
@@ -400,7 +400,7 @@
         },
         "references": [
           "Medical-surgical nursing texts (e.g. Lewis; Ignatavicius)",
-          "Reviewed by the content team on 17 November 2026."
+          "Rewritten to NCLEX-RN difficulty and reviewed by the content team on 19 November 2026."
         ]
       },
       "educationalObjective": "Evaluate outcomes in burn resuscitation.",
@@ -416,7 +416,7 @@
         "acute-coronary-syndrome"
       ],
       "cjmmSkill": "recognize_cues",
-      "difficulty": "easy",
+      "difficulty": "moderate",
       "stem": "Highlight the findings that support acute myocardial infarction.",
       "content": {
         "columns": [
@@ -494,7 +494,7 @@
         },
         "references": [
           "Medical-surgical nursing texts (e.g. Lewis; Ignatavicius)",
-          "Reviewed by the content team on 17 November 2026."
+          "Rewritten to NCLEX-RN difficulty and reviewed by the content team on 19 November 2026."
         ]
       },
       "educationalObjective": "Recognize the findings of an MI.",
@@ -569,7 +569,7 @@
         },
         "references": [
           "Medical-surgical nursing texts (e.g. Lewis; Ignatavicius)",
-          "Reviewed by the content team on 17 November 2026."
+          "Rewritten to NCLEX-RN difficulty and reviewed by the content team on 19 November 2026."
         ]
       },
       "educationalObjective": "Link ECG leads to the affected artery.",
@@ -586,24 +586,24 @@
       ],
       "cjmmSkill": "prioritize_hypotheses",
       "difficulty": "moderate",
-      "stem": "What is the priority goal of treatment for this client?",
+      "stem": "The client arrived at 0855. The chest pressure is 7 out of 10 after one nitroglycerin tablet, and the hospital has a cardiac catheterization lab. What is the priority goal of treatment for this client?",
       "content": {
         "options": [
           {
             "id": "a",
-            "text": "Reopen the blocked artery quickly, ideally with PCI within 90 minutes of arrival"
+            "text": "Reperfusion by PCI within 90 minutes of arrival"
           },
           {
             "id": "b",
-            "text": "Schedule a stress test for tomorrow"
+            "text": "Complete pain relief with IV morphine before transfer"
           },
           {
             "id": "c",
-            "text": "Start cardiac rehabilitation"
+            "text": "Fibrinolytic therapy within 30 minutes of arrival"
           },
           {
             "id": "d",
-            "text": "Teach a low-fat diet"
+            "text": "Blood pressure control to below 120/80 mm Hg"
           }
         ]
       },
@@ -613,14 +613,14 @@
       "rationale": {
         "correct": "STEMI: door-to-balloon time of 90 minutes or less, or fibrinolysis within 30 minutes if PCI isn't available.",
         "perOption": {
-          "a": "Time is muscle; rapid reperfusion limits damage.",
-          "b": "STEMI needs immediate reperfusion.",
-          "c": "This comes later.",
-          "d": "This comes later."
+          "a": "Time is muscle; rapid reperfusion limits damage to the anterior wall.",
+          "b": "Pain is treated, but reperfusion is not delayed for it.",
+          "c": "Fibrinolysis is used when PCI is not available in time; this hospital has a cath lab.",
+          "d": "Blood pressure is managed, but the blocked artery is the priority."
         },
         "references": [
           "American Heart Association Guidelines for CPR and Emergency Cardiovascular Care",
-          "Reviewed by the content team on 17 November 2026."
+          "Rewritten to NCLEX-RN difficulty and reviewed by the content team on 19 November 2026."
         ]
       },
       "educationalObjective": "Prioritize reperfusion in STEMI.",
@@ -687,7 +687,7 @@
         "references": [
           "American Heart Association Guidelines for CPR and Emergency Cardiovascular Care",
           "Nursing pharmacology texts (e.g. Lehne; McCuistion) and the drug's prescribing information",
-          "Reviewed by the content team on 17 November 2026."
+          "Rewritten to NCLEX-RN difficulty and reviewed by the content team on 19 November 2026."
         ]
       },
       "educationalObjective": "Plan initial STEMI care.",
@@ -709,19 +709,19 @@
         "options": [
           {
             "id": "a",
-            "text": "Defibrillate as soon as possible and begin CPR"
+            "text": "Start CPR and defibrillate as soon as possible"
           },
           {
             "id": "b",
-            "text": "Synchronized cardioversion"
+            "text": "Prepare for synchronized cardioversion at 100 joules"
           },
           {
             "id": "c",
-            "text": "Give atropine"
+            "text": "Give amiodarone 300 mg IV push right away"
           },
           {
             "id": "d",
-            "text": "Get a 12-lead ECG"
+            "text": "Obtain a 12-lead ECG to confirm the rhythm"
           }
         ]
       },
@@ -733,12 +733,12 @@
         "perOption": {
           "a": "Early defibrillation is the most important treatment for VF.",
           "b": "Pulseless VF needs unsynchronized defibrillation.",
-          "c": "Atropine treats bradycardia.",
+          "c": "Amiodarone is given after shocks per ACLS, not before the first shock.",
           "d": "This delays lifesaving treatment."
         },
         "references": [
           "American Heart Association Guidelines for CPR and Emergency Cardiovascular Care",
-          "Reviewed by the content team on 17 November 2026."
+          "Rewritten to NCLEX-RN difficulty and reviewed by the content team on 19 November 2026."
         ]
       },
       "educationalObjective": "Respond to ventricular fibrillation.",
@@ -808,7 +808,7 @@
         },
         "references": [
           "Medical-surgical nursing texts (e.g. Lewis; Ignatavicius)",
-          "Reviewed by the content team on 17 November 2026."
+          "Rewritten to NCLEX-RN difficulty and reviewed by the content team on 19 November 2026."
         ]
       },
       "educationalObjective": "Evaluate outcomes after PCI.",

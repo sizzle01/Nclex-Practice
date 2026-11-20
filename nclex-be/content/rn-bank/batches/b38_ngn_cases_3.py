@@ -1,4 +1,6 @@
-"""Batch 38: NGN unfolding case studies III - major burn with inhalation injury; anterior STEMI."""
+"""Batch 38: NGN unfolding case studies III - major burn with inhalation injury; anterior STEMI.
+
+Rewritten to NCLEX-RN difficulty on 20 November 2026 (see quality.py)."""
 from qb import *
 
 S = "integumentary"
@@ -51,11 +53,11 @@ calc(M("PHI.PPT", "medication-dose-calculations", "analyze_cues", "difficult", "
    "Calculate a burn resuscitation rate."),
 
 mc(M("PHI.PA", BURN, "prioritize_hypotheses", "difficult", S, "ms"),
-   "Which problem is the priority for this client?",
-   [("Risk of airway obstruction from inhalation injury", True, "Airway swelling can progress quickly; early intubation may be needed."),
-    ("Acute pain", False, "Pain matters but comes after the airway."),
-    ("Risk of infection", False, "This is a later concern."),
-    ("Disturbed body image", False, "This is a later concern.")],
+   "At 0200, the client is talking in a hoarse voice, the SpO2 is 93% on a nonrebreather mask, the blood pressure is 102/64 mm Hg and fluid resuscitation is starting. Which problem is the priority for this client?",
+   [("Risk of airway obstruction from inhalation injury", True, "Airway swelling can progress over hours to complete obstruction; early intubation may be needed."),
+    ("Hypovolemia from burn shock and large fluid shifts", False, "Fluids are started, but a closing airway kills faster than burn shock."),
+    ("Carbon monoxide poisoning from the house fire", False, "This is treated with 100% oxygen, which is already given; the airway threat is greater."),
+    ("Acute pain from partial-thickness burns", False, "Pain matters but comes after the airway and circulation.")],
    "Airway first in burns, especially with signs of inhalation injury.",
    "Prioritize the airway in burns."),
 
@@ -72,11 +74,11 @@ matrix_mc(M("PHI.PA", BURN, "generate_solutions", "moderate", S, "ms"),
    "Select interventions for a major burn."),
 
 mc(M("PHI.PA", BURN, "take_action", "moderate", S, "ms"),
-   "At 0600 the client's urine output is 18 mL/hr. What should the nurse do?",
-   [("Notify the provider and adjust the fluid rate per the burn protocol", True, "Output below 0.5 mL/kg/hr (35 mL/hr for 70 kg) means under-resuscitation."),
-    ("Give a diuretic", False, "This worsens hypovolemia."),
-    ("Keep the rate the same and recheck in 4 hours", False, "Delay risks kidney injury."),
-    ("Restrict oral fluids", False, "This doesn't help.")],
+   "At 0600 the client's urine output is 18 mL/hr, the heart rate is 130/min and the hematocrit is 54%. The lactated Ringer's is running at the calculated rate. What should the nurse do?",
+   [("Increase the lactated Ringer's rate per the burn protocol", True, "Output below 0.5 mL/kg/hr (35 mL/hr for 70 kg) with a high hematocrit means under-resuscitation."),
+    ("Ask the provider for IV furosemide to increase the urine output", False, "A diuretic worsens hypovolemia and hides the true volume status."),
+    ("Keep the current rate, since it matches the Parkland formula", False, "The formula is a starting point; fluids are titrated to urine output."),
+    ("Flush the urinary catheter to check that it is not blocked", False, "Low output with tachycardia and hemoconcentration points to hypovolemia.")],
    "Titrate burn fluids hourly to a target urine output.",
    "Respond to low urine output in burn resuscitation."),
 
@@ -112,7 +114,7 @@ mi_tabs = [
 ]
 
 mi_items = [
-hl_table(M("PHI.PA", ACS, "recognize_cues", "easy", CV, "ms"),
+hl_table(M("PHI.PA", ACS, "recognize_cues", "moderate", CV, "ms"),
    "Highlight the findings that support acute myocardial infarction.",
    ["Finding", "Result"],
    [(["Chest pressure", "Radiating to the left arm for 40 minutes"], True, "Ischemic pain is classic for MI."),
@@ -137,11 +139,11 @@ cloze(M("PHI.PA", ACS, "analyze_cues", "moderate", CV, "ms"),
    "Link ECG leads to the affected artery."),
 
 mc(M("PHI.PA", ACS, "prioritize_hypotheses", "moderate", CV, "aha"),
-   "What is the priority goal of treatment for this client?",
-   [("Reopen the blocked artery quickly, ideally with PCI within 90 minutes of arrival", True, "Time is muscle; rapid reperfusion limits damage."),
-    ("Schedule a stress test for tomorrow", False, "STEMI needs immediate reperfusion."),
-    ("Start cardiac rehabilitation", False, "This comes later."),
-    ("Teach a low-fat diet", False, "This comes later.")],
+   "The client arrived at 0855. The chest pressure is 7 out of 10 after one nitroglycerin tablet, and the hospital has a cardiac catheterization lab. What is the priority goal of treatment for this client?",
+   [("Reperfusion by PCI within 90 minutes of arrival", True, "Time is muscle; rapid reperfusion limits damage to the anterior wall."),
+    ("Complete pain relief with IV morphine before transfer", False, "Pain is treated, but reperfusion is not delayed for it."),
+    ("Fibrinolytic therapy within 30 minutes of arrival", False, "Fibrinolysis is used when PCI is not available in time; this hospital has a cath lab."),
+    ("Blood pressure control to below 120/80 mm Hg", False, "Blood pressure is managed, but the blocked artery is the priority.")],
    "STEMI: door-to-balloon time of 90 minutes or less, or fibrinolysis within 30 minutes if PCI isn't available.",
    "Prioritize reperfusion in STEMI."),
 
@@ -158,10 +160,10 @@ sata(M("PHI.PA", ACS, "generate_solutions", "moderate", CV, "aha ph"),
 
 mc(M("PHI.PA", "cardiac-dysrhythmias", "take_action", "difficult", CV, "aha"),
    "While waiting for transfer, the client becomes unresponsive, with no pulse, and the monitor shows ventricular fibrillation. What should the nurse do first?",
-   [("Defibrillate as soon as possible and begin CPR", True, "Early defibrillation is the most important treatment for VF."),
-    ("Synchronized cardioversion", False, "Pulseless VF needs unsynchronized defibrillation."),
-    ("Give atropine", False, "Atropine treats bradycardia."),
-    ("Get a 12-lead ECG", False, "This delays lifesaving treatment.")],
+   [("Start CPR and defibrillate as soon as possible", True, "Early defibrillation is the most important treatment for VF."),
+    ("Prepare for synchronized cardioversion at 100 joules", False, "Pulseless VF needs unsynchronized defibrillation."),
+    ("Give amiodarone 300 mg IV push right away", False, "Amiodarone is given after shocks per ACLS, not before the first shock."),
+    ("Obtain a 12-lead ECG to confirm the rhythm", False, "This delays lifesaving treatment.")],
    "Pulseless VF or VT: CPR and immediate defibrillation, then epinephrine and amiodarone per ACLS.",
    "Respond to ventricular fibrillation."),
 
@@ -176,7 +178,7 @@ matrix_mc(M("PHI.PA", ACS, "evaluate_outcomes", "difficult", CV, "ms"),
    "Evaluate outcomes after PCI."),
 ]
 
-BUILT = build(38, "ngn-cases-3", "NGN case studies III: major burn and anterior STEMI", [], cases=[
+BUILT = build(38, "ngn-cases-3", "NGN case studies III: major burn and anterior STEMI", [], hardened=True, cases=[
     case("Major burn with inhalation injury", burn_tabs, burn_items),
     case("Anterior STEMI", mi_tabs, mi_items),
 ])
