@@ -57,4 +57,5 @@ Written by `python3 -I build_all.py`; do not edit by hand. See `quality.py` for 
 | 65-management-of-care-specialty | 27 | yes | 18 | 17% | 28% (stem words) | 11% | 27 | 2/15/10 |
 | 66-risk-reduction-basic-care | 31 | yes | 27 | 7% | 29% (assess first) | 15% | 32 | 4/17/10 |
 | 67-moc-sic-ngn | 34 | yes | 23 | 0% | 23% (shortest) | 9% | 32 | 0/23/11 |
-| **Whole bank** | 1110 | | 873 | 14% | 25% (assess first) | 7% | 33 | 89/648/373 |
+| 68-moc-priorities-delegation-legal | 25 | yes | 17 | 29% | 33% (stem words) | 12% | 33 | 2/13/10 |
+| **Whole bank** | 1135 | | 890 | 14% | 25% (assess first) | 7% | 33 | 91/661/383 |
