@@ -188,7 +188,7 @@ mc(M(PSI, IPV, "take_action", "difficult", MH, "psych"),
    "Respond to disclosure of intimate partner violence."),
 
 mc(M(PSI, IPV, "analyze_cues", "moderate", MH, "psych"),
-   "A client says that after each beating, the partner cries, apologizes, brings flowers and promises it will never happen again. The client says, \"This time I think he really means it.\" Which phase of the cycle of violence is the client describing?",
+   "A client says that after each beating, the partner cries, apologizes, brings flowers and promises it will never happen again. The client says, \"This time I think they really mean it.\" Which phase of the cycle of violence is the client describing?",
    [("Reconciliation (honeymoon) phase", True, "Remorse and affection follow the battering."),
     ("Tension-building phase", False, "This involves rising stress and minor incidents."),
     ("Acute battering phase", False, "This is the violent episode."),
