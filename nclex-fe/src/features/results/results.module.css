@@ -104,3 +104,22 @@
 .fail {
   color: var(--error);
 }
+
+/* F25: the second-half drop message. It uses the warning token, which has light and dark variants. */
+.judgmentAlert {
+  margin: 0.75rem 0;
+  padding: 0.75rem 1rem;
+  border-left: 4px solid var(--warning);
+  border-radius: var(--radius-sm);
+  background: var(--surface-muted);
+}
+
+/* Named for screen readers, invisible on screen. */
+.visuallyHidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip-path: inset(50%);
+  white-space: nowrap;
+}

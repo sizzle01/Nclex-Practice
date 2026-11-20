@@ -14,6 +14,7 @@ import {
   fetchResult,
   resultQueryKey,
 } from "../attempt/api/attemptApi";
+import { ClinicalJudgmentPanel } from "./ClinicalJudgmentPanel";
 import { elapsed, percent, points } from "./format";
 import { ResultOutcome } from "./ResultOutcome";
 import outcomeStyles from "./ResultOutcome.module.css";
@@ -34,7 +35,8 @@ const dimensions: { key: keyof Breakdown; title: string; column: string }[] = [
 
 /**
  * /attempts/[id]/results (interfaces.md 5.2): the score, the readiness estimate with its
- * disclaimer, time per question, what to study next and the breakdown tables. An adaptive exam
+ * disclaimer, time per question, clinical judgment by step and by half (F25), what to study next and the
+ * breakdown tables. An adaptive exam
  * (F19) leads with pass or fail and why it ended instead of a percentage.
  */
 export function ResultsPage({ attemptId }: { attemptId: string }) {
@@ -66,6 +68,8 @@ export function ResultsPage({ attemptId }: { attemptId: string }) {
       ) : (
         <ScoreSummary data={data} />
       )}
+
+      {data.clinicalJudgment && <ClinicalJudgmentPanel judgment={data.clinicalJudgment} />}
 
       <StudyRecommendations attemptId={attemptId} />
       <WeakAreasCard />

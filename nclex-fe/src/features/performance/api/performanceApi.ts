@@ -11,6 +11,7 @@ export type TrendPoint = ApiSchema<"TrendPoint">;
 export type PerformanceDimension = ApiSchema<"PerformanceDimension">;
 export type BreakdownDimension = Exclude<PerformanceDimension, "overall">;
 export type TrendBucket = ApiSchema<"TrendBucket">;
+export type ClinicalJudgmentTrend = ApiSchema<"ClinicalJudgmentTrend">;
 
 /** What a trend chart follows: overall, or one category of a dimension. */
 export type TrendQuery = { dimension: PerformanceDimension; key?: string; bucket: TrendBucket };
@@ -19,6 +20,7 @@ export const performanceQueryKeys = {
   summary: ["performance", "summary"] as const,
   breakdown: (dimension: BreakdownDimension) => ["performance", "breakdown", dimension] as const,
   trend: (query: TrendQuery) => ["performance", "trend", query] as const,
+  clinicalJudgment: ["performance", "clinical-judgment"] as const,
 };
 
 export async function fetchSummary(): Promise<PerformanceSummary> {
@@ -41,6 +43,12 @@ export async function fetchTrend(query: TrendQuery): Promise<PerformanceTrend> {
   throw ApiError.from(response, error);
 }
 
+export async function fetchClinicalJudgmentTrend(): Promise<ClinicalJudgmentTrend> {
+  const { data, error, response } = await apiClient.GET("/api/v1/me/performance/clinical-judgment");
+  if (data) return data;
+  throw ApiError.from(response, error);
+}
+
 // Snapshots are refreshed by a background job a few seconds after a submit, so these are always
 // refetched when a page mounts rather than cached for long.
 
@@ -59,4 +67,9 @@ export function useTrend(query: TrendQuery | undefined) {
     queryFn: () => fetchTrend(query!),
     enabled: query !== undefined,
   });
+}
+
+/** Each clinical judgment step across the last five timed tests (F25). Read from results, not snapshots. */
+export function useClinicalJudgmentTrend() {
+  return useQuery({ queryKey: performanceQueryKeys.clinicalJudgment, queryFn: fetchClinicalJudgmentTrend });
 }

@@ -13,13 +13,14 @@ import {
 } from "../api/performanceApi";
 import { breakdownDimensions, dimensionInfo } from "../dimensions";
 import { BreakdownTable } from "./BreakdownTable";
+import { ClinicalJudgmentTrendTable } from "./ClinicalJudgmentTrendTable";
 import styles from "./performance.module.css";
 import { SummaryStats } from "./SummaryStats";
 import { TrendChart } from "./TrendChart";
 
 /**
- * /performance (interfaces.md 5.2): totals, a breakdown by the chosen dimension, and trend charts
- * (overall and one category) by week or day. The filters sit above everything they change.
+ * /performance (interfaces.md 5.2): totals, clinical judgment by step in recent timed tests (F25), a breakdown
+ * by the chosen dimension, and trend charts (overall and one category) by week or day. The filters sit above everything they change.
  */
 export function PerformancePage() {
   const summary = usePerformanceSummary();
@@ -64,6 +65,7 @@ export function PerformancePage() {
       ) : (
         <>
           <SummaryStats summary={summary.data} />
+          <ClinicalJudgmentTrendTable />
 
           <div className={styles.controls}>
             <label className={styles.field}>

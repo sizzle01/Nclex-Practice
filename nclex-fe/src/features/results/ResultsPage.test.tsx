@@ -40,6 +40,7 @@ const result: AttemptResultView = {
   },
   weakest: [{ dimension: "client_needs", key: "PHI.PPT", name: "Pharmacological and Parenteral Therapies", pct: 0.48 }],
   adaptive: null,
+  clinicalJudgment: null,
 };
 
 const recommendations = {
@@ -216,6 +217,16 @@ describe("ResultsPage", () => {
     expect(screen.getByRole("table", { name: "By question type" })).toBeInTheDocument();
     // Dimensions with no rows (no CJMM-tagged questions here) are left out.
     expect(screen.queryByRole("table", { name: "By clinical judgment step" })).not.toBeInTheDocument();
+  });
+
+  it("shows the clinical judgment panel when the result has one", async () => {
+    const step = { key: "take_action", name: "Take action", items: 2, pointsEarned: 1, maxPoints: 2, pct: 0.5, avgTimeMs: 60_000 };
+    const half = { items: 1, pct: 0.5, avgTimeMs: 60_000, steps: [step] };
+    replyWith(reply(200, { ...result, clinicalJudgment: { steps: [step], firstHalf: half, secondHalf: half, secondHalfDrop: false } }));
+
+    renderPage();
+
+    expect(await screen.findByRole("heading", { name: "Clinical judgment" })).toBeInTheDocument();
   });
 
   it("links to the review, including incorrect answers only", async () => {

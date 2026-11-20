@@ -5523,6 +5523,63 @@ export interface paths {
         patch?: never;
         trace?: never;
     };
+    "/api/v1/me/performance/clinical-judgment": {
+        parameters: {
+            query?: never;
+            header?: never;
+            path?: never;
+            cookie?: never;
+        };
+        get: {
+            parameters: {
+                query?: {
+                    track?: components["schemas"]["ExamTrack"];
+                };
+                header?: never;
+                path?: never;
+                cookie?: never;
+            };
+            requestBody?: never;
+            responses: {
+                /** @description OK */
+                200: {
+                    headers: {
+                        [name: string]: unknown;
+                    };
+                    content: {
+                        "application/json": components["schemas"]["ClinicalJudgmentTrend"];
+                    };
+                };
+                /** @description Bad Request */
+                400: {
+                    headers: {
+                        [name: string]: unknown;
+                    };
+                    content: {
+                        "application/problem+json": components["schemas"]["ProblemDetails"];
+                        "application/json": unknown;
+                    };
+                };
+                /** @description Unauthorized */
+                401: {
+                    headers: {
+                        [name: string]: unknown;
+                    };
+                    content: {
+                        "application/problem+json": components["schemas"]["ProblemDetails"];
+                        "application/json": unknown;
+                    };
+                };
+            };
+        };
+        put?: never;
+        post?: never;
+        delete?: never;
+        options?: never;
+        head?: never;
+        patch?: never;
+        trace?: never;
+    };
     "/api/v1/question-banks": {
         parameters: {
             query?: never;
@@ -6259,6 +6316,7 @@ export interface components {
             breakdown: components["schemas"]["ResultBreakdown"];
             weakest: components["schemas"]["WeakArea"][];
             adaptive: null | components["schemas"]["AdaptiveResult"];
+            clinicalJudgment: null | components["schemas"]["ClinicalJudgmentView"];
         };
         AttemptState: {
             /** Format: uuid */
@@ -6421,6 +6479,17 @@ export interface components {
             weightMax: null | number | string;
             children: null | components["schemas"]["ClientNeedsNode"][];
         };
+        ClinicalJudgmentTrend: {
+            track: components["schemas"]["ExamTrack"];
+            attempts: components["schemas"]["TrendAttempt"][];
+            steps: components["schemas"]["StepTrend"][];
+        };
+        ClinicalJudgmentView: {
+            steps: components["schemas"]["StepResult"][];
+            firstHalf: components["schemas"]["HalfResult"];
+            secondHalf: components["schemas"]["HalfResult"];
+            secondHalfDrop: boolean;
+        };
         ClockState: {
             running: boolean;
             /** Format: date-time */
@@ -6575,6 +6644,15 @@ export interface components {
             expected?: unknown;
             /** @default false */
             missed: boolean;
+        };
+        HalfResult: {
+            /** Format: int32 */
+            items: number | string;
+            /** Format: double */
+            pct: number | string;
+            /** Format: int32 */
+            avgTimeMs: number | string;
+            steps: components["schemas"]["StepResult"][];
         };
         /** @enum {unknown} */
         HealthState: "ok" | "degraded" | "unhealthy";
@@ -6971,6 +7049,25 @@ export interface components {
         StartWeakAreaPracticeRequest: {
             track?: null | components["schemas"]["ExamTrack"];
         };
+        StepResult: {
+            key: string;
+            name: string;
+            /** Format: int32 */
+            items: number | string;
+            /** Format: double */
+            pointsEarned: number | string;
+            /** Format: double */
+            maxPoints: number | string;
+            /** Format: double */
+            pct: number | string;
+            /** Format: int32 */
+            avgTimeMs: number | string;
+        };
+        StepTrend: {
+            key: string;
+            name: string;
+            scores: (null | number | string)[];
+        };
         StreamTicketResponse: {
             ticket: string;
             /** Format: int32 */
@@ -7108,6 +7205,13 @@ export interface components {
             exam: null | components["schemas"]["ClockState"];
             item: null | components["schemas"]["ClockState"];
             pause: components["schemas"]["PauseState"];
+        };
+        TrendAttempt: {
+            /** Format: uuid */
+            attemptId: string;
+            title: string;
+            /** Format: date-time */
+            submittedAt: string;
         };
         /** @enum {unknown} */
         TrendBucket: "day" | "week";

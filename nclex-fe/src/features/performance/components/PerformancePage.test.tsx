@@ -3,7 +3,7 @@ import { render, screen, waitFor, within } from "@testing-library/react";
 import userEvent from "@testing-library/user-event";
 import { beforeEach, describe, expect, it, vi } from "vitest";
 import { apiClient } from "@/lib/api/client";
-import type { BreakdownRow, PerformanceSummary, TrendPoint } from "../api/performanceApi";
+import type { BreakdownRow, ClinicalJudgmentTrend, PerformanceSummary, TrendPoint } from "../api/performanceApi";
 import { bucketLabel } from "../format";
 import { PerformancePage } from "./PerformancePage";
 
@@ -41,10 +41,34 @@ function point(bucketStart: string, pct: number, items: number): TrendPoint {
   return { bucketStart, pct, items, avgTimeMs: 80_000 };
 }
 
-function serve(overrides: { summary?: PerformanceSummary } = {}) {
+const stepKeys = [
+  ["recognize_cues", "Recognize cues"],
+  ["analyze_cues", "Analyze cues"],
+  ["prioritize_hypotheses", "Prioritize hypotheses"],
+  ["generate_solutions", "Generate solutions"],
+  ["take_action", "Take action"],
+  ["evaluate_outcomes", "Evaluate outcomes"],
+] as const;
+
+/** Two timed tests: generate solutions falls from 80% to 50%; analyze cues had no question in the first. */
+const judgmentTrend: ClinicalJudgmentTrend = {
+  track: "RN",
+  attempts: [
+    { attemptId: "a1", title: "Timed case study block 1", submittedAt: "2026-11-18T10:00:00Z" },
+    { attemptId: "a2", title: "Timed case study block 2", submittedAt: "2026-11-20T10:00:00Z" },
+  ],
+  steps: stepKeys.map(([key, name]) => ({
+    key,
+    name,
+    scores: key === "generate_solutions" ? [0.8, 0.5] : key === "analyze_cues" ? [null, 0.9] : [0.9, 0.88],
+  })),
+};
+
+function serve(overrides: { summary?: PerformanceSummary; judgment?: ClinicalJudgmentTrend } = {}) {
   getMock.mockImplementation(((path: string, init?: { params?: { query?: Query } }) => {
     const query = init?.params?.query ?? {};
     if (path === "/api/v1/me/performance/summary") return Promise.resolve(reply(200, overrides.summary ?? summary));
+    if (path === "/api/v1/me/performance/clinical-judgment") return Promise.resolve(reply(200, overrides.judgment ?? judgmentTrend));
     if (path === "/api/v1/me/performance/breakdown") {
       return Promise.resolve(reply(200, { track: "RN", dimension: query.dimension, items: breakdowns[query.dimension!] ?? [] }));
     }
@@ -146,6 +170,29 @@ describe("PerformancePage", () => {
       ),
     );
     expect(await screen.findAllByRole("columnheader", { name: "Day" })).toHaveLength(2);
+  });
+
+  it("shows each clinical judgment step across the recent timed tests, oldest first", async () => {
+    serve();
+
+    renderPage();
+
+    const table = await screen.findByRole("table", { name: /last 2 timed tests/ });
+    const headers = within(table).getAllByRole("columnheader").map((cell) => cell.textContent);
+    expect(headers[1]).toMatch(/^Timed case study block 1/);
+    expect(headers[2]).toMatch(/^Timed case study block 2/);
+    const generate = within(table).getByRole("row", { name: /^Generate solutions/ });
+    expect(within(generate).getAllByRole("cell").map((cell) => cell.textContent)).toEqual(["80% (borderline)", "50% (needs work)"]);
+    const analyze = within(table).getByRole("row", { name: /^Analyze cues/ });
+    expect(within(analyze).getByText("No questions")).toBeInTheDocument();
+  });
+
+  it("invites a first timed test when there are none yet", async () => {
+    serve({ judgment: { track: "RN", attempts: [], steps: judgmentTrend.steps.map((s) => ({ ...s, scores: [] })) } });
+
+    renderPage();
+
+    expect(await screen.findByText(/Finish a timed test, such as a timed case-study block/)).toBeInTheDocument();
   });
 
   it("says so when the performance cannot be loaded", async () => {
