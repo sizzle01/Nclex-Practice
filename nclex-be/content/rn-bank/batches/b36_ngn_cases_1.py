@@ -175,7 +175,7 @@ sata(M("PHI.PA", ST, "generate_solutions", "moderate", N, "aha ms"),
 
 mc(M("PHI.PA", ST, "take_action", "difficult", N, "aha"),
    "Forty minutes into the alteplase infusion, the client suddenly reports a severe headache and vomits. The blood pressure is 196/112 mm Hg, and the right arm is now flaccid. What should the nurse do first?",
-   [("Stop the alteplase infusion at the pump right away", True, "These signs suggest bleeding in the brain; the infusion is stopped first, then the provider is notified and a stat CT obtained."),
+   [("Turn off the thrombolytic at the pump right away", True, "These signs suggest bleeding in the brain; the infusion is stopped first, then the provider is notified and a stat CT obtained."),
     ("Give the prescribed IV labetalol and continue the infusion", False, "Blood pressure is treated, but a possible hemorrhage means the drug must be stopped first."),
     ("Give IV ondansetron for the vomiting and recheck in 15 minutes", False, "This treats a symptom and delays action on a possible hemorrhage."),
     ("Call the provider to request a stat head CT", False, "The CT is needed, but the infusion is stopped first so no more drug is given.")],

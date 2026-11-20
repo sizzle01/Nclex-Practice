@@ -46,7 +46,7 @@ Written by `python3 -I build_all.py`; do not edit by hand. See `quality.py` for 
 | 33-mental-health-2 | 22 | yes | 19 | 21% | 25% (longest) | 5% | 39 | 2/12/8 |
 | 34-mental-health-3 | 22 | yes | 20 | 15% | 30% (assess first) | 5% | 41.5 | 2/12/8 |
 | 35-pharm-psych-misc | 20 | yes | 19 | 16% | 29% (assess first) | 0% | 38 | 0/13/7 |
-| 36-ngn-cases-1 | 12 | yes | 2 | 0% | 62% (stem words) | 0% | 16 | 0/7/5 |
+| 36-ngn-cases-1 | 12 | yes | 2 | 0% | 50% (shortest) | 0% | 16 | 0/7/5 |
 | 37-ngn-cases-2 | 12 |  | 3 | 100% | 100% (longest) | 0% | 13.5 | 0/9/3 |
 | 38-ngn-cases-3 | 12 |  | 4 | 100% | 100% (longest) | 0% | 14 | 1/6/5 |
 | 60-ngn-cases-1 | 24 |  | 5 | 80% | 80% (longest) | 0% | 13 | 0/17/7 |
