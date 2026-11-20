@@ -75,4 +75,5 @@ Written by `python3 -I build_all.py`; do not edit by hand. See `quality.py` for 
 | 83-diagnostics-acute-care-cases | 25 | yes | 12 | 8% | 31% (assess first) | 0% | 26 | 1/14/10 |
 | 84-moc-judgment-safety | 25 | yes | 19 | 5% | 26% (assess first) | 0% | 31 | 1/8/16 |
 | 85-prevention-lifespan-mental-health | 25 | yes | 19 | 0% | 28% (shortest) | 0% | 28 | 1/10/14 |
-| **Whole bank** | 1560 | | 1177 | 13% | 25% (assess first) | 6% | 32 | 116/881/563 |
+| 86-pharmacotherapy-comfort-depth | 25 | yes | 18 | 17% | 28% (assess first) | 0% | 31 | 1/11/13 |
+| **Whole bank** | 1585 | | 1195 | 13% | 25% (assess first) | 6% | 32 | 117/892/576 |
