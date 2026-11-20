@@ -45,7 +45,7 @@ describe("TestSetDetailPanel", () => {
     expect(getMock).toHaveBeenCalledWith("/api/v1/test-sets/{id}", { params: { path: { id: challengeDetail.id } } });
     expect(screen.getByText("Exam conditions: 80 minutes, answers revealed at the end.")).toBeInTheDocument();
     expect(screen.getByText("Answers at the end")).toBeInTheDocument();
-    expect(screen.getByText("65% of points")).toBeInTheDocument();
+    expect(screen.getByText("86% of points (70% or more is close to pass)")).toBeInTheDocument();
     expect(screen.getByText("Unlimited")).toBeInTheDocument();
   });
 

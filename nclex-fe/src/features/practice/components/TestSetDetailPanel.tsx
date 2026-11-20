@@ -4,6 +4,7 @@ import { useRouter } from "next/navigation";
 import { useEffect, useId, useRef, useState } from "react";
 import ui from "@/components/ui/ui.module.css";
 import { useStartAttempt } from "@/features/attempt/api/attemptApi";
+import { CLOSE_TO_PASS_MARK, PASS_MARK } from "@/features/results/ResultOutcome";
 import { isApiError } from "@/lib/api/errors";
 import { useTestSet } from "../api/practiceApi";
 import {
@@ -89,10 +90,13 @@ export function TestSetDetailPanel({ id, setId, onClose }: TestSetDetailPanelPro
             <dd>{timingLabel(set)}</dd>
             <dt>Answers</dt>
             <dd>{revealModeLabel(set.revealMode)}</dd>
-            {set.passThreshold != null && (
+            {/* Every fixed-length test is graded against the same pass mark (F23); an adaptive exam passes on its ability estimate. */}
+            {!set.adaptive && (
               <>
-                <dt>Pass estimate</dt>
-                <dd>{percentLabel(set.passThreshold)} of points</dd>
+                <dt>Pass mark</dt>
+                <dd>
+                  {percentLabel(PASS_MARK)} of points ({percentLabel(CLOSE_TO_PASS_MARK)} or more is close to pass)
+                </dd>
               </>
             )}
             <dt>Going back</dt>
