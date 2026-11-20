@@ -167,7 +167,7 @@ mc(M(MOC, DC, "generate_solutions", "difficult", "pharmacology", "mgmt ph"),
    "Plan safe discharge for a client with a high-alert drug and impaired vision."),
 
 order(M(MOC, PRI, "prioritize_hypotheses", "difficult", F, "mgmt ms"),
-   "A night nurse on a medical unit finishes the 0700 bedside handoff with these four clients still waiting. Rank the clients from the one the nurse should see first to the one who can wait longest.",
+   "A day nurse on a medical unit takes the 0700 bedside handoff and has these four clients waiting. Rank the clients from the one the nurse should see first to the one who can wait longest.",
    [("A client with COPD who is now drowsy and difficult to arouse, with SpO2 85% on 4 L/min", "Decreasing consciousness with hypoxemia suggests CO2 narcosis and airway risk."),
     ("A client 1 day after surgery who reports new calf pain and swelling", "Possible DVT needs assessment and reporting soon."),
     ("A client with diabetes due for a scheduled insulin dose with breakfast", "Timed medication with the meal."),
