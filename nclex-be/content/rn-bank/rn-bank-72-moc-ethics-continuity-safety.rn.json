@@ -966,11 +966,6 @@
             "id": "s10",
             "text": "\"I'm not sure what else they could do instead.\"",
             "selectable": true
-          },
-          {
-            "id": "s11",
-            "text": "",
-            "selectable": false
           }
         ]
       },

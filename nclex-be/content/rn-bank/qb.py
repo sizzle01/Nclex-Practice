@@ -415,6 +415,8 @@ def _check(questions, cases):
             errors.append(f"{where}: 2+ options per group")
         if t in ("dropdown_cloze", "dropdown_table") and any(len(b["options"]) < 2 for b in c["blanks"]):
             errors.append(f"{where}: 2+ choices per blank")
+        # The importer rejects empty text in highlight segments (QuestionImportFile validation).
+        if any(not seg["text"] for seg in c.get("segments", [])): errors.append(f"{where}: empty highlight segment")
         texts = [o["text"] for o in c.get("options", [])]
         if t == "bowtie":
             texts = [o["text"] for k in ("condition", "actions", "parameters") for o in c[k]]
