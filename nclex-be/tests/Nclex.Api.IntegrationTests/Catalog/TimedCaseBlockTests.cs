@@ -62,7 +62,26 @@ public sealed class TimedCaseBlockTests(ApiFactory factory)
     }
 
     [Fact]
-    public async Task A_block_allows_one_ten_minute_pause()
+    public async Task A_finished_block_has_a_score_but_no_pass_or_fail()
+    {
+        await _content.ImportOkAsync(BlockFile());
+        var user = (await _attempts.VerifiedUserAsync()).AccessToken;
+        var attempt = await _attempts.StartOkAsync(user, _blockId);
+        await _attempts.OpenOkAsync(user, attempt.Id, Device);
+
+        var submit = await AttemptsApi.JsonOkAsync(await _attempts.SubmitAsync(user, attempt.Id, Device));
+
+        var result = submit.GetProperty("result");
+        result.GetProperty("score").GetProperty("pct").ValueKind.ShouldBe(JsonValueKind.Number);
+        result.GetProperty("readiness").ValueKind.ShouldBe(JsonValueKind.Null);
+        await using var scope = factory.Services.CreateAsyncScope();
+        var db = scope.ServiceProvider.GetRequiredService<AppDbContext>();
+        var stored = await db.AttemptResults.SingleAsync(r => r.AttemptId == attempt.Id, TestContext.Current.CancellationToken);
+        (stored.PassThreshold, stored.Passed, stored.ReadinessLabel).ShouldBe((null, null, null));
+    }
+
+    [Fact]
+    public async Task A_block_allows_one_ten_minute_pause_and_hides_the_outcome()
     {
         await _content.ImportOkAsync(BlockFile());
 
@@ -71,6 +90,7 @@ public sealed class TimedCaseBlockTests(ApiFactory factory)
         var block = await db.TestSets.SingleAsync(s => s.Id == _blockId, TestContext.Current.CancellationToken);
 
         block.Settings.PausePolicy.ShouldBe(new PausePolicy(1, 600));
+        block.OutcomeHidden.ShouldBeTrue();
     }
 
     // Two three-question cases and a block of both, with the settings catalog.py writes for a timed block.
@@ -85,6 +105,7 @@ public sealed class TimedCaseBlockTests(ApiFactory factory)
             timeBudgetSec = 6 * SecondsPerQuestion,
             allowBackNav = false,
             pausePolicy = new { maxPauses = 1, maxPauseSec = 600 },
+            outcomeHidden = true,
         });
 
         return QuestionImportFile.Parse(JsonSerializer.Serialize(new
