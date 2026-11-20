@@ -1,4 +1,4 @@
-"""Builds every batch in batches/ (in name order) and checks ids are unique across the whole bank.
+"""Builds every batch in batches/ (in batch-number order) and checks ids are unique across the whole bank.
 
     cd nclex-be/content/rn-bank && python3 -I build_all.py
 """
@@ -17,7 +17,13 @@ import quality  # noqa: E402
 all_ids, by_cn, by_type, total = set(), collections.Counter(), collections.Counter(), 0
 all_questions = []
 per_file = []
-for path in sorted((HERE / "batches").glob("b*.py")):
+def batch_number(path):
+    """b7_x.py -> 7. Number order, not name order, so b100 comes after b99 (and the catalog lands in
+    the highest-numbered file, which deploy.sh imports last)."""
+    return int(path.stem[1:].split("_", 1)[0])
+
+
+for path in sorted((HERE / "batches").glob("b*.py"), key=batch_number):
     # Dead conditional expressions hide which tag a question really has; keep batch files plain.
     if " if False" in path.read_text(encoding="utf-8"):
         raise SystemExit(f"{path.name}: remove the 'if False' expression")

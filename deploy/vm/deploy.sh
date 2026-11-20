@@ -83,7 +83,8 @@ deploy() {
 }
 
 # Imports the sample file first (it creates the original subtopics), then every RN bank file in
-# name order, as docs/features/RN-question-bank.md describes. One SSH session runs the whole loop,
+# batch-number order (sort -V, so rn-bank-100 follows rn-bank-99 and the catalog file comes last),
+# as docs/features/RN-question-bank.md describes. One SSH session runs the whole loop,
 # and the first failing file stops it; each file is its own transaction, so earlier ones stay.
 import_content() {
   echo "==> Importing the sample questions and the RN question bank"
@@ -91,7 +92,7 @@ import_content() {
 set -euo pipefail
 cd ~/"$1"
 files=(/content/sample-questions.rn.json)
-for f in content/rn-bank/rn-bank-*.rn.json; do files+=("/$f"); done
+while IFS= read -r f; do files+=("/$f"); done < <(ls content/rn-bank/rn-bank-*.rn.json | sort -V)
 for f in "${files[@]}"; do
   out=$(docker compose -f compose.vm.yml --env-file .env run --rm -T jobs import-questions "$f" 2>&1) \
     || { echo "$out"; echo "Import failed: $f" >&2; exit 1; }

@@ -18,9 +18,10 @@ docker compose up -d postgres
 cd nclex-be
 export ConnectionStrings__Postgres="Host=localhost;Port=5432;Database=nclex_qbank;Username=nclex;Password=nclex"
 dotnet build && dotnet ef database update --no-build -p src/Nclex.Infrastructure -s src/Nclex.Api
-# sample first (it creates the original subtopics), then every bank file in name order
+# sample first (it creates the original subtopics), then every bank file in batch-number order
+# (sort -V puts rn-bank-100 after rn-bank-99; the last file carries the catalog)
 dotnet run --no-build --project src/Nclex.Worker -- import-questions "$PWD/content/sample-questions.rn.json"
-for f in content/rn-bank/rn-bank-*.rn.json; do
+for f in $(ls content/rn-bank/rn-bank-*.rn.json | sort -V); do
   dotnet run --no-build --project src/Nclex.Worker -- import-questions "$PWD/$f"
 done
 ```
