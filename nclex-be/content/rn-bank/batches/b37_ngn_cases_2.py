@@ -1,4 +1,6 @@
-"""Batch 37: NGN unfolding case studies II - upper GI bleed; COPD exacerbation."""
+"""Batch 37: NGN unfolding case studies II - upper GI bleed; COPD exacerbation.
+
+Rewritten to NCLEX-RN difficulty on 20 November 2026 (see quality.py)."""
 from qb import *
 
 GI = "gastrointestinal"
@@ -54,12 +56,12 @@ matrix_mc(M("PHI.PA", UP, "analyze_cues", "moderate", GI, "ms"),
    "Coffee-ground emesis, melena, NSAID use and a high BUN-to-creatinine ratio suggest an upper GI bleed.",
    "Analyze findings in an upper GI bleed."),
 
-mc(M("PHI.PA", UP, "prioritize_hypotheses", "moderate", GI, "ms"),
-   "Which problem is the priority for this client at 0700?",
-   [("Hypovolemia from ongoing blood loss", True, "Hypotension and tachycardia mean perfusion is failing."),
-    ("Acute pain", False, "This is lower priority."),
-    ("Knowledge deficit about NSAIDs", False, "Teaching comes later."),
-    ("Risk for constipation", False, "This is lower priority.")],
+mc(M("PHI.PA", UP, "prioritize_hypotheses", "difficult", GI, "ms"),
+   "At 0700, the client is alert, has vomited coffee-ground material twice and the blood pressure has fallen to 86/52 mm Hg. Which problem is the priority for this client at 0700?",
+   [("Hypovolemia from ongoing upper GI blood loss", True, "Falling blood pressure and rising heart rate mean perfusion is failing; this is the most immediate threat."),
+    ("Risk for aspiration from vomiting blood", False, "The client is alert and protecting the airway; the circulation is actively failing."),
+    ("Acute kidney injury from low perfusion", False, "The creatinine is normal; this is a later risk if hypovolemia is not corrected."),
+    ("Knowledge deficit about the risks of NSAIDs", False, "Teaching comes after stabilization.")],
    "Circulation threats from hemorrhage take priority.",
    "Prioritize hypovolemia in GI bleeding."),
 
@@ -69,17 +71,17 @@ sata(M("PHI.PA", UP, "generate_solutions", "moderate", GI, "ms"),
     ("Type and crossmatch for blood", True, "Transfusion is likely."),
     ("IV proton pump inhibitor", True, "This reduces acid and stabilizes clots."),
     ("NPO status in preparation for endoscopy", True, "Endoscopy finds and treats the source."),
-    ("Ibuprofen for back pain", False, "NSAIDs worsen ulcer bleeding."),
-    ("Oral iron right away", False, "This isn't an acute treatment and can make stool black, confusing assessment.")],
+    ("Ibuprofen as needed for the back pain", False, "NSAIDs worsen ulcer bleeding."),
+    ("Oral iron tablets starting this morning", False, "This isn't an acute treatment and can make stool black, confusing assessment.")],
    "Upper GI bleed: access, blood, PPI, NPO and urgent endoscopy.",
    "Plan interventions for an upper GI bleed."),
 
 mc(M("PHI.PPT", "blood-transfusion-reactions", "take_action", "moderate", GI, "ms"),
-   "Ten minutes into the first unit of packed red blood cells, the client reports chills and flank pain. What should the nurse do first?",
-   [("Stop the transfusion and keep the vein open with 0.9% sodium chloride through new tubing", True, "These may be signs of an acute hemolytic reaction."),
-    ("Slow the transfusion", False, "Any suspected reaction means stopping."),
-    ("Give acetaminophen and continue", False, "This could be fatal."),
-    ("Take the unit back to the blood bank before assessing the client", False, "The client comes first.")],
+   "Ten minutes into the first unit of packed red blood cells, the client reports chills and pain in the lower back. The temperature has risen from 36.8 °C to 38.3 °C and the blood pressure is 92/58 mm Hg. What should the nurse do first?",
+   [("Stop the transfusion and run saline through new tubing now", True, "Chills and flank pain early in a transfusion suggest an acute hemolytic reaction; stop it and keep the vein open."),
+    ("Slow the transfusion and recheck vital signs in 15 minutes", False, "Any suspected reaction means stopping the transfusion."),
+    ("Give the prescribed acetaminophen and continue the unit slowly", False, "Continuing could be fatal in a hemolytic reaction."),
+    ("Return the unit and tubing to the blood bank right away", False, "The unit is returned after the client is stabilized and assessed.")],
    "Suspected transfusion reaction: stop, keep the line open with saline, notify and monitor.",
    "Respond to a transfusion reaction during hemorrhage care."),
 
@@ -165,11 +167,11 @@ matrix_mc(M("PHI.PA", AC, "generate_solutions", "moderate", R, "ms ph"),
    "Select treatments for a COPD exacerbation."),
 
 mc(M("PHI.PA", AC, "take_action", "difficult", R, "ms"),
-   "While on BiPAP, the client suddenly begins to vomit. What should the nurse do first?",
-   [("Remove the mask right away and turn the client to the side", True, "This prevents aspiration of vomit into the lungs."),
-    ("Increase the BiPAP pressure", False, "This raises the risk of aspiration."),
-    ("Give an antiemetic and leave the mask on", False, "Vomiting into a sealed mask risks aspiration."),
-    ("Lay the client flat", False, "This raises the risk of aspiration.")],
+   "Ninety minutes after BiPAP is started, the client becomes nauseated, pulls at the full-face mask and suddenly begins to vomit. The SpO2 is 89%. What should the nurse do first?",
+   [("Remove the mask and turn the client onto the right side", True, "Vomit in a sealed mask is forced into the lungs; removing the mask and positioning prevent aspiration."),
+    ("Increase the inspiratory pressure to keep the airway open", False, "Higher pressure pushes air and vomit into the lungs and stomach."),
+    ("Give IV ondansetron and keep the mask sealed in place", False, "Vomiting into a sealed mask risks aspiration; the antiemetic comes after."),
+    ("Lay the client flat and suction through the mask port", False, "Lying flat raises the risk of aspiration.")],
    "BiPAP: remove the mask for vomiting; watch for gastric distention and skin breakdown.",
    "Respond to vomiting during BiPAP."),
 
@@ -184,7 +186,7 @@ matrix_mc(M("PHI.PA", AC, "evaluate_outcomes", "moderate", R, "ms"),
    "Evaluate outcomes in a COPD exacerbation."),
 ]
 
-BUILT = build(37, "ngn-cases-2", "NGN case studies II: upper GI bleed and COPD exacerbation", [], cases=[
+BUILT = build(37, "ngn-cases-2", "NGN case studies II: upper GI bleed and COPD exacerbation", [], hardened=True, cases=[
     case("Upper gastrointestinal bleed", gi_tabs, gi_items),
     case("COPD exacerbation", copd_tabs, copd_items),
 ])

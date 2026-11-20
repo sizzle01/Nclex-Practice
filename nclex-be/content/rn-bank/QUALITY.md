@@ -47,7 +47,7 @@ Written by `python3 -I build_all.py`; do not edit by hand. See `quality.py` for 
 | 34-mental-health-3 | 22 | yes | 20 | 15% | 30% (assess first) | 5% | 41.5 | 2/12/8 |
 | 35-pharm-psych-misc | 20 | yes | 19 | 16% | 29% (assess first) | 0% | 38 | 0/13/7 |
 | 36-ngn-cases-1 | 12 | yes | 2 | 0% | 50% (shortest) | 0% | 16 | 0/7/5 |
-| 37-ngn-cases-2 | 12 |  | 3 | 100% | 100% (longest) | 0% | 13.5 | 0/9/3 |
+| 37-ngn-cases-2 | 12 | yes | 3 | 33% | 33% (longest) | 0% | 14.5 | 0/8/4 |
 | 38-ngn-cases-3 | 12 |  | 4 | 100% | 100% (longest) | 0% | 14 | 1/6/5 |
 | 60-ngn-cases-1 | 24 |  | 5 | 80% | 80% (longest) | 0% | 13 | 0/17/7 |
 | 61-management-of-care-settings | 33 | yes | 24 | 25% | 31% (skip absolutes) | 4% | 26 | 3/19/11 |
@@ -57,4 +57,4 @@ Written by `python3 -I build_all.py`; do not edit by hand. See `quality.py` for 
 | 65-management-of-care-specialty | 27 | yes | 18 | 17% | 28% (stem words) | 11% | 27 | 2/15/10 |
 | 66-risk-reduction-basic-care | 31 | yes | 27 | 7% | 29% (assess first) | 15% | 32 | 4/17/10 |
 | 67-moc-sic-ngn | 34 | yes | 23 | 0% | 23% (shortest) | 9% | 32 | 0/23/11 |
-| **Whole bank** | 1110 | | 873 | 15% | 25% (assess first) | 7% | 33 | 90/650/370 |
+| **Whole bank** | 1110 | | 873 | 15% | 25% (assess first) | 7% | 33 | 90/649/371 |

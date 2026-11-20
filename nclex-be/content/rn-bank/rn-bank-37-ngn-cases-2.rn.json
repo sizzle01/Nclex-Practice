@@ -1,5 +1,5 @@
 {
-  "notice": "RN bank batch 37: NGN case studies II: upper GI bleed and COPD exacerbation. Reviewed by the content team on 17 November 2026. See REVIEW-LOG.md.",
+  "notice": "RN bank batch 37: NGN case studies II: upper GI bleed and COPD exacerbation. Rewritten to NCLEX-RN difficulty and reviewed by the content team on 19 November 2026. See REVIEW-LOG.md.",
   "track": "RN",
   "subtopics": [
     {
@@ -111,7 +111,7 @@
         },
         "references": [
           "Medical-surgical nursing texts (e.g. Lewis; Ignatavicius)",
-          "Reviewed by the content team on 17 November 2026."
+          "Rewritten to NCLEX-RN difficulty and reviewed by the content team on 19 November 2026."
         ]
       },
       "educationalObjective": "Recognize cues of GI hemorrhage.",
@@ -188,7 +188,7 @@
         },
         "references": [
           "Medical-surgical nursing texts (e.g. Lewis; Ignatavicius)",
-          "Reviewed by the content team on 17 November 2026."
+          "Rewritten to NCLEX-RN difficulty and reviewed by the content team on 19 November 2026."
         ]
       },
       "educationalObjective": "Analyze findings in an upper GI bleed.",
@@ -204,25 +204,25 @@
         "upper-gi-disorders-and-bleeding"
       ],
       "cjmmSkill": "prioritize_hypotheses",
-      "difficulty": "moderate",
-      "stem": "Which problem is the priority for this client at 0700?",
+      "difficulty": "difficult",
+      "stem": "At 0700, the client is alert, has vomited coffee-ground material twice and the blood pressure has fallen to 86/52 mm Hg. Which problem is the priority for this client at 0700?",
       "content": {
         "options": [
           {
             "id": "a",
-            "text": "Hypovolemia from ongoing blood loss"
+            "text": "Hypovolemia from ongoing upper GI blood loss"
           },
           {
             "id": "b",
-            "text": "Acute pain"
+            "text": "Risk for aspiration from vomiting blood"
           },
           {
             "id": "c",
-            "text": "Knowledge deficit about NSAIDs"
+            "text": "Acute kidney injury from low perfusion"
           },
           {
             "id": "d",
-            "text": "Risk for constipation"
+            "text": "Knowledge deficit about the risks of NSAIDs"
           }
         ]
       },
@@ -232,14 +232,14 @@
       "rationale": {
         "correct": "Circulation threats from hemorrhage take priority.",
         "perOption": {
-          "a": "Hypotension and tachycardia mean perfusion is failing.",
-          "b": "This is lower priority.",
-          "c": "Teaching comes later.",
-          "d": "This is lower priority."
+          "a": "Falling blood pressure and rising heart rate mean perfusion is failing; this is the most immediate threat.",
+          "b": "The client is alert and protecting the airway; the circulation is actively failing.",
+          "c": "The creatinine is normal; this is a later risk if hypovolemia is not corrected.",
+          "d": "Teaching comes after stabilization."
         },
         "references": [
           "Medical-surgical nursing texts (e.g. Lewis; Ignatavicius)",
-          "Reviewed by the content team on 17 November 2026."
+          "Rewritten to NCLEX-RN difficulty and reviewed by the content team on 19 November 2026."
         ]
       },
       "educationalObjective": "Prioritize hypovolemia in GI bleeding.",
@@ -277,11 +277,11 @@
           },
           {
             "id": "e",
-            "text": "Ibuprofen for back pain"
+            "text": "Ibuprofen as needed for the back pain"
           },
           {
             "id": "f",
-            "text": "Oral iron right away"
+            "text": "Oral iron tablets starting this morning"
           }
         ]
       },
@@ -305,7 +305,7 @@
         },
         "references": [
           "Medical-surgical nursing texts (e.g. Lewis; Ignatavicius)",
-          "Reviewed by the content team on 17 November 2026."
+          "Rewritten to NCLEX-RN difficulty and reviewed by the content team on 19 November 2026."
         ]
       },
       "educationalObjective": "Plan interventions for an upper GI bleed.",
@@ -322,24 +322,24 @@
       ],
       "cjmmSkill": "take_action",
       "difficulty": "moderate",
-      "stem": "Ten minutes into the first unit of packed red blood cells, the client reports chills and flank pain. What should the nurse do first?",
+      "stem": "Ten minutes into the first unit of packed red blood cells, the client reports chills and pain in the lower back. The temperature has risen from 36.8 °C to 38.3 °C and the blood pressure is 92/58 mm Hg. What should the nurse do first?",
       "content": {
         "options": [
           {
             "id": "a",
-            "text": "Stop the transfusion and keep the vein open with 0.9% sodium chloride through new tubing"
+            "text": "Stop the transfusion and run saline through new tubing now"
           },
           {
             "id": "b",
-            "text": "Slow the transfusion"
+            "text": "Slow the transfusion and recheck vital signs in 15 minutes"
           },
           {
             "id": "c",
-            "text": "Give acetaminophen and continue"
+            "text": "Give the prescribed acetaminophen and continue the unit slowly"
           },
           {
             "id": "d",
-            "text": "Take the unit back to the blood bank before assessing the client"
+            "text": "Return the unit and tubing to the blood bank right away"
           }
         ]
       },
@@ -349,14 +349,14 @@
       "rationale": {
         "correct": "Suspected transfusion reaction: stop, keep the line open with saline, notify and monitor.",
         "perOption": {
-          "a": "These may be signs of an acute hemolytic reaction.",
-          "b": "Any suspected reaction means stopping.",
-          "c": "This could be fatal.",
-          "d": "The client comes first."
+          "a": "Chills and flank pain early in a transfusion suggest an acute hemolytic reaction; stop it and keep the vein open.",
+          "b": "Any suspected reaction means stopping the transfusion.",
+          "c": "Continuing could be fatal in a hemolytic reaction.",
+          "d": "The unit is returned after the client is stabilized and assessed."
         },
         "references": [
           "Medical-surgical nursing texts (e.g. Lewis; Ignatavicius)",
-          "Reviewed by the content team on 17 November 2026."
+          "Rewritten to NCLEX-RN difficulty and reviewed by the content team on 19 November 2026."
         ]
       },
       "educationalObjective": "Respond to a transfusion reaction during hemorrhage care.",
@@ -426,7 +426,7 @@
         },
         "references": [
           "Medical-surgical nursing texts (e.g. Lewis; Ignatavicius)",
-          "Reviewed by the content team on 17 November 2026."
+          "Rewritten to NCLEX-RN difficulty and reviewed by the content team on 19 November 2026."
         ]
       },
       "educationalObjective": "Evaluate outcomes in GI bleeding.",
@@ -522,7 +522,7 @@
         },
         "references": [
           "Medical-surgical nursing texts (e.g. Lewis; Ignatavicius)",
-          "Reviewed by the content team on 17 November 2026."
+          "Rewritten to NCLEX-RN difficulty and reviewed by the content team on 19 November 2026."
         ]
       },
       "educationalObjective": "Recognize cues of a COPD exacerbation.",
@@ -666,7 +666,7 @@
         },
         "references": [
           "Medical-surgical nursing texts (e.g. Lewis; Ignatavicius)",
-          "Reviewed by the content team on 17 November 2026."
+          "Rewritten to NCLEX-RN difficulty and reviewed by the content team on 19 November 2026."
         ]
       },
       "educationalObjective": "Interpret ABG values in a COPD exacerbation.",
@@ -741,7 +741,7 @@
         },
         "references": [
           "Medical-surgical nursing texts (e.g. Lewis; Ignatavicius)",
-          "Reviewed by the content team on 17 November 2026."
+          "Rewritten to NCLEX-RN difficulty and reviewed by the content team on 19 November 2026."
         ]
       },
       "educationalObjective": "Prioritize hypercapnic respiratory failure.",
@@ -826,7 +826,7 @@
         "references": [
           "Medical-surgical nursing texts (e.g. Lewis; Ignatavicius)",
           "Nursing pharmacology texts (e.g. Lehne; McCuistion) and the drug's prescribing information",
-          "Reviewed by the content team on 17 November 2026."
+          "Rewritten to NCLEX-RN difficulty and reviewed by the content team on 19 November 2026."
         ]
       },
       "educationalObjective": "Select treatments for a COPD exacerbation.",
@@ -843,24 +843,24 @@
       ],
       "cjmmSkill": "take_action",
       "difficulty": "difficult",
-      "stem": "While on BiPAP, the client suddenly begins to vomit. What should the nurse do first?",
+      "stem": "Ninety minutes after BiPAP is started, the client becomes nauseated, pulls at the full-face mask and suddenly begins to vomit. The SpO2 is 89%. What should the nurse do first?",
       "content": {
         "options": [
           {
             "id": "a",
-            "text": "Remove the mask right away and turn the client to the side"
+            "text": "Remove the mask and turn the client onto the right side"
           },
           {
             "id": "b",
-            "text": "Increase the BiPAP pressure"
+            "text": "Increase the inspiratory pressure to keep the airway open"
           },
           {
             "id": "c",
-            "text": "Give an antiemetic and leave the mask on"
+            "text": "Give IV ondansetron and keep the mask sealed in place"
           },
           {
             "id": "d",
-            "text": "Lay the client flat"
+            "text": "Lay the client flat and suction through the mask port"
           }
         ]
       },
@@ -870,14 +870,14 @@
       "rationale": {
         "correct": "BiPAP: remove the mask for vomiting; watch for gastric distention and skin breakdown.",
         "perOption": {
-          "a": "This prevents aspiration of vomit into the lungs.",
-          "b": "This raises the risk of aspiration.",
-          "c": "Vomiting into a sealed mask risks aspiration.",
-          "d": "This raises the risk of aspiration."
+          "a": "Vomit in a sealed mask is forced into the lungs; removing the mask and positioning prevent aspiration.",
+          "b": "Higher pressure pushes air and vomit into the lungs and stomach.",
+          "c": "Vomiting into a sealed mask risks aspiration; the antiemetic comes after.",
+          "d": "Lying flat raises the risk of aspiration."
         },
         "references": [
           "Medical-surgical nursing texts (e.g. Lewis; Ignatavicius)",
-          "Reviewed by the content team on 17 November 2026."
+          "Rewritten to NCLEX-RN difficulty and reviewed by the content team on 19 November 2026."
         ]
       },
       "educationalObjective": "Respond to vomiting during BiPAP.",
@@ -947,7 +947,7 @@
         },
         "references": [
           "Medical-surgical nursing texts (e.g. Lewis; Ignatavicius)",
-          "Reviewed by the content team on 17 November 2026."
+          "Rewritten to NCLEX-RN difficulty and reviewed by the content team on 19 November 2026."
         ]
       },
       "educationalObjective": "Evaluate outcomes in a COPD exacerbation.",
