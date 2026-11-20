@@ -173,8 +173,12 @@ def gate(questions):
 
 
 def duplicates(questions, hardened_ids):
-    """Pairs of near-identical stems where at least one question is hardened."""
-    sets = [(q["id"], set(_words(q["stem"]))) for q in questions]
+    """Pairs of near-identical stems where at least one question is hardened.
+
+    Case-study questions are skipped: NGN case items use short standard stems ("Complete the sentence.",
+    "Review the 0900 findings...") and depend on their case's scenario, so their stems match across cases
+    without the questions being duplicates."""
+    sets = [(q["id"], set(_words(q["stem"]))) for q in questions if not q.get("caseStudyId")]
     found = []
     for i, (a, wa) in enumerate(sets):
         for b, wb in sets[i + 1:]:
