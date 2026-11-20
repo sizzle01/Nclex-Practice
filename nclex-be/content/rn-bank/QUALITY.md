@@ -76,4 +76,5 @@ Written by `python3 -I build_all.py`; do not edit by hand. See `quality.py` for 
 | 84-moc-judgment-safety | 25 | yes | 19 | 5% | 26% (assess first) | 0% | 31 | 1/8/16 |
 | 85-prevention-lifespan-mental-health | 25 | yes | 19 | 0% | 28% (shortest) | 0% | 28 | 1/10/14 |
 | 86-pharmacotherapy-comfort-depth | 25 | yes | 18 | 17% | 28% (assess first) | 0% | 31 | 1/11/13 |
-| **Whole bank** | 1585 | | 1195 | 13% | 25% (assess first) | 6% | 32 | 117/892/576 |
+| 87-hemodynamics-critical-cases | 25 | yes | 11 | 9% | 27% (shortest) | 0% | 26 | 0/9/16 |
+| **Whole bank** | 1610 | | 1206 | 13% | 25% (assess first) | 6% | 32 | 117/901/592 |
