@@ -33,6 +33,7 @@ public sealed class ListAttemptsHandler(IAppDbContext db, ICurrentUser currentUs
                     Answered = db.AttemptItems.Count(i => i.AttemptId == attempt.Id && i.Response != null),
                     ScorePct = result == null ? (decimal?)null : result.ScorePct,
                     Passed = result == null ? null : result.Passed,
+                    ReadinessLabel = result == null ? null : result.ReadinessLabel,
                 })
             .AsNoTracking()
             .Skip(offset)
@@ -54,6 +55,7 @@ public sealed class ListAttemptsHandler(IAppDbContext db, ICurrentUser currentUs
             r.Attempt.ExamTimer.RemainingAt(now),
             r.ScorePct,
             r.Passed,
+            r.ReadinessLabel,
             r.Attempt.Settings.Timed)).ToList();
         return new AttemptPage(items, rows.Count > limit ? PageCursor.Encode(offset + limit) : null);
     }
