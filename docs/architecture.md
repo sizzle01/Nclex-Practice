@@ -246,7 +246,7 @@ sequenceDiagram
 - **Tutor mode** grades each item when the candidate submits it, which locks the item and returns the rationale. The final submit grades only the items that are still ungraded.
 - **Exam mode** grades everything at final submit. Rationales are revealed only after that.
 - **Category breakdown** is computed per dimension (`client_needs` at category and subcategory level, `body_system`, `item_type`, `cjmm_skill`) and stored in `attempt_category_scores`, so the results page is a single indexed read.
-- **Readiness** (`passed`, `readiness_label`) is set only when the set has a `pass_threshold`. The UI always shows it with an "estimate, not a prediction of the real exam" caveat.
+- **Readiness** (`passed`, `readiness_label`): since F23 every fixed-length test is graded against one fixed pass mark, whatever the set's own `pass_threshold`. 86% and above is a pass (`likely_ready`), 70% to 85% is close to pass (`close_to_pass`, `passed = false`), below 70% is a fail (`needs_more_practice`). The rule compares the whole percentage the candidate sees, so 85.5% ("86%") passes. `attempt_results.pass_threshold` records 0.86. The UI shows the outcome as Pass, Close to pass or Fail in green, amber or red, always with an "estimate, not a prediction of the real exam" caveat. The set's `pass_threshold` column is kept but no longer affects grading.
 - **Transactional outbox.** The email is written in the same transaction as the result, so a crash can never produce a result without its notification, or an email without a result.
 
 ### 5.6 Notifications

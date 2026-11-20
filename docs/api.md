@@ -206,7 +206,7 @@ The server picks the areas and the questions; the client sends no filters. The s
 |---|---|---|
 | POST | `/attempts` | Start an attempt for a test set |
 | GET | `/attempts?status=in_progress,paused` | Drafts list (dashboard) |
-| GET | `/attempts?status=submitted` | History (paginated) |
+| GET | `/attempts?status=submitted` | History (paginated). Each row has `scorePct`, `passed` and `readinessLabel` (F23: `likely_ready`, `close_to_pass` or `needs_more_practice`; null until submitted) |
 | GET | `/attempts/{id}` | Attempt state (no item content) |
 | POST | `/attempts/{id}/open` | Claim the device lease and resume the item timer (call when the player mounts) |
 | GET | `/attempts/{id}/items/{position}` | Item for display, plus the rationale if revealed |
@@ -361,7 +361,7 @@ Repeated calls return the same result.
   "score": { "pointsEarned": 68.0, "maxPoints": 92.0, "pct": 0.739,
              "itemsCorrect": 52, "itemsAnswered": 74, "itemsTotal": 75 },
   "time": { "totalMs": 6120000, "avgPerItemMs": 81600 },
-  "readiness": { "passThreshold": 0.65, "passed": true, "label": "likely_ready",
+  "readiness": { "passThreshold": 0.86, "passed": false, "label": "close_to_pass",
                  "disclaimer": "This is an estimate based on your practice score, not a prediction of your NCLEX result." },
   "breakdown": {
     "client_needs": [ { "key": "SECE.MOC", "name": "Management of Care", "items": 12, "correct": 8,
@@ -372,6 +372,8 @@ Repeated calls return the same result.
   "adaptive": null
 }
 ```
+`readiness.label` is `likely_ready` (pass, 86% and above), `close_to_pass` (70% to 85%) or `needs_more_practice` (fail, below 70%). Since F23 every fixed-length test has a readiness estimate against the fixed 86% pass mark, and `passThreshold` is always 0.86.
+
 For an adaptive exam (F19), `readiness` is null and `adaptive` holds the outcome:
 ```json
 "adaptive": { "passed": true, "itemsAnswered": 85, "minItems": 85, "maxItems": 150,

@@ -3,8 +3,8 @@
 ## 1. Summary
 
 Scores on the Performance page are now coloured so a candidate can see at a glance where they stand.
-70% and below is red (needs work), 71% to 85% is amber (borderline), and 86% and above is green
-(strong). This applies to the overall score tile, the Score column of the breakdown table and the
+Below 70% is red (needs work), 70% to 85% is amber (borderline), and 86% and above is green
+(strong). These match the F23 pass marks; before F23, exactly 70% was red. This applies to the overall score tile, the Score column of the breakdown table and the
 Score column of each trend chart's data table. Screen readers hear the band as well, for example
 "62% (needs work)", so the colour is never the only signal. Other pages (results, dashboard, history,
 weak areas) are unchanged.
@@ -43,8 +43,10 @@ None.
 
 ## 6. Key decisions and deviations
 
-- **Bands use the displayed whole percentage.** 70.6% shows as "71%", so it is amber. Banding on the
-  raw share would make it red while the label reads 71%.
+- **Bands use the displayed whole percentage.** 69.6% shows as "70%", so it is amber. Banding on the
+  raw share would make it red while the label reads 70%.
+- **F23 moved the red/amber edge** from "70% and below" to "below 70%" so the colours match the
+  pass marks. The edges now come from `PASS_MARK` and `CLOSE_TO_PASS_MARK` in `features/results/ResultOutcome.tsx`.
 - **Existing theme tokens.** Red, amber and green reuse `--error`, `--warning` and `--success`
   (`app/globals.css`), which already have light and dark variants with readable contrast. In light
   mode `--warning` is a dark amber (#a16207); in dark mode it is a bright yellow (#facc15).
@@ -56,7 +58,7 @@ None.
 
 ## 7. Tests
 
-- `format.test.ts`: band edges (0, 70%, 70.4%, 70.5%, 71%, 85%, 85.4%, 85.5%, 86%, 100%, and a string value).
+- `format.test.ts`: band edges (0, 69%, 69.4%, 69.5%, 70%, 85%, 85.4%, 85.5%, 86%, 100%, and a string value).
 - `ScorePercent.test.tsx`: each band renders the right `data-band` and hidden label.
 - `PerformancePage.test.tsx`: the existing row assertions now include the band label.
 
