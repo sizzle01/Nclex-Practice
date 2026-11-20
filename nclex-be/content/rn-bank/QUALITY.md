@@ -80,4 +80,5 @@ Written by `python3 -I build_all.py`; do not edit by hand. See `quality.py` for 
 | 88-moc-team-systems-safety | 25 | yes | 10 | 10% | 15% (shortest) | 0% | 22 | 0/10/15 |
 | 89-infection-screening-psychosocial | 25 | yes | 11 | 9% | 30% (assess first) | 0% | 29 | 0/14/11 |
 | 90-medications-care-measures | 25 | yes | 12 | 8% | 31% (stem words) | 0% | 36 | 1/13/11 |
-| **Whole bank** | 1685 | | 1239 | 13% | 25% (assess first) | 6% | 32 | 118/938/629 |
+| 91-monitoring-shock-cases | 25 | yes | 7 | 0% | 29% (shortest) | 43% | 21 | 0/11/14 |
+| **Whole bank** | 1710 | | 1246 | 13% | 25% (assess first) | 6% | 32 | 118/949/643 |
