@@ -91,4 +91,5 @@ Written by `python3 -I build_all.py`; do not edit by hand. See `quality.py` for 
 | 99-procedures-neuro-cardiac-cases | 25 | yes | 7 | 29% | 29% (longest) | 0% | 21 | 0/12/13 |
 | 100-cardiac-cases-acs-hf-af-htn | 24 | yes | 0 | 0% | 0% (-) | 0% | 16 | 0/4/20 |
 | 101-cardiac-cases-vascular-coagulation | 24 | yes | 0 | 0% | 0% (-) | 0% | 19.5 | 0/5/19 |
-| **Whole bank** | 1958 | | 1331 | 12% | 25% (assess first) | 5% | 31 | 118/1065/775 |
+| 102-cardiac-cases-pacing-vt-shock | 24 | yes | 0 | 0% | 0% (-) | 0% | 14.5 | 0/4/20 |
+| **Whole bank** | 1982 | | 1331 | 12% | 25% (assess first) | 5% | 31 | 118/1069/795 |
