@@ -1,5 +1,5 @@
 {
-  "notice": "RN bank batch 30: Pediatrics II: cardiac, GI/GU and neurological. Reviewed by the content team on 17 November 2026. See REVIEW-LOG.md.",
+  "notice": "RN bank batch 30: Pediatrics II: cardiac, GI/GU and neurological. Rewritten to NCLEX-RN difficulty and reviewed by the content team on 19 November 2026. See REVIEW-LOG.md.",
   "track": "RN",
   "subtopics": [
     {
@@ -48,25 +48,25 @@
         "pediatric-cardiac-disorders"
       ],
       "cjmmSkill": "take_action",
-      "difficulty": "moderate",
-      "stem": "A toddler with tetralogy of Fallot becomes deeply cyanotic and breathes rapidly while crying. What should the nurse do first?",
+      "difficulty": "difficult",
+      "stem": "A 14-month-old with unrepaired tetralogy of Fallot becomes deeply cyanotic, irritable and breathes rapidly and deeply after crying through a blood draw. The SpO2 falls from 82% to 64%. The parent is holding the child. What should the nurse do first?",
       "content": {
         "options": [
           {
             "id": "a",
-            "text": "Place the child in a knee-to-chest position"
+            "text": "Have the parent hold the child with knees drawn to the chest"
           },
           {
             "id": "b",
-            "text": "Lay the child flat on the back"
+            "text": "Lay the child flat on the bed and apply oxygen by face mask"
           },
           {
             "id": "c",
-            "text": "Encourage the child to keep crying"
+            "text": "Give a 20 mL/kg normal saline bolus through the IV"
           },
           {
             "id": "d",
-            "text": "Give a large fluid bolus right away"
+            "text": "Prepare to give IV morphine as prescribed to calm the child's breathing"
           }
         ]
       },
@@ -76,14 +76,14 @@
       "rationale": {
         "correct": "Hypercyanotic ('tet') spell: knee-chest, calm the child, oxygen, then morphine and fluids as ordered.",
         "perOption": {
-          "a": "This raises systemic resistance and sends more blood to the lungs.",
-          "b": "This doesn't help.",
-          "c": "Crying worsens the spell.",
-          "d": "Positioning comes first."
+          "a": "Knee-chest positioning raises systemic resistance and pushes more blood through the lungs.",
+          "b": "Oxygen helps, but lying flat does not reduce the right-to-left shunt; positioning comes first.",
+          "c": "Fluids may be ordered after positioning.",
+          "d": "Morphine may be given if positioning and calming fail."
         },
         "references": [
           "Pediatric nursing texts (e.g. Hockenberry, Wong's Essentials of Pediatric Nursing)",
-          "Reviewed by the content team on 17 November 2026."
+          "Rewritten to NCLEX-RN difficulty and reviewed by the content team on 19 November 2026."
         ]
       },
       "educationalObjective": "Manage a hypercyanotic spell."
@@ -98,7 +98,7 @@
       ],
       "cjmmSkill": "analyze_cues",
       "difficulty": "difficult",
-      "stem": "For each congenital heart defect, indicate the category it belongs to.",
+      "stem": "The nurse is preparing a teaching session for parents of children on the pediatric cardiac unit, using a diagram of blood flow through the heart. For each congenital heart defect, indicate whether it increases pulmonary blood flow, decreases pulmonary blood flow or obstructs blood flow.",
       "content": {
         "rows": [
           {
@@ -116,6 +116,14 @@
           {
             "id": "r4",
             "text": "Atrial septal defect"
+          },
+          {
+            "id": "r5",
+            "text": "Patent ductus arteriosus"
+          },
+          {
+            "id": "r6",
+            "text": "Aortic stenosis"
           }
         ],
         "columns": [
@@ -138,28 +146,36 @@
           "r1": "c1",
           "r2": "c2",
           "r3": "c3",
-          "r4": "c1"
+          "r4": "c1",
+          "r5": "c1",
+          "r6": "c3"
         }
       },
       "rationale": {
         "correct": "Classify congenital heart defects by how they change blood flow.",
         "perOption": {
           "r1:c1": "A left-to-right shunt increases blood flow to the lungs.",
-          "r1:c2": "VSD isn't cyanotic in its usual form.",
-          "r1:c3": "VSD isn't an obstructive lesion.",
+          "r1:c2": "VSD is not cyanotic in its usual form.",
+          "r1:c3": "VSD is not an obstructive lesion.",
           "r2:c1": "TOF reduces pulmonary flow.",
           "r2:c2": "Pulmonary stenosis with a right-to-left shunt causes cyanosis.",
           "r2:c3": "Its main feature is reduced pulmonary flow.",
-          "r3:c1": "This isn't a shunt lesion.",
-          "r3:c2": "This isn't cyanotic.",
+          "r3:c1": "This is not a shunt lesion.",
+          "r3:c2": "This is not cyanotic.",
           "r3:c3": "A narrowed aorta obstructs flow.",
           "r4:c1": "A left-to-right shunt increases blood flow to the lungs.",
-          "r4:c2": "ASD isn't cyanotic.",
-          "r4:c3": "ASD isn't obstructive."
+          "r4:c2": "ASD is not cyanotic.",
+          "r4:c3": "ASD is not obstructive.",
+          "r5:c1": "Blood flows from the aorta to the pulmonary artery, increasing lung flow.",
+          "r5:c2": "PDA is usually acyanotic.",
+          "r5:c3": "PDA is not obstructive.",
+          "r6:c1": "This is not a shunt lesion.",
+          "r6:c2": "This is not cyanotic.",
+          "r6:c3": "A narrowed aortic valve obstructs flow out of the left ventricle."
         },
         "references": [
           "Pediatric nursing texts (e.g. Hockenberry, Wong's Essentials of Pediatric Nursing)",
-          "Reviewed by the content team on 17 November 2026."
+          "Rewritten to NCLEX-RN difficulty and reviewed by the content team on 19 November 2026."
         ]
       },
       "educationalObjective": "Classify congenital heart defects."
@@ -174,24 +190,24 @@
       ],
       "cjmmSkill": "recognize_cues",
       "difficulty": "moderate",
-      "stem": "Which finding suggests coarctation of the aorta in an infant?",
+      "stem": "A 3-week-old is brought in for poor feeding and fussiness. The infant is pink, the heart rate is 168/min and a soft murmur is heard. Which additional finding most suggests coarctation of the aorta?",
       "content": {
         "options": [
           {
             "id": "a",
-            "text": "Higher blood pressure in the arms than in the legs, with weak femoral pulses"
+            "text": "Arm blood pressure 30 mm Hg higher than in the legs"
           },
           {
             "id": "b",
-            "text": "Equal blood pressure in all four limbs"
+            "text": "Bounding pulses that are equal in the four extremities"
           },
           {
             "id": "c",
-            "text": "Cyanosis at birth"
+            "text": "Oxygen saturation of 78% in the right hand and foot"
           },
           {
             "id": "d",
-            "text": "Barking cough"
+            "text": "A barking cough and inspiratory stridor"
           }
         ]
       },
@@ -202,13 +218,13 @@
         "correct": "Coarctation: compare blood pressures in the arms and legs and check the femoral pulses.",
         "perOption": {
           "a": "The narrowing limits blood flow to the lower body.",
-          "b": "This is normal.",
+          "b": "Femoral pulses are weak or absent in coarctation.",
           "c": "Coarctation is usually acyanotic.",
-          "d": "This isn't related."
+          "d": "These suggest an airway problem."
         },
         "references": [
           "Pediatric nursing texts (e.g. Hockenberry, Wong's Essentials of Pediatric Nursing)",
-          "Reviewed by the content team on 17 November 2026."
+          "Rewritten to NCLEX-RN difficulty and reviewed by the content team on 19 November 2026."
         ]
       },
       "educationalObjective": "Recognize coarctation of the aorta."
@@ -223,24 +239,24 @@
       ],
       "cjmmSkill": "recognize_cues",
       "difficulty": "moderate",
-      "stem": "Which findings suggest heart failure in an infant?",
+      "stem": "A 3-month-old with a large ventricular septal defect is seen for a weight check. The parent says feedings take 45 minutes and the baby sweats on the head while feeding. Which other finding would the nurse expect if heart failure is developing?",
       "content": {
         "options": [
           {
             "id": "a",
-            "text": "Sweating and tiring during feeds, poor weight gain and tachypnea"
+            "text": "Breathing at 68/min and a liver edge 3 cm below the ribs"
           },
           {
             "id": "b",
-            "text": "Rapid weight gain from overfeeding"
+            "text": "Weight gain of 40 g per day since the visit 4 weeks ago"
           },
           {
             "id": "c",
-            "text": "Bradypnea"
+            "text": "A respiratory rate of 24/min with easy breathing"
           },
           {
             "id": "d",
-            "text": "Increased energy"
+            "text": "Increased activity and alertness for an hour after feedings"
           }
         ]
       },
@@ -250,14 +266,14 @@
       "rationale": {
         "correct": "Infant heart failure: feeding problems, diaphoresis, tachypnea, poor growth and hepatomegaly.",
         "perOption": {
-          "a": "Feeding is exercise for infants; heart failure limits it.",
-          "b": "Infants with heart failure gain weight poorly.",
+          "a": "Tachypnea and hepatomegaly are classic signs of infant heart failure.",
+          "b": "Infants in heart failure gain weight poorly.",
           "c": "Tachypnea is typical.",
-          "d": "Fatigue is typical."
+          "d": "Fatigue after feedings is typical."
         },
         "references": [
           "Pediatric nursing texts (e.g. Hockenberry, Wong's Essentials of Pediatric Nursing)",
-          "Reviewed by the content team on 17 November 2026."
+          "Rewritten to NCLEX-RN difficulty and reviewed by the content team on 19 November 2026."
         ]
       },
       "educationalObjective": "Recognize heart failure in infants."
@@ -271,8 +287,8 @@
         "pre-administration-medication-checks"
       ],
       "cjmmSkill": "take_action",
-      "difficulty": "moderate",
-      "stem": "An infant is prescribed digoxin. The apical pulse is 84/min. What should the nurse do?",
+      "difficulty": "difficult",
+      "stem": "A 4-month-old with heart failure is prescribed digoxin 0.03 mg orally twice daily. Before the 0900 dose, the nurse counts an apical pulse of 84/min for 1 full minute. The infant vomited twice this morning. The last digoxin level was 1.4 ng/mL a week ago. What should the nurse do?",
       "content": {
         "options": [
           {
@@ -281,15 +297,15 @@
           },
           {
             "id": "b",
-            "text": "Give the dose"
+            "text": "Give the dose, since the last level was in range"
           },
           {
             "id": "c",
-            "text": "Give half the dose"
+            "text": "Give half the dose and recheck the pulse in 1 hour"
           },
           {
             "id": "d",
-            "text": "Recheck in 4 hours and give it then"
+            "text": "Recheck the pulse in 4 hours and give the dose then"
           }
         ]
       },
@@ -297,17 +313,17 @@
         "correct": "a"
       },
       "rationale": {
-        "correct": "Pediatric digoxin: count the apical pulse for 1 full minute and hold per the parameters (infants below about 90 to 110; children below about 70).",
+        "correct": "Pediatric digoxin: count the apical pulse for 1 full minute and hold per the parameters (infants below about 90 to 110; children below about 70). Vomiting and bradycardia suggest toxicity.",
         "perOption": {
-          "a": "Infants usually have digoxin held for a heart rate below about 90 to 110, per parameters.",
-          "b": "The heart rate is too low.",
-          "c": "The nurse can't adjust the dose.",
-          "d": "The provider should be notified."
+          "a": "An infant's digoxin is usually held for a heart rate below about 90 to 110; bradycardia with vomiting suggests toxicity.",
+          "b": "The heart rate is too low, and the vomiting may be a sign of toxicity.",
+          "c": "The nurse cannot change the dose.",
+          "d": "The provider needs to know about the bradycardia and vomiting now."
         },
         "references": [
           "Pediatric nursing texts (e.g. Hockenberry, Wong's Essentials of Pediatric Nursing)",
           "Nursing pharmacology texts (e.g. Lehne; McCuistion) and the drug's prescribing information",
-          "Reviewed by the content team on 17 November 2026."
+          "Rewritten to NCLEX-RN difficulty and reviewed by the content team on 19 November 2026."
         ]
       },
       "educationalObjective": "Apply pediatric digoxin parameters."
@@ -322,24 +338,24 @@
       ],
       "cjmmSkill": "generate_solutions",
       "difficulty": "difficult",
-      "stem": "A child is being treated for Kawasaki disease with IV immune globulin and aspirin. Which teaching is important?",
+      "stem": "A 3-year-old with Kawasaki disease received IV immune globulin yesterday and is now on low-dose aspirin. The fever has resolved. The child is due for the MMR and varicella vaccines next month. Which discharge teaching is accurate?",
       "content": {
         "options": [
           {
             "id": "a",
-            "text": "Live vaccines such as MMR may need to be postponed for about 11 months after IVIG"
+            "text": "Postpone the MMR and varicella vaccines for about 11 months"
           },
           {
             "id": "b",
-            "text": "Stop aspirin as soon as the fever ends"
+            "text": "Stop the aspirin now that the fever has gone away"
           },
           {
             "id": "c",
-            "text": "Kawasaki disease never affects the heart"
+            "text": "Give ibuprofen with the aspirin for joint pain or fever"
           },
           {
             "id": "d",
-            "text": "Give ibuprofen with the aspirin"
+            "text": "The heart is safe now, so follow-up echocardiograms are not needed"
           }
         ]
       },
@@ -349,14 +365,14 @@
       "rationale": {
         "correct": "Kawasaki disease: fever for 5 days or more, red eyes, strawberry tongue, peeling hands; risk of coronary aneurysm; IVIG and aspirin.",
         "perOption": {
-          "a": "IVIG antibodies can block the response to live vaccines.",
-          "b": "Low-dose aspirin often continues for weeks as directed.",
-          "c": "Coronary artery aneurysms are the main risk.",
-          "d": "Ibuprofen interferes with aspirin's antiplatelet effect."
+          "a": "Antibodies in IVIG can block the immune response to live vaccines.",
+          "b": "Low-dose aspirin often continues for 6 to 8 weeks as directed.",
+          "c": "Ibuprofen blocks aspirin's antiplatelet effect.",
+          "d": "Coronary artery aneurysms can develop over weeks and need follow-up."
         },
         "references": [
           "Pediatric nursing texts (e.g. Hockenberry, Wong's Essentials of Pediatric Nursing)",
-          "Reviewed by the content team on 17 November 2026."
+          "Rewritten to NCLEX-RN difficulty and reviewed by the content team on 19 November 2026."
         ]
       },
       "educationalObjective": "Teach about Kawasaki disease treatment."
@@ -371,7 +387,7 @@
       ],
       "cjmmSkill": "recognize_cues",
       "difficulty": "moderate",
-      "stem": "A 4-week-old has forceful vomiting after feeds, seems hungry right afterward and has a small olive-shaped mass in the upper abdomen. What does the nurse suspect?",
+      "stem": "A 4-week-old first-born infant has vomited forcefully across the room after most feeds for 3 days, then seems hungry right away. The vomit contains formula but no bile. The nurse feels a small, firm mass in the upper right abdomen. Which condition does the nurse suspect?",
       "content": {
         "options": [
           {
@@ -388,7 +404,7 @@
           },
           {
             "id": "d",
-            "text": "Hirschsprung disease"
+            "text": "Malrotation with volvulus"
           }
         ]
       },
@@ -399,13 +415,13 @@
         "correct": "Pyloric stenosis: projectile vomiting, hunger, olive mass and metabolic alkalosis.",
         "perOption": {
           "a": "A thickened pylorus causes projectile, non-bilious vomiting and a palpable olive.",
-          "b": "This causes currant jelly stools.",
-          "c": "Reflux causes spitting up, not projectile vomiting with a mass.",
-          "d": "This causes constipation."
+          "b": "This causes colicky pain and currant jelly stools.",
+          "c": "Reflux causes effortless spitting up, not projectile vomiting with a mass.",
+          "d": "This causes bilious vomiting."
         },
         "references": [
           "Pediatric nursing texts (e.g. Hockenberry, Wong's Essentials of Pediatric Nursing)",
-          "Reviewed by the content team on 17 November 2026."
+          "Rewritten to NCLEX-RN difficulty and reviewed by the content team on 19 November 2026."
         ]
       },
       "educationalObjective": "Recognize pyloric stenosis."
@@ -419,8 +435,8 @@
         "pediatric-gi-gu-disorders"
       ],
       "cjmmSkill": "recognize_cues",
-      "difficulty": "moderate",
-      "stem": "An 8-month-old has episodes of severe crying with the knees drawn up and red, jelly-like stools. What does the nurse suspect?",
+      "difficulty": "difficult",
+      "stem": "An 8-month-old has had episodes of screaming with the knees drawn up every 15 to 20 minutes, with quiet periods between. The infant has vomited twice and just passed a stool of blood and mucus. The nurse feels a sausage-shaped mass in the right upper abdomen. Which condition does the nurse suspect?",
       "content": {
         "options": [
           {
@@ -433,11 +449,11 @@
           },
           {
             "id": "c",
-            "text": "Constipation"
+            "text": "Infant colic"
           },
           {
             "id": "d",
-            "text": "Celiac disease"
+            "text": "Bacterial gastroenteritis"
           }
         ]
       },
@@ -447,14 +463,14 @@
       "rationale": {
         "correct": "Intussusception: sudden colicky pain, a sausage-shaped mass and currant jelly stools. Report a normal brown stool, which may mean it has reduced.",
         "perOption": {
-          "a": "Telescoping bowel causes colicky pain and currant jelly stools.",
-          "b": "This causes projectile vomiting.",
-          "c": "This doesn't cause currant jelly stools.",
-          "d": "This develops more slowly."
+          "a": "Telescoping bowel causes colicky pain, a sausage-shaped mass and currant jelly stools.",
+          "b": "This affects younger infants and causes projectile vomiting without bloody stool.",
+          "c": "Colic does not cause bloody stools or a mass.",
+          "d": "This causes diarrhea and fever but not a sausage-shaped mass."
         },
         "references": [
           "Pediatric nursing texts (e.g. Hockenberry, Wong's Essentials of Pediatric Nursing)",
-          "Reviewed by the content team on 17 November 2026."
+          "Rewritten to NCLEX-RN difficulty and reviewed by the content team on 19 November 2026."
         ]
       },
       "educationalObjective": "Recognize intussusception."
@@ -469,7 +485,7 @@
       ],
       "cjmmSkill": "analyze_cues",
       "difficulty": "moderate",
-      "stem": "A newborn hasn't passed meconium in 48 hours and has a distended abdomen. Which condition does this suggest?",
+      "stem": "A term newborn has not passed meconium at 48 hours of age. The abdomen is distended, the infant has started vomiting green fluid and a rectal exam is followed by an explosive release of stool. Which condition do these findings suggest?",
       "content": {
         "options": [
           {
@@ -482,11 +498,11 @@
           },
           {
             "id": "c",
-            "text": "Intussusception"
+            "text": "Meconium aspiration"
           },
           {
             "id": "d",
-            "text": "Diarrhea"
+            "text": "Intussusception"
           }
         ]
       },
@@ -494,16 +510,16 @@
         "correct": "a"
       },
       "rationale": {
-        "correct": "Hirschsprung disease: delayed meconium and later ribbon-like, foul-smelling stools.",
+        "correct": "Hirschsprung disease: delayed meconium, distension, bilious vomiting and later ribbon-like, foul-smelling stools.",
         "perOption": {
-          "a": "Missing nerve cells in the bowel prevent stool from passing.",
-          "b": "This causes vomiting.",
-          "c": "This is unusual in newborns.",
-          "d": "This doesn't fit."
+          "a": "Missing nerve cells in part of the bowel prevent stool from passing; a rectal exam can release a burst of stool.",
+          "b": "This causes non-bilious vomiting at 2 to 8 weeks.",
+          "c": "This affects the lungs, not stool passage.",
+          "d": "This is unusual in newborns."
         },
         "references": [
           "Pediatric nursing texts (e.g. Hockenberry, Wong's Essentials of Pediatric Nursing)",
-          "Reviewed by the content team on 17 November 2026."
+          "Rewritten to NCLEX-RN difficulty and reviewed by the content team on 19 November 2026."
         ]
       },
       "educationalObjective": "Recognize Hirschsprung disease."
@@ -518,24 +534,24 @@
       ],
       "cjmmSkill": "recognize_cues",
       "difficulty": "easy",
-      "stem": "Which finding suggests dehydration in an infant?",
+      "stem": "A 9-month-old has had diarrhea for 2 days. The parent says the baby is \"not acting right.\" Which group of findings suggests the infant is dehydrated?",
       "content": {
         "options": [
           {
             "id": "a",
-            "text": "Sunken anterior fontanel and fewer wet diapers"
+            "text": "Sunken fontanel and 2 wet diapers in 24 hours"
           },
           {
             "id": "b",
-            "text": "Bulging fontanel"
+            "text": "Bulging anterior fontanel and a high-pitched cry"
           },
           {
             "id": "c",
-            "text": "Moist mucous membranes"
+            "text": "Moist mucous membranes and tears when crying"
           },
           {
             "id": "d",
-            "text": "Weight gain"
+            "text": "Weight up 100 g from last week's visit"
           }
         ]
       },
@@ -546,13 +562,13 @@
         "correct": "Infant dehydration: sunken fontanel and eyes, dry membranes, fewer wet diapers, tachycardia and lethargy.",
         "perOption": {
           "a": "These are signs of volume loss.",
-          "b": "This suggests increased intracranial pressure.",
-          "c": "This means good hydration.",
-          "d": "This doesn't suggest dehydration."
+          "b": "These suggest increased intracranial pressure.",
+          "c": "These show good hydration.",
+          "d": "Weight loss, not gain, suggests dehydration."
         },
         "references": [
           "Pediatric nursing texts (e.g. Hockenberry, Wong's Essentials of Pediatric Nursing)",
-          "Reviewed by the content team on 17 November 2026."
+          "Rewritten to NCLEX-RN difficulty and reviewed by the content team on 19 November 2026."
         ]
       },
       "educationalObjective": "Recognize infant dehydration."
@@ -567,24 +583,24 @@
       ],
       "cjmmSkill": "generate_solutions",
       "difficulty": "moderate",
-      "stem": "A toddler with mild dehydration from gastroenteritis is alert and can drink. What should the nurse teach the parents?",
+      "stem": "A 2-year-old with gastroenteritis has vomited 3 times and had 5 loose stools today. The child is alert, has moist lips and is drinking. Mild dehydration is diagnosed. What should the nurse teach the parents?",
       "content": {
         "options": [
           {
             "id": "a",
-            "text": "Give small, frequent amounts of oral rehydration solution"
+            "text": "Give 5 mL of oral rehydration solution every few minutes"
           },
           {
             "id": "b",
-            "text": "Give large amounts of apple juice"
+            "text": "Give large cups of apple juice or a sports drink"
           },
           {
             "id": "c",
-            "text": "Withhold all fluids for 24 hours"
+            "text": "Withhold food and fluids for 24 hours to rest the gut"
           },
           {
             "id": "d",
-            "text": "Give only plain water"
+            "text": "Give plain water and hold solid foods for the next several days"
           }
         ]
       },
@@ -594,14 +610,14 @@
       "rationale": {
         "correct": "Mild to moderate dehydration: ORS in small frequent amounts, then resume a normal diet.",
         "perOption": {
-          "a": "ORS replaces fluid and electrolytes, and small amounts are tolerated even with vomiting.",
-          "b": "High sugar can worsen diarrhea.",
+          "a": "Small, frequent amounts of ORS replace fluid and electrolytes and are tolerated even with vomiting.",
+          "b": "High sugar can worsen diarrhea and lacks the right electrolytes.",
           "c": "This worsens dehydration.",
-          "d": "Water lacks electrolytes."
+          "d": "Water lacks electrolytes, and a normal diet resumes once rehydrated."
         },
         "references": [
           "Pediatric nursing texts (e.g. Hockenberry, Wong's Essentials of Pediatric Nursing)",
-          "Reviewed by the content team on 17 November 2026."
+          "Rewritten to NCLEX-RN difficulty and reviewed by the content team on 19 November 2026."
         ]
       },
       "educationalObjective": "Teach oral rehydration."
@@ -616,24 +632,24 @@
       ],
       "cjmmSkill": "take_action",
       "difficulty": "moderate",
-      "stem": "After a cleft lip repair, how should the nurse position the infant?",
+      "stem": "A 3-month-old returns from surgery after a cleft lip repair. The infant is fussy, rubbing the face against the sheet and trying to suck the fingers. Which action should the nurse take to protect the repair?",
       "content": {
         "options": [
           {
             "id": "a",
-            "text": "On the back or side, with elbow restraints to keep the hands away from the suture line"
+            "text": "Place the infant on the back and apply elbow restraints"
           },
           {
             "id": "b",
-            "text": "Prone"
+            "text": "Place the infant prone so secretions can drain from the mouth"
           },
           {
             "id": "c",
-            "text": "Prone with a pacifier"
+            "text": "Give a pacifier to soothe the infant and stop the crying"
           },
           {
             "id": "d",
-            "text": "Any position, without restraints"
+            "text": "Swaddle the infant face down on the parent's chest"
           }
         ]
       },
@@ -643,14 +659,14 @@
       "rationale": {
         "correct": "Cleft lip repair: protect the suture line, no prone positioning, elbow restraints and gentle cleaning.",
         "perOption": {
-          "a": "This protects the repair.",
-          "b": "Prone positioning risks rubbing the lip.",
-          "c": "Sucking strains the repair.",
-          "d": "The repair must be protected."
+          "a": "Lying supine keeps the lip off the sheet, and elbow restraints keep the hands away from the suture line.",
+          "b": "Prone positioning rubs the lip against the bed.",
+          "c": "Sucking strains the suture line.",
+          "d": "This presses the repair against the parent."
         },
         "references": [
           "Pediatric nursing texts (e.g. Hockenberry, Wong's Essentials of Pediatric Nursing)",
-          "Reviewed by the content team on 17 November 2026."
+          "Rewritten to NCLEX-RN difficulty and reviewed by the content team on 19 November 2026."
         ]
       },
       "educationalObjective": "Protect a cleft lip repair."
@@ -665,7 +681,7 @@
       ],
       "cjmmSkill": "take_action",
       "difficulty": "easy",
-      "stem": "When should parents collect a tape test for suspected pinworms?",
+      "stem": "A 5-year-old wakes at night scratching around the anus, and the provider suspects pinworms. The nurse is teaching the parent how to collect a tape test at home. When should the parent collect the sample?",
       "content": {
         "options": [
           {
@@ -674,15 +690,15 @@
           },
           {
             "id": "b",
-            "text": "At bedtime"
+            "text": "At bedtime, after the child has been bathed and dressed for sleep"
           },
           {
             "id": "c",
-            "text": "After the morning bath"
+            "text": "After the morning bath, once the skin is clean and dry"
           },
           {
             "id": "d",
-            "text": "After a meal"
+            "text": "Within an hour after the child eats breakfast"
           }
         ]
       },
@@ -693,13 +709,13 @@
         "correct": "Pinworms: morning tape test, treat the whole family, wash bedding and use good hand hygiene.",
         "perOption": {
           "a": "Female worms lay eggs around the anus at night.",
-          "b": "Eggs are best collected in the morning.",
+          "b": "Eggs are laid overnight, so morning collection finds them.",
           "c": "Bathing removes the eggs.",
           "d": "Timing relates to egg-laying, not meals."
         },
         "references": [
           "Pediatric nursing texts (e.g. Hockenberry, Wong's Essentials of Pediatric Nursing)",
-          "Reviewed by the content team on 17 November 2026."
+          "Rewritten to NCLEX-RN difficulty and reviewed by the content team on 19 November 2026."
         ]
       },
       "educationalObjective": "Teach pinworm testing."
@@ -714,7 +730,7 @@
       ],
       "cjmmSkill": "recognize_cues",
       "difficulty": "moderate",
-      "stem": "A 3-year-old has puffy eyes, a swollen abdomen and frothy urine with large amounts of protein, low albumin and high cholesterol. What does the nurse suspect?",
+      "stem": "A 3-year-old has swelling around the eyes in the morning, a swollen abdomen and frothy urine. Blood pressure is 98/60 mm Hg. Urine protein is 4+ with no blood, serum albumin is 1.8 g/dL and cholesterol is 320 mg/dL. Which condition does the nurse suspect?",
       "content": {
         "options": [
           {
@@ -741,14 +757,14 @@
       "rationale": {
         "correct": "Nephrotic syndrome: proteinuria, hypoalbuminemia, edema and hyperlipidemia; treated with corticosteroids.",
         "perOption": {
-          "a": "Massive protein loss causes low albumin and edema.",
+          "a": "Massive protein loss causes low albumin, edema and high cholesterol.",
           "b": "This causes hematuria and hypertension.",
-          "c": "This doesn't cause massive proteinuria.",
-          "d": "This causes an abdominal mass."
+          "c": "This does not cause massive proteinuria or edema.",
+          "d": "This causes a firm abdominal mass, not generalized edema."
         },
         "references": [
           "Pediatric nursing texts (e.g. Hockenberry, Wong's Essentials of Pediatric Nursing)",
-          "Reviewed by the content team on 17 November 2026."
+          "Rewritten to NCLEX-RN difficulty and reviewed by the content team on 19 November 2026."
         ]
       },
       "educationalObjective": "Recognize nephrotic syndrome."
@@ -762,25 +778,25 @@
         "pediatric-gi-gu-disorders"
       ],
       "cjmmSkill": "take_action",
-      "difficulty": "moderate",
-      "stem": "A child has a suspected Wilms tumor. Which action should the nurse avoid?",
+      "difficulty": "difficult",
+      "stem": "A 3-year-old is admitted after a parent noticed a firm, smooth mass on one side of the abdomen while bathing the child. A Wilms tumor is suspected, and surgery is planned for tomorrow. Which action should the nurse take?",
       "content": {
         "options": [
           {
             "id": "a",
-            "text": "Palpating the abdomen"
+            "text": "Post a sign at the bedside that says not to palpate the abdomen"
           },
           {
             "id": "b",
-            "text": "Taking the blood pressure"
+            "text": "Measure the mass by palpation each shift to track its growth"
           },
           {
             "id": "c",
-            "text": "Measuring urine output"
+            "text": "Take blood pressures in the thigh to avoid disturbing the child"
           },
           {
             "id": "d",
-            "text": "Weighing the child"
+            "text": "Give a soapsuds enema to empty the bowel before surgery"
           }
         ]
       },
@@ -791,13 +807,13 @@
         "correct": "Wilms tumor: post a sign to avoid abdominal palpation and handle the child carefully.",
         "perOption": {
           "a": "Palpation can rupture the tumor capsule and spread cancer cells.",
-          "b": "This is needed.",
-          "c": "This is appropriate.",
-          "d": "This is appropriate."
+          "b": "Palpation risks rupturing the tumor.",
+          "c": "Blood pressure is checked in the arm; Wilms tumor can cause hypertension.",
+          "d": "This is not routine and could disturb the tumor."
         },
         "references": [
           "Pediatric nursing texts (e.g. Hockenberry, Wong's Essentials of Pediatric Nursing)",
-          "Reviewed by the content team on 17 November 2026."
+          "Rewritten to NCLEX-RN difficulty and reviewed by the content team on 19 November 2026."
         ]
       },
       "educationalObjective": "Protect a child with a Wilms tumor."
@@ -812,24 +828,24 @@
       ],
       "cjmmSkill": "generate_solutions",
       "difficulty": "moderate",
-      "stem": "An infant boy has hypospadias. What should the nurse tell the parents?",
+      "stem": "A newborn boy has hypospadias with the urethral opening on the underside of the penis. The parents planned a circumcision before discharge and ask the nurse whether it can still be done. What should the nurse tell the parents?",
       "content": {
         "options": [
           {
             "id": "a",
-            "text": "\"Your son shouldn't be circumcised, because the foreskin may be needed for the repair.\""
+            "text": "\"It is delayed; the foreskin may be needed for the repair.\""
           },
           {
             "id": "b",
-            "text": "\"Circumcision should be done right away.\""
+            "text": "\"Circumcision should be done now so the area heals before the repair.\""
           },
           {
             "id": "c",
-            "text": "\"No repair is ever needed.\""
+            "text": "\"No repair is needed, because this does not affect urination.\""
           },
           {
             "id": "d",
-            "text": "\"This will affect his kidneys.\""
+            "text": "\"The repair is done at puberty, once growth is complete.\""
           }
         ]
       },
@@ -839,14 +855,14 @@
       "rationale": {
         "correct": "Hypospadias: no circumcision; surgical repair is usually done between 6 and 12 months.",
         "perOption": {
-          "a": "The foreskin may be used in surgery.",
-          "b": "This may prevent a good repair.",
-          "c": "Surgery is usually done in infancy.",
-          "d": "This isn't typical."
+          "a": "The foreskin may be used as tissue during surgical repair.",
+          "b": "Removing the foreskin may prevent a good repair.",
+          "c": "Surgery is usually done in infancy to correct the stream and appearance.",
+          "d": "Repair is usually done between 6 and 12 months."
         },
         "references": [
           "Pediatric nursing texts (e.g. Hockenberry, Wong's Essentials of Pediatric Nursing)",
-          "Reviewed by the content team on 17 November 2026."
+          "Rewritten to NCLEX-RN difficulty and reviewed by the content team on 19 November 2026."
         ]
       },
       "educationalObjective": "Teach parents about hypospadias."
@@ -861,24 +877,24 @@
       ],
       "cjmmSkill": "generate_solutions",
       "difficulty": "moderate",
-      "stem": "A parent of a 2-year-old who had a simple febrile seizure asks what to do next time. What should the nurse teach?",
+      "stem": "A 2-year-old had a 2-minute generalized seizure at home with a temperature of 39.4 °C (103 °F) and is now alert and playful. The provider diagnoses a simple febrile seizure. The parent asks what to do if it happens again. What should the nurse teach?",
       "content": {
         "options": [
           {
             "id": "a",
-            "text": "Protect the child from injury, turn the child to the side and time the seizure; call 911 if it lasts more than 5 minutes"
+            "text": "Turn the child on the side; call 911 if it lasts over 5 minutes"
           },
           {
             "id": "b",
-            "text": "Put something in the child's mouth"
+            "text": "Put a soft object between the child's teeth to protect the tongue"
           },
           {
             "id": "c",
-            "text": "Put the child in a cold bath"
+            "text": "Put the child in a cool bath to bring the fever down quickly"
           },
           {
             "id": "d",
-            "text": "Antipyretics will prevent all future seizures"
+            "text": "Give acetaminophen around the clock to prevent seizures"
           }
         ]
       },
@@ -888,14 +904,14 @@
       "rationale": {
         "correct": "Simple febrile seizures are usually benign; teach seizure first aid.",
         "perOption": {
-          "a": "Most febrile seizures are brief and harmless.",
-          "b": "This is dangerous.",
-          "c": "This isn't recommended.",
-          "d": "Antipyretics are for comfort; they don't prevent febrile seizures."
+          "a": "Most febrile seizures are brief; protecting the airway and timing the seizure are key.",
+          "b": "Objects in the mouth can break teeth or block the airway.",
+          "c": "A cool bath during a seizure risks drowning and is not recommended.",
+          "d": "Antipyretics are for comfort and do not prevent febrile seizures."
         },
         "references": [
           "Pediatric nursing texts (e.g. Hockenberry, Wong's Essentials of Pediatric Nursing)",
-          "Reviewed by the content team on 17 November 2026."
+          "Rewritten to NCLEX-RN difficulty and reviewed by the content team on 19 November 2026."
         ]
       },
       "educationalObjective": "Teach parents about febrile seizures."
@@ -910,24 +926,24 @@
       ],
       "cjmmSkill": "recognize_cues",
       "difficulty": "moderate",
-      "stem": "Which findings in a 4-month-old suggest hydrocephalus?",
+      "stem": "At a 4-month well-baby visit, the infant's head circumference has moved from the 50th to above the 95th percentile since the 2-month visit. The parent says the baby is more irritable and feeds poorly. Which other findings would most suggest hydrocephalus?",
       "content": {
         "options": [
           {
             "id": "a",
-            "text": "Rapidly increasing head size, a bulging fontanel and eyes that look downward (sunset eyes)"
+            "text": "A bulging fontanel and eyes that look downward"
           },
           {
             "id": "b",
-            "text": "Sunken fontanel"
+            "text": "A sunken fontanel and dry mucous membranes"
           },
           {
             "id": "c",
-            "text": "Small head size"
+            "text": "A closed anterior fontanel and a small forehead"
           },
           {
             "id": "d",
-            "text": "Normal head growth"
+            "text": "Flattening on one side of the back of the head"
           }
         ]
       },
@@ -937,14 +953,14 @@
       "rationale": {
         "correct": "Hydrocephalus in infants: increasing head circumference, bulging fontanel, sunset eyes and irritability.",
         "perOption": {
-          "a": "These show CSF building up.",
-          "b": "This suggests dehydration.",
-          "c": "This is microcephaly.",
-          "d": "This doesn't suggest hydrocephalus."
+          "a": "These show CSF building up and pressing on the brain.",
+          "b": "These suggest dehydration.",
+          "c": "Early closure fits craniosynostosis or microcephaly.",
+          "d": "This is positional plagiocephaly."
         },
         "references": [
           "Pediatric nursing texts (e.g. Hockenberry, Wong's Essentials of Pediatric Nursing)",
-          "Reviewed by the content team on 17 November 2026."
+          "Rewritten to NCLEX-RN difficulty and reviewed by the content team on 19 November 2026."
         ]
       },
       "educationalObjective": "Recognize hydrocephalus in an infant."
@@ -958,8 +974,8 @@
         "pediatric-neurological-disorders"
       ],
       "cjmmSkill": "recognize_cues",
-      "difficulty": "moderate",
-      "stem": "A child with a ventriculoperitoneal shunt has vomiting, headache and irritability. What does the nurse suspect?",
+      "difficulty": "difficult",
+      "stem": "A 6-year-old with a ventriculoperitoneal shunt has vomited 4 times since this morning and has a headache and is sleepier than usual. The sibling has a stomach virus. The temperature is 37.2 °C (99 °F), the pulse is 64/min and the blood pressure is 128/62 mm Hg. Which condition does the nurse suspect?",
       "content": {
         "options": [
           {
@@ -968,15 +984,15 @@
           },
           {
             "id": "b",
-            "text": "Viral gastroenteritis"
+            "text": "Viral gastroenteritis caught from the sibling at home"
           },
           {
             "id": "c",
-            "text": "Normal recovery"
+            "text": "Shunt infection spreading along the tubing to the abdomen"
           },
           {
             "id": "d",
-            "text": "Dehydration"
+            "text": "Dehydration from repeated vomiting"
           }
         ]
       },
@@ -986,14 +1002,14 @@
       "rationale": {
         "correct": "Shunt malfunction: signs of increased ICP. Shunt infection: fever and redness along the tract.",
         "perOption": {
-          "a": "Shunt blockage causes CSF to build up.",
-          "b": "Shunt failure must be ruled out first.",
-          "c": "These aren't normal.",
-          "d": "This doesn't fit."
+          "a": "Vomiting, headache and drowsiness with bradycardia and a widening pulse pressure suggest rising ICP.",
+          "b": "This is possible, but the vital signs point to rising ICP, which must be ruled out first.",
+          "c": "Infection usually causes fever and redness along the tract.",
+          "d": "Dehydration causes tachycardia, not bradycardia."
         },
         "references": [
           "Pediatric nursing texts (e.g. Hockenberry, Wong's Essentials of Pediatric Nursing)",
-          "Reviewed by the content team on 17 November 2026."
+          "Rewritten to NCLEX-RN difficulty and reviewed by the content team on 19 November 2026."
         ]
       },
       "educationalObjective": "Recognize VP shunt malfunction."
@@ -1008,24 +1024,24 @@
       ],
       "cjmmSkill": "take_action",
       "difficulty": "difficult",
-      "stem": "A newborn has a myelomeningocele. How should the nurse care for the sac before surgery?",
+      "stem": "A term newborn is born with a myelomeningocele in the lumbar area. The sac is intact, and surgery is planned within 48 hours. How should the nurse care for the sac until surgery?",
       "content": {
         "options": [
           {
             "id": "a",
-            "text": "Cover it with a sterile, moist, nonadherent dressing and place the newborn prone"
+            "text": "Cover with a sterile, saline-moist nonadherent dressing; position prone"
           },
           {
             "id": "b",
-            "text": "Leave it open to air"
+            "text": "Leave it open to air under the radiant warmer so it can be watched closely"
           },
           {
             "id": "c",
-            "text": "Place the newborn on the back"
+            "text": "Place the newborn on the back with a rolled towel under the hips"
           },
           {
             "id": "d",
-            "text": "Apply a dry gauze dressing"
+            "text": "Cover it with dry sterile gauze secured with tape"
           }
         ]
       },
@@ -1033,16 +1049,16 @@
         "correct": "a"
       },
       "rationale": {
-        "correct": "Myelomeningocele: sterile moist dressing, prone position and latex precautions.",
+        "correct": "Myelomeningocele: sterile moist dressing, prone position, latex precautions and watch for hydrocephalus.",
         "perOption": {
-          "a": "This protects the sac from drying, rupture and infection.",
-          "b": "This lets it dry out and become infected.",
+          "a": "This keeps the sac moist and free of pressure and lowers the risk of rupture and infection.",
+          "b": "Drying can crack the sac and allow infection.",
           "c": "This puts pressure on the sac.",
-          "d": "Dry gauze sticks to the sac."
+          "d": "Dry gauze sticks to the sac and can tear it."
         },
         "references": [
           "Pediatric nursing texts (e.g. Hockenberry, Wong's Essentials of Pediatric Nursing)",
-          "Reviewed by the content team on 17 November 2026."
+          "Rewritten to NCLEX-RN difficulty and reviewed by the content team on 19 November 2026."
         ]
       },
       "educationalObjective": "Protect a myelomeningocele before surgery."
@@ -1057,24 +1073,24 @@
       ],
       "cjmmSkill": "recognize_cues",
       "difficulty": "moderate",
-      "stem": "Which finding in a 7-month-old is an early sign of cerebral palsy?",
+      "stem": "A 7-month-old born at 28 weeks is seen for a developmental check. The parent says the baby feels \"stiff\" when picked up. Which finding is an early sign of cerebral palsy?",
       "content": {
         "options": [
           {
             "id": "a",
-            "text": "Primitive reflexes that persist and stiff muscle tone"
+            "text": "A Moro reflex still present, with legs that scissor"
           },
           {
             "id": "b",
-            "text": "Rolling over both ways"
+            "text": "Rolling over from front to back and from back to front"
           },
           {
             "id": "c",
-            "text": "Babbling"
+            "text": "Babbling with consonant sounds such as \"ba-ba\""
           },
           {
             "id": "d",
-            "text": "Reaching for toys with both hands"
+            "text": "Passing a toy from one hand to the other"
           }
         ]
       },
@@ -1084,14 +1100,14 @@
       "rationale": {
         "correct": "CP: persistent primitive reflexes, abnormal tone, delayed milestones and early hand preference.",
         "perOption": {
-          "a": "Persistent primitive reflexes and abnormal tone suggest CP.",
+          "a": "Persistent primitive reflexes and increased tone suggest CP.",
           "b": "This is expected at this age.",
           "c": "This is expected.",
           "d": "This is expected."
         },
         "references": [
           "Pediatric nursing texts (e.g. Hockenberry, Wong's Essentials of Pediatric Nursing)",
-          "Reviewed by the content team on 17 November 2026."
+          "Rewritten to NCLEX-RN difficulty and reviewed by the content team on 19 November 2026."
         ]
       },
       "educationalObjective": "Recognize early signs of cerebral palsy."
@@ -1105,25 +1121,25 @@
         "pediatric-neurological-disorders"
       ],
       "cjmmSkill": "recognize_cues",
-      "difficulty": "moderate",
-      "stem": "Which finding in a 6-month-old with fever suggests bacterial meningitis?",
+      "difficulty": "difficult",
+      "stem": "A 6-month-old is brought in with a temperature of 39.6 °C (103.3 °F), poor feeding and vomiting for 12 hours. The infant has no neck stiffness. Which additional finding most strongly suggests bacterial meningitis?",
       "content": {
         "options": [
           {
             "id": "a",
-            "text": "Bulging fontanel with irritability and a high-pitched cry"
+            "text": "A bulging fontanel with a high-pitched cry"
           },
           {
             "id": "b",
-            "text": "Runny nose"
+            "text": "Clear nasal discharge and a mild cough"
           },
           {
             "id": "c",
-            "text": "Diaper rash"
+            "text": "A sunken fontanel and few wet diapers"
           },
           {
             "id": "d",
-            "text": "Sunken fontanel"
+            "text": "Red, bulging eardrum on otoscope exam"
           }
         ]
       },
@@ -1133,14 +1149,14 @@
       "rationale": {
         "correct": "Infant meningitis may lack neck stiffness; look for a bulging fontanel, irritability, poor feeding and a high-pitched cry.",
         "perOption": {
-          "a": "These signs suggest increased ICP and meningeal irritation in infants.",
-          "b": "This suggests a cold.",
-          "c": "This isn't related.",
-          "d": "This suggests dehydration."
+          "a": "These suggest increased ICP and meningeal irritation; infants often lack neck stiffness.",
+          "b": "This suggests a viral upper respiratory infection.",
+          "c": "This suggests dehydration from vomiting.",
+          "d": "This suggests otitis media, a common cause of fever."
         },
         "references": [
           "Pediatric nursing texts (e.g. Hockenberry, Wong's Essentials of Pediatric Nursing)",
-          "Reviewed by the content team on 17 November 2026."
+          "Rewritten to NCLEX-RN difficulty and reviewed by the content team on 19 November 2026."
         ]
       },
       "educationalObjective": "Recognize meningitis in an infant."
@@ -1155,24 +1171,24 @@
       ],
       "cjmmSkill": "generate_solutions",
       "difficulty": "easy",
-      "stem": "A parent asks whether to give aspirin to a child who has the flu. What is the best response?",
+      "stem": "A parent calls the clinic about a 9-year-old with influenza who has a fever of 39 °C (102.2 °F) and body aches. The parent asks whether the child can take aspirin from the family medicine cabinet. What is the best response?",
       "content": {
         "options": [
           {
             "id": "a",
-            "text": "\"No, aspirin can cause Reye syndrome in children with viral illnesses; use acetaminophen or ibuprofen instead.\""
+            "text": "\"No, aspirin can cause Reye syndrome; use acetaminophen or ibuprofen.\""
           },
           {
             "id": "b",
-            "text": "\"Yes, aspirin is the best choice for fever.\""
+            "text": "\"Yes, aspirin works best for fever and the aches of the flu.\""
           },
           {
             "id": "c",
-            "text": "\"Only give half an adult aspirin.\""
+            "text": "\"Yes, but give half of an adult tablet to lower the risk.\""
           },
           {
             "id": "d",
-            "text": "\"Aspirin is safe if given with food.\""
+            "text": "\"Yes, as long as you give it with food or milk to protect the stomach.\""
           }
         ]
       },
@@ -1180,16 +1196,16 @@
         "correct": "a"
       },
       "rationale": {
-        "correct": "Avoid aspirin in children with viral illnesses (influenza, varicella).",
+        "correct": "Avoid aspirin in children and teens with viral illnesses (influenza, varicella).",
         "perOption": {
-          "a": "Reye syndrome causes liver failure and brain swelling.",
-          "b": "This is dangerous.",
-          "c": "Any amount is risky.",
-          "d": "Food doesn't prevent Reye syndrome."
+          "a": "Aspirin during a viral illness can cause Reye syndrome (liver failure and brain swelling).",
+          "b": "Aspirin is avoided in children with viral illness.",
+          "c": "Any amount carries the risk.",
+          "d": "Food does not prevent Reye syndrome."
         },
         "references": [
           "Pediatric nursing texts (e.g. Hockenberry, Wong's Essentials of Pediatric Nursing)",
-          "Reviewed by the content team on 17 November 2026."
+          "Rewritten to NCLEX-RN difficulty and reviewed by the content team on 19 November 2026."
         ]
       },
       "educationalObjective": "Prevent Reye syndrome."
