@@ -2,7 +2,7 @@
 
 Written by `python3 -I build_all.py` (coverage.py); do not edit by hand.
 
-**1934 of 5000 questions** (39%), 30 case studies, 50 bowtie questions. Multiple choice is 69% of the bank.
+**1958 of 5000 questions** (39%), 34 case studies, 51 bowtie questions. Multiple choice is 68% of the bank.
 
 ## By test plan category
 
@@ -10,13 +10,13 @@ Written by `python3 -I build_all.py` (coverage.py); do not edit by hand.
 |---|---|---|---|---|---|
 | Management of Care | 18% | 900 | 321 | 579 | 19 |
 | Safety and Infection Prevention and Control | 13% | 650 | 224 | 426 | 14 |
-| Health Promotion and Maintenance | 9% | 450 | 156 | 294 | 9 |
+| Health Promotion and Maintenance | 9% | 450 | 156 | 294 | 10 |
 | Psychosocial Integrity | 9% | 450 | 147 | 303 | 10 |
 | Basic Care and Comfort | 9% | 450 | 152 | 298 | 10 |
-| Pharmacological and Parenteral Therapies | 16% | 800 | 314 | 486 | 16 |
-| Reduction of Risk Potential | 12% | 600 | 207 | 393 | 13 |
-| Physiological Adaptation | 14% | 700 | 413 | 287 | 9 |
-| **Total** | 100% | 5000 | 1934 | 3066 | 100 |
+| Pharmacological and Parenteral Therapies | 16% | 800 | 324 | 476 | 15 |
+| Reduction of Risk Potential | 12% | 600 | 211 | 389 | 13 |
+| Physiological Adaptation | 14% | 700 | 423 | 277 | 9 |
+| **Total** | 100% | 5000 | 1958 | 3042 | 100 |
 
 ## Chunks
 
@@ -43,16 +43,16 @@ Written by `python3 -I build_all.py` (coverage.py); do not edit by hand.
 
 | Type | Questions | Share |
 |---|---|---|
-| multiple_choice | 1331 | 69% |
-| sata | 136 | 7% |
-| matrix_mc | 130 | 7% |
+| multiple_choice | 1331 | 68% |
+| sata | 139 | 7% |
+| matrix_mc | 137 | 7% |
+| dropdown_cloze | 52 | 3% |
+| bowtie | 51 | 3% |
 | ordered_response | 50 | 3% |
-| bowtie | 50 | 3% |
-| dropdown_cloze | 49 | 3% |
-| highlight_text | 46 | 2% |
-| fill_blank_calc | 41 | 2% |
-| highlight_table | 40 | 2% |
-| select_n | 23 | 1% |
-| dropdown_table | 22 | 1% |
-| multiple_response_grouping | 10 | 1% |
-| matrix_mr | 6 | 0% |
+| highlight_text | 47 | 2% |
+| highlight_table | 43 | 2% |
+| fill_blank_calc | 43 | 2% |
+| select_n | 24 | 1% |
+| dropdown_table | 23 | 1% |
+| multiple_response_grouping | 11 | 1% |
+| matrix_mr | 7 | 0% |
