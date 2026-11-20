@@ -64,4 +64,5 @@ Written by `python3 -I build_all.py`; do not edit by hand. See `quality.py` for 
 | 72-moc-ethics-continuity-safety | 25 | yes | 19 | 0% | 20% (stem words) | 5% | 31 | 2/13/10 |
 | 73-infection-lifespan-mental-health | 25 | yes | 18 | 0% | 25% (stem words) | 0% | 36 | 2/14/9 |
 | 74-medications-comfort-care | 25 | yes | 17 | 6% | 24% (stem words) | 0% | 32 | 2/13/10 |
-| **Whole bank** | 1285 | | 989 | 14% | 24% (assess first) | 7% | 33 | 101/742/442 |
+| 75-procedures-emergencies-cases | 25 | yes | 11 | 0% | 32% (stem words) | 0% | 26 | 0/15/10 |
+| **Whole bank** | 1310 | | 1000 | 14% | 24% (assess first) | 7% | 33 | 101/757/452 |

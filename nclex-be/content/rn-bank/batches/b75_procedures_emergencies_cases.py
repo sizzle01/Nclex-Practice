@@ -1,0 +1,416 @@
+"""Batch 75 (wave 1, chunk 2): Reduction of risk potential and physiological adaptation, with two NGN unfolding
+cases - variceal hemorrhage in cirrhosis and an infant with bronchiolitis (PHI.RRP, PHI.PA, PHI.PPT).
+
+Each case walks the six CJMM steps in order (NCSBN Clinical Judgment Measurement Model).
+
+Written to NCLEX-RN difficulty on 20 November 2026 (see quality.py and PROGRESS.md)."""
+from qb import *
+
+RRP, PA, PPT = "PHI.RRP", "PHI.PA", "PHI.PPT"
+F = "fundamentals"
+ANES = "anesthesia-and-sedation"
+NEURO_DX = "neurological-assessment-and-procedures"
+RESP_DX = "respiratory-diagnostic-procedures"
+CV_DX = "cardiovascular-diagnostics-and-monitoring"
+LABS = "laboratory-values-and-monitoring"
+SPEC = "specimen-collection"
+RENDO_DX = "renal-and-endocrine-diagnostics"
+POSTPROC = "post-procedure-complications"
+OXY = "oxygen-therapy-and-devices"
+SCI = "spinal-cord-injury"
+PIT = "pituitary-disorders"
+ADV = "adverse-effects-of-medications"
+SEIZMED = "antiseizure-medications"
+GI_BLEED = "upper-gi-disorders-and-bleeding"
+LIVER = "liver-disorders"
+GIMED = "gi-medications"
+PEDS_RESP = "pediatric-respiratory-disorders"
+
+items = [
+# ---- reduction of risk potential ----
+bowtie(M(RRP, ANES, "prioritize_hypotheses", "difficult", "musculoskeletal", "ms"),
+   "Twenty minutes into a laparoscopic cholecystectomy under general anesthesia with sevoflurane and succinylcholine, a 26-year-old client's end-tidal CO2 rises from 38 to 72 mm Hg despite increased ventilation. Heart rate is 142/min with ectopic beats, the jaw and limbs are rigid, and temperature has risen from 37.0 °C to 39.4 °C (103 °F). Complete the diagram by placing the condition the client is most likely experiencing, 2 actions the nurse should take, and 2 parameters the nurse should monitor.",
+   [("Malignant hyperthermia", True, "A rapid rise in end-tidal CO2, tachycardia, muscle rigidity and rising temperature after a volatile anesthetic and succinylcholine is malignant hyperthermia."),
+    ("Sepsis from the gallbladder", False, "Sepsis does not cause sudden rigidity and a sharp rise in CO2 during anesthesia."),
+    ("Thyroid storm", False, "Thyroid storm causes fever and tachycardia but not rigidity and an abrupt rise in end-tidal CO2."),
+    ("Neuroleptic malignant syndrome", False, "NMS follows antipsychotics and develops over days, not minutes into anesthesia.")],
+   [("Stop the triggering anesthetic and prepare IV dantrolene", True, "Removing the trigger and giving dantrolene stops the runaway muscle metabolism."),
+    ("Start active cooling, such as cold IV saline and ice packs to the groin and axillae", True, "Cooling limits organ damage from hyperthermia."),
+    ("Give acetaminophen through the nasogastric tube for the fever", False, "The heat comes from muscle metabolism, not the brain's set point; antipyretics do not work."),
+    ("Give another dose of succinylcholine to relax the rigid muscles", False, "Succinylcholine is a trigger and would worsen the crisis."),
+    ("Warm the IV fluids to prevent shivering during the case", False, "Warming adds heat to a client who is already hyperthermic.")],
+   [("Core temperature", True, "Shows whether cooling and dantrolene are working; cooling stops at about 38 °C to avoid overshoot."),
+    ("End-tidal CO2 and potassium level", True, "Falling end-tidal CO2 shows metabolism is slowing; potassium rises with muscle breakdown and can cause dysrhythmias."),
+    ("Blood glucose on the hour", False, "Glucose may change but is not the key guide to the crisis."),
+    ("Bowel sounds after the surgery", False, "Bowel function is not relevant to the crisis."),
+    ("Pupil size on the hour", False, "Pupil size does not guide treatment of malignant hyperthermia.")],
+   "Malignant hyperthermia: rising end-tidal CO2, rigidity, tachycardia and fever after volatile anesthetics or succinylcholine. Stop the trigger, give dantrolene, cool, and monitor temperature, CO2 and potassium.",
+   "Recognize and manage malignant hyperthermia."),
+
+mc(M(RRP, NEURO_DX, "take_action", "moderate", "neurological", "ms"),
+   "A client had a lumbar puncture yesterday. Today the client reports a severe headache that is much worse when sitting up and eases when lying flat. Vital signs and neurological checks are normal, and there is no fever or neck stiffness. What should the nurse do?",
+   [("Keep the client sitting upright so that the spinal fluid can drain away from the head and the pain eases", False,
+     "Sitting up worsens a post-dural puncture headache."),
+    ("Encourage the client to lie flat, increase fluids and report the headache to the provider", True,
+     "A positional headache after lumbar puncture is from a spinal fluid leak; lying flat, fluids and caffeine help, and a blood patch may be needed."),
+    ("Prepare the client for an emergency CT scan of the head to rule out a bleed", False,
+     "With normal neurological checks and a classic positional pattern, emergency imaging is not the first step."),
+    ("Restrict oral fluids so that the pressure in the spinal canal does not rise further", False,
+     "Fluids help the body replace spinal fluid; restricting them worsens the headache.")],
+   "Post-dural puncture headache worsens upright and eases lying flat; treat with rest flat, fluids, caffeine and, if needed, an epidural blood patch.",
+   "Manage a headache after lumbar puncture."),
+
+mc(M(RRP, RESP_DX, "take_action", "moderate", "respiratory", "ms"),
+   "A client returned to the unit 1 hour ago after a bronchoscopy with topical throat anesthesia and moderate sedation. The client is awake and asks for a drink of water. What should the nurse do first?",
+   [("Give small sips of water and watch for coughing as the client swallows them", False,
+     "Fluids are not offered until the gag reflex has returned."),
+    ("Check that the client's gag and swallow reflexes have returned", True,
+     "Topical anesthesia blunts the gag reflex; giving fluids before it returns risks aspiration."),
+    ("Give ice chips, since they melt slowly and are safer than plain water", False,
+     "Ice chips are still fluid and carry the same risk before the gag reflex returns."),
+    ("Tell the client to wait 24 hours before eating or drinking anything", False,
+     "The gag reflex usually returns within a few hours, so a 24-hour wait is not needed.")],
+   "After bronchoscopy or endoscopy with throat anesthesia, keep the client NPO until the gag and swallow reflexes return.",
+   "Prevent aspiration after bronchoscopy."),
+
+mc(M(RRP, CV_DX, "take_action", "moderate", "cardiovascular", "ms"),
+   "A client is scheduled for an exercise stress test tomorrow morning to evaluate chest pain. Which instruction should the nurse give the client?",
+   [("Avoid coffee, tea, cola and chocolate for 24 hours before the test", True,
+     "Caffeine can affect heart rate and interfere with the test, especially if a drug stress agent is needed."),
+    ("Eat a large, high-carbohydrate breakfast to have energy for the exercise", False,
+     "A light meal or fasting for a few hours is usually advised; a large meal can cause discomfort and affect results."),
+    ("Wear dress shoes and a button-down shirt so the electrodes stay in place", False,
+     "Comfortable clothes and walking shoes are needed for the treadmill."),
+    ("Take an extra dose of the beta-blocker to keep the heart rate low during the test", False,
+     "Beta-blockers are often held before the test as prescribed, because they stop the heart rate from rising.")],
+   "Before a stress test: no caffeine for about 24 hours, a light meal or fasting as directed, comfortable shoes and clothes, and follow instructions about holding heart rate-slowing drugs.",
+   "Prepare a client for a stress test."),
+
+mc(M(RRP, LABS, "prioritize_hypotheses", "difficult", "cardiovascular", "ms lab"),
+   "The nurse in a cardiac step-down unit receives four laboratory results. Which result should the nurse report to the provider first?",
+   [("Hemoglobin A1C of 8.2% in a client with type 2 diabetes who was admitted for a foot wound", False,
+     "A high A1C shows poor long-term glucose control but is not an emergency."),
+    ("Potassium of 3.4 mEq/L in a client taking furosemide who has no ECG changes and no muscle weakness", False,
+     "Mild hypokalemia needs replacement but is less urgent."),
+    ("Troponin I of 2.1 ng/mL in a client who reports pressure in the chest that started 1 hour ago", True,
+     "A high troponin with ongoing chest pressure suggests a myocardial infarction that needs urgent treatment."),
+    ("Total cholesterol of 262 mg/dL in a client with hypertension who is being discharged today", False,
+     "High cholesterol is a long-term risk factor that can be addressed in follow-up.")],
+   "Report results that point to an acute, life-threatening process first; a rising troponin with chest pain suggests MI.",
+   "Prioritize laboratory results."),
+
+matrix_mc(M(RRP, ANES, "evaluate_outcomes", "moderate", "maternal-newborn", "ob ms"),
+   "A client in labor received an epidural for pain relief 20 minutes ago. For each finding, indicate whether it is expected or should be reported right away.",
+   ["Expected", "Report right away"],
+   [("Warmth and numbness of both legs", 0,
+     ["Sensory and some motor block of the legs is expected with an epidural.", "This is the intended effect."]),
+    ("Blood pressure 82/48 mm Hg from a baseline of 124/76", 1,
+     ["A large drop in blood pressure reduces blood flow to the placenta.", "Hypotension is a common epidural complication that needs prompt treatment."]),
+    ("Numbness rising to the level of the nipples with trouble breathing", 1,
+     ["A high block can affect breathing muscles.", "This is a high spinal block and needs urgent help."]),
+    ("Pain score falling from 8 to 2 of 10", 0,
+     ["Pain relief is the goal.", "This shows the epidural is working."]),
+    ("Mild itching of the face", 0,
+     ["Itching is a common side effect of epidural opioids.", "It is usually mild and treatable."])],
+   "Expected: leg numbness, pain relief, mild itching. Report at once: hypotension and a rising block with breathing trouble.",
+   "Evaluate findings after epidural anesthesia."),
+
+mc(M(RRP, SPEC, "take_action", "difficult", "immune", "ms cdc"),
+   "A client with suspected sepsis has a prescription for IV piperacillin-tazobactam now and two sets of blood cultures. The antibiotic has just arrived from the pharmacy, and the cultures have not yet been drawn. What should the nurse do?",
+   [("Start the antibiotic now and draw the blood cultures when the infusion is finished", False,
+     "Antibiotics given before cultures can sterilize the blood and hide the organism."),
+    ("Draw both sets of blood cultures, then start the antibiotic within the first hour", True,
+     "Cultures are drawn first so the organism can be identified, without delaying antibiotics beyond the first hour."),
+    ("Wait for the culture results before starting any antibiotic, to choose the right one", False,
+     "Results take days; delaying antibiotics in sepsis increases mortality."),
+    ("Draw one set of cultures from the existing IV line to save time, then start the drug", False,
+     "Cultures from an existing line are often contaminated; separate venipunctures are preferred.")],
+   "In sepsis, draw blood cultures before antibiotics, but do not delay antibiotics beyond the first hour.",
+   "Sequence blood cultures and antibiotics in sepsis."),
+
+sata(M(RRP, RENDO_DX, "take_action", "moderate", F, "ms"),
+   "A client is scheduled for an MRI of the brain. Which findings should the nurse report to the radiology team before the scan?",
+   [("The client has a cardiac pacemaker placed 5 years ago", True,
+     "Many pacemakers are not MRI-safe; the device type must be checked."),
+    ("The client says, \"I panic in small, closed spaces.\"", True,
+     "Claustrophobia may need an open MRI or sedation."),
+    ("The client is wearing a transdermal nicotine patch", True,
+     "Some patches contain metal that can heat up and burn the skin."),
+    ("The client had a silver amalgam dental filling placed last year", False,
+     "Dental fillings do not prevent an MRI."),
+    ("The client worked as a welder for 20 years", True,
+     "Metal fragments in the eyes or body can move in the magnet; screening may be needed."),
+    ("The client reports an allergy to penicillin that causes a rash", False,
+     "A penicillin allergy does not affect MRI safety.")],
+   "Before MRI, screen for implanted devices, metal fragments, medication patches and claustrophobia.",
+   "Prepare a client for MRI."),
+
+mc(M(RRP, POSTPROC, "recognize_cues", "difficult", "cardiovascular", "ms"),
+   "A client had a cardiac catheterization through the right radial artery 2 hours ago, and a compression band is on the wrist. Which finding requires the nurse to act first?",
+   [("Mild soreness at the puncture site that the client rates 2 of 10", False,
+     "Mild soreness is expected after radial access."),
+    ("A small amount of dried blood under the edge of the band", False,
+     "A small amount of dried blood is common; the nurse checks it is not growing."),
+    ("The right hand is cool and pale, with capillary refill of 5 seconds", True,
+     "A cool, pale hand with slow refill suggests the band is too tight or the artery is blocked, threatening blood flow to the hand."),
+    ("The client asks to use the right hand to cut food and eat lunch from the meal tray", False,
+     "The client should limit use of the wrist, but this is a teaching issue, not an emergency.")],
+   "After radial access, check circulation to the hand often; a cool, pale hand with slow capillary refill needs immediate action.",
+   "Monitor circulation after radial catheterization."),
+
+# ---- physiological adaptation ----
+bowtie(M(PA, SCI, "prioritize_hypotheses", "difficult", "neurological", "ms"),
+   "A client with a complete spinal cord injury at T4 from 6 months ago is in a rehabilitation unit. The client suddenly reports a pounding headache and blurred vision. Blood pressure is 214/118 mm Hg (baseline 98/60) and heart rate is 48/min. The face is flushed and sweaty, and the skin below the chest is pale and cool. The urinary catheter bag has not drained for 3 hours. Complete the diagram by placing the condition the client is most likely experiencing, 2 actions the nurse should take, and 2 parameters the nurse should monitor.",
+   [("Autonomic dysreflexia", True, "Severe hypertension, bradycardia, headache and flushing above the injury in a client with an injury at T6 or above, with a blocked catheter, is autonomic dysreflexia."),
+    ("Hypertensive emergency from missed medication", False, "The client has a low baseline pressure and no history of hypertension; the trigger and pattern point to dysreflexia."),
+    ("Spinal shock", False, "Spinal shock occurs soon after injury and causes low blood pressure and flaccid paralysis."),
+    ("Hemorrhagic stroke", False, "Headache and hypertension can occur, but flushing above the injury with a blocked catheter fits dysreflexia.")],
+   [("Sit the client upright and lower the legs", True, "Sitting up lowers blood pressure by pooling blood in the legs."),
+    ("Check the catheter for kinks or blockage and drain the bladder", True, "Removing the trigger, most often a full bladder, usually resolves the episode."),
+    ("Lay the client flat with the legs raised", False, "Lying flat raises blood pressure further."),
+    ("Give a sedative and recheck the blood pressure in 1 hour", False, "The emergency needs the trigger found now; waiting risks stroke or seizure."),
+    ("Apply tight elastic stockings to both legs", False, "Tight clothing and stockings are possible triggers and should be loosened.")],
+   [("Blood pressure every few minutes", True, "Blood pressure shows whether removing the trigger is working or whether medication is needed."),
+    ("Bladder drainage and urine output", True, "Restored drainage confirms the trigger has been removed."),
+    ("Blood glucose before meals and at bedtime", False, "Glucose is not related to dysreflexia."),
+    ("Bowel sounds in each of the four quadrants", False, "Bowel sounds do not show response, though constipation can be a trigger."),
+    ("Serum sodium level each morning", False, "Sodium does not guide this emergency.")],
+   "Autonomic dysreflexia in injuries at T6 or above: sit the client up, loosen clothing, find and remove the trigger (bladder, bowel, skin) and monitor blood pressure closely.",
+   "Recognize and manage autonomic dysreflexia."),
+
+mc(M(PA, PIT, "generate_solutions", "moderate", "endocrine", "ms"),
+   "A client with small cell lung cancer has a serum sodium of 121 mEq/L, serum osmolality of 252 mOsm/kg and concentrated urine. The client is becoming confused. The provider diagnoses the syndrome of inappropriate antidiuretic hormone (SIADH). Which intervention should the nurse expect?",
+   [("Encourage the client to drink at least 3 L of water a day", False,
+     "Extra free water lowers sodium further."),
+    ("Restrict fluids and put seizure precautions in place", True,
+     "SIADH causes water retention; fluid restriction raises sodium, and very low sodium can cause seizures."),
+    ("Give a continuous infusion of 5% dextrose in water", False,
+     "D5W acts as free water and worsens hyponatremia."),
+    ("Give desmopressin to control the amount of urine produced", False,
+     "Desmopressin is an antidiuretic hormone and would worsen SIADH.")],
+   "SIADH: too much ADH causes water retention and dilutional hyponatremia. Restrict fluids, monitor sodium and neurological status and use seizure precautions.",
+   "Manage SIADH."),
+
+# ---- pharmacological and parenteral therapies ----
+mc(M(PPT, ADV, "take_action", "moderate", "cardiovascular", "ph aha"),
+   "A client with stable angina takes sublingual nitroglycerin 0.4 mg as needed. Which instruction should the nurse give for an episode of chest pain?",
+   [("Take one tablet, and if the pain is no better after 5 minutes, call 911", True,
+     "Current guidance is to call emergency services if pain is not improved 5 minutes after the first dose."),
+    ("Take up to three tablets at once to stop the chest pain quickly", False,
+     "Taking several tablets at once can cause severe hypotension."),
+    ("Swallow the tablet whole with a full glass of water so that it starts working faster", False,
+     "Sublingual nitroglycerin dissolves under the tongue; swallowing it greatly reduces its effect."),
+    ("Wait 30 minutes after the first tablet before taking another dose", False,
+     "Doses are repeated every 5 minutes, up to three, while emergency help is on the way.")],
+   "Nitroglycerin: one tablet under the tongue; if not better in 5 minutes, call 911, and repeat every 5 minutes up to three doses while sitting down.",
+   "Teach sublingual nitroglycerin use."),
+
+mc(M(PPT, SEIZMED, "analyze_cues", "difficult", "neurological", "ph"),
+   "A client taking phenytoin 300 mg daily for a seizure disorder recently started fluconazole for a fungal infection. The client now has an unsteady gait, slurred speech and jerky eye movements when looking to the side. Which finding should the nurse expect when reviewing the laboratory results?",
+   [("A phenytoin level below the therapeutic range of 10 to 20 mcg/mL", False,
+     "A low level would cause seizures, not ataxia and nystagmus."),
+    ("A phenytoin level of 28 mcg/mL, above the therapeutic range", True,
+     "Fluconazole slows phenytoin metabolism; nystagmus, ataxia and slurred speech are signs of phenytoin toxicity."),
+    ("A serum sodium level of 128 mEq/L from the antifungal drug", False,
+     "Fluconazole does not typically cause hyponatremia, and the signs fit phenytoin toxicity."),
+    ("A blood glucose level of 52 mg/dL from the interaction between the drugs", False,
+     "Low glucose can cause confusion but not this pattern of nystagmus and ataxia.")],
+   "Phenytoin toxicity causes nystagmus, ataxia and slurred speech; drugs that slow its metabolism, such as fluconazole, raise levels.",
+   "Recognize phenytoin toxicity from a drug interaction."),
+]
+
+# ---- Case 1: variceal hemorrhage ---------------------------------------------------------------
+var_tabs = [
+    ("var-notes", "Nurses' notes", [note("Emergency department, 2200",
+        "A 58-year-old client with alcohol-related cirrhosis vomited a large amount of bright red blood at home. The client "
+        "is pale, anxious and restless. The abdomen is distended with ascites, and there are spider angiomas on the chest. "
+        "Last alcohol drink was 2 days ago. Two large-bore IV catheters are in place.", id="var-note")]),
+    ("var-vitals", "Vital signs", [flow("Vital signs", ["2200", "2230"], [
+        ("Blood pressure", ["92/56 mm Hg", "84/50 mm Hg"]),
+        ("Heart rate", ["118/min", "128/min"]),
+        ("Respiratory rate", ["24/min", "26/min"]),
+        ("SpO2", ["95% on room air", "93% on room air"])], id="var-flow")]),
+    ("var-labs", "Laboratory results", [table("Laboratory results, 2215", ["Result", "Reference"], [
+        ("Hemoglobin", ["7.2 g/dL", "12-16 g/dL"]),
+        ("Platelets", ["62,000/mm3", "150,000-400,000/mm3"]),
+        ("INR", ["1.9", "0.8-1.1"]),
+        ("Ammonia", ["88 mcg/dL", "15-45 mcg/dL"])], id="var-lab")]),
+]
+
+var_qs = [
+hl_text(M(PA, GI_BLEED, "recognize_cues", "moderate", "gastrointestinal", "ms"),
+   "Review the 2230 findings. Highlight the findings that require immediate follow-up.",
+   ["The client ",
+    ("vomited a large amount of bright red blood", True, "Large-volume hematemesis signals active upper GI bleeding."),
+    ". ",
+    ("Spider angiomas on the chest", False, "A chronic sign of cirrhosis, not an acute concern."),
+    ". Blood pressure ",
+    ("84/50 mm Hg", True, "Falling blood pressure shows shock from blood loss."),
+    ", heart rate ",
+    ("128/min", True, "Rising heart rate is compensation for hypovolemia."),
+    ". Hemoglobin ",
+    ("7.2 g/dL", True, "A low hemoglobin confirms major blood loss."),
+    ". ",
+    ("Abdomen distended with ascites", False, "Known chronic finding in cirrhosis."),
+    "."],
+   "Hematemesis with falling blood pressure, tachycardia and low hemoglobin means active hemorrhage with shock.",
+   "Recognize cues of upper GI hemorrhage."),
+
+cloze(M(PA, LIVER, "analyze_cues", "moderate", "gastrointestinal", "ms"),
+   "Complete the sentence based on the client's data.",
+   "The bleeding is most likely from {{b1}}, which develop because of {{b2}}.",
+   [[("esophageal varices", True, "Varices are the classic cause of massive bright red hematemesis in cirrhosis."),
+     ("a duodenal ulcer", False, "Ulcers can bleed, but the history of cirrhosis makes varices most likely."),
+     ("a Mallory-Weiss tear", False, "Tears follow forceful vomiting and are usually smaller bleeds.")],
+    [("portal hypertension from scarring of the liver", True, "Scarring raises pressure in the portal vein, which forces blood into fragile collateral veins."),
+     ("low platelets from the spleen", False, "Low platelets worsen bleeding but do not create varices."),
+     ("high ammonia levels", False, "Ammonia causes encephalopathy, not varices.")]],
+   "Cirrhosis causes portal hypertension, which leads to esophageal varices that can rupture and bleed massively.",
+   "Analyze the cause of variceal bleeding."),
+
+bowtie(M(PA, GI_BLEED, "prioritize_hypotheses", "difficult", "gastrointestinal", "ms ph"),
+   "Complete the diagram by placing the condition the client is most likely experiencing, 2 actions the nurse should take, and 2 parameters the nurse should monitor.",
+   [("Hypovolemic shock from ruptured esophageal varices", True, "Massive hematemesis with hypotension, tachycardia and a low hemoglobin in cirrhosis is variceal hemorrhage with shock."),
+    ("Hepatic encephalopathy", False, "Ammonia is high, but the life threat right now is blood loss."),
+    ("Alcohol withdrawal", False, "Withdrawal may come later, but bleeding is the current emergency."),
+    ("Spontaneous bacterial peritonitis", False, "SBP causes fever and abdominal pain, not hematemesis.")],
+   [("Give blood products and IV fluids as prescribed through the large-bore IVs", True, "Restoring volume and red cells treats shock."),
+    ("Give the prescribed octreotide infusion", True, "Octreotide lowers portal pressure and slows variceal bleeding."),
+    ("Insert a nasogastric tube and irrigate with iced saline", False, "Iced saline lavage is not recommended and can injure tissue."),
+    ("Place the client flat on the back to raise the blood pressure", False, "Lying flat increases aspiration risk in a client who is vomiting blood."),
+    ("Give a dose of oral propranolol now for the heart rate", False, "Beta-blockers prevent future bleeds; in acute shock they lower blood pressure further.")],
+   [("Blood pressure and heart rate", True, "Show the response to resuscitation."),
+    ("Hemoglobin and signs of ongoing bleeding", True, "Show whether bleeding continues."),
+    ("Body weight measured once a week", False, "Not useful in acute hemorrhage."),
+    ("Serum lipase level each morning", False, "Not related to variceal bleeding."),
+    ("Burning or pain when the client urinates", False, "Not relevant.")],
+   "Variceal hemorrhage: resuscitate with blood and fluids, give octreotide and antibiotics, protect the airway and prepare for endoscopic banding.",
+   "Prioritize care in variceal hemorrhage."),
+
+sata(M(PA, GI_BLEED, "generate_solutions", "difficult", "gastrointestinal", "ms"),
+   "Which actions should the nurse anticipate for this client in the next hour?",
+   [("Prepare the client for an urgent endoscopy with banding", True, "Endoscopic band ligation is the main treatment to stop variceal bleeding."),
+    ("Raise the head of the bed and keep suction ready at the bedside", True, "Protects the airway from aspiration of blood."),
+    ("Give a prophylactic IV antibiotic such as ceftriaxone as prescribed", True, "Antibiotics reduce infection and death in clients with cirrhosis and GI bleeding."),
+    ("Encourage the client to drink clear fluids to replace lost volume", False, "The client should be NPO for endoscopy and is at aspiration risk."),
+    ("Give lactulose by mouth now for the high ammonia", False, "Lactulose may be needed, but not by mouth while the client is vomiting blood and awaiting endoscopy."),
+    ("Prepare for possible intubation to protect the airway", True, "Clients with massive hematemesis and agitation are often intubated before endoscopy.")],
+   "Variceal bleeding care: airway protection, NPO, endoscopic banding, antibiotics and resuscitation.",
+   "Generate solutions for variceal hemorrhage."),
+
+mc(M(PPT, GIMED, "take_action", "moderate", "gastrointestinal", "ph"),
+   "The provider prescribes an octreotide infusion. Which effect of the drug should the nurse explain to the client's family?",
+   [("It narrows the blood vessels that feed the varices and lowers pressure in the portal vein", True,
+     "Octreotide reduces splanchnic blood flow and portal pressure, which slows variceal bleeding."),
+    ("It helps the blood clot faster by raising the number of platelets circulating in the bloodstream", False,
+     "Octreotide does not affect platelets."),
+    ("It neutralizes the stomach acid that is eroding the thin walls of the swollen veins in the esophagus", False,
+     "Acid reducers such as pantoprazole do that; octreotide works on blood flow."),
+    ("It removes ammonia from the bowel to prevent confusion from liver failure", False,
+     "Lactulose and rifaximin lower ammonia.")],
+   "Octreotide lowers portal pressure by reducing splanchnic blood flow and is used with endoscopic therapy for variceal bleeding.",
+   "Explain octreotide therapy."),
+
+matrix_mc(M(RRP, LABS, "evaluate_outcomes", "moderate", "gastrointestinal", "ms lab"),
+   "The next morning, after banding and 3 units of packed red blood cells, the nurse reviews the client's data. For each finding, indicate whether it shows improvement or needs follow-up.",
+   ["Shows improvement", "Needs follow-up"],
+   [("Hemoglobin 9.1 g/dL", 0, ["Hemoglobin has risen after transfusion and has stayed stable.", "This shows bleeding has been controlled."]),
+    ("Blood pressure 112/68 mm Hg and heart rate 92/min", 0, ["Vital signs are close to normal.", "Shock has resolved."]),
+    ("New confusion and a flapping tremor of the hands", 1, ["Asterixis and confusion suggest hepatic encephalopathy, often triggered by GI bleeding.", "This needs lactulose and assessment."]),
+    ("No further vomiting of blood overnight", 0, ["No new hematemesis suggests the bands are holding.", "This shows improvement."])],
+   "Stable hemoglobin and vital signs show bleeding is controlled; new confusion and asterixis show hepatic encephalopathy, which blood in the gut can trigger.",
+   "Evaluate the response to treatment of variceal hemorrhage."),
+]
+
+# ---- Case 2: infant with bronchiolitis -------------------------------------------------------
+bron_tabs = [
+    ("bron-notes", "Nurses' notes", [note("Pediatric unit, 0800",
+        "A 3-month-old infant, born at 34 weeks, is admitted with 3 days of runny nose and cough and 1 day of poor feeding. "
+        "The parent says the infant has had only 2 wet diapers since yesterday. The infant has thick nasal secretions, "
+        "nasal flaring and subcostal retractions. Wheezes and crackles are heard in both lungs. A respiratory viral panel "
+        "is positive for RSV.", id="bron-note")]),
+    ("bron-vitals", "Vital signs", [flow("Vital signs", ["0800", "1000"], [
+        ("Temperature", ["38.1 °C (100.6 °F)", "38.0 °C (100.4 °F)"]),
+        ("Heart rate", ["168/min", "176/min"]),
+        ("Respiratory rate", ["64/min", "72/min"]),
+        ("SpO2", ["91% on room air", "88% on room air"])], id="bron-flow")]),
+]
+
+bron_qs = [
+hl_table(M(PA, PEDS_RESP, "recognize_cues", "moderate", "pediatrics", "peds"),
+   "Review the infant's 1000 findings. Highlight the findings that require immediate follow-up.",
+   ["Assessment", "Finding"],
+   [(["SpO2", "88% on room air"], True, "Oxygen saturation below 90% needs oxygen."),
+    (["Respiratory rate", "72/min"], True, "A rising rate above 60/min shows increasing distress."),
+    (["Temperature", "38.0 °C (100.4 °F)"], False, "Low-grade fever is common in RSV and is not the priority."),
+    (["Wet diapers", "2 since yesterday"], True, "Too few wet diapers shows dehydration from poor feeding."),
+    (["Nasal secretions", "Thick and clear"], False, "Expected in bronchiolitis; managed with suctioning.")],
+   "Low oxygen saturation, worsening tachypnea and poor urine output need prompt action in bronchiolitis.",
+   "Recognize cues of worsening bronchiolitis."),
+
+cloze(M(PA, PEDS_RESP, "analyze_cues", "moderate", "pediatrics", "peds"),
+   "Complete the sentence based on the infant's data.",
+   "The infant has {{b1}} and is at high risk because of {{b2}}.",
+   [[("bronchiolitis with increasing respiratory distress", True, "RSV infection with retractions, flaring, tachypnea and falling SpO2 is worsening bronchiolitis."),
+     ("croup with upper airway obstruction", False, "Croup causes a barking cough and stridor, not wheezes and crackles in both lungs."),
+     ("asthma", False, "Asthma is not diagnosed at 3 months, and the RSV panel explains the picture.")],
+    [("young age and premature birth", True, "Infants under 3 months and those born preterm have the highest risk of severe RSV disease."),
+     ("the low-grade fever", False, "Fever does not drive the risk of severe disease."),
+     ("being breastfed", False, "Breastfeeding is protective, not a risk factor.")]],
+   "Young age, prematurity, heart and lung disease and immune problems raise the risk of severe bronchiolitis.",
+   "Analyze risk in bronchiolitis."),
+
+matrix_mc(M(RRP, OXY, "prioritize_hypotheses", "difficult", "pediatrics", "peds"),
+   "For each potential problem, indicate whether the infant is at high or low immediate risk based on the current data.",
+   ["High immediate risk", "Low immediate risk"],
+   [("Respiratory failure", 0, ["Worsening tachypnea and falling SpO2 point to tiring.", "Falling SpO2 makes this risk high."]),
+    ("Dehydration", 0, ["Poor feeding and few wet diapers show fluid deficit.", "Low urine output makes this risk high."]),
+    ("Apnea", 0, ["Young preterm infants with RSV are at risk of apnea.", "Age and prematurity make this risk high."]),
+    ("Febrile seizure", 1, ["Febrile seizures usually occur from 6 months to 5 years.", "At 3 months with a low-grade fever, this risk is low."])],
+   "Young infants with RSV are at risk of respiratory failure, dehydration and apnea.",
+   "Prioritize risks in an infant with bronchiolitis."),
+
+sata(M(RRP, OXY, "generate_solutions", "moderate", "pediatrics", "peds"),
+   "Which interventions should the nurse anticipate for the infant?",
+   [("Suction the nose gently before feedings and as needed", True, "Infants breathe through the nose; clearing secretions improves breathing and feeding."),
+    ("Give humidified oxygen to keep the SpO2 at or above 90%", True, "Supplemental oxygen corrects hypoxemia."),
+    ("Give a nebulized bronchodilator every 4 hours as standard care", False, "Bronchodilators are not routinely recommended for bronchiolitis."),
+    ("Start IV or nasogastric fluids if the infant cannot feed safely", True, "Hydration support is needed when work of breathing interferes with feeding."),
+    ("Give an oral corticosteroid to reduce airway swelling", False, "Steroids are not recommended for bronchiolitis."),
+    ("Place the infant on continuous pulse oximetry and cardiorespiratory monitoring", True, "Monitoring detects hypoxemia and apnea."),
+    ("Keep the head of the crib slightly raised", True, "Slight elevation can ease breathing and feeding.")],
+   "Bronchiolitis care is supportive: suction, oxygen, hydration and monitoring; bronchodilators, steroids and antibiotics are not routine.",
+   "Plan supportive care for bronchiolitis."),
+
+mc(M(RRP, OXY, "take_action", "difficult", "pediatrics", "peds"),
+   "Thirty minutes after oxygen is started, the infant's SpO2 is 93%, but the infant has stopped breathing for 20 seconds and the heart rate dropped to 82/min. What should the nurse do first?",
+   [("Document the event and continue to watch the monitor closely for another episode", False,
+     "Apnea with bradycardia needs immediate intervention, not observation alone."),
+    ("Gently stimulate the infant and be ready to give breaths with a bag-valve mask", True,
+     "Stimulation often restarts breathing; if not, the nurse gives positive-pressure breaths while calling for help."),
+    ("Increase the oxygen flow and recheck the SpO2 in 5 minutes", False,
+     "Oxygen does not make an apneic infant breathe."),
+    ("Suction the mouth and nose deeply until the secretions are completely cleared", False,
+     "Deep, prolonged suctioning can worsen bradycardia; brief suction may help, but stimulation and breathing support come first.")],
+   "Apnea with bradycardia in an infant needs stimulation and, if breathing does not resume, bag-valve-mask ventilation and a rapid response call.",
+   "Respond to apnea in an infant."),
+
+matrix_mc(M(PA, PEDS_RESP, "evaluate_outcomes", "moderate", "pediatrics", "peds"),
+   "On day 3, the nurse reassesses the infant. For each finding, indicate whether it shows improvement or no improvement.",
+   ["Improvement", "No improvement"],
+   [("Respiratory rate 44/min with mild retractions", 0, ["The rate is lower and work of breathing is less.", "This shows improvement."]),
+    ("SpO2 94% on room air", 0, ["Oxygen is no longer needed.", "This shows improvement."]),
+    ("Six wet diapers in 24 hours", 0, ["Urine output is now adequate.", "This shows improvement."]),
+    ("Feeds for only 3 minutes before tiring and pulling away", 1, ["The infant still cannot feed well.", "Poor feeding means the infant is not ready for discharge."])],
+   "Lower work of breathing, normal oxygen saturation on room air and good urine output show recovery; adequate feeding is needed before discharge.",
+   "Evaluate recovery from bronchiolitis."),
+]
+
+cases = [
+    case("Variceal hemorrhage in alcohol-related cirrhosis", var_tabs, var_qs),
+    case("Infant with RSV bronchiolitis", bron_tabs, bron_qs),
+]
+
+BUILT = build(75, "procedures-emergencies-cases",
+              "Reduction of risk and physiological adaptation, with case studies on variceal hemorrhage and infant bronchiolitis",
+              items, cases, wave=True)
