@@ -82,4 +82,5 @@ Written by `python3 -I build_all.py`; do not edit by hand. See `quality.py` for 
 | 90-medications-care-measures | 25 | yes | 12 | 8% | 31% (stem words) | 0% | 36 | 1/13/11 |
 | 91-monitoring-shock-cases | 25 | yes | 7 | 0% | 29% (shortest) | 0% | 21 | 0/11/14 |
 | 92-moc-triage-disclosure-safety | 25 | yes | 11 | 0% | 30% (shortest) | 0% | 25 | 0/12/13 |
-| **Whole bank** | 1735 | | 1257 | 12% | 25% (assess first) | 6% | 32 | 118/961/656 |
+| 93-asepsis-newborn-mental-health | 25 | yes | 11 | 9% | 32% (assess first) | 0% | 25 | 0/15/10 |
+| **Whole bank** | 1760 | | 1268 | 12% | 25% (assess first) | 6% | 32 | 118/976/666 |
