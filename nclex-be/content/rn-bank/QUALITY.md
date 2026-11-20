@@ -66,4 +66,5 @@ Written by `python3 -I build_all.py`; do not edit by hand. See `quality.py` for 
 | 74-medications-comfort-care | 25 | yes | 17 | 6% | 24% (stem words) | 0% | 32 | 2/13/10 |
 | 75-procedures-emergencies-cases | 25 | yes | 11 | 0% | 32% (stem words) | 0% | 26 | 0/15/10 |
 | 76-moc-resources-legal-safety | 25 | yes | 20 | 10% | 32% (shortest) | 0% | 30 | 2/12/11 |
-| **Whole bank** | 1335 | | 1020 | 13% | 24% (assess first) | 7% | 33 | 103/769/463 |
+| 77-precautions-prevention-psychosocial | 25 | yes | 20 | 15% | 25% (assess first) | 5% | 30 | 2/14/9 |
+| **Whole bank** | 1360 | | 1040 | 13% | 24% (assess first) | 7% | 33 | 105/783/472 |
