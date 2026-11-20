@@ -83,4 +83,5 @@ Written by `python3 -I build_all.py`; do not edit by hand. See `quality.py` for 
 | 91-monitoring-shock-cases | 25 | yes | 7 | 0% | 29% (shortest) | 0% | 21 | 0/11/14 |
 | 92-moc-triage-disclosure-safety | 25 | yes | 11 | 0% | 30% (shortest) | 0% | 25 | 0/12/13 |
 | 93-asepsis-newborn-mental-health | 25 | yes | 11 | 9% | 32% (assess first) | 0% | 25 | 0/15/10 |
-| **Whole bank** | 1760 | | 1268 | 12% | 25% (assess first) | 6% | 32 | 118/976/666 |
+| 94-drug-safety-daily-function | 25 | yes | 13 | 8% | 25% (assess first) | 8% | 26 | 0/14/11 |
+| **Whole bank** | 1785 | | 1281 | 12% | 25% (assess first) | 6% | 32 | 118/990/677 |
