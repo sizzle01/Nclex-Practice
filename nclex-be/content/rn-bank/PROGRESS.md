@@ -2,7 +2,7 @@
 
 Written by `python3 -I build_all.py` (coverage.py); do not edit by hand.
 
-**1885 of 5000 questions** (38%), 24 case studies, 47 bowtie questions. Multiple choice is 70% of the bank.
+**1910 of 5000 questions** (38%), 26 case studies, 50 bowtie questions. Multiple choice is 70% of the bank.
 
 ## By test plan category
 
@@ -12,11 +12,11 @@ Written by `python3 -I build_all.py` (coverage.py); do not edit by hand.
 | Safety and Infection Prevention and Control | 13% | 650 | 224 | 426 | 14 |
 | Health Promotion and Maintenance | 9% | 450 | 154 | 296 | 9 |
 | Psychosocial Integrity | 9% | 450 | 147 | 303 | 10 |
-| Basic Care and Comfort | 9% | 450 | 152 | 298 | 9 |
-| Pharmacological and Parenteral Therapies | 16% | 800 | 303 | 497 | 16 |
-| Reduction of Risk Potential | 12% | 600 | 191 | 409 | 13 |
-| Physiological Adaptation | 14% | 700 | 393 | 307 | 10 |
-| **Total** | 100% | 5000 | 1885 | 3115 | 100 |
+| Basic Care and Comfort | 9% | 450 | 152 | 298 | 10 |
+| Pharmacological and Parenteral Therapies | 16% | 800 | 306 | 494 | 16 |
+| Reduction of Risk Potential | 12% | 600 | 204 | 396 | 13 |
+| Physiological Adaptation | 14% | 700 | 402 | 298 | 9 |
+| **Total** | 100% | 5000 | 1910 | 3090 | 100 |
 
 ## Chunks
 
@@ -29,7 +29,7 @@ Written by `python3 -I build_all.py` (coverage.py); do not edit by hand.
 | 5 | 1 | b84, b85, b86, b87 | 100 |
 | 6 | 2 | b88, b89, b90, b91 | 100 |
 | 7 | 2 | b92, b93, b94, b95 | 100 |
-| 8 | 2 | b96, b97, b98, b99 | 75 |
+| 8 | 2 | b96, b97, b98, b99 | 100 |
 
 **Next: chunk 9** (wave 2), batch files b100–b103, with the category counts above and this item-type mix:
 
@@ -43,15 +43,15 @@ Written by `python3 -I build_all.py` (coverage.py); do not edit by hand.
 
 | Type | Questions | Share |
 |---|---|---|
-| multiple_choice | 1324 | 70% |
-| sata | 129 | 7% |
-| matrix_mc | 113 | 6% |
-| ordered_response | 49 | 3% |
-| bowtie | 47 | 2% |
-| highlight_text | 43 | 2% |
-| dropdown_cloze | 42 | 2% |
+| multiple_choice | 1331 | 70% |
+| sata | 132 | 7% |
+| matrix_mc | 118 | 6% |
+| ordered_response | 50 | 3% |
+| bowtie | 50 | 3% |
+| dropdown_cloze | 45 | 2% |
+| highlight_text | 44 | 2% |
 | fill_blank_calc | 41 | 2% |
-| highlight_table | 36 | 2% |
+| highlight_table | 38 | 2% |
 | select_n | 23 | 1% |
 | dropdown_table | 22 | 1% |
 | multiple_response_grouping | 10 | 1% |
