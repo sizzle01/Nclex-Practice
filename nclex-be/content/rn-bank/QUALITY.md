@@ -92,4 +92,5 @@ Written by `python3 -I build_all.py`; do not edit by hand. See `quality.py` for 
 | 100-cardiac-cases-acs-hf-af-htn | 24 | yes | 0 | 0% | 0% (-) | 0% | 16 | 0/4/20 |
 | 101-cardiac-cases-vascular-coagulation | 24 | yes | 0 | 0% | 0% (-) | 0% | 19.5 | 0/5/19 |
 | 102-cardiac-cases-pacing-vt-shock | 24 | yes | 0 | 0% | 0% (-) | 0% | 14.5 | 0/4/20 |
-| **Whole bank** | 1982 | | 1331 | 12% | 25% (assess first) | 5% | 31 | 118/1069/795 |
+| 103-cardiac-cases-shock-vascular-standalone | 28 | yes | 1 | 0% | 25% (stem words) | 0% | 13 | 0/4/24 |
+| **Whole bank** | 2010 | | 1332 | 12% | 25% (assess first) | 5% | 31 | 118/1073/819 |

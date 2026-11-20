@@ -2,21 +2,21 @@
 
 Written by `python3 -I build_all.py` (coverage.py); do not edit by hand.
 
-**1982 of 5000 questions** (40%), 38 case studies, 51 bowtie questions. Multiple choice is 67% of the bank.
+**2010 of 5000 questions** (40%), 42 case studies, 52 bowtie questions. Multiple choice is 66% of the bank.
 
 ## By test plan category
 
 | Category | Test plan | Target | Have | To write | Next chunk |
 |---|---|---|---|---|---|
-| Management of Care | 18% | 900 | 321 | 579 | 19 |
+| Management of Care | 18% | 900 | 323 | 577 | 19 |
 | Safety and Infection Prevention and Control | 13% | 650 | 225 | 425 | 14 |
 | Health Promotion and Maintenance | 9% | 450 | 157 | 293 | 10 |
 | Psychosocial Integrity | 9% | 450 | 147 | 303 | 10 |
 | Basic Care and Comfort | 9% | 450 | 152 | 298 | 10 |
-| Pharmacological and Parenteral Therapies | 16% | 800 | 329 | 471 | 16 |
-| Reduction of Risk Potential | 12% | 600 | 220 | 380 | 12 |
-| Physiological Adaptation | 14% | 700 | 431 | 269 | 9 |
-| **Total** | 100% | 5000 | 1982 | 3018 | 100 |
+| Pharmacological and Parenteral Therapies | 16% | 800 | 335 | 465 | 16 |
+| Reduction of Risk Potential | 12% | 600 | 226 | 374 | 12 |
+| Physiological Adaptation | 14% | 700 | 445 | 255 | 9 |
+| **Total** | 100% | 5000 | 2010 | 2990 | 100 |
 
 ## Chunks
 
@@ -43,16 +43,16 @@ Written by `python3 -I build_all.py` (coverage.py); do not edit by hand.
 
 | Type | Questions | Share |
 |---|---|---|
-| multiple_choice | 1331 | 67% |
-| matrix_mc | 146 | 7% |
-| sata | 140 | 7% |
-| dropdown_cloze | 55 | 3% |
-| ordered_response | 52 | 3% |
-| bowtie | 51 | 3% |
-| highlight_text | 48 | 2% |
-| highlight_table | 46 | 2% |
+| multiple_choice | 1332 | 66% |
+| matrix_mc | 155 | 8% |
+| sata | 145 | 7% |
+| dropdown_cloze | 58 | 3% |
+| ordered_response | 53 | 3% |
+| bowtie | 52 | 3% |
+| highlight_text | 50 | 2% |
+| highlight_table | 48 | 2% |
 | fill_blank_calc | 44 | 2% |
-| dropdown_table | 25 | 1% |
-| select_n | 24 | 1% |
+| dropdown_table | 27 | 1% |
+| select_n | 25 | 1% |
 | multiple_response_grouping | 12 | 1% |
-| matrix_mr | 8 | 0% |
+| matrix_mr | 9 | 0% |
