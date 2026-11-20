@@ -1,5 +1,5 @@
 {
-  "notice": "RN bank batch 26: Maternity I: antepartum care and complications. Reviewed by the content team on 17 November 2026. See REVIEW-LOG.md.",
+  "notice": "RN bank batch 26: Maternity I: antepartum care and complications. Rewritten to NCLEX-RN difficulty and reviewed by the content team on 19 November 2026. See REVIEW-LOG.md.",
   "track": "RN",
   "subtopics": [
     {
@@ -33,25 +33,25 @@
         "preconception-and-prenatal-care"
       ],
       "cjmmSkill": "analyze_cues",
-      "difficulty": "moderate",
-      "stem": "A client's last menstrual period began on May 1, 2026. Using Naegele's rule, what is the estimated date of birth?",
+      "difficulty": "difficult",
+      "stem": "At a first prenatal visit, a 27-year-old client with regular 28-day cycles says the last menstrual period began on December 24, 2026. The client also had light spotting on January 7, 2027, and asks whether that changes the due date. Using Naegele's rule, which estimated date of birth should the nurse document?",
       "content": {
         "options": [
           {
             "id": "a",
-            "text": "February 8, 2027"
+            "text": "September 30, 2027"
           },
           {
             "id": "b",
-            "text": "February 1, 2027"
+            "text": "September 24, 2027"
           },
           {
             "id": "c",
-            "text": "August 8, 2026"
+            "text": "October 14, 2027"
           },
           {
             "id": "d",
-            "text": "January 24, 2027"
+            "text": "March 31, 2027"
           }
         ]
       },
@@ -59,16 +59,16 @@
         "correct": "a"
       },
       "rationale": {
-        "correct": "Naegele's rule: first day of the LMP + 7 days − 3 months + 1 year.",
+        "correct": "Naegele's rule: first day of the last normal menstrual period + 7 days − 3 months + 1 year.",
         "perOption": {
-          "a": "Add 7 days (May 8), subtract 3 months (February 8) and add 1 year.",
-          "b": "This forgets to add 7 days.",
-          "c": "This adds 3 months instead of subtracting.",
-          "d": "This is calculated incorrectly."
+          "a": "December 24 + 7 days = December 31; minus 3 months = September 30; plus 1 year = 2027. Spotting after the LMP is not used.",
+          "b": "This leaves out the 7 days.",
+          "c": "This dates the pregnancy from the spotting, which is often implantation bleeding, not a period.",
+          "d": "This adds 3 months instead of subtracting them."
         },
         "references": [
           "Maternal-newborn nursing texts (e.g. Perry; Lowdermilk)",
-          "Reviewed by the content team on 17 November 2026."
+          "Rewritten to NCLEX-RN difficulty and reviewed by the content team on 19 November 2026."
         ]
       },
       "educationalObjective": "Calculate an estimated date of birth."
@@ -83,24 +83,24 @@
       ],
       "cjmmSkill": "analyze_cues",
       "difficulty": "moderate",
-      "stem": "Which finding is a positive (certain) sign of pregnancy?",
+      "stem": "A client at 18 weeks gestation asks the nurse whether the pregnancy is \"definitely real\" after a friend said home tests can be wrong. The chart lists several findings from today's visit. Which finding is a positive (certain) sign of pregnancy?",
       "content": {
         "options": [
           {
             "id": "a",
-            "text": "Fetal heart tones heard with a Doppler"
+            "text": "Fetal heart tones of 150/min heard with a Doppler"
           },
           {
             "id": "b",
-            "text": "Positive home pregnancy test"
+            "text": "Ballottement of the fetus felt during the pelvic exam"
           },
           {
             "id": "c",
-            "text": "Missed period"
+            "text": "Quickening first felt by the client at 17 weeks"
           },
           {
             "id": "d",
-            "text": "Hegar's sign (softening of the lower uterus)"
+            "text": "A serum hCG level of 45,000 mIU/mL"
           }
         ]
       },
@@ -108,16 +108,16 @@
         "correct": "a"
       },
       "rationale": {
-        "correct": "Positive signs: fetal heart tones, fetal movement felt by the examiner and fetus seen on ultrasound.",
+        "correct": "Positive signs: fetal heart tones, fetal movement felt by the examiner and the fetus seen on ultrasound.",
         "perOption": {
-          "a": "Only signs coming directly from the fetus are positive signs.",
-          "b": "This is a probable sign.",
-          "c": "This is a presumptive sign.",
-          "d": "This is a probable sign."
+          "a": "Signs that come directly from the fetus are the only positive signs.",
+          "b": "Ballottement is a probable sign; a uterine polyp or mass can rebound in the same way.",
+          "c": "Movement felt by the client is presumptive; gas can feel the same.",
+          "d": "hCG is a probable sign; it can rise with a molar pregnancy or some tumors."
         },
         "references": [
           "Maternal-newborn nursing texts (e.g. Perry; Lowdermilk)",
-          "Reviewed by the content team on 17 November 2026."
+          "Rewritten to NCLEX-RN difficulty and reviewed by the content team on 19 November 2026."
         ]
       },
       "educationalObjective": "Classify signs of pregnancy."
@@ -132,24 +132,24 @@
       ],
       "cjmmSkill": "analyze_cues",
       "difficulty": "difficult",
-      "stem": "A pregnant client has a 4-year-old born at 39 weeks, had a miscarriage at 10 weeks, and has 2-year-old twins born at 34 weeks. Which GTPAL is correct?",
+      "stem": "A pregnant client's history: a son born at 41 weeks who is now 6, a stillbirth at 23 weeks, twins born at 35 weeks who are both living, and a miscarriage at 8 weeks. The nurse is recording the obstetric history using GTPAL. Which entry is correct?",
       "content": {
         "options": [
           {
             "id": "a",
-            "text": "G4 T1 P1 A1 L3"
+            "text": "G5 T1 P2 A1 L3"
           },
           {
             "id": "b",
-            "text": "G4 T1 P2 A1 L3"
+            "text": "G5 T1 P1 A2 L3"
           },
           {
             "id": "c",
-            "text": "G3 T1 P1 A1 L3"
+            "text": "G4 T1 P2 A1 L3"
           },
           {
             "id": "d",
-            "text": "G5 T1 P1 A1 L3"
+            "text": "G5 T1 P3 A1 L3"
           }
         ]
       },
@@ -157,16 +157,16 @@
         "correct": "a"
       },
       "rationale": {
-        "correct": "GTPAL: Gravida, Term, Preterm, Abortions, Living. Multiples count once for G, T and P.",
+        "correct": "GTPAL: Gravida, Term (37 weeks or more), Preterm (20 to 36 6/7 weeks, living or not), Abortions (before 20 weeks), Living. Multiples count once for G, T and P.",
         "perOption": {
-          "a": "4 pregnancies (including this one), 1 term birth, 1 preterm birth (twins count as one), 1 abortion and 3 living children.",
-          "b": "Twins count as one preterm birth.",
-          "c": "The current pregnancy counts.",
-          "d": "Twins count as one pregnancy."
+          "a": "5 pregnancies including this one; 1 term birth; 2 preterm births (the stillbirth after 20 weeks and the twins, counted once); 1 abortion; 3 living children.",
+          "b": "A loss at 23 weeks is past 20 weeks, so it counts as a preterm birth, not an abortion.",
+          "c": "The current pregnancy counts toward gravida.",
+          "d": "Twins count as one birth for term and preterm."
         },
         "references": [
           "Maternal-newborn nursing texts (e.g. Perry; Lowdermilk)",
-          "Reviewed by the content team on 17 November 2026."
+          "Rewritten to NCLEX-RN difficulty and reviewed by the content team on 19 November 2026."
         ]
       },
       "educationalObjective": "Calculate GTPAL."
@@ -180,25 +180,25 @@
         "preconception-and-prenatal-care"
       ],
       "cjmmSkill": "generate_solutions",
-      "difficulty": "easy",
-      "stem": "A client is planning a pregnancy. Which supplement should the nurse recommend?",
+      "difficulty": "moderate",
+      "stem": "A 31-year-old client who plans to become pregnant in the next few months had a previous pregnancy affected by spina bifida. The client takes no medicines and eats a balanced diet. Which recommendation should the nurse expect the provider to make?",
       "content": {
         "options": [
           {
             "id": "a",
-            "text": "Folic acid 400 mcg daily, starting before conception"
+            "text": "Folic acid 4 mg daily, starting at least 1 month before trying to conceive"
           },
           {
             "id": "b",
-            "text": "Vitamin A in high doses"
+            "text": "Folic acid 400 mcg daily, starting as soon as pregnancy is confirmed"
           },
           {
             "id": "c",
-            "text": "Iron only after delivery"
+            "text": "A prenatal vitamin with 10,000 IU of vitamin A to support development"
           },
           {
             "id": "d",
-            "text": "No supplements are needed"
+            "text": "Diet alone, because a varied, balanced diet supplies enough folate for pregnancy"
           }
         ]
       },
@@ -206,16 +206,16 @@
         "correct": "a"
       },
       "rationale": {
-        "correct": "Folic acid at least 1 month before conception and through early pregnancy prevents neural tube defects.",
+        "correct": "Folic acid: 400 mcg daily for most; 4 mg daily after a previous neural tube defect, from at least 1 month before conception through the first trimester.",
         "perOption": {
-          "a": "Folic acid reduces the risk of neural tube defects.",
-          "b": "High-dose vitamin A is teratogenic.",
-          "c": "Iron needs rise during pregnancy.",
-          "d": "Folic acid is recommended."
+          "a": "A previous neural tube defect calls for the high dose of folic acid, started before conception.",
+          "b": "The neural tube closes by about 4 weeks, often before pregnancy is known, and this client needs the higher dose.",
+          "c": "High-dose vitamin A is teratogenic.",
+          "d": "Supplements are recommended for all who could become pregnant."
         },
         "references": [
           "Maternal-newborn nursing texts (e.g. Perry; Lowdermilk)",
-          "Reviewed by the content team on 17 November 2026."
+          "Rewritten to NCLEX-RN difficulty and reviewed by the content team on 19 November 2026."
         ]
       },
       "educationalObjective": "Recommend preconception folic acid."
@@ -230,24 +230,24 @@
       ],
       "cjmmSkill": "generate_solutions",
       "difficulty": "easy",
-      "stem": "A pregnant client wakes at night with leg cramps. What should the nurse suggest?",
+      "stem": "A client at 30 weeks gestation says they wake at night with a painful cramp in the calf. Both calves are equal in size, soft and not warm. What should the nurse suggest the client do when a cramp starts?",
       "content": {
         "options": [
           {
             "id": "a",
-            "text": "Straighten the leg and pull the toes up toward the knee (dorsiflex the foot)"
+            "text": "Straighten the knee and pull the toes up toward the shin"
           },
           {
             "id": "b",
-            "text": "Point the toes"
+            "text": "Point the toes down firmly until the cramp goes away"
           },
           {
             "id": "c",
-            "text": "Massage the calf vigorously"
+            "text": "Take an extra calcium tablet at the time of the cramp"
           },
           {
             "id": "d",
-            "text": "Stop all calcium"
+            "text": "Lie flat with the legs raised on two pillows"
           }
         ]
       },
@@ -255,16 +255,16 @@
         "correct": "a"
       },
       "rationale": {
-        "correct": "Leg cramps: dorsiflexion, stretching, hydration and adequate calcium and magnesium.",
+        "correct": "Leg cramps: dorsiflexion, calf stretches before bed, fluids and adequate calcium and magnesium.",
         "perOption": {
           "a": "Dorsiflexion stretches the calf muscle and relieves the cramp.",
-          "b": "This can worsen the cramp.",
-          "c": "Vigorous massage isn't advised if DVT is possible.",
-          "d": "Calcium is needed in pregnancy."
+          "b": "Plantar flexion shortens the calf and can worsen the cramp.",
+          "c": "Calcium does not stop a cramp in progress.",
+          "d": "This does not stretch the muscle."
         },
         "references": [
           "Maternal-newborn nursing texts (e.g. Perry; Lowdermilk)",
-          "Reviewed by the content team on 17 November 2026."
+          "Rewritten to NCLEX-RN difficulty and reviewed by the content team on 19 November 2026."
         ]
       },
       "educationalObjective": "Relieve pregnancy leg cramps."
@@ -278,25 +278,25 @@
         "preconception-and-prenatal-care"
       ],
       "cjmmSkill": "take_action",
-      "difficulty": "easy",
-      "stem": "A client at 32 weeks lying flat on her back becomes dizzy, pale and sweaty. What should the nurse do first?",
+      "difficulty": "moderate",
+      "stem": "A client at 32 weeks gestation lying flat on the back for an ultrasound says, \"I feel faint.\" The client is pale and sweaty, the blood pressure has fallen from 118/72 to 88/50 mm Hg, and the pulse is 112/min. What should the nurse do first?",
       "content": {
         "options": [
           {
             "id": "a",
-            "text": "Turn her onto her left side"
+            "text": "Turn the client onto the left side"
           },
           {
             "id": "b",
-            "text": "Raise her legs"
+            "text": "Raise the legs and lower the head of the table"
           },
           {
             "id": "c",
-            "text": "Give oxygen first"
+            "text": "Apply oxygen at 10 L/min by nonrebreather mask"
           },
           {
             "id": "d",
-            "text": "Check her blood glucose"
+            "text": "Check a fingerstick blood glucose level"
           }
         ]
       },
@@ -304,16 +304,16 @@
         "correct": "a"
       },
       "rationale": {
-        "correct": "Supine hypotensive syndrome: lateral (left) positioning.",
+        "correct": "Supine hypotensive syndrome: lateral (preferably left) positioning or a wedge under the right hip.",
         "perOption": {
-          "a": "This relieves pressure of the uterus on the vena cava (supine hypotension).",
-          "b": "This doesn't relieve the compression.",
-          "c": "Repositioning comes first.",
-          "d": "The cause is positional."
+          "a": "This lifts the uterus off the vena cava and restores venous return (supine hypotensive syndrome).",
+          "b": "The uterus still compresses the vena cava in this position.",
+          "c": "Relieving the compression comes first.",
+          "d": "The timing and position point to a positional cause."
         },
         "references": [
           "Maternal-newborn nursing texts (e.g. Perry; Lowdermilk)",
-          "Reviewed by the content team on 17 November 2026."
+          "Rewritten to NCLEX-RN difficulty and reviewed by the content team on 19 November 2026."
         ]
       },
       "educationalObjective": "Relieve supine hypotensive syndrome."
@@ -327,33 +327,37 @@
         "preconception-and-prenatal-care"
       ],
       "cjmmSkill": "generate_solutions",
-      "difficulty": "moderate",
-      "stem": "Which danger signs should a pregnant client report right away? Select all that apply.",
+      "difficulty": "difficult",
+      "stem": "The nurse is teaching a client at 26 weeks gestation which symptoms need a call to the provider the same day, rather than waiting for the next routine visit. Which symptoms should the nurse include? Select all that apply.",
       "content": {
         "options": [
           {
             "id": "a",
-            "text": "Severe headache or blurred vision"
+            "text": "Puffiness of the face and hands that is present on waking"
           },
           {
             "id": "b",
-            "text": "Vaginal bleeding"
+            "text": "A gush or steady trickle of clear fluid from the vagina"
           },
           {
             "id": "c",
-            "text": "A gush or leak of fluid from the vagina"
+            "text": "Burning on urination with a temperature of 38.3°C (101°F)"
           },
           {
             "id": "d",
-            "text": "Decreased fetal movement"
+            "text": "Fewer fetal movements than usual over the day"
           },
           {
             "id": "e",
-            "text": "Mild ankle swelling at the end of the day"
+            "text": "Irregular, painless tightening that eases with rest and fluids"
           },
           {
             "id": "f",
-            "text": "Occasional heartburn"
+            "text": "Thin, white vaginal discharge without odor or itching"
+          },
+          {
+            "id": "g",
+            "text": "Ankle swelling at the end of the day that is gone by morning"
           }
         ]
       },
@@ -366,18 +370,19 @@
         ]
       },
       "rationale": {
-        "correct": "Teach danger signs: bleeding, fluid leakage, headache or vision changes, decreased movement, fever and severe abdominal pain.",
+        "correct": "Danger signs: bleeding, fluid leakage, headache or vision changes, facial or hand edema, fever, painful urination, decreased movement and regular contractions before 37 weeks.",
         "perOption": {
-          "a": "These may signal preeclampsia.",
-          "b": "Bleeding may signal previa, abruption or miscarriage.",
-          "c": "This may be rupture of membranes.",
-          "d": "This may signal fetal compromise.",
-          "e": "Dependent edema is common.",
-          "f": "This is a common discomfort."
+          "a": "Facial and hand edema can be an early sign of preeclampsia.",
+          "b": "This may be rupture of membranes.",
+          "c": "A urinary infection with fever raises the risk of pyelonephritis and preterm labor.",
+          "d": "Decreased movement can signal fetal compromise.",
+          "e": "These are Braxton Hicks contractions.",
+          "f": "Leukorrhea increases normally in pregnancy.",
+          "g": "Dependent edema that resolves overnight is common."
         },
         "references": [
           "Maternal-newborn nursing texts (e.g. Perry; Lowdermilk)",
-          "Reviewed by the content team on 17 November 2026."
+          "Rewritten to NCLEX-RN difficulty and reviewed by the content team on 19 November 2026."
         ]
       },
       "educationalObjective": "Teach pregnancy danger signs."
@@ -392,24 +397,24 @@
       ],
       "cjmmSkill": "generate_solutions",
       "difficulty": "moderate",
-      "stem": "A client with a normal pre-pregnancy BMI asks how much weight to gain. What is the recommended total?",
+      "stem": "At a first prenatal visit at 10 weeks, a client who is 165 cm tall and weighed 74 kg before pregnancy (BMI 27) asks how much weight to gain with this single pregnancy. Which total gain should the nurse recommend?",
       "content": {
         "options": [
           {
             "id": "a",
-            "text": "11.5 to 16 kg (25 to 35 lb)"
+            "text": "7 to 11.5 kg (15 to 25 lb)"
           },
           {
             "id": "b",
-            "text": "5 to 9 kg (11 to 20 lb)"
+            "text": "11.5 to 16 kg (25 to 35 lb)"
           },
           {
             "id": "c",
-            "text": "18 to 23 kg (40 to 50 lb)"
+            "text": "5 to 9 kg (11 to 20 lb)"
           },
           {
             "id": "d",
-            "text": "No weight gain"
+            "text": "12.5 to 18 kg (28 to 40 lb)"
           }
         ]
       },
@@ -417,16 +422,16 @@
         "correct": "a"
       },
       "rationale": {
-        "correct": "Weight gain goals depend on pre-pregnancy BMI.",
+        "correct": "Weight gain goals depend on pre-pregnancy BMI: underweight 28 to 40 lb, normal 25 to 35 lb, overweight 15 to 25 lb, obese 11 to 20 lb.",
         "perOption": {
-          "a": "This is the recommendation for a normal BMI.",
-          "b": "This is for an obese BMI.",
-          "c": "This is too much for a normal BMI.",
-          "d": "Weight gain is needed."
+          "a": "This is the recommendation for an overweight BMI of 25 to 29.9.",
+          "b": "This is for a normal BMI of 18.5 to 24.9.",
+          "c": "This is for an obese BMI of 30 or more.",
+          "d": "This is for an underweight BMI below 18.5."
         },
         "references": [
           "Maternal-newborn nursing texts (e.g. Perry; Lowdermilk)",
-          "Reviewed by the content team on 17 November 2026."
+          "Rewritten to NCLEX-RN difficulty and reviewed by the content team on 19 November 2026."
         ]
       },
       "educationalObjective": "Teach recommended pregnancy weight gain."
@@ -440,25 +445,25 @@
         "prenatal-testing"
       ],
       "cjmmSkill": "generate_solutions",
-      "difficulty": "easy",
-      "stem": "When is a pregnant client without risk factors routinely screened for gestational diabetes?",
+      "difficulty": "moderate",
+      "stem": "A client at a first prenatal visit at 9 weeks has a BMI of 34, had gestational diabetes in a previous pregnancy and has a parent with type 2 diabetes. When should the nurse expect this client to be screened for diabetes?",
       "content": {
         "options": [
           {
             "id": "a",
-            "text": "24 to 28 weeks"
+            "text": "At this visit, and again at 24 to 28 weeks if the result is normal"
           },
           {
             "id": "b",
-            "text": "6 to 8 weeks"
+            "text": "At 24 to 28 weeks, the standard time for screening in pregnancy"
           },
           {
             "id": "c",
-            "text": "38 to 40 weeks"
+            "text": "At 32 weeks, once insulin resistance reaches its peak"
           },
           {
             "id": "d",
-            "text": "Only after birth"
+            "text": "At the 6-week postpartum visit, before any future pregnancy is planned"
           }
         ]
       },
@@ -466,16 +471,16 @@
         "correct": "a"
       },
       "rationale": {
-        "correct": "GDM screening at 24 to 28 weeks (earlier if high risk).",
+        "correct": "Screen for diabetes at 24 to 28 weeks; screen at the first visit when risk factors such as obesity or previous gestational diabetes are present.",
         "perOption": {
-          "a": "Insulin resistance rises in the second trimester.",
-          "b": "This is early screening, for high-risk clients only.",
-          "c": "This is too late.",
-          "d": "Screening is during pregnancy."
+          "a": "Clients with risk factors are screened early and, if negative, again at the usual time.",
+          "b": "This client's risk factors call for early screening as well.",
+          "c": "This is too late to treat and prevent fetal effects.",
+          "d": "Postpartum testing is also needed, but it does not replace screening now."
         },
         "references": [
           "Maternal-newborn nursing texts (e.g. Perry; Lowdermilk)",
-          "Reviewed by the content team on 17 November 2026."
+          "Rewritten to NCLEX-RN difficulty and reviewed by the content team on 19 November 2026."
         ]
       },
       "educationalObjective": "Time gestational diabetes screening."
@@ -490,24 +495,24 @@
       ],
       "cjmmSkill": "analyze_cues",
       "difficulty": "moderate",
-      "stem": "A client with gestational diabetes asks about effects on her baby. Which risk should the nurse explain?",
+      "stem": "A client at 34 weeks with gestational diabetes has fasting glucose readings of 110 to 125 mg/dL despite diet changes and asks how the high readings could affect the baby. Which explanation by the nurse is accurate?",
       "content": {
         "options": [
           {
             "id": "a",
-            "text": "A large baby and low blood sugar after birth"
+            "text": "\"The baby may grow large and have low blood sugar after birth.\""
           },
           {
             "id": "b",
-            "text": "A very small baby"
+            "text": "\"The baby may be small, because your insulin does not reach the baby.\""
           },
           {
             "id": "c",
-            "text": "Low birth weight from too little insulin"
+            "text": "\"The baby is likely to be born with diabetes that needs insulin.\""
           },
           {
             "id": "d",
-            "text": "No effects on the baby"
+            "text": "\"The baby may have high blood sugar for the first few days.\""
           }
         ]
       },
@@ -515,16 +520,16 @@
         "correct": "a"
       },
       "rationale": {
-        "correct": "GDM: macrosomia, birth injury, newborn hypoglycemia; good glucose control reduces the risks.",
+        "correct": "Gestational diabetes: macrosomia, shoulder dystocia, neonatal hypoglycemia, respiratory distress and hyperbilirubinemia.",
         "perOption": {
-          "a": "Maternal hyperglycemia causes fetal hyperinsulinemia, macrosomia and newborn hypoglycemia.",
-          "b": "Macrosomia is more typical.",
-          "c": "This isn't the mechanism.",
-          "d": "There are fetal risks."
+          "a": "Maternal glucose crosses the placenta; fetal insulin rises, causing macrosomia and neonatal hypoglycemia after the glucose supply stops.",
+          "b": "Insulin does not cross the placenta; glucose does, and the fetus makes extra insulin.",
+          "c": "Gestational diabetes does not cause diabetes in the newborn.",
+          "d": "Newborns of diabetic mothers are at risk of low blood sugar."
         },
         "references": [
           "Maternal-newborn nursing texts (e.g. Perry; Lowdermilk)",
-          "Reviewed by the content team on 17 November 2026."
+          "Rewritten to NCLEX-RN difficulty and reviewed by the content team on 19 November 2026."
         ]
       },
       "educationalObjective": "Explain fetal risks of gestational diabetes."
@@ -539,7 +544,7 @@
       ],
       "cjmmSkill": "recognize_cues",
       "difficulty": "difficult",
-      "stem": "A client at 34 weeks has a blood pressure of 164/112 mm Hg, a severe headache and spots before her eyes. What does the nurse suspect?",
+      "stem": "A client at 34 weeks whose blood pressure was 112/70 mm Hg at 12 weeks now has a blood pressure of 164/112 mm Hg on two readings 15 minutes apart, a headache not relieved by acetaminophen and spots before the eyes. Urine protein is 2+. Which condition does the nurse suspect?",
       "content": {
         "options": [
           {
@@ -548,15 +553,15 @@
           },
           {
             "id": "b",
-            "text": "Chronic hypertension only"
+            "text": "Gestational hypertension without proteinuria"
           },
           {
             "id": "c",
-            "text": "Normal pregnancy changes"
+            "text": "Chronic hypertension with superimposed preeclampsia"
           },
           {
             "id": "d",
-            "text": "Migraine"
+            "text": "Eclampsia"
           }
         ]
       },
@@ -564,16 +569,16 @@
         "correct": "a"
       },
       "rationale": {
-        "correct": "Severe features: BP 160/110 or higher, headache, vision changes, RUQ pain, low platelets, raised liver enzymes, pulmonary edema, rising creatinine.",
+        "correct": "Severe features: BP 160/110 or higher, persistent headache, vision changes, RUQ pain, platelets below 100,000, raised liver enzymes, pulmonary edema or rising creatinine.",
         "perOption": {
-          "a": "Severe-range blood pressure with neurologic symptoms indicates severe features.",
-          "b": "New symptoms after 20 weeks suggest preeclampsia.",
-          "c": "These aren't normal.",
-          "d": "This misses an obstetric emergency."
+          "a": "New hypertension after 20 weeks with severe-range readings and neurologic symptoms meets the criteria.",
+          "b": "Proteinuria and symptoms are present.",
+          "c": "The blood pressure was normal early in pregnancy, so there is no chronic hypertension.",
+          "d": "Eclampsia requires a seizure."
         },
         "references": [
           "Maternal-newborn nursing texts (e.g. Perry; Lowdermilk)",
-          "Reviewed by the content team on 17 November 2026."
+          "Rewritten to NCLEX-RN difficulty and reviewed by the content team on 19 November 2026."
         ]
       },
       "educationalObjective": "Recognize preeclampsia with severe features."
@@ -588,24 +593,24 @@
       ],
       "cjmmSkill": "take_action",
       "difficulty": "difficult",
-      "stem": "A client receiving IV magnesium sulfate for preeclampsia has a respiratory rate of 10/min and absent knee reflexes. What should the nurse do first?",
+      "stem": "A client with preeclampsia is receiving IV magnesium sulfate at 2 g/hr. On hourly assessment, the client is drowsy, the respiratory rate is 10/min, the patellar reflexes are absent and the urine output was 20 mL over the past hour. Calcium gluconate is at the bedside. What should the nurse do first?",
       "content": {
         "options": [
           {
             "id": "a",
-            "text": "Stop the magnesium infusion"
+            "text": "Stop the magnesium sulfate infusion"
           },
           {
             "id": "b",
-            "text": "Increase the infusion rate"
+            "text": "Give calcium gluconate 1 g IV over 3 minutes"
           },
           {
             "id": "c",
-            "text": "Give oxytocin"
+            "text": "Draw a serum magnesium level and call the provider"
           },
           {
             "id": "d",
-            "text": "Document the findings and reassess in 1 hour"
+            "text": "Increase the IV fluid rate to improve urine output"
           }
         ]
       },
@@ -613,17 +618,17 @@
         "correct": "a"
       },
       "rationale": {
-        "correct": "Magnesium: monitor RR (12 or more), reflexes, urine output (30 mL/hr or more) and level of consciousness. The antidote is calcium gluconate.",
+        "correct": "Magnesium: keep RR at 12/min or more, reflexes present, urine output 30 mL/hr or more and the client alert. The antidote is calcium gluconate.",
         "perOption": {
-          "a": "These signs show magnesium toxicity; stopping the infusion comes first, then calcium gluconate and the provider.",
-          "b": "This worsens toxicity.",
-          "c": "This isn't related.",
-          "d": "This needs immediate action."
+          "a": "These signs show magnesium toxicity; the infusion is stopped first so that no more drug is given, then calcium gluconate and the provider.",
+          "b": "The antidote is given next, but the infusion is still running and must be stopped first.",
+          "c": "This delays treatment of clear toxicity.",
+          "d": "Fluid overload risks pulmonary edema in preeclampsia."
         },
         "references": [
           "Maternal-newborn nursing texts (e.g. Perry; Lowdermilk)",
           "Nursing pharmacology texts (e.g. Lehne; McCuistion) and the drug's prescribing information",
-          "Reviewed by the content team on 17 November 2026."
+          "Rewritten to NCLEX-RN difficulty and reviewed by the content team on 19 November 2026."
         ]
       },
       "educationalObjective": "Respond to magnesium sulfate toxicity."
@@ -638,7 +643,7 @@
       ],
       "cjmmSkill": "analyze_cues",
       "difficulty": "difficult",
-      "stem": "A client with preeclampsia has right upper quadrant pain, a platelet count of 85,000/mm3 and high liver enzymes. Which complication does the nurse suspect?",
+      "stem": "A client at 33 weeks with preeclampsia reports nausea and pain under the right ribs. Laboratory results: platelets 85,000/mm3, AST 210 units/L, ALT 190 units/L, LDH 780 units/L and schistocytes on the blood smear. Glucose is 92 mg/dL. Which complication does the nurse suspect?",
       "content": {
         "options": [
           {
@@ -647,15 +652,15 @@
           },
           {
             "id": "b",
-            "text": "Gallbladder disease"
+            "text": "Acute fatty liver of pregnancy"
           },
           {
             "id": "c",
-            "text": "Placenta previa"
+            "text": "Acute cholecystitis"
           },
           {
             "id": "d",
-            "text": "Hyperemesis gravidarum"
+            "text": "Immune thrombocytopenia"
           }
         ]
       },
@@ -663,16 +668,16 @@
         "correct": "a"
       },
       "rationale": {
-        "correct": "HELLP is a severe variant of preeclampsia; delivery is often needed.",
+        "correct": "HELLP is a severe form of preeclampsia; stabilize, give magnesium and plan for delivery.",
         "perOption": {
-          "a": "Hemolysis, Elevated Liver enzymes and Low Platelets.",
-          "b": "This doesn't explain the low platelets.",
-          "c": "Previa causes painless bleeding.",
-          "d": "This causes severe vomiting."
+          "a": "Hemolysis (LDH, schistocytes), elevated liver enzymes and low platelets.",
+          "b": "This usually causes low glucose and liver failure without the hemolysis picture.",
+          "c": "This does not explain hemolysis or low platelets.",
+          "d": "This lowers platelets but does not raise liver enzymes or cause hemolysis."
         },
         "references": [
           "Maternal-newborn nursing texts (e.g. Perry; Lowdermilk)",
-          "Reviewed by the content team on 17 November 2026."
+          "Rewritten to NCLEX-RN difficulty and reviewed by the content team on 19 November 2026."
         ]
       },
       "educationalObjective": "Recognize HELLP syndrome."
@@ -686,25 +691,33 @@
         "pregnancy-complications"
       ],
       "cjmmSkill": "analyze_cues",
-      "difficulty": "moderate",
-      "stem": "For each finding, indicate whether it is more consistent with placenta previa or placental abruption.",
+      "difficulty": "difficult",
+      "stem": "Two clients at 32 weeks are admitted with vaginal bleeding. For each finding, indicate whether it is more consistent with placenta previa or placental abruption.",
       "content": {
         "rows": [
           {
             "id": "r1",
-            "text": "Painless, bright red vaginal bleeding"
+            "text": "Bright red bleeding that started during sleep without pain"
           },
           {
             "id": "r2",
-            "text": "Rigid, board-like, tender uterus"
+            "text": "A rigid, tender uterus between contractions"
           },
           {
             "id": "r3",
-            "text": "Recent car crash or cocaine use"
+            "text": "Two previous cesarean births"
           },
           {
             "id": "r4",
-            "text": "Bleeding may be hidden behind the placenta"
+            "text": "Fundal height that has risen 2 cm since admission"
+          },
+          {
+            "id": "r5",
+            "text": "Late decelerations with a small amount of visible bleeding"
+          },
+          {
+            "id": "r6",
+            "text": "Fetus in a transverse lie on ultrasound"
           }
         ],
         "columns": [
@@ -722,25 +735,31 @@
         "byRow": {
           "r1": "c1",
           "r2": "c2",
-          "r3": "c2",
-          "r4": "c2"
+          "r3": "c1",
+          "r4": "c2",
+          "r5": "c2",
+          "r6": "c1"
         }
       },
       "rationale": {
-        "correct": "Previa: painless, bright red, no vaginal exams. Abruption: painful, rigid uterus, possibly concealed bleeding.",
+        "correct": "Previa: painless, bright red, soft uterus, no vaginal exams. Abruption: painful, rigid uterus, concealed bleeding, early fetal distress.",
         "perOption": {
           "r1:c1": "Previa typically causes painless bright red bleeding.",
           "r1:c2": "Abruption is usually painful.",
-          "r2:c1": "The uterus is soft in previa.",
-          "r2:c2": "Bleeding behind the placenta causes a rigid, tender uterus.",
-          "r3:c1": "These aren't typical previa risks.",
-          "r3:c2": "Trauma and cocaine are risk factors for abruption.",
-          "r4:c1": "Previa bleeding is usually visible.",
-          "r4:c2": "Concealed bleeding can occur with abruption."
+          "r2:c1": "The uterus stays soft in previa.",
+          "r2:c2": "Blood behind the placenta irritates the uterus, making it rigid and tender.",
+          "r3:c1": "Uterine scarring raises the risk of a low-lying placenta.",
+          "r3:c2": "Scarring is more strongly linked with previa.",
+          "r4:c1": "Previa bleeding is visible, not trapped.",
+          "r4:c2": "Concealed bleeding behind the placenta enlarges the uterus.",
+          "r5:c1": "Previa usually causes no fetal distress unless bleeding is heavy.",
+          "r5:c2": "Separation reduces placental blood flow, even when little blood is seen.",
+          "r6:c1": "A low placenta keeps the head from settling into the pelvis.",
+          "r6:c2": "Abnormal lie is not typical of abruption."
         },
         "references": [
           "Maternal-newborn nursing texts (e.g. Perry; Lowdermilk)",
-          "Reviewed by the content team on 17 November 2026."
+          "Rewritten to NCLEX-RN difficulty and reviewed by the content team on 19 November 2026."
         ]
       },
       "educationalObjective": "Tell placenta previa from abruption."
@@ -755,24 +774,24 @@
       ],
       "cjmmSkill": "take_action",
       "difficulty": "moderate",
-      "stem": "A client at 30 weeks has painless, bright red vaginal bleeding. Which action should the nurse avoid?",
+      "stem": "A client at 30 weeks gestation is admitted with painless, bright red vaginal bleeding. The fetal heart rate is 145/min with moderate variability, and no ultrasound has been done yet. Which admission order should the nurse question?",
       "content": {
         "options": [
           {
             "id": "a",
-            "text": "Performing a vaginal exam"
+            "text": "Sterile vaginal exam to check cervical dilation"
           },
           {
             "id": "b",
-            "text": "Monitoring the fetal heart rate"
+            "text": "Continuous electronic fetal monitoring"
           },
           {
             "id": "c",
-            "text": "Assessing the amount of bleeding"
+            "text": "Insert a large-bore IV and send a type and screen"
           },
           {
             "id": "d",
-            "text": "Starting an IV"
+            "text": "Weigh perineal pads to measure blood loss"
           }
         ]
       },
@@ -780,16 +799,16 @@
         "correct": "a"
       },
       "rationale": {
-        "correct": "Suspected previa: no vaginal exams until the placenta location is known by ultrasound.",
+        "correct": "Suspected previa: no vaginal or rectal exams until ultrasound shows where the placenta is.",
         "perOption": {
-          "a": "A vaginal exam can cause hemorrhage with placenta previa.",
-          "b": "This is needed.",
-          "c": "This is needed.",
-          "d": "This may be needed."
+          "a": "An exam can tear a low-lying placenta and cause hemorrhage.",
+          "b": "This is needed to watch fetal status.",
+          "c": "This prepares for possible hemorrhage.",
+          "d": "This measures bleeding accurately."
         },
         "references": [
           "Maternal-newborn nursing texts (e.g. Perry; Lowdermilk)",
-          "Reviewed by the content team on 17 November 2026."
+          "Rewritten to NCLEX-RN difficulty and reviewed by the content team on 19 November 2026."
         ]
       },
       "educationalObjective": "Avoid vaginal exams with suspected previa."
@@ -804,7 +823,7 @@
       ],
       "cjmmSkill": "recognize_cues",
       "difficulty": "difficult",
-      "stem": "A client at 7 weeks gestation has sharp pain on one side of the lower abdomen, light vaginal spotting and new right shoulder pain. What does the nurse suspect?",
+      "stem": "A client at 7 weeks gestation by dates comes to the emergency department with sharp left lower abdominal pain, light spotting and new pain in the right shoulder. The pulse is 118/min and the blood pressure is 92/58 mm Hg. Which condition does the nurse suspect?",
       "content": {
         "options": [
           {
@@ -813,15 +832,15 @@
           },
           {
             "id": "b",
-            "text": "Normal implantation"
+            "text": "Threatened spontaneous abortion"
           },
           {
             "id": "c",
-            "text": "Urinary tract infection"
+            "text": "Ruptured ovarian corpus luteum cyst"
           },
           {
             "id": "d",
-            "text": "Round ligament pain"
+            "text": "Acute appendicitis"
           }
         ]
       },
@@ -829,16 +848,16 @@
         "correct": "a"
       },
       "rationale": {
-        "correct": "A ruptured ectopic pregnancy is an emergency (hemorrhage); prepare for surgery.",
+        "correct": "A ruptured ectopic pregnancy is an emergency: large-bore IV, type and crossmatch and preparation for surgery.",
         "perOption": {
-          "a": "Shoulder pain suggests blood in the abdomen irritating the diaphragm.",
-          "b": "These symptoms aren't normal.",
-          "c": "This doesn't explain the shoulder pain.",
-          "d": "This occurs later in pregnancy without shoulder pain."
+          "a": "Shoulder pain suggests blood in the abdomen irritating the diaphragm, and the vital signs show hypovolemia.",
+          "b": "This causes spotting and cramping, but not shoulder pain or shock.",
+          "c": "This can bleed, but a tubal rupture must be ruled out first in a client this unstable.",
+          "d": "Appendicitis is usually right-sided and does not cause spotting."
         },
         "references": [
           "Maternal-newborn nursing texts (e.g. Perry; Lowdermilk)",
-          "Reviewed by the content team on 17 November 2026."
+          "Rewritten to NCLEX-RN difficulty and reviewed by the content team on 19 November 2026."
         ]
       },
       "educationalObjective": "Recognize a ruptured ectopic pregnancy."
@@ -853,24 +872,24 @@
       ],
       "cjmmSkill": "take_action",
       "difficulty": "moderate",
-      "stem": "A client at 10 weeks gestation has vomited many times a day for a week, has lost 6% of her body weight and has ketones in her urine. What should the nurse anticipate?",
+      "stem": "A client at 10 weeks gestation has vomited several times a day for a week, cannot keep fluids down, has lost 6% of body weight and has 3+ ketones in the urine. The pulse is 108/min. Which plan should the nurse anticipate?",
       "content": {
         "options": [
           {
             "id": "a",
-            "text": "IV fluids and antiemetics"
+            "text": "IV fluids with electrolytes and thiamine, and an antiemetic"
           },
           {
             "id": "b",
-            "text": "Telling her this is normal morning sickness"
+            "text": "Reassurance that morning sickness eases by the second trimester"
           },
           {
             "id": "c",
-            "text": "A high-fat diet"
+            "text": "A clear liquid diet at home and a follow-up visit in 1 week"
           },
           {
             "id": "d",
-            "text": "Waiting until the second trimester"
+            "text": "Large meals high in fat to replace the lost calories"
           }
         ]
       },
@@ -878,16 +897,16 @@
         "correct": "a"
       },
       "rationale": {
-        "correct": "Hyperemesis: IV fluids, electrolytes, thiamine, antiemetics and small frequent meals once tolerated.",
+        "correct": "Hyperemesis: IV fluids, electrolytes, thiamine, antiemetics, then small frequent meals once tolerated.",
         "perOption": {
-          "a": "Hyperemesis gravidarum causes dehydration and needs rehydration.",
-          "b": "Weight loss and ketonuria aren't normal.",
-          "c": "This may worsen nausea.",
-          "d": "She needs treatment now."
+          "a": "Hyperemesis gravidarum causes dehydration and ketosis; thiamine prevents Wernicke encephalopathy.",
+          "b": "Weight loss and ketonuria are not normal morning sickness.",
+          "c": "The client cannot keep fluids down and needs treatment now.",
+          "d": "Fatty meals worsen nausea; small, frequent bland meals are used once tolerated."
         },
         "references": [
           "Maternal-newborn nursing texts (e.g. Perry; Lowdermilk)",
-          "Reviewed by the content team on 17 November 2026."
+          "Rewritten to NCLEX-RN difficulty and reviewed by the content team on 19 November 2026."
         ]
       },
       "educationalObjective": "Manage hyperemesis gravidarum."
@@ -901,25 +920,25 @@
         "obstetric-medications"
       ],
       "cjmmSkill": "take_action",
-      "difficulty": "moderate",
-      "stem": "An Rh-negative client at 28 weeks has a negative antibody screen (indirect Coombs). What should the nurse anticipate?",
+      "difficulty": "difficult",
+      "stem": "An Rh-negative client at 28 weeks has a negative indirect Coombs test. The client's first baby was Rh-positive, and the client received Rho(D) immune globulin after that birth. The client asks, \"Do I need another shot?\" Which response by the nurse is accurate?",
       "content": {
         "options": [
           {
             "id": "a",
-            "text": "Giving Rho(D) immune globulin"
+            "text": "\"Yes, a dose now, and again after birth if the baby is Rh-positive.\""
           },
           {
             "id": "b",
-            "text": "No treatment until after birth"
+            "text": "\"No, the dose you had after your first birth protects later pregnancies.\""
           },
           {
             "id": "c",
-            "text": "A blood transfusion"
+            "text": "\"No, it is given only if your antibody screen turns positive.\""
           },
           {
             "id": "d",
-            "text": "Giving it to the baby instead"
+            "text": "\"Yes, but it is given to your baby right after birth.\""
           }
         ]
       },
@@ -927,16 +946,16 @@
         "correct": "a"
       },
       "rationale": {
-        "correct": "Rho(D) immune globulin: at 28 weeks, within 72 hours after birth of an Rh-positive infant, and after any bleeding or invasive procedure.",
+        "correct": "Rho(D) immune globulin: at 28 weeks, within 72 hours after birth of an Rh-positive infant, and after bleeding, trauma or invasive procedures, in every pregnancy.",
         "perOption": {
-          "a": "Rho(D) immune globulin at 28 weeks prevents sensitization.",
-          "b": "A 28-week dose is recommended.",
-          "c": "This isn't indicated.",
-          "d": "It is given to the mother."
+          "a": "Each pregnancy needs its own doses; the negative screen shows the client is not yet sensitized.",
+          "b": "The immune globulin clears in weeks; it is given again with each pregnancy.",
+          "c": "Once antibodies form, the immune globulin no longer helps.",
+          "d": "It is given to the Rh-negative mother, not the newborn."
         },
         "references": [
           "Maternal-newborn nursing texts (e.g. Perry; Lowdermilk)",
-          "Reviewed by the content team on 17 November 2026."
+          "Rewritten to NCLEX-RN difficulty and reviewed by the content team on 19 November 2026."
         ]
       },
       "educationalObjective": "Prevent Rh sensitization."
@@ -950,25 +969,25 @@
         "prenatal-testing"
       ],
       "cjmmSkill": "analyze_cues",
-      "difficulty": "moderate",
-      "stem": "During a 20-minute nonstress test at 36 weeks, the fetal heart rate rises 15 beats/min for 15 seconds three times with fetal movement. How should the nurse interpret this?",
+      "difficulty": "difficult",
+      "stem": "A client at 30 weeks with chronic hypertension has a 20-minute nonstress test. The baseline is 145/min with moderate variability, and the fetal heart rate rises 10 beats/min for 10 seconds twice with fetal movement. There are no decelerations. How should the nurse interpret this test?",
       "content": {
         "options": [
           {
             "id": "a",
-            "text": "Reactive, a reassuring result"
+            "text": "Reactive, because the criteria before 32 weeks are met"
           },
           {
             "id": "b",
-            "text": "Nonreactive"
+            "text": "Nonreactive, because the accelerations are under 15 beats for 15 seconds"
           },
           {
             "id": "c",
-            "text": "Positive contraction stress test"
+            "text": "Nonreactive, so a contraction stress test is needed right away"
           },
           {
             "id": "d",
-            "text": "Fetal distress"
+            "text": "Inconclusive, so the test should be extended to 40 minutes"
           }
         ]
       },
@@ -976,16 +995,16 @@
         "correct": "a"
       },
       "rationale": {
-        "correct": "NST at 32 weeks or more: reactive = 2 or more accelerations of 15 beats for 15 seconds within 20 minutes.",
+        "correct": "NST: reactive = 2 or more accelerations in 20 minutes, 15 beats for 15 seconds at 32 weeks or more, or 10 beats for 10 seconds before 32 weeks.",
         "perOption": {
-          "a": "Two or more accelerations of 15 beats for 15 seconds in 20 minutes is reactive.",
-          "b": "The criteria are met.",
-          "c": "This is a different test.",
-          "d": "Accelerations are reassuring."
+          "a": "Before 32 weeks, two accelerations of 10 beats for 10 seconds in 20 minutes is reactive.",
+          "b": "The 15-by-15 criteria apply at 32 weeks or more.",
+          "c": "The test is reactive at this gestational age.",
+          "d": "Extending the test is done when criteria are not met in 20 minutes."
         },
         "references": [
           "Maternal-newborn nursing texts (e.g. Perry; Lowdermilk)",
-          "Reviewed by the content team on 17 November 2026."
+          "Rewritten to NCLEX-RN difficulty and reviewed by the content team on 19 November 2026."
         ]
       },
       "educationalObjective": "Interpret a nonstress test."
@@ -1000,24 +1019,24 @@
       ],
       "cjmmSkill": "evaluate_outcomes",
       "difficulty": "moderate",
-      "stem": "After an amniocentesis, which symptom should the client report right away?",
+      "stem": "A client at 16 weeks gestation is going home after an amniocentesis for genetic testing. Which statement by the client shows that the discharge teaching was understood?",
       "content": {
         "options": [
           {
             "id": "a",
-            "text": "Fluid leaking from the vagina, cramping or fever"
+            "text": "\"I'll call if I have cramping, fluid leaking or a fever.\""
           },
           {
             "id": "b",
-            "text": "Mild soreness at the puncture site"
+            "text": "\"I'll expect some leaking of clear fluid for a day or two.\""
           },
           {
             "id": "c",
-            "text": "Feeling tired"
+            "text": "\"I can go back to my running program as soon as I get home.\""
           },
           {
             "id": "d",
-            "text": "Increased appetite"
+            "text": "\"I'll take aspirin if the puncture site feels sore tonight.\""
           }
         ]
       },
@@ -1027,14 +1046,14 @@
       "rationale": {
         "correct": "After amniocentesis, report bleeding, fluid leakage, fever or contractions; Rh-negative clients receive Rho(D) immune globulin.",
         "perOption": {
-          "a": "These may signal rupture of membranes, infection or preterm labor.",
-          "b": "This is expected.",
-          "c": "This isn't specific.",
-          "d": "This isn't related."
+          "a": "These may signal preterm labor, rupture of membranes or infection.",
+          "b": "Fluid leakage is not expected and needs to be reported.",
+          "c": "Strenuous activity is avoided for about a day.",
+          "d": "Aspirin raises the risk of bleeding; acetaminophen is used."
         },
         "references": [
           "Maternal-newborn nursing texts (e.g. Perry; Lowdermilk)",
-          "Reviewed by the content team on 17 November 2026."
+          "Rewritten to NCLEX-RN difficulty and reviewed by the content team on 19 November 2026."
         ]
       },
       "educationalObjective": "Teach warning signs after amniocentesis."
@@ -1047,26 +1066,26 @@
       "subtopics": [
         "obstetric-medications"
       ],
-      "cjmmSkill": "analyze_cues",
+      "cjmmSkill": "evaluate_outcomes",
       "difficulty": "moderate",
-      "stem": "A client in preterm labor at 30 weeks receives betamethasone. What is the purpose?",
+      "stem": "A client in preterm labor at 30 weeks receives the first of two doses of betamethasone 12 mg IM, 24 hours apart. Which statement by the client shows correct understanding of the medicine?",
       "content": {
         "options": [
           {
             "id": "a",
-            "text": "To speed fetal lung maturity"
+            "text": "\"It helps the baby's lungs and works best if birth is 1 to 7 days away.\""
           },
           {
             "id": "b",
-            "text": "To stop contractions"
+            "text": "\"It relaxes my uterus, so the contractions should slow down and stop soon.\""
           },
           {
             "id": "c",
-            "text": "To prevent infection"
+            "text": "\"It protects my baby from an infection I might have.\""
           },
           {
             "id": "d",
-            "text": "To lower blood pressure"
+            "text": "\"It works right away, so the baby is safe if born tonight.\""
           }
         ]
       },
@@ -1074,16 +1093,16 @@
         "correct": "a"
       },
       "rationale": {
-        "correct": "Betamethasone at 24 to 34 weeks improves newborn lung maturity.",
+        "correct": "Betamethasone at 24 to 34 weeks: two doses 24 hours apart to mature fetal lungs; monitor maternal glucose.",
         "perOption": {
-          "a": "Antenatal corticosteroids reduce respiratory distress syndrome.",
-          "b": "Tocolytics such as nifedipine do that.",
-          "c": "Antibiotics do that.",
-          "d": "This isn't the purpose."
+          "a": "Antenatal steroids reduce respiratory distress; the benefit is greatest 24 hours to 7 days after the first dose.",
+          "b": "Tocolytics such as nifedipine slow contractions; steroids do not.",
+          "c": "Antibiotics, such as for group B strep, do that.",
+          "d": "Full benefit takes about 24 hours from the first dose."
         },
         "references": [
           "Maternal-newborn nursing texts (e.g. Perry; Lowdermilk)",
-          "Reviewed by the content team on 17 November 2026."
+          "Rewritten to NCLEX-RN difficulty and reviewed by the content team on 19 November 2026."
         ]
       },
       "educationalObjective": "Explain antenatal corticosteroids."
@@ -1098,24 +1117,24 @@
       ],
       "cjmmSkill": "analyze_cues",
       "difficulty": "moderate",
-      "stem": "A client at 33 weeks reports a sudden gush of clear fluid. A nitrazine test turns the paper blue. What does this suggest?",
+      "stem": "A client at 33 weeks reports a sudden gush of clear fluid 1 hour ago and a steady trickle since. A sterile speculum exam shows fluid pooling in the vagina, nitrazine paper turns blue and a dried sample shows ferning under the microscope. What do these findings suggest?",
       "content": {
         "options": [
           {
             "id": "a",
-            "text": "Rupture of membranes"
+            "text": "Preterm premature rupture of membranes"
           },
           {
             "id": "b",
-            "text": "Urinary incontinence"
+            "text": "Stress incontinence from the weight of the uterus"
           },
           {
             "id": "c",
-            "text": "Normal vaginal discharge"
+            "text": "Increased normal vaginal discharge of pregnancy"
           },
           {
             "id": "d",
-            "text": "Placenta previa"
+            "text": "Bacterial vaginosis with a watery discharge"
           }
         ]
       },
@@ -1123,16 +1142,16 @@
         "correct": "a"
       },
       "rationale": {
-        "correct": "Preterm premature rupture of membranes raises the risk of infection and preterm birth; confirm with nitrazine or ferning.",
+        "correct": "Preterm premature rupture of membranes raises the risk of infection and preterm birth; confirm with pooling, nitrazine and ferning.",
         "perOption": {
-          "a": "Amniotic fluid is alkaline and turns nitrazine paper blue.",
-          "b": "Urine is usually acidic.",
-          "c": "This is usually acidic.",
-          "d": "Previa causes bleeding."
+          "a": "Pooling, an alkaline pH and ferning confirm amniotic fluid.",
+          "b": "Urine is usually acidic and does not fern.",
+          "c": "Vaginal discharge is acidic and does not fern.",
+          "d": "This causes a fishy odor; it can raise the pH but does not fern."
         },
         "references": [
           "Maternal-newborn nursing texts (e.g. Perry; Lowdermilk)",
-          "Reviewed by the content team on 17 November 2026."
+          "Rewritten to NCLEX-RN difficulty and reviewed by the content team on 19 November 2026."
         ]
       },
       "educationalObjective": "Recognize rupture of membranes."
@@ -1146,25 +1165,25 @@
         "preconception-and-prenatal-care"
       ],
       "cjmmSkill": "evaluate_outcomes",
-      "difficulty": "moderate",
-      "stem": "A pregnant client asks about alcohol. Which statement shows correct understanding?",
+      "difficulty": "easy",
+      "stem": "At a first prenatal visit at 8 weeks, a client says they drank wine at a party before knowing they were pregnant. After teaching about alcohol in pregnancy, which statement by the client shows correct understanding?",
       "content": {
         "options": [
           {
             "id": "a",
-            "text": "\"No amount of alcohol is known to be safe during pregnancy.\""
+            "text": "\"No amount of alcohol is known to be safe while I'm pregnant.\""
           },
           {
             "id": "b",
-            "text": "\"A glass of wine a day is fine.\""
+            "text": "\"A glass of wine with dinner a few nights a week is fine.\""
           },
           {
             "id": "c",
-            "text": "\"Only hard liquor is harmful.\""
+            "text": "\"Beer and wine are safe; it's liquor that harms the baby.\""
           },
           {
             "id": "d",
-            "text": "\"Alcohol is safe in the third trimester.\""
+            "text": "\"Alcohol is safe once the baby's organs have formed after 12 weeks.\""
           }
         ]
       },
@@ -1172,17 +1191,17 @@
         "correct": "a"
       },
       "rationale": {
-        "correct": "Avoid alcohol completely in pregnancy.",
+        "correct": "Avoid alcohol completely in pregnancy; a past exposure is discussed without blame and the client is encouraged to stop now.",
         "perOption": {
-          "a": "Alcohol can cause fetal alcohol spectrum disorders.",
-          "b": "No safe amount is known.",
-          "c": "All alcohol is harmful.",
-          "d": "It isn't safe at any time."
+          "a": "Alcohol crosses the placenta and can cause fetal alcohol spectrum disorders at any stage.",
+          "b": "No safe amount of alcohol is known.",
+          "c": "All types of alcohol carry the same risk.",
+          "d": "The brain keeps developing throughout pregnancy."
         },
         "references": [
           "Maternal-newborn nursing texts (e.g. Perry; Lowdermilk)",
           "Nursing pharmacology texts (e.g. Lehne; McCuistion) and the drug's prescribing information",
-          "Reviewed by the content team on 17 November 2026."
+          "Rewritten to NCLEX-RN difficulty and reviewed by the content team on 19 November 2026."
         ]
       },
       "educationalObjective": "Teach alcohol avoidance in pregnancy."
@@ -1197,24 +1216,24 @@
       ],
       "cjmmSkill": "analyze_cues",
       "difficulty": "moderate",
-      "stem": "At a prenatal visit at 20 weeks, where should the nurse expect to find the top of the uterus (fundus)?",
+      "stem": "At a prenatal visit, a client at 28 weeks by a first-trimester ultrasound has a fundal height of 34 cm. Two weeks ago it was 30 cm. The client feels well and the blood pressure is 116/72 mm Hg. What should the nurse anticipate?",
       "content": {
         "options": [
           {
             "id": "a",
-            "text": "At the level of the umbilicus"
+            "text": "An ultrasound, because the uterus is larger than expected for dates"
           },
           {
             "id": "b",
-            "text": "Just above the pubic bone"
+            "text": "Routine care, because fundal height often varies by a few centimeters"
           },
           {
             "id": "c",
-            "text": "Near the xiphoid process"
+            "text": "A new due date, because the dates are probably wrong"
           },
           {
             "id": "d",
-            "text": "It can't be felt yet"
+            "text": "Bed rest, because the fundus is rising too quickly"
           }
         ]
       },
@@ -1222,16 +1241,16 @@
         "correct": "a"
       },
       "rationale": {
-        "correct": "From 20 to 36 weeks, fundal height in cm roughly equals the weeks of gestation.",
+        "correct": "From 20 to 36 weeks, fundal height in cm roughly equals the weeks of gestation (± 2 cm).",
         "perOption": {
-          "a": "At 20 weeks, the fundus is usually at the navel.",
-          "b": "This is around 12 weeks.",
-          "c": "This is around 36 weeks.",
-          "d": "It can be felt by 12 weeks."
+          "a": "A fundal height more than 2 cm above the weeks of gestation needs evaluation for macrosomia, polyhydramnios or multiples.",
+          "b": "A 6 cm difference is outside the expected range.",
+          "c": "A first-trimester ultrasound is the most accurate dating.",
+          "d": "The cause must be found before a plan is made."
         },
         "references": [
           "Maternal-newborn nursing texts (e.g. Perry; Lowdermilk)",
-          "Reviewed by the content team on 17 November 2026."
+          "Rewritten to NCLEX-RN difficulty and reviewed by the content team on 19 November 2026."
         ]
       },
       "educationalObjective": "Assess fundal height."
@@ -1246,24 +1265,24 @@
       ],
       "cjmmSkill": "generate_solutions",
       "difficulty": "easy",
-      "stem": "A client at 30 weeks asks how to monitor her baby's movements. What should the nurse teach?",
+      "stem": "A client at 30 weeks gestation with a history of a stillbirth asks how to keep track of the baby's movements at home. Which instruction should the nurse give?",
       "content": {
         "options": [
           {
             "id": "a",
-            "text": "\"Count until you feel 10 movements; call if it takes more than 2 hours.\""
+            "text": "\"Count until you feel 10 movements; call if that takes over 2 hours.\""
           },
           {
             "id": "b",
-            "text": "\"Count movements only once a week.\""
+            "text": "\"Count the movements once a week on the same day.\""
           },
           {
             "id": "c",
-            "text": "\"Movement isn't important.\""
+            "text": "\"Expect fewer movements from now on, as the baby has less room to move.\""
           },
           {
             "id": "d",
-            "text": "\"Call only if there is no movement for 2 days.\""
+            "text": "\"Call if you notice no movement for a whole day.\""
           }
         ]
       },
@@ -1273,14 +1292,14 @@
       "rationale": {
         "correct": "Fetal movement counts: report fewer than 10 movements in 2 hours.",
         "perOption": {
-          "a": "Kick counts are a simple way to assess fetal well-being.",
-          "b": "Daily awareness is recommended.",
-          "c": "Decreased movement can signal compromise.",
-          "d": "This is too long to wait."
+          "a": "Daily kick counts are a simple check of fetal well-being.",
+          "b": "Daily counts are recommended.",
+          "c": "Movements should not decrease; a decrease needs evaluation.",
+          "d": "This is far too long to wait."
         },
         "references": [
           "Maternal-newborn nursing texts (e.g. Perry; Lowdermilk)",
-          "Reviewed by the content team on 17 November 2026."
+          "Rewritten to NCLEX-RN difficulty and reviewed by the content team on 19 November 2026."
         ]
       },
       "educationalObjective": "Teach fetal movement counting."
