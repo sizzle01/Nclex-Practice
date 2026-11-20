@@ -62,4 +62,5 @@ Written by `python3 -I build_all.py`; do not edit by hand. See `quality.py` for 
 | 70-pharmacology-basic-care | 25 | yes | 17 | 24% | 32% (assess first) | 12% | 40 | 2/12/11 |
 | 71-risk-reduction-adaptation-cases | 25 | yes | 11 | 9% | 30% (stem words) | 9% | 34 | 1/14/10 |
 | 72-moc-ethics-continuity-safety | 25 | yes | 19 | 0% | 20% (stem words) | 5% | 31 | 2/13/10 |
-| **Whole bank** | 1235 | | 954 | 14% | 25% (assess first) | 7% | 33 | 97/715/423 |
+| 73-infection-lifespan-mental-health | 25 | yes | 18 | 0% | 25% (stem words) | 0% | 36 | 2/14/9 |
+| **Whole bank** | 1260 | | 972 | 14% | 24% (assess first) | 7% | 33 | 99/729/432 |
