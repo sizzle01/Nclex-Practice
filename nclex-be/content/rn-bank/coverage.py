@@ -22,6 +22,7 @@ CHUNKS = {
     5: (84, 85, 86, 87),
     6: (88, 89, 90, 91),
     7: (92, 93, 94, 95),
+    8: (96, 97, 98, 99),
 }
 # Item-type mix for a chunk of new questions (plan of 2026-11-20): fewer plain multiple-choice questions
 # than the first 1,110, and the newer NGN formats the real exam uses.
