@@ -20,6 +20,9 @@ REVIEW_STATUS = "Reviewed by the content team on 17 November 2026."
 # Batches rewritten to real NCLEX-RN difficulty (build(..., hardened=True)) say so instead, and must pass
 # the quality gates in quality.py. Changing this text publishes a new version of every hardened question.
 HARDENED_STATUS = "Rewritten to NCLEX-RN difficulty and reviewed by the content team on 19 November 2026."
+# Questions written for the bank's growth to 5,000 (content waves, PROGRESS.md) carry their own line, so
+# the existing questions keep theirs. Waves are always built hardened.
+WAVE_STATUS = "Written to NCLEX-RN difficulty and reviewed by the content team on 20 November 2026."
 
 REFS = {
     "ms": "Medical-surgical nursing texts (e.g. Lewis; Ignatavicius)",
@@ -290,6 +293,21 @@ def calc(meta, stem, unit, decimals, label, value, why, obj, ex=None):
               {"value": value, "rounding": "exact"}, why, {}, obj, ex)
 
 
+def bowtie(meta, stem, conditions, actions, parameters, why, obj, ex=None):
+    """Each list: [(text, correct, rationale)], 4 to 8 options; 1 correct condition, 2 actions, 2 parameters.
+    Option ids are c1.., a1.., p1.. so they are unique across the three lists (interfaces.md 2, bowtie)."""
+    lists, key, per = {}, {}, {}
+    for name, prefix, opts, need in (("condition", "c", conditions, 1), ("actions", "a", actions, 2),
+                                     ("parameters", "p", parameters, 2)):
+        assert 4 <= len(opts) <= 8, f"bowtie {name} needs 4 to 8 options: {stem[:50]}"
+        correct = [f"{prefix}{i + 1}" for i, o in enumerate(opts) if o[1]]
+        assert len(correct) == need, f"bowtie {name} needs {need} correct: {stem[:50]}"
+        lists[name] = [{"id": f"{prefix}{i + 1}", "text": o[0]} for i, o in enumerate(opts)]
+        key[name] = correct[0] if need == 1 else correct
+        per.update({f"{prefix}{i + 1}": o[2] for i, o in enumerate(opts)})
+    return _q(meta, "bowtie", stem, lists, key, why, per, obj, ex)
+
+
 def case(title, tabs, questions):
     """An NGN unfolding case: tabs [(id, title, [exhibits])], questions in case order (up to 6)."""
     return {"title": title,
@@ -306,10 +324,12 @@ def _cid(batch, n):
     return f"c1c{batch:05d}-0000-4000-8000-{n:012d}"
 
 
-def build(batch, slug, title, items, cases=(), hardened=False):
+def build(batch, slug, title, items, cases=(), hardened=False, wave=False):
     """Writes rn-bank-NN-<slug>.rn.json. Question ids come from each item's position, so a rewrite must
-    keep the batch's items in the same order (and the same item types) to update questions in place."""
-    status = HARDENED_STATUS if hardened else REVIEW_STATUS
+    keep the batch's items in the same order (and the same item types) to update questions in place.
+    wave=True marks a new file from the content waves: hardened, with WAVE_STATUS."""
+    hardened = hardened or wave
+    status = WAVE_STATUS if wave else HARDENED_STATUS if hardened else REVIEW_STATUS
     questions, case_rows, n = [], [], 0
     for item in items:
         n += 1
@@ -396,6 +416,8 @@ def _check(questions, cases):
         if t in ("dropdown_cloze", "dropdown_table") and any(len(b["options"]) < 2 for b in c["blanks"]):
             errors.append(f"{where}: 2+ choices per blank")
         texts = [o["text"] for o in c.get("options", [])]
+        if t == "bowtie":
+            texts = [o["text"] for k in ("condition", "actions", "parameters") for o in c[k]]
         if len(texts) != len(set(texts)): errors.append(f"{where}: duplicate option text")
         ex_ids = [e["id"] for e in q.get("exhibits", [])]
         if len(ex_ids) != len(set(ex_ids)): errors.append(f"{where}: duplicate exhibit ids")

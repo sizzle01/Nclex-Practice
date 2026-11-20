@@ -10,6 +10,7 @@ from pathlib import Path
 HERE = Path(__file__).resolve().parent
 sys.path.insert(0, str(HERE))
 import catalog  # noqa: E402
+import coverage  # noqa: E402
 import qb  # noqa: E402
 import quality  # noqa: E402
 
@@ -53,7 +54,8 @@ print(f"Quality: {len(qb.HARDENED_FILES)} hardened file(s); whole bank key longe
 banks, sets = catalog.attach(out, all_questions)
 print(f"{out.name}: + catalog with {len(sets)} test sets and {len(banks)} bank")
 
-print(f"\nTotal: {total} questions")
+coverage.write(HERE / "PROGRESS.md", all_questions)
+print(f"\nTotal: {total} questions (progress toward {coverage.TARGET_TOTAL}: PROGRESS.md)")
 for cn, count in sorted(by_cn.items()):
     print(f"  {cn:9} {count:4}  {100 * count / total:5.1f}%")
 print("Item types:", dict(by_type))

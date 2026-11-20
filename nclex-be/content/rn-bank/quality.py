@@ -98,6 +98,7 @@ def _scenario_words(q):
     texts += [seg["text"] for seg in c.get("segments", [])]
     texts += [c["template"]] if "template" in c else []
     texts += [o["text"] for b in c.get("blanks", []) for o in b["options"]]
+    texts += [o["text"] for k in ("condition", "actions", "parameters") for o in c.get(k, [])]
     return len(_words(q["stem"])) + sum(len(_words(t)) for t in texts)
 
 
@@ -147,6 +148,13 @@ def gate(questions):
             wrong = [len(o["text"]) for o in q["content"]["options"] if o["id"] not in q["key"]["correct"]]
             if wrong and statistics.mean(right) > MAX_SELECT_LENGTH_RATIO * statistics.mean(wrong):
                 errors.append(f"{where}: correct options are much longer than wrong ones")
+        if t == "bowtie":
+            # In each wing the right options must not stand out by length either.
+            for wing in ("actions", "parameters"):
+                right = [len(o["text"]) for o in q["content"][wing] if o["id"] in q["key"][wing]]
+                wrong = [len(o["text"]) for o in q["content"][wing] if o["id"] not in q["key"][wing]]
+                if statistics.mean(right) > MAX_SELECT_LENGTH_RATIO * statistics.mean(wrong):
+                    errors.append(f"{where}: correct {wing} are much longer than wrong ones")
         minimum = MIN_SCENARIO_WORDS.get(q["difficulty"])
         if minimum and _needs_long_stem(q) and _scenario_words(q) < minimum:
             errors.append(f"{where}: {q['difficulty']} item has {_scenario_words(q)} words of stem and options, "
