@@ -14,6 +14,9 @@ Sets (PRD 5.5, api.md section 3):
   items so earlier attempts keep their set and history.
 The sets published before the bank started growing (2026-11-20) are frozen in catalog-frozen.json: their
 ids and items never change. New questions fill new parts after them.
+- Timed case-study blocks (F24): BLOCK_CASES whole cases per block under exam rules, timed at the NCLEX-RN
+  pace, no going back, rationales at the end and no pass estimate. A block is published only when it is full
+  and is then recorded in timed-blocks.json, so its cases never change as the bank grows.
 - The adaptive exam (F19, architecture.md 5.8): mode cat, no question list; each attempt picks
   85 to 150 questions from the whole bank, and the candidate chooses timed (5 h) or untimed.
 """
@@ -41,6 +44,16 @@ BANK_ID = "c1f00000-0000-4000-8000-000000000001"
 ADAPTIVE_SET_NUMBER = 32     # the adaptive exam's set id; it must never change (attempt history)
 NEW_TOPIC_BASE = 1000        # set number of new topic parts: base + category index * 100 + part
 NEW_CASE_BASE = 2000         # set number of new case-study sets: base + set number
+BLOCK_BASE = 3000            # set number of timed case-study blocks: base + block number
+
+# Timed case-study blocks (F24). The candidate's report showed clinical judgment falling away late in the exam,
+# so blocks build stamina under real conditions: the NCLEX-RN allows 5 hours for up to 150 questions, which is
+# 120 seconds a question, and its optional breaks run on the exam clock (one short pause here).
+BLOCK_CASES = 10
+BLOCK_MAX_PER_SYSTEM = 3     # so every block mixes at least four body systems; leftover cases wait for later chunks
+NCLEX_SECONDS_PER_QUESTION = 120
+BLOCK_PAUSE_POLICY = {"maxPauses": 1, "maxPauseSec": 600}
+BLOCKS_FILE = Path(__file__).resolve().parent / "timed-blocks.json"
 
 
 def _set_id(n):
@@ -98,6 +111,9 @@ def build_catalog(questions):
                                  f"{len(ids) // 6} unfolding case studies of 6 items each, with rationales after each item.", ids),
                      "id": set_id})
 
+    # ---- timed case-study blocks (F24) ----
+    sets += _timed_blocks(cases)
+
     # ---- the fixed-length challenges: unpublished since F19 and frozen with their original items ----
     sets += frozen["challenges"]
     n = ADAPTIVE_SET_NUMBER - 1
@@ -117,6 +133,64 @@ def build_catalog(questions):
               "description": f"All {len(questions)} RN bank questions across every NCLEX-RN category and item type.",
               "accessTier": "free", "questionIds": [q["id"] for q in questions]}]
     return banks, sets
+
+
+def _case_system(items):
+    """A case's body system: the one most of its questions are tagged with (ties go to the first item's)."""
+    systems = [q["bodySystem"] for q in items]
+    return max(systems, key=lambda s: (systems.count(s), -systems.index(s)))
+
+
+def _choose_block(unassigned, systems):
+    """Picks BLOCK_CASES cases from unassigned (case ids in order) so the block mixes body systems, as the real
+    exam does: each pick is the earliest case whose system is least used so far, and no system passes
+    BLOCK_MAX_PER_SYSTEM. Returns None when the pool cannot fill a mixed block yet."""
+    block, used = [], {}
+    pool = list(unassigned)
+    while len(block) < BLOCK_CASES:
+        allowed = [cid for cid in pool if used.get(systems[cid], 0) < BLOCK_MAX_PER_SYSTEM]
+        if not allowed:
+            return None
+        pick = min(allowed, key=lambda cid: (used.get(systems[cid], 0), pool.index(cid)))
+        pool.remove(pick)
+        block.append(pick)
+        used[systems[pick]] = used.get(systems[pick], 0) + 1
+    return block
+
+
+def _timed_blocks(cases):
+    """The timed blocks: those already recorded in timed-blocks.json, then a new block for every further
+    BLOCK_CASES cases not yet in one. New blocks are written back to the file, so a published block keeps the same
+    cases and questions for good (earlier attempts keep their set and history)."""
+    recorded = json.loads(BLOCKS_FILE.read_text(encoding="utf-8")) if BLOCKS_FILE.exists() else []
+    order = {cid: [q["id"] for q in sorted(items, key=lambda q: q["casePosition"])] for cid, items in cases.items()}
+    for block in recorded:
+        for cid, ids in zip(block["caseIds"], block["questionIds"]):
+            if order.get(cid) != ids:
+                raise SystemExit(f"timed block {block['number']}: case {cid} changed or was removed; published "
+                                 "blocks must keep their questions (see catalog.py, F24)")
+    assigned = {cid for block in recorded for cid in block["caseIds"]}
+    unassigned = [cid for cid in sorted(cases) if cid not in assigned]
+    systems = {cid: _case_system(items) for cid, items in cases.items()}
+    while (chosen := _choose_block(unassigned, systems)) is not None:
+        unassigned = [cid for cid in unassigned if cid not in chosen]
+        recorded.append({"number": len(recorded) + 1, "caseIds": chosen, "questionIds": [order[cid] for cid in chosen]})
+    BLOCKS_FILE.write_text(json.dumps(recorded, indent=1) + "\n", encoding="utf-8")
+
+    sets = []
+    for block in recorded:
+        ids = [qid for case_ids in block["questionIds"] for qid in case_ids]
+        budget = len(ids) * NCLEX_SECONDS_PER_QUESTION
+        minutes = budget // 60
+        sets.append({
+            "id": _set_id(BLOCK_BASE + block["number"]),
+            "title": f"Timed case study block {block['number']}",
+            "description": (f"{len(block['caseIds'])} unfolding case studies ({len(ids)} questions) from mixed body "
+                            f"systems, at the NCLEX-RN pace: {minutes // 60} h {minutes % 60:02d} min, one 10-minute "
+                            "break, no going back. Answers and rationales at the end."),
+            "mode": "challenge", "revealMode": "exam", "timed": True, "timeBudgetSec": budget,
+            "allowBackNav": False, "pausePolicy": BLOCK_PAUSE_POLICY, "accessTier": "free", "questionIds": ids})
+    return sets
 
 
 def attach(path, questions):
