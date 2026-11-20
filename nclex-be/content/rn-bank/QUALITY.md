@@ -71,4 +71,5 @@ Written by `python3 -I build_all.py`; do not edit by hand. See `quality.py` for 
 | 79-monitoring-complications-cases | 25 | yes | 11 | 9% | 30% (assess first) | 0% | 26 | 0/15/10 |
 | 80-moc-staffing-rights-safety | 25 | yes | 20 | 10% | 30% (shortest) | 0% | 29 | 2/12/11 |
 | 81-infection-development-coping | 25 | yes | 19 | 5% | 31% (shortest) | 0% | 29 | 2/14/9 |
-| **Whole bank** | 1460 | | 1109 | 13% | 24% (assess first) | 6% | 32 | 111/836/513 |
+| 82-medication-safety-daily-care | 25 | yes | 18 | 11% | 28% (assess first) | 0% | 28 | 2/13/10 |
+| **Whole bank** | 1485 | | 1127 | 13% | 24% (assess first) | 6% | 32 | 113/849/523 |
