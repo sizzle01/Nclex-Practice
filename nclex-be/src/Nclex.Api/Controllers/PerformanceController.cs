@@ -1,6 +1,7 @@
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Nclex.Application.Performance.GetBreakdown;
+using Nclex.Application.Performance.GetClinicalJudgmentTrend;
 using Nclex.Application.Performance.GetSummary;
 using Nclex.Application.Performance.GetTrend;
 
@@ -43,6 +44,15 @@ public sealed class PerformanceController : ControllerBase
     public Task<PerformanceTrend> Trend(
         [FromQuery] GetTrendRequest request,
         [FromServices] GetTrendHandler handler,
+        CancellationToken cancellationToken) =>
+        handler.HandleAsync(request, cancellationToken);
+
+    /// <summary>Each clinical judgment step's score in my last five timed attempts (F25).</summary>
+    [HttpGet("clinical-judgment")]
+    [ProducesResponseType<ClinicalJudgmentTrend>(StatusCodes.Status200OK)]
+    public Task<ClinicalJudgmentTrend> ClinicalJudgment(
+        [FromQuery] GetClinicalJudgmentTrendRequest request,
+        [FromServices] GetClinicalJudgmentTrendHandler handler,
         CancellationToken cancellationToken) =>
         handler.HandleAsync(request, cancellationToken);
 }

@@ -72,6 +72,7 @@ using Nclex.Application.Notifications.ReadState;
 using Nclex.Application.Notifications.Stream;
 using Nclex.Application.Performance;
 using Nclex.Application.Performance.GetBreakdown;
+using Nclex.Application.Performance.GetClinicalJudgmentTrend;
 using Nclex.Application.Performance.GetSummary;
 using Nclex.Application.Performance.GetTrend;
 using Nclex.Application.Performance.RebuildSnapshots;
@@ -214,6 +215,7 @@ public static class DependencyInjection
         services.AddScoped<GetSummaryHandler>();
         services.AddScoped<GetBreakdownHandler>();
         services.AddScoped<GetTrendHandler>();
+        services.AddScoped<GetClinicalJudgmentTrendHandler>();
         services.AddScoped<RequestSnapshotRebuildHandler>();
 
         // Admin console (F14)
