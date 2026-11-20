@@ -87,4 +87,5 @@ Written by `python3 -I build_all.py`; do not edit by hand. See `quality.py` for 
 | 95-diagnostics-emergencies-cases | 25 | yes | 7 | 0% | 25% (stem words) | 0% | 21 | 0/11/14 |
 | 96-moc-law-levels-of-care-safety | 25 | yes | 11 | 0% | 27% (shortest) | 0% | 27 | 0/14/11 |
 | 97-disinfection-development-mental-health | 25 | yes | 13 | 8% | 23% (shortest) | 0% | 26 | 0/15/10 |
-| **Whole bank** | 1860 | | 1312 | 12% | 25% (assess first) | 5% | 31.5 | 118/1030/712 |
+| 98-medication-technique-comfort | 25 | yes | 12 | 0% | 30% (stem words) | 0% | 24 | 0/14/11 |
+| **Whole bank** | 1885 | | 1324 | 12% | 25% (assess first) | 5% | 31 | 118/1044/723 |
