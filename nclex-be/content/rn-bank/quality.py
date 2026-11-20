@@ -161,7 +161,8 @@ def gate(questions):
                           f"needs {minimum} (give the clinical picture, or add an exhibit)")
 
     s = summary(questions)
-    if s["mc"] >= 8:
+    # Wave 2 files have fewer multiple-choice items, so the batch-level tells apply from 6 MC items.
+    if s["mc"] >= 6:
         if s["key_longest"] > MAX_KEY_LONGEST_SHARE:
             errors.append(f"key is the longest option in {s['key_longest']:.0%} of MC (max {MAX_KEY_LONGEST_SHARE:.0%})")
         if s["best_trick_score"] > MAX_TRICK_SCORE:
