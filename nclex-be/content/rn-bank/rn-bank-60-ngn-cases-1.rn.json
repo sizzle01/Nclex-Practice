@@ -1,5 +1,5 @@
 {
-  "notice": "RN bank batch 60: NGN unfolding case studies I. Reviewed by the content team on 17 November 2026. See REVIEW-LOG.md.",
+  "notice": "RN bank batch 60: NGN unfolding case studies I. Rewritten to NCLEX-RN difficulty and reviewed by the content team on 19 November 2026. See REVIEW-LOG.md.",
   "track": "RN",
   "subtopics": [
     {
@@ -135,7 +135,7 @@
         "references": [
           "Medical-surgical nursing texts (e.g. Lewis; Ignatavicius)",
           "NCSBN NCLEX-RN Test Plan",
-          "Reviewed by the content team on 17 November 2026."
+          "Rewritten to NCLEX-RN difficulty and reviewed by the content team on 19 November 2026."
         ]
       },
       "educationalObjective": "Recognize the cues of sepsis in an older adult.",
@@ -211,7 +211,7 @@
         "references": [
           "Medical-surgical nursing texts (e.g. Lewis; Ignatavicius)",
           "NCSBN NCLEX-RN Test Plan",
-          "Reviewed by the content team on 17 November 2026."
+          "Rewritten to NCLEX-RN difficulty and reviewed by the content team on 19 November 2026."
         ]
       },
       "educationalObjective": "Analyze cues to identify urosepsis.",
@@ -281,7 +281,7 @@
         },
         "references": [
           "Medical-surgical nursing texts (e.g. Lewis; Ignatavicius)",
-          "Reviewed by the content team on 17 November 2026."
+          "Rewritten to NCLEX-RN difficulty and reviewed by the content team on 19 November 2026."
         ]
       },
       "educationalObjective": "Prioritize the most likely complications of septic shock.",
@@ -319,11 +319,11 @@
           },
           {
             "id": "e",
-            "text": "Oral fluids only"
+            "text": "Encourage 240 mL of oral fluids every hour"
           },
           {
             "id": "f",
-            "text": "Hold all insulin for 24 hours"
+            "text": "Hold the insulin until the blood pressure is normal"
           }
         ]
       },
@@ -342,13 +342,13 @@
           "b": "Early antibiotics lower deaths from sepsis.",
           "c": "Recommended for hypotension or a lactate of 4 mmol/L or more; this client is hypotensive.",
           "d": "A falling lactate shows that perfusion is improving.",
-          "e": "Oral intake can't correct septic shock.",
+          "e": "Oral intake cannot correct septic shock in a confused client.",
           "f": "Glucose still needs management; hyperglycemia worsens outcomes."
         },
         "references": [
           "Medical-surgical nursing texts (e.g. Lewis; Ignatavicius)",
           "NCSBN NCLEX-RN Test Plan",
-          "Reviewed by the content team on 17 November 2026."
+          "Rewritten to NCLEX-RN difficulty and reviewed by the content team on 19 November 2026."
         ]
       },
       "educationalObjective": "Plan sepsis bundle care.",
@@ -411,7 +411,7 @@
         },
         "references": [
           "Medical-surgical nursing texts (e.g. Lewis; Ignatavicius)",
-          "Reviewed by the content team on 17 November 2026."
+          "Rewritten to NCLEX-RN difficulty and reviewed by the content team on 19 November 2026."
         ]
       },
       "educationalObjective": "Sequence nursing actions in septic shock.",
@@ -481,7 +481,7 @@
         },
         "references": [
           "Medical-surgical nursing texts (e.g. Lewis; Ignatavicius)",
-          "Reviewed by the content team on 17 November 2026."
+          "Rewritten to NCLEX-RN difficulty and reviewed by the content team on 19 November 2026."
         ]
       },
       "educationalObjective": "Evaluate the response to sepsis treatment.",
@@ -548,7 +548,7 @@
         },
         "references": [
           "Pediatric nursing texts (e.g. Hockenberry, Wong's Essentials of Pediatric Nursing)",
-          "Reviewed by the content team on 17 November 2026."
+          "Rewritten to NCLEX-RN difficulty and reviewed by the content team on 19 November 2026."
         ]
       },
       "educationalObjective": "Recognize a severe pediatric asthma exacerbation.",
@@ -623,7 +623,7 @@
         },
         "references": [
           "Pediatric nursing texts (e.g. Hockenberry, Wong's Essentials of Pediatric Nursing)",
-          "Reviewed by the content team on 17 November 2026."
+          "Rewritten to NCLEX-RN difficulty and reviewed by the content team on 19 November 2026."
         ]
       },
       "educationalObjective": "Analyze the cause of an asthma exacerbation.",
@@ -639,25 +639,25 @@
         "asthma-and-copd-management"
       ],
       "cjmmSkill": "prioritize_hypotheses",
-      "difficulty": "moderate",
-      "stem": "Which problem is the nurse's priority for this child?",
+      "difficulty": "difficult",
+      "stem": "The child is frightened and clinging to the parent, has had little to drink since the afternoon and used the inhaler without a spacer at home. Which problem is the nurse's priority for this child?",
       "content": {
         "options": [
           {
             "id": "a",
-            "text": "Impaired gas exchange"
+            "text": "Impaired gas exchange from narrowed airways"
           },
           {
             "id": "b",
-            "text": "Anxiety"
+            "text": "Anxiety that is making the breathing worse"
           },
           {
             "id": "c",
-            "text": "Risk for dehydration"
+            "text": "Risk for dehydration from rapid breathing"
           },
           {
             "id": "d",
-            "text": "Knowledge gap about inhaler technique"
+            "text": "Ineffective inhaler technique without a spacer"
           }
         ]
       },
@@ -667,14 +667,14 @@
       "rationale": {
         "correct": "Oxygenation comes first.",
         "perOption": {
-          "a": "Hypoxemia from bronchospasm is the most immediate threat.",
-          "b": "Present, but secondary to the breathing problem.",
-          "c": "Possible with tachypnea, but not the most urgent.",
-          "d": "Teaching comes after the child is stable."
+          "a": "An SpO2 of 89% from narrowed airways is the most immediate threat.",
+          "b": "Fear adds to the distress but is secondary to the hypoxemia.",
+          "c": "Possible with tachypnea and poor intake, but not the most urgent.",
+          "d": "This likely contributed, but teaching comes after the child is stable."
         },
         "references": [
           "Pediatric nursing texts (e.g. Hockenberry, Wong's Essentials of Pediatric Nursing)",
-          "Reviewed by the content team on 17 November 2026."
+          "Rewritten to NCLEX-RN difficulty and reviewed by the content team on 19 November 2026."
         ]
       },
       "educationalObjective": "Prioritize gas exchange in acute asthma.",
@@ -763,7 +763,7 @@
         "references": [
           "Pediatric nursing texts (e.g. Hockenberry, Wong's Essentials of Pediatric Nursing)",
           "Nursing pharmacology texts (e.g. Lehne; McCuistion) and the drug's prescribing information",
-          "Reviewed by the content team on 17 November 2026."
+          "Rewritten to NCLEX-RN difficulty and reviewed by the content team on 19 November 2026."
         ]
       },
       "educationalObjective": "Plan acute asthma treatment for a child.",
@@ -780,24 +780,24 @@
       ],
       "cjmmSkill": "take_action",
       "difficulty": "moderate",
-      "stem": "Which action should the nurse take first?",
+      "stem": "The provider has prescribed oxygen, nebulized albuterol with ipratropium, oral dexamethasone and a chest x-ray. Which action should the nurse take first?",
       "content": {
         "options": [
           {
             "id": "a",
-            "text": "Apply oxygen and start the nebulized bronchodilator"
+            "text": "Apply oxygen and start the albuterol-ipratropium nebulizer"
           },
           {
             "id": "b",
-            "text": "Obtain a chest x-ray"
+            "text": "Give the oral dexamethasone so it can start working sooner"
           },
           {
             "id": "c",
-            "text": "Teach the parent about avoiding triggers"
+            "text": "Send the child for the chest x-ray before treatments begin"
           },
           {
             "id": "d",
-            "text": "Weigh the child for medication dosing"
+            "text": "Weigh the child to confirm the doses of each medicine"
           }
         ]
       },
@@ -807,14 +807,14 @@
       "rationale": {
         "correct": "Treat breathing first.",
         "perOption": {
-          "a": "Treats hypoxemia and bronchospasm right away.",
-          "b": "Imaging isn't routine and doesn't treat the problem.",
-          "c": "Teaching comes later.",
-          "d": "An estimated or recent weight can be used; treatment shouldn't wait."
+          "a": "This treats the hypoxemia and bronchospasm right away.",
+          "b": "Steroids take hours to work; oxygen and bronchodilators act in minutes.",
+          "c": "Imaging does not treat the problem and should not delay treatment.",
+          "d": "A recent or estimated weight can be used; treatment should not wait."
         },
         "references": [
           "Pediatric nursing texts (e.g. Hockenberry, Wong's Essentials of Pediatric Nursing)",
-          "Reviewed by the content team on 17 November 2026."
+          "Rewritten to NCLEX-RN difficulty and reviewed by the content team on 19 November 2026."
         ]
       },
       "educationalObjective": "Take action in an acute pediatric asthma exacerbation.",
@@ -884,7 +884,7 @@
         },
         "references": [
           "Pediatric nursing texts (e.g. Hockenberry, Wong's Essentials of Pediatric Nursing)",
-          "Reviewed by the content team on 17 November 2026."
+          "Rewritten to NCLEX-RN difficulty and reviewed by the content team on 19 November 2026."
         ]
       },
       "educationalObjective": "Evaluate the response to asthma treatment.",
@@ -978,7 +978,7 @@
         },
         "references": [
           "Maternal-newborn nursing texts (e.g. Perry; Lowdermilk)",
-          "Reviewed by the content team on 17 November 2026."
+          "Rewritten to NCLEX-RN difficulty and reviewed by the content team on 19 November 2026."
         ]
       },
       "educationalObjective": "Recognize severe features of preeclampsia.",
@@ -1053,7 +1053,7 @@
         },
         "references": [
           "Maternal-newborn nursing texts (e.g. Perry; Lowdermilk)",
-          "Reviewed by the content team on 17 November 2026."
+          "Rewritten to NCLEX-RN difficulty and reviewed by the content team on 19 November 2026."
         ]
       },
       "educationalObjective": "Analyze seizure risk in severe preeclampsia.",
@@ -1070,7 +1070,7 @@
       ],
       "cjmmSkill": "prioritize_hypotheses",
       "difficulty": "difficult",
-      "stem": "Which problem is the nurse's priority?",
+      "stem": "The client is anxious, the face and hands are swollen, the fetal heart rate is reassuring and the platelets are 96,000/mm3. Which problem is the nurse's priority?",
       "content": {
         "options": [
           {
@@ -1079,15 +1079,15 @@
           },
           {
             "id": "b",
-            "text": "Fluid volume excess related to edema"
+            "text": "Risk for bleeding related to the low platelet count"
           },
           {
             "id": "c",
-            "text": "Anxiety about the birth"
+            "text": "Risk for fetal compromise from reduced placental flow"
           },
           {
             "id": "d",
-            "text": "Knowledge gap about breastfeeding"
+            "text": "Fluid volume excess shown by the facial edema"
           }
         ]
       },
@@ -1097,14 +1097,14 @@
       "rationale": {
         "correct": "Preventing eclampsia and stroke comes first.",
         "perOption": {
-          "a": "These are the most immediate threats to the client's life.",
-          "b": "Secondary to the hypertensive emergency.",
-          "c": "Real, but secondary.",
-          "d": "Addressed later."
+          "a": "Eclampsia and stroke are the most immediate threats to the client's life.",
+          "b": "Platelets above 50,000 rarely bleed on their own; seizures and stroke are more imminent.",
+          "c": "The fetal heart rate is reassuring; the maternal threat is more immediate.",
+          "d": "Edema is common in pregnancy and secondary here."
         },
         "references": [
           "Maternal-newborn nursing texts (e.g. Perry; Lowdermilk)",
-          "Reviewed by the content team on 17 November 2026."
+          "Rewritten to NCLEX-RN difficulty and reviewed by the content team on 19 November 2026."
         ]
       },
       "educationalObjective": "Prioritize problems in severe preeclampsia.",
@@ -1192,7 +1192,7 @@
         "references": [
           "Maternal-newborn nursing texts (e.g. Perry; Lowdermilk)",
           "Nursing pharmacology texts (e.g. Lehne; McCuistion) and the drug's prescribing information",
-          "Reviewed by the content team on 17 November 2026."
+          "Rewritten to NCLEX-RN difficulty and reviewed by the content team on 19 November 2026."
         ]
       },
       "educationalObjective": "Plan care for severe preeclampsia.",
@@ -1259,7 +1259,7 @@
         "references": [
           "Maternal-newborn nursing texts (e.g. Perry; Lowdermilk)",
           "Nursing pharmacology texts (e.g. Lehne; McCuistion) and the drug's prescribing information",
-          "Reviewed by the content team on 17 November 2026."
+          "Rewritten to NCLEX-RN difficulty and reviewed by the content team on 19 November 2026."
         ]
       },
       "educationalObjective": "Take action safely during magnesium sulfate therapy.",
@@ -1329,7 +1329,7 @@
         },
         "references": [
           "Maternal-newborn nursing texts (e.g. Perry; Lowdermilk)",
-          "Reviewed by the content team on 17 November 2026."
+          "Rewritten to NCLEX-RN difficulty and reviewed by the content team on 19 November 2026."
         ]
       },
       "educationalObjective": "Evaluate preeclampsia treatment.",
@@ -1396,7 +1396,7 @@
         },
         "references": [
           "Psychiatric-mental health nursing texts (e.g. Varcarolis; Halter)",
-          "Reviewed by the content team on 17 November 2026."
+          "Rewritten to NCLEX-RN difficulty and reviewed by the content team on 19 November 2026."
         ]
       },
       "educationalObjective": "Recognize alcohol withdrawal after surgery.",
@@ -1530,7 +1530,7 @@
         },
         "references": [
           "Psychiatric-mental health nursing texts (e.g. Varcarolis; Halter)",
-          "Reviewed by the content team on 17 November 2026."
+          "Rewritten to NCLEX-RN difficulty and reviewed by the content team on 19 November 2026."
         ]
       },
       "educationalObjective": "Analyze the timeline of alcohol withdrawal.",
@@ -1546,25 +1546,25 @@
         "alcohol-withdrawal"
       ],
       "cjmmSkill": "prioritize_hypotheses",
-      "difficulty": "moderate",
-      "stem": "Which problem is the nurse's priority?",
+      "difficulty": "difficult",
+      "stem": "The client keeps trying to stand on the operated ankle, has a temperature of 38.0 °C and pulled at the IV once overnight. Which problem is the nurse's priority?",
       "content": {
         "options": [
           {
             "id": "a",
-            "text": "Risk for injury from seizures and delirium"
+            "text": "Risk for injury from withdrawal seizures and delirium"
           },
           {
             "id": "b",
-            "text": "Ineffective coping"
+            "text": "Risk for infection shown by the new low-grade fever"
           },
           {
             "id": "c",
-            "text": "Impaired skin integrity at the incision"
+            "text": "Risk for falls from standing on the operated ankle"
           },
           {
             "id": "d",
-            "text": "Knowledge gap about alcohol use"
+            "text": "Ineffective denial of the client's alcohol use"
           }
         ]
       },
@@ -1575,13 +1575,13 @@
         "correct": "Safety from seizures and delirium comes first.",
         "perOption": {
           "a": "Withdrawal can progress to seizures and delirium tremens, which can be fatal.",
-          "b": "Addressed after the client is safe.",
-          "c": "Not the most urgent problem.",
-          "d": "Addressed later."
+          "b": "Fever here fits autonomic hyperactivity of withdrawal; infection is assessed but is less urgent.",
+          "c": "Falls are part of the injury risk, but seizures and DTs are the larger threat.",
+          "d": "This is addressed after the client is safe."
         },
         "references": [
           "Psychiatric-mental health nursing texts (e.g. Varcarolis; Halter)",
-          "Reviewed by the content team on 17 November 2026."
+          "Rewritten to NCLEX-RN difficulty and reviewed by the content team on 19 November 2026."
         ]
       },
       "educationalObjective": "Prioritize safety in alcohol withdrawal.",
@@ -1615,7 +1615,7 @@
           },
           {
             "id": "d",
-            "text": "A quiet, well-lit room"
+            "text": "A dark, quiet room with the door closed"
           },
           {
             "id": "e",
@@ -1631,8 +1631,7 @@
         "correct": [
           "a",
           "b",
-          "c",
-          "d"
+          "c"
         ]
       },
       "rationale": {
@@ -1641,14 +1640,14 @@
           "a": "Symptom-triggered benzodiazepines are first-line.",
           "b": "Prevents Wernicke encephalopathy.",
           "c": "Withdrawal seizures can occur.",
-          "d": "Reduces agitation and misperception of shadows.",
+          "d": "Darkness creates shadows the client may misperceive; a quiet, well-lit room is better.",
           "e": "Restraints are a last resort and can increase agitation.",
           "f": "Clients in withdrawal often need fluids and electrolytes."
         },
         "references": [
           "Psychiatric-mental health nursing texts (e.g. Varcarolis; Halter)",
           "Nursing pharmacology texts (e.g. Lehne; McCuistion) and the drug's prescribing information",
-          "Reviewed by the content team on 17 November 2026."
+          "Rewritten to NCLEX-RN difficulty and reviewed by the content team on 19 November 2026."
         ]
       },
       "educationalObjective": "Plan alcohol withdrawal care.",
@@ -1665,24 +1664,24 @@
       ],
       "cjmmSkill": "take_action",
       "difficulty": "moderate",
-      "stem": "The client's CIWA-Ar score is 22. What should the nurse do?",
+      "stem": "The client's CIWA-Ar score is 22. The client last had lorazepam 2 mg 1 hour ago and is still agitated. What should the nurse do?",
       "content": {
         "options": [
           {
             "id": "a",
-            "text": "Give the benzodiazepine dose the protocol specifies for this score"
+            "text": "Give the lorazepam dose the protocol lists for this score"
           },
           {
             "id": "b",
-            "text": "Reassess in 4 hours before treating"
+            "text": "Wait until the 4-hour reassessment before giving another dose"
           },
           {
             "id": "c",
-            "text": "Give haloperidol instead of a benzodiazepine"
+            "text": "Give haloperidol for the agitation instead of lorazepam"
           },
           {
             "id": "d",
-            "text": "Ask the family to bring in alcohol"
+            "text": "Apply wrist restraints until the agitation settles"
           }
         ]
       },
@@ -1692,15 +1691,15 @@
       "rationale": {
         "correct": "Symptom-triggered benzodiazepine dosing based on CIWA-Ar score.",
         "perOption": {
-          "a": "A score above about 15 to 20 indicates severe withdrawal needing medication.",
+          "a": "A score above about 15 to 20 indicates severe withdrawal; symptom-triggered dosing can repeat hourly.",
           "b": "Delay risks seizures and delirium tremens.",
-          "c": "Antipsychotics don't treat withdrawal and lower the seizure threshold.",
-          "d": "Not an accepted treatment."
+          "c": "Antipsychotics do not treat withdrawal and lower the seizure threshold.",
+          "d": "Restraints are a last resort and can increase agitation."
         },
         "references": [
           "Psychiatric-mental health nursing texts (e.g. Varcarolis; Halter)",
           "Nursing pharmacology texts (e.g. Lehne; McCuistion) and the drug's prescribing information",
-          "Reviewed by the content team on 17 November 2026."
+          "Rewritten to NCLEX-RN difficulty and reviewed by the content team on 19 November 2026."
         ]
       },
       "educationalObjective": "Act on a withdrawal assessment score.",
@@ -1770,7 +1769,7 @@
         },
         "references": [
           "Psychiatric-mental health nursing texts (e.g. Varcarolis; Halter)",
-          "Reviewed by the content team on 17 November 2026."
+          "Rewritten to NCLEX-RN difficulty and reviewed by the content team on 19 November 2026."
         ]
       },
       "educationalObjective": "Evaluate alcohol withdrawal treatment.",

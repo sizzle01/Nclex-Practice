@@ -2,6 +2,8 @@
 
 Each case walks the six CJMM steps in order: recognize cues, analyze cues, prioritize hypotheses,
 generate solutions, take action, evaluate outcomes (NCSBN Clinical Judgment Measurement Model).
+
+Rewritten to NCLEX-RN difficulty on 20 November 2026 (see quality.py).
 """
 from qb import *
 
@@ -75,8 +77,8 @@ sata(M(PA, "shock-and-sepsis", "generate_solutions", "difficult", "renal-urinary
     ("Broad-spectrum IV antibiotic within 1 hour", True, "Early antibiotics lower deaths from sepsis."),
     ("IV crystalloid 30 mL/kg", True, "Recommended for hypotension or a lactate of 4 mmol/L or more; this client is hypotensive."),
     ("Repeat lactate", True, "A falling lactate shows that perfusion is improving."),
-    ("Oral fluids only", False, "Oral intake can't correct septic shock."),
-    ("Hold all insulin for 24 hours", False, "Glucose still needs management; hyperglycemia worsens outcomes.")],
+    ("Encourage 240 mL of oral fluids every hour", False, "Oral intake cannot correct septic shock in a confused client."),
+    ("Hold the insulin until the blood pressure is normal", False, "Glucose still needs management; hyperglycemia worsens outcomes.")],
    "Hour-1 sepsis bundle: lactate, cultures, antibiotics, fluids, then vasopressors if hypotension persists.",
    "Plan sepsis bundle care."),
 
@@ -137,12 +139,12 @@ cloze(M(PA, "asthma-and-copd-management", "analyze_cues", "moderate", "pediatric
    "A viral infection triggered airway inflammation and bronchospasm.",
    "Analyze the cause of an asthma exacerbation."),
 
-mc(M(PA, "asthma-and-copd-management", "prioritize_hypotheses", "moderate", "pediatrics", "peds"),
-   "Which problem is the nurse's priority for this child?",
-   [("Impaired gas exchange", True, "Hypoxemia from bronchospasm is the most immediate threat."),
-    ("Anxiety", False, "Present, but secondary to the breathing problem."),
-    ("Risk for dehydration", False, "Possible with tachypnea, but not the most urgent."),
-    ("Knowledge gap about inhaler technique", False, "Teaching comes after the child is stable.")],
+mc(M(PA, "asthma-and-copd-management", "prioritize_hypotheses", "difficult", "pediatrics", "peds"),
+   "The child is frightened and clinging to the parent, has had little to drink since the afternoon and used the inhaler without a spacer at home. Which problem is the nurse's priority for this child?",
+   [("Impaired gas exchange from narrowed airways", True, "An SpO2 of 89% from narrowed airways is the most immediate threat."),
+    ("Anxiety that is making the breathing worse", False, "Fear adds to the distress but is secondary to the hypoxemia."),
+    ("Risk for dehydration from rapid breathing", False, "Possible with tachypnea and poor intake, but not the most urgent."),
+    ("Ineffective inhaler technique without a spacer", False, "This likely contributed, but teaching comes after the child is stable.")],
    "Oxygenation comes first.",
    "Prioritize gas exchange in acute asthma."),
 
@@ -161,11 +163,11 @@ grouping(M(PPT, "respiratory-medications", "generate_solutions", "difficult", "p
    "Plan acute asthma treatment for a child."),
 
 mc(M(PA, "asthma-and-copd-management", "take_action", "moderate", "pediatrics", "peds"),
-   "Which action should the nurse take first?",
-   [("Apply oxygen and start the nebulized bronchodilator", True, "Treats hypoxemia and bronchospasm right away."),
-    ("Obtain a chest x-ray", False, "Imaging isn't routine and doesn't treat the problem."),
-    ("Teach the parent about avoiding triggers", False, "Teaching comes later."),
-    ("Weigh the child for medication dosing", False, "An estimated or recent weight can be used; treatment shouldn't wait.")],
+   "The provider has prescribed oxygen, nebulized albuterol with ipratropium, oral dexamethasone and a chest x-ray. Which action should the nurse take first?",
+   [("Apply oxygen and start the albuterol-ipratropium nebulizer", True, "This treats the hypoxemia and bronchospasm right away."),
+    ("Give the oral dexamethasone so it can start working sooner", False, "Steroids take hours to work; oxygen and bronchodilators act in minutes."),
+    ("Send the child for the chest x-ray before treatments begin", False, "Imaging does not treat the problem and should not delay treatment."),
+    ("Weigh the child to confirm the doses of each medicine", False, "A recent or estimated weight can be used; treatment should not wait.")],
    "Treat breathing first.",
    "Take action in an acute pediatric asthma exacerbation."),
 
@@ -222,11 +224,11 @@ cloze(M(PA, "pregnancy-complications", "analyze_cues", "difficult", "maternal-ne
    "Analyze seizure risk in severe preeclampsia."),
 
 mc(M(PA, "pregnancy-complications", "prioritize_hypotheses", "difficult", "maternal-newborn", "ob"),
-   "Which problem is the nurse's priority?",
-   [("Risk for seizures and stroke from severe hypertension", True, "These are the most immediate threats to the client's life."),
-    ("Fluid volume excess related to edema", False, "Secondary to the hypertensive emergency."),
-    ("Anxiety about the birth", False, "Real, but secondary."),
-    ("Knowledge gap about breastfeeding", False, "Addressed later.")],
+   "The client is anxious, the face and hands are swollen, the fetal heart rate is reassuring and the platelets are 96,000/mm3. Which problem is the nurse's priority?",
+   [("Risk for seizures and stroke from severe hypertension", True, "Eclampsia and stroke are the most immediate threats to the client's life."),
+    ("Risk for bleeding related to the low platelet count", False, "Platelets above 50,000 rarely bleed on their own; seizures and stroke are more imminent."),
+    ("Risk for fetal compromise from reduced placental flow", False, "The fetal heart rate is reassuring; the maternal threat is more immediate."),
+    ("Fluid volume excess shown by the facial edema", False, "Edema is common in pregnancy and secondary here.")],
    "Preventing eclampsia and stroke comes first.",
    "Prioritize problems in severe preeclampsia."),
 
@@ -302,12 +304,12 @@ dtable(M(PSI_, "alcohol-withdrawal", "analyze_cues", "moderate", "mental-health"
    "The client's day-2 picture (hallucinations, fever, autonomic signs) fits progression toward delirium tremens.",
    "Analyze the timeline of alcohol withdrawal."),
 
-mc(M(PSI_, "alcohol-withdrawal", "prioritize_hypotheses", "moderate", "mental-health", "psych"),
-   "Which problem is the nurse's priority?",
-   [("Risk for injury from seizures and delirium", True, "Withdrawal can progress to seizures and delirium tremens, which can be fatal."),
-    ("Ineffective coping", False, "Addressed after the client is safe."),
-    ("Impaired skin integrity at the incision", False, "Not the most urgent problem."),
-    ("Knowledge gap about alcohol use", False, "Addressed later.")],
+mc(M(PSI_, "alcohol-withdrawal", "prioritize_hypotheses", "difficult", "mental-health", "psych"),
+   "The client keeps trying to stand on the operated ankle, has a temperature of 38.0 °C and pulled at the IV once overnight. Which problem is the nurse's priority?",
+   [("Risk for injury from withdrawal seizures and delirium", True, "Withdrawal can progress to seizures and delirium tremens, which can be fatal."),
+    ("Risk for infection shown by the new low-grade fever", False, "Fever here fits autonomic hyperactivity of withdrawal; infection is assessed but is less urgent."),
+    ("Risk for falls from standing on the operated ankle", False, "Falls are part of the injury risk, but seizures and DTs are the larger threat."),
+    ("Ineffective denial of the client's alcohol use", False, "This is addressed after the client is safe.")],
    "Safety from seizures and delirium comes first.",
    "Prioritize safety in alcohol withdrawal."),
 
@@ -316,18 +318,18 @@ sata(M(PSI_, "alcohol-withdrawal", "generate_solutions", "moderate", "mental-hea
    [("Benzodiazepine dosed by a withdrawal scale such as CIWA-Ar", True, "Symptom-triggered benzodiazepines are first-line."),
     ("Thiamine before any glucose-containing fluids", True, "Prevents Wernicke encephalopathy."),
     ("Seizure precautions", True, "Withdrawal seizures can occur."),
-    ("A quiet, well-lit room", True, "Reduces agitation and misperception of shadows."),
+    ("A dark, quiet room with the door closed", False, "Darkness creates shadows the client may misperceive; a quiet, well-lit room is better."),
     ("Restraints as the first intervention", False, "Restraints are a last resort and can increase agitation."),
     ("Restrict all oral fluids", False, "Clients in withdrawal often need fluids and electrolytes.")],
    "Withdrawal care: benzodiazepines, thiamine, fluids and electrolytes, safety and low stimulation.",
    "Plan alcohol withdrawal care."),
 
 mc(M(PSI_, "alcohol-withdrawal", "take_action", "moderate", "mental-health", "psych ph"),
-   "The client's CIWA-Ar score is 22. What should the nurse do?",
-   [("Give the benzodiazepine dose the protocol specifies for this score", True, "A score above about 15 to 20 indicates severe withdrawal needing medication."),
-    ("Reassess in 4 hours before treating", False, "Delay risks seizures and delirium tremens."),
-    ("Give haloperidol instead of a benzodiazepine", False, "Antipsychotics don't treat withdrawal and lower the seizure threshold."),
-    ("Ask the family to bring in alcohol", False, "Not an accepted treatment.")],
+   "The client's CIWA-Ar score is 22. The client last had lorazepam 2 mg 1 hour ago and is still agitated. What should the nurse do?",
+   [("Give the lorazepam dose the protocol lists for this score", True, "A score above about 15 to 20 indicates severe withdrawal; symptom-triggered dosing can repeat hourly."),
+    ("Wait until the 4-hour reassessment before giving another dose", False, "Delay risks seizures and delirium tremens."),
+    ("Give haloperidol for the agitation instead of lorazepam", False, "Antipsychotics do not treat withdrawal and lower the seizure threshold."),
+    ("Apply wrist restraints until the agitation settles", False, "Restraints are a last resort and can increase agitation.")],
    "Symptom-triggered benzodiazepine dosing based on CIWA-Ar score.",
    "Act on a withdrawal assessment score."),
 
@@ -349,4 +351,4 @@ cases = [
     case("Alcohol withdrawal after orthopedic surgery", aw_tabs, aw_qs),
 ]
 
-BUILT = build(60, "ngn-cases-1", "NGN unfolding case studies I", [], cases)
+BUILT = build(60, "ngn-cases-1", "NGN unfolding case studies I", [], cases, hardened=True)
