@@ -89,4 +89,5 @@ Written by `python3 -I build_all.py`; do not edit by hand. See `quality.py` for 
 | 97-disinfection-development-mental-health | 25 | yes | 13 | 8% | 23% (shortest) | 0% | 26 | 0/15/10 |
 | 98-medication-technique-comfort | 25 | yes | 12 | 0% | 30% (stem words) | 0% | 24 | 0/14/11 |
 | 99-procedures-neuro-cardiac-cases | 25 | yes | 7 | 29% | 29% (longest) | 0% | 21 | 0/12/13 |
-| **Whole bank** | 1910 | | 1331 | 12% | 25% (assess first) | 5% | 31 | 118/1056/736 |
+| 100-cardiac-cases-acs-hf-af-htn | 24 | yes | 0 | 0% | 0% (-) | 0% | 16 | 0/4/20 |
+| **Whole bank** | 1934 | | 1331 | 12% | 25% (assess first) | 5% | 31 | 118/1060/756 |

@@ -2,7 +2,7 @@
 
 Written by `python3 -I build_all.py` (coverage.py); do not edit by hand.
 
-**1910 of 5000 questions** (38%), 26 case studies, 50 bowtie questions. Multiple choice is 70% of the bank.
+**1934 of 5000 questions** (39%), 30 case studies, 50 bowtie questions. Multiple choice is 69% of the bank.
 
 ## By test plan category
 
@@ -10,13 +10,13 @@ Written by `python3 -I build_all.py` (coverage.py); do not edit by hand.
 |---|---|---|---|---|---|
 | Management of Care | 18% | 900 | 321 | 579 | 19 |
 | Safety and Infection Prevention and Control | 13% | 650 | 224 | 426 | 14 |
-| Health Promotion and Maintenance | 9% | 450 | 154 | 296 | 9 |
+| Health Promotion and Maintenance | 9% | 450 | 156 | 294 | 9 |
 | Psychosocial Integrity | 9% | 450 | 147 | 303 | 10 |
 | Basic Care and Comfort | 9% | 450 | 152 | 298 | 10 |
-| Pharmacological and Parenteral Therapies | 16% | 800 | 306 | 494 | 16 |
-| Reduction of Risk Potential | 12% | 600 | 204 | 396 | 13 |
-| Physiological Adaptation | 14% | 700 | 402 | 298 | 9 |
-| **Total** | 100% | 5000 | 1910 | 3090 | 100 |
+| Pharmacological and Parenteral Therapies | 16% | 800 | 314 | 486 | 16 |
+| Reduction of Risk Potential | 12% | 600 | 207 | 393 | 13 |
+| Physiological Adaptation | 14% | 700 | 413 | 287 | 9 |
+| **Total** | 100% | 5000 | 1934 | 3066 | 100 |
 
 ## Chunks
 
@@ -43,15 +43,15 @@ Written by `python3 -I build_all.py` (coverage.py); do not edit by hand.
 
 | Type | Questions | Share |
 |---|---|---|
-| multiple_choice | 1331 | 70% |
-| sata | 132 | 7% |
-| matrix_mc | 118 | 6% |
+| multiple_choice | 1331 | 69% |
+| sata | 136 | 7% |
+| matrix_mc | 130 | 7% |
 | ordered_response | 50 | 3% |
 | bowtie | 50 | 3% |
-| dropdown_cloze | 45 | 2% |
-| highlight_text | 44 | 2% |
+| dropdown_cloze | 49 | 3% |
+| highlight_text | 46 | 2% |
 | fill_blank_calc | 41 | 2% |
-| highlight_table | 38 | 2% |
+| highlight_table | 40 | 2% |
 | select_n | 23 | 1% |
 | dropdown_table | 22 | 1% |
 | multiple_response_grouping | 10 | 1% |
