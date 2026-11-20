@@ -35,10 +35,10 @@ public sealed class AttemptResult
 
     public int AvgTimeMs { get; private set; }
 
-    /// <summary>The set's threshold when the attempt started; null when it has none.</summary>
+    /// <summary>The pass mark the result was graded against (86% since F23); null for an adaptive exam.</summary>
     public decimal? PassThreshold { get; private set; }
 
-    /// <summary>Null when there is no threshold.</summary>
+    /// <summary>True only for a pass; close to pass is not a pass. Null only for rows graded before F23 without a threshold.</summary>
     public bool? Passed { get; private set; }
 
     public ReadinessLabel? ReadinessLabel { get; private set; }
