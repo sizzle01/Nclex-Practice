@@ -1,5 +1,5 @@
 import { describe, expect, it } from "vitest";
-import { bucketLabel, bucketTick } from "./format";
+import { bucketLabel, bucketTick, performanceBand } from "./format";
 
 describe("bucket labels", () => {
   it("names the week by its local start date, never the day before", () => {
@@ -12,5 +12,23 @@ describe("bucket labels", () => {
 
   it("keeps axis ticks short", () => {
     expect(bucketTick("2026-09-14")).toBe(new Date(2026, 8, 14).toLocaleDateString(undefined, { day: "numeric", month: "short" }));
+  });
+});
+
+describe("performanceBand", () => {
+  it.each([
+    [0, "red"],
+    [0.7, "red"],
+    [0.704, "red"],
+    [0.705, "amber"],
+    [0.71, "amber"],
+    [0.85, "amber"],
+    [0.854, "amber"],
+    [0.855, "green"],
+    [0.86, "green"],
+    [1, "green"],
+    ["0.9", "green"],
+  ] as const)("puts %s in the %s band", (share, band) => {
+    expect(performanceBand(share)).toBe(band);
   });
 });
