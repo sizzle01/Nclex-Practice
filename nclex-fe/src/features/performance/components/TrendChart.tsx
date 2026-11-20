@@ -3,9 +3,10 @@
 import { CartesianGrid, Line, LineChart, ResponsiveContainer, Tooltip, XAxis, YAxis } from "recharts";
 import ui from "@/components/ui/ui.module.css";
 import { toNumber } from "@/lib/format/toNumber";
-import { elapsed, percent } from "@/features/results/format";
+import { elapsed } from "@/features/results/format";
 import type { TrendBucket, TrendPoint } from "../api/performanceApi";
 import { bucketLabel, bucketTick } from "../format";
+import { ScorePercent } from "./ScorePercent";
 import styles from "./performance.module.css";
 
 type Props = {
@@ -123,7 +124,9 @@ function TrendBody({ title, points, bucket, isError }: Props) {
             {points.map((p) => (
               <tr key={p.bucketStart}>
                 <th scope="row">{bucketLabel(p.bucketStart, bucket)}</th>
-                <td>{percent(p.pct)}</td>
+                <td>
+                  <ScorePercent value={p.pct} />
+                </td>
                 <td>{toNumber(p.items)}</td>
                 <td>{elapsed(p.avgTimeMs)}</td>
               </tr>

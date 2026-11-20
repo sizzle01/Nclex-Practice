@@ -1,6 +1,7 @@
 import { toNumber } from "@/lib/format/toNumber";
-import { elapsed, percent } from "@/features/results/format";
+import { elapsed } from "@/features/results/format";
 import type { BreakdownRow } from "../api/performanceApi";
+import { ScorePercent } from "./ScorePercent";
 import styles from "./performance.module.css";
 
 /** Every category of one dimension across all finished tests. */
@@ -25,7 +26,9 @@ export function BreakdownTable({ title, column, rows }: { title: string; column:
               <th scope="row">{row.name}</th>
               <td>{toNumber(row.itemsAnswered)}</td>
               <td>{toNumber(row.itemsCorrect)}</td>
-              <td>{percent(row.accuracy)}</td>
+              <td>
+                <ScorePercent value={row.accuracy} />
+              </td>
               <td>{elapsed(row.avgTimeMs)}</td>
               <td>{toNumber(row.attemptsCount)}</td>
             </tr>

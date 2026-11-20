@@ -105,7 +105,7 @@ describe("PerformancePage", () => {
     renderPage();
 
     const table = await screen.findByRole("table", { name: "By Client Needs category" });
-    expect(within(table).getByRole("row", { name: /Physiological Integrity 40 22 55% 1 min 15 s 3/ })).toBeInTheDocument();
+    expect(within(table).getByRole("row", { name: /Physiological Integrity 40 22 55% ?\(needs work\) 1 min 15 s 3/ })).toBeInTheDocument();
 
     await userEvent.selectOptions(screen.getByRole("combobox", { name: "Break down by" }), "body_system");
 
@@ -120,8 +120,8 @@ describe("PerformancePage", () => {
     const overall = await screen.findByRole("table", { name: "Overall score: data" });
     const rows = within(overall).getAllByRole("row").slice(1);
     expect(rows.map((r) => r.textContent)).toEqual([
-      `${bucketLabel("2026-09-07", "week")}62%1201 min 20 s`,
-      `${bucketLabel("2026-09-14", "week")}68%2101 min 20 s`,
+      `${bucketLabel("2026-09-07", "week")}62% (needs work)1201 min 20 s`,
+      `${bucketLabel("2026-09-14", "week")}68% (needs work)2101 min 20 s`,
     ]);
     expect(screen.getByRole("img", { name: /Overall score: line chart of 2 weeks, latest 68%/ })).toBeInTheDocument();
     expect(await screen.findByRole("table", { name: "Safe & Effective Care Environment score: data" })).toHaveTextContent("75%");
