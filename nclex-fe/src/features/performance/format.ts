@@ -1,3 +1,4 @@
+import { CLOSE_TO_PASS_MARK, PASS_MARK } from "@/features/results/ResultOutcome";
 import { toNumber } from "@/lib/format/toNumber";
 import type { TrendBucket } from "./api/performanceApi";
 
@@ -37,12 +38,12 @@ export const bandLabel: Record<PerformanceBand, string> = {
 
 /**
  * The band of a score share (0 to 1). It uses the whole percentage the user sees, so the colour
- * always agrees with the label: 70.6% shows as "71%" and is amber, not red.
- * Red is 70% and below, amber 71% to 85%, green 86% and above.
+ * always agrees with the label: 69.6% shows as "70%" and is amber, not red.
+ * The bands follow the F23 pass marks: red below 70%, amber 70% to 85%, green 86% and above.
  */
 export function performanceBand(share: number | string): PerformanceBand {
   const shown = Math.round(toNumber(share) * 100);
-  if (shown <= 70) return "red";
-  if (shown <= 85) return "amber";
+  if (shown < Math.round(CLOSE_TO_PASS_MARK * 100)) return "red";
+  if (shown < Math.round(PASS_MARK * 100)) return "amber";
   return "green";
 }

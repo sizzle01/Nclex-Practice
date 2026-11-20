@@ -18,10 +18,10 @@ describe("bucket labels", () => {
 describe("performanceBand", () => {
   it.each([
     [0, "red"],
-    [0.7, "red"],
-    [0.704, "red"],
-    [0.705, "amber"],
-    [0.71, "amber"],
+    [0.69, "red"],
+    [0.694, "red"],
+    [0.695, "amber"],
+    [0.7, "amber"],
     [0.85, "amber"],
     [0.854, "amber"],
     [0.855, "green"],
