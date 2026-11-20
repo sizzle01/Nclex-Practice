@@ -81,4 +81,5 @@ Written by `python3 -I build_all.py`; do not edit by hand. See `quality.py` for 
 | 89-infection-screening-psychosocial | 25 | yes | 11 | 9% | 30% (assess first) | 0% | 29 | 0/14/11 |
 | 90-medications-care-measures | 25 | yes | 12 | 8% | 31% (stem words) | 0% | 36 | 1/13/11 |
 | 91-monitoring-shock-cases | 25 | yes | 7 | 0% | 29% (shortest) | 0% | 21 | 0/11/14 |
-| **Whole bank** | 1710 | | 1246 | 13% | 25% (assess first) | 6% | 32 | 118/949/643 |
+| 92-moc-triage-disclosure-safety | 25 | yes | 11 | 0% | 30% (shortest) | 0% | 25 | 0/12/13 |
+| **Whole bank** | 1735 | | 1257 | 12% | 25% (assess first) | 6% | 32 | 118/961/656 |
