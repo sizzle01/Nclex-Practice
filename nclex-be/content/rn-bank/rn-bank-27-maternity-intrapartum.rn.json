@@ -1,5 +1,5 @@
 {
-  "notice": "RN bank batch 27: Maternity II: labor, birth and fetal monitoring. Reviewed by the content team on 17 November 2026. See REVIEW-LOG.md.",
+  "notice": "RN bank batch 27: Maternity II: labor, birth and fetal monitoring. Rewritten to NCLEX-RN difficulty and reviewed by the content team on 19 November 2026. See REVIEW-LOG.md.",
   "track": "RN",
   "subtopics": [
     {
@@ -38,25 +38,25 @@
         "labor-and-birth"
       ],
       "cjmmSkill": "analyze_cues",
-      "difficulty": "easy",
-      "stem": "Which finding best distinguishes true labor from false labor?",
+      "difficulty": "moderate",
+      "stem": "A client at 39 weeks calls the birthing unit at 0200 with contractions every 5 to 8 minutes for 3 hours, felt in the lower back and abdomen. The client is unsure whether to come in. Which finding at triage would best confirm true labor?",
       "content": {
         "options": [
           {
             "id": "a",
-            "text": "Progressive cervical dilation and effacement"
+            "text": "Cervix changed from 2 cm to 4 cm over 2 hours"
           },
           {
             "id": "b",
-            "text": "Contractions that ease when walking"
+            "text": "Contractions that grow stronger when the client walks the hall"
           },
           {
             "id": "c",
-            "text": "Discomfort mainly in the abdomen"
+            "text": "Bloody show seen on the perineal pad"
           },
           {
             "id": "d",
-            "text": "Irregular contractions"
+            "text": "Contractions felt as tightening across the abdomen"
           }
         ]
       },
@@ -64,16 +64,16 @@
         "correct": "a"
       },
       "rationale": {
-        "correct": "True labor: regular contractions that grow stronger and change the cervix.",
+        "correct": "True labor: regular contractions that grow stronger, longer and closer and progressively dilate and efface the cervix.",
         "perOption": {
-          "a": "Only true labor changes the cervix.",
-          "b": "This suggests false labor.",
-          "c": "This is typical of false labor.",
-          "d": "This suggests false labor."
+          "a": "Only true labor produces progressive cervical change.",
+          "b": "Contractions that intensify with walking suggest true labor, but cervical change is what confirms it.",
+          "c": "Bloody show can occur days before labor begins.",
+          "d": "False labor is commonly felt in the abdomen."
         },
         "references": [
           "Maternal-newborn nursing texts (e.g. Perry; Lowdermilk)",
-          "Reviewed by the content team on 17 November 2026."
+          "Rewritten to NCLEX-RN difficulty and reviewed by the content team on 19 November 2026."
         ]
       },
       "educationalObjective": "Distinguish true labor from false labor."
@@ -88,7 +88,7 @@
       ],
       "cjmmSkill": "analyze_cues",
       "difficulty": "easy",
-      "stem": "When does the second stage of labor begin and end?",
+      "stem": "A client in labor has been pushing for 40 minutes, and the student nurse asks which stage of labor this is. The nurse explains that the second stage of labor lasts from which point to which point?",
       "content": {
         "options": [
           {
@@ -97,7 +97,7 @@
           },
           {
             "id": "b",
-            "text": "From the start of labor to full dilation"
+            "text": "From the onset of regular contractions to full dilation of the cervix"
           },
           {
             "id": "c",
@@ -105,7 +105,7 @@
           },
           {
             "id": "d",
-            "text": "The first 4 hours after birth"
+            "text": "From delivery of the placenta to 4 hours after birth"
           }
         ]
       },
@@ -115,14 +115,14 @@
       "rationale": {
         "correct": "Stages: 1 (dilation), 2 (birth of the baby), 3 (placenta), 4 (recovery, 1 to 4 hours).",
         "perOption": {
-          "a": "This is the pushing stage.",
+          "a": "The second stage is the pushing and birth stage.",
           "b": "This is the first stage.",
           "c": "This is the third stage.",
           "d": "This is the fourth stage."
         },
         "references": [
           "Maternal-newborn nursing texts (e.g. Perry; Lowdermilk)",
-          "Reviewed by the content team on 17 November 2026."
+          "Rewritten to NCLEX-RN difficulty and reviewed by the content team on 19 November 2026."
         ]
       },
       "educationalObjective": "Identify the stages of labor."
@@ -137,24 +137,24 @@
       ],
       "cjmmSkill": "analyze_cues",
       "difficulty": "moderate",
-      "stem": "The fetus is in a left occiput anterior (LOA) position. Where should the nurse place the Doppler to hear the fetal heart?",
+      "stem": "A client at 38 weeks is admitted in early labor. Leopold maneuvers find a hard, round part at the pelvic inlet and a smooth, firm surface along the client's left side, and the vaginal exam confirms a left occiput anterior (LOA) position. Where should the nurse place the external fetal heart monitor?",
       "content": {
         "options": [
           {
             "id": "a",
-            "text": "Left lower quadrant of the abdomen"
+            "text": "Left lower quadrant, below the umbilicus"
           },
           {
             "id": "b",
-            "text": "Right upper quadrant"
+            "text": "Right upper quadrant, above the umbilicus"
           },
           {
             "id": "c",
-            "text": "Left upper quadrant"
+            "text": "Left upper quadrant, above the umbilicus"
           },
           {
             "id": "d",
-            "text": "Directly at the umbilicus"
+            "text": "Right lower quadrant, over the fetal small parts"
           }
         ]
       },
@@ -162,16 +162,16 @@
         "correct": "a"
       },
       "rationale": {
-        "correct": "Fetal heart tones are heard best over the fetal back.",
+        "correct": "Fetal heart tones are heard best over the fetal back: below the umbilicus in a vertex position and above it in a breech position.",
         "perOption": {
-          "a": "With a head-down fetus with its back toward the left, heart tones are loudest below the umbilicus on the left.",
-          "b": "This suits a right-sided breech position.",
-          "c": "This suits a left-sided breech position.",
-          "d": "This is less accurate."
+          "a": "In a head-down fetus with its back to the left, heart tones are loudest below the umbilicus on the left.",
+          "b": "This suits a breech fetus with its back on the right.",
+          "c": "This suits a breech fetus with its back on the left.",
+          "d": "Heart tones are faint over the fetal limbs."
         },
         "references": [
           "Maternal-newborn nursing texts (e.g. Perry; Lowdermilk)",
-          "Reviewed by the content team on 17 November 2026."
+          "Rewritten to NCLEX-RN difficulty and reviewed by the content team on 19 November 2026."
         ]
       },
       "educationalObjective": "Locate fetal heart tones by fetal position."
@@ -186,24 +186,24 @@
       ],
       "cjmmSkill": "analyze_cues",
       "difficulty": "moderate",
-      "stem": "The fetal monitor shows decelerations that mirror each contraction, starting and ending with it. What should the nurse do?",
+      "stem": "A client at 7 cm dilation has a fetal heart rate baseline of 135/min with moderate variability. With each contraction, the rate gradually drops to 120/min, reaching its lowest point at the peak of the contraction and returning to baseline as it ends. What should the nurse do?",
       "content": {
         "options": [
           {
             "id": "a",
-            "text": "Continue to monitor; early decelerations are benign"
+            "text": "Keep monitoring, because these are early decelerations"
           },
           {
             "id": "b",
-            "text": "Prepare for an emergency cesarean birth"
+            "text": "Turn the client to the side and give an IV fluid bolus"
           },
           {
             "id": "c",
-            "text": "Stop the oxytocin right away"
+            "text": "Stop the oxytocin and notify the provider right away"
           },
           {
             "id": "d",
-            "text": "Give oxygen at 10 L/min"
+            "text": "Prepare the client for an emergency cesarean birth"
           }
         ]
       },
@@ -211,16 +211,16 @@
         "correct": "a"
       },
       "rationale": {
-        "correct": "Early decelerations come from head compression; no action is needed.",
+        "correct": "Early decelerations mirror the contraction and come from head compression; no action is needed.",
         "perOption": {
-          "a": "Early decelerations come from head compression and are reassuring.",
-          "b": "This isn't indicated.",
-          "c": "This isn't required for early decelerations.",
-          "d": "This isn't required."
+          "a": "Early decelerations come from head compression and need no intervention.",
+          "b": "This is the response to late decelerations, which begin after the contraction peaks.",
+          "c": "Early decelerations do not call for stopping oxytocin.",
+          "d": "This pattern is benign."
         },
         "references": [
           "Maternal-newborn nursing texts (e.g. Perry; Lowdermilk)",
-          "Reviewed by the content team on 17 November 2026."
+          "Rewritten to NCLEX-RN difficulty and reviewed by the content team on 19 November 2026."
         ]
       },
       "educationalObjective": "Interpret early decelerations."
@@ -235,7 +235,7 @@
       ],
       "cjmmSkill": "take_action",
       "difficulty": "difficult",
-      "stem": "A client receiving oxytocin has repeated late decelerations. What should the nurse do first?",
+      "stem": "A client at 6 cm receiving oxytocin at 12 milliunits/min has contractions every 2 to 3 minutes. The fetal heart rate baseline is 150/min with minimal variability, and gradual decelerations begin after the peak of each of the last four contractions. The client is lying on the back. What should the nurse do first?",
       "content": {
         "options": [
           {
@@ -244,15 +244,15 @@
           },
           {
             "id": "b",
-            "text": "Increase the oxytocin rate"
+            "text": "Turn the client to the left side and recheck the tracing in 15 minutes"
           },
           {
             "id": "c",
-            "text": "Document and continue monitoring"
+            "text": "Apply oxygen at 10 L/min by nonrebreather mask"
           },
           {
             "id": "d",
-            "text": "Have the client push"
+            "text": "Ask the client to start pushing to speed the birth"
           }
         ]
       },
@@ -260,16 +260,16 @@
         "correct": "a"
       },
       "rationale": {
-        "correct": "Late decelerations (placental insufficiency): stop oxytocin, reposition to the side, give an IV bolus, consider oxygen per protocol and notify the provider.",
+        "correct": "Late decelerations (uteroplacental insufficiency): stop oxytocin, reposition to the side, give an IV bolus, consider oxygen per protocol and notify the provider.",
         "perOption": {
-          "a": "Stopping oxytocin reduces contractions and improves blood flow to the placenta.",
-          "b": "This worsens the hypoxia.",
-          "c": "Late decelerations need action.",
-          "d": "This isn't appropriate."
+          "a": "Stopping oxytocin reduces contractions and improves placental blood flow; repositioning, a fluid bolus and notifying the provider follow.",
+          "b": "Repositioning helps, but oxytocin is still driving the contractions that cause the decelerations.",
+          "c": "Oxygen may be used per protocol but does not remove the cause.",
+          "d": "The client is not fully dilated."
         },
         "references": [
           "Maternal-newborn nursing texts (e.g. Perry; Lowdermilk)",
-          "Reviewed by the content team on 17 November 2026."
+          "Rewritten to NCLEX-RN difficulty and reviewed by the content team on 19 November 2026."
         ]
       },
       "educationalObjective": "Respond to late decelerations."
@@ -283,8 +283,8 @@
         "fetal-heart-rate-monitoring"
       ],
       "cjmmSkill": "take_action",
-      "difficulty": "moderate",
-      "stem": "The fetal monitor shows abrupt, V-shaped decelerations with no consistent link to contractions. What should the nurse do first?",
+      "difficulty": "difficult",
+      "stem": "A client at 5 cm with ruptured membranes has a fetal heart rate tracing with abrupt, V-shaped drops to 90/min lasting 20 to 30 seconds, occurring with some contractions and not others. The baseline is 140/min with moderate variability. What should the nurse do first?",
       "content": {
         "options": [
           {
@@ -293,15 +293,15 @@
           },
           {
             "id": "b",
-            "text": "Increase the oxytocin"
+            "text": "Increase the oxytocin to shorten the labor"
           },
           {
             "id": "c",
-            "text": "Do nothing"
+            "text": "Prepare for an emergency cesarean birth"
           },
           {
             "id": "d",
-            "text": "Have the client lie supine"
+            "text": "Place the client flat on the back with the legs raised"
           }
         ]
       },
@@ -309,16 +309,16 @@
         "correct": "a"
       },
       "rationale": {
-        "correct": "Variable decelerations: reposition, check for cord prolapse and consider amnioinfusion.",
+        "correct": "Variable decelerations: reposition, check for cord prolapse, stop oxytocin if recurrent and consider amnioinfusion.",
         "perOption": {
-          "a": "Variable decelerations come from cord compression; repositioning may relieve it.",
-          "b": "This may worsen compression.",
-          "c": "Action is needed.",
-          "d": "This may worsen compression."
+          "a": "Variable decelerations come from cord compression; a position change may relieve it.",
+          "b": "Stronger contractions increase cord compression.",
+          "c": "Intermittent variables with moderate variability do not call for this.",
+          "d": "The supine position adds vena cava compression."
         },
         "references": [
           "Maternal-newborn nursing texts (e.g. Perry; Lowdermilk)",
-          "Reviewed by the content team on 17 November 2026."
+          "Rewritten to NCLEX-RN difficulty and reviewed by the content team on 19 November 2026."
         ]
       },
       "educationalObjective": "Respond to variable decelerations."
@@ -333,24 +333,24 @@
       ],
       "cjmmSkill": "analyze_cues",
       "difficulty": "difficult",
-      "stem": "For each fetal heart rate pattern, indicate its most likely cause.",
+      "stem": "The nurse is reviewing four segments of a fetal heart rate tracing during the first stage of labor. For each pattern, indicate its most likely cause.",
       "content": {
         "rows": [
           {
             "id": "r1",
-            "text": "Early deceleration"
+            "text": "A gradual drop that mirrors the contraction from start to finish"
           },
           {
             "id": "r2",
-            "text": "Variable deceleration"
+            "text": "An abrupt V-shaped drop with no consistent timing"
           },
           {
             "id": "r3",
-            "text": "Late deceleration"
+            "text": "A gradual drop that begins after the contraction peaks"
           },
           {
             "id": "r4",
-            "text": "Acceleration"
+            "text": "A rise of 15 beats/min for 20 seconds with fetal movement"
           }
         ],
         "columns": [
@@ -368,7 +368,7 @@
           },
           {
             "id": "c4",
-            "text": "Fetal well-being"
+            "text": "Adequate oxygenation"
           }
         ]
       },
@@ -384,25 +384,25 @@
         "correct": "VEAL CHOP: Variable–Cord, Early–Head, Accelerations–OK, Late–Placenta.",
         "perOption": {
           "r1:c1": "Early decelerations mirror contractions from head compression.",
-          "r1:c2": "Cord compression causes variable decelerations.",
-          "r1:c3": "Placental insufficiency causes late decelerations.",
-          "r1:c4": "Early decelerations are benign but come from head compression.",
-          "r2:c1": "This causes early decelerations.",
-          "r2:c2": "Abrupt V-shaped drops come from cord compression.",
-          "r2:c3": "This causes late decelerations.",
-          "r2:c4": "This isn't a sign of well-being.",
-          "r3:c1": "This causes early decelerations.",
-          "r3:c2": "This causes variable decelerations.",
-          "r3:c3": "Late drops come from reduced blood flow to the placenta.",
+          "r1:c2": "Cord compression causes abrupt drops.",
+          "r1:c3": "Placental insufficiency causes drops that start after the peak.",
+          "r1:c4": "This is benign but has a specific cause.",
+          "r2:c1": "Head compression mirrors contractions.",
+          "r2:c2": "Abrupt drops come from cord compression.",
+          "r2:c3": "Placental insufficiency causes gradual, delayed drops.",
+          "r2:c4": "This is not a sign of well-being.",
+          "r3:c1": "Head compression mirrors contractions.",
+          "r3:c2": "Cord compression causes abrupt drops.",
+          "r3:c3": "Delayed drops come from reduced blood flow to the placenta.",
           "r3:c4": "This is concerning.",
-          "r4:c1": "This causes early decelerations.",
-          "r4:c2": "This causes variable decelerations.",
-          "r4:c3": "This causes late decelerations.",
+          "r4:c1": "This is not a deceleration.",
+          "r4:c2": "This is not a deceleration.",
+          "r4:c3": "This is not a deceleration.",
           "r4:c4": "Accelerations show good fetal oxygenation."
         },
         "references": [
           "Maternal-newborn nursing texts (e.g. Perry; Lowdermilk)",
-          "Reviewed by the content team on 17 November 2026."
+          "Rewritten to NCLEX-RN difficulty and reviewed by the content team on 19 November 2026."
         ]
       },
       "educationalObjective": "Match fetal heart rate patterns to their causes."
@@ -417,7 +417,7 @@
       ],
       "cjmmSkill": "analyze_cues",
       "difficulty": "easy",
-      "stem": "What is the normal baseline fetal heart rate?",
+      "stem": "A client at 40 weeks is placed on the fetal monitor at admission. Over 10 minutes, the fetal heart rate stays between 135 and 150 beats/min. The client asks if this is normal. What is the normal baseline fetal heart rate range?",
       "content": {
         "options": [
           {
@@ -426,15 +426,15 @@
           },
           {
             "id": "b",
-            "text": "60 to 100 beats/min"
+            "text": "100 to 140 beats/min"
           },
           {
             "id": "c",
-            "text": "160 to 200 beats/min"
+            "text": "120 to 180 beats/min"
           },
           {
             "id": "d",
-            "text": "80 to 110 beats/min"
+            "text": "90 to 150 beats/min"
           }
         ]
       },
@@ -445,13 +445,13 @@
         "correct": "FHR baseline: 110 to 160 beats/min with moderate variability (6 to 25 beats/min).",
         "perOption": {
           "a": "This is the normal baseline range.",
-          "b": "This is the adult range.",
-          "c": "This is tachycardia.",
-          "d": "This is bradycardia."
+          "b": "A baseline under 110 is fetal bradycardia.",
+          "c": "A baseline over 160 is fetal tachycardia.",
+          "d": "A baseline under 110 is fetal bradycardia."
         },
         "references": [
           "Maternal-newborn nursing texts (e.g. Perry; Lowdermilk)",
-          "Reviewed by the content team on 17 November 2026."
+          "Rewritten to NCLEX-RN difficulty and reviewed by the content team on 19 November 2026."
         ]
       },
       "educationalObjective": "Identify the normal fetal heart rate."
@@ -466,24 +466,24 @@
       ],
       "cjmmSkill": "take_action",
       "difficulty": "difficult",
-      "stem": "After the membranes rupture, the nurse sees the umbilical cord at the vaginal opening. What should the nurse do first?",
+      "stem": "A client at 4 cm with the fetus at −2 station has spontaneous rupture of membranes. The fetal heart rate drops to 70/min, and on sterile exam the nurse feels a pulsating cord in the vagina. What should the nurse do first?",
       "content": {
         "options": [
           {
             "id": "a",
-            "text": "Push the presenting part up off the cord with a gloved hand and call for help"
+            "text": "Hold the presenting part off the cord with a gloved hand; call for help"
           },
           {
             "id": "b",
-            "text": "Push the cord back into the vagina"
+            "text": "Gently push the cord back into the vagina above the presenting part"
           },
           {
             "id": "c",
-            "text": "Have the client push"
+            "text": "Wrap the cord in a warm, dry towel"
           },
           {
             "id": "d",
-            "text": "Leave to call the provider"
+            "text": "Leave the room to call the provider and the operating room"
           }
         ]
       },
@@ -491,16 +491,16 @@
         "correct": "a"
       },
       "rationale": {
-        "correct": "Cord prolapse: relieve pressure, use knee-chest or Trendelenburg position, give oxygen and prepare for urgent birth.",
+        "correct": "Cord prolapse: relieve pressure, knee-chest or Trendelenburg position, oxygen and prepare for urgent cesarean birth.",
         "perOption": {
-          "a": "Relieving pressure on the cord keeps oxygen flowing to the fetus.",
-          "b": "Handling the cord causes vasospasm.",
-          "c": "This compresses the cord.",
-          "d": "The nurse must stay and relieve the compression."
+          "a": "Relieving pressure on the cord restores blood flow to the fetus; the hand stays in place until birth.",
+          "b": "Handling the cord causes vasospasm and reduces blood flow.",
+          "c": "Saline-moist gauze is used for an exposed cord, and pressure relief comes first.",
+          "d": "The nurse stays and relieves the compression."
         },
         "references": [
           "Maternal-newborn nursing texts (e.g. Perry; Lowdermilk)",
-          "Reviewed by the content team on 17 November 2026."
+          "Rewritten to NCLEX-RN difficulty and reviewed by the content team on 19 November 2026."
         ]
       },
       "educationalObjective": "Respond to umbilical cord prolapse."
@@ -515,24 +515,24 @@
       ],
       "cjmmSkill": "take_action",
       "difficulty": "moderate",
-      "stem": "The client's membranes have just ruptured. What should the nurse assess first?",
+      "stem": "A client at 5 cm says, \"I think my water just broke,\" and the nurse sees a large amount of clear fluid on the pad. The fetal head was at −3 station on the last exam. What should the nurse assess first?",
       "content": {
         "options": [
           {
             "id": "a",
-            "text": "Fetal heart rate"
+            "text": "The fetal heart rate on the monitor"
           },
           {
             "id": "b",
-            "text": "The color of the client's urine"
+            "text": "The color, odor and amount of the fluid"
           },
           {
             "id": "c",
-            "text": "Maternal temperature"
+            "text": "The client's temperature and pulse"
           },
           {
             "id": "d",
-            "text": "Pain level"
+            "text": "The client's pain and need for an epidural"
           }
         ]
       },
@@ -540,16 +540,16 @@
         "correct": "a"
       },
       "rationale": {
-        "correct": "After rupture of membranes: check the FHR first, then the color, amount and odor of the fluid.",
+        "correct": "After rupture of membranes: check the FHR first, then the color, amount and odor of the fluid and the time.",
         "perOption": {
-          "a": "Cord prolapse can occur when the membranes rupture.",
-          "b": "This isn't the priority.",
-          "c": "This is checked, but the FHR comes first.",
-          "d": "This isn't the priority."
+          "a": "A high presenting part raises the risk of cord prolapse when the membranes rupture.",
+          "b": "This is documented, but after the fetal heart rate.",
+          "c": "These are checked for infection, but later.",
+          "d": "This is not the priority."
         },
         "references": [
           "Maternal-newborn nursing texts (e.g. Perry; Lowdermilk)",
-          "Reviewed by the content team on 17 November 2026."
+          "Rewritten to NCLEX-RN difficulty and reviewed by the content team on 19 November 2026."
         ]
       },
       "educationalObjective": "Assess after rupture of membranes."
@@ -564,24 +564,24 @@
       ],
       "cjmmSkill": "take_action",
       "difficulty": "moderate",
-      "stem": "The amniotic fluid is green-tinged. What should the nurse do?",
+      "stem": "A client at 41 weeks has artificial rupture of membranes, and the fluid is thick and dark green. The fetal heart rate is 150/min with moderate variability. What should the nurse do?",
       "content": {
         "options": [
           {
             "id": "a",
-            "text": "Notify the provider and make sure the newborn resuscitation team is available"
+            "text": "Notify the provider and have the newborn resuscitation team at the birth"
           },
           {
             "id": "b",
-            "text": "Document it as normal"
+            "text": "Document the finding as expected, since meconium is common after 40 weeks"
           },
           {
             "id": "c",
-            "text": "Give the client oxygen and nothing else"
+            "text": "Ask the client to push with contractions to shorten the labor"
           },
           {
             "id": "d",
-            "text": "Have the client push harder"
+            "text": "Prepare to suction the newborn's mouth as soon as the head is born"
           }
         ]
       },
@@ -589,16 +589,16 @@
         "correct": "a"
       },
       "rationale": {
-        "correct": "Meconium-stained fluid: monitor the FHR closely and prepare for newborn resuscitation.",
+        "correct": "Meconium-stained fluid: monitor the FHR closely and have a team skilled in newborn resuscitation at the birth.",
         "perOption": {
-          "a": "Meconium-stained fluid may mean fetal stress and risk of aspiration.",
-          "b": "This isn't normal.",
-          "c": "The team must be notified.",
-          "d": "This isn't the response."
+          "a": "Meconium-stained fluid means a risk of aspiration and possible fetal stress.",
+          "b": "Meconium is more common after 40 weeks, but it still needs reporting and preparation.",
+          "c": "The client is not fully dilated.",
+          "d": "Routine suctioning on the perineum is no longer recommended."
         },
         "references": [
           "Maternal-newborn nursing texts (e.g. Perry; Lowdermilk)",
-          "Reviewed by the content team on 17 November 2026."
+          "Rewritten to NCLEX-RN difficulty and reviewed by the content team on 19 November 2026."
         ]
       },
       "educationalObjective": "Respond to meconium-stained fluid."
@@ -613,7 +613,7 @@
       ],
       "cjmmSkill": "take_action",
       "difficulty": "difficult",
-      "stem": "A client receiving oxytocin has contractions every 90 seconds, each lasting 100 seconds. What should the nurse do first?",
+      "stem": "A client at 6 cm receiving oxytocin has had 7 contractions in the past 10 minutes, each lasting 90 seconds, with the uterus palpating firm between them. The fetal heart rate baseline is 145/min with moderate variability and no decelerations. What should the nurse do first?",
       "content": {
         "options": [
           {
@@ -622,15 +622,15 @@
           },
           {
             "id": "b",
-            "text": "Increase the infusion"
+            "text": "Lower the oxytocin rate by half and recheck in 30 minutes"
           },
           {
             "id": "c",
-            "text": "Continue and reassess in 1 hour"
+            "text": "Continue the infusion, since the fetal heart rate is reassuring"
           },
           {
             "id": "d",
-            "text": "Encourage pushing"
+            "text": "Give terbutaline 0.25 mg subcutaneously"
           }
         ]
       },
@@ -638,17 +638,17 @@
         "correct": "a"
       },
       "rationale": {
-        "correct": "Tachysystole: more than 5 contractions in 10 minutes; stop oxytocin, reposition, give fluids and notify the provider.",
+        "correct": "Tachysystole: more than 5 contractions in 10 minutes averaged over 30 minutes; stop or reduce oxytocin, reposition, give fluids and notify the provider.",
         "perOption": {
-          "a": "This is tachysystole, which reduces placental blood flow.",
-          "b": "This worsens tachysystole.",
-          "c": "Action is needed now.",
-          "d": "This isn't appropriate."
+          "a": "This is tachysystole; even with a normal tracing, it reduces placental blood flow.",
+          "b": "With a firm uterus between contractions, the infusion is stopped first per most protocols.",
+          "c": "Tachysystole needs action before fetal distress develops.",
+          "d": "This may be ordered if tachysystole persists after stopping the oxytocin."
         },
         "references": [
           "Maternal-newborn nursing texts (e.g. Perry; Lowdermilk)",
           "Nursing pharmacology texts (e.g. Lehne; McCuistion) and the drug's prescribing information",
-          "Reviewed by the content team on 17 November 2026."
+          "Rewritten to NCLEX-RN difficulty and reviewed by the content team on 19 November 2026."
         ]
       },
       "educationalObjective": "Respond to oxytocin-induced tachysystole."
@@ -663,24 +663,24 @@
       ],
       "cjmmSkill": "take_action",
       "difficulty": "moderate",
-      "stem": "Ten minutes after an epidural is placed, a laboring client's blood pressure falls to 88/50 mm Hg. What should the nurse do first?",
+      "stem": "Ten minutes after an epidural is placed, a laboring client's blood pressure falls from 124/78 to 88/50 mm Hg. The client feels nauseated, and the fetal heart rate baseline is 130/min. What should the nurse do first?",
       "content": {
         "options": [
           {
             "id": "a",
-            "text": "Turn the client onto her side and increase the IV fluids"
+            "text": "Turn the client to the side and increase the IV fluids"
           },
           {
             "id": "b",
-            "text": "Lay the client flat on her back"
+            "text": "Lay the client flat and raise the legs on pillows"
           },
           {
             "id": "c",
-            "text": "Remove the epidural catheter"
+            "text": "Turn off the epidural infusion and remove the catheter"
           },
           {
             "id": "d",
-            "text": "Give oxytocin"
+            "text": "Give an antiemetic for the nausea and reassess"
           }
         ]
       },
@@ -690,14 +690,14 @@
       "rationale": {
         "correct": "Epidural hypotension: side-lying position, IV bolus, notify the provider (ephedrine or phenylephrine) and monitor the FHR.",
         "perOption": {
-          "a": "Epidurals cause vasodilation; positioning and fluids restore blood pressure.",
-          "b": "This compresses the vena cava.",
-          "c": "This isn't the nurse's first action.",
-          "d": "This isn't related."
+          "a": "Epidural blockade causes vasodilation; positioning and fluid restore blood pressure.",
+          "b": "The supine position adds vena cava compression.",
+          "c": "This is not the nurse's first action.",
+          "d": "The nausea is a sign of hypotension."
         },
         "references": [
           "Maternal-newborn nursing texts (e.g. Perry; Lowdermilk)",
-          "Reviewed by the content team on 17 November 2026."
+          "Rewritten to NCLEX-RN difficulty and reviewed by the content team on 19 November 2026."
         ]
       },
       "educationalObjective": "Respond to hypotension after an epidural."
@@ -712,24 +712,24 @@
       ],
       "cjmmSkill": "recognize_cues",
       "difficulty": "moderate",
-      "stem": "A laboring client with an epidural has a bulge above the pubic bone and the fetal head isn't descending. What should the nurse check?",
+      "stem": "A client at 8 cm with an epidural for 5 hours has not voided and has had no urinary catheter. The nurse sees a rounded bulge above the pubic bone, and the fetal head has stayed at 0 station for 2 hours. What should the nurse check?",
       "content": {
         "options": [
           {
             "id": "a",
-            "text": "Bladder distention"
+            "text": "Whether the bladder is distended and full"
           },
           {
             "id": "b",
-            "text": "Blood glucose"
+            "text": "The fetal position with Leopold maneuvers"
           },
           {
             "id": "c",
-            "text": "Reflexes"
+            "text": "The client's lower extremity reflexes"
           },
           {
             "id": "d",
-            "text": "Temperature"
+            "text": "Whether the epidural catheter has moved"
           }
         ]
       },
@@ -737,16 +737,16 @@
         "correct": "a"
       },
       "rationale": {
-        "correct": "Check the bladder often during labor, especially with an epidural.",
+        "correct": "Check the bladder every 2 hours during labor, especially with an epidural.",
         "perOption": {
-          "a": "Epidurals reduce the urge to void; a full bladder can block descent.",
-          "b": "This isn't related.",
-          "c": "This isn't the issue.",
-          "d": "This isn't the issue."
+          "a": "An epidural reduces the urge to void; a full bladder can block fetal descent.",
+          "b": "The bulge and lack of voiding point to the bladder.",
+          "c": "This does not explain the bulge.",
+          "d": "This affects pain relief, not descent."
         },
         "references": [
           "Maternal-newborn nursing texts (e.g. Perry; Lowdermilk)",
-          "Reviewed by the content team on 17 November 2026."
+          "Rewritten to NCLEX-RN difficulty and reviewed by the content team on 19 November 2026."
         ]
       },
       "educationalObjective": "Recognize bladder distention in labor."
@@ -761,24 +761,24 @@
       ],
       "cjmmSkill": "analyze_cues",
       "difficulty": "moderate",
-      "stem": "A client dilated to 9 cm is irritable, nauseated and says, \"I can't do this anymore.\" Which phase of labor is she in?",
+      "stem": "A client at 9 cm who has been calm with breathing techniques is now irritable, nauseated and shaking, and says, \"Don't touch me. I can't do this anymore.\" Contractions are every 2 minutes and last 80 seconds. Which phase of labor does this describe?",
       "content": {
         "options": [
           {
             "id": "a",
-            "text": "Transition"
+            "text": "Transition phase of the first stage"
           },
           {
             "id": "b",
-            "text": "Latent"
+            "text": "Active phase of the first stage"
           },
           {
             "id": "c",
-            "text": "Second stage"
+            "text": "Second stage of labor"
           },
           {
             "id": "d",
-            "text": "Third stage"
+            "text": "Latent phase of the first stage"
           }
         ]
       },
@@ -786,16 +786,16 @@
         "correct": "a"
       },
       "rationale": {
-        "correct": "Transition: intense contractions, irritability, nausea and an urge to push.",
+        "correct": "Transition: intense contractions, irritability, nausea, shaking and an urge to push.",
         "perOption": {
           "a": "Transition (8 to 10 cm) is the most intense phase.",
-          "b": "The latent phase is 0 to about 5 cm, usually calmer.",
-          "c": "That begins at 10 cm.",
-          "d": "That is delivery of the placenta."
+          "b": "The active phase (about 6 to 8 cm) is usually less intense.",
+          "c": "This begins at 10 cm.",
+          "d": "The latent phase is calmer and the cervix is less dilated."
         },
         "references": [
           "Maternal-newborn nursing texts (e.g. Perry; Lowdermilk)",
-          "Reviewed by the content team on 17 November 2026."
+          "Rewritten to NCLEX-RN difficulty and reviewed by the content team on 19 November 2026."
         ]
       },
       "educationalObjective": "Identify the transition phase of labor."
@@ -810,24 +810,24 @@
       ],
       "cjmmSkill": "take_action",
       "difficulty": "difficult",
-      "stem": "During birth, the baby's head delivers but then pulls back against the perineum (turtle sign). What should the nurse do?",
+      "stem": "A client with gestational diabetes is giving birth to an estimated 4.5 kg baby. The fetal head delivers and then pulls back against the perineum, and the shoulders do not deliver with the next push. The provider calls for help. What should the nurse do?",
       "content": {
         "options": [
           {
             "id": "a",
-            "text": "Help with the McRoberts maneuver and apply suprapubic pressure as directed"
+            "text": "Flex the thighs to the abdomen and give suprapubic pressure as directed"
           },
           {
             "id": "b",
-            "text": "Apply fundal pressure"
+            "text": "Apply firm fundal pressure with the next contraction to push the shoulders out"
           },
           {
             "id": "c",
-            "text": "Pull on the baby's head"
+            "text": "Apply steady downward traction on the baby's head"
           },
           {
             "id": "d",
-            "text": "Have the client stop pushing and wait 1 hour"
+            "text": "Ask the client to stop pushing until the provider is ready"
           }
         ]
       },
@@ -835,16 +835,16 @@
         "correct": "a"
       },
       "rationale": {
-        "correct": "Shoulder dystocia: McRoberts (thighs flexed toward the abdomen), suprapubic pressure, call for help, no fundal pressure.",
+        "correct": "Shoulder dystocia: call for help, McRoberts (thighs flexed toward the abdomen), suprapubic pressure, no fundal pressure.",
         "perOption": {
-          "a": "These maneuvers help free the shoulder in shoulder dystocia.",
-          "b": "Fundal pressure worsens impaction.",
+          "a": "McRoberts and suprapubic pressure free the anterior shoulder in shoulder dystocia.",
+          "b": "Fundal pressure pushes the shoulder harder against the pubic bone.",
           "c": "This risks brachial plexus injury.",
-          "d": "Delay causes hypoxia."
+          "d": "Delay causes fetal hypoxia."
         },
         "references": [
           "Maternal-newborn nursing texts (e.g. Perry; Lowdermilk)",
-          "Reviewed by the content team on 17 November 2026."
+          "Rewritten to NCLEX-RN difficulty and reviewed by the content team on 19 November 2026."
         ]
       },
       "educationalObjective": "Respond to shoulder dystocia."
@@ -859,7 +859,7 @@
       ],
       "cjmmSkill": "recognize_cues",
       "difficulty": "difficult",
-      "stem": "During a trial of labor after cesarean, the client has sudden tearing abdominal pain, contractions stop and the fetal heart rate drops. What does the nurse suspect?",
+      "stem": "A client having a trial of labor after a previous cesarean birth is at 7 cm with oxytocin running. The client suddenly reports a tearing pain, contractions stop on the monitor, the fetal head is no longer felt at 0 station and the fetal heart rate drops to 80/min. What does the nurse suspect?",
       "content": {
         "options": [
           {
@@ -868,15 +868,15 @@
           },
           {
             "id": "b",
-            "text": "Normal transition"
+            "text": "Placental abruption"
           },
           {
             "id": "c",
-            "text": "Placenta previa"
+            "text": "Rapid progress into transition"
           },
           {
             "id": "d",
-            "text": "Early decelerations"
+            "text": "Prolapse of the umbilical cord"
           }
         ]
       },
@@ -884,16 +884,16 @@
         "correct": "a"
       },
       "rationale": {
-        "correct": "Uterine rupture: sudden pain, loss of station, FHR changes; emergency cesarean.",
+        "correct": "Uterine rupture: sudden pain, loss of station, stopped contractions and FHR changes; prepare for emergency cesarean birth.",
         "perOption": {
-          "a": "A prior uterine scar raises the risk; this is an obstetric emergency.",
-          "b": "Contractions don't stop in transition.",
-          "c": "This isn't the picture.",
-          "d": "This isn't the cause."
+          "a": "A prior uterine scar raises the risk; loss of station, stopped contractions and bradycardia are classic.",
+          "b": "Abruption causes pain and a rigid uterus, but contractions continue and station is not lost.",
+          "c": "Contractions do not stop in transition.",
+          "d": "This causes bradycardia, but not tearing pain or loss of station."
         },
         "references": [
           "Maternal-newborn nursing texts (e.g. Perry; Lowdermilk)",
-          "Reviewed by the content team on 17 November 2026."
+          "Rewritten to NCLEX-RN difficulty and reviewed by the content team on 19 November 2026."
         ]
       },
       "educationalObjective": "Recognize uterine rupture."
@@ -908,7 +908,7 @@
       ],
       "cjmmSkill": "recognize_cues",
       "difficulty": "difficult",
-      "stem": "Right after her membranes rupture, a laboring client suddenly becomes short of breath, hypotensive and cyanotic, and is oozing blood. What does the nurse suspect?",
+      "stem": "Minutes after artificial rupture of membranes, a laboring client says, \"Something is wrong,\" and becomes short of breath and cyanotic. The blood pressure is 70/40 mm Hg, the SpO2 is 78% and blood is oozing from the IV site. What does the nurse suspect?",
       "content": {
         "options": [
           {
@@ -917,15 +917,15 @@
           },
           {
             "id": "b",
-            "text": "Anxiety"
+            "text": "Supine hypotensive syndrome"
           },
           {
             "id": "c",
-            "text": "Supine hypotension"
+            "text": "Anaphylaxis to the latex in the gloves used for the procedure"
           },
           {
             "id": "d",
-            "text": "Normal labor"
+            "text": "Pulmonary embolism from a deep vein clot"
           }
         ]
       },
@@ -933,16 +933,16 @@
         "correct": "a"
       },
       "rationale": {
-        "correct": "Amniotic fluid embolism: support the airway and circulation, start CPR if needed and prepare for DIC.",
+        "correct": "Amniotic fluid embolism: call a rapid response, support airway and circulation, start CPR if needed and prepare for DIC.",
         "perOption": {
-          "a": "This is a sudden collapse with DIC, an obstetric emergency.",
-          "b": "This doesn't fit.",
-          "c": "This doesn't cause cyanosis and bleeding.",
-          "d": "This isn't normal."
+          "a": "Sudden respiratory distress, shock and coagulopathy around membrane rupture are classic.",
+          "b": "This does not cause cyanosis, low SpO2 or oozing blood.",
+          "c": "This does not explain the coagulopathy.",
+          "d": "This does not explain the sudden bleeding."
         },
         "references": [
           "Maternal-newborn nursing texts (e.g. Perry; Lowdermilk)",
-          "Reviewed by the content team on 17 November 2026."
+          "Rewritten to NCLEX-RN difficulty and reviewed by the content team on 19 November 2026."
         ]
       },
       "educationalObjective": "Recognize amniotic fluid embolism."
@@ -957,7 +957,7 @@
       ],
       "cjmmSkill": "take_action",
       "difficulty": "easy",
-      "stem": "A client in labor has intense back pain from an occiput posterior position. Which comfort measure is most helpful?",
+      "stem": "A client at 6 cm has intense, constant lower back pain between contractions, and the vaginal exam shows an occiput posterior position. The client does not want an epidural yet. Which comfort measure is most helpful?",
       "content": {
         "options": [
           {
@@ -966,15 +966,15 @@
           },
           {
             "id": "b",
-            "text": "Lying flat on her back"
+            "text": "Lying flat on the back with a pillow under the knees"
           },
           {
             "id": "c",
-            "text": "Avoiding position changes"
+            "text": "Staying in one position to save energy"
           },
           {
             "id": "d",
-            "text": "Ice on the abdomen"
+            "text": "An ice pack placed on the abdomen"
           }
         ]
       },
@@ -985,13 +985,13 @@
         "correct": "Back labor: counterpressure, hands-and-knees or side-lying positions and a birthing ball.",
         "perOption": {
           "a": "Counterpressure eases back labor.",
-          "b": "This increases discomfort.",
-          "c": "Hands-and-knees positions can help rotation.",
-          "d": "This doesn't target back pain."
+          "b": "This keeps the fetal head against the sacrum and increases pain.",
+          "c": "Hands-and-knees or side-lying positions help the fetus rotate.",
+          "d": "This does not target back pain."
         },
         "references": [
           "Maternal-newborn nursing texts (e.g. Perry; Lowdermilk)",
-          "Reviewed by the content team on 17 November 2026."
+          "Rewritten to NCLEX-RN difficulty and reviewed by the content team on 19 November 2026."
         ]
       },
       "educationalObjective": "Relieve back labor pain."
@@ -1006,24 +1006,24 @@
       ],
       "cjmmSkill": "recognize_cues",
       "difficulty": "moderate",
-      "stem": "Which finding indicates that the placenta is separating?",
+      "stem": "The baby was born 10 minutes ago and is skin to skin with the parent. The nurse is watching for the third stage of labor. Which group of findings shows that the placenta is separating?",
       "content": {
         "options": [
           {
             "id": "a",
-            "text": "A gush of blood, lengthening of the cord and a firm, rounded uterus"
+            "text": "A gush of blood, the cord lengthening and a firm, rounded uterus"
           },
           {
             "id": "b",
-            "text": "Absence of bleeding"
+            "text": "No bleeding, a shortening cord and a soft uterus"
           },
           {
             "id": "c",
-            "text": "Uterus becoming soft"
+            "text": "A boggy uterus that rises above the umbilicus with heavy bleeding"
           },
           {
             "id": "d",
-            "text": "Shortening of the cord"
+            "text": "A sudden rise in blood pressure with severe pain"
           }
         ]
       },
@@ -1033,14 +1033,14 @@
       "rationale": {
         "correct": "Placental separation usually occurs within 30 minutes of birth.",
         "perOption": {
-          "a": "These are the signs of separation.",
-          "b": "A gush is typical.",
-          "c": "It becomes firm and globular.",
-          "d": "The cord lengthens."
+          "a": "These are the signs of placental separation.",
+          "b": "The cord lengthens and a gush of blood is typical.",
+          "c": "This suggests uterine atony, not separation.",
+          "d": "This is not part of normal separation."
         },
         "references": [
           "Maternal-newborn nursing texts (e.g. Perry; Lowdermilk)",
-          "Reviewed by the content team on 17 November 2026."
+          "Rewritten to NCLEX-RN difficulty and reviewed by the content team on 19 November 2026."
         ]
       },
       "educationalObjective": "Recognize placental separation."
@@ -1055,24 +1055,24 @@
       ],
       "cjmmSkill": "take_action",
       "difficulty": "moderate",
-      "stem": "The nurse is alone with a client whose baby's head is crowning. What should the nurse do?",
+      "stem": "A multiparous client progresses rapidly, and the nurse is alone in the room when the baby's head begins to crown. The provider is 5 minutes away. What should the nurse do?",
       "content": {
         "options": [
           {
             "id": "a",
-            "text": "Support the perineum with gentle pressure, let the head deliver slowly and check for a cord around the neck"
+            "text": "Support the perineum, ease the head out slowly and check for a nuchal cord"
           },
           {
             "id": "b",
-            "text": "Pull on the baby's head"
+            "text": "Apply gentle traction on the head to speed delivery of the shoulders"
           },
           {
             "id": "c",
-            "text": "Have the client cross her legs"
+            "text": "Ask the client to keep the legs together and pant until the provider arrives"
           },
           {
             "id": "d",
-            "text": "Leave to find the provider"
+            "text": "Leave the room to find another nurse or the provider"
           }
         ]
       },
@@ -1080,16 +1080,16 @@
         "correct": "a"
       },
       "rationale": {
-        "correct": "Precipitous birth: stay, support the head, check for a nuchal cord, keep the baby warm and dry.",
+        "correct": "Precipitous birth: stay, call for help, support the head, check for a nuchal cord, keep the baby warm and dry.",
         "perOption": {
-          "a": "This prevents rapid birth and tearing.",
-          "b": "This risks injury.",
-          "c": "This is dangerous.",
-          "d": "The nurse must stay."
+          "a": "Controlled delivery prevents tearing, and a cord around the neck must be found.",
+          "b": "Traction risks injury to the baby.",
+          "c": "Holding back the birth can injure the baby and the client.",
+          "d": "The nurse stays with the client."
         },
         "references": [
           "Maternal-newborn nursing texts (e.g. Perry; Lowdermilk)",
-          "Reviewed by the content team on 17 November 2026."
+          "Rewritten to NCLEX-RN difficulty and reviewed by the content team on 19 November 2026."
         ]
       },
       "educationalObjective": "Assist with an emergency birth."
@@ -1104,24 +1104,24 @@
       ],
       "cjmmSkill": "recognize_cues",
       "difficulty": "moderate",
-      "stem": "A client in preterm labor is receiving terbutaline. Which finding requires the nurse to hold the dose?",
+      "stem": "A client at 31 weeks in preterm labor is receiving terbutaline 0.25 mg subcutaneously. Before the next dose, the nurse reviews the assessment. Which finding requires the nurse to hold the dose and notify the provider?",
       "content": {
         "options": [
           {
             "id": "a",
-            "text": "Maternal heart rate of 130/min"
+            "text": "Maternal heart rate of 132/min"
           },
           {
             "id": "b",
-            "text": "Maternal heart rate of 88/min"
+            "text": "Blood glucose of 128 mg/dL"
           },
           {
             "id": "c",
-            "text": "Blood pressure of 118/74 mm Hg"
+            "text": "Contractions slowing to every 15 minutes"
           },
           {
             "id": "d",
-            "text": "Fewer contractions"
+            "text": "A fine tremor of the hands"
           }
         ]
       },
@@ -1129,16 +1129,16 @@
         "correct": "a"
       },
       "rationale": {
-        "correct": "Terbutaline: tachycardia, hyperglycemia, hypokalemia and pulmonary edema.",
+        "correct": "Terbutaline: hold for maternal HR above 120/min, chest pain or dyspnea; watch for hyperglycemia, hypokalemia and pulmonary edema.",
         "perOption": {
-          "a": "Beta-agonists cause tachycardia; hold for a heart rate above about 120.",
-          "b": "This is acceptable.",
-          "c": "This is normal.",
-          "d": "This is the intended effect."
+          "a": "Beta-agonists cause tachycardia; most protocols hold the dose for a rate above 120/min.",
+          "b": "Mild hyperglycemia is expected with terbutaline.",
+          "c": "This is the intended effect.",
+          "d": "Mild tremor is a common, expected effect."
         },
         "references": [
           "Nursing pharmacology texts (e.g. Lehne; McCuistion) and the drug's prescribing information",
-          "Reviewed by the content team on 17 November 2026."
+          "Rewritten to NCLEX-RN difficulty and reviewed by the content team on 19 November 2026."
         ]
       },
       "educationalObjective": "Monitor terbutaline therapy."
@@ -1153,24 +1153,24 @@
       ],
       "cjmmSkill": "generate_solutions",
       "difficulty": "moderate",
-      "stem": "A client in labor is positive for group B streptococcus. What should the nurse anticipate?",
+      "stem": "A client at 39 weeks who screened positive for group B streptococcus at 36 weeks is admitted in active labor at 5 cm. The client reports a rash with amoxicillin as a child but no breathing problems. What should the nurse anticipate?",
       "content": {
         "options": [
           {
             "id": "a",
-            "text": "IV penicillin during labor, ideally at least 4 hours before birth"
+            "text": "IV cefazolin now, ideally at least 4 hours before birth"
           },
           {
             "id": "b",
-            "text": "Oral antibiotics after birth"
+            "text": "Oral amoxicillin for the newborn after birth"
           },
           {
             "id": "c",
-            "text": "A cesarean birth"
+            "text": "A scheduled cesarean birth to avoid exposing the baby"
           },
           {
             "id": "d",
-            "text": "No treatment"
+            "text": "No antibiotics, because of the client's penicillin allergy"
           }
         ]
       },
@@ -1178,16 +1178,16 @@
         "correct": "a"
       },
       "rationale": {
-        "correct": "GBS-positive: intrapartum IV penicillin (or an alternative if allergic).",
+        "correct": "GBS-positive: intrapartum IV penicillin; cefazolin for a low-risk allergy; clindamycin or vancomycin for a high-risk allergy.",
         "perOption": {
-          "a": "This prevents GBS infection in the newborn.",
-          "b": "This doesn't protect the newborn.",
-          "c": "This isn't required.",
-          "d": "Treatment is needed."
+          "a": "For a low-risk penicillin allergy, cefazolin protects the newborn from GBS.",
+          "b": "Treatment during labor is what protects the newborn.",
+          "c": "GBS is not a reason for cesarean birth.",
+          "d": "An alternative antibiotic is given."
         },
         "references": [
           "Maternal-newborn nursing texts (e.g. Perry; Lowdermilk)",
-          "Reviewed by the content team on 17 November 2026."
+          "Rewritten to NCLEX-RN difficulty and reviewed by the content team on 19 November 2026."
         ]
       },
       "educationalObjective": "Prevent newborn GBS infection."
@@ -1202,7 +1202,7 @@
       ],
       "cjmmSkill": "recognize_cues",
       "difficulty": "difficult",
-      "stem": "The nurse reviews the fetal monitoring summary for the past hour. Highlight the findings that require intervention.",
+      "stem": "A client at 39 weeks with ruptured membranes for 20 hours has a temperature of 38.4°C (101.1°F). The nurse reviews the fetal monitoring summary for the past hour. Highlight the findings that require intervention.",
       "content": {
         "columns": [
           "Time",
@@ -1213,7 +1213,7 @@
             "id": "r1",
             "cells": [
               "1400",
-              "Baseline 140 beats/min, moderate variability"
+              "Baseline 145 beats/min, moderate variability"
             ],
             "selectable": true
           },
@@ -1221,12 +1221,20 @@
             "id": "r2",
             "cells": [
               "1415",
-              "Two accelerations of 15 beats/min"
+              "Two accelerations of 15 beats/min for 15 seconds"
             ],
             "selectable": true
           },
           {
             "id": "r3",
+            "cells": [
+              "1420",
+              "Early decelerations with two contractions"
+            ],
+            "selectable": true
+          },
+          {
+            "id": "r4",
             "cells": [
               "1430",
               "Baseline 170 beats/min"
@@ -1234,15 +1242,15 @@
             "selectable": true
           },
           {
-            "id": "r4",
+            "id": "r5",
             "cells": [
               "1445",
-              "Minimal variability"
+              "Variability of 3 beats/min"
             ],
             "selectable": true
           },
           {
-            "id": "r5",
+            "id": "r6",
             "cells": [
               "1450",
               "Late decelerations with three straight contractions"
@@ -1253,9 +1261,9 @@
       },
       "key": {
         "correct": [
-          "r3",
           "r4",
-          "r5"
+          "r5",
+          "r6"
         ]
       },
       "rationale": {
@@ -1263,13 +1271,14 @@
         "perOption": {
           "r1": "This is reassuring.",
           "r2": "Accelerations are reassuring.",
-          "r3": "Fetal tachycardia may signal infection or hypoxia.",
-          "r4": "Reduced variability may signal fetal hypoxia or acidosis.",
-          "r5": "Recurrent late decelerations indicate placental insufficiency."
+          "r3": "Early decelerations are benign.",
+          "r4": "Fetal tachycardia here may signal maternal infection or hypoxia.",
+          "r5": "Minimal variability may signal fetal hypoxia or acidosis.",
+          "r6": "Recurrent late decelerations indicate uteroplacental insufficiency."
         },
         "references": [
           "Maternal-newborn nursing texts (e.g. Perry; Lowdermilk)",
-          "Reviewed by the content team on 17 November 2026."
+          "Rewritten to NCLEX-RN difficulty and reviewed by the content team on 19 November 2026."
         ]
       },
       "educationalObjective": "Recognize concerning fetal heart rate patterns."
