@@ -58,4 +58,5 @@ Written by `python3 -I build_all.py`; do not edit by hand. See `quality.py` for 
 | 66-risk-reduction-basic-care | 31 | yes | 27 | 7% | 29% (assess first) | 15% | 32 | 4/17/10 |
 | 67-moc-sic-ngn | 34 | yes | 23 | 0% | 23% (shortest) | 9% | 32 | 0/23/11 |
 | 68-moc-priorities-delegation-legal | 25 | yes | 17 | 29% | 33% (stem words) | 12% | 33 | 2/13/10 |
-| **Whole bank** | 1135 | | 890 | 14% | 25% (assess first) | 7% | 33 | 91/661/383 |
+| 69-safety-health-promotion-psychosocial | 25 | yes | 17 | 24% | 32% (skip absolutes) | 6% | 33 | 1/15/9 |
+| **Whole bank** | 1160 | | 907 | 14% | 25% (assess first) | 7% | 33 | 92/676/392 |
