@@ -5,6 +5,7 @@ import {
   challengeSet,
   practiceSet,
   sampleSet,
+  timedCaseBlockSet,
   untimedChallengeSet,
 } from "./components/testSets";
 import { filterSets, groupSets, parseFilter, sectionOf } from "./setCategories";
@@ -23,6 +24,11 @@ describe("sectionOf", () => {
     expect(sectionOf(challengeSet)).toBe("timedExams");
     expect(sectionOf(untimedChallengeSet)).toBe("untimedExams");
     expect(sectionOf(adaptiveSet)).toBe("adaptive");
+    expect(sectionOf(timedCaseBlockSet)).toBe("timedCaseBlocks");
+  });
+
+  it("keeps an untimed case-study challenge with the untimed mock exams", () => {
+    expect(sectionOf({ ...timedCaseBlockSet, timed: false, timeBudgetSec: null })).toBe("untimedExams");
   });
 
   it("keeps a sample set in Start here even when it is a case study", () => {
@@ -43,6 +49,12 @@ describe("groupSets", () => {
       ["Mock exams: timed", ["Comprehensive Challenge 1"]],
       ["Mock exams: untimed", ["NCLEX-RN challenge 1 (untimed)"]],
     ]);
+  });
+
+  it("puts timed case-study blocks between the case studies and the timed mock exams", () => {
+    const ids = groupSets([...catalog, timedCaseBlockSet], "all").map((section) => section.id);
+    expect(ids).toEqual(["start", "practice", "caseStudies", "timedCaseBlocks", "timedExams", "untimedExams"]);
+    expect(filterSets([timedCaseBlockSet], "timed")).toEqual([timedCaseBlockSet]);
   });
 
   it("keeps the API's order inside a section", () => {

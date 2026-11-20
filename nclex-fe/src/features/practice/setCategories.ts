@@ -31,7 +31,14 @@ export function filterSets(sets: TestSetSummary[], filter: SetFilter): TestSetSu
   return sets.filter(filterRules[filter]);
 }
 
-export type SectionId = "start" | "practice" | "caseStudies" | "timedExams" | "untimedExams" | "adaptive";
+export type SectionId =
+  | "start"
+  | "practice"
+  | "caseStudies"
+  | "timedCaseBlocks"
+  | "timedExams"
+  | "untimedExams"
+  | "adaptive";
 
 export interface SetSection {
   id: SectionId;
@@ -45,19 +52,26 @@ const sectionInfo: Array<Omit<SetSection, "sets">> = [
   { id: "start", title: "Start here", description: "A short sample to get used to the question types." },
   { id: "practice", title: "Practice sets", description: "Untimed, with the answer and rationale after each question." },
   { id: "caseStudies", title: "Case studies", description: "Unfolding NGN case studies, kept whole and in order." },
+  {
+    id: "timedCaseBlocks",
+    title: "Timed case-study blocks",
+    description: "Ten whole case studies against the NCLEX clock, to build stamina for the second half of the exam.",
+  },
   { id: "timedExams", title: "Mock exams: timed", description: "Exam conditions against the clock, results at the end." },
   { id: "untimedExams", title: "Mock exams: untimed", description: "The same exams with no time limit, results at the end." },
   { id: "adaptive", title: "Adaptive exams", description: "Like the real NCLEX: the exam stops once your result is clear." },
 ];
 
 // Nothing in the API marks a set as a case study, so the curated titles ("NGN case studies, set 1
-// of 2") are the signal. A test_sets category column would replace this if titles ever change.
+// of 2", "Timed case study block 1") are the signal. A test_sets category column would replace this if titles ever change.
 const caseStudyTitle = /case stud/i;
 
 /** The one section a set belongs to. Order matters: the sample and adaptive sets win over the rest. */
 export function sectionOf(set: TestSetSummary): SectionId {
   if (set.isSample) return "start";
   if (set.mode === "cat") return "adaptive";
+  // Timed blocks of whole cases (F24) are challenges too, but they get their own section.
+  if (set.mode === "challenge" && set.timed && caseStudyTitle.test(set.title)) return "timedCaseBlocks";
   if (set.mode === "challenge") return set.timed ? "timedExams" : "untimedExams";
   if (caseStudyTitle.test(set.title)) return "caseStudies";
   return "practice";

@@ -44,6 +44,16 @@ export const caseStudySet: TestSetSummary = {
   questionCount: 30,
 };
 
+/** A timed block of whole case studies (F24): exam rules, NCLEX pace, no pass estimate. */
+export const timedCaseBlockSet: TestSetSummary = {
+  ...challengeSet,
+  id: "c1e00000-0000-4000-8000-000000003001",
+  title: "Timed case study block 1",
+  questionCount: 60,
+  timeBudgetSec: 7200,
+  passThreshold: null,
+};
+
 export const untimedChallengeSet: TestSetSummary = {
   ...challengeSet,
   id: "c1e00000-0000-4000-8000-000000000028",
