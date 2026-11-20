@@ -86,4 +86,5 @@ Written by `python3 -I build_all.py`; do not edit by hand. See `quality.py` for 
 | 94-drug-safety-daily-function | 25 | yes | 13 | 8% | 25% (assess first) | 8% | 26 | 0/14/11 |
 | 95-diagnostics-emergencies-cases | 25 | yes | 7 | 0% | 25% (stem words) | 0% | 21 | 0/11/14 |
 | 96-moc-law-levels-of-care-safety | 25 | yes | 11 | 0% | 27% (shortest) | 0% | 27 | 0/14/11 |
-| **Whole bank** | 1835 | | 1299 | 12% | 25% (assess first) | 6% | 32 | 118/1015/702 |
+| 97-disinfection-development-mental-health | 25 | yes | 13 | 8% | 23% (shortest) | 0% | 26 | 0/15/10 |
+| **Whole bank** | 1860 | | 1312 | 12% | 25% (assess first) | 5% | 31.5 | 118/1030/712 |
