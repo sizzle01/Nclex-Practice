@@ -13,6 +13,11 @@
       "name": "Cardiovascular medications"
     },
     {
+      "clientNeeds": "SECE.MOC",
+      "slug": "handoff-and-sbar-communication",
+      "name": "Handoff and SBAR communication"
+    },
+    {
       "clientNeeds": "PHI.RRP",
       "slug": "postoperative-care",
       "name": "Postoperative care"
@@ -33,9 +38,9 @@
       "name": "Antidotes and reversal agents"
     },
     {
-      "clientNeeds": "PHI.PPT",
-      "slug": "medication-dose-calculations",
-      "name": "Medication dose calculations"
+      "clientNeeds": "SECE.SIC",
+      "slug": "client-identification-and-error-prevention",
+      "name": "Client identification and error prevention"
     },
     {
       "clientNeeds": "PHI.PA",
@@ -43,9 +48,19 @@
       "name": "Stroke care"
     },
     {
+      "clientNeeds": "SECE.SIC",
+      "slug": "medication-safety-systems",
+      "name": "Medication safety systems"
+    },
+    {
       "clientNeeds": "PHI.PA",
       "slug": "bleeding-and-clotting-disorders",
       "name": "Bleeding and clotting disorders"
+    },
+    {
+      "clientNeeds": "PHI.PPT",
+      "slug": "medication-dose-calculations",
+      "name": "Medication dose calculations"
     },
     {
       "clientNeeds": "PHI.RRP",
@@ -56,6 +71,11 @@
       "clientNeeds": "PHI.PA",
       "slug": "shock-and-sepsis",
       "name": "Shock and sepsis"
+    },
+    {
+      "clientNeeds": "SECE.MOC",
+      "slug": "delegation-and-supervision",
+      "name": "Delegation and supervision"
     }
   ],
   "questions": [
@@ -456,66 +476,113 @@
     },
     {
       "id": "c1a00101-0000-4000-8000-000000000005",
-      "itemType": "sata",
-      "clientNeeds": "PHI.PA",
+      "itemType": "dropdown_cloze",
+      "clientNeeds": "SECE.MOC",
       "bodySystem": "cardiovascular",
       "subtopics": [
-        "vascular-disorders"
+        "handoff-and-sbar-communication"
       ],
       "cjmmSkill": "take_action",
       "difficulty": "difficult",
-      "stem": "Review the 0045 findings. Which actions should the nurse take? Select all that apply.",
+      "stem": "The nurse calls the surgeon about the 0045 findings. Complete the SBAR report by choosing from the lists of options.",
       "content": {
-        "options": [
+        "template": "Situation: {{b1}}. Background: type A dissection on esmolol and nicardipine, surgery at 0200. Assessment: {{b2}}. Recommendation: {{b3}}.",
+        "blanks": [
           {
-            "id": "a",
-            "text": "Notify the surgeon of the leg and urine changes now"
+            "id": "b1",
+            "options": [
+              {
+                "id": "a",
+                "text": "the left leg is newly numb and pulseless, and urine output has fallen to 10 mL/hour"
+              },
+              {
+                "id": "b",
+                "text": "the client's pain has improved from 10 to 6 of 10"
+              },
+              {
+                "id": "c",
+                "text": "the heart rate is now 58/min on esmolol"
+              },
+              {
+                "id": "d",
+                "text": "the client is anxious about surgery"
+              }
+            ]
           },
           {
-            "id": "b",
-            "text": "Compare pulses, color and sensation in both legs"
+            "id": "b2",
+            "options": [
+              {
+                "id": "a",
+                "text": "I think the dissection is extending into the iliac and renal arteries"
+              },
+              {
+                "id": "b",
+                "text": "I think the client is dehydrated"
+              },
+              {
+                "id": "c",
+                "text": "I think the esmolol dose is too high"
+              },
+              {
+                "id": "d",
+                "text": "I am not sure what is happening"
+              }
+            ]
           },
           {
-            "id": "c",
-            "text": "Continue the esmolol to keep the heart rate below 60/min"
-          },
-          {
-            "id": "d",
-            "text": "Increase IV fluids to raise urine output"
-          },
-          {
-            "id": "e",
-            "text": "Stop the nicardipine so the kidneys get more pressure"
-          },
-          {
-            "id": "f",
-            "text": "Give furosemide to increase urine output"
+            "id": "b3",
+            "options": [
+              {
+                "id": "a",
+                "text": "please come to see the client now and consider moving surgery forward"
+              },
+              {
+                "id": "b",
+                "text": "may I give a fluid bolus for the urine output"
+              },
+              {
+                "id": "c",
+                "text": "may I stop the nicardipine"
+              },
+              {
+                "id": "d",
+                "text": "please review the client at the 0200 surgery"
+              }
+            ]
           }
         ]
       },
       "key": {
-        "correct": [
-          "a",
-          "b",
-          "c"
-        ]
+        "byBlank": {
+          "b1": "a",
+          "b2": "a",
+          "b3": "a"
+        }
       },
       "rationale": {
-        "correct": "Signs of new organ or limb ischemia mean the dissection is extending; keep rate and pressure low, document the findings and get the surgeon now.",
+        "correct": "SBAR gives the problem, the context, the nurse's conclusion and a specific request. New limb and kidney ischemia in dissection calls for the surgeon now.",
         "perOption": {
-          "a": "New leg numbness and low urine output mean the tear is extending into the iliac and renal arteries.",
-          "b": "This documents the extent of new ischemia for the surgeon.",
-          "c": "Rate and pressure control still slow the extension of the tear.",
-          "d": "Low output here comes from a blocked renal artery, not low volume; raising pressure worsens the tear.",
-          "e": "Allowing pressure to rise drives the dissection further.",
-          "f": "A diuretic cannot help a kidney with no blood supply."
+          "b1:a": "The situation states the new problem first, in one line.",
+          "b1:b": "Good news, but not why the nurse is calling.",
+          "b1:c": "That is the target, not the problem.",
+          "b1:d": "Not the reason for an urgent call.",
+          "b2:a": "The nurse states a clinical conclusion from the data.",
+          "b2:b": "Low output here comes from a blocked renal artery.",
+          "b2:c": "The rate and pressure are on target.",
+          "b2:d": "SBAR asks the nurse to give an assessment.",
+          "b3:a": "Organ and limb ischemia make this more urgent; the request is specific.",
+          "b3:b": "Fluid would raise pressure and does not treat a blocked artery.",
+          "b3:c": "Pressure control must continue.",
+          "b3:d": "Waiting allows ischemia to progress."
         },
         "references": [
+          "NCSBN National Guidelines for Nursing Delegation; LaCharity, Prioritization, Delegation & Assignment",
           "Medical-surgical nursing texts (e.g. Lewis; Ignatavicius)",
           "Written as part of a full NGN case study to NCLEX-RN difficulty and reviewed by the content team on 20 November 2026."
         ]
       },
-      "educationalObjective": "Take action when an aortic dissection extends.",
+      "educationalObjective": "Communicate an urgent change with SBAR.",
       "exhibits": [
         {
           "id": "ad-0045",
@@ -1251,39 +1318,78 @@
     },
     {
       "id": "c1a00101-0000-4000-8000-000000000011",
-      "itemType": "fill_blank_calc",
-      "clientNeeds": "PHI.PPT",
+      "itemType": "sata",
+      "clientNeeds": "SECE.SIC",
       "bodySystem": "gastrointestinal",
       "subtopics": [
-        "medication-dose-calculations"
+        "client-identification-and-error-prevention"
       ],
       "cjmmSkill": "take_action",
-      "difficulty": "moderate",
-      "stem": "The prescription is four-factor prothrombin complex concentrate 50 units/kg IV. The client weighs 165 lb. How many units should the nurse prepare? Record your answer as a whole number.",
+      "difficulty": "difficult",
+      "stem": "The first unit of packed red blood cells arrives from the blood bank at 1410. Which actions should the nurse take? Select all that apply.",
       "content": {
-        "unit": "units",
-        "decimals": 0,
-        "inputLabel": "Dose"
+        "options": [
+          {
+            "id": "a",
+            "text": "Check the unit, the label and the client's band with a second licensed nurse at the bedside"
+          },
+          {
+            "id": "b",
+            "text": "Prime the blood tubing with 0.9% sodium chloride only"
+          },
+          {
+            "id": "c",
+            "text": "Stay with the client and check vital signs during the first 15 minutes"
+          },
+          {
+            "id": "d",
+            "text": "Start the unit within 2 hours of its release from the blood bank"
+          },
+          {
+            "id": "e",
+            "text": "Hang the unit with the pantoprazole infusion through the same line"
+          },
+          {
+            "id": "f",
+            "text": "Warm the unit in the unit microwave to prevent hypothermia"
+          },
+          {
+            "id": "g",
+            "text": "Let the UAP take the first set of vital signs alone"
+          }
+        ]
       },
       "key": {
-        "value": 3750,
-        "rounding": "exact"
+        "correct": [
+          "a",
+          "b",
+          "c"
+        ]
       },
       "rationale": {
-        "correct": "165 lb divided by 2.2 = 75 kg. 75 kg x 50 units/kg = 3,750 units, which is below the usual maximum of 5,000 units.",
-        "perOption": {},
+        "correct": "Safe transfusion depends on two-person bedside identification, saline-only tubing, prompt start and close early monitoring by the RN.",
+        "perOption": {
+          "a": "Two-person bedside verification prevents ABO-incompatible transfusion, the most dangerous transfusion error.",
+          "b": "Dextrose solutions cause red cells to clump and break down.",
+          "c": "Most acute hemolytic reactions start early, within the first 50 mL.",
+          "d": "A unit is started within 30 minutes of release and finished within 4 hours, to limit bacterial growth.",
+          "e": "No drugs are given through blood tubing.",
+          "f": "Microwaving damages red cells; only an approved blood warmer is used.",
+          "g": "The first 15 minutes need the RN's assessment for a reaction."
+        },
         "references": [
-          "Nursing pharmacology texts (e.g. Lehne; McCuistion) and the drug's prescribing information",
+          "Fundamentals of nursing texts (e.g. Potter & Perry)",
+          "Laboratory reference ranges as used in common NCLEX review texts; follow the facility's ranges",
           "Written as part of a full NGN case study to NCLEX-RN difficulty and reviewed by the content team on 20 November 2026."
         ]
       },
-      "educationalObjective": "Calculate a weight-based reversal dose.",
+      "educationalObjective": "Take action to give a blood transfusion safely.",
       "exhibits": [
         {
-          "id": "warf-pharm",
+          "id": "warf-blood",
           "kind": "text",
-          "title": "Pharmacy note, 1340",
-          "body": "Four-factor PCC dosing for INR above 6: 50 units/kg, maximum 5,000 units. Weight on admission: 165 lb."
+          "title": "Blood bank release, 1410",
+          "body": "Packed red blood cells, group O negative, 1 unit, crossmatch compatible. Released 1410. Client blood type O negative."
         }
       ],
       "caseStudyId": "c1c00101-0000-4000-8000-000000000002",
@@ -1521,77 +1627,84 @@
     {
       "id": "c1a00101-0000-4000-8000-000000000014",
       "itemType": "matrix_mc",
-      "clientNeeds": "PHI.PA",
+      "clientNeeds": "SECE.SIC",
       "bodySystem": "hematologic-oncologic",
       "subtopics": [
-        "bleeding-and-clotting-disorders"
+        "medication-safety-systems"
       ],
       "cjmmSkill": "analyze_cues",
       "difficulty": "difficult",
-      "stem": "For each statement about the client, indicate whether it is accurate or inaccurate.",
+      "stem": "HIT is suspected. For each item in the client's care, indicate whether it exposes the client to heparin.",
       "content": {
         "rows": [
           {
             "id": "r1",
-            "text": "The low platelet count puts the client at high risk of bleeding."
+            "text": "Heparin 10 units/mL flush to the PICC every 8 hours"
           },
           {
             "id": "r2",
-            "text": "The timing, 7 days after heparin started, fits HIT."
+            "text": "A heparin-bonded PICC line"
           },
           {
             "id": "r3",
-            "text": "The cold left foot may be caused by an arterial clot linked to HIT."
+            "text": "0.9% sodium chloride flushes"
           },
           {
             "id": "r4",
-            "text": "The heparin flushes are too small to matter."
+            "text": "Enoxaparin for clot prevention if the infusion stops"
           },
           {
             "id": "r5",
-            "text": "Switching to enoxaparin would be a safe alternative."
+            "text": "Acetaminophen 650 mg every 6 hours as needed"
+          },
+          {
+            "id": "r6",
+            "text": "A pressure bag for an arterial line containing heparin 2 units/mL"
           }
         ],
         "columns": [
           {
             "id": "c1",
-            "text": "Accurate"
+            "text": "Exposes the client to heparin"
           },
           {
             "id": "c2",
-            "text": "Inaccurate"
+            "text": "Safe to continue"
           }
         ]
       },
       "key": {
         "byRow": {
-          "r1": "c2",
+          "r1": "c1",
           "r2": "c1",
-          "r3": "c1",
-          "r4": "c2",
-          "r5": "c2"
+          "r3": "c2",
+          "r4": "c1",
+          "r5": "c2",
+          "r6": "c1"
         }
       },
       "rationale": {
-        "correct": "HIT is an immune clotting disorder: the low platelets are a sign, not the danger, and all heparins must stop.",
+        "correct": "Stopping the infusion is not enough: flushes, coated lines, flush bags and every heparin product must go, and the allergy record must show heparin.",
         "perOption": {
-          "r1:c1": "In HIT, antibodies activate platelets, so the main danger is clotting, not bleeding.",
-          "r1:c2": "In HIT, antibodies activate platelets, so the main danger is clotting, not bleeding.",
-          "r2:c1": "HIT usually appears 5 to 10 days after first exposure.",
-          "r2:c2": "HIT usually appears 5 to 10 days after first exposure.",
-          "r3:c1": "HIT causes venous and arterial thrombosis.",
-          "r3:c2": "HIT causes venous and arterial thrombosis.",
-          "r4:c1": "Any heparin, even flushes, keeps the reaction going.",
-          "r4:c2": "Any heparin, even flushes, keeps the reaction going.",
-          "r5:c1": "Low molecular weight heparin cross-reacts with HIT antibodies.",
-          "r5:c2": "Low molecular weight heparin cross-reacts with HIT antibodies."
+          "r1:c1": "Even small flush doses keep the immune reaction going.",
+          "r1:c2": "Even small flush doses keep the immune reaction going.",
+          "r2:c1": "Some catheters are coated with heparin and may need to be replaced.",
+          "r2:c2": "Some catheters are coated with heparin and may need to be replaced.",
+          "r3:c1": "Saline contains no heparin.",
+          "r3:c2": "Saline contains no heparin.",
+          "r4:c1": "Low molecular weight heparin cross-reacts with HIT antibodies.",
+          "r4:c2": "Low molecular weight heparin cross-reacts with HIT antibodies.",
+          "r5:c1": "No interaction with HIT.",
+          "r5:c2": "No interaction with HIT.",
+          "r6:c1": "Arterial line flush bags often contain heparin.",
+          "r6:c2": "Arterial line flush bags often contain heparin."
         },
         "references": [
           "Nursing pharmacology texts (e.g. Lehne; McCuistion) and the drug's prescribing information",
           "Written as part of a full NGN case study to NCLEX-RN difficulty and reviewed by the content team on 20 November 2026."
         ]
       },
-      "educationalObjective": "Analyze the meaning of findings in HIT.",
+      "educationalObjective": "Analyze hidden sources of heparin in a client with HIT.",
       "caseStudyId": "c1c00101-0000-4000-8000-000000000003",
       "casePosition": 2
     },
@@ -2236,85 +2349,113 @@
     },
     {
       "id": "c1a00101-0000-4000-8000-000000000022",
-      "itemType": "matrix_mc",
-      "clientNeeds": "PHI.PPT",
+      "itemType": "multiple_response_grouping",
+      "clientNeeds": "SECE.MOC",
       "bodySystem": "cardiovascular",
       "subtopics": [
-        "cardiovascular-medications"
+        "delegation-and-supervision"
       ],
       "cjmmSkill": "generate_solutions",
       "difficulty": "difficult",
-      "stem": "While the surgeon is on the way, the nurse reviews the client's infusions and standing prescriptions. For each, indicate whether the nurse should continue it, stop it, or start it.",
+      "stem": "The primary RN stays at the bedside while the cardiac surgeon is on the way. For each team member, select the tasks that fit their role.",
       "content": {
-        "rows": [
+        "groups": [
           {
-            "id": "r1",
-            "text": "Nitroglycerin infusion"
+            "id": "g1",
+            "label": "Second ICU RN",
+            "options": [
+              {
+                "id": "a",
+                "text": "Stop the nitroglycerin and start the fluid bolus as prescribed"
+              },
+              {
+                "id": "b",
+                "text": "Open and arrange the sterile chest-opening tray"
+              },
+              {
+                "id": "c",
+                "text": "Take the next set of vital signs only"
+              }
+            ]
           },
           {
-            "id": "r2",
-            "text": "0.9% sodium chloride bolus as prescribed for hypotension"
+            "id": "g2",
+            "label": "Unlicensed assistive personnel",
+            "options": [
+              {
+                "id": "d",
+                "text": "Bring the emergency cart and the blood from the blood bank"
+              },
+              {
+                "id": "e",
+                "text": "Assess the chest tube for clots"
+              },
+              {
+                "id": "f",
+                "text": "Stay with the family in the waiting room and update them on the plan"
+              }
+            ]
           },
           {
-            "id": "r3",
-            "text": "Furosemide 20 mg IV scheduled for 0200"
-          },
-          {
-            "id": "r4",
-            "text": "Morphine 4 mg IV for restlessness"
-          },
-          {
-            "id": "r5",
-            "text": "Type and crossmatch, 2 units ready"
-          }
-        ],
-        "columns": [
-          {
-            "id": "c1",
-            "text": "Continue or start"
-          },
-          {
-            "id": "c2",
-            "text": "Stop"
+            "id": "g3",
+            "label": "Charge nurse",
+            "options": [
+              {
+                "id": "g",
+                "text": "Call the operating room and anesthesia team"
+              },
+              {
+                "id": "h",
+                "text": "Cover the primary RN's other client"
+              },
+              {
+                "id": "i",
+                "text": "Document the event in place of the primary RN"
+              }
+            ]
           }
         ]
       },
       "key": {
-        "byRow": {
-          "r1": "c2",
-          "r2": "c1",
-          "r3": "c2",
-          "r4": "c2",
-          "r5": "c1"
+        "byGroup": {
+          "g1": [
+            "a",
+            "b"
+          ],
+          "g2": [
+            "d"
+          ],
+          "g3": [
+            "g",
+            "h"
+          ]
         }
       },
       "rationale": {
-        "correct": "Stop drugs that lower preload or pressure, support preload with fluid and prepare blood.",
+        "correct": "In an emergency, each role does what it is licensed and trained for: RNs give drugs and prepare for surgery, the UAP fetches, the charge nurse coordinates and covers workload.",
         "perOption": {
-          "r1:c1": "A vasodilator lowers preload and pressure; the compressed heart needs both.",
-          "r1:c2": "A vasodilator lowers preload and pressure; the compressed heart needs both.",
-          "r2:c1": "Raising preload can briefly support output until the pericardium is drained.",
-          "r2:c2": "Raising preload can briefly support output until the pericardium is drained.",
-          "r3:c1": "Diuresis would further reduce filling.",
-          "r3:c2": "Diuresis would further reduce filling.",
-          "r4:c1": "Restlessness is a sign of poor perfusion; morphine also vasodilates and can hide it.",
-          "r4:c2": "Restlessness is a sign of poor perfusion; morphine also vasodilates and can hide it.",
-          "r5:c1": "Bleeding continues and reopening is likely.",
-          "r5:c2": "Bleeding continues and reopening is likely."
+          "a": "IV medication changes need an RN.",
+          "b": "An ICU RN trained in the emergency protocol can prepare it.",
+          "c": "Wasting an RN on a single measured task in an emergency.",
+          "d": "Fetching equipment and blood is within the role.",
+          "e": "Assessment stays with RNs.",
+          "f": "Explaining the plan and the client's condition is not within the UAP role.",
+          "g": "Coordinates resources for possible reopening.",
+          "h": "Reassigning the workload keeps the other client safe.",
+          "i": "Each nurse documents their own care."
         },
         "references": [
-          "Nursing pharmacology texts (e.g. Lehne; McCuistion) and the drug's prescribing information",
-          "Medical-surgical nursing texts (e.g. Lewis; Ignatavicius)",
+          "NCSBN National Guidelines for Nursing Delegation; LaCharity, Prioritization, Delegation & Assignment",
           "Written as part of a full NGN case study to NCLEX-RN difficulty and reviewed by the content team on 20 November 2026."
         ]
       },
-      "educationalObjective": "Generate solutions while awaiting surgical treatment of tamponade.",
+      "educationalObjective": "Plan delegation during a postoperative emergency.",
       "exhibits": [
         {
-          "id": "tam-orders",
+          "id": "tam-staff",
           "kind": "text",
-          "title": "Infusions and prescriptions, 0205",
-          "body": "Nitroglycerin 10 mcg/minute. 0.9% sodium chloride 250 mL bolus for SBP < 90 mm Hg. Furosemide 20 mg IV at 0200. Morphine 4 mg IV every 2 hours as needed. Type and crossmatch 2 units."
+          "title": "Staffing, 0205",
+          "body": "On duty: the primary RN, a second ICU RN, the charge nurse and one UAP. The primary RN's second client is stable on a ventilator."
         }
       ],
       "caseStudyId": "c1c00101-0000-4000-8000-000000000004",

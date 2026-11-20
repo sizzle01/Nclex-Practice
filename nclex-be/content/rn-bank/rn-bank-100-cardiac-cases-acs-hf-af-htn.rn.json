@@ -8,6 +8,11 @@
       "name": "Cardiovascular diagnostics and monitoring"
     },
     {
+      "clientNeeds": "SECE.MOC",
+      "slug": "informed-consent",
+      "name": "Informed consent"
+    },
+    {
       "clientNeeds": "PHI.PA",
       "slug": "acute-coronary-syndrome",
       "name": "Acute coronary syndrome"
@@ -31,6 +36,11 @@
       "clientNeeds": "PHI.PPT",
       "slug": "adverse-effects-of-medications",
       "name": "Adverse effects of medications"
+    },
+    {
+      "clientNeeds": "SECE.SIC",
+      "slug": "medication-safety-systems",
+      "name": "Medication safety systems"
     },
     {
       "clientNeeds": "PHI.PA",
@@ -58,6 +68,11 @@
       "name": "Cardiac dysrhythmias"
     },
     {
+      "clientNeeds": "SECE.SIC",
+      "slug": "injury-prevention",
+      "name": "Falls and injury prevention"
+    },
+    {
       "clientNeeds": "HPM",
       "slug": "health-teaching-and-behavior-change",
       "name": "Health teaching and behavior change"
@@ -66,6 +81,11 @@
       "clientNeeds": "PHI.PA",
       "slug": "hypertensive-crisis",
       "name": "Hypertensive crisis"
+    },
+    {
+      "clientNeeds": "SECE.MOC",
+      "slug": "assignment-and-staffing",
+      "name": "Assignment and staffing"
     },
     {
       "clientNeeds": "HPM",
@@ -182,53 +202,49 @@
     {
       "id": "c1a00100-0000-4000-8000-000000000002",
       "itemType": "matrix_mc",
-      "clientNeeds": "PHI.PA",
+      "clientNeeds": "SECE.MOC",
       "bodySystem": "cardiovascular",
       "subtopics": [
-        "acute-coronary-syndrome"
+        "informed-consent"
       ],
       "cjmmSkill": "analyze_cues",
       "difficulty": "difficult",
-      "stem": "For each finding, indicate what it shows about the client's condition.",
+      "stem": "At 1230 the nurse prepares the client for catheterization. For each finding, indicate whether the consent process is in order or the nurse must act before the procedure.",
       "content": {
         "rows": [
           {
             "id": "r1",
-            "text": "Chest pressure at rest for 2 hours"
+            "text": "The client signed the consent at 1000, alert and before any opioid was given"
           },
           {
             "id": "r2",
-            "text": "Troponin rising from 0.9 to 2.4 ng/mL in 2 hours"
+            "text": "The cardiologist explained the risks, including bleeding and kidney injury, and the client restated them"
           },
           {
             "id": "r3",
-            "text": "Creatinine 1.6 mg/dL"
+            "text": "The client now says, \"I'm not sure what they're going to do to my heart\""
           },
           {
             "id": "r4",
-            "text": "Ibuprofen three times daily"
+            "text": "The client's son asks to sign a new form because the client is \"too stressed\""
           },
           {
             "id": "r5",
-            "text": "Chest pain falling from 6 to 4 of 10 after treatment began"
+            "text": "The nurse signed the form as a witness to the client's signature"
           },
           {
             "id": "r6",
-            "text": "Temperature 37.0 C (98.6 F)"
+            "text": "The client received morphine 2 mg IV at 1200"
           }
         ],
         "columns": [
           {
             "id": "c1",
-            "text": "Supports NSTEMI"
+            "text": "In order"
           },
           {
             "id": "c2",
-            "text": "Raises risk from the planned treatment"
-          },
-          {
-            "id": "c3",
-            "text": "Expected and needs no change"
+            "text": "Nurse must act"
           }
         ]
       },
@@ -238,39 +254,33 @@
           "r2": "c1",
           "r3": "c2",
           "r4": "c2",
-          "r5": "c3",
-          "r6": "c3"
+          "r5": "c1",
+          "r6": "c1"
         }
       },
       "rationale": {
-        "correct": "Analysis separates the evidence for the diagnosis (rest pain, rising troponin) from factors that make the treatment itself risky (kidney disease and NSAID use before contrast and antithrombotics).",
+        "correct": "The nurse witnesses consent and checks it is still informed and voluntary; the provider explains risks. New doubt or a family member trying to sign for a capable client means the nurse must act.",
         "perOption": {
-          "r1:c1": "Pain at rest lasting more than 20 minutes is acute coronary syndrome, not stable angina.",
-          "r1:c2": "Pain at rest lasting more than 20 minutes is acute coronary syndrome, not stable angina.",
-          "r1:c3": "Pain at rest lasting more than 20 minutes is acute coronary syndrome, not stable angina.",
-          "r2:c1": "A rise in troponin separates NSTEMI (cell death) from unstable angina (no cell death).",
-          "r2:c2": "A rise in troponin separates NSTEMI (cell death) from unstable angina (no cell death).",
-          "r2:c3": "A rise in troponin separates NSTEMI (cell death) from unstable angina (no cell death).",
-          "r3:c1": "Baseline kidney disease is the strongest risk factor for kidney injury after iodinated contrast.",
-          "r3:c2": "Baseline kidney disease is the strongest risk factor for kidney injury after iodinated contrast.",
-          "r3:c3": "Baseline kidney disease is the strongest risk factor for kidney injury after iodinated contrast.",
-          "r4:c1": "With aspirin, heparin and later a P2Y12 inhibitor, NSAIDs add bleeding risk and reduce kidney blood flow.",
-          "r4:c2": "With aspirin, heparin and later a P2Y12 inhibitor, NSAIDs add bleeding risk and reduce kidney blood flow.",
-          "r4:c3": "With aspirin, heparin and later a P2Y12 inhibitor, NSAIDs add bleeding risk and reduce kidney blood flow.",
-          "r5:c1": "Some relief is expected with treatment; it does not rule out infarction, so the plan continues.",
-          "r5:c2": "Some relief is expected with treatment; it does not rule out infarction, so the plan continues.",
-          "r5:c3": "Some relief is expected with treatment; it does not rule out infarction, so the plan continues.",
-          "r6:c1": "A normal temperature changes nothing in the plan.",
-          "r6:c2": "A normal temperature changes nothing in the plan.",
-          "r6:c3": "A normal temperature changes nothing in the plan."
+          "r1:c1": "Consent signed while alert and before sedating drugs is valid.",
+          "r1:c2": "Consent signed while alert and before sedating drugs is valid.",
+          "r2:c1": "Explaining the procedure and risks is the provider's duty; teach-back shows understanding.",
+          "r2:c2": "Explaining the procedure and risks is the provider's duty; teach-back shows understanding.",
+          "r3:c1": "New doubt means consent may no longer be informed; the nurse stops and tells the cardiologist, who re-explains.",
+          "r3:c2": "New doubt means consent may no longer be informed; the nurse stops and tells the cardiologist, who re-explains.",
+          "r4:c1": "A capable adult consents for themselves; the nurse explains this and does not accept the son's signature.",
+          "r4:c2": "A capable adult consents for themselves; the nurse explains this and does not accept the son's signature.",
+          "r5:c1": "The nurse's role is to witness that the client signed voluntarily.",
+          "r5:c2": "The nurse's role is to witness that the client signed voluntarily.",
+          "r6:c1": "Consent was obtained before the opioid, so it stays valid; the dose is documented for the procedure team.",
+          "r6:c2": "Consent was obtained before the opioid, so it stays valid; the dose is documented for the procedure team."
         },
         "references": [
-          "American Heart Association Guidelines for CPR and Emergency Cardiovascular Care",
-          "Medical-surgical nursing texts (e.g. Lewis; Ignatavicius)",
+          "NCSBN National Guidelines for Nursing Delegation; LaCharity, Prioritization, Delegation & Assignment",
+          "Fundamentals of nursing texts (e.g. Potter & Perry)",
           "Written as part of a full NGN case study to NCLEX-RN difficulty and reviewed by the content team on 20 November 2026."
         ]
       },
-      "educationalObjective": "Analyze cues in a client with NSTEMI and procedure risk factors.",
+      "educationalObjective": "Analyze whether informed consent is valid before a procedure.",
       "caseStudyId": "c1c00100-0000-4000-8000-000000000001",
       "casePosition": 2
     },
@@ -931,53 +941,49 @@
     {
       "id": "c1a00100-0000-4000-8000-000000000008",
       "itemType": "matrix_mc",
-      "clientNeeds": "PHI.PPT",
+      "clientNeeds": "SECE.SIC",
       "bodySystem": "cardiovascular",
       "subtopics": [
-        "adverse-effects-of-medications"
+        "medication-safety-systems"
       ],
       "cjmmSkill": "analyze_cues",
       "difficulty": "difficult",
-      "stem": "For each factor, indicate how it contributes to the client's digoxin toxicity.",
+      "stem": "The nurse reviews how the client came to be toxic. For each factor, indicate whether it contributed to the event.",
       "content": {
         "rows": [
           {
             "id": "r1",
-            "text": "Clarithromycin started 5 days ago"
+            "text": "A walk-in clinic prescribed clarithromycin without a current medication list"
           },
           {
             "id": "r2",
-            "text": "Creatinine 1.9 mg/dL (1.2 last month)"
+            "text": "The antibiotic was filled at a different pharmacy from the heart medicines"
           },
           {
             "id": "r3",
-            "text": "Potassium 2.9 mEq/L"
+            "text": "Furosemide was doubled with no follow-up potassium or creatinine check"
           },
           {
             "id": "r4",
-            "text": "Magnesium 1.4 mg/dL"
+            "text": "The client takes digoxin at the same time each morning"
           },
           {
             "id": "r5",
-            "text": "Carvedilol 12.5 mg twice daily"
+            "text": "The client did not know the early signs of digoxin toxicity"
           },
           {
             "id": "r6",
-            "text": "Sodium 136 mEq/L"
+            "text": "The client keeps medications in the original labeled bottles"
           }
         ],
         "columns": [
           {
             "id": "c1",
-            "text": "Raises the digoxin level"
+            "text": "Contributed"
           },
           {
             "id": "c2",
-            "text": "Makes the heart more sensitive to digoxin"
-          },
-          {
-            "id": "c3",
-            "text": "Does not contribute"
+            "text": "Did not contribute"
           }
         ]
       },
@@ -985,40 +991,35 @@
         "byRow": {
           "r1": "c1",
           "r2": "c1",
-          "r3": "c2",
+          "r3": "c1",
           "r4": "c2",
-          "r5": "c2",
-          "r6": "c3"
+          "r5": "c1",
+          "r6": "c2"
         }
       },
       "rationale": {
-        "correct": "Toxicity comes from a higher level (drug interaction, kidney decline) and a more sensitive heart (low potassium and magnesium, beta blockade).",
+        "correct": "Medication events usually come from system gaps: no shared medication list, several pharmacies, missing laboratory follow-up and incomplete teaching. Reconciliation at every visit closes these gaps.",
         "perOption": {
-          "r1:c1": "Clarithromycin blocks P-glycoprotein and reduces digoxin clearance, so the level rises.",
-          "r1:c2": "Clarithromycin blocks P-glycoprotein and reduces digoxin clearance, so the level rises.",
-          "r1:c3": "Clarithromycin blocks P-glycoprotein and reduces digoxin clearance, so the level rises.",
-          "r2:c1": "Digoxin is cleared by the kidneys; reduced kidney function lets it build up.",
-          "r2:c2": "Digoxin is cleared by the kidneys; reduced kidney function lets it build up.",
-          "r2:c3": "Digoxin is cleared by the kidneys; reduced kidney function lets it build up.",
-          "r3:c1": "Low potassium lets more digoxin bind to the sodium-potassium pump, increasing toxicity at any level.",
-          "r3:c2": "Low potassium lets more digoxin bind to the sodium-potassium pump, increasing toxicity at any level.",
-          "r3:c3": "Low potassium lets more digoxin bind to the sodium-potassium pump, increasing toxicity at any level.",
-          "r4:c1": "Low magnesium also increases the heart's sensitivity and the risk of dysrhythmia.",
-          "r4:c2": "Low magnesium also increases the heart's sensitivity and the risk of dysrhythmia.",
-          "r4:c3": "Low magnesium also increases the heart's sensitivity and the risk of dysrhythmia.",
-          "r5:c1": "A beta blocker adds to digoxin's slowing of AV conduction, so bradycardia and block are more likely.",
-          "r5:c2": "A beta blocker adds to digoxin's slowing of AV conduction, so bradycardia and block are more likely.",
-          "r5:c3": "A beta blocker adds to digoxin's slowing of AV conduction, so bradycardia and block are more likely.",
-          "r6:c1": "A normal sodium level does not affect digoxin.",
-          "r6:c2": "A normal sodium level does not affect digoxin.",
-          "r6:c3": "A normal sodium level does not affect digoxin."
+          "r1:c1": "Without the list, the prescriber could not see the digoxin interaction.",
+          "r1:c2": "Without the list, the prescriber could not see the digoxin interaction.",
+          "r2:c1": "Using two pharmacies defeats the pharmacy's interaction alert.",
+          "r2:c2": "Using two pharmacies defeats the pharmacy's interaction alert.",
+          "r3:c1": "A dose increase of a loop diuretic needs a metabolic panel within about a week.",
+          "r3:c2": "A dose increase of a loop diuretic needs a metabolic panel within about a week.",
+          "r4:c1": "Consistent timing is correct practice.",
+          "r4:c2": "Consistent timing is correct practice.",
+          "r5:c1": "Nausea and visual changes were present for days before admission; teaching would have prompted an earlier call.",
+          "r5:c2": "Nausea and visual changes were present for days before admission; teaching would have prompted an earlier call.",
+          "r6:c1": "This supports safe self-administration.",
+          "r6:c2": "This supports safe self-administration."
         },
         "references": [
           "Nursing pharmacology texts (e.g. Lehne; McCuistion) and the drug's prescribing information",
+          "NCSBN National Guidelines for Nursing Delegation; LaCharity, Prioritization, Delegation & Assignment",
           "Written as part of a full NGN case study to NCLEX-RN difficulty and reviewed by the content team on 20 November 2026."
         ]
       },
-      "educationalObjective": "Analyze the factors behind digoxin toxicity.",
+      "educationalObjective": "Analyze system factors in a medication-related adverse event.",
       "caseStudyId": "c1c00100-0000-4000-8000-000000000002",
       "casePosition": 2
     },
@@ -1697,78 +1698,78 @@
     {
       "id": "c1a00100-0000-4000-8000-000000000015",
       "itemType": "matrix_mc",
-      "clientNeeds": "PHI.PA",
+      "clientNeeds": "SECE.SIC",
       "bodySystem": "cardiovascular",
       "subtopics": [
-        "cardiac-dysrhythmias"
+        "injury-prevention"
       ],
       "cjmmSkill": "prioritize_hypotheses",
       "difficulty": "difficult",
-      "stem": "For each complication, indicate how urgently it threatens the client at this time.",
+      "stem": "The client is starting diltiazem and heparin and has had a fine tremor and weight loss. For each safety risk, indicate its priority for the nurse's plan in the first 24 hours.",
       "content": {
         "rows": [
           {
             "id": "r1",
-            "text": "Falling cardiac output from the rapid rate"
+            "text": "A fall when getting up to the bathroom"
           },
           {
             "id": "r2",
-            "text": "Embolic stroke from an atrial clot"
+            "text": "Bleeding from the heparin infusion"
           },
           {
             "id": "r3",
-            "text": "Thyroid storm"
+            "text": "An embolic stroke while the rate is being controlled"
           },
           {
             "id": "r4",
-            "text": "Acute kidney injury from contrast"
+            "text": "A pressure injury"
+          },
+          {
+            "id": "r5",
+            "text": "Aspiration during meals"
           }
         ],
         "columns": [
           {
             "id": "c1",
-            "text": "Most immediate threat"
+            "text": "High priority"
           },
           {
             "id": "c2",
-            "text": "Important but less urgent"
-          },
-          {
-            "id": "c3",
-            "text": "Unlikely"
+            "text": "Lower priority"
           }
         ]
       },
       "key": {
         "byRow": {
           "r1": "c1",
-          "r2": "c2",
-          "r3": "c2",
-          "r4": "c3"
+          "r2": "c1",
+          "r3": "c1",
+          "r4": "c2",
+          "r5": "c2"
         }
       },
       "rationale": {
-        "correct": "First stabilize output by controlling the rate; stroke prevention and thyroid treatment follow closely.",
+        "correct": "Safety planning ranks the risks the treatment creates (hypotension and falls, bleeding) together with the disease's own risk (stroke).",
         "perOption": {
-          "r1:c1": "At 148/min with dyspnea and borderline pressure, output can fail within hours; rate control comes first.",
-          "r1:c2": "At 148/min with dyspnea and borderline pressure, output can fail within hours; rate control comes first.",
-          "r1:c3": "At 148/min with dyspnea and borderline pressure, output can fail within hours; rate control comes first.",
-          "r2:c1": "High risk over days to weeks; anticoagulation is started now, but the rate is the first danger.",
-          "r2:c2": "High risk over days to weeks; anticoagulation is started now, but the rate is the first danger.",
-          "r2:c3": "High risk over days to weeks; anticoagulation is started now, but the rate is the first danger.",
-          "r3:c1": "The client is thyrotoxic but has no high fever, delirium or vomiting yet; it needs watching.",
-          "r3:c2": "The client is thyrotoxic but has no high fever, delirium or vomiting yet; it needs watching.",
-          "r3:c3": "The client is thyrotoxic but has no high fever, delirium or vomiting yet; it needs watching.",
-          "r4:c1": "No contrast study is planned and creatinine is normal.",
-          "r4:c2": "No contrast study is planned and creatinine is normal.",
-          "r4:c3": "No contrast study is planned and creatinine is normal."
+          "r1:c1": "Calcium channel blockers lower blood pressure; with weakness from thyrotoxicosis, a fall on heparin could cause serious bleeding.",
+          "r1:c2": "Calcium channel blockers lower blood pressure; with weakness from thyrotoxicosis, a fall on heparin could cause serious bleeding.",
+          "r2:c1": "Heparin plus planned oral anticoagulation needs bleeding checks.",
+          "r2:c2": "Heparin plus planned oral anticoagulation needs bleeding checks.",
+          "r3:c1": "AF of more than 48 hours with prior TIA carries a high stroke risk until anticoagulation is therapeutic.",
+          "r3:c2": "AF of more than 48 hours with prior TIA carries a high stroke risk until anticoagulation is therapeutic.",
+          "r4:c1": "The client is mobile and well nourished enough; risk is low over 24 hours.",
+          "r4:c2": "The client is mobile and well nourished enough; risk is low over 24 hours.",
+          "r5:c1": "Nothing suggests a swallowing problem.",
+          "r5:c2": "Nothing suggests a swallowing problem."
         },
         "references": [
-          "American Heart Association Guidelines for CPR and Emergency Cardiovascular Care",
+          "Medical-surgical nursing texts (e.g. Lewis; Ignatavicius)",
+          "Fundamentals of nursing texts (e.g. Potter & Perry)",
           "Written as part of a full NGN case study to NCLEX-RN difficulty and reviewed by the content team on 20 November 2026."
         ]
       },
-      "educationalObjective": "Prioritize hypotheses in AF with a rapid ventricular rate.",
+      "educationalObjective": "Prioritize safety risks during rate control and anticoagulation.",
       "caseStudyId": "c1c00100-0000-4000-8000-000000000003",
       "casePosition": 3
     },
@@ -2315,78 +2316,113 @@
     },
     {
       "id": "c1a00100-0000-4000-8000-000000000021",
-      "itemType": "matrix_mc",
-      "clientNeeds": "PHI.PA",
+      "itemType": "dropdown_cloze",
+      "clientNeeds": "SECE.MOC",
       "bodySystem": "cardiovascular",
       "subtopics": [
-        "hypertensive-crisis"
+        "assignment-and-staffing"
       ],
       "cjmmSkill": "prioritize_hypotheses",
       "difficulty": "difficult",
-      "stem": "For each potential complication, indicate whether the client is at high risk or low risk in the next few hours.",
+      "stem": "The emergency department charge nurse is deciding where to admit the client. Complete the sentences by choosing from the lists of options.",
       "content": {
-        "rows": [
+        "template": "The client should be admitted to {{b1}} because {{b2}}. The client should be assigned to {{b3}}.",
+        "blanks": [
           {
-            "id": "r1",
-            "text": "Hemorrhagic stroke"
+            "id": "b1",
+            "options": [
+              {
+                "id": "a",
+                "text": "the intensive care unit"
+              },
+              {
+                "id": "b",
+                "text": "a medical-surgical unit with telemetry"
+              },
+              {
+                "id": "c",
+                "text": "an observation unit"
+              },
+              {
+                "id": "d",
+                "text": "home with follow-up tomorrow"
+              }
+            ]
           },
           {
-            "id": "r2",
-            "text": "Acute kidney injury progressing"
+            "id": "b2",
+            "options": [
+              {
+                "id": "a",
+                "text": "the nicardipine needs titration every few minutes against arterial line readings"
+              },
+              {
+                "id": "b",
+                "text": "the client has asthma"
+              },
+              {
+                "id": "c",
+                "text": "the client stopped clonidine"
+              },
+              {
+                "id": "d",
+                "text": "the troponin is 0.12 ng/mL"
+              }
+            ]
           },
           {
-            "id": "r3",
-            "text": "Ischemic stroke from lowering pressure too fast"
-          },
-          {
-            "id": "r4",
-            "text": "Hypoglycemia"
-          },
-          {
-            "id": "r5",
-            "text": "Acute pancreatitis"
-          }
-        ],
-        "columns": [
-          {
-            "id": "c1",
-            "text": "High risk now"
-          },
-          {
-            "id": "c2",
-            "text": "Low risk now"
+            "id": "b3",
+            "options": [
+              {
+                "id": "a",
+                "text": "an ICU RN experienced with titrated vasoactive infusions"
+              },
+              {
+                "id": "b",
+                "text": "a float nurse from a medical unit"
+              },
+              {
+                "id": "c",
+                "text": "an LPN supervised by the charge nurse"
+              },
+              {
+                "id": "d",
+                "text": "a newly hired ICU nurse still in orientation"
+              }
+            ]
           }
         ]
       },
       "key": {
-        "byRow": {
-          "r1": "c1",
-          "r2": "c1",
-          "r3": "c1",
-          "r4": "c2",
-          "r5": "c2"
+        "byBlank": {
+          "b1": "a",
+          "b2": "a",
+          "b3": "a"
         }
       },
       "rationale": {
-        "correct": "The dangers come both from the high pressure and from lowering it too fast.",
+        "correct": "Level of care and assignment follow the client's needs: a titrated vasoactive drip with an arterial line goes to the ICU and to an RN competent with it.",
         "perOption": {
-          "r1:c1": "Severe pressure with encephalopathy can lead to intracranial bleeding.",
-          "r1:c2": "Severe pressure with encephalopathy can lead to intracranial bleeding.",
-          "r2:c1": "Creatinine has doubled and is still exposed to severe pressure.",
-          "r2:c2": "Creatinine has doubled and is still exposed to severe pressure.",
-          "r3:c1": "Autoregulation is reset upward; a rapid fall can starve the brain of blood.",
-          "r3:c2": "Autoregulation is reset upward; a rapid fall can starve the brain of blood.",
-          "r4:c1": "Nothing suggests it.",
-          "r4:c2": "Nothing suggests it.",
-          "r5:c1": "Unrelated to this picture.",
-          "r5:c2": "Unrelated to this picture."
+          "b1:a": "A titrated vasoactive infusion with an arterial line and acute organ damage needs ICU monitoring.",
+          "b1:b": "Telemetry does not provide arterial line titration.",
+          "b1:c": "Observation is for clients expected to go home within a day.",
+          "b1:d": "Hypertensive emergency is never managed at home.",
+          "b2:a": "Frequent titration and neurologic checks need a nurse-to-client ratio of 1:1 or 1:2.",
+          "b2:b": "Asthma does not decide the level of care here.",
+          "b2:c": "The cause does not set the level of care.",
+          "b2:d": "One of several factors, but the infusion and monitoring decide it.",
+          "b3:a": "The most complex part of care must go to the most qualified nurse.",
+          "b3:b": "Titration in hypertensive emergency needs ICU competence.",
+          "b3:c": "An unstable client on a titrated infusion needs an RN.",
+          "b3:d": "Without a preceptor, this assignment is unsafe."
         },
         "references": [
+          "NCSBN National Guidelines for Nursing Delegation; LaCharity, Prioritization, Delegation & Assignment",
           "Medical-surgical nursing texts (e.g. Lewis; Ignatavicius)",
           "Written as part of a full NGN case study to NCLEX-RN difficulty and reviewed by the content team on 20 November 2026."
         ]
       },
-      "educationalObjective": "Prioritize risks in hypertensive emergency.",
+      "educationalObjective": "Prioritize the level of care and assignment for a client in hypertensive emergency.",
       "caseStudyId": "c1c00100-0000-4000-8000-000000000004",
       "casePosition": 3
     },

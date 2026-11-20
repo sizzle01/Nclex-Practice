@@ -33,6 +33,11 @@
       "name": "Cardiovascular medications"
     },
     {
+      "clientNeeds": "SECE.SIC",
+      "slug": "latex-and-drug-allergies",
+      "name": "Latex and drug allergies"
+    },
+    {
       "clientNeeds": "PHI.RRP",
       "slug": "cardiovascular-diagnostics-and-monitoring",
       "name": "Cardiovascular diagnostics and monitoring"
@@ -46,6 +51,11 @@
       "clientNeeds": "PHI.PA",
       "slug": "inflammatory-and-valvular-heart-disease",
       "name": "Inflammatory and valvular heart disease"
+    },
+    {
+      "clientNeeds": "SECE.MOC",
+      "slug": "client-rights-and-advocacy",
+      "name": "Client rights and advocacy"
     },
     {
       "clientNeeds": "PHI.PPT",
@@ -1031,90 +1041,90 @@
     {
       "id": "c1a00103-0000-4000-8000-000000000010",
       "itemType": "matrix_mc",
-      "clientNeeds": "PHI.PA",
+      "clientNeeds": "SECE.SIC",
       "bodySystem": "cardiovascular",
       "subtopics": [
-        "shock-and-sepsis"
+        "latex-and-drug-allergies"
       ],
       "cjmmSkill": "evaluate_outcomes",
       "difficulty": "difficult",
-      "stem": "Review the 2000 findings. For each finding, indicate whether it shows improvement or needs follow-up.",
+      "stem": "The client has recovered and is being observed overnight. For each safety measure, indicate whether it is complete or needs correction.",
       "content": {
         "rows": [
           {
             "id": "r1",
-            "text": "Blood pressure 118/70 mm Hg off the epinephrine infusion"
+            "text": "The allergy list reads \"ceftriaxone: anaphylaxis (airway swelling, hypotension)\""
           },
           {
             "id": "r2",
-            "text": "Voice clear, no stridor"
+            "text": "The red allergy band lists penicillin only"
           },
           {
             "id": "r3",
-            "text": "Hives fading"
+            "text": "The pharmacy profile is updated and the order set flags cephalosporins"
           },
           {
             "id": "r4",
-            "text": "The client asks to go home tonight"
+            "text": "The client is to be discharged at 2100, 3 hours after the epinephrine infusion was stopped"
           },
           {
             "id": "r5",
-            "text": "The allergy list still reads \"penicillin: rash\""
+            "text": "The client has a prescription for two epinephrine auto-injectors and practiced with a trainer"
           },
           {
             "id": "r6",
-            "text": "SpO2 97% on room air"
+            "text": "The client was told to take an antihistamine first and use the auto-injector if it does not work"
           }
         ],
         "columns": [
           {
             "id": "c1",
-            "text": "Shows improvement"
+            "text": "Complete"
           },
           {
             "id": "c2",
-            "text": "Needs follow-up"
+            "text": "Needs correction"
           }
         ]
       },
       "key": {
         "byRow": {
           "r1": "c1",
-          "r2": "c1",
+          "r2": "c2",
           "r3": "c1",
           "r4": "c2",
-          "r5": "c2",
-          "r6": "c1"
+          "r5": "c1",
+          "r6": "c2"
         }
       },
       "rationale": {
-        "correct": "Vital signs and airway show recovery. Safety still requires observation for a biphasic reaction and an updated allergy record.",
+        "correct": "Safety after anaphylaxis means a complete allergy record, matching band and pharmacy alerts, enough observation time, and correct auto-injector teaching.",
         "perOption": {
-          "r1:c1": "Shock has resolved.",
-          "r1:c2": "Shock has resolved.",
-          "r2:c1": "Airway swelling has settled.",
-          "r2:c2": "Airway swelling has settled.",
-          "r3:c1": "Skin signs resolving.",
-          "r3:c2": "Skin signs resolving.",
-          "r4:c1": "A biphasic reaction can recur hours later; observation is needed, often 12 to 24 hours after severe anaphylaxis.",
-          "r4:c2": "A biphasic reaction can recur hours later; observation is needed, often 12 to 24 hours after severe anaphylaxis.",
-          "r5:c1": "Ceftriaxone must be added as a severe reaction, with the details.",
-          "r5:c2": "Ceftriaxone must be added as a severe reaction, with the details.",
-          "r6:c1": "Oxygenation has recovered.",
-          "r6:c2": "Oxygenation has recovered."
+          "r1:c1": "The drug and the type of reaction are recorded so future prescribers can judge risk.",
+          "r1:c2": "The drug and the type of reaction are recorded so future prescribers can judge risk.",
+          "r2:c1": "The band must match the updated allergy list.",
+          "r2:c2": "The band must match the updated allergy list.",
+          "r3:c1": "A system alert prevents re-exposure.",
+          "r3:c2": "A system alert prevents re-exposure.",
+          "r4:c1": "Severe anaphylaxis needing an epinephrine infusion calls for longer observation for a biphasic reaction.",
+          "r4:c2": "Severe anaphylaxis needing an epinephrine infusion calls for longer observation for a biphasic reaction.",
+          "r5:c1": "The client can treat a future reaction at once.",
+          "r5:c2": "The client can treat a future reaction at once.",
+          "r6:c1": "Epinephrine is given first for any signs of anaphylaxis; delay increases deaths.",
+          "r6:c2": "Epinephrine is given first for any signs of anaphylaxis; delay increases deaths."
         },
         "references": [
-          "Medical-surgical nursing texts (e.g. Lewis; Ignatavicius)",
           "Nursing pharmacology texts (e.g. Lehne; McCuistion) and the drug's prescribing information",
+          "Fundamentals of nursing texts (e.g. Potter & Perry)",
           "Written as part of a full NGN case study to NCLEX-RN difficulty and reviewed by the content team on 20 November 2026."
         ]
       },
-      "educationalObjective": "Evaluate outcomes after anaphylaxis.",
+      "educationalObjective": "Evaluate allergy safety measures after anaphylaxis.",
       "exhibits": [
         {
           "id": "ana-2000",
           "kind": "flowsheet",
-          "title": "2000",
+          "title": "Safety checklist, 2000",
           "table": {
             "columns": [
               "2000"
@@ -1123,37 +1133,31 @@
               {
                 "label": "Blood pressure",
                 "cells": [
-                  "118/70 mm Hg (epinephrine stopped at 1800)"
-                ]
-              },
-              {
-                "label": "Airway",
-                "cells": [
-                  "Voice clear, no stridor"
-                ]
-              },
-              {
-                "label": "Skin",
-                "cells": [
-                  "Hives fading"
-                ]
-              },
-              {
-                "label": "SpO2",
-                "cells": [
-                  "97% on room air"
-                ]
-              },
-              {
-                "label": "Client request",
-                "cells": [
-                  "Wants to go home tonight"
+                  "118/70 mm Hg; epinephrine infusion stopped at 1800"
                 ]
               },
               {
                 "label": "Allergy list",
                 "cells": [
-                  "Penicillin: rash"
+                  "Updated"
+                ]
+              },
+              {
+                "label": "Allergy band",
+                "cells": [
+                  "Penicillin"
+                ]
+              },
+              {
+                "label": "Planned discharge",
+                "cells": [
+                  "2100"
+                ]
+              },
+              {
+                "label": "Teaching",
+                "cells": [
+                  "Epinephrine auto-injector practice done"
                 ]
               }
             ]
@@ -1409,14 +1413,14 @@
     {
       "id": "c1a00103-0000-4000-8000-000000000013",
       "itemType": "matrix_mc",
-      "clientNeeds": "PHI.RRP",
+      "clientNeeds": "SECE.MOC",
       "bodySystem": "cardiovascular",
       "subtopics": [
-        "postoperative-care"
+        "prioritizing-client-care"
       ],
       "cjmmSkill": "prioritize_hypotheses",
       "difficulty": "difficult",
-      "stem": "For each problem, indicate its priority.",
+      "stem": "At 1800 the nurse has the following issues. For each, indicate how the nurse should prioritize it.",
       "content": {
         "rows": [
           {
@@ -1425,25 +1429,33 @@
           },
           {
             "id": "r2",
-            "text": "Left foot ischemia"
+            "text": "Left foot mottled with absent pulses"
           },
           {
             "id": "r3",
-            "text": "Damped arterial line"
+            "text": "Damped arterial line waveform"
           },
           {
             "id": "r4",
-            "text": "Low CVP with low urine output"
+            "text": "Low CVP with falling urine output"
+          },
+          {
+            "id": "r5",
+            "text": "The client's family asking for an update in the waiting room"
           }
         ],
         "columns": [
           {
             "id": "c1",
-            "text": "Urgent: report to the surgeon now"
+            "text": "Report to the surgeon now"
           },
           {
             "id": "c2",
-            "text": "Fix at the bedside, then continue to monitor"
+            "text": "Handle at the bedside now"
+          },
+          {
+            "id": "c3",
+            "text": "Can wait"
           }
         ]
       },
@@ -1452,27 +1464,36 @@
           "r1": "c1",
           "r2": "c1",
           "r3": "c2",
-          "r4": "c1"
+          "r4": "c1",
+          "r5": "c3"
         }
       },
       "rationale": {
-        "correct": "Limb and bowel ischemia and low perfusion are reported now; the damped line is fixed at the bedside.",
+        "correct": "The nurse reports threats to organs and limbs at once, fixes equipment problems at the bedside, and defers non-clinical requests safely.",
         "perOption": {
           "r1:c1": "Bowel ischemia can progress to necrosis and needs urgent evaluation.",
           "r1:c2": "Bowel ischemia can progress to necrosis and needs urgent evaluation.",
+          "r1:c3": "Bowel ischemia can progress to necrosis and needs urgent evaluation.",
           "r2:c1": "A threatened limb needs the surgeon now.",
           "r2:c2": "A threatened limb needs the surgeon now.",
-          "r3:c1": "The nurse troubleshoots the line; the cuff confirms the pressure is safe.",
-          "r3:c2": "The nurse troubleshoots the line; the cuff confirms the pressure is safe.",
+          "r2:c3": "A threatened limb needs the surgeon now.",
+          "r3:c1": "The nurse troubleshoots the line now; the cuff confirms the pressure is safe meanwhile.",
+          "r3:c2": "The nurse troubleshoots the line now; the cuff confirms the pressure is safe meanwhile.",
+          "r3:c3": "The nurse troubleshoots the line now; the cuff confirms the pressure is safe meanwhile.",
           "r4:c1": "Needs a fluid plan and may signal kidney injury from the clamp.",
-          "r4:c2": "Needs a fluid plan and may signal kidney injury from the clamp."
+          "r4:c2": "Needs a fluid plan and may signal kidney injury from the clamp.",
+          "r4:c3": "Needs a fluid plan and may signal kidney injury from the clamp.",
+          "r5:c1": "Important, but after the urgent clinical issues; the charge nurse can tell them when the nurse will come.",
+          "r5:c2": "Important, but after the urgent clinical issues; the charge nurse can tell them when the nurse will come.",
+          "r5:c3": "Important, but after the urgent clinical issues; the charge nurse can tell them when the nurse will come."
         },
         "references": [
+          "NCSBN National Guidelines for Nursing Delegation; LaCharity, Prioritization, Delegation & Assignment",
           "Medical-surgical nursing texts (e.g. Lewis; Ignatavicius)",
           "Written as part of a full NGN case study to NCLEX-RN difficulty and reviewed by the content team on 20 November 2026."
         ]
       },
-      "educationalObjective": "Prioritize problems after AAA repair.",
+      "educationalObjective": "Prioritize competing problems after AAA repair.",
       "caseStudyId": "c1c00103-0000-4000-8000-000000000002",
       "casePosition": 3
     },
@@ -1990,35 +2011,35 @@
     {
       "id": "c1a00103-0000-4000-8000-000000000019",
       "itemType": "dropdown_cloze",
-      "clientNeeds": "PHI.PA",
+      "clientNeeds": "SECE.MOC",
       "bodySystem": "cardiovascular",
       "subtopics": [
-        "inflammatory-and-valvular-heart-disease"
+        "client-rights-and-advocacy"
       ],
       "cjmmSkill": "prioritize_hypotheses",
       "difficulty": "difficult",
-      "stem": "Complete the sentences by choosing from the lists of options.",
+      "stem": "On day 2 the client is sweating, yawning and restless and says, \"I'm leaving. I can't do six weeks in here.\" Complete the sentences by choosing from the lists of options.",
       "content": {
-        "template": "The client most likely has {{b1}} endocarditis with {{b2}}. The most likely organism is {{b3}}.",
+        "template": "The most likely reason for wanting to leave is {{b1}}. The nurse's first priority is to {{b2}}. If the client still chooses to leave, the client {{b3}}.",
         "blanks": [
           {
             "id": "b1",
             "options": [
               {
                 "id": "a",
-                "text": "right-sided (tricuspid valve)"
+                "text": "untreated opioid withdrawal"
               },
               {
                 "id": "b",
-                "text": "left-sided (mitral valve)"
+                "text": "a reaction to vancomycin"
               },
               {
                 "id": "c",
-                "text": "culture-negative"
+                "text": "worsening endocarditis"
               },
               {
                 "id": "d",
-                "text": "prosthetic valve"
+                "text": "a wish to avoid the cost of care"
               }
             ]
           },
@@ -2027,19 +2048,19 @@
             "options": [
               {
                 "id": "a",
-                "text": "septic emboli to the lungs"
+                "text": "tell the provider so withdrawal can be treated, for example with buprenorphine"
               },
               {
                 "id": "b",
-                "text": "pulmonary edema"
+                "text": "call security to keep the client on the unit"
               },
               {
                 "id": "c",
-                "text": "pneumothorax"
+                "text": "explain that leaving will mean losing insurance coverage"
               },
               {
                 "id": "d",
-                "text": "tuberculosis"
+                "text": "remove the IV so the client can leave quickly"
               }
             ]
           },
@@ -2048,19 +2069,19 @@
             "options": [
               {
                 "id": "a",
-                "text": "Staphylococcus aureus"
+                "text": "has the right to leave if able to make decisions, after being told the risks"
               },
               {
                 "id": "b",
-                "text": "Streptococcus viridans"
+                "text": "must stay because the infection is life-threatening"
               },
               {
                 "id": "c",
-                "text": "Candida"
+                "text": "cannot be given any follow-up or prescriptions"
               },
               {
                 "id": "d",
-                "text": "Escherichia coli"
+                "text": "must sign the form or the nurse cannot let them go"
               }
             ]
           }
@@ -2074,27 +2095,28 @@
         }
       },
       "rationale": {
-        "correct": "Right-sided S. aureus endocarditis with septic lung emboli.",
+        "correct": "Look for the treatable reason behind a wish to leave, such as withdrawal, and respect the right of a capable client to decide.",
         "perOption": {
-          "b1:a": "Injection drug use seeds the tricuspid valve first; inspiration makes the murmur louder.",
-          "b1:b": "Left-sided emboli go to the brain, kidneys and limbs, not the lungs.",
-          "b1:c": "Cultures are not yet back.",
-          "b1:d": "No prosthetic valve.",
-          "b2:a": "Lung nodules with pleuritic pain.",
-          "b2:b": "Nodules are not edema.",
-          "b2:c": "CT shows nodules.",
-          "b2:d": "Not supported by the picture.",
-          "b3:a": "The most common cause in people who inject drugs, often MRSA.",
-          "b3:b": "Linked to dental sources and left-sided disease.",
-          "b3:c": "Possible but less common.",
-          "b3:d": "Rare in endocarditis."
+          "b1:a": "Sweating, yawning and restlessness are withdrawal signs, a common reason people who inject drugs leave.",
+          "b1:b": "These are not drug-reaction signs.",
+          "b1:c": "Possible, but the picture is withdrawal.",
+          "b1:d": "Not suggested by the data.",
+          "b2:a": "Treating withdrawal removes the main reason for leaving and is the advocacy action.",
+          "b2:b": "A capable adult cannot be held against their will.",
+          "b2:c": "Untrue and coercive; leaving against advice does not void insurance.",
+          "b2:d": "Premature; the priority is to address the cause.",
+          "b3:a": "Capable adults may refuse care; the team explains risks, offers alternatives and documents.",
+          "b3:b": "A capable client may refuse even life-saving care.",
+          "b3:c": "Harm reduction includes follow-up and alternatives.",
+          "b3:d": "A client may refuse to sign; the nurse documents it."
         },
         "references": [
-          "Medical-surgical nursing texts (e.g. Lewis; Ignatavicius)",
+          "NCSBN National Guidelines for Nursing Delegation; LaCharity, Prioritization, Delegation & Assignment",
+          "Psychiatric-mental health nursing texts (e.g. Varcarolis; Halter)",
           "Written as part of a full NGN case study to NCLEX-RN difficulty and reviewed by the content team on 20 November 2026."
         ]
       },
-      "educationalObjective": "Prioritize the diagnosis in endocarditis.",
+      "educationalObjective": "Prioritize advocacy when a client wants to leave against medical advice.",
       "caseStudyId": "c1c00103-0000-4000-8000-000000000003",
       "casePosition": 3
     },

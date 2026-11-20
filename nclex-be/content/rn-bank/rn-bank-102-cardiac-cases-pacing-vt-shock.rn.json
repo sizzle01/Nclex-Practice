@@ -13,6 +13,11 @@
       "name": "Cardiovascular diagnostics and monitoring"
     },
     {
+      "clientNeeds": "SECE.MOC",
+      "slug": "prioritizing-client-care",
+      "name": "Prioritizing client care"
+    },
+    {
       "clientNeeds": "PHI.PPT",
       "slug": "cardiovascular-medications",
       "name": "Cardiovascular medications"
@@ -33,9 +38,19 @@
       "name": "Health teaching and behavior change"
     },
     {
+      "clientNeeds": "SECE.MOC",
+      "slug": "advance-directives",
+      "name": "Advance directives and end-of-life decisions"
+    },
+    {
       "clientNeeds": "PHI.PA",
       "slug": "basic-life-support",
       "name": "Basic life support"
+    },
+    {
+      "clientNeeds": "SECE.SIC",
+      "slug": "healthcare-associated-infection-prevention",
+      "name": "Healthcare-associated infection prevention"
     },
     {
       "clientNeeds": "PHI.PA",
@@ -296,112 +311,86 @@
     },
     {
       "id": "c1a00102-0000-4000-8000-000000000003",
-      "itemType": "dropdown_cloze",
-      "clientNeeds": "PHI.PA",
+      "itemType": "matrix_mc",
+      "clientNeeds": "SECE.MOC",
       "bodySystem": "cardiovascular",
       "subtopics": [
-        "cardiac-dysrhythmias"
+        "prioritizing-client-care"
       ],
       "cjmmSkill": "prioritize_hypotheses",
       "difficulty": "difficult",
-      "stem": "Complete the sentences by choosing from the lists of options.",
+      "stem": "The nurse has several tasks for this client. For each task, indicate when it should happen.",
       "content": {
-        "template": "The priority is to {{b1}}. Atropine is {{b2}} because {{b3}}.",
-        "blanks": [
+        "rows": [
           {
-            "id": "b1",
-            "options": [
-              {
-                "id": "a",
-                "text": "raise the heart rate to restore perfusion"
-              },
-              {
-                "id": "b",
-                "text": "lower the potassium"
-              },
-              {
-                "id": "c",
-                "text": "start anticoagulation"
-              },
-              {
-                "id": "d",
-                "text": "obtain a stat echocardiogram"
-              }
-            ]
+            "id": "r1",
+            "text": "Apply the transcutaneous pacing pads and connect the monitor"
           },
           {
-            "id": "b2",
-            "options": [
-              {
-                "id": "a",
-                "text": "unlikely to work"
-              },
-              {
-                "id": "b",
-                "text": "contraindicated"
-              },
-              {
-                "id": "c",
-                "text": "the definitive treatment"
-              },
-              {
-                "id": "d",
-                "text": "likely to cause hypertension"
-              }
-            ]
+            "id": "r2",
+            "text": "Notify the provider of the rhythm, blood pressure and drug combination"
           },
           {
-            "id": "b3",
-            "options": [
-              {
-                "id": "a",
-                "text": "the block is below the AV node"
-              },
-              {
-                "id": "b",
-                "text": "the client is older than 75"
-              },
-              {
-                "id": "c",
-                "text": "the client takes lisinopril"
-              },
-              {
-                "id": "d",
-                "text": "the blood pressure is too low"
-              }
-            ]
+            "id": "r3",
+            "text": "Complete the full medication reconciliation with the client's pharmacy"
+          },
+          {
+            "id": "r4",
+            "text": "Call the provider who prescribed the diltiazem"
+          },
+          {
+            "id": "r5",
+            "text": "Place the client flat and give oxygen if SpO2 falls below 90%"
+          },
+          {
+            "id": "r6",
+            "text": "Teach the client about the signs of a slow heart rate"
+          }
+        ],
+        "columns": [
+          {
+            "id": "c1",
+            "text": "Now"
+          },
+          {
+            "id": "c2",
+            "text": "After the client is stable"
           }
         ]
       },
       "key": {
-        "byBlank": {
-          "b1": "a",
-          "b2": "a",
-          "b3": "a"
+        "byRow": {
+          "r1": "c1",
+          "r2": "c1",
+          "r3": "c2",
+          "r4": "c2",
+          "r5": "c1",
+          "r6": "c2"
         }
       },
       "rationale": {
-        "correct": "In unstable complete heart block with a wide escape, the priority is to restore the rate, usually with transcutaneous pacing, because atropine rarely works.",
+        "correct": "First restore the rate and perfusion and tell the provider; reconciliation, communication with other prescribers and teaching follow.",
         "perOption": {
-          "b1:a": "Hypotension and altered mental status need a faster rate now.",
-          "b1:b": "Potassium is only mildly raised.",
-          "b1:c": "Not the problem.",
-          "b1:d": "This would delay treatment.",
-          "b2:a": "Atropine acts on the SA and AV nodes.",
-          "b2:b": "It may be tried, but it should not delay pacing.",
-          "b2:c": "Pacing is needed.",
-          "b2:d": "That is not the concern.",
-          "b3:a": "A wide escape rhythm means the block is below the node, where atropine has no effect, so pacing is prepared at once.",
-          "b3:b": "Age does not change its action.",
-          "b3:c": "Not relevant.",
-          "b3:d": "Atropine's limitation is the level of the block."
+          "r1:c1": "Unstable bradycardia with a wide escape rhythm needs pacing ready at once.",
+          "r1:c2": "Unstable bradycardia with a wide escape rhythm needs pacing ready at once.",
+          "r2:c1": "The provider must know now to order pacing, drugs and holds.",
+          "r2:c2": "The provider must know now to order pacing, drugs and holds.",
+          "r3:c1": "Important to prevent a repeat, but not before the rate is restored.",
+          "r3:c2": "Important to prevent a repeat, but not before the rate is restored.",
+          "r4:c1": "Communication about the drug interaction follows stabilization.",
+          "r4:c2": "Communication about the drug interaction follows stabilization.",
+          "r5:c1": "Supports perfusion and oxygenation now.",
+          "r5:c2": "Supports perfusion and oxygenation now.",
+          "r6:c1": "Teaching waits until the client is alert and stable.",
+          "r6:c2": "Teaching waits until the client is alert and stable."
         },
         "references": [
+          "NCSBN National Guidelines for Nursing Delegation; LaCharity, Prioritization, Delegation & Assignment",
           "American Heart Association Guidelines for CPR and Emergency Cardiovascular Care",
           "Written as part of a full NGN case study to NCLEX-RN difficulty and reviewed by the content team on 20 November 2026."
         ]
       },
-      "educationalObjective": "Prioritize treatment of unstable complete heart block.",
+      "educationalObjective": "Prioritize nursing actions in unstable bradycardia.",
       "caseStudyId": "c1c00102-0000-4000-8000-000000000001",
       "casePosition": 3
     },
@@ -1522,71 +1511,112 @@
     },
     {
       "id": "c1a00102-0000-4000-8000-000000000015",
-      "itemType": "matrix_mc",
-      "clientNeeds": "PHI.PA",
+      "itemType": "dropdown_cloze",
+      "clientNeeds": "SECE.MOC",
       "bodySystem": "cardiovascular",
       "subtopics": [
-        "cardiac-dysrhythmias"
+        "advance-directives"
       ],
       "cjmmSkill": "prioritize_hypotheses",
       "difficulty": "difficult",
-      "stem": "For each complication, indicate whether it is the most immediate threat or a lesser threat now.",
+      "stem": "After the shocks the client says, \"If my heart does this again, I don't want that thing to shock me. Turn it off.\" Complete the sentences by choosing from the lists of options.",
       "content": {
-        "rows": [
+        "template": "The client's request is {{b1}}. The nurse's priority now is to {{b2}}, and until a decision is made the nurse should {{b3}}.",
+        "blanks": [
           {
-            "id": "r1",
-            "text": "Degeneration of VT to ventricular fibrillation or pulseless VT"
+            "id": "b1",
+            "options": [
+              {
+                "id": "a",
+                "text": "a valid wish that needs a goals-of-care discussion"
+              },
+              {
+                "id": "b",
+                "text": "a sign of confusion that can be ignored"
+              },
+              {
+                "id": "c",
+                "text": "something the nurse can carry out with a magnet"
+              },
+              {
+                "id": "d",
+                "text": "illegal for the team to act on"
+              }
+            ]
           },
           {
-            "id": "r2",
-            "text": "Acute heart failure from the fast rate"
+            "id": "b2",
+            "options": [
+              {
+                "id": "a",
+                "text": "tell the provider and ask for a goals-of-care conversation"
+              },
+              {
+                "id": "b",
+                "text": "explain that the ICD must stay on"
+              },
+              {
+                "id": "c",
+                "text": "ask the family to persuade the client"
+              },
+              {
+                "id": "d",
+                "text": "document the request and take no other action"
+              }
+            ]
           },
           {
-            "id": "r3",
-            "text": "Psychological distress from the shocks"
-          },
-          {
-            "id": "r4",
-            "text": "Kidney injury from the creatinine of 1.4"
-          }
-        ],
-        "columns": [
-          {
-            "id": "c1",
-            "text": "Most immediate threat"
-          },
-          {
-            "id": "c2",
-            "text": "Lesser threat now"
+            "id": "b3",
+            "options": [
+              {
+                "id": "a",
+                "text": "continue current treatment and the ICD as ordered"
+              },
+              {
+                "id": "b",
+                "text": "place a magnet over the device"
+              },
+              {
+                "id": "c",
+                "text": "remove the defibrillator pads"
+              },
+              {
+                "id": "d",
+                "text": "change the code status in the chart"
+              }
+            ]
           }
         ]
       },
       "key": {
-        "byRow": {
-          "r1": "c1",
-          "r2": "c1",
-          "r3": "c2",
-          "r4": "c2"
+        "byBlank": {
+          "b1": "a",
+          "b2": "a",
+          "b3": "a"
         }
       },
       "rationale": {
-        "correct": "The immediate threats are collapse into a pulseless rhythm and acute pump failure.",
+        "correct": "A capable client's request to deactivate an ICD is respected through a goals-of-care discussion; until then the current orders stand.",
         "perOption": {
-          "r1:c1": "With an ejection fraction of 20% and recurrent VT, collapse can happen at any moment.",
-          "r1:c2": "With an ejection fraction of 20% and recurrent VT, collapse can happen at any moment.",
-          "r2:c1": "A weak ventricle tolerates VT poorly and can fail quickly.",
-          "r2:c2": "A weak ventricle tolerates VT poorly and can fail quickly.",
-          "r3:c1": "Real and important, but after rhythm control.",
-          "r3:c2": "Real and important, but after rhythm control.",
-          "r4:c1": "A mild rise that is monitored.",
-          "r4:c2": "A mild rise that is monitored."
+          "b1:a": "A capable client may refuse a treatment, including an ICD; the decision needs informed discussion.",
+          "b1:b": "The client is alert and oriented.",
+          "b1:c": "Deactivation needs a provider order and informed consent.",
+          "b1:d": "Deactivating an ICD at a client's request is legal and ethical.",
+          "b2:a": "The provider and team discuss benefits, burdens and alternatives, such as reprogramming.",
+          "b2:b": "This overrides the client's autonomy.",
+          "b2:c": "The decision is the client's.",
+          "b2:d": "Documentation alone does not respect the request.",
+          "b3:a": "Care continues as ordered until the client and provider make a decision and it is documented.",
+          "b3:b": "Not without an order.",
+          "b3:c": "Treatment continues as ordered until a decision is made.",
+          "b3:d": "Code status changes need the provider and the client's decision."
         },
         "references": [
-          "American Heart Association Guidelines for CPR and Emergency Cardiovascular Care",
+          "NCSBN National Guidelines for Nursing Delegation; LaCharity, Prioritization, Delegation & Assignment",
           "Written as part of a full NGN case study to NCLEX-RN difficulty and reviewed by the content team on 20 November 2026."
         ]
       },
-      "educationalObjective": "Prioritize hypotheses in VT with a weak ventricle.",
+      "educationalObjective": "Prioritize the nurse's response to a request to deactivate an ICD.",
       "caseStudyId": "c1c00102-0000-4000-8000-000000000003",
       "casePosition": 3
     },
@@ -2047,170 +2077,85 @@
     },
     {
       "id": "c1a00102-0000-4000-8000-000000000020",
-      "itemType": "dropdown_table",
-      "clientNeeds": "PHI.RRP",
+      "itemType": "matrix_mc",
+      "clientNeeds": "SECE.SIC",
       "bodySystem": "cardiovascular",
       "subtopics": [
-        "cardiovascular-diagnostics-and-monitoring"
+        "healthcare-associated-infection-prevention"
       ],
       "cjmmSkill": "analyze_cues",
       "difficulty": "difficult",
-      "stem": "For each hemodynamic pattern, choose the type of shock it fits.",
+      "stem": "The client has a pulmonary artery catheter through a right internal jugular introducer. For each observation of line care, indicate whether it meets the infection prevention bundle or needs correction.",
       "content": {
-        "columns": [
-          "Wedge pressure",
-          "Cardiac index",
-          "SVR",
-          "Type of shock"
-        ],
         "rows": [
           {
             "id": "r1",
-            "cells": [
-              {
-                "text": "High"
-              },
-              {
-                "text": "Low"
-              },
-              {
-                "text": "High"
-              },
-              {
-                "blankId": "b1"
-              }
-            ]
+            "text": "The hub is scrubbed with chlorhexidine for 15 seconds and allowed to dry before access"
           },
           {
             "id": "r2",
-            "cells": [
-              {
-                "text": "Low"
-              },
-              {
-                "text": "Low"
-              },
-              {
-                "text": "High"
-              },
-              {
-                "blankId": "b2"
-              }
-            ]
+            "text": "The transparent dressing is dated 9 days ago and is intact"
           },
           {
             "id": "r3",
-            "cells": [
-              {
-                "text": "Low or normal"
-              },
-              {
-                "text": "High"
-              },
-              {
-                "text": "Low"
-              },
-              {
-                "blankId": "b3"
-              }
-            ]
+            "text": "The nurse wears clean gloves only to change the dressing"
+          },
+          {
+            "id": "r4",
+            "text": "The team reviews daily whether the line is still needed"
+          },
+          {
+            "id": "r5",
+            "text": "A chlorhexidine-impregnated sponge is at the insertion site"
+          },
+          {
+            "id": "r6",
+            "text": "The introducer is used for a blood draw after the PA reading without a scrub"
           }
         ],
-        "blanks": [
+        "columns": [
           {
-            "id": "b1",
-            "options": [
-              {
-                "id": "a",
-                "text": "Cardiogenic"
-              },
-              {
-                "id": "b",
-                "text": "Hypovolemic"
-              },
-              {
-                "id": "c",
-                "text": "Septic (early)"
-              },
-              {
-                "id": "d",
-                "text": "Neurogenic"
-              }
-            ]
+            "id": "c1",
+            "text": "Meets the bundle"
           },
           {
-            "id": "b2",
-            "options": [
-              {
-                "id": "a",
-                "text": "Hypovolemic"
-              },
-              {
-                "id": "b",
-                "text": "Cardiogenic"
-              },
-              {
-                "id": "c",
-                "text": "Septic (early)"
-              },
-              {
-                "id": "d",
-                "text": "Anaphylactic"
-              }
-            ]
-          },
-          {
-            "id": "b3",
-            "options": [
-              {
-                "id": "a",
-                "text": "Septic (early)"
-              },
-              {
-                "id": "b",
-                "text": "Cardiogenic"
-              },
-              {
-                "id": "c",
-                "text": "Hypovolemic"
-              },
-              {
-                "id": "d",
-                "text": "Obstructive"
-              }
-            ]
+            "id": "c2",
+            "text": "Needs correction"
           }
         ]
       },
       "key": {
-        "byBlank": {
-          "b1": "a",
-          "b2": "a",
-          "b3": "a"
+        "byRow": {
+          "r1": "c1",
+          "r2": "c2",
+          "r3": "c2",
+          "r4": "c1",
+          "r5": "c1",
+          "r6": "c2"
         }
       },
       "rationale": {
-        "correct": "Wedge pressure, cardiac index and SVR together separate cardiogenic, hypovolemic and distributive shock.",
+        "correct": "Central line bundles rely on hub scrubbing, sterile dressing changes on time, chlorhexidine at the site and daily review of need.",
         "perOption": {
-          "b1:a": "The pump fails, so pressure backs up and the vessels constrict.",
-          "b1:b": "Hypovolemia has low filling pressures.",
-          "b1:c": "Septic shock has low SVR.",
-          "b1:d": "Neurogenic shock has low SVR and bradycardia.",
-          "b2:a": "Low volume lowers filling pressure and output, with compensatory vasoconstriction.",
-          "b2:b": "Wedge pressure is high in cardiogenic shock.",
-          "b2:c": "SVR is low in sepsis.",
-          "b2:d": "Anaphylaxis lowers SVR.",
-          "b3:a": "Vasodilation lowers SVR, and output rises to compensate.",
-          "b3:b": "Output is low in cardiogenic shock.",
-          "b3:c": "SVR is high in hypovolemia.",
-          "b3:d": "Obstruction lowers output."
+          "r1:c1": "Scrubbing the hub prevents bacteria entering the line.",
+          "r1:c2": "Scrubbing the hub prevents bacteria entering the line.",
+          "r2:c1": "Transparent dressings are changed at least every 7 days, or sooner if loose or soiled.",
+          "r2:c2": "Transparent dressings are changed at least every 7 days, or sooner if loose or soiled.",
+          "r3:c1": "Dressing changes use sterile technique.",
+          "r3:c2": "Dressing changes use sterile technique.",
+          "r4:c1": "Removing unneeded lines prevents infection.",
+          "r4:c2": "Removing unneeded lines prevents infection.",
+          "r5:c1": "This reduces bloodstream infection.",
+          "r5:c2": "This reduces bloodstream infection.",
+          "r6:c1": "Every access needs a hub scrub.",
+          "r6:c2": "Every access needs a hub scrub."
         },
         "references": [
-          "Medical-surgical nursing texts (e.g. Lewis; Ignatavicius)",
+          "CDC infection control and isolation precautions guidance",
           "Written as part of a full NGN case study to NCLEX-RN difficulty and reviewed by the content team on 20 November 2026."
         ]
       },
-      "educationalObjective": "Analyze hemodynamic profiles of shock.",
+      "educationalObjective": "Analyze central line care against the infection prevention bundle.",
       "caseStudyId": "c1c00102-0000-4000-8000-000000000004",
       "casePosition": 2
     },

@@ -8,14 +8,14 @@ Written by `python3 -I build_all.py` (coverage.py); do not edit by hand.
 
 | Category | Test plan | Target | Have | To write | Next chunk |
 |---|---|---|---|---|---|
-| Management of Care | 18% | 900 | 323 | 577 | 19 |
-| Safety and Infection Prevention and Control | 13% | 650 | 225 | 425 | 14 |
+| Management of Care | 18% | 900 | 331 | 569 | 19 |
+| Safety and Infection Prevention and Control | 13% | 650 | 231 | 419 | 14 |
 | Health Promotion and Maintenance | 9% | 450 | 157 | 293 | 10 |
 | Psychosocial Integrity | 9% | 450 | 147 | 303 | 10 |
 | Basic Care and Comfort | 9% | 450 | 152 | 298 | 10 |
-| Pharmacological and Parenteral Therapies | 16% | 800 | 335 | 465 | 16 |
-| Reduction of Risk Potential | 12% | 600 | 226 | 374 | 12 |
-| Physiological Adaptation | 14% | 700 | 445 | 255 | 9 |
+| Pharmacological and Parenteral Therapies | 16% | 800 | 332 | 468 | 16 |
+| Reduction of Risk Potential | 12% | 600 | 224 | 376 | 12 |
+| Physiological Adaptation | 14% | 700 | 436 | 264 | 9 |
 | **Total** | 100% | 5000 | 2010 | 2990 | 100 |
 
 ## Chunks
@@ -48,15 +48,15 @@ The wave chunks are paused (2026-11-20) while the bank is rebuilt around case st
 | Type | Questions | Share |
 |---|---|---|
 | multiple_choice | 1332 | 66% |
-| matrix_mc | 155 | 8% |
+| matrix_mc | 154 | 8% |
 | sata | 145 | 7% |
-| dropdown_cloze | 58 | 3% |
+| dropdown_cloze | 60 | 3% |
 | ordered_response | 53 | 3% |
 | bowtie | 52 | 3% |
 | highlight_text | 50 | 2% |
 | highlight_table | 48 | 2% |
-| fill_blank_calc | 44 | 2% |
-| dropdown_table | 27 | 1% |
+| fill_blank_calc | 43 | 2% |
+| dropdown_table | 26 | 1% |
 | select_n | 25 | 1% |
-| multiple_response_grouping | 12 | 1% |
+| multiple_response_grouping | 13 | 1% |
 | matrix_mr | 9 | 0% |
