@@ -15,7 +15,7 @@ namespace Nclex.Api.IntegrationTests.Notifications;
 public sealed class ResultNotificationTests(ApiFactory factory)
 {
     private static readonly string[] ResultTemplates =
-        [EmailTemplateNames.ResultPass, EmailTemplateNames.ResultFail, EmailTemplateNames.ResultReady];
+        [EmailTemplateNames.ResultPass, EmailTemplateNames.ResultClose, EmailTemplateNames.ResultFail, EmailTemplateNames.ResultReady];
 
     private readonly ExamScenario _exam = new(factory, new AttemptsApi(factory, new AuthApi(factory)));
     private readonly NotificationsApi _notifications = new(new AuthApi(factory));
@@ -58,13 +58,20 @@ public sealed class ResultNotificationTests(ApiFactory factory)
     }
 
     [Fact]
-    public async Task A_set_without_a_threshold_notifies_result_ready()
+    public async Task Close_to_pass_notifies_result_fail_with_its_own_wording_and_email()
     {
+        // No threshold on the set: since F23 every fixed-length test gets the 86% pass mark.
         var exam = await _exam.StartAsync(new { revealMode = "exam" });
+        await _exam.AnswerCloseToPassAsync(exam);
 
         await _exam.SubmitOkAsync(exam);
 
-        (await _probe.ForAsync(exam.UserId)).ShouldHaveSingleItem().Type.ShouldBe(NotificationType.ResultReady);
+        var item = (await _notifications.ListOkAsync(exam.Token)).GetProperty("items").EnumerateArray().ShouldHaveSingleItem();
+        item.GetProperty("type").GetString().ShouldBe("result_fail");
+        item.GetProperty("title").GetString().ShouldBe("You're close to passing");
+        item.GetProperty("body").GetString()!.ShouldStartWith("You scored 80%, just short of the 86% pass mark. ");
+        (await _outbox.ForAsync(exam.Email)).Where(m => ResultTemplates.Contains(m.Template))
+            .ShouldHaveSingleItem().Template.ShouldBe(EmailTemplateNames.ResultClose);
     }
 
     [Fact]

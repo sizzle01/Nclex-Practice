@@ -6,6 +6,7 @@ using Nclex.Api.IntegrationTests.Infrastructure;
 using Nclex.Application.Attempts;
 using Nclex.Domain.Entities;
 using Nclex.Infrastructure.Persistence;
+using Nclex.Infrastructure.Persistence.Migrations;
 
 namespace Nclex.Api.IntegrationTests.Attempts;
 
@@ -182,21 +183,62 @@ public sealed class GradingTests(ApiFactory factory)
     }
 
     [Fact]
-    public async Task Reaching_the_threshold_is_likely_ready_and_a_set_without_one_has_no_estimate()
+    public async Task Every_fixed_length_test_is_graded_against_the_86_percent_pass_mark()
     {
-        var (passUser, passAttempt, _) = await OpenedAsync(new { revealMode = "exam", passThreshold = 0.4 });
+        // The set asks for only 40% and this attempt scores 40%: before F23 that was a pass.
+        var (failUser, failAttempt, _) = await OpenedAsync(new { revealMode = "exam", passThreshold = 0.4 });
+        await _attempts.SaveAsync(failUser, failAttempt, 1, Device, Mc("b"), 1);
+        await _attempts.SaveAsync(failUser, failAttempt, 2, Device, Sata("a", "b", "d"), 2);
+        // 1 + 2 of the 3 SATA points + 1 = 4/5 = 80%, on a set with no threshold of its own.
+        var (closeUser, closeAttempt, _) = await OpenedAsync(new { revealMode = "exam" });
+        await _attempts.SaveAsync(closeUser, closeAttempt, 1, Device, Mc("b"), 1);
+        await _attempts.SaveAsync(closeUser, closeAttempt, 2, Device, Sata("a", "b"), 2);
+        await _attempts.SaveAsync(closeUser, closeAttempt, 3, Device, Mc("b"), 3);
+        var (passUser, passAttempt, _) = await OpenedAsync(new { revealMode = "exam" });
         await _attempts.SaveAsync(passUser, passAttempt, 1, Device, Mc("b"), 1);
-        await _attempts.SaveAsync(passUser, passAttempt, 2, Device, Sata("a", "b", "d"), 2);
-        var (plainUser, plainAttempt, _) = await OpenedAsync(new { revealMode = "exam" });
+        await _attempts.SaveAsync(passUser, passAttempt, 2, Device, Sata("a", "b", "e"), 2);
+        await _attempts.SaveAsync(passUser, passAttempt, 3, Device, Mc("b"), 3);
 
-        var passed = await AttemptsApi.JsonOkAsync(await _attempts.SubmitAsync(passUser, passAttempt, Device));
-        var plain = await AttemptsApi.JsonOkAsync(await _attempts.SubmitAsync(plainUser, plainAttempt, Device));
+        Readiness(await AttemptsApi.JsonOkAsync(await _attempts.SubmitAsync(failUser, failAttempt, Device)))
+            .ShouldBe((0.86m, false, "needs_more_practice"));
+        Readiness(await AttemptsApi.JsonOkAsync(await _attempts.SubmitAsync(closeUser, closeAttempt, Device)))
+            .ShouldBe((0.86m, false, "close_to_pass"));
+        Readiness(await AttemptsApi.JsonOkAsync(await _attempts.SubmitAsync(passUser, passAttempt, Device)))
+            .ShouldBe((0.86m, true, "likely_ready"));
+        var stored = await ResultRowAsync(closeAttempt);
+        (stored.PassThreshold, stored.Passed, stored.ReadinessLabel).ShouldBe((0.86m, false, ReadinessLabel.CloseToPass));
+    }
 
-        var readiness = passed.GetProperty("result").GetProperty("readiness");
-        (readiness.GetProperty("passed").GetBoolean(), readiness.GetProperty("label").GetString()).ShouldBe((true, "likely_ready"));
-        plain.GetProperty("result").GetProperty("readiness").ValueKind.ShouldBe(JsonValueKind.Null);
-        var stored = await ResultRowAsync(plainAttempt);
-        (stored.Passed, stored.ReadinessLabel, stored.PassThreshold).ShouldBe((null, null, null));
+    [Fact]
+    public async Task The_F23_migration_regrades_past_results_to_the_pass_marks_and_can_be_rolled_back()
+    {
+        var (user, attemptId, _) = await OpenedAsync(new { revealMode = "exam", passThreshold = 0.65 });
+        await _attempts.SubmitAsync(user, attemptId, Device);
+        await using var scope = factory.Services.CreateAsyncScope();
+        var db = scope.ServiceProvider.GetRequiredService<AppDbContext>();
+        var ct = TestContext.Current.CancellationToken;
+        // Make the row look graded before F23: 72% against the set's 65% was "likely ready".
+        await db.Database.ExecuteSqlAsync(
+            $"UPDATE attempt_results SET score_pct = 0.7200, pass_threshold = 0.6500, passed = true, readiness_label = 'likely_ready' WHERE attempt_id = {attemptId}",
+            ct);
+
+        await db.Database.ExecuteSqlRawAsync(F23_PassMarks.RegradeSql, ct);
+
+        var regraded = await ResultRowAsync(attemptId);
+        (regraded.PassThreshold, regraded.Passed, regraded.ReadinessLabel).ShouldBe((0.86m, false, ReadinessLabel.CloseToPass));
+
+        // Down, inside a transaction that is rolled back so other tests never see the old rule.
+        await using var transaction = await db.Database.BeginTransactionAsync(ct);
+        await db.Database.ExecuteSqlRawAsync(F23_PassMarks.RestoreSql, ct);
+        var restored = await db.AttemptResults.AsNoTracking().SingleAsync(r => r.AttemptId == attemptId, ct);
+        (restored.PassThreshold, restored.Passed, restored.ReadinessLabel).ShouldBe((0.65m, true, ReadinessLabel.LikelyReady));
+        await transaction.RollbackAsync(ct);
+    }
+
+    private static (decimal Threshold, bool Passed, string? Label) Readiness(JsonElement submit)
+    {
+        var readiness = submit.GetProperty("result").GetProperty("readiness");
+        return (readiness.GetProperty("passThreshold").GetDecimal(), readiness.GetProperty("passed").GetBoolean(), readiness.GetProperty("label").GetString());
     }
 
     [Fact]

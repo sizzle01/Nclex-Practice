@@ -17,6 +17,10 @@ public static class EmailTemplateNames
     // Notifications (F12): named like their notification_type.
     public const string ResultPass = "result_pass";
     public const string ResultFail = "result_fail";
+
+    // Close to pass (F23) has its own wording but keeps the result_fail notification type, so the
+    // notification_type enum does not change.
+    public const string ResultClose = "result_close";
     public const string ResultReady = "result_ready";
     public const string DraftReminder = "draft_reminder";
     public const string FlagResolved = "flag_resolved";
@@ -57,7 +61,7 @@ public sealed record AccountLockedPayload(string? DisplayName, DateTimeOffset Lo
 /// <param name="IpAddress">The client's IP address, if known.</param>
 public sealed record NewDeviceSignInPayload(string? DisplayName, DateTimeOffset SignedInAt, string? Browser, string? IpAddress);
 
-/// <summary>Payload of the result emails (<c>result_pass</c>, <c>result_fail</c>, <c>result_ready</c>).</summary>
+/// <summary>Payload of the result emails (<c>result_pass</c>, <c>result_close</c>, <c>result_fail</c>, <c>result_ready</c>).</summary>
 /// <param name="DisplayName">Used in the greeting, if the user gave one.</param>
 /// <param name="SetTitle">The test set's title.</param>
 /// <param name="ScorePct">The score, 0 to 1.</param>

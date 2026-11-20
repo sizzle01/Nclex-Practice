@@ -1,3 +1,5 @@
+import { CLOSE_TO_PASS_MARK, PASS_MARK } from "@/features/results/ResultOutcome";
+import { toNumber } from "@/lib/format/toNumber";
 import type { TrendBucket } from "./api/performanceApi";
 
 const dateFormat = new Intl.DateTimeFormat(undefined, { day: "numeric", month: "short", year: "numeric" });
@@ -22,4 +24,26 @@ export function bucketLabel(isoDate: string, bucket: TrendBucket): string {
 /** A short axis tick, e.g. "14 Sep". */
 export function bucketTick(isoDate: string): string {
   return shortDateFormat.format(localDate(isoDate));
+}
+
+/** How a score reads at a glance: red needs work, amber is borderline, green is strong. */
+export type PerformanceBand = "red" | "amber" | "green";
+
+/** The screen-reader wording of each band, so the colour is never the only signal (interfaces.md 4). */
+export const bandLabel: Record<PerformanceBand, string> = {
+  red: "needs work",
+  amber: "borderline",
+  green: "strong",
+};
+
+/**
+ * The band of a score share (0 to 1). It uses the whole percentage the user sees, so the colour
+ * always agrees with the label: 69.6% shows as "70%" and is amber, not red.
+ * The bands follow the F23 pass marks: red below 70%, amber 70% to 85%, green 86% and above.
+ */
+export function performanceBand(share: number | string): PerformanceBand {
+  const shown = Math.round(toNumber(share) * 100);
+  if (shown < Math.round(CLOSE_TO_PASS_MARK * 100)) return "red";
+  if (shown < Math.round(PASS_MARK * 100)) return "amber";
+  return "green";
 }

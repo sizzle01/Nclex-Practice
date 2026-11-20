@@ -45,6 +45,14 @@ public sealed class ExamScenario(ApiFactory factory, AttemptsApi attempts)
         await attempts.SaveAsync(exam.Token, exam.AttemptId, 3, Device, new { selected = "b" }, 1);
     }
 
+    /// <summary>Scores 4 of 5 points (80%), close to pass: both multiple choice right, two of the three SATA keys.</summary>
+    public async Task AnswerCloseToPassAsync(Started exam)
+    {
+        await attempts.SaveAsync(exam.Token, exam.AttemptId, 1, Device, new { selected = "b" }, 1);
+        await attempts.SaveAsync(exam.Token, exam.AttemptId, 2, Device, new { selected = new[] { "a", "b" } }, 1);
+        await attempts.SaveAsync(exam.Token, exam.AttemptId, 3, Device, new { selected = "b" }, 1);
+    }
+
     public Task<HttpResponseMessage> SubmitAsync(Started exam) => attempts.SubmitAsync(exam.Token, exam.AttemptId, Device);
 
     public async Task SubmitOkAsync(Started exam) => await AttemptsApi.JsonOkAsync(await SubmitAsync(exam));

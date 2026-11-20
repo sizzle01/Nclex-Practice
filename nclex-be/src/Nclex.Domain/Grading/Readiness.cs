@@ -2,33 +2,40 @@ using Nclex.Domain.Entities;
 
 namespace Nclex.Domain.Grading;
 
-/// <summary>The readiness estimate of a result; both parts are null when the set has no pass threshold.</summary>
-public sealed record Readiness(bool? Passed, ReadinessLabel? Label)
-{
-    public static Readiness None { get; } = new(null, null);
-}
+/// <summary>The readiness estimate of a result: whether it passed, and which of the three outcomes it is.</summary>
+public sealed record Readiness(bool Passed, ReadinessLabel Label);
 
 /// <summary>Decides the readiness estimate from a score (interfaces.md section 3).</summary>
 public interface IReadinessPolicy
 {
-    Readiness Evaluate(decimal scorePct, decimal? passThreshold);
+    Readiness Evaluate(decimal scorePct);
 }
 
 /// <summary>
-/// Reaching the set's threshold is "likely ready"; anything below is "needs more practice"
-/// (architecture.md 5.5). Compared on the rounded score the candidate sees, so a shown 65.00%
-/// against a 65% threshold is always a pass.
+/// One fixed rule for every fixed-length test (architecture.md 5.5, F23): 86% and above is a
+/// pass, 70% to 85% is close to pass, below 70% is a fail. The set's own threshold no longer
+/// counts. Compared on the whole percentage the candidate sees, so a shown "86%" (85.5% or more)
+/// always passes and a shown "70%" (69.5% or more) is always close to pass.
 /// </summary>
 public sealed class ReadinessPolicy : IReadinessPolicy
 {
-    public Readiness Evaluate(decimal scorePct, decimal? passThreshold)
+    /// <summary>The lowest shown percentage that passes.</summary>
+    public const int PassMarkPercent = 86;
+
+    /// <summary>The lowest shown percentage that is close to pass; anything below fails.</summary>
+    public const int CloseToPassPercent = 70;
+
+    /// <summary>The pass mark as a share, stored on each result as its threshold.</summary>
+    public const decimal PassMark = PassMarkPercent / 100m;
+
+    public Readiness Evaluate(decimal scorePct)
     {
-        if (passThreshold is not { } threshold)
+        var shown = ScoreMaths.WholePercent(scorePct);
+        if (shown >= PassMarkPercent)
         {
-            return Readiness.None;
+            return new Readiness(true, ReadinessLabel.LikelyReady);
         }
 
-        var passed = scorePct >= threshold;
-        return new Readiness(passed, passed ? ReadinessLabel.LikelyReady : ReadinessLabel.NeedsMorePractice);
+        return new Readiness(false, shown >= CloseToPassPercent ? ReadinessLabel.CloseToPass : ReadinessLabel.NeedsMorePractice);
     }
 }

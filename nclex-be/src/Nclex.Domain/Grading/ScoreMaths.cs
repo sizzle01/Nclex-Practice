@@ -20,6 +20,13 @@ public static class ScoreMaths
         // Adding 0.0000m sets the scale to 4 places: 0.4 becomes 0.4000, as Postgres returns it.
         Math.Round(value, 4, MidpointRounding.AwayFromZero) + 0.0000m;
 
+    /// <summary>
+    /// A share as the whole percentage the candidate sees, e.g. 0.8550 becomes 86. Halves round up,
+    /// as the frontend's <c>Math.round</c> does for scores, so the server and the screen agree.
+    /// </summary>
+    public static int WholePercent(decimal share) =>
+        (int)Math.Round(share * 100, MidpointRounding.AwayFromZero);
+
     /// <summary>Points, to the 2 places that the points columns (<c>numeric(_,2)</c>) hold.</summary>
     public static decimal Points(decimal value) =>
         Math.Round(value, 2, MidpointRounding.AwayFromZero) + 0.00m;

@@ -338,7 +338,7 @@ CREATE TABLE test_sets (
   timed              boolean NOT NULL DEFAULT false,
   per_question_sec   int,                          -- NULL = no per-item timer
   time_budget_sec    int,                          -- NULL = no exam timer
-  pass_threshold     numeric(5,4),                 -- 0.6500; NULL = no pass/fail estimate
+  pass_threshold     numeric(5,4),                 -- 0.6500; no longer used for grading since F23 (fixed 86% pass mark)
   pause_policy       jsonb NOT NULL DEFAULT '{"maxPauses":null,"maxPauseSec":null}',
   allow_back_nav     boolean NOT NULL DEFAULT true,
   is_sample          boolean NOT NULL DEFAULT false,  -- startable by unverified users
@@ -453,7 +453,7 @@ CREATE TABLE attempt_results (
   avg_time_ms       int NOT NULL,
   pass_threshold    numeric(5,4),
   passed            boolean,                       -- NULL when no threshold
-  readiness_label   text,                          -- 'likely_ready' | 'needs_more_practice'
+  readiness_label   text,                          -- 'likely_ready' | 'close_to_pass' (F23) | 'needs_more_practice'
   cat_theta         numeric(6,3), cat_se numeric(6,3),
   graded_at         timestamptz NOT NULL DEFAULT now()
 );

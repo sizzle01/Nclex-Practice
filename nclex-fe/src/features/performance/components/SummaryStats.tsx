@@ -1,6 +1,7 @@
 import { toNumber } from "@/lib/format/toNumber";
-import { elapsed, percent } from "@/features/results/format";
+import { elapsed } from "@/features/results/format";
 import type { PerformanceSummary } from "../api/performanceApi";
+import { ScorePercent } from "./ScorePercent";
 import styles from "./performance.module.css";
 
 /** The headline numbers across every finished test, as a description list of stat tiles. */
@@ -9,7 +10,9 @@ export function SummaryStats({ summary }: { summary: PerformanceSummary }) {
     <dl className={styles.stats}>
       <div className={styles.stat}>
         <dt>Overall score</dt>
-        <dd>{percent(summary.accuracy)}</dd>
+        <dd>
+          <ScorePercent value={summary.accuracy} />
+        </dd>
       </div>
       <div className={styles.stat}>
         <dt>Questions answered</dt>

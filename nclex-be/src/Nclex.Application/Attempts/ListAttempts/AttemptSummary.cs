@@ -7,7 +7,8 @@ namespace Nclex.Application.Attempts.ListAttempts;
 /// <param name="StaleDraft">True when the draft is over 30 days old, so the dashboard asks "resume or discard?".</param>
 /// <param name="TimeRemainingMs">Exam time left now; null for untimed attempts.</param>
 /// <param name="ScorePct">Share of points earned, 0 to 1, for the history table; null until submitted.</param>
-/// <param name="Passed">Whether the score reached the set's pass threshold (an adaptive exam: its pass or fail); null without a threshold or result.</param>
+/// <param name="Passed">Whether the attempt passed (an adaptive exam: its pass or fail); null without a result.</param>
+/// <param name="ReadinessLabel">Pass, close to pass or fail (an adaptive exam: pass or fail); null without a result.</param>
 /// <param name="Timed">Whether the attempt runs a timer; an adaptive exam's is the candidate's choice (F19).</param>
 public sealed record AttemptSummary(
     Guid Id,
@@ -23,6 +24,7 @@ public sealed record AttemptSummary(
     long? TimeRemainingMs,
     decimal? ScorePct,
     bool? Passed,
+    ReadinessLabel? ReadinessLabel,
     bool Timed);
 
 /// <summary>Body of GET /attempts: one page, in the cursor format of api.md section 1.</summary>

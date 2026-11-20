@@ -29,7 +29,7 @@ const result: AttemptResultView = {
   submitReason: "user",
   score: { pointsEarned: 68, maxPoints: 92, pct: 0.739, itemsCorrect: 52, itemsAnswered: 74, itemsTotal: 75 },
   time: { totalMs: 6_120_000, avgPerItemMs: 81_600 },
-  readiness: { passThreshold: 0.65, passed: true, label: "likely_ready", disclaimer },
+  readiness: { passThreshold: 0.86, passed: false, label: "close_to_pass", disclaimer },
   breakdown: {
     client_needs: [row("SECE.MOC", "Management of Care", 12, 8, 8.5, 12), row("PHI.PPT", "Pharmacological and Parenteral Therapies", 10, 4, 4.8, 10)],
     client_needs_parent: [row("SECE", "Safe & Effective Care Environment", 12, 8, 8.5, 12)],
@@ -87,9 +87,28 @@ describe("ResultsPage", () => {
     expect(score).toHaveTextContent("68 of 92 points");
     expect(score).toHaveTextContent("52 of 75 questions fully correct");
     expect(score).toHaveTextContent("1 h 42 min in total, 1 min 22 s per question on average");
-    expect(score).toHaveTextContent("Likely ready");
-    expect(score).toHaveTextContent("(passing threshold 65%)");
+    expect(score).toHaveTextContent("Close to pass");
+    expect(score).toHaveTextContent("(pass mark 86%)");
     expect(score).toHaveTextContent(disclaimer);
+  });
+
+  it.each([
+    [0.9, "likely_ready", "Pass"],
+    [0.74, "close_to_pass", "Close to pass"],
+    [0.55, "needs_more_practice", "Fail"],
+  ] as const)("labels a score of %s (%s) as %s against the 86%% pass mark", async (pct, label, text) => {
+    replyWith(
+      reply(200, {
+        ...result,
+        score: { ...result.score, pct },
+        readiness: { passThreshold: 0.86, passed: label === "likely_ready", label, disclaimer },
+      }),
+    );
+
+    renderPage();
+
+    const score = await screen.findByRole("region", { name: "Your score" });
+    expect(within(score).getByText(text)).toHaveAttribute("data-outcome", label);
   });
 
   it("leads an adaptive exam with pass or fail and why it ended, not a percentage", async () => {

@@ -4,16 +4,12 @@ import Link from "next/link";
 import ui from "@/components/ui/ui.module.css";
 import type { AttemptSummary } from "@/features/attempt/api/attemptApi";
 import { percent } from "@/features/results/format";
+import { ResultOutcome } from "@/features/results/ResultOutcome";
 import { useHistory } from "../api/historyApi";
 import styles from "./history.module.css";
 
 const modeLabels: Record<AttemptSummary["mode"], string> = { practice: "Practice", challenge: "Challenge", cat: "Adaptive" };
 
-/** Shown only when the set has a pass threshold; the "estimate, not a prediction" caveat is on the results page. */
-export function outcomeLabel(passed: boolean | null) {
-  if (passed === null) return "—";
-  return passed ? "Likely ready" : "Needs more practice";
-}
 
 /** /history (interfaces.md 5.2): every finished test, newest first, with links to its results and review. */
 export function HistoryPage() {
@@ -109,7 +105,8 @@ function HistoryRow({ attempt }: { attempt: AttemptSummary }) {
       <td className={styles.number}>
         {attempt.scorePct === null || attempt.mode === "cat" ? "—" : percent(attempt.scorePct)}
       </td>
-      <td>{outcomeLabel(attempt.passed)}</td>
+      {/* Pass, close to pass or fail (F23); the "estimate, not a prediction" caveat is on the results page. */}
+      <td>{attempt.readinessLabel ? <ResultOutcome label={attempt.readinessLabel} /> : "—"}</td>
       <td>
         <span className={styles.links}>
           <Link href={`/attempts/${attempt.id}/results`} aria-describedby={titleId}>

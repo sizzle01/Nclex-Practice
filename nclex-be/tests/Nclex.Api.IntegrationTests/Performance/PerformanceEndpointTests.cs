@@ -156,7 +156,8 @@ public sealed class PerformanceEndpointTests(ApiFactory factory) : IAsyncLifetim
 
         var row = history.GetProperty("items").EnumerateArray().ShouldHaveSingleItem();
         (row.GetProperty("id").GetGuid(), row.GetProperty("scorePct").GetDecimal()).ShouldBe((submitted, 1.0000m));
-        row.GetProperty("passed").ValueKind.ShouldBe(JsonValueKind.Null);
+        // Every fixed-length test is graded against the 86% pass mark (F23); this one scored 100%.
+        (row.GetProperty("passed").GetBoolean(), row.GetProperty("readinessLabel").GetString()).ShouldBe((true, "likely_ready"));
         var draftRow = drafts.GetProperty("items").EnumerateArray().ShouldHaveSingleItem();
         (draftRow.GetProperty("id").GetGuid(), draftRow.GetProperty("scorePct").ValueKind).ShouldBe((draft.Id, JsonValueKind.Null));
     }

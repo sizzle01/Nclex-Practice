@@ -94,7 +94,7 @@ public sealed class GradingService(
 
     /// <summary>
     /// An adaptive exam passes on its ability estimate (architecture.md 5.8); every other attempt
-    /// on its share of points against the set's threshold.
+    /// on its share of points against the fixed pass mark (F23).
     /// </summary>
     private AttemptResult ScoreResult(Attempt attempt, ResultTotals totals, DateTimeOffset now)
     {
@@ -106,8 +106,9 @@ public sealed class GradingService(
             return AttemptResult.CreateAdaptive(attempt.Id, totals, state.Estimate, state.Passed, now);
         }
 
-        var threshold = attempt.Settings.PassThreshold;
-        return AttemptResult.Create(attempt.Id, totals, threshold, readiness.Evaluate(totals.ScorePct, threshold), now);
+        // Every fixed-length test is graded against the one pass mark (F23), whatever the set's
+        // own threshold says.
+        return AttemptResult.Create(attempt.Id, totals, ReadinessPolicy.PassMark, readiness.Evaluate(totals.ScorePct), now);
     }
 
     private async Task GradeAsync(List<AttemptItem> items, CancellationToken cancellationToken)

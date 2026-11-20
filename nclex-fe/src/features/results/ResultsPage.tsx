@@ -15,6 +15,8 @@ import {
   resultQueryKey,
 } from "../attempt/api/attemptApi";
 import { elapsed, percent, points } from "./format";
+import { ResultOutcome } from "./ResultOutcome";
+import outcomeStyles from "./ResultOutcome.module.css";
 import styles from "./results.module.css";
 import { StudyRecommendations } from "./StudyRecommendations";
 
@@ -95,12 +97,14 @@ export function ResultsPage({ attemptId }: { attemptId: string }) {
 /** The score of a fixed-length test: points, questions and time, with the readiness estimate. */
 function ScoreSummary({ data }: { data: AttemptResultView }) {
   const score = data.score;
+  const label = data.readiness?.label;
   return (
     <section aria-labelledby="score-heading" className={`${ui.card} ${styles.summary}`}>
       <h2 id="score-heading" className={ui.cardTitle}>
         Your score
       </h2>
-      <p className={styles.score}>{percent(score.pct)}</p>
+      {/* The score takes its outcome's colour (F23); the outcome word below carries the meaning. */}
+      <p className={label ? `${styles.score} ${outcomeStyles[label]}` : styles.score}>{percent(score.pct)}</p>
       <ul className={styles.facts}>
         <li>
           {points(score.pointsEarned)} of {points(score.maxPoints)} points
@@ -155,14 +159,13 @@ function AdaptiveSummary({ adaptive, time }: { adaptive: AdaptiveResult; time: A
   );
 }
 
-/** The estimate is always shown with its caveat (architecture.md 5.5). */
+/** Pass, close to pass or fail against the pass mark, always shown with its caveat (architecture.md 5.5). */
 function Readiness({ readiness }: { readiness: AttemptResultView["readiness"] }) {
-  if (!readiness) return null;
+  if (!readiness?.label) return null;
   return (
     <div className={styles.readiness}>
       <p>
-        <strong>{readiness.label === "likely_ready" ? "Likely ready" : "Needs more practice"}</strong>{" "}
-        <span className={ui.muted}>(passing threshold {percent(readiness.passThreshold)})</span>
+        <ResultOutcome label={readiness.label} /> <span className={ui.muted}>(pass mark {percent(readiness.passThreshold)})</span>
       </p>
       <p className={ui.muted}>{readiness.disclaimer}</p>
     </div>

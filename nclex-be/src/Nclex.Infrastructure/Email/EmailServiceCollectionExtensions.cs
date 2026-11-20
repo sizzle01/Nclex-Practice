@@ -32,6 +32,7 @@ public static class EmailServiceCollectionExtensions
         services.AddSingleton<IEmailTemplate, NewDeviceSignInTemplate>();
         services.AddSingleton<IEmailTemplate, ResultPassTemplate>();
         services.AddSingleton<IEmailTemplate, ResultFailTemplate>();
+        services.AddSingleton<IEmailTemplate, ResultCloseTemplate>();
         services.AddSingleton<IEmailTemplate, ResultReadyTemplate>();
         services.AddSingleton<IEmailTemplate, DraftReminderTemplate>();
         services.AddSingleton<IEmailTemplate, FlagResolvedTemplate>();

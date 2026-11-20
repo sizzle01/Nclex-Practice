@@ -4,9 +4,10 @@ import Link from "next/link";
 import ui from "@/components/ui/ui.module.css";
 import { useRecentResults } from "@/features/history/api/historyApi";
 import { percent } from "@/features/results/format";
+import { ResultOutcome } from "@/features/results/ResultOutcome";
 import styles from "./Dashboard.module.css";
 
-/** The latest finished tests with their scores (interfaces.md 5.2, dashboard "last results"). */
+/** The latest finished tests with their scores and outcomes (interfaces.md 5.2, dashboard "last results"; F23). */
 export function RecentResults() {
   const { data, error, isPending } = useRecentResults();
 
@@ -26,6 +27,7 @@ export function RecentResults() {
           <Link href={`/attempts/${attempt.id}/results`}>{attempt.testSet.title}</Link>
           <span className={styles.rowMeta}>
             <strong>{attempt.scorePct === null ? "—" : percent(attempt.scorePct)}</strong>
+            {attempt.readinessLabel && <ResultOutcome label={attempt.readinessLabel} />}
             {attempt.submittedAt && <span className={ui.muted}>{new Date(attempt.submittedAt).toLocaleDateString()}</span>}
           </span>
         </li>

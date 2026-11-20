@@ -1,0 +1,22 @@
+/* Band colours reuse the theme's status tokens, which already have light and dark variants. */
+.red {
+  color: var(--error);
+}
+
+.amber {
+  color: var(--warning);
+}
+
+.green {
+  color: var(--success);
+}
+
+/* Named for screen readers, invisible on screen. */
+.visuallyHidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip-path: inset(50%);
+  white-space: nowrap;
+}

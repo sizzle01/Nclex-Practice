@@ -22,8 +22,8 @@ internal sealed class AttemptResultConfiguration : IEntityTypeConfiguration<Atte
         builder.Property(r => r.ReadinessLabel)
             .HasColumnType("text")
             .HasConversion(
-                label => label == ReadinessLabel.LikelyReady ? "likely_ready" : "needs_more_practice",
-                column => column == "likely_ready" ? ReadinessLabel.LikelyReady : ReadinessLabel.NeedsMorePractice);
+                label => ToColumn(label),
+                column => FromColumn(column));
         builder.Property(r => r.CatTheta).HasPrecision(6, 3);
         builder.Property(r => r.CatSe).HasPrecision(6, 3);
         builder.Property(r => r.GradedAt).HasDefaultValueSql("now()");
@@ -33,4 +33,19 @@ internal sealed class AttemptResultConfiguration : IEntityTypeConfiguration<Atte
             .HasForeignKey<AttemptResult>(r => r.AttemptId)
             .OnDelete(DeleteBehavior.Cascade);
     }
+
+    // EF Core never passes a null to a converter; the nullable types only match the property.
+    private static string ToColumn(ReadinessLabel? label) => label switch
+    {
+        ReadinessLabel.LikelyReady => "likely_ready",
+        ReadinessLabel.CloseToPass => "close_to_pass",
+        _ => "needs_more_practice",
+    };
+
+    private static ReadinessLabel? FromColumn(string column) => column switch
+    {
+        "likely_ready" => ReadinessLabel.LikelyReady,
+        "close_to_pass" => ReadinessLabel.CloseToPass,
+        _ => ReadinessLabel.NeedsMorePractice,
+    };
 }

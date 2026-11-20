@@ -6316,6 +6316,7 @@ export interface components {
             /** Format: double */
             scorePct: null | number | string;
             passed: null | boolean;
+            readinessLabel: null | components["schemas"]["ReadinessLabel"];
             timed: boolean;
         };
         AuthResponse: {
@@ -6856,7 +6857,7 @@ export interface components {
             redis: components["schemas"]["HealthState"];
         };
         /** @enum {unknown} */
-        ReadinessLabel: "likely_ready" | "needs_more_practice";
+        ReadinessLabel: "likely_ready" | "close_to_pass" | "needs_more_practice" | null;
         ReadinessResponse: {
             status: components["schemas"]["HealthState"];
             checks: components["schemas"]["ReadinessChecks"];

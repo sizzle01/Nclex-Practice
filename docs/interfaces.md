@@ -332,7 +332,8 @@ public interface IGradingService
 
 public interface IReadinessPolicy
 {
-    (bool? Passed, ReadinessLabel? Label) Evaluate(decimal scorePct, decimal? threshold);
+    // F23: one fixed rule. 86% and above LikelyReady (passed), 70–85% CloseToPass, below 70% NeedsMorePractice.
+    Readiness Evaluate(decimal scorePct);   // record Readiness(bool Passed, ReadinessLabel Label)
 }
 
 public interface INotificationPublisher
@@ -509,6 +510,7 @@ Clicking a `result_pass` or `result_fail` notification marks it read and opens `
 |---|---|---|
 | `result_pass` | "You passed your mock exam — great work!" | "You scored {pct}% on {set}. Review your rationales to lock it in." |
 | `result_fail` | "You didn't reach the passing threshold this time" | "You scored {pct}%. Here's what to focus on: {weakest1}, {weakest2}." |
+| `result_fail`, close to pass (F23; email template `result_close`) | "You're close to passing" | "You scored {pct}%, just short of the 86% pass mark. Here's what to focus on: {weakest1}, {weakest2}." |
 | `result_ready` | "Your results are ready" | "You scored {pct}% on {set}." (sets with no threshold) |
 | `draft_reminder` | "Pick up where you left off" | "{set} is {pctComplete}% done with {timeLeft} left." |
 | `flag_resolved` | "Thanks — we reviewed your report" | "{resolutionNote}" |

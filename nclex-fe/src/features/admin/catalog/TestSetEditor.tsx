@@ -126,7 +126,8 @@ function TestSetForm({ set }: { set: AdminTestSetView | null }) {
           </div>
         )}
         <div className={styles.filters}>
-          <TextField label="Pass threshold % (optional)" inputMode="decimal" error={errors.passPercent?.message} {...register("passPercent")} />
+          {/* No pass threshold field: every fixed-length test is graded against the 86% pass mark (F23).
+              The stored value is kept and saved back unchanged. */}
           <TextField label="Most pauses (optional)" inputMode="numeric" error={errors.maxPauses?.message} {...register("maxPauses")} />
           <TextField label="Longest pause, seconds (optional)" inputMode="numeric" error={errors.maxPauseSec?.message} {...register("maxPauseSec")} />
         </div>
