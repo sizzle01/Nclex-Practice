@@ -28,6 +28,8 @@ export const testSetSchema = z
     allowBackNav: z.boolean(),
     isSample: z.boolean(),
     accessTier: z.enum(["free", "premium"]),
+    // Not a form field: set only by content files (F24 timed case-study blocks); kept so a save does not reset it.
+    outcomeHidden: z.boolean(),
     isPublished: z.boolean(),
   })
   .refine((s) => (s.timed ? s.perQuestionSec !== "" || s.timeBudgetSec !== "" : s.perQuestionSec === "" && s.timeBudgetSec === ""), {
@@ -53,6 +55,7 @@ export function emptyTestSet(track: "RN" | "PN"): TestSetFormValues {
     allowBackNav: true,
     isSample: false,
     accessTier: "free",
+    outcomeHidden: false,
     isPublished: false,
   };
 }
@@ -75,6 +78,7 @@ export function testSetValuesFrom(set: AdminTestSetView): TestSetFormValues {
     allowBackNav: s.allowBackNav,
     isSample: s.isSample,
     accessTier: s.accessTier === "premium" ? "premium" : "free",
+    outcomeHidden: s.outcomeHidden,
     isPublished: set.isPublished,
   };
 }
@@ -94,5 +98,6 @@ export function toSettings(values: TestSetFormValues): TestSetSettings {
     allowBackNav: values.allowBackNav,
     isSample: values.isSample,
     accessTier: values.accessTier,
+    outcomeHidden: values.outcomeHidden,
   };
 }

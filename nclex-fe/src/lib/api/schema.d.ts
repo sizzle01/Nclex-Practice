@@ -7048,6 +7048,8 @@ export interface components {
             locked: boolean;
             myLastAttempt: null | components["schemas"]["LastAttemptSummary"];
             adaptive?: null | components["schemas"]["AdaptiveRules"];
+            /** @default false */
+            outcomeHidden: boolean;
         };
         /** @enum {unknown} */
         TestSetKind: "prebuilt" | "custom" | "cat" | "assigned" | null;
@@ -7076,6 +7078,8 @@ export interface components {
             allowBackNav: boolean;
             isSample: boolean;
             accessTier: components["schemas"]["PlanTier"];
+            /** @default false */
+            outcomeHidden: boolean;
         };
         TestSetSummary: {
             /** Format: uuid */

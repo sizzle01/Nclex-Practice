@@ -49,6 +49,17 @@ describe("TestSetDetailPanel", () => {
     expect(screen.getByText("Unlimited")).toBeInTheDocument();
   });
 
+  it("shows no pass mark for a timed case-study block, which gives no outcome", async () => {
+    const block = { ...challengeDetail, title: "Timed case study block 1", outcomeHidden: true };
+    getMock.mockResolvedValue(reply(200, block));
+
+    renderPanel(vi.fn(), block.id);
+
+    await screen.findByRole("heading", { name: "Timed case study block 1" });
+    expect(screen.queryByText("Pass mark")).not.toBeInTheDocument();
+    expect(screen.queryByText(/86% of points/)).not.toBeInTheDocument();
+  });
+
   it("starts the set and opens the player", async () => {
     getMock.mockResolvedValue(reply(200, challengeDetail));
     postMock.mockResolvedValue(reply(201, { id: "attempt-1" }));

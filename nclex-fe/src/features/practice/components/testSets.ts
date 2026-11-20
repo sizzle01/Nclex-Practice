@@ -80,6 +80,7 @@ export const adaptiveDetail: TestSetDetail = {
   kind: "cat",
   description: "Works like the real NCLEX-RN.",
   pausePolicy: { maxPauses: null, maxPauseSec: null },
+  outcomeHidden: false,
   allowBackNav: false,
 };
 
@@ -90,5 +91,6 @@ export const challengeDetail: TestSetDetail = {
   kind: "prebuilt",
   description: "Exam conditions: 80 minutes, answers revealed at the end.",
   pausePolicy: { maxPauses: null, maxPauseSec: null },
+  outcomeHidden: false,
   allowBackNav: true,
 };

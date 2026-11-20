@@ -90,8 +90,9 @@ export function TestSetDetailPanel({ id, setId, onClose }: TestSetDetailPanelPro
             <dd>{timingLabel(set)}</dd>
             <dt>Answers</dt>
             <dd>{revealModeLabel(set.revealMode)}</dd>
-            {/* Every fixed-length test is graded against the same pass mark (F23); an adaptive exam passes on its ability estimate. */}
-            {!set.adaptive && (
+            {/* Every fixed-length test is graded against the same pass mark (F23); an adaptive exam passes on its
+                ability estimate, and a timed case-study block gives no outcome at all (F24). */}
+            {!set.adaptive && !set.outcomeHidden && (
               <>
                 <dt>Pass mark</dt>
                 <dd>
