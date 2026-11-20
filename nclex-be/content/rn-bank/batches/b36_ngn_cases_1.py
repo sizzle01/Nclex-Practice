@@ -2,6 +2,8 @@
 
 Each case has six items that follow the clinical judgment measurement model in order:
 recognize cues, analyze cues, prioritize hypotheses, generate solutions, take action, evaluate outcomes.
+
+Rewritten to NCLEX-RN difficulty on 20 November 2026 (see quality.py).
 """
 from qb import *
 
@@ -60,11 +62,11 @@ cloze(M("PHI.PA", DKA, "analyze_cues", "moderate", E, "ms"),
    "Analyze the cause of DKA."),
 
 mc(M("PHI.PA", DKA, "prioritize_hypotheses", "difficult", E, "ms"),
-   "An IV insulin infusion is about to start. Which complication is the client at highest risk for during treatment?",
-   [("Hypokalemia", True, "Insulin moves potassium into cells; total body potassium is already low despite a normal-looking level."),
-    ("Hypernatremia", False, "This isn't the main risk."),
-    ("Hypercalcemia", False, "This isn't related."),
-    ("Fluid overload", False, "The client is dehydrated, although fluids are monitored.")],
+   "The 0800 potassium is 5.4 mEq/L, and an IV regular insulin infusion is about to start after the first liter of 0.9% sodium chloride. Which complication is the client at highest risk for during the next few hours of treatment?",
+   [("Hypokalemia", True, "Insulin moves potassium into cells; total body potassium is already depleted by vomiting and osmotic diuresis despite the high-looking level."),
+    ("Hyperkalemia", False, "The level is high now only because acidosis shifts potassium out of cells; it falls quickly with insulin."),
+    ("Hypoglycemia", False, "This is a risk later, but dextrose is added at about 250 mg/dL; potassium falls first and faster."),
+    ("Fluid overload", False, "The client is volume depleted, although fluids are monitored.")],
    "Monitor potassium closely and replace it before and during insulin therapy.",
    "Anticipate hypokalemia during DKA treatment."),
 
@@ -121,8 +123,8 @@ stroke_tabs = [
 ]
 
 stroke_items = [
-hl_text(M("PHI.PA", ST, "recognize_cues", "easy", N, "aha"),
-   "Highlight the findings in the emergency department note that are consistent with an acute stroke.",
+hl_text(M("PHI.PA", ST, "recognize_cues", "moderate", N, "aha"),
+   "Highlight the findings in the emergency department note that are consistent with an acute stroke rather than a stroke mimic or a risk factor.",
    ["The client has ",
     ("right facial droop", True, "Facial asymmetry is a stroke sign."),
     ", ",
@@ -162,21 +164,21 @@ cloze(M("PHI.PA", ST, "prioritize_hypotheses", "moderate", N, "aha"),
 
 sata(M("PHI.PA", ST, "generate_solutions", "moderate", N, "aha ms"),
    "The client receives alteplase. Which interventions should the nurse include for the next 24 hours?",
-   [("Frequent neurological and vital sign checks per protocol", True, "Early detection of bleeding or worsening stroke."),
+   [("Neurological and vital sign checks per protocol", True, "Early detection of bleeding or worsening stroke."),
     ("Keep blood pressure below 180/105 mm Hg", True, "This reduces the risk of hemorrhage."),
     ("Avoid IM injections and other invasive procedures", True, "This reduces the risk of bleeding."),
     ("Keep the client NPO until a swallow screen is passed", True, "This prevents aspiration."),
-    ("Give aspirin right away", False, "Antiplatelets are usually held for 24 hours after alteplase."),
-    ("Insert a nasogastric tube right away", False, "Invasive tubes are delayed if possible.")],
+    ("Give aspirin 325 mg as soon as the infusion is finished", False, "Antiplatelets are usually held for 24 hours after alteplase."),
+    ("Insert a nasogastric tube now so medicines can be given safely", False, "Invasive tubes are delayed for 24 hours if possible because of bleeding risk.")],
    "Post-thrombolysis care: monitoring, BP control, bleeding precautions, swallow screening.",
    "Plan care after alteplase."),
 
 mc(M("PHI.PA", ST, "take_action", "difficult", N, "aha"),
-   "During the alteplase infusion, the client suddenly has a severe headache and vomits. What should the nurse do first?",
-   [("Stop the alteplase infusion and notify the provider", True, "These signs suggest bleeding in the brain; a stat CT is needed."),
-    ("Give an antiemetic and continue", False, "This ignores a possible hemorrhage."),
-    ("Increase the infusion to finish faster", False, "This worsens bleeding."),
-    ("Recheck in 30 minutes", False, "This needs immediate action.")],
+   "Forty minutes into the alteplase infusion, the client suddenly reports a severe headache and vomits. The blood pressure is 196/112 mm Hg, and the right arm is now flaccid. What should the nurse do first?",
+   [("Stop the alteplase infusion at the pump right away", True, "These signs suggest bleeding in the brain; the infusion is stopped first, then the provider is notified and a stat CT obtained."),
+    ("Give the prescribed IV labetalol and continue the infusion", False, "Blood pressure is treated, but a possible hemorrhage means the drug must be stopped first."),
+    ("Give IV ondansetron for the vomiting and recheck in 15 minutes", False, "This treats a symptom and delays action on a possible hemorrhage."),
+    ("Call the provider to request a stat head CT", False, "The CT is needed, but the infusion is stopped first so no more drug is given.")],
    "A neurologic decline, headache or vomiting during thrombolysis means: stop the infusion, notify the provider and get a CT.",
    "Respond to suspected hemorrhage during thrombolysis."),
 
@@ -191,7 +193,7 @@ matrix_mc(M("PHI.PA", ST, "evaluate_outcomes", "moderate", N, "aha"),
    "Evaluate outcomes after stroke treatment."),
 ]
 
-BUILT = build(36, "ngn-cases-1", "NGN case studies I: DKA and acute ischemic stroke", [], cases=[
+BUILT = build(36, "ngn-cases-1", "NGN case studies I: DKA and acute ischemic stroke", [], hardened=True, cases=[
     case("Diabetic ketoacidosis", dka_tabs, dka_items),
     case("Acute ischemic stroke", stroke_tabs, stroke_items),
 ])

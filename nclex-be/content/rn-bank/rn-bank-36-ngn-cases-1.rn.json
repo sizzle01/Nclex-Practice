@@ -1,5 +1,5 @@
 {
-  "notice": "RN bank batch 36: NGN case studies I: DKA and acute ischemic stroke. Reviewed by the content team on 17 November 2026. See REVIEW-LOG.md.",
+  "notice": "RN bank batch 36: NGN case studies I: DKA and acute ischemic stroke. Rewritten to NCLEX-RN difficulty and reviewed by the content team on 19 November 2026. See REVIEW-LOG.md.",
   "track": "RN",
   "subtopics": [
     {
@@ -101,7 +101,7 @@
         },
         "references": [
           "Medical-surgical nursing texts (e.g. Lewis; Ignatavicius)",
-          "Reviewed by the content team on 17 November 2026."
+          "Rewritten to NCLEX-RN difficulty and reviewed by the content team on 19 November 2026."
         ]
       },
       "educationalObjective": "Recognize key cues in DKA.",
@@ -176,7 +176,7 @@
         },
         "references": [
           "Medical-surgical nursing texts (e.g. Lewis; Ignatavicius)",
-          "Reviewed by the content team on 17 November 2026."
+          "Rewritten to NCLEX-RN difficulty and reviewed by the content team on 19 November 2026."
         ]
       },
       "educationalObjective": "Analyze the cause of DKA.",
@@ -193,7 +193,7 @@
       ],
       "cjmmSkill": "prioritize_hypotheses",
       "difficulty": "difficult",
-      "stem": "An IV insulin infusion is about to start. Which complication is the client at highest risk for during treatment?",
+      "stem": "The 0800 potassium is 5.4 mEq/L, and an IV regular insulin infusion is about to start after the first liter of 0.9% sodium chloride. Which complication is the client at highest risk for during the next few hours of treatment?",
       "content": {
         "options": [
           {
@@ -202,11 +202,11 @@
           },
           {
             "id": "b",
-            "text": "Hypernatremia"
+            "text": "Hyperkalemia"
           },
           {
             "id": "c",
-            "text": "Hypercalcemia"
+            "text": "Hypoglycemia"
           },
           {
             "id": "d",
@@ -220,14 +220,14 @@
       "rationale": {
         "correct": "Monitor potassium closely and replace it before and during insulin therapy.",
         "perOption": {
-          "a": "Insulin moves potassium into cells; total body potassium is already low despite a normal-looking level.",
-          "b": "This isn't the main risk.",
-          "c": "This isn't related.",
-          "d": "The client is dehydrated, although fluids are monitored."
+          "a": "Insulin moves potassium into cells; total body potassium is already depleted by vomiting and osmotic diuresis despite the high-looking level.",
+          "b": "The level is high now only because acidosis shifts potassium out of cells; it falls quickly with insulin.",
+          "c": "This is a risk later, but dextrose is added at about 250 mg/dL; potassium falls first and faster.",
+          "d": "The client is volume depleted, although fluids are monitored."
         },
         "references": [
           "Medical-surgical nursing texts (e.g. Lewis; Ignatavicius)",
-          "Reviewed by the content team on 17 November 2026."
+          "Rewritten to NCLEX-RN difficulty and reviewed by the content team on 19 November 2026."
         ]
       },
       "educationalObjective": "Anticipate hypokalemia during DKA treatment.",
@@ -311,7 +311,7 @@
         },
         "references": [
           "Medical-surgical nursing texts (e.g. Lewis; Ignatavicius)",
-          "Reviewed by the content team on 17 November 2026."
+          "Rewritten to NCLEX-RN difficulty and reviewed by the content team on 19 November 2026."
         ]
       },
       "educationalObjective": "Select interventions for DKA.",
@@ -374,7 +374,7 @@
         },
         "references": [
           "Medical-surgical nursing texts (e.g. Lewis; Ignatavicius)",
-          "Reviewed by the content team on 17 November 2026."
+          "Rewritten to NCLEX-RN difficulty and reviewed by the content team on 19 November 2026."
         ]
       },
       "educationalObjective": "Sequence DKA treatment.",
@@ -444,7 +444,7 @@
         },
         "references": [
           "Medical-surgical nursing texts (e.g. Lewis; Ignatavicius)",
-          "Reviewed by the content team on 17 November 2026."
+          "Rewritten to NCLEX-RN difficulty and reviewed by the content team on 19 November 2026."
         ]
       },
       "educationalObjective": "Evaluate the response to DKA treatment.",
@@ -460,8 +460,8 @@
         "stroke-care"
       ],
       "cjmmSkill": "recognize_cues",
-      "difficulty": "easy",
-      "stem": "Highlight the findings in the emergency department note that are consistent with an acute stroke.",
+      "difficulty": "moderate",
+      "stem": "Highlight the findings in the emergency department note that are consistent with an acute stroke rather than a stroke mimic or a risk factor.",
       "content": {
         "segments": [
           {
@@ -539,7 +539,7 @@
         },
         "references": [
           "American Heart Association Guidelines for CPR and Emergency Cardiovascular Care",
-          "Reviewed by the content team on 17 November 2026."
+          "Rewritten to NCLEX-RN difficulty and reviewed by the content team on 19 November 2026."
         ]
       },
       "educationalObjective": "Recognize acute stroke findings.",
@@ -616,7 +616,7 @@
         },
         "references": [
           "American Heart Association Guidelines for CPR and Emergency Cardiovascular Care",
-          "Reviewed by the content team on 17 November 2026."
+          "Rewritten to NCLEX-RN difficulty and reviewed by the content team on 19 November 2026."
         ]
       },
       "educationalObjective": "Analyze eligibility for thrombolysis.",
@@ -691,7 +691,7 @@
         },
         "references": [
           "American Heart Association Guidelines for CPR and Emergency Cardiovascular Care",
-          "Reviewed by the content team on 17 November 2026."
+          "Rewritten to NCLEX-RN difficulty and reviewed by the content team on 19 November 2026."
         ]
       },
       "educationalObjective": "Prioritize blood pressure before thrombolysis.",
@@ -713,7 +713,7 @@
         "options": [
           {
             "id": "a",
-            "text": "Frequent neurological and vital sign checks per protocol"
+            "text": "Neurological and vital sign checks per protocol"
           },
           {
             "id": "b",
@@ -729,11 +729,11 @@
           },
           {
             "id": "e",
-            "text": "Give aspirin right away"
+            "text": "Give aspirin 325 mg as soon as the infusion is finished"
           },
           {
             "id": "f",
-            "text": "Insert a nasogastric tube right away"
+            "text": "Insert a nasogastric tube now so medicines can be given safely"
           }
         ]
       },
@@ -753,12 +753,12 @@
           "c": "This reduces the risk of bleeding.",
           "d": "This prevents aspiration.",
           "e": "Antiplatelets are usually held for 24 hours after alteplase.",
-          "f": "Invasive tubes are delayed if possible."
+          "f": "Invasive tubes are delayed for 24 hours if possible because of bleeding risk."
         },
         "references": [
           "American Heart Association Guidelines for CPR and Emergency Cardiovascular Care",
           "Medical-surgical nursing texts (e.g. Lewis; Ignatavicius)",
-          "Reviewed by the content team on 17 November 2026."
+          "Rewritten to NCLEX-RN difficulty and reviewed by the content team on 19 November 2026."
         ]
       },
       "educationalObjective": "Plan care after alteplase.",
@@ -775,24 +775,24 @@
       ],
       "cjmmSkill": "take_action",
       "difficulty": "difficult",
-      "stem": "During the alteplase infusion, the client suddenly has a severe headache and vomits. What should the nurse do first?",
+      "stem": "Forty minutes into the alteplase infusion, the client suddenly reports a severe headache and vomits. The blood pressure is 196/112 mm Hg, and the right arm is now flaccid. What should the nurse do first?",
       "content": {
         "options": [
           {
             "id": "a",
-            "text": "Stop the alteplase infusion and notify the provider"
+            "text": "Stop the alteplase infusion at the pump right away"
           },
           {
             "id": "b",
-            "text": "Give an antiemetic and continue"
+            "text": "Give the prescribed IV labetalol and continue the infusion"
           },
           {
             "id": "c",
-            "text": "Increase the infusion to finish faster"
+            "text": "Give IV ondansetron for the vomiting and recheck in 15 minutes"
           },
           {
             "id": "d",
-            "text": "Recheck in 30 minutes"
+            "text": "Call the provider to request a stat head CT"
           }
         ]
       },
@@ -802,14 +802,14 @@
       "rationale": {
         "correct": "A neurologic decline, headache or vomiting during thrombolysis means: stop the infusion, notify the provider and get a CT.",
         "perOption": {
-          "a": "These signs suggest bleeding in the brain; a stat CT is needed.",
-          "b": "This ignores a possible hemorrhage.",
-          "c": "This worsens bleeding.",
-          "d": "This needs immediate action."
+          "a": "These signs suggest bleeding in the brain; the infusion is stopped first, then the provider is notified and a stat CT obtained.",
+          "b": "Blood pressure is treated, but a possible hemorrhage means the drug must be stopped first.",
+          "c": "This treats a symptom and delays action on a possible hemorrhage.",
+          "d": "The CT is needed, but the infusion is stopped first so no more drug is given."
         },
         "references": [
           "American Heart Association Guidelines for CPR and Emergency Cardiovascular Care",
-          "Reviewed by the content team on 17 November 2026."
+          "Rewritten to NCLEX-RN difficulty and reviewed by the content team on 19 November 2026."
         ]
       },
       "educationalObjective": "Respond to suspected hemorrhage during thrombolysis.",
@@ -879,7 +879,7 @@
         },
         "references": [
           "American Heart Association Guidelines for CPR and Emergency Cardiovascular Care",
-          "Reviewed by the content team on 17 November 2026."
+          "Rewritten to NCLEX-RN difficulty and reviewed by the content team on 19 November 2026."
         ]
       },
       "educationalObjective": "Evaluate outcomes after stroke treatment.",
