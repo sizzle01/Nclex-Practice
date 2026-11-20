@@ -68,4 +68,5 @@ Written by `python3 -I build_all.py`; do not edit by hand. See `quality.py` for 
 | 76-moc-resources-legal-safety | 25 | yes | 20 | 10% | 32% (shortest) | 0% | 30 | 2/12/11 |
 | 77-precautions-prevention-psychosocial | 25 | yes | 20 | 15% | 25% (assess first) | 5% | 30 | 2/14/9 |
 | 78-drug-therapy-basic-needs | 25 | yes | 19 | 5% | 34% (shortest) | 0% | 33 | 2/12/11 |
-| **Whole bank** | 1385 | | 1059 | 13% | 24% (assess first) | 7% | 33 | 107/795/483 |
+| 79-monitoring-complications-cases | 25 | yes | 11 | 9% | 30% (assess first) | 0% | 26 | 0/15/10 |
+| **Whole bank** | 1410 | | 1070 | 13% | 24% (assess first) | 7% | 33 | 107/810/493 |
