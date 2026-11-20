@@ -31,13 +31,17 @@ Written by `python3 -I build_all.py` (coverage.py); do not edit by hand.
 | 7 | 2 | b92, b93, b94, b95 | 100 |
 | 8 | 2 | b96, b97, b98, b99 | 100 |
 
-**Next: chunk 9** (wave 2), batch files b100–b103, with the category counts above and this item-type mix:
+The wave chunks are paused (2026-11-20) while the bank is rebuilt around case studies.
 
-- multiple choice: about 55
-- multiple response, matrix, cloze, ordering, calculation: about 23
-- bowtie: about 6
-- highlight: about 4
-- case-study items (2 cases of 6): about 12
+## Case conversion (CASE-MAP.md)
+
+**252 of 2010 questions (13%) are inside full case studies**; the goal is 85%.
+
+| Chunk | Topic | Batch files | Questions | Case studies |
+|---|---|---|---|---|
+| 1 | Cardiac, pacemaker, hemodynamic monitoring and shock | b100, b101, b102, b103 | 100 | 16 |
+
+**Next: conversion chunk 2**: Pulmonary disorders with respiratory pharmacology (CASE-MAP.md).
 
 ## Item types in the whole bank
 

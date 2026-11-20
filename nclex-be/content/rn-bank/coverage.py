@@ -24,6 +24,14 @@ CHUNKS = {
     7: (92, 93, 94, 95),
     8: (96, 97, 98, 99),
 }
+# Case conversion (CASE-MAP.md, plan of 2026-11-20): the bank is rebuilt around full NGN case studies, topic by
+# topic, and the wave chunks above are paused. Add a line when a conversion chunk is committed.
+CONVERSION_CHUNKS = {
+    1: ("Cardiac, pacemaker, hemodynamic monitoring and shock", (100, 101, 102, 103)),
+}
+CONVERSION_NEXT = "Pulmonary disorders with respiratory pharmacology (CASE-MAP.md)"
+CASE_SHARE_GOAL = 85    # percent of the bank inside full case studies
+
 # Item-type mix for a chunk of new questions (plan of 2026-11-20): fewer plain multiple-choice questions
 # than the first 1,110, and the newer NGN formats the real exam uses.
 CHUNK_TYPE_MIX = [
@@ -90,11 +98,19 @@ def markdown(questions):
         count = sum(by_batch[b] for b in batches)
         files = ", ".join(f"b{b}" for b in batches)
         out.append(f"| {n} | {(n - 1) // CHUNKS_PER_WAVE + 1} | {files} | {count} |")
-    next_n = max(CHUNKS) + 1 if CHUNKS else 1
-    first = max(b for bs in CHUNKS.values() for b in bs) + 1 if CHUNKS else 68
-    out += ["", f"**Next: chunk {next_n}** (wave {(next_n - 1) // CHUNKS_PER_WAVE + 1}), "
-                f"batch files b{first}–b{first + 3}, with the category counts above and this item-type mix:", ""]
-    out += [f"- {label}: about {n}" for label, n in CHUNK_TYPE_MIX]
+    out += ["", "The wave chunks are paused (2026-11-20) while the bank is rebuilt around case studies."]
+
+    in_cases = sum(1 for q in questions if q.get("caseStudyId"))
+    out += ["", "## Case conversion (CASE-MAP.md)", "",
+            f"**{in_cases} of {total} questions ({100 * in_cases / total:.0f}%) are inside full case studies**; "
+            f"the goal is {CASE_SHARE_GOAL}%.", "",
+            "| Chunk | Topic | Batch files | Questions | Case studies |", "|---|---|---|---|---|"]
+    case_batch = collections.Counter(_batch(q["id"]) for q in questions if q.get("caseStudyId"))
+    for n, (topic, batches) in CONVERSION_CHUNKS.items():
+        count = sum(by_batch[b] for b in batches)
+        n_cases = sum(case_batch[b] for b in batches) // 6
+        out.append(f"| {n} | {topic} | {', '.join(f'b{b}' for b in batches)} | {count} | {n_cases} |")
+    out += ["", f"**Next: conversion chunk {max(CONVERSION_CHUNKS) + 1}**: {CONVERSION_NEXT}."]
 
     out += ["", "## Item types in the whole bank", "", "| Type | Questions | Share |", "|---|---|---|"]
     for t, n in types.most_common():
