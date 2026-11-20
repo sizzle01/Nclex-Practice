@@ -342,6 +342,7 @@ CREATE TABLE test_sets (
   pause_policy       jsonb NOT NULL DEFAULT '{"maxPauses":null,"maxPauseSec":null}',
   allow_back_nav     boolean NOT NULL DEFAULT true,
   is_sample          boolean NOT NULL DEFAULT false,  -- startable by unverified users
+  outcome_hidden     boolean NOT NULL DEFAULT false,  -- F24: results give no Pass/Close to pass/Fail (timed case-study blocks)
   access_tier        plan_tier NOT NULL DEFAULT 'free',
   is_published       boolean NOT NULL DEFAULT false,
   generator_criteria jsonb,                        -- custom builder filters (for "retake similar")

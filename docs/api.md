@@ -164,6 +164,8 @@ Validation: email in RFC 5322 format, at most 254 characters. Password must be 1
 ```
 An adaptive exam (F19, `mode: "cat"`) has `"adaptive": { "minItems": 85, "maxItems": 150 }`, and its `questionCount` is the maximum. `timed` and `timeBudgetSec` describe the timed option; the candidate may choose untimed when starting. `GET /test-sets/{id}` carries the same `adaptive` field, and `kind` is `"cat"`.
 
+`GET /test-sets/{id}` also has `outcomeHidden: boolean` (F24). It is true for timed case-study blocks, whose results give no Pass, Close to pass or Fail, so the detail panel shows no pass mark. Their results have `readiness: null`, and the result notification is the neutral "results ready" one.
+
 **`POST /test-sets/custom`**
 ```json
 // request

@@ -7924,6 +7924,7 @@
         "maxPauses": 1,
         "maxPauseSec": 600
       },
+      "outcomeHidden": true,
       "accessTier": "free",
       "questionIds": [
         "c1a00036-0000-4000-8000-000000000001",
@@ -8001,6 +8002,7 @@
         "maxPauses": 1,
         "maxPauseSec": 600
       },
+      "outcomeHidden": true,
       "accessTier": "free",
       "questionIds": [
         "c1a00071-0000-4000-8000-000000000014",
@@ -8078,6 +8080,7 @@
         "maxPauses": 1,
         "maxPauseSec": 600
       },
+      "outcomeHidden": true,
       "accessTier": "free",
       "questionIds": [
         "c1a00083-0000-4000-8000-000000000014",

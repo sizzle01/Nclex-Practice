@@ -12,6 +12,10 @@ namespace Nclex.Domain.Entities;
 /// <param name="PassThreshold">Share of points for a "likely pass" estimate; null for none.</param>
 /// <param name="PausePolicy">Pause limits (F09).</param>
 /// <param name="AllowBackNav">Whether the candidate may go back to earlier items.</param>
+/// <param name="OutcomeHidden">
+/// True when the result gives no Pass, Close to pass or Fail (F24). Settings stored before F24 have no such key
+/// and read as false, which is why the flag says "hidden" rather than "shown".
+/// </param>
 public sealed record AttemptSettings(
     TestMode Mode,
     RevealMode RevealMode,
@@ -20,7 +24,8 @@ public sealed record AttemptSettings(
     int? TimeBudgetSec,
     decimal? PassThreshold,
     PausePolicy PausePolicy,
-    bool AllowBackNav)
+    bool AllowBackNav,
+    bool OutcomeHidden = false)
 {
     // For EF Core: the stored JSON holds PausePolicy as a nested object, which EF cannot pass to
     // the positional constructor, so it builds the record this way and sets the properties.
@@ -38,7 +43,8 @@ public sealed record AttemptSettings(
         set.TimeBudgetSec,
         set.PassThreshold,
         set.PausePolicy,
-        set.AllowBackNav);
+        set.AllowBackNav,
+        set.OutcomeHidden);
 
     /// <summary>
     /// The same settings with no timers: an adaptive exam taken untimed, which the candidate chooses

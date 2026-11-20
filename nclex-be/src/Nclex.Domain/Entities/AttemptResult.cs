@@ -70,11 +70,18 @@ public sealed class AttemptResult
     public DateTimeOffset GradedAt { get; private set; }
 
     /// <summary>The result of <paramref name="attemptId"/> from its totals and readiness estimate.</summary>
+    /// <summary>
+    /// A result with no Pass, Close to pass or Fail outcome (F24 timed case-study blocks): the score and the
+    /// breakdowns only. Stored with no threshold, as database.md allows ("passed NULL when no threshold").
+    /// </summary>
+    public static AttemptResult CreateWithoutOutcome(Guid attemptId, ResultTotals totals, DateTimeOffset gradedAt) =>
+        Create(attemptId, totals, passThreshold: null, readiness: null, gradedAt);
+
     public static AttemptResult Create(
         Guid attemptId,
         ResultTotals totals,
         decimal? passThreshold,
-        Readiness readiness,
+        Readiness? readiness,
         DateTimeOffset gradedAt) =>
         new()
         {
@@ -88,8 +95,8 @@ public sealed class AttemptResult
             TotalTimeMs = totals.TotalTimeMs,
             AvgTimeMs = totals.AvgTimeMs,
             PassThreshold = passThreshold is { } threshold ? ScoreMaths.Share(threshold) : null,
-            Passed = readiness.Passed,
-            ReadinessLabel = readiness.Label,
+            Passed = readiness?.Passed,
+            ReadinessLabel = readiness?.Label,
             GradedAt = gradedAt,
         };
 }

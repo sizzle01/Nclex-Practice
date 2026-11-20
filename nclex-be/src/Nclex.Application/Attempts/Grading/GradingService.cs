@@ -93,8 +93,8 @@ public sealed class GradingService(
     }
 
     /// <summary>
-    /// An adaptive exam passes on its ability estimate (architecture.md 5.8); every other attempt
-    /// on its share of points against the fixed pass mark (F23).
+    /// An adaptive exam passes on its ability estimate (architecture.md 5.8); a set with its outcome hidden
+    /// gets none (F24); every other attempt is graded on its share of points against the fixed pass mark (F23).
     /// </summary>
     private AttemptResult ScoreResult(Attempt attempt, ResultTotals totals, DateTimeOffset now)
     {
@@ -106,7 +106,13 @@ public sealed class GradingService(
             return AttemptResult.CreateAdaptive(attempt.Id, totals, state.Estimate, state.Passed, now);
         }
 
-        // Every fixed-length test is graded against the one pass mark (F23), whatever the set's
+        // A timed case-study block gives no outcome (F24): it shows where judgment breaks down, not a verdict.
+        if (attempt.Settings.OutcomeHidden)
+        {
+            return AttemptResult.CreateWithoutOutcome(attempt.Id, totals, now);
+        }
+
+        // Every other fixed-length test is graded against the one pass mark (F23), whatever the set's
         // own threshold says.
         return AttemptResult.Create(attempt.Id, totals, ReadinessPolicy.PassMark, readiness.Evaluate(totals.ScorePct), now);
     }

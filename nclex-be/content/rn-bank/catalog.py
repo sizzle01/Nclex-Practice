@@ -15,7 +15,7 @@ Sets (PRD 5.5, api.md section 3):
 The sets published before the bank started growing (2026-11-20) are frozen in catalog-frozen.json: their
 ids and items never change. New questions fill new parts after them.
 - Timed case-study blocks (F24): BLOCK_CASES whole cases per block under exam rules, timed at the NCLEX-RN
-  pace, no going back, rationales at the end and no pass estimate. A block is published only when it is full
+  pace, no going back, rationales at the end and no Pass/Fail outcome (outcomeHidden). A block is published only when it is full
   and is then recorded in timed-blocks.json, so its cases never change as the bank grows.
 - The adaptive exam (F19, architecture.md 5.8): mode cat, no question list; each attempt picks
   85 to 150 questions from the whole bank, and the candidate chooses timed (5 h) or untimed.
@@ -189,7 +189,8 @@ def _timed_blocks(cases):
                             f"systems, at the NCLEX-RN pace: {minutes // 60} h {minutes % 60:02d} min, one 10-minute "
                             "break, no going back. Answers and rationales at the end."),
             "mode": "challenge", "revealMode": "exam", "timed": True, "timeBudgetSec": budget,
-            "allowBackNav": False, "pausePolicy": BLOCK_PAUSE_POLICY, "accessTier": "free", "questionIds": ids})
+            "allowBackNav": False, "pausePolicy": BLOCK_PAUSE_POLICY, "outcomeHidden": True, "accessTier": "free",
+            "questionIds": ids})
     return sets
 
 

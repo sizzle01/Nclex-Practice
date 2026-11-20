@@ -57,6 +57,7 @@ internal sealed class AttemptConfiguration : IEntityTypeConfiguration<Attempt>
             settings.Property(s => s.TimeBudgetSec).HasJsonPropertyName("timeBudgetSec");
             settings.Property(s => s.PassThreshold).HasJsonPropertyName("passThreshold");
             settings.Property(s => s.AllowBackNav).HasJsonPropertyName("allowBackNav");
+            settings.Property(s => s.OutcomeHidden).HasJsonPropertyName("outcomeHidden");
             settings.OwnsOne(s => s.PausePolicy, policy =>
             {
                 policy.HasJsonPropertyName("pausePolicy");

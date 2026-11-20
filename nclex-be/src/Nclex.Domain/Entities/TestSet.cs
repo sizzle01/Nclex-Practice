@@ -48,6 +48,9 @@ public sealed class TestSet
 
     public bool AllowBackNav { get; private set; }
 
+    /// <summary>True when results give no Pass, Close to pass or Fail outcome (F24 timed case-study blocks).</summary>
+    public bool OutcomeHidden { get; private set; }
+
     /// <summary>Sample sets can be started by users who have not verified their email yet.</summary>
     public bool IsSample { get; private set; }
 
@@ -183,7 +186,8 @@ public sealed class TestSet
         PausePolicy,
         AllowBackNav,
         IsSample,
-        AccessTier);
+        AccessTier,
+        OutcomeHidden);
 
     /// <summary>Shows the set to candidates, or hides it again.</summary>
     public void SetPublished(bool isPublished) => IsPublished = isPublished;
@@ -210,6 +214,7 @@ public sealed class TestSet
         AllowBackNav = settings.AllowBackNav;
         IsSample = settings.IsSample;
         AccessTier = settings.AccessTier;
+        OutcomeHidden = settings.OutcomeHidden;
         QuestionCount = questionCount;
     }
 }

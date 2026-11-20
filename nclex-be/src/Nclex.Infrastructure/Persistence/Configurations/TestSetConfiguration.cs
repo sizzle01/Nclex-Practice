@@ -34,6 +34,7 @@ internal sealed class TestSetConfiguration : IEntityTypeConfiguration<TestSet>
         // With a default of true, false must be the value EF always sends; true can be left to the database.
         builder.Property(s => s.AllowBackNav).HasDefaultValue(true).HasSentinel(true);
         builder.Property(s => s.IsSample).HasDefaultValue(false);
+        builder.Property(s => s.OutcomeHidden).HasDefaultValue(false);
         builder.Property(s => s.AccessTier).HasDefaultValue(PlanTier.Free).HasSentinel((PlanTier)(-1));
         builder.Property(s => s.IsPublished).HasDefaultValue(false);
         builder.Property(s => s.GeneratorCriteria).HasColumnType("jsonb");

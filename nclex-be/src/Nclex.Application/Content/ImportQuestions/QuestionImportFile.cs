@@ -153,6 +153,7 @@ public sealed record ImportedBank(
 /// <param name="AllowBackNav">Whether candidates may go back; true by default, as in the DDL.</param>
 /// <param name="PausePolicy">Pause limits; no limits by default.</param>
 /// <param name="CatConfig">An adaptive exam's rules, <c>{minItems, maxItems, passingTheta}</c>; required with mode cat, refused otherwise.</param>
+/// <param name="OutcomeHidden">True gives results no Pass, Close to pass or Fail (F24 timed case-study blocks).</param>
 /// <param name="IsPublished">False hides the set from candidates while keeping it, and its attempts, for history (F19).</param>
 public sealed record ImportedTestSet(
     Guid Id,
@@ -170,7 +171,8 @@ public sealed record ImportedTestSet(
     bool AllowBackNav = true,
     PausePolicy? PausePolicy = null,
     Nclex.Domain.Cat.CatConfig? CatConfig = null,
-    bool IsPublished = true)
+    bool IsPublished = true,
+    bool OutcomeHidden = false)
 {
     /// <summary>True for an adaptive exam (mode cat).</summary>
     public bool IsAdaptive => Mode == TestMode.Cat;
@@ -188,5 +190,6 @@ public sealed record ImportedTestSet(
         PausePolicy ?? PausePolicy.Unlimited,
         AllowBackNav,
         IsSample,
-        AccessTier);
+        AccessTier,
+        OutcomeHidden);
 }

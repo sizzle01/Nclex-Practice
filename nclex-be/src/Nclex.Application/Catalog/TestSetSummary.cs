@@ -54,6 +54,7 @@ public sealed record LastAttemptSummary(Guid Id, decimal ScorePct, DateTimeOffse
 /// <param name="Locked">True when the set is premium and the user's plan is free.</param>
 /// <param name="MyLastAttempt">The user's latest submitted attempt of the set; null when they have never finished it.</param>
 /// <param name="Adaptive">The length rules of an adaptive exam (F19); null for every other set.</param>
+/// <param name="OutcomeHidden">True when results give no Pass, Close to pass or Fail (F24), so no pass mark is shown.</param>
 public sealed record TestSetDetail(
     Guid Id,
     ExamTrack Track,
@@ -73,7 +74,8 @@ public sealed record TestSetDetail(
     PlanTier AccessTier,
     bool Locked,
     LastAttemptSummary? MyLastAttempt,
-    AdaptiveRules? Adaptive = null)
+    AdaptiveRules? Adaptive = null,
+    bool OutcomeHidden = false)
 {
     /// <summary>The detail of <paramref name="set"/> as <paramref name="viewer"/> sees it.</summary>
     public static TestSetDetail From(TestSet set, CatalogViewer viewer, LastAttemptSummary? myLastAttempt = null) => new(
@@ -95,7 +97,8 @@ public sealed record TestSetDetail(
         set.AccessTier,
         viewer.IsLocked(set.AccessTier),
         myLastAttempt,
-        AdaptiveRules.For(set));
+        AdaptiveRules.For(set),
+        set.OutcomeHidden);
 }
 
 /// <summary>Which sets a user may see at all; locking is separate.</summary>

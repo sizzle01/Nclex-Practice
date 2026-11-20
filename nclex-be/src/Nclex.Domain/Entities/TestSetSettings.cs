@@ -18,6 +18,10 @@ namespace Nclex.Domain.Entities;
 /// <param name="AllowBackNav">Whether candidates may go back to earlier items.</param>
 /// <param name="IsSample">Sample sets can be started before verifying an email (docs/README.md assumption 5).</param>
 /// <param name="AccessTier">Premium sets are locked for free accounts.</param>
+/// <param name="OutcomeHidden">
+/// True when results give no Pass, Close to pass or Fail (F24: timed case-study blocks, where the point is
+/// to find where clinical judgment breaks down, not to give a verdict). False for every other set.
+/// </param>
 public sealed record TestSetSettings(
     string Title,
     string? Description,
@@ -30,7 +34,8 @@ public sealed record TestSetSettings(
     PausePolicy PausePolicy,
     bool AllowBackNav,
     bool IsSample,
-    PlanTier AccessTier)
+    PlanTier AccessTier,
+    bool OutcomeHidden = false)
 {
     /// <summary>
     /// The database CHECK "NOT timed OR per_question_sec IS NOT NULL OR time_budget_sec IS NOT NULL":
