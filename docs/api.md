@@ -371,9 +371,17 @@ Repeated calls return the same result.
     "client_needs_parent": [ … ], "body_system": [ … ], "item_type": [ … ], "cjmm_skill": [ … ]
   },
   "weakest": [ { "dimension": "client_needs", "key": "PI.PPT", "name": "Pharmacological & Parenteral Therapies", "pct": 0.48 } ],
-  "adaptive": null
+  "adaptive": null,
+  "clinicalJudgment": {
+    "steps": [ { "key": "recognize_cues", "name": "Recognize cues", "items": 10, "pointsEarned": 8, "maxPoints": 10,
+                 "pct": 0.80, "avgTimeMs": 72000 }, … ],
+    "firstHalf":  { "items": 30, "pct": 0.78, "avgTimeMs": 95000, "steps": [ … ] },
+    "secondHalf": { "items": 30, "pct": 0.61, "avgTimeMs": 64000, "steps": [ … ] },
+    "secondHalfDrop": true
+  }
 }
 ```
+`clinicalJudgment` (F25) gives each CJMM step in model order (recognize, analyze, prioritize, generate, take action, evaluate), listing only steps the attempt covered, with points-based `pct` and average time per question. The halves split the attempt by served position; the first half takes the odd item. `secondHalfDrop` is true when both halves have at least 10 items and the second half's shown percentage is at least 10 points lower. It is null for an attempt of one item. It is computed when the result is read, from the stored item grades and times.
 `readiness.label` is `likely_ready` (pass, 86% and above), `close_to_pass` (70% to 85%) or `needs_more_practice` (fail, below 70%). Since F23 every fixed-length test has a readiness estimate against the fixed 86% pass mark, and `passThreshold` is always 0.86.
 
 For an adaptive exam (F19), `readiness` is null and `adaptive` holds the outcome:
@@ -403,6 +411,7 @@ A subtopic qualifies with at least one answered question without full marks, so 
 | GET | `/me/performance/summary?track=RN` | Totals, overall accuracy, avg time, items answered, and the three weakest Client Needs categories (`weakest`). Streak arrives with phase 2. |
 | GET | `/me/performance/breakdown?dimension=client_needs` | Snapshot per category (accuracy, avg time, count) |
 | GET | `/me/performance/trend?dimension=client_needs&key=PI.PPT&bucket=week&from=&to=` | Time series for charts |
+| GET | `/me/performance/clinical-judgment?track=RN` | Each CJMM step's `pct` in the last 5 submitted timed attempts, oldest first (F25): `{ track, attempts: [{ attemptId, title, submittedAt }], steps: [{ key, name, scores: [pct or null per attempt] }] }`. All six steps are always listed; a score is null when the attempt had no item on that step. |
 | GET | `/me/weak-areas?track=RN` | Weak Client Needs areas in the last 10 tests, and the size of the practice test they give (added in F18) |
 
 ```json
