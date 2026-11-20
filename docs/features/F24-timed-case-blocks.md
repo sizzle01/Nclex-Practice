@@ -6,7 +6,8 @@ Candidates get a new Practice section, "Timed case-study blocks". Each block is 
 - one timer at the NCLEX-RN pace: 2 hours for 60 questions;
 - one 10-minute break;
 - no going back;
-- answers and rationales only at the end, with no pass estimate.
+- answers and rationales only at the end;
+- no Pass, Close to pass or Fail outcome. F23 grades every other fixed-length test against 86%.
 
 The feature exists because the candidate's five-attempt NCLEX report showed clinical judgment falling away in the
 second half of the exam. That points to stamina and pressure rather than knowledge, and untimed tutor-mode case
@@ -38,7 +39,11 @@ Next:
    build. Never edit it by hand.
 3. `nclex-fe/src/features/practice/setCategories.ts`: `sectionOf` puts a timed case-study challenge in the new
    section.
-4. `nclex-be/tests/Nclex.Api.IntegrationTests/Catalog/TimedCaseBlockTests.cs`: a block imported and taken as a
+4. `nclex-be/src/Nclex.Domain/Entities/TestSetSettings.cs` (`OutcomeHidden`) and
+   `nclex-be/src/Nclex.Application/Attempts/Grading/GradingService.cs` (`ScoreResult`): a block's result is stored
+   with no threshold, `passed` or label.
+5. `nclex-fe/src/features/practice/components/TestSetDetailPanel.tsx`: no "Pass mark" row for a block.
+6. `nclex-be/tests/Nclex.Api.IntegrationTests/Catalog/TimedCaseBlockTests.cs`: a block imported and taken as a
    candidate.
 
 ## 4. Request flow
@@ -54,11 +59,18 @@ Next:
    It goes into the last batch file, and the importer checks that each case stays whole and in order.
 3. **Practice page.** The UI lists the sets as before. `sectionOf` sees a timed challenge whose title contains
    "case stud" and shows it under "Timed case-study blocks".
-4. **Taking a block.** Start, autosave, the exam timer, expiry and grading are the existing challenge-mode path
-   (architecture.md 5.1 to 5.5). Answers and rationales appear on the review page after submission.
+4. **Taking a block.** Start, autosave, the exam timer and expiry are the existing challenge-mode path
+   (architecture.md 5.1 to 5.4). Starting copies `outcomeHidden` into the attempt's settings snapshot.
+5. **Grading.** `GradingService.ScoreResult` sees `attempt.Settings.OutcomeHidden` and stores the result with
+   `AttemptResult.CreateWithoutOutcome`: the score and breakdowns, but no threshold, `passed` or label. The results
+   page then shows no outcome, history and the dashboard show only the score, and the notification is the neutral
+   "results ready" one. Answers and rationales appear on the review page.
 
 ## 5. Database changes
-None. Blocks are ordinary curated test sets.
+Migration `F24_OutcomeHidden` adds `test_sets.outcome_hidden boolean NOT NULL DEFAULT false`, documented in
+database.md. The attempt settings snapshot (`attempts.settings` JSON) gains an `outcomeHidden` key. The flag says
+"hidden" rather than "shown" so that settings stored before F24, which lack the key, read as false: the outcome is
+shown, as before.
 
 ## 6. Key decisions and deviations
 - **Branch base.** The plan said "from main". The branch is stacked on `content/case-conversion` because blocks
@@ -68,7 +80,10 @@ None. Blocks are ordinary curated test sets.
   cardiac, because the conversion writes topic by topic. A block now forms only when it can mix at least four
   systems. Today the bank's 42 cases make 3 blocks. The other 12, mostly cardiac, wait for later conversion
   chunks.
-- **No pass estimate** (decided by the user): the score and breakdowns point to where judgment breaks down.
+- **No outcome on blocks** (the user chose this after F23 was merged). F23 grades every fixed-length test against
+  86% whatever the set's threshold, so a missing threshold could not mark a block. An explicit `outcomeHidden`
+  setting does, set only by content files. The admin form carries the value through unchanged, with no field to
+  edit it. The aim is to show where judgment breaks down without a verdict after every practice block.
   F25 adds the clinical judgment panel.
 - **One 10-minute pause.** NCLEX breaks are optional and run on the exam clock. In this app a pause freezes the
   timer (architecture.md 5.1), so the break does not use exam time.
@@ -79,7 +94,9 @@ None. Blocks are ordinary curated test sets.
 - Backend, in `TimedCaseBlockTests`:
   - a block starts with exam rules, no going back, the NCLEX time budget and no pass threshold;
   - it serves each case whole and in order;
-  - it stores the one-pause policy.
+  - it stores the one-pause policy and `outcomeHidden`;
+  - a finished block has a score but no outcome, in the API and in the database.
+- Frontend: `TestSetDetailPanel.test.tsx` checks that a block shows no pass mark.
 - Frontend: `setCategories.test.ts` checks the new section, its place in the order, and that an untimed
   case-study challenge stays with the untimed exams.
 - The build checks that published blocks never change.
@@ -90,7 +107,8 @@ To run them:
 cd nclex-be && caffeinate -i dotnet test
 cd nclex-fe && npm run lint && npm run typecheck && npm test
 ```
-Results at commit time: 1,424 backend tests passed; lint and typecheck clean; 477 frontend tests passed.
+Results at commit time, after merging main with F23: 1,433 backend tests passed; lint and typecheck clean; 495
+frontend tests passed. `dotnet ef migrations has-pending-model-changes` reports none.
 
 ## 8. Follow-ups and known limitations
 - F25 adds the clinical judgment results panel: each step's score, first half versus second half, and time per
