@@ -38,7 +38,7 @@ Written by `python3 -I build_all.py`; do not edit by hand. See `quality.py` for 
 | 25-health-promotion-lifespan | 24 | yes | 21 | 10% | 23% (assess first) | 5% | 33 | 1/15/8 |
 | 26-maternity-antepartum | 25 | yes | 23 | 4% | 27% (shortest) | 4% | 43 | 3/12/10 |
 | 27-maternity-intrapartum | 24 | yes | 22 | 9% | 25% (shortest) | 5% | 43 | 3/12/9 |
-| 28-maternity-postpartum-newborn | 22 |  | 20 | 70% | 75% (skip absolutes) | 25% | 16 | 4/15/3 |
+| 28-maternity-postpartum-newborn | 22 | yes | 20 | 0% | 24% (assess first) | 10% | 38.5 | 2/12/8 |
 | 29-pediatrics-1 | 22 |  | 19 | 63% | 66% (longest) | 16% | 13.5 | 5/15/2 |
 | 30-pediatrics-2 | 23 |  | 22 | 82% | 82% (longest) | 23% | 15 | 3/17/3 |
 | 31-pediatrics-3 | 21 |  | 20 | 75% | 75% (longest) | 20% | 15 | 4/14/3 |
@@ -57,4 +57,4 @@ Written by `python3 -I build_all.py`; do not edit by hand. See `quality.py` for 
 | 65-management-of-care-specialty | 27 | yes | 18 | 17% | 28% (stem words) | 11% | 27 | 2/15/10 |
 | 66-risk-reduction-basic-care | 31 | yes | 27 | 7% | 29% (assess first) | 15% | 32 | 4/17/10 |
 | 67-moc-sic-ngn | 34 | yes | 23 | 0% | 23% (shortest) | 9% | 32 | 0/23/11 |
-| **Whole bank** | 1110 | | 873 | 25% | 29% (skip absolutes) | 10% | 29 | 96/683/331 |
+| **Whole bank** | 1110 | | 873 | 23% | 27% (skip absolutes) | 10% | 30 | 94/680/336 |
