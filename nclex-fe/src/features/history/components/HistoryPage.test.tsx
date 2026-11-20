@@ -29,6 +29,7 @@ function finished(id: string, title: string, overrides: Partial<AttemptSummary> 
     timeRemainingMs: null,
     scorePct: 0.7123,
     passed: null,
+    readinessLabel: null,
     timed: false,
     ...overrides,
   };
@@ -49,7 +50,7 @@ describe("HistoryPage", () => {
   it("lists finished tests with their score, estimate and links to results and review", async () => {
     getMock.mockResolvedValue(
       reply(200, {
-        items: [finished("a-1", "Challenge Exam 1", { mode: "challenge", passed: true }), finished("a-2", "Practice 3")],
+        items: [finished("a-1", "Challenge Exam 1", { mode: "challenge", passed: false, readinessLabel: "close_to_pass" }), finished("a-2", "Practice 3")],
         nextCursor: null,
       }),
     );
@@ -60,7 +61,7 @@ describe("HistoryPage", () => {
     const challenge = within(table).getByRole("row", { name: /Challenge Exam 1/ });
     expect(challenge).toHaveTextContent("Challenge");
     expect(challenge).toHaveTextContent("71%");
-    expect(challenge).toHaveTextContent("Likely ready");
+    expect(within(challenge).getByText("Close to pass")).toHaveAttribute("data-outcome", "close_to_pass");
     expect(within(challenge).getByRole("link", { name: "Results" })).toHaveAttribute("href", "/attempts/a-1/results");
     expect(within(challenge).getByRole("link", { name: "Review" })).toHaveAttribute("href", "/attempts/a-1/review");
     expect(within(table).getByRole("row", { name: /Practice 3/ })).toHaveTextContent("—");

@@ -86,7 +86,8 @@ describe("dashboard recent results", () => {
             staleDraft: false,
             timeRemainingMs: null,
             scorePct: 0.8,
-            passed: null,
+            passed: false,
+            readinessLabel: "close_to_pass",
           },
         ],
         nextCursor: "next",
@@ -98,6 +99,7 @@ describe("dashboard recent results", () => {
     const list = await screen.findByRole("list", { name: "Recent results" });
     expect(within(list).getByRole("link", { name: "Comprehensive Practice 1" })).toHaveAttribute("href", "/attempts/a-9/results");
     expect(list).toHaveTextContent("80%");
+    expect(within(list).getByText("Close to pass")).toHaveAttribute("data-outcome", "close_to_pass");
     expect(getMock).toHaveBeenCalledWith("/api/v1/attempts", { params: { query: { status: "submitted", limit: 5, cursor: undefined } } });
   });
 

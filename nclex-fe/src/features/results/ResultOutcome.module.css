@@ -1,0 +1,15 @@
+/* Outcome colours reuse the theme's status tokens, which already have light and dark variants. */
+.likely_ready {
+  color: var(--success);
+  font-weight: 600;
+}
+
+.close_to_pass {
+  color: var(--warning);
+  font-weight: 600;
+}
+
+.needs_more_practice {
+  color: var(--error);
+  font-weight: 600;
+}

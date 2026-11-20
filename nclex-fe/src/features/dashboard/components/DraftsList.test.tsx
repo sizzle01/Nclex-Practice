@@ -30,6 +30,7 @@ function draft(overrides: Partial<AttemptSummary>): AttemptSummary {
     timeRemainingMs: null,
     scorePct: null,
     passed: null,
+    readinessLabel: null,
     timed: false,
     ...overrides,
   };
