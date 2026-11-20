@@ -40,6 +40,21 @@ public sealed class NotificationCopyTests
     }
 
     [Fact]
+    public void Close_to_pass_names_the_pass_mark_and_the_two_weakest_categories()
+    {
+        var text = NotificationCopy.ResultClose(0.78m, ["Pharmacological Therapies", "Reduction of Risk Potential", "Basic Care"]);
+
+        text.Title.ShouldBe("You're close to passing");
+        text.Body.ShouldBe("You scored 78%, just short of the 86% pass mark. Here's what to focus on: Pharmacological Therapies, Reduction of Risk Potential.");
+    }
+
+    [Fact]
+    public void Close_to_pass_with_no_breakdown_still_reads_well()
+    {
+        NotificationCopy.ResultClose(0.7m, []).Body.ShouldBe("You scored 70%, just short of the 86% pass mark. Review your rationales to close the gap.");
+    }
+
+    [Fact]
     public void A_set_without_a_threshold_just_reports_the_score()
     {
         var text = NotificationCopy.ResultReady(0.7m, "Cardio quiz");

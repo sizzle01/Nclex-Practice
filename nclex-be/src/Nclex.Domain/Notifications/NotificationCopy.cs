@@ -25,6 +25,16 @@ public static class NotificationCopy
         return new("You didn't reach the passing threshold this time", $"You scored {Percent(scorePct)}%. {focus}");
     }
 
+    /// <summary>A score of 70% to 85%: short of the pass mark but near it (F23).</summary>
+    /// <param name="weakest">Names of the weakest categories, worst first; the first two are named.</param>
+    public static NotificationText ResultClose(decimal scorePct, IReadOnlyList<string> weakest)
+    {
+        var focus = weakest.Count == 0
+            ? "Review your rationales to close the gap."
+            : $"Here's what to focus on: {string.Join(", ", weakest.Take(2))}.";
+        return new("You're close to passing", $"You scored {Percent(scorePct)}%, just short of the 86% pass mark. {focus}");
+    }
+
     public static NotificationText ResultReady(decimal scorePct, string setTitle) => new(
         "Your results are ready",
         $"You scored {Percent(scorePct)}% on {setTitle}.");

@@ -4,7 +4,7 @@ using Nclex.Domain.Notifications;
 namespace Nclex.Infrastructure.Email.Templates;
 
 /// <summary>
-/// The three result emails share a payload and a layout; they differ only in wording, which
+/// The result emails share a payload and a layout; they differ only in wording, which
 /// comes from <see cref="NotificationCopy"/> so the email says what the bell says.
 /// </summary>
 internal abstract class ResultEmailTemplate(EmailLinks links) : IEmailTemplate
@@ -43,6 +43,14 @@ internal sealed class ResultFailTemplate(EmailLinks links) : ResultEmailTemplate
 
     protected override NotificationText Text(ResultEmailPayload values) =>
         NotificationCopy.ResultFail(values.ScorePct, values.Weakest);
+}
+
+internal sealed class ResultCloseTemplate(EmailLinks links) : ResultEmailTemplate(links)
+{
+    public override string Name => EmailTemplateNames.ResultClose;
+
+    protected override NotificationText Text(ResultEmailPayload values) =>
+        NotificationCopy.ResultClose(values.ScorePct, values.Weakest);
 }
 
 internal sealed class ResultReadyTemplate(EmailLinks links) : ResultEmailTemplate(links)

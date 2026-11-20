@@ -9,8 +9,8 @@ namespace Nclex.Application.Notifications;
 public sealed record WeakCategory(string Key, string Name);
 
 /// <summary>
-/// The notification grading creates when an attempt is submitted (architecture.md 5.5): pass, fail,
-/// or just "ready" when the set has no pass threshold.
+/// The notification grading creates when an attempt is submitted (architecture.md 5.5): pass, close
+/// to pass, fail, or just "ready" for a result without a pass/fail estimate.
 /// </summary>
 public static class ResultNotifications
 {
@@ -25,18 +25,14 @@ public static class ResultNotifications
         string? displayName,
         IReadOnlyList<WeakCategory> weakest)
     {
-        var (type, template) = result.Passed switch
-        {
-            true => (NotificationType.ResultPass, EmailTemplateNames.ResultPass),
-            false => (NotificationType.ResultFail, EmailTemplateNames.ResultFail),
-            null => (NotificationType.ResultReady, EmailTemplateNames.ResultReady),
-        };
         var names = weakest.Select(w => w.Name).ToList();
-        var text = type switch
+        var (type, template, text) = (result.Passed, result.ReadinessLabel) switch
         {
-            NotificationType.ResultPass => NotificationCopy.ResultPass(result.ScorePct, setTitle),
-            NotificationType.ResultFail => NotificationCopy.ResultFail(result.ScorePct, names),
-            _ => NotificationCopy.ResultReady(result.ScorePct, setTitle),
+            (true, _) => (NotificationType.ResultPass, EmailTemplateNames.ResultPass, NotificationCopy.ResultPass(result.ScorePct, setTitle)),
+            // Close to pass is still not a pass, so it keeps the result_fail type; only the wording differs.
+            (false, ReadinessLabel.CloseToPass) => (NotificationType.ResultFail, EmailTemplateNames.ResultClose, NotificationCopy.ResultClose(result.ScorePct, names)),
+            (false, _) => (NotificationType.ResultFail, EmailTemplateNames.ResultFail, NotificationCopy.ResultFail(result.ScorePct, names)),
+            (null, _) => (NotificationType.ResultReady, EmailTemplateNames.ResultReady, NotificationCopy.ResultReady(result.ScorePct, setTitle)),
         };
         var deepLink = DeepLink(attempt.Id);
 
