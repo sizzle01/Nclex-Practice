@@ -6,6 +6,7 @@ namespace Nclex.Application.Attempts.Results;
 /// <summary>Body of GET /attempts/{id}/result (api.md section 4).</summary>
 /// <param name="Weakest">The weakest Client Needs categories, worst first.</param>
 /// <param name="Adaptive">How an adaptive exam ended (F19); null for every other attempt.</param>
+/// <param name="ClinicalJudgment">Scores by CJMM step and by half of the attempt (F25); null for an attempt of one item.</param>
 public sealed record AttemptResultView(
     Guid AttemptId,
     string Title,
@@ -16,7 +17,8 @@ public sealed record AttemptResultView(
     ResultReadiness? Readiness,
     ResultBreakdown Breakdown,
     IReadOnlyList<WeakArea> Weakest,
-    AdaptiveResult? Adaptive);
+    AdaptiveResult? Adaptive,
+    ClinicalJudgmentView? ClinicalJudgment);
 
 /// <summary>
 /// The outcome of an adaptive exam (architecture.md 5.8). As on the NCLEX it is pass or fail from

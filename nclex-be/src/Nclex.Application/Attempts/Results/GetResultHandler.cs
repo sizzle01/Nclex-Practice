@@ -30,6 +30,7 @@ public sealed class GetResultHandler(IAppDbContext db, AttemptStore store, Dimen
             .Select(s => s.Title)
             .SingleAsync(cancellationToken);
         var names = await dimensionNames.ForTrackAsync(attempt.Track, cancellationToken);
+        var clinicalJudgment = ClinicalJudgment.For(await ServedItemsAsync(attempt.Id, cancellationToken));
 
         var summary = AttemptResultSummary.From(result);
         return new AttemptResultView(
@@ -48,7 +49,22 @@ public sealed class GetResultHandler(IAppDbContext db, AttemptStore store, Dimen
                 Rows(ScoreDimension.CjmmSkill),
                 Rows(ScoreDimension.Difficulty)),
             [.. WeakestAreas.From(scores).Select(s => new WeakArea(s.Dimension, s.DimensionKey, names.Name(s.Dimension, s.DimensionKey), s.Pct))],
-            AdaptiveResult.For(attempt));
+            AdaptiveResult.For(attempt),
+            clinicalJudgment is null
+                ? null
+                : ClinicalJudgmentView.From(clinicalJudgment, key => names.Name(ScoreDimension.CjmmSkill, key)));
+
+        // Read-only: the item grades and times were fixed at submit, so this never re-grades.
+        async Task<List<ServedItem>> ServedItemsAsync(Guid id, CancellationToken token) =>
+            await db.AttemptItems.AsNoTracking()
+                .Where(i => i.AttemptId == id)
+                .Join(db.QuestionVersions, i => i.QuestionVersionId, v => v.Id, (i, v) => new ServedItem(
+                    i.Position,
+                    i.PointsEarned ?? 0m,
+                    i.MaxPoints ?? 0,
+                    i.TimeSpentMs,
+                    v.CjmmSkill))
+                .ToListAsync(token);
 
         IReadOnlyList<CategoryResult> Rows(ScoreDimension dimension) =>
             [.. scores
