@@ -16,6 +16,7 @@ CHUNKS_PER_WAVE = 5
 # Which batch numbers make up each chunk; add a line when a chunk is committed.
 CHUNKS = {
     1: (68, 69, 70, 71),
+    2: (72, 73, 74, 75),
 }
 # Item-type mix for a chunk of new questions (plan of 2026-11-20): fewer plain multiple-choice questions
 # than the first 1,110, and the newer NGN formats the real exam uses.
