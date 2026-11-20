@@ -1,5 +1,5 @@
 {
-  "notice": "RN bank batch 25: Health promotion and maintenance across the lifespan. Reviewed by the content team on 17 November 2026. See REVIEW-LOG.md.",
+  "notice": "RN bank batch 25: Health promotion and maintenance across the lifespan. Rewritten to NCLEX-RN difficulty and reviewed by the content team on 19 November 2026. See REVIEW-LOG.md.",
   "track": "RN",
   "subtopics": [
     {
@@ -43,8 +43,8 @@
         "developmental-stages"
       ],
       "cjmmSkill": "analyze_cues",
-      "difficulty": "easy",
-      "stem": "According to Erikson, what is the main developmental task of adolescence?",
+      "difficulty": "difficult",
+      "stem": "A 15-year-old in the hospital for 2 weeks after a car crash dyes their hair a new color each visit, tries on different styles of dress and says, \"I don't know who I want to be.\" According to Erikson, which developmental task is the teen working on?",
       "content": {
         "options": [
           {
@@ -61,7 +61,7 @@
           },
           {
             "id": "d",
-            "text": "Integrity versus despair"
+            "text": "Intimacy versus isolation"
           }
         ]
       },
@@ -71,14 +71,14 @@
       "rationale": {
         "correct": "Erikson: trust (infant), autonomy (toddler), initiative (preschool), industry (school age), identity (adolescent), intimacy (young adult), generativity (middle adult), integrity (older adult).",
         "perOption": {
-          "a": "Adolescents work to form a sense of self.",
+          "a": "Adolescents try out roles and styles while forming a sense of self.",
           "b": "This is the task of infancy.",
           "c": "This is the task of school-age children.",
-          "d": "This is the task of older adulthood."
+          "d": "This is the task of young adulthood."
         },
         "references": [
           "Pediatric nursing texts (e.g. Hockenberry, Wong's Essentials of Pediatric Nursing)",
-          "Reviewed by the content team on 17 November 2026."
+          "Rewritten to NCLEX-RN difficulty and reviewed by the content team on 19 November 2026."
         ]
       },
       "educationalObjective": "Identify Erikson's stage for adolescence."
@@ -93,24 +93,24 @@
       ],
       "cjmmSkill": "generate_solutions",
       "difficulty": "moderate",
-      "stem": "An 82-year-old client enjoys talking about past accomplishments. Which intervention supports this client's developmental task?",
+      "stem": "An 82-year-old resident of an assisted living facility enjoys telling staff about raising a family and working as a teacher. The resident sometimes says, \"I did my best.\" Which nursing intervention supports this resident's developmental task?",
       "content": {
         "options": [
           {
             "id": "a",
-            "text": "Encourage reminiscence and life review"
+            "text": "Encourage reminiscence and a life review with photos"
           },
           {
             "id": "b",
-            "text": "Redirect the client to current events only"
+            "text": "Steer conversations to current events instead of the past"
           },
           {
             "id": "c",
-            "text": "Discourage talk about the past"
+            "text": "Discourage long stories about the past during care"
           },
           {
             "id": "d",
-            "text": "Suggest the client start a new career"
+            "text": "Suggest the resident take a class to start a new career"
           }
         ]
       },
@@ -118,16 +118,16 @@
         "correct": "a"
       },
       "rationale": {
-        "correct": "Older adults work toward integrity; reminiscence supports it.",
+        "correct": "Older adults work toward integrity; reminiscence and life review support it.",
         "perOption": {
           "a": "Reviewing life supports integrity rather than despair.",
           "b": "This discourages a healthy developmental process.",
           "c": "This blocks reflection.",
-          "d": "This isn't the developmental focus."
+          "d": "This is not the developmental focus."
         },
         "references": [
           "Fundamentals of nursing texts (e.g. Potter & Perry)",
-          "Reviewed by the content team on 17 November 2026."
+          "Rewritten to NCLEX-RN difficulty and reviewed by the content team on 19 November 2026."
         ]
       },
       "educationalObjective": "Support ego integrity in older adults."
@@ -141,8 +141,8 @@
         "developmental-stages"
       ],
       "cjmmSkill": "analyze_cues",
-      "difficulty": "easy",
-      "stem": "A 48-year-old mentors younger coworkers and volunteers in the community. Which developmental task does this reflect?",
+      "difficulty": "moderate",
+      "stem": "A 48-year-old client at a wellness visit says, \"I coach my daughter's soccer team, I mentor new staff at work, and I volunteer on weekends. It feels good to give back.\" Which developmental task does this reflect?",
       "content": {
         "options": [
           {
@@ -159,7 +159,7 @@
           },
           {
             "id": "d",
-            "text": "Initiative versus guilt"
+            "text": "Integrity versus despair"
           }
         ]
       },
@@ -167,16 +167,16 @@
         "correct": "a"
       },
       "rationale": {
-        "correct": "Middle adulthood: generativity, contributing to others and the next generation.",
+        "correct": "Middle adulthood: generativity, contributing to others and to the next generation.",
         "perOption": {
-          "a": "Middle adults focus on guiding the next generation.",
+          "a": "Middle adults focus on guiding the next generation and contributing to others.",
           "b": "This is the task of young adulthood.",
           "c": "This is the task of adolescence.",
-          "d": "This is the task of preschoolers."
+          "d": "This is the task of older adulthood."
         },
         "references": [
           "Fundamentals of nursing texts (e.g. Potter & Perry)",
-          "Reviewed by the content team on 17 November 2026."
+          "Rewritten to NCLEX-RN difficulty and reviewed by the content team on 19 November 2026."
         ]
       },
       "educationalObjective": "Identify generativity in middle adulthood."
@@ -189,34 +189,34 @@
       "subtopics": [
         "aging-and-older-adult-health"
       ],
-      "cjmmSkill": "recognize_cues",
-      "difficulty": "moderate",
-      "stem": "Which findings are expected changes of normal aging? Select all that apply.",
+      "cjmmSkill": "analyze_cues",
+      "difficulty": "difficult",
+      "stem": "An 84-year-old client at a clinic visit is accompanied by an adult child who lists several changes noticed over the past year. Which findings are expected changes of normal aging? Select all that apply.",
       "content": {
         "options": [
           {
             "id": "a",
-            "text": "Decreased skin elasticity"
+            "text": "Thinner, less elastic skin"
           },
           {
             "id": "b",
-            "text": "Difficulty seeing close objects (presbyopia)"
+            "text": "Needing reading glasses for close work"
           },
           {
             "id": "c",
-            "text": "Reduced hearing of high-pitched sounds (presbycusis)"
+            "text": "Trouble hearing high-pitched voices"
           },
           {
             "id": "d",
-            "text": "Decreased thirst sensation"
+            "text": "Feeling less thirsty than before"
           },
           {
             "id": "e",
-            "text": "Sudden confusion"
+            "text": "Sudden confusion that began yesterday"
           },
           {
             "id": "f",
-            "text": "Urinary incontinence"
+            "text": "New leaking of urine when coughing"
           }
         ]
       },
@@ -229,18 +229,18 @@
         ]
       },
       "rationale": {
-        "correct": "Know normal aging versus findings that need evaluation, such as delirium or incontinence.",
+        "correct": "Know normal aging and the findings that need evaluation, such as delirium or incontinence.",
         "perOption": {
           "a": "Collagen and elastin decrease with age.",
-          "b": "The lens becomes less flexible.",
+          "b": "The lens becomes less flexible (presbyopia).",
           "c": "Age-related hearing loss affects high frequencies.",
-          "d": "This raises the risk of dehydration.",
-          "e": "Acute confusion isn't normal aging and suggests delirium.",
-          "f": "Bladder capacity falls, but incontinence isn't a normal part of aging."
+          "d": "Thirst sensation falls, raising the risk of dehydration.",
+          "e": "Acute confusion is not normal aging and suggests delirium.",
+          "f": "Bladder capacity falls with age, but incontinence is not normal and needs evaluation."
         },
         "references": [
           "Fundamentals of nursing texts (e.g. Potter & Perry)",
-          "Reviewed by the content team on 17 November 2026."
+          "Rewritten to NCLEX-RN difficulty and reviewed by the content team on 19 November 2026."
         ]
       },
       "educationalObjective": "Distinguish normal aging from pathology."
@@ -254,25 +254,25 @@
         "aging-and-older-adult-health"
       ],
       "cjmmSkill": "generate_solutions",
-      "difficulty": "easy",
-      "stem": "Which teaching approach is best for an older adult?",
+      "difficulty": "moderate",
+      "stem": "The nurse is teaching a 79-year-old client with mild hearing loss and cataracts how to use a new inhaler. Which teaching approach is best?",
       "content": {
         "options": [
           {
             "id": "a",
-            "text": "Short sessions at a slower pace, with large-print materials and time for questions"
+            "text": "Short, unhurried sessions, large print and a demonstration"
           },
           {
             "id": "b",
-            "text": "Long sessions with lots of information at once"
+            "text": "One long session that covers everything about the inhaler at once"
           },
           {
             "id": "c",
-            "text": "Speaking quickly to keep the client's attention"
+            "text": "Speaking quickly so that the client stays interested and alert"
           },
           {
             "id": "d",
-            "text": "Written materials in small print"
+            "text": "A detailed handout printed in small type"
           }
         ]
       },
@@ -280,16 +280,16 @@
         "correct": "a"
       },
       "rationale": {
-        "correct": "Adapt teaching to sensory and cognitive changes in older adults.",
+        "correct": "Adapt teaching to sensory and cognitive changes in older adults: slow pace, short sessions, large print and demonstration.",
         "perOption": {
           "a": "This accommodates changes in vision, hearing and processing speed.",
           "b": "This overwhelms the learner.",
           "c": "This reduces understanding.",
-          "d": "Vision changes make this hard to read."
+          "d": "Vision changes make small print hard to read."
         },
         "references": [
           "Fundamentals of nursing texts (e.g. Potter & Perry)",
-          "Reviewed by the content team on 17 November 2026."
+          "Rewritten to NCLEX-RN difficulty and reviewed by the content team on 19 November 2026."
         ]
       },
       "educationalObjective": "Adapt teaching for older adults."
@@ -304,24 +304,24 @@
       ],
       "cjmmSkill": "generate_solutions",
       "difficulty": "moderate",
-      "stem": "A 34-year-old pregnant client at 28 weeks asks which vaccine is recommended during each pregnancy. What is the nurse's response?",
+      "stem": "A 34-year-old client who is 28 weeks pregnant with her second child received Tdap during her first pregnancy 3 years ago. She asks whether she needs any vaccines now. What is the nurse's response?",
       "content": {
         "options": [
           {
             "id": "a",
-            "text": "Tdap, ideally between 27 and 36 weeks"
+            "text": "\"Tdap again in this pregnancy, ideally between 27 and 36 weeks.\""
           },
           {
             "id": "b",
-            "text": "MMR"
+            "text": "\"You don't need Tdap this time, because you had it 3 years ago.\""
           },
           {
             "id": "c",
-            "text": "Varicella"
+            "text": "\"An MMR booster, to protect the baby from measles.\""
           },
           {
             "id": "d",
-            "text": "No vaccines during pregnancy"
+            "text": "\"Vaccines are not given to people who are pregnant.\""
           }
         ]
       },
@@ -329,16 +329,16 @@
         "correct": "a"
       },
       "rationale": {
-        "correct": "In pregnancy: Tdap each pregnancy (27 to 36 weeks) and inactivated influenza; avoid live vaccines.",
+        "correct": "In pregnancy: Tdap in each pregnancy (27 to 36 weeks) and inactivated influenza; avoid live vaccines.",
         "perOption": {
-          "a": "Tdap in each pregnancy passes pertussis antibodies to the newborn.",
-          "b": "Live vaccines are contraindicated in pregnancy.",
+          "a": "Tdap is given in every pregnancy to pass pertussis antibodies to the newborn.",
+          "b": "Tdap is repeated with each pregnancy.",
           "c": "Live vaccines are contraindicated in pregnancy.",
           "d": "Tdap and inactivated influenza are recommended."
         },
         "references": [
           "CDC/ACIP immunization schedules",
-          "Reviewed by the content team on 17 November 2026."
+          "Rewritten to NCLEX-RN difficulty and reviewed by the content team on 19 November 2026."
         ]
       },
       "educationalObjective": "Recommend vaccines during pregnancy."
@@ -352,25 +352,25 @@
         "immunizations"
       ],
       "cjmmSkill": "take_action",
-      "difficulty": "moderate",
-      "stem": "Which client should not receive the MMR vaccine today?",
+      "difficulty": "difficult",
+      "stem": "Four adults at a community clinic are due for the MMR vaccine. Which client should the nurse not vaccinate today?",
       "content": {
         "options": [
           {
             "id": "a",
-            "text": "A client who is pregnant"
+            "text": "A 28-year-old who is 10 weeks pregnant"
           },
           {
             "id": "b",
-            "text": "A client with a mild cold"
+            "text": "A 30-year-old with a runny nose and no fever"
           },
           {
             "id": "c",
-            "text": "A client who is breastfeeding"
+            "text": "A 32-year-old who is breastfeeding a 2-month-old"
           },
           {
             "id": "d",
-            "text": "A client with an egg allergy"
+            "text": "A 25-year-old with a history of hives from eggs"
           }
         ]
       },
@@ -381,13 +381,13 @@
         "correct": "Live vaccines (MMR, varicella, live intranasal influenza) are avoided in pregnancy and severe immunosuppression.",
         "perOption": {
           "a": "MMR is a live vaccine and is contraindicated in pregnancy.",
-          "b": "A mild illness isn't a contraindication.",
-          "c": "Breastfeeding isn't a contraindication.",
-          "d": "Egg allergy isn't a contraindication to MMR."
+          "b": "A mild illness is not a contraindication.",
+          "c": "Breastfeeding is not a contraindication.",
+          "d": "Egg allergy is not a contraindication to MMR."
         },
         "references": [
           "CDC/ACIP immunization schedules",
-          "Reviewed by the content team on 17 November 2026."
+          "Rewritten to NCLEX-RN difficulty and reviewed by the content team on 19 November 2026."
         ]
       },
       "educationalObjective": "Identify contraindications to live vaccines."
@@ -401,25 +401,25 @@
         "immunizations"
       ],
       "cjmmSkill": "analyze_cues",
-      "difficulty": "moderate",
-      "stem": "Which finding is a true contraindication to giving a vaccine?",
+      "difficulty": "difficult",
+      "stem": "A parent brings a 6-month-old for scheduled vaccines. The nurse is reviewing the history. Which finding is a true contraindication to giving the DTaP vaccine today?",
       "content": {
         "options": [
           {
             "id": "a",
-            "text": "Anaphylaxis after a previous dose of the same vaccine"
+            "text": "Anaphylaxis within minutes of the previous DTaP dose"
           },
           {
             "id": "b",
-            "text": "Mild fever with a cold"
+            "text": "A runny nose and a temperature of 37.8 °C (100 °F) today"
           },
           {
             "id": "c",
-            "text": "Soreness at the site after the last dose"
+            "text": "A red, sore thigh for 2 days after the last vaccine"
           },
           {
             "id": "d",
-            "text": "Currently taking an antibiotic"
+            "text": "A current course of amoxicillin for an ear infection"
           }
         ]
       },
@@ -429,14 +429,14 @@
       "rationale": {
         "correct": "True contraindications are uncommon; avoid missed opportunities to vaccinate.",
         "perOption": {
-          "a": "A severe allergic reaction to a prior dose is a contraindication.",
-          "b": "Mild illness isn't a contraindication.",
+          "a": "A severe allergic reaction to a previous dose is a contraindication.",
+          "b": "A mild illness is not a contraindication.",
           "c": "Local reactions are expected.",
-          "d": "This isn't a contraindication."
+          "d": "Taking an antibiotic is not a contraindication."
         },
         "references": [
           "CDC/ACIP immunization schedules",
-          "Reviewed by the content team on 17 November 2026."
+          "Rewritten to NCLEX-RN difficulty and reviewed by the content team on 19 November 2026."
         ]
       },
       "educationalObjective": "Identify true vaccine contraindications."
@@ -451,24 +451,24 @@
       ],
       "cjmmSkill": "generate_solutions",
       "difficulty": "moderate",
-      "stem": "Which vaccines are usually given at a healthy child's 12-month visit?",
+      "stem": "A healthy child who is up to date on all vaccines through 6 months comes for a 12-month well-child visit. Which vaccines should the nurse expect to give?",
       "content": {
         "options": [
           {
             "id": "a",
-            "text": "MMR and varicella"
+            "text": "The first doses of MMR and varicella"
           },
           {
             "id": "b",
-            "text": "Hepatitis B birth dose"
+            "text": "The hepatitis B dose that is given at birth"
           },
           {
             "id": "c",
-            "text": "HPV"
+            "text": "The first dose of the HPV vaccine series"
           },
           {
             "id": "d",
-            "text": "Tdap"
+            "text": "A Tdap booster for pertussis protection"
           }
         ]
       },
@@ -476,16 +476,16 @@
         "correct": "a"
       },
       "rationale": {
-        "correct": "Know the key schedule points: hepatitis B at birth; DTaP, IPV, Hib, PCV and rotavirus at 2, 4 and 6 months; MMR and varicella at 12 to 15 months.",
+        "correct": "Key schedule points: hepatitis B at birth; DTaP, IPV, Hib, PCV and rotavirus at 2, 4 and 6 months; MMR and varicella at 12 to 15 months.",
         "perOption": {
-          "a": "The first doses of MMR and varicella are given at 12 to 15 months.",
+          "a": "MMR and varicella are first given at 12 to 15 months.",
           "b": "This is given at birth.",
           "c": "HPV is given at 9 to 12 years.",
           "d": "Tdap is given at 11 to 12 years."
         },
         "references": [
           "CDC/ACIP immunization schedules",
-          "Reviewed by the content team on 17 November 2026."
+          "Rewritten to NCLEX-RN difficulty and reviewed by the content team on 19 November 2026."
         ]
       },
       "educationalObjective": "Identify vaccines due at 12 months."
@@ -499,25 +499,25 @@
         "immunizations"
       ],
       "cjmmSkill": "generate_solutions",
-      "difficulty": "easy",
-      "stem": "A 55-year-old asks about the shingles vaccine. What should the nurse tell the client?",
+      "difficulty": "moderate",
+      "stem": "A healthy 55-year-old client who had chickenpox as a child and shingles 2 years ago asks about the shingles vaccine. What should the nurse tell the client?",
       "content": {
         "options": [
           {
             "id": "a",
-            "text": "\"The recombinant zoster vaccine is recommended at 50 and older, given as 2 doses.\""
+            "text": "\"The recombinant vaccine is advised at 50 and over, as 2 doses.\""
           },
           {
             "id": "b",
-            "text": "\"It's only for people who have had shingles.\""
+            "text": "\"You don't need it now, because you've already had shingles once.\""
           },
           {
             "id": "c",
-            "text": "\"One dose protects for life.\""
+            "text": "\"One dose of the vaccine gives you protection for life.\""
           },
           {
             "id": "d",
-            "text": "\"It's only for children.\""
+            "text": "\"The shingles vaccine is meant for children.\""
           }
         ]
       },
@@ -525,16 +525,16 @@
         "correct": "a"
       },
       "rationale": {
-        "correct": "Recombinant zoster vaccine: 2 doses for adults 50 and older (and some younger immunocompromised adults).",
+        "correct": "Recombinant zoster vaccine: 2 doses for adults 50 and older (and some younger immunocompromised adults), including after shingles.",
         "perOption": {
-          "a": "Recombinant zoster vaccine is recommended for adults 50 and older.",
+          "a": "Recombinant zoster vaccine is recommended for adults 50 and older, even after shingles.",
           "b": "It is recommended whether or not the person has had shingles.",
           "c": "Two doses are needed.",
           "d": "It is for adults."
         },
         "references": [
           "CDC/ACIP immunization schedules",
-          "Reviewed by the content team on 17 November 2026."
+          "Rewritten to NCLEX-RN difficulty and reviewed by the content team on 19 November 2026."
         ]
       },
       "educationalObjective": "Teach about the shingles vaccine."
@@ -549,7 +549,7 @@
       ],
       "cjmmSkill": "analyze_cues",
       "difficulty": "moderate",
-      "stem": "For each infant milestone, indicate the age by which it usually appears.",
+      "stem": "The clinic nurse is screening several healthy, full-term infants of different ages at their well-child visits and explaining to the parents what to expect next. For each milestone, choose the age by which it usually appears.",
       "content": {
         "rows": [
           {
@@ -597,7 +597,7 @@
         }
       },
       "rationale": {
-        "correct": "Use milestones to screen development and refer when they are delayed.",
+        "correct": "Use milestones to screen development, and refer when they are delayed.",
         "perOption": {
           "r1:c1": "The social smile appears at about 2 months.",
           "r1:c2": "It appears earlier.",
@@ -605,7 +605,7 @@
           "r1:c4": "It appears earlier.",
           "r2:c1": "This is too early.",
           "r2:c2": "Infants usually sit unsupported by 6 to 8 months.",
-          "r2:c3": "This is a little late as the expected age.",
+          "r2:c3": "This is later than expected.",
           "r2:c4": "This is late.",
           "r3:c1": "This is too early.",
           "r3:c2": "This is too early.",
@@ -618,56 +618,37 @@
         },
         "references": [
           "Pediatric nursing texts (e.g. Hockenberry, Wong's Essentials of Pediatric Nursing)",
-          "Reviewed by the content team on 17 November 2026."
+          "Rewritten to NCLEX-RN difficulty and reviewed by the content team on 19 November 2026."
         ]
       },
       "educationalObjective": "Identify infant developmental milestones."
     },
     {
       "id": "c1a00025-0000-4000-8000-000000000012",
-      "itemType": "multiple_choice",
+      "itemType": "fill_blank_calc",
       "clientNeeds": "HPM",
       "bodySystem": "pediatrics",
       "subtopics": [
         "infant-growth-and-development"
       ],
       "cjmmSkill": "analyze_cues",
-      "difficulty": "easy",
-      "stem": "An infant weighed 3.5 kg at birth. About what weight should the nurse expect at 12 months?",
+      "difficulty": "moderate",
+      "stem": "A full-term infant weighed 3.5 kg at birth and is breastfeeding well. The parent asks what the baby should weigh at the 12-month visit. Using the usual pattern of infant weight gain, about how many kilograms should the nurse expect the infant to weigh at 12 months?",
       "content": {
-        "options": [
-          {
-            "id": "a",
-            "text": "10.5 kg"
-          },
-          {
-            "id": "b",
-            "text": "7 kg"
-          },
-          {
-            "id": "c",
-            "text": "5 kg"
-          },
-          {
-            "id": "d",
-            "text": "14 kg"
-          }
-        ]
+        "unit": "kg",
+        "decimals": 1,
+        "inputLabel": "Expected weight"
       },
       "key": {
-        "correct": "a"
+        "value": 10.5,
+        "rounding": "exact"
       },
       "rationale": {
-        "correct": "Birth weight doubles by about 5 to 6 months and triples by 12 months.",
-        "perOption": {
-          "a": "Birth weight usually triples by 12 months.",
-          "b": "Birth weight doubles by about 5 to 6 months.",
-          "c": "This is too low.",
-          "d": "This is too high."
-        },
+        "correct": "Birth weight usually triples by 12 months: 3.5 × 3 = 10.5 kg. It doubles by about 5 to 6 months.",
+        "perOption": {},
         "references": [
           "Pediatric nursing texts (e.g. Hockenberry, Wong's Essentials of Pediatric Nursing)",
-          "Reviewed by the content team on 17 November 2026."
+          "Rewritten to NCLEX-RN difficulty and reviewed by the content team on 19 November 2026."
         ]
       },
       "educationalObjective": "Estimate expected infant weight gain."
@@ -681,25 +662,25 @@
         "developmental-stages"
       ],
       "cjmmSkill": "take_action",
-      "difficulty": "moderate",
-      "stem": "A parent asks how to handle a 2-year-old's temper tantrums. What is the best advice?",
+      "difficulty": "difficult",
+      "stem": "The parent of a 2-year-old says, \"She throws herself on the floor and screams when I say no. I've started giving her the candy to stop it.\" What is the nurse's best advice?",
       "content": {
         "options": [
           {
             "id": "a",
-            "text": "\"Keep your child safe and ignore the tantrum, then praise calm behavior.\""
+            "text": "\"Keep her safe, ignore the tantrum, then praise calm behavior.\""
           },
           {
             "id": "b",
-            "text": "\"Spank your child to stop the behavior.\""
+            "text": "\"A quick spank will teach her that tantrums don't work.\""
           },
           {
             "id": "c",
-            "text": "\"Give your child what they want.\""
+            "text": "\"Keep giving her the candy, since it ends the tantrum quickly.\""
           },
           {
             "id": "d",
-            "text": "\"Lock your child in a room.\""
+            "text": "\"Put her alone in a locked room until she calms down.\""
           }
         ]
       },
@@ -707,16 +688,16 @@
         "correct": "a"
       },
       "rationale": {
-        "correct": "Toddlers: autonomy versus shame; use consistent limits, simple choices and ignoring when safe.",
+        "correct": "Toddlers: autonomy versus shame; use consistent limits, simple choices and ignoring the tantrum when it is safe.",
         "perOption": {
-          "a": "Ignoring tantrums while ensuring safety reduces them; toddlers are seeking autonomy.",
-          "b": "Physical punishment isn't recommended.",
-          "c": "This reinforces tantrums.",
+          "a": "Ignoring tantrums while keeping the child safe reduces them; toddlers are seeking autonomy.",
+          "b": "Physical punishment is not recommended.",
+          "c": "This rewards and reinforces tantrums.",
           "d": "This is unsafe."
         },
         "references": [
           "Pediatric nursing texts (e.g. Hockenberry, Wong's Essentials of Pediatric Nursing)",
-          "Reviewed by the content team on 17 November 2026."
+          "Rewritten to NCLEX-RN difficulty and reviewed by the content team on 19 November 2026."
         ]
       },
       "educationalObjective": "Guide parents on toddler tantrums."
@@ -730,25 +711,25 @@
         "developmental-stages"
       ],
       "cjmmSkill": "take_action",
-      "difficulty": "moderate",
-      "stem": "A 4-year-old is scheduled for surgery. Which approach best prepares the child?",
+      "difficulty": "difficult",
+      "stem": "A 4-year-old is scheduled for a tonsillectomy tomorrow morning and asks the nurse, \"Will they cut my whole neck off?\" Which approach best prepares the child?",
       "content": {
         "options": [
           {
             "id": "a",
-            "text": "Use a doll to show what will happen, shortly before the procedure"
+            "text": "Use a doll to show what will happen, close to the procedure"
           },
           {
             "id": "b",
-            "text": "Give a detailed explanation a week ahead"
+            "text": "Give a detailed explanation using the words the surgeon will use"
           },
           {
             "id": "c",
-            "text": "Avoid telling the child anything"
+            "text": "Avoid answering so that the child is not frightened further"
           },
           {
             "id": "d",
-            "text": "Show diagrams of internal organs"
+            "text": "Show the child diagrams of the throat and tonsils"
           }
         ]
       },
@@ -756,16 +737,16 @@
         "correct": "a"
       },
       "rationale": {
-        "correct": "Preschoolers: magical thinking and fear of bodily injury; use play and simple, honest explanations.",
+        "correct": "Preschoolers: magical thinking and fear of bodily injury; use play and simple, honest explanations shortly before procedures.",
         "perOption": {
-          "a": "Preschoolers learn through play and fear bodily injury.",
-          "b": "Preschoolers have limited time concepts; long lead times raise anxiety.",
+          "a": "Preschoolers learn through play and fear bodily injury; preparation close to the event works best.",
+          "b": "Medical words are too abstract and can increase fear.",
           "c": "Simple, honest preparation reduces fear.",
-          "d": "This is too abstract."
+          "d": "Diagrams are too abstract for a preschooler."
         },
         "references": [
           "Pediatric nursing texts (e.g. Hockenberry, Wong's Essentials of Pediatric Nursing)",
-          "Reviewed by the content team on 17 November 2026."
+          "Rewritten to NCLEX-RN difficulty and reviewed by the content team on 19 November 2026."
         ]
       },
       "educationalObjective": "Prepare a preschooler for a procedure."
@@ -779,25 +760,25 @@
         "developmental-stages"
       ],
       "cjmmSkill": "generate_solutions",
-      "difficulty": "easy",
-      "stem": "Which activity is most appropriate for a hospitalized 9-year-old?",
+      "difficulty": "moderate",
+      "stem": "A 9-year-old in traction for a femur fracture will be in the hospital for 3 weeks and says, \"I'm bored.\" Which activity is most appropriate?",
       "content": {
         "options": [
           {
             "id": "a",
-            "text": "A board game or building a model"
+            "text": "A board game with rules, or building a model kit"
           },
           {
             "id": "b",
-            "text": "A rattle"
+            "text": "A soft rattle and a set of brightly colored rings"
           },
           {
             "id": "c",
-            "text": "A push-pull toy"
+            "text": "A push-pull toy to use beside the bed"
           },
           {
             "id": "d",
-            "text": "A baby doll"
+            "text": "A baby doll with a bottle and blanket"
           }
         ]
       },
@@ -805,16 +786,16 @@
         "correct": "a"
       },
       "rationale": {
-        "correct": "School-age: industry, rule-based games, collections and projects.",
+        "correct": "School-age children: industry, rule-based games, collections and projects.",
         "perOption": {
-          "a": "School-age children enjoy rule-based games and completing projects (industry).",
-          "b": "This is for infants.",
-          "c": "This is for toddlers.",
+          "a": "School-age children enjoy rule-based games and finishing projects (industry).",
+          "b": "These suit infants.",
+          "c": "This suits toddlers and needs walking.",
           "d": "This suits younger children."
         },
         "references": [
           "Pediatric nursing texts (e.g. Hockenberry, Wong's Essentials of Pediatric Nursing)",
-          "Reviewed by the content team on 17 November 2026."
+          "Rewritten to NCLEX-RN difficulty and reviewed by the content team on 19 November 2026."
         ]
       },
       "educationalObjective": "Choose an activity for a school-age child."
@@ -828,25 +809,25 @@
         "developmental-stages"
       ],
       "cjmmSkill": "take_action",
-      "difficulty": "moderate",
-      "stem": "The nurse is doing a health history with a 15-year-old who came with a parent. What is the best approach?",
+      "difficulty": "difficult",
+      "stem": "A 15-year-old comes to the clinic with a parent for a sports physical. The teen answers questions in a few words and keeps looking at the parent. Which approach should the nurse take for the health history?",
       "content": {
         "options": [
           {
             "id": "a",
-            "text": "Interview the adolescent alone for part of the visit, explaining confidentiality and its limits"
+            "text": "Interview the teen alone for part of the visit, with privacy limits"
           },
           {
             "id": "b",
-            "text": "Ask the parent to answer all the questions"
+            "text": "Ask the parent to answer the questions, since the teen is quiet"
           },
           {
             "id": "c",
-            "text": "Tell the teen that everything will be shared with the parent"
+            "text": "Tell the teen that everything said will be shared with the parent"
           },
           {
             "id": "d",
-            "text": "Skip questions about risk behaviors"
+            "text": "Skip questions about sex and substance use with the parent present"
           }
         ]
       },
@@ -854,16 +835,16 @@
         "correct": "a"
       },
       "rationale": {
-        "correct": "Adolescents: privacy, confidentiality (with its limits) and screening for risk behaviors (HEEADSSS).",
+        "correct": "Adolescents: privacy, confidentiality with its limits, and screening for risk behaviors (HEEADSSS).",
         "perOption": {
-          "a": "Privacy encourages honest disclosure about risk behaviors.",
+          "a": "Privacy encourages honest disclosure about risk behaviors, and teens need to know what must be shared.",
           "b": "Adolescents should be engaged directly.",
           "c": "This discourages honesty.",
-          "d": "These are essential."
+          "d": "These questions are essential and are asked privately."
         },
         "references": [
           "Pediatric nursing texts (e.g. Hockenberry, Wong's Essentials of Pediatric Nursing)",
-          "Reviewed by the content team on 17 November 2026."
+          "Rewritten to NCLEX-RN difficulty and reviewed by the content team on 19 November 2026."
         ]
       },
       "educationalObjective": "Interview an adolescent effectively."
@@ -877,25 +858,25 @@
         "injury-prevention-across-lifespan"
       ],
       "cjmmSkill": "generate_solutions",
-      "difficulty": "moderate",
-      "stem": "A parent asks when to turn the child's car seat to face forward. What is the best response?",
+      "difficulty": "difficult",
+      "stem": "The parent of a 15-month-old who weighs 11 kg asks whether it is time to turn the car seat to face forward, because the child's legs touch the back seat. What is the nurse's best response?",
       "content": {
         "options": [
           {
             "id": "a",
-            "text": "\"Keep it rear-facing as long as possible, until your child reaches the seat's height or weight limit.\""
+            "text": "\"Keep it rear-facing until your child reaches the seat's limit.\""
           },
           {
             "id": "b",
-            "text": "\"At 6 months.\""
+            "text": "\"Turn it around now, since your child is older than 1 year.\""
           },
           {
             "id": "c",
-            "text": "\"At 1 year, no matter the size.\""
+            "text": "\"Turn it once the legs are bent, since that must be uncomfortable.\""
           },
           {
             "id": "d",
-            "text": "\"Whenever your child complains.\""
+            "text": "\"Turn it around whenever your child starts to complain.\""
           }
         ]
       },
@@ -905,14 +886,14 @@
       "rationale": {
         "correct": "Rear-facing car seats protect the head and neck; keep children rear-facing to the seat's limits.",
         "perOption": {
-          "a": "Rear-facing is safest; current guidance is to stay rear-facing to the seat's limits.",
-          "b": "This is too early.",
-          "c": "Rear-facing beyond 1 year is safer.",
-          "d": "Safety guides the decision."
+          "a": "Rear-facing is safest; current guidance is to stay rear-facing to the seat's height or weight limit.",
+          "b": "Turning at 1 year is not recommended.",
+          "c": "Bent legs are safe; this is not a reason to turn the seat.",
+          "d": "Safety, not complaints, guides the decision."
         },
         "references": [
           "Pediatric nursing texts (e.g. Hockenberry, Wong's Essentials of Pediatric Nursing)",
-          "Reviewed by the content team on 17 November 2026."
+          "Rewritten to NCLEX-RN difficulty and reviewed by the content team on 19 November 2026."
         ]
       },
       "educationalObjective": "Teach car seat safety."
@@ -926,25 +907,25 @@
         "injury-prevention-across-lifespan"
       ],
       "cjmmSkill": "evaluate_outcomes",
-      "difficulty": "easy",
-      "stem": "Which statement by a new parent shows correct understanding of safe sleep?",
+      "difficulty": "moderate",
+      "stem": "Before discharge, the nurse reviews safe sleep with the parents of a healthy 2-day-old. Which statement by a parent shows correct understanding?",
       "content": {
         "options": [
           {
             "id": "a",
-            "text": "\"I'll put my baby on her back on a firm mattress with no blankets or bumpers.\""
+            "text": "\"We'll put the baby on the back on a firm mattress in an empty crib.\""
           },
           {
             "id": "b",
-            "text": "\"I'll put my baby on her stomach so she won't choke.\""
+            "text": "\"We'll put the baby on the tummy so that the baby won't choke on spit-up.\""
           },
           {
             "id": "c",
-            "text": "\"I'll put soft pillows around her.\""
+            "text": "\"We'll put soft bumpers and a pillow around the baby for comfort.\""
           },
           {
             "id": "d",
-            "text": "\"She'll sleep in my bed every night.\""
+            "text": "\"The baby will sleep in our bed each night so we can hear breathing.\""
           }
         ]
       },
@@ -952,16 +933,16 @@
         "correct": "a"
       },
       "rationale": {
-        "correct": "Safe sleep: back to sleep, firm flat surface, empty crib, room-sharing without bed-sharing.",
+        "correct": "Safe sleep: on the back, on a firm flat surface, in an empty crib, with room-sharing but not bed-sharing.",
         "perOption": {
           "a": "This reduces the risk of SIDS and suffocation.",
           "b": "Prone sleep increases SIDS risk.",
           "c": "Soft bedding increases suffocation risk.",
-          "d": "Bed-sharing increases risk; room-sharing is recommended."
+          "d": "Bed-sharing increases risk; room-sharing without bed-sharing is advised."
         },
         "references": [
           "Pediatric nursing texts (e.g. Hockenberry, Wong's Essentials of Pediatric Nursing)",
-          "Reviewed by the content team on 17 November 2026."
+          "Rewritten to NCLEX-RN difficulty and reviewed by the content team on 19 November 2026."
         ]
       },
       "educationalObjective": "Teach safe infant sleep."
@@ -976,24 +957,24 @@
       ],
       "cjmmSkill": "analyze_cues",
       "difficulty": "moderate",
-      "stem": "Which child is at highest risk for lead poisoning?",
+      "stem": "A clinic nurse is deciding which children to screen for lead poisoning. Which child is at highest risk?",
       "content": {
         "options": [
           {
             "id": "a",
-            "text": "A 2-year-old living in a house built in 1950 with peeling paint"
+            "text": "A 2-year-old living in a 1950 house with peeling window paint"
           },
           {
             "id": "b",
-            "text": "A 10-year-old living in a new apartment"
+            "text": "A 10-year-old who moved into a newly built apartment last year"
           },
           {
             "id": "c",
-            "text": "A 6-month-old who is exclusively breastfed in a new home"
+            "text": "A 6-month-old who is breastfed and lives in a new home"
           },
           {
             "id": "d",
-            "text": "A teenager who plays sports"
+            "text": "A 16-year-old who plays soccer after school"
           }
         ]
       },
@@ -1001,16 +982,16 @@
         "correct": "a"
       },
       "rationale": {
-        "correct": "Lead risk: homes built before 1978, hand-to-mouth behavior and certain imported products; screen high-risk toddlers.",
+        "correct": "Lead risk: homes built before 1978, hand-to-mouth behavior and some imported products; screen high-risk toddlers.",
         "perOption": {
-          "a": "Older homes may have lead paint; toddlers put things in their mouths.",
-          "b": "This is lower risk.",
-          "c": "This is lower risk.",
-          "d": "This isn't a main risk."
+          "a": "Older homes may have lead paint, and toddlers put things in their mouths.",
+          "b": "This child is at lower risk.",
+          "c": "This infant is at lower risk.",
+          "d": "This is not a main risk."
         },
         "references": [
           "Pediatric nursing texts (e.g. Hockenberry, Wong's Essentials of Pediatric Nursing)",
-          "Reviewed by the content team on 17 November 2026."
+          "Rewritten to NCLEX-RN difficulty and reviewed by the content team on 19 November 2026."
         ]
       },
       "educationalObjective": "Identify lead poisoning risk."
@@ -1024,25 +1005,25 @@
         "health-teaching-and-behavior-change"
       ],
       "cjmmSkill": "evaluate_outcomes",
-      "difficulty": "easy",
-      "stem": "What is the best way for the nurse to confirm that a client understands discharge teaching?",
+      "difficulty": "moderate",
+      "stem": "The nurse has finished teaching a client how to give enoxaparin injections at home. What is the best way for the nurse to confirm that the client has understood?",
       "content": {
         "options": [
           {
             "id": "a",
-            "text": "Ask the client to explain or demonstrate the instructions in their own words (teach-back)"
+            "text": "Have the client show the injection steps on a practice pad"
           },
           {
             "id": "b",
-            "text": "Ask, \"Do you understand?\""
+            "text": "Ask the client, \"Do you understand how to give the injection?\""
           },
           {
             "id": "c",
-            "text": "Give a written handout only"
+            "text": "Give the client a printed handout with pictures of the steps"
           },
           {
             "id": "d",
-            "text": "Have the family sign the form"
+            "text": "Have a family member sign the discharge teaching form"
           }
         ]
       },
@@ -1050,16 +1031,16 @@
         "correct": "a"
       },
       "rationale": {
-        "correct": "Teach-back is the best way to confirm understanding.",
+        "correct": "Teach-back and return demonstration are the best ways to confirm understanding.",
         "perOption": {
-          "a": "Teach-back shows real understanding.",
+          "a": "A return demonstration shows real understanding of a skill.",
           "b": "Clients often say yes without understanding.",
-          "c": "This doesn't confirm understanding.",
-          "d": "This doesn't confirm understanding."
+          "c": "This does not confirm understanding.",
+          "d": "A signature does not confirm understanding."
         },
         "references": [
           "Fundamentals of nursing texts (e.g. Potter & Perry)",
-          "Reviewed by the content team on 17 November 2026."
+          "Rewritten to NCLEX-RN difficulty and reviewed by the content team on 19 November 2026."
         ]
       },
       "educationalObjective": "Evaluate learning with teach-back."
@@ -1073,25 +1054,25 @@
         "health-teaching-and-behavior-change"
       ],
       "cjmmSkill": "analyze_cues",
-      "difficulty": "easy",
-      "stem": "When is a client after surgery most ready to learn about wound care?",
+      "difficulty": "moderate",
+      "stem": "On the second day after an abdominal hysterectomy, a client needs teaching about incision care before discharge tomorrow. The client received IV morphine 15 minutes ago for pain of 8 out of 10. When is the client most ready to learn?",
       "content": {
         "options": [
           {
             "id": "a",
-            "text": "When pain is controlled and the client is alert"
+            "text": "Later today, when the pain is controlled and the client is alert"
           },
           {
             "id": "b",
-            "text": "Immediately after receiving a sedating pain medication"
+            "text": "Right now, while the morphine is having its strongest effect"
           },
           {
             "id": "c",
-            "text": "While the client is in severe pain"
+            "text": "Right now, before the pain medicine has had any time to start working"
           },
           {
             "id": "d",
-            "text": "Right before the client leaves the hospital"
+            "text": "Tomorrow, in the hour before the client leaves the hospital"
           }
         ]
       },
@@ -1101,14 +1082,14 @@
       "rationale": {
         "correct": "Assess readiness to learn: comfort, alertness and motivation.",
         "perOption": {
-          "a": "Readiness requires physical comfort and attention.",
-          "b": "Sedation impairs learning.",
-          "c": "Pain prevents learning.",
-          "d": "There isn't enough time for practice."
+          "a": "Readiness to learn needs comfort and attention.",
+          "b": "Opioid sedation impairs learning.",
+          "c": "Severe pain prevents learning.",
+          "d": "This leaves too little time for practice and questions."
         },
         "references": [
           "Fundamentals of nursing texts (e.g. Potter & Perry)",
-          "Reviewed by the content team on 17 November 2026."
+          "Rewritten to NCLEX-RN difficulty and reviewed by the content team on 19 November 2026."
         ]
       },
       "educationalObjective": "Assess readiness to learn."
@@ -1123,7 +1104,7 @@
       ],
       "cjmmSkill": "analyze_cues",
       "difficulty": "moderate",
-      "stem": "A client who smokes says, \"I know I should quit. Maybe in the next few months.\" Which stage of change is this?",
+      "stem": "A 46-year-old client who smokes a pack a day says, \"I know I really should quit, and I've been thinking about it. Maybe after the holidays in a few months.\" Which stage of change is this client in?",
       "content": {
         "options": [
           {
@@ -1148,16 +1129,16 @@
         "correct": "a"
       },
       "rationale": {
-        "correct": "Stages of change: precontemplation, contemplation, preparation, action, maintenance.",
+        "correct": "Stages of change: precontemplation, contemplation, preparation, action and maintenance.",
         "perOption": {
-          "a": "The client is thinking about change within about 6 months.",
+          "a": "The client is thinking about change within about 6 months but has no firm plan.",
           "b": "The client would have no intention of changing.",
           "c": "The client would be planning to act within a month.",
           "d": "The client would already be changing."
         },
         "references": [
           "Fundamentals of nursing texts (e.g. Potter & Perry)",
-          "Reviewed by the content team on 17 November 2026."
+          "Rewritten to NCLEX-RN difficulty and reviewed by the content team on 19 November 2026."
         ]
       },
       "educationalObjective": "Identify a client's stage of change."
@@ -1171,25 +1152,25 @@
         "health-teaching-and-behavior-change"
       ],
       "cjmmSkill": "take_action",
-      "difficulty": "easy",
-      "stem": "A client has limited health literacy. Which teaching strategy is best?",
+      "difficulty": "moderate",
+      "stem": "A client who reads at about a third-grade level is going home on warfarin. Which teaching strategy is best?",
       "content": {
         "options": [
           {
             "id": "a",
-            "text": "Use plain language, short sentences and pictures"
+            "text": "Plain words, short sentences and pictures of the key points"
           },
           {
             "id": "b",
-            "text": "Use medical terms so the information is accurate"
+            "text": "Medical terms, so that the information about the drug is accurate"
           },
           {
             "id": "c",
-            "text": "Give a long pamphlet to read later"
+            "text": "The full drug leaflet to read at home later"
           },
           {
             "id": "d",
-            "text": "Speak faster to cover more content"
+            "text": "A quick talk that covers as much as possible"
           }
         ]
       },
@@ -1201,12 +1182,12 @@
         "perOption": {
           "a": "Clear, simple information improves understanding.",
           "b": "Jargon reduces understanding.",
-          "c": "This may not be understood.",
-          "d": "This reduces understanding."
+          "c": "Long text may not be understood.",
+          "d": "Speed reduces understanding."
         },
         "references": [
           "Fundamentals of nursing texts (e.g. Potter & Perry)",
-          "Reviewed by the content team on 17 November 2026."
+          "Rewritten to NCLEX-RN difficulty and reviewed by the content team on 19 November 2026."
         ]
       },
       "educationalObjective": "Teach clients with limited health literacy."
@@ -1221,24 +1202,24 @@
       ],
       "cjmmSkill": "generate_solutions",
       "difficulty": "easy",
-      "stem": "How much physical activity is recommended for most healthy adults?",
+      "stem": "A healthy 40-year-old office worker asks how much exercise is recommended each week. What should the nurse tell the client?",
       "content": {
         "options": [
           {
             "id": "a",
-            "text": "At least 150 minutes of moderate aerobic activity a week, plus muscle strengthening 2 days a week"
+            "text": "150 minutes of moderate activity plus strength work twice a week"
           },
           {
             "id": "b",
-            "text": "30 minutes once a week"
+            "text": "One 30-minute walk on the weekend is enough for good health at this age"
           },
           {
             "id": "c",
-            "text": "Only muscle strengthening"
+            "text": "Strength training alone, with no need for aerobic activity"
           },
           {
             "id": "d",
-            "text": "Daily marathon training"
+            "text": "Daily marathon-style training to get the full benefit"
           }
         ]
       },
@@ -1248,14 +1229,14 @@
       "rationale": {
         "correct": "Adults: 150 to 300 minutes of moderate activity a week, plus strength training on 2 days.",
         "perOption": {
-          "a": "This is the national guideline.",
+          "a": "This is the national guideline for adults.",
           "b": "This is too little.",
           "c": "Aerobic activity is also needed.",
-          "d": "This isn't the general recommendation."
+          "d": "This is not the general recommendation."
         },
         "references": [
           "Fundamentals of nursing texts (e.g. Potter & Perry)",
-          "Reviewed by the content team on 17 November 2026."
+          "Rewritten to NCLEX-RN difficulty and reviewed by the content team on 19 November 2026."
         ]
       },
       "educationalObjective": "Teach physical activity guidelines."
