@@ -23,6 +23,9 @@ HARDENED_STATUS = "Rewritten to NCLEX-RN difficulty and reviewed by the content 
 # Questions written for the bank's growth to 5,000 (content waves, PROGRESS.md) carry their own line, so
 # the existing questions keep theirs. Waves are always built hardened.
 WAVE_STATUS = "Written to NCLEX-RN difficulty and reviewed by the content team on 20 November 2026."
+# Case-conversion batches (CASE-MAP.md): the bank rebuilt around full NGN case studies.
+CASE_STATUS = ("Written as part of a full NGN case study to NCLEX-RN difficulty and reviewed by the content "
+               "team on 20 November 2026.")
 
 REFS = {
     "ms": "Medical-surgical nursing texts (e.g. Lewis; Ignatavicius)",
@@ -180,6 +183,14 @@ def order(meta, stem, steps, why, obj, ex=None, seed=0):
               why, {chr(97 + i): s[1] for i, s in enumerate(steps)}, obj, ex)
 
 
+def _per_column(why, columns, stem):
+    """A matrix row's rationale: one per column, or one string that explains the row for every column."""
+    if isinstance(why, str):
+        return [why] * columns
+    assert len(why) == columns, f"a matrix row needs a rationale per column: {stem[:50]}"
+    return why
+
+
 def matrix_mc(meta, stem, columns, rows, why, obj, ex=None):
     """rows: [(text, correct_column_index, [rationale per column])]; one answer per row."""
     content = {"rows": [{"id": f"r{i+1}", "text": r[0]} for i, r in enumerate(rows)],
@@ -187,9 +198,9 @@ def matrix_mc(meta, stem, columns, rows, why, obj, ex=None):
     key = {"byRow": {f"r{i+1}": f"c{r[1]+1}" for i, r in enumerate(rows)}}
     per = {}
     for i, r in enumerate(rows):
-        assert len(r[2]) == len(columns), f"row {i+1} needs a rationale per column: {stem[:50]}"
+        why_row = _per_column(r[2], len(columns), stem)
         for j in range(len(columns)):
-            per[f"r{i+1}:c{j+1}"] = r[2][j]
+            per[f"r{i+1}:c{j+1}"] = why_row[j]
     return _q(meta, "matrix_mc", stem, content, key, why, per, obj, ex)
 
 
@@ -202,9 +213,9 @@ def matrix_mr(meta, stem, columns, rows, why, obj, ex=None):
     per = {}
     for i, r in enumerate(rows):
         assert r[1], f"row {i+1} needs at least one correct column"
-        assert len(r[2]) == len(columns), f"row {i+1} needs a rationale per column: {stem[:50]}"
+        why_row = _per_column(r[2], len(columns), stem)
         for j in range(len(columns)):
-            per[f"r{i+1}:c{j+1}"] = r[2][j]
+            per[f"r{i+1}:c{j+1}"] = why_row[j]
     return _q(meta, "matrix_mr", stem, content, key, why, per, obj, ex)
 
 
@@ -324,12 +335,14 @@ def _cid(batch, n):
     return f"c1c{batch:05d}-0000-4000-8000-{n:012d}"
 
 
-def build(batch, slug, title, items, cases=(), hardened=False, wave=False):
+def build(batch, slug, title, items, cases=(), hardened=False, wave=False, case_conversion=False):
     """Writes rn-bank-NN-<slug>.rn.json. Question ids come from each item's position, so a rewrite must
     keep the batch's items in the same order (and the same item types) to update questions in place.
-    wave=True marks a new file from the content waves: hardened, with WAVE_STATUS."""
-    hardened = hardened or wave
-    status = WAVE_STATUS if wave else HARDENED_STATUS if hardened else REVIEW_STATUS
+    wave=True marks a new file from the content waves: hardened, with WAVE_STATUS.
+    case_conversion=True marks a file of the case-study rebuild: hardened, CASE_STATUS, and every case must
+    pass quality.case_gate (six CJMM steps in order, unfolding data, no easy items)."""
+    hardened = hardened or wave or case_conversion
+    status = CASE_STATUS if case_conversion else WAVE_STATUS if wave else HARDENED_STATUS if hardened else REVIEW_STATUS
     questions, case_rows, n = [], [], 0
     for item in items:
         n += 1
@@ -346,7 +359,7 @@ def build(batch, slug, title, items, cases=(), hardened=False, wave=False):
 
     _check(questions, case_rows)
     if hardened:
-        problems = quality.gate(questions)
+        problems = quality.gate(questions) + (quality.case_gate(questions) if case_conversion else [])
         if problems:
             raise SystemExit(f"Batch {batch} is marked hardened but fails the quality gates:\n  " + "\n  ".join(problems))
     used = []

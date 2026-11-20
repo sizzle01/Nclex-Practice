@@ -7,6 +7,7 @@ REVIEW-LOG.md, 19 November 2026). These checks measure those tells.
 
 - report(): one row per file for QUALITY.md, for every batch.
 - gate(): the hard rules a batch marked HARDENED must pass, or the build stops.
+- case_gate(): the shape every case study in a case-conversion batch must have.
 - duplicates(): near-identical stems across the whole bank.
 """
 import re
@@ -178,6 +179,40 @@ def gate(questions):
     counts = [len(q["key"]["correct"]) for q in questions if q["itemType"] == "sata"]
     if len(counts) >= 3 and len(set(counts)) == 1:
         errors.append(f"every SATA has {counts[0]} correct options; vary the number")
+    return errors
+
+
+# Case-conversion batches (plan of 2026-11-20, CASE-MAP.md): the candidate must walk the whole clinical
+# judgment chain, so each case has the six CJMM steps in order and unfolds with new data in steps 4 to 6.
+CJMM_ORDER = ["recognize_cues", "analyze_cues", "prioritize_hypotheses", "generate_solutions", "take_action",
+              "evaluate_outcomes"]
+MIN_CASE_DIFFICULT_SHARE = 0.50
+MAX_CASE_PLAIN_MC = 1              # plain multiple choice per case; the rest use NGN formats
+
+
+def case_gate(questions):
+    """Problems that stop the build for a case-conversion batch; an empty list means it passes."""
+    errors = []
+    cases = {}
+    for q in questions:
+        if q.get("caseStudyId"):
+            cases.setdefault(q["caseStudyId"], []).append(q)
+    for cid, items in cases.items():
+        items.sort(key=lambda q: q["casePosition"])
+        skills = [q["cjmmSkill"] for q in items]
+        if skills != CJMM_ORDER:
+            errors.append(f"case {cid}: steps must be the six CJMM steps in order, got {skills}")
+        if not any(q.get("exhibits") for q in items[3:]):
+            errors.append(f"case {cid}: questions 4 to 6 need new data (an exhibit) so the case unfolds")
+        plain = sum(1 for q in items if q["itemType"] == "multiple_choice")
+        if plain > MAX_CASE_PLAIN_MC:
+            errors.append(f"case {cid}: {plain} plain multiple-choice items (max {MAX_CASE_PLAIN_MC})")
+    easy = [q["id"] for q in questions if q["difficulty"] == "easy"]
+    if easy:
+        errors.append(f"no easy items in a case-conversion batch: {easy[:3]}")
+    difficult = sum(1 for q in questions if q["difficulty"] == "difficult")
+    if difficult < MIN_CASE_DIFFICULT_SHARE * len(questions):
+        errors.append(f"{difficult} difficult of {len(questions)} (min {MIN_CASE_DIFFICULT_SHARE:.0%})")
     return errors
 
 
