@@ -147,7 +147,8 @@
           "Rewritten to NCLEX-RN difficulty and reviewed by the content team on 19 November 2026."
         ]
       },
-      "educationalObjective": "Interpret common laboratory values."
+      "educationalObjective": "Interpret common laboratory values.",
+      "status": "retired"
     },
     {
       "id": "c1a00066-0000-4000-8000-000000000002",
@@ -747,7 +748,8 @@
           "Rewritten to NCLEX-RN difficulty and reviewed by the content team on 19 November 2026."
         ]
       },
-      "educationalObjective": "Monitor after a kidney biopsy."
+      "educationalObjective": "Monitor after a kidney biopsy.",
+      "status": "retired"
     },
     {
       "id": "c1a00066-0000-4000-8000-000000000013",
@@ -796,7 +798,8 @@
           "Rewritten to NCLEX-RN difficulty and reviewed by the content team on 19 November 2026."
         ]
       },
-      "educationalObjective": "Collect a 24-hour urine specimen."
+      "educationalObjective": "Collect a 24-hour urine specimen.",
+      "status": "retired"
     },
     {
       "id": "c1a00066-0000-4000-8000-000000000014",
@@ -945,7 +948,8 @@
           "Rewritten to NCLEX-RN difficulty and reviewed by the content team on 19 November 2026."
         ]
       },
-      "educationalObjective": "Teach after cystoscopy."
+      "educationalObjective": "Teach after cystoscopy.",
+      "status": "retired"
     },
     {
       "id": "c1a00066-0000-4000-8000-000000000017",

@@ -45,13 +45,22 @@ CHUNK_TOPICS = {
     5: ("Neurologic", "neurological",
         r"stroke|seizure|intracranial|parkinson|multiple sclerosis|myasthenia|guillain|spinal cord|meningitis|"
         r"cranial nerve|glasgow|phenytoin|levetiracetam|carbamazepine|levodopa|head injury"),
+    6: ("Renal, hematologic and oncologic", ("renal-urinary", "hematologic-oncologic"),
+        r"dialysis|fistula|transfusion|anemia|epoetin|filgrastim|neutropen|"
+        r"chemotherap|platelet|thrombocytop|leukemia|lymphoma|tumor lysis|vesicant|extravasat|\biron\b|cyanocobalamin"),
 }
 LATER_CHUNKS = {"pediatrics", "maternal-newborn", "mental-health"}
 CLINICAL = {"PHI.PA", "PHI.PPT", "PHI.RRP", "PHI.BCC", "HPM"}
 # Topics the converted cases do not teach, even when a question carries a converted body system (for example, eye
 # surgery is tagged neurological). These questions are kept until a case covers them.
 KEEP_TAGS = {"eye-and-ear-disorders", "sensory-impairment-care", "urinary-elimination-and-catheter-care",
-             "bowel-elimination", "hygiene-and-personal-care"}
+             "bowel-elimination", "hygiene-and-personal-care",
+             # chunk 6 cases do not teach these renal and cancer topics yet
+             "urinary-tract-and-prostate-disorders", "adverse-effects-of-medications", "cancer-care",
+             "cancer-screening", "sickle-cell-disease", "palliative-and-end-of-life-care",
+             "pain-assessment-and-comfort", "specimen-collection", "medication-administration-technique"}
+# Single questions on topics no case covers yet (superior vena cava syndrome), kept whatever their tags.
+KEEP_STEMS = re.compile(r"superior vena cava|collar of the shirt", re.I)
 KEEP_MOC = re.compile(r"\b(first|priorit\w*|delegat\w*|assign\w*)\b", re.I)
 
 
@@ -67,7 +76,8 @@ def _topic_of(q, chunks):
     """The first applied chunk whose topic the question belongs to, or None."""
     for chunk in chunks:
         topic, system, keywords = CHUNK_TOPICS[chunk]
-        if q["bodySystem"] == system:
+        systems = (system,) if isinstance(system, str) else system
+        if q["bodySystem"] in systems:
             return chunk, topic
         if q["bodySystem"] in ("fundamentals", "pharmacology") and re.search(keywords, _stem(q)):
             return chunk, topic
@@ -91,7 +101,7 @@ def choose(questions, chunks):
             continue
         if q["clientNeeds"] not in CLINICAL:
             continue
-        if KEEP_TAGS & set(q["subtopics"]):
+        if KEEP_TAGS & set(q["subtopics"]) or KEEP_STEMS.search(q["stem"]):
             continue
         match = _topic_of(q, chunks)
         if not match:

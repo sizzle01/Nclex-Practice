@@ -91,7 +91,8 @@
           "Rewritten to NCLEX-RN difficulty and reviewed by the content team on 19 November 2026."
         ]
       },
-      "educationalObjective": "Recognize iron deficiency anemia."
+      "educationalObjective": "Recognize iron deficiency anemia.",
+      "status": "retired"
     },
     {
       "id": "c1a00018-0000-4000-8000-000000000002",
@@ -140,7 +141,8 @@
           "Rewritten to NCLEX-RN difficulty and reviewed by the content team on 19 November 2026."
         ]
       },
-      "educationalObjective": "Teach about oral iron."
+      "educationalObjective": "Teach about oral iron.",
+      "status": "retired"
     },
     {
       "id": "c1a00018-0000-4000-8000-000000000003",
@@ -189,7 +191,8 @@
           "Rewritten to NCLEX-RN difficulty and reviewed by the content team on 19 November 2026."
         ]
       },
-      "educationalObjective": "Teach about lifelong vitamin B12 therapy."
+      "educationalObjective": "Teach about lifelong vitamin B12 therapy.",
+      "status": "retired"
     },
     {
       "id": "c1a00018-0000-4000-8000-000000000004",
@@ -238,7 +241,8 @@
           "Rewritten to NCLEX-RN difficulty and reviewed by the content team on 19 November 2026."
         ]
       },
-      "educationalObjective": "Tell B12 deficiency apart from iron deficiency."
+      "educationalObjective": "Tell B12 deficiency apart from iron deficiency.",
+      "status": "retired"
     },
     {
       "id": "c1a00018-0000-4000-8000-000000000005",
@@ -287,7 +291,8 @@
           "Rewritten to NCLEX-RN difficulty and reviewed by the content team on 19 November 2026."
         ]
       },
-      "educationalObjective": "Identify risk factors for folate deficiency."
+      "educationalObjective": "Identify risk factors for folate deficiency.",
+      "status": "retired"
     },
     {
       "id": "c1a00018-0000-4000-8000-000000000006",
@@ -498,7 +503,8 @@
           "Rewritten to NCLEX-RN difficulty and reviewed by the content team on 19 November 2026."
         ]
       },
-      "educationalObjective": "Monitor hydroxyurea therapy."
+      "educationalObjective": "Monitor hydroxyurea therapy.",
+      "status": "retired"
     },
     {
       "id": "c1a00018-0000-4000-8000-000000000010",
@@ -547,7 +553,8 @@
           "Rewritten to NCLEX-RN difficulty and reviewed by the content team on 19 November 2026."
         ]
       },
-      "educationalObjective": "Recognize DIC."
+      "educationalObjective": "Recognize DIC.",
+      "status": "retired"
     },
     {
       "id": "c1a00018-0000-4000-8000-000000000011",
@@ -596,7 +603,8 @@
           "Rewritten to NCLEX-RN difficulty and reviewed by the content team on 19 November 2026."
         ]
       },
-      "educationalObjective": "Recognize and manage heparin-induced thrombocytopenia."
+      "educationalObjective": "Recognize and manage heparin-induced thrombocytopenia.",
+      "status": "retired"
     },
     {
       "id": "c1a00018-0000-4000-8000-000000000012",
@@ -660,7 +668,8 @@
           "Rewritten to NCLEX-RN difficulty and reviewed by the content team on 19 November 2026."
         ]
       },
-      "educationalObjective": "Apply bleeding precautions for thrombocytopenia."
+      "educationalObjective": "Apply bleeding precautions for thrombocytopenia.",
+      "status": "retired"
     },
     {
       "id": "c1a00018-0000-4000-8000-000000000013",
@@ -710,7 +719,8 @@
           "Rewritten to NCLEX-RN difficulty and reviewed by the content team on 19 November 2026."
         ]
       },
-      "educationalObjective": "Manage bleeding into a joint in hemophilia."
+      "educationalObjective": "Manage bleeding into a joint in hemophilia.",
+      "status": "retired"
     },
     {
       "id": "c1a00018-0000-4000-8000-000000000014",
@@ -759,7 +769,8 @@
           "Rewritten to NCLEX-RN difficulty and reviewed by the content team on 19 November 2026."
         ]
       },
-      "educationalObjective": "Plan care for polycythemia vera."
+      "educationalObjective": "Plan care for polycythemia vera.",
+      "status": "retired"
     },
     {
       "id": "c1a00018-0000-4000-8000-000000000015",
@@ -808,7 +819,8 @@
           "Rewritten to NCLEX-RN difficulty and reviewed by the content team on 19 November 2026."
         ]
       },
-      "educationalObjective": "Infuse packed red blood cells safely."
+      "educationalObjective": "Infuse packed red blood cells safely.",
+      "status": "retired"
     },
     {
       "id": "c1a00018-0000-4000-8000-000000000016",
@@ -857,7 +869,8 @@
           "Rewritten to NCLEX-RN difficulty and reviewed by the content team on 19 November 2026."
         ]
       },
-      "educationalObjective": "Recognize transfusion-associated circulatory overload."
+      "educationalObjective": "Recognize transfusion-associated circulatory overload.",
+      "status": "retired"
     },
     {
       "id": "c1a00018-0000-4000-8000-000000000017",
@@ -906,7 +919,8 @@
           "Rewritten to NCLEX-RN difficulty and reviewed by the content team on 19 November 2026."
         ]
       },
-      "educationalObjective": "Respond to a mild allergic transfusion reaction."
+      "educationalObjective": "Respond to a mild allergic transfusion reaction.",
+      "status": "retired"
     },
     {
       "id": "c1a00018-0000-4000-8000-000000000018",
@@ -1097,7 +1111,8 @@
           "Rewritten to NCLEX-RN difficulty and reviewed by the content team on 19 November 2026."
         ]
       },
-      "educationalObjective": "Interpret a complete blood count."
+      "educationalObjective": "Interpret a complete blood count.",
+      "status": "retired"
     },
     {
       "id": "c1a00018-0000-4000-8000-000000000020",
@@ -1176,7 +1191,8 @@
           "Rewritten to NCLEX-RN difficulty and reviewed by the content team on 19 November 2026."
         ]
       },
-      "educationalObjective": "Give IV iron safely."
+      "educationalObjective": "Give IV iron safely.",
+      "status": "retired"
     },
     {
       "id": "c1a00018-0000-4000-8000-000000000022",
@@ -1225,7 +1241,8 @@
           "Rewritten to NCLEX-RN difficulty and reviewed by the content team on 19 November 2026."
         ]
       },
-      "educationalObjective": "Prevent transfusion-related iron overload."
+      "educationalObjective": "Prevent transfusion-related iron overload.",
+      "status": "retired"
     },
     {
       "id": "c1a00018-0000-4000-8000-000000000023",
@@ -1314,7 +1331,8 @@
           "Rewritten to NCLEX-RN difficulty and reviewed by the content team on 19 November 2026."
         ]
       },
-      "educationalObjective": "Recognize the clinical signs of DIC."
+      "educationalObjective": "Recognize the clinical signs of DIC.",
+      "status": "retired"
     }
   ]
 }

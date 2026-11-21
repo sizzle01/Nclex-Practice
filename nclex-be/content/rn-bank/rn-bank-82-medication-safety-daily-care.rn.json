@@ -784,7 +784,8 @@
           "Written to NCLEX-RN difficulty and reviewed by the content team on 20 November 2026."
         ]
       },
-      "educationalObjective": "Determine red blood cell compatibility."
+      "educationalObjective": "Determine red blood cell compatibility.",
+      "status": "retired"
     },
     {
       "id": "c1a00082-0000-4000-8000-000000000012",
@@ -834,7 +835,8 @@
           "Written to NCLEX-RN difficulty and reviewed by the content team on 20 November 2026."
         ]
       },
-      "educationalObjective": "Respond to vesicant extravasation."
+      "educationalObjective": "Respond to vesicant extravasation.",
+      "status": "retired"
     },
     {
       "id": "c1a00082-0000-4000-8000-000000000013",

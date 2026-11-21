@@ -86,7 +86,8 @@
           "Rewritten to NCLEX-RN difficulty and reviewed by the content team on 19 November 2026."
         ]
       },
-      "educationalObjective": "Recognize the ECG changes of hyperkalemia."
+      "educationalObjective": "Recognize the ECG changes of hyperkalemia.",
+      "status": "retired"
     },
     {
       "id": "c1a00010-0000-4000-8000-000000000002",
@@ -135,7 +136,8 @@
           "Rewritten to NCLEX-RN difficulty and reviewed by the content team on 19 November 2026."
         ]
       },
-      "educationalObjective": "Prioritize emergency treatment of hyperkalemia."
+      "educationalObjective": "Prioritize emergency treatment of hyperkalemia.",
+      "status": "retired"
     },
     {
       "id": "c1a00010-0000-4000-8000-000000000003",
@@ -184,7 +186,8 @@
           "Rewritten to NCLEX-RN difficulty and reviewed by the content team on 19 November 2026."
         ]
       },
-      "educationalObjective": "Recognize the findings of hypokalemia."
+      "educationalObjective": "Recognize the findings of hypokalemia.",
+      "status": "retired"
     },
     {
       "id": "c1a00010-0000-4000-8000-000000000004",
@@ -383,7 +386,8 @@
           "Rewritten to NCLEX-RN difficulty and reviewed by the content team on 19 November 2026."
         ]
       },
-      "educationalObjective": "Plan care for hypercalcemia."
+      "educationalObjective": "Plan care for hypercalcemia.",
+      "status": "retired"
     },
     {
       "id": "c1a00010-0000-4000-8000-000000000008",
@@ -616,7 +620,8 @@
           "Rewritten to NCLEX-RN difficulty and reviewed by the content team on 19 November 2026."
         ]
       },
-      "educationalObjective": "Interpret common electrolyte results."
+      "educationalObjective": "Interpret common electrolyte results.",
+      "status": "retired"
     },
     {
       "id": "c1a00010-0000-4000-8000-000000000012",
@@ -665,7 +670,8 @@
           "Rewritten to NCLEX-RN difficulty and reviewed by the content team on 19 November 2026."
         ]
       },
-      "educationalObjective": "Recognize the findings of fluid volume deficit."
+      "educationalObjective": "Recognize the findings of fluid volume deficit.",
+      "status": "retired"
     },
     {
       "id": "c1a00010-0000-4000-8000-000000000013",
@@ -1560,7 +1566,8 @@
           "Rewritten to NCLEX-RN difficulty and reviewed by the content team on 19 November 2026."
         ]
       },
-      "educationalObjective": "Calculate 24-hour intake and output."
+      "educationalObjective": "Calculate 24-hour intake and output.",
+      "status": "retired"
     }
   ]
 }

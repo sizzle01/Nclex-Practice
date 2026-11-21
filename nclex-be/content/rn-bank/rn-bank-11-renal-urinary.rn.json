@@ -96,7 +96,8 @@
           "Rewritten to NCLEX-RN difficulty and reviewed by the content team on 19 November 2026."
         ]
       },
-      "educationalObjective": "Identify prerenal acute kidney injury."
+      "educationalObjective": "Identify prerenal acute kidney injury.",
+      "status": "retired"
     },
     {
       "id": "c1a00011-0000-4000-8000-000000000002",
@@ -145,7 +146,8 @@
           "Rewritten to NCLEX-RN difficulty and reviewed by the content team on 19 November 2026."
         ]
       },
-      "educationalObjective": "Prioritize monitoring in oliguric AKI."
+      "educationalObjective": "Prioritize monitoring in oliguric AKI.",
+      "status": "retired"
     },
     {
       "id": "c1a00011-0000-4000-8000-000000000003",
@@ -194,7 +196,8 @@
           "Rewritten to NCLEX-RN difficulty and reviewed by the content team on 19 November 2026."
         ]
       },
-      "educationalObjective": "Teach dietary restrictions for CKD."
+      "educationalObjective": "Teach dietary restrictions for CKD.",
+      "status": "retired"
     },
     {
       "id": "c1a00011-0000-4000-8000-000000000004",
@@ -258,7 +261,8 @@
           "Rewritten to NCLEX-RN difficulty and reviewed by the content team on 19 November 2026."
         ]
       },
-      "educationalObjective": "Recognize complications of chronic kidney disease."
+      "educationalObjective": "Recognize complications of chronic kidney disease.",
+      "status": "retired"
     },
     {
       "id": "c1a00011-0000-4000-8000-000000000005",
@@ -307,7 +311,8 @@
           "Rewritten to NCLEX-RN difficulty and reviewed by the content team on 19 November 2026."
         ]
       },
-      "educationalObjective": "Check safety parameters before giving epoetin."
+      "educationalObjective": "Check safety parameters before giving epoetin.",
+      "status": "retired"
     },
     {
       "id": "c1a00011-0000-4000-8000-000000000006",
@@ -405,7 +410,8 @@
           "Rewritten to NCLEX-RN difficulty and reviewed by the content team on 19 November 2026."
         ]
       },
-      "educationalObjective": "Protect a hemodialysis access."
+      "educationalObjective": "Protect a hemodialysis access.",
+      "status": "retired"
     },
     {
       "id": "c1a00011-0000-4000-8000-000000000008",
@@ -454,7 +460,8 @@
           "Rewritten to NCLEX-RN difficulty and reviewed by the content team on 19 November 2026."
         ]
       },
-      "educationalObjective": "Recognize a clotted dialysis access."
+      "educationalObjective": "Recognize a clotted dialysis access.",
+      "status": "retired"
     },
     {
       "id": "c1a00011-0000-4000-8000-000000000009",
@@ -503,7 +510,8 @@
           "Rewritten to NCLEX-RN difficulty and reviewed by the content team on 19 November 2026."
         ]
       },
-      "educationalObjective": "Recognize dialysis disequilibrium syndrome."
+      "educationalObjective": "Recognize dialysis disequilibrium syndrome.",
+      "status": "retired"
     },
     {
       "id": "c1a00011-0000-4000-8000-000000000010",
@@ -552,7 +560,8 @@
           "Rewritten to NCLEX-RN difficulty and reviewed by the content team on 19 November 2026."
         ]
       },
-      "educationalObjective": "Recognize peritonitis in peritoneal dialysis."
+      "educationalObjective": "Recognize peritonitis in peritoneal dialysis.",
+      "status": "retired"
     },
     {
       "id": "c1a00011-0000-4000-8000-000000000011",
@@ -601,7 +610,8 @@
           "Rewritten to NCLEX-RN difficulty and reviewed by the content team on 19 November 2026."
         ]
       },
-      "educationalObjective": "Troubleshoot slow peritoneal dialysis outflow."
+      "educationalObjective": "Troubleshoot slow peritoneal dialysis outflow.",
+      "status": "retired"
     },
     {
       "id": "c1a00011-0000-4000-8000-000000000012",
@@ -944,7 +954,8 @@
           "Rewritten to NCLEX-RN difficulty and reviewed by the content team on 19 November 2026."
         ]
       },
-      "educationalObjective": "Manage continuous bladder irrigation after TURP."
+      "educationalObjective": "Manage continuous bladder irrigation after TURP.",
+      "status": "retired"
     },
     {
       "id": "c1a00011-0000-4000-8000-000000000019",
@@ -1170,7 +1181,8 @@
           "Rewritten to NCLEX-RN difficulty and reviewed by the content team on 19 November 2026."
         ]
       },
-      "educationalObjective": "Prevent contrast-induced kidney injury."
+      "educationalObjective": "Prevent contrast-induced kidney injury.",
+      "status": "retired"
     },
     {
       "id": "c1a00011-0000-4000-8000-000000000024",
@@ -1220,7 +1232,8 @@
           "Rewritten to NCLEX-RN difficulty and reviewed by the content team on 19 November 2026."
         ]
       },
-      "educationalObjective": "Recognize post-streptococcal glomerulonephritis."
+      "educationalObjective": "Recognize post-streptococcal glomerulonephritis.",
+      "status": "retired"
     },
     {
       "id": "c1a00011-0000-4000-8000-000000000025",
@@ -1362,7 +1375,8 @@
           "Rewritten to NCLEX-RN difficulty and reviewed by the content team on 19 November 2026."
         ]
       },
-      "educationalObjective": "Interpret kidney function tests."
+      "educationalObjective": "Interpret kidney function tests.",
+      "status": "retired"
     },
     {
       "id": "c1a00011-0000-4000-8000-000000000026",
@@ -1411,7 +1425,8 @@
           "Rewritten to NCLEX-RN difficulty and reviewed by the content team on 19 November 2026."
         ]
       },
-      "educationalObjective": "Recognize signs of kidney transplant rejection."
+      "educationalObjective": "Recognize signs of kidney transplant rejection.",
+      "status": "retired"
     }
   ]
 }

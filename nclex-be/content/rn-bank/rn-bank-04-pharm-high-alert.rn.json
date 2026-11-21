@@ -684,7 +684,8 @@
           "Rewritten to NCLEX-RN difficulty and reviewed by the content team on 19 November 2026."
         ]
       },
-      "educationalObjective": "Give low-molecular-weight heparin correctly."
+      "educationalObjective": "Give low-molecular-weight heparin correctly.",
+      "status": "retired"
     },
     {
       "id": "c1a00004-0000-4000-8000-000000000013",
@@ -954,7 +955,8 @@
           "Rewritten to NCLEX-RN difficulty and reviewed by the content team on 19 November 2026."
         ]
       },
-      "educationalObjective": "Respond to a high INR in a client taking warfarin."
+      "educationalObjective": "Respond to a high INR in a client taking warfarin.",
+      "status": "retired"
     },
     {
       "id": "c1a00004-0000-4000-8000-000000000015",
@@ -1003,7 +1005,8 @@
           "Rewritten to NCLEX-RN difficulty and reviewed by the content team on 19 November 2026."
         ]
       },
-      "educationalObjective": "Teach a client about monitoring direct oral anticoagulants."
+      "educationalObjective": "Teach a client about monitoring direct oral anticoagulants.",
+      "status": "retired"
     },
     {
       "id": "c1a00004-0000-4000-8000-000000000016",
@@ -1151,7 +1154,8 @@
           "Rewritten to NCLEX-RN difficulty and reviewed by the content team on 19 November 2026."
         ]
       },
-      "educationalObjective": "Respond to a suspected transfusion reaction."
+      "educationalObjective": "Respond to a suspected transfusion reaction.",
+      "status": "retired"
     },
     {
       "id": "c1a00004-0000-4000-8000-000000000019",
@@ -1220,7 +1224,8 @@
           "Rewritten to NCLEX-RN difficulty and reviewed by the content team on 19 November 2026."
         ]
       },
-      "educationalObjective": "Prepare to give a blood transfusion safely."
+      "educationalObjective": "Prepare to give a blood transfusion safely.",
+      "status": "retired"
     },
     {
       "id": "c1a00004-0000-4000-8000-000000000020",
