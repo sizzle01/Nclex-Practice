@@ -2,21 +2,21 @@
 
 Written by `python3 -I build_all.py` (coverage.py); do not edit by hand.
 
-**2034 of 5000 questions** (41%), 46 case studies, 52 bowtie questions. Multiple choice is 65% of the bank.
+**2058 of 5000 questions** (41%), 50 case studies, 52 bowtie questions. Multiple choice is 65% of the bank.
 
 ## By test plan category
 
 | Category | Test plan | Target | Have | To write | Next chunk |
 |---|---|---|---|---|---|
-| Management of Care | 18% | 900 | 333 | 567 | 19 |
-| Safety and Infection Prevention and Control | 13% | 650 | 234 | 416 | 14 |
+| Management of Care | 18% | 900 | 334 | 566 | 19 |
+| Safety and Infection Prevention and Control | 13% | 650 | 238 | 412 | 14 |
 | Health Promotion and Maintenance | 9% | 450 | 159 | 291 | 10 |
 | Psychosocial Integrity | 9% | 450 | 147 | 303 | 10 |
 | Basic Care and Comfort | 9% | 450 | 152 | 298 | 10 |
-| Pharmacological and Parenteral Therapies | 16% | 800 | 335 | 465 | 16 |
-| Reduction of Risk Potential | 12% | 600 | 228 | 372 | 12 |
-| Physiological Adaptation | 14% | 700 | 446 | 254 | 9 |
-| **Total** | 100% | 5000 | 2034 | 2966 | 100 |
+| Pharmacological and Parenteral Therapies | 16% | 800 | 340 | 460 | 16 |
+| Reduction of Risk Potential | 12% | 600 | 229 | 371 | 13 |
+| Physiological Adaptation | 14% | 700 | 459 | 241 | 8 |
+| **Total** | 100% | 5000 | 2058 | 2942 | 100 |
 
 ## Chunks
 
@@ -35,7 +35,7 @@ The wave chunks are paused (2026-11-20) while the bank is rebuilt around case st
 
 ## Case conversion (CASE-MAP.md)
 
-**276 of 2034 questions (14%) are inside full case studies**; the goal is 85%.
+**300 of 2058 questions (15%) are inside full case studies**; the goal is 85%.
 
 | Chunk | Topic | Batch files | Questions | Case studies |
 |---|---|---|---|---|
@@ -48,15 +48,15 @@ The wave chunks are paused (2026-11-20) while the bank is rebuilt around case st
 | Type | Questions | Share |
 |---|---|---|
 | multiple_choice | 1332 | 65% |
-| matrix_mc | 163 | 8% |
-| sata | 149 | 7% |
-| dropdown_cloze | 64 | 3% |
+| matrix_mc | 173 | 8% |
+| sata | 153 | 7% |
+| dropdown_cloze | 67 | 3% |
+| highlight_table | 54 | 3% |
 | ordered_response | 53 | 3% |
 | highlight_text | 52 | 3% |
 | bowtie | 52 | 3% |
-| highlight_table | 50 | 2% |
-| fill_blank_calc | 43 | 2% |
-| dropdown_table | 28 | 1% |
+| fill_blank_calc | 44 | 2% |
+| dropdown_table | 29 | 1% |
 | select_n | 25 | 1% |
-| multiple_response_grouping | 13 | 1% |
+| multiple_response_grouping | 14 | 1% |
 | matrix_mr | 10 | 0% |
