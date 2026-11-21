@@ -117,4 +117,5 @@ Written by `python3 -I build_all.py`; do not edit by hand. See `quality.py` for 
 | 125-infection-cases-pid-syphilis-malaria-nf | 24 | yes | 0 | 0% | 0% (-) | 0% | 12 | 0/4/20 |
 | 126-msk-cases-fat-embolism-gout-bka-rhabdo | 24 | yes | 0 | 0% | 0% (-) | 0% | 13.5 | 0/4/20 |
 | 127-trauma-cases-spleen-heat-cold-mci-standalone | 28 | yes | 1 | 0% | 33% (stem words) | 0% | 14 | 0/4/24 |
-| **Whole bank** | 2610 | | 1339 | 12% | 25% (assess first) | 5% | 27 | 118/1168/1324 |
+| 128-mh-cases-depression-lithium-nms-clozapine | 24 | yes | 0 | 0% | 0% (-) | 0% | 12.5 | 0/4/20 |
+| **Whole bank** | 2634 | | 1339 | 12% | 25% (assess first) | 5% | 27 | 118/1172/1344 |
