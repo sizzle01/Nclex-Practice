@@ -48,6 +48,10 @@ CHUNK_TOPICS = {
     6: ("Renal, hematologic and oncologic", ("renal-urinary", "hematologic-oncologic"),
         r"dialysis|fistula|transfusion|anemia|epoetin|filgrastim|neutropen|"
         r"chemotherap|platelet|thrombocytop|leukemia|lymphoma|tumor lysis|vesicant|extravasat|\biron\b|cyanocobalamin"),
+    7: ("Immunity, infection, musculoskeletal and trauma", ("immune", "musculoskeletal"),
+        r"\bhiv\b|antiretrovir|lupus|rheumatoid|methotrexate|adalimumab|fluconazole|amphotericin|antifungal|"
+        r"malaria|syphilis|gonorrh|chlamydia|pelvic inflammatory|fracture|traction|amputat|gout|allopurinol|"
+        r"colchicine|rhabdomyol|heat stroke|hypotherm|triage"),
 }
 LATER_CHUNKS = {"pediatrics", "maternal-newborn", "mental-health"}
 CLINICAL = {"PHI.PA", "PHI.PPT", "PHI.RRP", "PHI.BCC", "HPM"}
@@ -58,9 +62,15 @@ KEEP_TAGS = {"eye-and-ear-disorders", "sensory-impairment-care", "urinary-elimin
              # chunk 6 cases do not teach these renal and cancer topics yet
              "urinary-tract-and-prostate-disorders", "adverse-effects-of-medications", "cancer-care",
              "cancer-screening", "sickle-cell-disease", "palliative-and-end-of-life-care",
-             "pain-assessment-and-comfort", "specimen-collection", "medication-administration-technique"}
-# Single questions on topics no case covers yet (superior vena cava syndrome), kept whatever their tags.
-KEEP_STEMS = re.compile(r"superior vena cava|collar of the shirt", re.I)
+             "pain-assessment-and-comfort", "specimen-collection", "medication-administration-technique",
+             # chunk 7 cases do not teach these
+             "mobility-and-assistive-devices", "joint-replacement-care", "immunizations", "aging-and-older-adult-health",
+             "immobility-and-positioning", "postoperative-care", "opioid-safety", "bone-health-and-osteoporosis",
+             "antimicrobial-therapy"}
+# Single questions on topics no case covers yet, kept whatever their tags: superior vena cava syndrome (chunk 6);
+# children (pediatric chunks), carpal tunnel, Lyme disease, HIV PrEP, osteoarthritis and Buck's traction (chunk 7).
+KEEP_STEMS = re.compile(r"superior vena cava|collar of the shirt|\bchild\b|\bparent\b|carpal|lyme|"
+                        r"pre-exposure|\bprep\b|osteoarthritis|buck's", re.I)
 KEEP_MOC = re.compile(r"\b(first|priorit\w*|delegat\w*|assign\w*)\b", re.I)
 
 

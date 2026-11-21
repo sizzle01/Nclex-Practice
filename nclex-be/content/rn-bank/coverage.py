@@ -35,9 +35,10 @@ CONVERSION_CHUNKS = {
     4: ("Gastrointestinal disorders with PUD, GERD and antiemetic drugs", (112, 113, 114, 115)),
     5: ("Neurologic disorders, head-to-toe and cranial nerve assessment, neuro and cholinergic drugs", (116, 117, 118, 119)),
     6: ("Renal, hematologic and oncologic disorders with hematopoietic drugs and thrombolytics", (120, 121, 122, 123)),
+    7: ("Immunity, infection, STI, musculoskeletal and trauma with antimicrobial, antifungal and antiparasitic drugs",
+        (124, 125, 126, 127)),
 }
-CONVERSION_NEXT = ("Immunity, infection, sexually transmitted infections, transplant, musculoskeletal and trauma, with "
-                   "antifungal and antiparasitic drugs (CASE-MAP.md, book_topics.py)")
+CONVERSION_NEXT = ("Mental health disorders with psychiatric medications (CASE-MAP.md, book_topics.py)")
 CASE_SHARE_GOAL = 85    # percent of the bank inside full case studies
 
 # Item-type mix for a chunk of new questions (plan of 2026-11-20): fewer plain multiple-choice questions

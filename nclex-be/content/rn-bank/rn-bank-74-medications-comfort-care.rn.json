@@ -976,7 +976,8 @@
           "Written to NCLEX-RN difficulty and reviewed by the content team on 20 November 2026."
         ]
       },
-      "educationalObjective": "Recognize a methotrexate dosing error."
+      "educationalObjective": "Recognize a methotrexate dosing error.",
+      "status": "retired"
     },
     {
       "id": "c1a00074-0000-4000-8000-000000000014",

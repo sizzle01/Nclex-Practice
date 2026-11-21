@@ -91,7 +91,8 @@
           "Rewritten to NCLEX-RN difficulty and reviewed by the content team on 19 November 2026."
         ]
       },
-      "educationalObjective": "Recognize early compartment syndrome."
+      "educationalObjective": "Recognize early compartment syndrome.",
+      "status": "retired"
     },
     {
       "id": "c1a00021-0000-4000-8000-000000000002",
@@ -140,7 +141,8 @@
           "Rewritten to NCLEX-RN difficulty and reviewed by the content team on 19 November 2026."
         ]
       },
-      "educationalObjective": "Respond to suspected compartment syndrome."
+      "educationalObjective": "Respond to suspected compartment syndrome.",
+      "status": "retired"
     },
     {
       "id": "c1a00021-0000-4000-8000-000000000003",
@@ -189,7 +191,8 @@
           "Rewritten to NCLEX-RN difficulty and reviewed by the content team on 19 November 2026."
         ]
       },
-      "educationalObjective": "Recognize fat embolism syndrome."
+      "educationalObjective": "Recognize fat embolism syndrome.",
+      "status": "retired"
     },
     {
       "id": "c1a00021-0000-4000-8000-000000000004",
@@ -253,7 +256,8 @@
           "Rewritten to NCLEX-RN difficulty and reviewed by the content team on 19 November 2026."
         ]
       },
-      "educationalObjective": "Perform a neurovascular assessment."
+      "educationalObjective": "Perform a neurovascular assessment.",
+      "status": "retired"
     },
     {
       "id": "c1a00021-0000-4000-8000-000000000005",
@@ -400,7 +404,8 @@
           "Rewritten to NCLEX-RN difficulty and reviewed by the content team on 19 November 2026."
         ]
       },
-      "educationalObjective": "Recognize pin site infection."
+      "educationalObjective": "Recognize pin site infection.",
+      "status": "retired"
     },
     {
       "id": "c1a00021-0000-4000-8000-000000000008",
@@ -449,7 +454,8 @@
           "Rewritten to NCLEX-RN difficulty and reviewed by the content team on 19 November 2026."
         ]
       },
-      "educationalObjective": "Recognize a hip fracture."
+      "educationalObjective": "Recognize a hip fracture.",
+      "status": "retired"
     },
     {
       "id": "c1a00021-0000-4000-8000-000000000009",
@@ -890,7 +896,8 @@
           "Rewritten to NCLEX-RN difficulty and reviewed by the content team on 19 November 2026."
         ]
       },
-      "educationalObjective": "Teach correct use of alendronate."
+      "educationalObjective": "Teach correct use of alendronate.",
+      "status": "retired"
     },
     {
       "id": "c1a00021-0000-4000-8000-000000000018",
@@ -1014,7 +1021,8 @@
           "Rewritten to NCLEX-RN difficulty and reviewed by the content team on 19 November 2026."
         ]
       },
-      "educationalObjective": "Teach dietary management of gout."
+      "educationalObjective": "Teach dietary management of gout.",
+      "status": "retired"
     },
     {
       "id": "c1a00021-0000-4000-8000-000000000020",
@@ -1063,7 +1071,8 @@
           "Rewritten to NCLEX-RN difficulty and reviewed by the content team on 19 November 2026."
         ]
       },
-      "educationalObjective": "Teach about allopurinol."
+      "educationalObjective": "Teach about allopurinol.",
+      "status": "retired"
     },
     {
       "id": "c1a00021-0000-4000-8000-000000000021",
@@ -1112,7 +1121,8 @@
           "Rewritten to NCLEX-RN difficulty and reviewed by the content team on 19 November 2026."
         ]
       },
-      "educationalObjective": "Prevent contractures after amputation."
+      "educationalObjective": "Prevent contractures after amputation.",
+      "status": "retired"
     },
     {
       "id": "c1a00021-0000-4000-8000-000000000022",
@@ -1161,7 +1171,8 @@
           "Rewritten to NCLEX-RN difficulty and reviewed by the content team on 19 November 2026."
         ]
       },
-      "educationalObjective": "Respond to phantom limb pain."
+      "educationalObjective": "Respond to phantom limb pain.",
+      "status": "retired"
     },
     {
       "id": "c1a00021-0000-4000-8000-000000000023",
@@ -1210,7 +1221,8 @@
           "Rewritten to NCLEX-RN difficulty and reviewed by the content team on 19 November 2026."
         ]
       },
-      "educationalObjective": "Wrap a residual limb correctly."
+      "educationalObjective": "Wrap a residual limb correctly.",
+      "status": "retired"
     },
     {
       "id": "c1a00021-0000-4000-8000-000000000024",
@@ -1259,7 +1271,8 @@
           "Rewritten to NCLEX-RN difficulty and reviewed by the content team on 19 November 2026."
         ]
       },
-      "educationalObjective": "Recognize carpal tunnel syndrome."
+      "educationalObjective": "Recognize carpal tunnel syndrome.",
+      "status": "retired"
     }
   ]
 }
