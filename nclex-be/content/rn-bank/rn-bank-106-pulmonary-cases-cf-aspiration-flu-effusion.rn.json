@@ -1426,19 +1426,19 @@
         "options": [
           {
             "id": "a",
-            "text": "Resident A, with SpO2 88%, respirations 28/min and new confusion"
+            "text": "Resident A, whose SpO2 is 88% with respirations of 28/min and new confusion"
           },
           {
             "id": "b",
-            "text": "Resident B, with a temperature of 38.2 C (100.8 F) and diabetes that may be destabilized"
+            "text": "Resident B, febrile at 38.2 C (100.8 F), whose diabetes may destabilize"
           },
           {
             "id": "c",
-            "text": "Resident C, whose antiviral dose needs adjusting for kidney disease today"
+            "text": "Resident C, whose antiviral dose needs adjusting for kidney disease"
           },
           {
             "id": "d",
-            "text": "A UAP who reports a sore throat and wants to know whether to finish the shift"
+            "text": "A UAP with a new sore throat who asks whether to finish the shift"
           }
         ]
       },
