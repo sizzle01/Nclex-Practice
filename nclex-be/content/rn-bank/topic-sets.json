@@ -1836,7 +1836,7 @@
  "c1e00000-0000-4000-8000-000000005921": {
   "id": "c1e00000-0000-4000-8000-000000005921",
   "title": "Major depressive disorders",
-  "description": "41 questions on major depressive disorders (3 case studies and 23 single questions in all). Untimed; answers, rationales and your result at the end.",
+  "description": "42 questions on major depressive disorders (3 case studies and 24 single questions in all). Untimed; answers, rationales and your result at the end.",
   "mode": "practice",
   "revealMode": "exam",
   "timed": false,
@@ -1884,7 +1884,8 @@
    "c1a00089-0000-4000-8000-000000000021",
    "c1a00097-0000-4000-8000-000000000020",
    "c1a00097-0000-4000-8000-000000000021",
-   "c1a00098-0000-4000-8000-000000000024"
+   "c1a00098-0000-4000-8000-000000000024",
+   "c1a00134-0000-4000-8000-000000000004"
   ],
   "isPublished": true
  },
@@ -1974,7 +1975,7 @@
  "c1e00000-0000-4000-8000-000000006001": {
   "id": "c1e00000-0000-4000-8000-000000006001",
   "title": "Substance use disorders",
-  "description": "42 questions on substance use disorders (2 case studies and 30 single questions in all). Untimed; answers, rationales and your result at the end.",
+  "description": "44 questions on substance use disorders (2 case studies and 32 single questions in all). Untimed; answers, rationales and your result at the end.",
   "mode": "practice",
   "revealMode": "exam",
   "timed": false,
@@ -2023,7 +2024,9 @@
    "c1a00094-0000-4000-8000-000000000024",
    "c1a00097-0000-4000-8000-000000000018",
    "c1a00097-0000-4000-8000-000000000024",
-   "c1a00098-0000-4000-8000-000000000001"
+   "c1a00098-0000-4000-8000-000000000001",
+   "c1a00134-0000-4000-8000-000000000001",
+   "c1a00134-0000-4000-8000-000000000002"
   ],
   "isPublished": true
  },
@@ -2067,7 +2070,7 @@
  "c1e00000-0000-4000-8000-000000006041": {
   "id": "c1e00000-0000-4000-8000-000000006041",
   "title": "Medications: anxiolytics",
-  "description": "16 questions on medications: anxiolytics (2 case studies and 4 single questions in all). Untimed; answers, rationales and your result at the end.",
+  "description": "17 questions on medications: anxiolytics (2 case studies and 5 single questions in all). Untimed; answers, rationales and your result at the end.",
   "mode": "practice",
   "revealMode": "exam",
   "timed": false,
@@ -2090,7 +2093,8 @@
    "c1a00001-0000-4000-8000-000000000022",
    "c1a00032-0000-4000-8000-000000000006",
    "c1a00034-0000-4000-8000-000000000003",
-   "c1a00089-0000-4000-8000-000000000018"
+   "c1a00089-0000-4000-8000-000000000018",
+   "c1a00134-0000-4000-8000-000000000002"
   ],
   "isPublished": true
  },
