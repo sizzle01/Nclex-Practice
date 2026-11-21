@@ -17,11 +17,17 @@ ids and items never change. New questions fill new parts after them.
 - Timed case-study blocks (F24): BLOCK_CASES whole cases per block under exam rules, timed at the NCLEX-RN
   pace, no going back, rationales at the end and no Pass/Fail outcome (outcomeHidden). A block is published only when it is full
   and is then recorded in timed-blocks.json, so its cases never change as the bank grows.
+- Topic tests (F27): one untimed set per review-book subtopic (book_topics.py), with its case studies kept whole and
+  then its standalone questions, in parts of up to TOPIC_PART_SIZE, answers and the result at the end. A topic with
+  fewer than TOPIC_MIN_QUESTIONS questions stays unpublished until the bank grows.
 - The adaptive exam (F19, architecture.md 5.8): mode cat, no question list; each attempt picks
   85 to 150 questions from the whole bank, and the candidate chooses timed (5 h) or untimed.
 """
 import json
+import re
 from pathlib import Path
+
+import book_topics
 
 PART_SIZE = 60
 CASES_PER_SET = 5
@@ -54,6 +60,13 @@ BLOCK_MAX_PER_SYSTEM = 3     # so every block mixes at least four body systems; 
 NCLEX_SECONDS_PER_QUESTION = 120
 BLOCK_PAUSE_POLICY = {"maxPauses": 1, "maxPauseSec": 600}
 BLOCKS_FILE = Path(__file__).resolve().parent / "timed-blocks.json"
+
+# Topic tests (F27). Set number = TOPIC_BASE + subtopic index * TOPIC_STRIDE + part, so each subtopic keeps its set ids
+# as the bank grows; book_topics.BOOK must only ever be appended to.
+TOPIC_BASE = 5000
+TOPIC_STRIDE = 20
+TOPIC_PART_SIZE = 50
+TOPIC_MIN_QUESTIONS = 10
 
 
 def _set_id(n):
@@ -133,6 +146,9 @@ def build_catalog(questions):
     # ---- timed case-study blocks (F24) ----
     sets += _timed_blocks(cases)
 
+    # ---- topic tests (F27) ----
+    sets += _topic_sets(questions, cases)
+
     # ---- the fixed-length challenges: unpublished since F19 and frozen with their original items ----
     sets += frozen["challenges"]
     n = ADAPTIVE_SET_NUMBER - 1
@@ -210,6 +226,60 @@ def _timed_blocks(cases):
             "mode": "challenge", "revealMode": "exam", "timed": True, "timeBudgetSec": budget,
             "allowBackNav": False, "pausePolicy": BLOCK_PAUSE_POLICY, "outcomeHidden": True, "accessTier": "free",
             "questionIds": ids})
+    return sets
+
+
+def _case_titles():
+    """Case study id -> title, from every built bank file."""
+    here = Path(__file__).resolve().parent
+    return {c["id"]: c["title"] for f in here.glob("rn-bank-*.rn.json")
+            for c in json.loads(f.read_text(encoding="utf-8")).get("caseStudies", [])}
+
+
+def _matches(q, tags, keywords, both):
+    tagged = any(t in tags for t in q["subtopics"])
+    worded = bool(keywords and re.search(keywords, q["stem"], re.I))
+    return (tagged and worded) if both else (tagged or worded)
+
+
+def _topic_sets(questions, cases):
+    """One untimed topic test per review-book subtopic, split into parts of up to TOPIC_PART_SIZE."""
+    titles = _case_titles()
+    by_title = {titles[cid]: [q["id"] for q in sorted(items, key=lambda q: q["casePosition"])]
+                for cid, items in cases.items() if cid in titles}
+    standalone = [q for q in questions if not q.get("caseStudyId")]
+    sets = []
+    for index, (section, subtopic, case_titles) in enumerate(book_topics.BOOK):
+        tags, keywords, both = book_topics.match_rule(section, subtopic)
+        units = [by_title[t] for t in case_titles if t in by_title]
+        units += [[q["id"]] for q in standalone if _matches(q, tags, keywords, both)]
+        # Even parts: as many as TOPIC_PART_SIZE needs, each about the same size, so no part is tiny.
+        size = sum(len(u) for u in units)
+        n_parts = max(1, -(-size // TOPIC_PART_SIZE))
+        target = -(-size // n_parts)
+        parts, current = [], []
+        for unit in units:
+            if current and len(current) + len(unit) > target:
+                parts.append(current)
+                current = []
+            current = current + unit
+        if current:
+            parts.append(current)
+        if len(parts) >= TOPIC_STRIDE:
+            raise SystemExit(f"topic {subtopic!r} needs more than {TOPIC_STRIDE - 1} parts; raise TOPIC_STRIDE carefully")
+        total = sum(len(p) for p in parts)
+        n_cases = sum(1 for t in case_titles if t in by_title)
+        for k, part in enumerate(parts, 1):
+            suffix = f", part {k} of {len(parts)}" if len(parts) > 1 else ""
+            sets.append({
+                "id": _set_id(TOPIC_BASE + index * TOPIC_STRIDE + k),
+                "title": f"{subtopic}{suffix}",
+                "description": (f"{len(part)} questions on {subtopic.lower()} ({n_cases} case studies and "
+                                f"{total - n_cases * 6} single questions in all). Untimed; answers, rationales and your "
+                                "result at the end."),
+                "mode": "practice", "revealMode": "exam", "timed": False, "allowBackNav": True,
+                "accessTier": "free", "topicSection": section, "questionIds": part,
+                "isPublished": total >= TOPIC_MIN_QUESTIONS})
     return sets
 
 
