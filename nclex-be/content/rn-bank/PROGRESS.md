@@ -2,21 +2,21 @@
 
 Written by `python3 -I build_all.py` (coverage.py); do not edit by hand.
 
-**2282 of 5000 questions** (46%), 86 case studies, 54 bowtie questions. Multiple choice is 59% of the bank.
+**2310 of 5000 questions** (46%), 90 case studies, 55 bowtie questions. Multiple choice is 58% of the bank.
 
 ## By test plan category
 
 | Category | Test plan | Target | Have | To write | Next chunk |
 |---|---|---|---|---|---|
-| Management of Care | 18% | 900 | 351 | 549 | 20 |
-| Safety and Infection Prevention and Control | 13% | 650 | 256 | 394 | 15 |
-| Health Promotion and Maintenance | 9% | 450 | 177 | 273 | 10 |
-| Psychosocial Integrity | 9% | 450 | 147 | 303 | 11 |
-| Basic Care and Comfort | 9% | 450 | 160 | 290 | 11 |
-| Pharmacological and Parenteral Therapies | 16% | 800 | 388 | 412 | 15 |
-| Reduction of Risk Potential | 12% | 600 | 246 | 354 | 13 |
-| Physiological Adaptation | 14% | 700 | 557 | 143 | 5 |
-| **Total** | 100% | 5000 | 2282 | 2718 | 100 |
+| Management of Care | 18% | 900 | 355 | 545 | 20 |
+| Safety and Infection Prevention and Control | 13% | 650 | 258 | 392 | 15 |
+| Health Promotion and Maintenance | 9% | 450 | 178 | 272 | 10 |
+| Psychosocial Integrity | 9% | 450 | 148 | 302 | 11 |
+| Basic Care and Comfort | 9% | 450 | 161 | 289 | 11 |
+| Pharmacological and Parenteral Therapies | 16% | 800 | 396 | 404 | 15 |
+| Reduction of Risk Potential | 12% | 600 | 254 | 346 | 13 |
+| Physiological Adaptation | 14% | 700 | 560 | 140 | 5 |
+| **Total** | 100% | 5000 | 2310 | 2690 | 100 |
 
 ## Chunks
 
@@ -35,30 +35,31 @@ The wave chunks are paused (2026-11-20) while the bank is rebuilt around case st
 
 ## Case conversion (CASE-MAP.md)
 
-**516 of 2282 questions (23%) are inside full case studies**; the goal is 85%.
+**540 of 2310 questions (23%) are inside full case studies**; the goal is 85%.
 
 | Chunk | Topic | Batch files | Questions | Case studies |
 |---|---|---|---|---|
 | 1 | Cardiac, pacemaker, hemodynamic monitoring and shock | b100, b101, b102, b103 | 100 | 16 |
 | 2 | Pulmonary disorders with respiratory pharmacology | b104, b105, b106, b107 | 100 | 16 |
 | 3 | Endocrine disorders with insulin, antidiabetic, thyroid and corticosteroid drugs | b108, b109, b110, b111 | 100 | 16 |
+| 4 | Gastrointestinal disorders with PUD, GERD and antiemetic drugs | b112, b113, b114, b115 | 100 | 16 |
 
-**Next: conversion chunk 4**: Gastrointestinal disorders with PUD, GERD and antiemetic drugs (CASE-MAP.md).
+**Next: conversion chunk 5**: Neurologic disorders with antiseizure and Parkinson drugs and cranial nerve assessment (CASE-MAP.md).
 
 ## Item types in the whole bank
 
 | Type | Questions | Share |
 |---|---|---|
-| multiple_choice | 1335 | 59% |
-| matrix_mc | 263 | 12% |
-| sata | 198 | 9% |
-| dropdown_cloze | 99 | 4% |
-| highlight_table | 80 | 4% |
+| multiple_choice | 1336 | 58% |
+| matrix_mc | 272 | 12% |
+| sata | 203 | 9% |
+| dropdown_cloze | 103 | 4% |
+| highlight_table | 84 | 4% |
 | highlight_text | 62 | 3% |
+| bowtie | 55 | 2% |
 | ordered_response | 54 | 2% |
-| bowtie | 54 | 2% |
-| fill_blank_calc | 48 | 2% |
-| dropdown_table | 31 | 1% |
+| fill_blank_calc | 49 | 2% |
+| dropdown_table | 32 | 1% |
 | select_n | 25 | 1% |
-| multiple_response_grouping | 19 | 1% |
+| multiple_response_grouping | 21 | 1% |
 | matrix_mr | 14 | 1% |

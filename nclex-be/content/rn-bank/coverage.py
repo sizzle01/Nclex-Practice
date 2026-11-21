@@ -30,8 +30,9 @@ CONVERSION_CHUNKS = {
     1: ("Cardiac, pacemaker, hemodynamic monitoring and shock", (100, 101, 102, 103)),
     2: ("Pulmonary disorders with respiratory pharmacology", (104, 105, 106, 107)),
     3: ("Endocrine disorders with insulin, antidiabetic, thyroid and corticosteroid drugs", (108, 109, 110, 111)),
+    4: ("Gastrointestinal disorders with PUD, GERD and antiemetic drugs", (112, 113, 114, 115)),
 }
-CONVERSION_NEXT = "Gastrointestinal disorders with PUD, GERD and antiemetic drugs (CASE-MAP.md)"
+CONVERSION_NEXT = "Neurologic disorders with antiseizure and Parkinson drugs and cranial nerve assessment (CASE-MAP.md)"
 CASE_SHARE_GOAL = 85    # percent of the bank inside full case studies
 
 # Item-type mix for a chunk of new questions (plan of 2026-11-20): fewer plain multiple-choice questions
