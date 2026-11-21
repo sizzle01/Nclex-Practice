@@ -104,5 +104,5 @@ Written by `python3 -I build_all.py`; do not edit by hand. See `quality.py` for 
 | 112-gi-cases-pud-he-sbo-cdiff | 24 | yes | 0 | 0% | 0% (-) | 0% | 10.5 | 0/4/20 |
 | 113-gi-cases-ibd-ostomy-cholangitis-hepb | 24 | yes | 0 | 0% | 0% (-) | 0% | 10.5 | 0/4/20 |
 | 114-gi-cases-cinv-ascites-lgib-diverticulitis | 24 | yes | 0 | 0% | 0% (-) | 0% | 12 | 0/4/20 |
-| 115-gi-cases-bariatric-apap-refeeding-egd-standalone | 28 | yes | 1 | 100% | 100% (longest) | 0% | 11.5 | 0/4/24 |
+| 115-gi-cases-bariatric-apap-refeeding-egd-standalone | 28 | yes | 1 | 0% | 25% (stem words) | 0% | 11.5 | 0/4/24 |
 | **Whole bank** | 2310 | | 1336 | 12% | 25% (assess first) | 5% | 29 | 118/1120/1072 |

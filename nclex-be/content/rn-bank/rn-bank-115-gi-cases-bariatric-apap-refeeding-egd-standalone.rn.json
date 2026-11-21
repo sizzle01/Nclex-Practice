@@ -445,11 +445,11 @@
         "options": [
           {
             "id": "a",
-            "text": "A client 1 day after gastric bypass whose heart rate has risen from 96 to 128/min and who feels anxious"
+            "text": "A client 1 day after gastric bypass whose heart rate rose from 96 to 128/min, feeling anxious"
           },
           {
             "id": "b",
-            "text": "A client with a new colostomy whose stoma is red and moist and who has not yet passed stool"
+            "text": "A client with a new colostomy whose stoma is red and moist and who has not yet passed any stool"
           },
           {
             "id": "c",
@@ -457,7 +457,7 @@
           },
           {
             "id": "d",
-            "text": "A client after cholecystectomy who reports right shoulder pain and wants a heating pad"
+            "text": "A client the day after laparoscopic cholecystectomy who reports right shoulder pain and asks for a heating pad"
           }
         ]
       },
