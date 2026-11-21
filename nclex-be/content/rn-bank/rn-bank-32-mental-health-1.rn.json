@@ -336,7 +336,8 @@
           "Rewritten to NCLEX-RN difficulty and reviewed by the content team on 19 November 2026."
         ]
       },
-      "educationalObjective": "Teach about buspirone."
+      "educationalObjective": "Teach about buspirone.",
+      "status": "retired"
     },
     {
       "id": "c1a00032-0000-4000-8000-000000000007",

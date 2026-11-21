@@ -55,6 +55,9 @@ CHUNK_TOPICS = {
     8: ("Mental health", "mental-health",
         r"lithium|haloperidol|clozapine|neuroleptic malignant|serotonin syndrome|phenelzine|maoi|sertraline|"
         r"fluoxetine|methylphenidate|buprenorphine|naloxone|benzodiazepine|lorazepam|anorexia|bulimia"),
+    9: ("Mental health part 2", "mental-health",
+        r"donepezil|memantine|disulfiram|naltrexone|acamprosate|thiamine|varenicline|buspirone|valpro|lamotrigine|"
+        r"olanzapine|tardive|electroconvulsive|\bect\b"),
 }
 LATER_CHUNKS = {"pediatrics", "maternal-newborn"}
 CLINICAL = {"PHI.PA", "PHI.PPT", "PHI.RRP", "PHI.BCC", "HPM"}
@@ -73,10 +76,9 @@ KEEP_TAGS = {"eye-and-ear-disorders", "sensory-impairment-care", "urinary-elimin
 # Single questions on topics no case covers yet, kept whatever their tags: superior vena cava syndrome (chunk 6);
 # children (pediatric chunks), carpal tunnel, Lyme disease, HIV PrEP, osteoarthritis and Buck's traction (chunk 7).
 KEEP_STEMS = re.compile(r"superior vena cava|collar of the shirt|\bchild\b|\bparent\b|carpal|lyme|"
-                        r"pre-exposure|\bprep\b|osteoarthritis|buck's|"
-                        # chunk 8 (mental health) cases do not yet teach these drugs and topics
-                        r"alcohol use disorder|disulfiram|naltrexone|varenicline|stopping paroxetine|buspirone|"
-                        r"valpro|lamotrigine|olanzapine|tardive|lip smacking|four clients who take antipsychotic", re.I)
+                        r"pre-exposure|\bprep\b|osteoarthritis|buck's", re.I)
+# Chunk 8 kept alcohol use drugs, varenicline, SSRI discontinuation, buspirone, valproate, lamotrigine, olanzapine
+# and tardive dyskinesia questions; chunk 9 cases teach them, so they are no longer kept.
 KEEP_MOC = re.compile(r"\b(first|priorit\w*|delegat\w*|assign\w*)\b", re.I)
 
 

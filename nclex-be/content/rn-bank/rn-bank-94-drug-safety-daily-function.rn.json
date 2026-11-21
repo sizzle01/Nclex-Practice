@@ -675,7 +675,8 @@
           "Written to NCLEX-RN difficulty and reviewed by the content team on 20 November 2026."
         ]
       },
-      "educationalObjective": "Recognize SSRI discontinuation syndrome."
+      "educationalObjective": "Recognize SSRI discontinuation syndrome.",
+      "status": "retired"
     },
     {
       "id": "c1a00094-0000-4000-8000-000000000009",

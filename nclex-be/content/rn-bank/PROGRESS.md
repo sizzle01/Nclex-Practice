@@ -35,7 +35,7 @@ The wave chunks are paused (2026-11-20) while the bank is rebuilt around case st
 
 ## Case conversion (CASE-MAP.md)
 
-**996 of 2222 active questions (45%) are inside full case studies**; the goal is 85%. 564 older questions are retired (F26, retired-questions.json): their topics were rebuilt as case studies.
+**996 of 2211 active questions (45%) are inside full case studies**; the goal is 85%. 575 older questions are retired (F26, retired-questions.json): their topics were rebuilt as case studies.
 
 | Chunk | Topic | Batch files | Questions | Case studies |
 |---|---|---|---|---|
@@ -47,12 +47,13 @@ The wave chunks are paused (2026-11-20) while the bank is rebuilt around case st
 | 6 | Renal, hematologic and oncologic disorders with hematopoietic drugs and thrombolytics | b120, b121, b122, b123 | 100 | 16 |
 | 7 | Immunity, infection, STI, musculoskeletal and trauma with antimicrobial, antifungal and antiparasitic drugs | b124, b125, b126, b127 | 100 | 16 |
 | 8 | Mental health disorders with psychiatric medications | b128, b129, b130, b131 | 100 | 16 |
+| 9 | Mental health part 2: abuse and violence, perinatal mood, dementia, alcohol, ECT, grief and remaining drugs | b132, b133, b134 | 76 | 12 |
 
-**Next: conversion chunk 9**: Mental health part 2: grief, abuse and violence, perinatal mood, dementia care, alcohol use, ECT, defense mechanisms and the remaining psychiatric drugs (CASE-MAP.md, book_topics.py).
+**Next: conversion chunk 10**: Maternity: prenatal care, labor and birth, obstetric complications and medications (CASE-MAP.md, book_topics.py).
 
 ## Review book checklist (book_topics.py)
 
-**54 of 96 subtopics covered** (at least 2 case studies), 19 started (1 case), 23 not yet covered.
+**55 of 96 subtopics covered** (at least 2 case studies), 19 started (1 case), 22 not yet covered.
 
 | Section | Subtopic | Status | Case studies |
 |---|---|---|---|
@@ -96,21 +97,21 @@ The wave chunks are paused (2026-11-20) while the bank is rebuilt around case st
 | Pharmacology | Respiratory: asthma and bronchoconstrictive disorders | covered | Status asthmaticus in an adult; COPD with CO2 narcosis from too much oxygen |
 | Pharmacology | Respiratory: allergic disorders | started | Over-the-counter cold medicines in an older adult |
 | Pharmacology | Respiratory: decongestant, antitussive, expectorant, mucolytic | started | Over-the-counter cold medicines in an older adult |
-| Mental health | Anxiety disorders and OCD | covered | Panic disorder with anxiolytic treatment; Obsessive-compulsive disorder with exposure and response prevention |
-| Mental health | Bipolar mood disorders | started | Bipolar mania with lithium toxicity |
+| Mental health | Anxiety disorders and OCD | covered | Panic disorder with anxiolytic treatment; Obsessive-compulsive disorder with exposure and response prevention; Generalized anxiety disorder with SSRI discontinuation and buspirone |
+| Mental health | Bipolar mood disorders | covered | Bipolar mania with lithium toxicity; Bipolar disorder on valproate and lamotrigine with a severe rash; Postpartum psychosis |
 | Mental health | Childhood and neurodevelopmental disorders | started | Child with ADHD on a stimulant |
-| Mental health | Defense mechanisms | **not yet** | - |
+| Mental health | Defense mechanisms | started | Alcohol use disorder with Wernicke encephalopathy |
 | Mental health | Eating disorders | covered | Anorexia nervosa with medical instability; Bulimia nervosa with severe hypokalemia |
 | Mental health | Impulse control disorders | started | Escalating aggression with seclusion and restraint |
-| Mental health | Major depressive disorders | covered | Major depression with suicide risk early in SSRI treatment; Serotonin syndrome from fluoxetine with tramadol; Hypertensive crisis on an MAOI |
+| Mental health | Major depressive disorders | covered | Major depression with suicide risk early in SSRI treatment; Serotonin syndrome from fluoxetine with tramadol; Hypertensive crisis on an MAOI; Electroconvulsive therapy for catatonic depression; Complicated grief in an older widower |
 | Mental health | Personality disorders | started | Borderline personality disorder with self-harm and splitting |
-| Mental health | Schizophrenia spectrum disorders | covered | Schizophrenia with neuroleptic malignant syndrome; Treatment-resistant schizophrenia on clozapine |
+| Mental health | Schizophrenia spectrum disorders | covered | Schizophrenia with neuroleptic malignant syndrome; Treatment-resistant schizophrenia on clozapine; Olanzapine with metabolic syndrome and tardive dyskinesia |
 | Mental health | Somatic symptom disorders | started | Functional neurological symptom disorder after a traumatic event |
-| Mental health | Substance use disorders | covered | Alcohol withdrawal after orthopedic surgery; Opioid overdose and buprenorphine induction |
-| Mental health | Trauma, stressor-related and dissociative disorders | covered | Post-traumatic stress disorder in a veteran; Functional neurological symptom disorder after a traumatic event |
-| Mental health | Medications: anxiolytics | covered | Panic disorder with anxiolytic treatment; Post-traumatic stress disorder in a veteran |
-| Mental health | Medications: depression and mood stabilization | covered | Major depression with suicide risk early in SSRI treatment; Bipolar mania with lithium toxicity; Serotonin syndrome from fluoxetine with tramadol; Hypertensive crisis on an MAOI |
-| Mental health | Medications: psychotic disorders | covered | Schizophrenia with neuroleptic malignant syndrome; Treatment-resistant schizophrenia on clozapine; Escalating aggression with seclusion and restraint |
+| Mental health | Substance use disorders | covered | Alcohol withdrawal after orthopedic surgery; Opioid overdose and buprenorphine induction; Alcohol use disorder with Wernicke encephalopathy; Smoking cessation with varenicline |
+| Mental health | Trauma, stressor-related and dissociative disorders | covered | Post-traumatic stress disorder in a veteran; Functional neurological symptom disorder after a traumatic event; Intimate partner violence in pregnancy; Sexual assault with trauma-informed forensic care |
+| Mental health | Medications: anxiolytics | covered | Panic disorder with anxiolytic treatment; Post-traumatic stress disorder in a veteran; Generalized anxiety disorder with SSRI discontinuation and buspirone |
+| Mental health | Medications: depression and mood stabilization | covered | Major depression with suicide risk early in SSRI treatment; Bipolar mania with lithium toxicity; Serotonin syndrome from fluoxetine with tramadol; Hypertensive crisis on an MAOI; Bipolar disorder on valproate and lamotrigine with a severe rash; Generalized anxiety disorder with SSRI discontinuation and buspirone; Smoking cessation with varenicline |
+| Mental health | Medications: psychotic disorders | covered | Schizophrenia with neuroleptic malignant syndrome; Treatment-resistant schizophrenia on clozapine; Escalating aggression with seclusion and restraint; Olanzapine with metabolic syndrome and tardive dyskinesia |
 | Maternity | Abruptio placentae | **not yet** | - |
 | Maternity | Electronic fetal heart rate monitoring | **not yet** | - |
 | Maternity | Fetal growth and development | **not yet** | - |
