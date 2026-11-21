@@ -110,4 +110,5 @@ Written by `python3 -I build_all.py`; do not edit by hand. See `quality.py` for 
 | 118-neuro-cases-crani-delirium-seizure-edh | 24 | yes | 0 | 0% | 0% (-) | 0% | 12 | 0/4/20 |
 | 119-neuro-cases-als-cn-tia-h2t-standalone | 28 | yes | 1 | 0% | 50% (stem words) | 0% | 13.5 | 0/4/24 |
 | 120-renal-cases-hd-pd-aki-stone | 24 | yes | 0 | 0% | 0% (-) | 0% | 11.5 | 0/4/20 |
-| **Whole bank** | 2434 | | 1337 | 12% | 25% (assess first) | 5% | 28 | 118/1140/1176 |
+| 121-renal-cases-turp-transplant-ckd-hdstart | 24 | yes | 0 | 0% | 0% (-) | 0% | 11 | 0/4/20 |
+| **Whole bank** | 2458 | | 1337 | 12% | 25% (assess first) | 5% | 28 | 118/1144/1196 |
