@@ -811,10 +811,6 @@
   "chunk": 5,
   "topic": "Neurologic"
  },
- "c1a00015-0000-4000-8000-000000000006": {
-  "chunk": 5,
-  "topic": "Neurologic"
- },
  "c1a00015-0000-4000-8000-000000000007": {
   "chunk": 5,
   "topic": "Neurologic"
@@ -859,31 +855,7 @@
   "chunk": 5,
   "topic": "Neurologic"
  },
- "c1a00015-0000-4000-8000-000000000018": {
-  "chunk": 5,
-  "topic": "Neurologic"
- },
- "c1a00015-0000-4000-8000-000000000019": {
-  "chunk": 5,
-  "topic": "Neurologic"
- },
  "c1a00015-0000-4000-8000-000000000020": {
-  "chunk": 5,
-  "topic": "Neurologic"
- },
- "c1a00015-0000-4000-8000-000000000021": {
-  "chunk": 5,
-  "topic": "Neurologic"
- },
- "c1a00015-0000-4000-8000-000000000022": {
-  "chunk": 5,
-  "topic": "Neurologic"
- },
- "c1a00015-0000-4000-8000-000000000023": {
-  "chunk": 5,
-  "topic": "Neurologic"
- },
- "c1a00015-0000-4000-8000-000000000024": {
   "chunk": 5,
   "topic": "Neurologic"
  },
@@ -1115,10 +1087,6 @@
   "chunk": 4,
   "topic": "Gastrointestinal"
  },
- "c1a00024-0000-4000-8000-000000000013": {
-  "chunk": 5,
-  "topic": "Neurologic"
- },
  "c1a00024-0000-4000-8000-000000000018": {
   "chunk": 5,
   "topic": "Neurologic"
@@ -1280,10 +1248,6 @@
   "topic": "Neurologic"
  },
  "c1a00070-0000-4000-8000-000000000021": {
-  "chunk": 5,
-  "topic": "Neurologic"
- },
- "c1a00070-0000-4000-8000-000000000022": {
   "chunk": 5,
   "topic": "Neurologic"
  },
@@ -1675,10 +1639,6 @@
   "chunk": 4,
   "topic": "Gastrointestinal"
  },
- "c1a00094-0000-4000-8000-000000000020": {
-  "chunk": 5,
-  "topic": "Neurologic"
- },
  "c1a00094-0000-4000-8000-000000000021": {
   "chunk": 5,
   "topic": "Neurologic"
@@ -1750,10 +1710,6 @@
  "c1a00098-0000-4000-8000-000000000015": {
   "chunk": 4,
   "topic": "Gastrointestinal"
- },
- "c1a00098-0000-4000-8000-000000000017": {
-  "chunk": 5,
-  "topic": "Neurologic"
  },
  "c1a00098-0000-4000-8000-000000000022": {
   "chunk": 2,

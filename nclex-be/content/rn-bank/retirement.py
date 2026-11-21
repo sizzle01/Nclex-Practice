@@ -48,6 +48,10 @@ CHUNK_TOPICS = {
 }
 LATER_CHUNKS = {"pediatrics", "maternal-newborn", "mental-health"}
 CLINICAL = {"PHI.PA", "PHI.PPT", "PHI.RRP", "PHI.BCC", "HPM"}
+# Topics the converted cases do not teach, even when a question carries a converted body system (for example, eye
+# surgery is tagged neurological). These questions are kept until a case covers them.
+KEEP_TAGS = {"eye-and-ear-disorders", "sensory-impairment-care", "urinary-elimination-and-catheter-care",
+             "bowel-elimination", "hygiene-and-personal-care"}
 KEEP_MOC = re.compile(r"\b(first|priorit\w*|delegat\w*|assign\w*)\b", re.I)
 
 
@@ -86,6 +90,8 @@ def choose(questions, chunks):
         if _batch(q["id"]) >= 100 or q.get("caseStudyId") or q["bodySystem"] in LATER_CHUNKS:
             continue
         if q["clientNeeds"] not in CLINICAL:
+            continue
+        if KEEP_TAGS & set(q["subtopics"]):
             continue
         match = _topic_of(q, chunks)
         if not match:
