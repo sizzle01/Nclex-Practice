@@ -272,7 +272,10 @@ public sealed class ImportQuestionsHandler(
         return new ImportResult(created, updated, unchanged, []) { Retired = retired };
     }
 
-    /// <summary>A file that retires a question must not also list it in a test set or bank (F26).</summary>
+    /// <summary>
+    /// A file that retires a question must not also list it in a published test set or a bank (F26). An unpublished
+    /// set may keep it, because nobody can start that set.
+    /// </summary>
     private static void CheckRetiredNotListed(QuestionImportFile file, List<ImportIssue> issues)
     {
         var retired = file.Questions.Where(q => q.Status == QuestionStatus.Retired).Select(q => q.Id).ToHashSet();
@@ -281,7 +284,7 @@ public sealed class ImportQuestionsHandler(
             return;
         }
 
-        foreach (var (set, s) in (file.TestSets ?? []).Select((set, s) => (set, s)))
+        foreach (var (set, s) in (file.TestSets ?? []).Select((set, s) => (set, s)).Where(x => x.set.IsPublished))
         {
             foreach (var (id, i) in set.QuestionIds.Select((id, i) => (id, i)).Where(x => retired.Contains(x.id)))
             {

@@ -21,6 +21,9 @@ public sealed class CatalogImporter(IAppDbContext db)
         var banks = file.Banks ?? [];
         var sets = file.TestSets ?? [];
         var known = await LoadUsableQuestionIdsAsync(file, cancellationToken);
+        // An unpublished set may still list questions retired since (F26): nobody can start it, and it keeps the
+        // list its past attempts were taken from.
+        var knownForHidden = known.Concat(await LoadRetiredQuestionIdsAsync(file, cancellationToken)).ToHashSet();
 
         var bankIds = banks.Select(b => b.Id).ToList();
         var existingBanks = await db.QuestionBanks.AsNoTracking()
@@ -64,7 +67,7 @@ public sealed class CatalogImporter(IAppDbContext db)
                 continue;
             }
 
-            CheckQuestionIds(set.QuestionIds, path, known, issues);
+            CheckQuestionIds(set.QuestionIds, path, set.IsPublished ? known : knownForHidden, issues);
             CheckCaseStudies(set.QuestionIds, path, cases, issues);
         }
 
@@ -242,6 +245,17 @@ public sealed class CatalogImporter(IAppDbContext db)
             .Select(q => q.Id)
             .ToListAsync(cancellationToken);
         return [.. published, .. file.Questions.Select(q => q.Id)];
+    }
+
+    // Retired questions on the track, stored or retired by this file (F26).
+    private async Task<IReadOnlyList<Guid>> LoadRetiredQuestionIdsAsync(QuestionImportFile file, CancellationToken cancellationToken)
+    {
+        var referenced = (file.TestSets ?? []).SelectMany(s => s.QuestionIds ?? []).Distinct().ToList();
+        var stored = await db.Questions.AsNoTracking()
+            .Where(q => referenced.Contains(q.Id) && q.Track == file.Track && q.Status == QuestionStatus.Retired)
+            .Select(q => q.Id)
+            .ToListAsync(cancellationToken);
+        return [.. stored, .. file.Questions.Where(q => q.Status == QuestionStatus.Retired).Select(q => q.Id)];
     }
 
     private static void CheckId(Guid id, string path, string noun, HashSet<Guid> seen, ExamTrack? existingTrack, ExamTrack fileTrack, List<ImportIssue> issues)

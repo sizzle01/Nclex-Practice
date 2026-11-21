@@ -59,7 +59,7 @@ public static class ImportIssueCodes
     /// <summary>Two subtopics on a track have the same name once case, punctuation and plurals are ignored.</summary>
     public const string DuplicateSubtopic = "DUPLICATE_SUBTOPIC";
 
-    /// <summary>A test set or bank in the file lists a question the file marks as retired (F26).</summary>
+    /// <summary>A published test set or a bank in the file lists a question the file marks as retired (F26).</summary>
     public const string RetiredQuestion = "RETIRED_QUESTION";
 
     /// <summary>The item type has no module yet, so its items can't be validated or graded.</summary>

@@ -68,6 +68,20 @@ public sealed class ImportRetiredQuestionsTests(ApiFactory factory)
     }
 
     [Fact]
+    public async Task An_unpublished_set_may_keep_listing_a_retired_question()
+    {
+        await _content.ImportOkAsync(CatalogContent.FileWith("RN", [Retired(_ids[0])]));
+        var hidden = CatalogContent.Set(Guid.NewGuid(), $"Retired part {Guid.NewGuid():N}", [_ids[0]], new { isPublished = false });
+        var published = CatalogContent.Set(Guid.NewGuid(), $"Live part {Guid.NewGuid():N}", [_ids[0]]);
+
+        var hiddenResult = await _content.ImportAsync(CatalogContent.FileWith("RN", [CatalogContent.Question(_ids[1])], testSets: [hidden]));
+        var publishedResult = await _content.ImportAsync(CatalogContent.FileWith("RN", [CatalogContent.Question(_ids[1])], testSets: [published]));
+
+        hiddenResult.Issues.ShouldBeEmpty();
+        publishedResult.Issues.ShouldContain(i => i.Code == ImportIssueCodes.UnknownQuestion);
+    }
+
+    [Fact]
     public async Task A_set_imported_earlier_leaves_out_a_question_retired_later()
     {
         var setId = Guid.NewGuid();
