@@ -98,4 +98,5 @@ Written by `python3 -I build_all.py`; do not edit by hand. See `quality.py` for 
 | 106-pulmonary-cases-cf-aspiration-flu-effusion | 24 | yes | 1 | 0% | 33% (stem words) | 0% | 12 | 0/4/20 |
 | 107-pulmonary-cases-co-flail-hfnc-otc-standalone | 28 | yes | 1 | 0% | 50% (longest) | 0% | 13.5 | 0/4/24 |
 | 108-endocrine-cases-hhs-edka-hypo-t2dm | 24 | yes | 0 | 0% | 0% (-) | 0% | 13 | 0/4/20 |
-| **Whole bank** | 2134 | | 1334 | 12% | 25% (assess first) | 5% | 30 | 118/1092/924 |
+| 109-endocrine-cases-thyroid | 24 | yes | 0 | 0% | 0% (-) | 0% | 10 | 0/4/20 |
+| **Whole bank** | 2158 | | 1334 | 12% | 25% (assess first) | 5% | 30 | 118/1096/944 |
