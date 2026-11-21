@@ -35,7 +35,7 @@ The wave chunks are paused (2026-11-20) while the bank is rebuilt around case st
 
 ## Case conversion (CASE-MAP.md)
 
-**924 of 2162 active questions (43%) are inside full case studies**; the goal is 85%. 548 older questions are retired (F26, retired-questions.json): their topics were rebuilt as case studies.
+**924 of 2146 active questions (43%) are inside full case studies**; the goal is 85%. 564 older questions are retired (F26, retired-questions.json): their topics were rebuilt as case studies.
 
 | Chunk | Topic | Batch files | Questions | Case studies |
 |---|---|---|---|---|
@@ -46,12 +46,13 @@ The wave chunks are paused (2026-11-20) while the bank is rebuilt around case st
 | 5 | Neurologic disorders, head-to-toe and cranial nerve assessment, neuro and cholinergic drugs | b116, b117, b118, b119 | 100 | 16 |
 | 6 | Renal, hematologic and oncologic disorders with hematopoietic drugs and thrombolytics | b120, b121, b122, b123 | 100 | 16 |
 | 7 | Immunity, infection, STI, musculoskeletal and trauma with antimicrobial, antifungal and antiparasitic drugs | b124, b125, b126, b127 | 100 | 16 |
+| 8 | Mental health disorders with psychiatric medications | b128, b129, b130, b131 | 100 | 16 |
 
-**Next: conversion chunk 8**: Mental health disorders with psychiatric medications (CASE-MAP.md, book_topics.py).
+**Next: conversion chunk 9**: Mental health part 2: grief, abuse and violence, perinatal mood, dementia care, alcohol use, ECT, defense mechanisms and the remaining psychiatric drugs (CASE-MAP.md, book_topics.py).
 
 ## Review book checklist (book_topics.py)
 
-**45 of 96 subtopics covered** (at least 2 case studies), 15 started (1 case), 36 not yet covered.
+**54 of 96 subtopics covered** (at least 2 case studies), 19 started (1 case), 23 not yet covered.
 
 | Section | Subtopic | Status | Case studies |
 |---|---|---|---|
@@ -60,7 +61,7 @@ The wave chunks are paused (2026-11-20) while the bank is rebuilt around case st
 | Fundamental | Basic EKG concept | covered | Drug-induced complete heart block and transcutaneous pacing; Ventricular tachycardia in a client with an ICD; Permanent pacemaker failure to capture; New atrial fibrillation with a rapid rate from thyrotoxicosis |
 | Fundamental | Dosage calculation | covered | Heparin-induced thrombocytopenia with arterial thrombosis; Cardiogenic shock with a pulmonary artery catheter; Chemotherapy-induced nausea and vomiting; Acetaminophen overdose; Diabetic foot ulcer with osteomyelitis; Massive pulmonary embolism treated with alteplase; Severe falciparum malaria in a returning traveler |
 | Fundamental | IV fluid | covered | Hyperosmolar hyperglycemic state; SIADH with a hyponatremic seizure |
-| Fundamental | Electrolyte imbalances | covered | Heart failure with digoxin toxicity; SIADH with a hyponatremic seizure; Adrenal crisis in Addison disease; Refeeding syndrome on parenteral nutrition; Hematoma and hypocalcemia after thyroidectomy; Missed hemodialysis with hyperkalemia and fluid overload; Tumor lysis syndrome; TURP with bladder irrigation and TUR syndrome; Rhabdomyolysis after a long lie on the floor |
+| Fundamental | Electrolyte imbalances | covered | Heart failure with digoxin toxicity; SIADH with a hyponatremic seizure; Adrenal crisis in Addison disease; Refeeding syndrome on parenteral nutrition; Hematoma and hypocalcemia after thyroidectomy; Missed hemodialysis with hyperkalemia and fluid overload; Tumor lysis syndrome; TURP with bladder irrigation and TUR syndrome; Rhabdomyolysis after a long lie on the floor; Bulimia nervosa with severe hypokalemia |
 | Fundamental | Lab | covered | Severe community-acquired pneumonia in an older adult; Acute cholangitis and ERCP; Acute hepatitis B and exposures; Small bowel obstruction with strangulation; Febrile neutropenia after chemotherapy; Tumor lysis syndrome; Lupus flare with lupus nephritis |
 | Holistic health assessment | Head-to-toe assessment | covered | Head-to-toe assessment that uncovers a chronic subdural hematoma; Head-to-toe admission template in long-term care |
 | Holistic health assessment | Head-to-toe assessment template | covered | Head-to-toe admission template in long-term care; Head-to-toe assessment that uncovers a chronic subdural hematoma |
@@ -84,7 +85,7 @@ The wave chunks are paused (2026-11-20) while the bank is rebuilt around case st
 | Pharmacology | Coagulation: anticoagulants | covered | Heparin-induced thrombocytopenia with arterial thrombosis; Warfarin over-anticoagulation with a GI bleed and a mechanical valve; Lower GI bleed on apixaban; Massive pulmonary embolism treated with alteplase |
 | Pharmacology | Coagulation: antiplatelets | covered | NSTEMI with a retroperitoneal bleed after catheterization; TIA, carotid endarterectomy and statin therapy |
 | Pharmacology | Coagulation: thrombolytics | covered | Acute ischemic stroke in the thrombolytic window; Massive pulmonary embolism treated with alteplase |
-| Pharmacology | Pain, fever and inflammation | covered | Acetaminophen overdose; Opioid-induced respiratory depression in sleep apnea; Acute gout flare and urate-lowering therapy; Below-knee amputation with phantom limb pain |
+| Pharmacology | Pain, fever and inflammation | covered | Acetaminophen overdose; Opioid-induced respiratory depression in sleep apnea; Acute gout flare and urate-lowering therapy; Below-knee amputation with phantom limb pain; Opioid overdose and buprenorphine induction |
 | Pharmacology | Endocrine: thyroid and antithyroid | covered | Thyroid storm; Myxedema coma; Levothyroxine over-replacement in an older adult |
 | Pharmacology | Endocrine: osteoporosis | started | Osteoporosis with a vertebral compression fracture |
 | Pharmacology | Endocrine: antidiabetic | covered | Newly diagnosed type 2 diabetes; Prolonged hypoglycemia from a sulfonylurea |
@@ -95,21 +96,21 @@ The wave chunks are paused (2026-11-20) while the bank is rebuilt around case st
 | Pharmacology | Respiratory: asthma and bronchoconstrictive disorders | covered | Status asthmaticus in an adult; COPD with CO2 narcosis from too much oxygen |
 | Pharmacology | Respiratory: allergic disorders | started | Over-the-counter cold medicines in an older adult |
 | Pharmacology | Respiratory: decongestant, antitussive, expectorant, mucolytic | started | Over-the-counter cold medicines in an older adult |
-| Mental health | Anxiety disorders and OCD | **not yet** | - |
-| Mental health | Bipolar mood disorders | **not yet** | - |
-| Mental health | Childhood and neurodevelopmental disorders | **not yet** | - |
+| Mental health | Anxiety disorders and OCD | covered | Panic disorder with anxiolytic treatment; Obsessive-compulsive disorder with exposure and response prevention |
+| Mental health | Bipolar mood disorders | started | Bipolar mania with lithium toxicity |
+| Mental health | Childhood and neurodevelopmental disorders | started | Child with ADHD on a stimulant |
 | Mental health | Defense mechanisms | **not yet** | - |
-| Mental health | Eating disorders | **not yet** | - |
-| Mental health | Impulse control disorders | **not yet** | - |
-| Mental health | Major depressive disorders | **not yet** | - |
-| Mental health | Personality disorders | **not yet** | - |
-| Mental health | Schizophrenia spectrum disorders | **not yet** | - |
-| Mental health | Somatic symptom disorders | **not yet** | - |
-| Mental health | Substance use disorders | started | Alcohol withdrawal after orthopedic surgery |
-| Mental health | Trauma, stressor-related and dissociative disorders | **not yet** | - |
-| Mental health | Medications: anxiolytics | **not yet** | - |
-| Mental health | Medications: depression and mood stabilization | **not yet** | - |
-| Mental health | Medications: psychotic disorders | **not yet** | - |
+| Mental health | Eating disorders | covered | Anorexia nervosa with medical instability; Bulimia nervosa with severe hypokalemia |
+| Mental health | Impulse control disorders | started | Escalating aggression with seclusion and restraint |
+| Mental health | Major depressive disorders | covered | Major depression with suicide risk early in SSRI treatment; Serotonin syndrome from fluoxetine with tramadol; Hypertensive crisis on an MAOI |
+| Mental health | Personality disorders | started | Borderline personality disorder with self-harm and splitting |
+| Mental health | Schizophrenia spectrum disorders | covered | Schizophrenia with neuroleptic malignant syndrome; Treatment-resistant schizophrenia on clozapine |
+| Mental health | Somatic symptom disorders | started | Functional neurological symptom disorder after a traumatic event |
+| Mental health | Substance use disorders | covered | Alcohol withdrawal after orthopedic surgery; Opioid overdose and buprenorphine induction |
+| Mental health | Trauma, stressor-related and dissociative disorders | covered | Post-traumatic stress disorder in a veteran; Functional neurological symptom disorder after a traumatic event |
+| Mental health | Medications: anxiolytics | covered | Panic disorder with anxiolytic treatment; Post-traumatic stress disorder in a veteran |
+| Mental health | Medications: depression and mood stabilization | covered | Major depression with suicide risk early in SSRI treatment; Bipolar mania with lithium toxicity; Serotonin syndrome from fluoxetine with tramadol; Hypertensive crisis on an MAOI |
+| Mental health | Medications: psychotic disorders | covered | Schizophrenia with neuroleptic malignant syndrome; Treatment-resistant schizophrenia on clozapine; Escalating aggression with seclusion and restraint |
 | Maternity | Abruptio placentae | **not yet** | - |
 | Maternity | Electronic fetal heart rate monitoring | **not yet** | - |
 | Maternity | Fetal growth and development | **not yet** | - |

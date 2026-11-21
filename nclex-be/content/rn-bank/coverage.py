@@ -37,8 +37,10 @@ CONVERSION_CHUNKS = {
     6: ("Renal, hematologic and oncologic disorders with hematopoietic drugs and thrombolytics", (120, 121, 122, 123)),
     7: ("Immunity, infection, STI, musculoskeletal and trauma with antimicrobial, antifungal and antiparasitic drugs",
         (124, 125, 126, 127)),
+    8: ("Mental health disorders with psychiatric medications", (128, 129, 130, 131)),
 }
-CONVERSION_NEXT = ("Mental health disorders with psychiatric medications (CASE-MAP.md, book_topics.py)")
+CONVERSION_NEXT = ("Mental health part 2: grief, abuse and violence, perinatal mood, dementia care, alcohol use, "
+                   "ECT, defense mechanisms and the remaining psychiatric drugs (CASE-MAP.md, book_topics.py)")
 CASE_SHARE_GOAL = 85    # percent of the bank inside full case studies
 
 # Item-type mix for a chunk of new questions (plan of 2026-11-20): fewer plain multiple-choice questions

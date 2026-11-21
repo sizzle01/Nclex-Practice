@@ -52,8 +52,11 @@ CHUNK_TOPICS = {
         r"\bhiv\b|antiretrovir|lupus|rheumatoid|methotrexate|adalimumab|fluconazole|amphotericin|antifungal|"
         r"malaria|syphilis|gonorrh|chlamydia|pelvic inflammatory|fracture|traction|amputat|gout|allopurinol|"
         r"colchicine|rhabdomyol|heat stroke|hypotherm|triage"),
+    8: ("Mental health", "mental-health",
+        r"lithium|haloperidol|clozapine|neuroleptic malignant|serotonin syndrome|phenelzine|maoi|sertraline|"
+        r"fluoxetine|methylphenidate|buprenorphine|naloxone|benzodiazepine|lorazepam|anorexia|bulimia"),
 }
-LATER_CHUNKS = {"pediatrics", "maternal-newborn", "mental-health"}
+LATER_CHUNKS = {"pediatrics", "maternal-newborn"}
 CLINICAL = {"PHI.PA", "PHI.PPT", "PHI.RRP", "PHI.BCC", "HPM"}
 # Topics the converted cases do not teach, even when a question carries a converted body system (for example, eye
 # surgery is tagged neurological). These questions are kept until a case covers them.
@@ -70,7 +73,10 @@ KEEP_TAGS = {"eye-and-ear-disorders", "sensory-impairment-care", "urinary-elimin
 # Single questions on topics no case covers yet, kept whatever their tags: superior vena cava syndrome (chunk 6);
 # children (pediatric chunks), carpal tunnel, Lyme disease, HIV PrEP, osteoarthritis and Buck's traction (chunk 7).
 KEEP_STEMS = re.compile(r"superior vena cava|collar of the shirt|\bchild\b|\bparent\b|carpal|lyme|"
-                        r"pre-exposure|\bprep\b|osteoarthritis|buck's", re.I)
+                        r"pre-exposure|\bprep\b|osteoarthritis|buck's|"
+                        # chunk 8 (mental health) cases do not yet teach these drugs and topics
+                        r"alcohol use disorder|disulfiram|naltrexone|varenicline|stopping paroxetine|buspirone|"
+                        r"valpro|lamotrigine|olanzapine|tardive|lip smacking|four clients who take antipsychotic", re.I)
 KEEP_MOC = re.compile(r"\b(first|priorit\w*|delegat\w*|assign\w*)\b", re.I)
 
 
