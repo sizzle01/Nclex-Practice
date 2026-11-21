@@ -26,6 +26,9 @@ for f in $(ls content/rn-bank/rn-bank-*.rn.json | sort -V); do
 done
 ```
 Rebuild the JSON from the batch sources and print the category mix: `cd content/rn-bank && python3 -I build_all.py`.
+Retiring questions (F26): a question with `"status": "retired"` in an import file is retired for good. The importer never
+brings it back, and only unpublished sets may still list it. The content build sets this from `retired-questions.json`,
+which `retirement.py <chunk>` fills once a topic is rebuilt as case studies (see docs/features/F26-retire-converted-questions.md).
 Build the review sheet: `python3 -I review_sheet.py` (writes `review/rn-bank-review.csv` and `.html`, gitignored).
 
 ## 3. Reading order
