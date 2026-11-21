@@ -99,4 +99,5 @@ Written by `python3 -I build_all.py`; do not edit by hand. See `quality.py` for 
 | 107-pulmonary-cases-co-flail-hfnc-otc-standalone | 28 | yes | 1 | 0% | 50% (longest) | 0% | 13.5 | 0/4/24 |
 | 108-endocrine-cases-hhs-edka-hypo-t2dm | 24 | yes | 0 | 0% | 0% (-) | 0% | 13 | 0/4/20 |
 | 109-endocrine-cases-thyroid | 24 | yes | 0 | 0% | 0% (-) | 0% | 10 | 0/4/20 |
-| **Whole bank** | 2158 | | 1334 | 12% | 25% (assess first) | 5% | 30 | 118/1096/944 |
+| 110-endocrine-cases-adrenal-pituitary | 24 | yes | 0 | 0% | 0% (-) | 0% | 10 | 0/4/20 |
+| **Whole bank** | 2182 | | 1334 | 12% | 25% (assess first) | 5% | 29 | 118/1100/964 |
