@@ -2,21 +2,21 @@
 
 Written by `python3 -I build_all.py` (coverage.py); do not edit by hand.
 
-**2110 of 5000 questions** (42%), 58 case studies, 53 bowtie questions. Multiple choice is 63% of the bank.
+**2134 of 5000 questions** (43%), 62 case studies, 53 bowtie questions. Multiple choice is 63% of the bank.
 
 ## By test plan category
 
 | Category | Test plan | Target | Have | To write | Next chunk |
 |---|---|---|---|---|---|
-| Management of Care | 18% | 900 | 340 | 560 | 19 |
-| Safety and Infection Prevention and Control | 13% | 650 | 243 | 407 | 14 |
-| Health Promotion and Maintenance | 9% | 450 | 160 | 290 | 10 |
+| Management of Care | 18% | 900 | 341 | 559 | 19 |
+| Safety and Infection Prevention and Control | 13% | 650 | 245 | 405 | 14 |
+| Health Promotion and Maintenance | 9% | 450 | 163 | 287 | 10 |
 | Psychosocial Integrity | 9% | 450 | 147 | 303 | 11 |
 | Basic Care and Comfort | 9% | 450 | 153 | 297 | 10 |
-| Pharmacological and Parenteral Therapies | 16% | 800 | 349 | 451 | 16 |
-| Reduction of Risk Potential | 12% | 600 | 231 | 369 | 13 |
-| Physiological Adaptation | 14% | 700 | 487 | 213 | 7 |
-| **Total** | 100% | 5000 | 2110 | 2890 | 100 |
+| Pharmacological and Parenteral Therapies | 16% | 800 | 355 | 445 | 16 |
+| Reduction of Risk Potential | 12% | 600 | 234 | 366 | 13 |
+| Physiological Adaptation | 14% | 700 | 496 | 204 | 7 |
+| **Total** | 100% | 5000 | 2134 | 2866 | 100 |
 
 ## Chunks
 
@@ -35,7 +35,7 @@ The wave chunks are paused (2026-11-20) while the bank is rebuilt around case st
 
 ## Case conversion (CASE-MAP.md)
 
-**348 of 2110 questions (16%) are inside full case studies**; the goal is 85%.
+**372 of 2134 questions (17%) are inside full case studies**; the goal is 85%.
 
 | Chunk | Topic | Batch files | Questions | Case studies |
 |---|---|---|---|---|
@@ -49,15 +49,15 @@ The wave chunks are paused (2026-11-20) while the bank is rebuilt around case st
 | Type | Questions | Share |
 |---|---|---|
 | multiple_choice | 1334 | 63% |
-| matrix_mc | 193 | 9% |
-| sata | 163 | 8% |
-| dropdown_cloze | 73 | 3% |
-| highlight_table | 59 | 3% |
-| highlight_text | 55 | 3% |
-| ordered_response | 53 | 3% |
-| bowtie | 53 | 3% |
-| fill_blank_calc | 45 | 2% |
+| matrix_mc | 202 | 9% |
+| sata | 168 | 8% |
+| dropdown_cloze | 77 | 4% |
+| highlight_table | 62 | 3% |
+| highlight_text | 56 | 3% |
+| ordered_response | 53 | 2% |
+| bowtie | 53 | 2% |
+| fill_blank_calc | 46 | 2% |
 | dropdown_table | 30 | 1% |
 | select_n | 25 | 1% |
 | multiple_response_grouping | 15 | 1% |
-| matrix_mr | 12 | 1% |
+| matrix_mr | 13 | 1% |
