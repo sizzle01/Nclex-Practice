@@ -1426,7 +1426,7 @@
         "options": [
           {
             "id": "a",
-            "text": "Resident A, whose SpO2 is 88% with respirations of 28/min and new confusion"
+            "text": "Resident A, with an SpO2 of 88%, respirations 28/min and new confusion"
           },
           {
             "id": "b",
@@ -1434,7 +1434,7 @@
           },
           {
             "id": "c",
-            "text": "Resident C, whose antiviral dose needs adjusting for kidney disease"
+            "text": "Resident C, whose antiviral dose needs adjusting for reduced kidney function"
           },
           {
             "id": "d",
