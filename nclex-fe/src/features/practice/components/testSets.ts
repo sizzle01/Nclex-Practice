@@ -54,6 +54,34 @@ export const timedCaseBlockSet: TestSetSummary = {
   passThreshold: null,
 };
 
+/** Topic tests (F27): untimed, answers at the end, grouped by review-book section. */
+export const topicAbgSet: TestSetSummary = {
+  ...practiceSet,
+  id: "c1e00000-0000-4000-8000-000000005001",
+  title: "ABG",
+  revealMode: "exam",
+  questionCount: 26,
+  topicSection: "Fundamental",
+};
+
+export const topicPreeclampsiaSet: TestSetSummary = {
+  ...practiceSet,
+  id: "c1e00000-0000-4000-8000-000000006241",
+  title: "Preeclampsia",
+  revealMode: "exam",
+  questionCount: 19,
+  topicSection: "Maternity",
+};
+
+export const topicInsulinSet: TestSetSummary = {
+  ...practiceSet,
+  id: "c1e00000-0000-4000-8000-000000005661",
+  title: "Endocrine: insulin",
+  revealMode: "exam",
+  questionCount: 30,
+  topicSection: "Pharmacology",
+};
+
 export const untimedChallengeSet: TestSetSummary = {
   ...challengeSet,
   id: "c1e00000-0000-4000-8000-000000000028",

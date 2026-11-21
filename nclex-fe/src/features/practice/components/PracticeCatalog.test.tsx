@@ -10,6 +10,8 @@ import {
   challengeSet,
   practiceSet,
   sampleSet,
+  topicAbgSet,
+  topicPreeclampsiaSet,
   untimedChallengeSet,
 } from "./testSets";
 
@@ -71,7 +73,7 @@ describe("PracticeCatalog", () => {
     renderWithAuth(<PracticeCatalog />, { status: "authenticated" });
 
     const tabs = await screen.findAllByRole("tab");
-    expect(tabs.map((tab) => tab.textContent)).toEqual(["All 3", "Practice 2", "Timed 1", "Untimed 2", "Adaptive 0"]);
+    expect(tabs.map((tab) => tab.textContent)).toEqual(["All 3", "Practice 2", "Timed 1", "Untimed 2", "Adaptive 0", "Topics 0"]);
     expect(screen.getByRole("tab", { name: "All 3" })).toHaveAttribute("aria-selected", "true");
     expect(screen.getByRole("tabpanel")).toHaveAccessibleName("All 3");
   });
@@ -111,11 +113,24 @@ describe("PracticeCatalog", () => {
     expect(screen.getByRole("tab", { name: "Practice 1" })).toHaveFocus();
     // The mocked router never changes the URL, so All stays selected and each key moves from it.
     await user.keyboard("{ArrowLeft}");
-    expect(replace).toHaveBeenLastCalledWith("/practice?filter=adaptive", { scroll: false });
+    expect(replace).toHaveBeenLastCalledWith("/practice?filter=topics", { scroll: false });
     await user.keyboard("{End}");
-    expect(replace).toHaveBeenLastCalledWith("/practice?filter=adaptive", { scroll: false });
+    expect(replace).toHaveBeenLastCalledWith("/practice?filter=topics", { scroll: false });
     await user.keyboard("{Home}");
     expect(replace).toHaveBeenLastCalledWith("/practice", { scroll: false });
+  });
+
+  it("lists topic tests under their review-book sections in the Topics tab", async () => {
+    serve({ first: { items: [sampleSet, topicAbgSet, topicPreeclampsiaSet], nextCursor: null } });
+    searchParams = new URLSearchParams({ filter: "topics" });
+
+    renderWithAuth(<PracticeCatalog />, { status: "authenticated" });
+
+    expect(await screen.findByRole("heading", { name: /^Fundamental/ })).toBeInTheDocument();
+    expect(screen.getByRole("heading", { name: /^Maternity/ })).toBeInTheDocument();
+    expect(screen.getByRole("heading", { name: "ABG" })).toBeInTheDocument();
+    expect(screen.queryByRole("heading", { name: "RN Sample Set" })).not.toBeInTheDocument();
+    expect(screen.getByRole("tab", { name: "Topics 2" })).toHaveAttribute("aria-selected", "true");
   });
 
   it("says adaptive exams are coming when none are published", async () => {

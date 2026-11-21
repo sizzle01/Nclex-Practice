@@ -7147,6 +7147,7 @@ export interface components {
             adaptive?: null | components["schemas"]["AdaptiveRules"];
             /** @default false */
             outcomeHidden: boolean;
+            topicSection?: null | string;
         };
         /** @enum {unknown} */
         TestSetKind: "prebuilt" | "custom" | "cat" | "assigned" | null;
@@ -7177,6 +7178,7 @@ export interface components {
             accessTier: components["schemas"]["PlanTier"];
             /** @default false */
             outcomeHidden: boolean;
+            topicSection?: null | string;
         };
         TestSetSummary: {
             /** Format: uuid */
@@ -7198,6 +7200,7 @@ export interface components {
             locked: boolean;
             myLastAttempt: null | components["schemas"]["LastAttemptSummary"];
             adaptive?: null | components["schemas"]["AdaptiveRules"];
+            topicSection?: null | string;
         };
         TimerState: {
             /** Format: date-time */

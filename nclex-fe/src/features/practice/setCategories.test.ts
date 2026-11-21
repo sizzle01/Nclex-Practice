@@ -6,6 +6,9 @@ import {
   practiceSet,
   sampleSet,
   timedCaseBlockSet,
+  topicAbgSet,
+  topicInsulinSet,
+  topicPreeclampsiaSet,
   untimedChallengeSet,
 } from "./components/testSets";
 import { filterSets, groupSets, parseFilter, sectionOf } from "./setCategories";
@@ -83,5 +86,30 @@ describe("parseFilter", () => {
     expect(parseFilter("timed")).toBe("timed");
     expect(parseFilter(null)).toBe("all");
     expect(parseFilter("nonsense")).toBe("all");
+  });
+});
+
+describe("topic tests (F27)", () => {
+  const withTopics = [...catalog, topicPreeclampsiaSet, topicInsulinSet, topicAbgSet];
+
+  it("shows topic tests only under the Topics tab", () => {
+    expect(filterSets(withTopics, "topics")).toEqual([topicPreeclampsiaSet, topicInsulinSet, topicAbgSet]);
+    expect(filterSets(withTopics, "all")).toEqual(catalog);
+    expect(filterSets(withTopics, "practice")).not.toContain(topicAbgSet);
+    expect(filterSets(withTopics, "untimed")).not.toContain(topicAbgSet);
+  });
+
+  it("groups topic tests under their review-book sections in book order", () => {
+    const sections = groupSets(withTopics, "topics");
+
+    expect(sections.map((section) => [section.title, section.sets.map((set) => set.title)])).toEqual([
+      ["Fundamental", ["ABG"]],
+      ["Pharmacology", ["Endocrine: insulin"]],
+      ["Maternity", ["Preeclampsia"]],
+    ]);
+  });
+
+  it("reads the topics tab from the URL", () => {
+    expect(parseFilter("topics")).toBe("topics");
   });
 });

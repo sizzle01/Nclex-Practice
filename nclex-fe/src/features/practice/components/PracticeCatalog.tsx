@@ -26,7 +26,7 @@ function catalogUrl(pathname: string, filter: SetFilter, setId: string | null): 
 
 /**
  * The /practice screen (interfaces.md 5.2): the curated sets of the user's track under filter tabs
- * (All, Practice, Timed, Untimed, Adaptive) and grouped into sections, plus the details of the set
+ * (All, Practice, Timed, Untimed, Adaptive, Topics) and grouped into sections, plus the details of the set
  * named by ?set=<id>. Both the tab and the set live in the URL, so they can be linked to and
  * survive a reload.
  */
@@ -122,7 +122,9 @@ function TabContent({ sets, filter, selectedId, onOpen }: TabContentProps) {
   const message =
     filter === "adaptive"
       ? "Adaptive exams are coming soon. Like the real NCLEX, they will stop once your result is clear."
-      : "No sets match this filter yet.";
+      : filter === "topics"
+        ? "Topic tests appear here as each topic gets enough questions."
+        : "No sets match this filter yet.";
   return (
     <div className={`${ui.card} ${styles.empty}`}>
       <p className={ui.muted}>{message}</p>

@@ -1,7 +1,7 @@
 import type { TestSetSummary } from "./api/practiceApi";
 
 /** The tabs above the catalog. "all" shows every set; the others narrow it down. */
-export const filters = ["all", "practice", "timed", "untimed", "adaptive"] as const;
+export const filters = ["all", "practice", "timed", "untimed", "adaptive", "topics"] as const;
 export type SetFilter = (typeof filters)[number];
 
 export const filterLabels: Record<SetFilter, string> = {
@@ -10,6 +10,7 @@ export const filterLabels: Record<SetFilter, string> = {
   timed: "Timed",
   untimed: "Untimed",
   adaptive: "Adaptive",
+  topics: "Topics",
 };
 
 /** Reads ?filter= from the URL; anything unknown falls back to "all" so an old link still works. */
@@ -17,13 +18,19 @@ export function parseFilter(value: string | null): SetFilter {
   return filters.find((filter) => filter === value) ?? "all";
 }
 
+/** A topic test (F27): one review-book subtopic. Topic tests appear only under the Topics tab. */
+export function isTopicTest(set: TestSetSummary): boolean {
+  return Boolean(set.topicSection);
+}
+
 const filterRules: Record<SetFilter, (set: TestSetSummary) => boolean> = {
-  all: () => true,
+  all: (set) => !isTopicTest(set),
   // Practice means "learn as you go": tutor sets, the sample and the case studies.
-  practice: (set) => set.mode === "practice",
-  timed: (set) => set.timed,
-  untimed: (set) => !set.timed,
+  practice: (set) => set.mode === "practice" && !isTopicTest(set),
+  timed: (set) => set.timed && !isTopicTest(set),
+  untimed: (set) => !set.timed && !isTopicTest(set),
   adaptive: (set) => set.mode === "cat",
+  topics: isTopicTest,
 };
 
 /** The sets a tab shows, in the API's order. */
@@ -41,7 +48,8 @@ export type SectionId =
   | "adaptive";
 
 export interface SetSection {
-  id: SectionId;
+  /** A fixed section id, or "topic-<n>" for a review-book section in the Topics tab. */
+  id: SectionId | `topic-${number}`;
   title: string;
   description: string;
   sets: TestSetSummary[];
@@ -83,7 +91,49 @@ export function sectionOf(set: TestSetSummary): SectionId {
  */
 export function groupSets(sets: TestSetSummary[], filter: SetFilter): SetSection[] {
   const shown = filterSets(sets, filter);
+  if (filter === "topics") return groupTopicSets(shown);
   return sectionInfo
     .map((info) => ({ ...info, sets: shown.filter((set) => sectionOf(set) === info.id) }))
     .filter((section) => section.sets.length > 0);
+}
+
+/** The review book's sections, in the book's order (content/rn-bank/book_topics.py). */
+export const topicSectionOrder = [
+  "Fundamental",
+  "Holistic health assessment",
+  "Pharmacology",
+  "Mental health",
+  "Maternity",
+  "Pediatrics",
+  "Med-Surg",
+];
+
+const topicSectionDescriptions: Record<string, string> = {
+  Fundamental: "ABGs, blood groups, EKG, dosage calculation, IV fluids, electrolytes and labs.",
+  "Holistic health assessment": "Head-to-toe assessment and cranial nerves.",
+  Pharmacology: "Each drug class, tested inside real clinical situations.",
+  "Mental health": "Mental health disorders and their medications.",
+  Maternity: "Pregnancy, labor and delivery, postpartum and the newborn.",
+  Pediatrics: "Growth and development, childhood disorders and vaccines.",
+  "Med-Surg": "Adult medical-surgical disorders, Med-Surg 1 and 2.",
+};
+
+/**
+ * Topic tests grouped under their review-book sections in book order (F27). Each test is untimed, serves only
+ * questions on its subtopic, and gives the result at the end. Sections not in the known list come last.
+ */
+export function groupTopicSets(sets: TestSetSummary[]): SetSection[] {
+  const names = [...new Set(sets.map((set) => set.topicSection ?? ""))].filter(Boolean);
+  const rank = (name: string) => {
+    const i = topicSectionOrder.indexOf(name);
+    return i === -1 ? topicSectionOrder.length : i;
+  };
+  return names
+    .sort((a, b) => rank(a) - rank(b))
+    .map((name, i) => ({
+      id: `topic-${i}` as const,
+      title: name,
+      description: topicSectionDescriptions[name] ?? "Topic tests.",
+      sets: sets.filter((set) => set.topicSection === name),
+    }));
 }

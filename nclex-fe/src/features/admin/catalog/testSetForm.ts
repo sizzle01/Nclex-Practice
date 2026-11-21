@@ -30,6 +30,8 @@ export const testSetSchema = z
     accessTier: z.enum(["free", "premium"]),
     // Not a form field: set only by content files (F24 timed case-study blocks); kept so a save does not reset it.
     outcomeHidden: z.boolean(),
+    // Not a form field either: the review-book section of a topic test (F27), set only by content files.
+    topicSection: z.string().nullable(),
     isPublished: z.boolean(),
   })
   .refine((s) => (s.timed ? s.perQuestionSec !== "" || s.timeBudgetSec !== "" : s.perQuestionSec === "" && s.timeBudgetSec === ""), {
@@ -56,6 +58,7 @@ export function emptyTestSet(track: "RN" | "PN"): TestSetFormValues {
     isSample: false,
     accessTier: "free",
     outcomeHidden: false,
+    topicSection: null,
     isPublished: false,
   };
 }
@@ -79,6 +82,7 @@ export function testSetValuesFrom(set: AdminTestSetView): TestSetFormValues {
     isSample: s.isSample,
     accessTier: s.accessTier === "premium" ? "premium" : "free",
     outcomeHidden: s.outcomeHidden,
+    topicSection: s.topicSection ?? null,
     isPublished: set.isPublished,
   };
 }
@@ -99,5 +103,6 @@ export function toSettings(values: TestSetFormValues): TestSetSettings {
     isSample: values.isSample,
     accessTier: values.accessTier,
     outcomeHidden: values.outcomeHidden,
+    topicSection: values.topicSection,
   };
 }
