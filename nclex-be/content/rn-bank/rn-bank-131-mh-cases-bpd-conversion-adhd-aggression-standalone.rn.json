@@ -12686,6 +12686,21 @@
       "isPublished": false
     },
     {
+      "id": "c1e00000-0000-4000-8000-000000005063",
+      "title": "Dosage calculation, part 3 of 3 (retired part)",
+      "description": "A topic part that no longer exists after the topic was re-split. Kept unpublished so past attempts keep their history.",
+      "mode": "practice",
+      "revealMode": "exam",
+      "timed": false,
+      "allowBackNav": true,
+      "accessTier": "free",
+      "topicSection": "Fundamental",
+      "questionIds": [
+        "c1a00090-0000-4000-8000-000000000003"
+      ],
+      "isPublished": false
+    },
+    {
       "id": "c1e00000-0000-4000-8000-000000000024",
       "title": "NCLEX-RN challenge 1 (timed)",
       "description": "Timed (2 h 50 min). 85 items weighted like the NCLEX-RN test plan, including 2 case studies. Exam rules: no going back, answers and a pass estimate at the end. Replaced by the adaptive exam.",

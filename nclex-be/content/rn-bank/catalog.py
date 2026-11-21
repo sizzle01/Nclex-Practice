@@ -67,6 +67,10 @@ TOPIC_BASE = 5000
 TOPIC_STRIDE = 20
 TOPIC_PART_SIZE = 50
 TOPIC_MIN_QUESTIONS = 10
+# Every topic test ever written to an import file, with its last question list (append-only). The importer never
+# unpublishes a set that drops out of the file, so when a topic shrinks to fewer parts the missing part is written
+# back unpublished from this record.
+TOPIC_SETS_FILE = Path(__file__).resolve().parent / "topic-sets.json"
 
 
 def _set_id(n):
@@ -280,7 +284,21 @@ def _topic_sets(questions, cases):
                 "mode": "practice", "revealMode": "exam", "timed": False, "allowBackNav": True,
                 "accessTier": "free", "topicSection": section, "questionIds": part,
                 "isPublished": total >= TOPIC_MIN_QUESTIONS})
-    return sets
+    return sets + _dropped_topic_parts(sets)
+
+
+def _dropped_topic_parts(sets):
+    """Unpublished copies of earlier topic parts that the current split no longer produces, and an updated record."""
+    shipped = json.loads(TOPIC_SETS_FILE.read_text(encoding="utf-8")) if TOPIC_SETS_FILE.exists() else {}
+    current = {s["id"] for s in sets}
+    dropped = [{**old, "isPublished": False, "title": f"{old['title']} (retired part)",
+                "description": "A topic part that no longer exists after the topic was re-split. Kept unpublished "
+                               "so past attempts keep their history."}
+               for set_id, old in sorted(shipped.items()) if set_id not in current]
+    for s in sets:
+        shipped[s["id"]] = s
+    TOPIC_SETS_FILE.write_text(json.dumps(dict(sorted(shipped.items())), indent=1) + "\n", encoding="utf-8")
+    return dropped
 
 
 def attach(path, questions):
