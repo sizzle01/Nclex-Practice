@@ -101,4 +101,5 @@ Written by `python3 -I build_all.py`; do not edit by hand. See `quality.py` for 
 | 109-endocrine-cases-thyroid | 24 | yes | 0 | 0% | 0% (-) | 0% | 10 | 0/4/20 |
 | 110-endocrine-cases-adrenal-pituitary | 24 | yes | 0 | 0% | 0% (-) | 0% | 10 | 0/4/20 |
 | 111-endocrine-cases-pheo-bone-foot-pump-standalone | 28 | yes | 1 | 0% | 25% (stem words) | 0% | 14.5 | 0/4/24 |
-| **Whole bank** | 2210 | | 1335 | 12% | 25% (assess first) | 5% | 29 | 118/1104/988 |
+| 112-gi-cases-pud-he-sbo-cdiff | 24 | yes | 0 | 0% | 0% (-) | 0% | 10.5 | 0/4/20 |
+| **Whole bank** | 2234 | | 1335 | 12% | 25% (assess first) | 5% | 29 | 118/1108/1008 |
