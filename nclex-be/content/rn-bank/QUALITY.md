@@ -93,4 +93,5 @@ Written by `python3 -I build_all.py`; do not edit by hand. See `quality.py` for 
 | 101-cardiac-cases-vascular-coagulation | 24 | yes | 0 | 0% | 0% (-) | 0% | 20 | 0/4/20 |
 | 102-cardiac-cases-pacing-vt-shock | 24 | yes | 0 | 0% | 0% (-) | 0% | 16 | 0/4/20 |
 | 103-cardiac-cases-shock-vascular-standalone | 28 | yes | 1 | 0% | 25% (stem words) | 0% | 14.5 | 0/4/24 |
-| **Whole bank** | 2010 | | 1332 | 12% | 25% (assess first) | 5% | 31 | 118/1072/820 |
+| 104-pulmonary-cases-pneumonia-asthma-copd-tb | 24 | yes | 0 | 0% | 0% (-) | 0% | 12 | 0/4/20 |
+| **Whole bank** | 2034 | | 1332 | 12% | 25% (assess first) | 5% | 30 | 118/1076/840 |
