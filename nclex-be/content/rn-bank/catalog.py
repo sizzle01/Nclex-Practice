@@ -77,13 +77,15 @@ def build_catalog(questions):
     """Returns (banks, testSets) for every active question in the bank.
 
     Retired questions (F26) are left out of every set, frozen ones included: an attempt stores its own items, so a
-    finished attempt keeps its history when a set loses questions. A frozen part left with no questions is kept but
-    unpublished, so the importer never sees a set that lists only retired questions."""
+    finished attempt keeps its history when a set loses questions. A practice part left with no active questions is
+    unpublished and keeps its original list (the importer accepts retired questions only in unpublished sets); the
+    unpublished challenges keep their original lists too."""
     retired = {q["id"] for q in questions if q.get("status") == "retired"}
+    # Parts are cut from every standalone question, retired ones included, so each part keeps its id and its
+    # membership as the bank changes; retired questions are then removed inside each part.
+    all_standalone = [q for q in questions if not q.get("caseStudyId")]
     questions = [q for q in questions if q["id"] not in retired]
     frozen = _frozen()
-    for part in frozen["topicParts"] + frozen["caseSets"]:
-        part["questionIds"] = [qid for qid in part["questionIds"] if qid not in retired]
     standalone = [q for q in questions if not q.get("caseStudyId")]
     cases = {}
     for q in questions:
@@ -98,20 +100,24 @@ def build_catalog(questions):
     for ci, (cn, name) in enumerate(CATEGORY_NAMES.items()):
         old = [p for p in frozen["topicParts"] if p["clientNeeds"] == cn]
         listed = {qid for p in old for qid in p["questionIds"]}
-        added = [q["id"] for q in standalone if q["clientNeeds"] == cn and q["id"] not in listed]
+        added = [q["id"] for q in all_standalone if q["clientNeeds"] == cn and q["id"] not in listed]
         parts = [(p["id"], p["questionIds"]) for p in old]
         parts += [(_set_id(NEW_TOPIC_BASE + ci * 100 + k), added[i:i + PART_SIZE])
                   for k, i in enumerate(range(0, len(added), PART_SIZE), len(old) + 1)]
-        for p, (set_id, part) in enumerate(parts, 1):
-            suffix = f", part {p} of {len(parts)}" if len(parts) > 1 else ""
-            entry = {**_practice(0, f"{name}{suffix}",
-                                 f"{len(part)} {name} questions with the answer and rationale after each one.", part),
-                     "id": set_id}
+        # Numbering counts only parts that still have active questions, so the titles read "part 2 of 9".
+        live = [(set_id, [qid for qid in part if qid not in retired]) for set_id, part in parts]
+        shown = [set_id for set_id, part in live if part]
+        for (set_id, original), (_, part) in zip(parts, live):
             if not part:
-                # Every question in this frozen part was retired: keep the set for history, hidden.
-                entry.update({"isPublished": False, "questionIds": _retired_placeholder(set_id),
-                              "description": "Retired: its questions were replaced by case studies."})
-            sets.append(entry)
+                sets.append({**_practice(0, f"{name} (retired part)",
+                                         "Its questions were replaced by case studies.", original),
+                             "id": set_id, "isPublished": False})
+                continue
+            p = shown.index(set_id) + 1
+            suffix = f", part {p} of {len(shown)}" if len(shown) > 1 else ""
+            sets.append({**_practice(0, f"{name}{suffix}",
+                                     f"{len(part)} {name} questions with the answer and rationale after each one.", part),
+                         "id": set_id})
 
     # ---- case study practice: frozen sets, then new cases CASES_PER_SET per set ----
     listed = {qid for s in frozen["caseSets"] for qid in s["questionIds"]}
@@ -146,12 +152,6 @@ def build_catalog(questions):
               "description": f"All {len(questions)} RN bank questions across every NCLEX-RN category and item type.",
               "accessTier": "free", "questionIds": [q["id"] for q in questions]}]
     return banks, sets
-
-
-def _retired_placeholder(set_id):
-    """The original question ids of a frozen part that is now fully retired. The importer requires a set to list
-    questions; an unpublished set is never shown, and attempt start skips retired questions anyway."""
-    return next(p["questionIds"] for p in _frozen()["topicParts"] if p["id"] == set_id)
 
 
 def _case_system(items):

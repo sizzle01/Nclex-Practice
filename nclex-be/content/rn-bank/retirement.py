@@ -6,8 +6,11 @@ The case-study conversion (CASE-MAP.md) writes new six-step cases topic by topic
 standalone questions are then retired, so candidates practice the reasoning chain instead of isolated recall
 (the candidate's NCLEX report, 2026-11-20). Rules:
 - Only questions written before the conversion (batches below 100) and not already inside a case study.
+- Only clinical questions (Physiological Integrity and Health Promotion). Management of care, safety and
+  psychosocial questions are kept in every topic: the cases do not replace them, and they are areas the
+  candidate needs.
 - A question belongs to a chunk's topic by body system, or, for questions tagged "fundamentals" or
-  "pharmacology", by keywords in its stem and options.
+  "pharmacology", by keywords in its stem (options alone are not enough).
 - Pediatric, maternal-newborn and mental health questions wait for their own chunks.
 - Kept for the 15% standalone share: bowtie items, and management of care items about priority or delegation.
 
@@ -41,6 +44,7 @@ CHUNK_TOPICS = {
         r"hepat|lactulose|parenteral nutrition|colitis|crohn"),
 }
 LATER_CHUNKS = {"pediatrics", "maternal-newborn", "mental-health"}
+CLINICAL = {"PHI.PA", "PHI.PPT", "PHI.RRP", "PHI.BCC", "HPM"}
 KEEP_MOC = re.compile(r"\b(first|priorit\w*|delegat\w*|assign\w*)\b", re.I)
 
 
@@ -48,8 +52,8 @@ def _batch(question_id):
     return int(question_id[3:8])
 
 
-def _text(q):
-    return (q["stem"] + " " + json.dumps(q["content"])).lower()
+def _stem(q):
+    return q["stem"].lower()
 
 
 def _topic_of(q, chunks):
@@ -58,7 +62,7 @@ def _topic_of(q, chunks):
         topic, system, keywords = CHUNK_TOPICS[chunk]
         if q["bodySystem"] == system:
             return chunk, topic
-        if q["bodySystem"] in ("fundamentals", "pharmacology") and re.search(keywords, _text(q)):
+        if q["bodySystem"] in ("fundamentals", "pharmacology") and re.search(keywords, _stem(q)):
             return chunk, topic
     return None
 
@@ -77,6 +81,8 @@ def choose(questions, chunks):
     to_retire, kept = [], []
     for q in questions:
         if _batch(q["id"]) >= 100 or q.get("caseStudyId") or q["bodySystem"] in LATER_CHUNKS:
+            continue
+        if q["clientNeeds"] not in CLINICAL:
             continue
         match = _topic_of(q, chunks)
         if not match:
