@@ -3,6 +3,7 @@
     cd nclex-be/content/rn-bank && python3 -I build_all.py
 """
 import collections
+import json
 import importlib.util
 import sys
 from pathlib import Path
@@ -60,6 +61,10 @@ print(f"Quality: {len(qb.HARDENED_FILES)} hardened file(s); whole bank key longe
 banks, sets = catalog.attach(out, all_questions)
 print(f"{out.name}: + catalog with {len(sets)} test sets and {len(banks)} bank")
 
+# The review book checklist must name real cases (book_topics.py).
+import book_topics  # noqa: E402
+book_topics.check([c["title"] for path in sorted(HERE.glob("rn-bank-*.rn.json"))
+                   for c in json.loads(path.read_text(encoding="utf-8")).get("caseStudies", [])])
 coverage.write(HERE / "PROGRESS.md", all_questions)
 print(f"\nTotal: {total} questions (progress toward {coverage.TARGET_TOTAL}: PROGRESS.md)")
 for cn, count in sorted(by_cn.items()):

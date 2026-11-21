@@ -46,6 +46,109 @@ The wave chunks are paused (2026-11-20) while the bank is rebuilt around case st
 
 **Next: conversion chunk 5**: Neurologic disorders with antiseizure and Parkinson drugs and cranial nerve assessment (CASE-MAP.md).
 
+## Review book checklist (book_topics.py)
+
+**34 of 96 subtopics covered** (at least 2 case studies), 16 started (1 case), 46 not yet covered.
+
+| Section | Subtopic | Status | Case studies |
+|---|---|---|---|
+| Fundamental | ABG | covered | Status asthmaticus in an adult; COPD with CO2 narcosis from too much oxygen; ARDS on mechanical ventilation; Euglycemic DKA on an SGLT2 inhibitor after surgery |
+| Fundamental | ABO blood group | covered | Warfarin over-anticoagulation with a GI bleed and a mechanical valve; Lower GI bleed on apixaban |
+| Fundamental | Basic EKG concept | covered | Drug-induced complete heart block and transcutaneous pacing; Ventricular tachycardia in a client with an ICD; Permanent pacemaker failure to capture; New atrial fibrillation with a rapid rate from thyrotoxicosis |
+| Fundamental | Dosage calculation | covered | Heparin-induced thrombocytopenia with arterial thrombosis; Cardiogenic shock with a pulmonary artery catheter; Chemotherapy-induced nausea and vomiting; Acetaminophen overdose; Diabetic foot ulcer with osteomyelitis |
+| Fundamental | IV fluid | covered | Hyperosmolar hyperglycemic state; SIADH with a hyponatremic seizure |
+| Fundamental | Electrolyte imbalances | covered | Heart failure with digoxin toxicity; SIADH with a hyponatremic seizure; Adrenal crisis in Addison disease; Refeeding syndrome on parenteral nutrition; Hematoma and hypocalcemia after thyroidectomy |
+| Fundamental | Lab | covered | Severe community-acquired pneumonia in an older adult; Acute cholangitis and ERCP; Acute hepatitis B and exposures; Small bowel obstruction with strangulation |
+| Holistic health assessment | Head-to-toe assessment | **not yet** | - |
+| Holistic health assessment | Head-to-toe assessment template | **not yet** | - |
+| Holistic health assessment | Cranial nerve | **not yet** | - |
+| Pharmacology | Antimicrobials: antibiotics | covered | Active pulmonary tuberculosis; Cystic fibrosis exacerbation; Infective endocarditis in a client who injects drugs; Severe C. difficile colitis and toxic megacolon |
+| Pharmacology | Antimicrobials: antiviral | started | Influenza outbreak in long-term care |
+| Pharmacology | Antimicrobials: antifungal | **not yet** | - |
+| Pharmacology | Antimicrobials: antiparasitic | **not yet** | - |
+| Pharmacology | Antilipidemics | **not yet** | - |
+| Pharmacology | Hematopoietic medications | **not yet** | - |
+| Pharmacology | Cardiovascular: ANS overview | covered | Pheochromocytoma; Anaphylactic shock in a client taking a beta blocker |
+| Pharmacology | Cardiovascular: adrenergic agonists | covered | Anaphylactic shock in a client taking a beta blocker; Cardiogenic shock with a pulmonary artery catheter |
+| Pharmacology | Cardiovascular: adrenergic antagonists | covered | Pheochromocytoma; Type A aortic dissection |
+| Pharmacology | Cardiovascular: PSNS overview and cholinergic medications | **not yet** | - |
+| Pharmacology | Cardiovascular: anticholinergic | covered | Drug-induced complete heart block and transcutaneous pacing; Over-the-counter cold medicines in an older adult |
+| Pharmacology | Cardiovascular: hypertension | started | Hypertensive emergency after stopping clonidine |
+| Pharmacology | Cardiovascular: heart failure | covered | Heart failure with digoxin toxicity; Acute pulmonary edema in heart failure |
+| Pharmacology | Cardiovascular: antidysrhythmic | covered | Ventricular tachycardia in a client with an ICD; New atrial fibrillation with a rapid rate from thyrotoxicosis |
+| Pharmacology | Cardiovascular: angina | started | NSTEMI with a retroperitoneal bleed after catheterization |
+| Pharmacology | Cardiovascular: fluid volume excess | covered | Acute pulmonary edema in heart failure; Ascites, paracentesis and spontaneous bacterial peritonitis |
+| Pharmacology | Coagulation: anticoagulants | covered | Heparin-induced thrombocytopenia with arterial thrombosis; Warfarin over-anticoagulation with a GI bleed and a mechanical valve; Lower GI bleed on apixaban |
+| Pharmacology | Coagulation: antiplatelets | started | NSTEMI with a retroperitoneal bleed after catheterization |
+| Pharmacology | Coagulation: thrombolytics | started | Acute ischemic stroke in the thrombolytic window |
+| Pharmacology | Pain, fever and inflammation | covered | Acetaminophen overdose; Opioid-induced respiratory depression in sleep apnea |
+| Pharmacology | Endocrine: thyroid and antithyroid | covered | Thyroid storm; Myxedema coma; Levothyroxine over-replacement in an older adult |
+| Pharmacology | Endocrine: osteoporosis | started | Osteoporosis with a vertebral compression fracture |
+| Pharmacology | Endocrine: antidiabetic | covered | Newly diagnosed type 2 diabetes; Prolonged hypoglycemia from a sulfonylurea |
+| Pharmacology | Endocrine: insulin | covered | Hyperosmolar hyperglycemic state; Insulin pump failure leading to DKA; Euglycemic DKA on an SGLT2 inhibitor after surgery |
+| Pharmacology | GI: PUD and GERD | started | Perforated duodenal ulcer |
+| Pharmacology | GI: antiemetics | started | Chemotherapy-induced nausea and vomiting |
+| Pharmacology | Neurologic | started | Status epilepticus after missed antiseizure doses |
+| Pharmacology | Respiratory: asthma and bronchoconstrictive disorders | covered | Status asthmaticus in an adult; COPD with CO2 narcosis from too much oxygen |
+| Pharmacology | Respiratory: allergic disorders | started | Over-the-counter cold medicines in an older adult |
+| Pharmacology | Respiratory: decongestant, antitussive, expectorant, mucolytic | started | Over-the-counter cold medicines in an older adult |
+| Mental health | Anxiety disorders and OCD | **not yet** | - |
+| Mental health | Bipolar mood disorders | **not yet** | - |
+| Mental health | Childhood and neurodevelopmental disorders | **not yet** | - |
+| Mental health | Defense mechanisms | **not yet** | - |
+| Mental health | Eating disorders | **not yet** | - |
+| Mental health | Impulse control disorders | **not yet** | - |
+| Mental health | Major depressive disorders | **not yet** | - |
+| Mental health | Personality disorders | **not yet** | - |
+| Mental health | Schizophrenia spectrum disorders | **not yet** | - |
+| Mental health | Somatic symptom disorders | **not yet** | - |
+| Mental health | Substance use disorders | started | Alcohol withdrawal after orthopedic surgery |
+| Mental health | Trauma, stressor-related and dissociative disorders | **not yet** | - |
+| Mental health | Medications: anxiolytics | **not yet** | - |
+| Mental health | Medications: depression and mood stabilization | **not yet** | - |
+| Mental health | Medications: psychotic disorders | **not yet** | - |
+| Maternity | Abruptio placentae | **not yet** | - |
+| Maternity | Electronic fetal heart rate monitoring | **not yet** | - |
+| Maternity | Fetal growth and development | **not yet** | - |
+| Maternity | Signs of pregnancy | **not yet** | - |
+| Maternity | Measuring fundal height | **not yet** | - |
+| Maternity | Gestational diabetes mellitus | **not yet** | - |
+| Maternity | Labor and delivery | **not yet** | - |
+| Maternity | Medications used during labor and delivery | **not yet** | - |
+| Maternity | Newborn | **not yet** | - |
+| Maternity | Newborn complications | **not yet** | - |
+| Maternity | Placenta previa | **not yet** | - |
+| Maternity | Postpartum | started | Postpartum hemorrhage from uterine atony |
+| Maternity | Preeclampsia | started | Preeclampsia with severe features at 35 weeks |
+| Maternity | Pregnancy terminology | **not yet** | - |
+| Maternity | Rh incompatibility | **not yet** | - |
+| Pediatrics | Growth and development: infant | **not yet** | - |
+| Pediatrics | Growth and development: toddler | **not yet** | - |
+| Pediatrics | Growth and development: preschool | **not yet** | - |
+| Pediatrics | Growth and development: school age | **not yet** | - |
+| Pediatrics | Growth and development: adolescence | **not yet** | - |
+| Pediatrics | Cardiac disorders | **not yet** | - |
+| Pediatrics | Genitourinary disorders | **not yet** | - |
+| Pediatrics | Hematologic disorders | started | Sickle cell crisis with acute chest syndrome |
+| Pediatrics | Neurologic disorders | **not yet** | - |
+| Pediatrics | Respiratory disorders | covered | Infant with RSV bronchiolitis; Child with a severe asthma exacerbation |
+| Pediatrics | Vaccination schedule | **not yet** | - |
+| Med-Surg | Altered immunity disorders | covered | Anaphylactic shock in a client taking a beta blocker; Crohn disease flare and infliximab |
+| Med-Surg | Cardiac disorders | covered | Inferior ST-elevation myocardial infarction; Type A aortic dissection; Cardiac tamponade after coronary bypass surgery |
+| Med-Surg | Endocrine disorders | covered | Adrenal crisis in Addison disease; Diabetes insipidus after pituitary surgery |
+| Med-Surg | Gastrointestinal disorders | covered | Hepatic encephalopathy in cirrhosis; Severe acute pancreatitis |
+| Med-Surg | Hemodynamic monitoring | covered | Cardiogenic shock with a pulmonary artery catheter; Arterial line and CVP monitoring after open AAA repair |
+| Med-Surg | Musculoskeletal disorders | covered | Hemorrhage after a total hip replacement; Acute limb ischemia and compartment syndrome |
+| Med-Surg | Neurologic disorders | covered | Rising intracranial pressure after a head injury; Acute ischemic stroke |
+| Med-Surg | Pacemaker | covered | Permanent pacemaker failure to capture; Drug-induced complete heart block and transcutaneous pacing |
+| Med-Surg | Pulmonary disorders | covered | ARDS on mechanical ventilation; Active pulmonary tuberculosis |
+| Med-Surg | Renal disorders | started | Acute kidney injury with hyperkalemia |
+| Med-Surg | Sepsis | covered | Older adult with sepsis from a urinary tract infection; Septic shock from an anastomotic leak after colectomy |
+| Med-Surg | Sexually transmitted infections | **not yet** | - |
+| Med-Surg | Shock | covered | Cardiogenic shock with a pulmonary artery catheter; Anaphylactic shock in a client taking a beta blocker |
+| Med-Surg | Trauma | covered | Flail chest with pulmonary contusion; Tension pneumothorax after a car crash; Major burn with inhalation injury |
+| Med-Surg | Transplant rejection | **not yet** | - |
+
 ## Item types in the whole bank
 
 | Type | Questions | Share |

@@ -8,6 +8,8 @@ build_all.py calls write() after the build; PROGRESS.md is generated, do not edi
 """
 import collections
 
+import book_topics
+
 from catalog import CATEGORY_NAMES, TEST_PLAN_MIDPOINTS
 
 TARGET_TOTAL = 5000
@@ -117,6 +119,8 @@ def markdown(questions):
         n_cases = sum(case_batch[b] for b in batches) // 6
         out.append(f"| {n} | {topic} | {', '.join(f'b{b}' for b in batches)} | {count} | {n_cases} |")
     out += ["", f"**Next: conversion chunk {max(CONVERSION_CHUNKS) + 1}**: {CONVERSION_NEXT}."]
+
+    out += book_topics.markdown()
 
     out += ["", "## Item types in the whole bank", "", "| Type | Questions | Share |", "|---|---|---|"]
     for t, n in types.most_common():
