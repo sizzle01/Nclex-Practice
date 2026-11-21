@@ -1690,6 +1690,10 @@ namespace Nclex.Infrastructure.Persistence.Migrations
                         .HasColumnType("text")
                         .HasColumnName("title");
 
+                    b.Property<string>("TopicSection")
+                        .HasColumnType("text")
+                        .HasColumnName("topic_section");
+
                     b.Property<ExamTrack>("Track")
                         .HasColumnType("exam_track")
                         .HasColumnName("track");
