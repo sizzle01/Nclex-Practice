@@ -107,4 +107,5 @@ Written by `python3 -I build_all.py`; do not edit by hand. See `quality.py` for 
 | 115-gi-cases-bariatric-apap-refeeding-egd-standalone | 28 | yes | 1 | 0% | 25% (stem words) | 0% | 11.5 | 0/4/24 |
 | 116-neuro-cases-mg-gbs-ich-sci | 24 | yes | 0 | 0% | 0% (-) | 0% | 10.5 | 0/4/20 |
 | 117-neuro-cases-h2t-meningitis-pd-ms | 24 | yes | 0 | 0% | 0% (-) | 0% | 14 | 0/4/20 |
-| **Whole bank** | 2358 | | 1336 | 12% | 25% (assess first) | 5% | 28 | 118/1128/1112 |
+| 118-neuro-cases-crani-delirium-seizure-edh | 24 | yes | 0 | 0% | 0% (-) | 0% | 12 | 0/4/20 |
+| **Whole bank** | 2382 | | 1336 | 12% | 25% (assess first) | 5% | 28 | 118/1132/1132 |
