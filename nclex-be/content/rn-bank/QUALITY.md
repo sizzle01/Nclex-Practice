@@ -96,4 +96,5 @@ Written by `python3 -I build_all.py`; do not edit by hand. See `quality.py` for 
 | 104-pulmonary-cases-pneumonia-asthma-copd-tb | 24 | yes | 0 | 0% | 0% (-) | 0% | 12 | 0/4/20 |
 | 105-pulmonary-cases-ards-chesttube-osa-trach | 24 | yes | 0 | 0% | 0% (-) | 0% | 15.5 | 0/4/20 |
 | 106-pulmonary-cases-cf-aspiration-flu-effusion | 24 | yes | 1 | 0% | 33% (stem words) | 0% | 12 | 0/4/20 |
-| **Whole bank** | 2082 | | 1333 | 12% | 25% (assess first) | 5% | 30 | 118/1084/880 |
+| 107-pulmonary-cases-co-flail-hfnc-otc-standalone | 28 | yes | 1 | 0% | 50% (longest) | 0% | 13.5 | 0/4/24 |
+| **Whole bank** | 2110 | | 1334 | 12% | 25% (assess first) | 5% | 30 | 118/1088/904 |

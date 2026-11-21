@@ -28,8 +28,9 @@ CHUNKS = {
 # topic, and the wave chunks above are paused. Add a line when a conversion chunk is committed.
 CONVERSION_CHUNKS = {
     1: ("Cardiac, pacemaker, hemodynamic monitoring and shock", (100, 101, 102, 103)),
+    2: ("Pulmonary disorders with respiratory pharmacology", (104, 105, 106, 107)),
 }
-CONVERSION_NEXT = "Pulmonary disorders with respiratory pharmacology (CASE-MAP.md)"
+CONVERSION_NEXT = "Endocrine disorders with insulin, antidiabetic, thyroid and corticosteroid drugs (CASE-MAP.md)"
 CASE_SHARE_GOAL = 85    # percent of the bank inside full case studies
 
 # Item-type mix for a chunk of new questions (plan of 2026-11-20): fewer plain multiple-choice questions

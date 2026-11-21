@@ -2,21 +2,21 @@
 
 Written by `python3 -I build_all.py` (coverage.py); do not edit by hand.
 
-**2082 of 5000 questions** (42%), 54 case studies, 52 bowtie questions. Multiple choice is 64% of the bank.
+**2110 of 5000 questions** (42%), 58 case studies, 53 bowtie questions. Multiple choice is 63% of the bank.
 
 ## By test plan category
 
 | Category | Test plan | Target | Have | To write | Next chunk |
 |---|---|---|---|---|---|
-| Management of Care | 18% | 900 | 337 | 563 | 19 |
-| Safety and Infection Prevention and Control | 13% | 650 | 241 | 409 | 14 |
-| Health Promotion and Maintenance | 9% | 450 | 159 | 291 | 10 |
-| Psychosocial Integrity | 9% | 450 | 147 | 303 | 10 |
+| Management of Care | 18% | 900 | 340 | 560 | 19 |
+| Safety and Infection Prevention and Control | 13% | 650 | 243 | 407 | 14 |
+| Health Promotion and Maintenance | 9% | 450 | 160 | 290 | 10 |
+| Psychosocial Integrity | 9% | 450 | 147 | 303 | 11 |
 | Basic Care and Comfort | 9% | 450 | 153 | 297 | 10 |
-| Pharmacological and Parenteral Therapies | 16% | 800 | 343 | 457 | 16 |
+| Pharmacological and Parenteral Therapies | 16% | 800 | 349 | 451 | 16 |
 | Reduction of Risk Potential | 12% | 600 | 231 | 369 | 13 |
-| Physiological Adaptation | 14% | 700 | 471 | 229 | 8 |
-| **Total** | 100% | 5000 | 2082 | 2918 | 100 |
+| Physiological Adaptation | 14% | 700 | 487 | 213 | 7 |
+| **Total** | 100% | 5000 | 2110 | 2890 | 100 |
 
 ## Chunks
 
@@ -35,28 +35,29 @@ The wave chunks are paused (2026-11-20) while the bank is rebuilt around case st
 
 ## Case conversion (CASE-MAP.md)
 
-**324 of 2082 questions (16%) are inside full case studies**; the goal is 85%.
+**348 of 2110 questions (16%) are inside full case studies**; the goal is 85%.
 
 | Chunk | Topic | Batch files | Questions | Case studies |
 |---|---|---|---|---|
 | 1 | Cardiac, pacemaker, hemodynamic monitoring and shock | b100, b101, b102, b103 | 100 | 16 |
+| 2 | Pulmonary disorders with respiratory pharmacology | b104, b105, b106, b107 | 100 | 16 |
 
-**Next: conversion chunk 2**: Pulmonary disorders with respiratory pharmacology (CASE-MAP.md).
+**Next: conversion chunk 3**: Endocrine disorders with insulin, antidiabetic, thyroid and corticosteroid drugs (CASE-MAP.md).
 
 ## Item types in the whole bank
 
 | Type | Questions | Share |
 |---|---|---|
-| multiple_choice | 1333 | 64% |
-| matrix_mc | 182 | 9% |
-| sata | 158 | 8% |
-| dropdown_cloze | 70 | 3% |
-| highlight_table | 57 | 3% |
+| multiple_choice | 1334 | 63% |
+| matrix_mc | 193 | 9% |
+| sata | 163 | 8% |
+| dropdown_cloze | 73 | 3% |
+| highlight_table | 59 | 3% |
+| highlight_text | 55 | 3% |
 | ordered_response | 53 | 3% |
-| highlight_text | 53 | 3% |
-| bowtie | 52 | 2% |
-| fill_blank_calc | 44 | 2% |
-| dropdown_table | 29 | 1% |
+| bowtie | 53 | 3% |
+| fill_blank_calc | 45 | 2% |
+| dropdown_table | 30 | 1% |
 | select_n | 25 | 1% |
 | multiple_response_grouping | 15 | 1% |
-| matrix_mr | 11 | 1% |
+| matrix_mr | 12 | 1% |
