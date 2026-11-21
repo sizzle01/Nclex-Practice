@@ -104,9 +104,12 @@ def markdown(questions):
     out += ["", "The wave chunks are paused (2026-11-20) while the bank is rebuilt around case studies."]
 
     in_cases = sum(1 for q in questions if q.get("caseStudyId"))
+    retired = sum(1 for q in questions if q.get("status") == "retired")
+    active = total - retired
     out += ["", "## Case conversion (CASE-MAP.md)", "",
-            f"**{in_cases} of {total} questions ({100 * in_cases / total:.0f}%) are inside full case studies**; "
-            f"the goal is {CASE_SHARE_GOAL}%.", "",
+            f"**{in_cases} of {active} active questions ({100 * in_cases / active:.0f}%) are inside full case "
+            f"studies**; the goal is {CASE_SHARE_GOAL}%. {retired} older questions are retired (F26, "
+            "retired-questions.json): their topics were rebuilt as case studies.", "",
             "| Chunk | Topic | Batch files | Questions | Case studies |", "|---|---|---|---|---|"]
     case_batch = collections.Counter(_batch(q["id"]) for q in questions if q.get("caseStudyId"))
     for n, (topic, batches) in CONVERSION_CHUNKS.items():

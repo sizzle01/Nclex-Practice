@@ -385,6 +385,11 @@ def build(batch, slug, title, items, cases=(), hardened=False, wave=False, case_
 # Names of the files built with hardened=True in this run; build_all.py reports and checks them.
 HARDENED_FILES = set()
 
+# Questions retired because their topic was rebuilt as case studies (F26, retirement.py). Read once per build; the
+# importer retires a question whose status is "retired" and never brings it back.
+_RETIRED_FILE = HERE / "retired-questions.json"
+RETIRED = set(json.loads(_RETIRED_FILE.read_text(encoding="utf-8"))) if _RETIRED_FILE.exists() else set()
+
 
 def _finish(item, qid, status):
     q = {"id": qid}
@@ -396,6 +401,8 @@ def _finish(item, qid, status):
     q["educationalObjective"] = item["educationalObjective"]
     if "exhibits" in item:
         q["exhibits"] = item["exhibits"]
+    if qid in RETIRED:
+        q["status"] = "retired"
     return q
 
 
