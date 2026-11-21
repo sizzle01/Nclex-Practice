@@ -113,4 +113,5 @@ Written by `python3 -I build_all.py`; do not edit by hand. See `quality.py` for 
 | 121-renal-cases-turp-transplant-ckd-hdstart | 24 | yes | 0 | 0% | 0% (-) | 0% | 11 | 0/4/20 |
 | 122-heme-onc-cases-neutropenia-tls-dic-pe | 24 | yes | 0 | 0% | 0% (-) | 0% | 10 | 0/4/20 |
 | 123-heme-onc-cases-anemia-mscc-extrav-ttp-standalone | 28 | yes | 1 | 0% | 25% (assess first) | 0% | 13.5 | 0/4/24 |
-| **Whole bank** | 2510 | | 1338 | 12% | 25% (assess first) | 5% | 27 | 118/1152/1240 |
+| 124-immunity-cases-hiv-sle-ra-fungal | 24 | yes | 0 | 0% | 0% (-) | 0% | 15.5 | 0/4/20 |
+| **Whole bank** | 2534 | | 1338 | 12% | 25% (assess first) | 5% | 27 | 118/1156/1260 |
