@@ -92,7 +92,8 @@
           "Rewritten to NCLEX-RN difficulty and reviewed by the content team on 19 November 2026."
         ]
       },
-      "educationalObjective": "Treat severe hypoglycemia in a client who can't swallow."
+      "educationalObjective": "Treat severe hypoglycemia in a client who can't swallow.",
+      "status": "retired"
     },
     {
       "id": "c1a00012-0000-4000-8000-000000000002",
@@ -141,7 +142,8 @@
           "Rewritten to NCLEX-RN difficulty and reviewed by the content team on 19 November 2026."
         ]
       },
-      "educationalObjective": "Treat mild hypoglycemia."
+      "educationalObjective": "Treat mild hypoglycemia.",
+      "status": "retired"
     },
     {
       "id": "c1a00012-0000-4000-8000-000000000003",
@@ -190,7 +192,8 @@
           "Rewritten to NCLEX-RN difficulty and reviewed by the content team on 19 November 2026."
         ]
       },
-      "educationalObjective": "Recognize medications that mask hypoglycemia."
+      "educationalObjective": "Recognize medications that mask hypoglycemia.",
+      "status": "retired"
     },
     {
       "id": "c1a00012-0000-4000-8000-000000000004",
@@ -239,7 +242,8 @@
           "Rewritten to NCLEX-RN difficulty and reviewed by the content team on 19 November 2026."
         ]
       },
-      "educationalObjective": "Begin DKA treatment in the correct order."
+      "educationalObjective": "Begin DKA treatment in the correct order.",
+      "status": "retired"
     },
     {
       "id": "c1a00012-0000-4000-8000-000000000005",
@@ -288,7 +292,8 @@
           "Rewritten to NCLEX-RN difficulty and reviewed by the content team on 19 November 2026."
         ]
       },
-      "educationalObjective": "Transition insulin safely after DKA."
+      "educationalObjective": "Transition insulin safely after DKA.",
+      "status": "retired"
     },
     {
       "id": "c1a00012-0000-4000-8000-000000000006",
@@ -337,7 +342,8 @@
           "Rewritten to NCLEX-RN difficulty and reviewed by the content team on 19 November 2026."
         ]
       },
-      "educationalObjective": "Check potassium before starting insulin in DKA."
+      "educationalObjective": "Check potassium before starting insulin in DKA.",
+      "status": "retired"
     },
     {
       "id": "c1a00012-0000-4000-8000-000000000007",
@@ -460,7 +466,8 @@
           "title": "Nurse's note",
           "body": "A 19-year-old with type 1 diabetes has had vomiting and abdominal pain for 1 day. Deep, rapid breathing; fruity breath odor. Dry mucous membranes. Heart rate 124/min."
         }
-      ]
+      ],
+      "status": "retired"
     },
     {
       "id": "c1a00012-0000-4000-8000-000000000008",
@@ -535,7 +542,8 @@
           "Rewritten to NCLEX-RN difficulty and reviewed by the content team on 19 November 2026."
         ]
       },
-      "educationalObjective": "Distinguish DKA from HHS."
+      "educationalObjective": "Distinguish DKA from HHS.",
+      "status": "retired"
     },
     {
       "id": "c1a00012-0000-4000-8000-000000000009",
@@ -584,7 +592,8 @@
           "Rewritten to NCLEX-RN difficulty and reviewed by the content team on 19 November 2026."
         ]
       },
-      "educationalObjective": "Prioritize care in HHS."
+      "educationalObjective": "Prioritize care in HHS.",
+      "status": "retired"
     },
     {
       "id": "c1a00012-0000-4000-8000-000000000010",
@@ -633,7 +642,8 @@
           "Rewritten to NCLEX-RN difficulty and reviewed by the content team on 19 November 2026."
         ]
       },
-      "educationalObjective": "Teach sick-day rules for diabetes."
+      "educationalObjective": "Teach sick-day rules for diabetes.",
+      "status": "retired"
     },
     {
       "id": "c1a00012-0000-4000-8000-000000000011",
@@ -697,7 +707,8 @@
           "Rewritten to NCLEX-RN difficulty and reviewed by the content team on 19 November 2026."
         ]
       },
-      "educationalObjective": "Teach foot care for diabetic neuropathy."
+      "educationalObjective": "Teach foot care for diabetic neuropathy.",
+      "status": "retired"
     },
     {
       "id": "c1a00012-0000-4000-8000-000000000012",
@@ -746,7 +757,8 @@
           "Rewritten to NCLEX-RN difficulty and reviewed by the content team on 19 November 2026."
         ]
       },
-      "educationalObjective": "Recognize signs of metformin-associated lactic acidosis."
+      "educationalObjective": "Recognize signs of metformin-associated lactic acidosis.",
+      "status": "retired"
     },
     {
       "id": "c1a00012-0000-4000-8000-000000000013",
@@ -795,7 +807,8 @@
           "Rewritten to NCLEX-RN difficulty and reviewed by the content team on 19 November 2026."
         ]
       },
-      "educationalObjective": "Teach about sulfonylurea-induced hypoglycemia."
+      "educationalObjective": "Teach about sulfonylurea-induced hypoglycemia.",
+      "status": "retired"
     },
     {
       "id": "c1a00012-0000-4000-8000-000000000014",
@@ -844,7 +857,8 @@
           "Rewritten to NCLEX-RN difficulty and reviewed by the content team on 19 November 2026."
         ]
       },
-      "educationalObjective": "Teach about SGLT2 inhibitors."
+      "educationalObjective": "Teach about SGLT2 inhibitors.",
+      "status": "retired"
     },
     {
       "id": "c1a00012-0000-4000-8000-000000000015",
@@ -893,7 +907,8 @@
           "Rewritten to NCLEX-RN difficulty and reviewed by the content team on 19 November 2026."
         ]
       },
-      "educationalObjective": "Identify contraindications to GLP-1 receptor agonists."
+      "educationalObjective": "Identify contraindications to GLP-1 receptor agonists.",
+      "status": "retired"
     },
     {
       "id": "c1a00012-0000-4000-8000-000000000016",
@@ -942,7 +957,8 @@
           "Rewritten to NCLEX-RN difficulty and reviewed by the content team on 19 November 2026."
         ]
       },
-      "educationalObjective": "Interpret a hemoglobin A1C."
+      "educationalObjective": "Interpret a hemoglobin A1C.",
+      "status": "retired"
     },
     {
       "id": "c1a00012-0000-4000-8000-000000000017",
@@ -991,7 +1007,8 @@
           "Rewritten to NCLEX-RN difficulty and reviewed by the content team on 19 November 2026."
         ]
       },
-      "educationalObjective": "Tell the Somogyi effect from the dawn phenomenon."
+      "educationalObjective": "Tell the Somogyi effect from the dawn phenomenon.",
+      "status": "retired"
     },
     {
       "id": "c1a00012-0000-4000-8000-000000000018",
@@ -1040,7 +1057,8 @@
           "Rewritten to NCLEX-RN difficulty and reviewed by the content team on 19 November 2026."
         ]
       },
-      "educationalObjective": "Teach safe exercise for diabetes."
+      "educationalObjective": "Teach safe exercise for diabetes.",
+      "status": "retired"
     },
     {
       "id": "c1a00012-0000-4000-8000-000000000019",
@@ -1089,7 +1107,8 @@
           "Rewritten to NCLEX-RN difficulty and reviewed by the content team on 19 November 2026."
         ]
       },
-      "educationalObjective": "Apply diabetes diagnostic criteria."
+      "educationalObjective": "Apply diabetes diagnostic criteria.",
+      "status": "retired"
     },
     {
       "id": "c1a00012-0000-4000-8000-000000000020",
@@ -1138,7 +1157,8 @@
           "Rewritten to NCLEX-RN difficulty and reviewed by the content team on 19 November 2026."
         ]
       },
-      "educationalObjective": "Teach routine screening for diabetes complications."
+      "educationalObjective": "Teach routine screening for diabetes complications.",
+      "status": "retired"
     },
     {
       "id": "c1a00012-0000-4000-8000-000000000021",
@@ -1243,7 +1263,8 @@
           "Rewritten to NCLEX-RN difficulty and reviewed by the content team on 19 November 2026."
         ]
       },
-      "educationalObjective": "Recognize the signs of hypoglycemia."
+      "educationalObjective": "Recognize the signs of hypoglycemia.",
+      "status": "retired"
     },
     {
       "id": "c1a00012-0000-4000-8000-000000000022",
@@ -1293,7 +1314,8 @@
           "Rewritten to NCLEX-RN difficulty and reviewed by the content team on 19 November 2026."
         ]
       },
-      "educationalObjective": "Manage insulin for a client with type 1 diabetes who is NPO."
+      "educationalObjective": "Manage insulin for a client with type 1 diabetes who is NPO.",
+      "status": "retired"
     },
     {
       "id": "c1a00012-0000-4000-8000-000000000023",
@@ -1342,7 +1364,8 @@
           "Rewritten to NCLEX-RN difficulty and reviewed by the content team on 19 November 2026."
         ]
       },
-      "educationalObjective": "Teach safe alcohol use with diabetes."
+      "educationalObjective": "Teach safe alcohol use with diabetes.",
+      "status": "retired"
     },
     {
       "id": "c1a00012-0000-4000-8000-000000000024",
@@ -1372,7 +1395,8 @@
           "Rewritten to NCLEX-RN difficulty and reviewed by the content team on 19 November 2026."
         ]
       },
-      "educationalObjective": "Calculate a mealtime insulin dose with a correction."
+      "educationalObjective": "Calculate a mealtime insulin dose with a correction.",
+      "status": "retired"
     }
   ]
 }

@@ -896,7 +896,8 @@
           "Written to NCLEX-RN difficulty and reviewed by the content team on 20 November 2026."
         ]
       },
-      "educationalObjective": "Teach colorectal cancer screening guidelines."
+      "educationalObjective": "Teach colorectal cancer screening guidelines.",
+      "status": "retired"
     },
     {
       "id": "c1a00069-0000-4000-8000-000000000015",
@@ -995,7 +996,8 @@
           "Written to NCLEX-RN difficulty and reviewed by the content team on 20 November 2026."
         ]
       },
-      "educationalObjective": "Recommend vaccines for older adults."
+      "educationalObjective": "Recommend vaccines for older adults.",
+      "status": "retired"
     },
     {
       "id": "c1a00069-0000-4000-8000-000000000017",

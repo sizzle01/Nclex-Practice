@@ -269,7 +269,8 @@
           "Written to NCLEX-RN difficulty and reviewed by the content team on 20 November 2026."
         ]
       },
-      "educationalObjective": "Interpret electrolyte results."
+      "educationalObjective": "Interpret electrolyte results.",
+      "status": "retired"
     },
     {
       "id": "c1a00095-0000-4000-8000-000000000003",
@@ -351,7 +352,8 @@
           "Written to NCLEX-RN difficulty and reviewed by the content team on 20 November 2026."
         ]
       },
-      "educationalObjective": "Recognize early sepsis from a vital sign trend."
+      "educationalObjective": "Recognize early sepsis from a vital sign trend.",
+      "status": "retired"
     },
     {
       "id": "c1a00095-0000-4000-8000-000000000004",
@@ -407,7 +409,8 @@
           "Written to NCLEX-RN difficulty and reviewed by the content team on 20 November 2026."
         ]
       },
-      "educationalObjective": "Collect a sputum specimen."
+      "educationalObjective": "Collect a sputum specimen.",
+      "status": "retired"
     },
     {
       "id": "c1a00095-0000-4000-8000-000000000005",
@@ -471,7 +474,8 @@
           "Written to NCLEX-RN difficulty and reviewed by the content team on 20 November 2026."
         ]
       },
-      "educationalObjective": "Prepare a client for cardiac catheterization."
+      "educationalObjective": "Prepare a client for cardiac catheterization.",
+      "status": "retired"
     },
     {
       "id": "c1a00095-0000-4000-8000-000000000006",
@@ -520,7 +524,8 @@
           "Written to NCLEX-RN difficulty and reviewed by the content team on 20 November 2026."
         ]
       },
-      "educationalObjective": "Recognize the stroke risk of atrial fibrillation."
+      "educationalObjective": "Recognize the stroke risk of atrial fibrillation.",
+      "status": "retired"
     },
     {
       "id": "c1a00095-0000-4000-8000-000000000007",
@@ -888,7 +893,8 @@
           "Written to NCLEX-RN difficulty and reviewed by the content team on 20 November 2026."
         ]
       },
-      "educationalObjective": "Act first for suspected acute coronary syndrome."
+      "educationalObjective": "Act first for suspected acute coronary syndrome.",
+      "status": "retired"
     },
     {
       "id": "c1a00095-0000-4000-8000-000000000012",
@@ -986,7 +992,8 @@
           "Written to NCLEX-RN difficulty and reviewed by the content team on 20 November 2026."
         ]
       },
-      "educationalObjective": "Monitor IV amiodarone."
+      "educationalObjective": "Monitor IV amiodarone.",
+      "status": "retired"
     },
     {
       "id": "c1a00095-0000-4000-8000-000000000014",

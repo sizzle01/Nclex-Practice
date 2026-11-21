@@ -86,7 +86,8 @@
           "Rewritten to NCLEX-RN difficulty and reviewed by the content team on 19 November 2026."
         ]
       },
-      "educationalObjective": "Recognize early hepatic encephalopathy."
+      "educationalObjective": "Recognize early hepatic encephalopathy.",
+      "status": "retired"
     },
     {
       "id": "c1a00017-0000-4000-8000-000000000002",
@@ -135,7 +136,8 @@
           "Rewritten to NCLEX-RN difficulty and reviewed by the content team on 19 November 2026."
         ]
       },
-      "educationalObjective": "Evaluate the response to lactulose."
+      "educationalObjective": "Evaluate the response to lactulose.",
+      "status": "retired"
     },
     {
       "id": "c1a00017-0000-4000-8000-000000000003",
@@ -184,7 +186,8 @@
           "Rewritten to NCLEX-RN difficulty and reviewed by the content team on 19 November 2026."
         ]
       },
-      "educationalObjective": "Plan diet for ascites."
+      "educationalObjective": "Plan diet for ascites.",
+      "status": "retired"
     },
     {
       "id": "c1a00017-0000-4000-8000-000000000004",
@@ -233,7 +236,8 @@
           "Rewritten to NCLEX-RN difficulty and reviewed by the content team on 19 November 2026."
         ]
       },
-      "educationalObjective": "Prioritize care in variceal bleeding."
+      "educationalObjective": "Prioritize care in variceal bleeding.",
+      "status": "retired"
     },
     {
       "id": "c1a00017-0000-4000-8000-000000000005",
@@ -283,7 +287,8 @@
           "Rewritten to NCLEX-RN difficulty and reviewed by the content team on 19 November 2026."
         ]
       },
-      "educationalObjective": "Teach prevention of variceal bleeding."
+      "educationalObjective": "Teach prevention of variceal bleeding.",
+      "status": "retired"
     },
     {
       "id": "c1a00017-0000-4000-8000-000000000006",
@@ -332,7 +337,8 @@
           "Rewritten to NCLEX-RN difficulty and reviewed by the content team on 19 November 2026."
         ]
       },
-      "educationalObjective": "Prepare a client for paracentesis."
+      "educationalObjective": "Prepare a client for paracentesis.",
+      "status": "retired"
     },
     {
       "id": "c1a00017-0000-4000-8000-000000000007",
@@ -381,7 +387,8 @@
           "Rewritten to NCLEX-RN difficulty and reviewed by the content team on 19 November 2026."
         ]
       },
-      "educationalObjective": "Monitor for complications after paracentesis."
+      "educationalObjective": "Monitor for complications after paracentesis.",
+      "status": "retired"
     },
     {
       "id": "c1a00017-0000-4000-8000-000000000008",
@@ -430,7 +437,8 @@
           "Rewritten to NCLEX-RN difficulty and reviewed by the content team on 19 November 2026."
         ]
       },
-      "educationalObjective": "Position a client after liver biopsy."
+      "educationalObjective": "Position a client after liver biopsy.",
+      "status": "retired"
     },
     {
       "id": "c1a00017-0000-4000-8000-000000000009",
@@ -479,7 +487,8 @@
           "Rewritten to NCLEX-RN difficulty and reviewed by the content team on 19 November 2026."
         ]
       },
-      "educationalObjective": "Review labs before a liver biopsy."
+      "educationalObjective": "Review labs before a liver biopsy.",
+      "status": "retired"
     },
     {
       "id": "c1a00017-0000-4000-8000-000000000010",
@@ -542,7 +551,8 @@
           "Rewritten to NCLEX-RN difficulty and reviewed by the content team on 19 November 2026."
         ]
       },
-      "educationalObjective": "Recognize the findings of cirrhosis."
+      "educationalObjective": "Recognize the findings of cirrhosis.",
+      "status": "retired"
     },
     {
       "id": "c1a00017-0000-4000-8000-000000000011",
@@ -634,7 +644,8 @@
           "Rewritten to NCLEX-RN difficulty and reviewed by the content team on 19 November 2026."
         ]
       },
-      "educationalObjective": "Interpret liver laboratory results."
+      "educationalObjective": "Interpret liver laboratory results.",
+      "status": "retired"
     },
     {
       "id": "c1a00017-0000-4000-8000-000000000012",
@@ -707,7 +718,8 @@
           "Rewritten to NCLEX-RN difficulty and reviewed by the content team on 19 November 2026."
         ]
       },
-      "educationalObjective": "Recognize and treat hepatic encephalopathy."
+      "educationalObjective": "Recognize and treat hepatic encephalopathy.",
+      "status": "retired"
     },
     {
       "id": "c1a00017-0000-4000-8000-000000000013",
@@ -775,7 +787,8 @@
           "Rewritten to NCLEX-RN difficulty and reviewed by the content team on 19 November 2026."
         ]
       },
-      "educationalObjective": "Identify transmission routes of viral hepatitis."
+      "educationalObjective": "Identify transmission routes of viral hepatitis.",
+      "status": "retired"
     },
     {
       "id": "c1a00017-0000-4000-8000-000000000014",
@@ -824,7 +837,8 @@
           "Rewritten to NCLEX-RN difficulty and reviewed by the content team on 19 November 2026."
         ]
       },
-      "educationalObjective": "Teach about hepatitis B vaccination."
+      "educationalObjective": "Teach about hepatitis B vaccination.",
+      "status": "retired"
     },
     {
       "id": "c1a00017-0000-4000-8000-000000000015",
@@ -873,7 +887,8 @@
           "Rewritten to NCLEX-RN difficulty and reviewed by the content team on 19 November 2026."
         ]
       },
-      "educationalObjective": "Position a client with pancreatitis for comfort."
+      "educationalObjective": "Position a client with pancreatitis for comfort.",
+      "status": "retired"
     },
     {
       "id": "c1a00017-0000-4000-8000-000000000016",
@@ -922,7 +937,8 @@
           "Rewritten to NCLEX-RN difficulty and reviewed by the content team on 19 November 2026."
         ]
       },
-      "educationalObjective": "Interpret laboratory findings in pancreatitis."
+      "educationalObjective": "Interpret laboratory findings in pancreatitis.",
+      "status": "retired"
     },
     {
       "id": "c1a00017-0000-4000-8000-000000000017",
@@ -971,7 +987,8 @@
           "Rewritten to NCLEX-RN difficulty and reviewed by the content team on 19 November 2026."
         ]
       },
-      "educationalObjective": "Prioritize care in acute pancreatitis."
+      "educationalObjective": "Prioritize care in acute pancreatitis.",
+      "status": "retired"
     },
     {
       "id": "c1a00017-0000-4000-8000-000000000018",
@@ -1020,7 +1037,8 @@
           "Rewritten to NCLEX-RN difficulty and reviewed by the content team on 19 November 2026."
         ]
       },
-      "educationalObjective": "Recognize hypocalcemia in pancreatitis."
+      "educationalObjective": "Recognize hypocalcemia in pancreatitis.",
+      "status": "retired"
     },
     {
       "id": "c1a00017-0000-4000-8000-000000000019",
@@ -1069,7 +1087,8 @@
           "Rewritten to NCLEX-RN difficulty and reviewed by the content team on 19 November 2026."
         ]
       },
-      "educationalObjective": "Teach timing of pancreatic enzyme replacement."
+      "educationalObjective": "Teach timing of pancreatic enzyme replacement.",
+      "status": "retired"
     },
     {
       "id": "c1a00017-0000-4000-8000-000000000020",
@@ -1118,7 +1137,8 @@
           "Rewritten to NCLEX-RN difficulty and reviewed by the content team on 19 November 2026."
         ]
       },
-      "educationalObjective": "Recognize cholecystitis."
+      "educationalObjective": "Recognize cholecystitis.",
+      "status": "retired"
     },
     {
       "id": "c1a00017-0000-4000-8000-000000000021",
@@ -1167,7 +1187,8 @@
           "Rewritten to NCLEX-RN difficulty and reviewed by the content team on 19 November 2026."
         ]
       },
-      "educationalObjective": "Manage shoulder pain after laparoscopic surgery."
+      "educationalObjective": "Manage shoulder pain after laparoscopic surgery.",
+      "status": "retired"
     },
     {
       "id": "c1a00017-0000-4000-8000-000000000022",
@@ -1216,7 +1237,8 @@
           "Rewritten to NCLEX-RN difficulty and reviewed by the content team on 19 November 2026."
         ]
       },
-      "educationalObjective": "Relieve pruritus in jaundice."
+      "educationalObjective": "Relieve pruritus in jaundice.",
+      "status": "retired"
     },
     {
       "id": "c1a00017-0000-4000-8000-000000000023",
@@ -1265,7 +1287,8 @@
           "Rewritten to NCLEX-RN difficulty and reviewed by the content team on 19 November 2026."
         ]
       },
-      "educationalObjective": "Teach safe analgesic use in liver disease."
+      "educationalObjective": "Teach safe analgesic use in liver disease.",
+      "status": "retired"
     },
     {
       "id": "c1a00017-0000-4000-8000-000000000024",
@@ -1314,7 +1337,8 @@
           "Rewritten to NCLEX-RN difficulty and reviewed by the content team on 19 November 2026."
         ]
       },
-      "educationalObjective": "Prevent hepatitis A transmission."
+      "educationalObjective": "Prevent hepatitis A transmission.",
+      "status": "retired"
     }
   ]
 }

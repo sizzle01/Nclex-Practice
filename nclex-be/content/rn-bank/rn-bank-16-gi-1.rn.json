@@ -91,7 +91,8 @@
           "Rewritten to NCLEX-RN difficulty and reviewed by the content team on 19 November 2026."
         ]
       },
-      "educationalObjective": "Teach lifestyle changes for GERD."
+      "educationalObjective": "Teach lifestyle changes for GERD.",
+      "status": "retired"
     },
     {
       "id": "c1a00016-0000-4000-8000-000000000002",
@@ -140,7 +141,8 @@
           "Rewritten to NCLEX-RN difficulty and reviewed by the content team on 19 November 2026."
         ]
       },
-      "educationalObjective": "Teach adherence to H. pylori therapy."
+      "educationalObjective": "Teach adherence to H. pylori therapy.",
+      "status": "retired"
     },
     {
       "id": "c1a00016-0000-4000-8000-000000000003",
@@ -189,7 +191,8 @@
           "Rewritten to NCLEX-RN difficulty and reviewed by the content team on 19 November 2026."
         ]
       },
-      "educationalObjective": "Recognize a perforated ulcer."
+      "educationalObjective": "Recognize a perforated ulcer.",
+      "status": "retired"
     },
     {
       "id": "c1a00016-0000-4000-8000-000000000004",
@@ -238,7 +241,8 @@
           "Rewritten to NCLEX-RN difficulty and reviewed by the content team on 19 November 2026."
         ]
       },
-      "educationalObjective": "Stabilize a client with an upper GI bleed."
+      "educationalObjective": "Stabilize a client with an upper GI bleed.",
+      "status": "retired"
     },
     {
       "id": "c1a00016-0000-4000-8000-000000000005",
@@ -287,7 +291,8 @@
           "Rewritten to NCLEX-RN difficulty and reviewed by the content team on 19 November 2026."
         ]
       },
-      "educationalObjective": "Teach timing for proton pump inhibitors."
+      "educationalObjective": "Teach timing for proton pump inhibitors.",
+      "status": "retired"
     },
     {
       "id": "c1a00016-0000-4000-8000-000000000006",
@@ -336,7 +341,8 @@
           "Rewritten to NCLEX-RN difficulty and reviewed by the content team on 19 November 2026."
         ]
       },
-      "educationalObjective": "Teach correct use of sucralfate."
+      "educationalObjective": "Teach correct use of sucralfate.",
+      "status": "retired"
     },
     {
       "id": "c1a00016-0000-4000-8000-000000000007",
@@ -385,7 +391,8 @@
           "Rewritten to NCLEX-RN difficulty and reviewed by the content team on 19 November 2026."
         ]
       },
-      "educationalObjective": "Teach dietary management of dumping syndrome."
+      "educationalObjective": "Teach dietary management of dumping syndrome.",
+      "status": "retired"
     },
     {
       "id": "c1a00016-0000-4000-8000-000000000008",
@@ -435,7 +442,8 @@
           "Rewritten to NCLEX-RN difficulty and reviewed by the content team on 19 November 2026."
         ]
       },
-      "educationalObjective": "Confirm feeding tube placement."
+      "educationalObjective": "Confirm feeding tube placement.",
+      "status": "retired"
     },
     {
       "id": "c1a00016-0000-4000-8000-000000000009",
@@ -484,7 +492,8 @@
           "Rewritten to NCLEX-RN difficulty and reviewed by the content team on 19 November 2026."
         ]
       },
-      "educationalObjective": "Prevent aspiration during tube feeding."
+      "educationalObjective": "Prevent aspiration during tube feeding.",
+      "status": "retired"
     },
     {
       "id": "c1a00016-0000-4000-8000-000000000010",
@@ -533,7 +542,8 @@
           "Rewritten to NCLEX-RN difficulty and reviewed by the content team on 19 November 2026."
         ]
       },
-      "educationalObjective": "Recognize a small bowel obstruction."
+      "educationalObjective": "Recognize a small bowel obstruction.",
+      "status": "retired"
     },
     {
       "id": "c1a00016-0000-4000-8000-000000000011",
@@ -608,7 +618,8 @@
           "Rewritten to NCLEX-RN difficulty and reviewed by the content team on 19 November 2026."
         ]
       },
-      "educationalObjective": "Tell ulcerative colitis apart from Crohn disease."
+      "educationalObjective": "Tell ulcerative colitis apart from Crohn disease.",
+      "status": "retired"
     },
     {
       "id": "c1a00016-0000-4000-8000-000000000012",
@@ -657,7 +668,8 @@
           "Rewritten to NCLEX-RN difficulty and reviewed by the content team on 19 November 2026."
         ]
       },
-      "educationalObjective": "Plan nutrition during an IBD flare."
+      "educationalObjective": "Plan nutrition during an IBD flare.",
+      "status": "retired"
     },
     {
       "id": "c1a00016-0000-4000-8000-000000000013",
@@ -706,7 +718,8 @@
           "Rewritten to NCLEX-RN difficulty and reviewed by the content team on 19 November 2026."
         ]
       },
-      "educationalObjective": "Teach diet to prevent diverticulitis."
+      "educationalObjective": "Teach diet to prevent diverticulitis.",
+      "status": "retired"
     },
     {
       "id": "c1a00016-0000-4000-8000-000000000014",
@@ -755,7 +768,8 @@
           "Rewritten to NCLEX-RN difficulty and reviewed by the content team on 19 November 2026."
         ]
       },
-      "educationalObjective": "Prevent rupture in suspected appendicitis."
+      "educationalObjective": "Prevent rupture in suspected appendicitis.",
+      "status": "retired"
     },
     {
       "id": "c1a00016-0000-4000-8000-000000000015",
@@ -804,7 +818,8 @@
           "Rewritten to NCLEX-RN difficulty and reviewed by the content team on 19 November 2026."
         ]
       },
-      "educationalObjective": "Identify the starting age for colorectal cancer screening."
+      "educationalObjective": "Identify the starting age for colorectal cancer screening.",
+      "status": "retired"
     },
     {
       "id": "c1a00016-0000-4000-8000-000000000016",
@@ -853,7 +868,8 @@
           "Rewritten to NCLEX-RN difficulty and reviewed by the content team on 19 November 2026."
         ]
       },
-      "educationalObjective": "Teach colonoscopy preparation."
+      "educationalObjective": "Teach colonoscopy preparation.",
+      "status": "retired"
     },
     {
       "id": "c1a00016-0000-4000-8000-000000000017",
@@ -902,7 +918,8 @@
           "Rewritten to NCLEX-RN difficulty and reviewed by the content team on 19 November 2026."
         ]
       },
-      "educationalObjective": "Assess a stoma."
+      "educationalObjective": "Assess a stoma.",
+      "status": "retired"
     },
     {
       "id": "c1a00016-0000-4000-8000-000000000018",
@@ -951,7 +968,8 @@
           "Rewritten to NCLEX-RN difficulty and reviewed by the content team on 19 November 2026."
         ]
       },
-      "educationalObjective": "Teach ileostomy self-care."
+      "educationalObjective": "Teach ileostomy self-care.",
+      "status": "retired"
     },
     {
       "id": "c1a00016-0000-4000-8000-000000000019",
@@ -1000,7 +1018,8 @@
           "Rewritten to NCLEX-RN difficulty and reviewed by the content team on 19 November 2026."
         ]
       },
-      "educationalObjective": "Fit an ostomy pouch correctly."
+      "educationalObjective": "Fit an ostomy pouch correctly.",
+      "status": "retired"
     },
     {
       "id": "c1a00016-0000-4000-8000-000000000020",
@@ -1049,7 +1068,8 @@
           "Rewritten to NCLEX-RN difficulty and reviewed by the content team on 19 November 2026."
         ]
       },
-      "educationalObjective": "Teach constipation prevention."
+      "educationalObjective": "Teach constipation prevention.",
+      "status": "retired"
     },
     {
       "id": "c1a00016-0000-4000-8000-000000000021",
@@ -1098,7 +1118,8 @@
           "Rewritten to NCLEX-RN difficulty and reviewed by the content team on 19 November 2026."
         ]
       },
-      "educationalObjective": "Prevent opioid-induced constipation."
+      "educationalObjective": "Prevent opioid-induced constipation.",
+      "status": "retired"
     },
     {
       "id": "c1a00016-0000-4000-8000-000000000022",
@@ -1147,7 +1168,8 @@
           "Rewritten to NCLEX-RN difficulty and reviewed by the content team on 19 November 2026."
         ]
       },
-      "educationalObjective": "Monitor for ondansetron adverse effects."
+      "educationalObjective": "Monitor for ondansetron adverse effects.",
+      "status": "retired"
     },
     {
       "id": "c1a00016-0000-4000-8000-000000000023",
@@ -1196,7 +1218,8 @@
           "Rewritten to NCLEX-RN difficulty and reviewed by the content team on 19 November 2026."
         ]
       },
-      "educationalObjective": "Recognize postoperative ileus."
+      "educationalObjective": "Recognize postoperative ileus.",
+      "status": "retired"
     },
     {
       "id": "c1a00016-0000-4000-8000-000000000024",
@@ -1226,7 +1249,8 @@
           "Rewritten to NCLEX-RN difficulty and reviewed by the content team on 19 November 2026."
         ]
       },
-      "educationalObjective": "Calculate a continuous tube feeding rate."
+      "educationalObjective": "Calculate a continuous tube feeding rate.",
+      "status": "retired"
     },
     {
       "id": "c1a00016-0000-4000-8000-000000000025",
@@ -1287,7 +1311,8 @@
           "Rewritten to NCLEX-RN difficulty and reviewed by the content team on 19 November 2026."
         ]
       },
-      "educationalObjective": "Insert a nasogastric tube in the correct sequence."
+      "educationalObjective": "Insert a nasogastric tube in the correct sequence.",
+      "status": "retired"
     }
   ]
 }

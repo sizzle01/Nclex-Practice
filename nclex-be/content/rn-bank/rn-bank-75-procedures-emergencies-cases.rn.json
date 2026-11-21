@@ -296,7 +296,8 @@
           "Written to NCLEX-RN difficulty and reviewed by the content team on 20 November 2026."
         ]
       },
-      "educationalObjective": "Prevent aspiration after bronchoscopy."
+      "educationalObjective": "Prevent aspiration after bronchoscopy.",
+      "status": "retired"
     },
     {
       "id": "c1a00075-0000-4000-8000-000000000004",
@@ -345,7 +346,8 @@
           "Written to NCLEX-RN difficulty and reviewed by the content team on 20 November 2026."
         ]
       },
-      "educationalObjective": "Prepare a client for a stress test."
+      "educationalObjective": "Prepare a client for a stress test.",
+      "status": "retired"
     },
     {
       "id": "c1a00075-0000-4000-8000-000000000005",
@@ -395,7 +397,8 @@
           "Written to NCLEX-RN difficulty and reviewed by the content team on 20 November 2026."
         ]
       },
-      "educationalObjective": "Prioritize laboratory results."
+      "educationalObjective": "Prioritize laboratory results.",
+      "status": "retired"
     },
     {
       "id": "c1a00075-0000-4000-8000-000000000006",
@@ -634,7 +637,8 @@
           "Written to NCLEX-RN difficulty and reviewed by the content team on 20 November 2026."
         ]
       },
-      "educationalObjective": "Monitor circulation after radial catheterization."
+      "educationalObjective": "Monitor circulation after radial catheterization.",
+      "status": "retired"
     },
     {
       "id": "c1a00075-0000-4000-8000-000000000010",
@@ -794,7 +798,8 @@
           "Written to NCLEX-RN difficulty and reviewed by the content team on 20 November 2026."
         ]
       },
-      "educationalObjective": "Manage SIADH."
+      "educationalObjective": "Manage SIADH.",
+      "status": "retired"
     },
     {
       "id": "c1a00075-0000-4000-8000-000000000012",
@@ -844,7 +849,8 @@
           "Written to NCLEX-RN difficulty and reviewed by the content team on 20 November 2026."
         ]
       },
-      "educationalObjective": "Teach sublingual nitroglycerin use."
+      "educationalObjective": "Teach sublingual nitroglycerin use.",
+      "status": "retired"
     },
     {
       "id": "c1a00075-0000-4000-8000-000000000013",

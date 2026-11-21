@@ -118,7 +118,8 @@
           "Rewritten to NCLEX-RN difficulty and reviewed by the content team on 19 November 2026."
         ]
       },
-      "educationalObjective": "Mix regular and NPH insulin in one syringe correctly."
+      "educationalObjective": "Mix regular and NPH insulin in one syringe correctly.",
+      "status": "retired"
     },
     {
       "id": "c1a00004-0000-4000-8000-000000000002",
@@ -167,7 +168,8 @@
           "Rewritten to NCLEX-RN difficulty and reviewed by the content team on 19 November 2026."
         ]
       },
-      "educationalObjective": "Link insulin peak times to hypoglycemia risk."
+      "educationalObjective": "Link insulin peak times to hypoglycemia risk.",
+      "status": "retired"
     },
     {
       "id": "c1a00004-0000-4000-8000-000000000003",
@@ -216,7 +218,8 @@
           "Rewritten to NCLEX-RN difficulty and reviewed by the content team on 19 November 2026."
         ]
       },
-      "educationalObjective": "Teach safe use of long-acting insulin."
+      "educationalObjective": "Teach safe use of long-acting insulin.",
+      "status": "retired"
     },
     {
       "id": "c1a00004-0000-4000-8000-000000000004",
@@ -266,7 +269,8 @@
           "Rewritten to NCLEX-RN difficulty and reviewed by the content team on 19 November 2026."
         ]
       },
-      "educationalObjective": "Anticipate fluid and insulin changes during DKA treatment."
+      "educationalObjective": "Anticipate fluid and insulin changes during DKA treatment.",
+      "status": "retired"
     },
     {
       "id": "c1a00004-0000-4000-8000-000000000005",
@@ -296,7 +300,8 @@
           "Rewritten to NCLEX-RN difficulty and reviewed by the content team on 19 November 2026."
         ]
       },
-      "educationalObjective": "Calculate a weight-based insulin infusion rate."
+      "educationalObjective": "Calculate a weight-based insulin infusion rate.",
+      "status": "retired"
     },
     {
       "id": "c1a00004-0000-4000-8000-000000000006",
@@ -370,7 +375,8 @@
           "Rewritten to NCLEX-RN difficulty and reviewed by the content team on 19 November 2026."
         ]
       },
-      "educationalObjective": "Respond to hypoglycemia before giving mealtime insulin."
+      "educationalObjective": "Respond to hypoglycemia before giving mealtime insulin.",
+      "status": "retired"
     },
     {
       "id": "c1a00004-0000-4000-8000-000000000007",
@@ -1262,7 +1268,8 @@
           "Rewritten to NCLEX-RN difficulty and reviewed by the content team on 19 November 2026."
         ]
       },
-      "educationalObjective": "Prevent hypoglycemia when TPN is interrupted."
+      "educationalObjective": "Prevent hypoglycemia when TPN is interrupted.",
+      "status": "retired"
     },
     {
       "id": "c1a00004-0000-4000-8000-000000000021",
@@ -1311,7 +1318,8 @@
           "Rewritten to NCLEX-RN difficulty and reviewed by the content team on 19 November 2026."
         ]
       },
-      "educationalObjective": "Respond to a suspected air embolism from a central line."
+      "educationalObjective": "Respond to a suspected air embolism from a central line.",
+      "status": "retired"
     },
     {
       "id": "c1a00004-0000-4000-8000-000000000022",
@@ -1360,7 +1368,8 @@
           "Rewritten to NCLEX-RN difficulty and reviewed by the content team on 19 November 2026."
         ]
       },
-      "educationalObjective": "Recognize and manage IV infiltration."
+      "educationalObjective": "Recognize and manage IV infiltration.",
+      "status": "retired"
     },
     {
       "id": "c1a00004-0000-4000-8000-000000000023",
@@ -1409,7 +1418,8 @@
           "Rewritten to NCLEX-RN difficulty and reviewed by the content team on 19 November 2026."
         ]
       },
-      "educationalObjective": "Manage extravasation of a vasopressor."
+      "educationalObjective": "Manage extravasation of a vasopressor.",
+      "status": "retired"
     },
     {
       "id": "c1a00004-0000-4000-8000-000000000024",
@@ -1508,7 +1518,8 @@
           "Rewritten to NCLEX-RN difficulty and reviewed by the content team on 19 November 2026."
         ]
       },
-      "educationalObjective": "Give IV push furosemide at a safe rate."
+      "educationalObjective": "Give IV push furosemide at a safe rate.",
+      "status": "retired"
     },
     {
       "id": "c1a00004-0000-4000-8000-000000000026",
@@ -1572,7 +1583,8 @@
           "Rewritten to NCLEX-RN difficulty and reviewed by the content team on 19 November 2026."
         ]
       },
-      "educationalObjective": "Choose the right pre-administration assessment for common drugs."
+      "educationalObjective": "Choose the right pre-administration assessment for common drugs.",
+      "status": "retired"
     }
   ]
 }

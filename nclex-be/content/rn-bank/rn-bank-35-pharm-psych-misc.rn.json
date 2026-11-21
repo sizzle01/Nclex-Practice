@@ -689,7 +689,8 @@
           "Rewritten to NCLEX-RN difficulty and reviewed by the content team on 19 November 2026."
         ]
       },
-      "educationalObjective": "Recognize risky medications for older adults."
+      "educationalObjective": "Recognize risky medications for older adults.",
+      "status": "retired"
     },
     {
       "id": "c1a00035-0000-4000-8000-000000000014",
@@ -836,7 +837,8 @@
           "Rewritten to NCLEX-RN difficulty and reviewed by the content team on 19 November 2026."
         ]
       },
-      "educationalObjective": "Recognize drug combinations that cause hyperkalemia."
+      "educationalObjective": "Recognize drug combinations that cause hyperkalemia.",
+      "status": "retired"
     },
     {
       "id": "c1a00035-0000-4000-8000-000000000017",
@@ -885,7 +887,8 @@
           "Rewritten to NCLEX-RN difficulty and reviewed by the content team on 19 November 2026."
         ]
       },
-      "educationalObjective": "Monitor warfarin drug interactions."
+      "educationalObjective": "Monitor warfarin drug interactions.",
+      "status": "retired"
     },
     {
       "id": "c1a00035-0000-4000-8000-000000000018",
@@ -934,7 +937,8 @@
           "Rewritten to NCLEX-RN difficulty and reviewed by the content team on 19 November 2026."
         ]
       },
-      "educationalObjective": "Teach about the grapefruit-statin interaction."
+      "educationalObjective": "Teach about the grapefruit-statin interaction.",
+      "status": "retired"
     },
     {
       "id": "c1a00035-0000-4000-8000-000000000019",

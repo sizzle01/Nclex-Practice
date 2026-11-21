@@ -35,7 +35,7 @@ The wave chunks are paused (2026-11-20) while the bank is rebuilt around case st
 
 ## Case conversion (CASE-MAP.md)
 
-**540 of 2310 active questions (23%) are inside full case studies**; the goal is 85%. 0 older questions are retired (F26, retired-questions.json): their topics were rebuilt as case studies.
+**540 of 1942 active questions (28%) are inside full case studies**; the goal is 85%. 368 older questions are retired (F26, retired-questions.json): their topics were rebuilt as case studies.
 
 | Chunk | Topic | Batch files | Questions | Case studies |
 |---|---|---|---|---|

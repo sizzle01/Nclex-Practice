@@ -546,7 +546,8 @@
           "Written to NCLEX-RN difficulty and reviewed by the content team on 20 November 2026."
         ]
       },
-      "educationalObjective": "Evaluate levothyroxine teaching."
+      "educationalObjective": "Evaluate levothyroxine teaching.",
+      "status": "retired"
     },
     {
       "id": "c1a00074-0000-4000-8000-000000000008",
@@ -661,7 +662,8 @@
           "Written to NCLEX-RN difficulty and reviewed by the content team on 20 November 2026."
         ]
       },
-      "educationalObjective": "Manage basal insulin before a procedure."
+      "educationalObjective": "Manage basal insulin before a procedure.",
+      "status": "retired"
     },
     {
       "id": "c1a00074-0000-4000-8000-000000000010",
@@ -710,7 +712,8 @@
           "Written to NCLEX-RN difficulty and reviewed by the content team on 20 November 2026."
         ]
       },
-      "educationalObjective": "Recognize transfusion-associated circulatory overload."
+      "educationalObjective": "Recognize transfusion-associated circulatory overload.",
+      "status": "retired"
     },
     {
       "id": "c1a00074-0000-4000-8000-000000000011",
@@ -1022,7 +1025,8 @@
           "Written to NCLEX-RN difficulty and reviewed by the content team on 20 November 2026."
         ]
       },
-      "educationalObjective": "Recognize dehydration from high ileostomy output."
+      "educationalObjective": "Recognize dehydration from high ileostomy output.",
+      "status": "retired"
     },
     {
       "id": "c1a00074-0000-4000-8000-000000000015",
@@ -1071,7 +1075,8 @@
           "Written to NCLEX-RN difficulty and reviewed by the content team on 20 November 2026."
         ]
       },
-      "educationalObjective": "Identify contraindications to heat therapy."
+      "educationalObjective": "Identify contraindications to heat therapy.",
+      "status": "retired"
     },
     {
       "id": "c1a00074-0000-4000-8000-000000000016",
@@ -1274,7 +1279,8 @@
           "Written to NCLEX-RN difficulty and reviewed by the content team on 20 November 2026."
         ]
       },
-      "educationalObjective": "Recognize enteral feeding intolerance."
+      "educationalObjective": "Recognize enteral feeding intolerance.",
+      "status": "retired"
     },
     {
       "id": "c1a00074-0000-4000-8000-000000000019",

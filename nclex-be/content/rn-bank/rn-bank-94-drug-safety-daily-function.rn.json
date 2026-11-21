@@ -367,7 +367,8 @@
           "Written to NCLEX-RN difficulty and reviewed by the content team on 20 November 2026."
         ]
       },
-      "educationalObjective": "Calculate an insulin infusion rate."
+      "educationalObjective": "Calculate an insulin infusion rate.",
+      "status": "retired"
     },
     {
       "id": "c1a00094-0000-4000-8000-000000000004",
@@ -572,7 +573,8 @@
           "Written to NCLEX-RN difficulty and reviewed by the content team on 20 November 2026."
         ]
       },
-      "educationalObjective": "Give a subcutaneous injection."
+      "educationalObjective": "Give a subcutaneous injection.",
+      "status": "retired"
     },
     {
       "id": "c1a00094-0000-4000-8000-000000000007",
@@ -853,7 +855,8 @@
           "Written to NCLEX-RN difficulty and reviewed by the content team on 20 November 2026."
         ]
       },
-      "educationalObjective": "Recognize clonidine withdrawal."
+      "educationalObjective": "Recognize clonidine withdrawal.",
+      "status": "retired"
     },
     {
       "id": "c1a00094-0000-4000-8000-000000000011",
@@ -1083,7 +1086,8 @@
           "Written to NCLEX-RN difficulty and reviewed by the content team on 20 November 2026."
         ]
       },
-      "educationalObjective": "Choose a diet after pancreatitis."
+      "educationalObjective": "Choose a diet after pancreatitis.",
+      "status": "retired"
     },
     {
       "id": "c1a00094-0000-4000-8000-000000000015",
@@ -1614,7 +1618,8 @@
           "Written to NCLEX-RN difficulty and reviewed by the content team on 20 November 2026."
         ]
       },
-      "educationalObjective": "Teach colostomy care."
+      "educationalObjective": "Teach colostomy care.",
+      "status": "retired"
     },
     {
       "id": "c1a00094-0000-4000-8000-000000000023",
@@ -1663,7 +1668,8 @@
           "Written to NCLEX-RN difficulty and reviewed by the content team on 20 November 2026."
         ]
       },
-      "educationalObjective": "Apply compression stockings correctly."
+      "educationalObjective": "Apply compression stockings correctly.",
+      "status": "retired"
     },
     {
       "id": "c1a00094-0000-4000-8000-000000000024",

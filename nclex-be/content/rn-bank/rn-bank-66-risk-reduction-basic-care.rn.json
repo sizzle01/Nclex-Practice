@@ -196,7 +196,8 @@
           "Rewritten to NCLEX-RN difficulty and reviewed by the content team on 19 November 2026."
         ]
       },
-      "educationalObjective": "Interpret troponin results."
+      "educationalObjective": "Interpret troponin results.",
+      "status": "retired"
     },
     {
       "id": "c1a00066-0000-4000-8000-000000000003",
@@ -245,7 +246,8 @@
           "Rewritten to NCLEX-RN difficulty and reviewed by the content team on 19 November 2026."
         ]
       },
-      "educationalObjective": "Interpret BNP."
+      "educationalObjective": "Interpret BNP.",
+      "status": "retired"
     },
     {
       "id": "c1a00066-0000-4000-8000-000000000004",
@@ -295,7 +297,8 @@
           "Rewritten to NCLEX-RN difficulty and reviewed by the content team on 19 November 2026."
         ]
       },
-      "educationalObjective": "Act on a toxic drug level."
+      "educationalObjective": "Act on a toxic drug level.",
+      "status": "retired"
     },
     {
       "id": "c1a00066-0000-4000-8000-000000000005",
@@ -344,7 +347,8 @@
           "Rewritten to NCLEX-RN difficulty and reviewed by the content team on 19 November 2026."
         ]
       },
-      "educationalObjective": "Investigate raised liver enzymes."
+      "educationalObjective": "Investigate raised liver enzymes.",
+      "status": "retired"
     },
     {
       "id": "c1a00066-0000-4000-8000-000000000006",
@@ -484,7 +488,8 @@
           "Rewritten to NCLEX-RN difficulty and reviewed by the content team on 19 November 2026."
         ]
       },
-      "educationalObjective": "Prepare a client for a stress test."
+      "educationalObjective": "Prepare a client for a stress test.",
+      "status": "retired"
     },
     {
       "id": "c1a00066-0000-4000-8000-000000000008",
@@ -533,7 +538,8 @@
           "Rewritten to NCLEX-RN difficulty and reviewed by the content team on 19 November 2026."
         ]
       },
-      "educationalObjective": "Monitor after a transesophageal echocardiogram."
+      "educationalObjective": "Monitor after a transesophageal echocardiogram.",
+      "status": "retired"
     },
     {
       "id": "c1a00066-0000-4000-8000-000000000009",
@@ -582,7 +588,8 @@
           "Rewritten to NCLEX-RN difficulty and reviewed by the content team on 19 November 2026."
         ]
       },
-      "educationalObjective": "Troubleshoot cardiac monitoring."
+      "educationalObjective": "Troubleshoot cardiac monitoring.",
+      "status": "retired"
     },
     {
       "id": "c1a00066-0000-4000-8000-000000000010",
@@ -631,7 +638,8 @@
           "Rewritten to NCLEX-RN difficulty and reviewed by the content team on 19 November 2026."
         ]
       },
-      "educationalObjective": "Care for an arterial line."
+      "educationalObjective": "Care for an arterial line.",
+      "status": "retired"
     },
     {
       "id": "c1a00066-0000-4000-8000-000000000011",
@@ -689,7 +697,8 @@
           "Rewritten to NCLEX-RN difficulty and reviewed by the content team on 19 November 2026."
         ]
       },
-      "educationalObjective": "Obtain a quality ECG."
+      "educationalObjective": "Obtain a quality ECG.",
+      "status": "retired"
     },
     {
       "id": "c1a00066-0000-4000-8000-000000000012",
@@ -836,7 +845,8 @@
           "Rewritten to NCLEX-RN difficulty and reviewed by the content team on 19 November 2026."
         ]
       },
-      "educationalObjective": "Explain a dexamethasone suppression test."
+      "educationalObjective": "Explain a dexamethasone suppression test.",
+      "status": "retired"
     },
     {
       "id": "c1a00066-0000-4000-8000-000000000015",
@@ -885,7 +895,8 @@
           "Rewritten to NCLEX-RN difficulty and reviewed by the content team on 19 November 2026."
         ]
       },
-      "educationalObjective": "Monitor a water deprivation test."
+      "educationalObjective": "Monitor a water deprivation test.",
+      "status": "retired"
     },
     {
       "id": "c1a00066-0000-4000-8000-000000000016",
@@ -1045,7 +1056,8 @@
           "Rewritten to NCLEX-RN difficulty and reviewed by the content team on 19 November 2026."
         ]
       },
-      "educationalObjective": "Collect stool for occult blood."
+      "educationalObjective": "Collect stool for occult blood.",
+      "status": "retired"
     },
     {
       "id": "c1a00066-0000-4000-8000-000000000019",
@@ -1094,7 +1106,8 @@
           "Rewritten to NCLEX-RN difficulty and reviewed by the content team on 19 November 2026."
         ]
       },
-      "educationalObjective": "Collect sputum correctly."
+      "educationalObjective": "Collect sputum correctly.",
+      "status": "retired"
     },
     {
       "id": "c1a00066-0000-4000-8000-000000000020",
@@ -1143,7 +1156,8 @@
           "Rewritten to NCLEX-RN difficulty and reviewed by the content team on 19 November 2026."
         ]
       },
-      "educationalObjective": "Respond to an early warning score."
+      "educationalObjective": "Respond to an early warning score.",
+      "status": "retired"
     },
     {
       "id": "c1a00066-0000-4000-8000-000000000021",
@@ -1241,7 +1255,8 @@
           "Rewritten to NCLEX-RN difficulty and reviewed by the content team on 19 November 2026."
         ]
       },
-      "educationalObjective": "Troubleshoot pulse oximetry."
+      "educationalObjective": "Troubleshoot pulse oximetry.",
+      "status": "retired"
     },
     {
       "id": "c1a00066-0000-4000-8000-000000000023",
@@ -1290,7 +1305,8 @@
           "Rewritten to NCLEX-RN difficulty and reviewed by the content team on 19 November 2026."
         ]
       },
-      "educationalObjective": "Choose oxygen delivery devices."
+      "educationalObjective": "Choose oxygen delivery devices.",
+      "status": "retired"
     },
     {
       "id": "c1a00066-0000-4000-8000-000000000024",
@@ -1388,7 +1404,8 @@
           "Rewritten to NCLEX-RN difficulty and reviewed by the content team on 19 November 2026."
         ]
       },
-      "educationalObjective": "Choose foods for a low-residue diet."
+      "educationalObjective": "Choose foods for a low-residue diet.",
+      "status": "retired"
     },
     {
       "id": "c1a00066-0000-4000-8000-000000000026",
@@ -1634,7 +1651,8 @@
           "Rewritten to NCLEX-RN difficulty and reviewed by the content team on 19 November 2026."
         ]
       },
-      "educationalObjective": "Teach about herbal interactions."
+      "educationalObjective": "Teach about herbal interactions.",
+      "status": "retired"
     },
     {
       "id": "c1a00066-0000-4000-8000-000000000031",
@@ -1683,7 +1701,8 @@
           "Rewritten to NCLEX-RN difficulty and reviewed by the content team on 19 November 2026."
         ]
       },
-      "educationalObjective": "Provide comfort at the end of life."
+      "educationalObjective": "Provide comfort at the end of life.",
+      "status": "retired"
     }
   ]
 }

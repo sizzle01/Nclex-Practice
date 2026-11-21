@@ -427,7 +427,8 @@
           "Written to NCLEX-RN difficulty and reviewed by the content team on 20 November 2026."
         ]
       },
-      "educationalObjective": "Manage the insulin infusion in DKA."
+      "educationalObjective": "Manage the insulin infusion in DKA.",
+      "status": "retired"
     },
     {
       "id": "c1a00086-0000-4000-8000-000000000005",
@@ -575,7 +576,8 @@
           "Written to NCLEX-RN difficulty and reviewed by the content team on 20 November 2026."
         ]
       },
-      "educationalObjective": "Anticipate a warfarin drug interaction."
+      "educationalObjective": "Anticipate a warfarin drug interaction.",
+      "status": "retired"
     },
     {
       "id": "c1a00086-0000-4000-8000-000000000008",
@@ -886,7 +888,8 @@
           "Written to NCLEX-RN difficulty and reviewed by the content team on 20 November 2026."
         ]
       },
-      "educationalObjective": "Recognize amiodarone pulmonary toxicity."
+      "educationalObjective": "Recognize amiodarone pulmonary toxicity.",
+      "status": "retired"
     },
     {
       "id": "c1a00086-0000-4000-8000-000000000014",
@@ -936,7 +939,8 @@
           "Written to NCLEX-RN difficulty and reviewed by the content team on 20 November 2026."
         ]
       },
-      "educationalObjective": "Identify causes of diarrhea in tube feeding."
+      "educationalObjective": "Identify causes of diarrhea in tube feeding.",
+      "status": "retired"
     },
     {
       "id": "c1a00086-0000-4000-8000-000000000015",
@@ -1177,7 +1181,8 @@
           "Written to NCLEX-RN difficulty and reviewed by the content team on 20 November 2026."
         ]
       },
-      "educationalObjective": "Relieve breathlessness at the end of life."
+      "educationalObjective": "Relieve breathlessness at the end of life.",
+      "status": "retired"
     },
     {
       "id": "c1a00086-0000-4000-8000-000000000019",
@@ -1467,7 +1472,8 @@
           "Written to NCLEX-RN difficulty and reviewed by the content team on 20 November 2026."
         ]
       },
-      "educationalObjective": "Prevent opioid-induced constipation."
+      "educationalObjective": "Prevent opioid-induced constipation.",
+      "status": "retired"
     },
     {
       "id": "c1a00086-0000-4000-8000-000000000024",

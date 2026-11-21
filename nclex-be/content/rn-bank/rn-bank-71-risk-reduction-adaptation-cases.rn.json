@@ -252,7 +252,8 @@
           "Written to NCLEX-RN difficulty and reviewed by the content team on 20 November 2026."
         ]
       },
-      "educationalObjective": "Recognize retroperitoneal bleeding after cardiac catheterization."
+      "educationalObjective": "Recognize retroperitoneal bleeding after cardiac catheterization.",
+      "status": "retired"
     },
     {
       "id": "c1a00071-0000-4000-8000-000000000003",
@@ -302,7 +303,8 @@
           "Written to NCLEX-RN difficulty and reviewed by the content team on 20 November 2026."
         ]
       },
-      "educationalObjective": "Identify lab results that affect liver biopsy safety."
+      "educationalObjective": "Identify lab results that affect liver biopsy safety.",
+      "status": "retired"
     },
     {
       "id": "c1a00071-0000-4000-8000-000000000004",
@@ -351,7 +353,8 @@
           "Written to NCLEX-RN difficulty and reviewed by the content team on 20 November 2026."
         ]
       },
-      "educationalObjective": "Recognize pneumothorax after thoracentesis."
+      "educationalObjective": "Recognize pneumothorax after thoracentesis.",
+      "status": "retired"
     },
     {
       "id": "c1a00071-0000-4000-8000-000000000005",
@@ -532,7 +535,8 @@
           "Written to NCLEX-RN difficulty and reviewed by the content team on 20 November 2026."
         ]
       },
-      "educationalObjective": "Respond to hypotension after paracentesis."
+      "educationalObjective": "Respond to hypotension after paracentesis.",
+      "status": "retired"
     },
     {
       "id": "c1a00071-0000-4000-8000-000000000008",
@@ -582,7 +586,8 @@
           "Written to NCLEX-RN difficulty and reviewed by the content team on 20 November 2026."
         ]
       },
-      "educationalObjective": "Prevent and treat postoperative atelectasis."
+      "educationalObjective": "Prevent and treat postoperative atelectasis.",
+      "status": "retired"
     },
     {
       "id": "c1a00071-0000-4000-8000-000000000009",
@@ -788,7 +793,8 @@
           "Written to NCLEX-RN difficulty and reviewed by the content team on 20 November 2026."
         ]
       },
-      "educationalObjective": "Interpret arterial blood gases."
+      "educationalObjective": "Interpret arterial blood gases.",
+      "status": "retired"
     },
     {
       "id": "c1a00071-0000-4000-8000-000000000011",
@@ -887,7 +893,8 @@
           "Written to NCLEX-RN difficulty and reviewed by the content team on 20 November 2026."
         ]
       },
-      "educationalObjective": "Treat adrenal crisis."
+      "educationalObjective": "Treat adrenal crisis.",
+      "status": "retired"
     },
     {
       "id": "c1a00071-0000-4000-8000-000000000013",

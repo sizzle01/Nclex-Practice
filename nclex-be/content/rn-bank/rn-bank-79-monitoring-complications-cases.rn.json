@@ -259,7 +259,8 @@
           "Written to NCLEX-RN difficulty and reviewed by the content team on 20 November 2026."
         ]
       },
-      "educationalObjective": "Recognize hypoglycemia in a fasting client."
+      "educationalObjective": "Recognize hypoglycemia in a fasting client.",
+      "status": "retired"
     },
     {
       "id": "c1a00079-0000-4000-8000-000000000003",
@@ -309,7 +310,8 @@
           "Written to NCLEX-RN difficulty and reviewed by the content team on 20 November 2026."
         ]
       },
-      "educationalObjective": "Recognize the risk of torsades de pointes."
+      "educationalObjective": "Recognize the risk of torsades de pointes.",
+      "status": "retired"
     },
     {
       "id": "c1a00079-0000-4000-8000-000000000004",
@@ -857,7 +859,8 @@
           "Written to NCLEX-RN difficulty and reviewed by the content team on 20 November 2026."
         ]
       },
-      "educationalObjective": "Distinguish left- from right-sided heart failure."
+      "educationalObjective": "Distinguish left- from right-sided heart failure.",
+      "status": "retired"
     },
     {
       "id": "c1a00079-0000-4000-8000-000000000013",
@@ -906,7 +909,8 @@
           "Written to NCLEX-RN difficulty and reviewed by the content team on 20 November 2026."
         ]
       },
-      "educationalObjective": "Give IV furosemide safely."
+      "educationalObjective": "Give IV furosemide safely.",
+      "status": "retired"
     },
     {
       "id": "c1a00079-0000-4000-8000-000000000014",

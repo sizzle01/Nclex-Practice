@@ -331,7 +331,8 @@
           "Rewritten to NCLEX-RN difficulty and reviewed by the content team on 19 November 2026."
         ]
       },
-      "educationalObjective": "Recognize the signs of hypocalcemia."
+      "educationalObjective": "Recognize the signs of hypocalcemia.",
+      "status": "retired"
     },
     {
       "id": "c1a00010-0000-4000-8000-000000000007",
@@ -429,7 +430,8 @@
           "Rewritten to NCLEX-RN difficulty and reviewed by the content team on 19 November 2026."
         ]
       },
-      "educationalObjective": "Link hypomagnesemia to refractory hypokalemia."
+      "educationalObjective": "Link hypomagnesemia to refractory hypokalemia.",
+      "status": "retired"
     },
     {
       "id": "c1a00010-0000-4000-8000-000000000009",
@@ -527,7 +529,8 @@
           "Rewritten to NCLEX-RN difficulty and reviewed by the content team on 19 November 2026."
         ]
       },
-      "educationalObjective": "Monitor for refeeding syndrome."
+      "educationalObjective": "Monitor for refeeding syndrome.",
+      "status": "retired"
     },
     {
       "id": "c1a00010-0000-4000-8000-000000000011",
@@ -709,7 +712,8 @@
           "Rewritten to NCLEX-RN difficulty and reviewed by the content team on 19 November 2026."
         ]
       },
-      "educationalObjective": "Respond to fluid volume excess."
+      "educationalObjective": "Respond to fluid volume excess.",
+      "status": "retired"
     },
     {
       "id": "c1a00010-0000-4000-8000-000000000014",
@@ -772,7 +776,8 @@
           "Rewritten to NCLEX-RN difficulty and reviewed by the content team on 19 November 2026."
         ]
       },
-      "educationalObjective": "Recognize the findings of fluid volume excess."
+      "educationalObjective": "Recognize the findings of fluid volume excess.",
+      "status": "retired"
     },
     {
       "id": "c1a00010-0000-4000-8000-000000000015",
@@ -954,7 +959,8 @@
           "Rewritten to NCLEX-RN difficulty and reviewed by the content team on 19 November 2026."
         ]
       },
-      "educationalObjective": "Interpret an arterial blood gas."
+      "educationalObjective": "Interpret an arterial blood gas.",
+      "status": "retired"
     },
     {
       "id": "c1a00010-0000-4000-8000-000000000018",
@@ -1121,7 +1127,8 @@
           "Rewritten to NCLEX-RN difficulty and reviewed by the content team on 19 November 2026."
         ]
       },
-      "educationalObjective": "Interpret several ABG results."
+      "educationalObjective": "Interpret several ABG results.",
+      "status": "retired"
     },
     {
       "id": "c1a00010-0000-4000-8000-000000000019",
@@ -1170,7 +1177,8 @@
           "Rewritten to NCLEX-RN difficulty and reviewed by the content team on 19 November 2026."
         ]
       },
-      "educationalObjective": "Explain Kussmaul respirations."
+      "educationalObjective": "Explain Kussmaul respirations.",
+      "status": "retired"
     },
     {
       "id": "c1a00010-0000-4000-8000-000000000020",
@@ -1219,7 +1227,8 @@
           "Rewritten to NCLEX-RN difficulty and reviewed by the content team on 19 November 2026."
         ]
       },
-      "educationalObjective": "Predict the acid-base effect of losing gastric fluid."
+      "educationalObjective": "Predict the acid-base effect of losing gastric fluid.",
+      "status": "retired"
     },
     {
       "id": "c1a00010-0000-4000-8000-000000000021",
@@ -1317,7 +1326,8 @@
           "Rewritten to NCLEX-RN difficulty and reviewed by the content team on 19 November 2026."
         ]
       },
-      "educationalObjective": "Interpret a compensated ABG."
+      "educationalObjective": "Interpret a compensated ABG.",
+      "status": "retired"
     },
     {
       "id": "c1a00010-0000-4000-8000-000000000023",
@@ -1366,7 +1376,8 @@
           "Rewritten to NCLEX-RN difficulty and reviewed by the content team on 19 November 2026."
         ]
       },
-      "educationalObjective": "Assess collateral circulation before a radial ABG."
+      "educationalObjective": "Assess collateral circulation before a radial ABG.",
+      "status": "retired"
     },
     {
       "id": "c1a00010-0000-4000-8000-000000000024",
@@ -1515,7 +1526,8 @@
           "Rewritten to NCLEX-RN difficulty and reviewed by the content team on 19 November 2026."
         ]
       },
-      "educationalObjective": "Recognize dehydration in an older adult."
+      "educationalObjective": "Recognize dehydration in an older adult.",
+      "status": "retired"
     },
     {
       "id": "c1a00010-0000-4000-8000-000000000026",

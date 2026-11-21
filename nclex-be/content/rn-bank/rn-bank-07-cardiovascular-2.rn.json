@@ -121,7 +121,8 @@
           "Rewritten to NCLEX-RN difficulty and reviewed by the content team on 19 November 2026."
         ]
       },
-      "educationalObjective": "Identify the best indicator of fluid retention in heart failure."
+      "educationalObjective": "Identify the best indicator of fluid retention in heart failure.",
+      "status": "retired"
     },
     {
       "id": "c1a00007-0000-4000-8000-000000000002",
@@ -184,7 +185,8 @@
           "Rewritten to NCLEX-RN difficulty and reviewed by the content team on 19 November 2026."
         ]
       },
-      "educationalObjective": "Teach heart failure self-management."
+      "educationalObjective": "Teach heart failure self-management.",
+      "status": "retired"
     },
     {
       "id": "c1a00007-0000-4000-8000-000000000003",
@@ -234,7 +236,8 @@
           "Rewritten to NCLEX-RN difficulty and reviewed by the content team on 19 November 2026."
         ]
       },
-      "educationalObjective": "Interpret a BNP result."
+      "educationalObjective": "Interpret a BNP result.",
+      "status": "retired"
     },
     {
       "id": "c1a00007-0000-4000-8000-000000000004",
@@ -283,7 +286,8 @@
           "Rewritten to NCLEX-RN difficulty and reviewed by the content team on 19 November 2026."
         ]
       },
-      "educationalObjective": "Position a client with acute pulmonary edema."
+      "educationalObjective": "Position a client with acute pulmonary edema.",
+      "status": "retired"
     },
     {
       "id": "c1a00007-0000-4000-8000-000000000005",
@@ -332,7 +336,8 @@
           "Rewritten to NCLEX-RN difficulty and reviewed by the content team on 19 November 2026."
         ]
       },
-      "educationalObjective": "Apply the washout rule when switching from an ACE inhibitor to sacubitril/valsartan."
+      "educationalObjective": "Apply the washout rule when switching from an ACE inhibitor to sacubitril/valsartan.",
+      "status": "retired"
     },
     {
       "id": "c1a00007-0000-4000-8000-000000000006",
@@ -381,7 +386,8 @@
           "Rewritten to NCLEX-RN difficulty and reviewed by the content team on 19 November 2026."
         ]
       },
-      "educationalObjective": "Monitor potassium with potassium-sparing drug combinations."
+      "educationalObjective": "Monitor potassium with potassium-sparing drug combinations.",
+      "status": "retired"
     },
     {
       "id": "c1a00007-0000-4000-8000-000000000007",
@@ -462,7 +468,8 @@
           "title": "Clinic note",
           "body": "A 70-year-old with heart failure ran out of furosemide 5 days ago. Weight is up 2.7 kg (6 lb) since last week. Sleeps on 3 pillows. Crackles in both lung bases; 2+ ankle edema. Temperature 36.8 °C; SpO2 91% on room air."
         }
-      ]
+      ],
+      "status": "retired"
     },
     {
       "id": "c1a00007-0000-4000-8000-000000000008",
@@ -511,7 +518,8 @@
           "Rewritten to NCLEX-RN difficulty and reviewed by the content team on 19 November 2026."
         ]
       },
-      "educationalObjective": "Recognize early compensated shock."
+      "educationalObjective": "Recognize early compensated shock.",
+      "status": "retired"
     },
     {
       "id": "c1a00007-0000-4000-8000-000000000009",
@@ -595,7 +603,8 @@
           "Rewritten to NCLEX-RN difficulty and reviewed by the content team on 19 November 2026."
         ]
       },
-      "educationalObjective": "Distinguish types of shock by their findings."
+      "educationalObjective": "Distinguish types of shock by their findings.",
+      "status": "retired"
     },
     {
       "id": "c1a00007-0000-4000-8000-000000000010",
@@ -772,7 +781,8 @@
           "Rewritten to NCLEX-RN difficulty and reviewed by the content team on 19 November 2026."
         ]
       },
-      "educationalObjective": "Recognize cardiac tamponade."
+      "educationalObjective": "Recognize cardiac tamponade.",
+      "status": "retired"
     },
     {
       "id": "c1a00007-0000-4000-8000-000000000014",
@@ -821,7 +831,8 @@
           "Rewritten to NCLEX-RN difficulty and reviewed by the content team on 19 November 2026."
         ]
       },
-      "educationalObjective": "Recognize the signs of pericarditis."
+      "educationalObjective": "Recognize the signs of pericarditis.",
+      "status": "retired"
     },
     {
       "id": "c1a00007-0000-4000-8000-000000000015",
@@ -884,7 +895,8 @@
           "Rewritten to NCLEX-RN difficulty and reviewed by the content team on 19 November 2026."
         ]
       },
-      "educationalObjective": "Recognize signs of infective endocarditis."
+      "educationalObjective": "Recognize signs of infective endocarditis.",
+      "status": "retired"
     },
     {
       "id": "c1a00007-0000-4000-8000-000000000016",
@@ -934,7 +946,8 @@
           "Rewritten to NCLEX-RN difficulty and reviewed by the content team on 19 November 2026."
         ]
       },
-      "educationalObjective": "Evaluate teaching after a mechanical valve replacement."
+      "educationalObjective": "Evaluate teaching after a mechanical valve replacement.",
+      "status": "retired"
     },
     {
       "id": "c1a00007-0000-4000-8000-000000000017",
@@ -984,7 +997,8 @@
           "Rewritten to NCLEX-RN difficulty and reviewed by the content team on 19 November 2026."
         ]
       },
-      "educationalObjective": "Recognize the risk of nitrates in aortic stenosis."
+      "educationalObjective": "Recognize the risk of nitrates in aortic stenosis.",
+      "status": "retired"
     },
     {
       "id": "c1a00007-0000-4000-8000-000000000018",
@@ -1033,7 +1047,8 @@
           "Rewritten to NCLEX-RN difficulty and reviewed by the content team on 19 November 2026."
         ]
       },
-      "educationalObjective": "Set safe goals for treating a hypertensive emergency."
+      "educationalObjective": "Set safe goals for treating a hypertensive emergency.",
+      "status": "retired"
     },
     {
       "id": "c1a00007-0000-4000-8000-000000000019",
@@ -1082,7 +1097,8 @@
           "Rewritten to NCLEX-RN difficulty and reviewed by the content team on 19 November 2026."
         ]
       },
-      "educationalObjective": "Recognize nitroprusside toxicity."
+      "educationalObjective": "Recognize nitroprusside toxicity.",
+      "status": "retired"
     },
     {
       "id": "c1a00007-0000-4000-8000-000000000020",
@@ -1131,7 +1147,8 @@
           "Rewritten to NCLEX-RN difficulty and reviewed by the content team on 19 November 2026."
         ]
       },
-      "educationalObjective": "Recognize bleeding after cardiac surgery."
+      "educationalObjective": "Recognize bleeding after cardiac surgery.",
+      "status": "retired"
     },
     {
       "id": "c1a00007-0000-4000-8000-000000000021",
@@ -1180,7 +1197,8 @@
           "Rewritten to NCLEX-RN difficulty and reviewed by the content team on 19 November 2026."
         ]
       },
-      "educationalObjective": "Teach a client with Raynaud phenomenon."
+      "educationalObjective": "Teach a client with Raynaud phenomenon.",
+      "status": "retired"
     },
     {
       "id": "c1a00007-0000-4000-8000-000000000022",
@@ -1229,7 +1247,8 @@
           "Rewritten to NCLEX-RN difficulty and reviewed by the content team on 19 November 2026."
         ]
       },
-      "educationalObjective": "Teach an exercise program for peripheral arterial disease."
+      "educationalObjective": "Teach an exercise program for peripheral arterial disease.",
+      "status": "retired"
     },
     {
       "id": "c1a00007-0000-4000-8000-000000000023",
@@ -1278,7 +1297,8 @@
           "Rewritten to NCLEX-RN difficulty and reviewed by the content team on 19 November 2026."
         ]
       },
-      "educationalObjective": "Teach about resuming sexual activity after an MI."
+      "educationalObjective": "Teach about resuming sexual activity after an MI.",
+      "status": "retired"
     },
     {
       "id": "c1a00007-0000-4000-8000-000000000024",
@@ -1377,7 +1397,8 @@
           "Rewritten to NCLEX-RN difficulty and reviewed by the content team on 19 November 2026."
         ]
       },
-      "educationalObjective": "Recognize worsening heart failure during a home visit."
+      "educationalObjective": "Recognize worsening heart failure during a home visit.",
+      "status": "retired"
     }
   ]
 }

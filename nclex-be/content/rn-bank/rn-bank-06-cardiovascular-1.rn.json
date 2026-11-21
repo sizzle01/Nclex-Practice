@@ -176,7 +176,8 @@
           "Rewritten to NCLEX-RN difficulty and reviewed by the content team on 19 November 2026."
         ]
       },
-      "educationalObjective": "Identify a nitrate contraindication."
+      "educationalObjective": "Identify a nitrate contraindication.",
+      "status": "retired"
     },
     {
       "id": "c1a00006-0000-4000-8000-000000000003",
@@ -257,7 +258,8 @@
           "title": "Emergency department note, 0740",
           "body": "Client, 61 years old, reports chest pressure and nausea for 40 minutes.\n\n12-lead ECG: ST-segment elevation in leads II, III and aVF.\n\nHeart rate 56/min, blood pressure 98/60 mm Hg, SpO2 95% on room air."
         }
-      ]
+      ],
+      "status": "retired"
     },
     {
       "id": "c1a00006-0000-4000-8000-000000000004",
@@ -306,7 +308,8 @@
           "Rewritten to NCLEX-RN difficulty and reviewed by the content team on 19 November 2026."
         ]
       },
-      "educationalObjective": "Respond to a high aPTT on heparin."
+      "educationalObjective": "Respond to a high aPTT on heparin.",
+      "status": "retired"
     },
     {
       "id": "c1a00006-0000-4000-8000-000000000005",
@@ -370,7 +373,8 @@
           "Rewritten to NCLEX-RN difficulty and reviewed by the content team on 19 November 2026."
         ]
       },
-      "educationalObjective": "Evaluate warfarin teaching."
+      "educationalObjective": "Evaluate warfarin teaching.",
+      "status": "retired"
     },
     {
       "id": "c1a00006-0000-4000-8000-000000000006",
@@ -419,7 +423,8 @@
           "Rewritten to NCLEX-RN difficulty and reviewed by the content team on 19 November 2026."
         ]
       },
-      "educationalObjective": "Link electrolytes to digoxin toxicity."
+      "educationalObjective": "Link electrolytes to digoxin toxicity.",
+      "status": "retired"
     },
     {
       "id": "c1a00006-0000-4000-8000-000000000007",
@@ -449,7 +454,8 @@
           "Rewritten to NCLEX-RN difficulty and reviewed by the content team on 19 November 2026."
         ]
       },
-      "educationalObjective": "Calculate a weight-based heparin infusion rate."
+      "educationalObjective": "Calculate a weight-based heparin infusion rate.",
+      "status": "retired"
     },
     {
       "id": "c1a00006-0000-4000-8000-000000000008",
@@ -516,7 +522,8 @@
           "Rewritten to NCLEX-RN difficulty and reviewed by the content team on 19 November 2026."
         ]
       },
-      "educationalObjective": "Perform adult basic life support in order."
+      "educationalObjective": "Perform adult basic life support in order.",
+      "status": "retired"
     },
     {
       "id": "c1a00006-0000-4000-8000-000000000009",
@@ -565,7 +572,8 @@
           "Rewritten to NCLEX-RN difficulty and reviewed by the content team on 19 November 2026."
         ]
       },
-      "educationalObjective": "Treat unstable ventricular tachycardia with a pulse."
+      "educationalObjective": "Treat unstable ventricular tachycardia with a pulse.",
+      "status": "retired"
     },
     {
       "id": "c1a00006-0000-4000-8000-000000000010",
@@ -614,7 +622,8 @@
           "Rewritten to NCLEX-RN difficulty and reviewed by the content team on 19 November 2026."
         ]
       },
-      "educationalObjective": "Anticipate testing before cardioversion."
+      "educationalObjective": "Anticipate testing before cardioversion.",
+      "status": "retired"
     },
     {
       "id": "c1a00006-0000-4000-8000-000000000011",
@@ -696,7 +705,8 @@
           "Rewritten to NCLEX-RN difficulty and reviewed by the content team on 19 November 2026."
         ]
       },
-      "educationalObjective": "Distinguish arterial from venous disease."
+      "educationalObjective": "Distinguish arterial from venous disease.",
+      "status": "retired"
     },
     {
       "id": "c1a00006-0000-4000-8000-000000000012",
@@ -766,7 +776,8 @@
           "Rewritten to NCLEX-RN difficulty and reviewed by the content team on 19 November 2026."
         ]
       },
-      "educationalObjective": "Recognize pulmonary embolism."
+      "educationalObjective": "Recognize pulmonary embolism.",
+      "status": "retired"
     },
     {
       "id": "c1a00006-0000-4000-8000-000000000013",
@@ -815,7 +826,8 @@
           "Rewritten to NCLEX-RN difficulty and reviewed by the content team on 19 November 2026."
         ]
       },
-      "educationalObjective": "Take first action for suspected PE."
+      "educationalObjective": "Take first action for suspected PE.",
+      "status": "retired"
     },
     {
       "id": "c1a00006-0000-4000-8000-000000000014",
@@ -864,7 +876,8 @@
           "Rewritten to NCLEX-RN difficulty and reviewed by the content team on 19 November 2026."
         ]
       },
-      "educationalObjective": "Recognize angioedema from an ACE inhibitor."
+      "educationalObjective": "Recognize angioedema from an ACE inhibitor.",
+      "status": "retired"
     },
     {
       "id": "c1a00006-0000-4000-8000-000000000015",
@@ -934,7 +947,8 @@
           "Rewritten to NCLEX-RN difficulty and reviewed by the content team on 19 November 2026."
         ]
       },
-      "educationalObjective": "Teach lifestyle changes for hypertension."
+      "educationalObjective": "Teach lifestyle changes for hypertension.",
+      "status": "retired"
     },
     {
       "id": "c1a00006-0000-4000-8000-000000000016",
@@ -983,7 +997,8 @@
           "Rewritten to NCLEX-RN difficulty and reviewed by the content team on 19 November 2026."
         ]
       },
-      "educationalObjective": "Hold a loop diuretic for hypokalemia."
+      "educationalObjective": "Hold a loop diuretic for hypokalemia.",
+      "status": "retired"
     },
     {
       "id": "c1a00006-0000-4000-8000-000000000017",
@@ -1032,7 +1047,8 @@
           "Rewritten to NCLEX-RN difficulty and reviewed by the content team on 19 November 2026."
         ]
       },
-      "educationalObjective": "Respond to femoral access-site bleeding."
+      "educationalObjective": "Respond to femoral access-site bleeding.",
+      "status": "retired"
     },
     {
       "id": "c1a00006-0000-4000-8000-000000000018",
@@ -1081,7 +1097,8 @@
           "Rewritten to NCLEX-RN difficulty and reviewed by the content team on 19 November 2026."
         ]
       },
-      "educationalObjective": "Recognize aortic aneurysm rupture."
+      "educationalObjective": "Recognize aortic aneurysm rupture.",
+      "status": "retired"
     },
     {
       "id": "c1a00006-0000-4000-8000-000000000019",
@@ -1130,7 +1147,8 @@
           "Rewritten to NCLEX-RN difficulty and reviewed by the content team on 19 November 2026."
         ]
       },
-      "educationalObjective": "Recognize statin-related muscle injury."
+      "educationalObjective": "Recognize statin-related muscle injury.",
+      "status": "retired"
     },
     {
       "id": "c1a00006-0000-4000-8000-000000000020",
@@ -1229,7 +1247,8 @@
           "Rewritten to NCLEX-RN difficulty and reviewed by the content team on 19 November 2026."
         ]
       },
-      "educationalObjective": "Identify medications to hold before a contrast procedure."
+      "educationalObjective": "Identify medications to hold before a contrast procedure.",
+      "status": "retired"
     },
     {
       "id": "c1a00006-0000-4000-8000-000000000022",
@@ -1287,7 +1306,8 @@
           "Rewritten to NCLEX-RN difficulty and reviewed by the content team on 19 November 2026."
         ]
       },
-      "educationalObjective": "Plan care after femoral cardiac catheterization."
+      "educationalObjective": "Plan care after femoral cardiac catheterization.",
+      "status": "retired"
     },
     {
       "id": "c1a00006-0000-4000-8000-000000000023",
@@ -1336,7 +1356,8 @@
           "Rewritten to NCLEX-RN difficulty and reviewed by the content team on 19 November 2026."
         ]
       },
-      "educationalObjective": "Identify atrial flutter on a rhythm strip."
+      "educationalObjective": "Identify atrial flutter on a rhythm strip.",
+      "status": "retired"
     },
     {
       "id": "c1a00006-0000-4000-8000-000000000024",
@@ -1385,7 +1406,8 @@
           "Rewritten to NCLEX-RN difficulty and reviewed by the content team on 19 November 2026."
         ]
       },
-      "educationalObjective": "Treat symptomatic bradycardia."
+      "educationalObjective": "Treat symptomatic bradycardia.",
+      "status": "retired"
     },
     {
       "id": "c1a00006-0000-4000-8000-000000000025",
@@ -1434,7 +1456,8 @@
           "Rewritten to NCLEX-RN difficulty and reviewed by the content team on 19 November 2026."
         ]
       },
-      "educationalObjective": "Evaluate teaching after pacemaker insertion."
+      "educationalObjective": "Evaluate teaching after pacemaker insertion.",
+      "status": "retired"
     }
   ]
 }

@@ -472,7 +472,8 @@
           "Rewritten to NCLEX-RN difficulty and reviewed by the content team on 19 November 2026."
         ]
       },
-      "educationalObjective": "Teach correct use of sublingual nitroglycerin."
+      "educationalObjective": "Teach correct use of sublingual nitroglycerin.",
+      "status": "retired"
     },
     {
       "id": "c1a00005-0000-4000-8000-000000000015",
@@ -620,7 +621,8 @@
           "Rewritten to NCLEX-RN difficulty and reviewed by the content team on 19 November 2026."
         ]
       },
-      "educationalObjective": "Teach the sequence for bronchodilator and corticosteroid inhalers."
+      "educationalObjective": "Teach the sequence for bronchodilator and corticosteroid inhalers.",
+      "status": "retired"
     },
     {
       "id": "c1a00005-0000-4000-8000-000000000018",
@@ -670,7 +672,8 @@
           "Rewritten to NCLEX-RN difficulty and reviewed by the content team on 19 November 2026."
         ]
       },
-      "educationalObjective": "Give medications safely through an enteral tube."
+      "educationalObjective": "Give medications safely through an enteral tube.",
+      "status": "retired"
     },
     {
       "id": "c1a00005-0000-4000-8000-000000000019",
@@ -768,7 +771,8 @@
           "Rewritten to NCLEX-RN difficulty and reviewed by the content team on 19 November 2026."
         ]
       },
-      "educationalObjective": "Perform an intradermal injection."
+      "educationalObjective": "Perform an intradermal injection.",
+      "status": "retired"
     },
     {
       "id": "c1a00005-0000-4000-8000-000000000021",
@@ -817,7 +821,8 @@
           "Rewritten to NCLEX-RN difficulty and reviewed by the content team on 19 November 2026."
         ]
       },
-      "educationalObjective": "Measure liquid medications accurately."
+      "educationalObjective": "Measure liquid medications accurately.",
+      "status": "retired"
     },
     {
       "id": "c1a00005-0000-4000-8000-000000000022",
@@ -931,7 +936,8 @@
           "Rewritten to NCLEX-RN difficulty and reviewed by the content team on 19 November 2026."
         ]
       },
-      "educationalObjective": "Teach self-injection of insulin."
+      "educationalObjective": "Teach self-injection of insulin.",
+      "status": "retired"
     },
     {
       "id": "c1a00005-0000-4000-8000-000000000024",

@@ -421,7 +421,8 @@
           "Written to NCLEX-RN difficulty and reviewed by the content team on 20 November 2026."
         ]
       },
-      "educationalObjective": "Mix two insulins in one syringe."
+      "educationalObjective": "Mix two insulins in one syringe.",
+      "status": "retired"
     },
     {
       "id": "c1a00082-0000-4000-8000-000000000005",
@@ -520,7 +521,8 @@
           "Written to NCLEX-RN difficulty and reviewed by the content team on 20 November 2026."
         ]
       },
-      "educationalObjective": "Evaluate corticosteroid teaching."
+      "educationalObjective": "Evaluate corticosteroid teaching.",
+      "status": "retired"
     },
     {
       "id": "c1a00082-0000-4000-8000-000000000007",
@@ -569,7 +571,8 @@
           "Written to NCLEX-RN difficulty and reviewed by the content team on 20 November 2026."
         ]
       },
-      "educationalObjective": "Evaluate tuberculosis medication teaching."
+      "educationalObjective": "Evaluate tuberculosis medication teaching.",
+      "status": "retired"
     },
     {
       "id": "c1a00082-0000-4000-8000-000000000008",
@@ -731,7 +734,8 @@
           "Written to NCLEX-RN difficulty and reviewed by the content team on 20 November 2026."
         ]
       },
-      "educationalObjective": "Respond to an ACE inhibitor cough."
+      "educationalObjective": "Respond to an ACE inhibitor cough.",
+      "status": "retired"
     },
     {
       "id": "c1a00082-0000-4000-8000-000000000011",
@@ -977,7 +981,8 @@
           "Written to NCLEX-RN difficulty and reviewed by the content team on 20 November 2026."
         ]
       },
-      "educationalObjective": "Prevent constipation in older adults."
+      "educationalObjective": "Prevent constipation in older adults.",
+      "status": "retired"
     },
     {
       "id": "c1a00082-0000-4000-8000-000000000016",
@@ -1026,7 +1031,8 @@
           "Written to NCLEX-RN difficulty and reviewed by the content team on 20 November 2026."
         ]
       },
-      "educationalObjective": "Prevent aspiration during tube feeding."
+      "educationalObjective": "Prevent aspiration during tube feeding.",
+      "status": "retired"
     },
     {
       "id": "c1a00082-0000-4000-8000-000000000017",
@@ -1328,7 +1334,8 @@
           "Written to NCLEX-RN difficulty and reviewed by the content team on 20 November 2026."
         ]
       },
-      "educationalObjective": "Evaluate CPAP teaching."
+      "educationalObjective": "Evaluate CPAP teaching.",
+      "status": "retired"
     },
     {
       "id": "c1a00082-0000-4000-8000-000000000022",
@@ -1377,7 +1384,8 @@
           "Written to NCLEX-RN difficulty and reviewed by the content team on 20 November 2026."
         ]
       },
-      "educationalObjective": "Teach diet for dumping syndrome."
+      "educationalObjective": "Teach diet for dumping syndrome.",
+      "status": "retired"
     },
     {
       "id": "c1a00082-0000-4000-8000-000000000023",
