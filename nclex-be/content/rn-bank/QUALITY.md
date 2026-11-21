@@ -119,4 +119,5 @@ Written by `python3 -I build_all.py`; do not edit by hand. See `quality.py` for 
 | 127-trauma-cases-spleen-heat-cold-mci-standalone | 28 | yes | 1 | 0% | 33% (stem words) | 0% | 14 | 0/4/24 |
 | 128-mh-cases-depression-lithium-nms-clozapine | 24 | yes | 0 | 0% | 0% (-) | 0% | 12.5 | 0/4/20 |
 | 129-mh-cases-serotonin-maoi-anorexia-bulimia | 24 | yes | 0 | 0% | 0% (-) | 0% | 13 | 0/4/20 |
-| **Whole bank** | 2658 | | 1339 | 12% | 25% (assess first) | 5% | 27 | 118/1176/1364 |
+| 130-mh-cases-panic-ocd-ptsd-opioid | 24 | yes | 0 | 0% | 0% (-) | 0% | 12 | 0/4/20 |
+| **Whole bank** | 2682 | | 1339 | 12% | 25% (assess first) | 5% | 26 | 118/1180/1384 |
