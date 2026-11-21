@@ -42,6 +42,9 @@ CHUNK_TOPICS = {
     4: ("Gastrointestinal", "gastrointestinal",
         r"cirrho|pancrea|bowel|peptic|ulcer|gerd|proton pump|antiemetic|ondansetron|ostomy|nasogastric|tube feed|"
         r"hepat|lactulose|parenteral nutrition|colitis|crohn"),
+    5: ("Neurologic", "neurological",
+        r"stroke|seizure|intracranial|parkinson|multiple sclerosis|myasthenia|guillain|spinal cord|meningitis|"
+        r"cranial nerve|glasgow|phenytoin|levetiracetam|carbamazepine|levodopa|head injury"),
 }
 LATER_CHUNKS = {"pediatrics", "maternal-newborn", "mental-health"}
 CLINICAL = {"PHI.PA", "PHI.PPT", "PHI.RRP", "PHI.BCC", "HPM"}

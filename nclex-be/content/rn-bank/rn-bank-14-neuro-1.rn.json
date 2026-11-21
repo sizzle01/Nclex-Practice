@@ -91,7 +91,8 @@
           "Rewritten to NCLEX-RN difficulty and reviewed by the content team on 19 November 2026."
         ]
       },
-      "educationalObjective": "Predict deficits after a right hemisphere stroke."
+      "educationalObjective": "Predict deficits after a right hemisphere stroke.",
+      "status": "retired"
     },
     {
       "id": "c1a00014-0000-4000-8000-000000000002",
@@ -140,7 +141,8 @@
           "Rewritten to NCLEX-RN difficulty and reviewed by the content team on 19 November 2026."
         ]
       },
-      "educationalObjective": "Communicate with a client who has expressive aphasia."
+      "educationalObjective": "Communicate with a client who has expressive aphasia.",
+      "status": "retired"
     },
     {
       "id": "c1a00014-0000-4000-8000-000000000003",
@@ -189,7 +191,8 @@
           "Rewritten to NCLEX-RN difficulty and reviewed by the content team on 19 November 2026."
         ]
       },
-      "educationalObjective": "Identify the first diagnostic test for a suspected stroke."
+      "educationalObjective": "Identify the first diagnostic test for a suspected stroke.",
+      "status": "retired"
     },
     {
       "id": "c1a00014-0000-4000-8000-000000000004",
@@ -238,7 +241,8 @@
           "Rewritten to NCLEX-RN difficulty and reviewed by the content team on 19 November 2026."
         ]
       },
-      "educationalObjective": "Manage blood pressure before thrombolysis."
+      "educationalObjective": "Manage blood pressure before thrombolysis.",
+      "status": "retired"
     },
     {
       "id": "c1a00014-0000-4000-8000-000000000005",
@@ -287,7 +291,8 @@
           "Rewritten to NCLEX-RN difficulty and reviewed by the content team on 19 November 2026."
         ]
       },
-      "educationalObjective": "Plan care for homonymous hemianopsia."
+      "educationalObjective": "Plan care for homonymous hemianopsia.",
+      "status": "retired"
     },
     {
       "id": "c1a00014-0000-4000-8000-000000000006",
@@ -336,7 +341,8 @@
           "Rewritten to NCLEX-RN difficulty and reviewed by the content team on 19 November 2026."
         ]
       },
-      "educationalObjective": "Plan care for unilateral neglect."
+      "educationalObjective": "Plan care for unilateral neglect.",
+      "status": "retired"
     },
     {
       "id": "c1a00014-0000-4000-8000-000000000007",
@@ -406,7 +412,8 @@
           "Rewritten to NCLEX-RN difficulty and reviewed by the content team on 19 November 2026."
         ]
       },
-      "educationalObjective": "Teach the warning signs of stroke."
+      "educationalObjective": "Teach the warning signs of stroke.",
+      "status": "retired"
     },
     {
       "id": "c1a00014-0000-4000-8000-000000000008",
@@ -455,7 +462,8 @@
           "Rewritten to NCLEX-RN difficulty and reviewed by the content team on 19 November 2026."
         ]
       },
-      "educationalObjective": "Recognize early increased ICP."
+      "educationalObjective": "Recognize early increased ICP.",
+      "status": "retired"
     },
     {
       "id": "c1a00014-0000-4000-8000-000000000009",
@@ -504,7 +512,8 @@
           "Rewritten to NCLEX-RN difficulty and reviewed by the content team on 19 November 2026."
         ]
       },
-      "educationalObjective": "Recognize Cushing triad."
+      "educationalObjective": "Recognize Cushing triad.",
+      "status": "retired"
     },
     {
       "id": "c1a00014-0000-4000-8000-000000000010",
@@ -568,7 +577,8 @@
           "Rewritten to NCLEX-RN difficulty and reviewed by the content team on 19 November 2026."
         ]
       },
-      "educationalObjective": "Plan interventions to reduce ICP."
+      "educationalObjective": "Plan interventions to reduce ICP.",
+      "status": "retired"
     },
     {
       "id": "c1a00014-0000-4000-8000-000000000011",
@@ -617,7 +627,8 @@
           "Rewritten to NCLEX-RN difficulty and reviewed by the content team on 19 November 2026."
         ]
       },
-      "educationalObjective": "Monitor a client receiving mannitol."
+      "educationalObjective": "Monitor a client receiving mannitol.",
+      "status": "retired"
     },
     {
       "id": "c1a00014-0000-4000-8000-000000000012",
@@ -666,7 +677,8 @@
           "Rewritten to NCLEX-RN difficulty and reviewed by the content team on 19 November 2026."
         ]
       },
-      "educationalObjective": "Avoid nasal tubes in suspected basal skull fracture."
+      "educationalObjective": "Avoid nasal tubes in suspected basal skull fracture.",
+      "status": "retired"
     },
     {
       "id": "c1a00014-0000-4000-8000-000000000013",
@@ -715,7 +727,8 @@
           "Rewritten to NCLEX-RN difficulty and reviewed by the content team on 19 November 2026."
         ]
       },
-      "educationalObjective": "Recognize an epidural hematoma."
+      "educationalObjective": "Recognize an epidural hematoma.",
+      "status": "retired"
     },
     {
       "id": "c1a00014-0000-4000-8000-000000000014",
@@ -745,7 +758,8 @@
           "Rewritten to NCLEX-RN difficulty and reviewed by the content team on 19 November 2026."
         ]
       },
-      "educationalObjective": "Calculate a Glasgow Coma Scale score."
+      "educationalObjective": "Calculate a Glasgow Coma Scale score.",
+      "status": "retired"
     },
     {
       "id": "c1a00014-0000-4000-8000-000000000015",
@@ -794,7 +808,8 @@
           "Rewritten to NCLEX-RN difficulty and reviewed by the content team on 19 November 2026."
         ]
       },
-      "educationalObjective": "Teach a client after a concussion."
+      "educationalObjective": "Teach a client after a concussion.",
+      "status": "retired"
     },
     {
       "id": "c1a00014-0000-4000-8000-000000000016",
@@ -844,7 +859,8 @@
           "Rewritten to NCLEX-RN difficulty and reviewed by the content team on 19 November 2026."
         ]
       },
-      "educationalObjective": "Treat status epilepticus."
+      "educationalObjective": "Treat status epilepticus.",
+      "status": "retired"
     },
     {
       "id": "c1a00014-0000-4000-8000-000000000017",
@@ -893,7 +909,8 @@
           "Rewritten to NCLEX-RN difficulty and reviewed by the content team on 19 November 2026."
         ]
       },
-      "educationalObjective": "Document a seizure."
+      "educationalObjective": "Document a seizure.",
+      "status": "retired"
     },
     {
       "id": "c1a00014-0000-4000-8000-000000000018",
@@ -942,7 +959,8 @@
           "Rewritten to NCLEX-RN difficulty and reviewed by the content team on 19 November 2026."
         ]
       },
-      "educationalObjective": "Give IV phenytoin safely."
+      "educationalObjective": "Give IV phenytoin safely.",
+      "status": "retired"
     },
     {
       "id": "c1a00014-0000-4000-8000-000000000019",
@@ -991,7 +1009,8 @@
           "Rewritten to NCLEX-RN difficulty and reviewed by the content team on 19 November 2026."
         ]
       },
-      "educationalObjective": "Recognize phenytoin toxicity."
+      "educationalObjective": "Recognize phenytoin toxicity.",
+      "status": "retired"
     },
     {
       "id": "c1a00014-0000-4000-8000-000000000020",
@@ -1040,7 +1059,8 @@
           "Rewritten to NCLEX-RN difficulty and reviewed by the content team on 19 November 2026."
         ]
       },
-      "educationalObjective": "Teach a client about antiseizure medication."
+      "educationalObjective": "Teach a client about antiseizure medication.",
+      "status": "retired"
     },
     {
       "id": "c1a00014-0000-4000-8000-000000000021",
@@ -1089,7 +1109,8 @@
           "Rewritten to NCLEX-RN difficulty and reviewed by the content team on 19 November 2026."
         ]
       },
-      "educationalObjective": "Recognize signs of meningitis."
+      "educationalObjective": "Recognize signs of meningitis.",
+      "status": "retired"
     },
     {
       "id": "c1a00014-0000-4000-8000-000000000022",
@@ -1187,7 +1208,8 @@
           "Rewritten to NCLEX-RN difficulty and reviewed by the content team on 19 November 2026."
         ]
       },
-      "educationalObjective": "Position a client for a lumbar puncture."
+      "educationalObjective": "Position a client for a lumbar puncture.",
+      "status": "retired"
     },
     {
       "id": "c1a00014-0000-4000-8000-000000000024",
@@ -1236,7 +1258,8 @@
           "Rewritten to NCLEX-RN difficulty and reviewed by the content team on 19 November 2026."
         ]
       },
-      "educationalObjective": "Interpret abnormal posturing."
+      "educationalObjective": "Interpret abnormal posturing.",
+      "status": "retired"
     },
     {
       "id": "c1a00014-0000-4000-8000-000000000025",
@@ -1329,7 +1352,8 @@
           "Rewritten to NCLEX-RN difficulty and reviewed by the content team on 19 November 2026."
         ]
       },
-      "educationalObjective": "Recognize signs of hemorrhagic stroke."
+      "educationalObjective": "Recognize signs of hemorrhagic stroke.",
+      "status": "retired"
     }
   ]
 }

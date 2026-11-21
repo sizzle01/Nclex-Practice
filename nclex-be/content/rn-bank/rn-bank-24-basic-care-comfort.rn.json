@@ -676,7 +676,8 @@
           "Rewritten to NCLEX-RN difficulty and reviewed by the content team on 19 November 2026."
         ]
       },
-      "educationalObjective": "Provide safe oral care to a client with dysphagia."
+      "educationalObjective": "Provide safe oral care to a client with dysphagia.",
+      "status": "retired"
     },
     {
       "id": "c1a00024-0000-4000-8000-000000000014",
@@ -936,7 +937,8 @@
           "Rewritten to NCLEX-RN difficulty and reviewed by the content team on 19 November 2026."
         ]
       },
-      "educationalObjective": "Prevent foot drop."
+      "educationalObjective": "Prevent foot drop.",
+      "status": "retired"
     },
     {
       "id": "c1a00024-0000-4000-8000-000000000019",

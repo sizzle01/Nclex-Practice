@@ -2,21 +2,21 @@
 
 Written by `python3 -I build_all.py` (coverage.py); do not edit by hand.
 
-**2382 of 5000 questions** (48%), 102 case studies, 56 bowtie questions. Multiple choice is 56% of the bank.
+**2410 of 5000 questions** (48%), 106 case studies, 57 bowtie questions. Multiple choice is 55% of the bank.
 
 ## By test plan category
 
 | Category | Test plan | Target | Have | To write | Next chunk |
 |---|---|---|---|---|---|
-| Management of Care | 18% | 900 | 360 | 540 | 21 |
-| Safety and Infection Prevention and Control | 13% | 650 | 262 | 388 | 15 |
-| Health Promotion and Maintenance | 9% | 450 | 183 | 267 | 10 |
-| Psychosocial Integrity | 9% | 450 | 152 | 298 | 11 |
-| Basic Care and Comfort | 9% | 450 | 162 | 288 | 11 |
-| Pharmacological and Parenteral Therapies | 16% | 800 | 409 | 391 | 15 |
-| Reduction of Risk Potential | 12% | 600 | 259 | 341 | 13 |
-| Physiological Adaptation | 14% | 700 | 595 | 105 | 4 |
-| **Total** | 100% | 5000 | 2382 | 2618 | 100 |
+| Management of Care | 18% | 900 | 366 | 534 | 21 |
+| Safety and Infection Prevention and Control | 13% | 650 | 263 | 387 | 15 |
+| Health Promotion and Maintenance | 9% | 450 | 186 | 264 | 10 |
+| Psychosocial Integrity | 9% | 450 | 153 | 297 | 11 |
+| Basic Care and Comfort | 9% | 450 | 164 | 286 | 11 |
+| Pharmacological and Parenteral Therapies | 16% | 800 | 413 | 387 | 15 |
+| Reduction of Risk Potential | 12% | 600 | 263 | 337 | 13 |
+| Physiological Adaptation | 14% | 700 | 602 | 98 | 4 |
+| **Total** | 100% | 5000 | 2410 | 2590 | 100 |
 
 ## Chunks
 
@@ -35,7 +35,7 @@ The wave chunks are paused (2026-11-20) while the bank is rebuilt around case st
 
 ## Case conversion (CASE-MAP.md)
 
-**612 of 2014 active questions (30%) are inside full case studies**; the goal is 85%. 368 older questions are retired (F26, retired-questions.json): their topics were rebuilt as case studies.
+**636 of 1963 active questions (32%) are inside full case studies**; the goal is 85%. 447 older questions are retired (F26, retired-questions.json): their topics were rebuilt as case studies.
 
 | Chunk | Topic | Batch files | Questions | Case studies |
 |---|---|---|---|---|
@@ -43,12 +43,13 @@ The wave chunks are paused (2026-11-20) while the bank is rebuilt around case st
 | 2 | Pulmonary disorders with respiratory pharmacology | b104, b105, b106, b107 | 100 | 16 |
 | 3 | Endocrine disorders with insulin, antidiabetic, thyroid and corticosteroid drugs | b108, b109, b110, b111 | 100 | 16 |
 | 4 | Gastrointestinal disorders with PUD, GERD and antiemetic drugs | b112, b113, b114, b115 | 100 | 16 |
+| 5 | Neurologic disorders, head-to-toe and cranial nerve assessment, neuro and cholinergic drugs | b116, b117, b118, b119 | 100 | 16 |
 
-**Next: conversion chunk 5**: Neurologic disorders with antiseizure and Parkinson drugs and cranial nerve assessment (CASE-MAP.md).
+**Next: conversion chunk 6**: Renal, hematologic and oncologic disorders with hematopoietic drugs and thrombolytics (CASE-MAP.md, book_topics.py).
 
 ## Review book checklist (book_topics.py)
 
-**34 of 96 subtopics covered** (at least 2 case studies), 16 started (1 case), 46 not yet covered.
+**40 of 96 subtopics covered** (at least 2 case studies), 15 started (1 case), 41 not yet covered.
 
 | Section | Subtopic | Status | Case studies |
 |---|---|---|---|
@@ -59,19 +60,19 @@ The wave chunks are paused (2026-11-20) while the bank is rebuilt around case st
 | Fundamental | IV fluid | covered | Hyperosmolar hyperglycemic state; SIADH with a hyponatremic seizure |
 | Fundamental | Electrolyte imbalances | covered | Heart failure with digoxin toxicity; SIADH with a hyponatremic seizure; Adrenal crisis in Addison disease; Refeeding syndrome on parenteral nutrition; Hematoma and hypocalcemia after thyroidectomy |
 | Fundamental | Lab | covered | Severe community-acquired pneumonia in an older adult; Acute cholangitis and ERCP; Acute hepatitis B and exposures; Small bowel obstruction with strangulation |
-| Holistic health assessment | Head-to-toe assessment | **not yet** | - |
-| Holistic health assessment | Head-to-toe assessment template | **not yet** | - |
-| Holistic health assessment | Cranial nerve | **not yet** | - |
+| Holistic health assessment | Head-to-toe assessment | covered | Head-to-toe assessment that uncovers a chronic subdural hematoma; Head-to-toe admission template in long-term care |
+| Holistic health assessment | Head-to-toe assessment template | covered | Head-to-toe admission template in long-term care; Head-to-toe assessment that uncovers a chronic subdural hematoma |
+| Holistic health assessment | Cranial nerve | covered | Cranial nerve assessment after craniotomy; Bell palsy and trigeminal neuralgia |
 | Pharmacology | Antimicrobials: antibiotics | covered | Active pulmonary tuberculosis; Cystic fibrosis exacerbation; Infective endocarditis in a client who injects drugs; Severe C. difficile colitis and toxic megacolon |
 | Pharmacology | Antimicrobials: antiviral | started | Influenza outbreak in long-term care |
 | Pharmacology | Antimicrobials: antifungal | **not yet** | - |
 | Pharmacology | Antimicrobials: antiparasitic | **not yet** | - |
-| Pharmacology | Antilipidemics | **not yet** | - |
+| Pharmacology | Antilipidemics | started | TIA, carotid endarterectomy and statin therapy |
 | Pharmacology | Hematopoietic medications | **not yet** | - |
 | Pharmacology | Cardiovascular: ANS overview | covered | Pheochromocytoma; Anaphylactic shock in a client taking a beta blocker |
 | Pharmacology | Cardiovascular: adrenergic agonists | covered | Anaphylactic shock in a client taking a beta blocker; Cardiogenic shock with a pulmonary artery catheter |
 | Pharmacology | Cardiovascular: adrenergic antagonists | covered | Pheochromocytoma; Type A aortic dissection |
-| Pharmacology | Cardiovascular: PSNS overview and cholinergic medications | **not yet** | - |
+| Pharmacology | Cardiovascular: PSNS overview and cholinergic medications | covered | Myasthenic crisis versus cholinergic crisis; Delirium on top of dementia |
 | Pharmacology | Cardiovascular: anticholinergic | covered | Drug-induced complete heart block and transcutaneous pacing; Over-the-counter cold medicines in an older adult |
 | Pharmacology | Cardiovascular: hypertension | started | Hypertensive emergency after stopping clonidine |
 | Pharmacology | Cardiovascular: heart failure | covered | Heart failure with digoxin toxicity; Acute pulmonary edema in heart failure |
@@ -79,7 +80,7 @@ The wave chunks are paused (2026-11-20) while the bank is rebuilt around case st
 | Pharmacology | Cardiovascular: angina | started | NSTEMI with a retroperitoneal bleed after catheterization |
 | Pharmacology | Cardiovascular: fluid volume excess | covered | Acute pulmonary edema in heart failure; Ascites, paracentesis and spontaneous bacterial peritonitis |
 | Pharmacology | Coagulation: anticoagulants | covered | Heparin-induced thrombocytopenia with arterial thrombosis; Warfarin over-anticoagulation with a GI bleed and a mechanical valve; Lower GI bleed on apixaban |
-| Pharmacology | Coagulation: antiplatelets | started | NSTEMI with a retroperitoneal bleed after catheterization |
+| Pharmacology | Coagulation: antiplatelets | covered | NSTEMI with a retroperitoneal bleed after catheterization; TIA, carotid endarterectomy and statin therapy |
 | Pharmacology | Coagulation: thrombolytics | started | Acute ischemic stroke in the thrombolytic window |
 | Pharmacology | Pain, fever and inflammation | covered | Acetaminophen overdose; Opioid-induced respiratory depression in sleep apnea |
 | Pharmacology | Endocrine: thyroid and antithyroid | covered | Thyroid storm; Myxedema coma; Levothyroxine over-replacement in an older adult |
@@ -88,7 +89,7 @@ The wave chunks are paused (2026-11-20) while the bank is rebuilt around case st
 | Pharmacology | Endocrine: insulin | covered | Hyperosmolar hyperglycemic state; Insulin pump failure leading to DKA; Euglycemic DKA on an SGLT2 inhibitor after surgery |
 | Pharmacology | GI: PUD and GERD | started | Perforated duodenal ulcer |
 | Pharmacology | GI: antiemetics | started | Chemotherapy-induced nausea and vomiting |
-| Pharmacology | Neurologic | started | Status epilepticus after missed antiseizure doses |
+| Pharmacology | Neurologic | covered | Status epilepticus after missed antiseizure doses; Parkinson disease after hip surgery; New-onset epilepsy and antiseizure drug safety; Multiple sclerosis relapse |
 | Pharmacology | Respiratory: asthma and bronchoconstrictive disorders | covered | Status asthmaticus in an adult; COPD with CO2 narcosis from too much oxygen |
 | Pharmacology | Respiratory: allergic disorders | started | Over-the-counter cold medicines in an older adult |
 | Pharmacology | Respiratory: decongestant, antitussive, expectorant, mucolytic | started | Over-the-counter cold medicines in an older adult |
@@ -139,30 +140,30 @@ The wave chunks are paused (2026-11-20) while the bank is rebuilt around case st
 | Med-Surg | Gastrointestinal disorders | covered | Hepatic encephalopathy in cirrhosis; Severe acute pancreatitis |
 | Med-Surg | Hemodynamic monitoring | covered | Cardiogenic shock with a pulmonary artery catheter; Arterial line and CVP monitoring after open AAA repair |
 | Med-Surg | Musculoskeletal disorders | covered | Hemorrhage after a total hip replacement; Acute limb ischemia and compartment syndrome |
-| Med-Surg | Neurologic disorders | covered | Rising intracranial pressure after a head injury; Acute ischemic stroke |
+| Med-Surg | Neurologic disorders | covered | Rising intracranial pressure after a head injury; Acute ischemic stroke; Myasthenic crisis versus cholinergic crisis; Guillain-Barre syndrome with respiratory failure; Intracerebral hemorrhage on warfarin; Bacterial meningitis with meningococcal sepsis; Parkinson disease after hip surgery; Multiple sclerosis relapse; ALS and goals of care |
 | Med-Surg | Pacemaker | covered | Permanent pacemaker failure to capture; Drug-induced complete heart block and transcutaneous pacing |
 | Med-Surg | Pulmonary disorders | covered | ARDS on mechanical ventilation; Active pulmonary tuberculosis |
 | Med-Surg | Renal disorders | started | Acute kidney injury with hyperkalemia |
 | Med-Surg | Sepsis | covered | Older adult with sepsis from a urinary tract infection; Septic shock from an anastomotic leak after colectomy |
 | Med-Surg | Sexually transmitted infections | **not yet** | - |
-| Med-Surg | Shock | covered | Cardiogenic shock with a pulmonary artery catheter; Anaphylactic shock in a client taking a beta blocker |
-| Med-Surg | Trauma | covered | Flail chest with pulmonary contusion; Tension pneumothorax after a car crash; Major burn with inhalation injury |
+| Med-Surg | Shock | covered | Cardiogenic shock with a pulmonary artery catheter; Anaphylactic shock in a client taking a beta blocker; Cervical spinal cord injury, neurogenic shock and autonomic dysreflexia |
+| Med-Surg | Trauma | covered | Flail chest with pulmonary contusion; Tension pneumothorax after a car crash; Major burn with inhalation injury; Epidural hematoma with a lucid interval; Cervical spinal cord injury, neurogenic shock and autonomic dysreflexia |
 | Med-Surg | Transplant rejection | **not yet** | - |
 
 ## Item types in the whole bank
 
 | Type | Questions | Share |
 |---|---|---|
-| multiple_choice | 1336 | 56% |
-| matrix_mc | 297 | 12% |
-| sata | 219 | 9% |
-| dropdown_cloze | 112 | 5% |
-| highlight_table | 93 | 4% |
-| highlight_text | 65 | 3% |
+| multiple_choice | 1337 | 55% |
+| matrix_mc | 305 | 13% |
+| sata | 225 | 9% |
+| dropdown_cloze | 115 | 5% |
+| highlight_table | 95 | 4% |
+| highlight_text | 67 | 3% |
 | ordered_response | 57 | 2% |
-| bowtie | 56 | 2% |
+| bowtie | 57 | 2% |
 | fill_blank_calc | 50 | 2% |
-| dropdown_table | 33 | 1% |
+| dropdown_table | 34 | 1% |
 | select_n | 25 | 1% |
-| multiple_response_grouping | 23 | 1% |
-| matrix_mr | 16 | 1% |
+| multiple_response_grouping | 25 | 1% |
+| matrix_mr | 18 | 1% |

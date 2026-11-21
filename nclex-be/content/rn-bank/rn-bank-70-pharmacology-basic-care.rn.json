@@ -1390,7 +1390,8 @@
           "Written to NCLEX-RN difficulty and reviewed by the content team on 20 November 2026."
         ]
       },
-      "educationalObjective": "Supervise feeding for a client with dysphagia."
+      "educationalObjective": "Supervise feeding for a client with dysphagia.",
+      "status": "retired"
     },
     {
       "id": "c1a00070-0000-4000-8000-000000000021",
@@ -1495,7 +1496,8 @@
           "Written to NCLEX-RN difficulty and reviewed by the content team on 20 November 2026."
         ]
       },
-      "educationalObjective": "Recognize pain in a client who cannot self-report."
+      "educationalObjective": "Recognize pain in a client who cannot self-report.",
+      "status": "retired"
     },
     {
       "id": "c1a00070-0000-4000-8000-000000000022",
@@ -1544,7 +1546,8 @@
           "Written to NCLEX-RN difficulty and reviewed by the content team on 20 November 2026."
         ]
       },
-      "educationalObjective": "Position an unconscious client for mouth care."
+      "educationalObjective": "Position an unconscious client for mouth care.",
+      "status": "retired"
     },
     {
       "id": "c1a00070-0000-4000-8000-000000000023",
