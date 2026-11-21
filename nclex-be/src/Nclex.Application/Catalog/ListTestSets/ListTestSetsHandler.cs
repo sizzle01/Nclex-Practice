@@ -52,5 +52,6 @@ public sealed class ListTestSetsHandler(IAppDbContext db, PlanTierGuard planTier
         set.AccessTier,
         viewer.IsLocked(set.AccessTier),
         myLastAttempt,
-        AdaptiveRules.For(set));
+        AdaptiveRules.For(set),
+        set.TopicSection);
 }

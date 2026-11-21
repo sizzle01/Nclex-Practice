@@ -51,6 +51,9 @@ public sealed class TestSet
     /// <summary>True when results give no Pass, Close to pass or Fail outcome (F24 timed case-study blocks).</summary>
     public bool OutcomeHidden { get; private set; }
 
+    /// <summary>The review-book section of a topic test (F27); null for every other set.</summary>
+    public string? TopicSection { get; private set; }
+
     /// <summary>Sample sets can be started by users who have not verified their email yet.</summary>
     public bool IsSample { get; private set; }
 
@@ -187,7 +190,8 @@ public sealed class TestSet
         AllowBackNav,
         IsSample,
         AccessTier,
-        OutcomeHidden);
+        OutcomeHidden,
+        TopicSection);
 
     /// <summary>Shows the set to candidates, or hides it again.</summary>
     public void SetPublished(bool isPublished) => IsPublished = isPublished;
@@ -215,6 +219,7 @@ public sealed class TestSet
         IsSample = settings.IsSample;
         AccessTier = settings.AccessTier;
         OutcomeHidden = settings.OutcomeHidden;
+        TopicSection = settings.TopicSection;
         QuestionCount = questionCount;
     }
 }

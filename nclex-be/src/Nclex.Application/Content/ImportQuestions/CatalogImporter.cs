@@ -344,11 +344,20 @@ public sealed class CatalogImporter(IAppDbContext db)
         }
     }
 
+    private const int MaxTopicSectionLength = 80;
+
     private static void CheckSettings(ImportedTestSet set, string path, List<ImportIssue> issues)
     {
         if (string.IsNullOrWhiteSpace(set.Title))
         {
             issues.Add(new ImportIssue($"{path}.title", ImportIssueCodes.Required, "The set needs a title."));
+        }
+
+        // A topic test (F27) names its review-book section for the Practice page's Topics tab.
+        if (set.TopicSection is { } section && (string.IsNullOrWhiteSpace(section) || section.Length > MaxTopicSectionLength))
+        {
+            issues.Add(new ImportIssue($"{path}.topicSection", ImportIssueCodes.InvalidValue,
+                $"A topic section needs 1 to {MaxTopicSectionLength} characters."));
         }
 
         // Adaptive exams (mode cat) are checked by CheckAdaptive; a catConfig on any other set is a mistake.

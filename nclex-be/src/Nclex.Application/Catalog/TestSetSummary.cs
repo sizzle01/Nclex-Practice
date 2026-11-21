@@ -10,6 +10,7 @@ namespace Nclex.Application.Catalog;
 /// <param name="Locked">True when the set is premium and the user's plan is free.</param>
 /// <param name="MyLastAttempt">The user's latest submitted attempt of the set; null when they have never finished it.</param>
 /// <param name="Adaptive">The length rules of an adaptive exam (F19); null for every other set.</param>
+/// <param name="TopicSection">The review-book section of a topic test (F27); null for every other set.</param>
 public sealed record TestSetSummary(
     Guid Id,
     string Title,
@@ -24,7 +25,8 @@ public sealed record TestSetSummary(
     PlanTier AccessTier,
     bool Locked,
     LastAttemptSummary? MyLastAttempt,
-    AdaptiveRules? Adaptive = null);
+    AdaptiveRules? Adaptive = null,
+    string? TopicSection = null);
 
 /// <summary>
 /// How long an adaptive exam can run (architecture.md 5.8). Its <c>questionCount</c> is the
@@ -55,6 +57,7 @@ public sealed record LastAttemptSummary(Guid Id, decimal ScorePct, DateTimeOffse
 /// <param name="MyLastAttempt">The user's latest submitted attempt of the set; null when they have never finished it.</param>
 /// <param name="Adaptive">The length rules of an adaptive exam (F19); null for every other set.</param>
 /// <param name="OutcomeHidden">True when results give no Pass, Close to pass or Fail (F24), so no pass mark is shown.</param>
+/// <param name="TopicSection">The review-book section of a topic test (F27); null for every other set.</param>
 public sealed record TestSetDetail(
     Guid Id,
     ExamTrack Track,
@@ -75,7 +78,8 @@ public sealed record TestSetDetail(
     bool Locked,
     LastAttemptSummary? MyLastAttempt,
     AdaptiveRules? Adaptive = null,
-    bool OutcomeHidden = false)
+    bool OutcomeHidden = false,
+    string? TopicSection = null)
 {
     /// <summary>The detail of <paramref name="set"/> as <paramref name="viewer"/> sees it.</summary>
     public static TestSetDetail From(TestSet set, CatalogViewer viewer, LastAttemptSummary? myLastAttempt = null) => new(
@@ -98,7 +102,8 @@ public sealed record TestSetDetail(
         viewer.IsLocked(set.AccessTier),
         myLastAttempt,
         AdaptiveRules.For(set),
-        set.OutcomeHidden);
+        set.OutcomeHidden,
+        set.TopicSection);
 }
 
 /// <summary>Which sets a user may see at all; locking is separate.</summary>

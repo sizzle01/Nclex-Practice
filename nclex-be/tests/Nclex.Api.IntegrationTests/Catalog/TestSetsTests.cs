@@ -43,6 +43,34 @@ public sealed class TestSetsTests(ApiFactory factory)
     }
 
     [Fact]
+    public async Task A_topic_test_carries_its_review_book_section()
+    {
+        var (questions, setId) = (CatalogContent.NewIds(1), Guid.NewGuid());
+        var topic = CatalogContent.Set(setId, $"ABG {setId:N}", questions, new { revealMode = "exam", topicSection = "Fundamental" });
+        await _content.ImportOkAsync(CatalogContent.File("RN", questions, testSets: [topic]));
+        var user = await _api.SignupNewUserAsync();
+
+        var listed = (await ListAllAsync(user.AccessToken, "/api/v1/test-sets")).Single(s => s.Id == setId);
+        var detail = await GetJsonAsync(user.AccessToken, $"/api/v1/test-sets/{setId}");
+
+        listed.TopicSection.ShouldBe("Fundamental");
+        detail.GetProperty("topicSection").GetString().ShouldBe("Fundamental");
+        detail.GetProperty("revealMode").GetString().ShouldBe("exam");
+        detail.GetProperty("timed").GetBoolean().ShouldBeFalse();
+    }
+
+    [Fact]
+    public async Task A_blank_topic_section_is_refused()
+    {
+        var (questions, setId) = (CatalogContent.NewIds(1), Guid.NewGuid());
+        var topic = CatalogContent.Set(setId, $"Blank topic {setId:N}", questions, new { topicSection = " " });
+
+        var result = await _content.ImportAsync(CatalogContent.File("RN", questions, testSets: [topic]));
+
+        result.Issues.ShouldContain(i => i.Path == "testSets[0].topicSection");
+    }
+
+    [Fact]
     public async Task Set_json_matches_the_api_contract_and_holds_no_items()
     {
         var (questions, setId) = (CatalogContent.NewIds(1), Guid.NewGuid());

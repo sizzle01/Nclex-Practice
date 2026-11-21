@@ -22,6 +22,10 @@ namespace Nclex.Domain.Entities;
 /// True when results give no Pass, Close to pass or Fail (F24: timed case-study blocks, where the point is
 /// to find where clinical judgment breaks down, not to give a verdict). False for every other set.
 /// </param>
+/// <param name="TopicSection">
+/// The review-book section of a topic test (F27), e.g. "Pharmacology"; null for every other set. The Practice
+/// page's Topics tab groups topic tests under these sections.
+/// </param>
 public sealed record TestSetSettings(
     string Title,
     string? Description,
@@ -35,7 +39,8 @@ public sealed record TestSetSettings(
     bool AllowBackNav,
     bool IsSample,
     PlanTier AccessTier,
-    bool OutcomeHidden = false)
+    bool OutcomeHidden = false,
+    string? TopicSection = null)
 {
     /// <summary>
     /// The database CHECK "NOT timed OR per_question_sec IS NOT NULL OR time_budget_sec IS NOT NULL":
