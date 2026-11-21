@@ -2,21 +2,21 @@
 
 Written by `python3 -I build_all.py` (coverage.py); do not edit by hand.
 
-**2682 of 5000 questions** (54%), 150 case studies, 59 bowtie questions. Multiple choice is 50% of the bank.
+**2710 of 5000 questions** (54%), 154 case studies, 60 bowtie questions. Multiple choice is 49% of the bank.
 
 ## By test plan category
 
 | Category | Test plan | Target | Have | To write | Next chunk |
 |---|---|---|---|---|---|
-| Management of Care | 18% | 900 | 380 | 520 | 22 |
-| Safety and Infection Prevention and Control | 13% | 650 | 283 | 367 | 16 |
+| Management of Care | 18% | 900 | 383 | 517 | 23 |
+| Safety and Infection Prevention and Control | 13% | 650 | 287 | 363 | 16 |
 | Health Promotion and Maintenance | 9% | 450 | 202 | 248 | 11 |
-| Psychosocial Integrity | 9% | 450 | 183 | 267 | 12 |
+| Psychosocial Integrity | 9% | 450 | 201 | 249 | 11 |
 | Basic Care and Comfort | 9% | 450 | 174 | 276 | 12 |
-| Pharmacological and Parenteral Therapies | 16% | 800 | 488 | 312 | 13 |
+| Pharmacological and Parenteral Therapies | 16% | 800 | 491 | 309 | 13 |
 | Reduction of Risk Potential | 12% | 600 | 278 | 322 | 14 |
 | Physiological Adaptation | 14% | 700 | 694 | 6 | 0 |
-| **Total** | 100% | 5000 | 2682 | 2318 | 100 |
+| **Total** | 100% | 5000 | 2710 | 2290 | 100 |
 
 ## Chunks
 
@@ -35,7 +35,7 @@ The wave chunks are paused (2026-11-20) while the bank is rebuilt around case st
 
 ## Case conversion (CASE-MAP.md)
 
-**900 of 2134 active questions (42%) are inside full case studies**; the goal is 85%. 548 older questions are retired (F26, retired-questions.json): their topics were rebuilt as case studies.
+**924 of 2162 active questions (43%) are inside full case studies**; the goal is 85%. 548 older questions are retired (F26, retired-questions.json): their topics were rebuilt as case studies.
 
 | Chunk | Topic | Batch files | Questions | Case studies |
 |---|---|---|---|---|
@@ -156,16 +156,16 @@ The wave chunks are paused (2026-11-20) while the bank is rebuilt around case st
 
 | Type | Questions | Share |
 |---|---|---|
-| multiple_choice | 1339 | 50% |
-| matrix_mc | 393 | 15% |
-| sata | 297 | 11% |
-| dropdown_cloze | 157 | 6% |
-| highlight_table | 136 | 5% |
+| multiple_choice | 1340 | 49% |
+| matrix_mc | 400 | 15% |
+| sata | 306 | 11% |
+| dropdown_cloze | 161 | 6% |
+| highlight_table | 140 | 5% |
 | highlight_text | 70 | 3% |
-| ordered_response | 61 | 2% |
-| bowtie | 59 | 2% |
+| ordered_response | 62 | 2% |
+| bowtie | 60 | 2% |
 | fill_blank_calc | 56 | 2% |
-| dropdown_table | 36 | 1% |
+| dropdown_table | 37 | 1% |
 | multiple_response_grouping | 29 | 1% |
 | select_n | 25 | 1% |
 | matrix_mr | 24 | 1% |
