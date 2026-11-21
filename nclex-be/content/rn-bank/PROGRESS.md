@@ -2,21 +2,21 @@
 
 Written by `python3 -I build_all.py` (coverage.py); do not edit by hand.
 
-**2734 of 5000 questions** (55%), 158 case studies, 60 bowtie questions. Multiple choice is 49% of the bank.
+**2758 of 5000 questions** (55%), 162 case studies, 60 bowtie questions. Multiple choice is 49% of the bank.
 
 ## By test plan category
 
 | Category | Test plan | Target | Have | To write | Next chunk |
 |---|---|---|---|---|---|
-| Management of Care | 18% | 900 | 386 | 514 | 23 |
+| Management of Care | 18% | 900 | 387 | 513 | 23 |
 | Safety and Infection Prevention and Control | 13% | 650 | 288 | 362 | 16 |
-| Health Promotion and Maintenance | 9% | 450 | 202 | 248 | 11 |
-| Psychosocial Integrity | 9% | 450 | 220 | 230 | 10 |
+| Health Promotion and Maintenance | 9% | 450 | 203 | 247 | 11 |
+| Psychosocial Integrity | 9% | 450 | 237 | 213 | 10 |
 | Basic Care and Comfort | 9% | 450 | 174 | 276 | 12 |
-| Pharmacological and Parenteral Therapies | 16% | 800 | 492 | 308 | 14 |
-| Reduction of Risk Potential | 12% | 600 | 278 | 322 | 14 |
+| Pharmacological and Parenteral Therapies | 16% | 800 | 496 | 304 | 14 |
+| Reduction of Risk Potential | 12% | 600 | 279 | 321 | 14 |
 | Physiological Adaptation | 14% | 700 | 694 | 6 | 0 |
-| **Total** | 100% | 5000 | 2734 | 2266 | 100 |
+| **Total** | 100% | 5000 | 2758 | 2242 | 100 |
 
 ## Chunks
 
@@ -35,7 +35,7 @@ The wave chunks are paused (2026-11-20) while the bank is rebuilt around case st
 
 ## Case conversion (CASE-MAP.md)
 
-**948 of 2170 active questions (44%) are inside full case studies**; the goal is 85%. 564 older questions are retired (F26, retired-questions.json): their topics were rebuilt as case studies.
+**972 of 2194 active questions (44%) are inside full case studies**; the goal is 85%. 564 older questions are retired (F26, retired-questions.json): their topics were rebuilt as case studies.
 
 | Chunk | Topic | Batch files | Questions | Case studies |
 |---|---|---|---|---|
@@ -158,10 +158,10 @@ The wave chunks are paused (2026-11-20) while the bank is rebuilt around case st
 | Type | Questions | Share |
 |---|---|---|
 | multiple_choice | 1340 | 49% |
-| matrix_mc | 408 | 15% |
-| sata | 314 | 11% |
-| dropdown_cloze | 165 | 6% |
-| highlight_table | 144 | 5% |
+| matrix_mc | 417 | 15% |
+| sata | 321 | 12% |
+| dropdown_cloze | 169 | 6% |
+| highlight_table | 148 | 5% |
 | highlight_text | 70 | 3% |
 | ordered_response | 62 | 2% |
 | bowtie | 60 | 2% |
