@@ -76,7 +76,7 @@ internal static class ImportQuestionsCommand
 
         Console.WriteLine(string.Create(
             CultureInfo.InvariantCulture,
-            $"Imported {file.Questions.Count} {file.Track} question(s): {result.Created} created, {result.Updated} updated, {result.Unchanged} unchanged."));
+            $"Imported {file.Questions.Count} {file.Track} question(s): {result.Created} created, {result.Updated} updated, {result.Unchanged} unchanged, {result.Retired} retired."));
         PrintCounts("bank(s)", file.Banks?.Count ?? 0, result.Banks);
         PrintCounts("test set(s)", file.TestSets?.Count ?? 0, result.TestSets);
         PrintCounts("media file(s)", file.Media?.Count ?? 0, result.Media);

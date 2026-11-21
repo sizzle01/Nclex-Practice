@@ -22,6 +22,9 @@ public sealed record ImportResult(int Created, int Updated, int Unchanged, IRead
     /// <summary>What happened to the file's subtopics.</summary>
     public ImportCounts Subtopics { get; init; } = ImportCounts.None;
 
+    /// <summary>Questions this import retired (F26); questions that were already retired are not counted.</summary>
+    public int Retired { get; init; }
+
     public bool Succeeded => Issues.Count == 0;
 
     public static ImportResult Failed(IReadOnlyList<ImportIssue> issues) => new(0, 0, 0, issues);
@@ -55,6 +58,9 @@ public static class ImportIssueCodes
 
     /// <summary>Two subtopics on a track have the same name once case, punctuation and plurals are ignored.</summary>
     public const string DuplicateSubtopic = "DUPLICATE_SUBTOPIC";
+
+    /// <summary>A test set or bank in the file lists a question the file marks as retired (F26).</summary>
+    public const string RetiredQuestion = "RETIRED_QUESTION";
 
     /// <summary>The item type has no module yet, so its items can't be validated or graded.</summary>
     public const string UnsupportedItemType = "UNSUPPORTED_ITEM_TYPE";

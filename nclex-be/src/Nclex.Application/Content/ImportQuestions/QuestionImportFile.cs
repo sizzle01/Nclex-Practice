@@ -57,6 +57,10 @@ public sealed record QuestionImportFile(
 /// <param name="CaseStudyId">The case study it belongs to, in this file or already imported; none by default.</param>
 /// <param name="CasePosition">Its place in the case, 1 to 6; given exactly when <paramref name="CaseStudyId"/> is.</param>
 /// <param name="Subtopics">Slugs of 1 to 3 subtopics of its Client Needs leaf; left out, its tags stay as they are.</param>
+/// <param name="Status">
+/// active (default) or retired (F26). "retired" takes the question out of future sets and the adaptive pool;
+/// the importer never brings a retired question back, so leaving the field out later changes nothing.
+/// </param>
 public sealed record ImportedQuestion(
     Guid Id,
     ItemType ItemType,
@@ -74,7 +78,8 @@ public sealed record ImportedQuestion(
     JsonElement? Exhibits = null,
     Guid? CaseStudyId = null,
     short? CasePosition = null,
-    IReadOnlyList<string>? Subtopics = null)
+    IReadOnlyList<string>? Subtopics = null,
+    QuestionStatus Status = QuestionStatus.Active)
 {
     public const int DefaultTimeAllotmentSec = 120;
 }

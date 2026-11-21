@@ -1,6 +1,7 @@
 using System.Text.Json;
 using Microsoft.EntityFrameworkCore;
 using Nclex.Application.Abstractions;
+using Nclex.Domain.Audit;
 using Nclex.Domain.Content;
 using Nclex.Domain.Entities;
 using Nclex.Domain.ItemTypes;
@@ -25,6 +26,7 @@ public sealed class ImportQuestionsHandler(
     MediaImporter mediaImporter,
     CaseStudyImporter caseStudyImporter,
     SubtopicImporter subtopicImporter,
+    IAuditLog audit,
     TimeProvider clock)
 {
     /// <summary>Imports a file that has no files beside it, so it can't list media.</summary>
@@ -46,6 +48,7 @@ public sealed class ImportQuestionsHandler(
         var media = await mediaImporter.ValidateAsync(file.Media, mediaReferences, files, issues, cancellationToken);
         await catalog.ValidateAsync(file, cases, issues, cancellationToken);
         await subtopicImporter.ValidateAsync(file, issues, cancellationToken);
+        CheckRetiredNotListed(file, issues);
         if (issues.Count > 0)
         {
             return ImportResult.Failed(issues);
@@ -211,7 +214,7 @@ public sealed class ImportQuestionsHandler(
             .Select(g => new { QuestionId = g.Key, Latest = g.Max(v => v.Version) })
             .ToDictionaryAsync(x => x.QuestionId, x => x.Latest, cancellationToken);
 
-        int created = 0, updated = 0, unchanged = 0;
+        int created = 0, updated = 0, unchanged = 0, retired = 0;
         var toPublish = new List<(Question Question, QuestionVersion Version, QuestionVersion? Previous)>();
         foreach (var (source, item) in questions)
         {
@@ -252,8 +255,49 @@ public sealed class ImportQuestionsHandler(
             question.Publish(version, previous, now);
         }
 
+        // Retire after publishing, so a question retired in its first import still has a current version for
+        // past-attempt review and the admin bank. Retiring only goes one way (F26).
+        foreach (var (source, _) in questions)
+        {
+            var question = existing.TryGetValue(source.Id, out var stored) ? stored : toPublish.Single(p => p.Question.Id == source.Id).Question;
+            if (source.Status == QuestionStatus.Retired && !question.IsRetired)
+            {
+                question.Retire(now);
+                audit.RecordEntityEvent(AuditActions.QuestionRetired, author.Id, AuditActions.QuestionEntity, question.Id.ToString(), new { source = "import" });
+                retired++;
+            }
+        }
+
         await db.SaveChangesAsync(cancellationToken);
-        return new ImportResult(created, updated, unchanged, []);
+        return new ImportResult(created, updated, unchanged, []) { Retired = retired };
+    }
+
+    /// <summary>A file that retires a question must not also list it in a test set or bank (F26).</summary>
+    private static void CheckRetiredNotListed(QuestionImportFile file, List<ImportIssue> issues)
+    {
+        var retired = file.Questions.Where(q => q.Status == QuestionStatus.Retired).Select(q => q.Id).ToHashSet();
+        if (retired.Count == 0)
+        {
+            return;
+        }
+
+        foreach (var (set, s) in (file.TestSets ?? []).Select((set, s) => (set, s)))
+        {
+            foreach (var (id, i) in set.QuestionIds.Select((id, i) => (id, i)).Where(x => retired.Contains(x.id)))
+            {
+                issues.Add(new ImportIssue($"testSets[{s}].questionIds[{i}]", ImportIssueCodes.RetiredQuestion,
+                    $"Question {id} is retired in this file and cannot be listed in test set \"{set.Title}\"."));
+            }
+        }
+
+        foreach (var (bank, b) in (file.Banks ?? []).Select((bank, b) => (bank, b)))
+        {
+            foreach (var (id, i) in bank.QuestionIds.Select((id, i) => (id, i)).Where(x => retired.Contains(x.id)))
+            {
+                issues.Add(new ImportIssue($"banks[{b}].questionIds[{i}]", ImportIssueCodes.RetiredQuestion,
+                    $"Question {id} is retired in this file and cannot be listed in a bank."));
+            }
+        }
     }
 
     private QuestionVersion AddVersion(Question question, int number, AuthoredItem item, User author, DateTimeOffset now)
