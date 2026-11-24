@@ -2490,7 +2490,7 @@
  "c1e00000-0000-4000-8000-000000006221": {
   "id": "c1e00000-0000-4000-8000-000000006221",
   "title": "Labor and delivery",
-  "description": "46 questions on labor and delivery (3 case studies and 28 single questions in all). Untimed; answers, rationales and your result at the end.",
+  "description": "47 questions on labor and delivery (3 case studies and 29 single questions in all). Untimed; answers, rationales and your result at the end.",
   "mode": "practice",
   "revealMode": "exam",
   "timed": false,
@@ -2543,7 +2543,8 @@
    "c1a00093-0000-4000-8000-000000000016",
    "c1a00095-0000-4000-8000-000000000009",
    "c1a00098-0000-4000-8000-000000000001",
-   "c1a00138-0000-4000-8000-000000000003"
+   "c1a00138-0000-4000-8000-000000000003",
+   "c1a00142-0000-4000-8000-000000000004"
   ],
   "isPublished": true
  },
@@ -2594,7 +2595,7 @@
  "c1e00000-0000-4000-8000-000000006261": {
   "id": "c1e00000-0000-4000-8000-000000006261",
   "title": "Newborn",
-  "description": "38 questions on newborn (2 case studies and 26 single questions in all). Untimed; answers, rationales and your result at the end.",
+  "description": "39 questions on newborn (2 case studies and 27 single questions in all). Untimed; answers, rationales and your result at the end.",
   "mode": "practice",
   "revealMode": "exam",
   "timed": false,
@@ -2639,7 +2640,8 @@
    "c1a00085-0000-4000-8000-000000000010",
    "c1a00097-0000-4000-8000-000000000011",
    "c1a00097-0000-4000-8000-000000000017",
-   "c1a00138-0000-4000-8000-000000000001"
+   "c1a00138-0000-4000-8000-000000000001",
+   "c1a00142-0000-4000-8000-000000000002"
   ],
   "isPublished": true
  },
@@ -2703,7 +2705,7 @@
  "c1e00000-0000-4000-8000-000000006321": {
   "id": "c1e00000-0000-4000-8000-000000006321",
   "title": "Postpartum",
-  "description": "33 questions on postpartum (3 case studies and 15 single questions in all). Untimed; answers, rationales and your result at the end.",
+  "description": "35 questions on postpartum (3 case studies and 17 single questions in all). Untimed; answers, rationales and your result at the end.",
   "mode": "practice",
   "revealMode": "exam",
   "timed": false,
@@ -2743,14 +2745,16 @@
    "c1a00085-0000-4000-8000-000000000015",
    "c1a00097-0000-4000-8000-000000000010",
    "c1a00097-0000-4000-8000-000000000021",
-   "c1a00138-0000-4000-8000-000000000002"
+   "c1a00138-0000-4000-8000-000000000002",
+   "c1a00142-0000-4000-8000-000000000001",
+   "c1a00142-0000-4000-8000-000000000002"
   ],
   "isPublished": true
  },
  "c1e00000-0000-4000-8000-000000006341": {
   "id": "c1e00000-0000-4000-8000-000000006341",
   "title": "Preeclampsia",
-  "description": "11 questions on preeclampsia (1 case studies and 5 single questions in all). Untimed; answers, rationales and your result at the end.",
+  "description": "12 questions on preeclampsia (1 case studies and 6 single questions in all). Untimed; answers, rationales and your result at the end.",
   "mode": "practice",
   "revealMode": "exam",
   "timed": false,
@@ -2768,7 +2772,8 @@
    "c1a00026-0000-4000-8000-000000000017",
    "c1a00026-0000-4000-8000-000000000022",
    "c1a00028-0000-4000-8000-000000000003",
-   "c1a00082-0000-4000-8000-000000000001"
+   "c1a00082-0000-4000-8000-000000000001",
+   "c1a00142-0000-4000-8000-000000000001"
   ],
   "isPublished": true
  },
