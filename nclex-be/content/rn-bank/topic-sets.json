@@ -785,7 +785,7 @@
  "c1e00000-0000-4000-8000-000000005261": {
   "id": "c1e00000-0000-4000-8000-000000005261",
   "title": "Antimicrobials: antiparasitic",
-  "description": "22 questions on antimicrobials: antiparasitic (1 case studies and 16 single questions in all). Untimed; answers, rationales and your result at the end.",
+  "description": "23 questions on antimicrobials: antiparasitic (1 case studies and 17 single questions in all). Untimed; answers, rationales and your result at the end.",
   "mode": "practice",
   "revealMode": "exam",
   "timed": false,
@@ -814,7 +814,8 @@
    "c1a00103-0000-4000-8000-000000000004",
    "c1a00111-0000-4000-8000-000000000004",
    "c1a00115-0000-4000-8000-000000000004",
-   "c1a00119-0000-4000-8000-000000000004"
+   "c1a00119-0000-4000-8000-000000000004",
+   "c1a00155-0000-4000-8000-000000000004"
   ],
   "isPublished": true
  },
@@ -2982,7 +2983,7 @@
  "c1e00000-0000-4000-8000-000000006401": {
   "id": "c1e00000-0000-4000-8000-000000006401",
   "title": "Growth and development: infant, part 1 of 2",
-  "description": "31 questions on growth and development: infant (4 case studies and 37 single questions in all). Untimed; answers, rationales and your result at the end.",
+  "description": "31 questions on growth and development: infant (4 case studies and 38 single questions in all). Untimed; answers, rationales and your result at the end.",
   "mode": "practice",
   "revealMode": "exam",
   "timed": false,
@@ -3027,7 +3028,7 @@
  "c1e00000-0000-4000-8000-000000006402": {
   "id": "c1e00000-0000-4000-8000-000000006402",
   "title": "Growth and development: infant, part 2 of 2",
-  "description": "30 questions on growth and development: infant (4 case studies and 37 single questions in all). Untimed; answers, rationales and your result at the end.",
+  "description": "31 questions on growth and development: infant (4 case studies and 38 single questions in all). Untimed; answers, rationales and your result at the end.",
   "mode": "practice",
   "revealMode": "exam",
   "timed": false,
@@ -3064,7 +3065,8 @@
    "c1a00093-0000-4000-8000-000000000017",
    "c1a00097-0000-4000-8000-000000000012",
    "c1a00150-0000-4000-8000-000000000002",
-   "c1a00150-0000-4000-8000-000000000004"
+   "c1a00150-0000-4000-8000-000000000004",
+   "c1a00155-0000-4000-8000-000000000002"
   ],
   "isPublished": true
  },
@@ -3354,7 +3356,7 @@
  "c1e00000-0000-4000-8000-000000006481": {
   "id": "c1e00000-0000-4000-8000-000000006481",
   "title": "Growth and development: adolescence",
-  "description": "33 questions on growth and development: adolescence (3 case studies and 15 single questions in all). Untimed; answers, rationales and your result at the end.",
+  "description": "34 questions on growth and development: adolescence (3 case studies and 16 single questions in all). Untimed; answers, rationales and your result at the end.",
   "mode": "practice",
   "revealMode": "exam",
   "timed": false,
@@ -3394,7 +3396,8 @@
    "c1a00077-0000-4000-8000-000000000015",
    "c1a00077-0000-4000-8000-000000000019",
    "c1a00085-0000-4000-8000-000000000019",
-   "c1a00086-0000-4000-8000-000000000024"
+   "c1a00086-0000-4000-8000-000000000024",
+   "c1a00155-0000-4000-8000-000000000004"
   ],
   "isPublished": true
  },
@@ -3702,7 +3705,7 @@
  "c1e00000-0000-4000-8000-000000006621": {
   "id": "c1e00000-0000-4000-8000-000000006621",
   "title": "Altered immunity disorders",
-  "description": "46 questions on altered immunity disorders (6 case studies and 10 single questions in all). Untimed; answers, rationales and your result at the end.",
+  "description": "47 questions on altered immunity disorders (6 case studies and 11 single questions in all). Untimed; answers, rationales and your result at the end.",
   "mode": "practice",
   "revealMode": "exam",
   "timed": false,
@@ -3755,7 +3758,8 @@
    "c1a00076-0000-4000-8000-000000000008",
    "c1a00084-0000-4000-8000-000000000021",
    "c1a00086-0000-4000-8000-000000000025",
-   "c1a00094-0000-4000-8000-000000000012"
+   "c1a00094-0000-4000-8000-000000000012",
+   "c1a00155-0000-4000-8000-000000000001"
   ],
   "isPublished": true
  },
@@ -4131,7 +4135,7 @@
  "c1e00000-0000-4000-8000-000000006801": {
   "id": "c1e00000-0000-4000-8000-000000006801",
   "title": "Renal disorders, part 1 of 2",
-  "description": "36 questions on renal disorders (9 case studies and 17 single questions in all). Untimed; answers, rationales and your result at the end.",
+  "description": "36 questions on renal disorders (9 case studies and 18 single questions in all). Untimed; answers, rationales and your result at the end.",
   "mode": "practice",
   "revealMode": "exam",
   "timed": false,
@@ -4181,7 +4185,7 @@
  "c1e00000-0000-4000-8000-000000006802": {
   "id": "c1e00000-0000-4000-8000-000000006802",
   "title": "Renal disorders, part 2 of 2",
-  "description": "35 questions on renal disorders (9 case studies and 17 single questions in all). Untimed; answers, rationales and your result at the end.",
+  "description": "36 questions on renal disorders (9 case studies and 18 single questions in all). Untimed; answers, rationales and your result at the end.",
   "mode": "practice",
   "revealMode": "exam",
   "timed": false,
@@ -4223,7 +4227,8 @@
    "c1a00090-0000-4000-8000-000000000003",
    "c1a00096-0000-4000-8000-000000000011",
    "c1a00099-0000-4000-8000-000000000001",
-   "c1a00123-0000-4000-8000-000000000004"
+   "c1a00123-0000-4000-8000-000000000004",
+   "c1a00155-0000-4000-8000-000000000001"
   ],
   "isPublished": true
  },
@@ -4500,7 +4505,7 @@
  "c1e00000-0000-4000-8000-000000006901": {
   "id": "c1e00000-0000-4000-8000-000000006901",
   "title": "Transplant rejection",
-  "description": "7 questions on transplant rejection (1 case studies and 1 single questions in all). Untimed; answers, rationales and your result at the end.",
+  "description": "8 questions on transplant rejection (1 case studies and 2 single questions in all). Untimed; answers, rationales and your result at the end.",
   "mode": "practice",
   "revealMode": "exam",
   "timed": false,
@@ -4514,7 +4519,8 @@
    "c1a00121-0000-4000-8000-000000000010",
    "c1a00121-0000-4000-8000-000000000011",
    "c1a00121-0000-4000-8000-000000000012",
-   "c1a00072-0000-4000-8000-000000000004"
+   "c1a00072-0000-4000-8000-000000000004",
+   "c1a00155-0000-4000-8000-000000000001"
   ],
   "isPublished": false
  }
