@@ -140,4 +140,5 @@ Written by `python3 -I build_all.py`; do not edit by hand. See `quality.py` for 
 | 148-peds-cases-appendix-scoliosis-headss-t1dm | 24 | yes | 0 | 0% | 0% (-) | 0% | 13 | 0/4/20 |
 | 149-peds-cases-pyloric-intussusception-hirschsprung-cleft | 24 | yes | 0 | 0% | 0% (-) | 0% | 12.5 | 0/4/20 |
 | 150-peds-cases-catchup-meningitis-foreign-body-lead-standalone | 28 | yes | 1 | 0% | 25% (stem words) | 0% | 12 | 0/4/24 |
-| **Whole bank** | 3186 | | 1345 | 12% | 25% (assess first) | 5% | 24 | 118/1260/1808 |
+| 151-pharm-cases-crypto-metronidazole-statin-acei | 24 | yes | 0 | 0% | 0% (-) | 0% | 10.5 | 0/4/20 |
+| **Whole bank** | 3210 | | 1345 | 12% | 25% (assess first) | 5% | 24 | 118/1264/1828 |
