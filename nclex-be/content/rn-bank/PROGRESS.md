@@ -35,7 +35,7 @@ The wave chunks are paused (2026-11-20) while the bank is rebuilt around case st
 
 ## Case conversion (CASE-MAP.md)
 
-**1284 of 2428 active questions (53%) are inside full case studies**; the goal is 85%. 658 older questions are retired (F26, retired-questions.json): their topics were rebuilt as case studies.
+**1284 of 2421 active questions (53%) are inside full case studies**; the goal is 85%. 665 older questions are retired (F26, retired-questions.json): their topics were rebuilt as case studies.
 
 | Chunk | Topic | Batch files | Questions | Case studies |
 |---|---|---|---|---|
@@ -50,19 +50,20 @@ The wave chunks are paused (2026-11-20) while the bank is rebuilt around case st
 | 9 | Mental health part 2: abuse and violence, perinatal mood, dementia, alcohol, ECT, grief and remaining drugs | b132, b133, b134 | 76 | 12 |
 | 10 | Maternity part 1: bleeding, diabetes, Rh, labor and fetal monitoring, prenatal care, newborn and postpartum | b135, b136, b137, b138 | 100 | 16 |
 | 11 | Maternity part 2: hyperemesis, PPROM, HELLP, screening, intrapartum emergencies, newborn and postpartum | b139, b140, b141, b142 | 100 | 16 |
+| 12 | Pediatrics part 1: cardiac, renal, neurologic and blood disorders | b143, b144, b145, b146 | 100 | 16 |
 
-**Next: conversion chunk 12**: Pediatrics: growth and development, pediatric disorders by system and vaccines (CASE-MAP.md, book_topics.py).
+**Next: conversion chunk 13**: Pediatrics part 2: growth and development by age, respiratory and GI disorders and the vaccination schedule (CASE-MAP.md, book_topics.py).
 
 ## Review book checklist (book_topics.py)
 
-**69 of 96 subtopics covered** (at least 2 case studies), 18 started (1 case), 9 not yet covered.
+**74 of 96 subtopics covered** (at least 2 case studies), 19 started (1 case), 3 not yet covered.
 
 | Section | Subtopic | Status | Case studies |
 |---|---|---|---|
 | Fundamental | ABG | covered | Status asthmaticus in an adult; COPD with CO2 narcosis from too much oxygen; ARDS on mechanical ventilation; Euglycemic DKA on an SGLT2 inhibitor after surgery |
 | Fundamental | ABO blood group | covered | Warfarin over-anticoagulation with a GI bleed and a mechanical valve; Lower GI bleed on apixaban; Disseminated intravascular coagulation from sepsis; Splenic laceration with hemorrhagic shock; Rh incompatibility and Rho(D) immune globulin; Pathologic newborn jaundice from ABO incompatibility |
 | Fundamental | Basic EKG concept | covered | Drug-induced complete heart block and transcutaneous pacing; Ventricular tachycardia in a client with an ICD; Permanent pacemaker failure to capture; New atrial fibrillation with a rapid rate from thyrotoxicosis |
-| Fundamental | Dosage calculation | covered | Heparin-induced thrombocytopenia with arterial thrombosis; Cardiogenic shock with a pulmonary artery catheter; Chemotherapy-induced nausea and vomiting; Acetaminophen overdose; Diabetic foot ulcer with osteomyelitis; Massive pulmonary embolism treated with alteplase; Severe falciparum malaria in a returning traveler; Preterm labor with tocolysis and magnesium; Postpartum hemorrhage needing second-line uterotonics |
+| Fundamental | Dosage calculation | covered | Heparin-induced thrombocytopenia with arterial thrombosis; Cardiogenic shock with a pulmonary artery catheter; Chemotherapy-induced nausea and vomiting; Acetaminophen overdose; Diabetic foot ulcer with osteomyelitis; Massive pulmonary embolism treated with alteplase; Severe falciparum malaria in a returning traveler; Preterm labor with tocolysis and magnesium; Postpartum hemorrhage needing second-line uterotonics; Kawasaki disease; Infant heart failure from a ventricular septal defect; Febrile seizure progressing to status epilepticus; Hemophilia A with a knee bleed |
 | Fundamental | IV fluid | covered | Hyperosmolar hyperglycemic state; SIADH with a hyponatremic seizure |
 | Fundamental | Electrolyte imbalances | covered | Heart failure with digoxin toxicity; SIADH with a hyponatremic seizure; Adrenal crisis in Addison disease; Refeeding syndrome on parenteral nutrition; Hematoma and hypocalcemia after thyroidectomy; Missed hemodialysis with hyperkalemia and fluid overload; Tumor lysis syndrome; TURP with bladder irrigation and TUR syndrome; Rhabdomyolysis after a long lie on the floor; Bulimia nervosa with severe hypokalemia |
 | Fundamental | Lab | covered | Severe community-acquired pneumonia in an older adult; Acute cholangitis and ERCP; Acute hepatitis B and exposures; Small bowel obstruction with strangulation; Febrile neutropenia after chemotherapy; Tumor lysis syndrome; Lupus flare with lupus nephritis |
@@ -74,14 +75,14 @@ The wave chunks are paused (2026-11-20) while the bank is rebuilt around case st
 | Pharmacology | Antimicrobials: antifungal | started | Candidemia treated with antifungal drugs |
 | Pharmacology | Antimicrobials: antiparasitic | started | Severe falciparum malaria in a returning traveler |
 | Pharmacology | Antilipidemics | started | TIA, carotid endarterectomy and statin therapy |
-| Pharmacology | Hematopoietic medications | covered | Anemia and mineral bone disease of chronic kidney disease; Febrile neutropenia after chemotherapy; Pernicious anemia compared with iron deficiency |
+| Pharmacology | Hematopoietic medications | covered | Anemia and mineral bone disease of chronic kidney disease; Febrile neutropenia after chemotherapy; Pernicious anemia compared with iron deficiency; Iron deficiency anemia from too much cow's milk |
 | Pharmacology | Cardiovascular: ANS overview | covered | Pheochromocytoma; Anaphylactic shock in a client taking a beta blocker |
 | Pharmacology | Cardiovascular: adrenergic agonists | covered | Anaphylactic shock in a client taking a beta blocker; Cardiogenic shock with a pulmonary artery catheter |
 | Pharmacology | Cardiovascular: adrenergic antagonists | covered | Pheochromocytoma; Type A aortic dissection |
 | Pharmacology | Cardiovascular: PSNS overview and cholinergic medications | covered | Myasthenic crisis versus cholinergic crisis; Delirium on top of dementia |
 | Pharmacology | Cardiovascular: anticholinergic | covered | Drug-induced complete heart block and transcutaneous pacing; Over-the-counter cold medicines in an older adult |
 | Pharmacology | Cardiovascular: hypertension | started | Hypertensive emergency after stopping clonidine |
-| Pharmacology | Cardiovascular: heart failure | covered | Heart failure with digoxin toxicity; Acute pulmonary edema in heart failure |
+| Pharmacology | Cardiovascular: heart failure | covered | Heart failure with digoxin toxicity; Acute pulmonary edema in heart failure; Infant heart failure from a ventricular septal defect |
 | Pharmacology | Cardiovascular: antidysrhythmic | covered | Ventricular tachycardia in a client with an ICD; New atrial fibrillation with a rapid rate from thyrotoxicosis |
 | Pharmacology | Cardiovascular: angina | started | NSTEMI with a retroperitoneal bleed after catheterization |
 | Pharmacology | Cardiovascular: fluid volume excess | covered | Acute pulmonary edema in heart failure; Ascites, paracentesis and spontaneous bacterial peritonitis |
@@ -129,15 +130,15 @@ The wave chunks are paused (2026-11-20) while the bank is rebuilt around case st
 | Maternity | Preeclampsia | covered | Preeclampsia with severe features at 35 weeks; HELLP syndrome with liver hematoma |
 | Maternity | Pregnancy terminology | covered | First prenatal visit with pregnancy terminology; Third-trimester visit with expected discomforts |
 | Maternity | Rh incompatibility | covered | Rh incompatibility and Rho(D) immune globulin; Rh-sensitized pregnancy with fetal anemia |
-| Pediatrics | Growth and development: infant | **not yet** | - |
-| Pediatrics | Growth and development: toddler | **not yet** | - |
-| Pediatrics | Growth and development: preschool | **not yet** | - |
+| Pediatrics | Growth and development: infant | started | Abusive head trauma in an infant |
+| Pediatrics | Growth and development: toddler | covered | Iron deficiency anemia from too much cow's milk; Iron tablet poisoning in a toddler |
+| Pediatrics | Growth and development: preschool | started | Care after a pediatric cardiac catheterization |
 | Pediatrics | Growth and development: school age | **not yet** | - |
 | Pediatrics | Growth and development: adolescence | **not yet** | - |
-| Pediatrics | Cardiac disorders | **not yet** | - |
-| Pediatrics | Genitourinary disorders | **not yet** | - |
-| Pediatrics | Hematologic disorders | started | Sickle cell crisis with acute chest syndrome |
-| Pediatrics | Neurologic disorders | **not yet** | - |
+| Pediatrics | Cardiac disorders | covered | Tetralogy of Fallot with a tet spell; Kawasaki disease; Infant heart failure from a ventricular septal defect; Care after a pediatric cardiac catheterization |
+| Pediatrics | Genitourinary disorders | covered | Nephrotic syndrome in a preschooler; Acute post-streptococcal glomerulonephritis; Wilms tumor before nephrectomy; Infant dehydration from rotavirus |
+| Pediatrics | Hematologic disorders | covered | Sickle cell crisis with acute chest syndrome; Acute lymphoblastic leukemia through induction; Hemophilia A with a knee bleed; Iron deficiency anemia from too much cow's milk |
+| Pediatrics | Neurologic disorders | covered | VP shunt malfunction in a toddler; Febrile seizure progressing to status epilepticus; Newborn with myelomeningocele; Abusive head trauma in an infant |
 | Pediatrics | Respiratory disorders | covered | Infant with RSV bronchiolitis; Child with a severe asthma exacerbation |
 | Pediatrics | Vaccination schedule | **not yet** | - |
 | Med-Surg | Altered immunity disorders | covered | Anaphylactic shock in a client taking a beta blocker; Crohn disease flare and infliximab; Advanced HIV with Pneumocystis pneumonia; Lupus flare with lupus nephritis; Rheumatoid arthritis biologic therapy with reactivated tuberculosis; Candidemia treated with antifungal drugs |

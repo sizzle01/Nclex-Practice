@@ -64,7 +64,19 @@ CHUNK_TOPICS = {
     11: ("Maternity and newborn part 2", "maternal-newborn",
          r"pregnan|prenatal|postpartum|newborn|neonat|\blabor\b|oxytocin|magnesium sulfate|rho\(d\)|placenta|fundal|"
          r"breastfe|apgar|lochia"),
+    12: ("Pediatrics part 1: cardiac, renal, neurologic and blood disorders", "pediatrics", r"(?!)"),
 }
+# Pediatric chunks retire only the subtopics their cases teach (growth, respiratory, GI and vaccines come later).
+CHUNK_SUBTOPICS = {
+    12: {"pediatric-cardiac-disorders", "pediatric-gi-gu-disorders", "pediatric-neurological-disorders",
+         "pediatric-hematology-oncology", "infant-dehydration", "poisoning-and-ingestions", "sickle-cell-disease"},
+}
+# Pediatric GI topics the chunk 12 cases do not teach yet (kept for chunk 13).
+KEEP_STEMS_PEDS_GI = re.compile(r"pyloric|intussuscep|hirschsprung|celiac|cleft|appendic|gastroschisis|omphalocele|"
+                                r"esophageal atresia|tracheoesophageal|reflux|constipation|encopresis|hernia|"
+                                r"lead|acetaminophen|salicylate|button batter|hydrocarbon|vomited forcefully|"
+                                r"knees drawn up|not passed meconium|hypospadias|moved from another country|"
+                                r"3-week-old|6-month-old is brought in with a temperature", re.I)
 LATER_CHUNKS = {"pediatrics"}
 CLINICAL = {"PHI.PA", "PHI.PPT", "PHI.RRP", "PHI.BCC", "HPM"}
 # Topics the converted cases do not teach, even when a question carries a converted body system (for example, eye
@@ -133,7 +145,14 @@ def choose(questions, chunks):
     """(to_retire, kept) for the given conversion chunks: lists of (question, chunk, topic, reason)."""
     to_retire, kept = [], []
     for q in questions:
-        if _batch(q["id"]) >= 100 or q.get("caseStudyId") or q["bodySystem"] in LATER_CHUNKS:
+        if _batch(q["id"]) >= 100 or q.get("caseStudyId"):
+            continue
+        if q["bodySystem"] in LATER_CHUNKS and not any(c in CHUNK_SUBTOPICS for c in chunks):
+            continue
+        allowed = set().union(*(CHUNK_SUBTOPICS.get(c, set()) for c in chunks))
+        if q["bodySystem"] == "pediatrics" and not (allowed & set(q["subtopics"])):
+            continue
+        if 12 in chunks and q["bodySystem"] == "pediatrics" and KEEP_STEMS_PEDS_GI.search(q["stem"]):
             continue
         if q["clientNeeds"] not in CLINICAL:
             continue

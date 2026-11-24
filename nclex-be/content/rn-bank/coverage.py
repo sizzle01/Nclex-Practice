@@ -44,9 +44,10 @@ CONVERSION_CHUNKS = {
          (135, 136, 137, 138)),
     11: ("Maternity part 2: hyperemesis, PPROM, HELLP, screening, intrapartum emergencies, newborn and postpartum",
          (139, 140, 141, 142)),
+    12: ("Pediatrics part 1: cardiac, renal, neurologic and blood disorders", (143, 144, 145, 146)),
 }
-CONVERSION_NEXT = ("Pediatrics: growth and development, pediatric disorders by system and vaccines "
-                   "(CASE-MAP.md, book_topics.py)")
+CONVERSION_NEXT = ("Pediatrics part 2: growth and development by age, respiratory and GI disorders and the vaccination "
+                   "schedule (CASE-MAP.md, book_topics.py)")
 CASE_SHARE_GOAL = 85    # percent of the bank inside full case studies
 
 # Item-type mix for a chunk of new questions (plan of 2026-11-20): fewer plain multiple-choice questions
