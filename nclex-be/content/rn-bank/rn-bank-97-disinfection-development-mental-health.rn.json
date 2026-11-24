@@ -830,7 +830,8 @@
           "Written to NCLEX-RN difficulty and reviewed by the content team on 20 November 2026."
         ]
       },
-      "educationalObjective": "Teach safe infant sleep."
+      "educationalObjective": "Teach safe infant sleep.",
+      "status": "retired"
     },
     {
       "id": "c1a00097-0000-4000-8000-000000000012",
@@ -1212,7 +1213,8 @@
           "Written to NCLEX-RN difficulty and reviewed by the content team on 20 November 2026."
         ]
       },
-      "educationalObjective": "Follow up an abnormal prenatal screen."
+      "educationalObjective": "Follow up an abnormal prenatal screen.",
+      "status": "retired"
     },
     {
       "id": "c1a00097-0000-4000-8000-000000000017",
@@ -1261,7 +1263,8 @@
           "Written to NCLEX-RN difficulty and reviewed by the content team on 20 November 2026."
         ]
       },
-      "educationalObjective": "Manage engorgement in a client not breastfeeding."
+      "educationalObjective": "Manage engorgement in a client not breastfeeding.",
+      "status": "retired"
     },
     {
       "id": "c1a00097-0000-4000-8000-000000000018",

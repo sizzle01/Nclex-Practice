@@ -125,7 +125,8 @@
           "Rewritten to NCLEX-RN difficulty and reviewed by the content team on 19 November 2026."
         ]
       },
-      "educationalObjective": "Identify the stages of labor."
+      "educationalObjective": "Identify the stages of labor.",
+      "status": "retired"
     },
     {
       "id": "c1a00027-0000-4000-8000-000000000003",
@@ -174,7 +175,8 @@
           "Rewritten to NCLEX-RN difficulty and reviewed by the content team on 19 November 2026."
         ]
       },
-      "educationalObjective": "Locate fetal heart tones by fetal position."
+      "educationalObjective": "Locate fetal heart tones by fetal position.",
+      "status": "retired"
     },
     {
       "id": "c1a00027-0000-4000-8000-000000000004",
@@ -223,7 +225,8 @@
           "Rewritten to NCLEX-RN difficulty and reviewed by the content team on 19 November 2026."
         ]
       },
-      "educationalObjective": "Interpret early decelerations."
+      "educationalObjective": "Interpret early decelerations.",
+      "status": "retired"
     },
     {
       "id": "c1a00027-0000-4000-8000-000000000005",
@@ -272,7 +275,8 @@
           "Rewritten to NCLEX-RN difficulty and reviewed by the content team on 19 November 2026."
         ]
       },
-      "educationalObjective": "Respond to late decelerations."
+      "educationalObjective": "Respond to late decelerations.",
+      "status": "retired"
     },
     {
       "id": "c1a00027-0000-4000-8000-000000000006",
@@ -606,7 +610,8 @@
           "Rewritten to NCLEX-RN difficulty and reviewed by the content team on 19 November 2026."
         ]
       },
-      "educationalObjective": "Respond to meconium-stained fluid."
+      "educationalObjective": "Respond to meconium-stained fluid.",
+      "status": "retired"
     },
     {
       "id": "c1a00027-0000-4000-8000-000000000012",
@@ -756,7 +761,8 @@
           "Rewritten to NCLEX-RN difficulty and reviewed by the content team on 19 November 2026."
         ]
       },
-      "educationalObjective": "Recognize bladder distention in labor."
+      "educationalObjective": "Recognize bladder distention in labor.",
+      "status": "retired"
     },
     {
       "id": "c1a00027-0000-4000-8000-000000000015",
@@ -805,7 +811,8 @@
           "Rewritten to NCLEX-RN difficulty and reviewed by the content team on 19 November 2026."
         ]
       },
-      "educationalObjective": "Identify the transition phase of labor."
+      "educationalObjective": "Identify the transition phase of labor.",
+      "status": "retired"
     },
     {
       "id": "c1a00027-0000-4000-8000-000000000016",
@@ -854,7 +861,8 @@
           "Rewritten to NCLEX-RN difficulty and reviewed by the content team on 19 November 2026."
         ]
       },
-      "educationalObjective": "Respond to shoulder dystocia."
+      "educationalObjective": "Respond to shoulder dystocia.",
+      "status": "retired"
     },
     {
       "id": "c1a00027-0000-4000-8000-000000000017",
@@ -903,7 +911,8 @@
           "Rewritten to NCLEX-RN difficulty and reviewed by the content team on 19 November 2026."
         ]
       },
-      "educationalObjective": "Recognize uterine rupture."
+      "educationalObjective": "Recognize uterine rupture.",
+      "status": "retired"
     },
     {
       "id": "c1a00027-0000-4000-8000-000000000018",
@@ -952,7 +961,8 @@
           "Rewritten to NCLEX-RN difficulty and reviewed by the content team on 19 November 2026."
         ]
       },
-      "educationalObjective": "Recognize amniotic fluid embolism."
+      "educationalObjective": "Recognize amniotic fluid embolism.",
+      "status": "retired"
     },
     {
       "id": "c1a00027-0000-4000-8000-000000000019",
@@ -1001,7 +1011,8 @@
           "Rewritten to NCLEX-RN difficulty and reviewed by the content team on 19 November 2026."
         ]
       },
-      "educationalObjective": "Relieve back labor pain."
+      "educationalObjective": "Relieve back labor pain.",
+      "status": "retired"
     },
     {
       "id": "c1a00027-0000-4000-8000-000000000020",
@@ -1099,7 +1110,8 @@
           "Rewritten to NCLEX-RN difficulty and reviewed by the content team on 19 November 2026."
         ]
       },
-      "educationalObjective": "Assist with an emergency birth."
+      "educationalObjective": "Assist with an emergency birth.",
+      "status": "retired"
     },
     {
       "id": "c1a00027-0000-4000-8000-000000000022",
@@ -1148,7 +1160,8 @@
           "Rewritten to NCLEX-RN difficulty and reviewed by the content team on 19 November 2026."
         ]
       },
-      "educationalObjective": "Monitor terbutaline therapy."
+      "educationalObjective": "Monitor terbutaline therapy.",
+      "status": "retired"
     },
     {
       "id": "c1a00027-0000-4000-8000-000000000023",
@@ -1288,7 +1301,8 @@
           "Rewritten to NCLEX-RN difficulty and reviewed by the content team on 19 November 2026."
         ]
       },
-      "educationalObjective": "Recognize concerning fetal heart rate patterns."
+      "educationalObjective": "Recognize concerning fetal heart rate patterns.",
+      "status": "retired"
     }
   ]
 }

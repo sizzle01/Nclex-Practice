@@ -35,7 +35,7 @@ The wave chunks are paused (2026-11-20) while the bank is rebuilt around case st
 
 ## Case conversion (CASE-MAP.md)
 
-**1188 of 2369 active questions (50%) are inside full case studies**; the goal is 85%. 617 older questions are retired (F26, retired-questions.json): their topics were rebuilt as case studies.
+**1188 of 2328 active questions (51%) are inside full case studies**; the goal is 85%. 658 older questions are retired (F26, retired-questions.json): their topics were rebuilt as case studies.
 
 | Chunk | Topic | Batch files | Questions | Case studies |
 |---|---|---|---|---|
@@ -49,12 +49,13 @@ The wave chunks are paused (2026-11-20) while the bank is rebuilt around case st
 | 8 | Mental health disorders with psychiatric medications | b128, b129, b130, b131 | 100 | 16 |
 | 9 | Mental health part 2: abuse and violence, perinatal mood, dementia, alcohol, ECT, grief and remaining drugs | b132, b133, b134 | 76 | 12 |
 | 10 | Maternity part 1: bleeding, diabetes, Rh, labor and fetal monitoring, prenatal care, newborn and postpartum | b135, b136, b137, b138 | 100 | 16 |
+| 11 | Maternity part 2: hyperemesis, PPROM, HELLP, screening, intrapartum emergencies, newborn and postpartum | b139, b140, b141, b142 | 100 | 16 |
 
-**Next: conversion chunk 11**: Maternity part 2: hyperemesis, PPROM and chorioamnionitis, HELLP, shoulder dystocia, uterine rupture, amniotic fluid embolism, prenatal screening, newborn respiratory distress and more (CASE-MAP.md, book_topics.py).
+**Next: conversion chunk 12**: Pediatrics: growth and development, pediatric disorders by system and vaccines (CASE-MAP.md, book_topics.py).
 
 ## Review book checklist (book_topics.py)
 
-**63 of 96 subtopics covered** (at least 2 case studies), 24 started (1 case), 9 not yet covered.
+**69 of 96 subtopics covered** (at least 2 case studies), 18 started (1 case), 9 not yet covered.
 
 | Section | Subtopic | Status | Case studies |
 |---|---|---|---|
@@ -113,21 +114,21 @@ The wave chunks are paused (2026-11-20) while the bank is rebuilt around case st
 | Mental health | Medications: anxiolytics | covered | Panic disorder with anxiolytic treatment; Post-traumatic stress disorder in a veteran; Generalized anxiety disorder with SSRI discontinuation and buspirone |
 | Mental health | Medications: depression and mood stabilization | covered | Major depression with suicide risk early in SSRI treatment; Bipolar mania with lithium toxicity; Serotonin syndrome from fluoxetine with tramadol; Hypertensive crisis on an MAOI; Bipolar disorder on valproate and lamotrigine with a severe rash; Generalized anxiety disorder with SSRI discontinuation and buspirone; Smoking cessation with varenicline |
 | Mental health | Medications: psychotic disorders | covered | Schizophrenia with neuroleptic malignant syndrome; Treatment-resistant schizophrenia on clozapine; Escalating aggression with seclusion and restraint; Olanzapine with metabolic syndrome and tardive dyskinesia |
-| Maternity | Abruptio placentae | started | Placental abruption after cocaine use |
-| Maternity | Electronic fetal heart rate monitoring | covered | Oxytocin induction with tachysystole and late decelerations; Umbilical cord prolapse; Fetal growth restriction found by fundal height |
-| Maternity | Fetal growth and development | covered | Fetal growth restriction found by fundal height; First prenatal visit with pregnancy terminology |
-| Maternity | Signs of pregnancy | started | First prenatal visit with pregnancy terminology |
-| Maternity | Measuring fundal height | covered | Fetal growth restriction found by fundal height; First prenatal visit with pregnancy terminology |
-| Maternity | Gestational diabetes mellitus | started | Gestational diabetes from screening to birth |
-| Maternity | Labor and delivery | covered | Labor epidural with hypotension and the stages of labor; Umbilical cord prolapse; Oxytocin induction with tachysystole and late decelerations |
-| Maternity | Medications used during labor and delivery | covered | Postpartum hemorrhage needing second-line uterotonics; Preterm labor with tocolysis and magnesium; Oxytocin induction with tachysystole and late decelerations; Labor epidural with hypotension and the stages of labor |
-| Maternity | Newborn | covered | Newborn assessment and routine medications; Pathologic newborn jaundice from ABO incompatibility |
-| Maternity | Newborn complications | covered | Pathologic newborn jaundice from ABO incompatibility; Neonatal opioid withdrawal syndrome; Gestational diabetes from screening to birth |
+| Maternity | Abruptio placentae | covered | Placental abruption after cocaine use; Placental abruption after a car crash |
+| Maternity | Electronic fetal heart rate monitoring | covered | Oxytocin induction with tachysystole and late decelerations; Umbilical cord prolapse; Fetal growth restriction found by fundal height; Uterine rupture during a trial of labor after cesarean; Placental abruption after a car crash |
+| Maternity | Fetal growth and development | covered | Fetal growth restriction found by fundal height; First prenatal visit with pregnancy terminology; Prenatal screening after an elevated AFP |
+| Maternity | Signs of pregnancy | covered | First prenatal visit with pregnancy terminology; Third-trimester visit with expected discomforts |
+| Maternity | Measuring fundal height | covered | Fetal growth restriction found by fundal height; First prenatal visit with pregnancy terminology; Third-trimester visit with expected discomforts; Gestational diabetes on insulin with night-time hypoglycemia |
+| Maternity | Gestational diabetes mellitus | covered | Gestational diabetes from screening to birth; Gestational diabetes on insulin with night-time hypoglycemia; Shoulder dystocia with a macrosomic baby |
+| Maternity | Labor and delivery | covered | Labor epidural with hypotension and the stages of labor; Umbilical cord prolapse; Oxytocin induction with tachysystole and late decelerations; Precipitous birth with the nurse alone; Shoulder dystocia with a macrosomic baby; Uterine rupture during a trial of labor after cesarean; Amniotic fluid embolism with cardiac arrest |
+| Maternity | Medications used during labor and delivery | covered | Postpartum hemorrhage needing second-line uterotonics; Preterm labor with tocolysis and magnesium; Oxytocin induction with tachysystole and late decelerations; Labor epidural with hypotension and the stages of labor; HELLP syndrome with liver hematoma; Preterm prelabor rupture of membranes with chorioamnionitis |
+| Maternity | Newborn | covered | Newborn assessment and routine medications; Pathologic newborn jaundice from ABO incompatibility; Newborn discharge exam and teaching; Late-preterm newborn with transient tachypnea and hypoglycemia |
+| Maternity | Newborn complications | covered | Pathologic newborn jaundice from ABO incompatibility; Neonatal opioid withdrawal syndrome; Gestational diabetes from screening to birth; Meconium aspiration in a post-term newborn; Late-preterm newborn with transient tachypnea and hypoglycemia |
 | Maternity | Placenta previa | started | Placenta previa with accreta |
-| Maternity | Postpartum | covered | Postpartum hemorrhage from uterine atony; Postpartum endometritis and mastitis; Postpartum hemorrhage needing second-line uterotonics |
-| Maternity | Preeclampsia | started | Preeclampsia with severe features at 35 weeks |
-| Maternity | Pregnancy terminology | started | First prenatal visit with pregnancy terminology |
-| Maternity | Rh incompatibility | started | Rh incompatibility and Rho(D) immune globulin |
+| Maternity | Postpartum | covered | Postpartum hemorrhage from uterine atony; Postpartum endometritis and mastitis; Postpartum hemorrhage needing second-line uterotonics; Postpartum vulvar hematoma with postpartum vaccines |
+| Maternity | Preeclampsia | covered | Preeclampsia with severe features at 35 weeks; HELLP syndrome with liver hematoma |
+| Maternity | Pregnancy terminology | covered | First prenatal visit with pregnancy terminology; Third-trimester visit with expected discomforts |
+| Maternity | Rh incompatibility | covered | Rh incompatibility and Rho(D) immune globulin; Rh-sensitized pregnancy with fetal anemia |
 | Pediatrics | Growth and development: infant | **not yet** | - |
 | Pediatrics | Growth and development: toddler | **not yet** | - |
 | Pediatrics | Growth and development: preschool | **not yet** | - |
@@ -152,7 +153,7 @@ The wave chunks are paused (2026-11-20) while the bank is rebuilt around case st
 | Med-Surg | Sepsis | covered | Older adult with sepsis from a urinary tract infection; Septic shock from an anastomotic leak after colectomy; Infected obstructing kidney stone with urosepsis; Disseminated intravascular coagulation from sepsis; Febrile neutropenia after chemotherapy; Necrotizing fasciitis of the leg; Candidemia treated with antifungal drugs |
 | Med-Surg | Sexually transmitted infections | covered | Pelvic inflammatory disease with a tubo-ovarian abscess; Secondary syphilis and a Jarisch-Herxheimer reaction |
 | Med-Surg | Shock | covered | Cardiogenic shock with a pulmonary artery catheter; Anaphylactic shock in a client taking a beta blocker; Cervical spinal cord injury, neurogenic shock and autonomic dysreflexia; Splenic laceration with hemorrhagic shock |
-| Med-Surg | Trauma | covered | Flail chest with pulmonary contusion; Tension pneumothorax after a car crash; Major burn with inhalation injury; Epidural hematoma with a lucid interval; Cervical spinal cord injury, neurogenic shock and autonomic dysreflexia; Splenic laceration with hemorrhagic shock; Exertional heat stroke; Accidental hypothermia with rewarming; Mass-casualty incident with START triage; Femur fracture in traction with fat embolism syndrome |
+| Med-Surg | Trauma | covered | Flail chest with pulmonary contusion; Tension pneumothorax after a car crash; Major burn with inhalation injury; Epidural hematoma with a lucid interval; Cervical spinal cord injury, neurogenic shock and autonomic dysreflexia; Splenic laceration with hemorrhagic shock; Exertional heat stroke; Accidental hypothermia with rewarming; Mass-casualty incident with START triage; Femur fracture in traction with fat embolism syndrome; Placental abruption after a car crash |
 | Med-Surg | Transplant rejection | started | Kidney transplant rejection and tacrolimus toxicity |
 
 ## Item types in the whole bank

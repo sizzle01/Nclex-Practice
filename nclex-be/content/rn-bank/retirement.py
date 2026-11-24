@@ -61,6 +61,9 @@ CHUNK_TOPICS = {
     10: ("Maternity and newborn", "maternal-newborn",
          r"pregnan|prenatal|postpartum|newborn|neonat|\blabor\b|oxytocin|magnesium sulfate|rho\(d\)|placenta|fundal|"
          r"breastfe|apgar|lochia"),
+    11: ("Maternity and newborn part 2", "maternal-newborn",
+         r"pregnan|prenatal|postpartum|newborn|neonat|\blabor\b|oxytocin|magnesium sulfate|rho\(d\)|placenta|fundal|"
+         r"breastfe|apgar|lochia"),
 }
 LATER_CHUNKS = {"pediatrics"}
 CLINICAL = {"PHI.PA", "PHI.PPT", "PHI.RRP", "PHI.BCC", "HPM"}
@@ -90,6 +93,8 @@ KEEP_STEMS_MATERNITY = re.compile(
     r"forceps|i can't do this anymore|irritable, nauseated and shaking|not voided|terbutaline|four postpartum clients|"
     r"come to the hospital|calls the birthing unit|which stage of labor|gradual|1-hour 50 g|preeclampsia and mild "
     r"intermittent|stillbirth|took the baby's movements|track of the baby's movements", re.I)
+# Chunk 11 (maternity part 2) teaches the chunk 10 list except true versus false labor.
+KEEP_STEMS_MATERNITY_2 = re.compile(r"come to the hospital|calls the birthing unit", re.I)
 # Chunk 8 kept alcohol use drugs, varenicline, SSRI discontinuation, buspirone, valproate, lamotrigine, olanzapine
 # and tardive dyskinesia questions; chunk 9 cases teach them, so they are no longer kept.
 KEEP_MOC = re.compile(r"\b(first|priorit\w*|delegat\w*|assign\w*)\b", re.I)
@@ -133,6 +138,8 @@ def choose(questions, chunks):
         if q["clientNeeds"] not in CLINICAL:
             continue
         if KEEP_TAGS & set(q["subtopics"]) or KEEP_STEMS.search(q["stem"]):
+            continue
+        if 11 in chunks and q["bodySystem"] == "maternal-newborn" and KEEP_STEMS_MATERNITY_2.search(q["stem"]):
             continue
         if 10 in chunks and q["bodySystem"] == "maternal-newborn" and KEEP_STEMS_MATERNITY.search(q["stem"]):
             continue

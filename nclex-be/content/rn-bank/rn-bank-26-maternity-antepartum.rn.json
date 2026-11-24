@@ -121,7 +121,8 @@
           "Rewritten to NCLEX-RN difficulty and reviewed by the content team on 19 November 2026."
         ]
       },
-      "educationalObjective": "Classify signs of pregnancy."
+      "educationalObjective": "Classify signs of pregnancy.",
+      "status": "retired"
     },
     {
       "id": "c1a00026-0000-4000-8000-000000000003",
@@ -170,7 +171,8 @@
           "Rewritten to NCLEX-RN difficulty and reviewed by the content team on 19 November 2026."
         ]
       },
-      "educationalObjective": "Calculate GTPAL."
+      "educationalObjective": "Calculate GTPAL.",
+      "status": "retired"
     },
     {
       "id": "c1a00026-0000-4000-8000-000000000004",
@@ -219,7 +221,8 @@
           "Rewritten to NCLEX-RN difficulty and reviewed by the content team on 19 November 2026."
         ]
       },
-      "educationalObjective": "Recommend preconception folic acid."
+      "educationalObjective": "Recommend preconception folic acid.",
+      "status": "retired"
     },
     {
       "id": "c1a00026-0000-4000-8000-000000000005",
@@ -268,7 +271,8 @@
           "Rewritten to NCLEX-RN difficulty and reviewed by the content team on 19 November 2026."
         ]
       },
-      "educationalObjective": "Relieve pregnancy leg cramps."
+      "educationalObjective": "Relieve pregnancy leg cramps.",
+      "status": "retired"
     },
     {
       "id": "c1a00026-0000-4000-8000-000000000006",
@@ -317,7 +321,8 @@
           "Rewritten to NCLEX-RN difficulty and reviewed by the content team on 19 November 2026."
         ]
       },
-      "educationalObjective": "Relieve supine hypotensive syndrome."
+      "educationalObjective": "Relieve supine hypotensive syndrome.",
+      "status": "retired"
     },
     {
       "id": "c1a00026-0000-4000-8000-000000000007",
@@ -436,7 +441,8 @@
           "Rewritten to NCLEX-RN difficulty and reviewed by the content team on 19 November 2026."
         ]
       },
-      "educationalObjective": "Teach recommended pregnancy weight gain."
+      "educationalObjective": "Teach recommended pregnancy weight gain.",
+      "status": "retired"
     },
     {
       "id": "c1a00026-0000-4000-8000-000000000009",
@@ -685,7 +691,8 @@
           "Rewritten to NCLEX-RN difficulty and reviewed by the content team on 19 November 2026."
         ]
       },
-      "educationalObjective": "Recognize HELLP syndrome."
+      "educationalObjective": "Recognize HELLP syndrome.",
+      "status": "retired"
     },
     {
       "id": "c1a00026-0000-4000-8000-000000000014",
@@ -917,7 +924,8 @@
           "Rewritten to NCLEX-RN difficulty and reviewed by the content team on 19 November 2026."
         ]
       },
-      "educationalObjective": "Manage hyperemesis gravidarum."
+      "educationalObjective": "Manage hyperemesis gravidarum.",
+      "status": "retired"
     },
     {
       "id": "c1a00026-0000-4000-8000-000000000018",
@@ -1066,7 +1074,8 @@
           "Rewritten to NCLEX-RN difficulty and reviewed by the content team on 19 November 2026."
         ]
       },
-      "educationalObjective": "Teach warning signs after amniocentesis."
+      "educationalObjective": "Teach warning signs after amniocentesis.",
+      "status": "retired"
     },
     {
       "id": "c1a00026-0000-4000-8000-000000000021",
@@ -1165,7 +1174,8 @@
           "Rewritten to NCLEX-RN difficulty and reviewed by the content team on 19 November 2026."
         ]
       },
-      "educationalObjective": "Recognize rupture of membranes."
+      "educationalObjective": "Recognize rupture of membranes.",
+      "status": "retired"
     },
     {
       "id": "c1a00026-0000-4000-8000-000000000023",
@@ -1215,7 +1225,8 @@
           "Rewritten to NCLEX-RN difficulty and reviewed by the content team on 19 November 2026."
         ]
       },
-      "educationalObjective": "Teach alcohol avoidance in pregnancy."
+      "educationalObjective": "Teach alcohol avoidance in pregnancy.",
+      "status": "retired"
     },
     {
       "id": "c1a00026-0000-4000-8000-000000000024",
@@ -1314,7 +1325,8 @@
           "Rewritten to NCLEX-RN difficulty and reviewed by the content team on 19 November 2026."
         ]
       },
-      "educationalObjective": "Teach fetal movement counting."
+      "educationalObjective": "Teach fetal movement counting.",
+      "status": "retired"
     }
   ]
 }

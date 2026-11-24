@@ -42,9 +42,10 @@ CONVERSION_CHUNKS = {
         (132, 133, 134)),
     10: ("Maternity part 1: bleeding, diabetes, Rh, labor and fetal monitoring, prenatal care, newborn and postpartum",
          (135, 136, 137, 138)),
+    11: ("Maternity part 2: hyperemesis, PPROM, HELLP, screening, intrapartum emergencies, newborn and postpartum",
+         (139, 140, 141, 142)),
 }
-CONVERSION_NEXT = ("Maternity part 2: hyperemesis, PPROM and chorioamnionitis, HELLP, shoulder dystocia, uterine "
-                   "rupture, amniotic fluid embolism, prenatal screening, newborn respiratory distress and more "
+CONVERSION_NEXT = ("Pediatrics: growth and development, pediatric disorders by system and vaccines "
                    "(CASE-MAP.md, book_topics.py)")
 CASE_SHARE_GOAL = 85    # percent of the bank inside full case studies
 
