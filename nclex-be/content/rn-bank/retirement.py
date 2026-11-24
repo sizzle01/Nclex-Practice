@@ -58,8 +58,11 @@ CHUNK_TOPICS = {
     9: ("Mental health part 2", "mental-health",
         r"donepezil|memantine|disulfiram|naltrexone|acamprosate|thiamine|varenicline|buspirone|valpro|lamotrigine|"
         r"olanzapine|tardive|electroconvulsive|\bect\b"),
+    10: ("Maternity and newborn", "maternal-newborn",
+         r"pregnan|prenatal|postpartum|newborn|neonat|\blabor\b|oxytocin|magnesium sulfate|rho\(d\)|placenta|fundal|"
+         r"breastfe|apgar|lochia"),
 }
-LATER_CHUNKS = {"pediatrics", "maternal-newborn"}
+LATER_CHUNKS = {"pediatrics"}
 CLINICAL = {"PHI.PA", "PHI.PPT", "PHI.RRP", "PHI.BCC", "HPM"}
 # Topics the converted cases do not teach, even when a question carries a converted body system (for example, eye
 # surgery is tagged neurological). These questions are kept until a case covers them.
@@ -77,6 +80,16 @@ KEEP_TAGS = {"eye-and-ear-disorders", "sensory-impairment-care", "urinary-elimin
 # children (pediatric chunks), carpal tunnel, Lyme disease, HIV PrEP, osteoarthritis and Buck's traction (chunk 7).
 KEEP_STEMS = re.compile(r"superior vena cava|collar of the shirt|\bchild\b|\bparent\b|carpal|lyme|"
                         r"pre-exposure|\bprep\b|osteoarthritis|buck's", re.I)
+# Chunk 10 (maternity part 1) cases do not yet teach these; maternity part 2 will.
+KEEP_STEMS_MATERNITY = re.compile(
+    r"vomited several times a day|amniocentesis|alpha-fetoprotein|gush of clear fluid 1 hour|right ribs|"
+    r"cramp in the calf|feel faint|\(bmi|drank wine|plan to (try to )?become pregnant|previous pregnancy affected|"
+    r"definitely real|four prenatal clients|swollen, hard, warm breasts|chosen not to breastfeed|umbilical cord at home|"
+    r"safe infant sleep|head-to-toe assessment of a 12-hour|36 weeks by cesarean|thick and dark green|head delivers|"
+    r"previous cesarean|something is wrong|back pain between contractions|alone in the room|leopold|38\.4|rubella|"
+    r"forceps|i can't do this anymore|irritable, nauseated and shaking|not voided|terbutaline|four postpartum clients|"
+    r"come to the hospital|calls the birthing unit|which stage of labor|gradual|1-hour 50 g|preeclampsia and mild "
+    r"intermittent|stillbirth|took the baby's movements|track of the baby's movements", re.I)
 # Chunk 8 kept alcohol use drugs, varenicline, SSRI discontinuation, buspirone, valproate, lamotrigine, olanzapine
 # and tardive dyskinesia questions; chunk 9 cases teach them, so they are no longer kept.
 KEEP_MOC = re.compile(r"\b(first|priorit\w*|delegat\w*|assign\w*)\b", re.I)
@@ -120,6 +133,8 @@ def choose(questions, chunks):
         if q["clientNeeds"] not in CLINICAL:
             continue
         if KEEP_TAGS & set(q["subtopics"]) or KEEP_STEMS.search(q["stem"]):
+            continue
+        if 10 in chunks and q["bodySystem"] == "maternal-newborn" and KEEP_STEMS_MATERNITY.search(q["stem"]):
             continue
         match = _topic_of(q, chunks)
         if not match:

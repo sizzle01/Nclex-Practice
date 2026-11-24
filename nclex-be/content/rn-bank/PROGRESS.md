@@ -35,7 +35,7 @@ The wave chunks are paused (2026-11-20) while the bank is rebuilt around case st
 
 ## Case conversion (CASE-MAP.md)
 
-**1092 of 2311 active questions (47%) are inside full case studies**; the goal is 85%. 575 older questions are retired (F26, retired-questions.json): their topics were rebuilt as case studies.
+**1092 of 2269 active questions (48%) are inside full case studies**; the goal is 85%. 617 older questions are retired (F26, retired-questions.json): their topics were rebuilt as case studies.
 
 | Chunk | Topic | Batch files | Questions | Case studies |
 |---|---|---|---|---|
@@ -48,19 +48,20 @@ The wave chunks are paused (2026-11-20) while the bank is rebuilt around case st
 | 7 | Immunity, infection, STI, musculoskeletal and trauma with antimicrobial, antifungal and antiparasitic drugs | b124, b125, b126, b127 | 100 | 16 |
 | 8 | Mental health disorders with psychiatric medications | b128, b129, b130, b131 | 100 | 16 |
 | 9 | Mental health part 2: abuse and violence, perinatal mood, dementia, alcohol, ECT, grief and remaining drugs | b132, b133, b134 | 76 | 12 |
+| 10 | Maternity part 1: bleeding, diabetes, Rh, labor and fetal monitoring, prenatal care, newborn and postpartum | b135, b136, b137, b138 | 100 | 16 |
 
-**Next: conversion chunk 10**: Maternity: prenatal care, labor and birth, obstetric complications and medications (CASE-MAP.md, book_topics.py).
+**Next: conversion chunk 11**: Maternity part 2: hyperemesis, PPROM and chorioamnionitis, HELLP, shoulder dystocia, uterine rupture, amniotic fluid embolism, prenatal screening, newborn respiratory distress and more (CASE-MAP.md, book_topics.py).
 
 ## Review book checklist (book_topics.py)
 
-**55 of 96 subtopics covered** (at least 2 case studies), 19 started (1 case), 22 not yet covered.
+**63 of 96 subtopics covered** (at least 2 case studies), 24 started (1 case), 9 not yet covered.
 
 | Section | Subtopic | Status | Case studies |
 |---|---|---|---|
 | Fundamental | ABG | covered | Status asthmaticus in an adult; COPD with CO2 narcosis from too much oxygen; ARDS on mechanical ventilation; Euglycemic DKA on an SGLT2 inhibitor after surgery |
-| Fundamental | ABO blood group | covered | Warfarin over-anticoagulation with a GI bleed and a mechanical valve; Lower GI bleed on apixaban; Disseminated intravascular coagulation from sepsis; Splenic laceration with hemorrhagic shock |
+| Fundamental | ABO blood group | covered | Warfarin over-anticoagulation with a GI bleed and a mechanical valve; Lower GI bleed on apixaban; Disseminated intravascular coagulation from sepsis; Splenic laceration with hemorrhagic shock; Rh incompatibility and Rho(D) immune globulin; Pathologic newborn jaundice from ABO incompatibility |
 | Fundamental | Basic EKG concept | covered | Drug-induced complete heart block and transcutaneous pacing; Ventricular tachycardia in a client with an ICD; Permanent pacemaker failure to capture; New atrial fibrillation with a rapid rate from thyrotoxicosis |
-| Fundamental | Dosage calculation | covered | Heparin-induced thrombocytopenia with arterial thrombosis; Cardiogenic shock with a pulmonary artery catheter; Chemotherapy-induced nausea and vomiting; Acetaminophen overdose; Diabetic foot ulcer with osteomyelitis; Massive pulmonary embolism treated with alteplase; Severe falciparum malaria in a returning traveler |
+| Fundamental | Dosage calculation | covered | Heparin-induced thrombocytopenia with arterial thrombosis; Cardiogenic shock with a pulmonary artery catheter; Chemotherapy-induced nausea and vomiting; Acetaminophen overdose; Diabetic foot ulcer with osteomyelitis; Massive pulmonary embolism treated with alteplase; Severe falciparum malaria in a returning traveler; Preterm labor with tocolysis and magnesium; Postpartum hemorrhage needing second-line uterotonics |
 | Fundamental | IV fluid | covered | Hyperosmolar hyperglycemic state; SIADH with a hyponatremic seizure |
 | Fundamental | Electrolyte imbalances | covered | Heart failure with digoxin toxicity; SIADH with a hyponatremic seizure; Adrenal crisis in Addison disease; Refeeding syndrome on parenteral nutrition; Hematoma and hypocalcemia after thyroidectomy; Missed hemodialysis with hyperkalemia and fluid overload; Tumor lysis syndrome; TURP with bladder irrigation and TUR syndrome; Rhabdomyolysis after a long lie on the floor; Bulimia nervosa with severe hypokalemia |
 | Fundamental | Lab | covered | Severe community-acquired pneumonia in an older adult; Acute cholangitis and ERCP; Acute hepatitis B and exposures; Small bowel obstruction with strangulation; Febrile neutropenia after chemotherapy; Tumor lysis syndrome; Lupus flare with lupus nephritis |
@@ -107,26 +108,26 @@ The wave chunks are paused (2026-11-20) while the bank is rebuilt around case st
 | Mental health | Personality disorders | started | Borderline personality disorder with self-harm and splitting |
 | Mental health | Schizophrenia spectrum disorders | covered | Schizophrenia with neuroleptic malignant syndrome; Treatment-resistant schizophrenia on clozapine; Olanzapine with metabolic syndrome and tardive dyskinesia |
 | Mental health | Somatic symptom disorders | started | Functional neurological symptom disorder after a traumatic event |
-| Mental health | Substance use disorders | covered | Alcohol withdrawal after orthopedic surgery; Opioid overdose and buprenorphine induction; Alcohol use disorder with Wernicke encephalopathy; Smoking cessation with varenicline |
+| Mental health | Substance use disorders | covered | Alcohol withdrawal after orthopedic surgery; Opioid overdose and buprenorphine induction; Alcohol use disorder with Wernicke encephalopathy; Smoking cessation with varenicline; Neonatal opioid withdrawal syndrome |
 | Mental health | Trauma, stressor-related and dissociative disorders | covered | Post-traumatic stress disorder in a veteran; Functional neurological symptom disorder after a traumatic event; Intimate partner violence in pregnancy; Sexual assault with trauma-informed forensic care |
 | Mental health | Medications: anxiolytics | covered | Panic disorder with anxiolytic treatment; Post-traumatic stress disorder in a veteran; Generalized anxiety disorder with SSRI discontinuation and buspirone |
 | Mental health | Medications: depression and mood stabilization | covered | Major depression with suicide risk early in SSRI treatment; Bipolar mania with lithium toxicity; Serotonin syndrome from fluoxetine with tramadol; Hypertensive crisis on an MAOI; Bipolar disorder on valproate and lamotrigine with a severe rash; Generalized anxiety disorder with SSRI discontinuation and buspirone; Smoking cessation with varenicline |
 | Mental health | Medications: psychotic disorders | covered | Schizophrenia with neuroleptic malignant syndrome; Treatment-resistant schizophrenia on clozapine; Escalating aggression with seclusion and restraint; Olanzapine with metabolic syndrome and tardive dyskinesia |
-| Maternity | Abruptio placentae | **not yet** | - |
-| Maternity | Electronic fetal heart rate monitoring | **not yet** | - |
-| Maternity | Fetal growth and development | **not yet** | - |
-| Maternity | Signs of pregnancy | **not yet** | - |
-| Maternity | Measuring fundal height | **not yet** | - |
-| Maternity | Gestational diabetes mellitus | **not yet** | - |
-| Maternity | Labor and delivery | **not yet** | - |
-| Maternity | Medications used during labor and delivery | **not yet** | - |
-| Maternity | Newborn | **not yet** | - |
-| Maternity | Newborn complications | **not yet** | - |
-| Maternity | Placenta previa | **not yet** | - |
-| Maternity | Postpartum | started | Postpartum hemorrhage from uterine atony |
+| Maternity | Abruptio placentae | started | Placental abruption after cocaine use |
+| Maternity | Electronic fetal heart rate monitoring | covered | Oxytocin induction with tachysystole and late decelerations; Umbilical cord prolapse; Fetal growth restriction found by fundal height |
+| Maternity | Fetal growth and development | covered | Fetal growth restriction found by fundal height; First prenatal visit with pregnancy terminology |
+| Maternity | Signs of pregnancy | started | First prenatal visit with pregnancy terminology |
+| Maternity | Measuring fundal height | covered | Fetal growth restriction found by fundal height; First prenatal visit with pregnancy terminology |
+| Maternity | Gestational diabetes mellitus | started | Gestational diabetes from screening to birth |
+| Maternity | Labor and delivery | covered | Labor epidural with hypotension and the stages of labor; Umbilical cord prolapse; Oxytocin induction with tachysystole and late decelerations |
+| Maternity | Medications used during labor and delivery | covered | Postpartum hemorrhage needing second-line uterotonics; Preterm labor with tocolysis and magnesium; Oxytocin induction with tachysystole and late decelerations; Labor epidural with hypotension and the stages of labor |
+| Maternity | Newborn | covered | Newborn assessment and routine medications; Pathologic newborn jaundice from ABO incompatibility |
+| Maternity | Newborn complications | covered | Pathologic newborn jaundice from ABO incompatibility; Neonatal opioid withdrawal syndrome; Gestational diabetes from screening to birth |
+| Maternity | Placenta previa | started | Placenta previa with accreta |
+| Maternity | Postpartum | covered | Postpartum hemorrhage from uterine atony; Postpartum endometritis and mastitis; Postpartum hemorrhage needing second-line uterotonics |
 | Maternity | Preeclampsia | started | Preeclampsia with severe features at 35 weeks |
-| Maternity | Pregnancy terminology | **not yet** | - |
-| Maternity | Rh incompatibility | **not yet** | - |
+| Maternity | Pregnancy terminology | started | First prenatal visit with pregnancy terminology |
+| Maternity | Rh incompatibility | started | Rh incompatibility and Rho(D) immune globulin |
 | Pediatrics | Growth and development: infant | **not yet** | - |
 | Pediatrics | Growth and development: toddler | **not yet** | - |
 | Pediatrics | Growth and development: preschool | **not yet** | - |

@@ -86,7 +86,8 @@
           "Rewritten to NCLEX-RN difficulty and reviewed by the content team on 19 November 2026."
         ]
       },
-      "educationalObjective": "Respond to a displaced fundus."
+      "educationalObjective": "Respond to a displaced fundus.",
+      "status": "retired"
     },
     {
       "id": "c1a00028-0000-4000-8000-000000000002",
@@ -135,7 +136,8 @@
           "Rewritten to NCLEX-RN difficulty and reviewed by the content team on 19 November 2026."
         ]
       },
-      "educationalObjective": "Respond to uterine atony."
+      "educationalObjective": "Respond to uterine atony.",
+      "status": "retired"
     },
     {
       "id": "c1a00028-0000-4000-8000-000000000003",
@@ -332,7 +334,8 @@
           "Rewritten to NCLEX-RN difficulty and reviewed by the content team on 19 November 2026."
         ]
       },
-      "educationalObjective": "Recognize postpartum endometritis."
+      "educationalObjective": "Recognize postpartum endometritis.",
+      "status": "retired"
     },
     {
       "id": "c1a00028-0000-4000-8000-000000000007",
@@ -578,7 +581,8 @@
           "Rewritten to NCLEX-RN difficulty and reviewed by the content team on 19 November 2026."
         ]
       },
-      "educationalObjective": "Teach about mastitis."
+      "educationalObjective": "Teach about mastitis.",
+      "status": "retired"
     },
     {
       "id": "c1a00028-0000-4000-8000-000000000012",
@@ -608,7 +612,8 @@
           "Rewritten to NCLEX-RN difficulty and reviewed by the content team on 19 November 2026."
         ]
       },
-      "educationalObjective": "Calculate an Apgar score."
+      "educationalObjective": "Calculate an Apgar score.",
+      "status": "retired"
     },
     {
       "id": "c1a00028-0000-4000-8000-000000000013",
@@ -657,7 +662,8 @@
           "Rewritten to NCLEX-RN difficulty and reviewed by the content team on 19 November 2026."
         ]
       },
-      "educationalObjective": "Prioritize newborn care right after birth."
+      "educationalObjective": "Prioritize newborn care right after birth.",
+      "status": "retired"
     },
     {
       "id": "c1a00028-0000-4000-8000-000000000014",
@@ -853,7 +859,8 @@
           "Rewritten to NCLEX-RN difficulty and reviewed by the content team on 19 November 2026."
         ]
       },
-      "educationalObjective": "Provide safe phototherapy."
+      "educationalObjective": "Provide safe phototherapy.",
+      "status": "retired"
     },
     {
       "id": "c1a00028-0000-4000-8000-000000000018",

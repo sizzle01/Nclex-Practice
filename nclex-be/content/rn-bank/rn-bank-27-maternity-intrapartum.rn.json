@@ -321,7 +321,8 @@
           "Rewritten to NCLEX-RN difficulty and reviewed by the content team on 19 November 2026."
         ]
       },
-      "educationalObjective": "Respond to variable decelerations."
+      "educationalObjective": "Respond to variable decelerations.",
+      "status": "retired"
     },
     {
       "id": "c1a00027-0000-4000-8000-000000000007",
@@ -405,7 +406,8 @@
           "Rewritten to NCLEX-RN difficulty and reviewed by the content team on 19 November 2026."
         ]
       },
-      "educationalObjective": "Match fetal heart rate patterns to their causes."
+      "educationalObjective": "Match fetal heart rate patterns to their causes.",
+      "status": "retired"
     },
     {
       "id": "c1a00027-0000-4000-8000-000000000008",
@@ -454,7 +456,8 @@
           "Rewritten to NCLEX-RN difficulty and reviewed by the content team on 19 November 2026."
         ]
       },
-      "educationalObjective": "Identify the normal fetal heart rate."
+      "educationalObjective": "Identify the normal fetal heart rate.",
+      "status": "retired"
     },
     {
       "id": "c1a00027-0000-4000-8000-000000000009",
@@ -503,7 +506,8 @@
           "Rewritten to NCLEX-RN difficulty and reviewed by the content team on 19 November 2026."
         ]
       },
-      "educationalObjective": "Respond to umbilical cord prolapse."
+      "educationalObjective": "Respond to umbilical cord prolapse.",
+      "status": "retired"
     },
     {
       "id": "c1a00027-0000-4000-8000-000000000010",
@@ -552,7 +556,8 @@
           "Rewritten to NCLEX-RN difficulty and reviewed by the content team on 19 November 2026."
         ]
       },
-      "educationalObjective": "Assess after rupture of membranes."
+      "educationalObjective": "Assess after rupture of membranes.",
+      "status": "retired"
     },
     {
       "id": "c1a00027-0000-4000-8000-000000000011",
@@ -651,7 +656,8 @@
           "Rewritten to NCLEX-RN difficulty and reviewed by the content team on 19 November 2026."
         ]
       },
-      "educationalObjective": "Respond to oxytocin-induced tachysystole."
+      "educationalObjective": "Respond to oxytocin-induced tachysystole.",
+      "status": "retired"
     },
     {
       "id": "c1a00027-0000-4000-8000-000000000013",
@@ -700,7 +706,8 @@
           "Rewritten to NCLEX-RN difficulty and reviewed by the content team on 19 November 2026."
         ]
       },
-      "educationalObjective": "Respond to hypotension after an epidural."
+      "educationalObjective": "Respond to hypotension after an epidural.",
+      "status": "retired"
     },
     {
       "id": "c1a00027-0000-4000-8000-000000000014",

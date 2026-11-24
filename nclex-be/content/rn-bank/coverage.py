@@ -40,8 +40,11 @@ CONVERSION_CHUNKS = {
     8: ("Mental health disorders with psychiatric medications", (128, 129, 130, 131)),
     9: ("Mental health part 2: abuse and violence, perinatal mood, dementia, alcohol, ECT, grief and remaining drugs",
         (132, 133, 134)),
+    10: ("Maternity part 1: bleeding, diabetes, Rh, labor and fetal monitoring, prenatal care, newborn and postpartum",
+         (135, 136, 137, 138)),
 }
-CONVERSION_NEXT = ("Maternity: prenatal care, labor and birth, obstetric complications and medications "
+CONVERSION_NEXT = ("Maternity part 2: hyperemesis, PPROM and chorioamnionitis, HELLP, shoulder dystocia, uterine "
+                   "rupture, amniotic fluid embolism, prenatal screening, newborn respiratory distress and more "
                    "(CASE-MAP.md, book_topics.py)")
 CASE_SHARE_GOAL = 85    # percent of the bank inside full case studies
 
