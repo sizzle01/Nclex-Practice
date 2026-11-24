@@ -133,4 +133,5 @@ Written by `python3 -I build_all.py`; do not edit by hand. See `quality.py` for 
 | 141-ob-cases-meconium-late-preterm-discharge-hematoma | 24 | yes | 0 | 0% | 0% (-) | 0% | 11.5 | 0/4/20 |
 | 142-ob-cases-third-trimester-sensitized-gdm-trauma-standalone | 28 | yes | 1 | 100% | 100% (longest) | 0% | 13 | 0/4/24 |
 | 143-peds-cases-tof-kawasaki-vsd-cath | 24 | yes | 0 | 0% | 0% (-) | 0% | 11.5 | 0/4/20 |
-| **Whole bank** | 3010 | | 1343 | 12% | 25% (assess first) | 5% | 25 | 118/1232/1660 |
+| 144-peds-cases-dehydration-nephrotic-agn-wilms | 24 | yes | 0 | 0% | 0% (-) | 0% | 13 | 0/4/20 |
+| **Whole bank** | 3034 | | 1343 | 12% | 25% (assess first) | 5% | 25 | 118/1236/1680 |
