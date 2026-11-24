@@ -137,4 +137,5 @@ Written by `python3 -I build_all.py`; do not edit by hand. See `quality.py` for 
 | 145-peds-cases-shunt-seizure-myelo-aht | 24 | yes | 0 | 0% | 0% (-) | 0% | 13 | 0/4/20 |
 | 146-peds-cases-all-hemophilia-ida-iron-standalone | 28 | yes | 1 | 100% | 100% (longest) | 0% | 13 | 0/4/24 |
 | 147-peds-cases-wellbaby-croup-tonsil-pertussis | 24 | yes | 0 | 0% | 0% (-) | 0% | 11.5 | 0/4/20 |
-| **Whole bank** | 3110 | | 1344 | 12% | 25% (assess first) | 5% | 24 | 118/1248/1744 |
+| 148-peds-cases-appendix-scoliosis-headss-t1dm | 24 | yes | 0 | 0% | 0% (-) | 0% | 13 | 0/4/20 |
+| **Whole bank** | 3134 | | 1344 | 12% | 25% (assess first) | 5% | 24 | 118/1252/1764 |
