@@ -142,4 +142,5 @@ Written by `python3 -I build_all.py`; do not edit by hand. See `quality.py` for 
 | 150-peds-cases-catchup-meningitis-foreign-body-lead-standalone | 28 | yes | 1 | 0% | 25% (stem words) | 0% | 12 | 0/4/24 |
 | 151-pharm-cases-crypto-metronidazole-statin-acei | 24 | yes | 0 | 0% | 0% (-) | 0% | 10.5 | 0/4/20 |
 | 152-pharm-cases-angina-osteoporosis-hpylori-antiemetic | 24 | yes | 0 | 0% | 0% (-) | 0% | 13 | 0/4/20 |
-| **Whole bank** | 3234 | | 1345 | 12% | 25% (assess first) | 5% | 23 | 118/1268/1848 |
+| 153-cases-allergy-cough-liver-tx-previa | 24 | yes | 0 | 0% | 0% (-) | 0% | 12.5 | 0/4/20 |
+| **Whole bank** | 3258 | | 1345 | 12% | 25% (assess first) | 5% | 23 | 118/1272/1868 |
