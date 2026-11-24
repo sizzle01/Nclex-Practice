@@ -2,21 +2,21 @@
 
 Written by `python3 -I build_all.py` (coverage.py); do not edit by hand.
 
-**2986 of 5000 questions** (60%), 198 case studies, 63 bowtie questions. Multiple choice is 45% of the bank.
+**3010 of 5000 questions** (60%), 202 case studies, 63 bowtie questions. Multiple choice is 45% of the bank.
 
 ## By test plan category
 
 | Category | Test plan | Target | Have | To write | Next chunk |
 |---|---|---|---|---|---|
 | Management of Care | 18% | 900 | 404 | 496 | 24 |
-| Safety and Infection Prevention and Control | 13% | 650 | 292 | 358 | 17 |
-| Health Promotion and Maintenance | 9% | 450 | 256 | 194 | 9 |
-| Psychosocial Integrity | 9% | 450 | 250 | 200 | 9 |
+| Safety and Infection Prevention and Control | 13% | 650 | 293 | 357 | 17 |
+| Health Promotion and Maintenance | 9% | 450 | 261 | 189 | 9 |
+| Psychosocial Integrity | 9% | 450 | 251 | 199 | 10 |
 | Basic Care and Comfort | 9% | 450 | 174 | 276 | 13 |
-| Pharmacological and Parenteral Therapies | 16% | 800 | 531 | 269 | 13 |
-| Reduction of Risk Potential | 12% | 600 | 295 | 305 | 15 |
-| Physiological Adaptation | 14% | 700 | 784 | 0 | 0 |
-| **Total** | 100% | 5000 | 2986 | 2098 | 100 |
+| Pharmacological and Parenteral Therapies | 16% | 800 | 535 | 265 | 13 |
+| Reduction of Risk Potential | 12% | 600 | 299 | 301 | 14 |
+| Physiological Adaptation | 14% | 700 | 793 | 0 | 0 |
+| **Total** | 100% | 5000 | 3010 | 2083 | 100 |
 
 ## Chunks
 
@@ -35,7 +35,7 @@ The wave chunks are paused (2026-11-20) while the bank is rebuilt around case st
 
 ## Case conversion (CASE-MAP.md)
 
-**1188 of 2328 active questions (51%) are inside full case studies**; the goal is 85%. 658 older questions are retired (F26, retired-questions.json): their topics were rebuilt as case studies.
+**1212 of 2352 active questions (52%) are inside full case studies**; the goal is 85%. 658 older questions are retired (F26, retired-questions.json): their topics were rebuilt as case studies.
 
 | Chunk | Topic | Batch files | Questions | Case studies |
 |---|---|---|---|---|
@@ -161,14 +161,14 @@ The wave chunks are paused (2026-11-20) while the bank is rebuilt around case st
 | Type | Questions | Share |
 |---|---|---|
 | multiple_choice | 1343 | 45% |
-| matrix_mc | 489 | 16% |
-| sata | 389 | 13% |
-| dropdown_cloze | 205 | 7% |
-| highlight_table | 181 | 6% |
+| matrix_mc | 497 | 17% |
+| sata | 395 | 13% |
+| dropdown_cloze | 209 | 7% |
+| highlight_table | 185 | 6% |
 | highlight_text | 71 | 2% |
 | ordered_response | 64 | 2% |
 | bowtie | 63 | 2% |
-| fill_blank_calc | 59 | 2% |
+| fill_blank_calc | 61 | 2% |
 | dropdown_table | 43 | 1% |
 | multiple_response_grouping | 29 | 1% |
 | select_n | 25 | 1% |

@@ -132,4 +132,5 @@ Written by `python3 -I build_all.py`; do not edit by hand. See `quality.py` for 
 | 140-ob-cases-dystocia-rupture-afe-precipitous | 24 | yes | 0 | 0% | 0% (-) | 0% | 12 | 0/4/20 |
 | 141-ob-cases-meconium-late-preterm-discharge-hematoma | 24 | yes | 0 | 0% | 0% (-) | 0% | 11.5 | 0/4/20 |
 | 142-ob-cases-third-trimester-sensitized-gdm-trauma-standalone | 28 | yes | 1 | 100% | 100% (longest) | 0% | 13 | 0/4/24 |
-| **Whole bank** | 2986 | | 1343 | 12% | 25% (assess first) | 5% | 25 | 118/1228/1640 |
+| 143-peds-cases-tof-kawasaki-vsd-cath | 24 | yes | 0 | 0% | 0% (-) | 0% | 11.5 | 0/4/20 |
+| **Whole bank** | 3010 | | 1343 | 12% | 25% (assess first) | 5% | 25 | 118/1232/1660 |
