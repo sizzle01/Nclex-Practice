@@ -3009,7 +3009,7 @@
  "c1e00000-0000-4000-8000-000000006421": {
   "id": "c1e00000-0000-4000-8000-000000006421",
   "title": "Growth and development: toddler",
-  "description": "29 questions on growth and development: toddler (0 case studies and 29 single questions in all). Untimed; answers, rationales and your result at the end.",
+  "description": "30 questions on growth and development: toddler (0 case studies and 30 single questions in all). Untimed; answers, rationales and your result at the end.",
   "mode": "practice",
   "revealMode": "exam",
   "timed": false,
@@ -3045,7 +3045,8 @@
    "c1a00081-0000-4000-8000-000000000002",
    "c1a00093-0000-4000-8000-000000000008",
    "c1a00093-0000-4000-8000-000000000012",
-   "c1a00097-0000-4000-8000-000000000012"
+   "c1a00097-0000-4000-8000-000000000012",
+   "c1a00146-0000-4000-8000-000000000001"
   ],
   "isPublished": true
  },
@@ -3311,7 +3312,7 @@
  "c1e00000-0000-4000-8000-000000006541": {
   "id": "c1e00000-0000-4000-8000-000000006541",
   "title": "Hematologic disorders",
-  "description": "16 questions on hematologic disorders (1 case studies and 10 single questions in all). Untimed; answers, rationales and your result at the end.",
+  "description": "17 questions on hematologic disorders (1 case studies and 11 single questions in all). Untimed; answers, rationales and your result at the end.",
   "mode": "practice",
   "revealMode": "exam",
   "timed": false,
@@ -3334,7 +3335,8 @@
    "c1a00031-0000-4000-8000-000000000002",
    "c1a00031-0000-4000-8000-000000000003",
    "c1a00031-0000-4000-8000-000000000021",
-   "c1a00077-0000-4000-8000-000000000003"
+   "c1a00077-0000-4000-8000-000000000003",
+   "c1a00146-0000-4000-8000-000000000001"
   ],
   "isPublished": true
  },
