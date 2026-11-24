@@ -116,7 +116,16 @@ interface TabContentProps {
 function TabContent({ sets, filter, selectedId, onOpen }: TabContentProps) {
   const sections = groupSets(sets, filter);
   if (sections.length > 0) {
-    return <SetSectionList sections={sections} selectedId={selectedId} panelId={panelId} onOpen={onOpen} />;
+    return (
+      <SetSectionList
+        sections={sections}
+        selectedId={selectedId}
+        panelId={panelId}
+        // Topics holds a test per book subtopic (100+), so it opens as a list of book sections (F28).
+        openByDefault={filter !== "topics"}
+        onOpen={onOpen}
+      />
+    );
   }
   // Adaptive exams arrive with F19 (architecture.md 5.8), so that tab says they are on the way.
   const message =
