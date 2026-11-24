@@ -44,6 +44,7 @@ describe("PracticeCatalog", () => {
     getMock.mockReset();
     replace.mockReset();
     searchParams = new URLSearchParams();
+    localStorage.clear();
   });
 
   it("groups the sets into sections, in the API's order within each", async () => {
@@ -128,6 +129,9 @@ describe("PracticeCatalog", () => {
 
     expect(await screen.findByRole("heading", { name: /^Fundamental/ })).toBeInTheDocument();
     expect(screen.getByRole("heading", { name: /^Maternity/ })).toBeInTheDocument();
+    // Topics starts collapsed (F28): the cards appear once a section is opened.
+    expect(screen.queryByRole("heading", { name: "ABG" })).not.toBeInTheDocument();
+    await userEvent.setup().click(screen.getByRole("button", { name: /^Fundamental/ }));
     expect(screen.getByRole("heading", { name: "ABG" })).toBeInTheDocument();
     expect(screen.queryByRole("heading", { name: "RN Sample Set" })).not.toBeInTheDocument();
     expect(screen.getByRole("tab", { name: "Topics 2" })).toHaveAttribute("aria-selected", "true");
