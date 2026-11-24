@@ -2,21 +2,21 @@
 
 Written by `python3 -I build_all.py` (coverage.py); do not edit by hand.
 
-**2910 of 5000 questions** (58%), 186 case studies, 62 bowtie questions. Multiple choice is 46% of the bank.
+**2934 of 5000 questions** (59%), 190 case studies, 62 bowtie questions. Multiple choice is 46% of the bank.
 
 ## By test plan category
 
 | Category | Test plan | Target | Have | To write | Next chunk |
 |---|---|---|---|---|---|
-| Management of Care | 18% | 900 | 398 | 502 | 24 |
+| Management of Care | 18% | 900 | 401 | 499 | 24 |
 | Safety and Infection Prevention and Control | 13% | 650 | 292 | 358 | 17 |
-| Health Promotion and Maintenance | 9% | 450 | 232 | 218 | 10 |
-| Psychosocial Integrity | 9% | 450 | 248 | 202 | 9 |
+| Health Promotion and Maintenance | 9% | 450 | 237 | 213 | 10 |
+| Psychosocial Integrity | 9% | 450 | 249 | 201 | 9 |
 | Basic Care and Comfort | 9% | 450 | 174 | 276 | 13 |
 | Pharmacological and Parenteral Therapies | 16% | 800 | 528 | 272 | 13 |
 | Reduction of Risk Potential | 12% | 600 | 293 | 307 | 14 |
-| Physiological Adaptation | 14% | 700 | 745 | 0 | 0 |
-| **Total** | 100% | 5000 | 2910 | 2135 | 100 |
+| Physiological Adaptation | 14% | 700 | 760 | 0 | 0 |
+| **Total** | 100% | 5000 | 2934 | 2126 | 100 |
 
 ## Chunks
 
@@ -35,7 +35,7 @@ The wave chunks are paused (2026-11-20) while the bank is rebuilt around case st
 
 ## Case conversion (CASE-MAP.md)
 
-**1116 of 2293 active questions (49%) are inside full case studies**; the goal is 85%. 617 older questions are retired (F26, retired-questions.json): their topics were rebuilt as case studies.
+**1140 of 2317 active questions (49%) are inside full case studies**; the goal is 85%. 617 older questions are retired (F26, retired-questions.json): their topics were rebuilt as case studies.
 
 | Chunk | Topic | Batch files | Questions | Case studies |
 |---|---|---|---|---|
@@ -160,12 +160,12 @@ The wave chunks are paused (2026-11-20) while the bank is rebuilt around case st
 | Type | Questions | Share |
 |---|---|---|
 | multiple_choice | 1342 | 46% |
-| matrix_mc | 465 | 16% |
-| sata | 365 | 13% |
-| dropdown_cloze | 193 | 7% |
-| highlight_table | 170 | 6% |
+| matrix_mc | 473 | 16% |
+| sata | 372 | 13% |
+| dropdown_cloze | 197 | 7% |
+| highlight_table | 174 | 6% |
 | highlight_text | 71 | 2% |
-| ordered_response | 63 | 2% |
+| ordered_response | 64 | 2% |
 | bowtie | 62 | 2% |
 | fill_blank_calc | 59 | 2% |
 | dropdown_table | 41 | 1% |
