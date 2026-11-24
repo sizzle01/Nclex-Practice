@@ -127,4 +127,5 @@ Written by `python3 -I build_all.py`; do not edit by hand. See `quality.py` for 
 | 135-ob-cases-abruption-previa-gdm-rh | 24 | yes | 0 | 0% | 0% (-) | 0% | 13.5 | 0/4/20 |
 | 136-ob-cases-fhr-prolapse-preterm-epidural | 24 | yes | 0 | 0% | 0% (-) | 0% | 11 | 0/4/20 |
 | 137-ob-cases-prenatal-iugr-ectopic-uterotonics | 24 | yes | 0 | 0% | 0% (-) | 0% | 11 | 0/4/20 |
-| **Whole bank** | 2858 | | 1341 | 12% | 25% (assess first) | 5% | 26 | 118/1208/1532 |
+| 138-ob-cases-newborn-jaundice-nas-postpartum-standalone | 28 | yes | 1 | 100% | 100% (longest) | 0% | 13 | 0/4/24 |
+| **Whole bank** | 2886 | | 1342 | 12% | 25% (assess first) | 5% | 25 | 118/1212/1556 |
