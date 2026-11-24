@@ -425,7 +425,8 @@
           "Rewritten to NCLEX-RN difficulty and reviewed by the content team on 19 November 2026."
         ]
       },
-      "educationalObjective": "Recognize pyloric stenosis."
+      "educationalObjective": "Recognize pyloric stenosis.",
+      "status": "retired"
     },
     {
       "id": "c1a00030-0000-4000-8000-000000000008",
@@ -474,7 +475,8 @@
           "Rewritten to NCLEX-RN difficulty and reviewed by the content team on 19 November 2026."
         ]
       },
-      "educationalObjective": "Recognize intussusception."
+      "educationalObjective": "Recognize intussusception.",
+      "status": "retired"
     },
     {
       "id": "c1a00030-0000-4000-8000-000000000009",
@@ -523,7 +525,8 @@
           "Rewritten to NCLEX-RN difficulty and reviewed by the content team on 19 November 2026."
         ]
       },
-      "educationalObjective": "Recognize Hirschsprung disease."
+      "educationalObjective": "Recognize Hirschsprung disease.",
+      "status": "retired"
     },
     {
       "id": "c1a00030-0000-4000-8000-000000000010",
@@ -867,7 +870,8 @@
           "Rewritten to NCLEX-RN difficulty and reviewed by the content team on 19 November 2026."
         ]
       },
-      "educationalObjective": "Teach parents about hypospadias."
+      "educationalObjective": "Teach parents about hypospadias.",
+      "status": "retired"
     },
     {
       "id": "c1a00030-0000-4000-8000-000000000017",
@@ -1163,7 +1167,8 @@
           "Rewritten to NCLEX-RN difficulty and reviewed by the content team on 19 November 2026."
         ]
       },
-      "educationalObjective": "Recognize meningitis in an infant."
+      "educationalObjective": "Recognize meningitis in an infant.",
+      "status": "retired"
     },
     {
       "id": "c1a00030-0000-4000-8000-000000000023",

@@ -35,7 +35,7 @@ The wave chunks are paused (2026-11-20) while the bank is rebuilt around case st
 
 ## Case conversion (CASE-MAP.md)
 
-**1380 of 2521 active questions (55%) are inside full case studies**; the goal is 85%. 665 older questions are retired (F26, retired-questions.json): their topics were rebuilt as case studies.
+**1380 of 2507 active questions (55%) are inside full case studies**; the goal is 85%. 679 older questions are retired (F26, retired-questions.json): their topics were rebuilt as case studies.
 
 | Chunk | Topic | Batch files | Questions | Case studies |
 |---|---|---|---|---|
@@ -51,12 +51,13 @@ The wave chunks are paused (2026-11-20) while the bank is rebuilt around case st
 | 10 | Maternity part 1: bleeding, diabetes, Rh, labor and fetal monitoring, prenatal care, newborn and postpartum | b135, b136, b137, b138 | 100 | 16 |
 | 11 | Maternity part 2: hyperemesis, PPROM, HELLP, screening, intrapartum emergencies, newborn and postpartum | b139, b140, b141, b142 | 100 | 16 |
 | 12 | Pediatrics part 1: cardiac, renal, neurologic and blood disorders | b143, b144, b145, b146 | 100 | 16 |
+| 13 | Pediatrics part 2: growth and development, respiratory and GI disorders and vaccines | b147, b148, b149, b150 | 100 | 16 |
 
-**Next: conversion chunk 13**: Pediatrics part 2: growth and development by age, respiratory and GI disorders and the vaccination schedule (CASE-MAP.md, book_topics.py).
+**Next: conversion chunk 14**: All planned chunks are converted. Next: second cases for subtopics with one case, rebalance the practice parts and review the 26 old cases (CASE-MAP.md, book_topics.py).
 
 ## Review book checklist (book_topics.py)
 
-**74 of 96 subtopics covered** (at least 2 case studies), 19 started (1 case), 3 not yet covered.
+**78 of 96 subtopics covered** (at least 2 case studies), 18 started (1 case), 0 not yet covered.
 
 | Section | Subtopic | Status | Case studies |
 |---|---|---|---|
@@ -130,20 +131,20 @@ The wave chunks are paused (2026-11-20) while the bank is rebuilt around case st
 | Maternity | Preeclampsia | covered | Preeclampsia with severe features at 35 weeks; HELLP syndrome with liver hematoma |
 | Maternity | Pregnancy terminology | covered | First prenatal visit with pregnancy terminology; Third-trimester visit with expected discomforts |
 | Maternity | Rh incompatibility | covered | Rh incompatibility and Rho(D) immune globulin; Rh-sensitized pregnancy with fetal anemia |
-| Pediatrics | Growth and development: infant | started | Abusive head trauma in an infant |
-| Pediatrics | Growth and development: toddler | covered | Iron deficiency anemia from too much cow's milk; Iron tablet poisoning in a toddler |
-| Pediatrics | Growth and development: preschool | started | Care after a pediatric cardiac catheterization |
-| Pediatrics | Growth and development: school age | **not yet** | - |
-| Pediatrics | Growth and development: adolescence | **not yet** | - |
+| Pediatrics | Growth and development: infant | covered | Abusive head trauma in an infant; Six-month well-baby visit; Pertussis in an unvaccinated infant; Cleft lip and palate |
+| Pediatrics | Growth and development: toddler | covered | Iron deficiency anemia from too much cow's milk; Iron tablet poisoning in a toddler; Hospitalized toddler with croup; Foreign body aspiration in a toddler; Lead poisoning in a toddler |
+| Pediatrics | Growth and development: preschool | covered | Care after a pediatric cardiac catheterization; Preschooler bleeding after tonsillectomy; Catch-up vaccination for a newly arrived child |
+| Pediatrics | Growth and development: school age | started | School-age child with a ruptured appendix |
+| Pediatrics | Growth and development: adolescence | covered | Adolescent spinal fusion for scoliosis; Confidential adolescent visit with HEADSS screening; Adolescent with type 1 diabetes missing insulin |
 | Pediatrics | Cardiac disorders | covered | Tetralogy of Fallot with a tet spell; Kawasaki disease; Infant heart failure from a ventricular septal defect; Care after a pediatric cardiac catheterization |
-| Pediatrics | Genitourinary disorders | covered | Nephrotic syndrome in a preschooler; Acute post-streptococcal glomerulonephritis; Wilms tumor before nephrectomy; Infant dehydration from rotavirus |
+| Pediatrics | Genitourinary disorders | covered | Nephrotic syndrome in a preschooler; Acute post-streptococcal glomerulonephritis; Wilms tumor before nephrectomy; Infant dehydration from rotavirus; Pyloric stenosis with metabolic alkalosis; Intussusception with perforation; Hirschsprung disease with a colostomy |
 | Pediatrics | Hematologic disorders | covered | Sickle cell crisis with acute chest syndrome; Acute lymphoblastic leukemia through induction; Hemophilia A with a knee bleed; Iron deficiency anemia from too much cow's milk |
-| Pediatrics | Neurologic disorders | covered | VP shunt malfunction in a toddler; Febrile seizure progressing to status epilepticus; Newborn with myelomeningocele; Abusive head trauma in an infant |
-| Pediatrics | Respiratory disorders | covered | Infant with RSV bronchiolitis; Child with a severe asthma exacerbation |
-| Pediatrics | Vaccination schedule | **not yet** | - |
+| Pediatrics | Neurologic disorders | covered | VP shunt malfunction in a toddler; Febrile seizure progressing to status epilepticus; Newborn with myelomeningocele; Abusive head trauma in an infant; Bacterial meningitis in an infant |
+| Pediatrics | Respiratory disorders | covered | Infant with RSV bronchiolitis; Child with a severe asthma exacerbation; Hospitalized toddler with croup; Pertussis in an unvaccinated infant; Foreign body aspiration in a toddler |
+| Pediatrics | Vaccination schedule | covered | Six-month well-baby visit; Pertussis in an unvaccinated infant; Catch-up vaccination for a newly arrived child |
 | Med-Surg | Altered immunity disorders | covered | Anaphylactic shock in a client taking a beta blocker; Crohn disease flare and infliximab; Advanced HIV with Pneumocystis pneumonia; Lupus flare with lupus nephritis; Rheumatoid arthritis biologic therapy with reactivated tuberculosis; Candidemia treated with antifungal drugs |
 | Med-Surg | Cardiac disorders | covered | Inferior ST-elevation myocardial infarction; Type A aortic dissection; Cardiac tamponade after coronary bypass surgery |
-| Med-Surg | Endocrine disorders | covered | Adrenal crisis in Addison disease; Diabetes insipidus after pituitary surgery |
+| Med-Surg | Endocrine disorders | covered | Adrenal crisis in Addison disease; Diabetes insipidus after pituitary surgery; Adolescent with type 1 diabetes missing insulin |
 | Med-Surg | Gastrointestinal disorders | covered | Hepatic encephalopathy in cirrhosis; Severe acute pancreatitis |
 | Med-Surg | Hemodynamic monitoring | covered | Cardiogenic shock with a pulmonary artery catheter; Arterial line and CVP monitoring after open AAA repair |
 | Med-Surg | Musculoskeletal disorders | covered | Hemorrhage after a total hip replacement; Acute limb ischemia and compartment syndrome; Femur fracture in traction with fat embolism syndrome; Acute gout flare and urate-lowering therapy; Below-knee amputation with phantom limb pain; Rhabdomyolysis after a long lie on the floor |

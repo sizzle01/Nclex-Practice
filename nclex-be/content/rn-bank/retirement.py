@@ -65,11 +65,16 @@ CHUNK_TOPICS = {
          r"pregnan|prenatal|postpartum|newborn|neonat|\blabor\b|oxytocin|magnesium sulfate|rho\(d\)|placenta|fundal|"
          r"breastfe|apgar|lochia"),
     12: ("Pediatrics part 1: cardiac, renal, neurologic and blood disorders", "pediatrics", r"(?!)"),
+    13: ("Pediatrics part 2: growth and development, respiratory, GI and vaccines", "pediatrics", r"(?!)"),
 }
 # Pediatric chunks retire only the subtopics their cases teach (growth, respiratory, GI and vaccines come later).
 CHUNK_SUBTOPICS = {
     12: {"pediatric-cardiac-disorders", "pediatric-gi-gu-disorders", "pediatric-neurological-disorders",
          "pediatric-hematology-oncology", "infant-dehydration", "poisoning-and-ingestions", "sickle-cell-disease"},
+    13: {"infant-growth-and-development", "adolescent-health", "immunizations", "infant-and-child-nutrition",
+         "pediatric-respiratory-disorders", "pediatric-gi-gu-disorders", "pediatric-care-basics",
+         "childhood-communicable-diseases", "pediatric-neurological-disorders", "poisoning-and-ingestions",
+         "infant-dehydration"},
 }
 # Pediatric GI topics the chunk 12 cases do not teach yet (kept for chunk 13).
 KEEP_STEMS_PEDS_GI = re.compile(r"pyloric|intussuscep|hirschsprung|celiac|cleft|appendic|gastroschisis|omphalocele|"
@@ -94,7 +99,7 @@ KEEP_TAGS = {"eye-and-ear-disorders", "sensory-impairment-care", "urinary-elimin
 # Single questions on topics no case covers yet, kept whatever their tags: superior vena cava syndrome (chunk 6);
 # children (pediatric chunks), carpal tunnel, Lyme disease, HIV PrEP, osteoarthritis and Buck's traction (chunk 7).
 KEEP_STEMS = re.compile(r"superior vena cava|collar of the shirt|\bchild\b|\bparent\b|carpal|lyme|"
-                        r"pre-exposure|\bprep\b|osteoarthritis|buck's", re.I)
+                        r"pre-exposure|\bprep\b|osteoarthritis|buck's|16-year-olds who recently", re.I)
 # Chunk 10 (maternity part 1) cases do not yet teach these; maternity part 2 will.
 KEEP_STEMS_MATERNITY = re.compile(
     r"vomited several times a day|amniocentesis|alpha-fetoprotein|gush of clear fluid 1 hour|right ribs|"

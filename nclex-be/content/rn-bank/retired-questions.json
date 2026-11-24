@@ -1695,13 +1695,49 @@
   "chunk": 11,
   "topic": "Maternity and newborn part 2"
  },
+ "c1a00029-0000-4000-8000-000000000002": {
+  "chunk": 13,
+  "topic": "Pediatrics part 2: growth and development, respiratory, GI and vaccines"
+ },
+ "c1a00029-0000-4000-8000-000000000003": {
+  "chunk": 13,
+  "topic": "Pediatrics part 2: growth and development, respiratory, GI and vaccines"
+ },
+ "c1a00029-0000-4000-8000-000000000005": {
+  "chunk": 13,
+  "topic": "Pediatrics part 2: growth and development, respiratory, GI and vaccines"
+ },
+ "c1a00029-0000-4000-8000-000000000007": {
+  "chunk": 13,
+  "topic": "Pediatrics part 2: growth and development, respiratory, GI and vaccines"
+ },
+ "c1a00029-0000-4000-8000-000000000015": {
+  "chunk": 13,
+  "topic": "Pediatrics part 2: growth and development, respiratory, GI and vaccines"
+ },
  "c1a00030-0000-4000-8000-000000000002": {
   "chunk": 12,
   "topic": "Pediatrics part 1: cardiac, renal, neurologic and blood disorders"
  },
+ "c1a00030-0000-4000-8000-000000000007": {
+  "chunk": 13,
+  "topic": "Pediatrics part 2: growth and development, respiratory, GI and vaccines"
+ },
+ "c1a00030-0000-4000-8000-000000000008": {
+  "chunk": 13,
+  "topic": "Pediatrics part 2: growth and development, respiratory, GI and vaccines"
+ },
+ "c1a00030-0000-4000-8000-000000000009": {
+  "chunk": 13,
+  "topic": "Pediatrics part 2: growth and development, respiratory, GI and vaccines"
+ },
  "c1a00030-0000-4000-8000-000000000014": {
   "chunk": 12,
   "topic": "Pediatrics part 1: cardiac, renal, neurologic and blood disorders"
+ },
+ "c1a00030-0000-4000-8000-000000000016": {
+  "chunk": 13,
+  "topic": "Pediatrics part 2: growth and development, respiratory, GI and vaccines"
  },
  "c1a00030-0000-4000-8000-000000000019": {
   "chunk": 12,
@@ -1711,6 +1747,10 @@
   "chunk": 12,
   "topic": "Pediatrics part 1: cardiac, renal, neurologic and blood disorders"
  },
+ "c1a00030-0000-4000-8000-000000000022": {
+  "chunk": 13,
+  "topic": "Pediatrics part 2: growth and development, respiratory, GI and vaccines"
+ },
  "c1a00031-0000-4000-8000-000000000001": {
   "chunk": 12,
   "topic": "Pediatrics part 1: cardiac, renal, neurologic and blood disorders"
@@ -1718,6 +1758,10 @@
  "c1a00031-0000-4000-8000-000000000002": {
   "chunk": 12,
   "topic": "Pediatrics part 1: cardiac, renal, neurologic and blood disorders"
+ },
+ "c1a00031-0000-4000-8000-000000000008": {
+  "chunk": 13,
+  "topic": "Pediatrics part 2: growth and development, respiratory, GI and vaccines"
  },
  "c1a00032-0000-4000-8000-000000000006": {
   "chunk": 9,
@@ -1923,6 +1967,10 @@
   "chunk": 1,
   "topic": "Cardiac"
  },
+ "c1a00069-0000-4000-8000-000000000018": {
+  "chunk": 13,
+  "topic": "Pediatrics part 2: growth and development, respiratory, GI and vaccines"
+ },
  "c1a00070-0000-4000-8000-000000000002": {
   "chunk": 1,
   "topic": "Cardiac"
@@ -2102,6 +2150,10 @@
  "c1a00077-0000-4000-8000-000000000012": {
   "chunk": 1,
   "topic": "Cardiac"
+ },
+ "c1a00077-0000-4000-8000-000000000013": {
+  "chunk": 13,
+  "topic": "Pediatrics part 2: growth and development, respiratory, GI and vaccines"
  },
  "c1a00077-0000-4000-8000-000000000016": {
   "chunk": 1,
@@ -2570,6 +2622,10 @@
  "c1a00097-0000-4000-8000-000000000011": {
   "chunk": 11,
   "topic": "Maternity and newborn part 2"
+ },
+ "c1a00097-0000-4000-8000-000000000013": {
+  "chunk": 13,
+  "topic": "Pediatrics part 2: growth and development, respiratory, GI and vaccines"
  },
  "c1a00097-0000-4000-8000-000000000016": {
   "chunk": 11,
