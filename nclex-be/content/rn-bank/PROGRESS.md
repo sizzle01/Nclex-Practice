@@ -52,12 +52,13 @@ The wave chunks are paused (2026-11-20) while the bank is rebuilt around case st
 | 11 | Maternity part 2: hyperemesis, PPROM, HELLP, screening, intrapartum emergencies, newborn and postpartum | b139, b140, b141, b142 | 100 | 16 |
 | 12 | Pediatrics part 1: cardiac, renal, neurologic and blood disorders | b143, b144, b145, b146 | 100 | 16 |
 | 13 | Pediatrics part 2: growth and development, respiratory and GI disorders and vaccines | b147, b148, b149, b150 | 100 | 16 |
+| 14 | Second cases for the 18 review-book subtopics that had one case | b151, b152, b153, b154, b155 | 112 | 18 |
 
-**Next: conversion chunk 14**: All planned chunks are converted. Next: second cases for subtopics with one case, rebalance the practice parts and review the 26 old cases (CASE-MAP.md, book_topics.py).
+**Next: conversion chunk 15**: Every review-book subtopic has at least two case studies. Next: rebalance the practice parts and review the 26 old cases (CASE-MAP.md, book_topics.py).
 
 ## Review book checklist (book_topics.py)
 
-**78 of 96 subtopics covered** (at least 2 case studies), 18 started (1 case), 0 not yet covered.
+**96 of 96 subtopics covered** (at least 2 case studies), 0 started (1 case), 0 not yet covered.
 
 | Section | Subtopic | Status | Case studies |
 |---|---|---|---|
@@ -73,44 +74,44 @@ The wave chunks are paused (2026-11-20) while the bank is rebuilt around case st
 | Holistic health assessment | Cranial nerve | covered | Cranial nerve assessment after craniotomy; Bell palsy and trigeminal neuralgia |
 | Pharmacology | Antimicrobials: antibiotics | covered | Active pulmonary tuberculosis; Cystic fibrosis exacerbation; Infective endocarditis in a client who injects drugs; Severe C. difficile colitis and toxic megacolon; Pelvic inflammatory disease with a tubo-ovarian abscess; Necrotizing fasciitis of the leg; Secondary syphilis and a Jarisch-Herxheimer reaction; Rheumatoid arthritis biologic therapy with reactivated tuberculosis |
 | Pharmacology | Antimicrobials: antiviral | covered | Influenza outbreak in long-term care; Advanced HIV with Pneumocystis pneumonia |
-| Pharmacology | Antimicrobials: antifungal | started | Candidemia treated with antifungal drugs |
-| Pharmacology | Antimicrobials: antiparasitic | started | Severe falciparum malaria in a returning traveler |
-| Pharmacology | Antilipidemics | started | TIA, carotid endarterectomy and statin therapy |
+| Pharmacology | Antimicrobials: antifungal | covered | Candidemia treated with antifungal drugs; Cryptococcal meningitis treated with antifungals |
+| Pharmacology | Antimicrobials: antiparasitic | covered | Severe falciparum malaria in a returning traveler; Trichomoniasis and a household pinworm outbreak |
+| Pharmacology | Antilipidemics | covered | TIA, carotid endarterectomy and statin therapy; Statin muscle injury from a drug interaction |
 | Pharmacology | Hematopoietic medications | covered | Anemia and mineral bone disease of chronic kidney disease; Febrile neutropenia after chemotherapy; Pernicious anemia compared with iron deficiency; Iron deficiency anemia from too much cow's milk |
 | Pharmacology | Cardiovascular: ANS overview | covered | Pheochromocytoma; Anaphylactic shock in a client taking a beta blocker |
 | Pharmacology | Cardiovascular: adrenergic agonists | covered | Anaphylactic shock in a client taking a beta blocker; Cardiogenic shock with a pulmonary artery catheter |
 | Pharmacology | Cardiovascular: adrenergic antagonists | covered | Pheochromocytoma; Type A aortic dissection |
 | Pharmacology | Cardiovascular: PSNS overview and cholinergic medications | covered | Myasthenic crisis versus cholinergic crisis; Delirium on top of dementia |
 | Pharmacology | Cardiovascular: anticholinergic | covered | Drug-induced complete heart block and transcutaneous pacing; Over-the-counter cold medicines in an older adult |
-| Pharmacology | Cardiovascular: hypertension | started | Hypertensive emergency after stopping clonidine |
+| Pharmacology | Cardiovascular: hypertension | covered | Hypertensive emergency after stopping clonidine; ACE inhibitor angioedema |
 | Pharmacology | Cardiovascular: heart failure | covered | Heart failure with digoxin toxicity; Acute pulmonary edema in heart failure; Infant heart failure from a ventricular septal defect |
 | Pharmacology | Cardiovascular: antidysrhythmic | covered | Ventricular tachycardia in a client with an ICD; New atrial fibrillation with a rapid rate from thyrotoxicosis |
-| Pharmacology | Cardiovascular: angina | started | NSTEMI with a retroperitoneal bleed after catheterization |
+| Pharmacology | Cardiovascular: angina | covered | NSTEMI with a retroperitoneal bleed after catheterization; Stable angina drugs and a nitrate interaction |
 | Pharmacology | Cardiovascular: fluid volume excess | covered | Acute pulmonary edema in heart failure; Ascites, paracentesis and spontaneous bacterial peritonitis |
 | Pharmacology | Coagulation: anticoagulants | covered | Heparin-induced thrombocytopenia with arterial thrombosis; Warfarin over-anticoagulation with a GI bleed and a mechanical valve; Lower GI bleed on apixaban; Massive pulmonary embolism treated with alteplase |
 | Pharmacology | Coagulation: antiplatelets | covered | NSTEMI with a retroperitoneal bleed after catheterization; TIA, carotid endarterectomy and statin therapy |
 | Pharmacology | Coagulation: thrombolytics | covered | Acute ischemic stroke in the thrombolytic window; Massive pulmonary embolism treated with alteplase |
 | Pharmacology | Pain, fever and inflammation | covered | Acetaminophen overdose; Opioid-induced respiratory depression in sleep apnea; Acute gout flare and urate-lowering therapy; Below-knee amputation with phantom limb pain; Opioid overdose and buprenorphine induction |
 | Pharmacology | Endocrine: thyroid and antithyroid | covered | Thyroid storm; Myxedema coma; Levothyroxine over-replacement in an older adult |
-| Pharmacology | Endocrine: osteoporosis | started | Osteoporosis with a vertebral compression fracture |
+| Pharmacology | Endocrine: osteoporosis | covered | Osteoporosis with a vertebral compression fracture; Osteoporosis drugs from alendronate to denosumab |
 | Pharmacology | Endocrine: antidiabetic | covered | Newly diagnosed type 2 diabetes; Prolonged hypoglycemia from a sulfonylurea |
 | Pharmacology | Endocrine: insulin | covered | Hyperosmolar hyperglycemic state; Insulin pump failure leading to DKA; Euglycemic DKA on an SGLT2 inhibitor after surgery |
-| Pharmacology | GI: PUD and GERD | started | Perforated duodenal ulcer |
-| Pharmacology | GI: antiemetics | started | Chemotherapy-induced nausea and vomiting |
+| Pharmacology | GI: PUD and GERD | covered | Perforated duodenal ulcer; H. pylori ulcer and long-term PPI effects |
+| Pharmacology | GI: antiemetics | covered | Chemotherapy-induced nausea and vomiting; Antiemetic adverse effects after surgery |
 | Pharmacology | Neurologic | covered | Status epilepticus after missed antiseizure doses; Parkinson disease after hip surgery; New-onset epilepsy and antiseizure drug safety; Multiple sclerosis relapse |
 | Pharmacology | Respiratory: asthma and bronchoconstrictive disorders | covered | Status asthmaticus in an adult; COPD with CO2 narcosis from too much oxygen |
-| Pharmacology | Respiratory: allergic disorders | started | Over-the-counter cold medicines in an older adult |
-| Pharmacology | Respiratory: decongestant, antitussive, expectorant, mucolytic | started | Over-the-counter cold medicines in an older adult |
+| Pharmacology | Respiratory: allergic disorders | covered | Over-the-counter cold medicines in an older adult; Peanut allergy and allergic rhinitis in a school-age child |
+| Pharmacology | Respiratory: decongestant, antitussive, expectorant, mucolytic | covered | Over-the-counter cold medicines in an older adult; Cough and cold drugs in COPD and in a young child |
 | Mental health | Anxiety disorders and OCD | covered | Panic disorder with anxiolytic treatment; Obsessive-compulsive disorder with exposure and response prevention; Generalized anxiety disorder with SSRI discontinuation and buspirone |
 | Mental health | Bipolar mood disorders | covered | Bipolar mania with lithium toxicity; Bipolar disorder on valproate and lamotrigine with a severe rash; Postpartum psychosis |
-| Mental health | Childhood and neurodevelopmental disorders | started | Child with ADHD on a stimulant |
-| Mental health | Defense mechanisms | started | Alcohol use disorder with Wernicke encephalopathy |
+| Mental health | Childhood and neurodevelopmental disorders | covered | Child with ADHD on a stimulant; Child with autism spectrum disorder in hospital |
+| Mental health | Defense mechanisms | covered | Alcohol use disorder with Wernicke encephalopathy; Defense mechanisms after a myocardial infarction |
 | Mental health | Eating disorders | covered | Anorexia nervosa with medical instability; Bulimia nervosa with severe hypokalemia |
-| Mental health | Impulse control disorders | started | Escalating aggression with seclusion and restraint |
+| Mental health | Impulse control disorders | covered | Escalating aggression with seclusion and restraint; Adolescent conduct disorder with fire-setting |
 | Mental health | Major depressive disorders | covered | Major depression with suicide risk early in SSRI treatment; Serotonin syndrome from fluoxetine with tramadol; Hypertensive crisis on an MAOI; Electroconvulsive therapy for catatonic depression; Complicated grief in an older widower |
-| Mental health | Personality disorders | started | Borderline personality disorder with self-harm and splitting |
+| Mental health | Personality disorders | covered | Borderline personality disorder with self-harm and splitting; Antisocial personality disorder on a medical unit |
 | Mental health | Schizophrenia spectrum disorders | covered | Schizophrenia with neuroleptic malignant syndrome; Treatment-resistant schizophrenia on clozapine; Olanzapine with metabolic syndrome and tardive dyskinesia |
-| Mental health | Somatic symptom disorders | started | Functional neurological symptom disorder after a traumatic event |
+| Mental health | Somatic symptom disorders | covered | Functional neurological symptom disorder after a traumatic event; Factitious disorder imposed on a child |
 | Mental health | Substance use disorders | covered | Alcohol withdrawal after orthopedic surgery; Opioid overdose and buprenorphine induction; Alcohol use disorder with Wernicke encephalopathy; Smoking cessation with varenicline; Neonatal opioid withdrawal syndrome |
 | Mental health | Trauma, stressor-related and dissociative disorders | covered | Post-traumatic stress disorder in a veteran; Functional neurological symptom disorder after a traumatic event; Intimate partner violence in pregnancy; Sexual assault with trauma-informed forensic care |
 | Mental health | Medications: anxiolytics | covered | Panic disorder with anxiolytic treatment; Post-traumatic stress disorder in a veteran; Generalized anxiety disorder with SSRI discontinuation and buspirone |
@@ -126,7 +127,7 @@ The wave chunks are paused (2026-11-20) while the bank is rebuilt around case st
 | Maternity | Medications used during labor and delivery | covered | Postpartum hemorrhage needing second-line uterotonics; Preterm labor with tocolysis and magnesium; Oxytocin induction with tachysystole and late decelerations; Labor epidural with hypotension and the stages of labor; HELLP syndrome with liver hematoma; Preterm prelabor rupture of membranes with chorioamnionitis |
 | Maternity | Newborn | covered | Newborn assessment and routine medications; Pathologic newborn jaundice from ABO incompatibility; Newborn discharge exam and teaching; Late-preterm newborn with transient tachypnea and hypoglycemia |
 | Maternity | Newborn complications | covered | Pathologic newborn jaundice from ABO incompatibility; Neonatal opioid withdrawal syndrome; Gestational diabetes from screening to birth; Meconium aspiration in a post-term newborn; Late-preterm newborn with transient tachypnea and hypoglycemia |
-| Maternity | Placenta previa | started | Placenta previa with accreta |
+| Maternity | Placenta previa | covered | Placenta previa with accreta; Marginal placenta previa managed expectantly |
 | Maternity | Postpartum | covered | Postpartum hemorrhage from uterine atony; Postpartum endometritis and mastitis; Postpartum hemorrhage needing second-line uterotonics; Postpartum vulvar hematoma with postpartum vaccines |
 | Maternity | Preeclampsia | covered | Preeclampsia with severe features at 35 weeks; HELLP syndrome with liver hematoma |
 | Maternity | Pregnancy terminology | covered | First prenatal visit with pregnancy terminology; Third-trimester visit with expected discomforts |
@@ -134,7 +135,7 @@ The wave chunks are paused (2026-11-20) while the bank is rebuilt around case st
 | Pediatrics | Growth and development: infant | covered | Abusive head trauma in an infant; Six-month well-baby visit; Pertussis in an unvaccinated infant; Cleft lip and palate |
 | Pediatrics | Growth and development: toddler | covered | Iron deficiency anemia from too much cow's milk; Iron tablet poisoning in a toddler; Hospitalized toddler with croup; Foreign body aspiration in a toddler; Lead poisoning in a toddler |
 | Pediatrics | Growth and development: preschool | covered | Care after a pediatric cardiac catheterization; Preschooler bleeding after tonsillectomy; Catch-up vaccination for a newly arrived child |
-| Pediatrics | Growth and development: school age | started | School-age child with a ruptured appendix |
+| Pediatrics | Growth and development: school age | covered | School-age child with a ruptured appendix; School-age child newly diagnosed with type 1 diabetes; Peanut allergy and allergic rhinitis in a school-age child |
 | Pediatrics | Growth and development: adolescence | covered | Adolescent spinal fusion for scoliosis; Confidential adolescent visit with HEADSS screening; Adolescent with type 1 diabetes missing insulin |
 | Pediatrics | Cardiac disorders | covered | Tetralogy of Fallot with a tet spell; Kawasaki disease; Infant heart failure from a ventricular septal defect; Care after a pediatric cardiac catheterization |
 | Pediatrics | Genitourinary disorders | covered | Nephrotic syndrome in a preschooler; Acute post-streptococcal glomerulonephritis; Wilms tumor before nephrectomy; Infant dehydration from rotavirus; Pyloric stenosis with metabolic alkalosis; Intussusception with perforation; Hirschsprung disease with a colostomy |
@@ -142,7 +143,7 @@ The wave chunks are paused (2026-11-20) while the bank is rebuilt around case st
 | Pediatrics | Neurologic disorders | covered | VP shunt malfunction in a toddler; Febrile seizure progressing to status epilepticus; Newborn with myelomeningocele; Abusive head trauma in an infant; Bacterial meningitis in an infant |
 | Pediatrics | Respiratory disorders | covered | Infant with RSV bronchiolitis; Child with a severe asthma exacerbation; Hospitalized toddler with croup; Pertussis in an unvaccinated infant; Foreign body aspiration in a toddler |
 | Pediatrics | Vaccination schedule | covered | Six-month well-baby visit; Pertussis in an unvaccinated infant; Catch-up vaccination for a newly arrived child |
-| Med-Surg | Altered immunity disorders | covered | Anaphylactic shock in a client taking a beta blocker; Crohn disease flare and infliximab; Advanced HIV with Pneumocystis pneumonia; Lupus flare with lupus nephritis; Rheumatoid arthritis biologic therapy with reactivated tuberculosis; Candidemia treated with antifungal drugs |
+| Med-Surg | Altered immunity disorders | covered | Anaphylactic shock in a client taking a beta blocker; Crohn disease flare and infliximab; Advanced HIV with Pneumocystis pneumonia; Lupus flare with lupus nephritis; Rheumatoid arthritis biologic therapy with reactivated tuberculosis; Candidemia treated with antifungal drugs; Cryptococcal meningitis treated with antifungals |
 | Med-Surg | Cardiac disorders | covered | Inferior ST-elevation myocardial infarction; Type A aortic dissection; Cardiac tamponade after coronary bypass surgery |
 | Med-Surg | Endocrine disorders | covered | Adrenal crisis in Addison disease; Diabetes insipidus after pituitary surgery; Adolescent with type 1 diabetes missing insulin |
 | Med-Surg | Gastrointestinal disorders | covered | Hepatic encephalopathy in cirrhosis; Severe acute pancreatitis |
@@ -153,10 +154,10 @@ The wave chunks are paused (2026-11-20) while the bank is rebuilt around case st
 | Med-Surg | Pulmonary disorders | covered | ARDS on mechanical ventilation; Active pulmonary tuberculosis |
 | Med-Surg | Renal disorders | covered | Acute kidney injury with hyperkalemia; Missed hemodialysis with hyperkalemia and fluid overload; Peritonitis on peritoneal dialysis; Acute kidney injury from an NSAID, ACE inhibitor and diuretic; Infected obstructing kidney stone with urosepsis; TURP with bladder irrigation and TUR syndrome; Kidney transplant rejection and tacrolimus toxicity; Anemia and mineral bone disease of chronic kidney disease; Starting hemodialysis with disequilibrium syndrome |
 | Med-Surg | Sepsis | covered | Older adult with sepsis from a urinary tract infection; Septic shock from an anastomotic leak after colectomy; Infected obstructing kidney stone with urosepsis; Disseminated intravascular coagulation from sepsis; Febrile neutropenia after chemotherapy; Necrotizing fasciitis of the leg; Candidemia treated with antifungal drugs |
-| Med-Surg | Sexually transmitted infections | covered | Pelvic inflammatory disease with a tubo-ovarian abscess; Secondary syphilis and a Jarisch-Herxheimer reaction |
+| Med-Surg | Sexually transmitted infections | covered | Pelvic inflammatory disease with a tubo-ovarian abscess; Secondary syphilis and a Jarisch-Herxheimer reaction; Trichomoniasis and a household pinworm outbreak |
 | Med-Surg | Shock | covered | Cardiogenic shock with a pulmonary artery catheter; Anaphylactic shock in a client taking a beta blocker; Cervical spinal cord injury, neurogenic shock and autonomic dysreflexia; Splenic laceration with hemorrhagic shock |
 | Med-Surg | Trauma | covered | Flail chest with pulmonary contusion; Tension pneumothorax after a car crash; Major burn with inhalation injury; Epidural hematoma with a lucid interval; Cervical spinal cord injury, neurogenic shock and autonomic dysreflexia; Splenic laceration with hemorrhagic shock; Exertional heat stroke; Accidental hypothermia with rewarming; Mass-casualty incident with START triage; Femur fracture in traction with fat embolism syndrome; Placental abruption after a car crash |
-| Med-Surg | Transplant rejection | started | Kidney transplant rejection and tacrolimus toxicity |
+| Med-Surg | Transplant rejection | covered | Kidney transplant rejection and tacrolimus toxicity; Liver transplant with CMV infection |
 
 ## Item types in the whole bank
 

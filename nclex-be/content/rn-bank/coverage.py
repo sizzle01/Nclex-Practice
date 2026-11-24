@@ -46,9 +46,10 @@ CONVERSION_CHUNKS = {
          (139, 140, 141, 142)),
     12: ("Pediatrics part 1: cardiac, renal, neurologic and blood disorders", (143, 144, 145, 146)),
     13: ("Pediatrics part 2: growth and development, respiratory and GI disorders and vaccines", (147, 148, 149, 150)),
+    14: ("Second cases for the 18 review-book subtopics that had one case", (151, 152, 153, 154, 155)),
 }
-CONVERSION_NEXT = ("All planned chunks are converted. Next: second cases for subtopics with one case, rebalance the "
-                   "practice parts and review the 26 old cases (CASE-MAP.md, book_topics.py)")
+CONVERSION_NEXT = ("Every review-book subtopic has at least two case studies. Next: rebalance the practice parts "
+                   "and review the 26 old cases (CASE-MAP.md, book_topics.py)")
 CASE_SHARE_GOAL = 85    # percent of the bank inside full case studies
 
 # Item-type mix for a chunk of new questions (plan of 2026-11-20): fewer plain multiple-choice questions

@@ -762,7 +762,7 @@
  "c1e00000-0000-4000-8000-000000005241": {
   "id": "c1e00000-0000-4000-8000-000000005241",
   "title": "Antimicrobials: antifungal",
-  "description": "9 questions on antimicrobials: antifungal (1 case studies and 3 single questions in all). Untimed; answers, rationales and your result at the end.",
+  "description": "15 questions on antimicrobials: antifungal (2 case studies and 3 single questions in all). Untimed; answers, rationales and your result at the end.",
   "mode": "practice",
   "revealMode": "exam",
   "timed": false,
@@ -776,16 +776,22 @@
    "c1a00124-0000-4000-8000-000000000022",
    "c1a00124-0000-4000-8000-000000000023",
    "c1a00124-0000-4000-8000-000000000024",
+   "c1a00151-0000-4000-8000-000000000001",
+   "c1a00151-0000-4000-8000-000000000002",
+   "c1a00151-0000-4000-8000-000000000003",
+   "c1a00151-0000-4000-8000-000000000004",
+   "c1a00151-0000-4000-8000-000000000005",
+   "c1a00151-0000-4000-8000-000000000006",
    "c1a00064-0000-4000-8000-000000000028",
    "c1a00068-0000-4000-8000-000000000025",
    "c1a00082-0000-4000-8000-000000000008"
   ],
-  "isPublished": false
+  "isPublished": true
  },
  "c1e00000-0000-4000-8000-000000005261": {
   "id": "c1e00000-0000-4000-8000-000000005261",
   "title": "Antimicrobials: antiparasitic",
-  "description": "23 questions on antimicrobials: antiparasitic (1 case studies and 17 single questions in all). Untimed; answers, rationales and your result at the end.",
+  "description": "29 questions on antimicrobials: antiparasitic (2 case studies and 17 single questions in all). Untimed; answers, rationales and your result at the end.",
   "mode": "practice",
   "revealMode": "exam",
   "timed": false,
@@ -799,6 +805,12 @@
    "c1a00125-0000-4000-8000-000000000016",
    "c1a00125-0000-4000-8000-000000000017",
    "c1a00125-0000-4000-8000-000000000018",
+   "c1a00151-0000-4000-8000-000000000007",
+   "c1a00151-0000-4000-8000-000000000008",
+   "c1a00151-0000-4000-8000-000000000009",
+   "c1a00151-0000-4000-8000-000000000010",
+   "c1a00151-0000-4000-8000-000000000011",
+   "c1a00151-0000-4000-8000-000000000012",
    "c1a00006-0000-4000-8000-000000000020",
    "c1a00020-0000-4000-8000-000000000020",
    "c1a00030-0000-4000-8000-000000000013",
@@ -822,7 +834,7 @@
  "c1e00000-0000-4000-8000-000000005281": {
   "id": "c1e00000-0000-4000-8000-000000005281",
   "title": "Antilipidemics",
-  "description": "8 questions on antilipidemics (1 case studies and 2 single questions in all). Untimed; answers, rationales and your result at the end.",
+  "description": "14 questions on antilipidemics (2 case studies and 2 single questions in all). Untimed; answers, rationales and your result at the end.",
   "mode": "practice",
   "revealMode": "exam",
   "timed": false,
@@ -836,10 +848,16 @@
    "c1a00119-0000-4000-8000-000000000020",
    "c1a00119-0000-4000-8000-000000000021",
    "c1a00119-0000-4000-8000-000000000022",
+   "c1a00151-0000-4000-8000-000000000013",
+   "c1a00151-0000-4000-8000-000000000014",
+   "c1a00151-0000-4000-8000-000000000015",
+   "c1a00151-0000-4000-8000-000000000016",
+   "c1a00151-0000-4000-8000-000000000017",
+   "c1a00151-0000-4000-8000-000000000018",
    "c1a00063-0000-4000-8000-000000000016",
    "c1a00063-0000-4000-8000-000000000021"
   ],
-  "isPublished": false
+  "isPublished": true
  },
  "c1e00000-0000-4000-8000-000000005301": {
   "id": "c1e00000-0000-4000-8000-000000005301",
@@ -1030,7 +1048,7 @@
  "c1e00000-0000-4000-8000-000000005421": {
   "id": "c1e00000-0000-4000-8000-000000005421",
   "title": "Cardiovascular: hypertension",
-  "description": "14 questions on cardiovascular: hypertension (1 case studies and 8 single questions in all). Untimed; answers, rationales and your result at the end.",
+  "description": "20 questions on cardiovascular: hypertension (2 case studies and 8 single questions in all). Untimed; answers, rationales and your result at the end.",
   "mode": "practice",
   "revealMode": "exam",
   "timed": false,
@@ -1044,6 +1062,12 @@
    "c1a00100-0000-4000-8000-000000000022",
    "c1a00100-0000-4000-8000-000000000023",
    "c1a00100-0000-4000-8000-000000000024",
+   "c1a00151-0000-4000-8000-000000000019",
+   "c1a00151-0000-4000-8000-000000000020",
+   "c1a00151-0000-4000-8000-000000000021",
+   "c1a00151-0000-4000-8000-000000000022",
+   "c1a00151-0000-4000-8000-000000000023",
+   "c1a00151-0000-4000-8000-000000000024",
    "c1a00002-0000-4000-8000-000000000011",
    "c1a00003-0000-4000-8000-000000000013",
    "c1a00011-0000-4000-8000-000000000017",
@@ -1137,7 +1161,7 @@
  "c1e00000-0000-4000-8000-000000005481": {
   "id": "c1e00000-0000-4000-8000-000000005481",
   "title": "Cardiovascular: angina",
-  "description": "8 questions on cardiovascular: angina (1 case studies and 2 single questions in all). Untimed; answers, rationales and your result at the end.",
+  "description": "14 questions on cardiovascular: angina (2 case studies and 2 single questions in all). Untimed; answers, rationales and your result at the end.",
   "mode": "practice",
   "revealMode": "exam",
   "timed": false,
@@ -1151,10 +1175,16 @@
    "c1a00100-0000-4000-8000-000000000004",
    "c1a00100-0000-4000-8000-000000000005",
    "c1a00100-0000-4000-8000-000000000006",
+   "c1a00152-0000-4000-8000-000000000001",
+   "c1a00152-0000-4000-8000-000000000002",
+   "c1a00152-0000-4000-8000-000000000003",
+   "c1a00152-0000-4000-8000-000000000004",
+   "c1a00152-0000-4000-8000-000000000005",
+   "c1a00152-0000-4000-8000-000000000006",
    "c1a00062-0000-4000-8000-000000000020",
    "c1a00080-0000-4000-8000-000000000008"
   ],
-  "isPublished": false
+  "isPublished": true
  },
  "c1e00000-0000-4000-8000-000000005501": {
   "id": "c1e00000-0000-4000-8000-000000005501",
@@ -1449,7 +1479,7 @@
  "c1e00000-0000-4000-8000-000000005621": {
   "id": "c1e00000-0000-4000-8000-000000005621",
   "title": "Endocrine: osteoporosis",
-  "description": "9 questions on endocrine: osteoporosis (1 case studies and 3 single questions in all). Untimed; answers, rationales and your result at the end.",
+  "description": "15 questions on endocrine: osteoporosis (2 case studies and 3 single questions in all). Untimed; answers, rationales and your result at the end.",
   "mode": "practice",
   "revealMode": "exam",
   "timed": false,
@@ -1463,11 +1493,17 @@
    "c1a00111-0000-4000-8000-000000000014",
    "c1a00111-0000-4000-8000-000000000015",
    "c1a00111-0000-4000-8000-000000000016",
+   "c1a00152-0000-4000-8000-000000000007",
+   "c1a00152-0000-4000-8000-000000000008",
+   "c1a00152-0000-4000-8000-000000000009",
+   "c1a00152-0000-4000-8000-000000000010",
+   "c1a00152-0000-4000-8000-000000000011",
+   "c1a00152-0000-4000-8000-000000000012",
    "c1a00021-0000-4000-8000-000000000016",
    "c1a00077-0000-4000-8000-000000000011",
    "c1a00097-0000-4000-8000-000000000014"
   ],
-  "isPublished": false
+  "isPublished": true
  },
  "c1e00000-0000-4000-8000-000000005641": {
   "id": "c1e00000-0000-4000-8000-000000005641",
@@ -1544,7 +1580,7 @@
  "c1e00000-0000-4000-8000-000000005681": {
   "id": "c1e00000-0000-4000-8000-000000005681",
   "title": "GI: PUD and GERD",
-  "description": "8 questions on gi: pud and gerd (1 case studies and 2 single questions in all). Untimed; answers, rationales and your result at the end.",
+  "description": "14 questions on gi: pud and gerd (2 case studies and 2 single questions in all). Untimed; answers, rationales and your result at the end.",
   "mode": "practice",
   "revealMode": "exam",
   "timed": false,
@@ -1558,15 +1594,21 @@
    "c1a00112-0000-4000-8000-000000000004",
    "c1a00112-0000-4000-8000-000000000005",
    "c1a00112-0000-4000-8000-000000000006",
+   "c1a00152-0000-4000-8000-000000000013",
+   "c1a00152-0000-4000-8000-000000000014",
+   "c1a00152-0000-4000-8000-000000000015",
+   "c1a00152-0000-4000-8000-000000000016",
+   "c1a00152-0000-4000-8000-000000000017",
+   "c1a00152-0000-4000-8000-000000000018",
    "c1a00061-0000-4000-8000-000000000022",
    "c1a00115-0000-4000-8000-000000000001"
   ],
-  "isPublished": false
+  "isPublished": true
  },
  "c1e00000-0000-4000-8000-000000005701": {
   "id": "c1e00000-0000-4000-8000-000000005701",
   "title": "GI: antiemetics",
-  "description": "9 questions on gi: antiemetics (1 case studies and 3 single questions in all). Untimed; answers, rationales and your result at the end.",
+  "description": "15 questions on gi: antiemetics (2 case studies and 3 single questions in all). Untimed; answers, rationales and your result at the end.",
   "mode": "practice",
   "revealMode": "exam",
   "timed": false,
@@ -1580,11 +1622,17 @@
    "c1a00114-0000-4000-8000-000000000004",
    "c1a00114-0000-4000-8000-000000000005",
    "c1a00114-0000-4000-8000-000000000006",
+   "c1a00152-0000-4000-8000-000000000019",
+   "c1a00152-0000-4000-8000-000000000020",
+   "c1a00152-0000-4000-8000-000000000021",
+   "c1a00152-0000-4000-8000-000000000022",
+   "c1a00152-0000-4000-8000-000000000023",
+   "c1a00152-0000-4000-8000-000000000024",
    "c1a00002-0000-4000-8000-000000000023",
    "c1a00095-0000-4000-8000-000000000009",
    "c1a00098-0000-4000-8000-000000000016"
   ],
-  "isPublished": false
+  "isPublished": true
  },
  "c1e00000-0000-4000-8000-000000005721": {
   "id": "c1e00000-0000-4000-8000-000000005721",
@@ -1667,7 +1715,7 @@
  "c1e00000-0000-4000-8000-000000005761": {
   "id": "c1e00000-0000-4000-8000-000000005761",
   "title": "Respiratory: allergic disorders",
-  "description": "14 questions on respiratory: allergic disorders (1 case studies and 8 single questions in all). Untimed; answers, rationales and your result at the end.",
+  "description": "20 questions on respiratory: allergic disorders (2 case studies and 8 single questions in all). Untimed; answers, rationales and your result at the end.",
   "mode": "practice",
   "revealMode": "exam",
   "timed": false,
@@ -1681,6 +1729,12 @@
    "c1a00107-0000-4000-8000-000000000026",
    "c1a00107-0000-4000-8000-000000000027",
    "c1a00107-0000-4000-8000-000000000028",
+   "c1a00153-0000-4000-8000-000000000001",
+   "c1a00153-0000-4000-8000-000000000002",
+   "c1a00153-0000-4000-8000-000000000003",
+   "c1a00153-0000-4000-8000-000000000004",
+   "c1a00153-0000-4000-8000-000000000005",
+   "c1a00153-0000-4000-8000-000000000006",
    "c1a00020-0000-4000-8000-000000000014",
    "c1a00020-0000-4000-8000-000000000015",
    "c1a00020-0000-4000-8000-000000000016",
@@ -1695,7 +1749,7 @@
  "c1e00000-0000-4000-8000-000000005781": {
   "id": "c1e00000-0000-4000-8000-000000005781",
   "title": "Respiratory: decongestant, antitussive, expectorant, mucolytic",
-  "description": "6 questions on respiratory: decongestant, antitussive, expectorant, mucolytic (1 case studies and 0 single questions in all). Untimed; answers, rationales and your result at the end.",
+  "description": "12 questions on respiratory: decongestant, antitussive, expectorant, mucolytic (2 case studies and 0 single questions in all). Untimed; answers, rationales and your result at the end.",
   "mode": "practice",
   "revealMode": "exam",
   "timed": false,
@@ -1708,9 +1762,15 @@
    "c1a00107-0000-4000-8000-000000000025",
    "c1a00107-0000-4000-8000-000000000026",
    "c1a00107-0000-4000-8000-000000000027",
-   "c1a00107-0000-4000-8000-000000000028"
+   "c1a00107-0000-4000-8000-000000000028",
+   "c1a00153-0000-4000-8000-000000000007",
+   "c1a00153-0000-4000-8000-000000000008",
+   "c1a00153-0000-4000-8000-000000000009",
+   "c1a00153-0000-4000-8000-000000000010",
+   "c1a00153-0000-4000-8000-000000000011",
+   "c1a00153-0000-4000-8000-000000000012"
   ],
-  "isPublished": false
+  "isPublished": true
  },
  "c1e00000-0000-4000-8000-000000005801": {
   "id": "c1e00000-0000-4000-8000-000000005801",
@@ -1799,7 +1859,7 @@
  "c1e00000-0000-4000-8000-000000005841": {
   "id": "c1e00000-0000-4000-8000-000000005841",
   "title": "Childhood and neurodevelopmental disorders",
-  "description": "9 questions on childhood and neurodevelopmental disorders (1 case studies and 3 single questions in all). Untimed; answers, rationales and your result at the end.",
+  "description": "15 questions on childhood and neurodevelopmental disorders (2 case studies and 3 single questions in all). Untimed; answers, rationales and your result at the end.",
   "mode": "practice",
   "revealMode": "exam",
   "timed": false,
@@ -1813,16 +1873,22 @@
    "c1a00131-0000-4000-8000-000000000020",
    "c1a00131-0000-4000-8000-000000000021",
    "c1a00131-0000-4000-8000-000000000022",
+   "c1a00154-0000-4000-8000-000000000001",
+   "c1a00154-0000-4000-8000-000000000002",
+   "c1a00154-0000-4000-8000-000000000003",
+   "c1a00154-0000-4000-8000-000000000004",
+   "c1a00154-0000-4000-8000-000000000005",
+   "c1a00154-0000-4000-8000-000000000006",
    "c1a00034-0000-4000-8000-000000000019",
    "c1a00034-0000-4000-8000-000000000020",
    "c1a00073-0000-4000-8000-000000000024"
   ],
-  "isPublished": false
+  "isPublished": true
  },
  "c1e00000-0000-4000-8000-000000005861": {
   "id": "c1e00000-0000-4000-8000-000000005861",
   "title": "Defense mechanisms",
-  "description": "12 questions on defense mechanisms (1 case studies and 6 single questions in all). Untimed; answers, rationales and your result at the end.",
+  "description": "18 questions on defense mechanisms (2 case studies and 6 single questions in all). Untimed; answers, rationales and your result at the end.",
   "mode": "practice",
   "revealMode": "exam",
   "timed": false,
@@ -1836,6 +1902,12 @@
    "c1a00133-0000-4000-8000-000000000010",
    "c1a00133-0000-4000-8000-000000000011",
    "c1a00133-0000-4000-8000-000000000012",
+   "c1a00155-0000-4000-8000-000000000005",
+   "c1a00155-0000-4000-8000-000000000006",
+   "c1a00155-0000-4000-8000-000000000007",
+   "c1a00155-0000-4000-8000-000000000008",
+   "c1a00155-0000-4000-8000-000000000009",
+   "c1a00155-0000-4000-8000-000000000010",
    "c1a00032-0000-4000-8000-000000000010",
    "c1a00034-0000-4000-8000-000000000011",
    "c1a00073-0000-4000-8000-000000000025",
@@ -1881,7 +1953,7 @@
  "c1e00000-0000-4000-8000-000000005901": {
   "id": "c1e00000-0000-4000-8000-000000005901",
   "title": "Impulse control disorders",
-  "description": "6 questions on impulse control disorders (1 case studies and 0 single questions in all). Untimed; answers, rationales and your result at the end.",
+  "description": "12 questions on impulse control disorders (2 case studies and 0 single questions in all). Untimed; answers, rationales and your result at the end.",
   "mode": "practice",
   "revealMode": "exam",
   "timed": false,
@@ -1894,9 +1966,15 @@
    "c1a00131-0000-4000-8000-000000000025",
    "c1a00131-0000-4000-8000-000000000026",
    "c1a00131-0000-4000-8000-000000000027",
-   "c1a00131-0000-4000-8000-000000000028"
+   "c1a00131-0000-4000-8000-000000000028",
+   "c1a00154-0000-4000-8000-000000000007",
+   "c1a00154-0000-4000-8000-000000000008",
+   "c1a00154-0000-4000-8000-000000000009",
+   "c1a00154-0000-4000-8000-000000000010",
+   "c1a00154-0000-4000-8000-000000000011",
+   "c1a00154-0000-4000-8000-000000000012"
   ],
-  "isPublished": false
+  "isPublished": true
  },
  "c1e00000-0000-4000-8000-000000005921": {
   "id": "c1e00000-0000-4000-8000-000000005921",
@@ -1996,7 +2074,7 @@
  "c1e00000-0000-4000-8000-000000005941": {
   "id": "c1e00000-0000-4000-8000-000000005941",
   "title": "Personality disorders",
-  "description": "10 questions on personality disorders (1 case studies and 4 single questions in all). Untimed; answers, rationales and your result at the end.",
+  "description": "16 questions on personality disorders (2 case studies and 4 single questions in all). Untimed; answers, rationales and your result at the end.",
   "mode": "practice",
   "revealMode": "exam",
   "timed": false,
@@ -2010,6 +2088,12 @@
    "c1a00131-0000-4000-8000-000000000008",
    "c1a00131-0000-4000-8000-000000000009",
    "c1a00131-0000-4000-8000-000000000010",
+   "c1a00154-0000-4000-8000-000000000013",
+   "c1a00154-0000-4000-8000-000000000014",
+   "c1a00154-0000-4000-8000-000000000015",
+   "c1a00154-0000-4000-8000-000000000016",
+   "c1a00154-0000-4000-8000-000000000017",
+   "c1a00154-0000-4000-8000-000000000018",
    "c1a00033-0000-4000-8000-000000000015",
    "c1a00033-0000-4000-8000-000000000016",
    "c1a00074-0000-4000-8000-000000000024",
@@ -2064,7 +2148,7 @@
  "c1e00000-0000-4000-8000-000000005981": {
   "id": "c1e00000-0000-4000-8000-000000005981",
   "title": "Somatic symptom disorders",
-  "description": "6 questions on somatic symptom disorders (1 case studies and 0 single questions in all). Untimed; answers, rationales and your result at the end.",
+  "description": "12 questions on somatic symptom disorders (2 case studies and 0 single questions in all). Untimed; answers, rationales and your result at the end.",
   "mode": "practice",
   "revealMode": "exam",
   "timed": false,
@@ -2077,9 +2161,15 @@
    "c1a00131-0000-4000-8000-000000000013",
    "c1a00131-0000-4000-8000-000000000014",
    "c1a00131-0000-4000-8000-000000000015",
-   "c1a00131-0000-4000-8000-000000000016"
+   "c1a00131-0000-4000-8000-000000000016",
+   "c1a00154-0000-4000-8000-000000000019",
+   "c1a00154-0000-4000-8000-000000000020",
+   "c1a00154-0000-4000-8000-000000000021",
+   "c1a00154-0000-4000-8000-000000000022",
+   "c1a00154-0000-4000-8000-000000000023",
+   "c1a00154-0000-4000-8000-000000000024"
   ],
-  "isPublished": false
+  "isPublished": true
  },
  "c1e00000-0000-4000-8000-000000006001": {
   "id": "c1e00000-0000-4000-8000-000000006001",
@@ -2832,7 +2922,7 @@
  "c1e00000-0000-4000-8000-000000006301": {
   "id": "c1e00000-0000-4000-8000-000000006301",
   "title": "Placenta previa",
-  "description": "6 questions on placenta previa (1 case studies and 0 single questions in all). Untimed; answers, rationales and your result at the end.",
+  "description": "12 questions on placenta previa (2 case studies and 0 single questions in all). Untimed; answers, rationales and your result at the end.",
   "mode": "practice",
   "revealMode": "exam",
   "timed": false,
@@ -2845,9 +2935,15 @@
    "c1a00135-0000-4000-8000-000000000009",
    "c1a00135-0000-4000-8000-000000000010",
    "c1a00135-0000-4000-8000-000000000011",
-   "c1a00135-0000-4000-8000-000000000012"
+   "c1a00135-0000-4000-8000-000000000012",
+   "c1a00153-0000-4000-8000-000000000019",
+   "c1a00153-0000-4000-8000-000000000020",
+   "c1a00153-0000-4000-8000-000000000021",
+   "c1a00153-0000-4000-8000-000000000022",
+   "c1a00153-0000-4000-8000-000000000023",
+   "c1a00153-0000-4000-8000-000000000024"
   ],
-  "isPublished": false
+  "isPublished": true
  },
  "c1e00000-0000-4000-8000-000000006321": {
   "id": "c1e00000-0000-4000-8000-000000006321",
@@ -3266,7 +3362,7 @@
  "c1e00000-0000-4000-8000-000000006461": {
   "id": "c1e00000-0000-4000-8000-000000006461",
   "title": "Growth and development: school age, part 1 of 2",
-  "description": "31 questions on growth and development: school age (1 case studies and 56 single questions in all). Untimed; answers, rationales and your result at the end.",
+  "description": "37 questions on growth and development: school age (3 case studies and 56 single questions in all). Untimed; answers, rationales and your result at the end.",
   "mode": "practice",
   "revealMode": "exam",
   "timed": false,
@@ -3280,6 +3376,18 @@
    "c1a00148-0000-4000-8000-000000000004",
    "c1a00148-0000-4000-8000-000000000005",
    "c1a00148-0000-4000-8000-000000000006",
+   "c1a00155-0000-4000-8000-000000000011",
+   "c1a00155-0000-4000-8000-000000000012",
+   "c1a00155-0000-4000-8000-000000000013",
+   "c1a00155-0000-4000-8000-000000000014",
+   "c1a00155-0000-4000-8000-000000000015",
+   "c1a00155-0000-4000-8000-000000000016",
+   "c1a00153-0000-4000-8000-000000000001",
+   "c1a00153-0000-4000-8000-000000000002",
+   "c1a00153-0000-4000-8000-000000000003",
+   "c1a00153-0000-4000-8000-000000000004",
+   "c1a00153-0000-4000-8000-000000000005",
+   "c1a00153-0000-4000-8000-000000000006",
    "c1a00003-0000-4000-8000-000000000021",
    "c1a00004-0000-4000-8000-000000000009",
    "c1a00011-0000-4000-8000-000000000012",
@@ -3298,20 +3406,14 @@
    "c1a00024-0000-4000-8000-000000000021",
    "c1a00025-0000-4000-8000-000000000003",
    "c1a00025-0000-4000-8000-000000000015",
-   "c1a00030-0000-4000-8000-000000000023",
-   "c1a00031-0000-4000-8000-000000000003",
-   "c1a00031-0000-4000-8000-000000000010",
-   "c1a00031-0000-4000-8000-000000000012",
-   "c1a00031-0000-4000-8000-000000000013",
-   "c1a00031-0000-4000-8000-000000000015",
-   "c1a00032-0000-4000-8000-000000000009"
+   "c1a00030-0000-4000-8000-000000000023"
   ],
   "isPublished": true
  },
  "c1e00000-0000-4000-8000-000000006462": {
   "id": "c1e00000-0000-4000-8000-000000006462",
   "title": "Growth and development: school age, part 2 of 2",
-  "description": "31 questions on growth and development: school age (1 case studies and 56 single questions in all). Untimed; answers, rationales and your result at the end.",
+  "description": "37 questions on growth and development: school age (3 case studies and 56 single questions in all). Untimed; answers, rationales and your result at the end.",
   "mode": "practice",
   "revealMode": "exam",
   "timed": false,
@@ -3319,6 +3421,12 @@
   "accessTier": "free",
   "topicSection": "Pediatrics",
   "questionIds": [
+   "c1a00031-0000-4000-8000-000000000003",
+   "c1a00031-0000-4000-8000-000000000010",
+   "c1a00031-0000-4000-8000-000000000012",
+   "c1a00031-0000-4000-8000-000000000013",
+   "c1a00031-0000-4000-8000-000000000015",
+   "c1a00032-0000-4000-8000-000000000009",
    "c1a00033-0000-4000-8000-000000000001",
    "c1a00033-0000-4000-8000-000000000002",
    "c1a00033-0000-4000-8000-000000000017",
@@ -3704,8 +3812,8 @@
  },
  "c1e00000-0000-4000-8000-000000006621": {
   "id": "c1e00000-0000-4000-8000-000000006621",
-  "title": "Altered immunity disorders",
-  "description": "47 questions on altered immunity disorders (6 case studies and 11 single questions in all). Untimed; answers, rationales and your result at the end.",
+  "title": "Altered immunity disorders, part 1 of 3",
+  "description": "24 questions on altered immunity disorders (7 case studies and 11 single questions in all). Untimed; answers, rationales and your result at the end.",
   "mode": "practice",
   "revealMode": "exam",
   "timed": false,
@@ -3736,7 +3844,21 @@
    "c1a00124-0000-4000-8000-000000000009",
    "c1a00124-0000-4000-8000-000000000010",
    "c1a00124-0000-4000-8000-000000000011",
-   "c1a00124-0000-4000-8000-000000000012",
+   "c1a00124-0000-4000-8000-000000000012"
+  ],
+  "isPublished": true
+ },
+ "c1e00000-0000-4000-8000-000000006622": {
+  "id": "c1e00000-0000-4000-8000-000000006622",
+  "title": "Altered immunity disorders, part 2 of 3",
+  "description": "27 questions on altered immunity disorders (7 case studies and 11 single questions in all). Untimed; answers, rationales and your result at the end.",
+  "mode": "practice",
+  "revealMode": "exam",
+  "timed": false,
+  "allowBackNav": true,
+  "accessTier": "free",
+  "topicSection": "Med-Surg",
+  "questionIds": [
    "c1a00124-0000-4000-8000-000000000013",
    "c1a00124-0000-4000-8000-000000000014",
    "c1a00124-0000-4000-8000-000000000015",
@@ -3749,6 +3871,12 @@
    "c1a00124-0000-4000-8000-000000000022",
    "c1a00124-0000-4000-8000-000000000023",
    "c1a00124-0000-4000-8000-000000000024",
+   "c1a00151-0000-4000-8000-000000000001",
+   "c1a00151-0000-4000-8000-000000000002",
+   "c1a00151-0000-4000-8000-000000000003",
+   "c1a00151-0000-4000-8000-000000000004",
+   "c1a00151-0000-4000-8000-000000000005",
+   "c1a00151-0000-4000-8000-000000000006",
    "c1a00002-0000-4000-8000-000000000017",
    "c1a00018-0000-4000-8000-000000000020",
    "c1a00020-0000-4000-8000-000000000004",
@@ -3757,7 +3885,21 @@
    "c1a00021-0000-4000-8000-000000000018",
    "c1a00076-0000-4000-8000-000000000008",
    "c1a00084-0000-4000-8000-000000000021",
-   "c1a00086-0000-4000-8000-000000000025",
+   "c1a00086-0000-4000-8000-000000000025"
+  ],
+  "isPublished": true
+ },
+ "c1e00000-0000-4000-8000-000000006623": {
+  "id": "c1e00000-0000-4000-8000-000000006623",
+  "title": "Altered immunity disorders, part 3 of 3",
+  "description": "2 questions on altered immunity disorders (7 case studies and 11 single questions in all). Untimed; answers, rationales and your result at the end.",
+  "mode": "practice",
+  "revealMode": "exam",
+  "timed": false,
+  "allowBackNav": true,
+  "accessTier": "free",
+  "topicSection": "Med-Surg",
+  "questionIds": [
    "c1a00094-0000-4000-8000-000000000012",
    "c1a00155-0000-4000-8000-000000000001"
   ],
@@ -4298,7 +4440,7 @@
  "c1e00000-0000-4000-8000-000000006841": {
   "id": "c1e00000-0000-4000-8000-000000006841",
   "title": "Sexually transmitted infections",
-  "description": "15 questions on sexually transmitted infections (2 case studies and 3 single questions in all). Untimed; answers, rationales and your result at the end.",
+  "description": "21 questions on sexually transmitted infections (3 case studies and 3 single questions in all). Untimed; answers, rationales and your result at the end.",
   "mode": "practice",
   "revealMode": "exam",
   "timed": false,
@@ -4318,6 +4460,12 @@
    "c1a00125-0000-4000-8000-000000000010",
    "c1a00125-0000-4000-8000-000000000011",
    "c1a00125-0000-4000-8000-000000000012",
+   "c1a00151-0000-4000-8000-000000000007",
+   "c1a00151-0000-4000-8000-000000000008",
+   "c1a00151-0000-4000-8000-000000000009",
+   "c1a00151-0000-4000-8000-000000000010",
+   "c1a00151-0000-4000-8000-000000000011",
+   "c1a00151-0000-4000-8000-000000000012",
    "c1a00063-0000-4000-8000-000000000014",
    "c1a00073-0000-4000-8000-000000000014",
    "c1a00081-0000-4000-8000-000000000010"
@@ -4505,7 +4653,7 @@
  "c1e00000-0000-4000-8000-000000006901": {
   "id": "c1e00000-0000-4000-8000-000000006901",
   "title": "Transplant rejection",
-  "description": "8 questions on transplant rejection (1 case studies and 2 single questions in all). Untimed; answers, rationales and your result at the end.",
+  "description": "14 questions on transplant rejection (2 case studies and 2 single questions in all). Untimed; answers, rationales and your result at the end.",
   "mode": "practice",
   "revealMode": "exam",
   "timed": false,
@@ -4519,9 +4667,15 @@
    "c1a00121-0000-4000-8000-000000000010",
    "c1a00121-0000-4000-8000-000000000011",
    "c1a00121-0000-4000-8000-000000000012",
+   "c1a00153-0000-4000-8000-000000000013",
+   "c1a00153-0000-4000-8000-000000000014",
+   "c1a00153-0000-4000-8000-000000000015",
+   "c1a00153-0000-4000-8000-000000000016",
+   "c1a00153-0000-4000-8000-000000000017",
+   "c1a00153-0000-4000-8000-000000000018",
    "c1a00072-0000-4000-8000-000000000004",
    "c1a00155-0000-4000-8000-000000000001"
   ],
-  "isPublished": false
+  "isPublished": true
  }
 }
