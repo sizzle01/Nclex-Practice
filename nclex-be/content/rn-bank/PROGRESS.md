@@ -2,21 +2,21 @@
 
 Written by `python3 -I build_all.py` (coverage.py); do not edit by hand.
 
-**3210 of 5000 questions** (64%), 234 case studies, 65 bowtie questions. Multiple choice is 42% of the bank.
+**3234 of 5000 questions** (65%), 238 case studies, 65 bowtie questions. Multiple choice is 42% of the bank.
 
 ## By test plan category
 
 | Category | Test plan | Target | Have | To write | Next chunk |
 |---|---|---|---|---|---|
 | Management of Care | 18% | 900 | 413 | 487 | 25 |
-| Safety and Infection Prevention and Control | 13% | 650 | 308 | 342 | 17 |
-| Health Promotion and Maintenance | 9% | 450 | 300 | 150 | 8 |
-| Psychosocial Integrity | 9% | 450 | 263 | 187 | 9 |
+| Safety and Infection Prevention and Control | 13% | 650 | 309 | 341 | 17 |
+| Health Promotion and Maintenance | 9% | 450 | 302 | 148 | 8 |
+| Psychosocial Integrity | 9% | 450 | 263 | 187 | 10 |
 | Basic Care and Comfort | 9% | 450 | 179 | 271 | 14 |
-| Pharmacological and Parenteral Therapies | 16% | 800 | 566 | 234 | 12 |
+| Pharmacological and Parenteral Therapies | 16% | 800 | 584 | 216 | 11 |
 | Reduction of Risk Potential | 12% | 600 | 310 | 290 | 15 |
-| Physiological Adaptation | 14% | 700 | 871 | 0 | 0 |
-| **Total** | 100% | 5000 | 3210 | 1961 | 100 |
+| Physiological Adaptation | 14% | 700 | 874 | 0 | 0 |
+| **Total** | 100% | 5000 | 3234 | 1940 | 100 |
 
 ## Chunks
 
@@ -35,7 +35,7 @@ The wave chunks are paused (2026-11-20) while the bank is rebuilt around case st
 
 ## Case conversion (CASE-MAP.md)
 
-**1404 of 2531 active questions (55%) are inside full case studies**; the goal is 85%. 679 older questions are retired (F26, retired-questions.json): their topics were rebuilt as case studies.
+**1428 of 2555 active questions (56%) are inside full case studies**; the goal is 85%. 679 older questions are retired (F26, retired-questions.json): their topics were rebuilt as case studies.
 
 | Chunk | Topic | Batch files | Questions | Case studies |
 |---|---|---|---|---|
@@ -163,10 +163,10 @@ The wave chunks are paused (2026-11-20) while the bank is rebuilt around case st
 | Type | Questions | Share |
 |---|---|---|
 | multiple_choice | 1345 | 42% |
-| matrix_mc | 563 | 18% |
-| sata | 457 | 14% |
-| dropdown_cloze | 240 | 7% |
-| highlight_table | 216 | 7% |
+| matrix_mc | 571 | 18% |
+| sata | 465 | 14% |
+| dropdown_cloze | 244 | 8% |
+| highlight_table | 220 | 7% |
 | highlight_text | 71 | 2% |
 | fill_blank_calc | 65 | 2% |
 | bowtie | 65 | 2% |
